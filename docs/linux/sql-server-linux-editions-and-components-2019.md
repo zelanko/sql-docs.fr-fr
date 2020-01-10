@@ -1,6 +1,6 @@
 ---
 title: Éditions et fonctionnalités prises en charge de SQL Server 2019 - Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954991"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776558"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2019 sur Linux
 
@@ -54,8 +54,8 @@ Pour obtenir la liste des fonctionnalités de SQL Server qui ne sont pas disponi
   
 |Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Définition|  
 |---------------------------------------|----------------|  
-|Enterprise|Offre Premium, l’édition [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise fournit des fonctionnalités de centre de données haut de gamme complètes, avec des performances ultrarapides qui autorisent des niveaux de service élevés pour les charges de travail critiques.|  
-|Standard|L’édition Standard [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] permet la gestion des données de base destinée aux services des grandes entreprises comme aux PME, leur permettant d’exécuter les applications et prenant en charge des outils de développement communs locaux et dans le cloud, pour une gestion efficace des bases de données avec des ressources informatiques minimales.|  
+|Entreprise|Offre Premium, l’édition [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise fournit des fonctionnalités de centre de données haut de gamme complètes, avec des performances ultrarapides qui autorisent des niveaux de service élevés pour les charges de travail critiques.|  
+|standard|L’édition Standard [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] permet la gestion des données de base destinée aux services des grandes entreprises comme aux PME, leur permettant d’exécuter les applications et prenant en charge des outils de développement communs locaux et dans le cloud, pour une gestion efficace des bases de données avec des ressources informatiques minimales.|  
 |Web|L'édition Web[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] est une option offrant un coût total de possession faible destinée aux hébergeurs Web et aux VAP Web, fournissant des fonctions évolutives, rentables et gérables aux propriétés Web à petite ou grande échelle.|  
 |Développeur|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permet aux développeurs de créer des applications basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. L'édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement et le test d'applications.|  
 |Express Edition|L’édition Express est une édition de base comprenant une base de données gratuite, idéale pour découvrir et créer des applications bureautiques et de petites applications serveur pilotées par les données. C'est la solution idéale pour les éditeurs de logiciels, les développeurs et les amateurs de création d'applications clientes. Si vous avez besoin de fonctionnalités de base de données plus évoluées, vous pouvez mettre à niveau de manière transparente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express vers des versions plus sophistiquées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
@@ -79,20 +79,20 @@ L’édition Developer continue à prendre en charge seulement un client pour [
   
 ##  <a name="Cross-BoxScaleLimits"></a> Limites d’échelle  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express| 
+|Fonctionnalité|Entreprise|standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs| 
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs|
-|Mémoire maximale du pool de mémoires tampons par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d’exploitation|128 Go|64 Go|1410 Mo|
+|Mémoire maximale du pool de mémoires tampons par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d’exploitation|128 Go|64 Go|1410 Mo|
 |Mémoire maximale du cache de segments columnstore par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|  
 |Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
-|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|  
+|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 Go|  
   
 <sup>1</sup> L’édition Enterprise avec serveur + licences d’accès client (CAL) (non disponibles pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par instance SQL Server. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, voir [Limites de capacité de calcul par édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
 ##  <a name="RDBMSHA"></a> Haute disponibilité SGBDR  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express|  
+|Fonctionnalité|Entreprise|standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
 |Copie des journaux de transaction|Oui|Oui|Oui|Non|  
 |Compression de sauvegarde|Oui|Oui|Non|Non| 
@@ -120,7 +120,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express|  
+|Fonctionnalité|Entreprise|standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Oui|Oui|Oui|Oui|  
 |Fichiers binaires LOB dans les index columnstore cluster|Oui|Oui|Oui|Oui|  
@@ -145,7 +145,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="RDBMSS"></a> Sécurité SGBDR  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express|
+|Fonctionnalité|Entreprise|standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |Sécurité au niveau des lignes|Oui|Oui|Oui|Oui|  
 |Always Encrypted|Oui|Oui|Oui|Oui| 
@@ -159,7 +159,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="RDBMSM"></a> Simplicité de gestion SGBDR  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express|   
+|Fonctionnalité|Entreprise|standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
 |Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|   
 |Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui| 
@@ -178,7 +178,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="Programmability"></a> Programmability  
   
-|Fonctionnalité|Enterprise|Standard|Web|Express 
+|Fonctionnalité|Entreprise|standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
 |JSON|Oui|Oui|Oui|Oui|   
 |Magasin des requêtes|Oui|Oui|Oui|Oui|   
@@ -192,7 +192,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 |Spécification d'une langue dans une requête|Oui|Oui|Oui|Oui|
 |Service Broker (messagerie)|Oui|Oui|Non (client uniquement)|Non (client uniquement)|
 |Transact-SQL, points de terminaison|Oui|Oui|Oui|Non|
-|Graphique|Oui|Oui|Oui|Oui|  
+|Graph|Oui|Oui|Oui|Oui|  
 
 
 <sup>1</sup> La montée en puissance parallèle avec plusieurs nœuds de calcul nécessite un nœud principal.
@@ -203,7 +203,7 @@ Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) 
 
 ##  <a name="SLS"></a> Services d’emplacement et spatiaux  
   
-|Nom de la fonctionnalité|Enterprise|Standard|Web|Express|  
+|Nom de la fonctionnalité|Entreprise|standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
 |Index spatiaux|Oui|Oui|Oui|Oui|   
 |Types de données planaires et géodésiques|Oui|Oui|Oui|Oui| 
@@ -212,7 +212,7 @@ Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) 
 
 ## <a name="Unsupported"></a> Fonctionnalités et services non pris en charge
 
-Les fonctionnalités et services suivants ne sont pas disponibles dans SQL Server 2019 sur Linux. Le support de ces fonctionnalités sera de plus en plus activé dans le temps.
+Les fonctionnalités et services suivants ne sont pas disponibles pour SQL Server 2019 sur Linux. Le support de ces fonctionnalités sera de plus en plus activé dans le temps.
 
 | Domaine | Fonctionnalité ou service non pris en charge |
 |-----|-----|

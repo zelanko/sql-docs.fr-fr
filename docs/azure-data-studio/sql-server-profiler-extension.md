@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959115"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776510"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Extension SQL Server Profiler (préversion)
 
-L’extension SQL Server Profiler (préversion) fournit une solution de suivi de SQL Server simple semblable à SQL Server Management Studio (SSMS) Profiler, à l’exception de l’utilisation de XEvents. SQL Server Profiler est très facile à utiliser et possède de bonnes valeurs par défaut pour les configurations de suivi les plus courantes. L’expérience utilisateur est optimisée pour parcourir les événements et afficher le texte Transact-SQL (T-SQL) associé. SQL Server Profiler pour Azure Data Studio suppose également de bonnes valeurs par défaut pour la collecte d’activités d’exécution de T-SQL avec une expérience utilisateur simple d’utilisation. Cette extension est actuellement en préversion.
+L’extension SQL Server Profiler (préversion) fournit une solution de suivi de SQL Server simple semblable à SQL Server Management Studio (SSMS) Profiler, à l’exception de l’utilisation d’événements étendus. SQL Server Profiler est très facile à utiliser et possède de bonnes valeurs par défaut pour les configurations de suivi les plus courantes. L’expérience utilisateur est optimisée pour parcourir les événements et afficher le texte Transact-SQL (T-SQL) associé. SQL Server Profiler pour Azure Data Studio suppose également de bonnes valeurs par défaut pour la collecte d’activités d’exécution de T-SQL avec une expérience utilisateur simple d’utilisation. Cette extension est actuellement en préversion.
 
 **Cas d’utilisation courants de SQL Server Profiler :**
 

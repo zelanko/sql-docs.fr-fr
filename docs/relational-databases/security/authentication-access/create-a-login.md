@@ -23,12 +23,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903034"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776390"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "72903034"
   
  En tant que principal de sécurité, il est possible d'accorder des autorisations à des comptes de connexion. L'étendue d'un compte de connexion est l'intégralité du [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion. Les autorisations dont l’étendue englobe la totalité de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par exemple, l’autorisation **CREATE ENDPOINT** ) peuvent être accordées à un compte de connexion.  
   
-> **REMARQUE :** Lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données autonome. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **REMARQUE :** Lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données autonome. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Sécurité  
 
@@ -75,7 +75,7 @@ ms.locfileid: "72903034"
   
 5.  Pour créer un compte de connexion qui est enregistré sur une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sélectionnez **Authentification SQL Server**.  
   
-    1.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouvel utilisateur. Entrez à nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
+    1.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouvel utilisateur. Entrez de nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
   
     2.  Lorsque vous modifiez un mot de passe existant, sélectionnez **Spécifier l'ancien mot de passe**, puis tapez l'ancien mot de passe dans la zone **Ancien mot de passe** .  
   
@@ -136,7 +136,7 @@ ms.locfileid: "72903034"
  **Utilisateurs mappés à cette connexion**  
  Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** _nom_base_de_données_ .  
   
- **Carte**  
+ **Map**  
  Autorise la connexion à accéder aux bases de données répertoriées au-dessous.  
   
  **Sauvegarde de la base de données**  
@@ -148,10 +148,10 @@ ms.locfileid: "72903034"
  **Schéma par défaut**  
  Spécifie le schéma par défaut de l'utilisateur. Lors de la création d'un utilisateur, son schéma par défaut est **dbo**. Il est possible de spécifier un schéma par défaut qui n'existe pas encore. Vous ne pouvez pas spécifier de schéma par défaut pour un utilisateur mappé sur un groupe Windows, un certificat ou une clé asymétrique.  
   
- **Guest account enabled for:**  _database_name_  
+ **Compte Invité activé pour :**  _nom_base_de_données_  
  Attribut en lecture seule indiquant si le compte Invité est activé sur la base de données sélectionnée. Utilisez la page **État** de la boîte de dialogue **Propriétés de la connexion** du compte Invité pour activer ou désactiver le compte Invité.  
   
- **Database role membership for:**  _database_name_  
+ **Appartenance au rôle de base de données pour :**  _nom_base_de_données_  
  Sélectionnez les rôles pour l'utilisateur dans la base de données spécifiée. Tous les utilisateurs sont membres du rôle **public** de chaque base de données et ne peuvent pas être supprimés. Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Éléments sécurisables  
@@ -182,7 +182,7 @@ ms.locfileid: "72903034"
   
 4.  Si vous sélectionnez **Tous les objets des types...** , dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Name**  
+ **Nom**  
  Nom de chaque principal ou élément sécurisable ajouté à la grille.  
   
  **Type**  
@@ -191,7 +191,7 @@ ms.locfileid: "72903034"
  **Onglet Autorisations explicites**  
  Énumère les autorisations possibles pour les éléments sécurisables sélectionnés dans la grille supérieure. Toutes les options ne sont pas disponibles pour toutes les autorisations explicites.  
   
- **Autorisations**  
+ **autorisations**  
  Nom de l'autorisation.  
   
  **Fournisseur d'autorisations**  
@@ -203,10 +203,10 @@ ms.locfileid: "72903034"
  **Avec autorisation**  
  Reflète l'état de l'option WITH GRANT pour l'autorisation indiquée dans la liste. Cette zone est en lecture seule. Pour appliquer cette autorisation, utilisez l'instruction [GRANT](../../../t-sql/statements/grant-transact-sql.md) .  
   
- **Refuser**  
+ **Deny**  
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
-### <a name="status"></a>État  
+### <a name="status"></a>Statut  
  La page **État** répertorie certaines des options d'authentification et d'autorisation qui peuvent être configurées sur la connexion sélectionnée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Les options suivantes sont disponibles sur cette page :  
@@ -223,13 +223,13 @@ ms.locfileid: "72903034"
   
  Sélectionnez cette option pour activer ou désactiver cette connexion. Cette option utilise l'instruction ALTER LOGIN avec l'option ENABLE ou DISABLE.  
   
- **SQL Server Authentication**  
+ **Authentification SQL Server**  
  La case à cocher **La connexion est verrouillée** est disponible uniquement si la connexion sélectionnée se connecte à l’aide de l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elle a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Créer une connexion à l’aide de l’authentification Windows à l’aide de T-SQL  
   
  
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -243,9 +243,9 @@ ms.locfileid: "72903034"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Créer une connexion via l’authentification SQL Server avec SSMS  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>Créer une connexion via l’authentification SQL Server avec T-SQL
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -273,6 +273,6 @@ ms.locfileid: "72903034"
 -   Pour accorder une autorisation à un compte de connexion, consultez [Accorder une autorisation à un principal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

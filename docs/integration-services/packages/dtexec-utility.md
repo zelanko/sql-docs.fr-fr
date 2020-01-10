@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b33c005a33a3a2fb1c10d1eb8ce1a4981a59a375
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b27fc68fc3c7685583248b39a7c27d4d33efa38c
+ms.sourcegitcommit: e0067f3687003e1b59a83619fdd19b666cf61e10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295838"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74249740"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
+  L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
   
 > **REMARQUE :** Lorsque vous utilisez la version actuelle de l’utilitaire **dtexec** pour exécuter un package créé par une version antérieure de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l’utilitaire met temporairement à niveau le package au format de package actuel. En revanche, vous ne pouvez pas vous servir de l’utilitaire **dtexec** pour enregistrer le package mis à niveau. Pour plus d’informations sur la mise à niveau permanente d’un package vers la version actuelle, voir [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
- Cette rubrique comprend les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
 -   [Serveur et fichier projet Integration Services](#server)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71295838"
   
 -   [Paramètres](#parameter)  
   
--   [Notes](#remark)  
+-   [Remarques](#remark)  
   
 -   [Exemples](#example)  
   
@@ -167,23 +167,23 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Ca[llerInfo]**  : (Facultatif). Spécifie des informations supplémentaires pour l'exécution d'un package. Lorsque vous exécutez un package à l'aide de SQL Server Agent, l'agent définit cet argument afin d'indiquer que l'exécution du package est appelée par SQL Server Agent. Ce paramètre est ignoré lorsque l’utilitaire **dtexec** est exécuté à partir de la ligne de commande.  
   
--   **/CheckF[ile]** _filespec_ : (Facultatif). Affecte à la propriété **CheckpointFileName** du package le chemin d'accès et le fichier spécifiés dans *filespec*. Ce fichier est utilisé lors du redémarrage du package. Si cette option est spécifiée et si aucune valeur n'est fournie pour le nom de fichier, le **CheckpointFileName** pour le package est défini à une chaîne vide. Si cette option n'est pas spécifiée, les valeurs dans le package sont conservées.  
+-   **/CheckF[ile]** _filespec_: (Facultatif). Affecte à la propriété **CheckpointFileName** du package le chemin d'accès et le fichier spécifiés dans *filespec*. Ce fichier est utilisé lors du redémarrage du package. Si cette option est spécifiée et si aucune valeur n'est fournie pour le nom de fichier, le **CheckpointFileName** pour le package est défini à une chaîne vide. Si cette option n'est pas spécifiée, les valeurs dans le package sont conservées.  
   
--   **/CheckP[ointing]** _{on\off}_  : (Facultatif). Définit une valeur qui détermine si le package utilise des points de contrôle pendant l'exécution du package. La valeur **on** spécifie qu’un package ayant échoué doit être réexécuté. Lorsque le package ayant échoué est relancé, le moteur d'exécution utilise le fichier de point de contrôle pour redémarrer le package à partir du point d'échec.  
+-   **/CheckP[ointing]** _{on\off}_ : (Facultatif). Définit une valeur qui détermine si le package utilise des points de contrôle pendant l'exécution du package. La valeur **on** spécifie qu’un package ayant échoué doit être réexécuté. Lorsque le package ayant échoué est relancé, le moteur d'exécution utilise le fichier de point de contrôle pour redémarrer le package à partir du point d'échec.  
   
-     La valeur par défaut est « on » si l'option est déclarée sans valeur. L'exécution du package échoue si la valeur « on » est choisie et si le fichier de point de contrôle demeure introuvable. Si cette option n'est pas spécifiée, la valeur définie dans le package est conservée. Pour plus d'informations, consultez [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+     La valeur par défaut est « on » si l'option est déclarée sans valeur. L'exécution du package échoue si la valeur « on » est choisie et si le fichier de point de contrôle demeure introuvable. Si cette option n'est pas spécifiée, la valeur définie dans le package est conservée. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
      L’option **/CheckPointing on** de dtexec revient à définir la propriété **SaveCheckpoints** du package sur True, et la propriété **CheckpointUsage** sur Always.  
   
--   **/Com[mandFile]** _filespec_ : (Facultatif). Spécifie les options de commande qui s’exécutent avec **dtexec**. Le fichier spécifié dans *filespec* est ouvert et les options du fichier sont lues jusqu'à ce que EOF soit rencontré dans le fichier. *filespec* est un fichier texte. L'argument *filespec* spécifie le nom et le chemin du fichier de commandes associé à l'exécution du package.  
+-   **/Com[mandFile]** _filespec_: (Facultatif). Spécifie les options de commande qui s’exécutent avec **dtexec**. Le fichier spécifié dans *filespec* est ouvert et les options du fichier sont lues jusqu'à ce que EOF soit rencontré dans le fichier. *filespec* est un fichier texte. L'argument *filespec* spécifie le nom et le chemin du fichier de commandes associé à l'exécution du package.  
   
--   **/Conf[igFile]** _filespec_ : (Facultatif). Spécifie un fichier de configuration dont des valeurs sont extraites. Avec cette option, vous pouvez définir une configuration d'exécution qui est différente de celle qui a été spécifiée au moment de la conception du package. Vous pouvez stocker différents paramètres de configuration dans le fichier de configuration XML et charger ensuite les paramètres avant l’exécution du package à l’aide de l’option **/ConfigFile** .  
+-   **/Conf[igFile]** _filespec_: (Facultatif). spécifie un fichier de configuration à partir duquel extraire des valeurs. Avec cette option, vous pouvez définir une configuration d'exécution qui est différente de celle qui a été spécifiée au moment de la conception du package. Vous pouvez stocker différents paramètres de configuration dans le fichier de configuration XML et charger ensuite les paramètres avant l’exécution du package à l’aide de l’option **/ConfigFile** .  
   
      Vous pouvez utiliser l’option **/ConfigFile** pour charger, au moment de l’exécution, des configurations supplémentaires que vous n’aviez pas spécifiées au moment de la conception. Cependant, vous ne pouvez pas utiliser l’option **/ConfigFile** pour remplacer des valeurs configurées que vous aviez aussi spécifiées au moment de la conception. Pour comprendre le fonctionnement de l'application des configurations de package, consultez [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_  : (Facultatif). Spécifie que le gestionnaire de connexions avec le nom ou le GUID indiqué est fourni dans le package et spécifie une chaîne de connexion valide.  
+-   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ : (Facultatif). Spécifie que le gestionnaire de connexions avec le nom ou le GUID indiqué est fourni dans le package et spécifie une chaîne de connexion valide.  
   
-     Cette option exige la spécification des deux paramètres : le nom ou le GUID du gestionnaire de connexions doit être fourni dans l’argument *id_or_name*, et une chaîne de connexion valide doit être spécifiée dans l’argument *connection_string*. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
+     Cette option exige la spécification des deux paramètres : le nom ou le GUID du gestionnaire de connexions doit être fourni dans l’argument *id_or_name* , et une chaîne de connexion valide doit être spécifiée dans l’argument *connection_string* . Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
      Au moment de l’exécution, vous pouvez utiliser l’option **/Connection** pour charger des configurations de package à partir d’un emplacement autre que celui que vous avez spécifié au moment de la conception. Les valeurs de ces configurations remplacent alors les valeurs spécifiées à l'origine. Cependant, vous ne pouvez utiliser l’option **/Connection** que pour des configurations qui utilisent un gestionnaire de connexions (par exemple les configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Pour comprendre comment les configurations de package sont appliquées, consultez [Configurations de package](../../integration-services/packages/package-configurations.md) et [Changements de comportement des fonctionnalités Integration Services dans SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
@@ -227,13 +227,13 @@ dtexec /option [value] [/option [value]]...
   
      Pour afficher plusieurs exemples de l’option **/ConsoleLog** , consultez la section **Notes** .  
   
--   **/D[ts]** _package_path_ : (Facultatif). Charge un package à partir du magasin de packages SSIS. Les packages stockés dans le Magasin de packages SSIS sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer**. Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+-   **/D[ts]** _package_path_: (Facultatif). Charge un package à partir du magasin de packages SSIS. Les packages stockés dans le Magasin de packages SSIS sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      L’argument *package_path* spécifie le chemin relatif du package [!INCLUDE[ssIS](../../includes/ssis-md.md)] , à partir de la racine du Magasin de packages SSIS, et inclut le nom du package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Si le chemin ou le nom du fichier spécifié dans l’argument *package_path* contient un espace, vous devez mettre l’argument *package_path* entre guillemets.  
   
      L’option **/DTS** ne peut pas être utilisée avec l’option **/File** ou **/SQL** . Si plusieurs options sont spécifiées, **dtexec** échoue.  
   
--   **/De[crypt]**  _password_ : (Facultatif). Définit le mot de passe de déchiffrement qui est utilisé lorsque vous chargez un package avec chiffrement de mot de passe.  
+-   **/De[crypt]**  _password_: (Facultatif). Définit le mot de passe de déchiffrement qui est utilisé lorsque vous chargez un package avec chiffrement de mot de passe.  
   
 -   (Facultatif) Crée les fichiers de vidage du débogage, .mdmp et .tmp, lorsqu'un ou plusieurs événements spécifiés se produisent pendant l'exécution du package. L’argument *error code* spécifie le type de code d’événement (erreur, avertissement ou information) qui déclenchera la création, par le système, des fichiers de vidage du débogage. Pour spécifier plusieurs codes d’événement, séparez chaque argument *error code* par un point-virgule (;). N'incluez pas de guillemets avec l'argument *error code* .  
   
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _code d’erreur_ : Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** _error code_: Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **REMARQUE :** Les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de Microsoft.  
   
@@ -267,22 +267,22 @@ dtexec /option [value] [/option [value]]...
   
      Pour plus d'informations sur les fichiers de vidage du débogage, consultez [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
--   **/Env[Reference]** _environment reference ID_ : (Facultatif). Spécifie la référence environnementale (ID) utilisée par l'exécution du package, dans le cas d'un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les paramètres configurés pour la liaison aux variables utilisent les valeurs des variables contenues dans l'environnement.  
+-   **/Env[Reference]** _environment reference ID_: (Facultatif). Spécifie la référence environnementale (ID) utilisée par l'exécution du package, dans le cas d'un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les paramètres configurés pour la liaison aux variables utilisent les valeurs des variables contenues dans l'environnement.  
   
      L’option **/Env[Reference]** s’utilise avec les options **/ISServer** et **/Server** .  
   
      Ce paramètre est utilisé par SQL Server Agent.  
-  --    **/F[ile]** _filespec_ : (Facultatif). Charge un package qui est enregistré dans le système de fichiers. Les packages enregistrés dans le système de fichiers sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+  --    **/F[ile]** _filespec_: (Facultatif). Charge un package qui est enregistré dans le système de fichiers. Les packages enregistrés dans le système de fichiers sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
 
   L'argument *filespec* spécifie le chemin d'accès et le nom de fichier du package. Vous pouvez spécifier le chemin d'accès en tant que chemin UNC (Universal Naming Convention) ou chemin d'accès local. Si le chemin d'accès ou le nom de fichier spécifié dans l'argument *filespec* contient un espace, vous devez placer l'argument *filespec* entre guillemets.  
   
-     L’option **/File** ne peut pas être utilisée avec l’option **/DTS** ou **/SQL** . Si plusieurs options sont spécifiées, **dtexec** échoue.  
+-   L’option **/File** ne peut pas être utilisée avec l’option **/DTS** ou **/SQL** . Si plusieurs options sont spécifiées, **dtexec** échoue.
   
 -   **/H[elp]** [*option_name*] : (Facultatif). Affiche l’aide pour les options ou l’argument *option_name* spécifié, puis ferme l’utilitaire.  
   
      Si vous spécifiez un argument *option_name* , **dtexec** ouvre la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche la rubrique relative à l’utilitaire dtexec.  
   
--   **/ISServer** _packagepath_ : (Facultatif). Exécute un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’argument *PackagePath* spécifie le nom de fichier et le chemin complet du package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si le chemin d'accès ou le nom de fichier spécifié dans l'argument *PackagePath* contient un espace, vous devez placer l'argument *PackagePath* entre guillemets.  
+-   **/ISServer** _packagepath_: (Facultatif). Exécute un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’argument *PackagePath* spécifie le nom de fichier et le chemin complet du package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si le chemin d'accès ou le nom de fichier spécifié dans l'argument *PackagePath* contient un espace, vous devez placer l'argument *PackagePath* entre guillemets.  
   
      Le format du package est le suivant :  
   
@@ -296,7 +296,7 @@ dtexec /option [value] [/option [value]]...
   
      Ce paramètre est utilisé par SQL Server Agent.  
   
--   **/L[ogger]** _classid_orprogid;configstring_ : (Facultatif). Associe un ou plusieurs modules fournisseurs d'informations avec l'exécution d'un package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Le paramètre *classid_orprogid* spécifie le module fournisseur d’informations et peut être spécifié en tant que GUID de classe. L'argument *configstring* correspond à la chaîne utilisée pour configurer le module fournisseur d'informations.  
+-   **/L[ogger]** _classid_orprogid;configstring_: (Facultatif). Associe un ou plusieurs modules fournisseurs d'informations avec l'exécution d'un package [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Le paramètre *classid_orprogid* spécifie le module fournisseur d’informations et peut être spécifié en tant que GUID de classe. L'argument *configstring* correspond à la chaîne utilisée pour configurer le module fournisseur d'informations.  
   
      La liste suivante affiche les modules fournisseurs d'informations disponibles :  
   
@@ -330,11 +330,11 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID : {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M[axConcurrent]** _concurrent_executables_ : (Facultatif). Spécifie le nombre d'exécutables que le package peut exécuter simultanément. La valeur spécifiée doit être un entier non négatif ou -1. La valeur -1 signifie que [!INCLUDE[ssIS](../../includes/ssis-md.md)] permet l’exécution simultanée d’un nombre maximal d’exécutables égal au nombre total de processeurs présents sur l’ordinateur exécutant le package, plus deux.  
+-   **/M[axConcurrent]** _concurrent_executables_: (Facultatif). Spécifie le nombre d'exécutables que le package peut exécuter simultanément. La valeur spécifiée doit être un entier non négatif ou -1. La valeur -1 signifie que [!INCLUDE[ssIS](../../includes/ssis-md.md)] permet l’exécution simultanée d’un nombre maximal d’exécutables égal au nombre total de processeurs présents sur l’ordinateur exécutant le package, plus deux.  
   
--   **/Pack[age]** _PackageName_ : (Facultatif). Spécifie le package à exécuter. Ce paramètre est principalement utilisé lorsque vous exécutez le package à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+-   **/Pack[age]** _PackageName_: (Facultatif). Spécifie le package à exécuter. Ce paramètre est principalement utilisé lorsque vous exécutez le package à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
--   **/P[assword]** _password_ : (Facultatif). Permet la récupération d'un package protégé par l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est utilisée avec l’option **/User** . Si l’option **/Password** est omise et que l’option **/User** est utilisée, un mot de passe vide est employé. La valeur *password* peut être mise entre guillemets.  
+-   **/P[assword]** _password_: (Facultatif). Permet la récupération d'un package protégé par l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est utilisée avec l’option **/User** . Si l’option **/Password** est omise et que l’option **/User** est utilisée, un mot de passe vide est employé. La valeur *password* peut être mise entre guillemets.  
   
     > **IMPORTANT** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -362,11 +362,11 @@ dtexec /option [value] [/option [value]]...
     /parameter CM.SourceServer.ServerName;.  
     ```  
   
--   **/Proj[ect]** _ProjectFile_ : (Facultatif). Spécifie le projet à partir duquel le package à exécuter doit être récupéré. L'argument *ProjectFile* spécifie le nom du fichier .ispac. Ce paramètre est principalement utilisé lorsque vous exécutez le package à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+-   **/Proj[ect]** _ProjectFile_: (Facultatif). Spécifie le projet à partir duquel le package à exécuter doit être récupéré. L'argument *ProjectFile* spécifie le nom du fichier .ispac. Ce paramètre est principalement utilisé lorsque vous exécutez le package à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
--   **/Rem** _comment_ : (Facultatif). Inclut des commentaires sur l'invite de commandes ou dans des fichiers de commandes. Cet argument est facultatif. La valeur *comment* est une chaîne à mettre entre guillemets, ou qui ne contient aucun espace. Si aucun argument n'est spécifié, une ligne vide est insérée. Les valeurs*comment* sont rejetées pendant la phase source de la commande.  
+-   **/Rem** _comment_: (Facultatif). Inclut des commentaires sur l'invite de commandes ou dans des fichiers de commandes. Cet argument est facultatif. La valeur *comment* est une chaîne à mettre entre guillemets, ou qui ne contient aucun espace. Si aucun argument n'est spécifié, une ligne vide est insérée. Les valeurs*comment* sont rejetées pendant la phase source de la commande.  
   
--   **/Rep[orting]** _level_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]] : (Facultatif). Spécifie les types de message à produire. Les options de rapport disponibles pour *level* sont les suivantes :  
+-   **/Rep[orting]** _level_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]]: (Facultatif). Spécifie les types de message à produire. Les options de rapport disponibles pour *level* sont les suivantes :  
   
      **N** : pas de rapport.  
   
@@ -418,11 +418,11 @@ dtexec /option [value] [/option [value]]...
   
      Vous pouvez utiliser l’option **/Set** pour modifier l’emplacement de chargement des configurations de package. Cependant, vous ne pouvez pas utiliser l’option **/Set** pour remplacer une valeur spécifiée par une configuration au moment de la conception. Pour comprendre comment les configurations de package sont appliquées, consultez [Configurations de package](../../integration-services/packages/package-configurations.md) et [Changements de comportement des fonctionnalités Integration Services dans SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
--   **/Ser[ver]** _server_ : (Facultatif). Quand l’option **/SQL** ou **/DTS** est spécifiée, cette option spécifie le nom du serveur à partir duquel le package est récupéré. Si vous omettez l’option **/Server** et que l’option **/SQL** ou **/DTS** est spécifiée, l’exécution du package est tentée sur le serveur local. La valeur de *server_instance* peut être mise entre guillemets.  
+-   **/Ser[ver]** _server_: (Facultatif). Quand l’option **/SQL** ou **/DTS** est spécifiée, cette option spécifie le nom du serveur à partir duquel le package est récupéré. Si vous omettez l’option **/Server** et que l’option **/SQL** ou **/DTS** est spécifiée, l’exécution du package est tentée sur le serveur local. La valeur de *server_instance* peut être mise entre guillemets.  
   
      L’option **Ser[ver]** est obligatoire quand l’option **/ISServer** est spécifiée.  
   
--   **/SQ[L]** _package_path_ : Charge un package qui est stocké dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans la base de données **msdb**. Les packages stockés dans la base de données **msdb** sont déployés à l'aide du modèle de déploiement de package. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
+-   **/SQ[L]** _package_path_: Charge un package qui est stocké dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans la base de données **msdb**. Les packages stockés dans la base de données **msdb** sont déployés à l'aide du modèle de déploiement de package. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
      L’argument *package_path* spécifie le nom du package à récupérer. Si des dossiers sont inclus dans le chemin, ils se terminent par des barres obliques inverses («\\»). La valeur de *package_path* peut être mise entre guillemets. Si le chemin ou le nom du fichier spécifié dans l’argument *package_path* contient un espace, vous devez mettre l’argument *package_path* entre guillemets.  
   
@@ -440,13 +440,13 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Su[m]**  : (Facultatif). Affiche un compteur incrémentiel qui contient le nombre de lignes qui seront reçues par le prochain composant.  
   
--   **/U[ser]** _user_name_ : (Facultatif). Permet la récupération d'un package protégé par l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est utilisée uniquement quand l’option **/SQL** est spécifiée. La valeur de *user_name* peut être mise entre guillemets.  
+-   **/U[ser]** _user_name_: (Facultatif). Permet la récupération d'un package protégé par l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option est utilisée uniquement quand l’option **/SQL** est spécifiée. La valeur de *user_name* peut être mise entre guillemets.  
   
     > **IMPORTANT**  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/Va[lidate]**  : (Facultatif). Arrête l'exécution du package après la phase de validation, sans exécuter le package. Pendant la validation, l’utilisation de l’option **/WarnAsError** amène **dtexec** à traiter un avertissement comme une erreur. Par conséquent, le package échoue si un avertissement se produit pendant la validation.  
   
--   **/VerifyB[uild]** _major_[ *;minor*[ *;build*]] : (Facultatif). Vérifie le numéro de build d'un package par rapport aux numéros de build qui ont été spécifiés pendant la phase de vérification dans les arguments *major*, *minor*et *build* . En cas de non-concordance, le package ne s'exécute pas.  
+-   **/VerifyB[uild]** _major_[ *;minor*[ *;build*]]: (Facultatif). Vérifie le numéro de build d'un package par rapport aux numéros de build qui ont été spécifiés pendant la phase de vérification dans les arguments *major*, *minor*et *build* . En cas de non-concordance, le package ne s'exécute pas.  
   
      Les valeurs sont des entiers longs. L'argument peut prendre trois formes, avec une valeur toujours obligatoire pour *major* :  
   
@@ -456,7 +456,7 @@ dtexec /option [value] [/option [value]]...
   
     -   *major*; *minor*; *build*  
   
--   **/VerifyP[ackageID]** _packageID_ : (Facultatif). Vérifie le GUID du package à exécuter en le comparant à la valeur spécifiée dans l’argument *package_id* .  
+-   **/VerifyP[ackageID]** _packageID_: (Facultatif). Vérifie le GUID du package à exécuter en le comparant à la valeur spécifiée dans l’argument *package_id* .  
   
 -   **/VerifyS[igned]**  : (Facultatif). Demande à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de vérifier la signature numérique du package. Si le package n'est pas signé ou si la signature n'est pas valide, le package échoue. Pour plus d’informations, consultez [Identifier la source de packages à l’aide de signatures numériques](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
@@ -464,9 +464,9 @@ dtexec /option [value] [/option [value]]...
   
     > **REMARQUE :** La valeur de Registre **BlockedSignatureStates** facultative peut spécifier un paramètre plus restrictif que l’option de signature numérique définie dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou au niveau de la ligne de commande **dtexec** . Dans cette situation, le paramètre du Registre plus restrictif a priorité sur les autres paramètres.  
   
--   **/VerifyV[ersionID]** _versionID_ : (Facultatif). Vérifie le GUID de version d’un package à exécuter en le comparant à la valeur spécifiée dans l’argument *version_id* pendant la phase de validation du package.  
+-   **/VerifyV[ersionID]** _versionID_: (Facultatif). Vérifie le GUID de version d’un package à exécuter en le comparant à la valeur spécifiée dans l’argument *version_id* pendant la phase de validation du package.  
   
--   **/VLog** _[Filespec]_  : (Facultatif). Écrit tous les événements de package Integration Services dans les modules fournisseurs d'informations activés lors de la conception du package. Pour qu'Integration Services active un module fournisseur d'informations pour les fichiers texte et écrive les événements de journal dans un fichier texte spécifié, incluez un chemin d'accès et un nom de fichier en tant que paramètre *Filespec* .  
+-   **/VLog** _[Filespec]_ : (Facultatif). Écrit tous les événements de package Integration Services dans les modules fournisseurs d'informations activés lors de la conception du package. Pour qu'Integration Services active un module fournisseur d'informations pour les fichiers texte et écrive les événements de journal dans un fichier texte spécifié, incluez un chemin d'accès et un nom de fichier en tant que paramètre *Filespec* .  
   
      Si vous n'incluez pas le paramètre *Filespec* , Integration Services n'activera pas de module fournisseur d'informations pour les fichiers texte. Il écrira uniquement les événements de journal dans les modules fournisseurs d'informations activés lors de la conception du package.  
   
@@ -492,7 +492,7 @@ dtexec /option [value] [/option [value]]...
 -   Les options **/Set** et **/ConfigFile** sont traitées dans l’ordre dans lequel elles sont rencontrées.  
   
 ##  <a name="example"></a> Exemples  
- Les exemples suivants montrent comment utiliser l’utilitaire d’invite de commandes **dtexec** pour configurer et exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Les exemples suivants montrent comment utiliser l’utilitaire d’invite de commandes **dtexec** pour configurer et exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Exécution des packages**  
   

@@ -3,17 +3,17 @@ title: Configurer des référentiels Linux pour SQL Server 2017 et 2019
 description: Vérifiez et configurez les référentiels source pour SQL Server 2019 et SQL Server 2017 sur Linux. Le référentiel source affecte la version de SQL Server appliquée lors de l’installation et de la mise à niveau.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531331"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776385"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer les référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
@@ -38,7 +38,7 @@ Cet article explique comment configurer le référentiel approprié pour les ins
 
 Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package du moteur de base de données, **mssql-server**, et les packages SQL Server associés. Il existe actuellement cinq référentiels principaux :
 
-| Référentiel | Nom | Description |
+| Référentiel | Name | Description |
 |---|---|---|
 | **2019** | **mssql-server-2019** | Référentiel contenant la mise à jour cumulative de SQL Server 2019. |
 | **2019 GDR** | **mssql-server-2019-gdr** | Référentiel SQL Server 2019 GDR pour les mises à jour critiques uniquement. |
@@ -173,10 +173,15 @@ Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes s
 ::: zone pivot="ld2-rhel"
 Configurez le nouveau référentiel à utiliser pour les installations et les mises à niveau de SQL Server. Utilisez une des commandes suivantes pour configurer le référentiel de votre choix.
 
-| Référentiel | Options de version | Command |
+> [!NOTE]
+> Les commandes suivantes pour SQL Server 2019 pointent vers le référentiel RHEL 8. RHEL 8 n’est pas préinstallé avec python2, ce qui est requis par SQL Server. Pour plus d’informations, consultez le blog suivant sur l’installation de python2 et sa configuration en tant qu’interpréteur par défaut : https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Si vous utilisez RHEL 7, remplacez le chemin ci-dessous par `/rhel/7` au lieu de `/rhel/8`.
+
+| Référentiel | Version | Commande |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -186,7 +191,7 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 ::: zone pivot="ld2-sles"
 Configurez le nouveau référentiel à utiliser pour les installations et les mises à niveau de SQL Server. Utilisez une des commandes suivantes pour configurer le référentiel de votre choix.
 
-| Référentiel | Options de version | Command |
+| Référentiel | Version | Commande |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
@@ -199,7 +204,7 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 ::: zone pivot="ld2-ubuntu"
 Configurez le nouveau référentiel à utiliser pour les installations et les mises à niveau de SQL Server.
 
-1. Importez les clés GPG de dépôt public.
+1. Importez les clés GPG de référentiel public.
 
    ```bash
    sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
@@ -207,7 +212,7 @@ Configurez le nouveau référentiel à utiliser pour les installations et les mi
 
 2. Utilisez une des commandes suivantes pour configurer le référentiel de votre choix.
 
-   | Référentiel | Options de version | Command |
+   | Référentiel | Version | Commande |
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
