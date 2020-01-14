@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710476"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623240"
 ---
 # <a name="polybase-scale-out-groups"></a>Groupes de scale-out PolyBase
 
@@ -28,7 +28,7 @@ Une instance de SQL Server autonome avec PolyBase peut se transformer en goulot 
   
 Consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) et [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![Groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Groupes de scale-out PolyBase")  
+![groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>Nœud principal  
 
@@ -47,7 +47,7 @@ Par exemple, supposons que vous avez une table SQL Server externe avec 12 parti
 > [!NOTE]
 >  C’est différent des lectures scale-out sur Hadoop. 
 
-![Groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Groupes de scale-out PolyBase")
+![groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>Traitement de requêtes distribuées  
 
@@ -66,3 +66,10 @@ Après l’installation de SQL Server, l’instance peut être désignée comme 
 Pour configurer un groupe de scale-out PolyBase, consultez le guide suivant :
 
 [Améliorer les groupes de scale-out PolyBase sur Windows](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>Voir aussi
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+
