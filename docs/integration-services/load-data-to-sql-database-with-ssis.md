@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295885"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924988"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Charger des données dans SQL Server ou Azure SQL Database avec SSIS (SQL Server Integration Services)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Créez un package SSIS (SQL Server Integration Services) pour charger des données dans SQL Server ou [Azure SQL Database](/azure/sql-database/). Vous pouvez éventuellement restructurer, transformer et nettoyer les données qui traversent le flux de données SSIS.
 
@@ -30,7 +28,6 @@ Cet article vous montre comment effectuer les opérations suivantes :
 * Créer un projet Integration Services dans Visual Studio.
 * Concevoir un package SSIS qui charge des données de la source vers la destination.
 * Exécuter le package SSIS pour charger les données.
-
 
 ## <a name="basic-concepts"></a>Concepts de base
 
@@ -60,7 +57,7 @@ Pour exécuter pas à pas ce tutoriel, vous avez besoin des éléments suivants 
 3. **SQL Server Data Tools pour Visual Studio (SSDT)** . Pour obtenir SQL Server Data Tools pour Visual Studio, consultez [Télécharger SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. Dans ce tutoriel, vous vous connectez à une instance SQL Server ou SQL Database et y chargez des données. Vous devez disposer des autorisations pour vous connecter, créer une table et charger des données sur :
    - **Une base de données Azure SQL Database**. Pour plus d’informations, consultez [Azure SQL Database](/azure/sql-database/).  
-      ou Gestionnaire de configuration
+      or
    - **Une instance SQL Server**. SQL Server est exécuté localement ou sur une machine virtuelle Azure. Pour télécharger une édition d’évaluation ou développeur gratuite de SQL Server, consultez [Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 5. **Exemples de données**. Ce tutoriel utilise des exemples de données stockées dans SQL Server, dans l’exemple de base de données AdventureWorks, en tant que données sources. Pour obtenir l’exemple de base de données AdventureWorks, consultez [Exemples de bases de données AdventureWorks][AdventureWorks 2014 Sample Databases].
@@ -140,8 +137,8 @@ Visual Studio s’ouvre et crée un nouveau projet Integration Services (SSIS). 
    2. Pour **Nom du serveur**, entrez le nom du serveur SQL Server ou du serveur SQL Database.
    3. Dans la section **Connexion au serveur**, sélectionnez **Utiliser l'authentification SQL Server** et entrez les informations d’authentification.
    4. Dans la section **Se connecter à une base de données**, sélectionnez une base de données existante.
-    A. Cliquez sur **Tester la connexion**.
-    B. Dans la boîte de dialogue indiquant les résultats du test de connexion, cliquez sur **OK** pour revenir à la boîte de dialogue **Gestionnaire de connexions**.
+    a. Cliquez sur **Tester la connexion**.
+    b. Dans la boîte de dialogue indiquant les résultats du test de connexion, cliquez sur **OK** pour revenir à la boîte de dialogue **Gestionnaire de connexions**.
     c. Dans la boîte de dialogue **Gestionnaire de connexions**, cliquez sur **OK** pour revenir à la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**.
 5. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**, cliquez sur **OK** pour revenir à l’**Éditeur de destination ADO.NET**.
 6. Dans l’**Éditeur de destination ADO.NET**, cliquez sur **Nouveau** en regard de la liste **Utiliser une table ou une vue** pour ouvrir la boîte de dialogue **Créer une table** afin de créer une nouvelle table de destination avec une liste de colonnes qui correspond à la table source.

@@ -1,6 +1,5 @@
 ---
-title: Cibles des événements étendus SQL Server | Microsoft Docs
-ms.custom: ''
+title: Cibles des Événements étendus SQL Server
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908001"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501983"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 
@@ -61,7 +60,7 @@ Dans Transact-SQL, l’instruction [CREATE EVENT SESSION](~/t-sql/statements/cre
 
 Les instructions SELECT qui renvoient de telles listes à partir de vues système sont disponibles à la copie depuis l’article suivant dans sa section C:
 
-- [SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)
+- [Utilisation de SELECT et JOIN dans les vues système pour les événements étendus dans SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)
     - [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) Champs SELECT pour un événement.
     - [C.6](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_6_parameters_targets) Paramètres SELECT pour une cible.
     - [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) Actions SELECT.
@@ -76,10 +75,10 @@ Vous pouvez voir les paramètres, les champs et actions utilisées dans le conte
 ## <a name="etw_classic_sync_target-target"></a>Cible etw_classic_sync_target
 
 
-Les événements SQL Server peuvent interagir avec le suivi d’événements pour Windows (ETW) pour surveiller l’activité système. Pour plus d'informations, consultez :
+Les événements SQL Server peuvent interagir avec le suivi d’événements pour Windows (ETW) pour surveiller l’activité système. Pour plus d'informations, consultez les pages suivantes :
 
-- [Cible du suivi d'événements pour Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
-- [Surveiller l'activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
+- [Suivi d’événements pour cible Windows](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
+- [Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
 Cette cible ETW traite de manière *synchrone* les données qu’elle reçoit, tandis que la plupart des cibles procèdent de manière *asynchrone*.
@@ -676,7 +675,7 @@ Pour afficher le code XML précédent, vous pouvez émettre l’instruction SELE
 
 ```sql
 SELECT
-        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
     INTO
         #XmlAsTable
     FROM
