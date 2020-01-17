@@ -1,6 +1,7 @@
 ---
-title: Exécuter des scripts pendant la synchronisation (programmation Transact-SQL de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Exécuter des scripts durant la synchronisation (Procédures stockées de réplication)
+description: Découvrez comment utiliser des procédures stockées de réplication pour exécuter des scripts à la demande durant le processus de synchronisation d’une publication transactionnelle ou de fusion.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7311d16a888b0adfbb2952c6f6027cdcf08fa00
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d1027e969c12f5b5234f05bfeef12c7b93e3de84
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710266"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321715"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Exécuter des scripts pendant la synchronisation (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

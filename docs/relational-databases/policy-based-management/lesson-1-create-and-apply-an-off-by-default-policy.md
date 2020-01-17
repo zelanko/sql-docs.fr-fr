@@ -1,6 +1,7 @@
 ---
-title: 'Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut | Microsoft Docs'
-ms.custom: ''
+title: 'Leçon 1 : Créer et appliquer une stratégie désactivée par défaut'
+description: Tutoriel qui vous apprend à créer et appliquer une stratégie désactivée par défaut pour la gestion basée sur des stratégies dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251281"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558000"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981884"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681780"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\* _SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -114,7 +114,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 
 Spécifie des options supplémentaires lors de la connexion via `ODBC` à une source de données externe.
 
-Au minimum, le nom du pilote est requis, mais d’autres options telles que `APP='<your_application_name>'` ou `ApplicationIntent= ReadOnly|ReadWrite` sont également utiles pour paramétrer et aider à la résolution des problèmes.
+Au minimum, le nom du pilote est nécessaire, mais d’autres options telles que `APP='<your_application_name>'` ou `ApplicationIntent= ReadOnly|ReadWrite` s’avèrent également utiles à paramétrer et facilitent la résolution des problèmes.
 
 Reportez-vous à la documentation du produit `ODBC` pour obtenir la liste des options [CONNECTION_OPTIONS][connection_options] autorisées.
 
@@ -138,7 +138,7 @@ Remarques et conseils supplémentaires lors de la création d’informations d�
   - Disposez d’au moins l’autorisation en lecture sur le fichier qui doit être chargé (par exemple `srt=o&sp=r`)
   - Utilisez une période d’expiration valide (toutes les dates sont au format UTC).
 
-Pour un exemple d’utilisation de `CREDENTIAL` avec `SHARED ACCESS SIGNATURE` et `TYPE` = `BLOB_STORAGE`, consultez [Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+Pour obtenir un exemple d’utilisation de `CREDENTIAL` avec `SHARED ACCESS SIGNATURE` et `TYPE` = `BLOB_STORAGE`, consultez [Créer une source de données externe pour exécuter des opérations en bloc et récupérer des données du stockage Blob Azure dans SQL Database](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
 
 Pour créer des informations d’identification délimitées à la base de données, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -152,7 +152,7 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
 
-Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
+Pour obtenir un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externe pour référencer le stockage blob Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -201,7 +201,7 @@ Actuellement un jeton SAP avec le type `HADOOP` n’est pas pris en charge. Il e
 
 ## <a name="examples-sql-server-2016"></a>Exemples : SQL Server (2016+)
 
-### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. Créer une source de données externe dans SQL 2019 pour faire référence à Oracle
+### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>R. Créer une source de données externe dans SQL 2019 pour faire référence à Oracle
 
 Pour créer une source de données externe qui fait référence à Oracle, assurez-vous d’avoir des informations d’identification de niveau base de données. Vous pouvez également, si vous le souhaitez, activer ou désactiver la transmission des calculs par rapport à cette source de données.
 
@@ -311,14 +311,38 @@ WITH
 ;
 ```
 
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. Créer une source de données externe pour référencer une instance nommée de SQL Server par le biais d’une connectivité PolyBase (SQL 2019)
+
+Pour créer une source de données externe qui référence une instance nommée de SQL Server, vous pouvez utiliser CONNECTION_OPTIONS pour spécifier le nom de l’instance. Dans l’exemple ci-dessous, WINSQL2019 est le nom d’hôte et SQL2019 est le nom de l’instance.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+Vous pouvez également utiliser un port pour vous connecter à une instance de SQL Server.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
 ## <a name="examples-bulk-operations"></a>Exemples : opérations en bloc
 
 > [!NOTE]
 > Ne placez pas de **/** en fin, nom de fichier, ou paramètres de signature d’accès partagé à la fin de l’URL `LOCATION` lors de la configuration d’une source de données externe pour les opérations en bloc.
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure
 
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**S’applique à** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
 
 ```sql
@@ -419,8 +443,8 @@ Fournit le protocole de connectivité et le chemin d’accès à la source de do
 | Source de données externe   | Préfixe de l’emplacement | Chemin d’emplacement                                         |
 | ---------------------- | --------------- | ----------------------------------------------------- |
 | opérations en bloc        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| Requête élastique (partition)  | Facultatif    | `<shard_map_server_name>.database.windows.net`        |
-| Requête élastique (distant) | Facultatif    | `<remote_server_name>.database.windows.net`           |
+| Requête élastique (partition)  | Non requis    | `<shard_map_server_name>.database.windows.net`        |
+| Requête élastique (distant) | Non requis    | `<remote_server_name>.database.windows.net`           |
 
 Chemin d’emplacement :
 
@@ -444,7 +468,7 @@ Remarques et conseils supplémentaires lors de la création d’informations d�
   - Disposez d’au moins l’autorisation en lecture sur le fichier qui doit être chargé (par exemple `srt=o&sp=r`)
   - Utilisez une période d’expiration valide (toutes les dates sont au format UTC).
 
-Pour un exemple d’utilisation de `CREDENTIAL` avec `SHARED ACCESS SIGNATURE` et `TYPE` = `BLOB_STORAGE`, consultez [Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+Pour obtenir un exemple d’utilisation de `CREDENTIAL` avec `SHARED ACCESS SIGNATURE` et `TYPE` = `BLOB_STORAGE`, consultez [Créer une source de données externe pour exécuter des opérations en bloc et récupérer des données du stockage Blob Azure dans SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
 
 Pour créer des informations d’identification délimitées à la base de données, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -468,13 +492,13 @@ Configurez cet argument lorsque `TYPE` a la valeur `RDBMS` ou `SHARD_MAP_MANAGER
 | SGBDR             | Le nom de la base de données distante sur le serveur fourni à l’aide de `LOCATION` |
 | SHARD_MAP_MANAGER | Nom de la base de données faisant office de Gestionnaire de la carte de partitions      |
 
-Pour un exemple montrant comment créer une source de données externe où `TYPE`=`RDBMS`, consultez [Créer une source de données externe SGBDR](#b-create-an-rdbms-external-data-source)
+Pour obtenir un exemple montrant comment créer une source de données externe où `TYPE` = `RDBMS`, consultez [Créer une source de données externe SGBDR](#b-create-an-rdbms-external-data-source).
 
 ### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 Utilisé lorsque l’argument `TYPE` a la valeur `SHARD_MAP_MANAGER` uniquement pour définir le nom de la carte de partitions.
 
-Pour un exemple montrant comment créer une source de données externe où `TYPE` = `SHARD_MAP_MANAGER`, consultez [Créer une source de données externe de Gestionnaire de la carte des partitions](#a-create-a-shard-map-manager-external-data-source)
+Pour obtenir un exemple montrant comment créer une source de données externe où `TYPE` = `SHARD_MAP_MANAGER`, consultez [Créer une source de données externe de gestionnaire de la carte des partitions](#a-create-a-shard-map-manager-external-data-source).
 
 ## <a name="permissions"></a>Autorisations
 
@@ -486,7 +510,7 @@ Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.
 
 ## <a name="examples"></a>Exemples :
 
-### <a name="a-create-a-shard-map-manager-external-data-source"></a>A. Créer une source de données externe de Gestionnaire de cartes de partitions
+### <a name="a-create-a-shard-map-manager-external-data-source"></a>R. Créer une source de données externe de Gestionnaire de cartes de partitions
 
 Pour créer une source de données externe pour faire référence à SHARD_MAP_MANAGER, spécifiez le nom du serveur SQL Database qui héberge le Gestionnaire de cartes de partitions dans SQL Database ou une base de données SQL Server sur une machine virtuelle.
 
@@ -606,7 +630,7 @@ Pour voir une utilisation de cet exemple, consultez [BULK INSERT][bulk_insert_ex
 
 |                                                              |                                                              |                                            |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL Data<br />Warehouse \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL Data<br />Warehouse \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
@@ -653,7 +677,7 @@ Chemin d’emplacement :
 
 Remarques et conseils supplémentaires lors de la définition de l’emplacement :
 
-- L’option par défaut consiste à activer les connexions SSL sécurisées lors du provisionnement d’Azure Data Lake Storage Gen 2. Si cette option est activée, vous devez utiliser `abfss` lorsqu’une connexion SSL sécurisée est sélectionnée. Notez que `abfss` fonctionne également pour les connexions SSL non sécurisées. 
+- L’option par défaut consiste à utiliser `enable secure SSL connections` lors du provisionnement d’Azure Data Lake Storage Gen 2. Si cette option est activée, vous devez utiliser `abfss` lorsqu’une connexion SSL sécurisée est sélectionnée. Notez que `abfss` fonctionne également pour les connexions SSL non sécurisées. 
 - Le moteur SQL Data Warehouse ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. Pour valider, créez une table externe à l’aide d’une source de données externe.
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
 - `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
@@ -678,7 +702,7 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
 
-Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#a-create-external-data-source-to-reference-azure-blob-storage).
+Pour obtenir un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externe pour référencer le stockage blob Azure](#a-create-external-data-source-to-reference-azure-blob-storage).
 
 ## <a name="permissions"></a>Autorisations
 
@@ -700,7 +724,7 @@ Actuellement un jeton SAP avec le type `HADOOP` n’est pas pris en charge. Il e
 
 ## <a name="examples"></a>Exemples :
 
-### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>A. Créer une source de données externe pour faire référence au stockage d’objets blob Azure
+### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>R. Créer une source de données externe pour faire référence au stockage d’objets blob Azure
 
 Dans cet exemple, la source de données externe est un conteneur de stockage d’objets blob Azure appelé `daily` sous le compte de stockage Azure nommé `logs`. La source de données externe de stockage Azure sert au transfert des données uniquement. Elle ne prend pas en charge le pushdown de prédicats.
 
@@ -861,7 +885,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 
 |                                                              |                                                              |                                                              |                                                         |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
 |                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
@@ -930,7 +954,7 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
 
-Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
+Pour obtenir un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externe pour référencer le stockage blob Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -980,7 +1004,7 @@ Actuellement un jeton SAP avec le type `HADOOP` n’est pas pris en charge. Il e
 
 ## <a name="examples"></a>Exemples :
 
-### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Créer une source de données externe pour faire référence à Hadoop
+### <a name="a-create-external-data-source-to-reference-hadoop"></a>R. Créer une source de données externe pour faire référence à Hadoop
 
 Pour créer une source de données externe pour faire référence à votre cluster Hortonworks ou Cloudera Hadoop, spécifiez le nom de l’ordinateur ou l’adresse IP du port et du `Namenode` Hadoop. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 

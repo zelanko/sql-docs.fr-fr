@@ -1,6 +1,7 @@
 ---
-title: Informations de publication, Tous les abonnements (Publication d’instantané) | Microsoft Docs
-ms.custom: ''
+title: Tous les abonnements (Instantané - SSMS)
+description: Décrit l’onglet « Tous les abonnements » pour une publication d’instantané sélectionnée dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f0ef9094c1e7d6a7396ee946dd9b4e7e3b3587b8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 37f5359dfa1fe4f127012256c724cb208768fd34
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770001"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321362"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>Informations de publication, Tous les abonnements (Publication d'instantané)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68770001"
   
 -   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
+-   **Filtre** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
 -   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68770001"
   
  L'ordre de tri détermine également la valeur affichée lorsqu'un abonnement a plusieurs états. Si, par exemple, un abonnement a une erreur et expire bientôt, la colonne **État** affiche **Erreur**.  
   
- Les valeurs d'état **Expire bientôt/Expiré** et **Abonnement non initialisé** sont des avertissements. Quand un avertissement s’affiche, la colonne **État** s’affiche également si un agent est en cours d’exécution. Par exemple, l'état peut être **En cours d'exécution, Expire bientôt/Expiré**.  
+ Les valeurs d'état **Expire bientôt/Expiré** et **Abonnement non initialisé** sont des avertissements. Lorsqu'un avertissement est affiché, la colonne **État** s'affiche également si un agent est en cours d'exécution. Par exemple, l'état peut être **En cours d'exécution, Expire bientôt/Expiré**.  
   
  La valeur d'état **Expire bientôt/Expiré** s'affiche uniquement si un seuil est défini. Pour plus d’informations sur la définition des seuils, consultez [Définir des seuils et des avertissements dans le Moniteur de réplication](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   

@@ -1,6 +1,6 @@
 ---
-title: Résolution des problèmes des index de hachage pour les tables à mémoire optimisée | Microsoft Docs
-ms.custom: ''
+title: Résolution des problèmes liés aux index de hachage - Tables à mémoire optimisée
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,17 +11,17 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909278"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412658"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Résolution des problèmes des index de hachage pour les tables à mémoire optimisée
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-## <a name="prerequisite"></a>Condition préalable  
+## <a name="prerequisite"></a>Configuration requise  
   
 Des informations de contexte importantes pour comprendre cet article sont disponibles dans l’article :  
   
@@ -113,8 +113,8 @@ Le bloc de code T-SQL suivant vous permet de tester aisément un `SELECT * FROM 
   
 1. Crée une table optimisée en mémoire avec quelques index de hachage.  
 2. Remplit la table avec des milliers de lignes.  
-    A. Un opérateur modulo est utilisé pour configurer le taux de valeurs en double dans la colonne StatusCode.  
-    B. La boucle insère 262 144 lignes en une minute environ.  
+    a. Un opérateur modulo est utilisé pour configurer le taux de valeurs en double dans la colonne StatusCode.  
+    b. La boucle insère 262 144 lignes en une minute environ.  
 3. PRINT imprime un message vous demandant d’exécuter l’instruction SELECT précédente à partir de **sys.dm_db_xtp_hash_index_stats**.  
 
 ```sql
@@ -181,9 +181,9 @@ Nos résultats `SELECT` sont affichés après le code, artificiellement divisés
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent |  
 | :-------- | -----------------: | -----------------: | -----------------: |  
-| ix_OrderSequence | 32768 | 13 | 0 |  
+| ix_OrderSequence | 32 768 | 13 | 0 |  
 | ix_StatusCode | 8 | 4 | 50 |  
-| PK_SalesOrd_B14003... | 262144 | 96525 | 36 |  
+| PK_SalesOrd_B14003... | 262 144 | 96525 | 36 |  
   
 - Ensuite, voici les résultats pour la *longueur de chaîne*.  
   
@@ -233,5 +233,5 @@ Les charges de travail OLTP se concentrent sur des lignes individuelles. Les ana
   
 
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire  
- [Index de hachage pour les tables mémoire optimisées](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
+ [Index de hachage pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Index non cluster pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

@@ -1,6 +1,7 @@
 ---
-title: Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données | Microsoft Docs
-ms.custom: ''
+title: Sortie de DTA
+description: Visualisez et utilisez la sortie de l’Assistant Paramétrage du moteur de base de données (DTA).
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -25,17 +26,18 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907038"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165481"
 ---
-# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Voir et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez vous aider des résumés, des recommandations et des rapports pour déterminer si les recommandations de paramétrage doivent être implémentées ou si le paramétrage doit se poursuivre afin d'atteindre un niveau de performance des requêtes répondant aux critères définis pour votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+  Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez utiliser des résumés, des recommandations et des rapports pour déterminer si vous souhaitez implémenter les recommandations de paramétrage, ou si vous souhaitez poursuivre le paramétrage jusqu’à l’obtention des améliorations nécessaires du niveau de performance des requêtes pour votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="View"></a> Afficher les résultats d'un paramétrage  
  Les procédures suivantes indiquent comment afficher les recommandations, les résumés, les rapports et les journaux de paramétrage dans l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données. Pour plus d'informations sur les options de l'interface utilisateur, consultez [Descriptions de l'interface utilisateur](#UI) plus loin dans cette rubrique.  
@@ -151,7 +153,7 @@ ms.locfileid: "72907038"
   
 3.  Ouvrez le fichier XML créé à l'étape 2 dans l'éditeur XML ou de texte de votre choix ou dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Faites défiler jusqu'à l'élément **Configuration** . Copiez et collez la section de l'élément **Configuration** dans un modèle de fichier d'entrée XML après l'élément **TuningOptions** . Enregistrez ce fichier d'entrée XML.  
   
-4.  Dans le nouveau fichier d’entrée XML créé à l’étape 3, spécifiez les options de paramétrage voulues dans l’élément **TuningOptions**, modifiez la section de l’élément **Configuration** (en ajoutant ou en supprimant les structures PDS comme approprié pour votre analyse), enregistrez le fichier et validez-le par rapport au schéma XML de l’Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur la modification de ce fichier XML, consultez [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+4.  Dans le nouveau fichier d’entrée XML créé à l’étape 3, spécifiez les options de paramétrage voulues dans l’élément **TuningOptions** , modifiez la section de l’élément **Configuration** (en ajoutant ou en supprimant les structures PDS comme approprié pour votre analyse), enregistrez le fichier et validez-le par rapport au schéma XML de l’Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur la modification de ce fichier XML, consultez [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 5.  Utilisez le fichier XML créé à l’étape 4 en tant qu’entrée dans l’utilitaire de ligne de commandes **dta** . Pour plus d'informations sur l'utilisation de fichiers d'entrée XML avec cet outil, consultez la section « Paramétrer une base de données à l'aide de l'utilitaire dta » dans [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -168,7 +170,7 @@ ms.locfileid: "72907038"
   
 4.  Enregistrez le fichier d'entrée avec l'extension **.xml** .  
   
-5.  Validez le fichier d'entrée XML enregistré à l'étape 4 par rapport au schéma XML de l'Assistant Paramétrage du moteur de base de données. Ce schéma est installé dans l'emplacement suivant lors de l'installation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+5.  Validez le fichier d'entrée XML enregistré à l'étape 4 par rapport au schéma XML de l'Assistant Paramétrage du moteur de base de données. Ce schéma est installé à l’emplacement suivant quand vous installez [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
@@ -183,7 +185,7 @@ ms.locfileid: "72907038"
 7.  Répétez les étapes 6 et 7 jusqu'à ce que vous ayez créé la configuration hypothétique qui produit l'amélioration des performances de requête recherchée. Vous pouvez alors mettre en œuvre la nouvelle configuration. Pour plus d'informations, consultez [Mettre en œuvre des recommandations de paramétrage](#Implement) plus haut dans cette rubrique.  
   
 ##  <a name="ReviewEvaluateClone"></a> Examiner, évaluer et cloner les sessions de paramétrage  
- L'Assistant Paramétrage du moteur de base de données crée une nouvelle session de paramétrage chaque fois que vous le démarrez pour analyser les effets d'une charge de travail sur votre ou vos bases de données. Vous pouvez utiliser le **Moniteur de session** de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour afficher ou recharger toutes les sessions de paramétrage qui ont été exécutées sur une instance donnée de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de pouvoir examiner l'ensemble des sessions de paramétrage existantes facilite : le clonage de sessions, l'édition de recommandations de paramétrage existantes et l'utilisation de l'Assistant Paramétrage du moteur de base de données pour évaluer la session éditée, ou la réalisation régulière d'opérations de paramétrage afin de surveiller le modèle physique de vos bases de données. Par exemple, vous pouvez être amené à planifier l'analyse mensuelle d'une base de données.  
+ L'Assistant Paramétrage du moteur de base de données crée une nouvelle session de paramétrage chaque fois que vous le démarrez pour analyser les effets d'une charge de travail sur votre ou vos bases de données. Vous pouvez utiliser le **Moniteur de session** du GUI de l’Assistant Paramétrage du moteur de base de données pour afficher ou recharger toutes les sessions de paramétrage qui ont été exécutées sur une instance donnée de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de pouvoir examiner l'ensemble des sessions de paramétrage existantes facilite : le clonage de sessions, l'édition de recommandations de paramétrage existantes et l'utilisation de l'Assistant Paramétrage du moteur de base de données pour évaluer la session éditée, ou la réalisation régulière d'opérations de paramétrage afin de surveiller le modèle physique de vos bases de données. Par exemple, vous pouvez être amené à planifier l'analyse mensuelle d'une base de données.  
   
  Avant de pouvoir examiner une session de paramétrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer des sessions de paramétrage sur l'instance serveur, en analysant des charges de travail via l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -251,7 +253,7 @@ ms.locfileid: "72907038"
  La colonne **Définition** contient la définition de la partition ou de l'index recommandés sous forme de lien hypertexte. Cette colonne est généralement trop étroite pour pouvoir voir la définition en entier. Cliquez sur le lien hypertexte pour ouvrir une boîte de dialogue contenant l'intégralité de la définition et le bouton **Copier dans le Presse-papiers** .  
   
 #### <a name="partition-recommendations"></a>Recommandations de partition  
- **Nom de la base de données**  
+ **Database Name**  
  Base de données contenant les objets dont la modification est recommandée.  
   
  **Recommandation**  
@@ -327,7 +329,7 @@ ms.locfileid: "72907038"
  **Time**  
  L'heure à laquelle l'Assistant Paramétrage du moteur de base de données a créé le rapport.  
   
- **Server**  
+ **Serveur**  
  Le serveur qui était la cible de la charge de travail de l'Assistant Paramétrage du moteur de base de données.  
   
  **Base(s) de données à analyser**  

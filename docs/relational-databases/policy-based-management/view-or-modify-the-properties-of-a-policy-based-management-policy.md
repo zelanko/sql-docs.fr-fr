@@ -1,6 +1,7 @@
 ---
-title: Afficher ou modifier les propriétés d’une stratégie de gestion basée sur des stratégies | Microsoft Docs
-ms.custom: ''
+title: Voir ou modifier les propriétés d’une stratégie de la gestion basée sur des stratégies
+description: Découvrez comment voir ou modifier les propriétés d’une stratégie de la gestion basée sur des stratégies pour SQL Server à l’aide de SSMS (SQL Server Management Studio) ou de T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 10/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cadd1acbe5092aee4460a9ffe1d36bfa50a3a9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a51ca391fe8cc27ad9447e6b4d18b88787532e34
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908157"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558014"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Afficher ou modifier les propriétés d'une stratégie de gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "67908157"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -57,7 +58,7 @@ ms.locfileid: "67908157"
   
 #### <a name="to-view-a-policys-properties"></a>Pour afficher les propriétés d'une stratégie  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

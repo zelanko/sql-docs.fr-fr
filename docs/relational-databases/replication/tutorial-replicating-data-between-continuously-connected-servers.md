@@ -1,6 +1,7 @@
 ---
-title: 'Tutoriel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutoriel : Configurer la réplication transactionnelle'
+description: Ce tutoriel vous apprend à configurer la réplication transactionnelle entre deux serveurs SQL Server intégralement connectés.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907706"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321926"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutoriel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ Dans cette section, vous créez une publication transactionnelle en utilisant [!
 
     ![Page« Sécurité de l’agent » et boîte de dialogue « Sécurité de l’Agent d’instantané »](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Répétez l’étape précédente pour définir <*nom_ordinateur_serveur_de_publication*> **\repl_logreader** comme compte de processus de l’Agent de lecture du journal, puis sélectionnez **OK**.  
+12. Répétez l’étape précédente pour définir <*nom_ordinateur_serveur_de_publication*> **\repl_logreader** comme compte de processus de l’Agent de lecture du journal, Sélectionnez ensuite **OK**.  
 
     ![Boîte de dialogue « Sécurité de l’Agent de lecture du journal » et page « Sécurité de l’Agent »](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -144,8 +145,8 @@ Si une erreur apparaît ici, consultez [Résoudre les erreurs liées à l’Agen
   
 2. Dans le dossier **Publications locales**, cliquez avec le bouton droit sur **AdvWorksProductTrans**, puis sélectionnez **Propriétés**.  La boîte de dialogue **Propriétés de la publication** apparaît.    
   
-   A. Sélectionnez la page **Liste d’accès à la publication**, puis sélectionnez **Ajouter**.  
-   B. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*> **\repl_distribution** et sélectionnez **OK**.
+   a. Sélectionnez la page **Liste d’accès à la publication**, puis sélectionnez **Ajouter**.  
+   b. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*> **\repl_distribution** et sélectionnez **OK**.
    
    ![Sélections pour ajouter une connexion à la liste d'accès à la publication](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -155,7 +156,7 @@ Pour plus d’informations, consultez [Replication Programming Concepts](../../r
 ## <a name="create-a-subscription-to-the-transactional-publication"></a>Créer un abonnement à la publication transactionnelle
 Dans cette section, vous ajoutez un Abonné à la publication que vous avez créée. Ce tutoriel utilise un Abonné distant (NODE2\SQL2016), mais vous pouvez également ajouter un abonnement localement au serveur de publication. 
 
-### <a name="create-the-subscription"></a>Créer l'abonnement  
+### <a name="create-the-subscription"></a>Créer l’abonnement  
   
 1. Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud du serveur, puis le dossier **Réplication**.  
   
@@ -191,9 +192,9 @@ Dans cette section, vous ajoutez un Abonné à la publication que vous avez cré
   
 1. Connectez-vous à l’abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion**.     
   
-   A. Dans la page **Général**, sous **Nom de connexion**, sélectionnez **Rechercher**, puis ajoutez le nom de connexion pour <*nom_ordinateur_Abonné>* > **\repl_distribution**.
+   a. Dans la page **Général**, sous **Nom de connexion**, sélectionnez **Rechercher**, puis ajoutez le nom de connexion pour <*nom_ordinateur_Abonné>* > **\repl_distribution**.
 
-   B. Dans la page **Mappages d’utilisateur**, accordez l’appartenance **db_owner** pour la base de données **ProductReplica**. 
+   b. Dans la page **Mappages d’utilisateur**, accordez l’appartenance **db_owner** pour la base de données **ProductReplica**. 
 
    ![Sélections pour configurer la connexion sur l’abonné](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -209,7 +210,7 @@ Dans cette section, vous ajoutez un Abonné à la publication que vous avez cré
    ![Sélections pour ouvrir la boîte de dialogue « Afficher l'état de synchronisation »](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
 3. Si l’abonnement n’apparaît pas sous **AdvWorksProductTrans**, appuyez sur la touche F5 pour actualiser la liste.  
   
-Pour plus d'informations, consultez :  
+Pour plus d'informations, consultez les pages suivantes :  
 - [Initialiser un abonnement avec un instantané](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md)  
 - [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
@@ -223,14 +224,14 @@ Dans cette section, vous utilisez les jetons de suivi pour vérifier que les mod
 
 2. Développez un groupe de serveurs de publication dans le volet gauche, développez une instance du serveur de publication, puis sélectionnez la publication **AdvWorksProductTrans**.  
   
-   A. Sélectionnez l’onglet **Jetons de suivi**.  
-   B. Sélectionnez **Insérer un suivi**.    
+   a. Sélectionnez l’onglet **Jetons de suivi**.  
+   b. Sélectionnez **Insérer un suivi**.    
    c. Affichez la durée calendaire pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n’a pas atteint un point spécifié.
 
    ![Informations pour le jeton de suivi](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-Pour plus d'informations, consultez : 
+Pour plus d'informations, consultez les pages suivantes : 
 - [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 - [Rechercher des erreurs avec les agents de réplication transactionnelle](troubleshoot-tran-repl-errors.md)
 

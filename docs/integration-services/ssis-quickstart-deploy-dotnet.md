@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b943d8e169b589f45c612dccc710e174759ca0ca
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43820f44e789330ed437c104e385090a8179a2b3
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295647"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947112"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Déployer un projet SSIS avec du code C# dans une application .NET
 
@@ -28,7 +28,7 @@ Pour créer une application C#, vous pouvez utiliser Visual Studio, Visual Studi
 
 Avant de commencer, vérifiez que Visual Studio ou Visual Studio Code est installé sur votre ordinateur. Téléchargez l’édition Community gratuite de Visual Studio, ou le logiciel Visual Studio Code gratuit, à partir de la page de [Téléchargements Visual Studio](https://www.visualstudio.com/downloads/).
 
-Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
+Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
@@ -40,16 +40,20 @@ Vous pouvez utiliser les informations de ce guide de démarrage rapide pour dép
 
 Vous ne pouvez pas utiliser les informations de ce guide de démarrage rapide pour déployer un package SSIS sur SQL Server sur Linux. Pour plus d’informations sur l’exécution de packages sur Linux, consultez [Extraire, transformer et charger des données sur Linux avec SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
-## <a name="for-azure-sql-database-get-the-connection-info"></a>Pour Azure SQL Database, obtenir les informations de connexion
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Pour Azure SQL Database, obtenez les informations de connexion.
 
 Pour déployer le projet sur Azure SQL Database, obtenez les informations de connexion dont vous avez besoin pour vous connecter à la base de données du catalogue SSIS (SSISDB). Vous avez besoin des informations de connexion et du nom de serveur complet dans les procédures qui suivent.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com/).
 2. Sélectionnez **Bases de données SQL** dans le menu de gauche, puis sélectionnez la base de données SSISDB dans la page **Bases de données SQL**. 
 3. Dans la page **Vue d’ensemble** de votre base de données, notez le nom complet du serveur. Pour voir l’option **Cliquer pour copier**, pointez sur le nom du serveur. 
-4. Si vous oubliez vos informations de connexion de serveur Azure SQL Database, accédez à la page du serveur SQL Database pour afficher le nom d’administrateur de serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
+4. Si vous avez oublié vos informations de connexion au serveur Azure SQL Database, accédez à la page du serveur SQL Database pour voir le nom de l’administrateur du serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
 5. Cliquez sur **Afficher les chaînes de connexion de la base de données**.
 6. Examinez la chaîne de connexion **ADO.NET** complète. Votre code peut aussi utiliser un `SqlConnectionStringBuilder` pour recréer cette chaîne de connexion avec chaque valeur de paramètre que vous fournissez.
+
+## <a name="supported-authentication-method"></a>Méthode d’authentification prise en charge
+
+Consultez [Méthodes d’authentification pour le déploiement](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="create-a-new-visual-studio-project"></a>Créer un projet Visual Studio
 
@@ -134,7 +138,7 @@ namespace deploy_ssis_project
     - [Déployer un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
     - [Déployer un package SSIS à partir de l’invite de commandes](./ssis-quickstart-deploy-cmdline.md)
     - [Déployer un package SSIS avec PowerShell](ssis-quickstart-deploy-powershell.md)
-- Exécutez un package déployé. Pour exécuter un package, vous pouvez choisir parmi plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
+- Exécutez un package déployé. Pour exécuter un package, vous pouvez choisir parmi plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
     - [Exécuter un package SSIS avec SSMS](./ssis-quickstart-run-ssms.md)
     - [Exécuter un package SSIS avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Exécuter un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

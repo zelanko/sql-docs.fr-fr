@@ -1,7 +1,7 @@
 ---
 title: Recompiler une procédure stockée | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909005"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564791"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,76 +60,59 @@ ms.locfileid: "72909005"
   
  Si cette option est utilisée dans une instruction EXECUTE, elle nécessite des autorisations EXECUTE sur la procédure. Aucune autorisation n'est requise sur l'instruction EXECUTE elle-même, mais une autorisation est requise sur la procédure référencée dans l'instruction EXECUTE. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- Indicateur de requête **RECOMPILE**  
+ Indicateur de requête**RECOMPILE**  
  Cette fonctionnalité est utilisée lorsque la procédure est créée et l’indicateur est inclus dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de la procédure. Par conséquent, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
  Procédure stockée système**sp_recompile**  
  Nécessite l'autorisation ALTER pour la procédure spécifiée.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Pour recompiler une procédure stockée à l'aide de l'option WITH RECOMPILE  
-  
-1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
-  
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée la définition de la procédure.  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```  
+1. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Pour recompiler une procédure stockée à l'aide de l'option WITH RECOMPILE  
+1. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée la définition de la procédure.  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Pour recompiler une procédure stockée à l'aide de l'option WITH RECOMPILE   
   
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
-  
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur poste et le nom de leur service à partir d'une vue.  
-  
-     Puis, copiez et collez le second exemple de code dans la fenêtre de requête et cliquez sur **Exécuter**. La procédure est alors exécutée et son plan de requête recompilé.  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Pour recompiler une procédure stockée à l'aide de sp_recompile  
-  
-1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
-  
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur poste et le nom de leur service à partir d'une vue.  
-  
-     Ensuite, copiez et collez l'exemple suivant dans la fenêtre de requête et cliquez sur **Exécuter**. Cela n'exécute pas la procédure mais la marque pour la recompilation de sorte que son plan de requête sera mis à jour à la prochaine exécution.  
+Sélectionnez **Nouvelle requête**, puis copiez et collez l’exemple de code suivant dans la fenêtre de requête et cliquez sur **Exécuter**. La procédure est alors exécutée et son plan de requête recompilé.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Pour recompiler une procédure stockée à l'aide de sp_recompile  
+
+Sélectionnez **Nouvelle requête**, puis copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **Exécuter**. Cela n'exécute pas la procédure mais la marque pour la recompilation de sorte que son plan de requête sera mis à jour à la prochaine exécution.  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -137,7 +120,7 @@ GO
  [Modifier une procédure stockée](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Renommer une procédure stockée](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   
  [Afficher la définition d'une procédure stockée](../../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md)   
- [Afficher les dépendances d'une procédure stockée](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)   
+ [Afficher les dépendances d’une procédure stockée](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)  
   
   

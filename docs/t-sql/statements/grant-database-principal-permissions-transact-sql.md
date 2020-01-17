@@ -1,6 +1,8 @@
 ---
-title: GRANT - Octroyer des autorisations sur un principal de base de données (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT - Autorisations sur un principal de base de données
+description: Octroyez les autorisations sur un utilisateur de base de données, un rôle de base de données ou un rôle d’application.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982245"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246158"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT – octroi d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +40,7 @@ ms.locfileid: "73982245"
   Permet d'accorder des autorisations sur un utilisateur de base de données, un rôle de base de données ou un rôle d'application dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -167,7 +169,7 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. Octroi de l'autorisation CONTROL sur un utilisateur à un autre utilisateur  
+### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>R. Octroi de l'autorisation CONTROL sur un utilisateur à un autre utilisateur  
  Dans l'exemple ci-dessous, l'autorisation `CONTROL` sur l'utilisateur `AdventureWorks2012``Wanida` est accordée à l'utilisateur `RolandX`.  
   
 ```  
@@ -176,7 +178,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. Octroi de l'autorisation VIEW DEFINITION sur un rôle à un utilisateur avec l'option GRANT OPTION  
- Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle `AdventureWorks2012` `SammamishParking` est accordée avec l'option `GRANT OPTION` à l'utilisateur de base de données `JinghaoLiu`.  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle `AdventureWorks2012``SammamishParking` est accordée avec l'option `GRANT OPTION` à l'utilisateur de base de données `JinghaoLiu`.  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -185,7 +187,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Octroi de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
- Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est accordée au rôle d'application `AdventureWorks2012` `AccountsPayable17`.  
+ Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est accordée au rôle d'application `AdventureWorks2012``AccountsPayable17`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

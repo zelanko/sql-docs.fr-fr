@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907885"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190117"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "72907885"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>Déployer plusieurs fois le même package DAC 
  Vous pouvez déployer plusieurs fois le même package DAC sur une instance unique du [!INCLUDE[ssDE](../../includes/ssde-md.md)], mais vous devez exécuter les déploiements un par un. Le nom d'instance DAC spécifié pour chaque déploiement doit être unique dans l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Si vous déployez une DAC dans une instance du moteur de base de données, la DAC déployée est incorporée dans l’**Utilitaire SQL Server** la prochaine fois que le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC sera ensuite présente dans le nœud **Applications de la couche Données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
+ Si vous déployez une DAC dans une instance du moteur de base de données, la DAC déployée est incorporée dans l’**Utilitaire SQL Server** la prochaine fois que le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC est ensuite présente dans le nœud **Application de la couche Données déployée** au sein de l’**Explorateur d’utilitaire** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et est signalée dans la page de détails pour **Application de la couche Données déployée**.  
   
-###  <a name="database-options-and-settings"></a>Options et paramètres de base de données  
+###  <a name="database-options-and-settings"></a>Options et paramètres de bases de données  
  Par défaut, la base de données créée pendant le déploiement aura tous les paramètres par défaut de l'instruction CREATE DATABASE, sauf pour les exceptions suivantes :  
   
 -   Le classement et le niveau de compatibilité de la base de données sont définis avec les valeurs définies dans le package DAC. Un package DAC créé à partir d'un projet de base de données dans les outils de développement de SQL Server utilise les valeurs définies dans le projet de base de données. Un package extrait d'une base de données existante utilise les valeurs de la base de données d'origine.  
@@ -145,6 +145,10 @@ Plus d’informations sur certaines pages de l’Assistant sont fournies ci-dess
 
 L'exemple suivant déploie une DAC nommée MyApplication sur une instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]en utilisant une définition de DAC d'un package de MyApplication.dacpac.  
   
+## <a name="powershell-examples"></a>Exemples PowerShell  
+
+L'exemple suivant déploie une DAC nommée MyApplication sur une instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]en utilisant une définition de DAC d'un package de MyApplication.dacpac.  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
@@ -175,6 +179,6 @@ $fileStream.Close()
 ## <a name="more-information"></a>Informations complémentaires 
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extraire une DAC d'une base de données](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)   
- [Identificateur de la base de données](../../relational-databases/databases/database-identifiers.md)  
+ [Identificateurs de base de données](../../relational-databases/databases/database-identifiers.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: 'Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms | Microsoft Docs'
-ms.custom: ''
+title: 'Leçon 2 : Créer et appliquer une stratégie de standards de nommage'
+description: Ce tutoriel vous apprend à créer et appliquer une stratégie de standards de nommage pour la gestion basée sur des stratégies dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907060"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558694"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

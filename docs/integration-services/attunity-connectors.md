@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 031659b2a5578eea2bb786e42267c92862579db7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 255c526a1de285dcf23c10fb97a6f6bb75a9ae2c
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299106"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542243"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Connecteurs Microsoft pour Oracle et Teradata par Attunity pour Integration Services (SSIS)
 
@@ -24,7 +24,9 @@ ms.locfileid: "71299106"
 > [!NOTE]
 > Les connecteurs Atunity pour Oracle et Teradata prennent en charge SQL Server 2017 et antérieur.
 >
-> À partir de SQL Server 2019, procurez-vous les derniers connecteurs pour Oracle et Teradata ici : [Connecteur Microsoft pour Oracle](data-flow/oracle-connector.md)
+> À partir de SQL Server 2019, procurez-vous les derniers connecteurs pour Oracle et Teradata ici :
+> - [Connecteur Microsoft pour Oracle](data-flow/oracle-connector.md)
+> - [Connecteur Microsoft pour Teradata](data-flow/teradata-connector.md)
 
 Vous pouvez télécharger des connecteurs pour Integration Services par Attunity afin d’optimiser les performances lors du chargement des données vers ou à partir d’Oracle ou Teradata dans un package SSIS.
 
@@ -50,4 +52,4 @@ Vous pouvez vérifier la version installée de SSDT dans Visual Studio à partir
 ## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>Télécharger la dernière version de SQL Server Data Tools (SSDT)
 
 Vous pouvez obtenir la version la plus récente de SSDT ici :  
-[Télécharger SSDT (SQL Server Data Tools)](..//ssdt/download-sql-server-data-tools-ssdt.md)
+[Télécharger la dernière version de SQL Server Data Tools](..//ssdt/download-sql-server-data-tools-ssdt.md)

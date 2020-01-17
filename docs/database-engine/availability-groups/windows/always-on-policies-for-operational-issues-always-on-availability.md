@@ -1,7 +1,7 @@
 ---
-title: Gestion basée sur des stratégies pour les problèmes opérationnels avec des groupes de disponibilité
+title: 'Gestion basée sur des stratégies : Groupes de disponibilité'
 description: Le modèle d’intégrité des groupes de disponibilité Always On évalue un ensemble de stratégies de gestion basées sur des stratégies prédéfinies. Vous pouvez les utiliser pour afficher l’intégrité d’un groupe de disponibilité et de ses réplicas et bases de données dans SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991551"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244059"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gestion basée sur des stratégies pour les problèmes opérationnels avec des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67991551"
  Stratégies prédéfinies Always On  
  Ensemble de stratégies intégrées qui permettent à un administrateur de base de données de vérifier qu’un groupe de disponibilité et ses réplicas de disponibilité et bases de données sont conformes aux états définis par les stratégies Always On.  
   
- [Groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Groupes de disponibilité AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  Solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données.  
   
  Groupe de disponibilité  
@@ -57,7 +57,7 @@ ms.locfileid: "67991551"
 |État de synchronisation des données de réplicas synchrones|[Certains réplicas synchrones ne sont pas synchronisés](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md).|Avertissement|Groupe de disponibilité|  
 |État du rôle des réplicas de disponibilité|[Certains réplicas de disponibilité n’ont pas un rôle sain](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Avertissement|Groupe de disponibilité|  
 |État de la connexion des réplicas de disponibilité|[Certains réplicas de disponibilité sont déconnectés](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Avertissement|Groupe de disponibilité|  
-|État du rôle du réplica de disponibilité|[Le réplica de disponibilité n’a pas un rôle sain](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Critique|réplica de disponibilité|  
+|État du rôle du réplica de disponibilité|[Le réplica de disponibilité n’a pas un rôle sain](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Critique|Réplica de disponibilité|  
 |État de la connexion du réplica de disponibilité|[Le réplica de disponibilité est déconnecté](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Critique|Réplica de disponibilité|  
 |État de jointure du réplica de disponibilité|[Le réplica de disponibilité n’est pas joint](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Avertissement|Réplica de disponibilité|  
 |État de synchronisation des données du réplica de disponibilité|[L’état de synchronisation des données d’une base de données de disponibilité n’est pas sain](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Avertissement|Réplica de disponibilité|  
@@ -116,6 +116,6 @@ ms.locfileid: "67991551"
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administration d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
- [Surveillance des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
+ [Outils pour superviser les groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

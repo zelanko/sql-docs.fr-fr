@@ -1,6 +1,7 @@
 ---
-title: Prérequis, restrictions et recommandations pour la mise en miroir de bases de données | Microsoft Docs
-ms.custom: ''
+title: 'Mise en miroir de bases de données : Prérequis, restrictions et recommandations'
+description: Découvrez les prérequis, restrictions et recommandations relatifs à la configuration de la mise en miroir de bases de données avec SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 135c0d98dd1be7e00ccaafdccba8115e1af8d54d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025427"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244366"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "68025427"
   
 -   Toutes les instances de serveur d'une session de mise en miroir doivent utiliser la même page de codes maître et le même classement. Si ce n'est pas le cas, un problème peut se produire pendant la configuration de la mise en miroir.  
   
--   Éventuellement, évaluez le temps de basculement d'une base de données pour vous assurer que la configuration du système va fournir les performances nécessaires. Pour plus d’informations, consultez [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+-   Éventuellement, évaluez le temps de basculement d'une base de données pour vous assurer que la configuration du système va fournir les performances nécessaires. Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
 -   Pour des performances optimales, utilisez une carte d'interface réseau dédiée à la mise en miroir.  
   

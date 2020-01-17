@@ -1,6 +1,7 @@
 ---
-title: Boîte de dialogue Évaluer les stratégies, page Sélection de la stratégie | Microsoft Docs
-ms.custom: ''
+title: Page « Sélection de la stratégie » de la boîte de dialogue « Évaluer les stratégies »
+description: Décrit la page « Sélection de la stratégie » de la boîte de dialogue « Évaluer les stratégies » dans le cadre de la gestion basée sur des stratégies via SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901142"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558214"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "67901142"
  **Fichiers**  
  Tapez le chemin d’un fichier qui contient une stratégie de Gestion basée sur des stratégies, ou utilisez le bouton Parcourir ( **...** ) pour sélectionner le fichier.  
   
- **Server**  
+ **Serveur**  
  Sélectionnez cette option pour vous connecter à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui contient la stratégie souhaitée.  
   
  **Stratégies : stratégie**  
@@ -42,7 +43,7 @@ ms.locfileid: "67901142"
  **Stratégies : Facette**  
  Indique la facette implémentée par la stratégie. Cette zone est en lecture seule.  
   
- **Évaluer**  
+ **Evaluate**  
  Exécute la stratégie en mode d'évaluation. Cela génère un rapport de conformité pour le jeu de cibles mais n'applique pas la conformité future et ne reconfigure pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="possible-errors"></a>Erreurs possibles  

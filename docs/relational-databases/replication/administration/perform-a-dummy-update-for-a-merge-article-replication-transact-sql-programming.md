@@ -1,6 +1,7 @@
 ---
-title: Exécuter une mise à jour factice pour un article de fusion (programmation Transact-SQL de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Effectuer une mise à jour factice d’un article de fusion (procédures stockées de réplication)
+description: Utilisez les procédures stockées de réplication Transact-SQL pour effectuer une mise à jour factice d’un article de fusion utilisé dans la réplication de fusion.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9696e02e91a28420ce66e21226e322ea7845ab4d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 05c3a91d647819126261f0637e0de24d0ce3e4fd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710331"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322031"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>Exécuter une mise à jour factice pour un article de fusion (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

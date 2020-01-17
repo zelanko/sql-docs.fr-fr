@@ -1,6 +1,7 @@
 ---
-title: Informations de publication, Agents (Publication d’instantané) | Microsoft Docs
-ms.custom: ''
+title: Agents (Instantané - SSMS)
+description: Décrit l’onglet « Agents » de la page Agent d’instantané dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 47b334cf08e126308544ec2126c96f7da0bed932
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9dd77881ddcc235966333c95e4a5a18180926f8c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770023"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321876"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informations de publication, Agents (Publication d'instantané)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68770023"
   
 -   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
+-   **Filtre** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
 -   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68770023"
   
 -   Non exécuté  
   
--   Terminé  
+-   Completed  
   
  **Agent**  
  L'Agent d'instantané. Il s'agit du seul Agent associé à une publication d'instantané. L'Agent de distribution est associé aux abonnements à cette publication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
@@ -54,7 +55,7 @@ ms.locfileid: "68770023"
  **Dernière heure de début**  
  Heure du dernier démarrage de l'Agent.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution de l'Agent. La durée correspond au délai écoulé si l'Agent est actif ou au délai total si l'Agent a déjà été exécuté.  
   
  **Dernière action**  

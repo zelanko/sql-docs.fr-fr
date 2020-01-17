@@ -1,6 +1,7 @@
 ---
-title: Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication | Microsoft Docs
-ms.custom: ''
+title: Afficher et modifier les propriétés du serveur de distribution et du serveur de publication
+description: Découvrez comment modifier les propriétés du serveur de distribution et du serveur de publication à l’aide de SQL Server Management Studio (SSMS), de Transact-SQL (T-SQL) ou de Replication Management Objects (RMO).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5fcc1f21654fedc935a604fac37c7a3ca591b3d5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769260"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321557"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "68769260"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Pour les serveurs de publication exécutant des versions antérieures à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un utilisateur du rôle serveur fixe **sysadmin** peut enregistrer des abonnés sur la page **Abonnés** . À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], il n'est plus nécessaire d'inscrire de manière explicite les abonnés pour la réplication.  
+-   Pour les serveurs de publication exécutant des versions antérieures à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], un utilisateur avec le rôle serveur fixe **sysadmin** peut enregistrer des Abonnés dans la page **Abonnés**. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], il n'est plus nécessaire d'inscrire de manière explicite les abonnés pour la réplication.  
   
 ###  <a name="Security"></a> Sécurité  
  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution.  
@@ -130,7 +131,7 @@ ms.locfileid: "68769260"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
   
 3.  (Facultatif) Vérifiez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> pour vérifier que le serveur actuellement connecté est un serveur de distribution.  
   
@@ -144,7 +145,7 @@ ms.locfileid: "68769260"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Spécifiez la propriété de nom et passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Spécifiez la propriété de nom et passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés du serveur. Si cette méthode retourne **false**, la base de données avec le nom spécifié n'existe pas sur le serveur.  
   
@@ -156,7 +157,7 @@ ms.locfileid: "68769260"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> et passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> et passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
   
 3.  (Facultatif) Pour modifier des propriétés, modifiez la valeur d'une des propriétés <xref:Microsoft.SqlServer.Replication.DistributionPublisher> qui peuvent être définies.  
   
@@ -166,7 +167,7 @@ ms.locfileid: "68769260"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
 3.  Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en spécifiant la connexion créée à l'étape 1.  
   
@@ -181,7 +182,7 @@ ms.locfileid: "68769260"
   
     1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+    2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
     3.  Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en spécifiant la connexion créée à l'étape 6a.  
   
@@ -203,7 +204,7 @@ ms.locfileid: "68769260"
  [Concepts liés à RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   
- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Concepts liés à RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Script d’information du serveur de distribution et du serveur de publication](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Concepts liés aux procédures stockées système de réplication](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Afficher des informations et effectuer des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85ebb4419cd81786fcfc58f7c7342e353c90d1f1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981867"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001970"
 ---
 # <a name="server-configuration-options-sql-server"></a>Options de configuration du serveur (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
   
 -   SC = Options à configuration automatique.  
   
-    |Option de configuration|Valeur minimale|Valeur maximale|Valeur par défaut|  
+    |Option de configuration|Valeur minimale|Valeur maximale|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -94,7 +94,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |[cursor threshold](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
     |[Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
     |[default full-text language](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
-    |[default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)|0|9999|0|  
+    |[default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)|0|9 999|0|  
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[Fournisseur EKM activé](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
@@ -105,18 +105,18 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |ft crawl bandwidth (min), consultez [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |ft notify bandwidth (max), consultez [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
     |ft notify bandwidth (min), consultez [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
-    |[Connexion Hadoop](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).|0|7|0|   
+    |[Connexion Hadoop](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).|0|7|0|   
     |[index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A, SC)|704|2147483647|0|  
     |[in-doubt xact resolution](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
     |[lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A, RR)|0|1|0|  
-    |[locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) (A, RR, SC)|5000|2147483647|0|  
+    |[locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) (A, RR, SC)|5 000|2147483647|0|  
     |[max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 correspond au maximum recommandé pour la version 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et 2048 pour la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Remarque :** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] était la dernière version disponible sur le système d’exploitation 32 bits.|0<br /><br /> Zéro configure automatiquement le nombre maximal de threads de travail en fonction du nombre de processeurs, à l’aide de la formule (256+( *\<processeurs>* -4) * 8) pour la version 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et (512+( *\<processeurs>* -4) * 8) pour la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Remarque :** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] était la dernière version disponible sur le système d’exploitation 32 bits.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 correspond au maximum recommandé pour la version 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et 2048 pour la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Remarque :** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] était la dernière version disponible sur le système d’exploitation 32 bits.|0<br /><br /> Zéro configure automatiquement le nombre maximal de threads de travail en fonction du nombre de processeurs, à l’aide de la formule (256+( *\<processeurs>* -4) * 8) pour la version 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et (512+( *\<processeurs>* -4) * 8) pour la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Remarque :** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] était la dernière version disponible sur le système d’exploitation 32 bits.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
-    |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
+    |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1 024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
     |[déclencheurs imbriqués](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
     |[network packet size](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
@@ -124,6 +124,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsolète)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **S’applique à** : [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
@@ -142,7 +143,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |[show advanced options](../../database-engine/configure-windows/show-advanced-options-server-configuration-option.md)|0|1|0|  
     |[SMO and DMO XPs](../../database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
     |[transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
-    |[two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
+    |[two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9 999|2049|  
     |[user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md) (A, RR, SC)|0|32767|0|  
     |[user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  

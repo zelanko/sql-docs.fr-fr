@@ -1,6 +1,7 @@
 ---
-title: Mise en miroir de bases de données - Utiliser des certificats pour les connexions entrantes | Microsoft Docs
-ms.custom: ''
+title: Utiliser des certificats pour la connexion entrante
+description: Décrit les étapes requises pour configurer les instances de serveur afin qu’elles utilisent les certificats pour authentifier les connexions entrantes dans le cadre de la mise en miroir de bases de données.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997904"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822272"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>Mise en miroir de bases de données - Utiliser des certificats pour les connexions entrantes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "67997904"
   
  La procédure suivante décrit ces étapes en détail. Pour chaque étape, la procédure fournit un exemple de configuration d'une instance du serveur sur un système nommé HOST_A. La section Exemple qui l'accompagne explique les mêmes étapes pour une autre instance du serveur sur un système nommé HOST_B.  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>Pour configurer les instances du serveur pour les connexions de mise en miroir entrantes (sur HOST_A)  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>Pour configurer les instances du serveur pour les connexions de mise en miroir entrantes (sur HOST_A)  
   
 1.  Créez une connexion pour l'autre système.  
   
@@ -90,7 +91,7 @@ ms.locfileid: "67997904"
   
      Pour plus d’informations, consultez [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md).  
   
-4.  Associez le certificat à l'utilisateur créé à l'étape 2.  
+4.  Associez le certificat à l'utilisateur créé à l'étape 2.  
   
      L'exemple suivant associe le certificat de HOST_B avec son utilisateur sur HOST_A.  
   
@@ -165,9 +166,9 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [Autorisations GRANT sur point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
+ [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

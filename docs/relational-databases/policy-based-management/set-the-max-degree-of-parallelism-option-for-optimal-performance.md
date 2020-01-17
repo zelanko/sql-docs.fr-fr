@@ -1,6 +1,7 @@
 ---
-title: Définir l’option max degree of parallelism pour des performances optimales | Microsoft Docs
-ms.custom: ''
+title: Degré maximal de parallélisme et gestion basée sur des stratégies
+description: Décrit la configuration d’une stratégie permettant de vérifier la valeur du degré maximal de parallélisme dans le cadre de la gestion basée sur des stratégies pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00123da615c420fa3d58daae9a287ce3c13b8329
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: c5f261998588fa15074a25c606a0aa50f742f04a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316662"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557822"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>Définir l'option max degree of parallelism pour des performances optimales
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

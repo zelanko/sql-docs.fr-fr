@@ -1,6 +1,5 @@
 ---
-title: Moteur des Événements étendus SQL Server | Microsoft Docs
-ms.custom: ''
+title: Moteur des Événements étendus SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +12,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009401"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242962"
 ---
 # <a name="sql-server-extended-events-engine"></a>Moteur des Événements étendus SQL Server
 

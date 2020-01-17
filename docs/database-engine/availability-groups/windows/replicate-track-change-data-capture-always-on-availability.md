@@ -1,6 +1,7 @@
 ---
-title: Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité | Microsoft Docs
-ms.custom: ''
+title: Réplication, suivi des modifications, capture des changements de données et groupes de disponibilité
+description: Découvrez-en plus sur l’interopérabilité de la réplication, du suivi des modifications et de la capture des changements de données quand vous les utilisez avec des groupes de disponibilité Always On SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251960"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235391"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +178,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
     - OU supprimer la base de données de toutes les instances de réplica secondaire du groupe de disponibilité et l’ajouter aux instances de réplica du groupe de disponibilité par amorçage automatique ou manuel
   
 ###  <a name="CT"></a> Suivi des modifications  
- Une base de données activée pour le suivi des modifications peut faire partie d’un groupe de disponibilité Always On. Aucune configuration supplémentaire n'est requise. Les applications clientes de suivi des modifications qui utilisent les fonctions table (TVF) de capture de données modifiées pour accéder aux données modifiées ont besoin de pouvoir localiser le réplica principal après le basculement. Si l'application cliente se connecte via le nom d'écouteur de groupe de disponibilité, les demandes de connexion seront toujours dirigées correctement vers le réplica principal actuel.  
+ Une base de données activée pour le suivi des modifications peut faire partie d’un groupe de disponibilité Always On. Aucune configuration supplémentaire n’est nécessaire. Les applications clientes de suivi des modifications qui utilisent les fonctions table (TVF) de capture de données modifiées pour accéder aux données modifiées ont besoin de pouvoir localiser le réplica principal après le basculement. Si l'application cliente se connecte via le nom d'écouteur de groupe de disponibilité, les demandes de connexion seront toujours dirigées correctement vers le réplica principal actuel.  
   
 > [!NOTE]  
 >  Les données de suivi des modifications doivent toujours être obtenues à partir du réplica principal. Toute tentative d'accès aux données de modification depuis un réplica secondaire provoque l'erreur suivante :  
@@ -189,7 +190,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
 ##  <a name="Prereqs"></a> Conditions préalables requises, restrictions et considérations relatives à l'utilisation de la réplication  
  Cette section décrit les considérations à prendre en compte pour déployer la réplication avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], y compris les conditions préalables requises, les restrictions et les recommandations.  
   
-### <a name="prerequisites"></a>Configuration requise  
+### <a name="prerequisites"></a>Conditions préalables requises  
   
 -   Lors de l'utilisation de la réplication transactionnelle, si la base de données de publication se trouve dans un groupe de disponibilité, le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. L'abonné peut utiliser un niveau inférieur de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -206,17 +207,17 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 |||||  
 |-|-|-|-|  
-||**Serveur de publication**|**Serveur de distribution**|**Abonné**|  
+||**Publisher**|**Serveur de distribution**|**Abonné**|  
 |**Transactionnelle**|Oui<br /><br /> Remarque : N’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
 |**P2P**|Non|Non|Non|  
-|**Fusion**|Oui|Non|Non|  
-|**Snapshot**|Oui|Non|Oui|
+|**Fusionner**|Oui|Non|Non|  
+|**Instantané**|Oui|Non|Oui|
   
  **La base de données du serveur de distribution n’est pas prise pour une utilisation avec la mise en miroir de base de données.  
   
-### <a name="considerations"></a>Observations  
+### <a name="considerations"></a>Considérations  
   
--   La base de données de distribution n'est pas prise en charge en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données. La configuration de la réplication est couplée à l'instance de SQL Server sur laquelle le serveur de distribution est configuré ; par conséquent la base de données de distribution ne peut pas être mise en miroir ni répliquée. Pour fournir une haute disponibilité au serveur de distribution, utilisez un cluster de basculement SQL Server. Pour plus d’informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   La base de données de distribution n'est pas prise en charge en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données. La configuration de la réplication est couplée à l'instance de SQL Server sur laquelle le serveur de distribution est configuré ; par conséquent la base de données de distribution ne peut pas être mise en miroir ni répliquée. Pour fournir une haute disponibilité au serveur de distribution, utilisez un cluster de basculement SQL Server. Pour plus d'informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Le basculement d’abonné vers une base de données secondaire, s’il est pris en charge, est une procédure manuelle pour les abonnés de réplication de fusion. La procédure est, pour l'essentiel, identique à la méthode utilisée pour le basculement vers une base de données de l'abonné en miroir. Les abonnés de réplication transactionnelle ne nécessitent pas de traitement spécial lorsqu’ils participent à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Les abonnés doivent exécuter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou une version ultérieure pour pouvoir participer à un groupe de disponibilité.  Pour plus d’informations, consultez [Abonnés de réplication et groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
@@ -231,7 +232,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 -   [FAQ sur l’administration de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **Modifier la capture de données**  
   
 -   [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
@@ -239,7 +240,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 -   [Utiliser les données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Change tracking**  
+ **Suivi des modifications**  
   
 -   [Activer et désactiver le suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

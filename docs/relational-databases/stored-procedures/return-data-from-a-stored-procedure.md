@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136663"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307982"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Il existe trois méthodes permettant de retourner des données depuis une procédure vers un programme appelant : les jeux de résultats, les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur les trois approches.  
   
-  ## <a name="returning-data-using-result-sets"></a>Retour de données avec des jeux de résultats
- Si vous incluez une instruction SELECT dans le corps d’une procédure stockée (mais pas une instruction SELECT... INTO ou INSERT... SELECT), les lignes spécifiées par l’instruction SELECT sont envoyées directement au client.  Pour les jeux de résultats volumineux, l’exécution de la procédure stockée ne passe pas à l’instruction tant que le jeu de résultat n’a pas été entièrement envoyé au client.  Pour les jeux de résultats de petite taille, les résultats sont spoulés pour être retournés au client et l’exécution se poursuit.  Si plusieurs de ces instructions SELECT sont exécutées pendant l’exécution de la procédure stockée, plusieurs jeux de résultats sont envoyés au client.  Ce comportement s’applique également aux lots TSQL imbriqués, aux procédures stockées imbriquées et aux lots TSQL du plus haut niveau.
+## <a name="returning-data-using-result-sets"></a>Retour de données avec des jeux de résultats
+Si vous incluez une instruction SELECT dans le corps d’une procédure stockée (mais pas une instruction SELECT... INTO ou INSERT... SELECT), les lignes spécifiées par l’instruction SELECT sont envoyées directement au client.  Pour les jeux de résultats volumineux, l’exécution de la procédure stockée ne passe pas à l’instruction tant que le jeu de résultat n’a pas été entièrement envoyé au client.  Pour les petits jeux de résultats, les résultats sont spoulés pour être retournés au client et l’exécution se poursuit.  Si plusieurs de ces instructions SELECT sont exécutées pendant l’exécution de la procédure stockée, plusieurs jeux de résultats sont envoyés au client.  Ce comportement s’applique également aux lots TSQL imbriqués, aux procédures stockées imbriquées et aux lots TSQL du plus haut niveau.
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Exemples de retour de données avec un jeu de résultats 

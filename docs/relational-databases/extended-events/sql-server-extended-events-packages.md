@@ -1,6 +1,5 @@
 ---
-title: Packages d’événements étendus SQL Server | Microsoft Docs
-ms.custom: ''
+title: Packages d’événements étendus SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009395"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242931"
 ---
 # <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
 
@@ -38,7 +37,7 @@ ms.locfileid: "68009395"
   
  Les packages sont identifiés par un nom, un GUID et le module binaire qui contient le package. Pour plus d’informations, consultez [sys.dm_xe_packages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md).  
   
- Un package peut contenir l'ensemble ou une partie des objets suivants, présentés plus en détails ultérieurement dans cette rubrique :  
+ Un package peut contenir l'ensemble ou une partie des objets suivants, présentés plus en détails ultérieurement dans cette rubrique :  
   
 -   Événements  
   
@@ -80,8 +79,8 @@ ms.locfileid: "68009395"
   
 |Terme|Définition|  
 |----------|----------------|  
-|Administratifs|Les événements administratifs sont principalement destinés aux utilisateurs finaux, aux administrateurs et au support technique. Les événements détectés dans les canaux administratifs font référence à un problème avec une solution déterminée qu'un administrateur peut mettre en place. Par exemple, le fait qu'une application ne puisse pas se connecter à une imprimante correspond à un événement administratif. Ces événements font l'objet d'une documentation détaillée ou sont accompagnés d'un message qui indique la procédure à suivre pour résoudre le problème.|  
-|Opérationnels|Les événements opérationnels permettent d'analyser et de diagnostiquer un problème ou une occurrence. Ils permettent de déclencher des outils ou des tâches en fonction du problème ou de l'occurrence. Par exemple, le fait qu'une imprimante soit ajoutée ou supprimée dans un système correspond à un événement opérationnel.|  
+|Admin|Les événements administratifs sont principalement destinés aux utilisateurs finaux, aux administrateurs et au support technique. Les événements détectés dans les canaux administratifs font référence à un problème avec une solution déterminée qu'un administrateur peut mettre en place. Par exemple, le fait qu'une application ne puisse pas se connecter à une imprimante correspond à un événement administratif. Ces événements font l'objet d'une documentation détaillée ou sont accompagnés d'un message qui indique la procédure à suivre pour résoudre le problème.|  
+|En fonctionnement|Les événements opérationnels permettent d'analyser et de diagnostiquer un problème ou une occurrence. Ils permettent de déclencher des outils ou des tâches en fonction du problème ou de l'occurrence. Par exemple, le fait qu'une imprimante soit ajoutée ou supprimée dans un système correspond à un événement opérationnel.|  
 |Analytiques|Les événements analytiques sont publiés selon un volume élevé. Ils décrivent le fonctionnement des programmes et sont généralement utilisés dans les enquêtes sur les performances.|  
 |Débogage|Les événements de débogage sont utilisés uniquement par les développeurs pour diagnostiquer un problème afin de le résoudre.<br /><br /> Les événements du canal de débogage renvoient des données d'état internes propres à l'implémentation. Les schémas et les données renvoyées par les événements sont susceptibles de changer ou de ne plus être compatibles avec les prochaines versions de SQL Server. Par conséquent, les événements du canal de débogage pourront être changés ou supprimés dans les versions à venir de SQL Server sans notification.|  
   
@@ -151,7 +150,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   Type  
+-   type  
   
  Pour plus d’informations, consultez [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
@@ -220,6 +219,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Voir aussi  
  [Sessions Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Moteur des Événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [Cibles des Événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

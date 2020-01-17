@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119205"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191088"
 ---
 # <a name="select-examples-transact-sql"></a>Exemples SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique fournit des exemples d’utilisation de l’instruction [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilisation de SELECT pour extraire des lignes et des colonnes  
+## <a name="a-using-select-to-retrieve-rows-and-columns"></a>R. Utilisation de SELECT pour extraire des lignes et des colonnes  
  L'exemple suivant présente trois exemples de code. Le premier exemple de code retourne toutes les lignes (aucune clause WHERE n'est définie) et toutes les colonnes (en utilisant `*`) de la table `Product` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
@@ -81,7 +81,7 @@ ms.locfileid: "74119205"
 ## <a name="e-using-correlated-subqueries"></a>E. Utilisation de sous-requêtes corrélées
 Une sous-requête corrélée est une requête dont les valeurs dépendent de la requête externe. Cette requête peut être exécutée de manière répétitive, une fois pour chaque ligne que la requête externe pourrait sélectionner.
 
- L'exemple suivant montre des requêtes sémantiquement équivalentes et illustre la différence entre l'utilisation du mot clé `EXISTS` et celle du mot clé `IN`. Les deux exemples illustrent une sous-requête valide qui extrait une instance de chaque nom de produit dont le modèle est un pull-over à manches longues (« long sleeve logo jersey »), et dont le numéro `ProductModelID` se trouve dans les tables `Product` et `ProductModel`.  
+Le premier exemple montre des requêtes sémantiquement équivalentes pour illustrer la différence entre l’utilisation du mot clé `EXISTS` et celle du mot clé `IN`. Les deux exemples illustrent une sous-requête valide qui extrait une instance de chaque nom de produit dont le modèle est un pull-over à manches longues (« long sleeve logo jersey »), et dont le numéro `ProductModelID` se trouve dans les tables `Product` et `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -158,7 +158,7 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- Si vous souhaitez vous assurer qu'au moins mille cinq cents articles sont impliqués dans le calcul de chaque produit, utilisez l'instruction `HAVING COUNT(*) > 1500` pour éliminer les produits dont le total renvoyé correspond à moins de `1500` articles vendus. La requête est la suivante :  
+ Si vous souhaitez vous assurer qu'au moins mille cinq cents articles sont impliqués dans le calcul de chaque produit, utilisez l'instruction `HAVING COUNT(*) > 1500` pour éliminer les produits dont le total renvoyé correspond à moins de `1500` articles vendus. La requête ressemble à ceci :  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   

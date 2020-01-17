@@ -22,12 +22,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2adf7404e80a0a04932c14b598011c1799b5611
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927200"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546569"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67927200"
 > [!NOTE]  
 >  Pour modifier les rôles en ajoutant ou en supprimant des membres dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) et [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,12 +65,12 @@ ALTER ROLE role_name
   
 ## <a name="arguments"></a>Arguments  
  *role_name*  
- **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis la version 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Spécifie le rôle de base de données à changer.  
   
- ADD MEMBER *database_principal*l  
- **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis la version 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER *principal_base_de_données*  
+ **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Indique que le principal de base de données doit être ajouté à l’appartenance à un rôle de base de données.  
   
@@ -79,7 +79,7 @@ ALTER ROLE role_name
 -   *database_principal* ne peut être ni un rôle de base de données fixe, ni un principal de serveur.  
   
 DROP MEMBER *database_principal*  
- **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis la version 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Indique qu’un principal de base de données doit être supprimé de l’appartenance à un rôle de base de données.  
   
@@ -88,7 +88,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* ne peut être ni un rôle de base de données fixe, ni un principal de serveur.  
   
 WITH NAME = *new_name*  
- **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis la version 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Indique que le nom d’un rôle serveur défini par l’utilisateur doit être changé. Le nouveau nom ne doit pas déjà exister dans la base de données.  
   
@@ -117,8 +117,8 @@ De plus, pour changer l’appartenance à un rôle de base de données fixe, vou
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-change-the-name-of-a-database-role"></a>A. Changer le nom d’un rôle de base de données  
- **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis la version 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="a-change-the-name-of-a-database-role"></a>R. Changer le nom d’un rôle de base de données  
+ **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  L'exemple suivant remplace le nom du rôle `buyers` par `purchasing`.   Cet exemple peut être exécuté dans la base de données exemple [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
@@ -127,7 +127,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. Ajouter ou supprimer des membres d’un rôle  
- **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis la version 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Cet exemple crée un rôle de base de données nommé `Sales`. Il ajoute un utilisateur de base de données nommé Barry à l’appartenance, puis montre comment supprimer le membre Barry.   Cet exemple peut être exécuté dans la base de données exemple [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   

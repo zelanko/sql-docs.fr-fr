@@ -1,6 +1,7 @@
 ---
-title: Mise en miroir de base de données - Établir une session - Authentification Windows | Microsoft Docs
-ms.custom: ''
+title: Configurer la mise en miroir de bases de données
+description: Procédure de configuration d’une relation de mise en miroir de bases de données entre un serveur principal et un serveur miroir avec l’authentification Windows.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db81b9dc854a5b753db2b59da35ffcec6d719dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006442"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822294"
 ---
-# <a name="database-mirroring---establish-session---windows-authentication"></a>Mise en miroir de base de données - Établir une session - Authentification Windows
+# <a name="configure-database-mirroring"></a>Configurer la mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.  
   
  Après avoir préparé la base de données miroir (voir [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), vous pouvez établir une session de mise en miroir de bases de données. Le principal, le serveur miroir et le serveur témoin doivent être trois instances distinctes, ayant chacune un système d'hébergement qui lui est propre.  
   
@@ -221,7 +222,7 @@ ms.locfileid: "68006442"
  [Mise en miroir de bases de données et réplication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
 

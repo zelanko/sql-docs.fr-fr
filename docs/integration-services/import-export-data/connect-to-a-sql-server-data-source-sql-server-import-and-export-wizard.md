@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285703"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308002"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données SQL Server (Assistant Importation et Exportation SQL Server)
 
@@ -34,6 +34,7 @@ Après avoir sélectionné le **Fournisseur de données .NET Framework pour SQL 
 
 |Informations nécessaires|Propriété du fournisseur de données .NET Framework pour SQL Server|
 |---|---|
+|Authentication|**NotSpecified** par défaut (« Sécurité intégrée »), ou choisissez un autre mode d’authentification. L’authentification interactive Active Directory n’est pas prise en charge. |
 |Nom du serveur|**Source de données**|
 |Informations d’authentification (connexion)|**Sécurité intégrée** ; ou **ID d’utilisateur** et **Mot de passe**<br/>Si vous voulez afficher la liste déroulante des bases de données sur le serveur, vous devez d’abord fournir des informations de connexion valides.|
 |Nom de la base de données|**Catalogue initial**|
@@ -68,7 +69,7 @@ Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources
 > [!TIP]
 > **Récupérer le pilote le plus récent**. Téléchargez [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).
 
-Voici l’écran générique que vous affichez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
+Voici l’écran générique que vous voyez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
 
 ![Connexion à SQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
@@ -85,7 +86,7 @@ Pour vous connecter à SQL Server au moyen du pilote ODBC le plus récent, assem
 **Driver**  
 Nom du pilote ODBC. Le nom diffère selon les versions du pilote.
 
-**Server**  
+**Serveur**  
 Nom du serveur SQL Server.
 
 **Sauvegarde de la base de données**  
@@ -110,7 +111,7 @@ L’exemple suivant utilise cette chaîne de connexion.
 
     `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
-Voici l’écran que vous affichez après avoir entré la chaîne de connexion.
+Voici l’écran que vous voyez après avoir entré la chaîne de connexion.
 
 ![Connexion à SQL avec ODBC après](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 

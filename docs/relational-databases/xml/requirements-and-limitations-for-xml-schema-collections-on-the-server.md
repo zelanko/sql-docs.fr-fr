@@ -1,6 +1,5 @@
 ---
-title: Spécifications et limitations relatives aux collections de schémas XML sur le serveur | Microsoft Docs
-ms.custom: ''
+title: Spécifications et limitations (collections de schémas XML) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,12 +23,13 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093194"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257620"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Spécifications et limitations relatives aux collections de schémas XML sur le serveur
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ ms.locfileid: "68093194"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explique les formes canoniques et restrictions de modèle.|  
+|[Formes canoniques et restrictions de modèle](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explique les formes canoniques et restrictions de modèle.|  
 |[Composants génériques et validation de contenu](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Décrit les limitations liées à l'utilisation des caractères génériques, de la validation de type lax et des éléments anyType avec des collections de schémas XML.|  
 |[Élément &#60;xsd:redefine&#62;](../../relational-databases/xml/the-xsd-redefine-element.md)|Explique la limitation liée à l’utilisation de l’élément \<xsd:redefine> et décrit une solution de contournement.|  
-|[Type xs:QName](../../relational-databases/xml/the-xs-qname-type.md)|Décrit la limitation relative au type xs:QName.|  
+|[The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)|Décrit la limitation relative au type xs:QName.|  
 |[Valeurs pour les déclarations &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|Décrit les restrictions appliquées aux déclarations \<xsd:simpleType>.|  
-|[Facettes d’énumération](../../relational-databases/xml/enumeration-facets.md)|Décrit la limitation relative aux facettes d'énumération.|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|Décrit la limitation relative à la restriction d'un type mixte à un contenu simple.|  
+|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|Décrit la limitation relative aux facettes d'énumération.|  
+|[Type mixte et contenu simple](../../relational-databases/xml/mixed-type-and-simple-content.md)|Décrit la limitation relative à la restriction d'un type mixte à un contenu simple.|  
 |[Collections de schémas XML volumineuses et conditions de mémoire insuffisante](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Fournit des solutions pour la condition de mémoire insuffisante qui se produit parfois avec les grandes collections de schémas.|  
 |[Modèles de contenu non déterministes](../../relational-databases/xml/non-deterministic-content-models.md)|Décrit les limitations relatives aux modèles de contenu non déterministes.|  
   

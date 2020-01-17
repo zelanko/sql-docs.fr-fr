@@ -1,6 +1,7 @@
 ---
-title: 'Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS | Microsoft Docs'
-ms.custom: ''
+title: 'Tutoriel : Always Encrypted avec enclaves sécurisées avec SSMS'
+description: Ce tutoriel vous montre comment créer un environnement Always Encrypted avec enclaves sécurisées de base, comment chiffrer les données sur place et comment émettre des requêtes riches sur des colonnes chiffrées à l’aide de SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592347"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557468"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Always Encrypted avec enclaves sécurisées avec SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Ce tutoriel vous apprend à bien démarrer avec [Always Encrypted avec enclaves sécurisées](encryption/always-encrypted-enclaves.md). Il vous montre comment :
@@ -36,15 +37,15 @@ Pour bien démarrer avec Always Encrypted avec enclaves sécurisées, vous avez 
 ### <a name="sql-server-computer-requirements"></a>Configuration requise de l’ordinateur SQL Server
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] ou une version ultérieure.
-- Windows 10 Entreprise version 1809 ou ultérieur ; ou Windows Server 2019 Édition Datacenter. Les autres éditions de Windows 10 et de Windows Server ne prennent pas en charge l’attestation avec SGH.
+- Windows 10 Entreprise version 1809 ou ultérieure , ou Windows Server 2019 Édition Datacenter. Les autres éditions de Windows 10 et de Windows Server ne prennent pas en charge l’attestation avec le Service Guardian hôte.
 - Prise en charge du processeur pour les technologies de virtualisation :
-  - Intel VT-x avec des tables de pages étendues.
-  - AMD-V avec indexation de virtualisation rapide.
+  - Intel VT-x avec Extended Page Tables.
+  - AMD-V avec Rapid Virtualization Indexing.
   - Si vous exécutez [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sur une machine virtuelle, l’hyperviseur et le processeur physique doivent offrir des fonctionnalités de virtualisation imbriquées. 
     - Sur Hyper-V 2016 ou ultérieur, [activez les extensions de virtualisation imbriquée sur le processeur de la machine virtuelle](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - Dans Azure, sélectionnez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée. Cela comprend toutes les machines virtuelles de la série v3, par exemple Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - Dans Azure, sélectionnez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée. Ceci comprend toutes les machines virtuelles de la série v3, par exemple Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - Sur VMware vSphere 6.7 et les versions ultérieures, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-    - D’autres hyperviseurs et clouds publics peuvent prendre en charge les fonctionnalités de virtualisation imbriquées qui activent aussi Always Encrypted avec enclaves VBS. Consultez les instructions relatives à la compatibilité et à la configuration de la documentation de votre solution de virtualisation.
+    - D’autres hyperviseurs et clouds publics peuvent prendre en charge les fonctionnalités de virtualisation imbriquées qui permettent aussi l’utilisation d’Always Encrypted avec enclaves VBS. Consultez les instructions relatives à la compatibilité et à la configuration dans la documentation de votre solution de virtualisation.
 - [SQL Server Management Studio (SSMS) version 18.3 ou ultérieure](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Vous pouvez aussi installer SSMS sur un autre ordinateur.
@@ -157,7 +158,7 @@ L’erreur UnauthorizedHost indique que la clé publique n’a pas été inscrit
 
 Si le problème persiste, exécutez Remove-HgsClientHostKey et répétez les étapes 4 à 7.
 
-## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Étape 3 : Activer Always Encrypted avec enclaves sécurisées dans SQL Server
+## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Étape 3 : Activer Always Encrypted avec enclaves sécurisées dans SQL Server
 
 Dans cette étape, vous allez activer la fonctionnalité Always Encrypted avec enclaves dans votre instance SQL Server.
 
@@ -166,7 +167,7 @@ Dans cette étape, vous allez activer la fonctionnalité Always Encrypted avec e
     1. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez le nom de votre serveur, sélectionnez une méthode d’authentification et spécifiez vos informations d’identification.
     1. Cliquez sur **Options >>** et sélectionnez l’onglet **Always Encrypted**.
     1. Assurez-vous que la case **Activer Always Encrypted (chiffrement de colonne)** n’est **pas** cochée.
-    1. Sélectionnez **Se connecter**.
+    1. Sélectionnez **Connecter**.
 
 2. Ouvrez une nouvelle fenêtre de requête et exécutez l’instruction ci-dessous pour définir le type d’enclave sécurisée sur Sécurité basée sur la virtualisation (VBS).
 
@@ -186,7 +187,7 @@ Dans cette étape, vous allez activer la fonctionnalité Always Encrypted avec e
 
     La requête doit retourner le résultat suivant :  
 
-    | NAME                           | valeur | value_in_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
@@ -199,7 +200,7 @@ Dans cette étape, vous allez activer la fonctionnalité Always Encrypted avec e
     > [!NOTE]
     > Les calculs complexes sont désactivés par défaut dans [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)]. Ils doivent être activés à l’aide de l’instruction ci-dessus après chaque redémarrage de votre instance SQL Server.
 
-## <a name="step-4-create-a-sample-database"></a>Étape 4 : Créer un exemple de base de données
+## <a name="step-4-create-a-sample-database"></a>Étape 4 : Créer un exemple de base de données
 Dans cette étape, vous allez créer une base de données avec des exemples de données, qui vous chiffrerez par la suite.
 
 1. À l’aide de l’instance SSMS dans l’étape précédente, exécutez l’instruction ci-dessous dans une fenêtre de requête pour créer une nouvelle base de données, nommée **ContosoHR**.
@@ -253,7 +254,7 @@ Dans cette étape, vous allez créer une base de données avec des exemples de d
             , $55415);
     ```
 
-## <a name="step-5-provision-enclave-enabled-keys"></a>Étape 5 : Approvisionner des clés prenant en charge les enclaves
+## <a name="step-5-provision-enclave-enabled-keys"></a>Étape 5 : Approvisionner des clés prenant en charge les enclaves
 
 Dans cette étape, vous allez créer une clé principale de colonne et une clé de chiffrement de colonne qui permettent les calculs d’enclave.
 
@@ -276,7 +277,7 @@ Dans cette étape, vous allez créer une clé principale de colonne et une clé 
     3. Dans le menu déroulant **Clé principale de colonne**, sélectionnez la clé principale de colonne que vous avez créée aux étapes précédentes.
     4. Sélectionnez **OK**.
 
-## <a name="step-6-encrypt-some-columns-in-place"></a>Étape 6 : Chiffrer des colonnes sur place
+## <a name="step-6-encrypt-some-columns-in-place"></a>Étape 6 : Chiffrer des colonnes sur place
 
 Dans cette étape, vous allez chiffrer les données stockées dans les colonnes **SSN** et **Salaire** à l’intérieur de l’enclave côté serveur, puis vous testerez une requête SELECT sur les données.
 
@@ -285,7 +286,7 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
     1. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez le nom de votre serveur, sélectionnez une méthode d’authentification et spécifiez vos informations d’identification.
     1. Cliquez sur **Options >>** et sélectionnez l’onglet **Always Encrypted**.
     1. Cochez la case **Activer Always Encrypted (chiffrement de colonne)** et spécifiez l’URL de votre attestation d’enclave (par exemple ht<span>tp://</span>hgs.bastion.local/Attestation).
-    1. Sélectionnez **Se connecter**.
+    1. Sélectionnez **Connecter**.
     1. Si vous êtes invité à activer les requêtes Paramétrage pour Always Encrypted, sélectionnez **Activer**.
 
 1. En utilisant la même instance SSMS (avec Always Encrypted activé), ouvrez une nouvelle fenêtre de requête et chiffrez les colonnes **SSN** et **Salaire** en exécutant les requêtes ci-dessous.
@@ -318,7 +319,7 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
     SELECT * FROM [dbo].[Employees];
     ```
 
-## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Étape 7 : Exécuter des requêtes complexes sur les colonnes chiffrées
+## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Étape 7 : Exécuter des requêtes complexes sur les colonnes chiffrées
 
 À présent, vous pouvez exécuter des requêtes complexes sur les colonnes chiffrées. Un traitement de requête se produit à l’intérieur de votre enclave côté serveur. 
 
@@ -339,7 +340,7 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
 
 3. Essayez à nouveau la même requête dans l’instance SSMS dont Always Encrypted n’est pas activé et notez l’échec survenu.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 À l’issue de ce tutoriel, vous pouvez accéder à l’un des tutoriels suivants :
 - [Tutoriel : Développer une application .NET Framework avec Always Encrypted avec enclaves sécurisées](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutoriel : Création et utilisation des index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement aléatoire](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
@@ -348,4 +349,4 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
 - [Configurer le type d’enclave pour l’option de configuration de serveur Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
 - [Provisionner des clés activées pour les enclaves](encryption/always-encrypted-enclaves-provision-keys.md)
 - [Configurer le chiffrement de colonne sur place avec Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
-- [Interroger des colonnes avec Always Encrypted avec enclaves sécurisées](encryption/always-encrypted-enclaves-query-columns.md)
+- [Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées](encryption/always-encrypted-enclaves-query-columns.md)

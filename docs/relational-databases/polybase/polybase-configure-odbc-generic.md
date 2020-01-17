@@ -1,6 +1,7 @@
 ---
-title: Configurer PolyBase pour accéder à des données externes avec des types génériques ODBC | Microsoft Docs
-ms.date: 04/23/2019
+title: 'Accéder aux données externes : Types génériques ODBC - PolyBase'
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5017dc54a1e7858786413b2fcc164e4949f77646
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907595"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255420"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 
@@ -77,7 +78,7 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
     CREDENTIAL = credential_nam );
     ```
 
-1. **Facultatif :** Créez des statistiques sur une table externe.
+1. **Facultatif :** Créez des statistiques sur une table externe.
 
 Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 

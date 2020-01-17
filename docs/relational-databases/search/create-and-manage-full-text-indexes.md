@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082932"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257660"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ Avant de pouvoir créer un index de recherche en texte intégral, vous devez dis
 
 ## <a name="populate-a-full-text-index"></a>Remplir un index de recherche en texte intégral
 Le processus de création et de gestion d’un index de recherche en texte intégral est appelé *alimentation* (également appelé *analyse*). Il existe trois types de remplissage d’index de recherche en texte intégral :
--   Remplissage complet
--   Remplissage basé sur le suivi des modifications
+-   Alimentation complète
+-   Alimentation basée sur le suivi des modifications
 -   Remplissage incrémentiel basé sur un horodatage.
 
 Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).
@@ -72,9 +72,9 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
   
 5.  Dans le volet **Sélectionner une page** , vous pouvez sélectionner l’une des pages suivantes :  
   
-    |Radiomessagerie|Description|  
+    |Page|Description|  
     |----------|-----------------|  
-    |**Général**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**|  
+    |**Généralités**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**|  
     |**Colonnes**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](populate-full-text-indexes.md).|
     |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Remarque : Une fois que vous avez fermé la boîte de dialogue **Propriétés d’index de recherche en texte intégral**, la planification que vous venez de créer est associée à un travail de SQL Server Agent (démarrer le remplissage incrémentiel de la table sur *database_name*.*table_name*).|  
   

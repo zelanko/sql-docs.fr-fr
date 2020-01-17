@@ -1,6 +1,5 @@
 ---
 title: Utiliser le mode RAW avec FOR XML | Microsoft Docs
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016148"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245236"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utiliser le mode RAW avec FOR XML
 
@@ -36,13 +36,13 @@ Le mode RAW transforme chaque ligne du jeu de résultats de la requête en un é
  L'option BINARY BASE64 doit être spécifiée dans la clause FOR XML pour retourner les données binaires dans un format encodé en base 64. En mode RAW, la récupération de données binaires sans spécification de l'option BINARY BASE64 génère une erreur.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- Cette section contient les exemples suivants :  
+ Cette section contient les exemples suivants :  
   
 -   [Exemple : Récupération des informations de modèle de produit au format XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [Exemple : Spécification de XSINIL avec la directive ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Exemple : Demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Demander des schémas comme résultats à l’aide de XMLDATA et XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Exemple : Récupération de données binaires](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

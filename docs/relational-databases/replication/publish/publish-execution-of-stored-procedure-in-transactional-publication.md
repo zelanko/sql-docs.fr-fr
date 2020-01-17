@@ -1,6 +1,7 @@
 ---
-title: Publier l’exécution d’une procédure stockée dans une publication transactionnelle | Microsoft Docs
-ms.custom: ''
+title: Publier l’exécution d’une procédure stockée (Transactionnel)
+description: Découvrez comment publier l’exécution de procédures stockées à l’aide de SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ad6e985006ffb1d6ad2e95d7d36b966e92e180b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8d3fc140fbadcb9000a8f6ff6b357e9750f95343
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769811"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321183"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>Publier l’exécution d’une procédure stockée dans une publication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

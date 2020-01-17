@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909712"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546553"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ Si vous prévoyez de vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] 
     > Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console et non pas un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’apparaît pas en tant qu’application dans les versions plus récentes de Windows. Le nom de fichier contient un nombre représentant le numéro de version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour ouvrir le Gestionnaire de configuration à partir de la commande Exécuter, voici les chemins des quatre dernières versions quand Windows est installé sur le lecteur C.  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 2.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** _<InstanceName>_ .  
   
@@ -108,7 +108,7 @@ Après avoir configuré le [!INCLUDE[ssDE](../includes/ssde-md.md)] en vue de l'
   
 6.  Dans la boîte de dialogue **Profil** , sélectionnez des profils qui décrivent l'environnement de connexion de l'ordinateur lorsque vous souhaitez vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)], puis cliquez sur **Suivant**.  
   
-7.  Dans la boîte de dialogue **Nom** , tapez un nom et une description pour cette règle, puis cliquez sur **Terminer**.  
+7.  Dans la boîte de dialogue **Nom**, entrez un nom et une description pour cette règle, puis cliquez sur **Terminer**.  
   
 Pour plus d’informations sur la configuration du pare-feu, y compris des instructions concernant [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Pour plus d’informations sur les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le moteur de base de données, Analysis Services, Reporting Services et Integration Services, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -126,7 +126,7 @@ Lorsque le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browse
 3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:** _<nom_ordinateur>_ . Dans notre exemple d’instance nommée, tapez **tcp:** _<nom_ordinateur>_ **,49172**.  
   
     > [!NOTE]  
-    > Si vous omettez  **tcp:** dans la zone **Nom du serveur**, le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
+    > Si vous omettez **tcp:** dans la zone **Nom du serveur** , le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
   
 4.  Dans la zone **Authentification** , confirmez **Authentification Windows**, puis cliquez sur **Se connecter**.  
   

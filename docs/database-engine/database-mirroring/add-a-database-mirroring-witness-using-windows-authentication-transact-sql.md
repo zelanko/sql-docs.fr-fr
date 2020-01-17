@@ -1,6 +1,7 @@
 ---
-title: Ajouter un témoin de mise en miroir de bases de données à l’aide de l’authentification Windows (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Configurer un témoin
+description: 'Explique comment configurer un témoin de mise en miroir de bases de données avec l’authentification Windows à l’aide de Transact-SQL. '
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: df8fe05e66c50b6bdee8e6bdfd792a2b481d1e02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945652"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822300"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Ajouter un témoin de mise en miroir de bases de données à l'aide de l'authentification Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67945652"
 > [!IMPORTANT]  
 >  Nous vous recommandons de configurer la mise en miroir de bases de données durant les heures creuses, car cela peut affecter les performances.  
   
-### <a name="to-establish-a-witness"></a>Pour établir un témoin  
+## <a name="establish-a-witness"></a>Établir un témoin  
   
 1.  Sur l'instance de serveur témoin, assurez-vous qu'un point de terminaison existe pour la mise en miroir de bases de données. Quel que soit le nombre de sessions de mise en miroir à prendre en charge, l'instance de serveur ne doit disposer que d'un seul point de terminaison de mise en miroir de bases de données. Si vous voulez utiliser cette instance de serveur exclusivement comme témoin dans des sessions de mise en miroir de bases de données, attribuez le rôle de témoin au point de terminaison (ROLE **=** WITNESS). Si vous souhaitez utiliser cette instance de serveur comme partenaire dans une ou plusieurs sessions de mise en miroir de bases de données, attribuez le rôle ALL au point de terminaison.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67945652"
   
      Si le témoin ne dispose pas d’un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Si les instances partenaires s'exécutent sous différents comptes d'utilisateurs de domaine, créez une connexion pour ces différents comptes dans la base de données master de chaque instance. Pour plus d’informations, consultez [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
+2.  Si les instances partenaires s'exécutent sous différents comptes d'utilisateurs de domaine, créez une connexion pour ces différents comptes dans la base de données master de chaque instance. Pour plus d’informations, consultez [Autoriser l’accès sur le réseau à un point de terminaison de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Connectez-vous au serveur principal et exécutez l'instruction suivante :  
   

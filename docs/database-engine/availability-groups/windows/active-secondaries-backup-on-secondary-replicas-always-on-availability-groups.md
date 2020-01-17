@@ -1,7 +1,7 @@
 ---
-title: Décharger les sauvegardes prises en charge vers des réplicas secondaires d’un groupe de disponibilité
-description: Découvrez les différents types de sauvegardes prises en charge lors du déchargement de sauvegardes vers un réplica secondaire d’un groupe de disponibilité Always On.
-ms.custom: seodec18
+title: Déplacer des sauvegardes vers un réplica de groupe de disponibilité secondaire
+description: Découvrez les différents types de sauvegardes pris en charge lors du déplacement de sauvegardes vers un réplica secondaire d’un groupe de disponibilité Always On.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807430"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822413"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Décharger les sauvegardes prises en charge vers des réplicas secondaires d’un groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Les fonctions secondaires actives [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent la prise en charge des opérations de sauvegarde sur les réplicas secondaires. Les opérations de sauvegarde peuvent solliciter de manière significative les E/S et l'UC (avec la compression de sauvegarde). Le déchargement des sauvegardes vers un réplica secondaire synchronisé ou en cours de synchronisation vous permet d'utiliser les ressources sur l'instance de serveur qui héberge le réplica principal pour vos charges de travail de niveau 1.  
+  Les fonctions secondaires actives [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prennent en charge le déplacement de sauvegardes sur des réplicas secondaires. Les opérations de sauvegarde peuvent solliciter de manière significative les E/S et l'UC (avec la compression de sauvegarde). Le déchargement des sauvegardes vers un réplica secondaire synchronisé ou en cours de synchronisation vous permet d'utiliser les ressources sur l'instance de serveur qui héberge le réplica principal pour vos charges de travail de niveau 1.  
 
 > [!NOTE]  
 >  Les instructions RESTORE ne sont pas autorisées sur les bases de données primaire ou secondaire d'un groupe de disponibilité.  
@@ -36,7 +36,7 @@ ms.locfileid: "72807430"
  
 ##  <a name="SupportedBuTypes"></a> Types de sauvegardes pris en charge sur les réplicas secondaires  
   
--   **BACKUP DATABASE** prend en charge uniquement la copie seule des sauvegardes complètes de la base de données, des fichiers ou des groupes de fichiers lorsqu’elle est exécutée sur les réplicas secondaires. Notez que les sauvegardes de type copie seule n'affectent pas la séquence de journaux de transactions consécutifs ou n'effacent pas la bitmap différentielle.  
+-   **BACKUP DATABASE** prend en charge les sauvegardes complètes de type copie uniquement de bases de données, fichiers ou groupes de fichiers uniquement quand elle est exécutée sur des réplicas secondaires. Les sauvegardes de type copie uniquement n’impactent pas la séquence de journaux de transactions consécutifs et n’effacent pas la bitmap différentielle.  
   
 -   Les sauvegardes différentielles ne sont pas prises en charge sur les réplicas secondaires.
 

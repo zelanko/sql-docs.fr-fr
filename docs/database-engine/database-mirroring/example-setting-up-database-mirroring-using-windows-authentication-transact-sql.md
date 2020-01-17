@@ -1,6 +1,7 @@
 ---
-title: 'Exemple : Configurer la mise en miroir de bases de données à l’aide de l’authentification Windows (T-SQL) | Microsoft Docs'
-ms.custom: ''
+title: Configurer la mise en miroir de bases de données avec l’authentification Windows (T-SQL)
+description: Exemple illustrant toutes les étapes nécessaires à la création d’une session de mise en miroir de bases de données avec un serveur témoin en utilisant l’authentification Windows avec T-SQL (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b30804974d472f06dc2ab5971d4d3f7674c61e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997889"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822261"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Exemple : Configurer la mise en miroir de bases de données à l’aide de l’authentification Windows (Transact-SQL)
+# <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>Exemple : Configurer la mise en miroir de bases de données à l’aide de l’authentification Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cet exemple illustre toutes les étapes nécessaires à la création d'une session de mise en miroir de base de données avec un serveur témoin à l'aide de l'authentification Windows. Les exemples de cette rubrique utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notez qu'au lieu d'utiliser les étapes [!INCLUDE[tsql](../../includes/tsql-md.md)], vous pouvez utiliser l'Assistant Sécurité de mise en miroir de bases de données pour configurer la mise en miroir de base de données. Pour plus d’informations, consultez [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
-## <a name="prerequisite"></a>Condition préalable  
+## <a name="prerequisite"></a>Configuration requise  
  L'exemple utilise la base de données d'exemple **AdventureWorks** , qui emploie par défaut le mode de récupération simple. Pour utiliser la mise en miroir avec cette base de données, vous devez la modifier pour qu'elle utilise le mode de restauration complète. Pour obtenir ce résultat dans [!INCLUDE[tsql](../../includes/tsql-md.md)], utilisez l'instruction ALTER DATABASE comme suit :  
   
 ```  
@@ -47,7 +48,7 @@ GO
   
  Le tableau ci-dessous récapitule les valeurs utilisées dans cet exemple.  
   
-|Rôle initial de la mise en miroir|Système hôte|Compte d'utilisateur de domaine|  
+|Rôle initial de la mise en miroir|Système hôte|Compte d’utilisateur de domaine|  
 |----------------------------|-----------------|-------------------------|  
 |Principal|PARTNERHOST1|*\<Mon_domaine>\\<nom_utilisateur_dbo\>*|  
 |Miroir|PARTNERHOST5|*\<Mon_domaine>\\<nom_utilisateur_dbo\>*|  
@@ -163,6 +164,6 @@ GO
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

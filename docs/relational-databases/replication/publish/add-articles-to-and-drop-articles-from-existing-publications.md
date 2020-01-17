@@ -1,6 +1,7 @@
 ---
-title: Ajouter et supprimer des articles de publications existantes | Microsoft Docs
-ms.custom: ''
+title: Ajouter et supprimer des articles (publication existante)
+description: Découvrez comment ajouter et supprimer des articles dans des publications existantes pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907800"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321321"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Ajouter et supprimer des articles de publications existantes
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,16 +52,16 @@ ms.locfileid: "72907800"
   
 3.  Après la création de l'instantané, synchronisez l'abonnement pour copier le schéma et les données du nouvel article.  
 
-    -   Pour synchroniser un abonnement par émission de données, consultez [Synchroniser un abonnement par émission de données](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
+    -   Pour synchroniser un abonnement par émission de données (push), consultez [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-    -   Pour synchroniser un abonnement par extraction, consultez [Synchroniser un abonnement par extraction](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   Pour synchroniser un abonnement par extraction de données (pull), consultez [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="dropping-articles"></a>abandon d'articles  
  Les articles peuvent être supprimés d'une publication à tout moment mais vous devez prendre en compte les comportements suivants :  
   
 -   La suppression d'un article d'une publication ne supprime pas l'objet de la base de données de publication ou l'objet correspondant de la base de données d'abonnement. Utilisez DROP \<objet> pour supprimer ces objets, le cas échéant. Lorsque vous supprimez un article lié à d’autres articles publiés par l’intermédiaire de contraintes de clés étrangères, il est conseillé de supprimer manuellement la table sur l’Abonné ou d’avoir recours à une exécution de script à la demande : spécifiez un script qui comprend les instructions DROP \<objet> appropriées. Pour plus d’informations, consultez [Exécuter des scripts pendant la synchronisation &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
--   Pour les publications de fusion présentant un niveau de compatibilité égal ou supérieur à 90RTM, les articles peuvent être supprimés à tout moment mais un nouvel instantané s'impose. De plus :  
+-   Pour les publications de fusion présentant un niveau de compatibilité égal ou supérieur à 90RTM, les articles peuvent être supprimés à tout moment mais un nouvel instantané s'impose. De plus :  
   
     -   Si l'article est un article parent dans une relation d'enregistrement logique ou de filtre de jointure, vous devez commencer par supprimer les relations, ce qui nécessite une réinitialisation.  
   

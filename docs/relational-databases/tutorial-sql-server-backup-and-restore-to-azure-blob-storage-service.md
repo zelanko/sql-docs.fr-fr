@@ -1,5 +1,5 @@
 ---
-title: 'Démarrage rapide : Sauvegarde et restauration de SQL avec le service de stockage Blob Azure'
+title: 'Démarrage rapide : Sauvegarder et restaurer avec le service Stockage Blob Azure'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 709aecfba4f73f0ef1d2c805e84d8a2113998e82
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095486"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165525"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Démarrage rapide : Sauvegarde et restauration de SQL Server avec le service de stockage Blob Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -25,13 +25,13 @@ Ce guide de démarrage rapide vous aide à comprendre comment écrire des sauveg
 Pour suivre ce guide de démarrage rapide, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL.  Vous avez besoin d’un compte de stockage Azure, de SQL Server Management Studio (SSMS) et d’un accès à un serveur qui exécute SQL Server ou à une instance gérée Azure SQL Database. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
 
 - Obtenir gratuitement un [compte Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Créer un [compte de stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Créez un [compte de stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installez [l’édition SQL Server 2017 Developer](https://www.microsoft.com/sql-server/sql-server-downloads) ou bien déployez une [instance gérée](/azure/sql-database/sql-database-managed-instance-get-started) avec une connectivité établie via une [machine virtuelle Azure SQL](/azure/sql-database/sql-database-managed-instance-configure-vm) ou via [point à site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Affectez le compte utilisateur au rôle de [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) et autorisez [modifier les informations d’identification](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
 ## <a name="create-azure-blob-container"></a>Créer un conteneur d’objets blob Azure
-Un conteneur regroupe un ensemble d’objets blob. Tous les objets blob doivent figurer dans un conteneur. Un compte de stockage peut contenir un nombre illimité de conteneurs, mais doit comporter au moins un conteneur. Un conteneur peut stocker un nombre illimité d'objets blob. 
+Un conteneur regroupe un ensemble d’objets blob. Tous les objets blob doivent figurer dans un conteneur. Un compte de stockage peut contenir un nombre illimité de conteneurs, mais doit comporter au moins un conteneur. Un conteneur peut stocker un nombre illimité d’objets blob. 
 
 Pour créer un conteneur, suivez ces étapes :
 
@@ -232,6 +232,6 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 ## <a name="see-also"></a>Voir aussi 
 Les ressources suivantes sont des lectures recommandées afin de mieux comprendre les concepts et les bonnes pratiques pour l’utilisation du service Stockage Blob Azure pour les sauvegardes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
--   [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+-   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+-   [Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: Supprimer un écouteur de groupe de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Supprimer un écouteur de groupe de disponibilité
+description: Explique comment supprimer un écouteur de groupe de disponibilité Always On à l’aide de SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1490e7b5165cb3d977747d1b47b1f364f4975f97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e298dd5dbdea6ee3895a35f3485c8df69574ba8d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014320"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822655"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Supprimer un écouteur de groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +51,10 @@ ms.locfileid: "68014320"
 5.  Cela ouvre la boîte de dialogue **Supprimer l'écouteur du groupe de disponibilité** . Pour plus d'informations, consultez [Supprimer l'écouteur du groupe de disponibilité](#AgListenerPropertiesDialog), plus loin dans cette rubrique.  
   
 ###  <a name="AgListenerPropertiesDialog"></a> Supprimer l'écouteur du groupe de disponibilité (boîte de dialogue)  
- **Name**  
+ **Nom**  
  Nom de l'écouteur à supprimer.  
   
- **Result**  
+ **Résultat**  
  Affiche un lien, **Opération réussie** ou **Erreur**, sur lequel vous pouvez cliquer pour plus d’informations.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  

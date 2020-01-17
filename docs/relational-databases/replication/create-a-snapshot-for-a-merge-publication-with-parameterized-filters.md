@@ -1,6 +1,7 @@
 ---
-title: Créer un instantané d’une publication de fusion avec des filtres paramétrés | Microsoft Docs
-ms.custom: ''
+title: Créer un instantané avec des filtres paramétrables (Fusion)
+description: Découvrez comment créer un instantané pour une publication de fusion avec des filtres paramétrables.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a803d848d12965f7e0c0b167bf3a2f20a235ecdc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 88c43b8d37861e52b5bda5afc0a38753f2b70d6e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907390"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321823"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Créer un instantané d'une publication de fusion avec des filtres paramétrés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications d
   
 ##  <a name="Recommendations"></a> Recommandations  
   
--   Lors de la génération d'un instantané pour une publication de fusion à l'aide de filtres paramétrables, vous devez commencer par générer un instantané standard (schéma) qui contient l'ensemble des données publiées, ainsi que les métadonnées de l'Abonné pour l'abonnement. Pour plus d'informations, voir [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Après avoir créé l'instantané de schéma, vous pouvez générer l'instantané qui contient la partition des données publiées spécifique à l'Abonné.  
+-   Lors de la génération d'un instantané pour une publication de fusion à l'aide de filtres paramétrables, vous devez commencer par générer un instantané standard (schéma) qui contient l'ensemble des données publiées, ainsi que les métadonnées de l'Abonné pour l'abonnement. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Après avoir créé l'instantané de schéma, vous pouvez générer l'instantané qui contient la partition des données publiées spécifique à l'Abonné.  
   
 -   Si le filtrage d'un ou plusieurs articles de la publication donne des partitions qui ne se chevauchent pas et sont uniques pour chaque abonnement, les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à initialiser la génération et la remise d'instantané. 
   
@@ -146,7 +147,7 @@ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications d
   
 3.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) pour ajouter des articles à la publication. Cette procédure stockée doit être exécutée une fois pour chaque article de la publication. Lorsque vous utilisez des filtres paramétrables, vous devez spécifier un filtre de lignes paramétrable pour un seul article à l’aide du paramètre **\@subset_filterclause**. Pour plus d'informations, voir [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d’informations, consultez [Définir et modifier un filtre de jointure entre des articles de fusion](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Définir et modifier un filtre de jointure entre des articles de fusion](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), en spécifiant la valeur de **\@publication** créée à l’étape 1. Notez la valeur du **snapshot_jobid** dans le jeu de résultats.  
   
@@ -314,9 +315,9 @@ PAUSE
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> pour créer la publication.  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> . Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-6.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable. (Facultatif) Créez des objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent des filtres de jointure entre les articles. Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+6.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable. (Facultatif) Créez des objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent des filtres de jointure entre les articles. Pour plus d’informations, consultez [définir un Article](../../relational-databases/replication/publish/define-an-article.md).  
   
 7.  Si <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> a la valeur **false**, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l'Agent d'instantané initial pour cette publication.  
   
@@ -372,7 +373,7 @@ PAUSE
   
 2.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable et créez tous les objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent les filtres de jointure entre les articles. Pour plus d’informations, consultez [définir un Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Générez l'instantané initial. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Générez l'instantané initial. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> et définissez les propriétés requises suivantes :  
   

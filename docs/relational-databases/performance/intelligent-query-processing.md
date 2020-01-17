@@ -1,8 +1,8 @@
 ---
-title: Traitement de requêtes intelligent dans les bases de données Microsoft SQL | Microsoft Docs
+title: Traitement de requêtes intelligent
 description: Fonctionnalités de traitement de requêtes intelligent pour améliorer les performances des requêtes dans SQL Server et Azure SQL Database.
-ms.custom: ''
-ms.date: 11/12/2019
+ms.custom: seo-dt-2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f18367446b3d36e4e95373f1789509e08082a403
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962421"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821978"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
@@ -26,6 +26,10 @@ ms.locfileid: "73962421"
 La famille de fonctionnalités de traitement de requêtes intelligent inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation à entreprendre. 
 
 ![Traitement de requêtes intelligent](./media/iqp-feature-family.png)
+
+Regardez cette vidéo de 6 minutes pour obtenir un aperçu du traitement intelligent des requêtes :
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
 
 Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes intelligent en activant le niveau de compatibilité applicable pour la base de données. Vous pouvez définir cette option à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
 
@@ -80,7 +84,7 @@ Différentes valeurs de paramètre peuvent également nécessiter différents pl
 
 ### <a name="memory-grant-feedback-caching"></a>Mise en cache du retour d’allocation de mémoire
 Le retour peut être stocké dans le plan mis en cache pour une seule exécution. Toutefois, ce sont les exécutions consécutives de cette instruction qui bénéficient des ajustements du retour d’allocation de mémoire. Cette fonctionnalité s’applique à l’exécution répétée d’instructions. Le retour d’allocation de mémoire modifie uniquement le plan mis en cache. Actuellement, les modifications ne sont pas capturées dans le Magasin des requêtes.
-Le retour n’est pas persistant si le plan est supprimé du cache. Le retour est également perdu en cas de basculement. Une instruction qui utilise `OPTION (RECOMPILE)` crée un plan et ne le met pas en cache. Parce qu’il n’est pas mis en cache, aucun retour d’allocation de mémoire n’est généré, et il n’est pas stocké pour cette compilation et l’exécution. Toutefois, si une instruction équivalente (autrement dit, avec le même hachage de requête) qui n’utilise **pas** `OPTION (RECOMPILE)` a été mise en cache, puis réexécutée, l’instruction consécutive peut bénéficier du retour d’allocation de mémoire.
+Le retour n’est pas persistant si le plan est supprimé du cache. Le retour est également perdu en cas de basculement. Une instruction qui utilise `OPTION (RECOMPILE)` crée un plan et ne le met pas en cache. Parce qu’il n’est pas mis en cache, aucun retour d’allocation de mémoire n’est généré, et il n’est pas stocké pour cette compilation et l’exécution. Toutefois, si une instruction équivalente (autrement dit, avec le même hachage de requête) qui n’utilise **pas**`OPTION (RECOMPILE)` a été mise en cache, puis réexécutée, l’instruction consécutive peut bénéficier du retour d’allocation de mémoire.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Suivi de l’activité du retour d’allocation de mémoire
 Vous pouvez suivre les événements du retour d’allocation de mémoire à l’aide de l’événement xEvent *memory_grant_updated_by_feedback*. Cet événement effectue le suivi de l’historique du nombre d’exécutions actuel, du nombre de fois que le plan a été mis à jour par le retour d’allocation de mémoire, de l’allocation de mémoire supplémentaire idéale avant modification et l’allocation de mémoire supplémentaire idéale après que le retour d’allocation de mémoire a modifié le plan mis en cache.
@@ -123,7 +127,7 @@ Un indicateur de requête USE HINT est prioritaire par rapport à une configurat
 
 ## <a name="row-mode-memory-grant-feedback"></a>Rétroaction d’allocation de mémoire en mode ligne
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 La rétroaction d’allocation de mémoire en mode ligne étend la fonctionnalité de rétroaction d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne.  
 
@@ -171,7 +175,7 @@ Avec l’exécution entrelacée, le nombre réel de lignes de la fonction est ut
 
 L’exécution entrelacée change la limite unidirectionnelle entre les phases d’exécution et d’optimisation pour l’exécution d’une seule requête, et permet d’adapter les plans selon les estimations de cardinalité révisées. Pendant l’optimisation, si nous rencontrons un candidat pour l’exécution entrelacée, c’est-à-dire des **fonctions table à instructions multiples (MSTVF)** , nous suspendons l’optimisation, exécutons la sous-arborescence applicable, capturons des estimations de cardinalité précises, puis reprenons l’optimisation pour les opérations en aval.   
 
-Les MSTVF ont une estimation de cardinalité fixe égale à 100 à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et égale à 1 pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution entrelacée entraîne des problèmes de performance des charges de travail qui sont liés à ces estimations de cardinalité fixes associées aux MSTVF. Pour plus d’informations sur les MSTVF, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+Les fonctions table à instructions multiples ont une estimation de cardinalité fixe égale à 100 à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et égale à 1 pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution entrelacée entraîne des problèmes de performance des charges de travail qui sont liés à ces estimations de cardinalité fixes associées aux MSTVF. Pour plus d’informations sur les MSTVF, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 L’image suivante illustre une sortie de [Statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md), un sous-ensemble d’un plan d’exécution global qui montre l’impact des estimations de cardinalité fixes des MSTVF. Vous pouvez comparer le flux de lignes réel et les lignes estimées. Il y a trois zones notables dans le plan (le flux va de droite à gauche) :
 1. L’analyse de table MSTVF utilise une estimation fixe de 100 lignes. Dans cet exemple, toutefois, l’analyse de table présente un flux de 527 597 lignes, comme indiqué dans les statistiques des requêtes actives par *527597 sur 100* (nombre réel sur nombre estimé). L’estimation fixe est donc considérablement biaisée.
@@ -274,19 +278,61 @@ Un indicateur de requête USE HINT est prioritaire par rapport à une configurat
 
 ## <a name="table-variable-deferred-compilation"></a>Compilation différée de variable de table
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-La compilation différée de variable de table améliore la qualité du plan et les performances globales pour les requêtes faisant référence à des variables de table. Pendant l’optimisation et la compilation initiale, cette fonctionnalité propage les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Ces informations précises sur le nombre de lignes optimisent les opérations de plan en aval.
+La **compilation différée de variable de table** améliore la qualité du plan et les performances globales pour les requêtes faisant référence à des variables de table. Pendant l’optimisation et la compilation de plans initiale, cette fonctionnalité va propager les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Le nombre exact de lignes sera ensuite utilisé pour optimiser les opérations de plan en aval.
 
 Avec la compilation différée de la variable de table, la compilation d’une instruction qui fait référence à une variable de table est différée jusqu'à la première exécution réelle de l’instruction. Ce comportement de compilation différée est identique à celui des tables temporaires. Cette modification entraîne l’utilisation de la cardinalité réelle au lieu de l’estimation d’origine sur une ligne. 
 
-Vous pouvez activer la compilation différée de variable de table dans Azure SQL Database. Pour ce faire, activez le niveau de compatibilité 150 pour la base de données à laquelle vous êtes connecté lorsque vous exécutez la requête.
+Pour permettre la compilation différée des variables de table, définissez le niveau de compatibilité de la base de données à 150 pour la base de données à laquelle vous êtes connecté durant l’exécution de la requête.
 
-Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+La compilation différée de variables de table **ne** modifie aucune autre caractéristique des variables de table. Par exemple, cette fonctionnalité n’ajoute pas de statistiques de colonnes aux variables de table.
+
+La compilation différée de variables de table **n’augmente pas la fréquence des recompilations**. Au lieu de cela, elle se positionne là où la compilation initiale se produit. Le plan mis en cache obtenu est généré en fonction du nombre de lignes de variable de table dans la compilation différée initiale. Le plan mis en cache est réutilisé par des requêtes consécutives. Et ce, jusqu’à ce que le plan soit supprimé ou recompilé. 
+
+Le nombre de lignes de variable de table utilisé pour la compilation du plan initial représente une valeur type très différente d’une estimation du nombre de lignes fixe. S’il est différent, les opérations en aval en bénéficieront. Si le nombre de lignes de variable de table varie de manière significative entre les exécutions, il est possible que cette fonctionnalité n’améliore pas les performances.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Désactivation de la compilation différée de variables de table sans changer le niveau de compatibilité
+Désactivez la compilation différée des variables de table au niveau de la base de données ou de l’instruction, tout en maintenant un niveau de compatibilité de la base de données supérieur ou égal à 150. Pour désactiver la compilation différée des variables de table dans toutes les exécutions de requête provenant de la base de données, exécutez l’exemple suivant dans le contexte de la base de données applicable :
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+Pour réactiver la compilation différée des variables de table dans toutes les exécutions de requête provenant de la base de données, exécutez l’exemple suivant dans le contexte de la base de données applicable :
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+Vous pouvez également désactiver la compilation différée des variables de table pour une requête spécifique en désignant DISABLE_DEFERRED_COMPILATION_TV comme un indicateur de requête USE HINT.  Par exemple :
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## <a name="scalar-udf-inlining"></a>Incorporation (inlining) des fonctions UDF scalaires
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 La fonctionnalité d’incorporation des fonctions UDF scalaires transforme automatiquement les [fonctions UDF scalaires](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) en expressions relationnelles. Elle les incorpore dans la requête SQL appelante. Cette transformation améliore les performances des charges de travail qui tirent parti des fonctions UDF scalaires. La fonctionnalité d’incorporation des fonctions UDF scalaires facilite l’optimisation basée sur le coût des opérations à l’intérieur des fonctions UDF. Les résultats sont des plans efficaces, axés sur les ensembles et parallèles au lieu de plans d’exécution inefficaces, itératifs, en série. Cette fonctionnalité est activée par défaut sous le niveau de compatibilité de base de données 150.
 
@@ -294,7 +340,7 @@ Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires
 
 ## <a name="approximate-query-processing"></a>Traitement des requêtes approximatif
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Le traitement des requêtes approximatif est une nouvelle famille de fonctionnalités. Il fournit des agrégations dans de vastes jeux de données où la réactivité est plus importante que la précision absolue. Un exemple est le calcul d’un **COUNT(DISTINCT())** dans 10 milliards de lignes pour l’affichage sur un tableau de bord. Dans ce cas, la précision absolue n’est pas importante, mais la réactivité est essentielle. La nouvelle fonction d’agrégation **APPROX_COUNT_DISTINCT** retourne le nombre approximatif de valeurs non null uniques dans un groupe.
 
@@ -302,7 +348,7 @@ Pour plus d’informations, consultez [APPROX_COUNT_DISTINCT (Transact-SQL)](../
 
 ## <a name="batch-mode-on-rowstore"></a>Mode Batch sur rowstore 
 
-**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Le mode batch sur rowstore permet l’exécution en mode batch des charges de travail analytiques sans avoir besoin d’index columnstore.  Cette fonctionnalité prend en charge les filtres bitmap et l’exécution du mode batch des segments de mémoire sur disque et des index B-tree. Le mode batch sur rowstore permet de prendre en charge tous les opérateurs existants compatibles avec le mode batch.
 
@@ -311,41 +357,45 @@ Le mode batch sur rowstore permet l’exécution en mode batch des charges de tr
 - Les index **ColumnStore** permettent aux requêtes analytiques d’accéder uniquement aux données dans les colonnes nécessaires. La compression de page au format columnstore est aussi plus efficace que la compression dans des index **rowstore** traditionnels. 
 - Avec le traitement **en mode batch**, les opérateurs de requête traitent les données plus efficacement. Ils travaillent sur un lot de lignes au lieu d’une ligne à la fois. Plusieurs autres améliorations d’évolutivité sont liées au traitement en mode Batch. Pour plus d’informations sur le mode batch, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
-Les deux ensembles de fonctionnalités fonctionnent ensemble pour améliorer les entrées/sorties (E/S) et l’utilisation du processeur :
-- En utilisant des index columnstore, une plus grande quantité de vos données s’intègre dans la mémoire. Cela réduit la nécessité des E/S.
+Les deux ensembles de fonctionnalités interagissent pour améliorer les E/S (entrées/sorties) et l’utilisation du processeur :
+- En utilisant des index columnstore, une plus grande quantité de vos données s’intègre dans la mémoire. Cela réduit la charge de travail d’E/S.
 - Le traitement en mode Batch utilise plus efficacement le processeur.
 
-Dès que possible, les deux technologies tirent parti l’une de l’autre. Par exemple, les agrégats en mode Batch peuvent être évalués dans le cadre d’une analyse d’index columnstore. Nous traitons également les données columnstore compressées à l’aide du codage de la longueur d’exécution beaucoup plus efficacement avec les jonctions en mode Batch et des agrégats en mode Batch. 
+Dès que possible, les deux technologies tirent parti l’une de l’autre. Par exemple, les agrégats en mode Batch peuvent être évalués dans le cadre d’une analyse d’index columnstore. Les données columnstore compressées sont également traitées à l’aide de l’encodage de la longueur d’exécution de manière beaucoup plus efficace avec les jointures en mode batch et les agrégats en mode batch. 
  
-Les deux fonctionnalités sont utilisables indépendamment :
-* Vous bénéficiez de plans en mode ligne qui utilisent des index columnstore.
-* Vous bénéficiez de plans en mode batch qui utilisent uniquement des index rowstore. 
+Il est toutefois important de comprendre que les deux fonctionnalités sont indépendantes :
+* Vous pouvez obtenir des plans en mode ligne qui utilisent des index columnstore.
+* Vous pouvez obtenir des plans en mode batch qui utilisent uniquement des index rowstore. 
 
 Vous obtenez généralement les meilleurs résultats lorsque vous utilisez les deux fonctionnalités ensemble. Donc, jusqu’à présent, l’optimiseur de requête SQL Server ne prenait en compte le traitement en mode batch que pour les requêtes impliquant au moins une table avec un index columnstore.
 
-Les index columnstore ne constituent pas une bonne option pour certaines applications. Une application peut utiliser une autre fonctionnalité qui n’est pas pris en charge avec des index columnstore. Par exemple, les modifications sur place ne sont pas compatibles avec la compression columnstore. Donc, les déclencheurs ne sont pas pris en charge sur les tables avec des index columnstore en cluster. Plus important encore, les index columnstore ajoutent une surcharge aux instructions **DELETE** et **UPDATE**. 
+Les index columnstore ne sont peut-être pas appropriés pour certaines applications. Une application peut utiliser une autre fonctionnalité qui n’est pas pris en charge avec des index columnstore. Par exemple, les modifications sur place ne sont pas compatibles avec la compression columnstore. Les déclencheurs ne sont donc pas pris en charge sur les tables avec des index columnstore en cluster. Plus important encore, les index columnstore ajoutent une surcharge aux instructions **DELETE** et **UPDATE**. 
 
-Pour certaines charges de travail transactionnelles-analytiques hybrides, les aspects transactionnels d’une charge de travail compense les avantages des index columnstore. Ces scénarios peuvent améliorer l’utilisation de l’UC par rapport au traitement en mode batch seul. C’est pourquoi le mode batch sur la fonctionnalité rowstore prend en compte le mode batch pour toutes les requêtes. Peu importe quels index sont impliqués.
+Pour certaines charges de travail transactionnelles-analytiques hybrides, la surcharge d’une charge de travail transactionnelle l’emporte sur les avantages liés à l’utilisation des index columnstore. De tels scénarios peuvent bénéficier d’une utilisation améliorée du processeur via un traitement en mode batch uniquement. C’est la raison pour laquelle la fonctionnalité Mode batch sur rowstore prend en compte le mode batch pour toutes les requêtes, quel que soit le type d’index concerné.
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>Charges de travail pouvant tirer parti du mode Batch sur rowstore
 Les charges de travail suivantes peuvent tirer parti du mode Batch sur rowstore :
-* Une partie importante de la charge de travail se compose de requêtes analytiques. En règle générale, ces requêtes possèdent des opérateurs tels que des jointures ou des agrégats qui traitent des centaines de milliers de lignes ou plus.
-* La charge de travail est liée à l’UC. Si le goulot d’étranglement est au niveau des E/S, nous vous recommandons d’envisager d’utiliser un index columnstore, si possible.
-* La création d’un index columnstore ajoute trop de surcharge à la partie transactionnelle de votre charge de travail. Ou bien, la création d’un index columnstore n’est pas faisable, car votre application dépend d’une fonctionnalité qui n’est pas encore prise en charge avec les index columnstore.
+* Une partie importante de la charge de travail se compose de requêtes analytiques. En règle générale, ces requêtes utilisent des opérateurs tels que des jointures ou des agrégats qui traitent des centaines de milliers de lignes ou plus.
+* La charge de travail est liée à l’UC. Si le goulot d’étranglement se situe au niveau des E/S, il est toujours recommandé d’envisager l’utilisation d’un index columnstore, si possible.
+* La création d’un index columnstore ajoute trop de surcharge à la partie transactionnelle de votre charge de travail. Ou bien, la création d’un index columnstore est impossible, car votre application dépend d’une fonctionnalité qui n’est pas encore prise en charge avec les index columnstore.
+
 
 > [!NOTE]
-> Le mode Batch sur rowstore ne peut aider qu’en réduisant la consommation de l’UC. Si votre goulot d’étranglement est lié aux E/S et si les données ne sont pas déjà mises en cache (cache « à froid »), le mode Batch sur rowstore n’améliore pas le temps écoulé. De même, si la mémoire sur l’ordinateur est insuffisante pour mettre en cache toutes les données, une amélioration des performances est peu probable.
+> Le mode Batch sur rowstore ne peut aider qu’en réduisant la consommation de l’UC. Si votre goulot d’étranglement est lié aux E/S et si les données ne sont pas déjà mises en cache (cache « à froid »), le mode batch sur rowstore n’améliore pas le temps écoulé des requêtes. De même, si la mémoire de la machine est insuffisante pour mettre en cache toutes les données, une amélioration des performances est peu probable.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>Ce qui change avec le mode Batch sur rowstore
-Autre que de passer au niveau de compatibilité 150, vous n’êtes pas obligé de modifier quoi que ce soit de votre côté pour activer le mode Batch sur rowstore pour les charges de travail éligibles.
 
-Même si une requête n’implique aucune table avec un index columnstore, le processeur de requêtes utilise désormais des données heuristiques pour décider s’il faut prendre en compte le mode Batch. Les données heuristiques sont constituées de ces vérifications :
+Définissez le niveau de compatibilité de la base de données à 150. Aucun autre changement n’est nécessaire.
+
+Même si une requête n’accède à aucune table avec des index columnstore, le processeur de requêtes détermine l’utilisation ou non du mode batch à l’aide d’informations heuristiques. Les données heuristiques sont constituées de ces vérifications :
 1. Une vérification initiale des tailles de la table, des opérateurs utilisés et des cardinalités estimées dans la requête d’entrée.
 2. Des points de contrôle supplémentaires, lorsque l’optimiseur détecte des plans nouveaux et à moindre coût pour la requête. Si ces autres plans n’utilisent pas le mode Batch de manière significative, l’optimiseur cesse d’explorer les alternatives du mode Batch.
+
 
 Si le mode Batch sur rowstore est utilisé, vous voyez le mode d’exécution réel en tant que **mode Batch** dans le plan de requête. L’opérateur d’analyse utilise le mode Batch pour les segments de mémoire sur disque et les index B-tree. Cette analyse en mode Batch peut évaluer les filtres de bitmap du mode Batch. Vous pouvez également voir d’autres opérateurs en mode Batch dans le plan. Par exemple, les jonctions de hachage, les agrégats basés sur le hachage, les tris, les agrégats de fenêtre, les filtres, la concaténation et les opérateurs scalaires de calcul.
 
 ### <a name="remarks"></a>Notes
+
 Les plans de requête n’utilisent pas toujours le mode Batch. L’optimiseur de requête peut décider que le mode Batch n’est pas utile pour la requête. 
 
 L’espace de recherche de l’optimiseur de requête change. Par conséquent, si vous obtenez un plan en mode ligne, il peut être différent du plan que vous obtenez dans un niveau de compatibilité inférieur. Et si vous obtenez un plan en mode Batch, il peut être différent du plan que vous obtenez avec un index columstore. 
@@ -380,7 +430,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
 
-Vous pouvez aussi désactiver le mode Batch sur rowstore pour une requête spécifique à l’aide de l’indicateur de requête **DISALLOW_BATCH_MODE**. Observez l'exemple suivant :
+Vous pouvez aussi désactiver le mode Batch sur rowstore pour une requête spécifique à l’aide de l’indicateur de requête **DISALLOW_BATCH_MODE**. Voir l’exemple suivant :
 
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER

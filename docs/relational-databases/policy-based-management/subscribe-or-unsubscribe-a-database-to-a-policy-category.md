@@ -1,6 +1,7 @@
 ---
-title: Abonner une base de données ou annuler son abonnement à une catégorie de stratégie | Microsoft Docs
-ms.custom: ''
+title: Abonner ou désabonner une base de données à une catégorie de stratégie
+description: Explique comment abonner ou désabonner une base de données à une catégorie de stratégie dans le cadre de la gestion basée sur des stratégies à l’aide de SQL Server Management Studio et T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021550"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558225"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Abonner une base de données ou annuler son abonnement à une catégorie de stratégie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment abonner une base de données à une catégorie de stratégie dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou annuler cet abonnement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique explique comment abonner ou désabonner une base de données à une catégorie de stratégie dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Dans cette rubrique**  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68021550"
      Développer la colonne  
      Cliquez sur cette option pour développer une catégorie de stratégie. Celle-ci répertorie toutes les stratégies incluses dans la catégorie.  
   
-     **Name**  
+     **Nom**  
      Nom de la catégorie de stratégie.  
   
      **Abonné**  
@@ -72,7 +73,7 @@ ms.locfileid: "68021550"
      **Mode d'exécution**  
      Indique le mode d'exécution de la stratégie.  
   
-     **Historique**  
+     **History**  
      Cliquez sur le lien hypertexte Afficher l'historique pour ouvrir la Visionneuse du fichier journal et consulter l'historique de stratégie.  
   
 4.  Pour l’abonnement à une catégorie de gestion basée sur des stratégies, cochez la case de la catégorie dans la colonne **Abonné** . Pour annuler l'abonnement à une catégorie, désactivez la case à cocher.  
@@ -83,7 +84,7 @@ ms.locfileid: "68021550"
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Pour abonner une base de données à une catégorie de stratégie  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "68021550"
   
 #### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>Pour annuler l'abonnement d'une base de données à une catégorie de stratégie  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

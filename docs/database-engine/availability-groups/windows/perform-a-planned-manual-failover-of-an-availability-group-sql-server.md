@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014596"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822493"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d’un groupe de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Un basculement manuel planifié est pris en charge seulement quand le réplica p
 -   Le réplica secondaire cible doit être actuellement synchronisé avec le réplica principal. Toutes les bases de données secondaires de ce réplica secondaire doivent être jointes au groupe de disponibilité. Elles doivent également être synchronisées avec leurs bases de données primaires correspondantes (autrement dit, les bases de données secondaires locales doivent être SYNCHRONISÉES). 
   
     > [!TIP] 
-    >  Pour déterminer si le basculement d’un réplica secondaire est prêt, interrogez la colonne **is_failover_ready** dans la vue de gestion dynamique [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Vous pouvez aussi consulter la colonne **Disponibilité du basculement** du [tableau de bord du groupe AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+    >  Pour déterminer si le basculement d’un réplica secondaire est prêt, interrogez la colonne **is_failover_ready** dans la vue de gestion dynamique [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Vous pouvez aussi consulter la colonne **Disponibilité du basculement** du [tableau de bord du groupe AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Cette tâche est prise en charge uniquement sur le réplica secondaire cible. Vous devez être connecté à l'instance de serveur qui héberge le réplica secondaire cible. 
   
 ###  <a name="Security"></a> Sécurité 

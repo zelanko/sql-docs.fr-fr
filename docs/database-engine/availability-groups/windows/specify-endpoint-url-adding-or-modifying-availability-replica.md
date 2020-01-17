@@ -1,6 +1,7 @@
 ---
-title: Spécifier l’URL de point de terminaison - Ajout ou modification d’un réplica de disponibilité | Microsoft Docs
-ms.custom: ''
+title: Spécifier l’URL du point de terminaison pour le réplica de disponibilité
+description: Découvrez comment spécifier l’URL du point de terminaison lors de l’ajout ou de la modification d’un réplica dans un groupe de disponibilité Always On sur SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014012"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251285"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Spécifier l’URL de point de terminaison - Ajout ou modification d’un réplica de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68014012"
   
  TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
   
- où  
+ where  
   
 -   *\<adresse_système>* est une chaîne qui identifie sans ambiguïté le système informatique cible. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68014012"
   
      Dans l'URL de point de terminaison, seul le numéro du port identifie l'instance de serveur associée au point de terminaison de mise en miroir sur l'ordinateur cible. L'illustration suivante présente les URL de point de terminaison de deux instances de serveurs sur un même ordinateur. L'instance par défaut utilise le port `7022` et l'instance nommée utilise le port `7033`. L'URL de point de terminaison de ces deux instances de serveur sont, respectivement : `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` et `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Notez que l'adresse ne contient pas le nom de l'instance du serveur.  
   
-     ![Adresses réseau du serveur d’une instance par défaut](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Adresses réseau du serveur d’une instance par défaut")  
+     ![Adresses réseau de serveur d’une instance par défaut](../../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Adresses réseau de serveur d’une instance par défaut")  
   
      Pour identifier le port actuellement associé au point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante :  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68014012"
   
 ### <a name="examples"></a>Exemples  
   
-#### <a name="a-using-a-system-name"></a>A. Utilisation d'un nom système  
+#### <a name="a-using-a-system-name"></a>R. Utilisation d'un nom système  
  L'URL de point de terminaison suivante spécifie un nom système, `SYSTEM46`, et le port `7022`.  
   
  `TCP://SYSTEM46:7022`  
@@ -97,7 +98,7 @@ ms.locfileid: "68014012"
   
  Pour former le nom de domaine complet, concaténez les valeurs de *<host_name>* et *<Primary_Dns_Suffix>* de la manière suivante :  
   
- _&lt;nom_hôte&gt;_ **.** _<Suffixe_DNS_principal>_  
+ _<host_name>_ **.** _<Suffixe_DNS_principal>_  
   
  Par exemple, la configuration IP  
   
@@ -141,7 +142,7 @@ ms.locfileid: "68014012"
   
 -   [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

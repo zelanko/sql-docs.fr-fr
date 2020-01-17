@@ -1,6 +1,8 @@
 ---
-title: DENY - Refuser des autorisations sur une liste de propriétés de recherche (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY - Autorisations sur une liste de propriétés de recherche
+description: Refusez des autorisations sur une liste de propriétés de recherche.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,12 +20,12 @@ ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8be5b497f3046afb4ed9d56ccde0f6f00ede919a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114811"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244548"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Autorisations de liste des propriétés de recherche DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "68114811"
   Refuse des autorisations dans une liste de propriétés de recherche.  
  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

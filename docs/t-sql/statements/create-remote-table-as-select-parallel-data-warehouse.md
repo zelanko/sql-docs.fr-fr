@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117317"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401707"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68117317"
   
  Pour configurer le serveur distant, consultez « Copie de table distante » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,16 +67,16 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Nom de l’ordinateur serveur distant ou adresse IPv4 du serveur distant. Les adresses IPv6 ne sont pas prises en charge. Vous pouvez spécifier une instance nommée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format **nom_ordinateur\nom_instance** ou **adresse_IP\nom_instance**. Le serveur doit être distant et ne peut donc pas être spécifié comme (local).  
   
  Numéro de *port* TCP  
- Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Par exemple : **ServerA,1450** ou **10.192.14.27,1435**  
+ Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Par exemple :  **ServerA,1450** ou **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Nous vous recommandons de vous connecter à un serveur distant à l’aide de l’adresse IP. En fonction de votre configuration réseau, la connexion à l’aide du nom de l’ordinateur peut nécessiter des étapes supplémentaires afin d’utiliser votre serveur DNS non-appliance pour résoudre le nom au serveur approprié. Cette étape n’est pas nécessaire lors de la connexion avec une adresse IP. Pour plus d’informations, consultez « Utiliser un redirecteur DNS pour résoudre les noms DNS non-appliance (Analytics Platform System) » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  *user_name*  
- Nom de connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Le nombre maximal de caractères autorisé est 128.  
+ Nom de connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Nombre maximal de caractères : 128.  
   
- *password*  
- Mot de passe de connexion. Le nombre maximal de caractères autorisé est 128.  
+ *mot de passe*  
+ Mot de passe de connexion. Nombre maximal de caractères : 128.  
   
  *batch_size*  
  Nombre maximal de lignes par lot. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] envoie les lignes par lots au serveur de destination. *Batch_size* est un entier positif >= 0. La valeur par défaut est 0.  
@@ -134,7 +134,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ##  <a name="Examples"></a> Exemples  
   
-### <a name="a-creating-a-remote-table"></a>A. Création d’une table distante  
+### <a name="a-creating-a-remote-table"></a>R. Création d’une table distante  
  Cet exemple crée une table distante SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée `MyOrdersTable` sur la base de données `OrderReporting` et le schéma `Orders`. La base de données `OrderReporting` se trouve sur un serveur nommé `SQLA` à l’écoute sur le port par défaut 1433. La connexion au serveur utilise les informations d’identification de l’utilisateur `David`, dont le mot de passe est `e4n8@3`.  
   
 ```  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Interrogation de la vue de gestion dynamique sys.dm_pdw_dms_workers pour l’état de copie de table distante  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. Interrogation de la vue de gestion dynamique sys.dm_pdw_dms_workers pour l’état de copie de table distante  
  Cette requête montre comment afficher l’état de la copie d’une table distante.  
   
 ```  

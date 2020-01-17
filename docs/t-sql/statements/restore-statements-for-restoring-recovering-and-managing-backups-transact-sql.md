@@ -1,6 +1,7 @@
 ---
-title: Instructions RESTORE pour la restauration, la récupération et la gestion des sauvegardes (T-SQL) | Microsoft Docs
-ms.custom: ''
+title: Restauration, récupération et gestion des sauvegardes
+description: Instructions Transact-SQL RESTORE pour la restauration, la récupération et la gestion des sauvegardes.
+ms.custom: seo-lt-2019
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
@@ -22,12 +23,12 @@ ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082553"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258759"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Instructions RESTORE pour la restauration, la récupération et la gestion des sauvegardes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -50,6 +51,6 @@ ms.locfileid: "68082553"
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Décrit l'instruction RESTORE VERIFYONLY de Transact-SQL, qui est utilisée d'une part pour vérifier la sauvegarde sans toutefois la restaurer, et d'autre part pour vérifier que le jeu de sauvegarde est complet et que l'ensemble de la sauvegarde est lisible ; elle ne tente pas de vérifier la structure des données.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Sauvegarder et restaurer des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

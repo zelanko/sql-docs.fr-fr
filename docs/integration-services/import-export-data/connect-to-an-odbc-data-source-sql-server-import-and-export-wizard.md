@@ -1,20 +1,21 @@
 ---
 title: Se connecter à une source de données ODBC (Assistant Importation et Exportation SQL Server) | Microsoft Docs
+description: Guide pratique pour configurer un nom de source de données ODBC ou créer une chaîne de connexion ODBC à utiliser avec l’Assistant Importation et Exportation SQL Server
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 12/31/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
+ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285492"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75608028"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données ODBC (Assistant Importation et Exportation SQL Server)
 
@@ -28,7 +29,7 @@ Vous devrez peut-être télécharger le pilote de données dont vous avez besoin
 Vous devrez peut-être également rechercher les informations de connexion requises que vous devez fournir. Ce site tiers ([The Connection Strings Reference](https://www.connectionstrings.com/)) contient des exemples de chaînes de connexion et des renseignements complémentaires sur les fournisseurs de données et les informations de connexion dont ils ont besoin.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>Vérifier que le pilote de votre choix est installé
-1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous savez que vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
+1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le menu Démarrer ou le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous savez que vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
 2.  Lancez l’applet. La fenêtre **Administrateur de source de données ODBC** s’ouvre.
 3.  Sous l’onglet **Pilotes**, vous trouverez la liste de tous les pilotes ODBC installés sur votre ordinateur. (Les noms de certains pilotes peuvent figurer dans plusieurs langues.)
 
@@ -44,13 +45,13 @@ Vous devrez peut-être également rechercher les informations de connexion requi
 ## <a name="step-1---select-the-data-source"></a>Étape 1 : sélectionner la source de données
 Les pilotes ODBC installés sur votre ordinateur ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données dans la page **Choisir une source de données** ou **Choisir une Destination** de l’Assistant. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
 
-Voici l’écran générique qui s’affiche immédiatement après que vous avez sélectionné le fournisseur de données .NET Framework pour ODBC.
+Voici l’écran générique que vous voyez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
 
 ![Connexion à SQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
 ## <a name="step-2---provide-the-connection-info"></a>Étape 2 : fournir les informations de connexion
 L’étape suivante consiste à fournir les informations de connexion pour votre pilote ODBC et votre source de données. Vous avez le choix entre deux options.
-1.  Fournissez un **nom de source de données** (DSN, Data Source Name) qui existe déjà ou que vous créez dans l’applet **Administrateur de source de données ODBC** du Panneau de configuration. Un nom de source de données est la collection enregistrée des paramètres requis pour se connecter à une source de données ODBC.
+1.  Spécifiez un **nom de source de données** (DSN, Data Source Name) qui existe déjà ou que vous créez avec l’applet **Administrateur de source de données ODBC**. Un nom de source de données est la collection enregistrée des paramètres requis pour se connecter à une source de données ODBC.
 
     Si vous connaissez déjà le nom de la source de données, ou savez comment créer un nom de source de données, vous pouvez ignorer le reste de cette page. Entrez le nom de la source de données dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une destination**, puis passez à l’étape suivante de l’Assistant.
 
@@ -66,7 +67,7 @@ Si vous fournissez une chaîne de connexion, la page **Choisir une source de don
 
 ## <a name="odbc_dsn"></a> Option 1 : fournir un nom de source de données
 Si vous souhaitez fournir les informations de connexion à l’aide d’un nom de source de données (DSN, data source name), utilisez l’applet **Administrateur de source de données ODBC** pour rechercher le nom de source de données existant ou pour créer un nouveau nom de source de données.
-1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
+1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le menu Démarrer ou le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
 2.  Lancez l’applet. La fenêtre **Administrateur de source de données ODBC** s’ouvre. L’applet se présente comme ceci.
 
     ![Applet Administrateur ODBC du Panneau de configuration](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -90,7 +91,7 @@ Si vous souhaitez fournir les informations de connexion à l’aide d’un nom d
 ## <a name="odbc_connstring"></a> Option 2 : fournir une chaîne de connexion
 Si vous souhaitez fournir vos informations de connexion à l’aide d’une chaîne de connexion, le reste de cette rubrique vous aide à obtenir la chaîne de connexion dont vous avez besoin.
 
-Cet exemple utilise la chaîne de connexion suivante qui permet de se connecter à Microsoft SQL Server.
+Cet exemple utilise la chaîne de connexion suivante qui permet de se connecter à Microsoft SQL Server. L’exemple de base de données utilisé est **WideWorldImporters**, et nous nous connectons au serveur SQL Server sur l’ordinateur local.
 
     ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
@@ -111,9 +112,9 @@ Pour rechercher des chaînes de connexion pour votre pilote ODBC en ligne, consu
 ## <a name="get-the-connection-string-with-an-app"></a>Obtenir la chaîne de connexion en ligne avec une application
 Pour générer et tester la chaîne de connexion pour votre pilote ODBC sur votre ordinateur, vous pouvez utiliser l’applet **Administrateur de source de données ODBC** du Panneau de configuration. Créez un nom de source de données fichier pour votre connexion, puis copiez les paramètres du nom de source de données fichier afin d’assembler la chaîne de connexion. Cela nécessite plusieurs étapes, mais garantit que la chaîne de connexion est valide.
 
-1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
+1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le menu Démarrer ou le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
 2.  Lancez l’applet. La fenêtre **Administrateur de source de données ODBC** s’ouvre.
-3.  Cliquez sur l’onglet **Source de données fichier** de l’applet. Cliquez sur **Ajouter**.
+3.  Cliquez sur l’onglet **Source de données fichier** de l’applet. Cliquez sur **Add**.
 
     Pour les besoins de cet exemple, créez un nom de source de données fichier plutôt qu’utilisateur ou système, car celui-ci enregistre les paires nom-valeur dans le format spécifique requis pour la chaîne de connexion.
 
@@ -160,7 +161,7 @@ Pour générer et tester la chaîne de connexion pour votre pilote ODBC sur votr
 
     Vous n’avez généralement pas besoin de tous les paramètres d’un nom de source de données créé par l’Administrateur de source de données ODBC pour créer une chaîne de connexion qui fonctionne.  
     -   Vous devez toujours spécifier le pilote ODBC.
-    -   Pour une source de données sur serveur tel que SQL Server, vous avez en général besoin des informations de Server, Database et des informations de connexion. Ainsi, dans l’exemple de nom de source de données, vous n’avez pas besoin des informations de TrustServerCertificate, WSID ou Application.
+    -   Pour une source de données sur serveur tel que SQL Server, vous avez en général besoin des informations de Server, Database et des informations de connexion. Dans l’exemple de nom de source de données, vous n’avez pas besoin des informations de TrustServerCertificate, WSID ou Application.
     -   Pour une source de données sur fichier, vous avez au minimum besoin du nom de fichier et de l’emplacement.
     
 12. Copiez la chaîne de connexion dans le champ **ConnectionString** de la page **Choisir une source de données** ou **Choisir une Destination de l’Assistant**. L’Assistant analyse la chaîne et vous êtes prêt à continuer.

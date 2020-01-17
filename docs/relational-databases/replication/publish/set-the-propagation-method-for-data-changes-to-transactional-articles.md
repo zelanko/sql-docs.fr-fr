@@ -1,6 +1,7 @@
 ---
-title: Définir la méthode de propagation des modifications de données des articles transactionnels | Microsoft Docs
-ms.custom: ''
+title: Définir la méthode de propagation des modifications apportées aux articles (Transactionnel)
+description: Décrit comment définir la méthode de propagation des modifications de données des articles transactionnels pour la réplication transactionnelle à l’aide de SQL Server Management Studio (SSMS) ou de Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 446855f89b924cb41462df67d02926f3b7b1ebe9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7b3b335a347dea69f7741d348ae3d30dd1ba2c8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904992"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321177"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Définir la méthode de propagation des modifications de données des articles transactionnels
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ ms.locfileid: "72904992"
     > [!NOTE]  
     >  Lors de la spécification de la valeur **SQL** pour un des paramètres ci-dessus, les commandes de ce type seront répliquées sur l'Abonné sous la forme de la commande [!INCLUDE[tsql](../../../includes/tsql-md.md)] appropriée.  
   
-     Pour plus d'informations, voir [Définir un article](../../../relational-databases/replication/publish/define-an-article.md).  
+     Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>Pour créer un article qui ne propage pas les modifications de données  
   
@@ -162,6 +163,6 @@ ms.locfileid: "72904992"
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier le mode de propagation des modifications des articles transactionnels](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Configurer les propriétés d’instantané (programmation Transact-SQL de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Configurer les propriétés d’instantané (procédures stockées de réplication)
+description: Utilisez les procédures stockées de réplication afin de configurer les propriétés d’instantané pour les publications transactionnelles ou d’instantané.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ec6f229ded9e9a77b6164ba9c91bee9cf8070fd7
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0152abb24a1bb94f02ebc3f5a4bc6a7c1092acfa
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710922"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321266"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurer les propriétés d'instantané (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "71710922"
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../relational-databases/replication/codesnippet/tsql/configure-snapshot-prope_1.sql)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier les options des instantanés](../../../relational-databases/replication/snapshot-options.md)   
+ [Modifier les options d’instantané](../../../relational-databases/replication/snapshot-options.md)   
  [Exécuter des scripts avant et après l’application de l’instantané](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Transférer des instantanés via FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)   

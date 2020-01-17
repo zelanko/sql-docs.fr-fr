@@ -1,6 +1,7 @@
 ---
-title: Ouvrir le Moniteur d’activité (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Ouvrir le Moniteur d’activité (SSMS)
+description: Guide pratique pour ouvrir le moniteur d’activité dans SSMS (SQL Server Management Studio).
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907228"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165529"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>Ouvrir le Moniteur d'activité (SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Ouvrir le moniteur d’activité dans SSMS (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  Le Moniteur d'activité exécute des requêtes sur l'instance analysée afin d'obtenir des informations pour ses volets d'informations. Si l'intervalle d'actualisation est défini sur une valeur inférieure à 10 secondes, le temps nécessaire à l'exécution de ces requêtes peut affecter les performances du serveur.  

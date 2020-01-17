@@ -1,6 +1,7 @@
 ---
-title: Spécifier une adresse réseau de serveur (mise en miroir de bases de données) | Microsoft Docs
-ms.custom: ''
+title: Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
+description: Spécifiez l’adresse réseau de serveur pour un point de terminaison de mise en miroir de bases de données.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1db02ef90af9e014e3481961daf08a1ce10a54c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048077"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252760"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68048077"
   
  TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
   
- où  
+ where  
   
 -   *\<adresse_système>* est une chaîne qui identifie sans ambiguïté le système informatique de destination. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68048077"
   
      Dans l'adresse réseau d'une instance de serveur, seul le numéro de port associé à son point de terminaison de mise en miroir permet de différencier cette instance des autres instances sur l'ordinateur. L'illustration suivante présente les adresses réseau de deux instances de serveurs sur un même ordinateur. L'instance par défaut utilise le port `7022` et l'instance nommée utilise le port `7033`. Les adresses réseau de serveur de ces deux instances de serveur sont, respectivement : `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` et `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Notez que l'adresse ne contient pas le nom de l'instance du serveur.  
   
-     ![Adresses réseau du serveur d’une instance par défaut](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Adresses réseau du serveur d’une instance par défaut")  
+     ![Adresses réseau de serveur d’une instance par défaut](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Adresses réseau de serveur d’une instance par défaut")  
   
      Pour identifier le port actuellement associé au point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68048077"
   
 ### <a name="examples"></a>Exemples  
   
-#### <a name="a-using-a-system-name"></a>A. Utilisation d'un nom système  
+#### <a name="a-using-a-system-name"></a>R. Utilisation d'un nom système  
  L'adresse réseau de serveur suivante spécifie un nom système, `SYSTEM46`, et un port, `7022`.  
   
 ```  
@@ -108,7 +109,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  Pour former le nom de domaine complet, concaténez les valeurs de *<host_name>* et *<Primary_Dns_Suffix>* de la manière suivante :  
   
- _&lt;nom_hôte&gt;_ **.** _<Suffixe_DNS_principal>_  
+ _<host_name>_ **.** _<Suffixe_DNS_principal>_  
   
  Par exemple, la configuration IP  
   

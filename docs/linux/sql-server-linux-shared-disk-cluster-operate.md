@@ -1,20 +1,21 @@
 ---
-title: Utiliser une instance de cluster de basculement - SQL Server sur Linux
-description: Cet article explique comment opérer une instance de cluster de basculement SQL Server sur Linux.
+title: Basculer manuellement une instance de cluster de basculement - SQL Server sur Linux
+description: Apprenez à basculer manuellement une instance de cluster de basculement sur SQL Server sur Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682116"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558540"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser une instance de cluster de basculement - SQL Server sur Linux
 
@@ -77,7 +78,7 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 
 - [Configurer l’instance de cluster de basculement - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

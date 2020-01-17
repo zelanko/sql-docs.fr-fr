@@ -1,6 +1,6 @@
 ---
-title: Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif | Microsoft Docs
-ms.custom: ''
+title: Fonctionnalités des modules T-SQL compilés nativement
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025085"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412519"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68025085"
 Les constructions de requête suivantes sont prises en charge :  
 
 Expression CASE : CASE peut être utilisé dans n'importe quelle instruction ou clause qui autorise une expression valide.
-   - **S’applique à :** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+   - **S’applique à :** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     Depuis [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], les instructions CASE sont désormais prises en charge pour les modules T-SQL compilés en mode natif.
 
 Clause SELECT :  
@@ -57,19 +57,19 @@ Clause SELECT :
 -   Alias de colonnes et de noms (en utilisant la syntaxe AS ou =).  
 
 -   Sous-requêtes scalaires
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les sous-requêtes scalaires sont désormais prises en charge dans les modules compilés en mode natif.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], l’opérateur DISTINCT est pris en charge dans les modules compilés en mode natif.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION et UNION ALL
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les opérateurs UNION et UNION ALL sont désormais pris en charge dans les modules compilés en mode natif.
 
 -   Affectations variables  
@@ -81,11 +81,11 @@ Clause FROM :
 -   FROM \<TVF inline compilé en mode natif>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN et INNER JOIN.
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les jointures sont désormais prises en charge dans les modules compilés en mode natif.
 
 -   Sous-requêtes `[AS] table_alias`. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les sous-requêtes sont désormais prises en charge dans les modules compilés en mode natif.
 
 Clause WHERE :  
@@ -94,7 +94,7 @@ Clause WHERE :
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **S’applique à :** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Depuis [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], les opérateurs OR/NOT/IN/EXISTS sont désormais pris en charge dans les modules compilés en mode natif.
 
 
@@ -191,7 +191,7 @@ Les instructions DML suivantes sont prises en charge.
 -   Opérateurs au niveau du bit ~, &, |, et ^  
 
 -   APPLY (opérateur)
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.
 
 ##  <a name="bfncsp"></a> Fonctions intégrées dans les modules compilés en mode natif  
@@ -202,7 +202,7 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
 
 -   Fonctions de chaînes : LEN, LTRIM, RTRIM et SUBSTRING.  
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les fonctions intégrées suivantes sont également prises en charge : TRIM, TRANSLATE et CONCAT_WS.  
 
 -   Fonctions d’identité : SCOPE_IDENTITY  
@@ -212,7 +212,7 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
 
 -   Fonctions JSON  
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les fonctions JSON sont prises en charge dans les modules compilés en mode natif.
 
 -   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  

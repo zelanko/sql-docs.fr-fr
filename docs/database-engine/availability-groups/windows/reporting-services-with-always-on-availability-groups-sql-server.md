@@ -1,6 +1,7 @@
 ---
-title: Reporting Services avec les groupes de disponibilité Always On (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Reporting Services avec les groupes de disponibilité
+description: Découvrez comment configurer SSRS (SQL Server Reporting Services) avec les groupes de disponibilité Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252122"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243618"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68252122"
  Pour obtenir des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez le [Forum aux questions sur Always On pour SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
 
 ##  <a name="bkmk_requirements"></a> Conditions préalables requises pour l’utilisation de Reporting Services et des groupes de disponibilité Always On  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et Power BI Report Server utilisent le composant .Net Framework 4.0 et prennent en charge les propriétés de chaîne de connexion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les utiliser avec des sources de données.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et Power BI Report Server utilisent le composant .Net Framework 4.0 et prennent en charge les propriétés de chaîne de connexion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les utiliser avec des sources de données.  
   
  Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 et les versions antérieures, vous devez télécharger et installer un correctif logiciel pour .Net 3.5 SP1. Ce correctif ajoute une prise en charge au client SQL concernant les fonctionnalités de groupes de disponibilité et la prise en charge des propriétés de chaîne de connexion **ApplicationIntent** et **MultiSubnetFailover**. Si ce correctif n'est pas installé sur chaque ordinateur qui héberge un serveur de rapports, les utilisateurs qui essaient d'afficher un aperçu des rapports recevront un message d'erreur similaire à celui ci-dessous et ce message sera enregistré dans le fichier journal de traces du serveur de rapports :  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68252122"
   
 -   **Mode SharePoint :** Utilisez les pages de configuration de SharePoint dans les bibliothèques de documents pour les rapports qui sont déjà publiés sur un serveur SharePoint.  
   
--   **Conception de rappouts :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repouts. Pour plus d’informations, consultez la section « Conception de rapports », plus loin dans cette rubrique.  
+-   **Conception de rapports :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] lors de la création de rapports. Pour plus d’informations, consultez la section « Conception de rapports », plus loin dans cette rubrique.  
   
  **Ressources supplémentaires :**  
   
@@ -80,7 +81,7 @@ ms.locfileid: "68252122"
   
 -   Pour plus d’informations sur les écouteurs de groupe de disponibilité, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Éléments à prendre en considération :** Les réplicas secondaires subissent généralement un retard lors de la réception de modifications de données à partir du réplica principal. Les facteurs suivants peuvent avoir une influence sur la latence de mise à jour entre les réplicas principal et secondaires :  
+ **Considérations :** Les réplicas secondaires subissent généralement un retard lors de la réception de modifications de données à partir du réplica principal. Les facteurs suivants peuvent avoir une influence sur la latence de mise à jour entre les réplicas principal et secondaires :  
   
 -   Nombre de réplicas secondaires. Le retard s'accentue avec chaque réplica secondaire ajouté à la configuration.  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68252122"
 ##  <a name="bkmk_reportdesign"></a> Conception de rapports et groupes de disponibilité  
  Lors de la conception de rapports dans [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou d'un projet de rapport dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un utilisateur peut configurer une chaîne de connexion de source de données de rapport afin qu'elle contienne les nouvelles propriétés de connexion fournies par [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. La prise en charge des nouvelles propriétés de connexion varie selon l'endroit où un utilisateur affiche un aperçu du rapport.  
   
--   **Aperçu local :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] et de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 et de support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Aperçu local :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] et [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] utilisent .Net Framework 4.0 et prennent en charge les propriétés de chaîne de connexion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Aperçu en mode distant ou serveur :** Si, après avoir publié des rapports sur le serveur de rapports ou utilisé l'aperçu dans [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], vous voyez une erreur similaire à celle qui suit, cela signifie que vous affichez un aperçu des rapports sur le serveur de rapports et que le correctif .NET Framework 3.5 SP1 pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] n'a pas été installé sur le serveur de rapports.  
   

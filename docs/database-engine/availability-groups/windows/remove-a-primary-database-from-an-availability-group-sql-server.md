@@ -1,7 +1,7 @@
 ---
-title: Supprimer une base de données primaire d’un groupe de disponibilité
+title: Supprimer une base de données d’un groupe de disponibilité
 description: Découvrez les étapes à suivre pour supprimer une base de données primaire d’un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL), PowerShell ou SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b18d1c8a573a42a8b92deead627783a195bb9e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014389"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822634"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Supprimer une base de données primaire d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "68014389"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68014389"
 ##  <a name="FollowUp"></a> Suivi : Après la suppression d’une base de données de disponibilité dans un groupe de disponibilité  
  La suppression d'une base de données de disponibilité de son groupe de disponibilité met fin à la synchronisation des données entre l'ancienne base de données primaire et les bases de données secondaires correspondantes. L'ancienne base de données primaire reste en ligne. Chaque base de données secondaire correspondante est placée dans l'état RESTORING.  
   
- À ce stade, il existe d'autres méthodes pour traiter une base de données secondaire supprimée :  
+ À ce stade, il existe d'autres méthodes pour traiter une base de données secondaire supprimée :  
   
 -   Si vous n'avez plus besoin d'une base de données secondaire particulière, vous pouvez la supprimer.  
   

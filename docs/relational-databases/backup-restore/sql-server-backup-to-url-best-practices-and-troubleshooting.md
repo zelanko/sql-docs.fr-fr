@@ -1,7 +1,7 @@
 ---
-title: Bonnes pratiques en matière de sauvegarde SQL Server vers une URL et résolution des problèmes associés | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Bonnes pratiques et résolution des problèmes liés à la sauvegarde vers une URL
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,25 +10,26 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
-ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
+ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72717241"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245443"
 ---
-# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cette rubrique présente des bonnes pratiques et des conseils de dépannage pour la sauvegarde et la restauration SQL Server dans le service Blob Azure.  
   
  Pour plus d’informations sur l’utilisation du service de stockage Blob Azure pour les opérations de sauvegarde et de restauration SQL Server, consultez :  
   
--   [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 -   [Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups"></a>Gestion des sauvegardes  
+## <a name="managing-backups-mb1"></a> Gestion des sauvegardes  
  La liste suivante comprend des recommandations générales sur la gestion des sauvegardes :  
   
 -   Nous vous recommandons d'utiliser un nom de fichier unique pour chaque sauvegarde afin d'éviter tout remplacement accidentel des objets blob.  
@@ -41,13 +42,13 @@ ms.locfileid: "72717241"
   
 -   L'utilisation de `WITH COMPRESSION` pendant la sauvegarde peut réduire les coûts du stockage et des transactions de stockage. Elle peut également réduire le temps nécessaire pour terminer le processus de sauvegarde.  
 
-- Définissez les arguments `MAXTRANSFERSIZE` et `BLOCKSIZE` comme cela est recommandé dans [Sauvegarde de SQL Server vers une URL](./sql-server-backup-to-url.md).
+- Définissez les arguments `MAXTRANSFERSIZE` et `BLOCKSIZE` comme cela est recommandé dans [Sauvegarde SQL Server vers une URL](./sql-server-backup-to-url.md).
   
 ## <a name="handling-large-files"></a>Gestion des fichiers volumineux  
   
 -   L’opération de sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise plusieurs threads pour optimiser le transfert de données vers les services de stockage Blob Azure.  Toutefois, les performances dépendent de divers facteurs, tels que la bande passante de l'éditeur de logiciels et la taille de la base de données. Si vous envisagez de sauvegarder des bases de données ou groupes de fichiers volumineux à partir d'une base de données SQL Server locale, nous vous recommandons de commencer par tester le débit. Le [SLA pour Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) de Microsoft Azure impose des temps de traitement maximum pour les objets blob dont vous devez tenir compte.  
   
--   L’utilisation de l’option `WITH COMPRESSION`, comme recommandé dans la section [Gestion de la sauvegarde](##managing-backups), est très importante lors de la sauvegarde de fichiers volumineux.  
+-   L’utilisation de l’option `WITH COMPRESSION`, comme recommandée dans la section [Gestion des sauvegardes](#managing-backups-mb1), est très importante lors de la sauvegarde de fichiers volumineux.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Dépannage des problèmes de sauvegarde vers une URL ou de restauration depuis une URL  
  Voici quelques méthodes rapides qui vous aideront à résoudre les erreurs survenant lors de la sauvegarde ou de la restauration vers/depuis le service de stockage Blob Azure.  
@@ -92,7 +93,7 @@ ms.locfileid: "72717241"
 
     -   Envisagez d’utiliser COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE et plusieurs arguments d’URL quand vous sauvegardez de grandes bases de données.  Consultez [Sauvegarde d’une base de données très volumineuse vers Stockage Blob Azure](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)
   
-        ```
+        ```console
         Msg 3202, Level 16, State 1, Line 1
         Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
         Msg 3013, Level 16, State 1, Line 1
@@ -133,11 +134,11 @@ ms.locfileid: "72717241"
   
  Les serveurs proxy peuvent avoir des paramètres qui limitent le nombre de connexions par minute. Le processus de sauvegarde vers l'URL est un processus multithread et, par conséquent, il peut dépasser cette limite. Si cela se produit, le serveur proxy supprime la connexion. Pour résoudre ce problème, modifiez les paramètres du proxy afin que SQL Server n'utilise pas le proxy. Voici quelques exemples des types d'erreur ou des messages qui peuvent s'afficher dans le journal des erreurs :  
   
-```
+```console
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-```
+```console
 A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
 Msg 3013, Level 16, State 1, Line 2  
@@ -145,7 +146,7 @@ Msg 3013, Level 16, State 1, Line 2
 BACKUP DATABASE is terminating abnormally.  
 ```
 
-```
+```console
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   

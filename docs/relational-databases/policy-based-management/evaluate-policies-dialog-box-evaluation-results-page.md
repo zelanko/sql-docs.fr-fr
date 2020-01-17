@@ -1,5 +1,6 @@
 ---
-title: Boîte de dialogue Évaluer les stratégies, page Résultats d’évaluation | Microsoft Docs
+title: Page « Résultats d’évaluation » de la boîte de dialogue « Évaluer les stratégies »
+description: Décrit la page « Résultats d’évaluation » de la boîte de dialogue « Évaluer les stratégies » dans le cadre de la gestion basée sur des stratégies via SSMS (SQL Server Management Studio).
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e6d5c9d558b65e091dfb9ef0901d15ffb0ac282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137800"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558251"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +46,6 @@ ms.locfileid: "68137800"
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-policy-selection-page.md)   
- [Boîte de dialogue Vue détaillée des résultats](../../relational-databases/policy-based-management/results-detailed-view-dialog-box.md)  
+ [Vue détaillée des résultats, boîte de dialogue](../../relational-databases/policy-based-management/results-detailed-view-dialog-box.md)  
   
   

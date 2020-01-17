@@ -1,5 +1,5 @@
 ---
-title: Activer le basculement de base de données amélioré pour un groupe de disponibilité
+title: Basculement amélioré pour un groupe de disponibilité
 description: Étapes à suivre pour activer le basculement de base de données amélioré, qui déclenche un basculement si une base de données dans un groupe de disponibilité Always On n’est plus en mesure d’écrire des transactions.
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947960"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822248"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Activer le basculement de base de données amélioré vers une base de données membre d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,19 +27,19 @@ Dans SQL Server 2012 et 2014, si une base de données membre d’un groupe de d
 
 SQL Server 2016 introduit un nouveau comportement facultatif nommé *basculement de base de données amélioré*, lequel peut être défini par l’Assistant ou à l’aide de Transact-SQL. Si cette option est activée et que le basculement automatique est configuré, quand une base de données membre d’un groupe de disponibilité n’est plus en mesure d’écrire des transactions, un basculement vers un réplica secondaire synchronisé est déclenché.
 
-**Scénario 1**
+**Scénario 1**
 
 Un groupe de disponibilité est configuré entre l’instance A et l’instance B, contenant une seule base de données nommée DB1. Le fichier de données de DB1 est sur le lecteur E et son fichier journal des transactions est sur le lecteur F. Le mode de disponibilité est défini sur la validation synchrone avec basculement automatique. La nouvelle option de basculement de base de données amélioré est configurée sur le groupe de disponibilité. Les deux réplicas sont actuellement synchronisés. Un problème entraîne une défaillance du lecteur E. Ce scénario ne déclenche pas de basculement de base de données amélioré, car le lecteur E ne contient pas le journal des transactions.  
 
-**Scénario 2**
+**Scénario 2**
 
 La configuration du groupe de disponibilité est la même que celle du scénario 1. Cette fois, ce n’est pas le lecteur E qui est défaillant, mais le lecteur sur lequel se trouve le journal des transactions, à savoir le lecteur F. Un basculement est alors déclenché, car ce scénario remplit la condition requise par le basculement de base de données amélioré : le journal des transactions n’est plus accessible, ce qui signifie que la base de données ne peut pas écrire de transactions.
 
-**Scénario 3**
+**Scénario 3**
 
 Un groupe de disponibilité est configuré entre l’instance A et l’instance B, contenant deux bases de données : DB1 et DB2. Le mode de disponibilité défini est la validation synchrone avec un mode de basculement automatique. Le basculement de base de données amélioré est activé. L’accès au disque contenant les données de DB2 et les fichiers journaux des transactions est perdu. Quand le problème est détecté, le groupe de disponibilité bascule automatiquement vers l’instance B.
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Configurer et afficher l’option de basculement de base de données amélioré
+## <a name="configure-enhanced-failover"></a>Configurer le basculement amélioré
 
 Le basculement de base de données amélioré peut être configuré à l’aide de SQL Server Management Studio ou Transact-SQL. Les applets de commande PowerShell n’ont pas cette possibilité. Par défaut, le basculement de base de données amélioré est désactivé.
 

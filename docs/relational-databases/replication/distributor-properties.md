@@ -1,6 +1,7 @@
 ---
-title: Réplication SQL Server, boîte de dialogue Propriétés du serveur de distribution | Microsoft Docs
-ms.custom: ''
+title: boîte de dialogue Propriétés du serveur de distribution
+description: Décrit les différentes pages de la boîte de dialogue « Propriétés du serveur de distribution » dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a14ded4a0d86973b6e267d35b505aa21e5d8629
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4ab407b34e86cc95f12467230c9bc9e5d7ef4e20
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768583"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321756"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés du serveur de distribution 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ La page **Serveurs de publication** de la boîte de dialogue **Propriétés du s
  Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton Propriétés **(...)** situé en regard d'un serveur de publication pour voir et définir d'autres propriétés.  
   
  **Ajouter**  
- Si le serveur souhaité ne figure pas dans la liste, cliquez sur **Ajouter** afin d'ajouter un serveur de publication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Oracle Publisher à la liste des serveurs de publication disponibles. Si le serveur ajouté est le premier à utiliser ce serveur de distribution en tant que serveur de distribution distant, vous serez invité à fournir un mot de passe de lien d'administration.  
+ Si le serveur souhaité ne figure pas dans la liste, cliquez sur **Ajouter** afin d'ajouter un serveur de publication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un serveur de publication Oracle à la liste des serveurs de publication disponibles. Si le serveur ajouté est le premier à utiliser ce serveur de distribution en tant que serveur de distribution distant, vous serez invité à fournir un mot de passe de lien d'administration.  
   
  **Mot de passe du lien d'administration**  
  Permet de spécifier ou de mettre à jour le mot de passe utilisé pour assurer la réplication de connexion entre le serveur de publication et le serveur de distribution distant à l'aide de la connexion **distributor_admin** :  
@@ -65,7 +66,7 @@ La page **Serveurs de publication** de la boîte de dialogue **Propriétés du s
 ## <a name="distribution-database"></a>Base de données de distribution 
  La boîte de dialogue **Propriétés de la base de données de distribution** vous permet d'afficher certaines propriétés et de définir la période de rétention de transaction ainsi que la période de rétention d'historique pour la base de données.  
   
- **Name**  
+ **Nom**  
  Nom de la base de données de distribution, dont la valeur par défaut est « distribution » (en lecture seule).  
   
  **Emplacements des fichiers**  

@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532854"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191076"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -169,14 +169,14 @@ Cette option est utile si vous avez l’autorisation nécessaire pour modifier u
 Au lieu de cela, vous pouvez passer le contenu du package en tant que variable au format binaire.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 Spécifie la plateforme pour le contenu de la bibliothèque. Cette valeur est nécessaire lors de la modification d’une bibliothèque existante pour ajouter une autre plateforme.
 Dans SQL Server 2017, Windows est la seule plateforme prise en charge.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**platform**
 
 Spécifie la plateforme pour le contenu de la bibliothèque. Cette valeur est nécessaire lors de la modification d’une bibliothèque existante pour ajouter une autre plateforme. 
 Dans SQL Server 2019, les plateformes Windows et Linux sont prises en charge.

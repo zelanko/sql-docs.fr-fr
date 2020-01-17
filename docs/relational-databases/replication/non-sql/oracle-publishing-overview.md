@@ -16,24 +16,25 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02d36b72c949db673bcc2d00918bd7571821d025
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d9d3a6f0860a8c0aff0a24b1acd6018163d5686
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111082"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548410"
 ---
 # <a name="oracle-publishing-overview"></a>Présentation de la publication Oracle  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vous pouvez inclure des serveurs de publication Oracle dans votre topologie de réplication, en partant d'Oracle version 9i. Les serveurs de publication peuvent être déployés sur tout matériel et système d'exploitation prenant en charge Oracle. La fonctionnalité s'appuie sur les solides fondations de la réplication d'instantané et de la réplication transactionnelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en fournissant des performances et une exploitabilité similaires.  
+À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], vous pouvez inclure des serveurs de publication Oracle dans votre topologie de réplication (Oracle 9i ou version ultérieure). Les serveurs de publication peuvent être déployés sur tout matériel et système d'exploitation prenant en charge Oracle. La fonctionnalité s'appuie sur les solides fondations de la réplication d'instantané et de la réplication transactionnelle de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en fournissant des performances et une exploitabilité similaires.  
   
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les scénarios divers suivants pour la réplication transactionnelle et d'instantané :  
   
 -   Publication de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers des Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   La publication de données sur et depuis Oracle présente les restrictions suivantes :  
-  | |Version 2016 ou antérieure |Version 2017 ou ultérieure |
+
+  |       | Version 2016 ou antérieure |Version 2017 ou ultérieure |
   |-------|-------|--------|
   |Réplication depuis Oracle |Prise en charge d’Oracle 10g ou version antérieure uniquement |Prise en charge d’Oracle 10g ou version antérieure uniquement |
   |Réplication vers Oracle |Jusqu’à Oracle 12c |Non pris en charge |

@@ -1,6 +1,6 @@
 ---
-title: Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif | Microsoft Docs
-ms.custom: ''
+title: Expression CASE dans une procédure stockée compilée nativement
+ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,17 +11,17 @@ ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3819201a24318c7bd48a78757a1284b5548be95b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c26cd8424000926030d37302606cece6a570668
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050392"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412647"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**S’applique à** : [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] et SQL Server à partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+**S’applique à :** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] et SQL Server à partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 
 Les expressions CASE sont prises en charge dans les modules T-SQL compilés en mode natif. L’exemple suivant montre une façon d’utiliser l’expression CASE dans une requête. 
 
@@ -44,7 +44,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**S’applique à** : [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] et SQL Server à partir de [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+**S’applique à :** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] et SQL Server à partir de [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
   Les expressions CASE *ne sont pas* prises en charge dans les modules T-SQL compilés en mode natif. L’exemple suivant illustre une méthode permettant d’implémenter les fonctionnalités d’une expression CASE dans une procédure stockée compilée en mode natif.  
   
@@ -103,6 +103,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de migration pour les procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
- [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [Constructions Transact-SQL non prises en charge par In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

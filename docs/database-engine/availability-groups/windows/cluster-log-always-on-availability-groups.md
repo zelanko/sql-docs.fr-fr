@@ -1,7 +1,7 @@
 ---
-title: Générer et analyser le fichier CLUSTER.LOG pour un groupe de disponibilité
+title: Générer et analyser le fichier CLUSTER.LOG pour des groupes de disponibilité
 description: 'Explique comment générer et analyser le journal de cluster pour un groupe de disponibilité Always On. '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240755"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244382"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Générer et analyser le fichier CLUSTER.LOG pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  Dans le volet de détails, cliquez avec le bouton droit sur la ressource du groupe de disponibilité, puis cliquez sur **Propriétés**.  
   
-4.  Cliquez sur l’onglet **Propriétés** .  
+4.  Cliquez sur l’onglet **Propriétés**.  
   
 5.  Modifiez la propriété **VerboseLogging**. Par défaut, **VerboseLogging** a la valeur `0` qui signale les informations, les avertissements et les erreurs. La valeur **VerboseLogging** peut aller de `0` à `2`.  
   

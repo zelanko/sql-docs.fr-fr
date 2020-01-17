@@ -1,6 +1,7 @@
 ---
-title: Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Basculer les rôles de mise en miroir de bases de données
+description: Découvrez comment basculer les rôles de mise en miroir de bases de données.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 662510b04b9bc5be9b94a5ffe149bf9eebcbf13a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025286"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252793"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.locfileid: "68025286"
 ||Hautes performances|Mode haute performance sans témoin|Mode haute performance avec témoin|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |Basculement automatique|Non|Non|Oui|  
-|basculement manuel|Non|Oui|Oui|  
+|Basculement manuel|Non|Oui|Oui|  
 |Service forcé|Oui|Oui|Non|  
   
  Après un basculement de rôle, certaines métadonnées doivent exister sur les deux partenaires pour garantir que tous les utilisateurs de base de données peuvent accéder à la nouvelle base de données principale. De plus, des travaux de sauvegarde doivent être créés sur le nouveau serveur principal pour garantir que la base de données continue d'être sauvegardée régulièrement. Pour plus d’informations, consultez [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
@@ -313,7 +314,7 @@ ms.locfileid: "68025286"
   
 ## <a name="see-also"></a>Voir aussi  
  [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Défaillances possibles pendant la mise en miroir de bases de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

@@ -1,6 +1,7 @@
 ---
-title: Option de détection de l’intégrité des bases de données pour le basculement | Microsoft Docs
-ms.custom: ''
+title: Détection de l’état d’intégrité au niveau base de données
+description: Découvrez la fonctionnalité de détection de l’état d’intégrité au niveau base de données disponible pour les groupes de disponibilité Always On SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013964"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251263"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 Exemple de sortie de la vue de gestion dynamique :
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -125,7 +126,7 @@ Par exemple, cet extrait de journal des erreurs montre qu’une écriture dans l
 >
 >25-04-2016 12:20:21.21 spid75      L’état du réplica de disponibilité local du groupe de disponibilité « ag » est passé de « PRIMARY_NORMAL » à « RESOLVING_NORMAL ».  L’état a changé, car le groupe de disponibilité passe hors connexion.  Le réplica passe hors connexion, car le groupe de disponibilité associé a été supprimé, ou l’utilisateur a passé hors connexion le groupe de disponibilité associé dans la console de gestion WSFC, ou le groupe de disponibilité bascule sur une autre instance de SQL Server.  Pour plus d’informations, consultez le journal des erreurs SQL Server, la console de gestion WSFC ou le journal WSFC.
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Événement étendu sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>Événement étendu sqlserver.availability_replica_database_fault_reporting
 
 Il s’agit d’un nouvel événement étendu défini à compter de SQL Server 2016, qui est déclenché par la détection de l’état d’intégrité au niveau base de données.  Le nom de l’événement est **sqlserver.availability_replica_database_fault_reporting**
 
@@ -160,7 +161,7 @@ Explication des champs :
 |database_name |Nom de la base de données signalant l’erreur.|
 |database_replica_id |ID de la base de données du réplica de disponibilité.|
 |failover_ready_replicas |Nombre de réplicas secondaires du basculement automatique qui sont synchronisés.|
-|fault_type  | ID de l’erreur signalée. Valeurs possibles :  <br/> 0 - AUCUN <br/>1 - Inconnu<br/>2 - Arrêt|
+|fault_type  | ID de l’erreur signalée. Valeurs possibles :  <br/> 0 - AUCUN <br/>1 - Inconnu<br/>2 - Arrêt|
 |is_critical | À compter de SQL Server 2016, cette valeur doit toujours retourner true pour l’événement étendu.|
 
 

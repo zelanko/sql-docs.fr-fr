@@ -1,8 +1,8 @@
 ---
-title: Utiliser les widgets d’insight dans Azure Data Studio pour surveiller les serveurs et les bases de données
+title: Utiliser les widgets d’insight pour superviser les serveurs et les bases de données
 titleSuffix: Azure Data Studio
 description: En savoir plus sur les widgets d’insight dans Azure Data Studio
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959526"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957053"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gérer les serveurs et les bases de données avec les widgets d’insight dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -27,14 +27,12 @@ Vous pouvez créer des tableaux de bord de gestion des serveurs et des bases de 
 
 ![Tableau de bord de base de données](media/insight-widgets/database-dashboard.png)
 
-
 Pour vous lancer et commencer à créer différents types d’aperçus, consultez les didacticiels suivants :
 
 - [Créer un widget insight personnalisé](tutorial-build-custom-insight-sql-server.md)
 - *Activer les widgets d’insight intégrés*
   - [Activer l’analyse des performances](tutorial-qds-sql-server.md)
   - [Activer l’analyse de l’utilisation de l’espace de table](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>Requêtes SQL
 

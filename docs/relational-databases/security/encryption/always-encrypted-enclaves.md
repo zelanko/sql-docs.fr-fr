@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted avec enclaves sécurisées | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted avec enclaves sécurisées
+description: Découvrez la fonctionnalité Always Encrypted avec enclaves sécurisées pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594042"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558025"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted avec enclaves sécurisées
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -86,13 +87,13 @@ Pour plus d’informations sur les types de chiffrement, consultez [Chiffrement 
 
 Le tableau suivant récapitule les fonctionnalités disponibles pour les colonnes chiffrées, selon que les colonnes utilisent des clés de chiffrement de colonne prenant en charge l’enclave et un type de chiffrement.
 
-| **Opération**| **La colonne ne prend PAS en charge l’enclave** |**La colonne ne prend PAS en charge l’enclave**| **La colonne prend en charge l’enclave**  |**La colonne prend en charge l’enclave** |
+| **opération**| **La colonne ne prend PAS en charge l’enclave** |**La colonne ne prend PAS en charge l’enclave**| **La colonne prend en charge l’enclave**  |**La colonne prend en charge l’enclave** |
 |:---|:---|:---|:---|:---|
 | | **Chiffrement aléatoire**  | **Chiffrement déterministe**     | **Chiffrement aléatoire**      | **Chiffrement déterministe**     |
-| **Chiffrement sur place** | Non pris en charge  | Non pris en charge   | Pris en charge         | Pris en charge    |
+| **Chiffrement sur place** | Non pris en charge  | Non pris en charge   | Prise en charge         | Prise en charge    |
 | **Comparaison d’égalité**   | Non pris en charge | Pris en charge en dehors de l’enclave | Pris en charge (à l’intérieur de l’enclave) | Pris en charge en dehors de l’enclave |
-| **Opérateurs de comparaison au-delà de l’égalité** | Non pris en charge  | Non pris en charge   | Pris en charge      | Non pris en charge     |
-| **LIKE**    | Non pris en charge      | Non pris en charge    | Pris en charge     | Non pris en charge    |
+| **Opérateurs de comparaison au-delà de l’égalité** | Non pris en charge  | Non pris en charge   | Prise en charge      | Non pris en charge     |
+| **LIKE**    | Non pris en charge      | Non pris en charge    | Prise en charge     | Non pris en charge    |
 
 Le chiffrement sur place inclut la prise en charge des opérations suivantes à l’intérieur de l’enclave :
 
@@ -148,7 +149,7 @@ Si votre base de données contient des index sur des colonnes prenant en charge 
 
 Lorsque vous migrez votre base de données à l’aide d’un fichier bacpac, vous devez vous assurer que vous supprimez toutes les colonnes des index prenant en charge les enclaves à l’aide d’un chiffrement aléatoire avant de créer le fichier bacpac.
 
-## <a name="known-limitations"></a>Limitations connues
+## <a name="known-limitations"></a>Limites connues
 Always Encrypted avec enclaves sécurisées résout certaines limitations d’Always Encrypted en autorisant les opérations suivantes :
 
 - Opérations de chiffrement sur place.
@@ -165,7 +166,7 @@ Les limitations suivantes sont spécifiques à Always Encrypted avec enclaves s�
 - Les colonnes prenant en charge les enclaves utilisant un chiffrement aléatoire ne peuvent pas être des colonnes de clé primaire, ni être référencées par des contraintes de clé étrangères ou des contraintes de clé unique.
 - Seules les jointures de boucles imbriquées (avec des index, le cas échéant) sont prises en charge sur les colonnes avec enclave utilisant un chiffrement aléatoire. Les jointures de hachage et de fusion ne sont pas prises en charge. 
 - Les opérations de chiffrement sur place ne peuvent pas être combinées avec d’autres modifications des métadonnées de la colonne, à l’exception des modifications d’un classement au sein de la même page de codes et possibilité de valeur null. Par exemple, vous ne pouvez pas chiffrer, rechiffrer ou déchiffrer une colonne ET changer un type de données de la colonne dans une seule instruction Transact-SQL `ALTER TABLE`/`ALTER COLUMN`. Utilisez deux instructions distinctes.
-- L’utilisation de clés activées pour les enclaves pour les colonnes dans des tables en mémoire n’est pas prise en charge.
+- L’utilisation de clés prenant en charge les enclaves pour les colonnes dans des tables en mémoire n’est pas prise en charge.
 - Les expressions qui définissent des colonnes calculées ne peuvent pas effectuer de calculs sur des colonnes avec enclave utilisant un chiffrement aléatoire (même si les calculs sont basés sur des comparaisons Like ou Range).
 - Les caractères d’échappement ne sont pas pris en charge dans les paramètres de l’opérateur LIKE sur les colonnes avec enclave utilisant un chiffrement aléatoire.
 - Les requêtes avec l’opérateur LIKE ou un opérateur de comparaison avec un paramètre de requête utilisant l’un des types de données suivants (qui deviennent des objets volumineux après chiffrement) ignorent les index et effectuent des analyses de table.
@@ -177,13 +178,13 @@ Les limitations suivantes sont spécifiques à Always Encrypted avec enclaves s�
   - Pour déclencher une opération de chiffrement sur place via `ALTER TABLE`/`ALTER COLUMN`, vous devez émettre l’instruction à l’aide d’une fenêtre de requête dans SSMS ou vous pouvez écrire votre propre programme qui émet l’instruction. Actuellement, l’applet de commande Set-SqlColumnEncryption dans le module PowerShell SqlServer et l’Assistant Always Encrypted dans SQL Server Management Studio ne prennent pas en charge le chiffrement sur place : ils déplacent les données en dehors de la base de données pour les opérations de chiffrement, même si les clés de chiffrement de colonne utilisées pour les opérations prennent en charge l’enclave.
 
 ## <a name="next-steps"></a>Étapes suivantes
-- [Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées à l’aide de SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Configurer et utiliser Always Encrypted avec enclaves sécurisées](configure-always-encrypted-enclaves.md)
 
 ## <a name="see-also"></a>Voir aussi
 - [Gérer des clés pour Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-manage-keys.md)
-- [Configurer le chiffrement de colonne sur place à l’aide d’Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-configure-encryption.md)
-- [Interroger des colonnes à l’aide d’Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-query-columns.md)
+- [Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-configure-encryption.md)
+- [Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-query-columns.md)
 - [Activer Always Encrypted avec enclaves sécurisées pour les colonnes chiffrées existantes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Créer et utiliser des index sur des colonnes à l’aide d’Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-create-use-indexes.md)
 

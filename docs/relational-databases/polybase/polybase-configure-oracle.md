@@ -1,7 +1,8 @@
 ---
-title: Configurer PolyBase pour accéder à des données externes dans Oracle | Microsoft Docs
+title: 'Accéder aux données externes : Oracle - PolyBase'
 description: Cet article montre comment utiliser PolyBase pour créer une source de données externes afin d’accéder aux données Oracle.
-ms.date: 04/23/2019
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4c2b212ea77d9cf9b58dbb7019c19dddd3c507e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 25fae1036d3a07d3cdbfe92ef55fe92e0396497a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710578"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242629"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Configurer PolyBase pour accéder à des données externes dans Oracle
 
@@ -64,7 +65,7 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
     CREDENTIAL = credential_name)
     ```
 
-1. **Facultatif :** Créez des statistiques sur une table externe.
+1. **Facultatif :** Créez des statistiques sur une table externe.
 
     Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 

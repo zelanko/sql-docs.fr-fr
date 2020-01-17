@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081540"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255933"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,9 @@ Pour plus d’informations sur les index spatiaux, consultez [Vue d’ensemble d
 Pour plus d’informations sur les index de recherche en texte intégral, consultez [Alimenter des index de recherche en texte intégral](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Notions de base de la conception d'index  
- Un index est une structure sur disque ou en mémoire associée à une table ou à une vue qui accélère l’extraction des lignes de la table ou de la vue. Il contient des clés créées à partir d'une ou plusieurs colonnes de la table ou de la vue. Pour les index sur disque, ces clés sont stockées dans une structure d’arbre B (B-tree) qui permet à SQL Server de trouver rapidement et efficacement la ou les lignes associées aux valeurs de clé.  
+ Pensez à un livre ordinaire : à la fin du livre, il existe un index qui permet de rechercher rapidement les informations dans le livre. L’index est une liste triée de mots clés, chacun accompagné d’un ensemble de numéros de page pointant vers les pages où il se trouve. Un index SQL Server n’est pas différent : il s’agit d’une liste triée de valeurs et, pour chaque valeur, il existe des pointeurs vers les pages de [données](../relational-databases/pages-and-extents-architecture-guide.md) où ces valeurs se trouvent. L’index lui-même est stocké dans les pages, constituant ainsi les pages d’index dans SQL Server. Dans un livre ordinaire, si l’index s’étend sur plusieurs pages et que vous devez rechercher des pointeurs vers toutes les pages qui contiennent le mot « SQL », par exemple, vous devez feuilleter jusqu’à ce que vous trouviez la page d’index qui contient le mot clé « SQL ». À partir de là, vous suivez les pointeurs vers toutes les pages du livre.  Cela peut être optimisé si, au tout début de l’index, vous créez une page unique qui contient une liste alphabétique de chaque lettre. Par exemple :  « A à D -  page 121 », « E à G - page 122 »,  et ainsi de suite. Cette page supplémentaire évite de feuilleter l’index pour rechercher le point de départ. Cette page n’existe pas dans les livres ordinaires, mais elle existe dans un index SQL Server. Cette page unique est appelée page racine de l’index. La page racine est la page de démarrage de l’arborescence utilisée par un index SQL Server. En suivant l’analogie de l’arborescence, les pages de fin qui contiennent des pointeurs vers les données réelles sont appelées « pages de feuille » de l’arborescence. 
+
+ Un index SQL Server est une structure sur disque ou en mémoire associée à une table ou à une vue qui accélère l’extraction des lignes de la table ou de la vue. Il contient des clés créées à partir d'une ou plusieurs colonnes de la table ou de la vue. Pour les index sur disque, ces clés sont stockées dans une structure arborescente (B-tree) qui permet à SQL Server de trouver rapidement et efficacement la ou les lignes associées aux valeurs de clé.  
 
  Un index stocke des données organisées logiquement dans une table composée de lignes et de colonnes, et stockées physiquement dans un format de données en ligne appelé *rowstore* <sup>1</sup> ou dans un format de données en colonne appelé *[columnstore](#columnstore_index)* .  
     
@@ -79,7 +81,7 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
 4.  Identifier les options d'index qui peuvent améliorer les performances au moment de la création ou de la maintenance de l'index. Par exemple, si vous créez un index cluster dans une table volumineuse existante, vous avez tout intérêt à utiliser l’option d’index `ONLINE`. Cette option permet en effet la poursuite des activités concurrentes sur les données sous-jacentes pendant la création ou la reconstruction de l'index. Pour plus d’informations, consultez [Définir les options d’index](../relational-databases/indexes/set-index-options.md).  
   
 5.  Déterminer l'emplacement de stockage optimal pour l'index. Un index non-cluster peut être stocké dans le même groupe de fichiers que celui auquel appartient la table sous-jacente, ou dans un groupe de fichiers distinct. L'emplacement de stockage des index peut améliorer les performances des requêtes par l'amélioration des performances d'E/S des disques. Par exemple, en stockant un index non-cluster dans un groupe de fichiers résidant sur un disque différent de celui du groupe de fichiers de la table, vous pouvez améliorer les performances, car plusieurs disques peuvent être lus simultanément.  
-     Une autre solution consiste à utiliser un schéma de partition sur plusieurs groupes de fichiers pour les index cluster et non-cluster. Le partitionnement permet une gestion plus simple des tables et index volumineux. Vous pouvez en effet accéder à des sous-ensembles de données ou les gérer de manière rapide et efficace, tout en préservant l'intégrité de la collection globale. Pour plus d'informations, consultez [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Si vous envisagez de recourir au partitionnement, vous devez déterminer si l'index doit être aligné, c'est-à-dire, partitionné plus ou moins de la même façon que la table, ou s'il doit être partitionné de façon indépendante.   
+     Une autre solution consiste à utiliser un schéma de partition sur plusieurs groupes de fichiers pour les index cluster et non-cluster. Le partitionnement permet une gestion plus simple des tables et index volumineux. Vous pouvez en effet accéder à des sous-ensembles de données ou les gérer de manière rapide et efficace, tout en préservant l'intégrité de la collection globale. Pour plus d’informations, consultez [Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md). Si vous envisagez de recourir au partitionnement, vous devez déterminer si l'index doit être aligné, c'est-à-dire, partitionné plus ou moins de la même façon que la table, ou s'il doit être partitionné de façon indépendante.   
 
 ##  <a name="General_Design"></a> Consignes générales pour la création d'index  
  Les administrateurs de bases de données expérimentés peuvent concevoir de bons ensembles d'index, mais cette tâche est très complexe, sujette à erreurs et demande beaucoup de temps, même dans le cas de bases de données et de charges de travail peu complexes. La compréhension des caractéristiques de votre base de données, de vos requêtes et de vos colonnes de données peut vous aider à créer des index optimaux.  
@@ -484,7 +486,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Lorsque vous créez une contrainte PRIMARY KEY ou UNIQUE, vous créez automatiquement un index unique sur les colonnes spécifiées. Il n'y a pas de différences significatives entre la création d'une contrainte UNIQUE et la création d'un index unique indépendant d'une contrainte. La validation des données se produit de la même manière et l'optimiseur de requête considère un index unique de la même façon, qu'il soit créé par une contrainte or manuellement. Toutefois, vous devez créer une contrainte UNIQUE ou PRIMARY KEY sur la colonne lorsque votre objectif est de préserver l'intégrité des données. Cette opération met en évidence la finalité de l'index.  
   
-### <a name="considerations"></a>Observations  
+### <a name="considerations"></a>Considérations  
   
 -   Un index unique, une contrainte UNIQUE ou une contrainte PRIMARY KEY ne peuvent pas être créés si les données comportent des valeurs de clé dupliquées.  
   
@@ -512,7 +514,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      La création d'un index filtré peut réduire le stockage sur disque des index non cluster lorsqu'un index de table entière n'est pas nécessaire. Vous pouvez remplacer un index non cluster de table entière par plusieurs index filtrés sans augmenter considérablement le stockage nécessaire.  
   
- Les index filtrés sont utiles lorsque les colonnes contiennent des sous-ensembles bien définis de données qui sont référencés par des requêtes dans des instructions SELECT. Exemples :  
+ Les index filtrés sont utiles lorsque les colonnes contiennent des sous-ensembles bien définis de données qui sont référencés par des requêtes dans des instructions SELECT. Voici quelques exemples :  
   
 -   Colonnes éparses qui contiennent uniquement quelques valeurs non NULL.  
   
@@ -646,7 +648,7 @@ La connaissances de ces informations de base permet de comprendre plus facilemen
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>Le stockage de données utilise la compression de columnstore et de rowstore
 Quand nous parlons des index columnstore, nous utilisons les termes *rowstore* et *columnstore* pour indiquer clairement le format du stockage de données. Les index columnstore utilisent les deux types de stockage.
 
- ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+ ![Index cluster columnstore](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Index columstore en cluster")
 
 - Un **columnstore** représente des données qui sont organisées logiquement sous la forme d’une table avec des lignes et des colonnes, et stockées physiquement dans un format de données selon les colonnes.
   
@@ -673,7 +675,7 @@ Le deltastore se compose d’un ou plusieurs rowgroups appelés **rowgroups delt
 
 Chaque colonne a certaines de ses valeurs dans chaque rowgroup. Ces valeurs sont appelées **segments de colonne**. Chaque rowgroup contient un segment de colonne pour chaque colonne dans la table. Chaque colonne a un seul segment de colonne dans chaque rowgroup.
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![Segment de colonne](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
  
 Quand l’index columnstore compresse un rowgroup, il compresse chaque segment de colonne séparément. Pour décompresser la totalité d’une colonne, l’index columnstore doit simplement décompresser un segment de colonne dans chaque rowgroup.   
 
@@ -846,14 +848,14 @@ La gestion de la structure d’un arbre Bw peut nécessiter trois opérations di
 #### <a name="delta-consolidation"></a>Consolidation des enregistrements delta
 La présence d’une longue chaîne d’enregistrements delta peut dégrader les performances de recherche, car cela peut signifier que de longues chaînes doivent être parcourues lors de la recherche à l’aide d’un index. Si un nouvel enregistrement delta est ajouté à une chaîne qui contient déjà 16 éléments, les modifications effectuées dans les enregistrements delta sont consolidées dans la page d’index référencée. La page est ensuite regénérée pour inclure les modifications indiquées par le nouvel enregistrement delta ayant déclenché la consolidation. La nouvelle page regénérée a le même ID de page, mais elle a une nouvelle adresse mémoire. 
 
-![hekaton_tables_23e](../relational-databases/in-memory-oltp/media/HKNCI_Delta.gif "Consolidation des enregistrements delta")
+![hekaton_tables_23e](../relational-databases/in-memory-oltp/media/HKNCI_Delta.gif "Centralisation des enregistrements delta")
 
 #### <a name="split-page"></a>Fractionnement de page
 Dans un arbre Bw, une page d’index croît selon les besoins pour stocker une seule ligne jusqu’à un maximum de 8 Ko. Quand la page d’index atteint une taille de 8 Ko, l’insertion d’une nouvelle ligne entraîne le fractionnement de la page d’index. Pour une page interne, cela se produit quand il n’y a plus assez d’espace pour ajouter une autre valeur et le pointeur associé. Pour une page feuille, cela se produit si la ligne est trop longue pour tenir dans la page après l’incorporation de tous les enregistrements delta. Les informations statistiques fournies dans l’en-tête d’une page feuille indiquent la quantité d’espace nécessaire pour consolider les enregistrements delta. Elles sont ajustées après chaque ajout d’un nouvel enregistrement delta. 
 
 Un fractionnement s’effectue en deux étapes atomiques. Dans l’image ci-dessous, l’exemple suppose qu’une page de niveau feuille force un fractionnement après l’insertion d’une clé avec la valeur 5, et qu’il existe une page non feuille pointant vers la fin de la page feuille active (clé avec la valeur 4).
 
-![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Fractionnement de pages")
+![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Fractionnement des pages")
 
 **Étape 1 :** Allouez deux nouvelles pages P1 et P2, puis fractionnez les lignes de la page P1 précédente sur ces nouvelles pages, y compris la ligne venant d’être insérée. Dans la table de mappage des pages, un nouvel emplacement est utilisé pour stocker l’adresse physique de la page P2. Ces pages P1 et P2 ne sont pas encore accessibles pour d’autres opérations simultanées. En outre, le pointeur logique entre P1 et P2 est défini. Puis, en une seule étape atomique, mettez à jour la table de mappage des pages pour changer le pointeur de l’ancienne page P1 à la nouvelle page P1. 
 
@@ -866,7 +868,7 @@ Quand une ligne est supprimée d’une page, un enregistrement delta corresponda
 
 Dans l’image ci-dessous, l’exemple suppose qu’une opération `DELETE` va supprimer la valeur de clé 10. 
 
-![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Fusion de pages")
+![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Fusion des pages")
 
 **Étape 1 :** Une page delta représentant la valeur de clé 10 (triangle bleu) est créée, et son pointeur dans la page non feuille Pp1 est défini à la nouvelle page delta. De plus, une page delta spécifique pour la fusion (triangle vert) est créée, et est liée pour pointer vers la page delta. À ce stade, les deux pages (page delta et page delta de la fusion) ne sont pas visibles pour les autres transactions simultanées. En une seule étape atomique, le pointeur vers la page de niveau feuille P1 dans la table de mappage des pages est mis à jour pour pointer vers la page delta de la fusion. Après cette étape, l’entrée de la valeur de clé 10 dans la page Pp1 pointe maintenant vers la page delta de la fusion. 
 

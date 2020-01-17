@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c259066aca1a4302fcd1a0caeb7fb3122c97147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084564"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244585"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68084564"
 > [!IMPORTANT]  
 >  Exécutez CREATE AVAILABILITY GROUP sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous projetez d'utiliser comme réplica principal initial de votre nouveau groupe de disponibilité. Cette instance de serveur doit résider sur un nœud de clustering de basculement Windows Server (WSFC).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -157,7 +157,7 @@ CREATE AVAILABILITY GROUP group_name
 |5|Spécifie qu'un basculement automatique doit être initialisé sur tous les états d'échec qualifiés, notamment :<br /><br /> -Insuffisance des threads de travail du moteur SQL.<br /><br /> -Détection d’un blocage insoluble.|  
   
 > [!NOTE]  
->  L’absence de réponse par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux demandes des clients n’est pas pertinente pour les groupes de disponibilité.  
+>  L’absence de réponse par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux requêtes des clients ne dépend pas des groupes de disponibilité.  
   
  Les valeurs de FAILURE_CONDITION_LEVEL et de HEALTH_CHECK_TIMEOUT définissent une *stratégie de basculement souple* pour un groupe donné. Cette stratégie de basculement souple vous offre un contrôle granulaire sur les conditions qui doivent entraîner un basculement automatique. Pour plus d’informations, consultez [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
@@ -184,7 +184,7 @@ CREATE AVAILABILITY GROUP group_name
  Utilisé pour créer un groupe de disponibilité distribué. Cette option est utilisée avec le paramètre AVAILABILITY GROUP ON pour connecter deux groupes de disponibilité dans des clusters de basculement Windows Server distincts.  Pour plus d’informations, consultez [Groupes de disponibilité distribués &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Les groupes de disponibilité distribués sont pris en charge depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Introduite dans SQL Server 2017. Utilisé pour définir un nombre minimal de réplicas secondaires synchrones nécessaires à la validation avant que le réplica principal ne valide une transaction. Garantit que la transaction SQL Server attend que les journaux des transactions soient mis à jour avec le nombre minimal de réplicas secondaires. La valeur par défaut est 0, ce qui donne le même comportement que SQL Server 2016. La valeur minimale est 0. La valeur maximale est le nombre de réplicas moins 1. Cette option se rapporte aux réplicas en mode de validation synchrone. Quand les réplicas sont en mode de validation synchrone, les écritures sur le réplica principal attend que les écritures sur les réplicas secondaires synchrones soient validées dans le journal des transactions de la base de données de réplica. Si un serveur SQL Server qui héberge un réplica synchrone secondaire cesse de répondre, le serveur SQL qui héberge le réplica principal marque ce réplica secondaire comme NOT SYNCHRONIZED et poursuit. Quand la base de données qui ne répond pas revient en ligne, elle est dans un état « non synchronisé » et le réplica est marqué comme non sain tant que le réplica principal ne l’a pas rendu à nouveau synchrone. Ce paramètre garantit que le réplica principal attend que le nombre minimal de réplicas aient validé chaque transaction. Si le nombre minimal de réplicas n’est pas disponible, les validations sur le réplica principal échouent. Pour le type de cluster `EXTERNAL`, le paramètre est modifié quand le groupe de disponibilité est ajouté à une ressource de cluster. Consultez [Haute disponibilité et protection des données pour les configurations des groupes de disponibilité](../../linux/sql-server-linux-availability-group-ha.md).
+ Introduite dans SQL Server 2017. Utilisé pour définir un nombre minimal de réplicas secondaires synchrones nécessaires à la validation avant que le réplica principal ne valide une transaction. Garantit que la transaction SQL Server attend que les journaux des transactions soient mis à jour avec le nombre minimal de réplicas secondaires. La valeur par défaut est 0, ce qui donne le même comportement que SQL Server 2016. La valeur minimale est 0. La valeur maximale est le nombre de réplicas moins 1. Cette option se rapporte aux réplicas en mode de validation synchrone. Quand les réplicas sont en mode de validation synchrone, les écritures sur le réplica principal attend que les écritures sur les réplicas secondaires synchrones soient validées dans le journal des transactions de la base de données de réplica. Si un serveur SQL Server qui héberge un réplica synchrone secondaire cesse de répondre, le serveur SQL qui héberge le réplica principal marque ce réplica secondaire comme NOT SYNCHRONIZED et poursuit. Quand la base de données qui ne répond pas revient en ligne, elle est dans un état « non synchronisé » et le réplica est marqué comme non sain tant que le réplica principal ne l’a pas rendu à nouveau synchrone. Ce paramètre garantit que le réplica principal attend que le nombre minimal de réplicas aient validé chaque transaction. Si le nombre minimal de réplicas n’est pas disponible, les validations sur le réplica principal échouent. Pour le type de cluster `EXTERNAL`, le paramètre est modifié quand le groupe de disponibilité est ajouté à une ressource de cluster. Consultez [Haute disponibilité et protection des données pour les configurations des groupes de disponibilité](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  
  Introduite dans SQL Server 2017. Utilisé pour identifier si le groupe de disponibilité est sur un cluster de basculement du serveur Windows (WSFC).  Choisissez WSFC quand le groupe de disponibilité est sur une instance de cluster de basculement dans un cluster de basculement Windows Server. Choisissez EXTERNAL quand le cluster est géré par un gestionnaire de cluster qui n’est pas un cluster de basculement Windows Server comme Linux Pacemaker. Choisissez NONE quand le groupe de disponibilité n’utilise pas WSFC pour la coordination de clusters. Par exemple, quand un groupe de disponibilité inclut des serveurs Linux sans aucun gestionnaire de cluster. 
@@ -220,7 +220,7 @@ CREATE AVAILABILITY GROUP group_name
  Nom réseau utilisé pour accéder à un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez ce nom si l'instance de serveur participe en tant que serveur partenaire de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution de SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) sur une instance de serveur FCI retourne l’intégralité de sa chaîne '*FCI_network_name*[\\*instance_name*]' (laquelle correspond au nom complet du réplica).  
   
  *instance_name*  
- Nom d’une instance d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergé par *system_name* ou *FCI_network_name* et dont le service HADR est activé. Pour une instance de serveur par défaut, *nom_instance* est facultatif. Les noms d'instance ne respectent pas la casse. Sur une instance de serveur autonome, ce nom de valeur est le même que la valeur retournée en exécutant SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
+ Nom d’une instance d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergé par *system_name* ou *FCI_network_name* et dont le service HADR est activé. Pour une instance de serveur par défaut, *nom_instance* est facultatif. Les noms d'instance ne respectent pas la casse. Sur une instance nommée, ce nom de valeur est le même que la valeur retournée en exécutant `select ServerProperty(N'InstanceName');`.  
   
  \  
  Est un séparateur utilisé uniquement lors de la spécification de *instance_name* pour la séparer de *system_name* ou de *FCI_network_name*.  
@@ -294,7 +294,7 @@ CREATE AVAILABILITY GROUP group_name
   
 -   0 indique que ce réplica de disponibilité ne sert pas à effectuer des sauvegardes. Cela est utile, par exemple, pour un réplica de disponibilité distant sur lequel vous ne souhaitez jamais basculer de sauvegardes.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Sauvegarder sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Spécifie des paramètres spécifiques au rôle qui entrent en vigueur si ce réplica de disponibilité a actuellement le rôle secondaire (autrement dit, chaque fois qu’il s’agit d’un réplica secondaire). Entre parenthèses, spécifiez le l'une ou l'autre, ou les deux options de rôle secondaire. Si vous spécifiez les deux, utilisez une liste séparée par des virgules.  
@@ -313,7 +313,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Toutes les connexions sont autorisées aux bases de données dans le réplica secondaire pour un accès en lecture seule.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles &#40;Groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
@@ -453,13 +453,13 @@ CREATE AVAILABILITY GROUP group_name
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
  *ip4_address*  
- Spécifie une adresse IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `10.120.19.155`.  
+ Spécifie une adresse IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple : `10.120.19.155`.  
   
  *ipv4_mask*  
- Spécifie un masque IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `255.255.254.0`.  
+ Spécifie un masque IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple : `255.255.254.0`.  
   
  *ipv6_address*  
- Spécifie une adresse IPv6 pour un écouteur du groupe de disponibilité. Par exemple, `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
+ Spécifie une adresse IPv6 pour un écouteur du groupe de disponibilité. Par exemple : `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
  PORT **=** *listener_port*  
  Spécifie le numéro de port *listener_port* à utiliser par un écouteur du groupe de disponibilité spécifié par une clause WITH IP. Le PORT est facultatif.  
@@ -480,7 +480,7 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. Configuration de la sauvegarde sur les réplicas secondaires, la stratégie flexible de basculement, et l'accès à la connexion  
+### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>R. Configuration de la sauvegarde sur les réplicas secondaires, la stratégie flexible de basculement, et l'accès à la connexion  
  L'exemple suivant crée un groupe de disponibilité nommé `MyAg` de deux bases de données utilisateur, `ThisDatabase` et `ThatDatabase`. Le tableau suivant récapitule les valeurs spécifiées pour les options définies pour l'ensemble du groupe de disponibilité.  
   
 |Option de groupe|Paramètre|Description|  

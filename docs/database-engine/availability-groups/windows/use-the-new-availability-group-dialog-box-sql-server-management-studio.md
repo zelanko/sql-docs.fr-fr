@@ -1,6 +1,7 @@
 ---
-title: Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Nouveau groupe de disponibilité dans SSMS
+description: Cet article contient des informations sur l’utilisation de la boîte de dialogue « Nouveau groupe de disponibilité » de SQL Server Management Studio pour configurer un groupe de disponibilité Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 556a0442a64caa5bcbcab98933650da93b4e410b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013476"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821954"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "68013476"
   
     3.  Attachez immédiatement chaque base de données secondaire récemment préparée au groupe de disponibilité. Pour plus d’informations, consultez [Joindre une base de données secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
--   Il est recommandé de créer un écouteur de groupe de disponibilité pour le nouveau groupe de disponibilité. Pour celà, vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel. Pour plus d’informations, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+-   Il est recommandé de créer un écouteur de groupe de disponibilité pour le nouveau groupe de disponibilité. Pour celà, vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel. Pour plus d'informations, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
  **Pour configurer les propriétés du groupe de disponibilité et du réplica**  

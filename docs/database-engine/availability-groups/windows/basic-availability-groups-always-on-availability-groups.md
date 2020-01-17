@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 46630e36db03d55c8e90be64570975e42466fbba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71b949178269c2777f5cacd32997d872d36cfc32
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991359"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74685654"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>Groupes de disponibilité Always On de base pour une base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,10 +25,10 @@ ms.locfileid: "67991359"
 ## <a name="features"></a>Fonctionnalités  
  Les groupes de disponibilité Always On de base remplacent la fonctionnalité de mise en miroir de bases de données déconseillée et fournissent un niveau de prise en charge des fonctionnalités similaire. Les groupes de disponibilité de base permettent à une base de données principale de conserver un réplica unique. Ce réplica peut utiliser le mode de validation synchrone ou asynchrone. Pour plus d’informations sur les modes de disponibilité, consultez [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). Le réplica secondaire reste inactif, à moins qu’un basculement soit requis. Ce basculement inverse les affectations de rôle principal et secondaire, ce qui implique la transformation du réplica secondaire en base de données active principale. Pour plus d’informations sur le basculement, consultez [Basculement et modes de basculement &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md). Les groupes de disponibilité de base peuvent fonctionner dans un environnement hybride qui s’étend sur site et couvre Microsoft Azure.  
   
-## <a name="limitations"></a>Limitations  
+## <a name="limitations"></a>Limites  
  Les groupes de disponibilité de base utilisent un sous-ensemble de fonctionnalités si on les compare aux groupes de disponibilité avancés sur SQL Server 2016 Enterprise Edition. Les groupes de disponibilité de base incluent les limitations suivantes :  
   
-- Limite de deux réplicas (principal et secondaire). Les groupes de disponibilité de base pour SQL Server 2017 sur Linux prennent en charge un seul réplica de configuration supplémentaire.
+- Limite de deux réplicas (principal et secondaire). Les groupes de disponibilité de base pour SQL Server 2017 sur Linux prennent en charge un réplica de configuration uniquement supplémentaire.
   
 - Aucun accès en lecture sur le réplica secondaire.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "67991359"
 >  Les limitations des groupes de disponibilité de base s’appliquent à la commande **CREATE AVAILABILITY GROUP** lorsque **WITH BASIC** est spécifiée. Par exemple, vous obtiendrez une erreur si vous essayez de créer un groupe de disponibilité de base qui permet un accès en lecture. Les autres limitations s’appliquent de la même manière. Reportez-vous à la section Limitations de cette rubrique pour plus d’informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

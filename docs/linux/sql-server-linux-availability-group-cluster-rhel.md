@@ -1,7 +1,7 @@
 ---
-title: Configurer un cluster RHEL pour le groupe de disponibilité SQL Server
-titleSuffix: SQL Server
-description: En savoir plus sur les clusters de groupe de disponibilité lors de l’exécution de Red Hat Enterprise Linux (RHEL)
+title: 'RHEL : configurer un groupe de disponibilité pour SQL Server sur Linux'
+description: Découvrez comment configurer un groupe de disponibilité si vous exécutez RHEL (Red Hat Enterprise Linux) pour SQL Server.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910809"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558494"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer un cluster RHEL pour le groupe de disponibilité SQL Server
 
@@ -144,7 +144,7 @@ Pour mettre à jour la valeur de la propriété sur une exécution de `true` :
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-Pour mettre à jour la propriété de ressource `ag_cluster` `failure-timeout` pour une exécution de `60s` :
+Pour mettre à jour la propriété de ressource `ag_cluster``failure-timeout` pour une exécution de `60s` :
 
 ```bash
 pcs resource update ag_cluster meta failure-timeout=60s

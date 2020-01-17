@@ -1,6 +1,7 @@
 ---
-title: Mise en miroir de base de données et instances de cluster de basculement SQL Server | Microsoft Docs
-ms.custom: ''
+title: Mise en miroir de bases de données et instances de cluster de basculement
+description: Découvrez comment associer mise en miroir de bases de données et instances de cluster de basculement SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 760994c4b8b9ed137e9e0d221e2f473c5fdbdb70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006445"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254175"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mise en miroir de base de données et instances de cluster de basculement SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Un cluster de basculement est composé d'un ou de plusieurs disques physiques placés dans un groupe de clusters géré par le service de cluster [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), appelé groupe de ressources, et constituant ainsi des nœuds membres du cluster. Le groupe de ressources est configuré comme une instance cluster de basculement qui héberge une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apparaît sur le réseau comme s’il s’agissait d’un ordinateur unique, mais elle est dotée d’une fonctionnalité qui assure le basculement d’un nœud vers un autre si le premier devient indisponible. Pour plus d’informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+  Un cluster de basculement est composé d'un ou de plusieurs disques physiques placés dans un groupe de clusters géré par le service de cluster [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), appelé groupe de ressources, et constituant ainsi des nœuds membres du cluster. Le groupe de ressources est configuré comme une instance cluster de basculement qui héberge une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apparaît sur le réseau comme s’il s’agissait d’un ordinateur unique, mais elle est dotée d’une fonctionnalité qui assure le basculement d’un nœud vers un autre si le premier devient indisponible. Pour plus d'informations, consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
- Les clusters de basculement garantissent une prise en charge de la haute disponibilité pour l’intégralité d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En cela, ils se distinguent de la fonctionnalité de mise en miroir de bases de données qui offre cette même prise en charge pour une seule base de données. La mise en miroir de base de données est mise en œuvre entre des clusters de basculement et également entre un cluster de basculement et un hôte non-cluster.  
+ Les clusters de basculement garantissent une prise en charge de la haute disponibilité pour l’intégralité d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En cela, ils se distinguent de la fonctionnalité de mise en miroir de bases de données qui offre cette même prise en charge pour une seule base de données. La mise en miroir de base de données est mise en œuvre entre des clusters de basculement et également entre un cluster de basculement et un hôte non-cluster.  
   
 > [!NOTE]  
 >  Pour une présentation de la mise en miroir de bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  

@@ -1,7 +1,7 @@
 ---
-title: Configurer un écouteur pour un groupe de disponibilité
+title: Configurer un écouteur de groupe de disponibilité
 description: 'Explique comment configurer un écouteur pour un groupe de disponibilité Always On à l’aide de PowerShell ou SQL Server Management Studio. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264689"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822119"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurer un écouteur Always On pour un groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "68264689"
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de serveur qui héberge le réplica principal du groupe de disponibilité, puis cliquez sur le nom du serveur pour développer l'arborescence du serveur.  
   
-2.  Développez le nœud **Haute disponibilité Always On** et le nœud **Groupes de disponibilité** .  
+2.  Développez le nœud **Haute disponibilité AlwaysOn** et le nœud **Groupes de disponibilité** .  
   
 3.  Cliquez sur le groupe de disponibilité dont vous souhaitez configurer l'écouteur, puis choisissez l'une des méthodes suivantes :  
   
@@ -132,7 +132,7 @@ ms.locfileid: "68264689"
  **Ajouter**  
  Cliquez pour ajouter une adresse IP statique dans un sous-réseau sélectionné ou un autre sous-réseau pour cet écouteur. Cela ouvre la boîte de dialogue **Ajouter une adresse IP** . Pour plus d’informations, consultez la rubrique d’aide [Boîte de dialogue Ajouter une adresse IP &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer le sous-réseau sélectionné de cet écouteur.  
   
  **OK**  
@@ -200,12 +200,12 @@ ms.locfileid: "68264689"
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Dépannage  
   
 ###  <a name="ADQuotas"></a> Échec de création d'un écouteur de groupe de disponibilité en raison de quotas Active Directory  
- La création d'un nouvel écouteur de groupe de disponibilité peut échouer parce que vous avez atteint un quota Active Directory pour le compte d'ordinateur participant du nœud de cluster.  Pour plus d'informations, consultez les articles suivants :  
+ La création d'un nouvel écouteur de groupe de disponibilité peut échouer parce que vous avez atteint un quota Active Directory pour le compte d'ordinateur participant du nœud de cluster.  Pour plus d’informations, consultez les articles suivants :  
   
 -   [Procédure de dépannage du compte de service de cluster lorsqu'il modifie des objets ordinateur](https://support.microsoft.com/kb/307532)  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68264689"
   
  **MultiSubnetFailover=True non pris en charge par NET Framework 3.5 ou OLEDB**  
   
- **Problème :** Si votre groupe de disponibilité ou votre instance de cluster de basculement comporte un nom d’écouteur (également appelé « nom de réseau » ou « point d’accès client » dans le gestionnaire de cluster WSFC) qui dépend de plusieurs adresses IP de plusieurs sous-réseaux, et si vous utilisez soit ADO.NET avec .NET Framework 3.5SP1, soit SQL Native Client 11.0 OLEDB, 50 % de vos demandes de connexion client à l’écouteur du groupe de disponibilité sont susceptibles de dépasser le délai de connexion.  
+ **Problème :** Si votre groupe de disponibilité ou votre instance de cluster de basculement comporte un nom d’écouteur (également appelé « nom de réseau » ou « point d’accès client » dans le gestionnaire de cluster WSFC) qui dépend de plusieurs adresses IP de plusieurs sous-réseaux, et si vous utilisez soit ADO.NET avec .NET Framework 3.5SP1, soit SQL Native Client 11.0 OLEDB, 50 % de vos demandes de connexion client à l’écouteur du groupe de disponibilité sont susceptibles de dépasser le délai de connexion.  
   
  **Solutions de contournement :** nous vous recommandons d’effectuer l’une des tâches suivantes.  
   

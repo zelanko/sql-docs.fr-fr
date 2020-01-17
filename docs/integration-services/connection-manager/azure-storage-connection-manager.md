@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8fd8b9b94d809a304e2f9347edba67d5ff7d9b85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294463"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687192"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestionnaire de connexions de Stockage Azure
 
@@ -37,7 +37,7 @@ Les propriétés suivantes sont disponibles.
     - **AccessKey :** pour cette méthode d’authentification, spécifiez la **clé de compte**.
     - **ServicePrincipal :** pour cette méthode d’authentification, spécifiez l’**ID d’application**, la **clé d’application** et l’**ID de locataire** du principal du service.
       Pour que la **connexion de test** fonctionne, le principal de service doit disposer au moins du rôle **Lecteur des données Blob du stockage** pour le compte de stockage.
-      Pour plus d’informations, consultez [Accorder l’accès aux données blob et en file d’attente Azure avec RBAC dans le portail Azure](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+      Pour plus d’informations, consultez [Octroyer l’accès aux données blob et de file d’attente Azure avec RBAC dans le Portail Azure](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 - **Environment :** spécifie l’environnement de cloud qui héberge le compte de stockage.
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Identités managées pour l’authentification des ressources Azure
@@ -64,6 +64,9 @@ Ensuite, configurez l’authentification d’identité managée pour le gestionn
 
 > [!NOTE]
 >  Pour configurer l’authentification d’identité managée sur les packages existants, la méthode privilégiée consiste à regénérer au moins une fois votre projet SSIS avec le [dernier concepteur SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). Redéployez ce projet SSIS sur votre runtime d’intégration Azure-SSIS, afin que la nouvelle propriété du gestionnaire de connexions `ConnectUsingManagedIdentity` soit ajoutée automatiquement à tous les gestionnaires de connexions de Stockage Azure dans votre projet SSIS. L’autre méthode consiste à utiliser directement une substitution de propriété avec le chemin de propriété **\Package.Connections[{nom de votre gestionnaire de connexions}].Properties[ConnectUsingManagedIdentity]** au moment de l’exécution.
+
+## <a name="secure-network-traffic-to-your-storage-account"></a>Sécuriser le trafic réseau vers votre compte de stockage
+Azure Data Factory est désormais un [service Microsoft approuvé](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services) sur le stockage Azure. Quand vous utilisez une authentification d’identité managée, vous pouvez sécuriser votre compte de stockage en [limitant l’accès aux réseaux sélectionnés](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule) tout en permettant à votre fabrique de données d’accéder à votre compte de stockage. Pour obtenir des instructions, consultez [Gestion des exceptions](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions).
 
 ## <a name="see-also"></a>Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)

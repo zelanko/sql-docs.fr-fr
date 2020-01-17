@@ -1,6 +1,7 @@
 ---
-title: Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
+title: Vues de gestion dynamique - Statistiques d’utilisation et niveau de performance des vues
 description: Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986669"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165887"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
 Cet article décrit la méthodologie et les scripts utilisés pour obtenir des informations sur les **performances des requêtes qui utilisent des vues**. Le but de ces scripts est de fournir des indicateurs sur l’utilisation et les performances des différentes vues trouvées dans une base de données. 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 La vue de gestion dynamique [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) expose des statistiques sur les optimisations effectuées par l’optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces valeurs sont cumulatives et leur enregistrement commence au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’optimiseur de requête, consultez [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md).   
 
 L’expression de table commune ci-dessous utilise cette vue de gestion dynamique pour fournir des informations sur la charge de travail, comme le pourcentage des requêtes qui référencent une vue. Les résultats retournés par cette requête n’indiquent pas par eux-mêmes un problème de performance, mais peuvent faire apparaître des problèmes sous-jacents quand ils sont combinés avec les plaintes des utilisateurs concernant des requêtes dont l’exécution est lente. 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 La dernière requête fournit des informations sur les vues non utilisées avec la vue de gestion dynamique [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). Cependant, le cache de plan d’exécution étant dynamique, les résultats peuvent varier. Utilisez donc cette requête au fil du temps pour déterminer si une vue est réellement utilisée ou non. 
 
 ```sql

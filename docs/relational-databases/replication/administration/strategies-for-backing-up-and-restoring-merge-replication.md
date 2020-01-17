@@ -1,6 +1,7 @@
 ---
-title: Stratégies de sauvegarde et de restauration de la réplication de fusion | Microsoft Docs
-ms.custom: ''
+title: Stratégies de sauvegarde et de restauration (réplication de fusion)
+description: Découvrez les stratégies de sauvegarde et de restauration utilisées dans la réplication de fusion.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948755"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321986"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Stratégies de sauvegarde et de restauration de la réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67948755"
   
 -   Bases de données système **master** et **msdb** sur le serveur de publication, sur le serveur de distribution et sur tous les Abonnés. Il est recommandé de sauvegarder ces bases de données en même temps, ainsi que la base de données de réplication appropriée. Par exemple, sauvegardez les bases de données **master** et **msdb** au niveau du serveur de publication en même temps que la base de données de publication. Si la base de données de publication est restaurée, vérifiez que les bases de données **master** et **msdb** sont cohérentes avec la base de données de publication en termes de configuration de la réplication et de paramètres.  
   
- Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n'effectuez pas de sauvegardes des journaux, une sauvegarde doit être effectuée si un paramètre concernant la réplication est modifié. Pour en savoir plus, voir [Actions courantes nécessitant une sauvegarde mise à jour](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
+ Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous n'effectuez pas de sauvegardes des journaux, une sauvegarde doit être effectuée si un paramètre concernant la réplication est modifié. Pour en savoir plus, voir [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
  Choisissez une des approches détaillées ci-dessous pour la sauvegarde et la restauration de la base de données de publication, puis suivez les recommandations indiquées pour la base de données de distribution et les bases de données d'abonnement.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "67948755"
 > [!IMPORTANT]  
 >  La synchronisation d'une base de données de publication avec une base de données d'abonnement peut aboutir à des tables publiées restaurées à un point dans le temps plus récent que celui d'autres tables non publiées restaurées à partir de la sauvegarde.  
   
- Si vous effectuez une synchronisation avec un Abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme ; il doit être un abonnement client ou un abonnement serveur (qui s'appelaient « abonnement local » et « abonnement global » dans les versions antérieures).  
+ Si vous effectuez une synchronisation avec un Abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l’abonnement ne peut pas être anonyme ; il doit être un abonnement client ou un abonnement serveur (qui s’appelaient « abonnement local » et « abonnement global » dans les versions antérieures).  
   
  Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
@@ -87,7 +88,7 @@ ms.locfileid: "67948755"
   
  Pour définir la période de rétention de publication, consultez [Définir la période d’expiration des abonnements](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
- Pour synchroniser un abonnement, consultez [Synchroniser un abonnement par émission (push)](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchroniser un abonnement par extraction (pull)](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Sauvegarde et restauration d'une base de données de réédition  
  Une base de données de réédition désigne une base de données qui s'abonne à des données auprès d'un éditeur et qui, à son tour, diffuse ces données à d'autres bases de données d'abonnement. Lorsque vous restaurez une base de données de réédition, suivez les recommandations données dans les sections « Sauvegarde et restauration d'une base de données de publication » et « Sauvegarde et restauration d'une base de données d'abonnement » de cette rubrique.  

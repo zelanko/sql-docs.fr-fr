@@ -1,6 +1,7 @@
 ---
-title: Initialiser un abonnement transactionnel sans instantané | Microsoft Docs
-ms.custom: ''
+title: Initialiser un abonnement sans instantané (Transactionnel)
+description: Découvrez comment initialiser une réplication transactionnelle sans utiliser d’instantané pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d1f5e9afbc79aa83493507088fe1323b3733058b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767766"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321587"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,6 +77,6 @@ ms.locfileid: "68767766"
  Pour initialiser un abonnement avec une méthode de remplacement, consultez [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)  
+ [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

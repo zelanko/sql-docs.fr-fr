@@ -1,6 +1,7 @@
 ---
-title: Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Basculer un groupe de disponibilité
+description: Explique comment effectuer un basculement manuel planifié ou forcé d’un groupe de disponibilité Always On à l’aide de SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013518"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821946"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +182,7 @@ ms.locfileid: "68013518"
  **Connecté en tant que**  
  Affiche le compte qui est connecté à l'instance de serveur, une fois que la connexion a été établie. Si cette colonne affiche «**Non connecté**» pour une instance de serveur donnée, vous devez cliquer sur le bouton **Se connecter** .  
   
- **Se connecter**  
+ **Connexion**  
  Cliquez sur ce bouton si cette instance de serveur s'exécute sous un compte différent de celui des autres instances de serveur auxquelles vous devez vous connecter.  
   
  **Annuler**  

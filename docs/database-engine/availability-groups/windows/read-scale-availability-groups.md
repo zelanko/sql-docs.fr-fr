@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014459"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720828"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Utiliser une échelle lecture avec des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Un groupe de disponibilité est une solution complète qui fournit des fonctionnalités de haute disponibilité à SQL Server, ainsi que des solutions de mise à l’échelle intégrées. Dans une application de base de données classique, plusieurs clients exécutent divers types de charge de travail. Des goulots d’étranglement peuvent parfois apparaître à cause d’une insuffisance de ressources. Vous pouvez libérer des ressources et obtenir un débit plus élevé pour la charge de travail OLTP. Vous pouvez également fournir une mise à l’échelle et des performances plus élevées sur les charges de travail en lecture seule. Tirez parti de la technologie de réplication la plus rapide pour SQL Server et créez un groupe de bases de données répliquées pour décharger les charges de travail de reporting et d’analytique sur des réplicas en lecture seule.
+Un groupe de disponibilité est une solution complète qui fournit des fonctionnalités de haute disponibilité à SQL Server, ainsi que des solutions de mise à l’échelle intégrées. Dans une application de base de données classique, plusieurs clients exécutent divers types de charge de travail. Des goulots d’étranglement peuvent parfois apparaître à cause d’une insuffisance de ressources. 
+
+Dans le contexte d’un groupe de disponibilité, l’échelle lecture déplace les charges de travail de lecture sur le ou les réplicas secondaires. Vous pouvez libérer des ressources et obtenir un débit plus élevé pour la charge de travail OLTP. Vous pouvez également fournir une mise à l’échelle et des performances plus élevées sur les charges de travail en lecture seule. Tirez parti de la technologie de réplication la plus rapide pour SQL Server et créez un groupe de bases de données répliquées pour décharger les charges de travail de reporting et d’analytique sur des réplicas en lecture seule.
 
 Avec les groupes de disponibilité, un ou plusieurs réplicas secondaires peuvent être configurés pour prendre en charge un accès en lecture seule aux bases de données secondaires.
 

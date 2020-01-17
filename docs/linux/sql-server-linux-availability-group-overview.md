@@ -1,6 +1,7 @@
 ---
-title: Groupes de disponibilité AlwaysOn pour SQL Server sur Linux
-description: ''
+title: Groupes de disponibilité pour SQL Server sur Linux
+description: Découvrez les caractéristiques des groupes de disponibilité Always On pour SQL Server sur Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794993"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558627"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Groupes de disponibilité Always On sur Linux
 
@@ -144,9 +145,9 @@ Un groupe de disponibilité dont le type de cluster est External ou qui est WSFC
 
 Un groupe de disponibilité avec un type de cluster None peut avoir ses réplicas à travers différents systèmes d’exploitation, de sorte qu’il peut y avoir à la fois des réplicas Linux et Windows dans le même groupe de disponibilité. Un exemple est illustré ici où le réplica principal est basé sur Windows, tandis que le réplica secondaire se trouve sur l’une des distributions Linux.
 
-![Hybrid None](./media/sql-server-linux-availability-group-overview/image1.png)
+![Aucun hybride](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Un groupe de disponibilité distribué peut également franchir les limites entre systèmes d’exploitation. Les groupes sous-jacents sont liés par les règles relatives à la façon dont elles sont configurées. Par exemple, il peut y avoir une configuration de groupe External pour Linux uniquement, mais le groupe de disponibilité auquel ce groupe est joint peut être configuré à l’aide de WSFC. Prenons l'exemple suivant :
+Un groupe de disponibilité distribué peut également franchir les limites entre systèmes d’exploitation. Les groupes sous-jacents sont liés par les règles relatives à la façon dont elles sont configurées. Par exemple, il peut y avoir une configuration de groupe External pour Linux uniquement, mais le groupe de disponibilité auquel ce groupe est joint peut être configuré à l’aide de WSFC. Prenons l’exemple suivant :
 
 ![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

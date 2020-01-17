@@ -1,5 +1,6 @@
 ---
-title: Planifier l’attestation du Service Guardian hôte | Microsoft Docs
+title: Planifier l’attestation du Service Guardian hôte
+description: Planifiez l’attestation à l’aide du Service Guardian hôte pour Always Encrypted avec enclaves sécurisées dans SQL Server.
 ms.custom: ''
 ms.date: 10/12/2019
 ms.prod: sql
@@ -9,18 +10,18 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 439dd1e7cafd6d0766668188660aaedaffca8ca3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595634"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317956"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planifier l’attestation du Service Guardian hôte
 
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-Quand vous utilisez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md), vous devez vérifier que votre application cliente communique avec une enclave digne de confiance au sein du processus de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Pour une enclave de sécurité basée sur la virtualisation (VBS, Virtualization-Based Security), cela implique de vérifier que le code à l’intérieur de l’enclave est valide et que l’ordinateur hébergeant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] est digne de confiance. L’attestation à distance réalise cet objectif en introduisant un tiers qui peut valider l’identité (et éventuellement la configuration) de l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Avant que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] puisse utiliser une enclave pour exécuter une requête, il doit fournir des informations au service d’attestation concernant son environnement d’exploitation pour obtenir un certificat d’intégrité. Ce certificat d’intégrité est ensuite envoyé au client, qui peut vérifier son authenticité de façon indépendante auprès du service d’attestation. Une fois que le client approuve le certificat d’intégrité, il sait qu’il communique avec une enclave VBS digne de confiance et émet la requête qui va utiliser cette enclave.
+Quand vous utilisez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md), vous devez vérifier que l’application cliente communique avec une enclave digne de confiance au sein du processus [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Pour une enclave de sécurité basée sur la virtualisation (VBS), cela implique de vérifier que le code à l’intérieur de l’enclave est valide et que l’ordinateur hébergeant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] est digne de confiance. L’attestation à distance réalise cet objectif en introduisant un tiers qui peut valider l’identité (et éventuellement la configuration) de l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Avant que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] puisse utiliser une enclave pour exécuter une requête, il doit fournir des informations au service d’attestation concernant son environnement d’exploitation pour obtenir un certificat d’intégrité. Ce certificat d’intégrité est ensuite envoyé au client, qui peut vérifier son authenticité de façon indépendante auprès du service d’attestation. Une fois que le client approuve le certificat d’intégrité, il sait qu’il communique avec une enclave VBS digne de confiance et émet la requête qui va utiliser cette enclave.
 
 Le rôle Service Guardian hôte dans Windows Server 2019 fournit des fonctionnalités d’attestation à distance pour Always Encrypted avec des enclaves VBS.
 Cet article vous guide tout au long des décisions de prédéploiement et des exigences pour utiliser Always Encrypted avec des enclaves VBS et l’attestation du Service Guardian hôte.
@@ -32,11 +33,11 @@ Dans un déploiement classique, il y aura 1 à 3 serveurs Service Guardian hôte
 Comme le Service Guardian hôte est chargé de déterminer quels ordinateurs exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] sont dignes de confiance, il nécessite une isolation à la fois physique et logique de l’instance [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] qu’il protège.
 Si les mêmes administrateurs ont accès au Service Guardian hôte et à un ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], ils pourraient configurer le service d’attestation pour permettre à un ordinateur malveillant d’exécuter [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], ce qui leur permettrait de compromettre l’enclave VBS.
 
-### <a name="hgs-domain"></a>Domaine du Service Guardian hôte
+### <a name="hgs-domain"></a>Domaine SGH
 
 Le programme d’installation du Service Guardian hôte va créer automatiquement un nouveau domaine Active Directory pour les serveurs Service Guardian hôte, les ressources du cluster de basculement et les comptes d’administrateur.
 
-L’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] n’a pas besoin d’être joint à un domaine, mais si c’est le cas, il doit s’agir d’un domaine différent de celui utilisé par le serveur Service Guardian hôte.
+L’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] n’a pas besoin d’être dans à un domaine, mais si c’est le cas, il doit s’agir d’un domaine différent de celui utilisé par le serveur SGH.
 
 ### <a name="high-availability"></a>Haute disponibilité
 
@@ -47,7 +48,9 @@ Un stockage partagé n’est pas nécessaire entre les nœuds du Service Guardia
 
 ### <a name="network-connectivity"></a>Connectivité réseau
 
-Le client SQL et le [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doivent être en mesure de communiquer avec le Service Guardian hôte sur HTTP. Vous pouvez si vous le souhaitez configurer le Service Guardian hôte avec un certificat TLS pour prendre en charge les connexions HTTPS chiffrées.
+Le client SQL et l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doivent pouvoir communiquer avec SGH sur HTTP.
+Configurez SGH avec un certificat TLS pour chiffrer toutes les communications entre le client SQL et SGH, ainsi qu’entre l’ordinateur SQL Server et SGH.
+Cette configuration vous protège contre les attaques de l’intercepteur et garantit que vous communiquez avec le bon serveur SGH.
 
 Les serveurs Service Guardian hôte nécessitent une connectivité entre chaque nœud du cluster pour garantir la synchronisation de la base de données du service d’attestation. C’est une bonne pratique pour le cluster de basculement que de connecter les nœuds du Service Guardian hôte sur un réseau donné pour la communication du cluster et d’utiliser un réseau distinct pour la communication des autres clients avec le Service Guardian hôte.
 
@@ -61,6 +64,12 @@ Le Service Guardian hôte prend en charge deux modes d’attestation avec [!INCL
 | Module de plateforme sécurisée (TPM) | L’attestation de module TPM fournit l’assurance la plus forte quant à l’identité et à l’intégrité de l’ordinateur qui atteste avec le Service Guardian hôte. Elle nécessite que TPM version 2.0 soit installé sur les ordinateurs exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Chaque puce TPM contient une identité unique et immuable (une paire de clés de type EK - Endorsement Key) qui peut être utilisée pour identifier un ordinateur particulier. Les modules TPM mesurent également le processus de démarrage de l’ordinateur, en stockant les hachages des mesures sensibles pour la sécurité dans les registres de contrôle de plateforme qui peuvent être lus mais pas modifiés par le système d’exploitation. Ces mesures sont utilisées lors de l’attestation pour fournir une preuve de chiffrement qu’un ordinateur est bien dans la configuration de sécurité où il prétend être. |
 | Clé hôte | L’attestation de clé hôte est une forme d’attestation plus simple qui vérifie seulement l’identité d’un ordinateur en utilisant une paire de clés asymétriques. La clé privée est stockée sur l’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] et la clé publique est fournie au Service Guardian hôte. La configuration de la sécurité de l’ordinateur n’est pas mesurée et une puce TPM 2.0 n’est pas nécessaire sur l’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Il est important de protéger la clé privée installée sur l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], car toute personne qui obtiendrait cette clé peut emprunter l’identité d’un ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] légitime et l’enclave VBS s’exécutant dans [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. |
 
+En général, nous faisons les recommandations suivantes :
+
+- Pour les **serveurs de production physiques**, nous recommandons d’utiliser l’attestation TPM pour les garanties supplémentaires qu’elle fournit.
+- Pour les **serveurs de production virtuels**, nous recommandons d’utiliser l’attestation de clé d’hôte dans la mesure où la plupart des machines virtuelles ne disposent ni de modules TPM virtuels ni d’un démarrage sécurisé. Si vous utilisez une machine virtuelle bénéficiant d’une sécurité renforcée comme une [machine virtuelle locale dotée d’une protection maximale](https://aka.ms/shieldedvms), vous pouvez opter pour le mode TPM. Dans tous les déploiements virtualisés, le processus d’attestation analyse uniquement votre environnement de machine virtuelle (pas la plateforme de virtualisation sous la machine virtuelle).
+- Dans les **scénarios de développement/test**, nous recommandons d’utiliser l’attestation de clé d’hôte car elle est plus facile à configurer.
+
 ### <a name="trust-model"></a>Modèle d’approbation
 
 Dans le modèle d’approbation d’enclave VBS, les requêtes et les données chiffrées sont évaluées dans une enclave logicielle pour la protéger du système d’exploitation hôte.
@@ -69,7 +78,7 @@ Pour qu’un client puisse faire confiance à une instance légitime de VBS, vou
 Les mesures de module TPM capturées lors du processus de démarrage incluent la clé d’identité unique de l’instance de VBS, ce qui garantit que le certificat d’intégrité est valide seulement sur cet ordinateur.
 En outre, quand un module TPM est disponible sur un ordinateur exécutant VBS, la partie privée de la clé d’identité VBS est protégée par le module TPM, empêchant toute tentative d’emprunt d’identité de cette instance de VBS.
 
-Le démarrage sécurisé est obligatoire avec l’attestation de module TPM pour vérifier que l’interface UEFI a chargé un chargeur de démarrage légitime signé par Microsoft, et qu’aucun rootkit ou bootkit n’a intercepté le processus de démarrage de l’hyperviseur.
+Le démarrage sécurisé est obligatoire avec l’attestation TPM pour vérifier que l’interface UEFI a chargé un chargeur de démarrage légitime signé par Microsoft et qu’aucun rootkit n’a intercepté le processus de démarrage de l’hyperviseur.
 De plus, un appareil IOMMU est nécessaire par défaut pour garantir qu’aucun appareil matériel disposant d’un accès direct à la mémoire ne peut inspecter ni modifier la mémoire de l’enclave.
 
 Ces protections supposent que l’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] est une machine physique.
@@ -80,22 +89,22 @@ Elle ne peut pas mesurer l’état de l’hyperviseur contrôlant la machine vir
 Cependant, même quand [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] est virtualisé, l’enclave est néanmoins toujours protégée contre les attaques provenant du système d’exploitation de la machine virtuelle.
 Si vous faites confiance à votre hyperviseur ou à votre fournisseur cloud, et que vous vous inquiétez principalement des attaques d’un administrateur de base de données et d’un administrateur du système d’exploitation sur des données sensibles, un [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] virtualisé peut répondre à vos besoins.
 
-De même, l’attestation de clé d’hôte reste valable dans les situations où un module TPM 2.0 n’est pas installé sur l’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], ou dans des scénarios de développement/test où la sécurité n’est pas primordiale.
+De même, l’attestation de clé d’hôte reste valable dans les situations où un module TPM 2.0 n’est pas installé sur l’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] ou dans des scénarios de développement/test où la sécurité n’est pas primordiale.
 Vous pouvez néanmoins toujours utiliser la plupart des fonctionnalités de sécurité mentionnées ci-dessus, notamment le démarrage sécurisé et un module TPM 1.2, pour mieux protéger VBS et le système d’exploitation comme un tout.
 Cependant, étant donné qu’il n’existe aucun moyen pour le Service Guardian hôte de vérifier que ces paramètres sont activés sur l’ordinateur avec l’attestation de clé hôte, le client n’est pas sûr que l’hôte utilise toutes les protections disponibles.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-### <a name="hgs-server-prerequisites"></a>Prérequis pour le serveur Service Guardian hôte
+### <a name="hgs-server-prerequisites"></a>Prérequis pour le serveur SGH
 
 Le ou les ordinateurs qui exécutent le rôle Service Guardian hôte doivent remplir les conditions suivantes :
 
 | Composant | Condition requise |
 | --------- | ----------- |
-| Système d'exploitation | Windows Server 2019 Édition Standard ou Datacenter |
-| Unité centrale | 2 cœurs (minimum), 4 cœurs (recommandé) |
+| Système d’exploitation | Windows Server 2019 Édition Standard ou Datacenter |
+| UC | 2 cœurs (minimum), 4 cœurs (recommandé) |
 | RAM | 8 Go (minimum) |
-| Cartes réseau | 2 cartes réseau recommandées (1 pour le trafic du cluster, 1 pour le Service Guardian hôte) |
+| Cartes réseau | 2 cartes réseau avec adresses IP statiques recommandées (1 pour le trafic du cluster, 1 pour SGH) |
 
 Le Service Guardian hôte est un rôle très lié au processeur, en raison du nombre d’actions qui nécessitent un chiffrement et un déchiffrement.
 L’utilisation de processeurs modernes avec des fonctionnalités d’accélération du chiffrement améliore les performances du Service Guardian hôte.
@@ -116,12 +125,12 @@ Ces conditions requises incluent :
   - AMD-V avec Rapid Virtualization Indexing.
   - Si vous exécutez [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] sur une machine virtuelle, l’hyperviseur et le processeur physique doivent offrir des fonctionnalités de virtualisation imbriquées. Pour plus d’informations sur les garanties lors de l’exécution d’enclaves VBS dans une machine virtuelle, consultez la section [Modèle d’approbation](#trust-model).
     - Sur Hyper-V 2016 ou ultérieur, [activez les extensions de virtualisation imbriquée sur le processeur de la machine virtuelle](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - Dans Azure, sélectionnez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée. Ceci comprend toutes les machines virtuelles de la série v3, par exemple Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-    - Sur VMware vSphere 6.7 et les versions ultérieures, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - Dans Azure, sélectionnez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée. Toutes les machines virtuelles de la série v3 prennent en charge la virtualisation imbriquée, notamment Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - Sur VMware vSphere 6.7 ou ultérieur, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - D’autres hyperviseurs et clouds publics peuvent prendre en charge les fonctionnalités de virtualisation imbriquées qui permettent aussi l’utilisation d’Always Encrypted avec enclaves VBS. Consultez les instructions relatives à la compatibilité et à la configuration dans la documentation de votre solution de virtualisation.
 - Si vous envisagez d’utiliser l’attestation de module TPM, vous aurez besoin d’une puce TPM 2.0 révision 1.16 prêt à être utilisée sur le serveur. À ce stade, l’attestation de Service Guardian hôte ne fonctionne pas avec les puces TPM 2.0 révision 1.38. De plus, le module TPM doit avoir un certificat de paire de clés de type EK (Endorsement Key) valide.
 
-## <a name="devtest-environment-considerations"></a>Considérations relatives à l’environnement de développement/test
+## <a name="devtest-environment-considerations"></a>Considérations relatives aux environnements de développement/test
 
 Si vous utilisez Always Encrypted avec enclaves VBS dans un environnement de développement ou de test, et que vous n’avez pas besoin d’une haute disponibilité ou d’une protection renforcée de l’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], vous pouvez faire une ou plusieurs des concessions suivantes pour un déploiement simplifié :
 
@@ -132,4 +141,4 @@ Si vous utilisez Always Encrypted avec enclaves VBS dans un environnement de dé
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Déployer le Service Guardian hôte pour [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)

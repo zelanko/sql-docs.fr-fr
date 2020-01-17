@@ -1,6 +1,7 @@
 ---
-title: Questions fréquentes (FAQ) pour les administrateurs de la réplication | Microsoft Docs
-ms.custom: ''
+title: Questions fréquentes (FAQ) pour les administrateurs de la réplication
+description: Liste des questions fréquentes destinées aux administrateurs de la réplication pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041196"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322025"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "72041196"
   
 -   L'option de synchronisation Web pour la réplication de fusion. Pour plus d’informations, voir [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- Tous les types de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent répliquer des données via un réseau privé virtuel (VPN), mais vous devrez plutôt utiliser la synchronisation Web si vous utilisez une réplication de fusion.  
+ Même si tous les types de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent répliquer des données via un réseau privé virtuel (VPN), utilisez plutôt la synchronisation Web avec la réplication de fusion.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>La réplication reprend-elle si une connexion est supprimée ?  
  Oui. Le traitement de la réplication reprend là où il s'est interrompu si une connexion est supprimée. Si vous utilisez une réplication de fusion sur un réseau non fiable, envisagez d'utiliser des enregistrements logiques qui garantissent que les modifications liées sont traitées en tant qu'unité. Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -119,7 +120,7 @@ ms.locfileid: "72041196"
  Non. Vous pourriez créer un package SSIS pour transférer des connexions et des mots de passe d'un serveur de publication vers un ou plusieurs abonnés.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Que sont les schémas et comment sont-ils répliqués ?  
- À commencer par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schéma* a deux significations :  
+ À compter de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schéma* a deux significations :  
   
 -   La définition d'un objet, par exemple une instruction `CREATE TABLE`. Par défaut, la réplication copie les définitions de tous les objets répliqués sur l'Abonné.  
   

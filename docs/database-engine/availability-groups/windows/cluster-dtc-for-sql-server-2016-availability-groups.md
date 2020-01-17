@@ -1,7 +1,7 @@
 ---
 title: Mettre en cluster le service DTC pour un groupe de disponibilité
 description: 'Décrit les exigences et les étapes liées au clustering du service Microsoft Distributed Transaction Coordinator (DTC) pour un groupe de disponibilité Always On. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 450ea18f977f720b742a9fba28f6d24d01d5373d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988561"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244390"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Mettre en cluster le service DTC pour un groupe de disponibilité Always On
 
@@ -26,14 +26,14 @@ Cette rubrique décrit les exigences et les étapes liées au clustering du serv
 
  ## <a name="checklist-preliminary-requirements"></a>Liste de vérification : Prérequis
 
-||Tâche|Référence|  
+||Tâche|Informations de référence|  
 |------|-----------------|----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Assurez-vous que tous les nœuds, les services et le groupe de disponibilité ont été configurés correctement.|[Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que les exigences relatives au groupe de disponibilité DTC sont remplies.|[Transactions entre bases de données et transactions distribuées pour des groupes de disponibilité Always On et la mise en miroir de bases de données (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## <a name="checklist-clustered-dtc-resource-dependencies"></a>Liste de vérification : Dépendances de la ressource DTC en cluster
 
-||Tâche|Référence|  
+||Tâche|Informations de référence|  
 |------|-----------------|----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Un lecteur de stockage partagé.|[Configuration du lecteur de stockage partagé](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Envisagez d’utiliser la lettre de lecteur **M**.|
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Une ressource de nom réseau DTC unique.  Le nom sera enregistré comme un objet Ordinateur en cluster dans Active Directory.<br /><br />Assurez-vous qu’une des conditions suivantes est remplie :<br /><br />• L’utilisateur qui crée la ressource de nom de réseau DTC est autorisé à créer des objets Ordinateur sur l’unité d’organisation ou le conteneur dans lequel se trouve la ressource de nom de réseau DTC.<br /><br />• Si l’utilisateur n’est pas autorisé à créer d’objets Ordinateur, demandez à un administrateur de domaine de préconfigurer un objet Ordinateur en cluster pour la ressource de nom de réseau DTC.|[Préconfigurer des objets Ordinateur en Cluster dans les services de domaine Active Directory](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
@@ -45,11 +45,11 @@ Une fois que vous avez créé votre ressource de groupe de disponibilité, crée
 
 ## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Liste de vérification : Configurations de la ressource DTC après sa mise en cluster
 
-||Tâche|Référence|  
+||Tâche|Informations de référence|  
 |------|-----------------|----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Activer l’accès réseau sécurisé pour la ressource DTC mise en cluster.|[Activer l’accès réseau sécurisé pour MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Arrêter et désactiver le service DTC local.|[Configurer le démarrage d’un service](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
-|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Parcourez tour à tour le service SQL Server pour chaque instance du groupe de disponibilité.  Basculer le groupe de disponibilité en fonction des besoins.|[Effectuer un basculement manuel planifié d’un groupe de disponibilité (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
+|![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Parcourez tour à tour le service SQL Server pour chaque instance du groupe de disponibilité.  Basculer le groupe de disponibilité en fonction des besoins.|[Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - Si le serveur est Windows Server 2012 R2, l’article [3030373 de la Base de connaissances](https://support.microsoft.com/kb/3090973) doit être appliqué au système d’exploitation.
 

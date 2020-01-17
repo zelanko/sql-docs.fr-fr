@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531203"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721804"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurer une base de données SQL Server dans un conteneur Docker Linux
 
@@ -84,8 +84,8 @@ Ce tutoriel montre comment déplacer et restaurer un fichier de sauvegarde SQL S
 
    Cette commande crée un conteneur SQL Server 2017 avec l’édition Développeur (par défaut). Le port SQL Server **1433** est exposé sur l’hôte en tant que port **1401**. Le paramètre `-v sql1data:/var/opt/mssql` facultatif crée un conteneur de volumes de données nommé **sql1ddata**. Il est utilisé pour rendre persistantes les données créées par SQL Server.
 
-   > [!NOTE]
-   > Le processus d’exécution des éditions SQL Server de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [Exécuter des images conteneur de production](sql-server-linux-configure-docker.md#production). Si vous utilisez les mêmes noms de conteneur et ports, le reste de cette procédure pas à pas fonctionne toujours avec les conteneurs de production.
+   > [!IMPORTANT]
+   > Cet exemple utilise un conteneur de volume de données dans Docker. Si vous choisissez plutôt de mapper un répertoire hôte, notez que cette approche est assortie de limitations sur Docker pour Mac et Windows. Pour plus d’informations, consultez [Configurer des images de conteneur SQL Server sur Docker](sql-server-linux-configure-docker.md#persist).
 
 1. Pour afficher vos conteneurs Docker, utilisez la commande `docker ps`.
 
@@ -542,7 +542,7 @@ Dans ce tutoriel, vous avez appris à sauvegarder une base de données sur Windo
 > * Créer et extraire des fichiers de sauvegarde à partir d’un conteneur.
 > * Utiliser des conteneurs de volume de données dans Docker pour rendre persistantes les données SQL Server.
 
-Ensuite, passez en revue les autres scénarios de configuration et de résolution des problèmes Docker :
+Ensuite, consultez les autres scénarios de configuration et de résolution des problèmes Docker :
 
 > [!div class="nextstepaction"]
 >[Guide de configuration pour SQL Server 2017 sur Docker](sql-server-linux-configure-docker.md)

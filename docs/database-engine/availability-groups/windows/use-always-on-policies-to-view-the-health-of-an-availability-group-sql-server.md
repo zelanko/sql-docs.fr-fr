@@ -1,6 +1,7 @@
 ---
-title: Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité | Microsoft Docs
-ms.custom: ''
+title: Stratégies pour visualiser l’intégrité d’un groupe de disponibilité
+description: Utilisez les stratégies Always On ou PowerShell pour déterminer l’intégrité opérationnelle d’un groupe de disponibilité Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013638"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244742"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68013638"
   
 1.  Définissez la valeur par défaut (**cd**) sur une instance de serveur qui héberge l’un des réplicas de disponibilité. Pour afficher des informations sur tous les réplicas de disponibilité d'un groupe de disponibilité, utilisez l'instance de serveur qui héberge le réplica principal.  
   
-2.  Utilisez les applets de commande suivantes :  
+2.  Utilisez les applets de commande suivantes :  
   
      **Test-SqlAvailabilityGroup**  
      Évalue l'intégrité d'un groupe de disponibilité lors de l'évaluation des stratégies de gestion basées sur des stratégies SQL Server. Vous devez disposer des autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION pour exécuter cette applet de commande.  
@@ -90,7 +91,7 @@ ms.locfileid: "68013638"
     |**AllowUserPolicies**|Exécute des stratégies d’utilisateur présentes dans les catégories de stratégie Always On.|  
     |**InputObject**|Collection d'objets qui représentent des groupes de disponibilité, des réplicas de disponibilité ou des états de base de données de disponibilité (selon les applets de commande que vous utilisez). L'applet de commande calcule l'intégrité des objets spécifiés.|  
     |**NoRefresh**|Quand ce paramètre est défini, l’applet de commande n’actualise pas manuellement les objets spécifiés par le paramètre **-Path** ou **-InputObject** .|  
-    |**Chemin d'accès**|Chemin d'accès au groupe de disponibilité, à un ou plusieurs réplicas de disponibilité ou à l'état de cluster de réplica de la base de données de disponibilité (selon les applets de commande que vous utilisez). Il s'agit d'un paramètre facultatif. Si elle n'est pas spécifiée, la valeur de ce paramètre est définie par défaut à l'emplacement de travail actuel.|  
+    |**Chemin d’accès**|Chemin d'accès au groupe de disponibilité, à un ou plusieurs réplicas de disponibilité ou à l'état de cluster de réplica de la base de données de disponibilité (selon les applets de commande que vous utilisez). Il s'agit d'un paramètre facultatif. Si elle n'est pas spécifiée, la valeur de ce paramètre est définie par défaut à l'emplacement de travail actuel.|  
     |**ShowPolicyDetails**|Indique le résultat de chaque évaluation de la stratégie exécutée par cette applet de commande. L'applet de commande génère un objet par évaluation de stratégie, et cet objet comporte des champs décrivant les résultats de l'évaluation (que la stratégie ait réussi ou non, le nom de la stratégie et la catégorie, etc.).|  
   
      Par exemple, la commande **Test-SqlAvailabilityGroup** suivante spécifie le paramètre **ShowPolicyDetails** pour afficher le résultat de chaque évaluation de stratégie exécutée par cette applet de commande pour chaque stratégie de gestion basée sur des stratégies (PBM) exécutée sur le groupe de disponibilité nommé `MyAg`.  

@@ -1,6 +1,7 @@
 ---
-title: Page Validation (Assistants Groupe de disponibilité Always On) | Microsoft Docs
-ms.custom: ''
+title: 'Assistant Groupe de disponibilité : Page Validation'
+description: Cette rubrique décrit les options disponibles dans la page Validation de l’Assistant Groupe de disponibilité Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013453"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821840"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Page Validation (Assistants Groupe de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +32,17 @@ ms.locfileid: "68013453"
  **Résultats de la validation du groupe de disponibilité.**  
  Cette grille affiche les résultats de chaque étape de validation finalisée. Les colonnes de la grille sont les suivantes :  
   
- **Name**  
+ **Nom**  
  Affiche une expression qui décrit une étape spécifique.  
   
- **Result**  
+ **Résultat**  
  Affiche l'un des textes de lien hypertexte suivants. Pour plus d'informations sur le résultat d'une étape de validation donnée, cliquez sur le lien hypertexte.  
   
 |Résultats|Description|  
 |------------|-----------------|  
-|**Erreur**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
+|**Error**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
 |**Ignoré**|Indique que l'étape de validation a été ignorée parce qu'elle n'était pas requise par vos sélections. Cliquez sur le lien pour afficher la raison pour laquelle une étape a été ignorée.|  
-|**Réussi**|Indique que l'étape de validation s'est terminée avec succès|  
+|**Success**|Indique que l'étape de validation s'est terminée avec succès|  
 |**Avertissement**|Indique un problème potentiel avec la configuration du groupe de disponibilité.  Cliquez sur le lien pour afficher le message d'avertissement.|  
   
  **Réexécuter la validation**  
@@ -53,10 +54,10 @@ ms.locfileid: "68013453"
   
 -   [Utiliser l’Assistant Ajouter un réplica au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Utiliser l’Assistant Ajouter une base données au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
+-   [Utiliser l’Assistant Ajouter une base de données au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

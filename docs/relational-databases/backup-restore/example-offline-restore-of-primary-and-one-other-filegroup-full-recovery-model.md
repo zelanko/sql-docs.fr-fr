@@ -1,5 +1,6 @@
 ---
-title: 'Exemple de restauration hors ligne : Primaire et 1 groupe de fichiers (Mode de récupération complète) | Microsoft Docs'
+title: 'Restauration hors ligne : groupe de fichiers primaire et 1 groupe de fichiers'
+ms.description: Full recovery model
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 390db80fc88e3d115bad292e5bf0bf1a4a921639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d98eefac2e015aa1648f1afaa56a5676805cf10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089796"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245252"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>Exemple : Restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers (mode de restauration complète)
+# <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>Exemple : Restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique concerne uniquement les bases de données contenant plusieurs groupes de fichiers et obéissant au mode de récupération complète.  

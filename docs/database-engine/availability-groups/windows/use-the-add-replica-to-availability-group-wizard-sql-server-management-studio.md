@@ -1,7 +1,7 @@
 ---
-title: Ajouter un réplica à un groupe de disponibilité à l’aide de l’Assistant dans SSMS - SQL Server
+title: Ajouter un réplica à un groupe de disponibilité (SSMS)
 ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a89678fd2964e528ed09a38184fc295e0c955d98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013565"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244982"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Ajouter un réplica à un groupe de disponibilité Always On à l’aide de l’Assistant Groupe de disponibilité dans SQL Server Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,15 +82,15 @@ ms.locfileid: "68013565"
   
 6.  Si les réplicas sélectionnés contiennent des bases de données comportant une clé principale de base de données, entrez les mots de passe pour les clés principales de base de données dans la colonne **Mot de passe**. La colonne **État** indique **Mot de passe requis** pour les bases de données qui comportent une clé principale de base de données. L’option **Suivant** est grisée jusqu’à ce que le mot de passe correct soit entré dans la colonne **Mot de passe**. Après avoir entré les mots de passe, cliquez sur **Actualiser**. Si les mots de passe entrés sont corrects, la colonne État indique **Mot de passe entré** et **Suivant** devient disponible.  
   
-7.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
+7.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l’une des options suivantes :  
   
-    -   **Complet**  
+    -   **Complète**  
   
          Sélectionnez cette option si votre environnement répond aux conditions requises pour démarrer automatiquement la synchronisation initiale des données (pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations](#Prerequisites), plus haut dans cette rubrique).  
   
          Si vous sélectionnez **Complet**, après avoir créé le groupe de disponibilité, l'assistant sauvegarde chaque base de données primaire et son journal des transactions sur un partage réseau et restaure les sauvegardes sur chaque instance de serveur qui héberge un nouveau réplica secondaire. L'assistant joint ensuite chaque nouvelle base de données secondaire au groupe de disponibilité.  
   
-         Dans le champ **Spécifier un emplacement réseau partagé accessible par tous les réplicas :** , spécifiez un partage de sauvegarde dans lequel l’intégralité de l’instance de serveur qui héberge les réplicas dispose d’un accès en lecture-écriture. Les sauvegardes de journaux feront partie de votre chaîne de sauvegarde du journal. Stockez les fichiers de sauvegarde des journaux de manière appropriée.  
+         Dans le champ **Spécifier un emplacement réseau partagé accessible par tous les réplicas** , spécifiez un partage de sauvegarde dans lequel l’intégralité de l’instance de serveur qui héberge les réplicas dispose d’un accès en lecture-écriture. Les sauvegardes de journaux feront partie de votre chaîne de sauvegarde du journal. Stockez les fichiers de sauvegarde des journaux de manière appropriée.  
   
         > [!IMPORTANT]  
         >  Pour plus d’informations sur les autorisations de système de fichiers requises, consultez [Configuration préalable requise](#Prerequisites)plus haut dans cette rubrique.  

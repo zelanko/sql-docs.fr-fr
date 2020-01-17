@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982850"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249729"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -682,7 +682,7 @@ Ce tableau décrit les interactions entre les options { **NOINIT** | INIT } et {
 
 BACKUP prend en charge l’option `RESTART` pour assurer la compatibilité descendante avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mais RESTART est inopérant.
 
-## <a name="general-remarks"></a>Remarques d’ordre général
+## <a name="general-remarks"></a>Remarques générales
 
 Les sauvegardes de base de données ou de fichier journal peuvent être ajoutées à n'importe quel périphérique de disque ou à bandes, ce qui permet de conserver au même emplacement physique la base de données et ses journaux de transactions.
 
@@ -739,9 +739,9 @@ Des problèmes de propriété et d'autorisations sur le fichier physique de l'un
 
 ## <a name="examples"></a> Exemples
 
-Cette section contient les exemples suivants :
+Cette section contient les exemples suivants :
 
-- A. [Sauvegarde d'une base de données complète](#backing_up_db)
+- R. [Sauvegarde d'une base de données complète](#backing_up_db)
 - B. [Sauvegarde de la base de données et du journal](#backing_up_db_and_log)
 - C. [Création d’une sauvegarde de fichiers complète à partir de groupes de fichiers secondaires](#full_file_backup)
 - D. [Création d’une sauvegarde de fichiers différentielle à partir de groupes de fichiers secondaires](#differential_file_backup)
@@ -936,7 +936,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 Sauvegarde une base de données SQL placée/hébergée dans Azure SQL Database Managed Instance. [L’instance managée](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) SQL Database dispose de sauvegardes automatiques et permet aux utilisateurs de créer des sauvegardes `COPY_ONLY` de base de données complètes. Les sauvegardes différentielles, de journaux et d’instantanés de fichiers ne sont pas prises en charge.
 
@@ -1260,7 +1260,7 @@ Les sauvegardes [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ne sont pas stock�
 
 **Gérer les informations d’identification réseau**
 
-L’accès réseau au répertoire de sauvegarde est basé sur la sécurité standard des partages de fichiers Windows. Avant d’effectuer une sauvegarde, vous devez créer ou désigner un compte Windows qui sera utilisé pour l’authentification de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] auprès du répertoire de sauvegarde. Ce compte Windows doit être doté d’un droit d’accès, de création et d’écriture sur le répertoire de sauvegarde.
+L’accès réseau au répertoire de sauvegarde est basé sur la sécurité standard des partages de fichiers du système d’exploitation. Avant d’effectuer une sauvegarde, vous devez créer ou désigner un compte Windows qui sera utilisé pour l’authentification de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] auprès du répertoire de sauvegarde. Ce compte Windows doit être doté d’un droit d’accès, de création et d’écriture sur le répertoire de sauvegarde.
 
 > [!IMPORTANT]
 > Pour réduire les risques de sécurité liés à vos données, il vous est conseillé de désigner un compte Windows qui servira uniquement aux opérations de sauvegarde et de restauration. Autorisez ce compte à accéder à l’emplacement de sauvegarde et à aucun autre emplacement.
@@ -1273,7 +1273,7 @@ Pour répertorier toutes les informations d’identification réseau stockées d
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Ajouter des informations d’identification réseau pour l’emplacement de sauvegarde
+### <a name="a-add-network-credentials-for-the-backup-location"></a>R. Ajouter des informations d’identification réseau pour l’emplacement de sauvegarde
 
 Pour créer une sauvegarde, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] doit disposer d’autorisations de lecture/écriture pour le répertoire de sauvegarde. L’exemple suivant montre comment ajouter les informations d’identification d’un utilisateur. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] va stocker ces informations d’identification et les utiliser pour les opérations de sauvegarde et de restauration.
 

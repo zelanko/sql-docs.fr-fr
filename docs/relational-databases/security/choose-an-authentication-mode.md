@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903143"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721354"
 ---
 # <a name="choose-an-authentication-mode"></a>Choisir un mode d'authentification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "72903143"
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>Inconvénients de l'authentification SQL Server  
   
--   Si l'utilisateur possède un compte de domaine Windows avec un nom de connexion et un mot de passe pour Windows, il doit encore fournir un autre nom de connexion et un autre mot de passe ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) pour se connecter. Pour de nombreux utilisateurs, il est difficile de gérer plusieurs noms et plusieurs mots de passe. Devoir fournir des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à chaque connexion à la base de données peut s’avérer fastidieux.  
+-   Si un utilisateur est un utilisateur de domaine Windows qui dispose d’une connexion et d’un mot de passe pour Windows, il doit toujours fournir un autre nom de connexion et un autre mot de passe ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) pour se connecter. Pour de nombreux utilisateurs, il est difficile de gérer plusieurs noms et plusieurs mots de passe. Devoir fournir des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à chaque connexion à la base de données peut s’avérer fastidieux.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] L’authentification ne peut pas utiliser le protocole de sécurité Kerberos.  
   

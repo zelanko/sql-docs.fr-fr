@@ -1,6 +1,7 @@
 ---
-title: Corriger le chevauchement des options Masque d’affinité et Masque d’affinité d’E/S | Microsoft Docs
-ms.custom: ''
+title: Stratégie de correction du chevauchement des options Masque d’affinité et Masque d’affinité d’E/S
+description: Découvrez comment activer une stratégie qui vérifie si une instance de SQL Server comporte un ou plusieurs processeurs prévus pour être utilisés à la fois avec l’option Masque d’affinité et l’option Masque d’affinité d’E/S pour la gestion basée sur des stratégies dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4864bd6c5f1f34843c9e44c3cf3c2e72777f13b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b225710aaadf3ea605e3cffd91a5a4fea2a51e62
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109763"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557787"
 ---
 # <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Corriger le chevauchement des options Masque d’affinité et Masque d’affinité d’E/S
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +38,13 @@ ms.locfileid: "68109763"
 ## <a name="for-more-information"></a>Pour plus d'informations  
  [Masque d'affinité (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)  
   
- [option de configuration de serveur Masque d’affinité d’E/S](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md)  
+ [Masque d’affinité d’E/S (option de configuration de serveur)](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md)  
   
  [Masque d'affinité 64 (option de configuration de serveur)](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md)  
   
- [option de configuration du serveur affinity64 Input-Output mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)  
+ [Masque d’affinité 64 d’E/S (option de configuration de serveur)](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contrôler et appliquer les meilleures pratiques à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Contrôler et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

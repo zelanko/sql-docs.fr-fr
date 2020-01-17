@@ -1,6 +1,7 @@
 ---
-title: Réplication SQL Server, boîte de dialogue Propriétés du serveur de publication | Microsoft Docs
-ms.custom: ''
+title: Propriétés du serveur de publication, boîte de dialogue (SSMS)
+description: Décrit la boîte de dialogue « Propriétés du serveur de publication » pour une publication spécifique dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908304"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320646"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés du serveur de publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ La boîte de dialogue **Propriétés du serveur de publication** permet d'affich
  **Transactionnelle**  
  Activez cette case à cocher pour permettre aux utilisateurs du rôle de base de données fixe **db_owner** de créer des publications d'instantanés ou des publications transactionnelles dans la base de données. 
   
- **Fusion**  
+ **Fusionner**  
  Activez cette case à cocher pour permettre aux utilisateurs du rôle de base de données fixe **db_owner** de créer des publications de fusion dans la base de données.  
   
 

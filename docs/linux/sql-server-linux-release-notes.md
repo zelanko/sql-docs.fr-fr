@@ -3,17 +3,17 @@ title: Notes de publication pour SQL Server 2017 sur Linux
 description: Cet article contient les notes de publication et fonctionnalités prises en charge pour SQL Server 2017 s’exécutant sur Linux. Les notes de publication sont incluses dans la mise en production la plus récente et dans plusieurs mises en production précédentes.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/10/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72930488"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258398"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour SQL Server 2017 sur Linux
 
@@ -31,7 +31,7 @@ Les notes de publication suivantes s’appliquent à [!INCLUDE[ssSQL17](../inclu
 | Serveur Red Hat Enterprise Linux 7.3, 7.4, 7.5 ou 7.6 | XFS ou EXT4 | [Guide d'installation](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS ou EXT4 | [Guide d'installation](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS ou EXT4 | [Guide d'installation](quickstart-install-connect-ubuntu.md) | 
-| Moteur Docker 1.8+ sur Windows, Mac ou Linux | Néant | [Guide d'installation](quickstart-install-connect-docker.md) | 
+| Moteur Docker 1.8+ sur Windows, Mac ou Linux | N/A | [Guide d'installation](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > Pour plus d’informations, consultez les [exigences système](sql-server-linux-setup.md#system) pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux. Pour obtenir la dernière stratégie de support pour [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], consultez la [Stratégie de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
@@ -44,8 +44,9 @@ La plupart des outils client existants qui ciblent [!INCLUDE[ssNoVersion](../inc
 
 La table suivante énumère l’historique des mises en production pour [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
-| Version               | Options de version       | Date de publication |
+| Libérer               | Version       | Date de publication |
 |-----------------------|---------------|--------------|
+| [CU18](#CU18)         | 14.0.3257.3   | 09-12-2019   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
@@ -79,9 +80,49 @@ Si vous mettez à jour des packages [!INCLUDE[ssNoVersion](../includes/ssnoversi
 - [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Activer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU18"></a> CU18 (décembre 2019)
+
+Il s’agit de la mise en production de la mise à jour cumulative 18 (CU18) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3257.3. Pour plus d’informations sur les correctifs et les améliorations de cette mise en production, consultez [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377).
+
+### <a name="package-details"></a>Détails du package
+
+Pour les installations du package manuelles ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations figurant dans la table suivante :
+
+| Package | Version du package | Téléchargements |
+|-----|-----|-----|
+| Package Red Hat RPM | 14.0.3257.3-13 | [Package RPM du moteur](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Package SLES RPM | 14.0.3257.3-13 | [Package RPM du moteur mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
+| Package Ubuntu 16.04 Debian | 14.0.3257.3-13 | [Package Debian du moteur](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[Package Debian haute disponibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[Package SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="remarks"></a>Notes
+
+Les conteneurs SQL Server 2017 disposent désormais d’un nouveau modèle d’étiquetage comme décrit ci-dessous à l’aide d’exemples.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-<update>-<Linux Distribution>-<Linux Distribution Version>`
+
+  Ceci permet de tirer (pull) l’image conteneur avec la combinaison décrite dans l’étiquette.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-latest`
+
+    Ceci permet de tirer (pull) la dernière version de SQL Server sur la dernière version d’Ubuntu prise en charge.
+
+**Exemples :**
+
+`mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
+
+Ceci permet de tirer (pull) SQL Server 2017 CU18 en fonction du conteneur Ubuntu 16.04.
+
+`mcr.microsoft.com/mssql/server:2017-latest`
+
+Ceci permet de tirer (pull) la dernière version de SQL Server 2017 (CU18 au moment de la rédaction de cet article) en fonction du conteneur Ubuntu 16.04.
+
+> [!NOTE]
+> Nous ne publierons plus de conteneurs avec d’autres modèles d’étiquetage pour les conteneurs SQL Server 2017.
+
+
 ## <a id="CU17"></a> CU17 (octobre 2019)
 
-Il s’agit de la mise en production de la mise à jour cumulative 17 (CU17) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3238.1. Pour plus d’informations sur les correctifs et les améliorations de cette mise en production, consultez [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4515579).
+Il s’agit de la mise en production de la mise à jour cumulative 17 (CU17) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3238.1. Pour plus d’informations sur les correctifs et les améliorations de cette mise en production, consultez [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579).
 
 ### <a name="package-details"></a>Détails du package
 
@@ -95,7 +136,7 @@ Pour les installations du package manuelles ou hors connexion, vous pouvez tél�
 
 ## <a id="CU16"></a> CU16 (août 2019)
 
-Il s’agit de la mise en production de la mise à jour cumulative 16 (CU16) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3223.3. Pour plus d’informations sur les correctifs et les améliorations de cette mise en production, consultez [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218).
+Il s’agit de la mise en production de la mise à jour cumulative 16 (CU16) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3223.3. Pour plus d’informations sur les correctifs et les améliorations de cette mise en production, consultez [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218).
 
 ### <a name="whats-new"></a>What's New
 
@@ -115,7 +156,7 @@ Pour les installations du package manuelles ou hors connexion, vous pouvez tél�
 
 ## <a id="CU15"></a> CU15 (mai 2019)
 
-Il s’agit de la mise en production de la mise à jour cumulative 15 (CU15) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3162.1. Pour plus d’informations sur les correctifs et les améliorations de cette mise en production, consultez [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951).
+Il s’agit de la mise en production de la mise à jour cumulative 15 (CU15) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La version [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de cette mise en production est 14.0.3162.1. Pour plus d’informations sur les correctifs et les améliorations de cette mise en production, consultez [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951).
 
 ### <a name="package-details"></a>Détails du package
 
@@ -459,7 +500,7 @@ Les sections suivantes décrivent les problèmes connus avec la mise en producti
 
 - L’autorisation utilisateur **ADMINISTER BULK OPERATIONS** n’est pas prise en charge sur Linux pour l’instant.
 
-#### <a name="networking"></a>Réseau
+#### <a name="networking"></a>Mise en réseau
 
 Les fonctionnalités qui impliquent des connexions TCP sortantes à partir du processus sqlservr, telles que les serveurs liés ou les groupes de disponibilité, peuvent ne pas fonctionner si les deux conditions suivantes sont réunies :
 

@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729878"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401632"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729878"
 
 Affiche le nombre de modifications incrémentielles dans les tables de base qui sont conservées pour les affichages matérialisés dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Le taux de surcharge est calculé en tant que TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,7 +54,7 @@ Requiert l'autorisation VIEW DATABASE STATE.
 
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. Cet exemple retourne le taux de charge d’une vue matérialisée.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>R. Cet exemple retourne le taux de charge d’une vue matérialisée.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -64,7 +64,7 @@ Sortie :
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
-|1234|1|3 |3 |
+|1234|1|3 |3.0 |
 
 </br>
 
@@ -139,7 +139,7 @@ ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
 go
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
-Sortie
+Output
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  

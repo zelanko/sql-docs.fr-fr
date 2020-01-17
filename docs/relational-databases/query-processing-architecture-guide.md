@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096939"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866074"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ Les entrées et les sorties de l’optimiseur de requête pendant l’optimisati
 
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
-Une instruction `SELECT` ne définit que :  
+Une instruction `SELECT` ne définit que :  
 * le format du jeu de résultats. Il est principalement spécifié dans la liste de sélection. Toutefois, d’autres clauses telles que `ORDER BY` et `GROUP BY` influencent également la syntaxe finale du jeu de résultats.
 * les tables contenant les données source. Ceci est spécifié dans la clause `FROM` .
 * la manière dont les tables sont reliées de façon logique pour les besoins de l’instruction `SELECT` . Elle est définie dans les spécifications de jointure, qui peuvent être présentes dans la clause `WHERE` ou dans une clause `ON` à la suite de `FROM`.
@@ -420,9 +420,9 @@ Le plan d'exécution des procédures stockées et des déclencheurs est exécut�
 Les plans d'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprennent les composants principaux suivants : 
 
 - **Plan d’exécution de requête**     
-  Le corps du plan d’exécution est une structure de données réentrante et en lecture seule qui peut être utilisée par un nombre quelconque d’utilisateurs. Il constitue le plan de requête. Aucun contexte d'utilisateur n'est stocké dans le plan de requête. Il n'y a jamais plus d'une ou deux copies du plan de requête en mémoire : une copie pour toutes les exécutions en série et une autre pour toutes les exécutions en parallèle. La copie en parallèle couvre toutes les exécutions en parallèle, indépendamment de leur degré de parallélisme. 
+  Le corps du plan d'exécution est une structure de données réentrante et en lecture seule qui peut être utilisée par un nombre quelconque d'utilisateurs. Il constitue le plan de requête. Aucun contexte d'utilisateur n'est stocké dans le plan de requête. Il n'y a jamais plus d'une ou deux copies du plan de requête en mémoire : une copie pour toutes les exécutions en série et une autre pour toutes les exécutions en parallèle. La copie en parallèle couvre toutes les exécutions en parallèle, indépendamment de leur degré de parallélisme. 
 - **Contexte d’exécution**     
-  Chaque utilisateur exécutant actuellement la requête dispose d’une structure de données qui contient les données propres à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d'exécution sont réutilisées. Si un utilisateur exécute une requête et qu'une des structures n'est pas en cours d'utilisation, elle est réinitialisée avec le contexte du nouvel utilisateur. 
+  Chaque utilisateur exécutant actuellement la requête dispose d'une structure de données qui contient les données spécifiques à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d'exécution sont réutilisées. Si un utilisateur exécute une requête et qu'une des structures n'est pas en cours d'utilisation, elle est réinitialisée avec le contexte du nouvel utilisateur. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
@@ -483,7 +483,7 @@ Certaines modifications dans une base de données peuvent entraîner l'inefficac
 
 La plupart des recompilations sont nécessaires pour que les instructions soient correctes ou pour obtenir des plans d'exécution de requête potentiellement plus rapides.
 
-Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, chaque fois qu’une instruction d’un lot entraîne une recompilation, la totalité du lot est recompilée, qu’il soit soumis par le biais d’une procédure stockée, d’un déclencheur, d’un lot ad hoc ou d’une instruction préparée. À compter de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], seule l’instruction qui déclenche la recompilation dans le lot est recompilée. En raison de cette différence, les nombres de recompilations dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 et versions ultérieures ne sont pas comparables. En outre, il existe davantage de types de recompilations dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et dans les versions ultérieures en raison de son ensemble de fonctionnalités étendu.
+Dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antérieures à la version 2005, chaque fois qu’une instruction d’un lot entraînait une recompilation, la totalité du lot était recompilée, qu’il soit soumis par le biais d’une procédure stockée, d’un déclencheur, d’un lot ad hoc ou d’une instruction préparée. À compter de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], seule l’instruction qui déclenche la recompilation dans le lot est recompilée. En outre, il existe davantage de types de recompilations dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et dans les versions ultérieures en raison de son ensemble de fonctionnalités étendu.
 
 La recompilation de niveau instruction améliore les performances car, dans la plupart des cas, un nombre réduit d'instructions est à l'origine des recompilations et de leurs effets secondaires, en termes de temps processeur et de verrous. Par conséquent, ces effets épargnent les autres instructions du traitement qui n'ont pas besoin d'être recompilées.
 
@@ -507,7 +507,7 @@ La colonne `recompile_cause` de `sql_statement_recompile` xEvent contient un cod
 > La colonne *EventSubClass* de `SP:Recompile` et `SQL:StmtRecompile` contient un code entier qui indique la raison de la recompilation. Les codes sont décrits [ici](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
-> Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `ON`, les requêtes sont recompilées quand elles ciblent des tables ou des vues indexées dont les statistiques ont été mises à jour ou dont les cardinalités ont sensiblement évolué depuis la dernière exécution. Ce comportement s’applique aux tables temporaires, aux tables définies par l’utilisateur standard, ainsi qu’aux tables inserted et deleted créées par des déclencheurs DML. Si les performances des requêtes sont affectées par des recompilations excessives, vous pouvez attribuer à ce paramètre la valeur `OFF`. Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `OFF`, aucune recompilation ne se produit en fonction des statistiques ou des modifications de cardinalité, à l’exception des tables inserted et deleted qui sont créées par des déclencheurs DML `INSTEAD OF`. Comme ces tables sont créées dans tempdb, la recompilation de requêtes qui accèdent à ces tables dépend du paramétrage de `AUTO_UPDATE_STATISTICS` dans tempdb. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, la recompilation des requêtes se poursuit en fonction des modifications de cardinalité apportées aux tables inserted et deleted créées par des déclencheurs DML, même si ce paramètre a pour valeur `OFF`.
+> Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `ON`, les requêtes sont recompilées quand elles ciblent des tables ou des vues indexées dont les statistiques ont été mises à jour ou dont les cardinalités ont sensiblement évolué depuis la dernière exécution. Ce comportement s’applique aux tables temporaires, aux tables définies par l’utilisateur standard, ainsi qu’aux tables inserted et deleted créées par des déclencheurs DML. Si les performances des requêtes sont affectées par des recompilations excessives, vous pouvez attribuer à ce paramètre la valeur `OFF`. Quand l’option de base de données `AUTO_UPDATE_STATISTICS` a pour valeur `OFF`, aucune recompilation ne se produit en fonction des statistiques ou des modifications de cardinalité, à l’exception des tables inserted et deleted qui sont créées par des déclencheurs DML `INSTEAD OF`. Comme ces tables sont créées dans tempdb, la recompilation de requêtes qui accèdent à ces tables dépend du paramétrage de `AUTO_UPDATE_STATISTICS` dans tempdb. Dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antérieures à la version 2005, la recompilation des requêtes se poursuit en fonction des modifications de cardinalité apportées aux tables inserted et deleted créées par des déclencheurs DML, même si ce paramètre a pour valeur `OFF`.
 
 ### <a name="PlanReuse"></a> Réutilisation des paramètres et des plans d'exécution
 
@@ -585,7 +585,7 @@ Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l’utilisation de 
 > [!WARNING] 
 > L’utilisation de paramètres ou de marqueurs de paramètres pour la conservation des valeurs entrées par les utilisateurs finaux est plus fiable que la concaténation des valeurs dans une chaîne qui sera exécutée à l’aide de la méthode API d’accès aux données, à savoir l’instruction `EXECUTE` , ou de la procédure stockée `sp_executesql` .
 
-Si vous exécutez une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] sans paramètres, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] paramètre cette instruction en interne afin d’augmenter la possibilité de l’associer à un plan d’exécution existant. Ce processus est appelé « paramétrage simple ». Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, le processus était désigné par le terme « autoparamétrage ».
+Si vous exécutez une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] sans paramètres, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] paramètre cette instruction en interne afin d’augmenter la possibilité de l’associer à un plan d’exécution existant. Ce processus est appelé « paramétrage simple ». Dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antérieures à la version 2005, le processus était désigné par le terme « autoparamétrage ».
 
 Imaginons l'instruction suivante :
 
@@ -624,7 +624,7 @@ Lorsque l’option `PARAMETERIZATION` a la valeur `FORCED`, toute valeur littér
 * Les instructions internes au corps de procédures stockées, de déclencheurs ou de fonctions définies par l’utilisateur. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réutilise les plans de requête pour ces routines.
 * Les instructions préparées ayant déjà été paramétrées dans l'application cliente.
 * Les instructions contenant des appels de méthode XQuery, où la méthode apparaît dans un contexte nécessitant généralement que ses arguments soient paramétrés (clause `WHERE` , par exemple). Si la méthode figure dans un contexte où le paramétrage de ses arguments n'est pas requis, le reste de l'instruction est paramétré.
-* Les instructions à l’intérieur d’un curseur [!INCLUDE[tsql](../includes/tsql-md.md)]. (Les instructions`SELECT` à l’intérieur des curseurs API sont paramétrables.)
+* Les instructions à l'intérieur d'un curseur [!INCLUDE[tsql](../includes/tsql-md.md)]. (Les instructions`SELECT` à l’intérieur des curseurs API sont paramétrables.)
 * Constructions de requêtes déconseillées.
 * Toute instruction exécutée dans le contexte de `ANSI_PADDING` ou `ANSI_NULLS` ayant la valeur `OFF`.
 * Les instructions contenant plus de 2 097 littéraux pouvant être paramétrables.
@@ -927,7 +927,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge
    Le nom de serveur lié peut également être spécifié dans une instruction `OPENQUERY` afin d’ouvrir un ensemble de lignes à partir d’une source de données OLE DB. Cet ensemble de lignes peut ensuite être référencé en tant que table dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
 * Noms de connecteurs appropriés  
-  Dans le cas de références rares à une source de données, la fonction `OPENROWSET` ou `OPENDATASOURCE` est spécifiée avec les informations nécessaires à la connexion au serveur lié. Il est donc possible de faire référence à l’ensemble de lignes comme à une table dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] : 
+  Dans le cas de références rares à une source de données, la fonction `OPENROWSET` ou `OPENDATASOURCE` est spécifiée avec les informations nécessaires à la connexion au serveur lié. Il est donc possible de faire référence à l'ensemble de lignes comme à une table dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] : 
   
   ```sql
   SELECT *
@@ -936,11 +936,11 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise OLE DB pour la communication entre le moteur relationnel et le moteur de stockage. Le moteur relationnel décompose chaque instruction [!INCLUDE[tsql](../includes/tsql-md.md)] en une série d’opérations sur des ensembles de lignes OLE DB simples ouverts par le moteur de stockage à partir des tables de base. En d'autres termes, le moteur relationnel peut également ouvrir des ensembles de lignes OLE DB simples dans n'importe quelle source de données OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise OLE DB pour la communication entre le moteur relationnel et le moteur de stockage. Le moteur relationnel décompose chaque instruction [!INCLUDE[tsql](../includes/tsql-md.md)] en une série d'opérations sur des ensembles de lignes OLE DB simples ouverts par le moteur de stockage à partir des tables de base. En d'autres termes, le moteur relationnel peut également ouvrir des ensembles de lignes OLE DB simples dans n'importe quelle source de données OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Le moteur relationnel utilise l'API OLE DB pour ouvrir les ensembles de lignes sur les serveurs liés, pour extraire les lignes et pour gérer les transactions.
 
-Pour chaque source de données OLE DB à laquelle vous accédez en tant que serveur lié, un fournisseur OLE DB doit être présent sur le serveur exécutant [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L’ensemble d’opérations [!INCLUDE[tsql](../includes/tsql-md.md)] qui peut être utilisé sur une source de données OLE DB spécifique dépend des capacités du fournisseur OLE DB.
+Pour chaque source de données OLE DB à laquelle vous accédez en tant que serveur lié, un fournisseur OLE DB doit être présent sur le serveur exécutant [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'ensemble d'opérations [!INCLUDE[tsql](../includes/tsql-md.md)] qui peut être utilisé sur une source de données OLE DB spécifique dépend des capacités du fournisseur OLE DB.
 
 Pour chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les membres du rôle serveur fixe `sysadmin` peuvent activer ou désactiver l’utilisation de noms de connecteurs ad hoc pour un fournisseur OLE DB à l’aide de la propriété [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess`. Si l’accès approprié est activé, tout utilisateur connecté à cette instance peut exécuter des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] contenant des noms de connecteurs appropriés, en faisant référence à n’importe quelle source de données sur le réseau accessible par le biais du fournisseur OLE DB. Afin de contrôler l’accès aux sources de données, les membres du rôle `sysadmin` peuvent désactiver l’accès ad hoc pour ce fournisseur OLE DB, limitant ainsi l’accès des utilisateurs aux sources de données référencées par les noms de serveurs liés définis par les administrateurs. Par défaut, ce type d'accès approprié est activé pour le fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais désactivé pour tous les autres fournisseurs OLE DB.
 
@@ -1197,7 +1197,7 @@ GO
  [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Événements étendus](../relational-databases/extended-events/extended-events.md)  
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
- [Estimation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Évaluation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Traitement de requêtes intelligent](../relational-databases/performance/intelligent-query-processing.md)   
  [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md)    
  [Plans d’exécution](../relational-databases/performance/execution-plans.md)    

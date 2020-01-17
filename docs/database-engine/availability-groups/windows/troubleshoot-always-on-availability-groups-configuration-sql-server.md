@@ -1,6 +1,7 @@
 ---
-title: Résoudre des problèmes de configuration des groupes de disponibilité Always On (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Problèmes courants liés aux groupes de disponibilité et procédures de résolution
+description: Découvrez comment identifier et résoudre les problèmes courants liés aux groupes de disponibilité Always On sur SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3ef92d88ca0579910e7d02f9dbe73ec381510cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013762"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235325"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Résoudre des problèmes de configuration des groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "68013762"
   
 2.  Si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute en tant que compte intégré, tel que Système local, Service local ou Service réseau, ou comme compte qui n'appartient pas au domaine, vous devez utiliser des certificats pour l'authentification de point de terminaison. Si vos comptes de service utilisent des comptes de domaine au sein du même domaine, vous pouvez choisir d'accorder l'accès CONNECT pour chaque compte de service sur tous les emplacements de réplica ou vous pouvez utiliser des certificats. Pour plus d’informations, consultez [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Points de terminaison  
+##  <a name="Endpoints"></a> Endpoints  
  Les points de terminaison doivent être correctement configurés.  
   
 1.  Vérifiez que chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devant héberger un réplica de disponibilité (chaque *emplacement de réplica*) dispose d’un point de terminaison de mise en miroir de bases de données. Pour déterminer si un point de terminaison de mise en miroir de bases de données existe sur une instance de serveur donnée, utilisez l’affichage catalogue [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md). Pour plus d’informations, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) ou [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -122,7 +123,7 @@ ms.locfileid: "68013762"
 ##  <a name="JoinDbFails"></a> Échec de jointure de base de données (erreur SQL Server 35250)  
  Cette section décrit les causes possibles et la résolution d'un problème de jointure de bases de données secondaires au groupe de disponibilité du fait que la connexion au réplica principal n'est pas active.  
   
- **Résolution :**  
+ **Résolution :**  
   
 1.  Vérifiez le paramètre du pare-feu pour voir s'il permet la communication de port du point de terminaison entre les instances de serveur qui hébergent le réplica principal et le réplica secondaire (port 5022 par défaut).  
   
@@ -154,7 +155,7 @@ ms.locfileid: "68013762"
   
 -   [Gestion des connexions et des travaux pour les bases de données d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)  
   
--   [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
+-   [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
@@ -166,7 +167,7 @@ ms.locfileid: "68013762"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [Configuration réseau du client](../../../database-engine/configure-windows/client-network-configuration.md)   
+ [Configuration du réseau client](../../../database-engine/configure-windows/client-network-configuration.md)   
  [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298228"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546535"
 ---
 # <a name="odata-source"></a>Source OData
 
@@ -41,13 +41,15 @@ Le composant prend en charge les protocoles OData v3 et v4.
 
 La source OData prend en charge les sources de données suivantes :
 -   Microsoft Dynamics AX Online et Microsoft Dynamics CRM Online,
--   Listes SharePoint. Pour visualiser toutes les listes d’un serveur SharePoint, utilisez l’URL suivante : https://\<serveur>/_vti_bin/ListData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
+-   Listes SharePoint. Pour voir toutes les listes d’un serveur SharePoint, utilisez l’URL suivante : `https://<server>/_vti_bin/ListData.svc`. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Types de données pris en charge
 
 La source OData prend en charge les types de données simples suivants : int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string et TimeSpan.
 
 Pour découvrir les types de données des colonnes dans votre source de données, consultez la page `https://<OData feed endpoint>/$metadata`.
+
+Pour le type de données **Decimal**, la précision et l’échelle sont déterminées par les métadonnées sources. Si les métadonnées sources ne spécifient pas les propriétés **Précision** et **Échelle**, les données peuvent être tronquées.
 
 > [!IMPORTANT]
 > Le composant Source OData ne prend pas en charge les types complexes, comme les éléments à choix multiple, dans des listes SharePoint.
@@ -94,7 +96,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
  **URL du flux**  
  Affiche l’URL du flux en lecture seule en fonction des options sélectionnées dans la boîte de dialogue.  
   
- **Aperçu**  
+ **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Aperçu** . L’**Aperçu** peut afficher jusqu’à 20 lignes.  
   
 ### <a name="dynamic-options"></a>Options dynamiques  
@@ -105,7 +107,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
  **Resource path**  
- Type de chemin d'accès de ressource. Par exemple : Employees  
+ Type de chemin d'accès de ressource. Par exemple :  Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Éditeur de source OData (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source OData** pour sélectionner des colonnes externes (source) à inclure dans la sortie et pour les mapper aux colonnes de la sortie.  
@@ -130,7 +132,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
  **Colonne**  
  Indique les colonnes externes (source) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OData** .  
   
- **Erreur**  
+ **Error**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  

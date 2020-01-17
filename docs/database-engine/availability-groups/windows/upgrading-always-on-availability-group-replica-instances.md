@@ -1,6 +1,7 @@
 ---
-title: Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On | Microsoft Docs
-ms.custom: ''
+title: Mettre à niveau les réplicas de groupe de disponibilité
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910786"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822191"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jo
 ## <a name="ag-with-one-remote-secondary-replica"></a>Groupe de disponibilité avec un réplica secondaire distant  
  Si vous avez déployé un groupe de disponibilité uniquement pour la récupération d’urgence, vous devez peut-être le basculer sur un réplica secondaire avec validation asynchrone. Cette configuration est illustrée dans la figure ci-dessous :  
   
- ![Mise à niveau de groupe de disponibilité dans un scénario de récupération d’urgence](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Mise à niveau de groupe de disponibilité dans un scénario de récupération d’urgence")  
+ ![Mise à niveau de groupe de disponibilité dans un scénario DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Mise à niveau de groupe de disponibilité dans un scénario DR")  
   
  Dans ce cas, vous devez basculer le groupe de disponibilité sur le réplica secondaire avec validation asynchrone pendant la mise à niveau propagée. Pour éviter la perte de données, changez le mode de validation en validation synchrone et attendez que le réplica secondaire soit synchronisé avant de basculer le groupe de disponibilité. Par conséquent, le processus de mise à niveau à jour peut ressembler à ce qui suit :  
   

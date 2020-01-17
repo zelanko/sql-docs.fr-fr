@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988439"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255815"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ Cette fonction retourne un entier représentant la valeur *datepart* spécifiée
   
 Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,8 +72,8 @@ Partie spécifique de l’argument *date* pour lequel `DATEPART` retourne une va
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-|**TZoffset**|**tz**|  
-|**ISO_WEEK**|**isowk**, **isoww**|  
+|**tzoffset**|**tz**|  
+|**iso_week**|**isowk**, **isoww**|  
   
 *date*  
 Expression qui est résolue en l’un des types de données suivants : 
@@ -88,14 +88,14 @@ Expression qui est résolue en l’un des types de données suivants :
 Pour *date*, `DATEPART` accepte une expression de colonne, une expression, un littéral de chaîne ou une variable définie par l’utilisateur. Pour éviter toute ambiguïté, utilisez des années à quatre chiffres. Pour obtenir des informations sur les années à deux chiffres, consultez [Configurer l’option de configuration du serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-type"></a>Type de retour  
- **Int**  
+ **int**  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Chaque *datepart* et ses abréviations retournent la même valeur.
   
 La valeur retournée dépend de l’environnement de langue défini à l’aide de [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) et de l’[option de configuration de serveur Configurer la langue par défaut](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) de la connexion. La valeur retournée dépend de [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) si *date* est un littéral de chaîne de certains formats. SET DATEFORMAT ne change pas la valeur de retour quand la date est une expression de colonne d’un type de données de date ou d’heure.
   
-Le tableau suivant répertorie tous les arguments *datepart*, avec les valeurs retournées correspondantes, pour l’instruction `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L’argument *date* a le type de données **datetimeoffset(7)** . Les deux dernières positions de la valeur de retour **nanosecond** *datepart* sont toujours `00` et cette valeur a une échelle de 9 :
+Le tableau suivant répertorie tous les arguments *datepart*, avec les valeurs retournées correspondantes, pour l’instruction `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. L’argument *date* a le type de données **datetimeoffset(7)** . Les deux dernières positions de la valeur de retour **nanosecond** *datepart* sont toujours `00` et cette valeur a une échelle de 9 :
 
 **.123456700**
   
@@ -106,15 +106,16 @@ Le tableau suivant répertorie tous les arguments *datepart*, avec les valeurs r
 |**month, mm, m**|10|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
-|**week, wk, ww**|45|  
-|**weekday, dw**|1|  
+|**week, wk, ww**|44|  
+|**weekday, dw**|3|  
 |**hour, hh**|12|  
 |**minute, n**|15|  
 |**second, ss, s**|32|  
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**tzoffset, tz**|310|  
+|**iso_week, isowk, isoww**|44|  
   
 ## <a name="week-and-weekday-datepart-arguments"></a>Arguments des parties de date semaine et jour ouvrable
 Pour un argument *datepart* ayant la valeur **week** (**wk**, **ww**) ou **weekday** (**dw**), la valeur de retour `DATEPART` dépend de la valeur définie par [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
@@ -146,7 +147,7 @@ est utilisée comme valeur par défaut. Après avoir défini DATEFIRST, utilisez
 ## <a name="year-month-and-day-datepart-arguments"></a>Arguments des parties de date année, mois et jour  
 Les valeurs retournées pour DATEPART (**year**, *date*), DATEPART (**month**, *date*) et DATEPART (**day**, *date*) sont les mêmes que celles retournées par les fonctions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) et [DAY](../../t-sql/functions/day-transact-sql.md), respectivement.
   
-## <a name="iso_week-datepart"></a>Partie de date ISO_WEEK  
+## <a name="iso_week-datepart"></a>Partie de date iso_week  
 ISO 8601 inclut le système semaine-date ISO, un système de numérotation pour les semaines. Chaque semaine est associée à l'année dans laquelle jeudi se produit. Par exemple, la semaine 1 de 2004 (2004W01) couvrait la période du lundi 29 décembre 2003 au dimanche 4 janvier 2004. En général, les pays européens utilisent ce style de numérotation, ce qui n’est normalement pas le cas des autres pays.
 
 Remarque : Le numéro de semaine le plus élevé dans une année peut être 52 ou 53.
@@ -155,21 +156,21 @@ Les systèmes de numérotation des différents pays peuvent ne pas se conformer 
   
 |Premier jour de la semaine|La première semaine de l'année contient|Semaines assignées deux fois|Utilisé par/dans|  
 |---|---|---|---|
-|Dimanche|1er janvier,<br /><br /> Premier samedi,<br /><br /> 1 à 7 jours de l’année|Oui|United States|  
+|Dimanche|1er janvier,<br /><br /> Premier samedi,<br /><br /> 1 à 7 jours de l’année|Oui|États-Unis|  
 |Lundi|1er janvier,<br /><br /> Premier dimanche,<br /><br /> 1 à 7 jours de l’année|Oui|Majorité de l'Europe et Royaume-Uni|  
 |Lundi|4 janvier<br /><br /> Premier jeudi,<br /><br /> 4 à 7 jours de l’année|Non|ISO 8601, Norvège et Suède|  
 |Lundi|7 janvier,<br /><br /> Premier lundi,<br /><br /> 7 jours de l'année|Non||  
 |Mercredi|1er janvier,<br /><br /> Premier mardi,<br /><br /> 1 à 7 jours de l’année|Oui||  
 |Samedi|1er janvier,<br /><br /> Premier vendredi,<br /><br /> 1 à 7 jours de l’année|Oui||  
   
-## <a name="tzoffset"></a>TZoffset  
-`DATEPART` retourne la valeur **TZoffset** (**tz**) sous la forme du nombre de minutes (signé). L’instruction suivante retourne un décalage de fuseau horaire de 310 minutes :
+## <a name="tzoffset"></a>tzoffset  
+`DATEPART` retourne la valeur **tzoffset** (**tz**) sous la forme du nombre de minutes (signé). L’instruction suivante retourne un décalage de fuseau horaire de 310 minutes :
   
 ```sql
-SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
+SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');  
 ```  
-`DATEPART` restitue la valeur TZoffset comme suit :
-- Pour datetimeoffset et datetime2, TZoffset retourne le décalage horaire en minutes, où le décalage pour datetime2 s’élève toujours à 0 minutes.
+`DATEPART` restitue la valeur tzoffset comme suit :
+- Pour datetimeoffset et datetime2, tzoffset retourne le décalage horaire en minutes, où le décalage pour datetime2 s’élève toujours à 0 minute.
 - Pour les types de données qui peuvent implicitement être convertis en **datetimeoffset** ou **datetime2**, `DATEPART` retourne le décalage horaire en minutes. Exception : autre types de données de date/heure.
 - Les paramètres de tous les autres types génèrent une erreur.
   

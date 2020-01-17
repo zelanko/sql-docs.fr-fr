@@ -1,21 +1,20 @@
 ---
-title: Mise en route avec SQL Server sur Ubuntu
-titleSuffix: SQL Server
+title: 'Ubuntu : Installer SQL Server sur Linux'
 description: Ce démarrage rapide montre comment installer SQL Server 2017 ou SQL Server 2019 sur Ubuntu, puis comment créer et interroger une base de données avec sqlcmd.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sqlfreshmay19
+ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: df3609c5bf4f31ee8a32992127681d42609b9528
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531351"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558419"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -194,7 +193,7 @@ Suivez les étapes suivantes pour installer **mssql-tools** sur Ubuntu.
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Afin de rendre **sqlcmd/bcp** accessible depuis l’interpréteur de commandes Bash pour les sessions interactives/sans connexion, modifiez votre variable **PATH** dans le fichier **~/.bashrc** à l’aide de la commande suivante :
+   Afin de rendre **sqlcmd/bcp** accessible depuis l’interpréteur de commandes Bash pour les sessions interactives/sans connexion, modifiez le **PATH** dans le fichier **~/.bashrc** à l’aide de la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

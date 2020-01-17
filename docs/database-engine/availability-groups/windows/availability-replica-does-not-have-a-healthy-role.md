@@ -1,7 +1,7 @@
 ---
-title: Le réplica de disponibilité n’a pas un rôle sain pour un groupe de disponibilité
-description: Identifiez les raisons possibles pour lesquelles un réplica n’a pas un rôle sain dans un groupe de disponibilité Always On.
-ms.custom: seodec18
+title: Le réplica n’a pas un rôle sain pour un groupe de disponibilité
+description: Identifiez les raisons possibles pour lesquelles un réplica de disponibilité n’a pas un rôle sain dans un groupe de disponibilité Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9454b48f17af904db87e0000b07651c1bc454362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991380"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241772"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Le réplica de disponibilité n’a pas un rôle sain pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67991380"
 |-|-|  
 |**Nom de la stratégie**|État du rôle du réplica de disponibilité|  
 |**Problème**|Le réplica de disponibilité n'a pas un rôle sain.|  
-|**Catégorie**|**Critique**|  
+|**Catégorie**|**Critical**|  
 |**Facette**|Réplica de disponibilité|  
   
 ## <a name="description"></a>Description  
@@ -42,7 +42,7 @@ ms.locfileid: "67991380"
 ## <a name="possible-causes"></a>Causes possibles  
  Le rôle de ce réplica de disponibilité n'est pas sain. Le réplica n'a pas le rôle principal ou secondaire.  
   
-## <a name="possible-solution-informationstilltocome"></a>Solution possible : Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>Solution possible : Information_still_to_come  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

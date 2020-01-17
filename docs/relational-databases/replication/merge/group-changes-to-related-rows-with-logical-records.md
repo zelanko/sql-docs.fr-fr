@@ -1,6 +1,7 @@
 ---
-title: Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques | Microsoft Docs
-ms.custom: ''
+title: Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques
+description: Découvrez comment apporter des modifications à des lignes connexes en tant qu’unité à l’aide de la réplication de fusion dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9be51c4a919549ac356813f3b6ae185b7c5b5c58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7752007e36d7dd1a2da8522a531b4f46f3b5571
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033247"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321483"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Regrouper les modifications apportées à des lignes connexes à l'aide d'enregistrements logiques
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "68033247"
 ## <a name="considerations-for-using-logical-records"></a>Considérations sur l'utilisation des enregistrements logiques  
  Les éléments suivants doivent être pris en compte lors de l'utilisation d'enregistrements logiques.  
   
-### <a name="general-considerations"></a>Considérations générales  
+### <a name="general-considerations"></a>Considérations d’ordre général  
   
 -   Il est recommandé de limiter au maximum le nombre de tables dans un enregistrement logique : cinq tables ou moins.  
   
@@ -98,7 +99,7 @@ ms.locfileid: "68033247"
   
 -   La résolution de conflits personnalisée avec des gestionnaires de logique métier ou des outils de résolution personnalisés n'est pas prise en charge pour les articles inclus dans un enregistrement logique.  
   
--   Si des enregistrements logiques sont utilisés dans une publication qui comprend des filtres paramétrés, vous devez initialiser chaque Abonné avec un instantané de sa partition. Si vous initialisez un Abonné avec une autre méthode, l'Agent de fusion échoue. Pour plus d’informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+-   Si des enregistrements logiques sont utilisés dans une publication qui comprend des filtres paramétrés, vous devez initialiser chaque Abonné avec un instantané de sa partition. Si vous initialisez un Abonné avec une autre méthode, l'Agent de fusion échoue. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 -   Les conflits qui concernent des enregistrements logiques ne sont pas affichés dans l'Outil de résolution des conflits. Pour afficher des informations sur ces conflits, utilisez des procédures stockées de réplication. Pour plus d’informations, consultez [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   

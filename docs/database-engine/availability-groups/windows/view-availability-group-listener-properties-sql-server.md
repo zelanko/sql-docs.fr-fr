@@ -1,6 +1,7 @@
 ---
-title: Afficher les propriétés d’un écouteur de groupe de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Voir les propriétés d’un écouteur de groupe de disponibilité
+description: 'Explique comment voir les propriétés d’un écouteur de groupe de disponibilité Always On à l’aide de SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou SQL PowerShell. '
+ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55603d6dba2a5f688ce07d1f071019f101d9e955
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013378"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821773"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Afficher les propriétés d’un écouteur de groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

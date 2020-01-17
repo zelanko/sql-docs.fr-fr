@@ -1,6 +1,8 @@
 ---
-title: Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan | Microsoft Docs
-ms.custom: ''
+title: Créer et tester des repères de plan
+titleSuffix: SQL Server Profiler
+description: Création et test de repères de plan dans SQL Server Profiler.
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -21,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305090"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165928"
 ---
-# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Utiliser SQL Server Profiler pour créer et tester des repères de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Lorsque vous créez un repère de plan, vous pouvez recourir à [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour capturer le texte de requête exact à utiliser dans l’argument *statement_text* de la procédure stockée **sp_create_plan_guide** . Ainsi, au moment de la compilation, le repère de plan correspondra à la requête. Une fois le repère de plan créé, vous pouvez également utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour tester la correspondance effective du repère de plan à la requête. En règle générale, vous devez tester les repères de plan à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour vérifier que la requête correspond au repère de plan.  
   
-## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capture du texte de requête à l'aide du Générateur de profils SQL Server  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capture de texte de requête à l’aide de SQL Server Profiler  
  Si vous exécutez une requête et capturez le texte tel qu'il a été soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous pouvez créer un repère de plan de type SQL ou TEMPLATE qui corresponde exactement à ce texte. Cela permet de faire en sorte que le repère de plan soit utilisé par l'optimiseur de requête.  
   
  Imaginons la requête suivante soumise par une application en tant que traitement autonome :  
@@ -80,7 +82,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Test des repères de plan à l'aide du Générateur de profils SQL Server  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Test de repères de plan à l’aide de SQL Server Profiler  
  Pour vérifier qu'un repère de plan correspond à une requête, procédez comme suit :  
   
 1.  Démarrez une trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , en veillant à ce que le type d’événement **Showplan XML** , situé sous le nœud **Performances** , soit sélectionné.  

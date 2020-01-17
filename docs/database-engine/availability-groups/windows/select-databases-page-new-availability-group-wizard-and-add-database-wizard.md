@@ -1,6 +1,7 @@
 ---
-title: Page Sélectionner les bases de données (Assistant Nouveau groupe de disponibilité et Assistant Ajouter une base de données) | Microsoft Docs
-ms.custom: ''
+title: Page Sélectionner les bases de données (Assistants Nouveau groupe de disponibilité et Ajout de base de données)
+description: Décrit la page « Sélectionner les bases de données » des Assistants Nouveau groupe de disponibilité et Ajout de base de données disponibles dans l’interface graphique utilisateur de SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04836a29531c1eaab61277891e22e31b669d9ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0560e17a7ab582b52b4f0a5db822dbd2ab5fa5f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014192"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235376"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>Page Sélectionner les bases de données (Assistant Nouveau groupe de disponibilité et Assistant Ajouter une base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68014192"
 ##  <a name="PageOptions"></a> Options Sélectionner les bases de données  
  La grille **Bases de données utilisateur sur cette instance de SQL Server** répertorie chaque base de données utilisateur locale. Les colonnes sont les suivantes :  
   
- **Name**  
+ **Nom**  
  Affiche le nom d'une base de données utilisateur locale.  
 
  **Taille**  
@@ -51,6 +52,6 @@ ms.locfileid: "68014192"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

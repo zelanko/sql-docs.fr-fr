@@ -1,7 +1,7 @@
 ---
-title: Configurer un cluster SLES pour le groupe de disponibilité SQL Server
+title: 'SUSE : Configurer un groupe de disponibilité pour SQL Server sur Linux'
 titleSuffix: SQL Server
-description: Découvrez comment créer des clusters de groupes de disponibilité pour SQL Server sur SUSE Linux Enterprise Server (SLES)
+description: Découvrez comment créer des clusters de groupes de disponibilité pour SQL Server sur SLES (SUSE Linux Enterprise Server).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809828"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558442"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer un cluster SLES pour le groupe de disponibilité SQL Server
 
@@ -118,9 +118,9 @@ Sur les serveurs Linux, configurez le groupe de disponibilité, puis configurez 
 
 3. Pour configurer la couche de communication du cluster (Corosync) : 
 
-   A. Entrez une adresse réseau à laquelle effectuer la liaison. Par défaut, le script propose l’adresse réseau d’eth0. Vous pouvez également entrer une autre adresse réseau, par exemple l’adresse de bond0. 
+   a. Entrez une adresse réseau à laquelle effectuer la liaison. Par défaut, le script propose l’adresse réseau d’eth0. Vous pouvez également entrer une autre adresse réseau, par exemple l’adresse de bond0. 
 
-   B. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser par défaut. 
+   b. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser par défaut. 
 
    c. Entrez un port de multidiffusion. Le script propose 5405 comme valeur par défaut. 
 
@@ -220,7 +220,7 @@ L’isolation au niveau des ressources garantit principalement qu’il n’y a p
 
 L’isolation au niveau du nœud garantit qu’un nœud n’exécute aucune ressource. Pour ce faire, réinitialisez le nœud et l’implémentation de son Pacemaker est appelée STONITH (qui signifie « prendre l’autre nœud dans la tête »). Pacemaker prend en charge un grand nombre de périphériques d’isolation, tels qu’une alimentation sans coupure ou des cartes d’interface de gestion pour des serveurs.
 
-Pour plus d'informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Clusters de Pacemaker à partir de zéro](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
 - [Isolation et STONITH](https://clusterlabs.org/doc/crm_fencing.html)
@@ -330,7 +330,7 @@ crm crm configure \
 Basculez manuellement le groupe de disponibilité avec `crm`. N’initialisez pas le basculement avec Transact-SQL. Pour plus d'informations, consultez [Basculement](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
-Pour plus d'informations, consultez :
+Pour plus d'informations, consultez les pages suivantes :
 - [Gestion des ressources de cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
 - [Concepts de haute disponibilité](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Référence rapide à Pacemaker](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 

@@ -1,7 +1,7 @@
 ---
-title: Changer le cluster qui gère les métadonnées pour les réplicas dans un groupe de disponibilité
+title: 'Modifier des métadonnées : Migration d’un groupe de disponibilité entre clusters'
 description: Quand vous effectuez une migration entre clusters, changez le cluster qui gère les métadonnées pour les réplicas de disponibilité dans un groupe de disponibilité Always On en changeant le contexte de cluster HADR d’une instance de SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a83f693905eb5a8b963875ea0e23e46d4e3eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988569"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241805"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Changer le cluster qui gère les métadonnées pour les réplicas dans un groupe de disponibilité Always On
 
@@ -50,7 +50,7 @@ ms.locfileid: "67988569"
   
      S'il existe des réplicas de disponibilité sur l'instance de serveur, avant de modifier le contexte de cluster HADR, vous devez effectuer l'une des opérations suivantes :  
   
-    |Rôle de réplica|Action|Lien|  
+    |Rôle du réplica|Action|Lien|  
     |------------------|------------|----------|  
     |Principal|Place le groupe de disponibilité hors connexion.|[Placer un groupe de disponibilité hors connexion &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/take-an-availability-group-offline-sql-server.md)|  
     |Secondary|Supprimer le réplica de son groupe de disponibilité|[Supprimer un réplica secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708509"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252861"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Activer les connexions chiffrées dans le moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Le niveau de chiffrement utilisé par TLS, sur 40 ou 128 bits, dépend de la v
 > L’utilisation du niveau de chiffrement 40 bits est considérée comme non sécurisée.
 
 > [!WARNING]
-> Les connexions TLS chiffrées à l’aide d’un certificat autosigné n’offrent pas de sécurité renforcée. Elles sont vulnérables à des attaques humaines. Ne faites jamais confiance à une connexion TLS utilisant des certificats autosignés dans un environnement de production ou sur des serveurs connectés à Internet.
+> Les connexions TLS chiffrées à l’aide d’un certificat autosigné n’offrent pas de sécurité renforcée. Elles sont vulnérables aux attaques de l’intercepteur. Ne faites jamais confiance à une connexion TLS utilisant des certificats autosignés dans un environnement de production ou sur des serveurs connectés à Internet.
 
 L’activation du chiffrement TLS améliore la sécurité des données transmises sur des réseaux entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des applications. Toutefois, quand tout le trafic entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et une application cliente est chiffré au moyen de TLS, le traitement supplémentaire suivant est nécessaire :
 -  Un aller-retour réseau supplémentaire est requis au moment de la connexion.
@@ -82,7 +82,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pour charger un 
 
 - La propriété **Subject** du certificat doit indiquer que le nom courant (CN) est le même que le nom de domaine ou le nom de domaine complet (FQDN, Fully Qualified Domain Name) de l'ordinateur serveur. Quand vous utilisez le nom d’hôte, le suffixe DNS doit être spécifié dans le certificat. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un cluster de basculement, le nom courant doit correspondre au nom d’hôte (ou FQDN) du serveur virtuel, et les certificats doivent être provisionnés sur tous les nœuds dans le cluster de basculement.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) prennent en charge les certificats génériques. SNAC a depuis été déprécié et remplacé par [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) et [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Les autres clients ne prennent pas toujours en charge les certificats génériques. Pour plus d’informations, consultez la documentation du client et [KB 258858](http://support.microsoft.com/kb/258858).       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) prennent en charge les certificats génériques. SNAC a depuis été déprécié et remplacé par [Microsoft OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) et [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Les autres clients ne prennent pas toujours en charge les certificats génériques. Pour plus d’informations, consultez la documentation du client et [KB 258858](https://support.microsoft.com/kb/258858).       
   Vous ne pouvez pas sélectionner un certificat générique à l’aide du Gestionnaire de configuration SQL Server. Pour utiliser un certificat générique, modifiez le Registre de clé `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib`, puis entrez l’empreinte numérique du certificat, sans espaces, comme valeur **Certificat**.  
 
   > [!WARNING]  
@@ -120,7 +120,7 @@ Si vous utilisez [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[
 
 ## <a name="to-export-the-server-certificate"></a>Pour exporter le certificat de serveur  
   
-1. Dans le composant logiciel enfichable **Certificats** , recherchez le certificat dans le dossier **Certificats** / **Personnel** , cliquez avec le bouton droit sur **Certificat**, pointez sur **Toutes les tâches**, puis sur **Exporter**.  
+1. Dans le composant logiciel enfichable **Certificats** , recherchez le certificat dans le dossier **Certificats** / **Personnel** , cliquez avec le bouton droit sur **Certificat**, pointez sur **Toutes les tâches**, puis cliquez sur **Exporter**.  
   
 2. Suivez les étapes de l' **Assistant d'exportation de certificats**en stockant le fichier de certificat à un emplacement approprié.  
   
@@ -131,7 +131,7 @@ Si vous utilisez [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[
   
 1. Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<instance de serveur>_ , puis sélectionnez **Propriétés**.  
   
-2. Dans la boîte de dialogue **Propriétés de** **Protocoles pour** _\<nom_instance>_ , sous l’onglet **Certificat**, sélectionnez le certificat voulu dans la liste déroulante de la zone **Certificat**, puis cliquez sur **OK**.  
+2. Dans la boîte de dialogue ****Propriétés** de Protocoles pour** _\<nom_instance>_ , sous l’onglet **Certificat**, sélectionnez le certificat voulu dans la liste déroulante de la zone **Certificat**, puis cliquez sur **OK**.  
   
 3. Sur l'onglet **Indicateurs** , dans la zone **ForceEncryption** , sélectionnez **Oui**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   
@@ -164,4 +164,3 @@ Les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuven
 ## <a name="see-also"></a>Voir aussi
 [Prise en charge de TLS 1.2 pour Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)

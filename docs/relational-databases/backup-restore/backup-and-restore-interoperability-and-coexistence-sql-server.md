@@ -1,7 +1,7 @@
 ---
-title: 'Sauvegarde et restauration : interopérabilité et coexistence (SQL Server) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/05/2016
+title: 'Sauvegarde et restauration : interopérabilité des fonctionnalités'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940855"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247452"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : interopérabilité et coexistence (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67940855"
  Cette section ne concerne que les bases de données en mode de restauration complète et composées de plusieurs groupes de fichiers.  
   
 > [!NOTE]  
->  La fonctionnalité de mise en miroir de bases de données sera supprimée dans une prochaine version de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez à la place [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  La fonctionnalité de mise en miroir de bases de données sera supprimée dans une prochaine version de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.  
   
  La mise en miroir de bases de données est une solution permettant d'accroître la disponibilité d'une base de données. La mise en miroir est implémentée individuellement pour chaque base de données et fonctionne uniquement avec les bases de données qui utilisent le mode de restauration complète. Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

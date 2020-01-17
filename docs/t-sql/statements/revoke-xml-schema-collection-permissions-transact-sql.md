@@ -1,6 +1,7 @@
 ---
-title: REVOKE - révocation d’autorisations de collection de schémas XML (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE - Autorisations sur une collection de schémas XML
+description: Utilisez Transact-SQL pour révoquer des autorisations de collection de schémas XML.
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: pdw, sql-database
@@ -17,19 +18,19 @@ ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db84729a448ce1d90c016696aef85d2580ede913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913966"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255462"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de collection de schémas XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Révoque des autorisations octroyées ou refusées sur une collection de schémas XML.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

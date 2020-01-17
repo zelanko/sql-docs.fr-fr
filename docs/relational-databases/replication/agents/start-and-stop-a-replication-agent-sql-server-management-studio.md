@@ -1,6 +1,7 @@
 ---
-title: Démarrer et arrêter un Agent de réplication (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Démarrer et arrêter un Agent de réplication (SSMS)
+description: Découvrez comment démarrer et arrêter un Agent de réplication dans SQL Server Management Studio et le moniteur de réplication.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 70f876d9152e836e12ad0c28e640362b23197190
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770701"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321622"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Démarrer et arrêter un Agent de réplication (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Démarrez et arrêtez les Agents à partir des dossiers **Travaux** et **Réplication** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Réplication Monitor. Démarrez et arrêtez les Agents et les travaux suivants :  
+  Démarrez et arrêtez des agents à partir du dossier **Travaux** et du dossier **Réplication** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou à partir du moniteur de réplication. Démarrez et arrêtez les Agents et les travaux suivants :  
   
 -   Agent d'instantané, utilisé par toutes les publications  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68770701"
   
  Pour plus d’informations sur le démarrage de l’Agent de fusion et de l’Agent de Distribution, consultez [Synchroniser un abonnement par émission de données](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchroniser un abonnement par extraction](../../../relational-databases/replication/synchronize-a-pull-subscription.md). Pour plus d’informations sur les travaux de maintenance, consultez [Exécuter des travaux de maintenance de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md).  
   
- Pour plus d’informations sur le démarrage du moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-or-log-reader-agent-from-management-studio"></a>Pour démarrer et arrêter un Agent d'instantané ou un Agent de lecture du journal à partir de Management Studio  
   
@@ -70,6 +71,6 @@ ms.locfileid: "68770701"
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Concepts des exécutables de l’Agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Présentation des Agents de réplication](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

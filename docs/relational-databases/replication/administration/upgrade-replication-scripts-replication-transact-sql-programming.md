@@ -1,6 +1,7 @@
 ---
-title: Mettre à niveau les scripts de réplication (programmation Transact-SQL de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Mettre à niveau des scripts de réplication (procédures stockées de réplication)
+description: Découvrez comment utiliser les procédures stockées de réplication pour mettre à niveau les scripts utilisés pour configurer programmatiquement une topologie de réplication.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710372"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320042"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Mettre à niveau les scripts de réplication (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "71710372"
   
     -   Pour un abonnement par extraction, mettez à jour l’exécution de [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) afin de fournir les informations d’identification Windows sous lesquelles l’Agent de distribution s’exécute sur l’Abonné pour `@job_name` et `@job_password`. Cette opération s'effectue après l'exécution de [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-    -   Pour un abonnement par émission de données, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) sur le serveur de publication. Spécifiez `@subscriber`, `@subscriber_db`, `@publication` et les informations d’identification Windows sous lesquelles l’Agent de distribution s’exécute sur le serveur de distribution pour `@job_name` et `@job_password`, ainsi que la planification du travail de l’agent. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md). Cette opération s'effectue après l'exécution de [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Pour plus d'informations, voir [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
+    -   Pour un abonnement par émission de données, exécutez [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) sur le serveur de publication. Spécifiez `@subscriber`, `@subscriber_db`, `@publication` et les informations d’identification Windows sous lesquelles l’Agent de distribution s’exécute sur le serveur de distribution pour `@job_name` et `@job_password`, ainsi que la planification du travail de l’agent. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md). Cette opération s'effectue après l'exécution de [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>Pour mettre à niveau les scripts qui configurent une publication de fusion  
   
@@ -109,7 +110,7 @@ ms.locfileid: "71710372"
   
     -   Pour un abonnement par extraction, mettez à jour l’exécution de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) afin de fournir les informations d’identification Windows sous lesquelles l’Agent de fusion s’exécute sur l’Abonné pour `@job_name` et `@job_password`. Cette opération s'effectue après l'exécution de [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-    -   Pour un abonnement par émission de données, exécutez [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) sur le serveur de publication. Spécifiez `@subscriber`, `@subscriber_db`, `@publication` et les informations d’identification Windows sous lesquelles l’Agent de fusion s’exécute sur le serveur de distribution pour `@job_name` et `@job_password`, ainsi que la planification du travail de l’agent. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md). Cette opération s'effectue après l'exécution de [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Pour plus d'informations, voir [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
+    -   Pour un abonnement par émission de données, exécutez [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) sur le serveur de publication. Spécifiez `@subscriber`, `@subscriber_db`, `@publication` et les informations d’identification Windows sous lesquelles l’Agent de fusion s’exécute sur le serveur de distribution pour `@job_name` et `@job_password`, ainsi que la planification du travail de l’agent. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md). Cette opération s'effectue après l'exécution de [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ## <a name="example"></a>Exemple  
  Ce qui suit est un exemple de script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] créant une publication transactionnelle pour la table Product. Cette publication prend en charge la mise à jour immédiate avec la mise à jour en file d'attente comme basculement. Les paramètres par défaut ont été supprimés pour des raisons de lisibilité.  

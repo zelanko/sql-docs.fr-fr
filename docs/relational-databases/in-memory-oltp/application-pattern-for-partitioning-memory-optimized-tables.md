@@ -1,6 +1,6 @@
 ---
-title: Modèle d’application pour partitionner des tables mémoire optimisées | Microsoft Docs
-ms.custom: ''
+title: Modèle d’application - Partitionnement de tables à mémoire optimisée
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f23f65299365b0716cd2a94f48e3a050fb18b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951230"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412801"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67951230"
   
 -   Ajoutez la partition active.  
   
- ![Basculement de partition](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Basculement de partition")  
+ ![Basculement de partition](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
 Maintenance de données actives  
   
  Les actions qui commencent par Deleting ActiveOrders doivent être effectuées pendant une période de maintenance pour éviter des requêtes sans données pendant l'intervalle entre la suppression des données et le basculement dans la table de mise en lots.  
@@ -227,6 +227,6 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

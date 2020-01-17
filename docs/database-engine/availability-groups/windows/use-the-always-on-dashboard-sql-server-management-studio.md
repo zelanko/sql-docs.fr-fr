@@ -1,6 +1,7 @@
 ---
-title: Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Utilisation du tableau de bord de groupe de disponibilité dans SSMS
+description: Explique comment utiliser le tableau de bord de groupe de disponibilité Always On pour superviser l’intégrité de votre groupe de disponibilité dans SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013534"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822678"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +110,7 @@ Quand vous êtes connecté au réplica principal, **Détails du réplica de disp
 
 Le volet **Réplica de disponibilité** affiche les colonnes suivantes :  
   
- **Name**  
+ **Nom**  
  Nom de l'instance du serveur qui héberge le réplica de disponibilité. Cette colonne est affichée par défaut.  
   
  **Rôle**  
@@ -167,7 +168,7 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
  Indique l'état opérationnel actuel du réplica secondaire. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
   
  **0**. Basculement en attente    
- **1**. En attente    
+ **1**. Pending    
  **2**. En ligne    
  **3**. Hors connexion   
  **4**. Échec    
@@ -198,7 +199,7 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
   
  Le volet qui affiche les informations regroupées comporte les colonnes suivantes :  
   
- **Name**  
+ **Nom**  
  Nom de la base de données de disponibilité. Cette valeur est affichée par défaut.  
   
  **Réplica**  
@@ -237,7 +238,7 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
     > [!CAUTION]  
     >  Lorsqu'une base de données est dans l'état INITIALIZING, forcer le basculement vers le réplica secondaire laisse toujours cette base de données dans un état dans lequel elle ne peut pas être démarrée.  
   
- **Failover Readiness**  
+ **Disponibilité du basculement**  
  Indique le réplica de disponibilité qui peut basculer avec ou sans perte possible de données. Cette colonne est affichée par défaut. Les valeurs possibles sont les suivantes :  
   
 -   **Perte de données**   
@@ -338,6 +339,6 @@ Pour plus d’informations, consultez [Rapports de latence du groupe de disponib
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Surveillance des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
+ [Outils pour superviser les groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

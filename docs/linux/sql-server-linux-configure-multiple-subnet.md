@@ -1,6 +1,7 @@
 ---
-title: Pacemaker pour les groupes de disponibilité Always On et les instances de cluster de basculement sur Linux
-description: ''
+title: Configurer un groupe de disponibilité et une instance de cluster de basculement avec plusieurs sous-réseaux (Linux)
+description: Apprenez à configurer des groupes de disponibilité Always On et des instances de cluster de basculement avec plusieurs sous-réseaux pour SQL Server sur Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f35f1916107e8ede0e7bf7cc3df483a0c33f3355
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077590"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558607"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurer Pacemaker pour les groupes de disponibilité Always On et les instances de cluster de basculement
 

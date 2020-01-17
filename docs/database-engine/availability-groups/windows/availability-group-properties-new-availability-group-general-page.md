@@ -1,8 +1,8 @@
 ---
-title: 'Propriétés d’un groupe de disponibilité : Nouveau groupe de disponibilité (page Général)'
+title: Page Général (boîtes de dialogue Nouveau groupe de disponibilité et Propriétés du groupe de disponibilité)
 titleSuffix: SQL Server
-description: Description des différentes propriétés disponibles dans la page « Général » de l’Assistant « Nouveau groupe de disponibilité » de SQL Server Management Studio.
-ms.custom: seodec18
+description: Description des différentes propriétés disponibles dans la page « Général » des boîtes de dialogue « Nouveau groupe de disponibilité » et « Propriétés du groupe de disponibilité » de SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934879"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254079"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Propriétés d’un groupe de disponibilité : Nouveau groupe de disponibilité (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67934879"
  **Ajouter**  
  Cliquez pour ajouter une base de données au groupe de disponibilité.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer une base de données sélectionnée du groupe de disponibilité.  
   
 ## <a name="availability-replicas"></a>Réplicas de disponibilité  
@@ -49,10 +49,10 @@ ms.locfileid: "67934879"
  Nom de serveur de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge ce réplica et, pour une instance non définie par défaut, son nom d'instance.  
   
  **Rôle**  
- **Principal**  
+ **Primaire**  
  Actuellement le réplica principal.  
   
- **Secondary**  
+ **Secondaire**  
  Actuellement un réplica secondaire.  
   
  **Résolution**  
@@ -72,7 +72,7 @@ ms.locfileid: "67934879"
  **Mode de basculement**  
  Mode de basculement du réplica, parmi :  
   
- **Automatic**  
+ **Automatique**  
  Basculement automatique. Le réplica est une cible pour les basculements automatiques. Pris en charge uniquement si le mode de disponibilité est défini en mode de validation synchrone.  
   
  **Manuel**  
@@ -93,7 +93,7 @@ ms.locfileid: "67934879"
  **Non**  
  Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s'agit du paramètre par défaut.  
   
- **Intention de lecture uniquement**  
+ **Tentative de lecture uniquement**  
  Seules les connexions en lecture seule directes sont autorisées aux bases de données secondaires de ce réplica. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
   
  **Oui**  
@@ -108,10 +108,10 @@ ms.locfileid: "67934879"
  **Ajouter**  
  Cliquez pour ajouter un réplica secondaire au groupe de disponibilité.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer un réplica secondaire du groupe de disponibilité.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

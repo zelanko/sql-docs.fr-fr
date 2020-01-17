@@ -1,6 +1,7 @@
 ---
-title: Configurer le NFS de stockage d’instances de cluster de basculement - SQL Server sur Linux
-description: ''
+title: Configurer le stockage NFS pour une instance de cluster de basculement - SQL Server sur Linux
+description: Apprenez à configurer une instance de cluster de basculement avec le stockage NFS pour SQL Server sur Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032364"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558334"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - NFS - SQL Server sur Linux
 
@@ -81,7 +82,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l’accès. Quan
     mkdir /var/opt/mssql/tmp
     ```
 
-   * Copiez les données et les fichiers journaux SQL Server dans le répertoire temporaire. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   * Copiez les données et les fichiers journaux de SQL Server dans le répertoire temporaire. Vous ne recevrez pas d’accusé de réception en cas de réussite.
     
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -225,7 +226,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l’accès. Quan
   
    * Tapez Quitter pour ne plus être le superutilisateur.
 
-   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, en changer le contexte, vérifier que les fichiers existent au niveau du système d’exploitation, puis il supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
+   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, en changer le contexte, vérifier que les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
 
     ![15-createtestdatabase][4]
  

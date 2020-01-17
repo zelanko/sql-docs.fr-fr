@@ -1,6 +1,6 @@
 ---
-title: Déterminer si une procédure stockée ou une table doit être déplacée vers l’OLTP en mémoire | Microsoft Docs
-ms.custom: ''
+title: Déterminer si une table ou une procédure stockée doit être portée vers l’OLTP en mémoire
+ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +14,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a392904b378514bb22816a3c325535fbe94cbacf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907862"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412697"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ Les statistiques d'analyse et de contention dans le rapport détaillé de la tab
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  
     ```  
   
-2.  Entrez la commande suivante.  
+2.  Entrez la commande ci-après.  
   
     ```  
     Save-SqlMigrationReport -FolderPath "<folder_path>"  

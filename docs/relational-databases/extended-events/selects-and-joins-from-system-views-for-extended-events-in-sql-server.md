@@ -1,6 +1,5 @@
 ---
-title: SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server | Microsoft Docs
-ms.custom: ''
+title: SELECT et JOIN dans les vues système pour les événements étendus
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903458"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242898"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Cet article explique les deux ensembles de vues système qui se rapportent aux événements étendus dans Microsoft SQL Server et dans le service cloud Azure SQL Database. L’article explique :
+Cet article décrit les deux ensembles de vues système liés aux événements étendus dans SQL Server et Azure SQL Database. L’article explique :
 
 - Comment joindre (JOIN) différentes vues système
 - Comment sélectionner (SELECT) des types d’informations particuliers à partir de la vue système
@@ -34,7 +34,7 @@ La plupart des exemples sont écrits pour SQL Server, mais avec de petites modif
 
 
 
-## <a name="a-foundational-information"></a>A. Informations fondamentales
+## <a name="a-foundational-information"></a>R. Informations fondamentales
 
 
 Il existe deux ensembles de vues système pour les événements étendus :
@@ -55,7 +55,7 @@ Il existe deux ensembles de vues système pour les événements étendus :
 
 - Elles stockent des informations sur l’ *activité en cours* des sessions d’événements en cours d’exécution. Ces DMV en savent peu sur la définition des sessions.
     - Même si toutes les sessions d’événements sont actuellement arrêtées, une instruction SELECT à partir de la vue *sys.dm_xe_packages* retournera toujours des lignes, car différents packages sont chargés dans la mémoire active au démarrage du serveur.
-    - Pour la même raison, *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
+    - Pour la même raison, *sys.dm_xe_objects* *sys.dm_xe_object_columns* retournent également des lignes.
 
 
 - Le préfixe de nom pour les DMV des événements étendus est le suivant :
@@ -345,7 +345,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>Sortie
+#### <a name="output"></a>Output
 
 
 Voici la sortie de l’exécution de l’instruction SELECT JOIN UNION précédente. Les noms et les valeurs des paramètres de sortie sont mappés à ce qui est clairement visible dans l’instruction CREATE EVENT SESSION précédente.
@@ -419,7 +419,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>Sortie
+#### <a name="output"></a>Output
 
 Voici la liste des packages.
 
@@ -477,7 +477,7 @@ SELECT  --C.2
 ```
 
 
-#### <a name="output"></a>Sortie
+#### <a name="output"></a>Output
 
 Voici le nombre d’objets par type d’objet. Il existe environ 1915 objets.
 
@@ -532,7 +532,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>Sortie
+#### <a name="output"></a>Output
 
 Pour vous mettre en appétit, voici un échantillonnage arbitraire des objets retournés par l’instruction SELECT précédente.
 
@@ -605,7 +605,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>Sortie
+#### <a name="output"></a>Output
 
 Les lignes suivantes ont été retournées par l’instruction précédente SELECT, WHERE `o.name = 'lock_deadlock'`:
 
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* et champs d’événements
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* et champs d’événements
 
 
 L’instruction SELECT suivante inclut une jointure à la vue délicate nommée *sys.dm_xe_map_values*.
@@ -693,7 +693,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>Sortie
+#### <a name="output"></a>Output
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +765,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>Sortie
+#### <a name="output"></a>Output
 
 Les lignes de paramètres suivantes sont un sous-ensemble des éléments retournés par l’instruction SELECT précédente, dans SQL Server 2016.
 
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 Transtypage SELECT DMV de colonne target_data en XML
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 Transtypage SELECT DMV de colonne target_data en XML
 
 
 Cette instruction SELECT de DMV retourne les lignes de données à partir de la cible de votre session d’événements active. Les données sont converties au format XML, ce qui rend la cellule retournée interactive pour faciliter l’affichage dans SSMS.
@@ -854,7 +854,7 @@ Quand vous cliquez sur la cellule XML-Cast, vous obtenez l’affichage suivant.
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 Sélectionner à partir d’une fonction pour extraire des données event_file à partir du lecteur de disque
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 Sélectionner à partir d’une fonction pour extraire des données event_file à partir du lecteur de disque
 
 
 Supposez que votre session d’événements a collecté des données puis a été arrêtée. Si votre session a été définie pour utiliser la cible event_file, vous pouvez toujours récupérer les données en appelant la fonction *sys.fn_xe_target_read_file*.

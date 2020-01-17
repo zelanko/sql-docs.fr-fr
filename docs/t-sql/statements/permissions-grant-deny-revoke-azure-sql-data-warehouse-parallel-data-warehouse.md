@@ -1,6 +1,7 @@
 ---
-title: Autorisations GRANT DENY REVOKE - Azure SQL Data Warehouse et Parallel Data Warehouse | Microsoft Docs
-ms.custom: ''
+title: Autorisations GRANT-DENY-REVOKE
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
@@ -13,12 +14,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2245de7cf96e7635098fff57013010e143e6a9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095586"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255469"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "74095586"
   
 -   **REVOKE** supprime les autorisations **GRANT** ou **DENY** existantes.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -264,7 +265,7 @@ REVOKE
   
 ##  <a name="Examples"></a> Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. Accord d’une autorisation de niveau serveur à une connexion  
+### <a name="a-granting-a-server-level-permission-to-a-login"></a>R. Accord d’une autorisation de niveau serveur à une connexion  
  Les deux instructions suivantes accordent une autorisation de niveau serveur à une connexion.  
   
 ```  

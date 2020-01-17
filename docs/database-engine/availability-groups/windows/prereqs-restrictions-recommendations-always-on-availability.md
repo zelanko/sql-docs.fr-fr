@@ -1,7 +1,7 @@
 ---
-title: Prérequis, restrictions et recommandations pour les groupes de disponibilité
-description: Description des prérequis, des restrictions et des recommandations pour déployer un groupe de disponibilité Always On.
-ms.custom: seodec18
+title: 'Groupe de disponibilité : Prérequis, restrictions et recommandations'
+description: Description des prérequis, des restrictions et des recommandations pour déployer un groupe de disponibilité Always On sur SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/22/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54b58cefb736fd4429c54c773f2fd6c0a9e86f59
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708488"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258083"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "71708488"
   
 -   [Utilisation de threads par les groupes de disponibilité](#ThreadUsage)  
   
--   [Autorisations](#PermissionsSI)  
+-   [autorisations](#PermissionsSI)  
   
 -   [Tâches associées](#RelatedTasksSI)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "71708488"
   
 ###  <a name="PrerequisitesSI"></a> Liste de vérification : Prérequis (instance serveur)  
   
-||Condition préalable|Liens|  
+||Configuration requise|Liens|  
 |-|------------------|-----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Cet ordinateur hôte doit être un nœud WSFC. Les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité d’un groupe de disponibilité donné résident sur des nœuds distincts du cluster. Un groupe de disponibilité peut temporairement chevaucher deux clusters pendant sa migration vers un autre cluster. SQL Server 2016 introduit les groupes de disponibilité distribués. Dans un groupe de disponibilité distribué, deux groupes de disponibilité résident sur des clusters différents.|[Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Groupes de disponibilité distribués (groupes de disponibilité Always On)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si vous souhaitez qu'un groupe de disponibilité utilise Kerberos :<br /><br /> Toutes les instances de serveur qui hébergent un réplica de disponibilité pour le groupe de disponibilité doivent utiliser le même compte de service SQL Server.<br /><br /> L'administrateur de domaine doit inscrire manuellement un nom de principal de service (SPN) avec Active Directory sur le compte de service SQL Server pour le nom de réseau virtuel (VNN) de l'écouteur de groupe de disponibilité. Si le SPN est inscrit sur un compte différent du compte de service SQL Server, l'authentification échoue.<br /><br /> <br /><br /> <b>\*\* Important \*\*</b> Si vous modifiez le compte de service SQL Server, l’administrateur de domaine devra réinscrire le SPN manuellement.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Brève explication :**<br /><br /> Kerberos et les SPN assurent une authentification mutuelle. Le SPN est mappé au compte Windows qui démarre les services SQL Server. Si l'inscription du SPN n'est pas effectuée correctement ou échoue, la couche de sécurité Windows ne peut pas déterminer le compte associé au SPN et l'authentification Kerberos ne peut pas être utilisée.<br /><br /> <br /><br /> Remarque : NTLM n'est pas soumis à cette condition.|  
@@ -226,7 +226,7 @@ ms.locfileid: "71708488"
   
 ###  <a name="PrerequisitesFCI"></a> Liste de vérification : Prérequis (ICF)  
   
-||Condition préalable|Lien|  
+||Configuration requise|Lien|  
 |-|------------------|----------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que chaque instance de cluster de basculement SQL Server dispose du stockage partagé requis, conformément à l'installation standard de l'instance de cluster de basculement SQL Server.||  
   
@@ -249,7 +249,7 @@ ms.locfileid: "71708488"
   
 -   [Restrictions](#RestrictionsAG)  
   
--   [Spécifications](#RequirementsAG)  
+-   [Configuration requise](#RequirementsAG)  
   
 -   [Sécurité](#SecurityAG)  
   
@@ -279,7 +279,7 @@ ms.locfileid: "71708488"
 ###  <a name="RequirementsAG"></a> Conditions préalables requises (groupes de disponibilité)  
  Lors de la création ou de la reconfiguration d'un groupe de disponibilité, veillez à respecter les conditions préalables requises suivantes.  
   
-||Condition préalable|Description|  
+||Configuration requise|Description|  
 |-|------------------|-----------------|  
 |![Case à cocher](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si vous envisagez d'utiliser une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un réplica de disponibilité, assurez-vous de comprendre les restrictions relatives à l'instance de cluster de basculement et de respecter les conditions préalables requises pour cette dernière.|[Prérequis et restrictions concernant l’utilisation d’une instance de cluster de basculement SQL Server afin d’héberger un réplica de disponibilité](#FciArLimitations) (plus haut dans cet article)|  
   
@@ -321,13 +321,13 @@ ms.locfileid: "71708488"
   
  **Dans cette section :**  
   
--   [Spécifications](#RequirementsDb)  
+-   [Configuration requise](#RequirementsDb)  
   
 -   [Restrictions](#RestrictionsDb)  
   
 -   [Recommandations pour les ordinateurs qui hébergent des réplicas de disponibilité (système Windows](#TDEdbs)  
   
--   [Autorisations](#PermissionsDbs)  
+-   [autorisations](#PermissionsDbs)  
   
 -   [Tâches associées](#RelatedTasksADb)  
   

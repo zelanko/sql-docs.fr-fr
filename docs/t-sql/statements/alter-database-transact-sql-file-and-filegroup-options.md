@@ -1,6 +1,8 @@
 ---
-title: Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Fichiers et de groupes de fichiers ALTER DATABASE
+description: Mettez à jour les fichiers et groupes de fichiers d’une base de données à l’aide de Transact-SQL.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982836"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244428"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)
 
@@ -63,7 +65,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -137,7 +139,7 @@ REMOVE FILE *logical_file_name* Supprime la description du fichier logique d’u
 *logical_file_name* Spécifie le nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!WARNING]
-> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
+> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, voir [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)(en anglais). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
 
 MODIFY FILE Spécifie le fichier à modifier. Vous pouvez modifier une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.
 
@@ -189,12 +191,12 @@ Les fichiers de données ne doivent pas être placés sur des systèmes de fichi
 
 Si le fichier se trouve sur une partition brute, *os_file_name* doit spécifier uniquement la lettre d’une unité correspondant à une partition brute existante. Chaque partition brute ne peut contenir qu'un seul fichier.
 
-**'** *filestream_path* **'** Pour un groupe de fichiers FILESTREAM, FILENAME fait référence à un chemin d’accès où les données FILESTREAM seront stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin `C:\MyFiles\MyFilestreamData`, `C:\MyFiles` doit exister avant l’exécution de ALTER DATABASE, mais le dossier `MyFilestreamData` ne doit pas exister.
+**'** *filestream_path* **'** Pour un groupe de fichiers FILESTREAM, FILENAME fait référence à un chemin où les données FILESTREAM seront stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin `C:\MyFiles\MyFilestreamData`, `C:\MyFiles` doit exister avant l’exécution de ALTER DATABASE, mais le dossier `MyFilestreamData` ne doit pas exister.
 
 > [!NOTE]
 > Les propriétés SIZE et FILEGROWTH ne s'appliquent pas à un groupe de fichiers FILESTREAM.
 
-**'** *memory_optimized_data_path* **'** Pour un groupe de fichiers à mémoire optimisée, FILENAME fait référence à un chemin d’accès où les données à mémoire optimisées seront stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin `C:\MyFiles\MyData`, `C:\MyFiles` doit exister avant l’exécution de ALTER DATABASE, mais le dossier `MyData` ne doit pas exister.
+**'** *memory_optimized_data_path* **'** Pour un groupe de fichiers à mémoire optimisée, FILENAME fait référence à un chemin où les données à mémoire optimisée seront stockées. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister. Par exemple, si vous spécifiez le chemin `C:\MyFiles\MyData`, `C:\MyFiles` doit exister avant l’exécution de ALTER DATABASE, mais le dossier `MyData` ne doit pas exister.
 
 Le groupe de fichiers et le fichier (`<filespec>`) doivent être créés dans la même instruction.
 
@@ -238,7 +240,7 @@ Une valeur 0 indique que la croissance automatique est désactivée et qu'aucun 
 
 Si FILEGROWTH n’est pas spécifié, les valeurs par défaut sont les suivantes :
 
-|Options de version|Valeurs par défaut|
+|Version|Valeurs par défaut|
 |-------------|--------------------|
 |À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|64 Mo de données. 64 Mo de fichiers journaux.|
 |À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|1 Mo de données. 10 % de fichiers journaux.|
@@ -286,7 +288,7 @@ NAME = *new_filegroup_name* Remplace le nom du groupe de fichiers par *new_fileg
 
 AUTOGROW_SINGLE_FILE **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
 
-Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, seule sa taille augmente. Il s'agit du paramètre par défaut.
+Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, seule sa taille augmente. Il s’agit de la valeur par défaut.
 
 AUTOGROW_ALL_FILES
 
@@ -310,7 +312,7 @@ READ_ONLY | READONLY Spécifie que le groupe de fichiers est en lecture seule. L
 - Tout verrouillage est impossible dans les bases de données en lecture seule, ce qui améliore les performances des requêtes.
 
 > [!NOTE]
-> Le mot clé `READONLY` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READONLY` dans les nouveaux développements et prévoyez de modifier les applications qui utilisent actuellement `READONLY`. Utilisez à la place `READ_ONLY` .
+> Le mot clé `READONLY` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READONLY` dans les nouveaux développements et prévoyez de modifier les applications qui utilisent actuellement `READONLY`. Utilisez `READ_ONLY` à la place.
 
 READ_WRITE | READWRITE Spécifie que le groupe est en lecture/écriture. Les objets du groupe de fichiers peuvent être mis à jour. Pour modifier cet état, vous devez bénéficier d'un accès exclusif à la base de données. Pour plus d'informations, consultez la clause SINGLE_USER.
 
@@ -336,7 +338,7 @@ Les paramètres SIZE, MAXSIZE et FILEGROWTH ne peuvent pas être définis lorsqu
 
 Les paramètres SIZE et FILEGROWTH ne peuvent pas être définis pour les groupes de fichiers à mémoire optimisée.
 
-Le mot clé `READONLY` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READONLY` dans les nouveaux développements et prévoyez de modifier les applications qui l’utilisent actuellement. Utilisez à la place `READ_ONLY` .
+Le mot clé `READONLY` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READONLY` dans les nouveaux développements et prévoyez de modifier les applications qui l’utilisent actuellement. Utilisez `READ_ONLY` à la place.
 
 Le mot clé `READWRITE` sera supprimé dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d’utiliser `READWRITE` dans les nouveaux travaux de développement et prévoyez de modifier les applications qui utilisent `READWRITE` actuellement pour qu’elles utilisent `READ_WRITE` à la place.
 
@@ -375,7 +377,7 @@ Même si le conteneur FILESTREAM peut avoir été vidé avec l’opération « 
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-adding-a-file-to-a-database"></a>A. Ajout d'un fichier à une base de données
+### <a name="a-adding-a-file-to-a-database"></a>R. Ajout d'un fichier à une base de données
 
 L'exemple suivant ajoute un fichier de données de 5 Mo à la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
 
@@ -685,7 +687,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 Utilisez cette instruction sur une base de données dans l’instance managée Azure SQL Database.
 
@@ -819,7 +821,7 @@ NAME = *new_filegroup_name* Remplace le nom du groupe de fichiers par *new_fileg
 
 AUTOGROW_SINGLE_FILE
 
-Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, seule sa taille augmente. Il s'agit du paramètre par défaut.
+Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, seule sa taille augmente. Il s’agit de la valeur par défaut.
 
 AUTOGROW_ALL_FILES
 
@@ -857,7 +859,7 @@ Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifi�
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-adding-a-file-to-a-database"></a>A. Ajout d'un fichier à une base de données
+### <a name="a-adding-a-file-to-a-database"></a>R. Ajout d'un fichier à une base de données
 
 L'exemple suivant ajoute un fichier de données de 5 Mo à la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
 

@@ -17,17 +17,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a24105ff8deb7e3b2dea54d6c1cb859736ae6f5f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593995"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254832"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
   
  Always Encrypted est une fonctionnalité conçue pour protéger les données sensibles, telles que les numéros de carte de crédit ou les numéros nationaux d’identification (par exemple, les numéros de sécurité sociale aux États-Unis), qui sont stockées dans des bases de données [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Always Encrypted permet aux clients de chiffrer des données sensibles dans des applications clientes et de ne jamais révéler les clés de chiffrement au [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Ainsi, Always Encrypted fournit une séparation entre ceux qui détiennent les données et peuvent les voir, et ceux qui les gèrent mais ne doivent pas y avoir accès. En empêchant les administrateurs de base de données locales, les opérateurs de base de données cloud ou d’autres utilisateurs avec des privilèges élevés, mais non autorisés, d’accéder aux données chiffrées, Always Encrypted permet aux clients de stocker des données sensibles de manière sécurisée en dehors de leur contrôle direct. De cette manière, les organisations peuvent stocker leurs données dans Azure et activer la délégation de l’administration de base de données locale à des tiers, ou réduire les contraintes d’attestation de sécurité pour leur propre personnel d’administration de base de données.
 
@@ -36,7 +36,7 @@ ms.locfileid: "73593995"
   > [!NOTE] 
   > Dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], les enclaves sécurisées étendent substantiellement les fonctionnalités de calcul confidentiel d’Always Encrypted avec des critères spéciaux, d’autres opérateurs de comparaison et le chiffrement sur place. Consultez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md).
 
- Always Encrypted rend le chiffrement transparent pour les applications. À cette fin, un pilote Always Encrypted installé sur l’ordinateur client chiffre et déchiffre automatiquement les données sensibles dans l’application cliente. Le pilote chiffre les données dans les colonnes sensibles avant de les transmettre au [!INCLUDE[ssDE](../../../includes/ssde-md.md)]et il réécrit automatiquement les requêtes pour que la sémantique de l’application soit conservée. De même, il déchiffre de manière transparente les données stockées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête.  
+ Always Encrypted rend le chiffrement transparent pour les applications. À cette fin, un pilote Always Encrypted installé sur l’ordinateur client chiffre et déchiffre automatiquement les données sensibles dans l’application cliente. Le pilote chiffre les données dans les colonnes sensibles avant de les transmettre au [!INCLUDE[ssDE](../../../includes/ssde-md.md)]et il réécrit automatiquement les requêtes pour que la sémantique de l’application soit conservée. De même, le pilote déchiffre de manière transparente les données stockées dans les colonnes de base de données chiffrées contenues dans les résultats de requête.  
   
  Always Encrypted est disponible dans toutes les éditions de [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], à partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et de tous les niveaux de service de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Pour les versions avant [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1, Always Encrypted était limité à l’édition Enterprise.) Pour visualiser une présentation Channel 9 qui aborde Always Encrypted, consultez [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Sécurisation des données sensibles avec Always Encrypted).  
 
@@ -70,9 +70,9 @@ Pour plus d’informations sur le développement des applications à l’aide d�
 
 ## <a name="remarks"></a>Notes
 
-Le déchiffrement est effectué via le client. Cela signifie que certaines actions qui se produisent uniquement côté serveur ne fonctionnent pas avec Always Encrypted. 
+Le chiffrement et le déchiffrement sont effectués par le biais du pilote client. Cela signifie que certaines actions qui se produisent uniquement côté serveur ne fonctionneront pas en utilisant Always Encrypted. Citons par exemple la copie de données d’une colonne vers une autre à l’aide d’une instruction UPDATE, BULK INSERT(T-SQL), SELECT INTO, INSERT..SELECT. 
 
-Voici un exemple d’une mise à jour qui tente de déplacer des données d’une colonne chiffrée vers une colonne non chiffrée sans retourner de jeu de résultats au client : 
+Voici un exemple d’une instruction UPDATE qui tente de déplacer des données d’une colonne chiffrée vers une colonne non chiffrée sans retourner de jeu de résultats au client : 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -267,7 +267,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
 - [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
-- [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md) 
+- [Développer des applications avec Always Encrypted](always-encrypted-client-development.md) 
 - [Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted](always-encrypted-wizard.md)
 - [Chiffrement Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-cryptography.md)   
 - [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   

@@ -1,6 +1,8 @@
 ---
-title: Types de données et fonctions de date et d’heure (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Types de données et fonctions de date et d’heure
+description: Liens vers des articles sur les types de données et les fonctions de date et d’heure.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -21,12 +23,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982956"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256094"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Types de données et fonctions de date et d'heure (Transact-SQL)
 
@@ -57,9 +59,9 @@ Les types de données de date et d’heure [!INCLUDE[tsql](../../includes/tsql-m
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|AAAA-MM-JJ hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00,0000000 à 9999-12-31 23:59:59,9999999 (au format UTC)|100 nanosecondes|8 à 10|Oui|Oui|  
   
 > [!NOTE]  
->  Avec [!INCLUDE[tsql](../../includes/tsql-md.md)], le type de données[rowversion](../../t-sql/data-types/rowversion-transact-sql.md) n’est pas un type de données de date et d’heure. **timestamp** est un synonyme déprécié de **rowversion**.  
+>  Avec [!INCLUDE[tsql](../../includes/tsql-md.md)], le type de données [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) n’est pas un type de données de date et d’heure. **timestamp** est un synonyme déprécié de **rowversion**.  
   
-##  <a name="DateandTimeFunctions"></a> Fonctions de date et d’heure  
+##  <a name="DateandTimeFunctions"></a> Fonctions de date et heure  
 Les tableaux suivants répertorient les fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d’informations sur le déterminisme, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ###  <a name="GetSystemDateandTimeValues"></a> Fonctions permettant de retourner des valeurs système de date et d’heure 
@@ -87,10 +89,10 @@ Les tableaux suivants répertorient les fonctions de date et d’heure [!INCLUDE
 |Fonction|Syntaxe|Valeur retournée|Type de données de retour|Propriété de déterminisme|  
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Retourne une chaîne de caractères représentant la partie date (*datepart*) spécifiée de la date spécifiée.|**nvarchar**|Non déterministe|   
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Retourne un entier représentant la partie date (*datepart*) spécifiée de la *date* spécifiée.|**Int**|Non déterministe|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Retourne un entier représentant la partie jour de la *date* spécifiée.|**Int**|Déterministe|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Retourne un entier représentant la partie mois d’une *date* spécifiée.|**Int**|Déterministe|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Retourne un entier représentant la partie année d’une *date* spécifiée.|**Int**|Déterministe|  
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Retourne un entier représentant la partie date (*datepart*) spécifiée de la *date* spécifiée.|**int**|Non déterministe|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Retourne un entier représentant la partie jour de la *date* spécifiée.|**int**|Déterministe|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Retourne un entier représentant la partie mois d’une *date* spécifiée.|**int**|Déterministe|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Retourne un entier représentant la partie année d’une *date* spécifiée.|**int**|Déterministe|  
   
 ###  <a name="fromParts"></a> Fonctions permettant de retourner des valeurs de date et d’heure à partir de leurs parties
   
@@ -107,7 +109,7 @@ Les tableaux suivants répertorient les fonctions de date et d’heure [!INCLUDE
   
 |Fonction|Syntaxe|Valeur retournée|Type de données de retour|Propriété de déterminisme|  
 |---|---|---|---|---|
-|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Retourne le nombre de limites *datepart* de date ou d’heure traversées entre deux dates spécifiées.|**Int**|Déterministe|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Retourne le nombre de limites *datepart* de date ou d’heure traversées entre deux dates spécifiées.|**int**|Déterministe|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Retourne le nombre de limites *datepart* de date ou d’heure traversées entre deux dates spécifiées.|**bigint**|Déterministe|  
   
 ###  <a name="ModifyDateandTimeValues"></a> Fonctions permettant de modifier les valeurs de date et d’heure
@@ -134,7 +136,7 @@ Les tableaux suivants répertorient les fonctions de date et d’heure [!INCLUDE
   
 |Fonction|Syntaxe|Valeur retournée|Type de données de retour|Propriété de déterminisme|  
 |---|---|---|---|---|
-|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Détermine si une expression d’entrée **datetime** ou **smalldatetime** a une valeur de date ou d’heure valide.|**Int**|ISDATE est déterministe uniquement si elle est utilisée avec la fonction CONVERT, quand le paramètre de style CONVERT est spécifié et quand le style est différent de 0, 100, 9 ou 109.|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Détermine si une expression d’entrée **datetime** ou **smalldatetime** a une valeur de date ou d’heure valide.|**int**|ISDATE est déterministe uniquement si elle est utilisée avec la fonction CONVERT, quand le paramètre de style CONVERT est spécifié et quand le style est différent de 0, 100, 9 ou 109.|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> Rubriques relatives à la date et à l’heure 
   

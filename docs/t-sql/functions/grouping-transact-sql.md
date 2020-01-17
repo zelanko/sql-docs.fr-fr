@@ -1,7 +1,7 @@
 ---
 title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 12/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f5d3a1e3b6ac5b6e5d8ec46e03de9f757a4651b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048181"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74833780"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Indique si une expression de colonne spécifiée dans une liste GROUP BY est agrégée ou non. GROUPING retourne 1 pour agrégé ou 0 pour non agrégé dans le jeu de résultats. GROUPING ne peut être utilisé que dans les clauses SELECT \<select list>, HAVING et ORDER BY lorsque GROUP BY est spécifié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

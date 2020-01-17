@@ -1,5 +1,5 @@
 ---
-title: Désactiver la gestion de sauvegarde de SQL Server sur Microsoft Azure | Microsoft Docs
+title: Désactiver la gestion de sauvegarde dans le stockage Blob Azure
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 423ad16effc6d4ed216b8b1f295731ded432a8fe
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846541"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257974"
 ---
-# <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Désactiver la gestion de sauvegarde de SQL Server sur Microsoft Azure
+# <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Désactivation de la sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment activer ou suspendre [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] au niveau base de données et instance.  
   

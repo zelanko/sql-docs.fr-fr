@@ -1,6 +1,7 @@
 ---
-title: Créer une spécification de l’audit du serveur et de la base de données | Microsoft Docs
-ms.custom: ''
+title: Créer une spécification de l’audit du serveur et de la base de données
+description: Découvrez comment créer une spécification de l’audit de SQL Server et de la base de données à l’aide de SQL Server Management Studio ou de Transact-SQL (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903869"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557872"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification de l'audit du serveur et de la base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.locfileid: "72903869"
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit de la base de données** .  
   
-     **Name**  
+     **Nom**  
      Nom de la spécification de l'audit de la base de données. Le nom est généré automatiquement lorsque vous créez une spécification d'audit du serveur, mais vous pouvez le modifier.  
   
      **Audit**  
@@ -130,11 +131,11 @@ ms.locfileid: "72903869"
   
 #### <a name="to-create-a-database-level-audit-specification"></a>Pour créer une spécification d'audit de niveau base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une spécification d'audit de base de données appelée `Audit_Pay_Tables` qui audite les instructions SELECT et INSERT par l'utilisateur `dbo`, pour la table `HumanResources.EmployeePayHistory` en fonction de l'audit de serveur défini précédemment.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une spécification d'audit de base de données appelée `Audit_Pay_Tables` qui audite les instructions SELECT et INSERT par l'utilisateur `dbo` , pour la table `HumanResources.EmployeePayHistory` en fonction de l'audit de serveur défini précédemment.  
   
     ```  
     USE AdventureWorks2012 ;   

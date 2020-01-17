@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123508"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325511"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
 
@@ -54,19 +54,19 @@ L'évaluation de la même expression peut produire des résultats différents da
 Pour pouvoir gérer correctement les vues et retourner des résultats cohérents, les vues indexées nécessitent des valeurs fixes pour plusieurs options SET. Les options SET répertoriées dans le tableau ci-dessous doivent être définies avec les valeurs indiquées dans la colonne **Valeur requise** chaque fois que les conditions suivantes sont réunies :
 
 - La vue et les index suivants sur la vue sont créés.
-- Tables de base référencées dans la vue lorsque la table est créée.
+- Tables de base référencées dans la vue quand celle-ci est créée.
 - Une insertion, une mise à jour ou une suppression est exécutée sur une table qui participe à la vue indexée. Cette exigence inclut des opérations telles que la copie en bloc, la réplication et les requêtes distribuées.
 - L'optimiseur de requête utilise la vue indexée pour générer le plan de requête.
 
-|Options SET|Valeur requise|Valeur de serveur par défaut|Valeur par défaut<br /><br /> Valeur OLE DB et ODBC|Valeur par défaut<br /><br /> Valeur DB-Library|
+|Options définies|Valeur requise|Valeur de serveur par défaut|Default<br /><br /> Valeur OLE DB et ODBC|Default<br /><br /> Valeur DB-Library|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
+|ANSI_NULLS|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|
+|ANSI_PADDING|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|
+|ANSI_WARNINGS<sup>1</sup>|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|
+|ARITHABORT|ACTIVÉ|ACTIVÉ|OFF|OFF|
+|CONCAT_NULL_YIELDS_NULL|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|QUOTED_IDENTIFIER|ACTIVÉ|ACTIVÉ|ACTIVÉ|OFF|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> Définir `ANSI_WARNINGS` sur ON définit implicitement `ARITHABORT` sur ON.
@@ -118,7 +118,7 @@ Outre les options SET et les conditions requises pour les fonctions déterminist
    |Prédicats de texte intégral (`CONTAINS`, `FREETEXT`)|Fonction `SUM` qui référence une expression acceptant les valeurs Null|`ORDER BY`|
    |Fonction d'agrégation CLR définie par l'utilisateur|`TOP`|Opérateurs `CUBE`, `ROLLUP` ou `GROUPING SETS`|
    |`MIN`, `MAX`|Opérateurs `UNION`, `EXCEPT` ou `INTERSECT`|`TABLESAMPLE`|
-   |les variables de tables ;|`OUTER APPLY` ou `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
+   |Variables de table|`OUTER APPLY` ou `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Jeux de colonnes éparses|Fonctions table incluse ou fonctions table à instructions multiples|`OFFSET`|
    |`CHECKSUM_AGG`|||
    |&nbsp;|&nbsp;|&nbsp;|

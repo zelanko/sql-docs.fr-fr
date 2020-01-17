@@ -1,7 +1,7 @@
 ---
-title: Propriétés du réplica de disponibilité (page Général) pour les groupes de disponibilité
+title: Page Général (Propriétés du réplica de disponibilité)
 description: Description des différentes propriétés disponibles dans la page « Général » de la page « Propriétés du réplica de disponibilité » dans SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c2dceee5ebda0b6039a2614b3ae3d9b0dd356e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b708c987f1e9d0bbaf069a5d105e6feab57b9b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988662"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241742"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Propriétés du réplica de disponibilité (page Général) pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "67988662"
  Nom de serveur de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge ce réplica et, pour une instance non définie par défaut, son nom d'instance.  
   
  **Rôle**  
- **Principal**  
+ **Primaire**  
  Actuellement le réplica principal.  
   
- **Secondary**  
+ **Secondaire**  
  Actuellement un réplica secondaire.  
   
  **Résolution**  
@@ -61,7 +61,7 @@ ms.locfileid: "67988662"
  **Failover mode**  
  Mode de basculement du réplica, parmi :  
   
- **Automatic**  
+ **Automatique**  
  Basculement automatique. Le réplica est une cible pour les basculements automatiques. Pris en charge uniquement si le mode de disponibilité est défini en mode de validation synchrone.  
   
  **Manuel**  
@@ -82,13 +82,13 @@ ms.locfileid: "67988662"
  **Non**  
  Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s'agit du paramètre par défaut.  
   
- **Intention de lecture uniquement**  
+ **Tentative de lecture uniquement**  
  Seules les connexions en lecture seule directes sont autorisées aux bases de données secondaires de ce réplica. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
   
  **Oui**  
  Toutes les connexions sont autorisées aux bases de données secondaires de ce réplica, mais uniquement pour l'accès en lecture. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles &#40;Groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Délai d'attente de session (secondes)**  
  Délai d'attente en secondes. Le délai d’expiration est le temps maximum pendant lequel le réplica attend de recevoir un message d’un autre réplica avant de considérer que la connexion entre les réplicas principal et secondaire a échoué. Le délai d'expiration de session détecte si les réplicas secondaries sont connectés au réplica primaire. En cas de détection d’un échec de connexion avec un réplica secondaire, le réplica principal considère que le réplica secondaire présente l’état NOT_SYNCHRONIZED. En cas de détection d'un échec de connexion avec le réplica principal, un réplica secondaire tente simplement de se reconnecter.  
@@ -100,6 +100,6 @@ ms.locfileid: "67988662"
  Représentation de chaîne du point de terminaison de mise en miroir de bases de données spécifié par l'utilisateur, qui est utilisé par les connexions entre les réplicas principal et secondaire pour la synchronisation des données. Pour plus d’informations sur la syntaxe des URL de point de terminaison, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

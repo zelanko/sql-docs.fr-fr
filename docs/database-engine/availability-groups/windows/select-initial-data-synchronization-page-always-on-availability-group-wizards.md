@@ -1,6 +1,7 @@
 ---
-title: Page Sélectionner la synchronisation de données initiale (Assistants de groupe de disponibilité Always On) | Microsoft Docs
-ms.custom: ''
+title: Page Sélectionner la synchronisation de données initiale (Assistant Groupe de disponibilité)
+description: Description de la « page Sélectionner la synchronisation de données initiale » de l’Assistant Groupe de disponibilité Always On dans SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014180"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235343"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Page Sélectionner la synchronisation de données initiale (Assistants de groupe de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68014180"
   
 ## <a name="Auto"></a> Amorçage automatique
  
- SQL Server crée automatiquement les réplicas secondaires pour chaque base de données dans le groupe. L’amorçage automatique nécessite que le chemin des données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe. Disponible sur [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] et ultérieur. Consultez [Initialiser automatiquement le groupe de disponibilité Always On](automatically-initialize-always-on-availability-group.md).
+ SQL Server crée automatiquement les réplicas secondaires pour chaque base de données du groupe. L’amorçage automatique nécessite que le chemin des données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe. Disponible sur [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] et ultérieur. Consultez [Initialiser automatiquement le groupe de disponibilité Always On](automatically-initialize-always-on-availability-group.md).
 
 ##  <a name="Full"></a> Sauvegarde complète de la base de données et des journaux 
  Pour chaque base de données principale, l'option **Sauvegarde complète de la base de données et des journaux** exécute plusieurs opérations dans un flux de travail : créer une sauvegarde complète et une sauvegarde des journaux de la base de données principale, créer les bases de données secondaires correspondantes en restaurant ces sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire et joindre chaque base de données secondaire à un groupe de disponibilité.  
@@ -83,14 +84,14 @@ ms.locfileid: "68014180"
  Sélectionnez cette option si vous souhaitez effectuer vos propres sauvegardes de base de données et de journaux de chaque base de données primaire, puis les restaurer dans chaque instance de serveur qui héberge un réplica secondaire. Une fois que vous avez fermé l'assistant, vous devez ensuite joindre chaque base de données secondaire sur chaque réplica secondaire.  
   
 > [!NOTE]  
->  Pour plus d'informations, consultez [Démarrer un mouvement de données sur une base de données secondaire Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+>  Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="PrepareSecondaryDbs"></a> Pour préparer manuellement une base de données secondaire  
  Pour préparer les bases de données secondaires indépendamment de l'Assistant [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] utilisé, vous pouvez opter pour l'une des méthodes suivantes :  
   
 -   Restaurez manuellement une sauvegarde récente de la base de données primaire à l'aide de RESTORE WITH NORECOVERY, puis restaurez chaque sauvegarde de journal suivante à l'aide de RESTORE WITH NORECOVERY. Si les bases de données primaire et secondaire ont des chemins d'accès différents, vous devez utiliser l'option WITH MOVE. Effectuez cette séquence de restauration sur chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité.  Vous pouvez utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell pour exécuter ces opérations de sauvegarde et de restauration.  
   
-     **Pour plus d'informations, consultez :**  
+     **Pour plus d'informations :**  
   
      [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -99,7 +100,7 @@ ms.locfileid: "68014180"
     > [!NOTE]  
     >  Après avoir créé toutes les bases de données secondaires pour le groupe de disponibilité, si vous souhaitez effectuer des sauvegardes sur des réplicas secondaires, vous devez reconfigurer la préférence de sauvegarde automatisée du groupe de disponibilité.  
   
-     **Pour plus d'informations, consultez :**  
+     **Pour plus d'informations :**  
   
      [Conditions préalables requises pour la migration de la copie des journaux de transaction vers les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -126,6 +127,6 @@ ms.locfileid: "68014180"
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

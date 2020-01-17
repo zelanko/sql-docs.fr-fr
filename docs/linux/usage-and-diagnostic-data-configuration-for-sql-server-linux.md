@@ -1,20 +1,21 @@
 ---
 title: Configurer la collecte des données d’utilisation et de diagnostic pour SQL Server sur Linux
 description: Décrit comment les données de diagnostic et d’utilisation des clients SQL Server sont collectées et configurées sur Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531292"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558535"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Configurer la collecte des données d’utilisation et de diagnostic pour SQL Server sur Linux
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configurer la collecte des données d’utilisation et de diagnostic pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -26,7 +27,7 @@ En particulier, Microsoft n’envoie par ce mécanisme aucune information de ces
 
 - valeurs des tables utilisateur ;
 - identifiants d’ouverture de session ou autres informations d’authentification ;
-- informations d’identification personnelle (PII).
+- Informations d’identification personnelle (PII)
 
 SQL Server 2017 collecte et envoie toujours des informations sur l’expérience d’installation à partir du processus d’installation afin de nous permettre de trouver et de résoudre rapidement les problèmes d’installation que rencontre le client. SQL Server 2017 peut être configuré de façon à ne pas envoyer d’informations (pour une instance de serveur donnée) à Microsoft par le biais de **mssql-conf**. mssql-conf est un script de configuration qui s’installe avec SQL Server 2017 pour Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu.
 

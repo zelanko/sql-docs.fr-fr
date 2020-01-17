@@ -1,6 +1,7 @@
 ---
-title: Déboguer un gestionnaire de logique métier (programmation de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Déboguer un gestionnaire de logique métier (programmation de la réplication)
+description: Découvrez comment utiliser un gestionnaire de logique métier pour appeler une logique métier personnalisée quand un abonnement de fusion est synchronisé.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01a1e4be7476b2f683345e8bfd23f4fcf0e90642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063081"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321776"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Déboguer un gestionnaire de logique métier (programmation de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Utilisez un gestionnaire de logique métier pour appeler une logique métier personnalisée lorsqu'un abonnement de fusion est synchronisé. Pour plus d’informations, consultez [Exécuter la logique pendant la synchronisation de fusion](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+  Utilisez un gestionnaire de logique métier pour appeler une logique métier personnalisée lorsqu'un abonnement de fusion est synchronisé. Pour plus d’informations, consultez [Exécuter la logique métier lors de la synchronisation de fusion](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
  Le réconciliateur de réplication de fusion (replrec.dll) appelle l'assembly de code managé qui contient la logique métier. Dans la plupart des cas, replrec.dll et la logique métier personnalisée sont exécutés sur l'ordinateur où s'exécute l'Agent de fusion (sur l'Abonné pour un abonnement par extraction ou sur le serveur de distribution pour un abonnement par émission de données). Dans le cas de la synchronisation Web ou dans le cas d'un Abonné [!INCLUDE[ssEW](../../includes/ssew-md.md)] , le réconciliateur et la logique métier personnalisée sont exécutés sur le serveur Web.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68063081"
   
 2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Créez un projet Replication Management Objects dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio qui démarre par programme l'Agent de fusion de façon synchrone. Pour plus d’informations, voir [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+3.  Créez un projet Replication Management Objects dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio qui démarre par programme l'Agent de fusion de façon synchrone. Pour plus d’informations, consultez [Synchroniser un abonnement par extraction (pull)](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 4.  Définissez un point d'arrêt dans le code du gestionnaire de logique métier, soit dans la méthode en cours de débogage, soit dans le constructeur de classe. Pour plus d'informations sur les méthodes qui peuvent être implémentées dans un gestionnaire de logique métier, consultez la rubrique sur les méthodes <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   

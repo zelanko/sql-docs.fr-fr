@@ -1,6 +1,7 @@
 ---
-title: Configurer des comptes de connexion - Disponibilité Always On de la mise en miroir de bases de données | Microsoft Docs
-ms.custom: ''
+title: Configurer des comptes de connexion (mise en miroir et groupes de disponibilité)
+description: Configurez des comptes de connexion pour accéder au point de terminaison de mise en miroir de bases de données d’un miroir de base de données ou d’un groupe de disponibilité Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3612f2ef5a736ed2d676b5336ecdd48bdd10de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025223"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252777"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Configurer des comptes de connexion - Disponibilité Always On de la mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +66,6 @@ ms.locfileid: "68025223"
 ## <a name="see-also"></a>Voir aussi  
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Résoudre les problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Résoudre des problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

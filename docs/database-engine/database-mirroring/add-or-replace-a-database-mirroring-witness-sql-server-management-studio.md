@@ -1,6 +1,7 @@
 ---
-title: Ajouter ou remplacer un témoin de mise en miroir de base de données (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Ajouter ou remplacer un témoin de mise en miroir (SSMS)
+description: Découvrez comment ajouter ou remplacer un témoin de mise en miroir de bases de données à l’aide de SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947953"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247495"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Ajouter ou remplacer un témoin de mise en miroir de base de données (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "67947953"
   
 9. Dans la boîte de dialogue **Instance de serveur témoin** , cliquez sur **Se connecter**.  
   
-10. Dans la boîte de dialogue **Se connecter au serveur** , indiquez l’instance du serveur témoin dans le champ **Nom du serveur** et utilisez l’authentification Windows (valeur par défaut). Cliquez sur **Se connecter**.  
+10. Dans la boîte de dialogue **Se connecter au serveur** , indiquez l’instance du serveur témoin dans le champ **Nom du serveur** et utilisez l’authentification Windows (valeur par défaut). Cliquez sur **Connecter**.  
   
 11. Une fois qu’une connexion a été établie, le port d’écoute et le point de terminaison de mise en miroir de bases de données de l’instance du serveur témoin s’affichent dans la boîte de dialogue **Instance de serveur témoin** . Cliquez sur **Suivant**.  
   

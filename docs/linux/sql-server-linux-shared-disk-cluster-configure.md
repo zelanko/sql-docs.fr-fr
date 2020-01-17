@@ -1,6 +1,7 @@
 ---
-title: Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
-description: ''
+title: Configurer une instance de cluster de basculement - SQL Server sur Linux (RHEL)
+description: Apprenez à configurer une instance de cluster de basculement sur RHEL (Red Hat Enterprise Linux) pour SQL Server.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032299"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558324"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
@@ -23,12 +24,12 @@ ms.locfileid: "68032299"
 Une instance de cluster de basculement de disque partagé à deux nœuds SQL Server fournit une redondance au niveau du serveur pour la haute disponibilité. Dans ce didacticiel, vous allez apprendre à créer une instance de cluster de basculement à deux nœuds de SQL Server sur Linux. Les étapes spécifiques que vous allez effectuer sont les suivantes :
 
 > [!div class="checklist"]
-> * installer et configurer Linux
-> * installer et configurer SQL Server
-> * configurer le fichier hôtes
-> * configurer le stockage partagé et déplacer les fichiers de base de données
-> * installer et configurer Pacemaker sur chaque nœud de cluster
-> * configurer l’instance de cluster de basculement
+> * Installer et configurer Linux
+> * Installer et configurer SQL Server
+> * Configurer le fichier hosts
+> * Configurer le stockage partagé et déplacer les fichiers de base de données
+> * Installer et configurer Pacemaker sur chaque nœud de cluster
+> * Configurer l’instance de cluster de basculement
 
 Cet article explique comment créer une instance de cluster de basculement de disque partagé à deux nœuds (FCI) pour SQL Server. Cet article contient des instructions et des exemples de scripts pour Red Hat Enterprise Linux (RHEL). Les distributions Ubuntu sont similaires à RHEL afin que les exemples de script fonctionnent également sur Ubuntu. 
 
@@ -38,13 +39,13 @@ Pour plus d’informations, consultez [Instance de cluster de basculement (FCI) 
 
 Pour effectuer le scénario de bout en bout suivant, vous avez besoin de deux machines pour déployer le cluster à deux nœuds et d’un autre serveur pour le stockage. Les étapes ci-dessous décrivent comment ces serveurs seront configurés.
 
-## <a name="set-up-and-configure-linux"></a>installer et configurer Linux
+## <a name="set-up-and-configure-linux"></a>Installer et configurer Linux
 
 La première étape consiste à configurer le système d'exploitation sur les nœuds de cluster. Sur chaque nœud du cluster, configurez une distribution Linux. Utilisez la même distribution et la même version sur les deux nœuds. Utilisez l’une ou l’autre des distributions suivantes :
     
 * RHEL avec un abonnement valide pour le module complémentaire HA
 
-## <a name="install-and-configure-sql-server"></a>installer et configurer SQL Server
+## <a name="install-and-configure-sql-server"></a>Installer et configurer SQL Server
 
 1. Installez et configurez des SQL Server sur les deux nœuds.  Pour obtenir des instructions détaillées, consultez [Installer SQL Server sur Linux](sql-server-linux-setup.md).
 1. Désignez un nœud comme principal et l’autre comme secondaire, à des fins de configuration. Utilisez ces termes pour le présent guide.  
@@ -77,7 +78,7 @@ La première étape consiste à configurer le système d'exploitation sur les n�
 
 1. Sur le nœud principal, arrêtez et désactivez SQL Server. 
 
-## <a name="configure-the-hosts-file"></a>Configurer le fichier hôtes
+## <a name="configure-the-hosts-file"></a>Configurer le fichier hosts
 
 Sur chaque nœud de cluster, configurez le fichier hôtes. Le fichier hôtes doit inclure l’adresse IP et le nom de chaque nœud de cluster.
 
@@ -285,7 +286,7 @@ Dans ce tutoriel, vous avez effectué les tâches suivantes.
 > [!div class="checklist"]
 > * Installer et configurer Linux
 > * Installer et configurer SQL Server
-> * Configurer le fichier hôtes
+> * Configurer le fichier hosts
 > * Configurer le stockage partagé et déplacer les fichiers de base de données
 > * Installer et configurer Pacemaker sur chaque nœud de cluster
 > * Configurer l’instance de cluster de basculement

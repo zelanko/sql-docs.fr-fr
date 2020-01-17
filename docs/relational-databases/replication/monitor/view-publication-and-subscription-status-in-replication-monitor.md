@@ -1,6 +1,7 @@
 ---
-title: Afficher l’état des publications et des abonnements dans le Moniteur de réplication | Microsoft Docs
-ms.custom: ''
+title: Afficher l’état des publications et des abonnements (Moniteur de réplication)
+description: Découvrez comment afficher l’état des publications et des abonnements à l’aide du moniteur de réplication dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,16 +23,16 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51dafccba54e66ff9f6ed9d7fd6c7e4159c8ef19
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bc233524eed394001b0b3fb087d7273c8ead8009
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770542"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322261"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Afficher l'état des publications et des abonnements dans le Moniteur de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l'état des publications et des abonnements :  
+  Le moniteur de réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l’état des publications et des abonnements :  
   
 -   L'état d'une publication est déterminé par l'état de la priorité la plus élevée de ses abonnements. Par exemple, si un abonnement à une publication comporte une erreur et qu'un autre présente un problème de performances, un état d'erreur est affiché pour la publication.  
   
@@ -64,12 +65,12 @@ ms.locfileid: "68770542"
 ## <a name="publication-status-values"></a>Valeurs d'état des publications  
  Le tableau suivant montre les valeurs d'état des publications et leurs icônes correspondantes dans l'ordre de la priorité.  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Critique pour les performances|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|OK|none|  
+|Error|![Icône d’IU : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Critique pour les performances|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d’IU : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’IU : nouvelle tentative de l’agent de réplication")|  
+|OK|Aucun|  
   
 ## <a name="subscription-status-values"></a>Valeurs d'état des abonnements  
  Les tableaux suivants montrent les valeurs d'état des abonnements et leurs icônes correspondantes dans l'ordre de la priorité. Un abonnement peut avoir deux états en même temps (par exemple, **Expire bientôt/Expiré** et **Nouvelle tentative de la commande qui a échoué**) ; l'état de haute priorité est affiché.  
@@ -78,39 +79,39 @@ ms.locfileid: "68770542"
   
 ### <a name="transactional-subscriptions"></a>Abonnements transactionnels  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Critique pour les performances|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Expire bientôt/Expiré|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Abonnement non initialisé|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|Non exécuté|![Icône d’interface utilisateur : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
-|Exécution en cours|![Icône d’interface utilisateur : agent de réplication en cours d’exécution](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icône d’interface utilisateur : agent de réplication en cours d’exécution")|  
+|Error|![Icône d’IU : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Critique pour les performances|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Expire bientôt/Expiré|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Abonnement non initialisé|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d’IU : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’IU : nouvelle tentative de l’agent de réplication")|  
+|Non exécuté|![Icône d’IU : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’IU : agent de réplication arrêté")|  
+|Exécution en cours|![Icône d’IU : agent de réplication en cours d’exécution](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icône d’IU : agent de réplication en cours d’exécution")|  
   
 ### <a name="merge-subscriptions"></a>Abonnements de fusion  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Critique pour les performances|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Fusion longue|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Expire bientôt/Expiré|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Abonnement non initialisé|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|Synchronisation|![Icône d’interface utilisateur : agent de réplication en cours d’exécution](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icône d’interface utilisateur : agent de réplication en cours d’exécution")|  
-|Sans synchronisation|![Icône d’interface utilisateur : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
+|Error|![Icône d’IU : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Critique pour les performances|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Fusion longue|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Expire bientôt/Expiré|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Abonnement non initialisé|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d’IU : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’IU : nouvelle tentative de l’agent de réplication")|  
+|Synchronisation|![Icône d’IU : agent de réplication en cours d’exécution](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icône d’IU : agent de réplication en cours d’exécution")|  
+|Sans synchronisation|![Icône d’IU : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’IU : agent de réplication arrêté")|  
   
 ### <a name="snapshot-subscriptions"></a>Abonnements d'instantanés  
   
-|État|Icône|  
+|Statut|Icône|  
 |------------|----------|  
-|Error|![Icône d’interface utilisateur : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|  
-|Expire bientôt/Expiré|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Abonnement non initialisé|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|  
-|Nouvelle tentative de la commande qui a échoué|![Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’interface utilisateur : nouvelle tentative de l’agent de réplication")|  
-|Synchronisation|![Icône d’interface utilisateur : agent de réplication en cours d’exécution](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icône d’interface utilisateur : agent de réplication en cours d’exécution")|  
-|Sans synchronisation|![Icône d’interface utilisateur : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
+|Error|![Icône d’IU : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’IU : erreur")|  
+|Expire bientôt/Expiré|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Abonnement non initialisé|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|  
+|Nouvelle tentative de la commande qui a échoué|![Icône d’IU : nouvelle tentative de l’agent de réplication](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icône d’IU : nouvelle tentative de l’agent de réplication")|  
+|Synchronisation|![Icône d’IU : agent de réplication en cours d’exécution](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icône d’IU : agent de réplication en cours d’exécution")|  
+|Sans synchronisation|![Icône d’IU : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’IU : agent de réplication arrêté")|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  

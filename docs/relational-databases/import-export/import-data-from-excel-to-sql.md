@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708139"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245271"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importer des données d’Excel vers SQL Server ou Azure SQL Database
 
@@ -57,7 +57,7 @@ Importez des données directement de fichiers Excel en effectuant les étapes de
 5. Cliquez sur l’une des options suivantes :
 
   - **Importer des données**
-  - **Exporter des données**
+  - **Exporter les données**
 
     ![Démarrer l’Assistant SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg)
 
@@ -251,7 +251,7 @@ Comme décrit précédemment dans la section [Prérequis](#prereq), vous devez e
 
 Pour plus d’informations sur l’Assistant Copie, consultez les rubriques suivantes :
 
-- [Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
+- [Assistant Data Factory Copy](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [Tutoriel : Créer un pipeline avec activité de copie à l’aide de l’Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
 
 ## <a name="adf"></a> Azure Data Factory
@@ -268,14 +268,14 @@ Pour plus d’informations sur l’utilisation de ces sources et récepteurs Dat
 
 Pour apprendre à copier des données avec Azure Data Factory, consultez les rubriques suivantes :
 
-- [Déplacer des données grâce à l’activité de copie](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
+- [Déplacer des données à l’aide de l’activité de copie](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 - [Tutoriel : Créer un pipeline avec activité de copie à l’aide du Portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
-## <a name="common-errors"></a>Erreurs fréquentes
+## <a name="common-errors"></a>Erreurs courantes
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>« Microsoft.ACE.OLEDB.12.0 » n’a pas été inscrit
 
-Cette erreur se produit car le fournisseur OLE DB n’est pas installé. Installez-le à partir de [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Veillez à installer la version 64 bits si Windows et SQL Server sont tous deux 64 bits.
+Cette erreur se produit car le fournisseur OLE DB n’est pas installé. Installez-le à partir de [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Veillez à installer la version 64 bits si Windows et SQL Server sont tous deux 64 bits.
 
 L’erreur complète est la suivante :
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossible de créer une instance du fournisseur OLE DB « Microsoft.ACE.OLEDB.12.0 » du serveur lié « (null) »
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Impossible de créer une instance du fournisseur OLE DB « Microsoft.ACE.OLEDB.12.0 » du serveur lié « (null) »
 
 Cela indique que Microsoft OLEDB n’a pas été configuré correctement. Exécutez le code Transact-SQL suivant pour résoudre ce problème :
 

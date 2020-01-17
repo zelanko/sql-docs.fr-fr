@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305278"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75224512"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Joindre SQL Server sur un hôte Linux à un domaine Active Directory
 
@@ -170,7 +170,7 @@ Procédez comme suit pour joindre un hôte SQL Server à un domaine Active Direc
 
    Le tableau suivant répertorie certains messages d’erreur que vous pouvez recevoir et des suggestions pour les résoudre :
 
-   | Message d'erreur | Recommandation |
+   | Message d’erreur | Recommandation |
    |---|---|
    | `Necessary packages are not installed` | Installez ces packages à l’aide du gestionnaire de package de votre distribution Linux avant d’exécuter à nouveau la commande de jonction de domaine. |
    | `Insufficient permissions to join the domain` | Vérifiez auprès d’un administrateur de domaine que vous disposez des autorisations suffisantes pour joindre des machines Linux à votre domaine. |
@@ -178,7 +178,7 @@ Procédez comme suit pour joindre un hôte SQL Server à un domaine Active Direc
 
    SQL Server utilise SSSD et NSS pour le mappage des comptes et des groupes d’utilisateurs aux identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution pour SQL Server pour créer des connexions AD avec succès. **realmd** effectue généralement cette opération automatiquement dans le cadre de la jonction au domaine, mais dans certains cas, vous devez le faire séparément.
 
-   Pour plus d’informations, consultez comment [configurer SSSD manuellement](https://access.redhat.com/articles/3023951) et [configurer NSS pour fonctionner avec SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Pour plus d’informations, consultez comment [configurer SSSD manuellement](https://access.redhat.com/articles/3023951) et [configurer NSS pour fonctionner avec SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Vérifiez que vous pouvez maintenant collecter des informations sur un utilisateur à partir du domaine et que vous pouvez acquérir un ticket Kerberos en tant qu’utilisateur. L’exemple suivant utilise les commandes **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) et [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) pour ce faire.
 
@@ -210,7 +210,7 @@ Vous pouvez utiliser des utilitaires tiers tels que [PBIS](https://www.beyondtru
 SQL Server n’utilise pas le code ou la bibliothèque de l’intégrateur tiers pour les requêtes relatives à AD. SQL Server interroge toujours AD à l’aide des appels de la bibliothèque OpenLDAP directement dans cette installation. Les intégrateurs tiers sont utilisés uniquement pour joindre l’hôte Linux au domaine AD et SQL Server n’a aucune communication directe avec ces utilitaires.
 
 > [!IMPORTANT]
-> Veuillez consulter les suggestions relatives à l'utilisation de l'option de configuration **mssql-conf** `network.disablesssd` dans la section **Options de configuration supplémentaires** de l’article [Utiliser l’authentification Active Directory avec SQL Server sur Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
+> Veuillez consulter les suggestions relatives à l’utilisation de l’option de configuration **mssql-conf** `network.disablesssd` dans la section **Options de configuration supplémentaires** de l’article [Utiliser l’authentification Active Directory avec SQL Server sur Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
 
 Vérifiez que votre **/etc/krb5.conf** est correctement configuré. Pour la plupart des fournisseurs Active Directory tiers, cette configuration est effectuée automatiquement. Toutefois, vérifiez que les valeurs suivantes se trouvent dans **/etc/krb5.conf** afin d’éviter tout problème futur :
 

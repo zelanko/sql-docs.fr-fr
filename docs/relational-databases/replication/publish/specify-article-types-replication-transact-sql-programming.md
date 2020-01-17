@@ -1,6 +1,7 @@
 ---
-title: Spécifier les types d’articles (programmation Transact-SQL de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Spécifier les types d’articles (procédures stockées de réplication)
+description: Utilisez les procédures stockées de réplication pour spécifier programmatiquement un type d’article lorsque vous définissez un article pour la réplication SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfa3710648e381dbd142c57180bf5395d9eee18f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3adcfa7c18259df1b063ff95f86d4f7721b45091
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904626"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321188"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Spécifier les types d'articles (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.locfileid: "72904626"
   
 2.  Pour les articles **logbased manualboth** et **logbased manualfilter** , exécutez [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) pour générer la procédure stockée de filtrage pour un article filtré horizontalement. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Pour les articles **logbased manualboth**, **logbased manualview**et **logbased manualfilter** , exécutez [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) pour générer la vue qui définit l'article filtré verticalement. Pour plus d’informations, voir [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  Pour les articles **logbased manualboth**, **logbased manualview**et **logbased manualfilter** , exécutez [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) pour générer la vue qui définit l'article filtré verticalement. Pour plus d'informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>Pour publier un article de procédure stockée, d'exécution des procédures stockées ou de fonction définie par l'utilisateur dans une publication transactionnelle ou d'instantané  
   
@@ -77,7 +78,7 @@ ms.locfileid: "72904626"
   
     -   **proc schema only** – article de procédure stockée de schéma uniquement.  
   
-    -   **proc exec** – réplique l'exécution de la procédure stockée sur tous les Abonnés de l'article. Pour plus d’informations, voir [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+    -   **proc exec** – réplique l'exécution de la procédure stockée sur tous les Abonnés de l'article. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
     -   **serializable proc exec** – réplique l'exécution de la procédure stockée uniquement si l'exécution s'effectue dans le contexte d'une transaction sérialisable. Pour plus d’informations, consultez [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   

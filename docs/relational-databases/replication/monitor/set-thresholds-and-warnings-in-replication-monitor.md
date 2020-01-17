@@ -1,6 +1,7 @@
 ---
-title: Définir des seuils et des avertissements dans le Moniteur de réplication | Microsoft Docs
-ms.custom: ''
+title: Définir des seuils et des avertissements (Moniteur de réplication)
+description: Découvrez comment activer l’affichage d’avertissements pour différentes conditions susceptibles de se produire lors de la réplication à l’aide du moniteur de réplication dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fcc0e1482d3b38a395724f090805767291b609d7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bf3d9ba88f433619a79c9f4453823e81589b4ee3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767605"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322262"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Définir des seuils et des avertissements dans le Moniteur de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l'état des publications et des abonnements. Par défaut, le Moniteur de réplication affiche des avertissements uniquement pour les abonnements non initialisés, mais vous pouvez activer les avertissements pour d'autres conditions. Il est recommandé d'activer les avertissements pour votre topologie, afin que vous soyez informés de l'état et des performances en temps voulu.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le moniteur de réplication affiche des informations sur l’état des publications et des abonnements. Par défaut, le Moniteur de réplication affiche des avertissements uniquement pour les abonnements non initialisés, mais vous pouvez activer les avertissements pour d'autres conditions. Il est recommandé d'activer les avertissements pour votre topologie, afin que vous soyez informés de l'état et des performances en temps voulu.  
   
  Quand vous activez un avertissement, vous spécifiez un seuil. Lorsque ce seuil est atteint ou dépassé, un avertissement est affiché (à moins qu'un problème plus important ne doive être affiché). L'atteinte d'un seuil déclenche un avertissement dans le Moniteur de réplication, mais également une alerte. Vous pouvez activer des avertissements pour les situations suivantes :  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68767605"
   
      Cette boîte de dialogue affiche des alertes pour tous les types de publications, y compris des alertes qui ne sont pas liées à la surveillance des seuils. Pour plus d’informations, consultez [Utiliser les alertes pour les événements des agents de réplication](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Définissez des options dans la boîte de dialogue **Propriétés de l’alerte \<nom_alerte>**  :  
+3.  Définissez les options dans la boîte de dialogue **Propriétés de l’alerte \<nom_alerte>**  :  
   
     -   Sur la page **Général** , cliquez sur **Activer**; spécifiez la base de données à laquelle l'alerte doit s'appliquer.  
   
@@ -151,7 +152,7 @@ ms.locfileid: "68767605"
   
      Cette boîte de dialogue affiche des alertes pour tous les types de publications, y compris des alertes qui ne sont pas liées à la surveillance des seuils. Pour plus d’informations, consultez [Utiliser les alertes pour les événements des agents de réplication](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Définissez des options dans la boîte de dialogue **Propriétés de l’alerte \<nom_alerte>**  :  
+3.  Définissez les options dans la boîte de dialogue **Propriétés de l’alerte \<nom_alerte>**  :  
   
     -   Sur la page **Général** , cliquez sur **Activer**; spécifiez la base de données à laquelle l'alerte doit s'appliquer.  
   

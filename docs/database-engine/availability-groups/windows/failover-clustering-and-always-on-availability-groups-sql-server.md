@@ -1,7 +1,7 @@
 ---
-title: Combiner une instance de cluster de basculement avec des groupes de disponibilité
+title: Instance de cluster de basculement avec des groupes de disponibilité
 description: Améliorez la haute disponibilité et la récupération d’urgence en combinant les fonctionnalités d’une instance de cluster de basculement SQL Server et un groupe de disponibilité Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988387"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822255"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de basculement et groupes de disponibilité Always On (SQL Server)
 
@@ -63,10 +63,10 @@ ms.locfileid: "67988387"
 |-|-------------------------|-------------------------------------------|  
 |**Utilise WSFC**|Oui|Oui|  
 |**Niveau de protection**|Instance|Base de données|  
-|**Type de stockage**|Partagés|Non partagé<br /><br /> Même si les réplicas dans un groupe de disponibilité ne partagent pas le stockage, un réplica hébergé par une instance de cluster de basculement utilise une solution de stockage partagé conforme aux exigences de cette instance de cluster de basculement. La solution de stockage est partagée uniquement par les nœuds de l'instance de cluster de basculement et pas entre les réplicas du groupe de disponibilité.|  
+|**Type de stockage**|Partagé|Non partagé<br /><br /> Même si les réplicas dans un groupe de disponibilité ne partagent pas le stockage, un réplica hébergé par une instance de cluster de basculement utilise une solution de stockage partagé conforme aux exigences de cette instance de cluster de basculement. La solution de stockage est partagée uniquement par les nœuds de l'instance de cluster de basculement et pas entre les réplicas du groupe de disponibilité.|  
 |**Solutions de stockage**|attachement direct, SAN, points de montage, SMB|Dépend du type de nœud|  
 |**Secondaires accessibles en lecture**|Non*|Oui|  
-|**Paramètres de stratégie de basculement applicables**|Quorum WSFC<br /><br /> Spécifique à l'instance de cluster de basculement<br /><br /> Paramètres du groupe de disponibilité**|Quorum WSFC<br /><br /> Paramètres du groupe de disponibilité|  
+|**Paramètres de stratégie de basculement applicables**|Quorum WSFC<br /><br /> Spécifique à l'instance de cluster de basculement<br /><br /> Paramètres du groupe de disponibilité**|Quorum WSFC<br /><br /> Paramètres de groupe de disponibilité|  
 |**Ressources basculées**|Serveur, instance et base de données|Base de données uniquement|  
   
  *Alors que les réplicas secondaires synchrones dans un groupe de disponibilité s’exécutent toujours sur leurs instances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] respectives, les nœuds secondaires dans une instance de cluster de basculement n’ont pas démarré leurs instances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] respectives et sont donc inaccessibles en lecture. Dans une instance de cluster de basculement, un nœud secondaire démarre son instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uniquement lorsque la propriété du groupe de ressources lui est transférée lors d'un basculement de l'instance de cluster de basculement. Toutefois, sur le nœud actif de l'instance de cluster de basculement, lorsqu'une base de données hébergée par l'instance de cluster de basculement appartient à un groupe de disponibilité, si le réplica de disponibilité local s'exécute comme réplica secondaire accessible en lecture, la base de données est accessible en lecture.  

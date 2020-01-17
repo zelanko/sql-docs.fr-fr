@@ -1,6 +1,7 @@
 ---
-title: Définir et modifier un filtre de lignes paramétrable pour un article de fusion | Microsoft Docs
-ms.custom: ''
+title: Définir et modifier un filtre de lignes paramétrable (Fusion)
+description: Découvrez comment définir et modifier un filtre de lignes paramétrable pour un article de publication de fusion pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 5ce5f0625cf4a57e974fe7faf9eac677a2c629db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846761"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321210"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Définir et modifier un filtre de lignes paramétrable pour un article de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +101,7 @@ ms.locfileid: "70846761"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>Pour supprimer un filtre de lignes paramétrable  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les filtres de lignes paramétrables peuvent être créés et modifiés par programme en utilisant des procédures stockées de réplication.  

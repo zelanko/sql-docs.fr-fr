@@ -1,5 +1,5 @@
 ---
-title: Spécifier un disque ou une bande comme destination de sauvegarde (SQL Server) | Microsoft Docs
+title: Spécifier une destination de sauvegarde sur disque ou bande
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3119e81a462ff163f1ee3d0df0ee334a718ddba5
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 637095ead0a7b4f35b2dc82941567ecb5b91900f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280951"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258358"
 ---
-# <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>Spécifier un disque ou une bande comme destination de sauvegarde (SQL Server)
+# <a name="specify-a-disk-or-tape-backup-destination-sql-server"></a>Spécifier une destination de sauvegarde sur disque ou bande (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment spécifier un disque ou une bande comme destination de sauvegarde dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -60,7 +60,7 @@ ms.locfileid: "70280951"
   
 #### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>Pour spécifier un disque ou une bande comme destination de sauvegarde  
   
-1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   

@@ -1,7 +1,7 @@
 ---
-title: Différences entre les modes de disponibilité pour un groupe de disponibilité
+title: Modes de disponibilité d’un groupe de disponibilité
 description: Description des différents modes de disponibilité pour un groupe de disponibilité Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934842"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241778"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Différences entre les modes de disponibilité pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ Pour plus d’informations sur l’examen de la latence de restauration par prog
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Basculement et modes de basculement &#40;Groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
+ [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

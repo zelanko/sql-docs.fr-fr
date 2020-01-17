@@ -1,5 +1,7 @@
 ---
-title: Modèles de déploiement des groupes de disponibilité Always On SQL Server
+title: Modèles de déploiement des groupes de disponibilité - SQL Server sur Linux
+description: Découvrez les configurations de déploiement prises en charge pour les groupes de disponibilité Always On SQL Server sur serveurs Linux.
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2fea849a46dea302dccba3ae8648db3654c35798
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996438"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558474"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations des groupes de disponibilité
 
@@ -121,7 +123,7 @@ La valeur par défaut pour `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. 
 - Le groupe de disponibilité a besoin d’au moins un réplica secondaire en plus du réplica principal.
 - Les réplicas de configuration uniquement ne sont pas comptabilisés dans le nombre maximal de réplicas par instance de SQL Server. L’édition standard SQL Server autorise jusqu’à trois réplicas, SQL Server Entreprise Edition en autorise jusqu’à 9.
 
-## <a name="considerations"></a>Observations
+## <a name="considerations"></a>Considérations
 
 - Il n’y a pas plus d’un réplica de configuration uniquement par groupe de disponibilité. 
 - Un réplica de configuration uniquement ne peut pas être un réplica principal.

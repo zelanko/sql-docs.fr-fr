@@ -1,7 +1,7 @@
 ---
-title: Restaurer une sauvegarde différentielle de base de données (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restauration de base de données : différentielle'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 14e12715c3722fe3278bf535b50bc749539d57ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937506"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253493"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurer une sauvegarde différentielle de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67937506"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Configuration requise](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -65,19 +65,19 @@ ms.locfileid: "67937506"
 ####  <a name="Permissions"></a> Autorisations  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-restore-a-differential-database-backup"></a>Pour restaurer une sauvegarde différentielle de base de données  
   
-1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**. Selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système**et sélectionnez une base de données système.  
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, sur **Restaurer**, puis cliquez sur **Base de données**.  
   
-4.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l'une des options suivantes :  
+4.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l’une des options suivantes :  
   
     -   **Sauvegarde de la base de données**  
   
@@ -86,13 +86,13 @@ ms.locfileid: "67937506"
     > [!NOTE]  
     >  Si la sauvegarde est prise à partir d'un serveur différent, le serveur de destination ne disposera pas des informations d'historique de sauvegarde pour la base de données spécifiée. Dans ce cas, sélectionnez **Unité** pour spécifier manuellement le fichier ou l'unité à restaurer.  
   
-    -   **Unité**  
+    -   **Appareil**  
   
          Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
-         Dans la zone de liste **Source : Unité : Base de données**, sélectionnez le nom de la base de données à restaurer.  
+         Dans la zone de liste **Source : Appareil : Base de données**, sélectionnez le nom de la base de données à restaurer.  
   
          **Remarque** Cette liste n'est disponible que lorsque **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67937506"
   
 6.  Dans la grille **Jeux de sauvegarde à restaurer** , sélectionnez les sauvegardes par la sauvegarde différentielle que vous souhaitez restaurer.  
   
-     Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer**, consultez [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer** , consultez [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
 7.  Dans la page **Options** , dans le volet **Options de restauration** , vous pouvez choisir les options suivantes si elles s'appliquent à votre situation :  
   
@@ -153,7 +153,7 @@ ms.locfileid: "67937506"
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
   
-#### <a name="a-restoring-a-differential-database-backup"></a>A. Restauration d'une sauvegarde différentielle de base de données  
+#### <a name="a-restoring-a-differential-database-backup"></a>R. Restauration d'une sauvegarde différentielle de base de données  
  Cet exemple illustre la restauration et la sauvegarde différentielle de la base de données `MyAdvWorks` .  
   
 ```sql  

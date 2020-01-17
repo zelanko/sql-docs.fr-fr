@@ -1,7 +1,7 @@
 ---
-title: Restaurer une base de données jusqu’à une transaction marquée (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Restaurer la base de données jusqu’à une transaction marquée (SSMS)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 066ca4d751e6d5d33f69bf284f5a35fb3aaa27e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e71815c79e626a1cebb60c7d5d50fda1cce132d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937587"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245077"
 ---
-# <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurer une base de données jusqu'à une transaction marquée (SQL Server Management Studio)
+# <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurer une base de données jusqu’à une transaction marquée (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Quand une base de données se trouve dans l’état de restauration, vous pouvez utiliser la boîte de dialogue **Restaurer le journal des transactions** pour restaurer la base de données jusqu’à une transaction marquée dans les sauvegardes du journal disponibles.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67937587"
   
 ### <a name="to-restore-a-marked-transaction"></a>Pour restaurer une transaction marquée  
   
-1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67937587"
     |**Description**|Description de la transaction marquée spécifiée par l'utilisateur lorsque la transaction a été validée (le cas échéant).|  
     |**LSN**|Numéro séquentiel dans le journal de la transaction marquée.|  
     |**Sauvegarde de la base de données**|Nom de la base de données où la transaction marquée a été validée.|  
-    |**Nom d'utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
+    |**Nom d’utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   

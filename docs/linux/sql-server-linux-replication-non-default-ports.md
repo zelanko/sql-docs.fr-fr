@@ -1,22 +1,24 @@
 ---
-title: Configurer les partages de dossiers de captures instantanées Réplication SQL Server sur Linux
-description: Cet article décrit comment configurer des partages de dossier de captures instantanées Réplication SQL Server sur Linux.
+title: Configurer un dossier de captures instantanées de réplication (ports autres que ceux par défaut)
+titleSuffix: SQL Server on Linux
+description: Apprenez à configurer des partages de dossier de captures instantanées avec des ports autres que ceux par défaut pour la réplication SQL Server sur Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikeray
+ms.author: mikerayW
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093185"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558592"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>Configurer la réplication avec des ports autres que ceux par défaut
+# <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Configurer la réplication avec des ports autres que ceux par défaut (SQL Server sur Linux)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,19 +25,20 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983238"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548274"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Supprime une ou plusieurs lignes d’une table ou d’une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -218,7 +219,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="examples"></a>Exemples  
   
-|Catégorie|Éléments syntaxiques proposés|  
+|Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
 |[Syntaxe de base](#BasicSyntax)|Suppression|  
 |[Limitation des lignes supprimées](#LimitRows)|WHERE • FROM • curseur •|  
@@ -228,7 +229,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ###  <a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction DELETE en utilisant la syntaxe minimale requise.  
   
-#### <a name="a-using-delete-with-no-where-clause"></a>A. Utilisation de DELETE sans clause WHERE  
+#### <a name="a-using-delete-with-no-where-clause"></a>R. Utilisation de DELETE sans clause WHERE  
  L'exemple suivant supprime toutes les lignes de la table `SalesPersonQuotaHistory` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , car aucune clause WHERE ne limite le nombre de lignes supprimées.  
   
 ```sql
@@ -240,7 +241,7 @@ GO
  Les exemples de cette section montrent comment limiter le nombre de lignes qui seront supprimées.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilisation de la clause WHERE pour supprimer un jeu de lignes  
- L'exemple suivant supprime toutes les lignes de la table `ProductCostHistory` , dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , dans lesquelles la valeur de la colonne `StandardCost` est supérieure à `1000.00`.  
+ L’exemple suivant supprime toutes les lignes de la table `ProductCostHistory` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] dans lesquelles la valeur de la colonne `StandardCost` est supérieure à `1000.00`.  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Utilisation d'un curseur pour déterminer la ligne à supprimer  
- L'exemple suivant supprime une ligne de la table `EmployeePayHistory` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en utilisant un curseur nommé `my_cursor`. La suppression est appliquée uniquement à la ligne actuellement extraite à partir du curseur.  
+ L’exemple suivant supprime une seule ligne de la table `EmployeePayHistory` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en utilisant un curseur nommé `complex_cursor`. La suppression est appliquée uniquement à la ligne actuellement extraite à partir du curseur.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -366,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Suppression de données dans une table distante en utilisant la fonction OPENQUERY  
- L'exemple suivant supprime des lignes dans une table distante en spécifiant la fonction d'ensemble de lignes [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) . Le nom de serveur lié créé dans l'exemple précédent est utilisé dans cet exemple.  
+ L’exemple suivant supprime des lignes d’une table distante en spécifiant la fonction d’ensemble de lignes [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Le nom de serveur lié créé dans l'exemple précédent est utilisé dans cet exemple.  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>O. Supprimer avec une clause WHERE
+
+Cette requête montre comment supprimer avec une clause WHERE et non avec une clause FROM.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

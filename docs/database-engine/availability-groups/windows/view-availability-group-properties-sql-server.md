@@ -1,6 +1,7 @@
 ---
-title: Afficher les propriétés d’un groupe de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Afficher les propriétés d’un groupe de disponibilité
+description: 'Voir les propriétés d’un groupe de disponibilité Always On à l’aide de SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou SQL PowerShell. '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9fb3f29746df1e88b1d0ae8bdae4e163b654e3df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013366"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821813"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Afficher les propriétés d'un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ ms.locfileid: "68013366"
   
 -   [Supprimer une base de données primaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
--   [Supprimer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+-   [Supprimer un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
  **Pour basculer manuellement un groupe de disponibilité**  
   

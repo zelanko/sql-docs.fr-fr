@@ -1,7 +1,7 @@
 ---
-title: Mécanismes du délai d’attente du contrôle d’intégrité et du délai d’expiration du bail pour les groupes de disponibilité
+title: Délai d’attente du contrôle d’intégrité et délai d’expiration du bail pour les groupes de disponibilité
 description: Mécanismes et recommandations pour les délais concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874362"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254057"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mécanismes et recommandations liés aux délais d’attente concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On 
 
@@ -55,7 +55,7 @@ Les paramètres par défaut sont optimisés pour réagir rapidement aux symptôm
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>Relation entre le délai d’expiration du cluster et le délai d’expiration du bail 
 
-La principale fonction du mécanisme de bail est d’accepter la ressource SQL Server hors connexion si le service de cluster ne peut pas communiquer avec l’instance lors de l’exécution d’un basculement vers un autre nœud. Lorsque le cluster effectue une opération hors connexion sur la ressource de cluster du groupe de disponibilité, le service de cluster effectue un appel RPC à rhs.exe afin de mettre la ressource hors connexion. La DLL de ressource utilise des procédures stockées pour indiquer à SQL Server de mettre le groupe de disponibilité hors connexion. Toutefois, les procédures stockées peuvent échouer ou expirer. L’hôte des ressources arrête également son propre thread de renouvellement de bail lors de l’appel hors connexion. Dans le cas le plus défavorable, SQL Server provoque l’expiration du bail à la moitié du délai défini (LeaseTimeout) et fait passer l’instance à l’état de résolution. Les basculements peuvent être effectués par plusieurs parties. Toutefois, il est crucial que la vue de l’état du cluster soit la même sur l’ensemble du cluster et entre les instances SQL Server. Prenons, par exemple, un scénario dans lequel l’instance principale perd la connexion avec le reste du cluster. Tous les nœuds du cluster vont détecter une défaillance au même moment en raison des valeurs de délai d’expiration du cluster, mais seul le nœud principal pourra interagir avec l’instance principale de SQL Server afin de la forcer à abandonner le rôle principal. 
+La principale fonction du mécanisme de bail est d’accepter la ressource SQL Server hors connexion si le service de cluster ne peut pas communiquer avec l’instance lors de l’exécution d’un basculement vers un autre nœud. Lorsque le cluster effectue une opération hors connexion sur la ressource de cluster du groupe de disponibilité, le service de cluster effectue un appel RPC à rhs.exe afin de mettre la ressource hors connexion. La DLL de ressource utilise des procédures stockées pour indiquer à SQL Server de mettre le groupe de disponibilité hors connexion. Toutefois, les procédures stockées peuvent échouer ou expirer. L’hôte des ressources arrête également son propre thread de renouvellement de bail lors de l’appel hors connexion. Dans le cas le plus défavorable, SQL Server provoque l’expiration du bail à la moitié du délai défini \* (LeaseTimeout) et fait passer l’instance à l’état de résolution. Les basculements peuvent être effectués par plusieurs parties. Toutefois, il est crucial que la vue de l’état du cluster soit la même sur l’ensemble du cluster et entre les instances SQL Server. Prenons, par exemple, un scénario dans lequel l’instance principale perd la connexion avec le reste du cluster. Tous les nœuds du cluster vont détecter une défaillance au même moment en raison des valeurs de délai d’expiration du cluster, mais seul le nœud principal pourra interagir avec l’instance principale de SQL Server afin de la forcer à abandonner le rôle principal. 
 
 Pour le nœud principal, le service de cluster a perdu le quorum et met fin à sa propre exécution. Le service de cluster émet un appel RPC vers l’hôte des ressources pour mettre fin au processus. Cet appel de fin d’exécution est chargé de mettre hors connexion le groupe de disponibilité de l’instance SQL Server. Cet appel hors connexion est effectué via T-SQL, mais ne peut pas garantir la connexion entre SQL et la DLL de ressource. 
 
@@ -63,13 +63,13 @@ Pour le reste du cluster, il n’existe aucun réplica principal. Il va donc vot
 
 Le délai d’expiration du bail empêche le syndrome Split-Brain en cas d’erreurs de communication. Même si toutes les communications échouent, le processus de la DLL de ressource s’arrête et ne peut plus mettre à jour le bail. Une fois que le bail expire, il se charge de mettre hors connexion le groupe de disponibilité. L’instance SQL Server doit être informée qu’elle n’héberge plus le réplica principal avant que le cluster n’en établisse un nouveau. Étant donné que le reste du cluster, qui est chargé de choisir un nouveau réplica principal, n’a aucun moyen de se coordonner avec l’actuel réplica principal, les valeurs de délai d’expiration empêchent qu’un nouveau réplica principal ne soit établi avant que l’actuel réplica ne se mette hors connexion. 
 
-Lorsque le cluster bascule, l’instance SQL Server qui héberge l’ancien réplica principal doit passer à l’état de résolution avant que le nouveau réplica principal ne soit en ligne. Le thread de bail SQL Server a toujours une durée de vie égale à la moitié du délai d’expiration du bail (LeaseTimeout), car chaque fois que le bail est renouvelé, la nouvelle durée de vie est remplacée par `LeaseInterval` ou par la moitié du délai d’expiration du bail (LeaseTimeout). Si le service de cluster ou de l’hôte des ressources s’interrompt ou cesse de s’exécuter sans signaler l’événement d’arrêt de bail, le cluster déclare le nœud principal comme mort au bout de `SameSubnetThreshold`\ `SameSubnetDelay` millisecondes. Pendant ce délai, le bail doit expirer pour garantir la mise hors connexion du réplica principal. Max time-to-live pour le délai de bail étant ½ \* `LeaseTimeout`, ½ \* `LeaseTimeout` doit être inférieur à `SameSubnetThreshold` \* `SameSubnetDelay`. 
+Lorsque le cluster bascule, l’instance SQL Server qui héberge l’ancien réplica principal doit passer à l’état de résolution avant que le nouveau réplica principal ne soit en ligne. Le thread de bail SQL Server a toujours une durée de vie égale à la moitié du délai d’expiration du bail \* (LeaseTimeout), car chaque fois que le bail est renouvelé, la nouvelle durée de vie est remplacée par `LeaseInterval` ou par la moitié du délai d’expiration du bail \* (LeaseTimeout). Si le service de cluster ou de l’hôte des ressources s’interrompt ou cesse de s’exécuter sans signaler l’événement d’arrêt de bail, le cluster déclare le nœud principal comme mort au bout de `SameSubnetThreshold`\ `SameSubnetDelay` millisecondes. Pendant ce délai, le bail doit expirer pour garantir la mise hors connexion du réplica principal. Max time-to-live pour le délai d’expiration du bail étant ½ \* `LeaseTimeout`, ½ \* `LeaseTimeout` doit être inférieur à `SameSubnetThreshold` \* `SameSubnetDelay`. 
 
 `SameSubnetThreshold \<= CrossSubnetThreshold` et `SameSubnetDelay \<= CrossSubnetDelay` doit avoir la valeur True sur tous les clusters SQL Server. 
 
 ### <a name="health-check-timeout-operation"></a>Délai d’attente du contrôle d’intégrité 
 
-Le délai d’attente du contrôle d’intégrité est plus souple, car aucun autre mécanisme de basculement ne dépend directement de lui. La valeur par défaut de 30 secondes comprend un intervalle `sp_server_diagnostics` égal à 10 secondes, une valeur minimale de 15 secondes pour le délai d’attente et un intervalle de 5 secondes. En règle générale, l’intervalle de mise à jour `sp_server_diagnositcs` est toujours égal à un tiers de `HealthCheckTimeout`. Lorsque la DLL de ressource ne reçoit pas de nouveau jeu de données d’intégrité à un certain intervalle, elle continue d’utiliser les données d’intégrité de l’intervalle précédent pour déterminer l’état d’intégrité du groupe de disponibilité et de l’instance actuels. Le fait d’augmenter la valeur du délai d’attente du contrôle d’intégrité permet au réplica principal d’être plus tolérant à la sursollicitation du processeur, ce qui peut empêcher `sp_server_diagnostics` de fournir de nouvelles données à chaque intervalle. Cela signifie, toutefois, qu’il va s’appuyer plus longtemps sur des contrôles d’intégrité obsolètes. Quelle que soit la valeur du délai d’attente, lorsque vous recevez des données indiquant que le réplica n’est pas sain, le prochain appel à `IsAlive` retourne que l’instance n’est pas saine et que le service de cluster s’apprête à démarrer un basculement. 
+Le délai d’attente du contrôle d’intégrité est plus souple, car aucun autre mécanisme de basculement ne dépend directement de lui. La valeur par défaut de 30 secondes comprend un intervalle `sp_server_diagnostics` égal à 10 secondes, une valeur minimale de 15 secondes pour le délai d’attente et un intervalle de 5 secondes. En règle générale, l’intervalle de mise à jour `sp_server_diagnositcs` est toujours égal à un 1/3 \* `HealthCheckTimeout`. Lorsque la DLL de ressource ne reçoit pas de nouveau jeu de données d’intégrité à un certain intervalle, elle continue d’utiliser les données d’intégrité de l’intervalle précédent pour déterminer l’état d’intégrité du groupe de disponibilité et de l’instance actuels. Le fait d’augmenter la valeur du délai d’attente du contrôle d’intégrité permet au réplica principal d’être plus tolérant à la sursollicitation du processeur, ce qui peut empêcher `sp_server_diagnostics` de fournir de nouvelles données à chaque intervalle. Cela signifie, toutefois, qu’il va s’appuyer plus longtemps sur des contrôles d’intégrité obsolètes. Quelle que soit la valeur du délai d’attente, lorsque vous recevez des données indiquant que le réplica n’est pas sain, le prochain appel à `IsAlive` retourne que l’instance n’est pas saine et que le service de cluster s’apprête à démarrer un basculement. 
 
 Le niveau de condition d’échec du groupe de disponibilité modifie les conditions d’échec pour le contrôle d’intégrité. Pour tous les niveaux d’échec, si l’élément Groupe de disponibilité est déclaré comme non sain par `sp_server_diagnostics`, le contrôle d’intégrité échoue. Chaque niveau hérite de toutes les conditions d’échec des niveaux inférieurs à lui. 
 
@@ -130,7 +130,7 @@ Le mécanisme de bail est contrôlé par une seule valeur qui est spécifique à
 
 Deux valeurs définissent le contrôle d’intégrité Always On : FailureConditionLevel et HealthCheckTimeout. FailureConditionLevel indique le niveau de tolérance pour les conditions d’échec signalées par `sp_server_diagnostics`, et HealthCheckTimeout définit le délai pendant lequel la DLL de ressource peut fonctionner sans recevoir de mise à jour de `sp_server_diagnostics`. L’intervalle de mise à jour pour `sp_server_diagnostics` est toujours égal à un tiers de HealthCheckTimeout. 
 
-Pour configurer le niveau de condition de basculement, utilisez l’option `FAILURE_CONDITION_LEVEL = <n>` de l’instruction `CREATE` ou `ALTER` `AVAILABILITY GROUP`, où `<n>` est un entier compris entre 1 et 5. La commande suivante définit le niveau de condition d’échec sur 1 pour le groupe de disponibilité « AG1 » : 
+Pour configurer le niveau de condition de basculement, utilisez l’option `FAILURE_CONDITION_LEVEL = <n>` de l’instruction `CREATE` ou `ALTER` `AVAILABILITY GROUP`, où `<n>` est un entier compris entre 1 et 5. La commande suivante définit le niveau de condition d’échec sur 1 pour le groupe de disponibilité « AG1 » : 
 
 ```sql
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 
@@ -153,7 +153,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | Paramètre de délai d’attente | Fonction | Entre | Utilisations | IsAlive et LooksAlive | Causes | Résultat 
+ | Paramètre de délai d’attente | Objectif | Entre | Utilisations | IsAlive et LooksAlive | Causes | Résultat 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Délai d’expiration du bail </br> **Par défaut : 20000** | Empêcher le Split-Brain | Principal et cluster </br> (HADR) | [Objets d’événement Windows](/windows/desktop/Sync/event-objects)| Utilisé dans les deux | Absence de réponse du système d’exploitation, mémoire virtuelle faible, pagination de la plage de travail, génération d’un vidage sur incident, UC invariable, WSFC hors service (perte de quorum) | Ressource de groupe de disponibilité hors connexion-en ligne, basculement |  
  | Délai d’expiration de session </br> **Par défaut : 10000** | Informer de l’existence d’un problème de communication entre le principal et le secondaire | Secondaire et principal </br> (HADR) | [Sockets TCP (messages envoyés via le point de terminaison DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Utilisé dans aucun des deux | Problèmes de communication </br> réseau sur le secondaire - hors service, absence de réponse du système d’exploitation, contention de ressources | Secondaire - DÉCONNECTÉ | 

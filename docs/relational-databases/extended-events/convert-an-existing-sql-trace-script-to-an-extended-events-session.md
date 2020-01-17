@@ -1,6 +1,5 @@
 ---
-title: Convertir un script Trace SQL existant en session d’événements étendus | Microsoft Docs
-ms.custom: ''
+title: Convertir un script Trace SQL en session d’événements étendus
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9763f3c25edeb68a7a2b06f3664aae6b79b7d38
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b41947e50cd2cdd283af77a8d3ee4168f208f57e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909409"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255753"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script Trace SQL existant en session d'événements étendus
 
@@ -83,7 +83,7 @@ ms.locfileid: "72909409"
   
     2.  Pour chaque classe d'événements Trace SQL que vous avez identifiée à l'étape précédente, recherchez le nom d'événement Événements étendus équivalent. (Si vous n’êtes pas sûr du nom de l’événement équivalent, utilisez la requête dans la rubrique [Consulter les Événements étendus équivalents aux classes d’événements Trace SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md).)  
   
-    3.  Utilisez la requête suivante pour identifier les champs de données corrects à utiliser pour les événements que vous avez identifiés à l'étape précédente. La requête affiche les champs de données d'événements étendus dans la colonne « event_field ». Dans la requête, remplacez *<event_name>* par le nom d’un événement que vous avez spécifié à l’étape précédente.  
+    3.  Utilisez la requête suivante pour identifier les champs de données corrects à utiliser pour les événements que vous avez identifiés à l'étape précédente. La requête affiche les champs de données d'événements étendus dans la colonne « event_field ». Dans la requête, remplacez *<event_name>* par le nom d’un événement que vous avez spécifié à l’étape précédente.  
   
         ```sql
         SELECT xp.name package_name, xe.name event_name  
@@ -252,6 +252,6 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Consulter les Événements étendus équivalents aux classes d’événements Trace SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+ [Consulter les événements étendus équivalents aux classes d’événements Trace SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

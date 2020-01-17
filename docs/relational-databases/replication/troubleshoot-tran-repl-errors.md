@@ -1,6 +1,7 @@
 ---
-title: 'Outil de résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server | Microsoft Docs'
-ms.custom: ''
+title: Rechercher des erreurs avec la réplication transactionnelle
+description: Explique comment rechercher et identifier les erreurs liées à la réplication transactionnelle, et décrit la méthodologie de résolution des problèmes de réplication.
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907291"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321936"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Outil de résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,17 +57,17 @@ L’Agent d’instantané génère l’instantané et l’écrit dans le dossier
 
 1. Affichez l’état de votre Agent d’instantané :
 
-    A. Dans l’Explorateur d’objets, développez le nœud **Publications locales** sous **Réplication**.
+    a. Dans l’Explorateur d’objets, développez le nœud **Publications locales** sous **Réplication**.
 
-    B. Cliquez avec le bouton droit sur votre publication **AdvWorksProductTrans** > **Afficher l’état de l’Agent d’instantané**. 
+    b. Cliquez avec le bouton droit sur votre publication **AdvWorksProductTrans** > **Afficher l’état de l’Agent d’instantané**. 
 
     ![Commande « Afficher l’état de l’Agent d’instantané » sur le menu contextuel](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. Si une erreur est signalée dans l’état de l’Agent d’instantané, vous pouvez trouver plus de détails dans l’historique des travaux de l’Agent d’instantané :
 
-    A. Développez **SQL Server Agent** dans l’Explorateur d’objets, puis ouvrez le moniteur d’activité des travaux. 
+    a. Développez **SQL Server Agent** dans l’Explorateur d’objets, puis ouvrez le moniteur d’activité des travaux. 
 
-    B. Triez par **Catégorie** et identifiez l’Agent d’instantané dans la catégorie **REPL-Instantané**.
+    b. Triez par **Catégorie** et identifiez l’Agent d’instantané dans la catégorie **REPL-Instantané**.
 
     c. Cliquez avec le bouton droit sur l’Agent d’instantané, puis choisissez **Afficher l’historique**. 
 
@@ -114,9 +115,9 @@ L’Agent de lecture du journal se connecte à votre base de données du serveur
 
 6. L’erreur se produit généralement quand le propriétaire de la base de données du serveur de publication n’est pas défini correctement. Ceci peut se produire quand une base de données est restaurée. Pour vérifier cela :
 
-    A. Développez **Bases de données** dans l’Explorateur d’objets.
+    a. Développez **Bases de données** dans l’Explorateur d’objets.
 
-    B. Cliquez avec le bouton droit sur **AdventureWorks2012** > **Propriétés**. 
+    b. Cliquez avec le bouton droit sur **AdventureWorks2012** > **Propriétés**. 
 
     c. Vérifiez qu’un propriétaire existe sous la page **Fichiers**. Si cette zone est vide, ceci est la cause probable de votre problème. 
 
@@ -133,9 +134,9 @@ L’Agent de lecture du journal se connecte à votre base de données du serveur
 
 8. Il peut être nécessaire de redémarrer l’Agent de lecture du journal.
 
-    A. Développez le nœud **SQL Server Agent** dans l’Explorateur d’objets, puis ouvrez le moniteur d’activité des travaux.
+    a. Développez le nœud **SQL Server Agent** dans l’Explorateur d’objets, puis ouvrez le moniteur d’activité des travaux.
 
-    B. Triez par **Catégorie** et identifiez l’Agent de lecture du journal dans la catégorie **REPL-LogReader**. 
+    b. Triez par **Catégorie** et identifiez l’Agent de lecture du journal dans la catégorie **REPL-LogReader**. 
 
     c. Cliquez avec le bouton droit sur le travail **Agent de lecture du journal** et sélectionnez **Démarrer le travail à l’étape**. 
 
@@ -163,9 +164,9 @@ L’Agent de distribution recherche des données dans la base de données de dis
 
 3. L’erreur indique que l’Agent de distribution fait une nouvelle tentative. Pour trouver plus d’informations, consultez l’historique de l’Agent de Distribution : 
 
-    A. Développez **SQL Server Agent** dans Explorateur d’objets > **Moniteur d’activité des travaux**. 
+    a. Développez **SQL Server Agent** dans Explorateur d’objets > **Moniteur d’activité des travaux**. 
     
-    B. Triez les travaux par **Catégorie**. 
+    b. Triez les travaux par **Catégorie**. 
 
     c. Identifiez l’Agent de distribution dans la catégorie **REPL-Distribution**. Cliquez avec le bouton droit sur l’agent, puis sélectionnez **Afficher l’historique**.
 
@@ -180,9 +181,9 @@ L’Agent de distribution recherche des données dans la base de données de dis
 
 6. Cette erreur indique que le mot de passe utilisé par l’Agent de distribution est incorrect. Pour la résoudre :
 
-    A. Développez le nœud **Réplication** dans l’Explorateur d’objets.
+    a. Développez le nœud **Réplication** dans l’Explorateur d’objets.
     
-    B. Cliquez avec le bouton droit sur l’abonnement > **Propriétés**.
+    b. Cliquez avec le bouton droit sur l’abonnement > **Propriétés**.
     
     c. Sélectionnez les points de suspension (...) à côté de **Compte de processus de l’agent**, puis modifiez le mot de passe.
 

@@ -1,6 +1,7 @@
 ---
-title: Résoudre une opération d’ajout de fichier ayant échoué (Groupes de disponibilité AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Échec de l’opération d’ajout de fichier pour un groupe de disponibilité
+decription: Possible resolutions for failing to add a file to an availability group.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07561af07d0a682b4fa99076cc774e0c3fbb2590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013809"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251227"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>Résoudre une opération d’ajout de fichier ayant échoué (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68013809"
 > [!NOTE]  
 >  Nous recommandons, si possible, que le chemin d'accès au fichier (y compris la lettre de lecteur) d'une base de données secondaire donnée soit identique au chemin d'accès de la base de données primaire correspondante.  
   
-## <a name="problem-resolution"></a>Dépannage  
+## <a name="problem-resolution"></a>Résolution des problèmes  
  Pour résoudre ce problème, le propriétaire de la base de données doit effectuer les opérations suivantes :  
   
 1.  Supprimer la base de données secondaire du groupe de disponibilité. Pour plus d’informations, consultez [Supprimer une base de données secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md).  

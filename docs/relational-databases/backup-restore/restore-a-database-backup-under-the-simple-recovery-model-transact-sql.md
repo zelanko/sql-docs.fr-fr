@@ -1,7 +1,7 @@
 ---
-title: Restaurer une sauvegarde de base de données en mode de récupération simple (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restauration de base de données : mode de récupération simple (Transact-SQL)'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e130868d8df6537bef9c969cfa860b95242f185b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 835f5c6a4571359f750862d3487817a7e11f6503
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937650"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244226"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Restaurer une sauvegarde de base de données en mode de récupération simple (Transact-SQL)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment restaurer une sauvegarde complète de base de données.  
@@ -31,11 +32,11 @@ ms.locfileid: "67937650"
 > [!IMPORTANT]  
 >  L'administrateur système qui restaure la sauvegarde complète de base de données doit être la seule personne à utiliser la base de données à restaurer.  
   
-## <a name="prerequisites-and-recommendations"></a>Conditions préalables et recommandations  
+## <a name="prerequisites-and-recommendations"></a>Prérequis et recommandations  
   
 -   Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
--   Pour des raisons de sécurité, nous vous recommandons de ne pas attacher ni restaurer des bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou tout autre code défini par l’utilisateur, de la base de données.  
+-   Pour des raisons de sécurité, nous vous recommandons de ne pas attacher ni restaurer des bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
   
 ## <a name="database-compatibility-level-after-upgrade"></a>Niveau de compatibilité des bases de données après une mise à niveau  
  Les niveaux de compatibilité des bases de données **tempdb**, **model**, **msdb** et **Resource** sont définis sur le niveau de compatibilité [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] après la mise à niveau. La base de données système **master** conserve le niveau de compatibilité qu’elle avait avant la mise à niveau, sauf si ce niveau était inférieur à 100. Si le niveau de compatibilité de la base de données **master** était inférieur à 100 avant la mise à niveau, il est défini sur 100 une fois celle-ci effectuée.  

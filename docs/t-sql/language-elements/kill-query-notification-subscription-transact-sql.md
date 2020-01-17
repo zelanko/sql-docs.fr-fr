@@ -1,6 +1,8 @@
 ---
-title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: KILL QUERY NOTIFICATION SUBSCRIPTION
+description: Supprimer les abonnements aux notifications de requêtes d’une instance. Cette instruction peut supprimer un abonnement spécifique, ou bien tous les abonnements.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -20,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f70759864eaf2c91a0b5bf2bf59461bec09937b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122300"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251061"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime les abonnements aux notifications de requêtes de l'instance. Cette instruction peut supprimer un abonnement spécifique, ou bien tous les abonnements.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +63,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>A. Suppression de tous les abonnements aux notifications de requêtes de l'instance  
+### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>R. Suppression de tous les abonnements aux notifications de requêtes de l'instance  
  L'exemple suivant supprime tous les abonnements aux notifications de requêtes de l'instance.  
   
 ```  

@@ -1,7 +1,7 @@
 ---
-title: Évaluer l’intégrité du groupe de disponibilité à l’aide de stratégies de groupe
+title: Utiliser des stratégies de groupe pour l’intégrité des groupes de disponibilité
 description: Découvrez comment afficher les stratégies système des groupes de disponibilité qui sont utilisées par le tableau de bord Always On pour fournir des informations sur l’intégrité d’un groupe de disponibilité.
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fadf5ccccf60114bc6068cfe4a79dc70bca3ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a48450322a8552720a119ea325ed720669fe5a8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935006"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245650"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>Évaluer l’intégrité du groupe de disponibilité Always On à l’aide de stratégies de groupe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

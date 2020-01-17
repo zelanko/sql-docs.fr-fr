@@ -1,6 +1,6 @@
 ---
-title: Configurer le SMB de stockage d’instances de cluster de basculement - SQL Server sur Linux
-description: ''
+title: Configurer le stockage SMB pour une instance de cluster de basculement - SQL Server sur Linux
+description: Apprenez à configurer une instance de cluster de basculement avec le stockage SMB pour SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032326"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558577"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - SMB - SQL Server sur Linux
 
@@ -70,7 +70,7 @@ Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
       su mssql
       ```
       
-   1. Créez un répertoire temporaire pour stocker les données et les fichiers journaux de SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   1. Créez un répertoire temporaire pour stocker les données et les fichiers journaux SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite.
       
       ```bash
       mkdir <TempDir>
@@ -110,7 +110,7 @@ Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
       ls /var/opt/mssql/data
       ```
       
-   1. Tapez quitter pour revenir à l’utilisateur racine.
+   1. Tapez Quitter pour revenir à l’utilisateur racine.
       
    1. Montez le partage SMB dans le dossier de données de SQL Server. Vous ne recevrez pas d’accusé de réception en cas de réussite. Cet exemple illustre la syntaxe de connexion à un partage SMB 3.0 basé sur Windows Server.
       
@@ -156,9 +156,9 @@ Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
       ls /var/opt/mssql/data
       ```
       
-   1. Entrez quitter pour ne pas être mssql 
+   1. Entrez Quitter pour ne pas être mssql 
       
-   1. Entrez quitter pour ne pas être la racine
+   1. Entrez Quitter pour ne pas être la racine
    
    1. Démarrez SQL Server. Si tout a été copié correctement et que la sécurité est appliquée correctement, SQL Server doit s’afficher comme étant démarré.
       
@@ -232,7 +232,7 @@ Voici quelques conseils et remarques pour l’utilisation réussie de SMB :
       
    1. Vérifiez que le montage a réussi en émettant un montage sans commutateurs.
    
-   1. Tapez quitter pour ne plus être le superutilisateur.
+   1. Tapez Quitter pour ne plus être le superutilisateur.
    
    1. Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, en changer le contexte, vérifier que les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
    

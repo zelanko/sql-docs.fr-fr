@@ -1,6 +1,7 @@
 ---
-title: Nettoyer les métadonnées de fusion (programmation Transact-SQL de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Nettoyer les métadonnées de fusion (procédures stockées de réplication)
+description: Nettoyez programmatiquement les données dans les tables de réplication de fusion à l'aide de procédures stockées de réplication
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 972e250e97e8f94b3de3a453137c21cc9fc099c2
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 50a5b71edd908c3c676f036e7f61197835e49360
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710444"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322086"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>Nettoyer les métadonnées de fusion (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

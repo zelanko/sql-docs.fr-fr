@@ -12,12 +12,12 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54e282e7d68c23837c1865f1257ba7e159644d26
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595534"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492004"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>Développer des applications avec Always Encrypted avec enclaves sécurisées
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -40,6 +40,9 @@ Les pilotes clients suivants prennent en charge Always Encrypted avec enclaves s
 - Fournisseur de données .NET Framework pour SQL Server dans .NET Framework 4.7.2 ou supérieur. 
     - Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).
     - Pour obtenir un tutoriel pas à pas, consultez [Tutoriel : Développer une application .NET Framework avec Always Encrypted avec enclaves sécurisées](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- Fournisseur de données Microsoft .NET pour SQL Server dans .NET Framework 4.6 ou ultérieur et .NET Core 2.1 ou ultérieur. 
+    - Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec le fournisseur de données Microsoft .NET pour SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md).
+    - Pour obtenir un tutoriel pas à pas, consultez [Tutoriel : Développer une application .NET en utilisant Always Encrypted avec enclaves sécurisées](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - Microsoft ODBC Driver for SQL Server, version 17.4 ou ultérieure. 
     - Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md). 
     - Pour plus d’informations sur la façon d’activer les calculs d’enclave pour une connexion de base de données en utilisant ODBC, consultez la section [Activation d’Always Encrypted avec enclaves sécurisées](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves).

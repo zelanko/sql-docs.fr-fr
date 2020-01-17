@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586778"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325491"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ Comme mentionné, dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l
 
 Le tableau suivant présente les types de page utilisés dans les fichiers de données d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-|Type de page | Sommaire |
+|Type de page | Contents |
 |-------|-------|
-|Data |Lignes de données avec toutes les données, sauf text, ntext, image, nvarchar(max), varchar(max), varbinary(max) et xml, lorsque le texte dans la ligne est défini sur ACTIVÉ (ON). |
+|Données |Lignes de données avec toutes les données, sauf text, ntext, image, nvarchar(max), varchar(max), varbinary(max) et xml, lorsque le texte dans la ligne est défini sur ACTIVÉ (ON). |
 |Index |Des entrées d'index. |
 |Texte/image |Types de données d’objets volumineux : (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) et données xml) <br> Colonnes de longueur variable lorsque la ligne de données dépasse 8 Ko : (varchar, nvarchar, varbinary et sql_variant) |
 |GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) |Informations précisant si ces extensions sont allouées. |
@@ -54,7 +54,7 @@ Le tableau suivant présente les types de page utilisés dans les fichiers de do
 > [!NOTE]
 > Les fichiers journaux ne contiennent pas de pages mais une série d'enregistrements de fichiers journaux.
 
-Les lignes de données sont placées séquentiellement sur la page, immédiatement à partir de l'en-tête. Une table de décalage de lignes débute à la fin de la page et chaque table de décalage de lignes contient une entrée pour chaque ligne de la page. Chaque entrée enregistre la distance à laquelle se trouve le premier octet de la ligne par rapport au début de la page. Les entrées de la table de décalage de lignes sont inversées par rapport à l'ordre des lignes sur la page.
+Les lignes de données sont placées séquentiellement sur la page, immédiatement à partir de l'en-tête. Une table de décalage de lignes débute à la fin de la page et chaque table de décalage de lignes contient une entrée pour chaque ligne de la page. Chaque entrée de décalage de lignes enregistre la distance à laquelle se trouve le premier octet de la ligne par rapport au début de la page. Ainsi, la fonction de la table de décalage de lignes consiste à aider SQL Server à trouver des lignes dans une page très rapidement. Les entrées de la table de décalage de lignes sont inversées par rapport à l'ordre des lignes sur la page.
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ Cette opération est réalisée chaque fois qu'une opération d'insertion ou de 
 
 ##### <a name="row-overflow-considerations"></a>Observations relatives au dépassement de ligne 
 
-Quand vous combinez des colonnes de type varchar, nvarchar, varbinary, sql_variant ou CLR défini par l’utilisateur qui dépassent 8 060 octets par ligne, tenez compte des points suivants : 
+Comme mentionné précédemment, une ligne ne peut pas résider dans plusieurs pages et peut provoquer un dépassement si la taille combinée des champs de type de données de longueur variable dépasse la limite de 8 060 octets. À titre d’illustration, une table peut être créée avec deux colonnes : une colonne varchar (7000) et une autre colonne varchar (2000). Individuellement, aucune colonne ne dépasse 8 060 octets, mais combinées, elles peuvent le faire si la largeur totale de chaque colonne est remplie. SQL Server peut déplacer dynamiquement la colonne de longueur variable varchar(7000) vers des pages de l’unité d’allocation ROW_OVERFLOW_DATA. Quand vous combinez des colonnes de type varchar, nvarchar, varbinary, sql_variant ou CLR défini par l’utilisateur qui dépassent 8 060 octets par ligne, tenez compte des points suivants :
 -  Les enregistrements volumineux sont automatiquement déplacés vers une autre page dès lors que les enregistrements s'allongent suite à une opération de mise à jour. Les opérations de mise à jour qui raccourcissent les enregistrements peuvent provoquer le rapatriement d'enregistrements vers la page initiale dans l'unité d'allocation IN_ROW_DATA. L’interrogation et d’autres opérations de sélection, telles que les tris ou les jointures portant sur des enregistrements volumineux qui contiennent des données de dépassement de ligne, augmentent le temps de traitement car ces enregistrements sont traités de façon synchrone, et non de manière asynchrone.   
    Par conséquent, quand vous concevez une table comportant plusieurs colonnes de type varchar, nvarchar, varbinary, sql_variant ou CLR défini par l’utilisateur, évaluez le pourcentage de lignes susceptibles de dépasser et la fréquence à laquelle ces données de dépassement sont susceptibles d’être interrogées. S'il est probable qu'il y ait de fréquentes requêtes sur de nombreuses lignes de données de dépassement de ligne, pensez à normaliser la table de manière à ce que certaines colonnes soient déplacées vers une autre table. Celle-ci peut ensuite être interrogée lors d'une opération JOIN asynchrone. 
 -  La longueur des différentes colonnes ne doit pas dépasser la limite de 8 000 octets par colonne de type varchar, nvarchar, varbinary, sql_variant et CLR défini par l’utilisateur. Seule la combinaison de leurs longueurs peut dépasser la limite de 8 060 octets par ligne d'une table.
@@ -98,7 +98,7 @@ Jusqu’à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, [!INCLUDE[ssN
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gestion des allocations des extensions et de l'espace libre 
 
-Les structures de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui gèrent les allocations des extensions et l’espace libre ont une structure relativement simple. Elles présentent les avantages suivants : 
+Les structures de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui gèrent les allocations des extensions et l’espace libre ont une structure relativement simple. Cette solution offre les avantages suivants : 
 
 * Les informations sur l'espace libre sont très compactes, d'où un nombre de pages d'informations relativement faible.   
   La vitesse s'en trouve augmentée grâce à la réduction du nombre de lectures sur le disque nécessaires à la récupération des informations d'allocation et à l'augmentation de la possibilité de garder en mémoire l'affectation des pages, ce qui réduit encore le nombre de lectures. 
@@ -136,7 +136,7 @@ Les pages **PFS (Page Free Space)** enregistrent quand une page individuelle a �
 
 Une fois une extension allouée à un objet, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les pages PFS pour enregistrer les pages de l'extension qui sont allouées ou libres. Ces informations sont alors utilisées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour l'allocation de toute nouvelle page. La quantité d'espace libre d'une page n'est conservée que pour les pages de segment, de texte et d'image. Ces informations sont exploitées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour rechercher une page disposant de suffisamment d'espace libre pour accueillir une nouvelle ligne. Pour les index, le suivi de l'espace libre des pages n'est pas nécessaire étant donné que le point d'insertion d'une nouvelle ligne est défini par les valeurs de clés de l'index.
 
-Une page PFS vient juste après la page d’en-tête d’un fichier de données (ID de page 1). Elle est suivie d’une page GAM (ID de page 2), puis d’une page SGAM (ID de page 3). Il y a une nouvelle page PFS approximativement 8 000 pages après la première page PFS, et des pages PFS supplémentaires toutes les 8 000 pages. Il y a une autre page GAM 64 000 extensions après la première page GAM (page 2), une autre page SGAM 64 000 extensions après la première page SGAM (page 3) et des pages GAM et SGAM supplémentaires toutes les 64 000 extensions. L’illustration suivante indique l’ordre des pages utilisées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour l’allocation et la gestion des extensions.
+Une nouvelle page PFS, GAM ou SGAM est ajoutée au fichier de données pour chaque plage supplémentaire dont elle effectue le suivi. Ainsi, il y a une nouvelle page PFS 8 088 pages après la première page PFS, et des pages PFS supplémentaires toutes les 8 088 pages. À titre d’illustration, l’ID de page 1 est une page PFS, l’ID de page 8088 est une page PFS, l’ID de page 16176 est une page PFS, et ainsi de suite. Il y a une nouvelle page GAM 64 000 étendues après la première page GAM, qui effectue le suivi des 64 000 étendues qui la suivent. La séquence continue toutes les 64 000 étendues. De même, il y a une nouvelle page SGAM 64 000 étendues après la première page SGAM et des pages SGAM supplémentaires toutes les 64 000 étendues. L’illustration suivante indique l’ordre des pages utilisées par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pour l’allocation et la gestion des extensions.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -192,4 +192,4 @@ L'intervalle entre les pages DCM et les pages BCM est le même que l'intervalle 
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Segments &#40;tables sans index cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
 [Lecture de pages](../relational-databases/reading-pages.md)   
-[Écriture de pages](../relational-databases/writing-pages.md)   
+[Écritures de pages](../relational-databases/writing-pages.md)   

@@ -1,6 +1,7 @@
 ---
-title: 'Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica) | Microsoft Docs'
-ms.custom: ''
+title: 'Assistant Groupe de disponibilité : Page Spécifier les réplicas'
+description: Décrit les options de la page « Spécifier les réplicas » de l’Assistant Nouveau groupe de disponibilité dans SSMS (SQL Server Management Studio).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 190ff2f2f7fe510722f73c03bdc4beba18273d2b
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176215"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822564"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "70176215"
  **Non**  
  Aucune connexion directe n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s'agit du paramètre par défaut.  
   
- **Intention de lecture uniquement**  
+ **Tentative de lecture uniquement**  
  Seules les connexions en lecture seule directes sont autorisées aux bases de données secondaires de ce réplica. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
   
  **Oui**  
@@ -66,7 +67,7 @@ ms.locfileid: "70176215"
  Cliquez pour ajouter un réplica secondaire au groupe de disponibilité.  
   
  **Ajouter un réplica Azure**  
- Cliquez pour créer une machine virtuelle Azure qui exécute un réplica secondaire dans le groupe de disponibilité. Cette option s'applique uniquement pour un groupe de disponibilité dans un environnement hybride qui contient des réplicas locaux. Pour plus d’informations, consultez [Haute disponibilité et récupération d’urgence pour SQL Server dans les machines virtuelles Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Cliquez pour créer une machine virtuelle Azure qui exécute un réplica secondaire dans le groupe de disponibilité. Cette option s’applique uniquement à un groupe de disponibilité dans un environnement hybride qui contient des réplicas locaux. Pour plus d’informations, consultez [Haute disponibilité et récupération d’urgence pour SQL Server dans les machines virtuelles Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Supprimer le réplica**  
  Cliquez pour supprimer le réplica secondaire sélectionné du groupe de disponibilité.  
@@ -115,14 +116,14 @@ ms.locfileid: "70176215"
  **Secondaire uniquement**  
  Spécifie que les sauvegardes ne doivent jamais être effectuées sur le réplica principal. Si le réplica principal est le seul réplica en ligne, la sauvegarde ne doit pas avoir lieu.  
   
- **Principal**  
+ **Primaire**  
  Spécifie que les sauvegardes doivent toujours avoir lieu sur le réplica principal. Cette option est utile si vous avez besoin de fonctionnalités de sauvegarde, telles que la création de sauvegardes différentielles, qui ne sont pas prises en charge lorsque la sauvegarde est exécutée sur un réplica secondaire.  
   
  **Tout réplica**  
  Spécifie que vous préférez que les travaux de sauvegarde ignorent le rôle des réplicas de disponibilité lorsque vous choisissez le réplica pour effectuer les sauvegardes. Notez que les travaux de sauvegarde peuvent évaluer d'autres facteurs tels que la priorité de sauvegarde de chaque réplica de disponibilité en association avec son état opérationnel et son état connecté.  
   
 > [!IMPORTANT]  
->  Il n'y a aucune contrainte du paramètre de préférence de sauvegarde. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Il n'y a aucune contrainte du paramètre de préférence de sauvegarde. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Grille des priorités de sauvegarde de réplica  
  Utilisez la grille **Priorités de sauvegarde de réplica** pour spécifier les priorités de sauvegarde pour chacun des réplicas du groupe de disponibilité. Cette grille comporte les colonnes suivantes :  
@@ -131,7 +132,7 @@ ms.locfileid: "70176215"
  Affiche le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica de disponibilité.  
   
  **Priorité de sauvegarde (Minimale=1, Maximale=100)**  
- Attribuez la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. La valeur par défaut est 50. Vous pouvez sélectionner n'importe quel autre entier dans la plage 0..100. 1 indique la priorité la plus faible, 100 la priorité la plus élevée. Si vous avez défini **Priorité de sauvegarde** sur 1, le réplica de disponibilité est choisi pour l'exécution des sauvegardes uniquement si aucun réplica de disponibilité ayant une priorité plus élevée n'est actuellement disponible.  
+ Attribuez la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. La valeur par défaut est 50. Vous pouvez sélectionner n'importe quel autre entier dans la plage 0..100. 1 indique la priorité la plus faible, 100 la priorité la plus élevée. Si vous avez défini **Priorité de sauvegarde** sur 1, le réplica de disponibilité est choisi pour l’exécution des sauvegardes uniquement si aucun réplica de disponibilité ayant une priorité plus élevée n’est actuellement disponible.  
   
  **Exclure le réplica**  
  Pour que ce réplica de disponibilité ne soit jamais choisi pour effectuer des sauvegardes. Cela est utile, par exemple, pour un réplica de disponibilité distant sur lequel vous ne souhaitez jamais basculer de sauvegardes.  
@@ -163,7 +164,7 @@ ms.locfileid: "70176215"
  **Adresse IP statique**  
  Indiquez si vous souhaitez que l'écouteur écoute sur plusieurs sous-réseaux. Pour utiliser le mode réseau IP statique, un écouteur de groupe de disponibilité doit écouter sur chaque sous-réseau qui héberge un réplica de disponibilité pour le groupe de disponibilité. Pour chaque sous-réseau, cliquez sur **Ajouter** pour sélectionner une adresse de sous-réseau et spécifier une adresse IP.  
   
- Si l’option **Adresse IP statique** est sélectionnée comme mode réseau (il s’agit de la sélection par défaut), une grille affiche les colonnes **Sous-réseau** et **Adresse IP** , et les boutons associés **Ajouter** et **Supprimer** sont affichés. Notez que la grille est vide tant que vous n'avez pas ajouté le premier sous-réseau.  
+ Si l’option **Adresse IP statique** est sélectionnée comme mode réseau (il s’agit de la sélection par défaut), une grille affiche les colonnes **Sous-réseau** et **Adresse IP** , et les boutons associés **Ajouter** et **Supprimer** sont affichés. La grille est vide tant que vous n’avez pas ajouté le premier sous-réseau.  
   
  Colonne**Sous-réseau**  
  Affiche l'adresse de sous-réseau que vous avez sélectionnée pour chaque sous-réseau ajouté pour l'écouteur.  
@@ -174,7 +175,7 @@ ms.locfileid: "70176215"
  **Ajouter**  
  Cliquez pour ajouter un sous-réseau à cet écouteur. Cela ouvre la boîte de dialogue **Ajouter une adresse IP** . Pour plus d’informations, consultez la rubrique d’aide [Boîte de dialogue Ajouter une adresse IP &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer le sous-réseau actuellement sélectionné dans la grille.  
   
  **DHCP**  
@@ -211,6 +212,6 @@ ms.locfileid: "70176215"
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

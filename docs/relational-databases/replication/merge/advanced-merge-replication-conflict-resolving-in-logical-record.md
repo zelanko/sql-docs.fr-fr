@@ -1,6 +1,7 @@
 ---
-title: Détection et résolution des conflits dans les enregistrements logiques | Microsoft Docs
-ms.custom: ''
+title: Détecter et résoudre les conflits dans les enregistrements logiques (Fusion)
+description: Découvrez les différentes combinaisons des approches possibles de détection et de résolution des conflits quand vous utilisez des enregistrements logiques avec la réplication de fusion.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d222370b5e5ced1b2157a5f02f8eb4c7f44bb5e
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033319"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321576"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflit de réplication de fusion avancée - Résolution dans les enregistrements logiques
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

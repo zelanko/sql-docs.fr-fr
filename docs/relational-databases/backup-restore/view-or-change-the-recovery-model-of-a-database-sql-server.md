@@ -1,7 +1,7 @@
 ---
-title: Afficher ou modifier le mode de récupération d’une base de données (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/10/2019
+title: Définir le mode de récupération de base de données
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908810"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254054"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908810"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 
--   [Avant](back-up-a-transaction-log-sql-server.md) **mode de récupération complète ou en mode de récupération utilisant les journaux de transactions** , [sauvegardez le journal des transactions](recovery-models-sql-server.md).  
+-   [Sauvegardez le journal des transactions](back-up-a-transaction-log-sql-server.md) **avant** de quitter le [mode de récupération complète ou mode de récupération utilisant les journaux de transactions](recovery-models-sql-server.md).  
   
 -   La récupération jusqu'à une date et heure n'est pas possible dans le mode de récupération utilisant les journaux de transactions. Si vous exécutez des transactions en mode de récupération utilisant les journaux de transactions, pouvant nécessiter une restauration du journal des transactions, ces transactions peuvent être exposées à des pertes de données. Pour optimiser la possibilité de récupérer les données dans un scénario de récupération après sinistre, passez au mode de récupération utilisant les journaux de transactions dans les conditions suivantes :  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72908810"
   
      Si ces deux conditions sont satisfaites, vous ne serez pas exposé à des pertes de données lors d'une restauration du journal des transactions sauvegardé en mode de récupération utilisant les journaux de transactions.  
   
-**Remarque :** Si vous adoptez le mode de récupération complète pendant une opération en bloc, la journalisation des opérations en bloc passe de la journalisation minimale à la journalisation complète, et inversement.  
+**Remarque** Si vous adoptez le mode de récupération complète pendant une opération en bloc, la journalisation des opérations en bloc passe de la journalisation minimale à la journalisation complète, et inversement.  
   
 ###  <a name="Security"></a> Autorisations requises  
    Nécessite l'autorisation ALTER sur la base de données.  
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Créer un travail](../../ssms/agent/create-a-job.md)  
   
--   [Activer ou désactiver un travail](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   

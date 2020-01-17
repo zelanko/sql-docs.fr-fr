@@ -1,6 +1,7 @@
 ---
-title: Afficher et résoudre les conflits de données pour les publications de fusion | Microsoft Docs
-ms.custom: ''
+title: Afficher et résoudre les conflits de données (Fusion)
+description: Découvrez comment afficher et résoudre les conflits de données pour une publication de fusion dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907786"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321886"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Résolution de conflit pour la réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "72907786"
   
 ## <a name="resolve-conflicts"></a>Résoudre les conflits  
   
-1.  Connectez-vous au serveur de publication (ou à l'Abonné, le cas échéant) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]puis développez le nœud du serveur.  
+1.  Connectez-vous au serveur de publication (ou à l’Abonné, le cas échéant) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur.  
   
 2.  Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .  
   
@@ -89,9 +90,9 @@ Lorsqu'un conflit est résolu dans une réplication de fusion, les données de l
   
     |Valeur @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
-    |**publisher** (serveur de publication)|1|0|  
+    |**publisher**|1|0|  
     |**subscriber** (Abonné)|0|1|  
-    |**both** (les deux)|1|1|  
+    |**les deux**|1|1|  
   
 2.  Dans la base de données de publication sur le serveur de publication ou dans la base de données d'abonnement de l'Abonné, exécutez [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Affectez une valeur à `@publication` afin de retourner uniquement des informations sur les conflits pour les articles qui appartiennent à une publication spécifique. Des informations sur les tables de conflits sont alors retournées pour les articles présentant des conflits. Notez la valeur de **conflict_table** pour tout article qui vous intéresse. Si la valeur de **conflict_table** d'un article est NULL, seuls des conflits de suppression se sont produits dans cet article.  
   

@@ -1,7 +1,7 @@
 ---
-title: Déterminer la cause possible des problèmes de connectivité entre des réplicas de disponibilité
+title: Causes possibles des problèmes de connectivité entre des réplicas de disponibilité
 description: Cette rubrique décrit les différentes causes possibles d’un échec de connexion entre des réplicas membres d’un groupe de disponibilité Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874531"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235652"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>Déterminer la cause possible des problèmes de connectivité entre des réplicas de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +102,6 @@ Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](.
 -   Interroger **session_timeout** dans [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

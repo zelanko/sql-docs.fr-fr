@@ -1,6 +1,7 @@
 ---
-title: Réplication SQL Server, boîte de dialogue Propriétés de la publication | Microsoft Docs
-ms.custom: ''
+title: Propriétés de la publication, boîte de dialogue
+description: Décrit les pages disponibles dans la boîte de dialogue Propriétés de la publication dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,12 +22,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4edfe83d19a0db5c15c767e5d94cf7de993d1fe8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0124efa2f34cc0c329376d7e3dc3f83b3d38cf85
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769984"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321350"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés de la publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ Cette page décrit les pages disponibles dans la boîte de dialogue Propriétés
  La page **Général** de la boîte de dialogue **Propriétés de la publication** contient des informations générales sur la publication, notamment le nom, la description et la stratégie d'expiration d'abonnement.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Nom de la publication (en lecture seule).  
   
  **Sauvegarde de la base de données**  
@@ -123,7 +124,7 @@ Pour accroître au maximum les performances de votre application et réduire le 
  **Ajouter**  
  Permet d'ajouter une nouvelle entrée à la liste. Vous ne pouvez ajouter que les noms de connexion, de compte ou de groupe déjà définis aussi bien sur le serveur de publication que le serveur de distribution. Ils sont par ailleurs définis sur ces deux serveurs si les comptes du domaine sont utilisés ou si des comptes locaux ont été créés sur les deux serveurs.  
   
- **Supprimer**  
+ **Remove**  
  Supprime de la liste l'entrée sélectionnée.  
   
  **Supprimer tout**  
@@ -136,7 +137,7 @@ Pour accroître au maximum les performances de votre application et réduire le 
     > [!NOTE]  
     >  Les modifications des paramètres FTP nécessitent de générer un nouvel instantané.  
   
--   Définissez les propriétés de synchronisation Web de la réplication de fusion sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures qui permet de synchroniser les abonnements sur HTTPS (Secure Hypertext Transfer Protocol). Pour utiliser la synchronisation Web, vous devez configurer un serveur IIS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services). Pour plus d’informations, consultez [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+-   Définissez les propriétés de synchronisation Web de la réplication de fusion sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures qui permet de synchroniser les abonnements sur HTTPS (Secure Hypertext Transfer Protocol). Pour utiliser la synchronisation Web, vous devez configurer un serveur IIS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services). Pour plus d’informations, voir [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
 ### <a name="options"></a>Options  
  **Accéder aux fichiers d'instantanés via FTP**  
@@ -166,7 +167,7 @@ Pour accroître au maximum les performances de votre application et réduire le 
 ## <a name="data-partitions"></a>Partitions de données
 Partitions de données  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
-  La page **Partitions de données** de la boîte de dialogue **Propriétés de la publication** permet de définir des partitions de données pour les publications de fusion qui utilisent le filtrage paramétré. Après avoir défini les partitions, vous pouvez générer des instantanés pour fournir différents jeux de données initiaux pour différents abonnés en fonction des propriétés de connexion (connexion et/ou nom d'ordinateur) des abonnés. Vous pouvez également permettre aux abonnés de demander la distribution et la génération d'instantanés s'ils ne disposent pas d'un instantané pour leur partition lorsqu'ils se synchronisent pour la première fois. Pour plus d'informations, voir [Créer un instantané d'une publication de fusion avec des filtres paramétrés](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  La page **Partitions de données** de la boîte de dialogue **Propriétés de la publication** permet de définir des partitions de données pour les publications de fusion qui utilisent le filtrage paramétré. Après avoir défini les partitions, vous pouvez générer des instantanés pour fournir différents jeux de données initiaux pour différents abonnés en fonction des propriétés de connexion (connexion et/ou nom d'ordinateur) des abonnés. Vous pouvez également permettre aux abonnés de demander la distribution et la génération d'instantanés s'ils ne disposent pas d'un instantané pour leur partition lorsqu'ils se synchronisent pour la première fois. Pour plus d'informations, voir [Créer un instantané d’une publication de fusion avec des filtres paramétrés](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Options  
  **Ajouter**  
@@ -187,8 +188,8 @@ Partitions de données
  **Définir automatiquement une partition et générer un instantané si nécessaire lorsqu'un nouvel abonné essaie de se synchroniser**  
  Sélectionnez cette option si vous voulez permettre aux abonnés de demander la génération et l'application d'instantanés. Les abonnés peuvent avoir besoin de cette option s'ils ne disposent pas d'un instantané pour leur partition lorsqu'ils se synchronisent pour la première fois.  
 
-## <a name="snapshot"></a>Snapshot
-Snapshot  
+## <a name="snapshot"></a>Instantané
+Instantané  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   La page **Instantané** de la boîte de dialogue **Propriétés de la publication** permet de définir un format d'instantané, l'emplacement d'un dossier d'instantanés et des scripts avant et après l'application d'instantané. Le dossier d'instantanés doit être défini comme partage et disposer des autorisations suffisantes pour les agents qui lisent et écrivent des fichiers dans le dossier. Pour plus d’informations sur une sécurisation appropriée du dossier, consultez [Sécuriser le dossier d’instantanés](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -199,7 +200,7 @@ Snapshot
  **Format d'instantané**  
  Sélectionnez le mode natif ou le mode caractère pour le format d'instantané.  
   
--   Sélectionnez **SQL Server natif - tous les Abonnés doivent être des serveurs qui exécutent SQL Server** si tous les abonnés sont des instances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autres que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Le format natif d'instantané fournit les meilleures performances.    
+-   Sélectionnez **SQL Server natif - tous les Abonnés doivent être des serveurs qui exécutent SQL Server** si tous les Abonnés sont des instances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autres que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Le format natif d'instantané fournit les meilleures performances.    
 -   Sélectionnez **Caractère - obligatoire si un serveur de publication ou un Abonné n'exécute pas SQL Server** si des abonnés exécutent [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou sont des abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .    
  **Emplacement des fichiers d'instantané**  
  Sélectionnez l'emplacement des fichiers d'instantané. Vous pouvez les stocker dans l'emplacement par défaut et dans un emplacement différent, ou seulement dans un emplacement différent. Les fichiers stockés dans un emplacement différent peuvent être compressés.  

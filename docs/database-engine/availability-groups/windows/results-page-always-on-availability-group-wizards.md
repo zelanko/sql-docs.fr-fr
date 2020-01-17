@@ -1,5 +1,6 @@
 ---
-title: Page Résultats (Assistants Groupe de disponibilité Always On) | Microsoft Docs
+title: Page Résultats (Assistants de groupe de disponibilité Always On)
+description: Décrit les options de la page « Résultats » de l’Assistant Groupe de disponibilité Always On dans l’interface graphique utilisateur de SQL Server Management Studio.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014241"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235445"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Page Résultats (Assistants de groupe de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,16 +30,16 @@ ms.locfileid: "68014241"
 ##  <a name="PageOptions"></a> Options de la page Résultats  
  La grille **Résumé** comporte les colonnes suivantes :  
   
- **Name**  
+ **Nom**  
  Affiche une expression qui décrit une opération spécifique.  
   
- **Result**  
+ **Résultat**  
  Pour chaque étape terminée, affiche l'un des textes de lien hypertexte suivants.  
   
 |Résultats|Description|  
 |------------|-----------------|  
-|**Erreur**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
-|**Réussi**|Indique que l'étape de validation s'est terminée avec succès.|  
+|**Error**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
+|**Success**|Indique que l'étape de validation s'est terminée avec succès.|  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -51,6 +52,6 @@ ms.locfileid: "68014241"
 -   [Utiliser l’Assistant Basculer le groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Sécurité du transport - Mise en miroir de bases de données - Groupes de disponibilité Always On | Microsoft Docs
-ms.custom: ''
+title: 'Sécurité du transport : Groupes de disponibilité et mise en miroir de bases de données'
+description: Découvrez comment sécuriser le transport des messages échangés entre les bases de données participant à un groupe de disponibilité Always On ou à une session de mise en miroir de bases de données hébergée sur SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047981"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252748"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Sécurité du transport - Mise en miroir de bases de données - Groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68047981"
 ### <a name="certificates"></a>Certificats  
  Dans certaines situations, par exemple lorsque les instances de serveur ne se trouvent pas dans des domaines approuvés ou que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution en tant que service local, l'authentification Windows n'est pas disponible. Dans ces cas, ce ne sont pas des informations d'identification utilisateur, mais des certificats, qui sont nécessaires pour authentifier les demandes de connexion. Le point de terminaison de mise en miroir de chaque instance de serveur doit être configuré avec son propre certificat créé localement.  
   
- La méthode de chiffrement est établie lorsque le certificat est créé. Pour plus d’informations, consultez [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Gérez avec précaution les certificats que vous utilisez.  
+ La méthode de chiffrement est établie lorsque le certificat est créé. Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Gérez avec précaution les certificats que vous utilisez.  
   
  Une instance de serveur utilise la clé privée de son propre certificat pour établir son identité lors de la configuration d'une connexion. L'instance de serveur qui reçoit la demande de connexion utilise la clé publique du certificat de l'émetteur pour authentifier l'identité de celui-ci. Par exemple, considérons deux instances de serveur, en l'occurrence Serveur_A et Serveur_B. Serveur_A utilise sa clé privée pour chiffrer l'en-tête de connexion avant d'envoyer une demande de connexion à Serveur_B. Serveur_B utilise la clé publique du certificat de Serveur_A pour déchiffrer l'en-tête de connexion. Si l'en-tête déchiffré est correct, Serveur_B sait que l'en-tête a été chiffré par Serveur_A et la connexion est authentifiée. Si l'en-tête déchiffré est incorrect, Serveur_B sait que la demande de connexion n'est pas authentique et refuse la connexion.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68047981"
   
 |valeur ALGORITHM|Description|  
 |---------------------|-----------------|  
-|RC4|Indique que le point de terminaison doit utiliser l'algorithme RC4. Il s'agit du paramètre par défaut.<br /><br /> <strong>\*\* Avertissement \*\*</strong> L’algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.|  
+|RC4|Indique que le point de terminaison doit utiliser l'algorithme RC4. Il s’agit de la valeur par défaut.<br /><br /> <strong>\*\* Avertissement \*\*</strong> L’algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.|  
 |AES|Indique que le point de terminaison doit utiliser l'algorithme AES.|  
 |AES RC4|Indique que les deux points de terminaison négocieront un algorithme de chiffrement avec ce point de terminaison, en donnant la préférence à l'algorithme AES.|  
 |RC4 AES|Indique que les deux points de terminaison négocieront un algorithme de chiffrement avec ce point de terminaison, en donnant la préférence à l'algorithme RC4.|  
@@ -107,7 +108,7 @@ ms.locfileid: "68047981"
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
- [Résolution des problèmes de configuration de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Résoudre les problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [Résoudre des problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

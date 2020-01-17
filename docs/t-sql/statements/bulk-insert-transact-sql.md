@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252014"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249852"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "72252014"
 
 Importe un fichier de données dans une table ou vue de base de données dans un format spécifié par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -96,11 +96,11 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et Azure SQL Database.
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et Azure SQL Database.
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, le data_file peut être dans le Stockage Blob Azure. Dans ce cas, vous devez spécifier l’option **data_source_name**. Pour obtenir un exemple, consultez [Importation de données à partir d’un fichier dans Stockage Blob Azure](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 **'** _data_source_name_ **'** 
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et Azure SQL Database.
@@ -151,7 +151,7 @@ DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widen
 ERRORFILE **='** _file_name_ **'**  : Spécifie le fichier utilisé pour collecter les lignes comportant des erreurs de mise en forme et impossibles à convertir en un ensemble de lignes OLE DB. Ces lignes sont copiées « en l'état » du fichier de données vers ce fichier d'erreur.
 
 Le fichier d'erreur est créé lors de l'exécution de la commande. Une erreur se produit si le fichier existe déjà. De plus, un fichier de contrôle portant l'extension .ERROR.txt est créé. Il fait référence à chacune des lignes du fichier d'erreur et propose un diagnostic. Dès que les erreurs ont été corrigées, les données peuvent être chargées.
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` peut se trouver dans Stockage Blob Azure.
 
 'errorfile_data_source_name' **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -177,8 +177,7 @@ KEEPNULLS : Spécifie que lors l’importation en bloc, les colonnes vides doiv
 
 KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ : Spécifie le nombre approximatif de kilo-octets (Ko) de données par lot sous la forme *kilobytes_per_batch*. Par défaut, KILOBYTES_PER_BATCH est inconnu. Pour plus d'informations sur les performances, consultez la section « Notes » plus loin dans cette rubrique.
 
-LASTROW **=** _dernière_ligne_
-Numéro de la dernière ligne à charger. La valeur par défaut est 0, c'est-à-dire la dernière ligne du fichier de données spécifié.
+LASTROW **=** _last_row_ : Spécifie le numéro de la dernière ligne à charger. La valeur par défaut est 0, c'est-à-dire la dernière ligne du fichier de données spécifié.
 
 MAXERRORS **=** _max_errors_ : Spécifie le nombre maximal d’erreurs de syntaxe autorisées dans les données avant l’annulation de l’importation en bloc. Chaque ligne ne pouvant pas être importée par l'opération d'importation en bloc est ignorée et compte comme une erreur. Si *max_errors* n’est pas spécifié, la valeur par défaut est de 10.
 
@@ -218,7 +217,7 @@ FORMATFILE **=** '_format_file_path_' : Spécifie le chemin complet d’un fich
 - Les délimiteurs de colonne sont différents.
 - Le format des données présente d'autres changements. Les fichiers de format sont généralement créés au moyen de l’utilitaire **bcp**, puis modifiés, au besoin, à l’aide d’un éditeur de texte. Pour plus d’informations, consultez [Utilitaire bcp](../../tools/bcp-utility.md) et [Créer un fichier de format](../../relational-databases/import-export/create-a-format-file-sql-server.md).
 
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et Azure SQL Database.
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 et Azure SQL Database.
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path peut être dans Stockage Blob Azure.
 
 FIELDTERMINATOR **='** _field_terminator_ **'**  : Spécifie la marque de fin de champ à utiliser pour les fichiers de données de type **char** et **widechar**. La marque de fin de champ par défaut est le caractère de tabulation (\t). Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
@@ -279,13 +278,13 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows, mais il peut lire dans Stockage Blob Azure.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Types de données pour l'importation et l'exportation en bloc de documents SQLXML
 
 Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format :
 
-|Type de données|Effet|
+|Type de données|Résultat|
 |---------------|------------|
 |SQLCHAR ou SQLVARCHAR|Les données sont envoyées dans la page de codes du client ou dans la page de codes impliquée par le classement. Le résultat est le même que si vous définissiez la propriété DATAFILETYPE **='char'** sans spécifier de fichier de format.|
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode. Le résultat est le même que si vous définissiez la propriété DATAFILETYPE **= 'widechar'** sans spécifier de fichier de format.|
@@ -355,7 +354,7 @@ Requiert les autorisations INSERT et ADMINISTER BULK OPERATIONS. Dans Azure SQL 
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. Importation des données d'un fichier à l'aide du caractère (|)
+### <a name="a-using-pipes-to-import-data-from-a-file"></a>R. Importation des données d'un fichier à l'aide du caractère (|)
 
 L'exemple suivant importe des informations détaillées de commande dans la table `AdventureWorks2012.Sales.SalesOrderDetail`, à partir du fichier de données spécifié en utilisant le caractère `|` comme marque de fin de champ et `|\n` comme marque de fin de ligne.
 
@@ -370,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. Utilisation de l'argument FIRE_TRIGGERS
 
@@ -388,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Utilisation du retour à la ligne comme délimiteur de ligne
 
@@ -406,7 +405,7 @@ EXEC(@bulk_cmd);
 > En raison de la manière dont Microsoft Windows traite les fichiers texte **(\n**, est remplacé automatiquement par **\r\n)** .
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 ### <a name="d-specifying-a-code-page"></a>D. Spécification d’une page de codes
 
@@ -423,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importation de données d’un fichier CSV
 
@@ -440,7 +439,7 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importation de données à partir d’un fichier dans Stockage Blob Azure
 
@@ -471,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
+> Azure SQL Database prend uniquement en charge la lecture à partir du stockage Blob Azure.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importation de données à partir d’un fichier dans Stockage Blob Azure et spécification d’un fichier d’erreurs
 

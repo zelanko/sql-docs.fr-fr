@@ -1,6 +1,8 @@
 ---
-title: DENY - Refuser des autorisations sur un principal de base de données (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY - Autorisations sur un principal de base de données
+description: Refusez les autorisations sur un utilisateur de base de données, un rôle de base de données ou un rôle d’application.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982523"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244579"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY – refus d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "73982523"
   Permet de refuser des autorisations sur un utilisateur de base de données, un rôle de base de données ou un rôle d'application dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -150,7 +152,7 @@ DENY permission [ ,...n ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. Refus de l'autorisation CONTROL sur un utilisateur à un autre utilisateur  
+### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>R. Refus de l'autorisation CONTROL sur un utilisateur à un autre utilisateur  
  Dans l'exemple ci-dessous, l'autorisation `CONTROL` sur l'utilisateur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`Wanida` est refusée à l'utilisateur `RolandX`.  
   
 ```  
@@ -170,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Refus de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
- Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est refusée au rôle d'application [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
+ Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est refusée au rôle d'application [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`AccountsPayable17`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

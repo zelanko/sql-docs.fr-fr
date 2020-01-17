@@ -1,6 +1,7 @@
 ---
-title: Interrompre une base de données de disponibilité (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Mettre en suspens une base de données de disponibilité
+description: Découvrez comment mettre en suspens le déplacement des données d’une base de données d’un groupe de disponibilité Always On à l’aide de SSMS (SQL Server Management Studio), T-SQL (Transact-SQL) ou PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517957"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251276"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Interrompre une base de données de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "72517957"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   

@@ -1,6 +1,7 @@
 ---
-title: Mesurer la latence et valider les connexions pour la réplication transactionnelle | Microsoft Docs
-ms.custom: ''
+title: Mesurer la latence et valider les connexions (Transactionnel)
+description: Découvrez comment mesurer la latence et valider les connexions pour une publication de transaction dans SQL Server en utilisant le moniteur de réplication dans SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) ou Replication Management Objects (RMO).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711021"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321848"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,15 +58,15 @@ ms.locfileid: "71711021"
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  Les jetons de suivi peuvent également être utiles lors de la suspension d'un système, qui consiste à arrêter toute l'activité pour vérifier que tous les nœuds ont reçu les changements en cours. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Pour utiliser les jetons de suivi, vous devez utiliser certaines versions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Pour utiliser les jetons de suivi, vous avez besoin de certaines versions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   Le serveur de distribution doit être [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure.  
   
 -   Le serveur de publication doit être [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure, ou un serveur de publication Oracle.  
   
--   Pour les abonnements par envoi de données, les statistiques de jetons de suivi sont rassemblées à partir du serveur de publication, du serveur de distribution et des Abonnés si l'Abonné exécute [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou version ultérieure.  
+-   Pour les abonnements par envoi de données, les statistiques de jetons de suivi sont collectées à partir du serveur de publication, du serveur de distribution et des Abonnés si l’Abonné exécute [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou une version ultérieure.  
   
--   Pour les abonnements par extraction de données, les statistiques de jetons de suivi sont rassemblées uniquement à partir des Abonnés si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 7.0 ou version ultérieure. Si l'Abonné exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], les statistiques ne sont rassemblées qu'à partir du serveur de publication et du serveur de distribution.  
+-   Pour les abonnements par extraction de données, les statistiques de jetons de suivi sont rassemblées uniquement à partir des Abonnés si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 7.0 ou version ultérieure. Si l’Abonné exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], les statistiques sont collectées uniquement à partir du serveur de publication et du serveur de distribution.  
   
  Il existe aussi d'autres problèmes et restrictions à connaître :  
   
@@ -140,7 +141,7 @@ ms.locfileid: "71711021"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
@@ -152,7 +153,7 @@ ms.locfileid: "71711021"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
@@ -166,7 +167,7 @@ ms.locfileid: "71711021"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   

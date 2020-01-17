@@ -1,6 +1,6 @@
 ---
-title: Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server | Microsoft Docs
-ms.custom: ''
+title: 'Planifier l’adoption de l’OLTP en mémoire '
+ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2aaee2db975d9632c1f13a664a6ad2939afe20b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021809"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412545"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Cet article décrit la manière dont l’adoption des fonctionnalités de mémoi
 
 
 
-## <a name="a-adoption-of-in-memory-oltp-features"></a>A. Adoption des fonctionnalités OLTP en mémoire
+## <a name="a-adoption-of-in-memory-oltp-features"></a>R. Adoption des fonctionnalités OLTP en mémoire
 
 
 Les sous-sections suivantes décrivent les facteurs que vous devez prendre en compte lorsque vous envisagez d’adopter et d’implémenter des fonctionnalités en mémoire. De nombreuses explications sont disponibles dans l’article suivant :
@@ -39,9 +39,9 @@ Les sous-sections suivantes décrivent les facteurs que vous devez prendre en co
 
 L’un des prérequis pour utiliser les fonctionnalités en mémoire peut concerner l’édition ou le niveau de service du produit SQL. Pour plus d’informations sur les prérequis, consultez :
 
-- [Conditions requises pour l'utilisation des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
+- [Conditions requises pour l’utilisation des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
     - [Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-    - [Recommandations concernant le niveau de tarification de SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+    - [Recommandations relatives aux niveaux tarifaires des bases de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
 
 
 ### <a name="a2-forecast-the-amount-of-active-memory"></a>A.2 Prévoir la quantité de mémoire active
@@ -59,7 +59,7 @@ Une table optimisée en mémoire qui contient 200 Go de données nécessite plus
 Dans le cas d’une base de données hébergée dans le service cloud Azure SQL Database, le niveau de service que vous choisissez a un impact sur la quantité de mémoire active que votre base de données est autorisée à consommer. Vous devez prévoir de surveiller l’utilisation de la mémoire de votre base de données à l’aide d’une alerte. Pour plus d’informations, consultez :
 
 - Passer en revue les limites de stockage OLTP en mémoire pour votre [niveau tarifaire](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
-- [Surveiller le stockage OLTP en mémoire](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- [Surveiller le stockage OLTP In-Memory](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variables de table optimisées en mémoire
 
@@ -95,8 +95,8 @@ L’une des méthodes de conversion d’une table basée sur disque en table opt
 
 L’outil Conseiller d’optimisation de la mémoire peut générer un script permettant d’implémenter la conversion d’une table basée sur disque en une table optimisée en mémoire. Cet outil est installé avec SQL Server Data Tools (SSDT).
 
-- [Conseiller d'optimisation de la mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Conseil d’optimisation par mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
+- [Télécharger la dernière version de SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>Fichier .dacpac
@@ -113,7 +113,7 @@ Vous utilisez des fichiers .dacpac dans le contexte d’un projet Visual Studio 
 
 Pour savoir si les fonctionnalités OLTP en mémoire peuvent améliorer les performances de votre application, consultez :
 
-- [OLTP en mémoire (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 
 
@@ -302,6 +302,6 @@ Vous pouvez renforcer vos scripts Transact-SQL par rapport à une possible erreu
 
 ## <a name="related-links"></a>Liens connexes
 
-- [OLTP en mémoire (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 

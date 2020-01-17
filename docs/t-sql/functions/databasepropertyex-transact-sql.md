@@ -20,19 +20,19 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982174"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256098"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Pour une base de données spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette fonction retourne le paramètre actuel de l’option ou de la propriété de base de données spécifiée.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,8 +55,8 @@ Expression spécifiant le nom de la propriété de base de données à retourner
 |Propriété|Description|Valeur retournée|  
 |---|---|---|
 |Classement|Nom du classement par défaut de la base de données|Nom du classement<br /><br /> NULL : la base de données n’est pas démarrée.<br /><br /> Type de données de base : **nvarchar(128)**|  
-|ComparisonStyle|Style de comparaison Windows du classement. Pour générer une bitmap pour la valeur ComparisonStyle terminée, utilisez les valeurs de style suivantes :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131072<br /><br /> <br /><br /> Par exemple, la valeur par défaut 196609 est le résultat de la combinaison des options permettant d'ignorer la casse, le type de caractères Kana et la largeur.|Retourne le style de comparaison.<br /><br /> Renvoie 0 pour tous les classements binaires.<br /><br /> Type de données de base : **int**|  
-|Édition|Édition de la base de données ou couche de service.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Usage général<br /><br /> Critique pour l’entreprise<br /><br /> Simple<br /><br /> Standard<br /><br /> Premium<br /><br /> Système (pour la base de données master)<br /><br /> NULL : la base de données n’est pas démarrée.<br /><br /> Type de données de base : **nvarchar**(64)|  
+|ComparisonStyle|Style de comparaison Windows du classement. Pour générer une bitmap pour la valeur ComparisonStyle terminée, utilisez les valeurs de style suivantes :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131 072<br /><br /> <br /><br /> Par exemple, la valeur par défaut 196609 est le résultat de la combinaison des options permettant d'ignorer la casse, le type de caractères Kana et la largeur.|Retourne le style de comparaison.<br /><br /> Renvoie 0 pour tous les classements binaires.<br /><br /> Type de données de base : **int**|  
+|Édition|Édition de la base de données ou couche de service.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Usage général<br /><br /> Critique pour l’entreprise<br /><br /> De base<br /><br /> standard<br /><br /> Premium<br /><br /> Système (pour la base de données master)<br /><br /> NULL : la base de données n’est pas démarrée.<br /><br /> Type de données de base : **nvarchar**(64)|  
 |IsAnsiNullDefault|La base de données suit les règles ISO d'autorisation des valeurs Null.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**|  
 |IsAnsiNullsEnabled|Toutes les comparaisons à une valeur NULL produisent le résultat UNKNOWN (inconnu).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**|  
 |IsAnsiPaddingEnabled|Les chaînes sont complétées à la même longueur avant leur comparaison ou insertion.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée non valide<br /><br /> Type de données de base : **int**|  
@@ -89,13 +89,13 @@ Expression spécifiant le nom de la propriété de base de données à retourner
 |LCID|Identificateur de paramètres régionaux (LCID) Windows de classement.|Valeur LCID (au format décimal).<br /><br /> Type de données de base : **int**|  
 |MaxSizeInBytes|Taille maximale de la base de données, en octets.|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL : la base de données n’est pas démarrée<br /><br /> Type de données de base : **bigint**|  
 |Récupération|Mode de récupération de base de données|FULL : Mode de restauration complète<br /><br /> BULK_LOGGED : mode de récupération utilisant les journaux de transactions<br /><br /> SIMPLE : Mode de récupération simple<br /><br /> Type de données de base : **nvarchar(128)**|  
-|ServiceObjective|Décrit le niveau de performance de la base de données dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ou [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Il peut s'agir :<br /><br /> NULL : base de données non démarrée<br /><br /> Shared (pour l'édition Web/Business)<br /><br /> Simple<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Système (pour base de données master)<br /><br /> Type de données de base : **nvarchar(32)**|  
+|ServiceObjective|Décrit le niveau de performance de la base de données dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ou [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> NULL : base de données non démarrée<br /><br /> Shared (pour l'édition Web/Business)<br /><br /> De base<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Système (pour base de données master)<br /><br /> Type de données de base : **nvarchar(32)**|  
 |ServiceObjectiveId|ID de l'objectif de service dans la [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier** qui identifie l’objectif de service.|  
 |SQLSortOrder|ID d'ordre de tri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pris en charge dans les versions antérieures de SQL Server.|0 : la base de données utilise le classement Windows<br /><br /> >0 : ID d’ordre de tri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> NULL : entrée non valide ou base de données non démarrée<br /><br /> Type de données de base : **tinyint**|  
-|État|État de la base de données.|ONLINE : la base de données est disponible pour la requête.<br /><br /> **Remarque :** L’état ONLINE peut être retourné pendant que la base de données s’ouvre et qu’elle n’a pas encore été récupérée. Pour déterminer lorsqu’une base de données peut accepter les connexions, interrogez la propriété Collation de **DATABASEPROPERTYEX**. La base de données peut accepter les connexions lorsque le classement de base de données retourne une valeur non NULL. Pour les bases de données AlwaysOn, interrogez les colonnes database_state ou database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE : la base de données a été explicitement mise hors connexion.<br /><br /> RESTORING : la restauration de la base de données a démarré.<br /><br /> RECOVERING : la récupération de la base de données a démarré et cette-dernière n’est pas encore prête pour les requêtes.<br /><br /> SUSPECT : la base de données n’a pas été récupérée.<br /><br /> EMERGENCY : la base de données se trouve dans un état d’urgence en lecture seule. L'accès est limité aux membres sysadmin.<br /><br /> Type de données de base : **nvarchar(128)**|  
+|Statut|État de la base de données.|ONLINE : la base de données est disponible pour la requête.<br /><br /> **Remarque :** La fonction peut retourner un état ONLINE pendant que la base de données s’ouvre et qu’elle n’a pas encore été récupérée. Pour déterminer si une base de données ONLINE peut accepter les connexions, interrogez la propriété Collation de **DATABASEPROPERTYEX**. La base de données ONLINE peut accepter les connexions quand le classement de base de données retourne une valeur non NULL. Pour les bases de données AlwaysOn, interrogez les colonnes database_state ou database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE : la base de données a été explicitement mise hors connexion.<br /><br /> RESTORING : la restauration de la base de données a démarré.<br /><br /> RECOVERING : la récupération de la base de données a démarré et cette-dernière n’est pas encore prête pour les requêtes.<br /><br /> SUSPECT : la base de données n’a pas été récupérée.<br /><br /> EMERGENCY : la base de données se trouve dans un état d’urgence en lecture seule. L'accès est limité aux membres sysadmin.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |Updateability|Indique si les données peuvent être modifiées.|READ_ONLY : la base de données prend en charge les opérations de lecture de données, mais pas les modifications de données.<br /><br /> READ_WRITE : la base de données prend en charge les opérations de lecture et les modifications de données.<br /><br /> Type de données de base : **nvarchar(128)**|  
 |UserAccess|Définit les utilisateurs autorisés à accéder à la base de données.|SINGLE_USER : un seul utilisateur db_owner, dbcreator ou sysadmin à la fois<br /><br /> RESTRICTED_USER : uniquement les membres des rôles db_owner, dbcreator ou sysadmin<br /><br /> MULTI_USER : tous les utilisateurs<br /><br /> Type de données de base : **nvarchar(128)**|  
-|Options de version|Numéro de version interne du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec lequel la base de données a été créée. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Numéro de version : la base de données est ouverte.<br /><br /> NULL : la base de données n’a pas démarré.<br /><br /> Type de données de base : **int**| 
+|Version|Numéro de version interne du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec lequel la base de données a été créée. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Numéro de version : la base de données est ouverte.<br /><br /> NULL : la base de données n’a pas démarré.<br /><br /> Type de données de base : **int**| 
 
 <br/>   
 
@@ -115,7 +115,7 @@ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur p
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>A. Récupération de l'état de l'option de base de données AUTO_SHRINK  
+### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>R. Récupération de l'état de l'option de base de données AUTO_SHRINK  
 Cet exemple retourne l’état de l’option de base de données AUTO_SHRINK pour la base de données `AdventureWorks`.
   
 ```sql

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594012"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75883994"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Tableau de bord Azure SQL Database Managed Instance pour Azure Data Studio (préversion)
 
@@ -28,7 +28,7 @@ L’extension Azure SQL Database Managed Instance fournit un tableau de bord per
 - Affiche l’état des réplicas de base de données
 - Affiche les journaux des erreurs filtrés
 
-## <a name="install"></a>Installation
+## <a name="install"></a>Installer
 
 Vous pouvez installer la version officielle de cette extension. Suivez pour cela les étapes décrites dans la documentation sur [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
 Dans le volet **Extensions**, recherchez « managed instance » et installez l’extension. Une fois l’installation terminée, vous recevrez automatiquement une notification à chaque mise à jour de l’extension.
@@ -73,7 +73,7 @@ Le troisième volet de l’onglet **Instance managée** affiche l’état des r�
 
 Au niveau de service universel, chaque base de données a un seul réplica (principal). Sur une instance au niveau vital pour l’entreprise, chaque base de données a un réplica principal et trois réplicas secondaires, dont un est utilisé pour les charges de travail en lecture seule. Dans le volet **Réplicas**, vous pouvez superviser le processus de synchronisation et vérifier que tous les réplicas secondaires sont bien synchronisés avec le réplica principal.
 
-## <a name="logs"></a>Journaux
+## <a name="logs"></a>Journaux d’activité
 
 Le quatrième volet de l’onglet **Instance managée** affiche les entrées du journal des erreurs SQL les plus récentes et les plus pertinentes.
 
@@ -97,7 +97,6 @@ Pour plus d'informations, voir la [FAQ sur le Code de conduite ][conduct-FAQ] ou
 
 Pour plus d’informations, visitez le [projet GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

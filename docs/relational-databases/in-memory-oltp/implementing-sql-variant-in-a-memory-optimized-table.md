@@ -1,6 +1,6 @@
 ---
-title: Implémentation de SQL_VARIANT dans une table optimisée en mémoire | Microsoft Docs
-ms.custom: ''
+title: SQL_VARIANT dans une table à mémoire optimisée
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,14 +11,14 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fee7c55c95d60329ca7b3721416569d83902a6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e156de3313889fd29d0745e0cf5cdf23d5192c59
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050336"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412607"
 ---
-# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implémentation de SQL_VARIANT dans une table optimisée en mémoire
+# <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>Implémentation de SQL_VARIANT dans une table optimisée en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Considérons un exemple de table avec une colonne **SQL_VARIANT** :  

@@ -1,6 +1,7 @@
 ---
-title: Opérer le cluster partagé Red Hat Enterprise Linux pour SQL Server
-description: Implémentez la haute disponibilité en configurant le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server.
+title: Utiliser une instance de cluster de basculement RHEL pour SQL Server sur Linux
+description: Découvrez comment utiliser une instance de cluster de basculement de disque partagé RHEL (Red Hat Enterprise Linux) pour SQL Server pour la haute disponibilité (basculement manuel de l’instance, par exemple) et comment ajouter des nœuds au cluster et en supprimer.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032246"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558524"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Opérer le cluster de disques partagés Red Hat Enterprise Linux pour SQL Server
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Utiliser une instance de cluster de basculement RHEL pour SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

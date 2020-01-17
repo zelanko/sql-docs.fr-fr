@@ -1,7 +1,7 @@
 ---
-title: Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Sauvegarde et restauration avec le stockage Blob Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041369"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251137"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Graphique de sauvegarde vers le service de stockage d’objets blob Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Graphique de sauvegarde vers le service de stockage d’objets blob Azure")  
+  ![Graphique de sauvegarde vers l’objet blob Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Graphique de sauvegarde vers l’objet blob Azure")  
   
  Cette rubrique présente les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers le [service de stockage d’objets blob Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)ainsi que la restauration à partir de ce service. Elle résume également les avantages liés à l’utilisation du service d’objets blob Microsoft Azure pour stocker des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  SQL Server prend en charge le stockage des sauvegardes dans le service de stockage d’objets blob Microsoft Azure comme suit :  
   
--   **Gérer vos sauvegardes dans Microsoft Azure :** À l'aide des mêmes méthodes que celles utilisées pour sauvegarder sur disque (DISK) et sur bande (TAPE), réalisez maintenant vos sauvegardes dans le stockage Microsoft Azure en spécifiant une URL comme destination de sauvegarde. Utilisez cette fonctionnalité pour sauvegarder ou configurer manuellement votre propre stratégie de sauvegarde comme vous le feriez pour un stockage local ou d'autres options hors site. Cette fonctionnalité est également connue sous le nom **Sauvegarde SQL Server vers une URL**. Pour plus d'informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Cette fonctionnalité est disponible dans SQL Server 2012 SP1 CU2 ou version ultérieure. Cette fonctionnalité a été améliorée dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pour fournir des performances et des fonctionnalités supplémentaires via l’utilisation d’objets blob de blocs, de signatures d’accès partagé et d’entrelacements.  
+-   **Gérer vos sauvegardes dans Microsoft Azure :** À l'aide des mêmes méthodes que celles utilisées pour sauvegarder sur disque (DISK) et sur bande (TAPE), réalisez maintenant vos sauvegardes dans le stockage Microsoft Azure en spécifiant une URL comme destination de sauvegarde. Utilisez cette fonctionnalité pour sauvegarder ou configurer manuellement votre propre stratégie de sauvegarde comme vous le feriez pour un stockage local ou d'autres options hors site. Cette fonctionnalité est également connue sous le nom **Sauvegarde SQL Server vers une URL**. Pour plus d’informations, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Cette fonctionnalité est disponible dans SQL Server 2012 SP1 CU2 ou version ultérieure. Cette fonctionnalité a été améliorée dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] pour fournir des performances et des fonctionnalités supplémentaires via l’utilisation d’objets blob de blocs, de signatures d’accès partagé et d’entrelacements.  
   
     > [!NOTE]  
     >  Pour les versions SQL Server antérieures à SQL Server 2012 SP1 CU2, utilisez le complément SQL Server Backup to Microsoft Azure Tool afin de créer rapidement et facilement des sauvegardes dans le stockage Microsoft Azure. Pour plus d'informations, consultez le [centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=324399).  
@@ -63,7 +63,7 @@ ms.locfileid: "68041369"
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

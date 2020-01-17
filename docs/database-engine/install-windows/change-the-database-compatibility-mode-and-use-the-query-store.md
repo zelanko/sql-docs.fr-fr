@@ -1,7 +1,7 @@
 ---
-title: Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes | Microsoft Docs
-ms.custom: ''
-ms.date: 02/06/2019
+title: Utiliser le magasin des requêtes après une mise à niveau
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982133"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251550"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes
 
@@ -45,7 +45,7 @@ Le processus de mise à niveau permettant d’activer la nouvelle fonctionnalit�
   
 Le flux de travail recommandé pour mettre à niveau le processeur de requêtes vers la dernière version du code est documenté dans la [section Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server de la rubrique Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) et est illustré ci-dessous.  
   
-![requête-magasin-utilisation-5](../../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5") 
+![requête-magasin-utilisation-5](../../relational-databases/performance/media/query-store-usage-5.png "|::ref1::|") 
 
 Depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, les utilisateurs peuvent être guidés tout au long du workflow recommandé en utilisant l’Assistant Paramétrage de requêtes. Pour plus d’informations, consultez [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

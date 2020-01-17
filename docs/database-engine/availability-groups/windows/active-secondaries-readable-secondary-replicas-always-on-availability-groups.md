@@ -1,7 +1,7 @@
 ---
-title: Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité
+title: Déplacer une charge de travail vers un réplica de groupe de disponibilité secondaire
 description: Découvrez le déchargement de rapports et requêtes en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On sur SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991661"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822403"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ ms.locfileid: "67991661"
   
 -   Étant donné que les statistiques temporaires sont stockées dans **tempdb**, un redémarrage du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoque la disparition de toutes les statistiques temporaires.  
   
--   Le suffixe _readonly_database_statistic est réservé aux statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser ce suffixe lorsque vous créez des statistiques sur une base de données primaire. Pour plus d'informations, consultez [Statistics](../../../relational-databases/statistics/statistics.md).  
+-   Le suffixe _readonly_database_statistic est réservé aux statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser ce suffixe lorsque vous créez des statistiques sur une base de données primaire. Pour plus d’informations, consultez [Statistiques](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Accès aux tables optimisées en mémoire sur un réplica secondaire  
  Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Par exemple :  

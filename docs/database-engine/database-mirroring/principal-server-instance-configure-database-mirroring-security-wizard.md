@@ -1,6 +1,7 @@
 ---
-title: Instance de serveur principal (Configurer l’Assistant Sécurité de mise en miroir de bases de données) | Microsoft Docs
-ms.custom: ''
+title: Instance de serveur principal (Configurer l'Assistant Sécurité de mise en miroir de bases de données)
+description: Description de la page « Instance de serveur principal » de l’Assistant « Configurer la sécurité de la mise en miroir de bases de données » dans SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c06c2b5a747855a7b0e5db70a9628c4a443ed121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025420"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255965"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>Instance de serveur principal (Configurer l'Assistant Sécurité de mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68025420"
  **Instance de serveur principal**  
  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , la mise en miroir de base de données est toujours configurée à partir du serveur principal ; c'est pourquoi l'instance de serveur active est toujours l'instance de serveur principal.  
   
- **Port d'écoute**  
+ **Port de l’écouteur**  
  Le comportement de cette option varie comme suit selon qu'il existe ou non un point de terminaison de mise en miroir pour cette instance du serveur :  
   
 -   Si le port d’écoute n’existe pas pour cette instance de serveur, le numéro de port 5022 est affiché dans la zone de texte **Port** . Vous pouvez utiliser n'importe quel numéro de port disponible, tel que 7022.  

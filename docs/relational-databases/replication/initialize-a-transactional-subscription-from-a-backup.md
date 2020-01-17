@@ -1,6 +1,7 @@
 ---
-title: Initialiser un abonnement transactionnel à partir d’une sauvegarde | Microsoft Docs
-ms.custom: ''
+title: Initialiser un abonnement à partir d’une sauvegarde (Transactionnel)
+description: Découvrez comment utiliser des procédures stockées de réplication pour initialiser une publication transactionnelle à partir d’une sauvegarde dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710303"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320476"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Initialiser un abonnement transactionnel à partir d’une sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Bien qu'un abonnement à une publication transactionnelle soit en général initialisé à l'aide d'un instantané, il est possible d'initialiser un abonnement à partir d'une sauvegarde en utilisant les procédures stockées de réplication. Pour plus d’informations, consultez [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+  Bien qu'un abonnement à une publication transactionnelle soit en général initialisé à l'aide d'un instantané, il est possible d'initialiser un abonnement à partir d'une sauvegarde en utilisant les procédures stockées de réplication. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### <a name="to-initialize-a-transactional-subscriber-from-a-backup"></a>Pour initialiser un Abonné transactionnel à partir d'une sauvegarde  
   
@@ -72,6 +73,6 @@ ms.locfileid: "71710303"
   
 ## <a name="see-also"></a>Voir aussi  
  [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Sauvegarder et restaurer des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

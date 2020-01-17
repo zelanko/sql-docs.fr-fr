@@ -27,19 +27,19 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948095"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564810"
 ---
-# <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
+# <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Cette clause est dérivée d’une requête simple et définie au sein de l’étendue d’exécution d’une seule instruction SELECT, INSERT, UPDATE, DELETE ou MERGE. Cette clause peut également être utilisée dans une instruction CREATE VIEW comme faisant partie de l'instruction SELECT qui la définit. Une expression de table commune peut inclure des références à elle-même. Dans ce cas, elle est désignée en tant qu'expression de table commune récursive.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -175,7 +175,7 @@ Les principes suivants s'appliquent à des expressions de table communes non ré
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-simple-common-table-expression"></a>A. Création d'une expression de table commune simple  
+### <a name="a-creating-a-simple-common-table-expression"></a>R. Création d'une expression de table commune simple  
  L'exemple suivant affiche le nombre total de commandes client par année pour chaque commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql   
@@ -288,9 +288,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -307,12 +305,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. Utilisation d'une expression de table commune récursive pour afficher deux niveaux de récursivité  
+#### <a name="using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>Utilisation d'une expression de table commune récursive pour afficher deux niveaux de récursivité  
  L'exemple suivant affiche les responsables et les employés sous leurs ordres. Le nombre de niveaux retournés est limité à deux.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -329,12 +325,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. Utilisation d'une expression de table commune récursive pour afficher une liste hiérarchique  
- L'exemple suivant prolonge l'exemple D en ajoutant les noms du responsable et des employés, ainsi que leurs titres respectifs. La hiérarchie des responsables et des employés est mise en évidence par l'indentation de chaque niveau.  
+#### <a name="using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>Utilisation d'une expression de table commune récursive pour afficher une liste hiérarchique  
+ L’exemple suivant ajoute les noms du responsable et des employés, ainsi que leurs titres respectifs. La hiérarchie des responsables et des employés est mise en évidence par l'indentation de chaque niveau.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -359,12 +353,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. Utilisation de MAXRECURSION pour annuler une instruction  
+#### <a name="using-maxrecursion-to-cancel-a-statement"></a>Utilisation de MAXRECURSION pour annuler une instruction  
  `MAXRECURSION` peut être utilisé pour empêcher une expression de table commune récursive mal rédigée d'entrer dans une boucle infinie. L'exemple suivant créée intentionnellement une boucle infinie et utilise l'indicateur `MAXRECURSION` pour limiter le nombre de niveaux de récursivité à deux.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -385,9 +377,7 @@ OPTION (MAXRECURSION 2);
   
  Une fois l'erreur de codage corrigée, MAXRECURSION n'est plus nécessaire. L'exemple suivant montre le code corrigé.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -403,7 +393,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. Utilisation d'une expression de table commune pour parcourir de façon sélective une relation récursive dans une instruction SELECT  
+### <a name="e-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>E. Utilisation d'une expression de table commune pour parcourir de façon sélective une relation récursive dans une instruction SELECT  
  L'exemple suivant montre la hiérarchie des composants et assemblys de produits nécessaires pour construire la bicyclette pour `ProductAssemblyID = 800`.  
   
 ```sql  
@@ -432,7 +422,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. Utilisation d'une expression de table commune récursive dans une instruction UPDATE  
+### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. Utilisation d'une expression de table commune récursive dans une instruction UPDATE  
  L’exemple suivant met à jour la valeur `PerAssemblyQty` pour tous les composants du produit 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). L'expression de table commune retourne une liste hiérarchique des parties utilisées pour générer `ProductAssemblyID 800` et des composants utilisés pour créer ces parties, et ainsi de suite. Seules les lignes renvoyées par l'expression de table commune récursive sont modifiées.  
   
 ```sql  
@@ -460,7 +450,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. Utilisation de plusieurs membres d'ancrage et récursifs  
+### <a name="h-using-multiple-anchor-and-recursive-members"></a>H. Utilisation de plusieurs membres d'ancrage et récursifs  
  L'exemple suivant utilise plusieurs membres d'ancrage et récursifs pour retourner tous les ancêtres d'une personne donnée. Une table est créée et les valeurs insérées pour établir la généalogie familiale renvoyée par l'expression de table commune récursive.  
   
 ```sql  
@@ -507,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Utilisation de fonctions analytiques dans une expression de table commune récursive  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Utilisation de fonctions analytiques dans une expression de table commune récursive  
  L'exemple suivant montre un piège qui peut se produire lors de l'utilisation d'une fonction analytique ou d'agrégation dans la partie récursive d'une expression CTE.  
   
 ```sql  
@@ -580,7 +570,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Utilisation d’une expression de table commune dans une instruction CTAS  
+### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Utilisation d’une expression de table commune dans une instruction CTAS  
  L’exemple suivant crée une table qui contient le nombre total de commandes client réalisées par chaque représentant commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -609,7 +599,7 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Utilisation d’une expression de table commune dans une instruction CETAS  
+### <a name="k-using-a-common-table-expression-within-a-cetas-statement"></a>K. Utilisation d’une expression de table commune dans une instruction CETAS  
  L’exemple suivant crée une table externe qui contient le nombre total de commandes client réalisées par chaque représentant commercial chez [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -639,7 +629,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Utilisation de plusieurs expressions de table communes, séparées par des virgules, dans une instruction  
+### <a name="l-using-multiple-comma-separated-ctes-in-a-statement"></a>L. Utilisation de plusieurs expressions de table communes, séparées par des virgules, dans une instruction  
  L’exemple suivant montre comment inclure deux expressions de table communes dans la même instruction. Les expressions de table communes ne peuvent pas être imbriquées (pas de récursivité).  
   
 ```sql  

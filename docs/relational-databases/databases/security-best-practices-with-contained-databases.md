@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127208"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246125"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127208"
   Les bases de données autonomes présentent quelques menaces originales que les administrateurs du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doivent connaître et limiter. La plupart de ces menaces sont liées au processus d’authentification **USER WITH PASSWORD** , qui déplace la limite de l’authentification du niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers celui de la base de données.  
   
 ## <a name="threats-related-to-users"></a>Menaces associées aux utilisateurs  
- Les utilisateurs d’une base de données autonome qui disposent de l’autorisation **ALTER ANY USER** , tels que les membres des rôles de base de données fixes **db_owner** et **db_securityadmin**, peuvent accorder un accès à la base de données, sans que l’administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le sache ou l’autorise. Autoriser des utilisateurs à accéder à une base de données autonome augmente la surface d'exposition potentielle aux attaques contre l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entière. Les administrateurs doivent comprendre cette délégation du contrôle d'accès et être très prudents lorsqu'ils accordent à des utilisateurs l'autorisation **ALTER ANY USER** dans la base de données autonome. Tous les propriétaires de base de données disposent de l'autorisation **ALTER ANY USER** . Les administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent procéder périodiquement à un audit des utilisateurs dans une base de données autonome.  
+ Les utilisateurs d’une base de données autonome qui disposent de l’autorisation **ALTER ANY USER**, par exemple les membres des rôles de base de données fixes **db_owner** et **db_accessadmin**, peuvent octroyer l’accès à la base de données, sans que l’administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne le sache ou ne l’autorise. Autoriser des utilisateurs à accéder à une base de données autonome augmente la surface d'exposition potentielle aux attaques contre l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entière. Les administrateurs doivent comprendre cette délégation du contrôle d'accès et être très prudents lorsqu'ils accordent à des utilisateurs l'autorisation **ALTER ANY USER** dans la base de données autonome. Tous les propriétaires de base de données disposent de l'autorisation **ALTER ANY USER** . Les administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent procéder périodiquement à un audit des utilisateurs dans une base de données autonome.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Accès à d'autres bases de données à l'aide du compte Invité  
  Les propriétaires de base de données et les utilisateurs de base de données disposant de l'autorisation **ALTER ANY USER** peuvent créer des utilisateurs de base de données autonome. Une fois connecté à une base de données autonome sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur d'une base de données autonome peut accéder à d'autres bases de données sur le [!INCLUDE[ssDE](../../includes/ssde-md.md)], si ces bases de données ont activé le compte **Invité**.  
@@ -84,7 +84,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>S'échapper d'une base de données autonome  
  Si une base de données est partiellement autonome, les administrateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent périodiquement auditer les fonctions des utilisateurs et des modules dans les bases de données autonomes.  
   
-## <a name="denial-of-service-through-autoclose"></a>Déni de service via AUTO_CLOSE  
+## <a name="denial-of-service-through-auto_close"></a>Déni de service via AUTO_CLOSE  
  Ne configurez pas de bases de données autonomes pour la fermeture automatique. Si la base de données est fermée, son ouverture pour authentifier un utilisateur consomme des ressources supplémentaires et risque de contribuer à une attaque par déni de service.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,6 +1,6 @@
 ---
-title: Serveurs liés
-ms.date: 05/29/2019
+title: Serveurs liés (Moteur de base de données) | Microsoft Docs
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094778"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165342"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
 
@@ -64,16 +64,19 @@ Le fournisseur OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!
 ## <a name="linked-server-details"></a>Détails des serveurs liés  
  L'illustration suivante montre les aspects fondamentaux d'une configuration de serveurs liés.  
   
- ![Niveau client, niveau serveur et niveau serveur de base de données](../../relational-databases/linked-servers/media/lsvr.gif "Niveau client, niveau serveur et niveau serveur de base de données")  
+ ![Niveau client, niveau serveur et niveau serveur de base de données](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 Généralement, les serveurs liés sont utilisés pour le traitement des requêtes distribuées. Lorsqu'une application cliente exécute une requête distribuée via un serveur lié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyse la commande et envoie des demandes à OLE°DB. La requête d'ensemble de lignes peut se présenter sous la forme d'une exécution de requête vers le fournisseur, ou par l'ouverture d'une table de base à partir du fournisseur.  
-  
+
 > [!NOTE]
 > Pour qu'une source de données renvoie les données via un serveur lié, le fournisseur OLE DB (DLL) associé à cette source de données doit se trouver sur le même serveur que l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-> [!IMPORTANT] 
-> Lorsqu'un fournisseur OLE DB est utilisé, le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit disposer d'autorisations de lecture et d'exécution sur le répertoire et sur tous les sous-répertoires correspondants dans lequel le fournisseur est installé. Cela inclut les fournisseurs mis en production par Microsoft, ainsi que tous les fournisseurs tiers. 
-  
+ 
+> [!IMPORTANT]
+> Lorsqu'un fournisseur OLE DB est utilisé, le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit disposer d'autorisations de lecture et d'exécution sur le répertoire et sur tous les sous-répertoires correspondants dans lequel le fournisseur est installé. Cela inclut les fournisseurs mis en production par Microsoft, ainsi que tous les fournisseurs tiers.
+
+> [!NOTE]
+> Les serveurs liés prennent en charge l’authentification directe Active Directory au moment de l’utilisation de la délégation totale. À partir de SQL Server 2017 CU17, l’authentification directe avec délégation contrainte est également prise en charge. Toutefois, [la délégation contrainte basée sur les ressources](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) n’est pas prise en charge.
+
 ## <a name="managing-providers"></a>Gestion des fournisseurs  
 Un ensemble d'options permettent de contrôler la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge et utilise des fournisseurs OLE DB spécifiés dans le Registre.  
   

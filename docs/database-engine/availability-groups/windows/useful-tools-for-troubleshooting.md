@@ -1,6 +1,7 @@
 ---
-title: Outils utiles pour la résolution des problèmes (groupes de disponibilité Always On - SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Outils permettant de résoudre les problèmes de groupe de disponibilité (index de contenu)
+description: Index des articles décrivant les outils qui permettent de superviser les groupes de disponibilité et de résoudre les problèmes liés à ces groupes.
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 435a20941a6827aea7e6e3709b5123b059d8735a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f7781503aa82b8b0692191a69dac5c2890f8d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013462"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244731"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>Outils utiles pour la résolution des problèmes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

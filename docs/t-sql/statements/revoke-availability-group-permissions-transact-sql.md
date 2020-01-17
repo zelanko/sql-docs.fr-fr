@@ -1,6 +1,8 @@
 ---
-title: REVOKE - Révoquer des autorisations sur un groupe de disponibilité (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE - Autorisations sur un groupe de disponibilité
+description: Révoquez des autorisations sur un groupe de disponibilité AlwaysOn.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082353"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242612"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE (Révocation d'autorisations de groupe de disponibilité) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Révoque des autorisations sur un groupe de disponibilité Always On. 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -104,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. Révocation de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
+### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>R. Révocation de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
  L'exemple suivant révoque l'autorisation `VIEW DEFINITION` sur le groupe de disponibilité `MyAg` sur la connexion `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -114,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Révocation de l'autorisation TAKE OWNERSHIP avec l'option CASCADE  
- Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le groupe de disponibilité `MyAg` est révoquée pour l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` et pour tous les principaux auxquels `PKomosinski` a accordé l'autorisation TAKE sur MyAg.  
+ Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le groupe de disponibilité `MyAg` est révoquée pour l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` et pour tous les principaux auxquels `PKomosinski` a accordé l'autorisation TAKE sur MyAg.  
   
 ```  
 USE master;  

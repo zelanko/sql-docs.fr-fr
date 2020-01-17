@@ -1,7 +1,7 @@
 ---
-title: Changer le mode de disponibilité d’un réplica dans un groupe de disponibilité
+title: Changer le mode de disponibilité d’un réplica pour un groupe de disponibilité
 description: Explique comment changer le mode de disponibilité d’un réplica de disponibilité au sein d’un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL), de PowerShell ou de SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c17beebfd689e5e768450d92353b87f8fcfa1ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1a3b5d1dfdf3a5e8556058cee750a4e2e08476a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988591"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822443"
 ---
-# <a name="change-the-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Changer le mode de disponibilité d’un réplica dans un groupe de disponibilité Always On
+# <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Changer le mode de disponibilité d’un réplica dans un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment modifier le mode de disponibilité d’un réplica de disponibilité dans un groupe de disponibilité Always On dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell. Le mode de disponibilité est une propriété de réplica qui contrôle si le réplica effectue la validation de façon synchrone ou asynchrone. Le*mode de validation asynchrone* optimise les performances au détriment d’une haute disponibilité et prend en charge uniquement le basculement forcé manuel (avec une possible perte de données), qu’on appelle généralement *basculement forcé*. Le*mode de validation synchrone* privilégie la haute disponibilité plutôt que les performances et, une fois que le réplica secondaire est synchronisé, prend en charge le basculement manuel et, éventuellement, le basculement automatique.  
     

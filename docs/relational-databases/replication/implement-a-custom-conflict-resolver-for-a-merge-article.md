@@ -1,6 +1,7 @@
 ---
-title: Implémenter un outil personnalisé de résolution des conflits pour un article de fusion | Microsoft Docs
-ms.custom: ''
+title: Implémenter un outil personnalisé de résolution des conflits (Fusion)
+description: Découvrez comment implémenter un outil personnalisé de résolution des conflits pour une publication de fusion dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a71c7c83afe2fcb8b0192f6dfd12c8072ccdc392
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905113"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322156"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implémenter un outil personnalisé de résolution des conflits pour un article de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "72905113"
  Vous pouvez écrire votre propre outil personnalisé de résolution des conflits sous forme de procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] au niveau de chaque serveur de publication. Pendant la synchronisation, cette procédure stockée est appelée quand des conflits sont rencontrés dans un article auprès duquel l’outil de résolution a été inscrit. Les informations sur la ligne en conflit sont transmises par l’Agent de fusion aux paramètres requis de la procédure. Les outils personnalisés de résolution des conflits s'appuyant sur des procédures stockées sont toujours créés au niveau du serveur de publication.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les programmes de résolution des procédures stockées sont appelés uniquement pour gérer les conflits de changement de ligne. Ils ne peuvent pas être utilisés pour gérer d’autres types de conflits, comme les échecs d’insertion déclenchés par des violations de clés primaires ou des violations de contraintes d’index unique.
+>  Les outils de résolution des conflits à l’aide de procédures stockées [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appelés uniquement pour gérer les conflits liés à des modifications de ligne. Ils ne peuvent pas être utilisés pour gérer d’autres types de conflits, comme les échecs d’insertion déclenchés par des violations de clés primaires ou des violations de contraintes d’index unique.
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>Pour créer un outil personnalisé de résolution des conflits s'appuyant sur des procédures stockées  
   
@@ -52,7 +53,7 @@ ms.locfileid: "72905113"
     |**\@rowguid**|**uniqueidentifier**|Identificateur unique de la ligne en conflit.|  
     |**\@subscriber**|**sysname**|Nom du serveur à partir duquel une modification en conflit est propagée.|  
     |**\@subscriber_db**|**sysname**|Nom de la base de données à partir de laquelle une modification en conflit est propagée.|  
-    |**\@log_conflict OUTPUT**|**Int**|Définit si le processus de fusion doit enregistrer un conflit en vue de le résoudre ultérieurement :<br /><br /> **0** = ne pas enregistrer le conflit.<br /><br /> **1** = l'Abonné est le perdant du conflit.<br /><br /> **2** = le serveur de publication est le perdant du conflit.|  
+    |**\@log_conflict OUTPUT**|**int**|Définit si le processus de fusion doit enregistrer un conflit en vue de le résoudre ultérieurement :<br /><br /> **0** = ne pas enregistrer le conflit.<br /><br /> **1** = l'Abonné est le perdant du conflit.<br /><br /> **2** = le serveur de publication est le perdant du conflit.|  
     |**\@conflict_message OUTPUT**|**nvarchar(512)**|Message accompagnant la résolution si le conflit est enregistré.|  
     |**\@destowner**|**sysname**|Propriétaire de la table publiée créée sur l'Abonné.|  
   
@@ -63,14 +64,14 @@ ms.locfileid: "72905113"
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>Utiliser un outil personnalisé de résolution des conflits avec un nouvel article de table  
   
 1. Exécutez [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) pour définir un article. 
-1. Spécifiez la valeur **MicrosoftSQL** **Programme de résolution des procédures stockées** pour le paramètre **\@article_resolver**. 
+1. Spécifiez la valeur **MicrosoftSQL** **Server Stored Procedure Resolver** pour le paramètre **\@article_resolver**. 
 1. Spécifiez le nom de la procédure stockée qui implémente la logique de l’outil de résolution des conflits pour le paramètre **\@resolver_info**. 
 
    Pour plus d’informations, consultez [Définir un article](../../relational-databases/replication/publish/define-an-article.md).
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Pour utiliser un outil de résolution des conflits personnalisé avec un article de table existant  
   
-1.  Exécutez [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en spécifiant **\@publication**, **\@article**, en affectant la valeur **article_resolver** à **\@property** et en affectant la valeur du **programme de résolution des procédures stockées** **Microsoft SQL Server** à **\@value**.  
+1.  Exécutez [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en spécifiant **\@publication**, **\@article**, en affectant la valeur **article_resolver** à **\@property** et en affectant la valeur **MicrosoftSQL** **Server Stored ProcedureResolver** à **\@value**.  
   
 2.  Exécutez [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en spécifiant **\@publication**, **\@article**, en affectant la valeur **resolver_info** à **\@property** et en spécifiant le nom de la procédure stockée qui implémente la logique de l’outil de résolution des conflits pour **\@value**.  
   

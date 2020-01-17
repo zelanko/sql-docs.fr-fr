@@ -1,6 +1,7 @@
 ---
-title: 'Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données) | Microsoft Docs'
-ms.custom: ''
+title: Effets d’un témoin sur la disponibilité de la base de données
+description: Explique comment une mise en miroir de bases de données affecte le quorum et la disponibilité de la base de données.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -21,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 554108909607d7d1cdabb10bb075a9d77b5e7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025409"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822682"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Chaque fois qu’un témoin est défini pour une session de mise en miroir de base de données, un *quorum* est nécessaire. Le quorum désigne une relation où deux ou plusieurs instances de serveur dans une session de mise en miroir de base de données sont connectées. En règle générale, le quorum implique trois instances de serveurs interconnectées. Lorsqu'un témoin est défini, un quorum est requis pour rendre la base de données disponible. Conçu pour les sessions en mode haute sécurité avec basculement automatique, un quorum garantit qu'une base de données appartient à un seul partenaire à la fois.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68025409"
  Une instance de serveur déconnectée enregistre son rôle le plus récent dans la session. En principe, une instance de serveur déconnectée se reconnecte à la session lors de son redémarrage et obtient de nouveau le quorum.  
   
 > [!IMPORTANT]  
->  Le témoin ne doit être défini que si vous avez l'intention d'utiliser le mode haute sécurité avec basculement automatique. En mode hautes performances, qui ne requiert jamais de témoin, nous vous conseillons vivement d'attribuer la valeur OFF à la propriété WITNESS. Pour plus d’informations sur l’impact d’un témoin sur le mode hautes performances, consultez [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
+>  Le témoin ne doit être défini que si vous avez l'intention d'utiliser le mode haute sécurité avec basculement automatique. En mode hautes performances, qui ne requiert jamais de témoin, nous vous conseillons vivement d'attribuer la valeur OFF à la propriété WITNESS. Pour plus d’informations sur l’incidence d’un témoin sur le mode hautes performances, consultez [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
 ## <a name="quorum-in-high-safety-mode-sessions"></a>Quorum dans les sessions en mode haute sécurité  
  En mode haute sécurité, un quorum permet le basculement automatique en fournissant un contexte dans lequel les instances de serveur avec quorum décident quel partenaire détient le rôle de principal. Le serveur principal sert la base de données s'il dispose d'un quorum. Si le serveur principal perd le quorum lorsque le serveur miroir synchronisé et le témoin conservent le quorum, le basculement automatique se produit.  

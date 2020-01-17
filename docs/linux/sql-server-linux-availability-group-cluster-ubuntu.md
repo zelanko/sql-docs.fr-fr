@@ -1,7 +1,8 @@
 ---
-title: Configurer un cluster Ubuntu pour le groupe de disponibilité SQL Server
-titleSuffix: SQL Server
-description: En savoir plus sur la création de clusters de groupe de disponibilité pour Ubuntu
+title: Configurer un cluster Ubuntu pour un groupe de disponibilité
+titleSuffix: SQL Server on Linux
+description: Découvrez comment créer un cluster à trois nœuds sur Ubuntu et ajouter une ressource de groupe de disponibilité précédemment créée au cluster.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027313"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558484"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer un cluster Ubuntu et la ressource du groupe de disponibilité
 
@@ -42,8 +43,10 @@ Les étapes de création d’un groupe de disponibilité sur des serveurs Linux 
 
    >[!IMPORTANT]
    >Les environnements de production nécessitent un agent d’isolation, comme STONITH pour la haute disponibilité. Les démonstrations de cette documentation n’utilisent pas les agents d’isolation. Elles sont destinées uniquement à des fins de test et de validation. 
-   
+   >
    >Un cluster Linux utilise l’isolation pour ramener le cluster à un état connu. La façon de configurer l’isolation dépend de la distribution et de l’environnement. À ce stade, l’isolation n’est pas disponible dans certains environnements cloud. Pour plus d’informations, consultez [Stratégies de support pour les clusters à haute disponibilité RHEL - Plateformes de virtualisation](https://access.redhat.com/articles/29440).
+   >
+   >L’isolation est généralement implémentée au niveau du système d’exploitation et dépend de l’environnement. Pour plus d’informations sur l’isolation, consultez la documentation du fournisseur du système d’exploitation.
 
 5.  [Ajoutez le groupe de disponibilité en tant que ressource dans le cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
 
@@ -143,7 +146,7 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->La désactivation de STONITH est uniquement à des fins de test. Si vous envisagez d’utiliser Pacemaker dans un environnement de production, vous devez planifier une implémentation de STONITH en fonction de votre environnement et la garder activée. Notez qu’à ce stade, il n’existe aucun agent d’isolation pour les environnements cloud (y compris Azure) ou Hyper-V. En fait, le fournisseur de cluster n’offre pas de prise en charge pour l’exécution de clusters de production dans ces environnements. 
+>La désactivation de STONITH est uniquement à des fins de test. Si vous envisagez d’utiliser Pacemaker dans un environnement de production, vous devez planifier une implémentation de STONITH en fonction de votre environnement et la garder activée. Contactez le fournisseur du système d’exploitation pour obtenir des informations sur les agents d’isolation pour toute distribution spécifique. 
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Définir l’intervalle de revérification du cluster de la propriété du cluster
 

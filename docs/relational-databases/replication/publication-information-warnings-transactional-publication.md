@@ -1,6 +1,7 @@
 ---
-title: Informations de publication, Avertissements (Publication transactionnelle) | Microsoft Docs
-ms.custom: ''
+title: Avertissements (Informations de publication transactionnelle)
+description: Décrit l’onglet « Avertissements » de la boîte de dialogue Informations de publication transactionnelle.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 886a9066102fd25498b974caca73085b59c8594f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6efff6deabc18db61ab8390d912ef6918d42b2e3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769962"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321300"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>Informations de publication, Avertissements (Publication transactionnelle)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "68769962"
 > [!NOTE]  
 >  Cliquer sur **Ignorer les modifications** n'affecte en rien les alertes définies dans la boîte de dialogue **Configurer les alertes de réplication** .  
   
- **Enregistrer les modifications**  
+ **Save Changes**  
  Permet d'enregistrer toute modification apportée aux avertissements et aux seuils.  
   
 ## <a name="see-also"></a>Voir aussi  

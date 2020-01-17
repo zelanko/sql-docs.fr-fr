@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545055"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241745"
 ---
 # <a name="what-is-azure-data-studio"></a>Qu’est-ce qu’Azure Data Studio ?
 
 Azure Data Studio est un outil de base de données multiplateforme pour les professionnels des données qui utilisent la famille Microsoft de plateformes de données locales et cloud sur Windows, macOS et Linux.
 
-Précédemment publié sous le nom de SQL Operations Studio (préversion), Azure Data Studio offre une expérience d’éditeur moderne avec des fonctionnalités IntelliSense, des extraits de code, l’intégration du contrôle de code source et un terminal intégré. Il est conçu en tenant compte de l’utilisateur de la plateforme de données, avec l’intégration de la représentation graphique des jeux de résultats de requête et des tableaux de bord personnalisables.
+Azure Data Studio offre une expérience d’éditeur moderne avec des fonctionnalités IntelliSense, des extraits de code, l’intégration du contrôle de code source et un terminal intégré. Il est conçu en tenant compte de l’utilisateur de la plateforme de données, avec l’intégration de la représentation graphique des jeux de résultats de requête et des tableaux de bord personnalisables.
 
 Le code source d’Azure Data Studio et de ses fournisseurs de données est disponible sur GitHub, dans le cadre d’un CLUF de code source qui fournit des droits pour modifier et utiliser le logiciel, mais pas pour le redistribuer ou l’héberger dans un service cloud. Pour plus d’informations, consultez les [Questions fréquentes (FAQ) Azure Data Studio](faq.md).
 
 **[Téléchargez et installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>Éditeur de code SQL avec IntelliSense
 
@@ -37,7 +36,6 @@ Le code source d’Azure Data Studio et de ses fournisseurs de données est disp
 Les extraits de code SQL génèrent la syntaxe SQL appropriée pour créer des bases de données, des tables, des vues, des procédures stockées, des utilisateurs, des connexions, des rôles, etc., ainsi que pour mettre à jour des objets de base de données existants. Utilisez les extraits intelligents pour créer rapidement des copies de votre base de données à des fins de développement ou de test, et pour générer et exécuter des scripts CREATE et INSERT.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit également des fonctionnalités permettant de créer des extraits de code SQL personnalisés. Pour plus d’informations, consultez [Créer et utiliser des extraits de code](code-snippets.md).
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>Tableaux de bord de serveur et de base de données personnalisables
 
@@ -61,6 +59,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Comparaison des fonctionnalités avec SQL Server Management Studio (SSMS)
 
 **Utilisez Azure Data Studio si vous :**
+
 - Devez exécuter la solution sur macOS ou Linux
 - Vous connectez à un cluster Big Data SQL Server 2019
 - Passez la majeure partie de votre temps à modifier ou exécuter des requêtes
@@ -68,9 +67,9 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 - Pouvez exécuter la plupart des tâches d’administration via le terminal intégré à l’aide de sqlcmd ou de PowerShell
 - Avez des besoins minimaux en assistants
 - N’avez pas besoin d’effectuer une configuration d’administration complète
-- Le voulez 
 
 **Utilisez SQL Server Management Studio si vous :**
+
 - Consacrez la majeure partie de votre temps aux tâches d’administration de base de données
 - Effectuez une configuration d’administration complète
 - Effectuez la gestion de la sécurité, notamment la gestion des utilisateurs, l’évaluation des vulnérabilités et la configuration des fonctionnalités de sécurité
@@ -84,7 +83,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Connexion à Azure|Oui|Oui|
-|Tableau de bord|Oui||
+|tableau de bord|Oui||
 |Extensions|Oui||
 |Terminal intégré|Oui||
 |Explorateur d’objets|Oui|Oui|
@@ -95,12 +94,11 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Volet des tâches|Oui||
 |Thèmes|Oui||
 |Mode sombre|Oui||
-|Azure Resource Explorer|Aperçu||
+|Azure Resource Explorer|PRÉVERSION||
 |Assistant Générer des scripts||Oui|
 |Importation/exportation de DACPAC||Oui|
 |Propriétés des objets||Oui|
 |Concepteur de tables||Oui|
-
 
 ### <a name="query-editor"></a>Éditeur de requête
 
@@ -110,7 +108,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Exportation des résultats au format CSV, JSON, XLSX|Oui||
 |IntelliSense|Oui|Oui|
 |Extraits de code|Oui|Oui|
-|Plan d’affichage|Aperçu|Oui|
+|Plan d’affichage|PRÉVERSION|Oui|
 |Statistiques du client||Oui|
 |Statistiques des requêtes dynamiques||Oui|
 |Options de requête||Oui|
@@ -133,9 +131,9 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Assistant Créer une table externe|Aperçu||
-|Intégration HDFS|Aperçu||
-|Notebooks|Aperçu||
+|Assistant Créer une table externe|PRÉVERSION||
+|Intégration HDFS|PRÉVERSION||
+|Notebooks|PRÉVERSION||
 
 ### <a name="database-administration"></a>Administration de bases de données
 
@@ -143,9 +141,9 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |:---|:---|:---|
 |Sauvegarder/restaurer|Oui|Oui|
 |Prise en charge des clusters Big Data|Oui||
-|Importation de fichiers plats|Aperçu|Oui|
-|Agent SQL|Aperçu|Oui|
-|SQL Profiler|Aperçu|Oui|
+|Importation de fichiers plats|PRÉVERSION|Oui|
+|SQL Agent|PRÉVERSION|Oui|
+|SQL Profiler|PRÉVERSION|Oui|
 |Always On||Oui|
 |Always Encrypted||Oui|
 |Assistant Copier des données||Oui|
@@ -157,7 +155,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |PolyBase||Oui|
 |Magasin des requêtes||Oui|
 |Serveurs inscrits||Oui|
-|REPLICATION||Oui|
+|Réplication||Oui|
 |Gestion de la sécurité||Oui|
 |Service Broker||Oui|
 |SQL Mail||Oui|

@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982716"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901874"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "73982716"
  La possibilité d'exécuter un code CLR est désactivée par défaut dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez créer, modifier ou supprimer des objets de base de données qui référencent des modules de code managé, mais ces références ne seront pas exécutées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à moins que l’option [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) ne soit activée à l’aide de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
  
 > [!NOTE]  
->  L’intégration du CLR .NET Framework dans SQL Server est décrite dans cette rubrique. L’intégration du CLR ne s’applique pas à Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+>  L’intégration du CLR .NET Framework à SQL Server est décrite dans cette rubrique. L’intégration du CLR ne s’applique pas à Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -179,10 +179,10 @@ column_name <data_type>
 |-|-|-|-|  
 |**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
-|**decimal**|**float**|**image**|**Int**|  
+|**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
 |**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
-|**smallmoney**|**sql_variant**|**texte**|**time**|  
+|**smallmoney**|**sql_variant**|**text**|**time**|  
 |**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
   
  *base_type* peut également être n’importe quel synonyme de type de données correspondant à l’un de ces types de données système.  
@@ -286,10 +286,10 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. Création d'un type d'alias basé sur le type de données varchar  
+### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>R. Création d'un type d'alias basé sur le type de données varchar  
  L'exemple suivant crée un type d'alias basé sur le type de données `varchar` fourni par le système.  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -299,7 +299,7 @@ FROM varchar(11) NOT NULL ;
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. Création d'un type de table défini par l'utilisateur  
  L'exemple suivant crée un type de table défini par l'utilisateur qui possède deux colonnes. Pour plus d’informations sur la création et l’utilisation des paramètres table, consultez [Utiliser les paramètres table &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
+ [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [Utilisation de types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

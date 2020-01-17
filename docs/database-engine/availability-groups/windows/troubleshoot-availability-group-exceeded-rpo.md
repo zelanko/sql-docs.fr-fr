@@ -1,6 +1,7 @@
 ---
-title: 'Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité (SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: Dépassement de RPO du groupe de disponibilité
+description: Problèmes courants et méthodes de résolution quand votre groupe de disponibilité Always On dépasse l’objectif de point de récupération (RPO)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013741"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822181"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Disque physique : Tous les compteurs**  
   
--   **Disque physique : Nombre moyen disque s/transfert**  
+-   **Disque physique : Avg. disque s/transfert**  
   
 -   **SQL Server : Bases de données > Temps d’attente de vidage du journal**  
   

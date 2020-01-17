@@ -1,8 +1,8 @@
 ---
-title: Configurer le groupe de disponibilité Always On SQL Server sur Linux
-titleSuffix: SQL Server
-description: En savoir plus sur la création d’un groupe de disponibilité Always On SQL Server pour la haute disponibilité sur Linux.
+title: Configurer un groupe de disponibilité pour SQL Server sur Linux
+description: Découvrez comment créer un groupe de disponibilité Always On SQL Server pour la haute disponibilité sur Linux.
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030310"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558390"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurer le groupe de disponibilité Always On SQL Server sur Linux
 
@@ -215,7 +215,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 Si vous avez suivi les étapes de ce document, vous disposez d’un groupe de disponibilité qui n’est pas encore en cluster. L’étape suivante consiste à ajouter le cluster. Cette configuration est valide pour les scénarios d’échelle lecture/équilibrage de charge, mais elle n’est pas complète pour la haute disponibilité. Pour une haute disponibilité, vous devez ajouter le groupe de disponibilité en tant que ressource de cluster. Pour obtenir des instructions, consultez [Étapes suivantes](#next-steps). 
 
-## <a name="notes"></a>Remarques
+## <a name="notes"></a>Notes
 
 >[!IMPORTANT]
 >Après avoir configuré le cluster et ajouté le groupe de disponibilité en tant que ressource de cluster, vous ne pouvez pas utiliser Transact-SQL pour basculer les ressources du groupe de disponibilité. Les ressources de cluster SQL Server sur Linux ne sont pas couplées aussi étroitement au système d’exploitation, car elles se trouvent sur un cluster de basculement Windows Server (WSFC). Le service SQL Server n’est pas informé de la présence du cluster. Toutes les orchestrations sont effectuées via les outils d’administration de cluster. Dans RHEL ou Ubuntu, utilisez `pcs`. Dans SLES utilisez `crm`. 

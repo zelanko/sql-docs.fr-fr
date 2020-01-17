@@ -1,7 +1,7 @@
 ---
-title: Historique de sauvegarde et informations d’en-tête (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: Historique de sauvegarde et en-tête | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081465"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242589"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historique de sauvegarde et informations d'en-tête (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68081465"
 ##  <a name="BnRHistoryTables"></a> Tables d'historique de sauvegarde et de restauration  
  Cette section présente les tables d'historique qui stockent les métadonnées de restauration et de sauvegarde dans la base de données système **msdb** .  
   
-|Table d'historique|Description|  
+|Table d’historique|Description|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Cette table contient une ligne pour chaque fichier de données ou fichier journal sauvegardé.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Contient une ligne pour chaque groupe de fichiers d'un jeu de sauvegarde.|  
@@ -131,7 +131,7 @@ ms.locfileid: "68081465"
 ##  <a name="CompareMediaHeaderBackupHeader"></a> Comparaison des informations d'en-tête de support et d'en-tête de sauvegarde  
  La tableau suivant donne un exemple des différences entre l’affichage des informations de l’en-tête de sauvegarde et de l’en-tête de support. L'obtention de l'en-tête de support ne nécessite que la récupération des informations au début de la bande. L'obtention de l'en-tête de sauvegarde nécessite d'analyser la bande entière pour examiner l'en-tête de chaque jeu de sauvegarde.  
   
- ![Support de sauvegarde contenant trois jeux de sauvegarde SQL Server](../../relational-databases/backup-restore/media/bnr-media-label.gif "Support de sauvegarde contenant trois jeux de sauvegarde SQL Server")  
+ ![Jeu de supports contenant trois jeux de sauvegarde SQL Server](../../relational-databases/backup-restore/media/bnr-media-label.gif "Jeu de supports contenant trois jeux de sauvegarde SQL Server")  
   
 > [!NOTE]  
 >  Si vous utilisez des jeux de supports ayant plusieurs familles de supports, l'en-tête de support et le jeu de sauvegarde sont écrits sur toutes les familles. Par conséquent, il suffit de fournir une seule famille de supports pour ces opérations de rapport.  

@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419600"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721924"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Cette fonction retourne un modèle binaire de type **varbinary** qui indique les colonnes insérées ou mises à jour d’une table ou d’une vue. Utilisez `COLUMNS_UPDATED` à n’importe quel endroit du corps d’un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ou UPDATE pour tester si celui-ci doit exécuter certaines actions.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +74,7 @@ Quand un jeu de colonnes est défini sur une table, la fonction `COLUMNS_UPDATED
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. Utilisation de COLUMNS_UPDATED pour tester les huit premières colonnes d'une table  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>R. Utilisation de COLUMNS_UPDATED pour tester les huit premières colonnes d'une table  
 Cet exemple crée deux tables, `employeeData` et `auditEmployeeData`. La table `employeeData` contient des informations sensibles relatives aux salaires des employés et les membres du service des ressources humaines peuvent la modifier. Si le numéro de sécurité sociale, le salaire annuel ou le numéro de compte bancaire d’un employé change, un enregistrement d’audit est généré et inséré dans la table d’audit `auditEmployeeData`.
   
 Avec la fonction `COLUMNS_UPDATED()`, nous pouvons tester rapidement si des modifications ont été apportées aux colonnes contenant des informations sensibles relatives aux employés. Cette utilisation de `COLUMNS_UPDATED()` fonctionne seulement pour détecter des modifications apportées aux huit premières colonnes de la table.
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   

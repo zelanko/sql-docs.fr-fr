@@ -1,6 +1,8 @@
 ---
-title: Alias (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: Alias
+description: Alias dans Azure SQL Data Warehouse et Parallel Data Warehouse.
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,17 +12,17 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c9aee41091d2ca77d4fd23fb4997e49644360392
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031560"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244767"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Alias (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Les alias permettent l’utilisation temporaire d’une chaîne courte facile à mémoriser à la place d’un nom de table ou de colonne dans des requêtes [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Les alias de table sont souvent utilisés dans les requêtes JOIN, car la syntaxe JOIN requiert des noms d’objet complets lors du référencement de colonnes.  
+  Les alias permettent l’utilisation temporaire d’une chaîne courte facile à mémoriser à la place d’un nom de table ou de colonne dans des requêtes [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Les alias de table sont souvent utilisés dans les requêtes JOIN, car la syntaxe JOIN requiert des noms d’objet complets lors du référencement de colonnes.  
   
  Les alias doivent être en un seul mot conformément aux règles de nommage des objets. Pour plus d’informations, consultez les règles de nommage des objets dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Les alias ne doivent pas contenir d’espaces vides, ni être entourés de guillemets simples ou doubles.  
   

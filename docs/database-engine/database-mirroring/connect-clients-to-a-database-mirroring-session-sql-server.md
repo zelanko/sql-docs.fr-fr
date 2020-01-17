@@ -1,6 +1,7 @@
 ---
-title: Connecter des clients à une session de mise en miroir de bases de données (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Connecter des clients à un miroir de base de données
+description: Configurez les clients pour les connecter à un miroir de base de données à l’aide de Native Client ou du fournisseur .NET Framework pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952008"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258883"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +92,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- ou Gestionnaire de configuration  
+ or  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -168,13 +169,13 @@ Server=123.34.45.56,4724;
   
  Le délai entre deux tentatives est calculé au moyen de la formule suivante :  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0,08 **&#42;** _LoginTimeout_ **)**  
   
  Où *PreviousRetryTime* a la valeur 0 au départ.  
   
- Par exemple, si vous utilisez le délai d’expiration de connexion par défaut de 15 secondes, *LoginTimeout* *= 15*. Dans ce cas, les délais entre deux tentatives alloués lors des trois premiers essais sont les suivants :  
+ Par exemple, si vous utilisez le délai d’expiration de connexion par défaut de 15 secondes, *LoginTimeout* *= 15*. Dans ce cas, les délais entre deux tentatives alloués lors des trois premiers essais sont les suivants :  
   
-|Arrondi|Calcul de*RetryTime*|Délai entre chaque tentative|  
+|Round|Calcul de*RetryTime*|Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondes|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondes|  
@@ -183,7 +184,7 @@ Server=123.34.45.56,4724;
   
  Le tableau suivant illustre ces délais pour les tentatives de connexion successives, lesquelles excèdent toutes le délai d'expiration.  
   
- ![Délai maximal de reprise pour un délai de connexion de 15 secondes](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "Délai maximal de reprise pour un délai de connexion de 15 secondes")  
+ ![Délai maximal de reprise pour un délai de connexion de 15 secondes](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "Délai maximal de reprise pour un délai de connexion de 15 secondes")  
   
  Pour le délai d'expiration de connexion par défaut, la durée maximale allouée aux trois premières tentatives de connexion est de 14,4 secondes. Si chaque tentative venait à utiliser la totalité du temps qui lui est alloué, il ne resterait alors que 0,6 secondes avant l'expiration du délai de connexion. Dans ce cas, la quatrième tentative serait écourtée et permettrait uniquement une dernière tentative de connexion rapide à l'aide du nom du partenaire initial. Cependant, une tentative de connexion peut échouer avant le délai autorisé, surtout lors des tentatives ultérieures. Par exemple, la réception d'une erreur réseau peut entraîner l'arrêt d'une tentative avant l'expiration du délai entre deux tentatives. Si les premières tentatives échouent en raison d'une erreur réseau, un délai supplémentaire est alors disponible pour la quatrième tentative, et éventuellement, pour des tentatives supplémentaires.  
   
@@ -241,7 +242,7 @@ Server=123.34.45.56,4724;
 |Configuration|Serveur principal|Serveur miroir|Comportement lors de la tentative de connexion en spécifiant Partner_A et Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configuration de la mise en miroir de départ.|Partner_A|Partner_B|Partner_A est mis en cache en tant que nom du partenaire initial. Le client réussit à se connecter à Partner_A. Le client télécharge le nom du serveur miroir, Partner_B, et le met en cache en ignorant le nom du partenaire de basculement fourni par le client.|  
-|Partner_A subit une défaillance matérielle et un basculement a lieu (suivi d'une déconnexion des clients).|Partner_B|none|Partner_A est toujours mis en cache comme nom de partenaire initial, mais le nom de partenaire de basculement fourni par le client, Partner_B, permet au client de se connecter au serveur principal actuel.|  
+|Partner_A subit une défaillance matérielle et un basculement a lieu (suivi d'une déconnexion des clients).|Partner_B|Aucun|Partner_A est toujours mis en cache comme nom de partenaire initial, mais le nom de partenaire de basculement fourni par le client, Partner_B, permet au client de se connecter au serveur principal actuel.|  
 |L'administrateur de base de données arrête la mise en miroir (et déconnecte les clients), remplace Partner_A par Partner_C et redémarre la mise en miroir.|Partner_B|Partner_C|Le client essaie de se connecter à Partner_A sans succès. Ensuite, il essaie avec Partner_B (le serveur principal actuel) et sa tentative aboutit. Le fournisseur d'accès aux données télécharge le nom du serveur miroir actuel, Partner_C, et le met en cache comme nom de partenaire de basculement.|  
 |Le service est manuellement basculé vers Partner_C (déconnexion des clients).|Partner_C|Partner_B|Le client tente tout d'abord de se connecter à Partner_A, puis à Partner_B. Ces deux noms échouent et la demande de connexion finit par expirer et par échouer.|  
   

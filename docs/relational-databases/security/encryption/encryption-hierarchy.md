@@ -14,15 +14,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4f8d3f61d3806e44a1e48774d2c216fdb3c83de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049935"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957421"
 ---
 # <a name="encryption-hierarchy"></a>Hiérarchie de chiffrement
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "68049935"
 -   chiffrement transparent des données  
   
 ### <a name="transact-sql-functions"></a>Fonctions Transact-SQL  
- Des éléments individuels peuvent être chiffrés dès leur insertion ou mise à jour à l’aide de fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Pour plus d’informations, consultez [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) et [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md).  
+ Des éléments individuels peuvent être chiffrés dès leur insertion ou mise à jour à l’aide de fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Pour plus d’informations, consultez [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbypassphrase-transact-sql.md) et [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../../t-sql/functions/decryptbypassphrase-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificats  
  Un certificat de clé publique, généralement appelé simplement un certificat, est une instruction signée numériquement qui lie la valeur d'une clé publique à l'identité de la personne, de la machine ou du service qui contient la clé privée correspondante. Les certificats sont émis et signés par une autorité de certification. L'entité qui reçoit un certificat d'une autorité de certification est le sujet de ce certificat. En général, les certificats contiennent les informations suivantes.  
@@ -112,7 +112,7 @@ ms.locfileid: "68049935"
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Éléments sécurisables](../../../relational-databases/security/securables.md)  
   
   

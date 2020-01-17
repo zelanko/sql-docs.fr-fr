@@ -1,7 +1,9 @@
 ---
-title: CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/04/2017
+title: CREATE DATABASE AUDIT SPECIFICATION
+description: Créez un objet de spécification d’audit de base de données à l’aide de la fonctionnalité d’audit de SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061005"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656646"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée un objet Spécification de l'audit de la base de données à l'aide de la fonctionnalité d'audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -92,8 +94,8 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ## <a name="examples"></a>Exemples
 
-### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. Auditer SELECT et INSERT dans une table pour n’importe quel principal de base de données 
- L’exemple suivant crée un audit du serveur nommé `Payrole_Security_Audit`, puis une spécification d’audit de la base de données nommée `Payrole_Security_Audit` qui audite les instructions `SELECT` et `INSERT` par n’importe quel utilisateur (`public`), pour la table `HumanResources.EmployeePayHistory` de la base de données `AdventureWorks2012`.  
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>R. Auditer SELECT et INSERT dans une table pour n’importe quel principal de base de données 
+ L’exemple suivant crée un audit du serveur nommé `Payrole_Security_Audit`, puis une spécification d’audit de la base de données nommée `Payrole_Security_Audit` qui audite les instructions `SELECT` et `INSERT` par l’utilisateur `dbo`, pour la table `HumanResources.EmployeePayHistory` dans la base de données `AdventureWorks2012`.  
   
 ```  
 USE master ;  
@@ -119,7 +121,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. Auditer le DML (INSERT, UPDATE ou DELETE) dans _tous_ les objets du schéma _sales_ d’un rôle de base de données  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Auditer le DML (INSERT, UPDATE ou DELETE) dans _tous_ les objets du schéma _sales_ d’un rôle de base de données  
  L’exemple suivant crée un audit du serveur nommé `DataModification_Security_Audit`, puis une spécification d’audit de la base de données nommée `Audit_Data_Modification_On_All_Sales_Tables` qui audite les instructions `INSERT`, `UPDATE` et `DELETE` par les utilisateurs d’un nouveau rôle de base de données `SalesUK`, pour tous les objets du schéma `Sales` de la base de données `AdventureWorks2012`.  
   
 ```  

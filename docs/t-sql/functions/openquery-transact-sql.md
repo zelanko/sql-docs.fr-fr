@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313738"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542268"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Exécute la requête directe spécifiée sur le serveur lié spécifié. Ce serveur est une source de données OLE DB. Il est possible de référencer OPENQUERY dans la clause FROM d’une requête SELECT comme s’il s’agissait du nom d’une table. Il est également possible de référencer OPENQUERY comme la table cible d'une instruction INSERT, UPDATE ou DELETE. Cela dépend des possibilités du fournisseur OLE DB. Bien que la requête puisse renvoyer plusieurs jeux de résultats, OPENQUERY ne renvoie que le premier.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,7 +65,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-executing-an-update-pass-through-query"></a>A. Exécution d'une requête UPDATE directe  
+### <a name="a-executing-an-update-pass-through-query"></a>R. Exécution d'une requête UPDATE directe  
  L'exemple suivant exécute une requête `UPDATE` directe sur le serveur lié créé dans l'exemple A.  
   
 ```sql  
@@ -101,7 +101,6 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Fonctions d’ensemble de lignes &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909550"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190151"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 
@@ -80,9 +80,9 @@ Le tableau suivant répertorie les valeurs par défaut de chaque option de la ba
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
 |AUTO_CLOSE|OFF|Non|  
-|AUTO_CREATE_STATISTICS|ON|Oui|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_SHRINK|OFF|Non|  
-|AUTO_UPDATE_STATISTICS|ON|Oui|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
 |CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
@@ -90,7 +90,7 @@ Le tableau suivant répertorie les valeurs par défaut de chaque option de la ba
 |CURSOR_DEFAULT|GLOBAL|Oui|  
 |Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|Non|  
+|DB_CHAINING|ACTIVÉ|Non|  
 |ENCRYPTION|OFF|Non|  
 |MIXED_PAGE_ALLOCATION|OFF|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
@@ -111,7 +111,7 @@ Pour obtenir une description de ces options de base de données, consultez [Opti
 
 |SLO|Taille maximale de fichier de données TempDB (Go)|Nombre de fichiers de données TempDB|Taille maximale des données TempDB (Go)|
 |---|---:|---:|---:|
-|Simple|13|1|13|
+|De base|13|1|13|
 |S0|13|1|13|
 |S1|13|1|13|
 |S2|13|1|13|
@@ -214,7 +214,14 @@ Pour plus d’informations sur les améliorations des performances dans TempDB, 
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Métadonnées tempdb à mémoire optimisée
-La contention de métadonnées TempDB a toujours été un goulot d’étranglement pour la scalabilité de nombreuses charges de travail s’exécutant sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../in-memory-database.md) une nouvelle fonctionnalité, les métadonnées TempDB à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau de scalabilité pour les charges de travail de base de données TempDB lourdes. Dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Pour pouvoir bénéficier de cette nouvelle fonctionnalité, utilisez le script suivant :
+La contention de métadonnées TempDB a toujours été un goulot d’étranglement pour la scalabilité de nombreuses charges de travail s’exécutant sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../in-memory-database.md) une nouvelle fonctionnalité, les métadonnées TempDB à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau de scalabilité pour les charges de travail de base de données TempDB lourdes. Dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous.
+
+Regardez cette vidéo de 7 minutes pour obtenir une vue d’ensemble des scénarios et du mode d’utilisation des métadonnées TempDB à mémoire optimisée :
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+Pour pouvoir bénéficier de cette nouvelle fonctionnalité, utilisez le script suivant :
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

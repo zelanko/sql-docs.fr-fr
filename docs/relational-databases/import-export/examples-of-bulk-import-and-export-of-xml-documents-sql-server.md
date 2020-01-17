@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056028"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401587"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d’importation et d’exportation en bloc de documents XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ GO
  [&#91;Haut&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Exportation en bloc de données XML  
- L'exemple suivant utilise la commande `bcp` pour exporter en bloc des données XML à partir de la table créée dans l'exemple précédent, à l'aide du même fichier de format XML. Dans la commande `bcp` suivante, `<server_name>` et `<instance_name>` représentent des espaces réservés qui doivent être remplacés par les valeurs appropriées :  
+ L’exemple suivant utilise [bcp](../../tools/bcp-utility.md) pour exporter en bloc des données XML à partir de la table créée dans l’exemple précédent, à l’aide du même fichier de format XML. Dans la commande `bcp` suivante, `<server_name>` et `<instance_name>` représentent des espaces réservés qui doivent être remplacés par les valeurs appropriées :  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

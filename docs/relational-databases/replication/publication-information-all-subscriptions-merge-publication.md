@@ -1,6 +1,7 @@
 ---
-title: Informations sur la publication, onglet Tous les abonnements (Publication de fusion) | Microsoft Docs
-ms.custom: ''
+title: Tous les abonnements (Fusion - SSMS)
+description: Décrit l’onglet « Tous les abonnements » de la publication de fusion sélectionnée dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8a85b419ff9b129fe4f4baace0c49ca46fb5304d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 619406c884ec5067f569178094f9a3a0c05634e6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710910"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321407"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Informations sur la publication, onglet Tous les abonnements (Publication de fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "71710910"
   
 -   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
+-   **Filtre** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
 -   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "71710910"
   
 -   Sans synchronisation  
   
- L'ordre de tri détermine également la valeur affichée lorsqu'un abonnement a plusieurs états. Par exemple, si un abonnement comporte une erreur et expire bientôt, la colonne **État** affiche **Erreur**.  
+ L'ordre de tri détermine également la valeur affichée lorsqu'un abonnement a plusieurs états. Si, par exemple, un abonnement a une erreur et expire bientôt, la colonne **État** affiche **Erreur**.  
   
  Les valeurs d'état **Critique pour les performances**, **Fusion longue**, **Expire bientôt/Expiré**et **Abonnement non initialisé** sont des avertissements. Lorsqu'un avertissement est affiché, la colonne **État** s'affiche également si un agent est en cours de synchronisation. Par exemple, l'état peut être **Synchronisation, Critique pour les performances**.  
   
@@ -96,10 +97,10 @@ ms.locfileid: "71710910"
  **Dernière synchronisation**  
  Heure de la dernière exécution de l'Agent de fusion. Les modifications peuvent avoir été traitées ou non au cours de la synchronisation. Si la synchronisation est en cours, le pourcentage d'avancement s'affiche.  
   
- **Duration**  
+ **Durée**  
  Délai d'exécution de l'Agent de fusion au cours de la dernière synchronisation. La durée correspond au délai écoulé si l'Agent de fusion est en cours de synchronisation ou au délai total si l'Agent s'est déjà synchronisé.  
   
- **Connexion**  
+ **Connection**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Type de connexion entre l'Abonné et le serveur de publication. Les valeurs possibles sont **LAN**, **Connexion à distance**et **Internet**. La valeur **Internet** s'affiche si l'abonnement utilise la synchronisation Web.  
   
 ## <a name="see-also"></a>Voir aussi  

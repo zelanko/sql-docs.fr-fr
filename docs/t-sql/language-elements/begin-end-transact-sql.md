@@ -24,19 +24,19 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe87e41f31ff7c85152138015c3ba3649cacda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e278e41fa2f27684b1ce249bb45b1dc78356753
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130142"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325561"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Délimite une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour permettre l'exécution groupée d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. BEGIN et END sont des mots clés du langage de contrôle de flux.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -89,7 +89,7 @@ WHILE @Iteration <10
 BEGIN  
     SELECT FirstName, MiddleName   
     FROM dbo.DimCustomer WHERE LastName = 'Adams';  
-SET @Iteration += 1  
+    SET @Iteration += 1  
 END;  
   
 ```  

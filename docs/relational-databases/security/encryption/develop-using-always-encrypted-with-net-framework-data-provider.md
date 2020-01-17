@@ -1,6 +1,7 @@
 ---
-title: Utilisation d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted avec le fournisseur de données .NET Framework
+description: Découvrez comment développer des applications .NET à l’aide de la fonctionnalité Always Encrypted pour SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594459"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558059"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Utilisation d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ Pour configurer votre application :
 2. Mettez à jour la configuration de votre application (par exemple, dans web.config ou app.config) pour définir le mappage au type d’enclave avec lequel votre instance [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] a été configurée (consultez [Configurer le type d’enclave pour l’option de configuration de serveur Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] prend en charge les enclaves VBS et le service Guardian hôte pour l’attestation. Par conséquent, vous devez mapper le type d’enclave VBS à la classe Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider à partir du package NuGet. 
 3. Activez les calculs d’enclave pour connecter votre application à la base de données en définissant le mot clé de l’URL d’attestation d’enclave dans la chaîne de connexion sur un point de terminaison d’attestation. La valeur du mot clé doit être définie sur le point de terminaison d’attestation du serveur SGH configuré dans votre environnement. 
 
-Pour obtenir un tutoriel pas à pas, consultez [Tutoriel : Développer une application .NET Framework à l’aide d’Always Encrypted avec enclaves sécurisées](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+Pour obtenir un tutoriel pas à pas, consultez [Tutoriel : Développer une application .NET Framework avec Always Encrypted avec enclaves sécurisées](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
@@ -522,7 +523,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 ## <a name="copying-encrypted-data-using-sqlbulkcopy"></a>Copie de données chiffrées à l’aide de SqlBulkCopy
 
-Grâce à SqlBulkCopy, les données qui sont déjà chiffrées et stockées dans une table peuvent être copiées vers une autre table, sans que vous ayez à les déchiffrer. Pour cela :
+Grâce à SqlBulkCopy, les données qui sont déjà chiffrées et stockées dans une table peuvent être copiées vers une autre table, sans que vous ayez à les déchiffrer. Pour ce faire :
 
 - Vérifiez que la configuration du chiffrement de la table cible est identique à celle de la table source. Les deux tables doivent avoir les mêmes colonnes chiffrées, et ces colonnes doivent être chiffrées à l’aide des mêmes types et des mêmes clés de chiffrement. Remarque : Si les colonnes cibles sont chiffrées différemment de la colonne source correspondante, vous ne pourrez pas déchiffrer les données de la table cible après les avoir copiées. Les données seront endommagées.
 - Configurez les deux connexions de base de données, c’est-à-dire, celle vers la table source et celle vers la table cible, sans activer Always Encrypted. 
@@ -564,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Nom|Description|Introduit avec .NET
+|Name|Description|Introduit avec .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Fournisseur de magasin de clés pour le magasin de certificats Windows.|  4.6
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Fournisseur de magasin de clés pour l’API de chiffrement Microsoft de la prochaine génération (CNG).|  4.6.1
@@ -585,7 +586,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>Voir aussi
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Blog sur Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Blog Chiffrement intégral](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Didacticiel de SQL Database : Protéger les données à l’aide d’Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 

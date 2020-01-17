@@ -1,6 +1,8 @@
 ---
-title: GRANT - Octroyer des autorisations sur un groupe de disponibilité (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT - Autorisations sur un groupe de disponibilité
+description: Octroyez des autorisations sur un groupe de disponibilité AlwaysOn.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065547"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246166"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT (Octroi d'autorisations de groupe de disponibilité) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "68065547"
   Octroie des autorisations sur un groupe de disponibilité AlwaysOn.  
   
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -97,7 +99,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. Octroi de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
+### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>R. Octroi de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
  L'exemple suivant octroie l'autorisation `VIEW DEFINITION` sur le groupe de disponibilité `MyAg` sur la connexion `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -107,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Octroi d'une autorisation TAKE OWNERSHIP avec l'option GRANT OPTION  
- Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le groupe de disponibilité `MyAg` est accordée à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` avec l'option `GRANT OPTION`.  
+ Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le groupe de disponibilité `MyAg` est accordée à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` avec l'option `GRANT OPTION`.  
   
 ```  
 USE master;  
@@ -117,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. Accorder l'autorisation CONTROL sur un groupe de disponibilité  
- L'exemple suivant octroie l'autorisation `CONTROL` sur le groupe de disponibilité `MyAg` à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski`. CONTROL permet un contrôle total des connexions du groupe de disponibilité, même s'il ne s'agit pas du propriétaire du groupe de disponibilité. Pour modifier la propriété, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ L'exemple suivant octroie l'autorisation `CONTROL` sur le groupe de disponibilité `MyAg` à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski`. CONTROL permet un contrôle total des connexions du groupe de disponibilité, même s'il ne s'agit pas du propriétaire du groupe de disponibilité. Pour modifier la propriété, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 ```  
 USE master;  

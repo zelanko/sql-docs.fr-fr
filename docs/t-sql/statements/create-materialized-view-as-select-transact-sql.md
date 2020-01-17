@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729850"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226743"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -50,9 +50,9 @@ ms.locfileid: "73729850"
 
 Cet article explique l’instruction SQL CREATE MATERIALIZED VIEW AS SELECT T dans Azure SQL Data Warehouse pour développer des solutions. L’article fournit également des exemples de code.
 
-Un affichage matérialisé conserve les données retournées à partir de la requête de définition d’affichage et est automatiquement mis à jour lors des modifications de données dans les tables sous-jacentes.   Il améliore les performances des requêtes complexes (généralement des requêtes avec jointures et agrégations) tout en offrant des opérations de maintenance simple.   Avec sa capacité d’automatching du plan d’exécution, un affichage matérialisé ne devra pas être référencés dans la requête pour que l’optimiseur prenne en compte l’affichage pour substitution.  Ainsi, les ingénieurs de données peuvent implémenter des affichages matérialisés comme un mécanisme pour améliorer les temps de réponse de requête, sans avoir à modifier les requêtes.  
+Une vue matérialisée conserve les données renvoyées par la requête de définition de vue et est automatiquement mise à jour à mesure que les données changent dans les tables sous-jacentes.   Elle améliore les performances des requêtes complexes (généralement des requêtes contenant des jointures et agrégations) tout en offrant des opérations de maintenance simples.   Avec sa capacité d’automatching du plan d’exécution, un affichage matérialisé ne devra pas être référencés dans la requête pour que l’optimiseur prenne en compte l’affichage pour substitution.  Ainsi, les ingénieurs de données peuvent implémenter des affichages matérialisés comme un mécanisme pour améliorer les temps de réponse de requête, sans avoir à modifier les requêtes.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,7 +88,7 @@ Seules les distributions HASH et ROUND_ROBIN sont prises en charge.
 *select_statement*   
 La liste SELECT dans la définition de l’affichage matérialisé doit respecter au moins un de ces deux critères :
 - La liste SELECT contient une fonction d’agrégation.
-- GROUP BY est utilisé dans la définition de l’affichage matérialisé et toutes les colonnes dans GROUP BY sont incluses dans la liste SELECT.  
+- GROUP BY est utilisé dans la définition de l’affichage matérialisé et toutes les colonnes dans GROUP BY sont incluses dans la liste SELECT.  Il est possible d’utiliser jusqu’à 32 colonnes dans la clause GROUP BY.
 
 Les fonctions d’agrégation sont requises dans la liste SELECT de la définition de l’affichage matérialisé.  Les agrégations prises en charge incluent MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 

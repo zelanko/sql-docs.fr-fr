@@ -1,6 +1,7 @@
 ---
-title: Définir et modifier un filtre de jointure entre des articles de fusion | Microsoft Docs
-ms.custom: ''
+title: Définir et modifier un filtre de jointure entre des articles de fusion
+description: Découvrez comment définir et modifier le filtre de jointure utilisé entre des articles de fusion à l’aide de SQL Server Management Studio (SSMS) ou de Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c37ddcac8c12b6885c696bea77ef66e5eedd5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908578"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321562"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Définir et modifier un filtre de jointure entre des articles de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ ms.locfileid: "72908578"
         > [!CAUTION]  
         >  La sélection de cette option indique que la relation entre les tables enfant et parent dans un filtre de jointure correspond à une relation Un à un ou Un à plusieurs. Sélectionnez cette option seulement si vous avez une contrainte sur la colonne de jointure dans la table enfant qui garantit l'unicité. Si vous ne définissez pas correctement l'option, des erreurs de non-convergence de données peuvent se produire.  
   
-    -   Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour que les modifications dans les lignes de la table filtrée et de la table jointe soient traitées comme une unité, sélectionnez **Enregistrement logique** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et ses versions ultérieures seulement). Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour que les modifications dans les lignes de la table filtrée et de la table jointe soient traitées comme une unité, sélectionnez **Enregistrement logique** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et ses versions ultérieures uniquement). Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -113,7 +114,7 @@ ms.locfileid: "72908578"
   
     -   Pour un article filtré à l'aide d'un filtre de lignes statique, consultez [Définir et modifier un filtre de lignes statiques](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)  
   
-2.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) sur la base de données de publication du serveur de publication pour définir un ou plusieurs articles connexes, également appelés « articles enfants », pour la publication. Pour plus d'informations, voir [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+2.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) sur la base de données de publication du serveur de publication pour définir un ou plusieurs articles connexes, également appelés « articles enfants », pour la publication. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Spécifiez `@publication`, le nom unique de ce filtre pour `@filtername`, le nom de l’article enfant créé à l’étape 2 pour `@article`, le nom de l’article parent auquel s’effectue la jointure pour `@join_articlename`, et l’une des valeurs suivantes pour `@join_unique_key` :  
   

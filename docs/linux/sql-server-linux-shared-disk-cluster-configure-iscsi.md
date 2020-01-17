@@ -1,6 +1,7 @@
 ---
-title: Configurer l’iSCSI de stockage d’instances de cluster de basculement - SQL Server sur Linux
-description: ''
+title: Configurer le stockage iSCSI pour une instance de cluster de basculement - SQL Server sur Linux
+description: Apprenez à configurer une instance de cluster de basculement avec le stockage iSCSI pour SQL Server sur Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032403"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558578"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - iSCSI - SQL Server sur Linux
 
@@ -55,7 +56,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     - iface.ipaddress
     - iface.subnet_Mask 
 
-    Observez l'exemple suivant :
+    Voir l’exemple suivant :
 
     ![iSCSITargetSettings][2]
 
@@ -168,7 +169,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     mkdir /var/opt/mssql/TempDir
     ```
     
-   *    Copiez les données et les fichiers journaux SQL Server dans le répertoire temporaire. Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   *    Copiez les données et les fichiers journaux de SQL Server dans le répertoire temporaire. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -297,7 +298,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     chown mssql <FolderName>
     ```
 
-    \<FolderName> est le nom du dossier créé. En voici un exemple :
+    \<FolderName> est le nom du dossier créé. Voici un exemple.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     chown mssql <FolderName>
     ```
 
-    \<FolderName> est le nom du dossier créé. En voici un exemple :
+    \<FolderName> est le nom du dossier créé. Voici un exemple.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -351,7 +352,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> est la liste des groupes de volumes de la sortie de l’étape 20 qui ne sera pas utilisée par l’instance de cluster de basculement. Placez-les entre guillemets et séparez-les par une virgule. En voici un exemple :
+    \<ListOfVGsNotUsedByPacemaker> est la liste des groupes de volumes de la sortie de l’étape 20 qui ne sera pas utilisée par l’instance de cluster de basculement. Placez-les entre guillemets et séparez-les par une virgule. Voici un exemple.
 
     ![55-ListOfVGs][11]
  
@@ -388,11 +389,11 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     ```
 25. Répétez les étapes de 1 à 6 sur tous les autres serveurs qui feront partie à l’instance de cluster de basculement.
 
-Vous êtes maintenant prêt à configurer l’instance FCI.
+Vous êtes maintenant prêt à configurer l’instance de cluster de basculement (FCI).
 
 |Distribution |Rubrique 
 |----- |-----
-|**Red Hat Enterprise Linux avec module complémentaire haute disponibilité** |[Configurer](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Opérer](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**Red Hat Enterprise Linux avec module complémentaire haute disponibilité** |[Configurer](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Exploitation](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server avec module complémentaire haute disponibilité** |[Configurer](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>Étapes suivantes

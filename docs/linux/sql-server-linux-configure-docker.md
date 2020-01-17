@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531341"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721544"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur SQL Server sur Docker
 
@@ -35,7 +35,12 @@ Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubunt
 > Cet article se concentre spécifiquement sur l’utilisation de l’image mssql-server-linux. L’image Windows n’est pas traitée, mais vous pouvez obtenir plus d’informations dans la [page du Hub Docker mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 > [!IMPORTANT]
-> Avant de choisir d’exécuter un conteneur SQL Server pour les cas d’utilisation de production, consultez notre [stratégie de support pour les conteneurs SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) afin de vérifier que vous êtes en cours d’exécution sur une configuration prise en charge.
+> Avant de choisir d’exécuter un conteneur SQL Server pour les cas d’utilisation de production, consultez notre [stratégie de support pour les conteneurs SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) afin de vérifier que vous êtes en cours d’exécution sur une configuration prise en charge.
+
+Cette vidéo de 6 minutes offre une introduction à l’exécution de SQL Server sur les conteneurs :
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>Extraire et exécuter l’image conteneur
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Cette technique vous permet également de partager et d’afficher les fichiers sur l’ordinateur hôte en dehors de Docker.
 
 > [!IMPORTANT]
-> Le mappage du volume hôte pour Docker sur Mac avec l’image SQL Server sur Linux n’est pas pris en charge pour l’instant. Utilisez des conteneurs de volume de données à la place. Cette restriction est spécifique au répertoire `/var/opt/mssql`. La lecture à partir d’un répertoire monté fonctionne bien. Par exemple, vous pouvez monter un répertoire hôte à l’aide de -v sur Mac et restaurer une sauvegarde à partir d’un fichier .bak résidant sur l’hôte.
+> Actuellement, le mappage du volume hôte pour **Docker sur Windows** ne prend pas en charge le mappage de l’intégralité du répertoire `/var/opt/mssql`. Toutefois, vous pouvez mapper un sous-répertoire comme `/var/opt/mssql/data` à votre ordinateur hôte.
+
+> [!IMPORTANT]
+> Le mappage du volume hôte pour **Docker sur Mac** avec l’image SQL Server sur Linux n’est pas pris en charge pour l’instant. Utilisez des conteneurs de volume de données à la place. Cette restriction est spécifique au répertoire `/var/opt/mssql`. La lecture à partir d’un répertoire monté fonctionne bien. Par exemple, vous pouvez monter un répertoire hôte à l’aide de -v sur Mac et restaurer une sauvegarde à partir d’un fichier .bak résidant sur l’hôte.
 
 ### <a name="use-data-volume-containers"></a>Utiliser des conteneurs de volume de données
 
@@ -336,7 +344,7 @@ Pour copier un fichier hors du conteneur, utilisez la commande suivante :
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-**Exemple :**
+**Exemple :**
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -354,7 +362,7 @@ Pour copier un fichier dans le conteneur, utilisez la commande suivante :
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-**Exemple :**
+**Exemple :**
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
@@ -615,7 +623,7 @@ Exécutez l’une des commandes suivantes si SQL Server n’a pas accès aux fic
 Accordez au groupe racine des autorisations sur les répertoires suivants afin que le conteneur SQL Server non racine ait accès aux fichiers de base de données.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

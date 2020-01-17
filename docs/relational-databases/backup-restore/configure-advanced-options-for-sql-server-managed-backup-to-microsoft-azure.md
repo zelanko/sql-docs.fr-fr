@@ -1,7 +1,8 @@
 ---
-title: Configurer les options avancées pour la sauvegarde managée SQL Server sur Microsoft Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 03/05/2017
+title: 'Gestion de sauvegarde : configurer les options avancées'
+titleSuffix: to Microsoft Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908977"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242570"
 ---
-# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurer les options avancées pour la sauvegarde managée SQL Server sur Microsoft Azure
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurer les options avancées pour la gestion de sauvegarde de SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Ce didacticiel explique comment définir les options avancées pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ces procédures sont nécessaires uniquement si vous avez besoin des fonctionnalités qu’elles proposent. Sinon, vous pouvez activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] et utiliser le comportement par défaut.  
   
  Dans chaque scénario, la sauvegarde est spécifiée à l'aide du paramètre `database_name` . Quand le paramètre `database_name` est NULL ou *, les modifications affectent les paramètres par défaut au niveau de l’instance. Les paramètres au niveau de l'instance affectent également les bases de données créées après la modification.  
   
- Une fois que vous avez défini ces paramètres, vous pouvez activer la sauvegarde managée pour la base de données ou l’instance à l’aide de la procédure stockée système [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Pour plus d'informations, consultez [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+ Une fois que vous avez défini ces paramètres, vous pouvez activer la sauvegarde managée pour la base de données ou l’instance à l’aide de la procédure stockée système [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Pour plus d’informations, consultez [Activer la gestion de sauvegarde de SQL Server sur Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 > [!WARNING]  
 >  Vous devez toujours configurer les options avancées et les options de planification personnalisées avant d’activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Sinon, des opérations de sauvegarde indésirables risquent se produire pendant le laps de temps qui sépare l'activation de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] et la configuration de ces paramètres.  
@@ -110,10 +111,10 @@ ms.locfileid: "72908977"
   
     ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Après avoir configuré les options avancées et les planifications personnalisées, vous devez activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données cible ou l’instance SQL Server. Pour plus d'informations, consultez [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Sauvegarde managée de SQL Server vers Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

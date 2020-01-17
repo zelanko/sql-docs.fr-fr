@@ -1,6 +1,5 @@
 ---
-title: Promouvoir les valeurs XML les plus fréquentes à l’aide de colonnes calculées | Microsoft Docs
-ms.custom: ''
+title: Promouvoir les valeurs XML fréquentes à l’aide de colonnes calculées | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 156ed5549daa8129ff17d1b2827d798521c8a88b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905527"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257636"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ FROM   T
 WHERE  xCol.exist('/book/@ISBN[. = "0-7356-1588-2"]') = 1  
 ```  
   
- La requête portant sur la colonne XML peut être réécrite de façon à utiliser directement la colonne calculée comme suit :  
+ La requête portant sur la colonne XML peut être réécrite de façon à utiliser directement la colonne calculée comme suit :  
   
 ```  
 SELECT xCol  

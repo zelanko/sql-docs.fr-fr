@@ -1,6 +1,7 @@
 ---
-title: Administrer une topologie d’égal à égal (programmation Transact-SQL de la réplication) | Microsoft Docs
-ms.custom: ''
+title: Administrer une topologie d’égal à égal (procédures stockées de réplication)
+description: Découvrez comment utiliser les procédures stockées de réplication pour administrer une topologie d’égal à égal, par exemple pour ajouter un article ou modifier un schéma.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 633e1a3cc6db676065d588c570d75c6b5a376f6d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 712a0514bf4fb9e4c66e0d6f7b0475ec5a957dde
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908065"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322196"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrer une topologie d'égal à égal (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "72908065"
   
 4.  Copiez manuellement en bloc les données de la nouvelle table sur tous les nœuds à l'aide de l' [utilitaire bcp](../../../tools/bcp-utility.md).  
   
-5.  Exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) pour créer l’article sur chaque nœud de la topologie. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
+5.  Exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) pour créer l'article sur chaque nœud de la topologie. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  Après l’exécution de [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), la réplication ajoute automatiquement l’article aux abonnements de la topologie.  
+    >  Après l'exécution de [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) , la réplication ajoute automatiquement l'article aux abonnements de la topologie.  
   
 6.  Redémarrez les Agents de distribution sur chaque nœud de la topologie.  
 
@@ -65,6 +66,6 @@ ms.locfileid: "72908065"
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Sauvegarde et restauration des bases de données SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Réplication transactionnelle d’égal à égal](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -1,6 +1,8 @@
 ---
-title: REVOKE – Révoquer des autorisations de principal de serveur (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE - Autorisations sur un principal de serveur
+description: Révoquez les autorisations d’une connexion SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -19,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2ee75a4b200850e8762814ddd30dab8c1e60bdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21cb290cb91ca74227db7a3cd16501ddd882ae48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914232"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255788"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de principal de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de révoquer des autorisations accordées et refusées sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -112,8 +114,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Révocation d'une autorisation IMPERSONATE sur une connexion  
- Dans l’exemple ci-dessous, l’autorisation `IMPERSONATE` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` est révoquée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créée à partir du compte d’utilisateur Windows `AdvWorks\YoonM`.  
+### <a name="a-revoking-impersonate-permission-on-a-login"></a>R. Révocation d'une autorisation IMPERSONATE sur une connexion  
+ Dans l’exemple ci-dessous, l’autorisation `IMPERSONATE` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` est révoquée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créée à partir du compte d’utilisateur Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -122,7 +124,7 @@ GO
 ```  
   
 ### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. Révocation d’une autorisation VIEW DEFINITION avec l’option CASCADE  
- Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` est révoquée pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'option `CASCADE` indique que l'autorisation `VIEW DEFINITION` sur `EricKurjan` sera également révoquée pour les principaux auxquels `RMeyyappan` a accordé cette autorisation.  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` est révoquée pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. L'option `CASCADE` indique que l'autorisation `VIEW DEFINITION` sur `EricKurjan` sera également révoquée pour les principaux auxquels `RMeyyappan` a accordé cette autorisation.  
   
 ```  
 USE master;  

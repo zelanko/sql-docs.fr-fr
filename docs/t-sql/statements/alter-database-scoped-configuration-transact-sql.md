@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: Activez plusieurs paramètres de configuration de base de données au niveau de chaque base de données.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240695"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258136"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -128,9 +130,9 @@ Pour définir cette option au niveau de l’instance, consultez [Configurer l’
 > Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la valeur affectée à la configuration du **degré maximal de parallélisme** au niveau du serveur est toujours 0. MAXDOP peut être configuré pour chaque base de données, comme décrit dans cet article. Pour obtenir des recommandations sur la configuration optimale de MAXDOP, consultez la section [Ressources supplémentaires](#additional-resources).
 
 > [!TIP]
-> Pour définir cette option au niveau de la requête, utilisez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
-> Pour ce faire, au niveau du serveur, utilisez l’[option de configuration serveur](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) du **degré maximal de parallélisme (MAXDOP)** .     
-> Pour ce faire, au niveau de la charge de travail, utilisez l’[option de configuration de groupe de charges de travail Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
+> Pour définir cette option au niveau de la requête, utilisez l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
+> Pour ce faire au niveau du serveur, utilisez l’[option de configuration serveur](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) du **degré maximal de parallélisme (MAXDOP)** .     
+> Pour ce faire au niveau de la charge de travail, utilisez l’[option de configuration de groupe de charge de travail Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
 PRIMARY
 
@@ -141,8 +143,8 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 Permet de définir le modèle d’estimation de la cardinalité de l’optimiseur de requête sur SQL Server 2012 ou antérieur selon le niveau de compatibilité de la base de données. La valeur par défaut est **OFF**, ce qui définit le modèle d’estimation de la cardinalité de l’optimiseur de requête en fonction du niveau de compatibilité de la base de données. Définir LEGACY_CARDINALITY_ESTIMATION sur **ON** équivaut à activer [indicateur de Trace 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Pour définir cette option au niveau de la requête, ajoutez [l’indicateur de requête](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
-> Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures, pour effectuer cette opération au niveau de la requête, ajoutez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** au lieu de l’indicateur de trace.
+> Pour définir cette option au niveau de la requête, ajoutez l’[indicateur de requête](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
+> Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures, pour effectuer cette opération au niveau de la requête, ajoutez l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** au lieu de l’indicateur de trace.
 
 PRIMARY
 
@@ -153,8 +155,8 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 Active ou désactive la [détection de paramètres](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). La valeur par défaut est ON. La définition de PARAMETER_SNIFFING sur ON équivaut à activer [l’indicateur de trace 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Pour définir cette option au niveau de la requête, utilisez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
-> Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures, pour effectuer cette opération au niveau de la requête, vous pouvez également utiliser [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
+> Pour définir cette option au niveau de la requête, consultez l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
+> Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures, pour effectuer cette opération au niveau de la requête, vous pouvez également utiliser l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
 
 PRIMARY
 
@@ -165,7 +167,7 @@ Cette valeur est valide uniquement pour les bases de données secondaires lorsqu
 Active ou désactive les correctifs logiciels d’optimisation de requête, quel que soit le niveau de compatibilité de la base de données. La valeur par défaut est **OFF**, laquelle désactive les correctifs logiciels d’optimisation des requêtes qui ont été publiés après l’arrivée du plus haut niveau de compatibilité d’une version donnée (post-RTM). L’utilisation de la valeur **ON** équivaut à activer [l’indicateur de trace 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Pour définir cette option au niveau de la requête, ajoutez [l’indicateur de requête](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
+> Pour définir cette option au niveau de la requête, ajoutez l’[indicateur de requête](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
 > Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et versions ultérieures, pour effectuer cette opération au niveau de la requête, ajoutez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT au lieu de l’indicateur de trace.
 
 PRIMARY
@@ -430,7 +432,7 @@ La vue système [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../.
 
 Ces exemples illustrent l’utilisation de ALTER DATABASE SCOPED CONFIGURATION.
 
-### <a name="a-grant-permission"></a>A. Accorder une autorisation
+### <a name="a-grant-permission"></a>R. Accorder l’autorisation
 
 Cet exemple accorde à l’utilisateur Joe l’autorisation nécessaire pour exécuter ALTER DATABASE SCOPED CONFIGURATION.
 
@@ -574,7 +576,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ### <a name="legacy_cardinality_estimation-resources"></a>Ressources LEGACY_CARDINALITY_ESTIMATION
 
 - [Estimation de la cardinalité (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)
+- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimiser vos plans de requêtes avec l’Estimateur de la cardinalité de SQL Server 2014)](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parameter_sniffing-resources"></a>Ressources PARAMETER_SNIFFING
 

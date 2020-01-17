@@ -1,7 +1,7 @@
 ---
-title: Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: 'Mise à niveau : Assistant Installation (Programme d’installation)'
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bcbc5be852e2eed6b22689c8745210dd840e7e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934696"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258797"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation)
 
@@ -115,7 +115,7 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
      Pour spécifier le même compte de connexion pour tous les comptes de service dans cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fournissez les informations d'identification dans les champs en bas de page.  
   
-     **Remarque relative à la sécurité** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Note de sécurité** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Lorsque vous avez terminé de spécifier les informations de connexion pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Suivant**.  
   
@@ -131,7 +131,7 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
 20. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations sur les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Après avoir effectué la mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effectuez les tâches suivantes :  
   
 -   **Inscrire vos serveurs** - La mise à niveau entraîne la suppression des paramètres du Registre pour l’instance antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après la mise à niveau, vous devez réinscrire vos serveurs.  

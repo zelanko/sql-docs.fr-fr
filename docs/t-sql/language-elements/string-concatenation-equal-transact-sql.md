@@ -1,6 +1,8 @@
 ---
-title: += (Affectation après concaténation de chaînes) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: += Concaténation de chaînes
+description: Concaténer deux chaînes et définir la chaîne obtenue à l’aide du résultat de l’opération.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,19 +19,19 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 631fcc8728975d12370d517fb785b7cb832e6758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd21fb221076470d0c39194ea4c38d96af0f1056
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121662"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257053"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Affectation après concaténation de chaînes) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concatène deux chaînes et définit la chaîne obtenue à l'aide du résultat de l'opération. Par exemple, si une variable @x a la valeur « Adventure », alors @x += « Works » prend la valeur d’origine de @x, ajoute « Works » à la chaîne, puis assigne à @x la nouvelle valeur « AdventureWorks ».  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +57,7 @@ SELECT 'Adventure' += 'Works'
 ```  
   
 ## <a name="examples"></a>Exemples  
-### <a name="a-concatenation-using--operator"></a>A. Concaténation à l’aide de l’opérateur +=
+### <a name="a-concatenation-using--operator"></a>R. Concaténation à l’aide de l’opérateur +=
  L'exemple suivant est une concaténation basée sur l'opérateur `+=`.  
   
 ```  

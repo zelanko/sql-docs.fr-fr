@@ -1,6 +1,7 @@
 ---
-title: Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Configurer des alertes pour les métriques de performances de mise en miroir de bases de données
+description: 'Aide pour la configuration des seuils d’avertissement et alertes pour les métriques de performances utilisées par la mise en miroir de bases de données. '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050599"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820902"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utiliser des seuils d'avertissement et d'alertes sur des métriques de performances de mise en miroir (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050599"
   
  Une fois l'analyse établie pour une base de données en miroir, un administrateur système peut configurer des seuils d'avertissements sur plusieurs métriques de performances clés. Il est également possible de configurer des alertes sur ces événements de mise en miroir de bases de données et sur d'autres événements.  
   
- **Dans cette rubrique :**  
-  
--   [Métriques de performances et seuils d'avertissement](#PerfMetricsAndWarningThresholds)  
-  
--   [Définition et gestion de seuils d'avertissement](#SetUpManageWarningThresholds)  
-  
--   [Utilisation d'alertes pour une base de données en miroir](#UseAlerts)  
-  
--   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> Métriques de performances et seuils d'avertissement  
  Le tableau suivant répertorie les métriques de performances pour lesquelles des avertissements peuvent être configurés, décrit les seuils d'avertissement correspondants et répertorie le libellé Moniteur de mise en miroir de bases de données correspondant.  
@@ -76,7 +68,7 @@ ms.locfileid: "68050599"
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Événements de seuil de performance envoyés au journal des événements Windows  
  Si un seuil d’avertissement est défini pour une métrique de performance, la valeur la plus récente est comparée au seuil quand la table d’états est mise à jour. Si le seuil est atteint, la procédure de mise à jour, **sp_dbmmonitorupdate**, génère un événement d’informations (un *événement de seuil de performance*) pour la métrique et elle écrit l’événement dans le journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Le tableau suivant répertorie les ID des événements de seuil de performance.  
   
-|Mesure de performance|ID d'événement|  
+|Mesure de performance|ID de l’événement|  
 |------------------------|--------------|  
 |Journal non envoyé|32042|  
 |Journal non restauré|32043|  

@@ -1,6 +1,7 @@
 ---
-title: Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration | Microsoft Docs
-ms.custom: ''
+title: Configurer la gestion de clés extensible TDE avec Azure Key Vault
+description: Étapes à suivre pour installer et configurer SQL Server Connect pour Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929710"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557467"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Les étapes suivantes permettent l’installation et la configuration du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour Azure Key Vault.  
+  Les étapes suivantes vous guident tout au long de l’installation et de la configuration du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour Azure Key Vault.  
   
 ## <a name="before-you-start"></a>Avant de commencer  
  Pour utiliser Azure Key Vault avec votre serveur SQL Server, il existe quelques conditions préalables :  
@@ -44,7 +45,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
 2016 | [Package redistribuable Visual C++ pour Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Partie I : Configurer un principal du service Azure Active Directory  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Partie I : Configurer un principal du service Azure Active Directory  
  Pour accorder à votre service Azure Key Vault des autorisations d’accès à SQL Server, vous avez besoin d’un compte de principal du Service dans Azure Active Directory (AAD).  
   
 1.  Accédez au [portail Azure](https://ms.portal.azure.com/), puis connectez-vous.  
@@ -57,7 +58,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>Partie II : Créer un Key Vault et une clé  
+## <a name="part-ii-create-a-key-vault-and-key"></a>Partie II : Créer un Key Vault et une clé  
  Le coffre de clés et la clé créés ici seront utilisés par le moteur de base de données SQL Server pour la protection des clés de chiffrement.  
   
 > [!IMPORTANT]  
@@ -169,13 +170,13 @@ Version de SQL Server  |Lien d’installation du package redistribuable
       > [!NOTE]
         >  SQL Server prend en charge seulement les clés RSA 2 048 bits.
         
-    ### <a name="best-practice"></a>Recommandation :
+    ### <a name="best-practice"></a>Meilleure pratique :
     
     Pour garantir la récupération rapide de clé et être en mesure d’accéder à vos données en dehors d’Azure, nous recommandons les meilleures pratiques suivantes :
  
-    1. Créer votre clé de chiffrement localement sur un appareil HSM local. (Vérifiez qu’il s’agit d’une clé RSA 2 048 bits asymétrique, donc prise en charge par SQL Server.)
+    1. Créez votre clé de chiffrement localement sur un appareil HSM local. (Vérifiez qu’il s’agit d’une clé RSA 2 048 bits asymétrique, donc prise en charge par SQL Server.)
     2. Importer la clé de chiffrement dans Azure Key Vault. Consultez les étapes ci-dessous pour connaître la marche à suivre.
-    3. Avant d’utiliser la clé dans le coffre de clés Azure pour la première fois, sauvegardez une clé Azure Key Vault. En savoir plus sur la commande [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) .
+    3. Avant d’utiliser la clé dans le coffre de clés Azure pour la première fois, sauvegardez une clé Azure Key Vault. En savoir plus sur la commande [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
     4. Chaque fois que des modifications sont apportées à la clé (par exemple, ajout de listes de contrôle d’accès, ajout d’étiquettes, ajout d’attributs de clé), veillez à faire une autre sauvegarde de la clé Azure Key Vault.
 
         > [!NOTE]  
@@ -354,7 +355,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
   
 Maintenant que vous avez terminé la configuration de base, découvrez comment [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).   
   

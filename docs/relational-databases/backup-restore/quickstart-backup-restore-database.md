@@ -1,22 +1,22 @@
 ---
-title: 'Démarrage rapide : Sauvegarder et restaurer une base de données SQL Server localement'
+title: 'Démarrage rapide : Sauvegarder et restaurer une base de données'
 titleSuffix: SQL Server
-description: Ce guide de démarrage rapide montre comment exécuter SQL Server sur Linux dans le cloud de votre choix.
+description: Ce guide de démarrage rapide montre comment sauvegarder et restaurer une base de données SQL Server locale.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033619"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258644"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Démarrage rapide : Sauvegarder et restaurer une base de données SQL Server localement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Pour obtenir une procédure plus détaillée, consultez [Créer une sauvegarde d
 ## <a name="prerequisites"></a>Conditions préalables requises
 Pour suivre ce guide de démarrage rapide, vous avez besoin des éléments suivants : 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## <a name="create-a-test-database"></a>Créer une base de données de test 

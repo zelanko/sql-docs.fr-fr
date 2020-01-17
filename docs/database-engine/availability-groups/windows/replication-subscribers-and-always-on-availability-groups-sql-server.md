@@ -1,6 +1,7 @@
 ---
-title: Abonnés de réplication et groupes de disponibilité Always On (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Abonnés de réplication et groupes de disponibilité (SQL Server)
+description: Découvrez comment configurer un abonné de réplication avec un groupe de disponibilité Always On SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5635d4ce579e01d88079e3a813cddaf3391addc
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969437"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235571"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Abonnés de réplication et groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68969437"
   
  Quand vous créez un abonnement par extraction, avec la base de données d’abonnement dans un groupe de disponibilité, après chaque basculement il est recommandé de désactiver le travail de l’agent de distribution sur l’ancien réplica principal et d’activer le travail sur le nouveau réplica principal.  
   
-## <a name="creating-a-transactional-replication-push-subscription"></a>Création d'un abonnement de réplication transactionnelle par extraction  
+## <a name="creating-a-transactional-replication-push-subscription"></a>Création d'un abonnement de réplication transactionnelle par émission de données  
   
 ```  
 -- commands to execute at the publisher, in the publisher database:  

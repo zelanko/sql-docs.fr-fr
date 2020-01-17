@@ -1,6 +1,7 @@
 ---
-title: Problèmes et limitations de conception des serveurs de publication Oracle | Microsoft Docs
-ms.custom: ''
+title: Considérations et limitations (serveurs de publication Oracle)
+description: Décrit les considérations et les limitations de conception à prendre en compte lors de la configuration d’un Abonné SQL Server avec un serveur de publication Oracle.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710934"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321906"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Problèmes et limitations de conception des serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En termes de conception, la publication à partir d'une base de données Oracle fonctionne de façon similaire à la publication à partir d'une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Toutefois, soyez conscient des problèmes et limitations suivants :  
+  La publication à partir d’une base de données Oracle est conçue pour fonctionner de façon similaire à la publication à partir d’une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, soyez conscient des problèmes et limitations suivants :  
   
 -   L'option Oracle Gateway offre de meilleures performances que l'option Oracle Complete ; il n'est cependant pas possible de l'utiliser pour publier la même table dans plusieurs publications transactionnelles. Une table peut faire partie d'un nombre quelconque de publications d'instantané mais d'une seule publication transactionnelle uniquement. Si vous devez publier la même table dans plusieurs publications transactionnelles, choisissez l'option Oracle Complete.  
   
@@ -60,11 +61,11 @@ ms.locfileid: "71710934"
   
 -   Tables imbriquées  
   
--   Vues  
+-   Les vues  
   
 -   Packages, corps de package, procédures et déclencheurs  
   
--   Files d'attente  
+-   Files d’attente  
   
 -   Séquences  
   

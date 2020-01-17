@@ -1,6 +1,7 @@
 ---
-title: Instance de serveur miroir (Configurer l’Assistant Sécurité de mise en miroir de bases de données) | Microsoft Docs
-ms.custom: ''
+title: 'Assistant Configurer la sécurité : Instance de serveur miroir'
+description: Décrit la page « Instance de serveur miroir » de l’« Assistant Configurer la sécurité de la mise en miroir de bases de données » dans SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d52fa3912bffd084a8f95e79963abcd99158cdd4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045630"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822398"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Instance de serveur miroir (Configurer l'Assistant Sécurité de mise en miroir de bases de données)
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>Assistant Configurer la sécurité de la mise en miroir de bases de données : Instance de serveur miroir
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette page vous permet de spécifier des informations sur l'instance de serveur avec la base de données miroir.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68045630"
   
  Dans le cas contraire, entrez le nom de l'instance de serveur miroir. Notez que l'instance de serveur miroir ne peut pas être identique à l'instance de serveur principal.  
   
- **Se connecter**  
+ **Connexion**  
  Si aucune instance de serveur miroir n’a été spécifiée, cliquez sur **Se connecter** pour afficher la boîte de dialogue **Se connecter au serveur** , dans laquelle vous pouvez spécifier l’instance de serveur et établir une connexion.  
   
  Si l’instance a été spécifiée, mais que l’Assistant ne propose pas de connexion doté d’autorisations suffisantes pour vérifier l’existence du point de terminaison, cliquez sur **Se connecter**. Dans la boîte de dialogue **Se connecter au serveur** qui s’affiche, l’instance de serveur est présélectionnée et ne peut pas être modifiée. Spécifiez un compte de domaine qui possède une autorisation suffisante et connectez-vous à l'instance du serveur.  
@@ -46,7 +47,7 @@ ms.locfileid: "68045630"
 > [!NOTE]  
 >  Au moment de se connecter à l’instance du serveur, l’Assistant de configuration de la sécurité de mise en miroir de bases de données utilise les informations d’identification fournies dans la boîte de dialogue **Se connecter au serveur** . Celles-ci diffèrent des informations d'identification d'une session de mise en miroir, qui utilise les informations d'identification du compte de démarrage où l'instance de serveur est en cours d'exécution en tant que service.  
   
- **Port d'écoute**  
+ **Port de l’écouteur**  
  Le comportement de cette option varie comme suit selon qu'il existe ou non un point de terminaison de mise en miroir pour cette instance du serveur :  
   
 -   Si aucun port d’écoute n’existe pour l’instance de serveur, le numéro de port 5022 est affiché dans la zone de texte **Port** . Vous pouvez utiliser n'importe quel numéro de port disponible, tel que 7022.  

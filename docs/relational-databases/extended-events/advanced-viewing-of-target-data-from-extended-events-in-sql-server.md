@@ -1,6 +1,5 @@
 ---
-title: Affichage avancé des données cibles d’événements étendus dans SQL Server | Microsoft Docs
-ms.custom: ''
+title: Vue avancée des données cibles à partir d’événements étendus
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,13 +9,14 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909416"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255760"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
 
@@ -65,11 +65,11 @@ Cet article a été rédigé du point de vue de SQL Server. Il utilise la cible 
 
 Pour plus d’informations sur les événements étendus propres à la Base de données SQL Azure, consultez :
 
-- [Événements étendus dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Événements étendus dans la Base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
 
 
 
-## <a name="a-general-options"></a>A. Options générales
+## <a name="a-general-options"></a>R. Options générales
 
 
 En général, les différents modes d’accès aux options avancées sont les suivants :
@@ -91,7 +91,7 @@ Il existe différentes façons d’importer des données cibles event_file dans 
 
 
 - Chaque fois que la session d’événements est lancée, le système incorpore un entier long dans un nouveau nom de fichier de telle sorte que le nom de fichier soit unique et différent de la dernière fois où la session a démarré.
-  - *Exemple :* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *Exemple :* Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - Le contenu à l’intérieur d’un fichier . XEL n’est pas du texte brut qui peut être affiché dans Notepad.exe.

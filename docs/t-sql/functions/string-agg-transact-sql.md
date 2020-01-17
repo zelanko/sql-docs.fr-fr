@@ -16,19 +16,21 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632125"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720793"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Concatène les valeurs des expressions de chaîne et place les valeurs de séparateur entre elles. Le séparateur n’est pas ajouté à la fin de la chaîne.
+Concatène les valeurs des expressions de chaîne et place les valeurs de séparateur entre elles. Le séparateur n’est pas ajouté à la fin de la chaîne. 
+
+Introduite dans SQL Server 2017.
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,7 +83,7 @@ Les valeurs NULL sont ignorées et le séparateur correspondant n’est pas ajou
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Générer une liste de noms séparés sur plusieurs lignes
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>R. Générer une liste de noms séparés sur plusieurs lignes
 
 L’exemple suivant génère une liste de noms dans une cellule de résultat unique, séparés par des retours chariot.
 ```sql

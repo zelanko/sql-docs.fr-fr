@@ -1,6 +1,7 @@
 ---
-title: 'Tutoriel : configurer la réplication entre un serveur et des clients mobiles (réplication de fusion) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutoriel : Configurer la réplication de fusion'
+description: Ce tutoriel vous apprend à configurer la réplication de fusion entre un serveur SQL Server et un client mobile.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517967"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321850"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : configurer la réplication entre un serveur et des clients mobiles (fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,21 +110,21 @@ Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!
   
 10. Dans la page **Filtrer les lignes de la table**, sélectionnez **Employee (HumanResources)** . Ensuite, sélectionnez **Ajouter**, puis **Ajouter une jointure pour étendre le filtre sélectionné**.  
   
-    A. Dans la boîte de dialogue **Ajouter une jointure**, sélectionnez **Sales.SalesOrderHeader** sous **Table jointe**. Sélectionnez **Write the join statement manually** (Écrire l’instruction de jointure manuellement), puis finalisez l’instruction de jointure de la façon suivante :  
+    a. Dans la boîte de dialogue **Ajouter une jointure**, sélectionnez **Sales.SalesOrderHeader** sous **Table jointe**. Sélectionnez **Write the join statement manually** (Écrire l’instruction de jointure manuellement), puis finalisez l’instruction de jointure de la façon suivante :  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. Dans **Spécifiez les options de jointure**, sélectionnez **Clé unique**, puis sélectionnez **OK**.
+    b. Dans **Spécifiez les options de jointure**, sélectionnez **Clé unique**, puis sélectionnez **OK**.
 
     ![Sélections pour l’ajout d’une jointure au filtre](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. Dans la page **Filtrer les lignes de la table**, sélectionnez **SalesOrderHeader**. Ensuite, sélectionnez **Ajouter**, puis **Ajouter une jointure pour étendre le filtre sélectionné**.  
   
-    A. Dans la boîte de dialogue **Ajouter une jointure** , sélectionnez **Sales.SalesOrderDetail** sous **Table jointe**.    
-    B. Sélectionnez **Utiliser le générateur pour créer l’instruction**.  
+    a. Dans la boîte de dialogue **Ajouter une jointure** , sélectionnez **Sales.SalesOrderDetail** sous **Table jointe**.    
+    b. Sélectionnez **Utiliser le générateur pour créer l’instruction**.  
     c. Dans la zone **d’aperçu**, vérifiez que l’instruction de jointure ressemble à ceci :  
   
     ```sql  
@@ -164,14 +165,14 @@ Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!
   
 2. Dans le dossier **Publications locales**, cliquez avec le bouton droit sur **AdvWorksSalesOrdersMerge**, puis sélectionnez **Propriétés**.  
   
-   A. Sélectionnez la page **Liste d’accès à la publication**, puis sélectionnez **Ajouter**. 
+   a. Sélectionnez la page **Liste d’accès à la publication**, puis sélectionnez **Ajouter**. 
   
-   B. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*> **\repl_merge**, puis **OK**. Sélectionnez **OK** à nouveau. 
+   b. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*> **\repl_merge**, puis **OK**. Sélectionnez **OK** à nouveau. 
 
    ![Sélections pour l’ajout de la connexion de l’Agent de fusion](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
-Pour plus d'informations, consultez :  
+Pour plus d'informations, consultez les pages suivantes :  
 - [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md) 
 - [Filtres de lignes paramétrés](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 - [Définir un article](../../relational-databases/replication/publish/define-an-article.md)  
@@ -226,7 +227,7 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
   
 1. Connectez-vous à l’abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion**.  
   
-   Dans la page **Général**, sélectionnez **Rechercher**, puis entrez <*nom_ordinateur_abonné*> **\repl_merge** dans la zone **Entrer le nom d’objet**. Sélectionnez **Vérifier les noms**, puis **OK**. 
+   Dans la page **Général**, sélectionnez **Rechercher**, puis entrez <*nom_ordinateur_abonné*> **\repl_merge** dans la zone **Entrer le nom d’objet**. Sélectionnez **Vérifier les noms**, puis sélectionnez **OK**. 
     
    ![Sélections pour la définition de la connexion](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
@@ -240,14 +241,14 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
   
 2. Dans le dossier **Publications locales**, cliquez avec le bouton droit sur la publication **AdvWorksSalesOrdersMerge**, puis sélectionnez **Propriétés**.  
    
-   A. Sélectionnez la page **Partitions de données**, puis sélectionnez **Ajouter**.   
-   B. Dans la boîte de dialogue **Ajouter une partition de données**, entrez **adventure-works\pamela0** dans la zone **Valeur de HOST_NAME**, puis sélectionnez **OK**.  
+   a. Sélectionnez la page **Partitions de données**, puis sélectionnez **Ajouter**.   
+   b. Dans la boîte de dialogue **Ajouter une partition de données**, entrez **adventure-works\pamela0** dans la zone **Valeur de HOST_NAME**, puis sélectionnez **OK**.  
    c. Sélectionnez la partition nouvellement ajoutée, sélectionnez **Générer les instantanés sélectionnés maintenant**, puis **OK**. 
 
    ![Sélections pour l’ajout d’une partition](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   
   
-Pour plus d'informations, consultez :  
+Pour plus d'informations, consultez les pages suivantes :  
 - [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md)  
 - [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
@@ -276,7 +277,7 @@ Vous avez correctement configuré votre serveur de publication et votre abonné 
 2. Répéter cette procédure quand la connectivité réseau est disponible pour synchroniser les données entre le serveur de publication et l’abonné.
 3. Interroger la table **SalesOrderHeader** ou **SalesOrderDetail** sur l’autre serveur pour voir les modifications répliquées.  
   
-Pour plus d'informations, consultez :   
+Pour plus d'informations, consultez les pages suivantes :   
 - [Initialiser un abonnement avec un instantané](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Synchroniser les données](../../relational-databases/replication/synchronize-data.md)  
 - [Synchroniser un abonnement par extraction](../../relational-databases/replication/synchronize-a-pull-subscription.md)  

@@ -1,20 +1,20 @@
 ---
-title: Déployer un conteneur SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
+title: Déployer un conteneur SQL Server avec Azure Kubernetes Services (AKS)
 description: Ce didacticiel explique comment déployer une solution de haute disponibilité SQL Server avec Kubernetes sur Azure Kubernetes Service.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653708"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558344"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
@@ -250,7 +250,7 @@ Dans cette étape, créez un manifeste pour décrire le conteneur en fonction de
 
    ![Capture d’écran de la commande Obtenir le pod](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
-   Dans l’image précédente, le pod présente l’état `Running`. Cet état indique que le conteneur est prêt. Ceci peut prendre plusieurs minutes.
+   Dans l’image précédente, le pod présente l’état `Running`. Cet état indique que le conteneur est prêt. Cette opération peut prendre plusieurs minutes.
 
    >[!NOTE]
    >Une fois le déploiement créé, plusieurs minutes peuvent être nécessaires avant que le pod ne soit visible. Le délai est dû au fait que le cluster extrait l’image [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) du Hub Docker. Une fois l’image extraite pour la première fois, les déploiements ultérieurs peuvent être plus rapides si le déploiement se fait sur un nœud sur lequel l’image est déjà mise en cache. 

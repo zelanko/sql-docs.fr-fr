@@ -1,6 +1,7 @@
 ---
-title: Administrer des serveurs à l’aide de la Gestion basée sur des stratégies | Microsoft Docs
-ms.custom: ''
+title: Administrer des serveurs à l’aide de la gestion basée sur des stratégies
+description: Découvrez comment utiliser la gestion basée sur des stratégies pour manager une ou plusieurs instances de SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c62c2372b0a61d0a09a0e15998f2340b995fc919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109942"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558667"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,13 +105,13 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
 ## <a name="links-to-specific-tasks"></a>Liens vers des tâches spécifiques 
 
  - [Stocker des stratégies de Gestion basée sur des stratégies.](policy-based-management-storage.md)|  
- - [Configurer des alertes afin d'informer les administrateurs de stratégie en cas d'échec de stratégie](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [Créer une condition de gestion basée sur des stratégies.](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
- - [Supprimer une condition de gestion basée sur des stratégies.](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
+ - [Configurer des alertes pour informer les administrateurs de stratégie en cas d’échec de stratégie](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
+ - [Créer une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [Supprimer une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
  - [Afficher ou modifier les propriétés d'une condition de gestion basée sur des stratégies](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
  - [Exporter une stratégie de gestion basée sur des stratégies](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
  - [Importer une stratégie de gestion basée sur des stratégies](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
- - [Évaluer une stratégie de gestion basée sur des stratégies à partir d'un objet](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
+ - [Évaluer une stratégie de gestion basée sur des stratégies à partir d’un objet](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
  - [Utiliser les facettes de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
  - [Contrôler et appliquer les meilleures pratiques à l’aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 

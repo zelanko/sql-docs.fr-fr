@@ -1,6 +1,7 @@
 ---
-title: Abonnement, historique du serveur de publication vers le serveur de distribution (abonnement transactionnel) | Microsoft Docs
-ms.custom: ''
+title: Historique du serveur de publication vers le serveur de distribution (Transactionnel - SSMS)
+description: Décrit l’onglet « Historique du serveur de publication vers le serveur de distribution » du moniteur de réplication pour une publication transactionnelle dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 30e5a68dcd22b0f73f88ce6151ef46e02bbf81f1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 350866a6a574469ef87586cd10f932bfcc201859
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768313"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322180"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Abonnement, Historique du serveur de publication vers le serveur de distribution (abonnement transactionnel)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68768313"
   
 -   Error  
   
--   Terminé  
+-   Completed  
   
 -   Nouvel essai  
   
@@ -47,10 +48,10 @@ ms.locfileid: "68768313"
  **Heure de fin**  
  Heure de fin de la session. Si l'agent ne s'est pas arrêté, ce champ est vide.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution de l'Agent de lecture du journal dans cette session. Cette durée représente le temps écoulé si l'agent est en cours d'exécution et le temps total de la session si l'agent de la session s'est terminé.  
   
- **Message d'erreur**  
+ **Message d’erreur**  
  Si une session s'est terminée sur une erreur, ce champ affiche le dernier message d'erreur enregistré par l'Agent de lecture du journal. Dans le cas contraire, ce champ est vide.  
   
  **Message d'action**  

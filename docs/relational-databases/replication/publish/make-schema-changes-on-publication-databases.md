@@ -18,16 +18,16 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769870"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542059"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Quand vous effectuez une des modifications de schéma suivantes dans l’objet publié approprié sur un Abonné [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   ALTER TABLE  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68769870"
 ## <a name="considerations-for-schema-changes"></a>Considérations sur les modifications de schéma  
  Les éléments suivants doivent être pris en compte lors de la réplication des modifications de schéma.  
   
-### <a name="general-considerations"></a>Considérations générales  
+### <a name="general-considerations"></a>Considérations d’ordre général  
   
 -   Les modifications de schéma sont soumises aux restrictions imposées par [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Par exemple, ALTER TABLE ne vous permet pas de modifier les colonnes clés primaire.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68769870"
   
 -   Tous les objets de l'Abonné référencés lors de l'ajout d'une clé étrangère doivent avoir un nom et un propriétaire identiques à l'objet correspondant sur le serveur de publication.  
   
--   L'ajout, la suppression ou la modification explicites d'index ne sont pas pris en charge. En revanche, les index créés explicitement pour les contraintes, par exemple une contrainte de clé primaire, le sont.  
+-   Les modifications explicites d’ajout, de suppression ou de modification d’index ne sont pas répliquées, et toute modification impliquant un index explicite doit être effectuée individuellement sur chaque jeu de réplicas. En revanche, les index créés explicitement pour les contraintes, par exemple une contrainte de clé primaire, le sont.  
   
 -   La modification ou la suppression de colonnes d'identité gérées par la réplication ne sont pas prises en charge. Pour plus d’informations sur la gestion automatique des colonnes d’identité, consultez [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68769870"
   
 -   Pour supprimer une colonne d’une publication existante, tout en la conservant dans la table sur le serveur de publication, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
-     Pour plus d’informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Cette opération exige la génération d'un nouvel instantané.  
+     Pour plus d'informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Cette opération exige la génération d'un nouvel instantané.  
   
 -   La colonne à supprimer ne peut pas être utilisée dans les clauses de filtrage d'un article quelconque d'une publication de la base de données.  
   

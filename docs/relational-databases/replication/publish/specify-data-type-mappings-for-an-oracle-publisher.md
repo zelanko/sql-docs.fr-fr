@@ -1,6 +1,7 @@
 ---
-title: Spécifier des mappages de types de données pour un Serveur de publication Oracle | Microsoft Docs
-ms.custom: ''
+title: Mappages de types de données pour un serveur de publication Oracle
+description: Décrit comment spécifier des mappages de types de données pour un serveur de publication Oracle dans SQL Server en utilisant SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1f86c97036c74024c47d71150586135022543588
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 8449d7c6c766824628c3352897c25303f10e3a29
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661316"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320761"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Spécifier des mappages de types de données pour un Serveur de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "68661316"
 1.  Exécutez [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)sur une base de données quelconque du serveur de distribution. Spécifiez la valeur **ORACLE** pour **\@source_dbms** et tous les autres paramètres éventuellement requis pour filtrer le jeu de résultats.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
- Cet exemple change une colonne avec le type de données Oracle NUMBER pour qu’elle soit mappée vers le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **numeric**(38,38), au lieu du type par défaut **float**.  
+ Cet exemple change une colonne avec le type de données Oracle NUMBER pour qu’elle soit mappée vers le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**numeric**(38,38), au lieu du type par défaut **float**.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  
   
@@ -96,7 +97,7 @@ ms.locfileid: "68661316"
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [Réplication hétérogène d’une base de données](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Réplication de base de données hétérogène](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire | Microsoft Docs
+title: Fonctionnalités non prises en charge - OLTP en mémoire
 ms.custom: ''
 ms.date: 05/29/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720b10e5f4cd7c7ba5676f9dddc2f64e632d64cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912133"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412512"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 |Reconstruire le journal|La reconstruction du journal, via un attachement ou ALTER DATABASE, n'est pas prise en charge pour les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
 |Serveur lié|Vous ne peut pas accéder à des serveurs liés dans la même requête ou transaction en tant que tables à mémoire optimisée. Pour plus d’informations, consultez [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Journalisation en bloc|Quel que soit le mode de récupération de la base de données, toutes les opérations sur les tables à mémoire optimisée durables sont toujours entièrement journalisées.|  
-|Journalisation minimale|La journalisation minimale n'est pas prise en charge pour les tables à mémoire optimisée. Pour plus d’informations sur la journalisation minimale, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) et [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
+|Journalisation minimale|La journalisation minimale n'est pas prise en charge pour les tables à mémoire optimisée. Pour plus d’informations sur la journalisation minimale, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) et [Prérequis pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
 |Suivi des modifications|Le suivi des modifications ne peut pas être activé sur une base de données qui contient des objets OLTP en mémoire. |
 | déclencheurs DDL | Les déclencheurs DDL aux niveaux de la base de données et du serveur ne sont pas pris en charge avec les tables OLTP en mémoire ou les modules compilés en mode natif. |  
 | Capture de données modifiées (CDC) | SQL Server 2017 CU15 et versions ultérieures prennent en charge l’activation de la capture des changements de données sur une base de données ayant des tables à mémoire optimisée. Cela s’applique uniquement à la base de données et aux tables sur disque dans la base de données. Dans les versions antérieures de SQL Server, la capture des changements de données ne peut pas être utilisée avec une base de données qui contient des tables à mémoire optimisée, car elle utilise en interne un déclencheur DDL pour exécuter une opération DROP TABLE. |  
-| Mode fibre | Le mode fibre n’est pas pris en charge avec les tables à mémoire optimisée :<br /><br />Si le mode fibre est activé, vous ne pouvez pas créer de bases de données avec des groupes de fichiers à mémoire optimisée ni ajouter de tels groupes aux bases de données existantes.<br /><br />Vous pouvez activer le mode fibre s'il existe déjà des bases de données avec des groupes de fichiers à mémoire optimisée. Cependant, l'activation du mode fibre nécessite un redémarrage du serveur. Dans cette situation, les bases de données avec des groupes de fichiers à mémoire optimisée ne peuvent pas être récupérées. Vous voyez un message d’erreur vous suggérant de désactiver le mode fibre pour pouvoir utiliser les bases de données avec des groupes de fichiers à mémoire optimisée.<br /><br />Si le mode fibre est activé, l’attachement et la restauration de bases de données avec des groupes de fichiers à mémoire optimisée ne s’effectuent pas correctement. Les bases de données sont marquées comme suspectes.<br /><br />Pour plus d’informations, consultez [Regroupement léger (option de configuration de serveur)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
+| Mode fibre | Le mode fibre n’est pas pris en charge avec les tables à mémoire optimisée :<br /><br />Si le mode fibre est activé, vous ne pouvez pas créer de bases de données avec des groupes de fichiers à mémoire optimisée ni ajouter de tels groupes aux bases de données existantes.<br /><br />Vous pouvez activer le mode fibre s'il existe déjà des bases de données avec des groupes de fichiers à mémoire optimisée. Cependant, l'activation du mode fibre nécessite un redémarrage du serveur. Dans cette situation, les bases de données avec des groupes de fichiers à mémoire optimisée ne peuvent pas être récupérées. Vous voyez un message d’erreur vous suggérant de désactiver le mode fibre pour pouvoir utiliser les bases de données avec des groupes de fichiers à mémoire optimisée.<br /><br />Si le mode fibre est activé, l’attachement et la restauration de bases de données avec des groupes de fichiers à mémoire optimisée ne s’effectuent pas correctement. Les bases de données sont marquées comme suspectes.<br /><br />Pour plus d’informations, consultez [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitation de Service Broker|Impossible d'accéder à une file d'attente à partir d'une procédure stockée compilée en mode natif.<br /><br /> Impossible d'accéder à une file d'attente dans une base de données distante, dans une transaction qui accède à des tables à mémoire optimisée.|  
 |Réplication sur les abonnés|La réplication transactionnelle vers des tables à mémoire optimisée sur les abonnés est prise en charge, mais avec certaines restrictions. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
 
@@ -63,7 +63,7 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
   
 - Curseurs de jeu de clés et dynamiques sur les requêtes qui accèdent aux tables à mémoire optimisée. Ces curseurs sont dégradés en statique et en lecture seule.  
   
-- L’utilisation de **MERGE INTO** _cible_ , où *cible* est une table à mémoire optimisée, n’est pas prise en charge.
+- L’utilisation de **MERGE INTO** _cible_, où *cible* est une table à mémoire optimisée, n’est pas prise en charge.
     - **MERGE USING** _source_ est pris en charge pour les tables à mémoire optimisée.  
   
 - Le type de données ROWVERSION (TIMESTAMP) n’est pas pris en charge. Pour plus d’informations, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).

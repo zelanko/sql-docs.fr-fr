@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (préversion)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Utilisez l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055133"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321831"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -65,7 +65,7 @@ WITH
 Est facultatif si le schéma par défaut de l’utilisateur réalisant l’opération est le schéma de la table spécifiée. Si *schema* n’est pas spécifié et que le schéma par défaut de l’utilisateur réalisant l’opération COPY diffère de celui de la table, cette opération est annulée, et un message d’erreur est retourné.  
 
 *table_name*  
-Correspond au nom de la table dans laquelle copier les données. La table cible peut être une table temporaire ou permanente.
+Correspond au nom de la table dans laquelle copier les données. La table cible peut être une table temporaire ou permanente et elle doit déjà exister dans la base de données. 
 
 *(column_list)*  
 Est une liste facultative d’une ou de plusieurs colonnes utilisées pour mapper les champs de données sources aux colonnes de la table cible en vue du chargement des données. *column_list* doit être placé entre parenthèses et délimité par des virgules. La liste des colonnes est au format suivant :
@@ -131,7 +131,7 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
 
 - Authentification avec la signature d’accès partagé (SAS) *IDENTITY : constante avec une valeur « Shared Access Signature »* 
-  *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources dans votre compte de stockage.*
+  *SECRET : La * [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) * fournit un accès délégué aux ressources de votre compte de stockage.*
   Autorisations minimales requises : READ et LIST
 
 - Authentification avec des [*principaux de service*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Si ERRORFILE a le chemin complet du compte de stockage défini, ERRORFILE_CREDEN
   
 - Authentification avec la signature d’accès partagé (SAS)
   - *IDENTITY : constante avec une valeur « Shared Access Signature »*
-  - *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview) *fournit un accès délégué aux ressources dans votre compte de stockage.*
+  - *SECRET : La* [*signature d’accès partagé*](/azure/storage/common/storage-sas-overview)  *fournit un accès délégué aux ressources de votre compte de stockage.*
   - Autorisations minimales requises : READ, LIST, WRITE, CREATE, DELETE
   
 - Authentification avec des [*principaux de service*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -214,13 +214,13 @@ La commande COPY détecte automatiquement le type de compression en fonction de 
 > Les caractères FIELDQUOTE sont placés dans une séquence d’échappement dans les colonnes de type chaîne qui contiennent un double FIELDQUOTE (délimiteur). 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* s’applique uniquement au format CSV. Spécifie la marque de fin de champ à utiliser dans le fichier CSV. Plusieurs caractères peuvent être utilisés comme marque de fin de champ. La virgule (,) est la marque de fin de champ par défaut.
+*FIELDTERMINATOR* s’applique uniquement au format CSV. Spécifie la marque de fin de champ à utiliser dans le fichier CSV. La marque de fin de champ peut être spécifiée en notation hexadécimale. Plusieurs caractères peuvent être utilisés comme marque de fin de champ. La virgule (,) est la marque de fin de champ par défaut.
 Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* s’applique uniquement au format CSV. Spécifie la marque de fin de ligne à utiliser dans le fichier CSV. Plusieurs caractères peuvent être utilisés comme marque de fin de ligne. La combinaison de caractères « \r\n » est la marque de fin de ligne par défaut. 
+*ROW TERMINATOR* s’applique uniquement au format CSV. Spécifie la marque de fin de ligne à utiliser dans le fichier CSV. La marque de fin de ligne peut être spécifiée en notation hexadécimale. Plusieurs caractères peuvent être utilisés comme marque de fin de ligne. La combinaison de caractères « \r\n » est la marque de fin de ligne par défaut. 
 
-La commande COPY ajoute le caractère \r quand vous spécifiez le caractère \n (nouvelle ligne), ce qui donne \r\n. Pour spécifier le caractère \n uniquement, utilisez sa valeur hexadécimale (0x0A). Si vous spécifiez des marques de fin de ligne à plusieurs caractères au format hexadécimal, n’ajoutez pas « 0x » entre chaque caractère.
+La commande COPY ajoute le caractère \r quand vous spécifiez le caractère \n (nouvelle ligne), ce qui donne \r\n. Pour spécifier le caractère \n uniquement, utilisez sa notation hexadécimale (0x0A). Si vous spécifiez des marques de fin de ligne à plusieurs caractères au format hexadécimal, n’ajoutez pas « 0x » entre chaque caractère.
 
 Consultez cette [documentation](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) pour obtenir des conseils supplémentaires sur la spécification des marques de fin de ligne.
 
@@ -254,12 +254,12 @@ Requiert les autorisations INSERT et ADMINISTER BULK OPERATIONS. Dans Azure SQL 
 
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-load-from-a-public-storage-account"></a>A. Charger à partir d’un compte de stockage public
+### <a name="a-load-from-a-public-storage-account"></a>R. Charger à partir d’un compte de stockage public
 
 L’exemple suivant est la forme la plus simple de la commande COPY, qui charge les données à partir d’un compte de stockage public. Ici, les valeurs par défaut de l’instruction COPY correspondent au format du fichier CSV « lineitem ».
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 Ces valeurs par défaut sont les suivantes :
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -357,6 +357,46 @@ WITH (
     FIELDTERMINATOR = '|'
 )
 ```
+
+## <a name="faq"></a>Questions fréquentes (FAQ)
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Quelles sont les performances de la commande COPY par rapport à Polybase ?
+La commande COPY offre de meilleures performances jusqu’à ce que la fonctionnalité soit en disponibilité générale. Pour obtenir de meilleures performances de chargement pendant la préversion publique, envisagez de fractionner votre entrée en plusieurs fichiers lors du chargement du CSV. Actuellement, la commande COPY est à égalité en termes de performances avec Polybase quand vous utilisez INSERT SELECT. 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quelles sont les recommandations de fractionnement de fichiers pour la commande COPY lors du chargement de fichiers CSV ?
+Le tableau ci-dessous indique les nombres de fichiers conseillés. Une fois le nombre de fichiers recommandé atteint, vous obtenez de meilleures performances, plus les fichiers sont volumineux. Vous n’avez pas besoin de fractionner vos fichiers non compressés une fois que la commande COPY est en disponibilité générale. 
+
+| **DWU** | **Nombre de fichiers** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1 000  |    120     |
+|  1 500  |    180     |
+|  2 000  |    240     |
+|  2 500  |    300     |
+|  3 000  |    360     |
+|  5 000  |    600     |
+|  6 000 / 750  |    720     |
+|  7 500  |    900     |
+| 10 000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Quelles sont les recommandations de fractionnement de fichiers pour la commande COPY lors du chargement de fichiers Parquet ou ORC ?
+Il n’est pas nécessaire de fractionner les fichiers Parquet et ORC car la commande COPY le fait automatiquement. Les fichiers Parquet et ORC du compte de stockage Azure doivent avoir une taille de 256 Mo ou plus pour obtenir des performances optimales. 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>Quand la commande COPY sera-t-elle en disponibilité générale ?
+La commande COPY sera en disponibilité générale au début de l’année prochaine (2020). 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>Existe-t-il des problèmes connus avec la commande COPY ?
+
+- La prise en charge du type LOB comme (n)varchar(max) n’est pas disponible dans l’instruction COPY. Il le sera au début de l’année prochaine.
+
+Envoyez vos commentaires ou signalez vos problèmes à la liste de distribution suivante : sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>Voir aussi  
 

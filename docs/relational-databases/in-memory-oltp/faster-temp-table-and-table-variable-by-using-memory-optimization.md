@@ -1,6 +1,6 @@
 ---
-title: Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire | Microsoft Docs
-ms.custom: ''
+title: Optimisation de la mémoire pour obtenir une table temporaire et des variables de table plus rapides
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713249"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412675"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713249"
   
 Si vous utilisez des tables temporaires, des variables de table ou des paramètres table, envisagez de les convertir pour tirer parti des tables optimisées en mémoire et des variables de table afin d’améliorer les performances. Les modifications de code sont généralement minimes.  
   
-Cet article décrit :  
+Cet article aborde les points suivants :  
   
 - Scénarios en faveur d’une conversion en mémoire.  
 - Étapes techniques pour implémenter les conversions en mémoire.  
@@ -32,7 +32,7 @@ Cet article décrit :
 - Exemple de code qui met en évidence les avantages en matière de performances de l’optimisation en mémoire
   
   
-## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Principes de base des variables de table optimisées en mémoire  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>R. Principes de base des variables de table optimisées en mémoire  
   
 Une variable de table optimisée en mémoire offre une grande efficacité en utilisant les mêmes algorithme et structures de données optimisés en mémoire que ceux utilisés par les tables optimisées en mémoire. L’efficacité est optimale quand la variable de table est accessible à partir d’un module compilé en mode natif.  
   
@@ -48,7 +48,7 @@ Une variable de table optimisée en mémoire :
 
   
   
-#### <a name="object-types"></a>Types d'objets  
+#### <a name="object-types"></a>Types d’objets  
   
 OLTP en mémoire fournit les objets suivants qui peuvent être utilisés pour l’optimisation en mémoire des tables temporaires et des variables de table :  
   
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Tout d’abord, créez la fonction table suivante pour filtrer sur **@@spid** . La fonction sera utilisable par toutes les tables SCHEMA_ONLY que vous convertissez à partir des tables temporaires de session.  
+Créez tout d’abord la fonction table suivante pour effectuer un filtrage sur **\@\@spid**. La fonction sera utilisable par toutes les tables SCHEMA_ONLY que vous convertissez à partir des tables temporaires de session.  
   
   
   
@@ -303,7 +303,7 @@ Le script suivant crée le groupe de fichiers pour vous et configure les paramè
 Pour plus d’informations sur `ALTER DATABASE ... ADD` pour les fichiers et groupes de fichiers, consultez :  
   
 - [Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-- [Groupe de fichiers optimisé en mémoire](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
+- [Groupe de fichiers mémoire optimisé](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
 ## <a name="f-quick-test-to-prove-speed-improvement"></a>F. Test rapide pour prouver l’amélioration de la vitesse  

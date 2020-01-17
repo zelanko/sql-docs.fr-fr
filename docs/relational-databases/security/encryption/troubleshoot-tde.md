@@ -1,6 +1,7 @@
 ---
-title: Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault | Microsoft Docs
-description: Résolvez les problèmes de Transparent Data Encryption (TDE) avec une configuration d’Azure Key Vault.
+title: Erreurs courantes liées aux clés gérées par le client dans Azure Key Vault
+description: Découvrez comment résoudre les erreurs courantes liés au chiffrement TDE et aux clés gérées par le client dans Azure Key Vault.
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
@@ -13,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cc99c51a2f2ad43ca615be0477970a59cfb75065
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74957293"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558464"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault
 

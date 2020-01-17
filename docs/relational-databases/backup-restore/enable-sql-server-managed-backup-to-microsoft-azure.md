@@ -1,7 +1,8 @@
 ---
-title: Activer la gestion de sauvegarde de SQL Server sur Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 10/03/2016
+title: Utiliser la gestion de sauvegarde sur Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
+ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,21 +11,22 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238732"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257955"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Activer la gestion de sauvegarde de SQL Server sur Azure
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique décrit comment activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les paramètres par défaut au niveau base de données et instance. Elle décrit également comment activer les notifications par courrier électronique et surveiller l'activité de sauvegarde.  
   
- Ce didacticiel utilise Azure PowerShell. Avant de commencer ce didacticiel, [téléchargez et installez Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ Ce tutoriel utilise Azure PowerShell. Avant de commencer ce didacticiel, [téléchargez et installez Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Si vous souhaitez également activer des options avancées ou utiliser une planification personnalisée, configurez ces paramètres avant d’activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour plus d’informations, consultez [Configurer les options avancées pour la gestion de sauvegarde de SQL Server sur Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Si vous souhaitez également activer des options avancées ou utiliser une planification personnalisée, configurez ces paramètres avant d’activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour plus d’informations, consultez [Configurer les options avancées pour la gestion de sauvegarde de SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="create-the-azure-blob-container"></a>Création du conteneur Azure Blob
 
@@ -104,7 +106,7 @@ Si l’URL est incluse, séparez-la du jeton SAP au niveau du point d’interrog
 |**Jeton SAP**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur SAP, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur les signatures d’accès partagé, consultez l’article [Signatures d’accès partagé, partie 1 : Présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 ## <a name="enable-managed-backup-to-azure"></a>Activer la gestion de sauvegarde sur Azure
   
@@ -146,7 +148,7 @@ Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la créatio
   
      Les événements du canal d'administration, opérationnel et analytique doivent être activés par défaut et ne doivent pas pouvoir être désactivés. Cela est en principe suffisant pour surveiller les événements qui nécessitent une intervention manuelle.  Vous pouvez activer les événements de débogage, mais les canaux de débogage comprennent des événements d'information et de débogage que la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utilise pour détecter et résoudre les problèmes.  
   
-6.  **Activez et configurez les notifications de l’état d’intégrité :** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] fournit une procédure stockée qui crée un travail d’agent pour envoyer des notifications par courrier électronique des erreurs ou des avertissements susceptibles de nécessiter une intervention. Les étapes suivantes décrivent la procédure d'activation et de configuration des notifications par courrier électronique :  
+6.  **Activez et configurez les notifications de l’état d’intégrité :** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] fournit une procédure stockée qui crée un travail d’agent pour envoyer des notifications par e-mail des erreurs ou des avertissements susceptibles de nécessiter une intervention. Les étapes suivantes décrivent la procédure d'activation et de configuration des notifications par courrier électronique :  
   
     1.  Configurez la messagerie de base de données si elle n'est pas déjà activée sur l'instance. Pour plus d'informations, consultez [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   

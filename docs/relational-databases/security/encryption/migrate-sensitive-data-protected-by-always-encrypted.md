@@ -1,6 +1,7 @@
 ---
-title: Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted
+description: Découvrez comment charger en masse des données dans des colonnes en utilisant Always Encrypted avec SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594168"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558199"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ Pour charger des données chiffrées sans effectuer de contrôle des métadonné
 ## <a name="data-migration-scenarios"></a>Scénarios de migration de données  
 Le tableau suivant présente les paramètres appropriés recommandés pour plusieurs scénarios de migration.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "|::ref1::|")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Chargement en masse de données chiffrées  
 Procédez comme suit pour charger des données chiffrées.  
@@ -63,7 +64,7 @@ Le scénario suivant indique comment une importation de données incorrecte peut
  
 4.  La même application (ou une autre) se connecte à la base de données à l’aide d’un pilote compatible Always Encrypted et avec la présence de **column encryption setting=enabled** dans la chaîne de connexion, puis récupère les données. L’application s’attend à ce que les données soient déchiffrées en toute transparence. Toutefois, le pilote n’est pas en mesure de déchiffrer les données, car il s’agit de textes chiffrés incorrects.  
 
-## <a name="best-practice"></a>Meilleure pratique  
+## <a name="best-practice"></a>Bonne pratique  
  
 Utilisez les comptes d’utilisateur désignés pour les charges de travail de longue durée utilisant cette option.  
  
@@ -71,9 +72,9 @@ Pour des applications ou des outils de copie en bloc à exécution courte qui do
  
 N’utilisez pas cette option pour développer de nouvelles applications. Utilisez plutôt un pilote client qui fournit une API afin de supprimer les vérifications des métadonnées de chiffrement pour une seule session, par exemple, l’option AllowEncryptedValueModifications dans le fournisseur de données .NET Framework pour SQL Server. Consultez [Copie de données chiffrées à l’aide de SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
 
-## <a name="next-steps"></a>Next Steps
-- [Interroger les colonnes à l’aide d’Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md)
+## <a name="next-steps"></a>Étapes suivantes
+- [Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Développer des applications avec Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Voir aussi  
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

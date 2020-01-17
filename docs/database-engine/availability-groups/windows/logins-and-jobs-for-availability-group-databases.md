@@ -1,7 +1,7 @@
 ---
-title: Gérer les connexions pour les travaux qui utilisent des bases de données dans un groupe de disponibilité
+title: Gérer les connexions de travaux pour les bases de données d’un groupe de disponibilité
 description: Décrit comment gérer les connexions pour les travaux qui utilisent des bases de données membres d’un groupe de disponibilité Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05645d3ce6bcccd006db72fefa9343153e3a0390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 840e34dcad069ccd6dc2c4102c6a2a85b7e4fbf5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022581"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822234"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Gérer les connexions pour les travaux qui utilisent des bases de données dans un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68022581"
   
      Les instances de serveur qui hébergent les réplicas de disponibilité d'un groupe de disponibilité peuvent être configurées différemment, avec des lettres de lecteurs de bande ou de lecteur différentes. Les travaux de chaque réplica de disponibilité doivent autoriser de telles différences.  
   
-     Notez que les travaux de sauvegarde peuvent utiliser la fonction [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) pour déterminer si le réplica local est celui qui est utilisé par défaut pour les sauvegardes, selon les préférences de sauvegarde du groupe de disponibilité. Les travaux de sauvegarde créés à l’aide de l’ [Assistant Plan de maintenance](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) utilisent cette fonction en mode natif. Pour d'autres travaux de sauvegarde, nous vous recommandons d'utiliser cette fonction comme condition dans vos travaux de sauvegarde, de façon à ce qu'ils s'exécutent uniquement sur le réplica par défaut. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarder sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Notez que les travaux de sauvegarde peuvent utiliser la fonction [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) pour déterminer si le réplica local est celui qui est utilisé par défaut pour les sauvegardes, selon les préférences de sauvegarde du groupe de disponibilité. Les travaux de sauvegarde créés à l’aide de l’ [Assistant Plan de maintenance](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) utilisent cette fonction en mode natif. Pour d'autres travaux de sauvegarde, nous vous recommandons d'utiliser cette fonction comme condition dans vos travaux de sauvegarde, de façon à ce qu'ils s'exécutent uniquement sur le réplica par défaut. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Connexions**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68022581"
 > [!NOTE]  
 >  Ce problème affecte les comptes Windows locaux sur différents ordinateurs. Toutefois, ce problème ne se pose pas pour les comptes de domaine car le SID est identique sur chacun des ordinateurs.  
   
- Pour plus d’informations, consultez [Mise en miroir de bases de données et copie des journaux de transaction](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog du moteur de base de données).  
+ Pour plus d’informations, consultez [Orphaned Users with Database Mirroring and Log Shipping (Utilisateurs orphelins avec mise en miroir de bases de données et copie des journaux de transaction)](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog du moteur de base de données).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

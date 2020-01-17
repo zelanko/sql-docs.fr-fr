@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982279"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002334"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Les indicateurs de requête spécifient que les indicateurs affichés doivent ê
 > [!CAUTION]  
 > Comme l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d’exécution pour une requête, nous recommandons de ne recourir aux indicateurs qu’en dernier ressort, et à condition d’être un développeur ou un administrateur de base de données expérimenté.  
   
-**S’applique à :**  
+**S’applique à :**  
   
 [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -92,7 +92,8 @@ Les indicateurs de requête spécifient que les indicateurs affichés doivent ê
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,7 +169,9 @@ Spécifie que l'ordre de jointure spécifié dans la syntaxe de la requête est 
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 Force ou désactive la poussée vers le bas (pushdown) du calcul des expressions éligibles dans Hadoop. S’applique uniquement aux requêtes avec PolyBase. Ne s’applique pas au stockage Azure.  
-  
+
+{FORCE | DISABLE} SCALEOUTEXECUTION Force ou désactive l’exécution d’un scale-out des requêtes PolyBase qui utilisent des tables externes dans les Clusters Big Data SQL Server 2019. Cet indicateur n’est respecté que par une requête utilisant l’instance principale d’un cluster Big Data SQL. Le scale-out se produit dans le pool de calcul du cluster Big Data. 
+
 KEEP PLAN  
 Force l’optimiseur de requête à abaisser le seuil de recompilation estimé pour une requête. Le seuil de recompilation estimé lance une recompilation automatique de la requête lorsque le nombre estimé de modifications de colonnes indexées a été apporté à une table par exécution de l’une des instructions suivantes :
 
@@ -275,7 +278,7 @@ Les noms d’indicateur suivants sont pris en charge :
    Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
    **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  Désactive la compilation différée de variable de table. Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  Désactive la compilation différée de variable de table. Pour plus d'informations, consultez [Compilation différée de variable de table](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
   **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
@@ -292,7 +295,7 @@ Les noms d’indicateur suivants sont pris en charge :
    
    Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
-   Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données lors de la compilation d’une requête comportant un ou plusieurs paramètres. Cette instruction rend le plan de requête indépendant de la valeur du paramètre utilisée initialement lors de la compilation de la requête. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `PARAMETER_SNIFFING = OFF`.
+   Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données lors de la compilation d’une requête comportant un ou plusieurs paramètres. Cette instruction rend le plan de requête indépendant de la valeur du paramètre utilisée initialement lors de la compilation de la requête. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`PARAMETER_SNIFFING = OFF`.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
   Désactive la rétroaction d’allocation de mémoire en mode ligne. Pour plus d’informations, consultez [Rétroaction d’allocation de mémoire en mode ligne](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
   **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
@@ -305,11 +308,11 @@ Les noms d’indicateur suivants sont pris en charge :
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
-   Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives de SQL Server). Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `QUERY_OPTIMIZER_HOTFIXES = ON`.
+   Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives de SQL Server). Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`QUERY_OPTIMIZER_HOTFIXES = ON`.
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
-   Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur remplace le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON` ou l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+   Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur remplace le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`LEGACY_CARDINALITY_ESTIMATION = ON` ou l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
+   Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Force le comportement de l’optimiseur de requête au niveau de la requête, comme si celle-ci était compilée avec le niveau de compatibilité de la base de données _n_, où _n_ est un niveau pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour _n_.      
    **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
@@ -340,8 +343,7 @@ Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en ch
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **’** _xml\_plan_ **’** . USE PLAN ne peut pas être spécifié avec les instructions INSERT, UPDATE, MERGE ou DELETE.  
   
-TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [ **,** ]…_n_ ] ] **)** 
-Applique l’indicateur de table spécifié à la table ou à la vue correspondant à _nom\_objet\_exposé_. Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [ **,** ]…_n_ ] ] **)** Applique l’indicateur de table spécifié à la table ou à la vue correspondant à _nom\_objet\_exposé_. Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
   
  _nom\_objet\_exposé_ peut être l’une des références suivantes :  
   
@@ -370,10 +372,10 @@ Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_
  Lorsqu'ils sont spécifiés comme indicateurs de requête, les indicateurs de table INDEX, FORCESCAN et FORCESEEK sont valides pour les objets suivants :  
   
 -   Tables  
--   Vues  
+-   Les vues  
 -   Vues indexées  
 -   Expressions de table communes (l'indicateur doit être spécifié dans l'instruction SELECT dont le jeu de résultats remplit l'expression de table commune)  
--   Vues de gestion dynamique  
+-   Vues de gestion dynamique (DMV)  
 -   Sous-requêtes nommées  
   
 Il est possible de spécifier des indicateurs de table INDEX, FORCESCAN et FORCESEEK comme indicateurs de requête pour une requête ne disposant pas d’indicateurs de table. Vous pouvez également les utiliser pour remplacer respectivement des indicateurs INDEX, FORCESCAN et FORCESEEK existants dans la requête. 
@@ -384,7 +386,7 @@ L’erreur 8072 se produit dans deux scénarios : lorsqu’un indicateur de tabl
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-merge-join"></a>A. Utilisation de MERGE JOIN  
+### <a name="a-using-merge-join"></a>R. Utilisation de MERGE JOIN  
  L’exemple suivant spécifie que MERGE JOIN exécute l’opération JOIN dans la requête. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

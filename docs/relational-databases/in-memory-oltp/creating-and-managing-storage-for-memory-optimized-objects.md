@@ -1,6 +1,6 @@
 ---
-title: Création et gestion du stockage des objets mémoire optimisés | Microsoft Docs
-ms.custom: ''
+title: Créer et gérer un stockage - Objets à mémoire optimisée
+ms.custom: seo-dt-2019
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c0c50a375559b34e5fa09bbce419d9acdb860e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90817352d72991e47f20b31144e15b204e5f3bff
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915343"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412711"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Création et gestion du stockage des objets mémoire optimisés
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67915343"
   
  Rubriques de cette section :  
   
--   [Configuration du stockage des tables mémoire optimisées](../../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md)  
+-   [Configuration du stockage des tables à mémoire optimisée](../../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md)  
   
 -   [Groupe de fichiers mémoire optimisé](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67915343"
   
 -   [Définition de la durabilité des objets mémoire optimisés](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
--   [Comparaison du stockage des tables sur disque et du stockage des tables mémoire optimisées](../../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
+-   [Comparaison du stockage des tables sur disque et du stockage des tables à mémoire optimisée](../../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

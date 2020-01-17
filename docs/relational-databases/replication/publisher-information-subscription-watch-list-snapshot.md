@@ -1,6 +1,7 @@
 ---
-title: Informations sur le serveur de publication, Liste de suivi des abonnements (Instantané) | Microsoft Docs
-ms.custom: ''
+title: Liste de suivi des abonnements (Moniteur de réplication - Instantané)
+description: Décrit l’onglet « Liste de suivi des abonnements » du moniteur de réplication pour une publication d’instantané dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bc62259db10a92350aeb24f51b38072339b34921
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 45fec0f9c4d2c5ab7520c2ddfb2a921b771acfcb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769716"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320490"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>Informations sur le serveur de publication, Liste de suivi des abonnements (Instantané)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68769716"
   
 -   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
+-   **Filtre** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
 -   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68769716"
   
  L'ordre de tri détermine également la valeur affichée lorsqu'un abonnement a plusieurs états. Si, par exemple, un abonnement a une erreur et expire bientôt, la colonne **État** affiche **Erreur**.  
   
- Les valeurs d'état **Expire bientôt/Expiré** et **Abonnement non initialisé** sont des avertissements. Quand un avertissement s’affiche, la colonne **État** s’affiche également si un agent est en cours d’exécution. Par exemple, l'état peut être **En cours d'exécution, Expire bientôt/Expiré**.  
+ Les valeurs d'état **Expire bientôt/Expiré** et **Abonnement non initialisé** sont des avertissements. Lorsqu'un avertissement est affiché, la colonne **État** s'affiche également si un agent est en cours d'exécution. Par exemple, l'état peut être **En cours d'exécution, Expire bientôt/Expiré**.  
   
  La valeur d'état **Expire bientôt/Expiré** s'affiche uniquement si un seuil est défini. Pour plus d’informations sur la définition des seuils, consultez [Définir des seuils et des avertissements dans le Moniteur de réplication](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68769716"
  Nom de chaque abonnement au format : *SubscriberName : SubscriptionDatabaseName*.  
   
  **Publication**  
- Nom de la publication avec laquelle un abonnement se synchronise, au format : *PublicationDatabaseName: PublicationName*.  
+ Nom de la publication avec laquelle un abonnement se synchronise, au format : *PublicationDatabaseName: NomPublication*.  
   
  **Dernière synchronisation**  
  Heure de la dernière exécution de l'Agent de distribution. Si la synchronisation est en cours, **Opération en cours** s'affiche.  
@@ -78,6 +79,6 @@ ms.locfileid: "68769716"
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Afficher des informations et exécuter des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Moniteur de réplication](../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

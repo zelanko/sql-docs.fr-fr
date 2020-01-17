@@ -1,7 +1,7 @@
 ---
-title: Planifier et exécuter des séquences de restauration (mode de récupération complète) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Séquences de restauration (mode de récupération complète) | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81f8e91f2179fdc0b11747714ab810b801dc5389
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033682"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258661"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planifier et exécuter des séquences de restauration (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "68033682"
   
     -   Si ce point correspond au point de défaillance, vous devez restaurer chaque sauvegarde du journal ayant été créée depuis la dernière sauvegarde de données (complète ou différentielle) que vous avez restaurée. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-    -   Pour une restauration limitée dans le temps, vous n'aurez sans doute pas besoin des sauvegardes du journal les plus récentes. Si vous utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'Assistant Récupération de base de données garantit que seules les sauvegardes requises pour la restauration de votre limite dans le temps spécifique sont sélectionnées. Ces sauvegardes constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;Mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+    -   Pour une restauration limitée dans le temps, vous n'aurez sans doute pas besoin des sauvegardes du journal les plus récentes. Si vous utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'Assistant Récupération de base de données garantit que seules les sauvegardes requises pour la restauration de votre limite dans le temps spécifique sont sélectionnées. Ces sauvegardes constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 ## <a name="restarting-a-restore-sequence"></a>Redémarrage d'une séquence de restauration  
  Si vous rencontrez un problème avec le résultat d'une séquence de restauration, vous pouvez l'arrêter et la redémarrer à partir du début. Par exemple, si vous restaurez accidentellement un trop grand nombre de sauvegardes de journal et allez au-delà du point de récupération souhaité, vous devez redémarrer la séquence de restauration jusqu'à la sauvegarde du journal qui contient le point de récupération cible.  

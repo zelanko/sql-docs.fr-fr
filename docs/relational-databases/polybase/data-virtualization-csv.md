@@ -1,28 +1,29 @@
 ---
-title: Virtualiser des données externes dans SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: 'Virtualiser les données externes : valeurs séparées par des virgules (CSV)'
 description: Cette page détaille les étapes d’utilisation de l’Assistant Création d’une table externe pour un fichier CSV
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: b1bb5f2e807731e1020729e045c017b6f1524ae1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710608"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256167"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Utiliser l’Assistant Table externe avec des fichiers CSV
 
 SQL Server 2019 permet également de virtualiser les données d’un fichier CSV dans HDFS.  Ce processus permet aux données de rester à leur emplacement d’origine et de les **virtualiser** dans une instance SQL Server, ce qui vous permet de les interroger comme n’importe quelle autre table dans SQL Server. Cette fonctionnalité évite ainsi de recourir à des processus ETL. Ceci est possible via l’utilisation de connecteurs PolyBase. Pour plus d’informations sur la virtualisation des données, consultez notre document [Bien démarrer avec PolyBase](polybase-guide.md).
 
-## <a name="prerequisite"></a>Condition préalable
+## <a name="prerequisite"></a>Configuration requise
 
-À compter de CTP 2.4, le pool de données et les sources de données externes du pool de stockage ne sont plus créés par défaut dans votre cluster de Big Data. Avant d’utiliser l’Assistant, créez la source de données externe **SqlStoragePool** par défaut dans votre base de données cible à l’aide de la requête Transact-SQL suivante. N’oubliez pas de changer d’abord le contexte de la requête à votre base de données cible.
+Les sources de données externes du pool de données et du pool de stockage ne sont pas créées par défaut dans une base de données au sein de votre cluster Big Data. Avant d’utiliser l’Assistant, créez la source de données externe **SqlStoragePool** par défaut dans votre base de données cible à l’aide de la requête Transact-SQL suivante. N’oubliez pas de changer d’abord le contexte de la requête à votre base de données cible.
 
 ```sql
 -- Create default data sources for SQL Big Data Cluster

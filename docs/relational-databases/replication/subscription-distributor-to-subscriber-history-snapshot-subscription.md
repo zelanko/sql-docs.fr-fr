@@ -1,6 +1,7 @@
 ---
-title: Abonnement, Historique du serveur de distribution vers l’abonné (Abonnement aux instantanés) | Microsoft Docs
-ms.custom: ''
+title: Historique du serveur de distribution vers l’Abonné (Instantané)
+description: Décrit l’onglet « Historique du serveur de distribution vers l’Abonné » du moniteur de réplication pour une publication d’instantané dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fdf09887875407cc98127c3afdaa96d97402fcb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 460ab1ee21fd09c423316e7f4893dd6875d43130
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768330"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321676"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Abonnement, Historique du serveur de distribution vers l'Abonné (abonnement aux instantanés)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68768330"
   
 -   Error  
   
--   Terminé  
+-   Completed  
   
 -   Nouvel essai  
   
@@ -47,10 +48,10 @@ ms.locfileid: "68768330"
  **Heure de fin**  
  Heure de fin de la session. Si l'agent ne s'est pas arrêté, ce champ est vide.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution de l'Agent de distribution dans cette session. Cette durée représente le temps écoulé si l'agent est en cours d'exécution et le temps total de la session si l'agent de la session s'est terminé.  
   
- **Message d'erreur**  
+ **Message d’erreur**  
  Si une session s'est terminée sur une erreur, ce champ affiche le dernier message d'erreur enregistré par l'Agent de distribution. Dans le cas contraire, ce champ est vide.  
   
  **Message d'action**  

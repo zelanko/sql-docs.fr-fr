@@ -1,5 +1,6 @@
 ---
-title: Afficher ou modifier les propriétés d’une condition de gestion basée sur des stratégies | Microsoft Docs
+title: Voir ou modifier les propriétés d’une condition de gestion basée sur des stratégies
+description: Découvrez comment voir ou modifier les propriétés d’une condition de gestion basée sur des stratégies à l’aide de SSMS (SQL Server Management Studio) ou de T-SQL (Transact-SQL).
 ms.custom: ''
 ms.date: 10/05/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c904edf49ca2f07e2cb715821f9858ea25302311
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e9a628b725222d0e77ed7fcb55b80ec8de153a55
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909803"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558124"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Afficher ou modifier les propriétés d'une condition de gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "72909803"
   
 
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -53,7 +54,7 @@ ms.locfileid: "72909803"
   
 #### <a name="to-view-a-conditions-properties"></a>Pour afficher les propriétés d'une condition  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

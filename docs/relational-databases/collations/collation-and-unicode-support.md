@@ -1,7 +1,7 @@
 ---
 title: Prise en charge d’Unicode et des classements | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982822"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901943"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et des classements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -192,8 +192,7 @@ Le tableau suivant montre les désignations de classement par défaut, telles qu
 |Catalan (Catalogne)|0x0403|0x0409|Latin1_General_CI_AS|
 |Chinois (Hong Kong R.A.S., RPC)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
 |Chinese (Macao (R.A.S.))|0x1404|0x1404|Latin1_General_CI_AI|
-|Chinois (Macao (R.A.S.)
-)|0x21404|0x21404|Latin1_General_CI_AI|
+|Chinois (Macao)|0x21404|0x21404|Latin1_General_CI_AI|
 |Chinois (RPC)|0x0804|0x0804|Chinese_PRC_CI_AS|
 |Chinois (RPC)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
 |Chinese (Singapore)|0x1004|0x0804|Chinese_PRC_CI_AS|
@@ -464,7 +463,7 @@ Si vous stockez des données caractères qui reflètent plusieurs langues dans [
 > [!NOTE]
 > Pour les types de données Unicode, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] peut représenter jusqu'à 65 535 caractères à l’aide de UCS-2 ou la plage Unicode complète (1 114 111 caractères) si les caractères supplémentaires sont utilisés. Pour plus d’informations sur l’activation de caractères supplémentaires, consultez [Caractères supplémentaires](#Supplementary_Characters).
 
-D’autre part, à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si un classement compatible UTF-8 (\_UTF8) est utilisé, les types de données qui étaient auparavant non-Unicode (**char** et **varchar**) deviennent des types de données Unicode (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ne change pas le comportement des types de données Unicode (UTF-16) existants (**nchar**, **nvarchar** et **ntext**). Pour plus d’informations, consultez [Différences de stockage entre UTF-8 et UTF-16](#storage_differences).
+D’autre part, à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si un classement compatible UTF-8 (\_UTF8) est utilisé, les types de données non Unicode (**char** et **varchar**) deviennent des types de données Unicode basés sur l’encodage UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ne change pas le comportement des types de données Unicode existants (**nchar**, **nvarchar** et **ntext**), qui continuent d’utiliser l’encodage UCS-2 ou UTF-16. Pour plus d’informations, consultez [Différences de stockage entre UTF-8 et UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Considérations relatives à Unicode
 Des limitations significatives sont associées aux types de données non-Unicode. C’est parce qu’un ordinateur non-Unicode ne peut utiliser qu’une seule page de codes. Vous pouvez bénéficier de gains de performances en utilisant Unicode, car il requiert moins de conversions de page de codes. Les classements Unicode doivent être sélectionnés individuellement au niveau de la base de données, de la colonne ou de l’expression parce qu’ils ne sont pas pris en charge au niveau du serveur.    
@@ -517,7 +516,7 @@ Mais le Consortium Unicode a établi des 16 « plans » de caractères supplé
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des types de données tels que **nchar** et **nvarchar** pour stocker les données Unicode dans la plage BMP (de 000000 à 00FFFF), ce que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] encode à l’aide d’UCS-2. 
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle famille de classements de caractères supplémentaires (\_SC) pouvant être utilisée avec les types de données **nchar**, **nvarchar** et **sql_variant** pour représenter la plage de caractères Unicode complète (de 000000 à 10FFFF). Par exemple : **Latin1_General_100_CI_AS_SC** ou, si vous utilisez un classement japonais, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle famille de classements de caractères supplémentaires (\_SC) pouvant être utilisée avec les types de données **nchar**, **nvarchar** et **sql_variant** pour représenter la plage de caractères Unicode complète (de 000000 à 10FFFF). Par exemple :  **Latin1_General_100_CI_AS_SC** ou, si vous utilisez un classement japonais, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] étend la prise en charge des caractères supplémentaires aux types de données **char** et **varchar** avec les nouveaux classements prenant en charge UTF-8 ([\_UTF8](#utf8)). Ces types de données sont également capables de représenter la plage de caractères Unicode complète.   
 
@@ -604,7 +603,7 @@ La table suivante liste les octets de stockage d’encodage pour chaque plage de
 |000800–003FFF<br />004000–00FFFF|2 048–16 383<br />16 384–65 535|3|2|
 |010000–03FFFF<sup>2</sup><br /><br />040000–10FFFF<sup>2</sup>|65 536–262 143<sup>2</sup><br /><br />262 144–1 114 111<sup>2</sup>|4|4|
 
-<sup>1</sup> Les *octets de stockage* font référence à la longueur d’octets encodés, pas à la taille de stockage sur disque des types de données. Pour plus d’informations sur les tailles de stockage sur disque, consultez [nchar et nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) et [char et varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+<sup>1</sup> Les *octets de stockage* font référence à la longueur d’octets encodée, et non à la taille de stockage sur disque des types de données. Pour plus d’informations sur les tailles de stockage sur disque, consultez [nchar et nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) et [char et varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
 
 <sup>2</sup> Plage de points de code pour des [caractères supplémentaires](#Supplementary_Characters).
 
@@ -623,12 +622,23 @@ Avant de choisir s’il faut utiliser l’encodage UTF-8 ou UTF-16 pour une base
 
 Pour d’autres considérations, consultez [Écrire des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
+### <a name="converting"></a> Conversion au format UTF-8
+Dans la mesure où dans [CHAR(*n*) et VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) ou dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), le *n* définit la taille de stockage des octets, et non le nombre de caractères qui peuvent être stockés, il est important de déterminer la taille du type de données à convertir pour éviter la troncation des données. 
+
+Par exemple, considérons une colonne définie en tant que **NVARCHAR(100)** , qui stocke 180 octets de caractères japonais. Dans cet exemple, les données de colonne sont encodées à l’aide de UCS-2 ou UTF-16, qui utilise 2 octets par caractère. La conversion du type de colonne en **VARCHAR(200)** n’est pas suffisante pour empêcher la troncation des données, car le nouveau type de données peut stocker uniquement 200 octets, mais les caractères japonais nécessitent 3 octets quand ils sont encodés en UTF-8. La colonne doit donc être définie en tant que **VARCHAR(270)** pour éviter toute perte de données par troncation de données.
+
+Il est donc nécessaire de savoir à l’avance quelle est la taille en octets projetée pour la définition de colonne avant de convertir les données existantes en UTF-8, et d’ajuster la nouvelle taille de type de données de manière appropriée. Consultez le script [!INCLUDE[tsql](../../includes/tsql-md.md)] ou le notebook SQL dans les [exemples de données sur GitHub ](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), qui utilisent la fonction [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) et l’instruction [COLLATE](../../t-sql/statements/collations.md) afin de déterminer les exigences de longueur de données appropriées pour les opérations de conversion UTF-8 dans une base de données existante.
+
+Pour changer le classement des colonnes et le type de données dans une table existante, utilisez l’une des méthodes décrites dans [Définir ou changer le classement des colonnes](../../relational-databases/collations/set-or-change-the-column-collation.md).
+
+Pour changer le classement de la base de données, en permettant aux nouveaux objets d’hériter du classement de base de données par défaut, ou pour changer le classement du serveur, en permettant aux nouvelles bases de données d’hériter du classement système par défaut, consultez la section [Tâches associées](#Related_Tasks) de cet article. 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
 |Tâche|Rubrique|    
 |----------|-----------|    
-|Explique comment définir ou modifier le classement de l’instance de SQL Server|[Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|Explique comment définir ou modifier le classement d’une base de données utilisateur|[Définir ou modifier le classement de la base de données](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|Explique comment définir ou modifier le classement de l'instance de SQL Server. Notez que le changement du classement du serveur ne change pas le classement des bases de données existantes.|[Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|Explique comment définir ou modifier le classement d'une base de données utilisateur. Notez que le changement d’un classement de base de données ne change pas le classement des colonnes de table existantes.|[Définir ou modifier le classement de la base de données](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |Explique comment définir ou modifier le classement d’une colonne dans la base de données|[Définir ou modifier le classement des colonnes](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Explique comment retourner des informations de classement au niveau du serveur, de la base de données ou de la colonne|[Afficher des informations de classement](../../relational-databases/collations/view-collation-information.md)|    
 |Explique comment écrire des instructions Transact-SQL qui sont plus portables d’une langue à une autre ou qui prennent en charge plusieurs langues plus facilement|[Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -650,6 +660,6 @@ Pour plus d’informations, consultez le contenu connexe suivante :
 ## <a name="see-also"></a>Voir aussi    
 [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)     
 [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[Jeux de caractères codés sur un octet et multioctets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

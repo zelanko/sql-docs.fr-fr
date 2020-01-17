@@ -1,6 +1,7 @@
 ---
-title: Forcer le service dans une session de mise en miroir de bases de données (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Forcer le service de mise en miroir de bases de données
+description: Si le serveur principal tombe en panne alors que le serveur miroir est disponible, rendez la base de données disponible en imposant le basculement du service vers la base de données miroir (avec d’éventuelles pertes de données).
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8be517127e297fb72e8010cdad953c8a955d8815
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997868"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822222"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Forcer le service dans une session de mise en miroir de bases de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "67997868"
   
 1.  Connectez-vous au serveur miroir.  
   
-2.  Émettez l'instruction suivante :  
+2.  Émettez l'instruction suivante :  
   
      ALTER DATABASE *<nom_base_de_données>* SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   

@@ -1,6 +1,7 @@
 ---
-title: Basculer manuellement une session de mise en miroir de bases de données (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Basculer manuellement un miroir de base de données vers un partenaire
+description: Instructions pour basculer manuellement un miroir de base de données principal vers un partenaire secondaire à l’aide de T-SQL (Transact-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ddfaec9f9192af98f8b3580554f8c89d757af566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041741"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822108"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>Basculer manuellement une session de mise en miroir de bases de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68041741"
   
 3.  Exécutez l'instruction suivante sur le serveur principal :  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *nom_base_de_données* SET PARTNER FAILOVER, où *nom_base_de_données* est la base de données mise en miroir.  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER, où *database_name* est la base de données mise en miroir.  
   
      Cela lance une transition immédiate du serveur miroir vers le rôle de principal.  
   

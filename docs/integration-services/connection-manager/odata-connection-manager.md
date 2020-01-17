@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298458"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542183"
 ---
 # <a name="odata-connection-manager"></a>Gestionnaire de connexions OData
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298458"
   
 Pour un accès anonyme, sélectionnez l’option Authentification Windows.  
 
-Pour vous connecter à Microsoft Dynamics AX Online ou Microsoft Dynamics CRM Online, vous ne pouvez pas utiliser l’option d’authentification **Microsoft Online Services**. Par ailleurs, vous ne pouvez utiliser aucun option qui est configurée pour l’authentification multifacteur.
+Pour vous connecter à Microsoft Dynamics AX Online ou Microsoft Dynamics CRM Online, vous ne pouvez pas utiliser l’option d’authentification **Microsoft Online Services**. Par ailleurs, vous ne pouvez utiliser aucun option qui est configurée pour l’authentification multifacteur. L’authentification moderne n’est pas prise en charge pour l’instant. 
   
 ### <a name="specifying-and-securing-credentials"></a>Spécification des informations d'identification  
  Si votre service OData requiert l’authentification de base, spécifiez un nom d’utilisateur et un mot de passe dans [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md). Les valeurs que vous entrez dans l'éditeur sont conservées dans le package. La valeur du mot de passe est chiffrée selon le niveau de protection du package.  
@@ -80,7 +80,7 @@ Pour vous connecter à Microsoft Dynamics AX Online ou Microsoft Dynamics CRM On
  URL du service OData. Par exemple : https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Authentification**  
-Sélectionnez l'une des options suivantes :
+Sélectionnez l’une des options suivantes :
 -   **Authentification Windows** Pour l’accès anonyme, sélectionnez cette option.
 -   **Authentification de base** 
 -   **Microsoft Dynamics AX Online** pour Dynamics AX Online

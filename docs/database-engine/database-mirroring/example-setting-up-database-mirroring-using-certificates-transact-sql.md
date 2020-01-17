@@ -1,6 +1,7 @@
 ---
-title: 'Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: 'Exemple : Mise en miroir de bases de données avec certificats (T-SQL)'
+description: Exemple de configuration de la mise en miroir de bases de données SQL Server avec des certificats à l’aide de Transact-SQL.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3aa589de707e6f2edaac83db40ba908bf7177ae
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212347"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253592"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +263,7 @@ ms.locfileid: "70212347"
     ```  
   
     > [!NOTE]  
-    >  Si vous envisagez d’utiliser le mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie avec la valeur FULL (valeur par défaut) et ajoutez dès que possible le témoin après l’exécution de la deuxième instruction SET PARTNER **’**_serveur_partenaire_**’** . Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
+    >  Si vous envisagez d’utiliser le mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie avec la valeur FULL (valeur par défaut) et ajoutez dès que possible le témoin après l’exécution de la deuxième instruction SET PARTNER **’** _serveur_partenaire_ **’** . Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
   
  [&#91;Début de l’exemple&#93;](#ExampleH2)  
   
@@ -280,12 +281,12 @@ ms.locfileid: "70212347"
   
 -   [Résoudre des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

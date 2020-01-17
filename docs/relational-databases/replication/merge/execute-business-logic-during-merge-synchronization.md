@@ -1,6 +1,7 @@
 ---
-title: Exécuter la logique métier pendant la synchronisation de fusion | Microsoft Docs
-ms.custom: ''
+title: Logique métier pour la synchronisation de fusion
+description: Découvrez comment écrire du code d’assembly managé pour la logique métier utilisée lors de la synchronisation de la réplication de fusion.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 713348f8b6370dfe9762cc1f3a7280b19dedee41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033311"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321481"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Exécuter la logique métier lors de la synchronisation de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "68033311"
      Cette option est utile pour les applications qui doivent substituer des opérations ou des valeurs de données spécifiques. Par exemple, une application peut transformer une suppression de ligne en mise à jour spéciale qui affecte la valeur « supprimé » à une colonne **status** de la ligne puis effectue un suivi du client à l'origine de la suppression. Cela peut s'avérer utile pour l'audit ou le flux de travail.  
   
 ### <a name="custom-conflict-resolution"></a>Résolution personnalisée des conflits  
- La réplication de fusion offre des fonctionnalités de résolution ou de détection de conflits. Vous pouvez accepter une stratégie de résolution par défaut ou opter pour une résolution personnalisée des conflits. Pour plus d'informations, voir [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Le gestionnaire de logique métier peut être appelé au cours du traitement de modifications de données conflictuelles et effectuer l'une des deux actions suivantes :  
+ La réplication de fusion offre des fonctionnalités de résolution ou de détection de conflits. Vous pouvez accepter une stratégie de résolution par défaut ou opter pour une résolution personnalisée des conflits. Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Le gestionnaire de logique métier peut être appelé au cours du traitement de modifications de données conflictuelles et effectuer l'une des deux actions suivantes :  
   
 -   Accepter la résolution par défaut  
   
@@ -92,8 +93,8 @@ ms.locfileid: "68033311"
   
 ## <a name="see-also"></a>Voir aussi  
  [Réplication de fusion](../../../relational-databases/replication/merge/merge-replication.md)   
- [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchroniser les données](../../../relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Synchronisation web pour la réplication de fusion](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

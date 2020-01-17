@@ -1,6 +1,7 @@
 ---
-title: SQL Server et clés de chiffrement de base de données (moteur de base de données) | Microsoft Docs
-ms.custom: ''
+title: SQL Server et clés de chiffrement de base de données
+description: Découvrez la clé principale de service et la clé principale de base de données utilisées par le moteur de base de données SQL Server pour chiffrer et sécuriser les données.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1c5e618d1116dfc464bcea781cdab8469e735b32
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111571"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558105"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68111571"
 
 La clé principale du service ne peut être ouverte que par le compte de service Windows sous lequel elle a été créée ou par un principal ayant accès au nom du compte de service et à son mot de passe.
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé SMK, consultez [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé SMK, consultez [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
 
 ### <a name="database-master-key"></a>Clé principale de base de données
   
@@ -57,7 +58,7 @@ La clé principale du service ne peut être ouverte que par le compte de service
 -   Ajout ou suppression d'une instance de serveur à partir d'un déploiement évolutif de serveur dans lequel plusieurs serveurs partagent une base de données unique et la clé qui fournit un chiffrement réversible pour cette base de données.  
   
 ## <a name="important-security-information"></a>Informations de sécurité importantes  
- L'accès aux objets sécurisés par la clé principale du service requiert le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui a permis de créer la clé ou le compte d'ordinateur (machine). Autrement dit, l'ordinateur est attaché au système dans lequel la clé a été créée. Vous pouvez modifier le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *ou* le compte d’ordinateur sans perdre l’accès à la clé. Toutefois, si vous modifiez les deux, vous perdrez l'accès à la clé principale de service. Si vous perdez l’accès à la clé principale de service sans un de ces deux éléments, vous ne pouvez pas déchiffrer les données et les objets chiffrés en utilisant la clé d’origine.  
+ L'accès aux objets sécurisés par la clé principale du service requiert le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui a permis de créer la clé ou le compte d'ordinateur (machine). Autrement dit, l'ordinateur est attaché au système dans lequel la clé a été créée. Vous pouvez modifier le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*ou* le compte d’ordinateur sans perdre l’accès à la clé. Toutefois, si vous modifiez les deux, vous perdrez l'accès à la clé principale de service. Si vous perdez l’accès à la clé principale de service sans un de ces deux éléments, vous ne pouvez pas déchiffrer les données et les objets chiffrés en utilisant la clé d’origine.  
   
  Les connexions sécurisées avec la clé principale de service ne peuvent pas être restaurées sans la clé principale de service.  
   
@@ -67,7 +68,7 @@ La clé principale du service ne peut être ouverte que par le compte de service
 >  Si vous perdez tout accès aux clés décrites précédemment, vous perdez l'accès aux objets, connexions et données sécurisés par ces clés. Vous pouvez restaurer la clé principale de service, comme décrit dans les liens répertoriés ici, ou vous pouvez revenir au système de chiffrement d'origine pour récupérer l'accès. Il n'existe aucune « porte dérobée » pour récupérer l'accès.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Clé principale du service](../../../relational-databases/security/encryption/service-master-key.md)  
  Fournit une brève explication pour la clé principale de service et les meilleures pratiques associées.  
   
  [Gestion de clés extensible &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

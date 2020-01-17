@@ -1,6 +1,7 @@
 ---
-title: Configurer des paramètres SQL Server à l’aide de variables d’environnement
+title: Configurer des variables d’environnement pour SQL Server sur Linux
 description: Cet article explique comment utiliser des variables d’environnement pour configurer des paramètres SQL Server 2017 spécifiques sur Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531320"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558370"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer des paramètres SQL Server à l’aide de variables d’environnement sur Linux
 
@@ -43,13 +44,13 @@ Vous pouvez utiliser différentes variables d’environnement pour configurer SQ
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Variable d'environnement | Description |
+| Variable d’environnement | Description |
 |-----|-----|
 | **ACCEPT_EULA** | Définissez la variable **ACCEPT_EULA** sur n’importe quelle valeur pour confirmer que vous acceptez le [Contrat de licence utilisateur final](https://go.microsoft.com/fwlink/?LinkId=746388). Paramètre obligatoire pour l’image de SQL Server. |
 | **MSSQL_SA_PASSWORD** | Configurez le mot de passe de l’utilisateur AS. |
-| **MSSQL_PID** | Définissez l’édition SQL Server ou la clé de produit. Les valeurs possibles sont : </br></br>**Evaluation**</br>**Développeur**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clé de produit**</br></br>Si vous spécifiez une clé de produit, celle-ci doit être au format #####-#####-#####-#####-#####, où « # » est un chiffre ou une lettre.|
+| **MSSQL_PID** | Définissez l’édition SQL Server ou la clé de produit. Les valeurs possibles incluent : </br></br>**Evaluation**</br>**Développeur**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clé de produit**</br></br>Si vous spécifiez une clé de produit, celle-ci doit être au format #####-#####-#####-#####-#####, où « # » est un chiffre ou une lettre.|
 | **MSSQL_LCID** | Définit l’ID de langue à utiliser pour SQL Server. Par exemple 1036 correspond au français. |
-| **MSSQL_COLLATION** | Définit le classement par défaut du serveur SQL Server. Cela remplace le mappage par défaut de l’ID de langue (LCID) par le classement. |
+| **MSSQL_COLLATION** | Définit le classement par défaut pour SQL Server. Cela remplace le mappage par défaut de l’ID de langue (LCID) par le classement. |
 | **MSSQL_MEMORY_LIMIT_MB** | Définit la quantité maximale de mémoire (en Mo) que SQL Server peut utiliser. Par défaut, il s’agit de 80 % de la mémoire physique totale. |
 | **MSSQL_TCP_PORT** | Configurez le port TCP sur lequel SQL Server écoute (par défaut 1433). |
 | **MSSQL_IP_ADDRESS** | Définissez l’adresse IP. Actuellement, l’adresse IP doit être de type IPv4 (0.0.0.0). |
@@ -58,7 +59,7 @@ Vous pouvez utiliser différentes variables d’environnement pour configurer SQ
 | **MSSQL_LOG_DIR** | Modifiez le répertoire dans lequel les nouveaux fichiers journaux de base de données SQL Server (.ldf) sont créés. |
 | **MSSQL_DUMP_DIR** | Modifiez le répertoire dans lequel SQL Server dépose les images mémoire et d’autres fichiers de dépannage par défaut. |
 | **MSSQL_ENABLE_HADR** | Activez le groupe de disponibilité. Par exemple, « 1 » est activé et « 0 » est désactivé. |
-| **MSSQL_AGENT_ENABLED** | Activez SQL Server Agent. Par exemple, « true » est activé et « false » est désactivé. Par défaut, l’agent est désactivé.  |
+| **MSSQL_AGENT_ENABLED** | Activer l’agent SQL Server. Par exemple, « true » est activé et « false » est désactivé. Par défaut, l’agent est désactivé.  |
 | **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de la base de données Master. Doit être nommé **master.mdf** jusqu’à la première exécution de SQL Server. |
 | **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier journal de la base de données Master. Doit être nommé **mastlog.ldf** jusqu’à la première exécution de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Définit l’emplacement des fichiers de journal d’erreurs. |
@@ -67,13 +68,13 @@ Vous pouvez utiliser différentes variables d’environnement pour configurer SQ
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Variable d'environnement | Description |
+| Variable d’environnement | Description |
 |-----|-----|
 | **ACCEPT_EULA** | Définissez la variable **ACCEPT_EULA** sur n’importe quelle valeur pour confirmer que vous acceptez le [Contrat de licence utilisateur final](https://go.microsoft.com/fwlink/?LinkId=746388). Paramètre obligatoire pour l’image de SQL Server. |
 | **MSSQL_SA_PASSWORD** | Configurez le mot de passe de l’utilisateur AS. |
-| **MSSQL_PID** | Définissez l’édition SQL Server ou la clé de produit. Les valeurs possibles sont : </br></br>**Evaluation**</br>**Développeur**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clé de produit**</br></br>Si vous spécifiez une clé de produit, celle-ci doit être au format #####-#####-#####-#####-#####, où « # » est un chiffre ou une lettre.|
+| **MSSQL_PID** | Définissez l’édition SQL Server ou la clé de produit. Les valeurs possibles incluent : </br></br>**Evaluation**</br>**Développeur**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clé de produit**</br></br>Si vous spécifiez une clé de produit, celle-ci doit être au format #####-#####-#####-#####-#####, où « # » est un chiffre ou une lettre.|
 | **MSSQL_LCID** | Définit l’ID de langue à utiliser pour SQL Server. Par exemple 1036 correspond au français. |
-| **MSSQL_COLLATION** | Définit le classement par défaut du serveur SQL Server. Cela remplace le mappage par défaut de l’ID de langue (LCID) par le classement. |
+| **MSSQL_COLLATION** | Définit le classement par défaut pour SQL Server. Cela remplace le mappage par défaut de l’ID de langue (LCID) par le classement. |
 | **MSSQL_MEMORY_LIMIT_MB** | Définit la quantité maximale de mémoire (en Mo) que SQL Server peut utiliser. Par défaut, il s’agit de 80 % de la mémoire physique totale. |
 | **MSSQL_TCP_PORT** | Configurez le port TCP sur lequel SQL Server écoute (par défaut 1433). |
 | **MSSQL_IP_ADDRESS** | Définissez l’adresse IP. Actuellement, l’adresse IP doit être de type IPv4 (0.0.0.0). |
@@ -82,7 +83,7 @@ Vous pouvez utiliser différentes variables d’environnement pour configurer SQ
 | **MSSQL_LOG_DIR** | Modifiez le répertoire dans lequel les nouveaux fichiers journaux de base de données SQL Server (.ldf) sont créés. |
 | **MSSQL_DUMP_DIR** | Modifiez le répertoire dans lequel SQL Server dépose les images mémoire et d’autres fichiers de dépannage par défaut. |
 | **MSSQL_ENABLE_HADR** | Activez le groupe de disponibilité. Par exemple, « 1 » est activé et « 0 » est désactivé. |
-| **MSSQL_AGENT_ENABLED** | Activez SQL Server Agent. Par exemple, « true » est activé et « false » est désactivé. Par défaut, l’agent est désactivé.  |
+| **MSSQL_AGENT_ENABLED** | Activer l’agent SQL Server. Par exemple, « true » est activé et « false » est désactivé. Par défaut, l’agent est désactivé.  |
 | **MSSQL_MASTER_DATA_FILE** | Définit l’emplacement du fichier de données de la base de données Master. Doit être nommé **master.mdf** jusqu’à la première exécution de SQL Server. |
 | **MSSQL_MASTER_LOG_FILE** | Définit l’emplacement du fichier journal de la base de données Master. Doit être nommé **mastlog.ldf** jusqu’à la première exécution de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Définit l’emplacement des fichiers de journal d’erreurs. |

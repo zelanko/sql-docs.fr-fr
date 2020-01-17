@@ -1,7 +1,8 @@
 ---
-title: Sauvegarder plusieurs bases de données dans le service Stockage Blob Azure - PowerShell | Microsoft Docs
-ms.custom: ''
-ms.date: 05/21/2016
+title: 'Sauvegarder plusieurs bases de données : Stockage Blob Azure'
+titleSuffix: PowerShell
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbfcee4bd7ceafb7d09f9719744e5d1e89776499
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: a3e89a3dc9cff58b5ab610f0454217cc3b658dc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383767"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247459"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Sauvegarder plusieurs bases de données dans le service Stockage Blob Azure - PowerShell
 
@@ -169,4 +170,4 @@ foreach ($database in $databases) {
 
 [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
 
-[Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+[Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

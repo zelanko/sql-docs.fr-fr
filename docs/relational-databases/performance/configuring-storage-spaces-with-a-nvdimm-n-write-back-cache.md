@@ -1,6 +1,6 @@
 ---
-title: Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N | Microsoft Docs
-ms.custom: ''
+title: Configuration du stockage - Cache en écriture différée NVDIMM-N
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137989"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165991"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  Vous pouvez désormais voir ce nouveau volume sur votre serveur. Vous pouvez utiliser ce lecteur pour votre journal des transactions SQL Server.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Lecteur Log_Space](../../relational-databases/performance/media/log-space-drive.png "Lecteur Log_Space")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Espaces de stockage Windows dans Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

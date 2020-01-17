@@ -1,6 +1,7 @@
 ---
-title: Visionneuse des conflits de réplication Microsoft (réplication de fusion) | Microsoft Docs
-ms.custom: ''
+title: Visionneuse des conflits de réplication (Fusion)
+description: Décrit la Visionneuse des conflits de réplication utilisée pour la réplication de fusion dans SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025809"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321956"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visionneuse des conflits de réplication Microsoft (réplication de fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +57,13 @@ ms.locfileid: "68025809"
  **Appliquer ou supprimer le filtre**  
  Applique ou supprime un filtre défini dans la boîte de dialogue **Définir les filtres** .  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne tous les conflits de la grille.  
   
  **Aucune sélection**  
  Désélectionne tous les conflits de la grille.  
   
- **Supprimer**  
+ **Remove**  
  Supprime les conflits sélectionnés et leurs métadonnées associées des tables système de réplication. Vous obtenez le même résultat en cliquant sur le bouton Soumettre le gagnant (sans modifier les données) de chaque conflit sélectionné.  
   
  **Afficher toutes les colonnes**  

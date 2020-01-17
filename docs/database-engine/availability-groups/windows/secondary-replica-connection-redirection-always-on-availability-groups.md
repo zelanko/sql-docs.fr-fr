@@ -1,6 +1,7 @@
 ---
-title: Redirection de connexion en lecture/écriture depuis un réplica secondaire SQL Server vers le réplica principal (groupes de disponibilité Always On) | Microsoft Docs
-ms.custom: ''
+title: Rediriger les connexions en lecture/écriture vers le réplica principal
+description: Découvrez comment toujours rediriger les connexions en lecture/écriture vers le réplica principal d’un groupe de disponibilité Always On, quel que soit le serveur cible spécifié dans la chaîne de connexion.
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014200"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235204"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)
 
@@ -32,7 +33,7 @@ ms.locfileid: "68014200"
 
 Par exemple, la chaîne de connexion peut cibler un réplica secondaire. Selon la configuration du réplica de groupe de disponibilité et les paramètres de la chaîne de connexion, la connexion peut être automatiquement redirigée vers le réplica principal. 
 
-## <a name="use-cases"></a>Cas d’utilisation
+## <a name="use-cases"></a>Cas d'utilisation
 
 Dans les versions antérieures à la [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], l’écouteur du groupe de disponibilité et la ressource de cluster correspondante redirigent le trafic utilisateur vers le réplica principal afin de garantir la reconnexion après un basculement. La [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continue de prendre en charge la fonctionnalité d’écouteur du groupe de disponibilité, et permet de rediriger la connexion de réplica pour les scénarios qui ne peuvent pas inclure d’écouteur. Par exemple :
 
@@ -47,7 +48,7 @@ Pour qu’un réplica secondaire redirige les requêtes de connexion en lecture/
 * Les spécifications `PRIMARY_ROLE` du réplica doivent inclure `READ_WRITE_ROUTING_URL`.
 * La chaîne de connexion doit définir `ApplicationIntent` comme `ReadWrite`, qui est la valeur par défaut.
 
-## <a name="set-readwriteroutingurl-option"></a>Définir l’option READ_WRITE_ROUTING_URL
+## <a name="set-read_write_routing_url-option"></a>Définir l’option READ_WRITE_ROUTING_URL
 
 Pour configurer la redirection des connexions en lecture/écriture, définissez `READ_WRITE_ROUTING_URL` pour le réplica principal lorsque vous créez le groupe de disponibilité. 
 
@@ -57,24 +58,24 @@ Dans [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUT
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) non défini (par défaut) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) non défini (par défaut) 
 
 Par défaut, la redirection des connexions de réplica en lecture/écriture n’est pas définie pour un réplica. La façon dont un réplica secondaire gère les requêtes de connexion varie selon qu’il est configuré pour autoriser les connexions, et selon la valeur du paramètre `ApplicationIntent` de la chaîne de connexion. Le tableau suivant montre comment un réplica secondaire gère les connexions en fonction de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` et de `ApplicationIntent`.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/> Valeur par défaut|Échec des connexions|Échec des connexions|Réussite des connexions<br/>Réussite des lectures<br/>Échec des écritures|
+|`ApplicationIntent=ReadWrite`<br/> Default|Échec des connexions|Échec des connexions|Réussite des connexions<br/>Réussite des lectures<br/>Échec des écritures|
 |`ApplicationIntent=ReadOnly`|Échec des connexions|Réussite des connexions|Réussite des connexions
 
 Le tableau précédant montre le comportement par défaut, qui est identique à celui des versions de SQL Server antérieures à la [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) défini 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) défini 
 
 Une fois la redirection des connexions en lecture/écriture définie, le réplica gère les requêtes de connexion différemment. Le comportement de connexion dépend toujours de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` et de `ApplicationIntent`. Le tableau suivant montre comment un réplica secondaire, où `READ_WRITE_ROUTING` est défini, gère les connexions en fonction de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` et de `ApplicationIntent`.
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>Valeur par défaut|Échec des connexions|Échec des connexions|Connexions acheminées vers le réplica principal|
+|`ApplicationIntent=ReadWrite`<br/>Default|Échec des connexions|Échec des connexions|Connexions acheminées vers le réplica principal|
 |`ApplicationIntent=ReadOnly`|Échec des connexions|Réussite des connexions|Réussite des connexions
 
 Le tableau précédent montre que lorsque `READ_WRITE_ROUTING_URL` est défini dans le réplica principal, le réplica secondaire redirige les connexions vers le réplica principal lorsque `SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`, et que la connexion spécifie `ReadWrite`.
@@ -84,7 +85,7 @@ Le tableau précédent montre que lorsque `READ_WRITE_ROUTING_URL` est défini d
 Dans cet exemple, un groupe de disponibilité a trois réplicas :
 * Un réplica principal sur COMPUTER01
 * Un réplica secondaire synchrone sur COMPUTER02
-* Un réplica secondaire synchrone sur COMPUTER03
+* Un réplica secondaire asynchrone sur COMPUTER03
 
 L’illustration suivante représente le groupe de disponibilité.
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
@@ -136,7 +137,7 @@ CREATE AVAILABILITY GROUP MyAg
 GO  
 ```
    - `<domain>.<tld>`
-      - Domaine et domaine de niveau supérieur du nom de domaine complet. Par exemple, `corporation.com`.
+      - Domaine et domaine de niveau supérieur du nom de domaine complet. Par exemple : `corporation.com`.
 
 
 ### <a name="connection-behaviors"></a>Comportements de connexion
@@ -158,7 +159,7 @@ Si l’instance de SQL Server qui est spécifiée dans la chaîne de connexion n
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+[Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 

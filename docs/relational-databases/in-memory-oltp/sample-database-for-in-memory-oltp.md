@@ -1,7 +1,7 @@
 ---
 title: Exemple de base de données pour OLTP en mémoire | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 12/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,25 +11,25 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef40223423b1645ce2acd7944db2ba32f85d01db
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111806"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258782"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Exemple de base de données pour OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
 ## <a name="overview"></a>Vue d’ensemble  
- Cet exemple présente la fonctionnalité OLTP en mémoire. Il présente les tables optimisées en mémoire et les procédures stockées compilées en mode natif, et illustre les avantages en matière de performances de l’OLTP en mémoire.  
+ Cet exemple présente la fonctionnalité OLTP en mémoire. Il présente les tables à mémoire optimisée et les procédures stockées compilées nativement. De plus, il permet d’illustrer les avantages relatifs aux performances d’OLTP en mémoire.  
   
 > [!NOTE]  
 >  Pour afficher cette rubrique pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], consultez [Extensions à AdventureWorks pour présenter l’OLTP en mémoire](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
   
- Dans l'exemple, 5 tables de la base de données AdventureWorks sont migrées vers des tables optimisées en mémoire, et une charge de travail de démonstration est incluse pour le traitement des commandes. Utilisez cette charge de travail de démonstration pour voir le gain de performances obtenu en utilisant l’OLTP en mémoire sur votre serveur.  
+ L’exemple permet de migrer cinq tables de la base de données AdventureWorks vers des tables à mémoire optimisée. De plus, il comporte une charge de travail de démonstration pour le traitement des commandes client. Utilisez cette charge de travail de démonstration pour voir le gain de performances obtenu en utilisant l’OLTP en mémoire sur votre serveur.  
   
- Dans la description de l’exemple, nous abordons les compromis négociés durant la migration des tables vers l’OLTP en mémoire, pour prendre en compte les fonctionnalités qui ne sont pas (encore) prises en charge pour les tables optimisées en mémoire.  
+ Dans la description de l’exemple, nous abordons les compromis effectués durant la migration des tables vers l’OLTP en mémoire afin de prendre en compte les fonctionnalités qui ne sont pas (encore) prises en charge pour les tables à mémoire optimisée.  
   
  La documentation de l'exemple est structurée comme suit :  
   
@@ -39,15 +39,15 @@ ms.locfileid: "68111806"
   
 -   [Description des exemples de tables et de procédures](#Descriptionofthesampletablesandprocedures) : inclut les descriptions des tables et des procédures ajoutées à AdventureWorks par l’exemple d’OLTP en mémoire ainsi que les considérations relatives à la migration de certaines tables AdventureWorks d’origine vers des tables à mémoire optimisée  
   
--   Instructions pour effectuer des [Mesures de performance à l’aide de la charge de travail de démonstration](#PerformanceMeasurementsusingtheDemoWorkload) : inclut des instructions pour installer et exécuter Ostress, un outil de pilotage de la charge de travail, et pour exécuter la charge de travail de démonstration elle-même  
+-   Instructions pour effectuer des [mesures du niveau de performance à l’aide de la charge de travail de démonstration](#PerformanceMeasurementsusingtheDemoWorkload) : inclut des instructions pour installer et exécuter ostress (un outil de pilotage de la charge de travail) ainsi que pour exécuter la charge de travail de démonstration elle-même  
   
 -   [Utilisation de la mémoire et de l’espace disque dans l’exemple](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Conditions préalables  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d’au moins 16 Go de mémoire disponible sur SQL Server. Pour obtenir des conseils généraux sur le matériel pour l’OLTP en mémoire, consultez le billet de blog suivant : [Considérations matérielles pour l’OLTP en mémoire dans SQL Server 2014](blog-hardware-in-memory-oltp.md)
+-   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple en particulier, vous devez disposer d’au moins 16 Go de mémoire pour SQL Server. Pour obtenir des conseils généraux sur le matériel pour l’OLTP en mémoire, consultez le billet de blog suivant : [Considérations matérielles pour l’OLTP en mémoire dans SQL Server 2014](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installation de l’exemple In-Memory OLTP basé sur AdventureWorks  
  Procédez comme suit pour installer l'exemple :  
@@ -68,7 +68,7 @@ ms.locfileid: "68111806"
   
      Exemple de script T-SQL :  
   
-    ```  
+    ```sql
     RESTORE DATABASE [AdventureWorks2016CTP3]   
       FROM DISK = N'C:\temp\AdventureWorks2016CTP3.bak'   
         WITH FILE = 1,    
@@ -85,7 +85,7 @@ ms.locfileid: "68111806"
   
  Les nouvelles tables à mémoire optimisée ont le suffixe « _inmem ». L’exemple inclut également les tables correspondantes avec le suffixe « _ondisk » : ces tables peuvent être utilisées pour effectuer une comparaison un-à-un entre les performances des tables à mémoire optimisée et des tables sur disque de votre système.  
   
- Notez que les tables optimisées en mémoire utilisées dans la charge de travail pour la comparaison de performances sont entièrement durables et entièrement journalisées. Elles ne sacrifient pas la durabilité ou la fiabilité pour atteindre les gains de performance.  
+ Les tables à mémoire optimisée utilisées dans la charge de travail pour la comparaison du niveau de performance sont entièrement durables et entièrement journalisées. Elles ne sacrifient pas la durabilité ou la fiabilité pour atteindre les gains de performance.  
   
  La charge de travail cible pour cet exemple est le traitement des commandes, comprenant également des informations sur les produits et les remises. À cet effet, il utilise les tables SalesOrderHeader, SalesOrderDetail, Product, SpecialOffer, et SpecialOfferProduct.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "68111806"
   
  Sales.SalesOrderHeader_inmem  
   
--   Les*contraintes par défaut* sont prises en charge pour les tables optimisées en mémoire, et la plupart des contraintes par défaut ont été migrées en l’état. Toutefois, la table d'origine Sales.SalesOrderHeader contient plusieurs contraintes par défaut qui récupèrent la date actuelle, pour les colonnes OrderDate et ModifiedDate. Dans une charge de travail de traitement des commandes à haut débit, avec de nombreuses concurrences, n'importe quelle ressource globale peut devenir un point de contention. L’heure système est l’une de ces ressources globales, et nous avons observé qu’elle peut devenir un goulot d’étranglement quand une charge de travail d’OLTP en mémoire qui insère des commandes client est exécutée, en particulier si l’heure système doit être extraite pour plusieurs colonnes dans l’en-tête de la commande, ainsi que pour ses détails. Le problème est résolu dans cet exemple en récupérant l'heure système une seule fois pour chaque commande client insérée, puis en utilisant cette valeur pour les colonnes datetime dans SalesOrderHeader_inmem et SalesOrderDetail_inmem, dans la procédure stockée Sales.usp_InsertSalesOrder_inmem.  
+-   Les*contraintes par défaut* sont prises en charge pour les tables optimisées en mémoire, et la plupart des contraintes par défaut ont été migrées en l’état. Toutefois, la table d'origine Sales.SalesOrderHeader contient plusieurs contraintes par défaut qui récupèrent la date actuelle, pour les colonnes OrderDate et ModifiedDate. Dans une charge de travail de traitement des commandes à haut débit avec de nombreuses concurrences, toute ressource globale peut devenir un point de contention. L’heure système est l’une de ces ressources globales, et nous avons observé qu’elle peut devenir un goulot d’étranglement quand une charge de travail d’OLTP en mémoire qui insère des commandes client est exécutée, en particulier si l’heure système doit être extraite pour plusieurs colonnes dans l’en-tête de la commande, ainsi que pour ses détails. Le problème est résolu dans cet exemple en récupérant l'heure système une seule fois pour chaque commande client insérée, puis en utilisant cette valeur pour les colonnes datetime dans SalesOrderHeader_inmem et SalesOrderDetail_inmem, dans la procédure stockée Sales.usp_InsertSalesOrder_inmem.  
   
--   *Types définis par l’utilisateur (UDT) alias* : la table d’origine utilise deux types définis par l’utilisateur (UDT) alias : dbo.OrderNumber et dbo.AccountNumber, pour les colonnes PurchaseOrderNumber et AccountNumber, respectivement. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prend pas en charge le type défini par l’utilisateur alias pour les tables optimisées en mémoire, par conséquent les nouvelles tables utilisent les types de données système nvarchar(25) et nvarchar(15), respectivement.  
+-   *UDT (types de données définis par l’utilisateur) alias* : la table d’origine utilise deux UDT alias, dbo.OrderNumber et dbo.AccountNumber, pour les colonnes PurchaseOrderNumber et AccountNumber, respectivement. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prend pas en charge le type défini par l’utilisateur alias pour les tables optimisées en mémoire, par conséquent les nouvelles tables utilisent les types de données système nvarchar(25) et nvarchar(15), respectivement.  
   
--   *Colonnes autorisant des valeurs NULL dans l’index* : dans la table d’origine, la colonne SalesPersonID autorise les valeurs NULL, tandis que dans les nouvelles tables, la colonne n’accepte pas les valeurs NULL et a une contrainte par défaut avec la valeur (-1). Cela est dû au fait que les index des tables optimisées en mémoire ne peuvent pas avoir de colonnes autorisant des valeurs NULL dans la clé d'index ; -1 est un substitut de la valeur NULL dans ce cas.  
+-   *Colonnes autorisant des valeurs NULL dans l’index* : dans la table d’origine, la colonne SalesPersonID autorise les valeurs NULL, tandis que dans les nouvelles tables, la colonne n’accepte pas les valeurs NULL et a une contrainte par défaut avec la valeur (-1). Cela est dû au fait que les index des tables à mémoire optimisée ne peuvent pas avoir de colonnes Nullable dans la clé d’index ; -1 est une valeur de substitution de la valeur NULL dans ce cas.  
   
--   *Colonnes calculées[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car*  ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
+-   *Colonnes calculées[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car* ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
 
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.
 
   
@@ -182,21 +182,26 @@ ms.locfileid: "68111806"
   
  Les index HASH peuvent être utilisés pour optimiser davantage la charge de travail. Ils sont particulièrement optimisés pour les recherches de point et les insertions de ligne. Toutefois, il faut considérer qu'ils ne prennent pas en charge les analyses de plage, les analyses triées, ou la recherche sur les colonnes clés d'index. Par conséquent, leur utilisation est plus délicate. En outre, il est nécessaire de spécifier le bucket_count lors de la création. Celui-ci doit généralement correspondre à une valeur comprise entre le nombre de valeurs de clé d'index et son double, mais il peut généralement être surestimé.  
   
- Consultez la documentation en ligne pour plus de détails sur les [instructions d’index](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) et pour les recommandations concernant le [choix du bon bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
-  
+Pour plus d’informations, consultez les [instructions d’index](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) et les recommandations sur le [choix du bucket_count approprié](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) dans la documentation en ligne.  
+
+
+La documentation en ligne fournit des informations supplémentaires sur les sujets suivants :
+- [Recommandations relatives à l’index](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
+- [Choix du bucket_count approprié](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+
  Les index des tables migrées ont été paramétrés pour la charge de travail de traitement des commandes de démonstration. La charge de travail repose sur les insertions et les recherches de point dans les tables Sales.SalesOrderHeader_inmem et Sales.SalesOrderDetail_inmem, elle porte également sur les recherches de point sur les colonnes clés primaires dans les tables Production.Product_inmem et Sales.SpecialOffer_inmem.  
   
  Sales.SalesOrderHeader_inmem a trois index, qui sont tous des index HASH pour des raisons de performances, et aucune recherche triée ou de plage n'est nécessaire pour la charge de travail.  
   
 -   Index HASH sur (SalesOrderID) : le bucket_count est dimensionné à 10 millions (arrondi à 16 millions), car le nombre estimé de commandes est 10 millions.  
   
--   Index HASH sur (SalesPersonID) : le bucket_count est 1 million. Le jeu de données fourni ne contient pas beaucoup de commerciaux, mais il permet une croissance future ; de plus, les performances ne sont pas affectées par les recherches de point si le bucket_count est surdimensionné.  
+-   Index HASH sur (SalesPersonID) : le bucket_count est 1 million. Le jeu de données fourni ne comporte pas beaucoup de commerciaux. Toutefois, ce grand bucket_count permet une augmentation future. De plus, vous n’êtes pas affecté par une dégradation du niveau de performance pour les recherches de points si le bucket_count est surdimensionné.  
   
 -   Index HASH sur (CustomerID) : le bucket_count est 1 million. Le jeu de données fourni ne contient pas beaucoup de clients, mais il permet une croissance future.  
   
  Sales.SalesOrderDetail_inmem a trois index, qui sont tous des index HASH pour des raisons de performances, et aucune recherche triée ou de plage n'est nécessaire pour la charge de travail.  
   
--   Index HASH sur (SalesOrderID, SalesOrderDetailID) : il s'agit de l'index de clé primaire, et bien que les recherches sur (SalesOrderID, SalesOrderDetailID) soient rares, l'utilisation d'un index de hachage pour la clé accélère les insertions de lignes. Le bucket_count est dimensionné à 50 millions (arrondi à 67 millions) : le nombre estimé de commandes est 10 millions, valeur dimensionnée pour une moyenne de 5 articles par commande.  
+-   Index HASH sur (SalesOrderID, SalesOrderDetailID) : il s'agit de l'index de clé primaire, et bien que les recherches sur (SalesOrderID, SalesOrderDetailID) soient rares, l'utilisation d'un index de hachage pour la clé accélère les insertions de lignes. Le bucket_count est dimensionné à 50 millions (arrondi à 67 millions) : le nombre attendu de commandes client est de 10 millions, ce qui correspond à une moyenne de cinq articles par commande  
   
 -   Index HASH sur (SalesOrderID) : les recherches par commande sont fréquentes : vous souhaitez rechercher tous les articles correspondant à une commande unique.  Le Index bucket_count est dimensionné à 10 millions (arrondi à 16 millions), car le nombre estimé de commandes est 10 millions.  
   
@@ -242,7 +247,7 @@ ms.locfileid: "68111806"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem : paramètre table qui contient les articles de la commande  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem : paramètre table (TVP) qui contient les articles de la commande  
   
     -   Paramètres d'entrée (facultatifs) :  
   
@@ -308,11 +313,11 @@ ms.locfileid: "68111806"
  Ostress est un outil en ligne de commande qui a été développé par l’équipe de support technique de Microsoft CSS SQL Server. Cet outil peut être utilisé pour exécuter des requêtes ou des procédures stockées distantes en parallèle. Vous pouvez configurer le nombre de threads pour exécuter une instruction T-SQL donnée en parallèle et spécifier combien de fois l'instruction doit être exécutée sur ce thread. Ostress assemblera les threads et exécutera l'instruction sur tous les threads en parallèle. Lorsque l'exécution est terminée pour tous les threads, Ostress indique le temps qu'il a fallu pour terminer l'exécution sur tous les threads.  
   
 ### <a name="installing-ostress"></a>Installation d'Ostress  
- Ostress est installé avec les utilitaires RML ; il n'y a aucune installation autonome pour Ostress.  
+ Ostress est installé avec les utilitaires RML (Report Markup Language). Il n’existe aucune installation autonome pour ostress.  
   
  Étapes d'installation :  
   
-1.  Téléchargez et exécutez le package d’installation x64 pour les utilitaires RML à partir de la page suivante : [Télécharger Report Markup Language (RML) pour SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+1.  Téléchargez et exécutez le package d’installation x64 pour les utilitaires RML à partir de la page suivante : [Télécharger RML pour SQL Server](https://www.microsoft.com/download/details.aspx?id=4511)
 
 2.  Si une boîte de dialogue indique que certains fichiers sont en cours d’utilisation, cliquez sur « Continuer »  
   
@@ -340,7 +345,7 @@ ms.locfileid: "68111806"
 -   -r Nombre d'itérations pour chaque connexion qui exécute chaque fichier d'entrée/requête  
   
 ### <a name="demo-workload"></a>Charge de travail de démonstration  
- La procédure stockée principale utilisée dans la charge de travail de démonstration est Sales.usp_InsertSalesOrder_inmem/ondisk. Le script ci-dessous construit un paramètre table (TVP) avec des exemples de données, puis appelle la procédure pour insérer une commande avec 5 articles.  
+ La procédure stockée principale utilisée dans la charge de travail de démonstration est Sales.usp_InsertSalesOrder_inmem/ondisk. Le script ci-dessous construit un paramètre table (TVP) avec des exemples de données, puis appelle la procédure pour insérer une commande client avec cinq articles.  
   
  L'outil Ostress permet d'exécuter des appels de procédure stockée en parallèle, pour simuler des clients insérant des commandes simultanément.  
   
@@ -348,7 +353,7 @@ ms.locfileid: "68111806"
   
  Le script suivant est exécuté simultanément pour simuler une charge de travail de traitement des commandes :  
   
-```  
+```sql
 DECLARE   
       @i int = 0,   
       @od Sales.SalesOrderDetailType_inmem,   
@@ -368,8 +373,7 @@ WHILE (@i < 20)
 BEGIN;   
       EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od;   
       SET @i += 1   
-END  
-  
+END
 ```  
   
  Avec ce script, chaque exemple de commande construite est inséré 20 fois, via 20 procédures stockées exécutées dans une boucle WHILE. La boucle est utilisée pour tenir compte du fait que la base de données est utilisée pour construire l'exemple de commande. Dans des environnements de production standard, l'application de niveau intermédiaire construira la commande à insérer.  
@@ -392,7 +396,7 @@ END
   
  Cliquez sur le bouton correspondant pour copier la commande, et collez-la dans l'invite de commandes des utilitaires RML.  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -401,13 +405,13 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
  Observez l'utilisation de l'UC pendant que la charge de travail est exécutée, par exemple via le Gestionnaire des tâches. Vous constaterez que l'utilisation de l'UC est proche de 100 %. Dans le cas contraire, vous avez un goulot d'étranglement d'E/S du journal. Consultez [Dépannage des tests lents](#Troubleshootingslow-runningtests).  
   
 ##### <a name="disk-based-tables"></a>Tables sur disque  
- La commande suivante exécute la charge de travail sur les tables sur disque. Notez que l'exécution de cette charge de travail peut prendre du temps, principalement à cause d'une contention de verrous internes dans le système. Les tables optimisées en mémoire n'ont pas de verrous et ne sont pas concernées par ce problème.  
+ La commande suivante exécute la charge de travail sur les tables sur disque. Cette charge de travail peut prendre un certain temps pour s’exécuter, principalement en raison d’une contention de verrous dans le système. Les tables optimisées en mémoire n'ont pas de verrous et ne sont pas concernées par ce problème.  
   
  Ouvrez l'invite de commandes RML et exécutez la commande suivante :  
   
  Cliquez sur le bouton correspondant pour copier la commande, et collez-la dans l'invite de commandes des utilitaires RML.  
   
-```  
+```console
 ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
@@ -422,11 +426,11 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 
 #### <a name="resetting-the-demo"></a>Réinitialisation de la démonstration  
  Pour réinitialiser la démonstration, ouvrez l'invite de commandes RML et exécutez la commande suivante :  
   
-```  
+```console
 ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"  
 ```  
   
- Selon le matériel, l'exécution peut prendre quelques minutes.  
+ Selon le matériel, l’exécution peut prendre quelques minutes.  
   
  Nous vous recommandons de réinitialiser après chaque exécution de démonstration. Étant donné que cette charge de travail est réservée à l'insertion, chaque exécution consommera plus de mémoire, c'est pourquoi une réinitialisation est requise afin d'éviter des conditions de mémoire insuffisante. La quantité de mémoire consommée après une exécution est décrite dans la section [Utilisation de la mémoire après avoir exécuté la charge de travail](#Memoryutilizationafterrunningtheworkload).  
   
@@ -451,7 +455,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 #### <a name="overall-utilization-of-the-database"></a>Utilisation générale de la base de données  
  La requête suivante peut être utilisée pour obtenir l’utilisation totale de mémoire pour l’OLTP en mémoire dans le système.  
   
-```  
+```sql
 SELECT type  
    , name  
 , pages_kb/1024 AS pages_MB   
@@ -462,18 +466,19 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**nom**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valeur par défaut|94|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
   
- Les régisseurs de mémoire par défaut contiennent les structures de mémoire à l'échelle du système et sont relativement petits. Le régisseur de mémoire de la base de données utilisateur, dans ce cas la base de données dont l'ID est 5, a une taille d'environ 900 Mo.  
+ Les régisseurs de mémoire par défaut contiennent les structures de mémoire à l'échelle du système et sont relativement petits. Le régisseur de mémoire de la base de données utilisateur, dans le cas présent la base de données ayant l’ID 5, a une taille d’environ 900 Mo.  
   
 #### <a name="memory-utilization-per-table"></a>Utilisation de la mémoire par table  
  La requête suivante peut être utilisée pour explorer l'utilisation de la mémoire des différentes tables et de leurs index :  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -482,7 +487,7 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
- L'exemple suivant indique les résultats de cette requête pour une nouvelle installation de l'exemple :  
+ Le tableau suivant affiche les résultats de cette requête pour une nouvelle installation de l’exemple :  
   
 ||||  
 |-|-|-|  
@@ -491,10 +496,11 @@ WHERE t.type='U'
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
 |DemoSalesOrderDetailSeed|64|10432|  
-|SpecialOffer_inmem|3|8192|  
+|SpecialOffer_inmem|3|8 192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-  
+||||
+
  Comme vous pouvez le constater, les tables sont assez petites : SalesOrderHeader_inmem a une taille d’environ 7 Mo et SalesOrderDetail_inmem a une taille d’environ 15 Mo.  
   
  Ce qui est frappant ici est la taille de la mémoire allouée aux index, par rapport à la taille des données de table. Cela est dû au fait que les index de hachage de l'exemple sont prédimensionnés pour contenir plus de données. Notez que les index de hachage ont une taille fixe, par conséquent, leur taille n'augmente pas selon la taille des données de la table.  
@@ -502,7 +508,7 @@ WHERE t.type='U'
 ####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilisation de la mémoire après avoir exécuté la charge de travail  
  Après l'insertion de 10 millions de commandes, l'utilisation globale de la mémoire devrait s'apparenter à ce qui suit :  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -511,17 +517,18 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**nom**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valeur par défaut|146|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
-  
- Comme vous pouvez le voir, SQL Server utilise un peu moins de 8 Go pour les tables optimisées en mémoire et les index dans l’exemple de base de données.  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
+
+ Comme vous pouvez le voir, SQL Server utilise un peu moins de 8 Go pour les tables à mémoire optimisée et les index dans l’exemple de base de données.  
   
  Voici l'utilisation de la mémoire détaillée par table après l'exécution d'un exemple :  
   
-```  
+```sql
 SELECT object_name(t.object_id) AS [Table Name]  
      , memory_allocated_for_table_kb  
  , memory_allocated_for_indexes_kb  
@@ -535,20 +542,21 @@ WHERE t.type='U'
 |**Nom de la table**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
-|SpecialOffer_inmem|2|8192|  
+|SpecialOffer_inmem|2|8 192|  
 |SalesOrderHeader_inmem|1575679|147456|  
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-  
- Nous pouvons voir un total d'environ 6,5 Go de données. Notez que la taille des index sur la table SalesOrderHeader_inmem et SalesOrderDetail_inmem est la même que la taille des index avant d'insérer les commandes. La taille de l'index n'a pas changé car les deux tables utilisent des index de hachage, qui sont statiques.  
+||||
+
+ Nous pouvons voir un total d’environ 6,5 Go de données. Notez que la taille des index sur la table SalesOrderHeader_inmem et SalesOrderDetail_inmem est la même que la taille des index avant d'insérer les commandes. La taille de l'index n'a pas changé car les deux tables utilisent des index de hachage, qui sont statiques.  
   
 #### <a name="after-demo-reset"></a>Après la réinitialisation de la démonstration  
  La procédure stockée Demo.usp_DemoReset peut être utilisée pour réinitialiser la démonstration. Elle supprime les données dans les tables SalesOrderHeader_inmem et SalesOrderDetail_inmem, puis réinsère les données à partir des tables d'origine SalesOrderHeader et SalesOrderDetail.  
   
  Cependant, même si les lignes des tables ont été supprimées, cela ne signifie pas pour autant que la mémoire est immédiatement récupérée. SQL Server récupère la mémoire des lignes supprimées dans les tables optimisées en mémoire en arrière-plan, si nécessaire. Vous verrez qu'immédiatement après la réinitialisation de la démonstration, sans charge de travail transactionnelle sur le système, la mémoire des lignes supprimées n'est pas encore récupérée :  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -557,17 +565,18 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**nom**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valeur par défaut|2261|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
-  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
+
  C'est le comportement attendu : la mémoire est récupérée lorsque la charge de travail transactionnelle s'exécute.  
   
  Si vous démarrez une deuxième exécution de la charge de travail de démonstration, vous verrez que l'utilisation de la mémoire diminue au début, au fur et à mesure que les lignes précédemment supprimées sont nettoyées. À un certain moment, la taille de la mémoire augmentera de nouveau, jusqu'à ce que la charge de travail soit terminée. Une fois que les 10 millions de lignes ont été insérées après la réinitialisation de la démonstration, l'utilisation de la mémoire sera très similaire à l'utilisation après la première exécution. Par exemple :  
   
-```  
+```sql
 SELECT type  
 , name  
 , pages_kb/1024 AS pages_MB   
@@ -576,16 +585,17 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**nom**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valeur par défaut|1863|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
-|MEMORYCLERK_XTP|Valeur par défaut|0|  
-  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
+||||
+
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Utilisation du disque pour les tables optimisées en mémoire  
  La taille globale sur disque des fichiers de point de contrôle d'une base de données à un moment donné peut être récupérée à l'aide de la requête :  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -596,9 +606,9 @@ WHERE f.type=N'FX'
 #### <a name="initial-state"></a>InitialState  
  Quand les exemples de groupe de fichiers et de tables à mémoire optimisée sont initialement créés, un certain nombre de fichiers de point de contrôle sont créés au préalable et le système commence à les remplir. Le nombre de fichiers de point de contrôle créés au préalable dépend du nombre de processeurs logiques dans le système. Étant donné que cet exemple a une taille très petite au début, les fichiers créés au préalable seront vides après la création initiale.  
   
- Voici la taille initiale sur disque de l'exemple sur un ordinateur doté de 16 processeurs logiques :  
+ Le code suivant montre la taille initiale sur disque de l’exemple sur une machine dotée de 16 processeurs logiques :  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -609,12 +619,13 @@ WHERE f.type=N'FX'
 |-|  
 |**Taille sur disque en Mo**|  
 |2312|  
-  
- Comme vous pouvez le voir, il y a un grand écart entre la taille sur disque des fichiers de point de contrôle, qui est de 2,3 Go, et la taille réelle des données, proche de 30 Mo.  
+||
+
+ Comme vous pouvez le voir, il existe une grande différence entre la taille sur disque des fichiers de point de contrôle, qui est de 2,3 Go, et la taille réelle des données, qui est plus proche de 30 Mo.  
   
  Pour analyser de plus près la raison de l'utilisation de l'espace disque, vous pouvez utiliser la requête suivante, La taille du disque retournée par cette requête est approximative pour les fichiers ayant l'état 5 (REQUIRED FOR BACKUP/HA), 6 (IN TRANSITION TO TOMBSTONE) ou 7 (TOMBSTONE).  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -633,20 +644,21 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
-|PRECREATED|DATA|16|2048|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
+|PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-  
- Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. SQL Server créé au préalable une paire de fichiers (données, delta) par processeur logique. En outre, les fichiers de données ont une taille prédimensionnée de 128 Mo, et les fichiers delta de 8 Mo, afin d'optimiser l'insertion des données dans ces fichiers.  
+|||||
+
+ Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. SQL Server créé au préalable une paire de fichiers (données, delta) par processeur logique. De plus, les fichiers de données sont prédimensionnés à 128 Mo, et les fichiers delta à 8 Mo, afin d’optimiser l’insertion des données dans ces fichiers.  
   
  Les données réelles dans les tables optimisées en mémoire se trouvent dans un seul fichier de données.  
   
 #### <a name="after-running-the-workload"></a>Après l'exécution de la charge de travail  
  Après une seule exécution de test qui insère 10 millions de commandes, la taille totale sur disque ressemble à ce qui suit (pour un serveur de test avec 16 noyaux) :  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -656,13 +668,14 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**Taille sur disque en Mo**|  
-|8828|  
+|8828|
+||
   
- La taille sur disque est proche de 9 Go, ce qui est proche de la taille en mémoire des données.  
+ La taille sur disque est proche de 9 Go, ce qui est proche de la taille en mémoire des données.  
   
  Analysons plus en détail les tailles des fichiers de point de contrôle entre les différents états :  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -679,22 +692,23 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
-|PRECREATED|DATA|16|2048|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
+|PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-  
+|||||
+
  Nous avons toujours 16 paires de fichiers précréés, prêtes au fur et à mesure que les points de contrôle se ferment.  
   
- Il y a une paire en cours de création, utilisée tant que le point de contrôle actif n'est pas fermé. Avec les fichiers de point de contrôle en cours d'utilisation, cela donne environ 6,5 Go d'utilisation du disque pour 6,5 Go de données en mémoire. N'oubliez pas que les index ne sont pas conservés sur le disque, donc, dans ce cas, la taille globale sur le disque est plus petite que la taille de la mémoire.  
+ Il y a une paire en cours de création, utilisée tant que le point de contrôle actif n'est pas fermé. Avec les fichiers de point de contrôle actifs, cela donne environ 6,5 Go d’utilisation du disque pour 6,5 Go de données en mémoire. N'oubliez pas que les index ne sont pas conservés sur le disque, donc, dans ce cas, la taille globale sur le disque est plus petite que la taille de la mémoire.  
   
 #### <a name="after-demo-reset"></a>Après la réinitialisation de la démonstration  
  Après la réinitialisation de la démonstration, l'espace disque n'est pas libéré immédiatement s'il n'y a pas de charge de travail transactionnelle sur le système, et s'il n'y a pas de points de contrôle de base de données. Pour que les fichiers de point de contrôle passent par les différentes étapes et soient inévitablement supprimés, plusieurs points de contrôle et événements de troncation du journal doivent se produire, pour initialiser la fusion des fichiers de point de contrôle, ainsi que pour initialiser le garbage collection. Cela se produit automatiquement si vous avez une charge de travail transactionnelle dans le système (et si vous effectuez des sauvegardes de journaux régulières, dans le cas où vous utilisez le mode de restauration complète), mais pas lorsque le système est inactif, comme dans un scénario de démonstration.  
   
  Dans l'exemple, après la réinitialisation de la démonstration, vous obtiendrez un résultat similaire au suivant.  
   
-```  
+```sql
 SELECT SUM(df.size) * 8 / 1024 AS [On-disk size in MB]  
 FROM sys.filegroups f JOIN sys.database_files df   
    ON f.data_space_id=df.data_space_id  
@@ -704,11 +718,12 @@ WHERE f.type=N'FX'
 ||  
 |-|  
 |**Taille sur disque en Mo**|  
-|11839|  
+|11839|
+||
   
- À presque 12 Go, la taille dépasse manifestement les 9 Go que nous avions avant le réinitialisation de la démonstration. Cela est dû au fait que certaines fusions de fichiers de point de contrôle ont commencé, tandis que certaines cibles de fusion n'ont pas encore été installées, et que certains fichiers sources de fusion n'ont pas encore été nettoyés, comme vous pouvez le voir à partir des éléments suivants :  
+ À presque 12 Go, cela dépasse nettement les 9 Go que nous avions avant la réinitialisation de la démonstration. Cela est dû au fait que certaines fusions de fichiers de point de contrôle ont commencé, tandis que certaines cibles de fusion n'ont pas encore été installées, et que certains fichiers sources de fusion n'ont pas encore été nettoyés, comme vous pouvez le voir à partir des éléments suivants :  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -725,8 +740,8 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
-|PRECREATED|DATA|16|2048|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
+|PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
 |ACTIVE|DELTA|38|1331|  
@@ -734,14 +749,15 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-  
+|||||
+
  Les cibles de fusion sont installées et la source fusionnée est nettoyée au fur et à mesure que l'activité transactionnelle s'exécute dans le système.  
   
  Après une deuxième exécution de la charge de travail de démonstration, et l'insertion de 10 millions de commandes client après la réinitialisation de la démonstration, vous constaterez que les fichiers construits lors de la première exécution de la charge de travail ont été nettoyés. Si vous exécutez la requête ci-dessus plusieurs fois pendant que la charge de travail s'exécute, vous verrez les fichiers de point de contrôle passer à travers les différentes étapes.  
   
  Après la deuxième exécution de la charge de travail et l'insertion de 10 millions de commandes, vous verrez que l'utilisation du disque est très similaire, mais pas nécessairement identique, à celle constatée après la première exécution, car le système est dynamique par nature. Par exemple :  
   
-```  
+```sql
 SELECT state_desc  
  , file_type_desc  
  , COUNT(*) AS [count]  
@@ -758,18 +774,17 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
-|PRECREATED|DATA|16|2048|  
+|**state_desc**|**file_type_desc**|**count**|**taille sur disque en Mo**|  
+|PRECREATED|DATA|16|2 048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-  
+|||||
+
  Dans ce cas, il existe deux paires de fichiers de point de contrôle avec l’état « under construction », signifiant que plusieurs paires de fichiers ont été déplacées vers l’état « under construction », probablement en raison du haut niveau de concurrence dans la charge de travail. Plusieurs threads simultanés ont nécessité une nouvelle paire de fichiers en même temps ; par conséquent, une paire est passée de l’état « precreated » à l’état « under construction ».  
   
-## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
 
+[OLTP en mémoire &#40;Optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)  

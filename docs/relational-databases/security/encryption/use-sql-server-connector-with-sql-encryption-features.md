@@ -1,6 +1,7 @@
 ---
-title: Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL | Microsoft Docs
-ms.custom: ''
+title: Utiliser le chiffrement du connecteur SQL Server avec Azure Key Vault
+description: Découvrez comment utiliser le connecteur SQL Server avec des fonctionnalités de chiffrement courantes telles que le chiffrement TDE, le chiffrement des sauvegardes et le chiffrement au niveau des colonnes à l’aide d’Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929747"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558507"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ Vous devez créer des informations d’identification et une connexion, puis cr�
   
      Dans la boîte de dialogue **Gérer le chiffrement de base de données** , vérifiez que le chiffrement TDE est activé et quelle clé asymétrique chiffre la clé DEK.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "|::ref3::|")  
   
      Vous pouvez aussi exécuter le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant. Un état de chiffrement de 3 indique une base de données.  
   
@@ -195,7 +196,7 @@ Le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a besoin des informations d’
   
 3.  **Sauvegarder la base de données**  
   
-     Sauvegardez la base de données en spécifiant le chiffrement avec la clé asymétrique stockée dans le coffre de clés.
+     Sauvegardez le chiffrement spécifiant la spécification de base de données avec la clé asymétrique stockée dans le coffre de clés.
      
      Dans l’exemple ci-dessous, notez que si la base de données a déjà été chiffrée avec TDE et que la clé asymétrique `CONTOSO_KEY_BACKUP` est différente de la clé asymétrique TDE, la sauvegarde sera chiffrée à la fois par la clé asymétrique TDE et par `CONTOSO_KEY_BACKUP`. L’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cible aura besoin des deux clés pour déchiffrer la sauvegarde.
   
@@ -280,7 +281,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
   
 ## <a name="see-also"></a>Voir aussi  
  [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
- [Gestion de clés extensible à l'aide d'Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   

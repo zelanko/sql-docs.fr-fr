@@ -1,6 +1,7 @@
 ---
-title: Optimiser les performances des filtres paramétrés avec des partitions précalculées | Microsoft Docs
-ms.custom: ''
+title: Optimiser les filtres paramétrés avec des partitions précalculées (Fusion)
+description: Découvrez comment utiliser des partitions précalculées en vue d’optimiser les performances des filtres paramétrés pour les publications de fusion.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018689"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321462"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtres paramétrés - Optimiser pour les partitions précalculées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +28,9 @@ ms.locfileid: "68018689"
   
  Lorsqu'un abonné synchronise avec un serveur de publication, ce dernier doit évaluer les filtres de l'Abonné pour déterminer quelles lignes appartiennent à la partition, ou à l'ensemble de données de cet abonné. Le processus permettant de déterminer l'appartenance d'une partition aux modifications sur le serveur de publication pour chaque abonné recevant un dataset filtré est dénommé *évaluation de partition*. Sans partitions précalculées, l'évaluation de partition doit être effectuée pour chaque modification apportée à une colonne filtrée sur le serveur de publication depuis la dernière exécution de l'Agent de fusion pour un abonné spécifique, et ce processus doit être répété pour chaque abonné synchronisant avec le serveur de publication.  
   
- Cependant, si le serveur de publication et l'Abonné s'exécutent sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure et que vous utilisez des partitions précalculées, l'appartenance d'une partition pour toutes les modifications sur le serveur de publication est précalculée et persistante au moment où sont apportées les modifications. Il en résulte que lorsque l'Abonné synchronise avec le serveur de publication, il peut commencer immédiatement à télécharger les modifications concernant sa partition, sans avoir à passer par le processus d'évaluation de partition. Cela peut entraîner d'importantes améliorations en terme de performance, lorsqu'une publication comporte beaucoup de modifications, d'abonnés ou d'articles dans la publication.  
+ Cependant, si le serveur de publication et l’Abonné s’exécutent sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure et que vous utilisez des partitions précalculées, l’appartenance d’une partition pour toutes les modifications sur le serveur de publication est précalculée et persistante au moment où sont apportées les modifications. Il en résulte que lorsque l'Abonné synchronise avec le serveur de publication, il peut commencer immédiatement à télécharger les modifications concernant sa partition, sans avoir à passer par le processus d'évaluation de partition. Cela peut entraîner d'importantes améliorations en terme de performance, lorsqu'une publication comporte beaucoup de modifications, d'abonnés ou d'articles dans la publication.  
   
- En plus d'utiliser des partitions précalculées, prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent. Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d’informations, consultez [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ En plus d'utiliser des partitions précalculées, prégénérez des instantanés et/ou permettez aux Abonnés de demander la génération et l'application d'un instantané la première fois qu'ils se synchronisent. Utilisez l'une ou l'autre de ces options ou les deux pour fournir des instantanés pour les publications qui utilisent des filtres paramétrés. Si vous ne spécifiez pas une de ces options, les abonnements sont initialisés à l'aide d'une série d'instructions SELECT et INSERT au lieu d'utiliser l'utilitaire **bcp** , ce processus étant beaucoup plus lent. Pour plus d'informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **Pour utiliser les partitions précalculées**  
   

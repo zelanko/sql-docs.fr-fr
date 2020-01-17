@@ -1,6 +1,6 @@
 ---
-title: Page Résultat de l’évaluation de stratégie (tableau de bord Always On) | Microsoft Docs
-description: Description de la page « Résultat de l’évaluation de stratégie » qui se trouve dans le « tableau de bord Always On » dans SQL Server Management Studio.
+title: Page Résultat de l’évaluation de stratégie (tableau de bord Always On)
+description: Description de la page « Résultat de l’évaluation de stratégie » qui se trouve dans le « tableau de bord Always On » dans SSMS (SQL Server Management Studio).
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014537"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235438"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Page Résultat de l’évaluation de stratégie (tableau de bord Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,15 +29,15 @@ ms.locfileid: "68014537"
  **Problème détecté**  
  Affiche une ligne pour chaque problème détecté. L'icône associée à un problème fournit un indicateur visuel pour indiquer la gravité du problème, comme suit :  
   
-|Icône|Severity|  
+|Icône|severity|  
 |----------|--------------|  
-|![Icône d’interface utilisateur : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|Critique|  
-|![Icône d’interface utilisateur : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|Avertissement|  
+|![Icône d’IU : erreur](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icône d’IU : erreur")|Critique|  
+|![Icône d’IU : avertissement](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icône d’IU : avertissement")|Avertissement|  
   
  **Description**  
  Cette grille affiche une brève description du problème sélectionné.  
   
- **Informations supplémentaires**  
+ **Plus d’informations**  
  Cliquez sur ce lien pour ouvrir la rubrique d'aide correspondant au problème sélectionné.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  

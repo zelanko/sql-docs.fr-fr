@@ -1,6 +1,6 @@
 ---
-title: Lier une base de données avec des tables optimisées en mémoire à un pool de ressources | Microsoft Docs
-ms.custom: ''
+title: Lier une base de données avec des tables à mémoire optimisée à une liste de ressources partagées
+ms.custom: seo-dt-2019
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951143"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412764"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Lier une base de données avec des tables optimisées en mémoire à un pool de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "67951143"
  Vous pouvez créer la base de données et le pool de ressources dans n'importe quel ordre. L'important est de créer les deux avant de procéder à leur liaison.  
   
 ###  <a name="bkmk_CreateDatabase"></a> Créer la base de données  
- Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée la base de données IMOLTP_DB destinée à contenir une ou plusieurs tables optimisées en mémoire. Le chemin \<lecteur_et_chemin> doit exister avant d’exécuter cette commande.  
+ Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée la base de données IMOLTP_DB destinée à contenir une ou plusieurs tables mémoire optimisées. Le chemin \<lecteur_et_chemin> doit exister avant d’exécuter cette commande.  
   
 ```sql  
 CREATE DATABASE IMOLTP_DB  
@@ -84,7 +84,7 @@ Pour cet exemple, nous allons supposer que vos calculs ont déterminé que les t
  Ainsi, vous avez besoin au moins de 62,5 % de la mémoire disponible pour obtenir les 16 Go requis pour vos tables et index mémoire optimisés.  Étant donné que les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être des entiers, nous devons les définir sur au moins 63 %.  
   
 ###  <a name="bkmk_CreateResourcePool"></a> Créer un pool de ressources et configurer la mémoire  
- Lors de la configuration de tables optimisées en mémoire, la planification des capacités doit être effectuée sur MIN_MEMORY_PERCENT, et non sur MAX_MEMORY_PERCENT.  Consultez [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) pour des informations sur MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT. Ce paramètre fournit une disponibilité de mémoire plus prédictible pour les tables optimisées en mémoire, car MIN_MEMORY_PERCENT sollicite la mémoire d'autres pools de ressources pour s'assurer qu'il est servi. Pour garantir que la mémoire est disponible et éviter les conditions OOM (mémoire insuffisante), les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être identiques. Consultez [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ci-dessous pour obtenir le pourcentage de la mémoire disponible pour les tables optimisées en mémoire en fonction de la quantité de mémoire allouée.  
+ Lors de la configuration de tables mémoire optimisées, la planification des capacités doit être effectuée sur MIN_MEMORY_PERCENT, et non sur MAX_MEMORY_PERCENT.  Consultez [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) pour des informations sur MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT. Ce paramètre fournit une disponibilité de mémoire plus prédictible pour les tables mémoire optimisées, car MIN_MEMORY_PERCENT sollicite la mémoire d'autres pools de ressources pour s'assurer qu'il est servi. Pour garantir que la mémoire est disponible et éviter les conditions OOM (mémoire insuffisante), les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être identiques. Consultez [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ci-dessous pour obtenir le pourcentage de la mémoire disponible pour les tables optimisées en mémoire en fonction de la quantité de mémoire allouée.  
   
  Consultez [Bonnes pratiques : Utilisation d'OLTP en mémoire dans un environnement de machine virtuelle](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) pour plus d’informations sur le fonctionnement dans un environnement de machine virtuelle.  
   
@@ -148,7 +148,7 @@ GO
   
 2.  Utilisez `ALTER RESURCE GOVERNOR` pour reconfigurer Resource Governor avec les nouvelles valeurs.  
   
- **Exemple de code**  
+ **Exemple de Code**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -169,11 +169,11 @@ GO
   
 |Mémoire validée cible|Pourcentage disponible pour les tables en mémoire|  
 |-----------------------------|---------------------------------------------|  
-|<= 8 Go|70|  
+|<= 8 Go|70 %|  
 |<= 16 Go|75 %|  
 |<= 32 Go|80 %|  
 |\<= 96 Go|85 %|  
-|>96 Go|90 %|  
+|>96 Go|90%|  
   
  Par exemple, si votre « mémoire allouée cible » est de 100 Go et vous estimez que les tables et les index à mémoire optimisée ont besoin de 60 Go de mémoire, créez un pool de ressources avec MAX_MEMORY_PERCENT = 67 (60 Go nécessaires/0,90 = 66,667 Go – arrondi à 67 Go ; 67 Go/100 Go installés = 67 %) pour vous assurer que vos objets [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ont les 60 Go dont ils ont besoin.  
   

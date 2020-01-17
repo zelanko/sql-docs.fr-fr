@@ -31,19 +31,19 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816821"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550215"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés. Si l'un de ces arguments n'est pas du type de données chaîne de caractères, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] essaie de le convertir, dans la mesure du possible.  
   
- ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -128,10 +128,10 @@ David          Barber               Snohomish
 (2 row(s) affected)  
 ```
 
-## <a name="pattern-matching-by-using-like"></a>Critères spéciaux à l'aide de LIKE  
- LIKE prend en charge les critères spéciaux ASCII ainsi que les critères spéciaux Unicode. Lorsque tous les arguments (*match_expression*, *pattern* et *escape_character*, le cas échéant) sont des types de données caractères ASCII, une correspondance de modèles ASCII est effectuée. Si l'un des arguments est de type de données Unicode, tous les arguments sont convertis en Unicode et les critères spéciaux Unicode sont exécutés. Lors de l’utilisation des données Unicode (types de données **nchar** ou **nvarchar**) avec LIKE, les espaces à droite sont significatifs ; pour les données non Unicode, en revanche, ils ne le sont pas. LIKE Unicode est compatible avec la norme ISO. LIKE ASCII est compatible avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="pattern-matching-by-using-like"></a>Recherche générique à l'aide de LIKE  
+ Le mot clé LIKE prend en charge la recherche générique ASCII ainsi que la recherche générique Unicode. Lorsque tous les arguments (*match_expression*, *pattern* et *escape_character*, le cas échéant) sont des types de données caractères ASCII, une correspondance de modèles ASCII est effectuée. Si l'un des arguments est de type de données Unicode, tous les arguments sont convertis en Unicode et une recherche générique Unicode est effectuée. Lors de l’utilisation des données Unicode (types de données **nchar** ou **nvarchar**) avec LIKE, les espaces à droite sont significatifs ; pour les données non Unicode, en revanche, ils ne le sont pas. Unicode LIKE est compatible avec la version standard de ISO. ASCII LIKE est compatible avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Voici une série d'exemples illustrant les différences dans les lignes renvoyées entre les critères spéciaux LIKE ASCII et Unicode.  
+ Voici une série d'exemples illustrant les différences dans les lignes renvoyées entre une recherche générique ASCII LIKE et une recherche générique Unicode LIKE.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -182,7 +182,7 @@ GO
   
 |Symbole|Signification|  
 |------------|-------------|  
-|LIKE '5[%]'|5%|  
+|LIKE '5[%]'|5 %|  
 |LIKE '[_]n'|_n|  
 |LIKE '[a-cdf]'|a, b, c, d ou f|  
 |LIKE '[-acdf]'|-, a, c, d, ou f|  
@@ -200,7 +200,7 @@ GO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-like-with-the--wildcard-character"></a>A. Utilisation de LIKE avec le caractère générique %  
+### <a name="a-using-like-with-the--wildcard-character"></a>R. Utilisation de LIKE avec le caractère générique %  
  L'exemple suivant renvoie tous les numéros de téléphone comportant l'indicatif `415` dans la table `PersonPhone`.  
   
 ```sql  
@@ -216,8 +216,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -232,10 +232,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
-### B. Using NOT LIKE with the % wildcard character  
- The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
+```
+
+### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Utilisation de NOT LIKE avec le caractère générique %  
+ L’exemple ci-après renvoie tous les numéros de téléphone de la table `PersonPhone` dont l’indicatif n’est pas `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -250,8 +250,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -263,10 +263,10 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
-### C. Using the ESCAPE clause  
- The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
+### <a name="c-using-the-escape-clause"></a>C. Utilisation de la clause ESCAPE  
+ L’exemple suivant utilise la clause `ESCAPE` et le caractère d’échappement pour trouver la chaîne de caractères exacte `10-15%` dans la colonne `c1` de la table `mytbl2`.  
   
 ```sql
 USE tempdb;  

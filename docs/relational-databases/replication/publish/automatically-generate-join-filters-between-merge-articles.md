@@ -1,6 +1,7 @@
 ---
-title: Générer automatiquement des filtres de jointure entre des articles de fusion | Microsoft Docs
-ms.custom: ''
+title: Générer automatiquement des filtres de jointure entre des articles (Fusion)
+description: Décrit comment générer automatiquement un ensemble de filtres de jointure dans la page « Filtrer les lignes de la table » de l’Assistant Nouvelle publication pour une publication de fusion dans SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907973"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321276"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Générer automatiquement des filtres de jointure entre des articles de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "67907973"
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Pour modifier un filtre généré automatiquement  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
   
 2.  Modifiez le filtre dans la boîte de dialogue **Modifier le filtre** ou **Modifier une jointure** .  
   
@@ -81,7 +82,7 @@ ms.locfileid: "67907973"
 1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
+ [Filtres de jointure](../../../relational-databases/replication/merge/join-filters.md)   
  [Filtres de lignes paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

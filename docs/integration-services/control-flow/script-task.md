@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44c8739327d84999456302bf2a21fd6858658d4c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71293997"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542305"
 ---
 # <a name="script-task"></a>Tâche de script
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  La tâche de script fournit du code permettant d’exécuter des fonctions qui ne sont pas disponibles dans les tâches et transformations intégrées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tâche de script peut également combiner des fonctions dans un même script au lieu d'utiliser plusieurs tâches et transformations. Utilisez la tâche de script pour le travail devant être effectué une fois dans un package (ou une fois par objet énuméré), et non une fois par ligne de données.  
+  La tâche de script fournit du code permettant d’exécuter des fonctions qui ne sont pas disponibles dans les tâches et transformations intégrées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tâche de script peut également combiner des fonctions dans un même script au lieu d'utiliser plusieurs tâches et transformations. Utilisez la tâche de script pour le travail devant être effectué une fois dans un package (ou une fois par objet énuméré), et non une fois par ligne de données.  
   
  Vous pouvez utiliser la tâche de script aux fins suivantes :  
   
@@ -47,11 +47,11 @@ ms.locfileid: "71293997"
  Si vous choisissez la tâche de script pour votre package, vous devez développer le script utilisé par la tâche et configurer cette dernière.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>Écriture et exécution du script utilisé par la tâche  
- La tâche de script utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) en tant qu’environnement d’écriture des scripts et que moteur d’exécution de ces derniers.  
+ La tâche de script utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement d’écriture des scripts et moteur d’exécution de ces derniers.  
   
  VSTA fournit l’ensemble des fonctionnalités standard de l’environnement [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , telles que l’éditeur [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] à code de couleur, IntelliSense et **l’Explorateur d’objets**. VSTA utilise également le même débogueur que les autres outils de développement [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les points d'arrêt dans le script fonctionnent de façon transparente avec ceux des tâches et des conteneurs [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . VSTA prend en charge les langages de programmation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
- Vous ne pouvez lancer un script que si VSTA est installé sur l'ordinateur où le package est exécuté. Lorsque le package s'exécute, la tâche charge le moteur de script puis exécute le script. Vous pouvez accéder aux assemblys .NET externes dans les scripts en ajoutant des références aux assemblys du projet.  
+ Vous ne pouvez lancer un script que si VSTA est installé sur l'ordinateur où le package est exécuté. Lorsque le package s'exécute, la tâche charge le moteur de script puis exécute le script. Vous pouvez accéder aux assemblys .NET externes dans les scripts en ajoutant des références aux assemblys du projet. Actuellement, nous ne prenons pas en charge les références d’assembly standard .NET Core et .NET.  
   
 > [!NOTE]  
 >  Contrairement aux versions antérieures pour lesquelles il était possible d’indiquer si les scripts étaient précompilés, tous les scripts de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] et des versions ultérieures sont précompilés. Lorsqu'un script est précompilé, le moteur de langage n'est pas chargé au moment de l'exécution et le package s'exécute plus rapidement. Toutefois, les fichiers binaires précompilés occupent un espace disque important.  
@@ -99,7 +99,7 @@ ms.locfileid: "71293997"
  Pour en savoir plus sur la tâche de script, consultez [Script Task](../../integration-services/control-flow/script-task.md) et [Configuration de la tâche de script dans l'éditeur de tâche de script](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Pour en savoir plus sur la programmation de la tâche de script, consultez [Extension du package à l'aide de la tâche de script](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Attribuez un nom unique à la tâche de script. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -146,6 +146,6 @@ ms.locfileid: "71293997"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Procédure d’envoi d’e-mail avec notification de remise en C#) sur shareourideas.com  
+-   Article technique [Procédure d'envoi de courrier électronique avec notification de remise en C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Procédure d’envoi d’e-mail avec notification de remise en C#) sur shareourideas.com  
   
   

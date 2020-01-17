@@ -1,6 +1,6 @@
 ---
-title: Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif | Microsoft Docs
-ms.custom: ''
+title: Table à mémoire optimisée et procédure stockée compilée nativement
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a1e096d09865693661659a91875728baefdf92d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8793d5fc14401cbe800604accc6642a424fbbe
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915310"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412741"
 ---
-# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Création d'une table optimisée en mémoire et d'une procédure stockée compilée en mode natif
+# <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Création d'une table mémoire optimisée et d'une procédure stockée compilée en mode natif
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -27,11 +27,11 @@ Pour permettre à une application d'utiliser l'OLTP en mémoire, effectuez les t
 
 -   Créez un groupe de fichiers de données mémoire optimisé et ajoutez un conteneur au groupe de fichiers.  
   
--   Créez des tables et des index optimisés en mémoire. Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+-   Créez des tables et des index mémoire optimisés. Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
--   Chargez les données dans la table optimisée en mémoire et mettez à jour les statistiques après le chargement des données et avant de créer les procédures stockées compilées. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
+-   Chargez les données dans la table mémoire optimisée et mettez à jour les statistiques après le chargement des données et avant de créer les procédures stockées compilées. Pour plus d’informations, consultez [Statistiques pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
   
--   Créez des procédures stockées compilées en mode natif pour accéder aux données des tables optimisée en mémoire. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). Vous pouvez également utiliser un [!INCLUDE[tsql](../../includes/tsql-md.md)] traditionnel et interprète pour accéder aux données dans les tables optimisées en mémoire.  
+-   Créez des procédures stockées compilées en mode natif pour accéder aux données des tables mémoire optimisées. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md). Vous pouvez également utiliser un [!INCLUDE[tsql](../../includes/tsql-md.md)] traditionnel et interprète pour accéder aux données dans les tables mémoire optimisées.  
   
 -   Le cas échéant, effectuez la migration des données de tables existantes vers des tables mémoire optimisées.  
 

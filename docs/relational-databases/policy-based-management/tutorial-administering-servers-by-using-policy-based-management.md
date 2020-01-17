@@ -1,6 +1,7 @@
 ---
-title: 'Tutoriel : Administration de serveurs à l’aide de la gestion basée sur des stratégies | Microsoft Docs'
-ms.custom: ''
+title: 'Tutoriel : Administration des serveurs à l’aide de la gestion basée sur des stratégies'
+description: Ce tutoriel vous apprend à créer et appliquer une stratégie désactivée par défaut ainsi qu’une stratégie de standards de nommage.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021493"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558229"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutoriel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>Tutoriel : Administration des serveurs à l’aide de la gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Bienvenue au didacticiel Administration de serveurs à l'aide de stratégies de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais ne connaissant pas la Gestion basée sur des stratégies.  
   

@@ -1,6 +1,7 @@
 ---
-title: Créer un abonnement pour un Abonné non-SQL Server | Microsoft Docs
-ms.custom: ''
+title: Créer un abonnement pour un Abonné non-SQL Server
+description: Décrit comment créer un abonnement pour un Abonné non-SQL Server dans SQL Server à l’aide de SQL Server Management Studio (SSMS) ou de Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710430"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322006"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Créer un abonnement pour un Abonné non-SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +127,7 @@ ms.locfileid: "71710430"
   
     -   Sélectionnez **Immédiatement** dans la liste déroulante de la colonne **À quel moment** pour que l'Agent de distribution transfère les fichiers d'instantanés à l'Abonné lorsque l'Assistant se termine. Sélectionnez **Lors de la première synchronisation** pour que l'Agent transfère les fichiers lors de la prochaine exécution planifiée de l'Agent.  
   
-12. Sur la page **Actions de l'Assistant** , scriptez en option l'abonnement. Pour plus d’informations, consultez [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
+12. Sur la page **Actions de l'Assistant** , scriptez en option l'abonnement. Pour plus d'informations, voir [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>Pour conserver les tables sur l'Abonné  
   
@@ -159,7 +160,7 @@ ms.locfileid: "71710430"
     -   Si **enabled_for_het_sub** a la valeur 0, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), en spécifiant **enabled_for_het_sub** pour `@property` et **true** pour `@value`.  
   
         > [!NOTE]  
-        >  Avant de remplacer la valeur de **enabled_for_het_sub** par **true**, vous devez supprimer tout abonnement existant à la publication. Vous ne pouvez pas affecter la valeur **enabled_for_het_sub** à **true** lorsque la publication prend également en charge la mise à jour des abonnements. La modification de **enabled_for_het_sub** affectera d'autres propriétés de publication. Pour plus d’informations, voir [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+        >  Avant de remplacer la valeur de **enabled_for_het_sub** par **true**, vous devez supprimer tout abonnement existant à la publication. Vous ne pouvez pas affecter la valeur **enabled_for_het_sub** à **true** lorsque la publication prend également en charge la mise à jour des abonnements. La modification de **enabled_for_het_sub** affectera d'autres propriétés de publication. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez `@publication`, `@subscriber`, la valeur `(default destination)` pour `@destination_db`, la valeur **push** pour `@subscription_type` et la valeur 3 pour `@subscriber_type` (spécifie un fournisseur OLE DB).  
   
@@ -178,7 +179,7 @@ ms.locfileid: "71710430"
   
     -   La valeur **0** pour `@subscriber_security_mode` et les informations de connexion du fournisseur OLE DB pour `@subscriber_login` et `@subscriber_password`.  
   
-    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
+    -   Planification du travail de l'Agent de distribution pour cet abonnement. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
     >  Lors de la création d'un abonnement par émission de données sur un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées au serveur de distribution en texte brut. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

@@ -1,7 +1,7 @@
 ---
-title: Afficher les fichiers de données et les fichiers journaux dans un jeu de sauvegarde (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/15/2017
+title: Afficher les fichiers de données et les fichiers journaux dans un jeu de sauvegarde
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b1fa3ed90caa1e7791aff61ca5394a77d72b384
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 758a57b7060c2f9669c6f3564eef507e129ab7c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908798"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255622"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Afficher les fichiers de données et les fichiers journaux dans un jeu de sauvegarde (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "72908798"
   
 #### <a name="to-view-the-data-and-log-files-in-a-backup-set"></a>Pour afficher les données et les fichiers journaux dans un jeu de sauvegarde  
   
-1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   

@@ -1,6 +1,6 @@
 ---
-title: Options (SQL Server Always On, page Tableau de bord) | Microsoft Docs
-description: Description de la page « Options » disponible dans le tableau de bord SQL Server Always On.
+title: Tableau de bord de groupe de disponibilité dans SSMS
+description: Description de la page « Options » disponible dans le tableau de bord Always On SQL Server dans SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014643"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822544"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Options (SQL Server Always On, page Tableau de bord)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014643"
   
 ## <a name="on-this-page"></a>Sur cette page  
  **Activez l'actualisation automatique.**  
- Cliquez pour activer l'actualisation automatique. Les options sont :  
+ Cliquez pour activer l'actualisation automatique. Les options sont :  
   
 -   Le champ **Intervalle d’actualisation (en secondes)** affiche le nombre de secondes auquel le tableau de bord sera actualisé. La valeur par défaut est 30. Lorsque l'actualisation automatique est activée, vous pouvez modifier ce champ afin de changer l'intervalle d'actualisation.  
   

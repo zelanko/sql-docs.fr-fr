@@ -1,6 +1,7 @@
 ---
-title: Configurer PolyBase pour accéder à des données externes dans MongoDB | Microsoft Docs
-ms.date: 04/23/2019
+title: 'Accéder aux données externes : MongoDB - PolyBase'
+ms.date: 12/13/2019
+ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9b343327b73a8e682a76b94757982f20fde81e7c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710615"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255432"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurer PolyBase pour accéder à des données externes dans MongoDB
 
@@ -61,7 +62,7 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
     CREDENTIAL = credential_name);
     ```
 
-1. **Facultatif :** Créez des statistiques sur une table externe.
+1. **Facultatif :** Créez des statistiques sur une table externe.
 
     Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 
@@ -100,7 +101,7 @@ Cette technique peut occasionner plusieurs problèmes, notamment les deux suivan
 
 À titre d’exemple, nous allons évaluer la collection de restaurants de l’exemple de jeu de données MongoDB stockée dans un format JSON non relationnel. Chaque restaurant dispose d’un champ d’adresse imbriqué et d’un tableau de notes (« grades ») attribuées à des jours différents. La figure ci-dessous illustre un restaurant type avec une adresse imbriquée et des notes imbriquées/répétées.
 
-![Aplanissement MongoDB](../../relational-databases/polybase/media/mongo-flattening.png "Aplanissement de restaurant MongoDB")
+![Aplatissement MongoDB](../../relational-databases/polybase/media/mongo-flattening.png "Aplatissement de MongoDB Restaurant")
 
 L’adresse de l’objet sera aplanie comme suit :
 

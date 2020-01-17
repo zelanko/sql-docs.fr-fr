@@ -1,6 +1,7 @@
 ---
-title: Informations de publication, Avertissements (Publication de fusion, SQL Server 2005 et versions ultérieures) | Microsoft Docs
-ms.custom: ''
+title: Avertissements (Informations de publication de fusion)
+description: Décrit l’onglet « Avertissements » de la page d’informations sur la publication de réplication de fusion dans SQL Server Management Studio sur SQL Server 2005 et versions ultérieures.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd25636ed1451f51430e889051bef18c8ce1570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120291"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321333"
 ---
-# <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informations de publication, Avertissements (Publication de fusion, SQL Server 2005 et versions ultérieures)
+# <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Informations de publication, Avertissements (Publication de fusion, SQL Server 2005 et version ultérieure)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'onglet **Avertissements** est disponible pour les serveurs de distribution qui exécutent [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. L'onglet **Avertissements** vous permet d'effectuer les tâches suivantes selon la publication sélectionnée :  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68120291"
  **Activé**  
  Permet d'activer un avertissement et de définir un seuil.  
   
- **Alerte**  
+ **Alert**  
  Sélectionnez pour activer le paramètre d'alerte pour un avertissement de réplication donné.  
   
  **Avertissement**  
@@ -74,7 +75,7 @@ ms.locfileid: "68120291"
 > [!NOTE]  
 >  Cliquer sur **Ignorer les modifications** n'affecte en rien les alertes définies dans la boîte de dialogue **Configurer les alertes de réplication** .  
   
- **Enregistrer les modifications**  
+ **Save Changes**  
  Permet d'enregistrer toute modification apportée aux avertissements et aux seuils.  
   
 ## <a name="see-also"></a>Voir aussi  

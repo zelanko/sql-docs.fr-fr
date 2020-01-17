@@ -1,7 +1,7 @@
 ---
-title: Page Entrer les mots de passe (Assistant Ajouter un réplica) pour les groupes de disponibilité
+title: 'Assistant Ajouter un réplica : Page Entrer les mots de passe pour les groupes de disponibilité'
 description: Description des propriétés disponibles dans la page « Entrer les mots de passe » de l’Assistant « Ajouter un réplica » dans SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6198ca1183caf731a78026dfd1f2f7644979580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6277498bd66e2659e0a692d2e62d66501ca1fac8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008437"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822218"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Page Entrer les mots de passe (Assistant Ajouter un réplica) pour les groupes de disponibilités Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68008437"
 ## <a name="enter-passwords-options"></a>Options de la page Entrer les mots de passe  
  La grille **Bases de données utilisateur sur cette instance de SQL Server** répertorie chaque base de données utilisateur locale. Les colonnes sont les suivantes :  
   
- **Name**  
+ **Nom**  
  Affiche le nom d'une base de données utilisateur locale.  
   
  **Taille**  
@@ -50,6 +50,6 @@ ms.locfileid: "68008437"
 -   [Utiliser l’Assistant Ajouter un réplica au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

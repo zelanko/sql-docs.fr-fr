@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981729"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564799"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Type de données spécial utilisé pour stocker un jeu de résultats afin de le 
 
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,6 +100,10 @@ Les variables de **table** n’ont pas de statistiques de distribution. Elles ne
 Les variables de **table** ne sont pas prises en charge dans le modèle de raisonnement basé sur les coûts de l’optimiseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles ne doivent donc pas être utilisées lorsque des choix basés sur les coûts sont requis pour obtenir un plan de requête efficace. Les tables temporaires sont préférables lorsque des tableaux basés sur les coûts sont obligatoires. Ce plan inclut en général les requêtes avec jointures, les décisions de parallélisme et les options de sélection d’index.
   
 Les requêtes qui modifient des variables de **table** ne génèrent pas de plans d’exécution parallèle. Les performances peuvent être affectées quand des variables de **table** volumineuses ou des variables de **table** intégrées dans des requêtes complexes sont modifiées. À la place, envisagez d’utiliser des tables temporaires dans les cas où les variables de **table** sont modifiées. Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Il est toujours possible d’effectuer une mise en parallèle des requêtes qui lisent des variables de **table** sans les modifier.
+
+> [!IMPORTANT]
+> Le niveau de compatibilité de la base de données 150 améliore les performances des variables de table avec l’introduction de la **compilation différée de variable de table**.  Pour plus d'informations, consultez [Compilation différée de variable de table](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).
+>
   
 Il est impossible de créer explicitement des index sur des variables de **table** et aucune statistique n’est conservée sur les variables de **table**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a introduit une nouvelle syntaxe, qui permet de créer certains types d’index inline avec la définition de la table.  Il est ainsi possible de créer des index sur des variables de **table** dans le cadre de la définition de la table. Dans certains cas, les performances peuvent s’améliorer en utilisant plutôt des tables temporaires, car elles assurent une prise en charge totale des index et fournissent des statistiques. Pour plus d’informations sur les tables temporaires et la création d’index inline, voir [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
@@ -110,65 +114,10 @@ L’opération d’affectation entre des variables de **table** n’est pas pris
 Comme les variables de **table** ont une étendue limitée et ne font pas partie de la base de données persistante, les restaurations de transaction ne les affectent pas.
   
 Une fois créées, les variables de table ne sont plus modifiables.
-
-## <a name="table-variable-deferred-compilation"></a>Compilation différée de variable de table
-La **compilation différée de variable de table** améliore la qualité du plan et les performances globales pour les requêtes faisant référence à des variables de table. Pendant l’optimisation et la compilation de plans initiale, cette fonctionnalité va propager les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Le nombre exact de lignes sera ensuite utilisé pour optimiser les opérations de plan en aval.
-
-> [!NOTE]
-> La compilation différée de variable de table est une fonctionnalité en préversion publique dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
-
-Avec la compilation différée de la variable de table, la compilation d’une instruction qui fait référence à une variable de table est différée jusqu'à la première exécution réelle de l’instruction. Ce comportement de compilation différée est identique à celui des tables temporaires. Cette modification entraîne l’utilisation de la cardinalité réelle au lieu de l’estimation d’origine sur une ligne. 
-
-Pour activer la préversion publique de la compilation différée de variables de table, fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
-
-La compilation différée de variables de table **ne** modifie aucune autre caractéristique des variables de table. Par exemple, cette fonctionnalité n’ajoute pas de statistiques de colonnes aux variables de table.
-
-La compilation différée de variables de table **n’augmente pas la fréquence des recompilations**. Au lieu de cela, elle se positionne là où la compilation initiale se produit. Le plan mis en cache obtenu est généré en fonction du nombre de lignes de variable de table dans la compilation différée initiale. Le plan mis en cache est réutilisé par des requêtes consécutives. Et ce, jusqu’à ce que le plan soit supprimé ou recompilé. 
-
-Le nombre de lignes de variable de table utilisé pour la compilation du plan initial représente une valeur type très différente d’une estimation du nombre de lignes fixe. S’il est différent, les opérations en aval en bénéficieront. Si le nombre de lignes de variable de table varie de manière significative entre les exécutions, il est possible que cette fonctionnalité n’améliore pas les performances.
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Désactivation de la compilation différée de variables de table sans changer le niveau de compatibilité
-Désactivez la compilation différée des variables de table au niveau de la base de données ou de l’instruction, tout en maintenant un niveau de compatibilité de la base de données supérieur ou égal à 150. Pour désactiver la compilation différée des variables de table dans toutes les exécutions de requête provenant de la base de données, exécutez l’exemple suivant dans le contexte de la base de données applicable :
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-Pour réactiver la compilation différée des variables de table dans toutes les exécutions de requête provenant de la base de données, exécutez l’exemple suivant dans le contexte de la base de données applicable :
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-Vous pouvez également désactiver la compilation différée des variables de table pour une requête spécifique en désignant DISABLE_DEFERRED_COMPILATION_TV comme un indicateur de requête USE HINT.  Par exemple :
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-declaring-a-variable-of-type-table"></a>A. Déclaration d'une variable de type table  
+### <a name="a-declaring-a-variable-of-type-table"></a>R. Déclaration d'une variable de type table  
 L'exemple suivant crée une variable `table` qui stocke les valeurs définies dans la clause OUTPUT de l'instruction UPDATE. Deux instructions `SELECT` suivent ; elles retournent les valeurs dans `@MyTableVar`, ainsi que les résultats de la mise à jour dans la table `Employee`. Les résultats dans la colonne `INSERTED.ModifiedDate` sont différents des valeurs de la colonne `ModifiedDate` dans la table `Employee`. Ceci s’explique par le fait que le déclencheur `AFTER UPDATE`, qui met à jour la valeur de `ModifiedDate` en fonction de la date actuelle, est défini sur la table `Employee`. Toutefois, les colonnes renvoyées par `OUTPUT` reflètent les données avant l'activation des déclencheurs. Pour plus d’informations, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
 ```sql

@@ -18,20 +18,20 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906867"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325501"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Échappe les caractères spéciaux dans les textes et retourne le texte avec des caractères d’échappement. **STRING_ESCAPE** est une fonction déterministe.  
+Échappe les caractères spéciaux dans les textes et retourne le texte avec des caractères d’échappement. **STRING_ESCAPE** est une fonction déterministe, introduite dans SQL Server 2016. 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,8 +41,8 @@ STRING_ESCAPE( text , type )
   
 ## <a name="arguments"></a>Arguments
 
- *texte*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) **nvarchar** représentant l’objet qui doit être échappé.  
+ *text*  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md)**nvarchar** représentant l’objet qui doit être échappé.  
   
  *type*  
  Règles d’échappement qui seront appliquées. La valeur prise en charge actuellement est `'json'`.  
@@ -73,7 +73,7 @@ STRING_ESCAPE( text , type )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Échapper du texte selon les règles de mise en forme JSON
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>R.  Échapper du texte selon les règles de mise en forme JSON
 
  La requête suivante échappe les caractères spéciaux à l’aide des règles JSON et retourne le texte avec séquence d’échappement.  
   

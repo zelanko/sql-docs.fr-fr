@@ -1,6 +1,7 @@
 ---
-title: Utiliser l’Assistant Ajout d’un réplica Azure (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Configurer une machine virtuelle Azure comme réplica secondaire dans un groupe de disponibilité
+description: Utilisez l’Assistant Ajout d’un réplica Azure pour vous aider à créer une machine virtuelle Azure dans un environnement informatique hybride et à la configurer comme réplica secondaire pour un groupe de disponibilité Always On nouveau ou existant.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ed09ad0f6325ab2ed8ee1d89d7c36f19584a3475
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176205"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822659"
 ---
-# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utiliser l'Assistant Ajout d’un réplica Azure (SQL Server)
+# <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configurer une machine virtuelle Azure comme réplica secondaire dans un groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilisez l’Assistant Ajout d’un réplica Azure pour vous aider à créer une machine virtuelle Azure dans un environnement informatique hybride et à la configurer comme réplica secondaire pour un groupe de disponibilité Always On nouveau ou existant.  
   
@@ -62,13 +63,13 @@ ms.locfileid: "70176205"
   
 4.  Spécifiez les paramètres de la machine virtuelle Azure qui hébergera le nouveau réplica secondaire :  
   
-     image  
+     Image  
      Nom de l’image SQL Server à utiliser pour la machine virtuelle Azure  
   
-     Taille de l'ordinateur virtuel  
+     Taille de la machine virtuelle  
      Taille de la machine virtuelle Azure  
   
-     Nom de l'ordinateur virtuel  
+     Nom de la machine virtuelle  
      Nom DNS de la machine virtuelle Azure  
   
      Nom d'utilisateur de l'ordinateur virtuel  
@@ -83,10 +84,10 @@ ms.locfileid: "70176205"
      Sous-réseau de réseau virtuel  
      Sous-réseau de réseau virtuel dans lequel placer la machine virtuelle Azure  
   
-     Domaine  
+     Domain  
      Domaine Active Directory (AD) auquel joindre la machine virtuelle Azure  
   
-     Nom d'utilisateur de domaine  
+     Domain Username  
      Nom d’utilisateur AD utilisé pour joindre la machine virtuelle Azure au domaine  
   
      Mot de passe  

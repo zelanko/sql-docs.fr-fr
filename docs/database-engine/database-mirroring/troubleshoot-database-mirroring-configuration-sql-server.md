@@ -1,6 +1,7 @@
 ---
-title: Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Problèmes courants liés à la configuration de la mise en miroir de bases de données
+description: Fournit des informations permettant de résoudre les problèmes de configuration d’une session de mise en miroir de bases de données.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049765"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822510"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68049765"
 |Problème|Résumé|  
 |-----------|-------------|  
 |Message d'erreur 1418|Ce message [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indique que l'adresse réseau du serveur ne peut pas être atteinte ou n'existe pas, et il suggère de vérifier le nom de l'adresse réseau puis de réexécuter la commande. |  
-|[Accounts](#Accounts)|Traite des conditions nécessaires à la configuration correcte des comptes sous lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.|  
+|[Comptes (Accounts)](#Accounts)|Traite des conditions nécessaires à la configuration correcte des comptes sous lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.|  
 |[Points de terminaison](#Endpoints)|Traite des conditions nécessaires à la configuration correcte du point de terminaison de mise en miroir de bases de données de chaque instance de serveur.|  
 |[SystemAddress](#SystemAddress)|Résume les alternatives pour la spécification du nom système d'une instance de serveur dans une configuration de mise en miroir de bases de données.|  
 |[Accès réseau](#NetworkAccess)|Traite de l'exigence selon laquelle chaque instance de serveur doit être autorisée à accéder aux ports de l'autre instance ou des autres instances de serveur par le biais du protocole TCP.|  
@@ -41,7 +42,7 @@ ms.locfileid: "68049765"
 |[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='** _serveur_partenaire_ **'** .|  
 |[Transactions entre bases de données](#CrossDbTxns)|Un basculement automatique peut entraîner une résolution automatique et éventuellement incorrecte des transactions incertaines. Pour cette raison, la mise en miroir de bases de données ne prend pas en charge les transactions entre bases de données.|  
   
-##  <a name="Accounts"></a> Accounts  
+##  <a name="Accounts"></a> Comptes (Accounts)  
  Les comptes sous lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution doivent être configurés correctement.  
   
 1.  Les comptes possèdent-ils les autorisations appropriées ?  
@@ -52,7 +53,7 @@ ms.locfileid: "68049765"
   
 2.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution en tant que service utilisant le compte système local, vous devez utiliser des certificats pour l'authentification. Pour plus d'informations, consultez [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Points de terminaison  
+##  <a name="Endpoints"></a> Endpoints  
  Les points de terminaison doivent être correctement configurés.  
   
 1.  Vérifiez que chaque instance de serveur (serveur principal, serveurs miroir et témoin, le cas échéant) a un point de terminaison de mise en miroir de bases de données. Pour plus d’informations, consultez [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) et, selon la forme d’authentification, soit [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md), soit [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -167,7 +168,7 @@ ms.locfileid: "68049765"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Sécurité du transport pour la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
+ [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
 

@@ -1,6 +1,6 @@
 ---
-title: Prise en charge d’OLTP en mémoire par SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Prise en charge de SSMS pour l’OLTP en mémoire
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a97bac2561b7d022b2e5028d8f18410b206931b6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907459"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412531"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "72907459"
   
      Un modèle pour créer des tables optimisées en mémoire s'affiche.  
   
-2.  Pour remplacer les paramètres du modèle, cliquez sur **Spécifier les valeurs des paramètres du modèle** dans le menu **Requête** .  
+2.  Pour remplacer les paramètres du modèle, cliquez sur **Spécifier les valeurs des paramètres du modèle** dans le menu **Requête**.  
   
      Pour plus d’informations sur la manière d’utiliser les modèles, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72907459"
   
         -   Importez et exportez des données. Utilisez l’ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et l’option Copier les données à partir d’une ou plusieurs tables ou vues** . Si la table de destination est une table optimisée en mémoire qui n'existe pas dans la base de données de destination :  
   
-            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Ensuite, cliquez sur **Suivant**.  
+            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Cliquez ensuite sur **Suivant**.  
   
             2.  Cliquez sur **Modifier les mappages**. Sélectionnez ensuite **Créer la table de destination** puis cliquez sur **Modifier SQL**. Entrez la syntaxe CREATE TABLE pour créer une table optimisée en mémoire sur la base de données de destination. Cliquez sur **OK** et suivez les étapes restantes de l’Assistant.  
   

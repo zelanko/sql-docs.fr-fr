@@ -1,6 +1,8 @@
 ---
-title: DENY - Refuser des autorisations sur un groupe de disponibilité (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY - Autorisations sur un groupe de disponibilité
+description: Refusez des autorisations sur un groupe de disponibilité AlwaysOn.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 043d98195f21a7e0abe6a26734f4534c14070a31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114980"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258311"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>DENY (Refus d'autorisations de groupe de disponibilité) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "68114980"
   Refuse des autorisations sur un groupe de disponibilité Always On dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -95,7 +97,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. Refus de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
+### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>R. Refus de l'autorisation VIEW DEFINITION sur un groupe de disponibilité  
  L'exemple suivant refuse l'autorisation `VIEW DEFINITION` sur le groupe de disponibilité `MyAg` sur la connexion `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
@@ -105,7 +107,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. Refus d'une autorisation TAKE OWNERSHIP avec l'optio CASCADE  
- Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le groupe de disponibilité `MyAg` est refusée à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` avec l'option `CASCADE`.  
+ Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le groupe de disponibilité `MyAg` est refusée à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` avec l'option `CASCADE`.  
   
 ```  
 USE master;  

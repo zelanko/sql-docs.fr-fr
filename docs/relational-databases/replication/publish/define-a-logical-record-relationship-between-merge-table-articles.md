@@ -1,6 +1,7 @@
 ---
-title: Définir une relation d’enregistrement logique entre des articles de table de fusion | Microsoft Docs
-ms.custom: ''
+title: Définir une relation d’enregistrement logique entre des articles de table de fusion
+description: Découvrez comment définir la relation d’enregistrement logique entre les tables connexes utilisées pour les articles de réplication de fusion.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846614"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321227"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Définir une relation d'enregistrement logique entre des articles de table de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "70846614"
   
     -   Pour utiliser la détection et la résolution standard des conflits au niveau des lignes ou des colonnes, affectez la valeur **false** à **\@logical_record_level_conflict_detection** et **\@logical_record_level_conflict_resolution**, qui est la valeur par défaut.  
   
-3.  Répétez l'étape 2 pour chaque article qui constituera l'enregistrement logique. Vous devez utiliser la même option de détection et de résolution des conflits pour chaque article de l'enregistrement logique. Pour plus d'informations, voir [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+3.  Répétez l'étape 2 pour chaque article qui constituera l'enregistrement logique. Vous devez utiliser la même option de détection et de résolution des conflits pour chaque article de l'enregistrement logique. Pour plus d'informations, voir [Détection et résolution des conflits dans les enregistrements logiques](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Spécifiez **\@publication**, le nom d’un article de la relation pour **\@article**, le nom du deuxième article pour **\@join_articlename**, le nom de la relation pour **\@filtername**, une clause qui définit la relation entre les deux articles pour **\@join_filterclause**, le type de jointure pour **\@join_unique_key** et affectez l’une des valeurs suivantes à **\@filter_type** :  
   

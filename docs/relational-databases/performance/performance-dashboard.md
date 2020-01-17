@@ -1,7 +1,7 @@
 ---
 title: Tableau de bord Performances | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 12/14/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -14,17 +14,17 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b2c743d23ae9c9ee730c3c1daa8d41709e44fd6f
+ms.sourcegitcommit: 68751257feec99109edf88a5b89c0ec2ee72276f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041171"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728560"
 ---
 # <a name="performance-dashboard"></a>Tableau de bord Performances
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 et ultérieures inclut le tableau de bord Performances. Ce tableau de bord a été conçu pour fournir visuellement un aperçu rapide de l’état des performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 et ultérieures inclut le tableau de bord Performances. Ce tableau de bord a été conçu pour fournir visuellement un insight rapide de l’état du niveau de performance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et d’[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Managed Instance. 
 
 Le tableau de bord Performances aide à identifier rapidement si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] est victime d’un goulot d’étranglement de performances. Si un goulot d’étranglement est trouvé, capturez facilement des données de diagnostic supplémentaires pouvant être nécessaires pour résoudre le problème. Voici certains problèmes de performances courants que le tableau de bord Performances peut aider à identifier :
 -  Goulots d'étranglement au niveau de l'unité centrale (et identification des requêtes sollicitant le plus l'unité centrale)
@@ -43,7 +43,7 @@ Le tableau de bord Performances comprend les sections et sous-rapports suivants�
    -  Sessions utilisateur
    -  Taux d'accès au cache
 -  informations historiques
-   -  Attentes
+   -  Attend
    -  Verrous internes
    -  Statistiques d’E/S
    -  Requêtes coûteuses
@@ -60,7 +60,7 @@ Le tableau de bord Performances comprend les sections et sous-rapports suivants�
   
 Pour afficher le tableau de bord Performances, cliquez avec le bouton droit sur le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l’Explorateur d’objets, sélectionnez **Rapports**, **Rapports standard**, puis cliquez sur **Tableau de bord Performances**.  
   
-![Tableau de bord de Performances dans le menu](../../relational-databases/performance/media/perf_dashboard_ssms.png "Tableau de bord de Performances dans le menu")  
+![Tableau de bord Performances dans le menu](../../relational-databases/performance/media/perf_dashboard_ssms.png "Tableau de bord Performances dans le menu")  
   
 Le tableau de bord Performances apparaît sous la forme d’un nouvel onglet. Voici un exemple indiquant clairement la présence d’un goulot d’étranglement au niveau de l’UC :  
   
@@ -73,19 +73,19 @@ Le rapport **Index absents** indique les index potentiellement absents que l’o
 > Déterminez systématiquement si la suggestion d’un nouvel index est préférable à l’utilisation d’un index existant dans la même table ; en effet, vous pourriez obtenir les mêmes résultats simplement en modifiant un index existant, plutôt qu’en en créant un. Par exemple, supposons la suggestion d’un nouvel index sur les colonnes C1, C2 et C3 ; commencez par déterminer s’il existe un index sur les colonnes C1 et C2. Si tel est le cas, il peut être préférable d’ajouter simplement la colonne C3 à l’index existant (en conservant l’ordre des colonnes préexistantes) pour éviter de créer un index.
 > Pour plus d’informations, consultez le [Guide de conception et d’architecture des index](../../relational-databases/sql-server-index-design-guide.md).
 
-Le rapport **Attentes** filtre toutes les attentes d’inactivité et de mise en veille. Pour plus d’informations sur les attentes, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) et [Paramétrage des performances de SQL Server 2005 à l’aide des attentes et des files d’attente](http://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
+Le rapport **Attentes** filtre toutes les attentes d’inactivité et de mise en veille. Pour plus d’informations sur les attentes, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) et [Paramétrage des performances de SQL Server 2005 à l’aide des attentes et des files d’attente](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
 Les rapports **Requêtes coûteuses** sont réinitialisés quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, car les données dans les DMV sous-jacentes sont effacées. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous trouverez des informations détaillées sur les requêtes coûteuses dans le Magasin des requêtes. 
 
 > [!NOTE]
-> Le tableau de bord Performances a d’abord été publié sous forme de téléchargement autonome pour [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), puis mis à jour pour [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+> Le tableau de bord Performances a d’abord été publié sous forme de téléchargement autonome pour [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), puis mis à jour pour [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
 
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiert les autorisations `VIEW SERVER STATE` et `ALTER TRACE`. Sur [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.
 
 ## <a name="see-also"></a>Voir aussi  
- [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Ouvrir le Moniteur d’activité &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
  [Moniteur d’activité](../../relational-databases/performance-monitor/activity-monitor.md)     
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Analyse des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     

@@ -1,7 +1,7 @@
 ---
 title: Définir ou changer le classement des colonnes | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,44 +13,78 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d49dbce19b0d2c7ce1fa1337eb6cbdc58da08f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140862"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74908710"
 ---
 # <a name="set-or-change-the-column-collation"></a>Définir ou changer le classement des colonnes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Vous pouvez remplacer le classement de la base de données pour les données **char**, **varchar**, **text**, **nchar**, **nvarchar**et **ntext** en spécifiant un classement différent pour une colonne spécifique d’une table et en utilisant l’un des éléments suivants :  
   
--   Clause COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) et [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Par exemple :  
+-   Clause COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) et [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md), illustrée dans les exemples ci-dessous. 
+
+    -   **Conversion sur place.** Considérez l’une des tables existantes définies ci-dessous :
+
+        ```sql
+        -- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
+        CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
+
+        -- VARCHAR column is encoded the Latin code page and therefore is not Unicode capable
+        CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
+        ```
+
+        Pour convertir la colonne sur place afin d’utiliser UTF-8, exécutez une instruction `ALTER COLUMN` qui définit le type de données nécessaire et un classement UTF-8 :
+
+        ```sql 
+        ALTER TABLE dbo.MyTable 
+        ALTER COLUMN CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8
+        ```
+
+        Cette méthode est facile à implémenter, mais elle représente potentiellement une opération bloquante qui peut devenir un problème pour les tables volumineuses et les applications occupées.
+
+    -   **Copier et remplacer.** Considérez l’une des tables existantes définies ci-dessous :
+
+        ```sql
+        -- NVARCHAR column is encoded in UTF-16 because a supplementary character enabled collation is used
+        CREATE TABLE dbo.MyTable (CharCol NVARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC);
+        GO
+
+        -- VARCHAR column is encoded using the Latin code page and therefore is not Unicode capable
+        CREATE TABLE dbo.MyTable (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI);
+        GO
+        ```
+
+        Pour convertir la colonne afin d’utiliser le format UTF-8, copiez les données dans une nouvelle table où la colonne cible correspond déjà au type de données nécessaire avec un classement UTF-8, puis remplacez l’ancienne table :
+
+        ```sql
+        CREATE TABLE dbo.MyTableNew (CharCol VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8);
+        GO
+        INSERT INTO dbo.MyTableNew 
+        SELECT * FROM dbo.MyTable;
+        GO
+        DROP TABLE dbo.MyTable;
+        GO
+        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
+        GO
+        ```
+
+        Cette méthode est beaucoup plus rapide que la conversion sur place. Toutefois, la gestion de schémas complexes avec de nombreuses dépendances (clés étrangères, clés primaires, déclencheurs, contraintes par défaut) et la synchronisation de la fin de la table (si la base de données est en cours d’utilisation) nécessite davantage de planification.
+        
+    Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
   
-    ```  
-    CREATE TABLE dbo.MyTable  
-      (PrimaryKey   int PRIMARY KEY,  
-       CharCol      varchar(10) COLLATE French_CI_AS NOT NULL  
-      );  
-    GO  
-    ALTER TABLE dbo.MyTable ALTER COLUMN CharCol  
-                varchar(10)COLLATE Latin1_General_CI_AS NOT NULL;  
-    GO  
-    ```  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Modifier des colonnes (moteur de base de données)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure).  
   
 -   Utilisation de la propriété **Column.Collation** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  Vous ne pouvez pas modifier le classement d'une colonne actuellement référencée par l'un des éléments suivants :  
   
 -   une colonne calculée ;  
-  
 -   un index ;  
-  
--   des statistiques de distribution, générées automatiquement ou à l'aide de l'instruction CREATE STATISTICS ;  
-  
+-   des statistiques de distribution, générées automatiquement ou par l’instruction `CREATE STATISTICS`  
 -   une contrainte CHECK ;  
-  
 -   une contrainte FOREIGN KEY.  
   
  Quand vous utilisez **tempdb**, la clause [COLLATE](~/t-sql/statements/collations.md) contient une option *database_default* pour spécifier qu’une colonne de table temporaire utilise, pour la connexion, le classement par défaut de la base de données utilisateur active à la place du classement de **tempdb**.  
@@ -63,7 +97,7 @@ ms.locfileid: "68140862"
   
  Ceci pourrait provoquer des problèmes de non-correspondance de classement entre les bases de données définies par l'utilisateur et les objets de base de données système. Par exemple, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le classement Latin1_General_CS_AS et vous exécutez les instructions suivantes :  
   
-```  
+```sql  
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  
 USE TestDB;  
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
@@ -71,7 +105,7 @@ CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );
   
  Dans ce système, la base de données **tempdb** utilise le classement Latin1_General_CS_AS avec la page de codes 1252, et `TestDB` et `TestPermTab.Col1` utilisent le classement `Estonian_CS_AS` avec la page de codes 1257. Par exemple :  
   
-```  
+```sql  
 USE TestDB;  
 GO  
 -- Create a temporary table with the same column declarations  
@@ -84,7 +118,7 @@ GO
   
  Dans l’exemple précédent, la base de données **tempdb** utilise le classement Latin1_General_CS_AS, et `TestDB` et `TestTab.Col1` utilisent le classement `Estonian_CS_AS` . Par exemple :  
   
-```  
+```sql  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
@@ -94,7 +128,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Spécifiez que la colonne de table temporaire utilise le classement par défaut de la base de données utilisateur à la place de **tempdb**. Cela permet à la table temporaire de fonctionner avec des tables formatées de la même manière dans différentes bases de données, si votre système l'exige.  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE database_default  
@@ -103,7 +137,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
 -   Spécifiez le classement approprié pour la colonne `#TestTempTab` :  
   
-    ```  
+    ```sql  
     CREATE TABLE #TestTempTab  
        (PrimaryKey int PRIMARY KEY,  
         Col1 nchar COLLATE Estonian_CS_AS  
@@ -113,6 +147,6 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
 ## <a name="see-also"></a>Voir aussi  
  [Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [Définir ou modifier le classement de la base de données](../../relational-databases/collations/set-or-change-the-database-collation.md)   
- [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

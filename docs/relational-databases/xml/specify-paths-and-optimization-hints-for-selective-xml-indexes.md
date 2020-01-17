@@ -1,6 +1,5 @@
 ---
-title: Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs | Microsoft Docs
-ms.custom: ''
+title: Chemins d’accès et indicateurs d’optimisation des index XML sélectifs | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905234"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257614"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "72905234"
   
  Vous spécifiez les chemins d'accès de nœud et les indicateurs d'optimisation en même temps dans l'une des instructions suivantes :  
   
--   Dans la clause **FOR** d’une instruction **CREATE**. Pour plus d’informations, consultez [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+-   Dans la clause **FOR** d’une instruction **CREATE** . Pour plus d’informations, consultez [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
--   Dans la clause **ADD** d’une instruction **ALTER**. Pour plus d’informations, consultez [ALTER INDEX &#40;index XML sélectifs&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
+-   Dans la clause **ADD** d’une instruction **ALTER** . Pour plus d’informations, consultez [ALTER INDEX &#40;index XML sélectifs&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
  Pour plus d’informations sur les index XML sélectifs, consultez [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -274,7 +274,7 @@ FOR
 ### <a name="examples"></a>Exemples  
  Voici quelques exemples supplémentaires de sélection des nœuds appropriés pour indexer des types XQuery différents.  
   
- **Exemple 1**  
+ **Exemple 1**  
   
  Voici une requête XQuery simple qui utilise la méthode exist() :  
   
@@ -289,7 +289,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
 |----------------------------------|-----------------------------------|  
 |**/a/b/c/d/e/h**|L'existence du nœud `h` est évaluée dans la méthode exist().|  
   
- **Exemple 2**  
+ **Exemple 2**  
   
  Voici une variation plus complexe de la requête XQuery précédente, avec un prédicat appliqué :  
   
@@ -305,7 +305,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
 |**/a/b/c/d/e**|Un prédicat est appliqué sur le nœud `e`.|  
 |**/a/b/c/d/e/f**|La valeur du nœud `f` est évaluée au sein du prédicat.|  
   
- **Exemple 3**  
+ **Exemple 3**  
   
  Voici une requête plus complexe avec une clause value() :  
   
@@ -355,7 +355,7 @@ WHERE T.xmldata.exist('
 ### <a name="benefits-of-optimization-hints"></a>Avantages des indicateurs d'optimisation  
  Le tableau suivant identifie les indicateurs d'optimisation qui prennent en charge un stockage plus efficace ou de meilleures performances.  
   
-|indicateur d'optimisation|Stockage plus efficace|Performances améliorées|  
+|indicateur d'optimisation|Stockage plus efficace|performances améliorées|  
 |-----------------------|----------------------------|--------------------------|  
 |**node()**|Oui|Non|  
 |**SINGLETON**|Non|Oui|  
@@ -373,11 +373,11 @@ WHERE T.xmldata.exist('
 |**MAXLENGTH**|Oui|Non|  
   
 ### <a name="node-optimization-hint"></a>Indicateur d'optimisation node()  
- S'applique à : Types de données XQuery  
+ S’applique à : Types de données XQuery  
   
  Vous pouvez utiliser l'optimisation node() pour spécifier un nœud dont la valeur n'est pas requise pour évaluer la requête classique. Cet indicateur réduit les besoins de stockage lorsque la requête classique doit uniquement évaluer l'existence du nœud. (Par défaut, un index XML sélectif stocke la valeur de tous les nœuds promus, à l'exception des types de nœuds complexes.)  
   
- Prenons l'exemple suivant :  
+ Prenons l’exemple suivant :  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  
@@ -391,7 +391,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Si une requête requiert la valeur d'un nœud qui a été indexé avec l'indicateur node(), l'index XML sélectif ne peut pas être utilisé.  
   
 ### <a name="singleton-optimization-hint"></a>Indicateur d'optimisation SINGLETON  
- S'applique à : Types de données XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ S’applique à : Types de données XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  L'indicateur d'optimisation SINGLETON spécifie la cardinalité d'un nœud. Cet indicateur améliore les performances des requêtes, car il sait à l'avance qu'un nœud apparaît au plus une fois dans son parent ou ancêtre.  
   
@@ -402,14 +402,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Si l'indicateur SINGLETON a été spécifié, mais un nœud apparaît plusieurs fois dans son parent ou ancêtre, une erreur est générée lorsque vous créez l'index (pour les données existantes) ou lorsque vous exécutez une requête (pour les nouvelles données).  
   
 ### <a name="data-type-optimization-hint"></a>Indicateur d'optimisation DATA TYPE  
- S'applique à : Types de données XQuery  
+ S’applique à : Types de données XQuery  
   
  L'indicateur d'optimisation DATA TYPE vous permet de spécifier un type de données XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du nœud indexé. Le type de données est utilisé pour la colonne dans la table de données de l'index XML sélectif qui correspond au nœud indexé.  
   
  Lors de la conversion d'une valeur existante dans le type de données spécifié échoue, l'opération d'insertion (dans l'index) réussit ; toutefois, une valeur NULL est insérée dans la table de données de l'index.  
   
 ### <a name="maxlength-optimization-hint"></a>Indicateur d'optimisation MAXLENGTH  
- S'applique à : Types de données XQuery  
+ S’applique à : Types de données XQuery  
   
  L'indicateur d'optimisation MAXLENGTH vous permet de limiter la longueur de données xs:string. MAXLENGTH n'est pas pertinente pour les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant donné que vous spécifiez la longueur lorsque vous spécifiez les types de dates VARCHAR ou NVARCHAR.  
   

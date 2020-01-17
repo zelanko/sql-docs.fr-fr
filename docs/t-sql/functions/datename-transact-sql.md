@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278345"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255816"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ Cette fonction retourne une chaîne de caractères représentant la valeur *date
 
 Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,7 +88,7 @@ Pour *date*, `DATENAME` accepte une expression de colonne, une expression, un li
 ## <a name="return-type"></a>Type de retour  
 **nvarchar**
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
   
 -   Chaque *datepart* et ses abréviations retournent la même valeur.  
   
@@ -122,7 +122,7 @@ DECLARE @t time = '12:10:30.123';
 SELECT DATENAME(year, @t);  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 Utilisez `DATENAME` dans les clauses suivantes :
 
@@ -156,7 +156,7 @@ L’exemple suivant retourne les parties de la date spécifiée. Remplacez une v
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -184,7 +184,7 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 ## <a name="see-also"></a>Voir aussi

@@ -1,6 +1,7 @@
 ---
-title: Publication de l’exécution de procédures stockées dans la réplication transactionnelle | Microsoft Docs
-ms.custom: ''
+title: Publication de l’exécution de procédures stockées (réplication transactionnelle)
+description: Découvrez comment inclure des procédures stockées qui s’exécutent sur le serveur de publication et qui affectent des tables publiées dans votre publication transactionnelle en tant qu’articles d’exécution de procédure stockée.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ad8e489d753587912eb7369316c1413bd1eaf1c9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710732"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321405"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publication de l'exécution de procédures stockées dans la réplication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

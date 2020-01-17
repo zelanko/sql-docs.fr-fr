@@ -1,6 +1,7 @@
 ---
-title: Préparer une base de données miroir pour la mise en miroir (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Préparer une base de données pour la mise en miroir
+description: Découvrez comment préparer une base de données SQL Server pour la mise en miroir de bases de données.
+ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33c9db8ae95807f0b95141945bddaef8560608b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009958"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255979"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Préparer une base de données miroir pour la mise en miroir (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68009958"
   
 -   **Avant de commencer :**  
   
-     [Spécifications](#Requirements)  
+     [Configuration requise](#Requirements)  
   
      [Limitations et restrictions](#Restrictions)  
   
@@ -130,7 +131,7 @@ ms.locfileid: "68009958"
   
     -   [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+    -   [RESTORE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  À l'aide de RESTORE WITH NORECOVERY, appliquez les autres sauvegardes de fichiers journaux ou sauvegardes en attente à la base de données miroir.  
   
@@ -139,7 +140,7 @@ ms.locfileid: "68009958"
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Avant de démarrer une session de mise en miroir de bases de données, vous devez créer la base de données miroir. Vous devez procéder à cette opération avant de démarrer la session de mise en miroir.  
   
- L'exemple suivant utilise l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui emploie par défaut le mode de récupération simple.  
+ L'exemple suivant utilise la base de données d'exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui emploie par défaut le mode de récupération simple.  
   
 1.  Pour utiliser la mise en miroir de base de données sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , modifiez-la afin qu'elle utilise le mode de restauration complète :  
   
