@@ -4,18 +4,18 @@ description: Explorez les différentes façons d’utiliser les images conteneur
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: a184a6e19154d0e8534fe843cf65c1afc9d2f547
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75721544"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776410"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur SQL Server sur Docker
 
@@ -56,20 +56,17 @@ Cet article de configuration fournit des scénarios d’utilisation supplémenta
 
 ## <a id="rhel"></a> Exécuter des images conteneurs basées sur RHEL
 
-La documentation pour les images conteneur SQL Server Linux pointe vers des conteneurs basés sur Ubuntu. À partir de SQL Server 2019, vous pouvez utiliser des conteneurs basés sur Red Hat Enterprise Linux (RHEL). Remplacez le référentiel de conteneurs **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** par **mcr.microsoft.com/mssql/rhel/server:2019-RC1** dans toutes vos commandes Docker.
+La documentation pour les images conteneur SQL Server Linux pointe vers des conteneurs basés sur Ubuntu. À partir de SQL Server 2019, vous pouvez utiliser des conteneurs basés sur Red Hat Enterprise Linux (RHEL). Remplacez le référentiel de conteneurs **mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04** par **mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8** dans toutes vos commandes Docker.
 
-Par exemple, la commande suivante tire (pull) le dernier conteneur SQL Server 2019 qui utilise RHEL :
+Par exemple, la commande suivante tire (pull) le conteneur CU 1 pour SQL Server 2019 qui utilise RHEL 8 :
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-RC1
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CU1-rhel-8
 ```
-
-> [!NOTE]
-> À partir de la version en disponibilité générale de SQL Server 2019, la dernière image conteneur RHEL est toujours la version RC1. Cette version n’est pas destinée à une utilisation en production. Cet article sera mis à jour quand une nouvelle image conteneur RHEL sera disponible.
 
 ::: moniker-end
 

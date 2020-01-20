@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681770"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924922"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps Tools (préversion)
 
@@ -133,12 +133,19 @@ Actuellement, la tâche de déploiement SSIS ne prend pas en charge les scénari
 
 ## <a name="release-notes"></a>Notes de publication
 
+### <a name="version-012-preview"></a>Version 0.1.2 - préversion
+
+Date de publication : 13 janvier 2020
+
+- Ajout d’informations plus détaillées sur les exceptions dans le journal des tâches SSIS Deploy lorsque le type de destination est SSISDB.
+- Correction de l’exemple de chemin de destination dans le texte d’aide du chemin de destination de la propriété de la tâche SSIS Deploy.
+
 ### <a name="version-011-preview"></a>Version 0.1.1 - préversion
 
 Date de publication : 6 janvier 2020
 
-- Ajout d’une restriction quant à la version minimale de l’agent requise. Actuellement, la version minimale de l’agent de ce produit est 2.144.0.
-- Correction de textes d’affichage incorrects de la tâche de déploiement SSIS.
+- Ajout d’une restriction pour la version minimale requise de l’agent. Actuellement, la version minimale de l’agent de ce produit est 2.144.0.
+- Correction de texte d’affichage incorrect pour la tâche SSIS Deploy.
 - Amélioration de certains messages d’erreur.
 
 ### <a name="version-010-preview"></a>Version 0.1.0 - préversion

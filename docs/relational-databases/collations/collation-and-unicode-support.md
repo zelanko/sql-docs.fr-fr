@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901943"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831813"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et des classements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -478,16 +478,12 @@ Lorsque vous déplacez des données d'un serveur vers un client, votre classemen
 Pour utiliser les classements UTF-8 disponibles dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous devez sélectionner des classements compatibles avec l’encodage UTF-8 (\_UTF8).
  
 -   L’indicateur UTF8 peut être appliqué aux éléments suivants :    
-    -   Classements version 90 
-        > [!NOTE]
-        > Seulement quand des caractères supplémentaires (\_SC) ou des classements compatibles avec le respect du sélecteur de variante (\_VSS) existent déjà dans cette version.
-    -   Classements version 100    
-    -   Classements version 140   
+    -   Classements linguistiques qui prennent déjà en charge les caractères supplémentaires (\_SC) ou le sélecteur de variante (\_VSS)
     -   BIN2<sup>1</sup> classement binaire
     
 -   L’indicateur UTF8 ne peut pas être appliqué aux éléments suivants :    
-    -   Classements version 90 qui ne prennent pas en charge les caractères supplémentaires (\_SC) ou le respect du sélecteur de variante (\_VSS)    
-    -   Classements binaires BIN ou BIN2<sup>2</sup>    
+    -   Classements linguistiques qui ne prennent pas en charge les caractères supplémentaires (\_SC) ou le sélecteur de variante (\_VSS)
+    -   Classements binaires BIN ou BIN2<sup>2</sup>
     -   Classements SQL\_*  
     
 <sup>1</sup> À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 a remplacé le classement **UTF8_BIN2** par **Latin1_General_100_BIN2_UTF8**.        
@@ -528,8 +524,6 @@ Si vous utilisez des caractères supplémentaires :
 -   Les caractères supplémentaires peuvent être utilisés dans des opérations de tri et de comparaison dans les versions de classement 90 ou versions supérieures.    
 -   Tous les classements version 100 prennent en charge le tri linguistique avec les caractères supplémentaires.    
 -   Les caractères supplémentaires ne sont pas utilisables dans les métadonnées, telles que les noms d’objets de base de données.    
--   Les bases de données qui utilisent des classements avec des caractères supplémentaires (\_SC) ne peuvent pas être activées pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. C’est parce que certaines des tables système et des procédures stockées créées pour la réplication utilisent le type de données **ntext** hérité qui ne prend pas en charge les caractères supplémentaires.  
-
 -   L’indicateur SC peut s’appliquer aux éléments suivants :    
     -   Classements version 90    
     -   Classements version 100    

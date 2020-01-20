@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af707d0d07ce754b57eb18048c52db5921693ee
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165588"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831857"
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 
@@ -32,7 +32,7 @@ L’OLTP en mémoire peut offrir des gains de performance considérables pour le
 
 Mais d’où proviennent exactement ces gains de performance ? En substance, l’OLTP en mémoire améliore les performances de traitement transactionnel en rendant l’accès aux données et l’exécution des transactions plus efficaces, et en supprimant la contention de verrous et de verrous internes entre les transactions exécutées simultanément. Cette technologie n’est pas rapide parce qu’elle est en mémoire, mais parce qu’elle est optimisée à travers la présence des données en mémoire. Les algorithmes de stockage des données, d’accès et de traitement ont été entièrement repensés pour tirer parti des dernières améliorations en matière de calcul en mémoire et haute simultanéité.
 
-Le fait que les données se trouvent en mémoire ne signifie pas pour autant que vous les perdez en cas de défaillance. Par défaut, toutes les transactions présentent une durabilité complète. Vous bénéficiez donc des mêmes garanties de durabilité que pour toute autre table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : dans le cadre de la validation de transaction, toutes les modifications sont écrites dans le journal des transactions sur le disque. Si une défaillance survient après la validation de la transaction, vos données sont présentes lorsque la base de données est remise en ligne. De plus, l’OLTP en mémoire est compatible avec toutes les fonctionnalités de haute disponibilité et de récupération d’urgence de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme Always On, la sauvegarde et la restauration, etc.
+Le fait que les données se trouvent en mémoire ne signifie pas pour autant que vous les perdez en cas de défaillance. Par défaut, toutes les transactions présentent une durabilité complète. Vous bénéficiez donc des mêmes garanties de durabilité que pour toute autre table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : dans le cadre de la validation de transaction, toutes les modifications sont écrites dans le journal des transactions sur le disque. Si une défaillance survient après la validation de la transaction, vos données sont présentes lorsque la base de données est remise en ligne. De plus, l’OLTP en mémoire est compatible avec toutes les fonctionnalités de haute disponibilité et de récupération d’urgence de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme Always On, la sauvegarde et la restauration, etc.
 
 Pour tirer parti de l’OLTP en mémoire dans votre base de données, vous devez utiliser un ou plusieurs des types d’objets suivants :
 

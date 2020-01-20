@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2020
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2020
-ms.locfileid: "75656636"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952377"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -187,7 +187,7 @@ Vous pouvez créer plusieurs tables externes qui référencent les mêmes source
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 
-Étant donné que les données d’une table externe ne sont pas comprises dans SQL Server, elles ne sont pas sous le contrôle de PolyBase, et peuvent donc être changées ou supprimées à tout moment par un processus externe. Par conséquent, il n’est pas garanti que les résultats d’une requête exécutée sur une table externe soient déterministes. La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
+Dans la mesure où les données d’une table externe ne sont pas sous le contrôle de gestion direct de SQL Server, elles peuvent être changées ou supprimées à tout moment par un processus externe. Par conséquent, il n’est pas garanti que les résultats d’une requête exécutée sur une table externe soient déterministes. La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
 
 Vous pouvez créer plusieurs tables externes qui référencent chacune des sources de données externes différentes. Si vous exécutez simultanément plusieurs requêtes sur des sources de données Hadoop différentes, chaque source Hadoop doit utiliser le même paramètre de configuration de serveur « hadoop connectivity » (connectivité Hadoop). Par exemple, vous ne pouvez pas exécuter simultanément une requête sur un cluster Hadoop Cloudera et sur un cluster Hadoop Hortonworks, puisqu’ils utilisent des paramètres de configuration différents. Pour connaître les paramètres de configuration et les combinaisons prises en charge, consultez [Configuration de la connectivité PolyBase](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
@@ -389,7 +389,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
+    WITH (
     LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = SQLServerCredentials
@@ -431,14 +431,14 @@ WITH
    CREATE DATABASE SCOPED CREDENTIAL credential_name
    WITH IDENTITY = 'username', Secret = 'password';
 
-   /* 
+   /*
    * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
    * CONNECTION_OPTIONS: Specify driver location
    * CREDENTIAL: the database scoped credential, created above.
    */
    CREATE EXTERNAL DATA SOURCE external_data_source_name
-   WITH ( 
+   WITH (
      LOCATION = 'oracle://<server address>[:<port>]',
      -- PUSHDOWN = ON | OFF,
      CREDENTIAL = credential_name)
@@ -484,7 +484,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
+    WITH (
     LOCATION = teradata://<server address>[:<port>],
    -- PUSHDOWN = ON | OFF,
     CREDENTIAL =credential_name
@@ -571,7 +571,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -666,15 +666,15 @@ Les constructions et les opérations suivantes ne sont pas prises en charge :
 Seuls les prédicats littéraux définis dans une requête peuvent être envoyés (push down) vers la source de données externe. Cela diffère des serveurs liés et de l’accès où les prédicats définis au moment de l’exécution de la requête peuvent être utilisés, par exemple, en combinaison avec une boucle imbriquée dans un plan de requête. Le plus souvent, il en résulte que toute la table externe est copiée localement avant d’être jointe.
 
 ```sql
-  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ Assuming External.Orders is an external table and Customer is a local table.
   \\ This query  will copy the whole of the external locally as the predicate needed
   \\ to filter isn't known at compile time. Its only known during execution of the query
   
-  SELECT Orders.OrderId, Orders.OrderTotal 
+  SELECT Orders.OrderId, Orders.OrderTotal
     FROM External.Orders
-   WHERE CustomerId in (SELECT TOP 1 CustomerId 
-                          FROM Customer 
-                         WHERE CustomerName = 'MyCompany')
+   WHERE CustomerId in (SELECT TOP 1 CustomerId
+                          FROM Customer
+                          WHERE CustomerName = 'MyCompany')
 ```
 
 Avec les tables externes, vous ne pouvez pas utiliser le parallélisme dans le plan de requête.
@@ -709,18 +709,18 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Présentation : Azure SQL Data Warehouse.
+## <a name="overview-azure-synapse-analytics"></a>Présentation : Azure Synapse Analytics
 
-Dans Azure SQL Data Warehouse, utilisez une table externe pour :
+Utilisez une table externe pour :
 
 - Interroger des données Hadoop ou Azure Blob Storage avec des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]
-- Importer des données Hadoop ou Azure Blob Storage, et les stocker dans Azure SQL Data Warehouse.
-- Importer des données Azure Data Lake Store et les stocker dans Azure SQL Data Warehouse.
+- Importer et stocker des données depuis Hadoop ou le stockage Blob Azure.
+- Importer et stocker des données depuis Azure Data Lake Store
 
 Voir aussi [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) et [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
 
@@ -754,7 +754,7 @@ column_name <data_type>
 
 ## <a name="arguments"></a>Arguments
 
-*{database_name.schema_name.table_name | nom_schéma.nom_table | nom_table}*  Nom (composé d’une à trois parties) de la table à créer. Pour une table externe, SQL Data Warehouse stocke uniquement les métadonnées de la table avec des statistiques de base sur le fichier ou le dossier qui est référencé dans Azure Data Lake, Hadoop ou le Stockage Blob Azure. Aucune donnée n’est déplacée ni stockée dans SQL Data Warehouse.
+*{database_name.schema_name.table_name | nom_schéma.nom_table | nom_table}*  Nom (composé d’une à trois parties) de la table à créer. Pour une table externe, seules les métadonnées de la table avec des statistiques de base sur le fichier ou le dossier qui sont référencées dans Azure Data Lake, Hadoop ou le stockage Blob Azure. Aucune donnée réelle n’est déplacée ni stockée lors de la création de tables externes.
 
 \<column_definition > [,... *n* ] CREATE EXTERNAL TABLE prend en charge la possibilité de configurer le nom de colonne, le type de données, la possibilité d’une valeur null et le classement. Vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes.
 
@@ -852,7 +852,7 @@ Vous pouvez créer plusieurs tables externes qui référencent les mêmes source
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 
-Étant donné que les données d’une table externe sont sous le contrôle de SQL Data Warehouse, et peuvent donc être changées ou supprimées à tout moment par un processus externe. Par conséquent, il n’est pas garanti que les résultats d’une requête exécutée sur une table externe soient déterministes. La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
+Dans la mesure où les données d’une table externe ne sont pas sous le contrôle de gestion direct d’Azure Synapse, elles peuvent être changées ou supprimées à tout moment par un processus externe. Par conséquent, il n’est pas garanti que les résultats d’une requête exécutée sur une table externe soient déterministes. La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
 
 Vous pouvez créer plusieurs tables externes qui référencent chacune des sources de données externes différentes.
 
@@ -898,7 +898,7 @@ WITH (TYPE = HADOOP,
 CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
-    FORMAT_TYPE = DELIMITEDTEXT 
+    FORMAT_TYPE = DELIMITEDTEXT
     , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
        , STRING_DELIMITER = ''
       , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
@@ -930,14 +930,14 @@ AS SELECT * FROM
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -1070,7 +1070,7 @@ Vous pouvez créer plusieurs tables externes qui référencent les mêmes source
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 
-Étant donné que les données d’une table externe sont en dehors de l’appliance, elles ne sont pas sous le contrôle de PolyBase, et peuvent donc être changées ou supprimées à tout moment par un processus externe. Par conséquent, il n’est pas garanti que les résultats d’une requête exécutée sur une table externe soient déterministes. La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
+Dans la mesure où les données d’une table externe ne sont pas sous le contrôle de gestion direct de l’appliance, elles peuvent être changées ou supprimées à tout moment par un processus externe. Par conséquent, il n’est pas garanti que les résultats d’une requête exécutée sur une table externe soient déterministes. La même requête peut retourner des résultats différents chaque fois qu’elle est exécutée sur une table externe. De même, une requête peut échouer si les données externes sont déplacées ou supprimées.
 
 Vous pouvez créer plusieurs tables externes qui référencent chacune des sources de données externes différentes. Si vous exécutez simultanément plusieurs requêtes sur des sources de données Hadoop différentes, chaque source Hadoop doit utiliser le même paramètre de configuration de serveur « hadoop connectivity » (connectivité Hadoop). Par exemple, vous ne pouvez pas exécuter simultanément une requête sur un cluster Hadoop Cloudera et sur un cluster Hadoop Hortonworks, puisqu’ils utilisent des paramètres de configuration différents. Pour connaître les paramètres de configuration et les combinaisons prises en charge, consultez [Configuration de la connectivité PolyBase](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
@@ -1093,7 +1093,7 @@ Limitations concernant la largeur des tables :
 
 Dans SQL Server 2016, PolyBase a une limite de largeur de ligne de 32 Ko, basée sur la taille maximale d’une ligne valide par définition de table. Si la somme du schéma de colonne est supérieure à 32 Ko, PolyBase ne peut pas interroger les données.
 
-Dans SQL Data Warehouse, cette limite a été relevée à 1 Mo.
+Dans Azure Synapse Analytics, cette limitation a été augmentée à 1 Mo.
 
 ## <a name="locking"></a>Verrouillage
 
@@ -1138,6 +1138,6 @@ FROM ClickStream
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end

@@ -3,17 +3,17 @@ title: Notes de publication pour SQL Server 2017 sur Linux
 description: Cet article contient les notes de publication et fonctionnalités prises en charge pour SQL Server 2017 s’exécutant sur Linux. Les notes de publication sont incluses dans la mise en production la plus récente et dans plusieurs mises en production précédentes.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/09/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 6887026d7aa549af0fef82b007b4034cffaf1d9d
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258398"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952523"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour SQL Server 2017 sur Linux
 
@@ -93,6 +93,11 @@ Pour les installations du package manuelles ou hors connexion, vous pouvez tél�
 | Package Red Hat RPM | 14.0.3257.3-13 | [Package RPM du moteur](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Package SLES RPM | 14.0.3257.3-13 | [Package RPM du moteur mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM haute disponibilité](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Package RPM de recherche en texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
 | Package Ubuntu 16.04 Debian | 14.0.3257.3-13 | [Package Debian du moteur](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[Package Debian haute disponibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[Package SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="added-support"></a>Ajout de prise en charge
+
+- La capture des changements de données (CDC) est prise en charge avec SQL Server 2017 sur Linux à partir de CU18.
+- La réplication transactionnelle est prise en charge avec SQL Server 2017 sur Linux à partir de CU18.
 
 ### <a name="remarks"></a>Notes
 

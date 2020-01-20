@@ -5,17 +5,17 @@ description: Ce guide de démarrage rapide montre comment installer SQL Server 
 author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: d94e90e67814ec2dd1541abdbd52b04152681d84
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558434"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776406"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Red Hat
 
@@ -30,7 +30,7 @@ Dans ce démarrage rapide, vous installez SQL Server 2017 ou SQL Server 2019 s
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Dans ce guide de démarrage rapide, vous installez SQL Server 2019 sur ed Hat Enterprise Linux (RHEL) 7.3+. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Dans ce guide de démarrage rapide, vous installez SQL Server 2019 sur Red Hat Enterprise Linux (RHEL) 8. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 ::: moniker-end
 
@@ -39,7 +39,19 @@ Dans ce guide de démarrage rapide, vous installez SQL Server 2019 sur ed Hat E
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+Vous devez disposer d’une machine RHEL 7.3, 7.4, 7.5, 7.6 ou 8 avec **au moins 2 Go** de mémoire.
+
+::: moniker-end
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 Vous devez disposer d’une machine RHEL 7.3, 7.4, 7.5 ou 7.6 avec **au moins 2 Go** de mémoire.
+
+::: moniker-end
 
 Pour installer Red Hat Enterprise Linux sur votre propre machine, voir [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [Créer et gérer des machines virtuelles Linux avec l’interface Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), puis utilisez `--image RHEL` dans l’appel à `az vm create`.
 
@@ -64,7 +76,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
    > Si vous voulez tester SQL Server 2019, vous devez inscrire à la place le référentiel SQL Server 2019. Utilisez la commande suivante pour les installations SQL Server 2019 :
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    > ```
 
 2. Exécutez les commandes suivantes pour installer SQL Server :
@@ -111,7 +123,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
 1. Téléchargez le fichier config du référentiel Microsoft SQL Server 2019 Red Hat :
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    ```
 
 2. Exécutez les commandes suivantes pour installer SQL Server :
@@ -146,6 +158,9 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
 
 ::: moniker-end
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ## <a id="tools"></a>Installer les outils en ligne de commande SQL Server
 
 Pour créer une base de données, vous devez vous connecter à un outil capable d’exécuter des instructions Transact-SQL sur SQL Server. Les étapes suivantes installent les outils en ligne de commande SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
@@ -175,5 +190,42 @@ Pour créer une base de données, vous devez vous connecter à un outil capable 
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="tools"></a>Installer les outils en ligne de commande SQL Server
+
+Pour créer une base de données, vous devez vous connecter à un outil capable d’exécuter des instructions Transact-SQL sur SQL Server. Les étapes suivantes installent les outils en ligne de commande SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
+
+1. Téléchargez le fichier config du référentiel Microsoft Red Hat.
+
+   ```bash
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
+   ```
+
+1. Si vous aviez une version précédente de **mssql-tools** installée, supprimez tous les anciens packages unixODBC.
+
+   ```bash
+   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   ```
+
+1. Exécutez les commandes suivantes pour installer **mssql-tools** avec le package pour développeur unixODBC.
+
+   ```bash
+   sudo yum install -y mssql-tools unixODBC-devel
+   ```
+
+1. Par commodité, ajoutez `/opt/mssql-tools/bin/` à votre variable d'environnement **PATH**. Vous pourrez ainsi exécuter les outils sans spécifier le chemin complet. Exécutez les commandes suivantes afin de modifier la variable **PATH** pour les sessions de connexion et les sessions interactives/sans connexion :
+
+   ```bash
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+::: moniker-end
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

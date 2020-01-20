@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: bf7b3f2fc9d0bb8c801bf7f0417a3b79d6d373fb
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681780"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952368"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Crée une source de données externe pour l’interrogation à l’aide de SQL Server, SQL Database, SQL Data Warehouse ou le système de la plateforme d’analyse (Parallel Data Warehouse ou PDW).
+Crée une source de données externe pour le requêtage avec SQL Server, SQL Database, Azure Synapse Analytics ou Analytics Platform System (Parallel Data Warehouse ou PDW).
 
 Cet article fournit la syntaxe, les arguments, les notes, les autorisations et des exemples associés au produit SQL que vous choisissez.
 
@@ -42,7 +42,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **_\* SQL Server \*_** &nbsp; | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -59,7 +59,7 @@ Crée une source de données externe pour des requêtes PolyBase. Des sources de
 ## <a name="syntax"></a>Syntaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CONNECTION_OPTIONS        = '<name_value_pairs>']
@@ -105,7 +105,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 
 - Le moteur SQL ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. Pour valider, créez une table externe à l’aide d’une source de données externe.
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
-- Vous pouvez utiliser le préfixe d’emplacement `sqlserver` pour connecter SQL Server 2019 à SQL Server, SQL Database ou SQL Data Warehouse.
+- Vous pouvez utiliser le préfixe d’emplacement `sqlserver` pour connecter SQL Server 2019 à SQL Server, SQL Database ou Azure Synapse Analytics.
 - Spécifiez `Driver={<Name of Driver>}` lors de la connexion via `ODBC`.
 - `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
 - Pour garantir la réussite des requêtes PolyBase lors du basculement du `Namenode` Hadoop, envisagez d’utiliser une adresse IP virtuelle pour le `Namenode`du cluster Hadoop. Dans le cas contraire, exécutez une commande [ALTER EXTERNAL DATA SOURCE][alter_eds] pour pointer vers le nouvel emplacement.
@@ -158,7 +158,7 @@ Pour obtenir un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des do
 
 Configurez cette valeur facultative lors de la connexion à Hortonworks ou Cloudera.
 
-Lorsque `RESOURCE_MANAGER_LOCATION` est défini, l’optimiseur de requête prend une décision basée sur le coût pour améliorer les performances. Une tâche MapReduce peut être utilisée pour transmettre le calcul à Hadoop. En spécifiant `RESOURCE_MANAGER_LOCATION`, il est possible de considérablement réduire le volume des données transférées entre Hadoop et SQL, ce qui peut donc améliorer les performances des requêtes.  
+Lorsque `RESOURCE_MANAGER_LOCATION` est défini, l’optimiseur de requête prend une décision basée sur le coût pour améliorer les performances. Une tâche MapReduce peut être utilisée pour transmettre le calcul à Hadoop. En spécifiant `RESOURCE_MANAGER_LOCATION`, il est possible de considérablement réduire le volume des données transférées entre Hadoop et SQL, ce qui peut donc améliorer les performances des requêtes.
 
 Si le Gestionnaire des ressources n’est pas spécifié, le transfert de calcul dans Hadoop est désactivé pour les requêtes PolyBase.
 
@@ -187,7 +187,7 @@ Nécessite l’autorisation CONTROL sur la base de données dans SQL Server.
 
 ## <a name="locking"></a>Verrouillage
 
-Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.  
+Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.
 
 ## <a name="security"></a>Sécurité
 
@@ -233,7 +233,7 @@ Pour obtenir des exemples supplémentaires pour d’autres sources de données t
 
 Pour créer une source de données externe pour faire référence à votre cluster Hortonworks ou Cloudera Hadoop, spécifiez le nom de l’ordinateur ou l’adresse IP du port et du `Namenode` Hadoop. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -246,7 +246,7 @@ WITH
 
 Spécifiez l’option `RESOURCE_MANAGER_LOCATION` pour activer le calcul transmis à Hadoop pour des requêtes PolyBase. Une fois activé, PolyBase prend une décision basée sur les coûts pour déterminer si le calcul de la requête doit être poussé vers Hadoop.
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -260,7 +260,7 @@ WITH
 
 Pour vérifier si le cluster Hadoop est sécurisé par Kerberos, regardez la valeur de la propriété hadoop.security.authentication dans Hadoop core-site.xml. Pour faire référence à un cluster Hadoop sécurisé par Kerberos, vous devez spécifier des informations d’identification limitées à la base de données qui contiennent votre nom d’utilisateur et votre mot de passe Kerberos. La clé principale de la base de données est utilisée pour chiffrer le secret des informations d’identification limitées à la base de données.
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;
@@ -317,18 +317,19 @@ Pour créer une source de données externe qui référence une instance nommée 
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019',
   CONNECTION_OPTIONS = 'Server=%s\SQL2019',
   CREDENTIAL = SQLServerCredentials
 );
 
 ```
+
 Vous pouvez également utiliser un port pour vous connecter à une instance de SQL Server.
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019:58137',
   CREDENTIAL = SQLServerCredentials
 );
@@ -403,7 +404,7 @@ Pour voir une utilisation de cet exemple, consultez [BULK INSERT][bulk_insert_ex
 
 |                                                              |                                 |                                                              |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
@@ -413,13 +414,13 @@ Pour voir une utilisation de cet exemple, consultez [BULK INSERT][bulk_insert_ex
 Crée une source de données externe pour des requêtes élastiques. Des sources de données externes sont utilisées pour établir la connectivité et prendre en charge ces principaux cas d’utilisation :
 
 - Les opérations de chargement en bloc à l’aide de `BULK INSERT` ou `OPENROWSET`
-- Interrogation d’instances distantes de SQL Database ou de SQL Data Warehouse à l’aide de SQL Database avec des [requêtes élastiques][remote_eq]
+- Interrogation d’instances distantes SQL Database ou Azure Synapse à l’aide de SQL Database avec des [requêtes élastiques][remote_eq]
 - Interrogation d’une base Azure SQL Database partitionnée à l’aide de [requêtes élastiques][sharded_eq]
 
 ## <a name="syntax"></a>Syntaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -434,7 +435,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-Spécifie le nom défini par l’utilisateur de la source de données. Ce nom doit être unique dans la base de données de SQL Database (SQL DB).
+Spécifie le nom défini par l’utilisateur de la source de données. Ce nom doit être unique dans la base de données de SQL Database.
 
 ### <a name="location--prefixpathport"></a>EMPLACEMENT = *`'<prefix>://<path[:port]>'`*
 
@@ -476,7 +477,7 @@ Pour créer des informations d’identification délimitées à la base de donn�
 
 Spécifie le type de source de données externe en cours de configuration. Ce paramètre n’est pas toujours requis.
 
-- Utilisez SGBDR pour les requêtes de bases de données croisées utilisant les requêtes élastiques à partir de SQL Database.  
+- Utilisez SGBDR pour les requêtes de bases de données croisées utilisant les requêtes élastiques à partir de SQL Database.
 - Utilisez SHARD_MAP_MANAGER lors de la création d’une source de données externe lorsque vous vous connectez à une base de données SQL partitionnée.
 - Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset].
 
@@ -506,7 +507,7 @@ Nécessite l’autorisation CONTROL sur la base de données dans SQL Database.
 
 ## <a name="locking"></a>Verrouillage
 
-Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.  
+Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.
 
 ## <a name="examples"></a>Exemples :
 
@@ -545,7 +546,7 @@ Pour créer une source de données externe pour faire référence à un SGBDR, s
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 ;
 
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
+CREATE DATABASE SCOPED CREDENTIAL SQL_Credential
 WITH
      IDENTITY  = '<username>'
 ,    SECRET    = '<password>'
@@ -630,22 +631,22 @@ Pour voir une utilisation de cet exemple, consultez [BULK INSERT][bulk_insert_ex
 
 |                                                              |                                                              |                                            |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL Data<br />Warehouse \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Azure Synapse<br />Analytics \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Présentation : Azure SQL Data Warehouse.
+## <a name="overview-azure-synapse-analytics"></a>Présentation : Azure Synapse Analytics
 
 Crée une source de données externe pour PolyBase. Des sources de données externes sont utilisées pour établir la connectivité et prendre en charge le cas d’utilisation principal suivant : Virtualisation des données et chargement des données à l’aide de [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
-> Pour créer une source de données externes afin d’interroger des instances SQL Database Warehouse à l’aide de SQL Database avec des [requêtes élastiques][remote_eq], consultez [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current).
+> Pour créer une source de données externes afin d’interroger une ressource SQL Analytics en utilisant Azure SQL Database avec des [requêtes élastiques][remote_eq], consultez [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current).
 
 ## <a name="syntax"></a>Syntaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -658,7 +659,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-Spécifie le nom défini par l’utilisateur de la source de données. Ce nom doit être unique dans la base de données de SQL Data Warehouse (SQL DW).
+Spécifie le nom défini par l’utilisateur de la source de données. Le nom doit être unique au sein de la base de données SQL dans Azure Synapse.
 
 ### <a name="location--prefixpathport"></a>EMPLACEMENT = *`'<prefix>://<path[:port]>'`*
 
@@ -677,8 +678,8 @@ Chemin d’emplacement :
 
 Remarques et conseils supplémentaires lors de la définition de l’emplacement :
 
-- L’option par défaut consiste à utiliser `enable secure SSL connections` lors du provisionnement d’Azure Data Lake Storage Gen 2. Si cette option est activée, vous devez utiliser `abfss` lorsqu’une connexion SSL sécurisée est sélectionnée. Notez que `abfss` fonctionne également pour les connexions SSL non sécurisées. 
-- Le moteur SQL Data Warehouse ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. Pour valider, créez une table externe à l’aide d’une source de données externe.
+- L’option par défaut consiste à utiliser `enable secure SSL connections` lors du provisionnement d’Azure Data Lake Storage Gen 2. Si cette option est activée, vous devez utiliser `abfss` lorsqu’une connexion SSL sécurisée est sélectionnée. Notez que `abfss` fonctionne également pour les connexions SSL non sécurisées.
+- Azure Synapse ne vérifie pas l’existence de la source de données externe lorsque l’objet est créé. . Pour valider, créez une table externe à l’aide d’une source de données externe.
 - Utilisez la même source de données externe pour toutes les tables lors de l’interrogation de Hadoop afin de garantir la cohérence des paramètres sémantiques de requête.
 - `wasb` est le protocole par défaut pour le stockage d’objets blob Azure. `wasbs` est facultatif mais recommandé, car il permet d’envoyer les données au moyen d’une connexion SSL sécurisée.
 
@@ -706,11 +707,11 @@ Pour obtenir un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des do
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation CONTROL sur la base de données dans SQL Data Warehouse.
+Requiert l'autorisation CONTROL sur la base de données.
 
 ## <a name="locking"></a>Verrouillage
 
-Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.  
+Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.
 
 ## <a name="security"></a>Sécurité
 
@@ -843,8 +844,8 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
-- [CREATE EXTERNAL TABLE AS SELECT (Azure SQL Data Warehouse)][create_etb_as_sel]
-- [CREATE TABLE AS SELECT (Azure SQL Data Warehouse)][create_tbl_as_sel]
+- [CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)][create_etb_as_sel]
+- [CREATE TABLE AS SELECT (Azure Synapse Analytics)][create_tbl_as_sel]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]
 - [Utilisation des signatures d’accès partagé (SAP)][sas_token]
 
@@ -885,7 +886,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 
 |                                                              |                                                              |                                                              |                                                         |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [Base de données SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
 |                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
@@ -897,7 +898,7 @@ Crée une source de données externe pour des requêtes PolyBase. Des sources de
 ## <a name="syntax"></a>Syntaxe
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -960,7 +961,7 @@ Pour obtenir un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des do
 
 Configurez cette valeur facultative lors de la connexion à Hortonworks ou Cloudera.
 
-Lorsque `RESOURCE_MANAGER_LOCATION` est défini, l’optimiseur de requête prend une décision basée sur le coût pour améliorer les performances. Une tâche MapReduce peut être utilisée pour transmettre le calcul à Hadoop. En spécifiant `RESOURCE_MANAGER_LOCATION`, il est possible de considérablement réduire le volume des données transférées entre Hadoop et SQL, ce qui peut donc améliorer les performances des requêtes.  
+Lorsque `RESOURCE_MANAGER_LOCATION` est défini, l’optimiseur de requête prend une décision basée sur le coût pour améliorer les performances. Une tâche MapReduce peut être utilisée pour transmettre le calcul à Hadoop. En spécifiant `RESOURCE_MANAGER_LOCATION`, il est possible de considérablement réduire le volume des données transférées entre Hadoop et SQL, ce qui peut donc améliorer les performances des requêtes.
 
 Si le Gestionnaire des ressources n’est pas spécifié, le transfert de calcul dans Hadoop est désactivé pour les requêtes PolyBase.
 
@@ -978,7 +979,7 @@ Si le port n’est pas spécifié, la valeur par défaut est déterminée d’ap
 
 Pour obtenir la liste complète des versions de Hadoop prises en charge, consultez [Configuration de la connectivité PolyBase (Transact-SQL)][connectivity_pb].
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > La valeur RESOURCE_MANAGER_LOCATION n’est pas validée lorsque vous créez la source de données externe. La saisie d’une valeur incorrecte peut entraîner l’échec de la requête au moment de l’exécution chaque fois qu’une transmission est tentée, étant donné que la valeur fournie ne serait pas en mesure d’être résolue.
 
 [Créer une source de données externe pour faire référence à Hadoop avec la transmission activée](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) fournit un exemple concret ainsi que des instructions complémentaires.
@@ -992,7 +993,7 @@ Nécessite l’autorisation CONTROL sur la base de données dans le système de 
 
 ## <a name="locking"></a>Verrouillage
 
-Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.  
+Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.
 
 ## <a name="security"></a>Sécurité
 
@@ -1008,7 +1009,7 @@ Actuellement un jeton SAP avec le type `HADOOP` n’est pas pris en charge. Il e
 
 Pour créer une source de données externe pour faire référence à votre cluster Hortonworks ou Cloudera Hadoop, spécifiez le nom de l’ordinateur ou l’adresse IP du port et du `Namenode` Hadoop. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -1021,7 +1022,7 @@ WITH
 
 Spécifiez l’option `RESOURCE_MANAGER_LOCATION` pour activer le calcul transmis à Hadoop pour des requêtes PolyBase. Une fois activé, PolyBase prend une décision basée sur les coûts pour déterminer si le calcul de la requête doit être poussé vers Hadoop.
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -1035,7 +1036,7 @@ WITH
 
 Pour vérifier si le cluster Hadoop est sécurisé par Kerberos, regardez la valeur de la propriété hadoop.security.authentication dans Hadoop core-site.xml. Pour faire référence à un cluster Hadoop sécurisé par Kerberos, vous devez spécifier des informations d’identification limitées à la base de données qui contiennent votre nom d’utilisateur et votre mot de passe Kerberos. La clé principale de la base de données est utilisée pour chiffrer le secret des informations d’identification limitées à la base de données.
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;

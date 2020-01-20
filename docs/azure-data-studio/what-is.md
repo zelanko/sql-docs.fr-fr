@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241745"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952410"
 ---
 # <a name="what-is-azure-data-studio"></a>Qu’est-ce qu’Azure Data Studio ?
 
@@ -33,7 +33,7 @@ Le code source d’Azure Data Studio et de ses fournisseurs de données est disp
 
 ## <a name="smart-sql-code-snippets"></a>Extraits de code Smart SQL
 
-Les extraits de code SQL génèrent la syntaxe SQL appropriée pour créer des bases de données, des tables, des vues, des procédures stockées, des utilisateurs, des connexions, des rôles, etc., ainsi que pour mettre à jour des objets de base de données existants. Utilisez les extraits intelligents pour créer rapidement des copies de votre base de données à des fins de développement ou de test, et pour générer et exécuter des scripts CREATE et INSERT.
+Les extraits de code SQL génèrent la syntaxe SQL appropriée pour créer des bases de données, des tables, des vues, des procédures stockées, des utilisateurs, des connexions et des rôles, ainsi que pour mettre à jour des objets de base de données existants. Utilisez les extraits intelligents pour créer rapidement des copies de votre base de données à des fins de développement ou de test, et pour générer et exécuter des scripts CREATE et INSERT.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit également des fonctionnalités permettant de créer des extraits de code SQL personnalisés. Pour plus d’informations, consultez [Créer et utiliser des extraits de code](code-snippets.md).
 
@@ -51,7 +51,7 @@ Utilisez vos outils en ligne de commande préférés (par exemple Bash, PowerShe
 
 ## <a name="extensibility-and-extension-authoring"></a>Extensibilité et création d’extensions
 
-Améliorez l’expérience [!INCLUDE[name-sos](../includes/name-sos-short.md)] en étendant les fonctionnalités de l’installation de base. [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit des points d’extensibilité pour les activités de gestion des données, ainsi que la prise en charge de la création d’extensions.
+Améliorez l’expérience [!INCLUDE[name-sos](../includes/name-sos-short.md)] en étendant les fonctionnalités de l’installation de base. [!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit des points d’extensibilité pour les activités de gestion des données et la prise en charge de la création d’extensions.
 
 Pour en savoir plus sur l’extensibilité dans [!INCLUDE[name-sos](../includes/name-sos-short.md)], consultez [Extensibilité](extensibility.md).
 Pour en savoir plus sur la création d'extensions, consultez [Création d’une extension](extension-authoring.md).
@@ -96,7 +96,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Mode sombre|Oui||
 |Azure Resource Explorer|PRÉVERSION||
 |Assistant Générer des scripts||Oui|
-|Importation/exportation de DACPAC||Oui|
+|Import/exporter un package DAC (DACPAC)||Oui|
 |Propriétés des objets||Oui|
 |Concepteur de tables||Oui|
 
@@ -119,7 +119,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Notebooks|Oui||
 |Enregistrer la requête sous forme d’extrait de code|Oui||
 
-### <a name="operating-system-support"></a>Prise en charge du système d'exploitation
+### <a name="operating-system-support"></a>Prise en charge du système d’exploitation
 
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -131,9 +131,9 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Assistant Créer une table externe|PRÉVERSION||
-|Intégration HDFS|PRÉVERSION||
-|Notebooks|PRÉVERSION||
+|Assistant Créer une table externe|Oui||
+|Intégration HDFS|Oui||
+|Notebooks|Oui||
 
 ### <a name="database-administration"></a>Administration de bases de données
 
@@ -147,7 +147,7 @@ Pour en savoir plus sur la création d'extensions, consultez [Création d’une 
 |Always On||Oui|
 |Always Encrypted||Oui|
 |Assistant Copier des données||Oui|
-|Assistant Paramétrage des données||Oui|
+|Database Engine Tuning Advisor||Oui|
 |Visionneuse de journal des erreurs||Oui|
 |Plans de maintenance||Oui|
 |Requêtes sur plusieurs serveurs||Oui|

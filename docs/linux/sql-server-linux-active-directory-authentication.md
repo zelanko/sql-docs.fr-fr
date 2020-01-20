@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 72a1a554203349e9e6bd8cee43d2a6fe9d093ad8
-ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.openlocfilehash: 90c0023c0de69c03f64d33ff64866b0e5ff4f5ba
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755864"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924952"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutoriel : Utiliser l’authentification Active Directory avec SQL Server sur Linux
 
@@ -64,7 +64,7 @@ Joignez votre hôte SQL Server Linux à un contrôleur de domaine Active Directo
    ```
 
    > [!NOTE]
-   > La meilleure pratique de sécurité consiste à disposer d’un compte AD dédié pour SQL Server, afin que les informations d’identification de SQL Server ne soient pas partagées avec d’autres services utilisant le même compte. Toutefois, vous pouvez éventuellement réutiliser un compte AD existant si vous connaissez le mot de passe du compte (qui est requis pour générer un fichier keytab à l’étape suivante).
+   > La meilleure pratique de sécurité consiste à disposer d’un compte AD dédié pour SQL Server, afin que les informations d’identification de SQL Server ne soient pas partagées avec d’autres services utilisant le même compte. Toutefois, vous pouvez éventuellement réutiliser un compte AD existant si vous connaissez le mot de passe du compte (qui est requis pour générer un fichier keytab à l’étape suivante). De plus, le compte doit être activé pour prendre en charge le chiffrement Kerberos AES 128 bits et 256 bits (attribut **msDS-SupportedEncryptionTypes**) sur le compte d’utilisateur.
 
 2. Définissez le nom de principal du service (SPN) pour ce compte à l’aide de l’outil **setspn.exe**. Le SPN doit être mis en forme exactement comme spécifié dans l’exemple suivant. Vous pouvez trouver le nom de domaine complet de la machine hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en exécutant `hostname --all-fqdns` sur l'hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le port TCP doit être 1433, sauf si vous avez configuré [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour utiliser un numéro de port différent.
 
@@ -114,13 +114,13 @@ La configuration de l’authentification AD pour SQL Server sur Linux nécessite
 
    ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
    ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ <UserName>@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+   ktpass /princ <UserName>@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
    > [!NOTE]

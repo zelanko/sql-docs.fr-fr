@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 6976d81994dbc8db154b285da03bed2397e9fee1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558494"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884035"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer un cluster RHEL pour le groupe de disponibilité SQL Server
 
@@ -163,7 +163,10 @@ Pour créer la ressource de groupe de disponibilité, utilisez la commande `pcs 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+> [!NOTE]
+> Avec la disponibilité de **RHEL 8**, la syntaxe de création a changé. Si vous utilisez **RHEL 8**, la terminologie `master` a été remplacée par `promotable`. Utilisez la commande de création suivante à la place de la commande ci-dessus : `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -187,8 +190,20 @@ Sur un cluster Pacemaker, vous pouvez manipuler les décisions du cluster avec l
 
 Pour vous assurer que le réplica principal et les ressources d’adresse IP virtuelle sont exécutés sur le même hôte, définissez une contrainte de colocalisation avec un score INFINITY. Pour ajouter une contrainte de colocalisation, exécutez la commande suivante sur un nœud.
 
+### <a name="rhel-7"></a>RHEL 7
+
+Lorsque vous créez la ressource `ag_cluster` dans RHEL 7, la ressource est créée en tant que `ag_cluster-master`. Utilisez la commande suivante pour RHEL 7 :
+
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+Lorsque vous créez la ressource `ag_cluster` dans RHEL 8, la ressource est créée en tant que `ag_cluster-clone`. Utilisez la commande suivante pour RHEL 8 :
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>Ajouter une contrainte de classement
@@ -209,8 +224,16 @@ Pour empêcher l’adresse IP de pointer temporairement vers le nœud avec le se
 
 Pour ajouter une contrainte de classement, exécutez la commande suivante sur un nœud :
 
+### <a name="rhel-7"></a>RHEL 7
+
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 >[!IMPORTANT]
