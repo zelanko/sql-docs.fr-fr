@@ -1,6 +1,7 @@
 ---
-title: Configurer la réplication SQL Server sur Linux
+title: Configurer la réplication (SSMS)
 description: Cet article décrit comment configurer la réplication SQL Server sur Linux.
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,13 +10,14 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67895936"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952497"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurer la réplication SQL Server sur Linux
 
@@ -23,7 +25,7 @@ ms.locfileid: "67895936"
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit la réplication SQL Server pour les instances SQL Server sur Linux.
 
-Pour des informations détaillées sur la réplication, consultez la [documentation sur la réplication SQL Server](../relational-databases/replication/sql-server-replication.md).
+Pour plus d’informations sur la réplication, consultez la [documentation sur la réplication SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 Configurez la réplication sur Linux avec SQL Server Management Studio (SSMS) ou les procédures stockées Transact-SQL.
 
@@ -79,13 +81,13 @@ Pour configurer le distributeur :
 
 Pour créer une publication et des articles :
 
-1. Dans l'Explorateur d'objets, cliquez sur **Réplication** > **Publications locales**> **Nouvelle publication...** .
+1. Dans l'Explorateur d'objets, cliquez sur **Réplication** > **Publications locales**> **Nouvelle publication...**.
 
 1. Suivez les instructions de l’**Assistant Nouvelle publication** pour configurer le type de réplication et les articles qui appartiennent à la publication.
 
 ### <a name="configure-the-subscription"></a>Configurer l'abonnement
 
-Pour configurer l'abonnement dans l'Explorateur d'objets, cliquez sur **Réplication** > **Abonnements locaux**> **Nouveaux abonnements...** .
+Pour configurer l'abonnement dans l'Explorateur d'objets, cliquez sur **Réplication** > **Abonnements locaux**> **Nouveaux abonnements...**.
 
 ### <a name="monitor-replication-jobs"></a>Surveiller les travaux de réplication
 

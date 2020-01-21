@@ -1,6 +1,6 @@
 ---
-title: 'Enquête rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL | Microsoft Docs'
-ms.custom: ''
+title: OLTP en mémoire pour des performances T-SQL plus rapides
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712945"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412504"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Inspection des zones initiales dans OLTP en mémoire
 
@@ -78,7 +78,7 @@ Il existe deux scénarios principaux :
 Cet article se concentre sur OLTP et non sur l’analyse. Pour plus d’informations sur la façon dont les index columnstore permettent à SQL de bénéficier de l’analytique, consultez :  
   
 - [Prise en main de columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
-- [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+- [Description des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
   
   
 > [!NOTE]
@@ -253,7 +253,7 @@ ALTER TABLE...ADD/DROP peut ajouter ou supprimer une colonne dans une table opti
   
   
 - [Index pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-- [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+- [Constructions Transact-SQL non prises en charge par In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
   
@@ -403,7 +403,7 @@ Le reste de cette section répertorie les principaux éléments à prendre en co
 - [Taille de la table et des lignes dans les tables mémoire optimisées](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Partitionner votre table volumineuse :** une façon de répondre à la demande d’une quantité de mémoire active élevée consiste à partitionner votre table volumineuse en parties en mémoire qui stockent les lignes de données *récentes à chaud*, tandis que les autres parties sur le disque comportent les lignes *héritées à froid* (telles que les commandes qui ont été entièrement livrées et terminées). Ce partitionnement est un processus manuel de conception et d’implémentation. Consultez :  
+**Partitionner votre table volumineuse :** une façon de répondre à la demande d’une quantité de mémoire active élevée consiste à partitionner votre table volumineuse en parties en mémoire qui stockent les lignes de données *récentes à chaud*, tandis que les autres parties sur le disque comportent les lignes *héritées à froid* (telles que les commandes qui ont été entièrement livrées et terminées). Ce partitionnement est un processus manuel de conception et d’implémentation. Consultez l'article :  
   
 - [Partitionnement au niveau de l’application](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Modèle d’application pour partitionner des tables mémoire optimisées](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -424,9 +424,9 @@ Les[index pour les tables optimisées en mémoire](../../relational-databases/in
 - [Index de hachage pour les tables mémoire optimisées](../../relational-databases/sql-server-index-design-guide.md#hash_index)
 - [Index non-cluster pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
-Vous devez vous assurer qu’il y aura suffisamment de mémoire active pour votre table optimisée en mémoire planifié et ses index. Consultez :  
+Vous devez vous assurer qu’il y aura suffisamment de mémoire active pour votre table optimisée en mémoire planifié et ses index. Consultez l'article :  
   
-- [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+- [Création et gestion du stockage des objets à mémoire optimisée](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
 Vous pouvez déclarer une table optimisée en mémoire avec DURABILITY = SCHEMA_ONLY :  
   
@@ -434,7 +434,7 @@ Vous pouvez déclarer une table optimisée en mémoire avec DURABILITY = SCHEMA_
 - Quand la base de données est remise en ligne, la table optimisée en mémoire est rechargée, vide, en mémoire active.  
 - Les tables SCHEMA_ONLY peuvent constituer une bonne [alternative aux tables #temporary](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) dans tempdb, quand plusieurs milliers de lignes sont impliqués.  
   
-Vous pouvez aussi déclarer des variables de table comme mémoire optimisée. Consultez :  
+Vous pouvez aussi déclarer des variables de table comme mémoire optimisée. Consultez l'article :  
   
 - [Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
@@ -477,7 +477,7 @@ Consultez les autres articles suivants qui traitent de considérations spéciale
   - Le stockage utilisé par les tables optimisées en mémoire peut être bien supérieur à sa taille en mémoire, et il affecte la taille de la sauvegarde de base de données.  
 - [Transactions avec tables optimisées en mémoire](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Fournit des informations sur la logique de nouvelle tentative dans T-SQL, pour les transactions sur les tables optimisées en mémoire.  
-- [Prise en charge d’OLTP en mémoire par Transact-SQL](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+- [Prise en charge de Transact-SQL pour OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Instructions T-SQL et types de données pris en charge et non pris en charge, pour les procédures natives et les tables optimisées en mémoire  
 - [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md), qui présente une considération avancée optionnelle.  
 
@@ -493,7 +493,7 @@ L’article suivant, et ses articles enfants dans la table des matières, décri
   
 ## <a name="related-links"></a>Liens connexes  
   
-- Article initial : [OLTP en mémoire (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Article initial : [In-Memory OLTP (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Voici des articles qui contiennent du code pour illustrer les gains de performance que vous pouvez obtenir à l’aide de l’OLTP en mémoire :  
   

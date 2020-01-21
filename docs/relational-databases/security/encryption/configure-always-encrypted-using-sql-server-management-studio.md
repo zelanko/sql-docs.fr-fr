@@ -1,6 +1,7 @@
 ---
-title: Configurer Always Encrypted à l’aide de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Configurer Always Encrypted à l’aide de SSMS
+description: Décrit les tâches de configuration et de gestion des bases de données Always Encrypted avec SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff7ef354fdf3118f68c22bf2ad927070bf8e4b6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7c033cf8200103fe6198661f7ed0e3e2a6c3966a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594423"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557864"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,16 +34,16 @@ SSMS ne prend pas en charge la séparation des rôles entre ceux qui gèrent la 
 ## <a name="always-encrypted-tasks-using-ssms"></a>Tâches Always Encrypted à l’aide de SSMS
 
 - [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-- [Permuter des clés Always Encrypted à l’aide de SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+- [Effectuer une rotation des clés Always Encrypted avec SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 - [Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted](always-encrypted-wizard.md)
-- [Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec un package DAC](configure-always-encrypted-using-dacpac.md)
-- [Interroger les colonnes à l’aide d’Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Exporter et importer des bases de données à l’aide d’Always Encrypted](always-encrypted-migrate-using-bacpac.md)
-- [Sauvegarder et restaurer des bases de données à l’aide d’Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
+- [Configurer le chiffrement de colonne en utilisant Always Encrypted avec un package DAC](configure-always-encrypted-using-dacpac.md)
+- [Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Exporter et importer des bases de données avec Always Encrypted](always-encrypted-migrate-using-bacpac.md)
+- [Sauvegarder et restaurer des bases de données avec Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
 - [Migrer des données à partir ou à destination de colonnes à l’aide d’Always Encrypted avec l’Assistant Importation et exportation SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Vue d’ensemble de la gestion de clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md)
+- [Développer des applications avec Always Encrypted](always-encrypted-client-development.md)

@@ -1,7 +1,7 @@
 ---
 title: DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 90622710b19ef3c2692cdcff62089cb7539fcf97
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 6e75e84884bca1fef4d42a64056e2ef38111e6db
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632808"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952340"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -34,82 +34,82 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
 ## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server et instance managée SQL Database
 
+Supprime un groupe de charges de travail du gouverneur de ressources défini par l'utilisateur existant.
 
-  Supprime un groupe de charges de travail du gouverneur de ressources défini par l'utilisateur existant.  
-  
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-DROP WORKLOAD GROUP group_name  
-[;]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- *group_name*  
- Nom d'un groupe de charges de travail défini par l'utilisateur existant.  
-  
-## <a name="remarks"></a>Notes  
- L'instruction DROP WORKLOAD GROUP n'est pas autorisée sur les groupes interne ou par défaut du gouverneur de ressources.  
-  
- Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
-  
- Si un groupe de charges de travail contient des sessions actives, sa suppression ou son déplacement vers un pool de ressources différent échoue lorsque l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE est appelée pour appliquer la modification. Pour éviter ce problème, vous pouvez suivre l'une des actions suivantes :  
-  
--   Attendez la déconnexion de toutes les sessions du groupe affecté, puis réexécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.  
-  
--   Arrêtez explicitement les sessions du groupe affecté à l'aide de la commande KILL, puis réexécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.  
-  
--   Redémarrez le serveur. Au terme du processus de redémarrage, le groupe supprimé ne sera pas créé, et un groupe déplacé utilisera la nouvelle affectation de pool de ressources.  
-  
--   Dans un scénario dans lequel vous publiez l'instruction DROP WORKLOAD GROUP mais décidez que vous ne souhaitez pas arrêter explicitement des sessions pour appliquer la modification, vous pouvez recréer le groupe en utilisant le nom qu'il portait avant l'émission de l'instruction DROP, puis déplacer le groupe dans le pool de ressources d'origine. Pour appliquer les modifications, exécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.  
-  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```
+DROP WORKLOAD GROUP group_name
+[;]
+```
+
+## <a name="arguments"></a>Arguments
+
+*group_name* : nom d'un groupe de charges de travail défini par l'utilisateur existant.
+
+## <a name="remarks"></a>Notes 
+
+L'instruction DROP WORKLOAD GROUP n'est pas autorisée sur les groupes interne ou par défaut du gouverneur de ressources.
+
+Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
+
+Si un groupe de charges de travail contient des sessions actives, sa suppression ou son déplacement vers un pool de ressources différent échoue lorsque l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE est appelée pour appliquer la modification. Pour éviter ce problème, vous pouvez suivre l'une des actions suivantes :
+
+- Attendez la déconnexion de toutes les sessions du groupe affecté, puis réexécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.
+
+- Arrêtez explicitement les sessions du groupe affecté à l'aide de la commande KILL, puis réexécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.
+
+- Redémarrez le serveur. Au terme du processus de redémarrage, le groupe supprimé ne sera pas créé, et un groupe déplacé utilisera la nouvelle affectation de pool de ressources.
+
+- Dans un scénario dans lequel vous publiez l'instruction DROP WORKLOAD GROUP mais décidez que vous ne souhaitez pas arrêter explicitement des sessions pour appliquer la modification, vous pouvez recréer le groupe en utilisant le nom qu'il portait avant l'émission de l'instruction DROP, puis déplacer le groupe dans le pool de ressources d'origine. Pour appliquer les modifications, exécutez l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE.
+
 ## <a name="permissions"></a>Autorisations
 
- Requiert l'autorisation CONTROL SERVER.  
-  
+Requiert l'autorisation CONTROL SERVER.
+
 ## <a name="examples"></a>Exemples
 
- L'exemple suivant supprime le groupe de charges de travail nommé `adhoc`.  
-  
-```  
-DROP WORKLOAD GROUP adhoc;  
-GO  
-ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+L'exemple suivant supprime le groupe de charges de travail nommé `adhoc`.
+
+```
+DROP WORKLOAD GROUP adhoc;
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+
+## <a name="see-also"></a> Voir aussi
+
+- [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)
+- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)  
+- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)
+- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)
+- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
+- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
+- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > ||||
 > |---|---|---|
-> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[Instance managée<br />SQL Database](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[Instance managée<br />SQL Database](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
 
 &nbsp;
 
-## <a name="sql-data-warehouse-preview"></a>SQL Data Warehouse (préversion)
+## <a name="azure-synapse-analytics-preview"></a>Azure Synapse Analytics (préversion)
 
 Supprime un groupe de charge de travail.  Une fois l’instruction exécutée, les paramètres sont activés.
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -119,10 +119,10 @@ DROP WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Arguments
 
- *group_name*  
- Nom d'un groupe de charges de travail défini par l'utilisateur existant.
+*group_name*  
+Nom d'un groupe de charges de travail défini par l'utilisateur existant.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Un groupe de charge de travail ne peut pas être supprimé si des classifieurs ont été définis pour lui.  Vous devez supprimer les classifieurs existants avant de supprimer le groupe de charge de travail.  Si des requêtes actives utilisant des ressources du groupe de charge de travail sont supprimées, l’instruction de suppression du groupe de charge de travail est bloquée.
 
@@ -141,9 +141,10 @@ SELECT c.name as classifier_name
 
 ## <a name="permissions"></a>Autorisations
 
-Requiert l’autorisation CONTROL DATABASE
+Exige l’autorisation CONTROL DATABASE
 
 ## <a name="see-also"></a>Voir aussi
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
- 
+
+[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
+
 ::: moniker-end

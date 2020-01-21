@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281547"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947171"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Déployer un projet SSIS à partir de Visual Studio Code avec Transact-SQL
 
@@ -46,33 +46,37 @@ Pour activer les commandes `mssql` et T-SQL IntelliSense, définissez **SQL** co
 
 1. Ouvrez Visual Studio Code, puis ouvrez une nouvelle fenêtre. 
 
-2. Cliquez sur **Texte brut** en bas à droite de la barre d’état.
+2. Cliquez sur **Texte brut** dans le coin inférieur droit de la barre d’état.
  
 3. Dans le menu déroulant **Sélectionner le mode de langage** qui s’affiche, sélectionnez ou entrez **SQL**, puis appuyez sur **Entrée** pour définir SQL comme mode de langage. 
+
+## <a name="supported-authentication-method"></a>Méthode d’authentification prise en charge
+
+Consultez [Méthodes d’authentification pour le déploiement](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>Se connecter à la base de données du catalogue SSIS
 
 Utilisez Visual Studio Code pour établir une connexion au catalogue SSIS.
 
-1. Dans VS Code, appuyez sur **Ctrl+Maj+P** (ou **F1**) pour ouvrir la palette de commandes.
+1. Dans VS Code, appuyez sur **CTRL+MAJ+P** (ou **F1**) pour ouvrir la Palette de commandes.
 
-2. Tapez **sqlcon** et appuyez sur **Entrée**.
+2. Tapez **sqlcon**, puis appuyez sur **ENTRÉE**.
 
-3. Appuyez sur **Entrée** pour sélectionner **Créer un profil de connexion**. Cette étape crée un profil de connexion pour votre instance de SQL Server.
+3. Appuyez sur **ENTRÉE** pour sélectionner **Créer un profil de connexion**. Cette étape crée un profil de connexion pour votre instance de SQL Server.
 
-4. Suivez les invites afin de spécifier les propriétés de connexion pour le nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **Entrée** pour continuer. 
+4. Suivez les invites pour spécifier les propriétés de connexion de ce nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **ENTRÉE** pour continuer. 
 
    | Paramètre       | Valeur suggérée | En savoir plus |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nom du serveur** | Nom complet du serveur |  |
-   | **Nom de la base de données** | **SSISDB** | Nom de la base de données avec laquelle établir une connexion. |
+   | **Nom de la base de données** | **SSISDB** | Nom de la base de données à laquelle se connecter. |
    | **Authentification** | Connexion SQL | |
-   | **User name** | Compte Administrateur du serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
-   | **Mot de passe (connexion SQL)** | Mot de passe du compte Administrateur de votre serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
-   | **Enregistrer le mot de passe** | Oui ou Non | Si vous ne souhaitez pas entrer le mot de passe à chaque fois, sélectionnez Oui. |
-   | **Entrez un nom pour ce profil** | Nom d’un profil, tel que **mySSISServer** | L’enregistrement du nom de profil permet d’accélérer les connexions suivantes. | 
+   | **Nom d'utilisateur** | Compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
+   | **Mot de passe (connexion SQL)** | Mot de passe de votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
+   | **Enregistrer le mot de passe ?** | Oui ou Non | Si vous ne souhaitez pas entrer le mot de passe à chaque fois, sélectionnez Oui. |
+   | **Entrez un nom pour ce profil** | Nom d’un profil, tel que **mySSISServer** | Un nom de profil enregistré permet d’accélérer votre connexion lors des connexions suivantes. | 
 
-5. Appuyez sur la touche **Échap** pour fermer le message d’information qui vous signale que le profil a été créé et connecté.
+5. Appuyez sur la touche **ÉCHAP** pour fermer le message d’information qui vous informe que le profil est créé et connecté.
 
 6. Vérifiez votre connexion dans la barre d’état.
 
@@ -103,7 +107,7 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Déployer un package SSIS à partir de l’invite de commandes](./ssis-quickstart-deploy-cmdline.md)
     - [Déployer un package SSIS avec PowerShell](ssis-quickstart-deploy-powershell.md)
     - [Déployer un package SSIS avec C#](./ssis-quickstart-deploy-dotnet.md) 
-- Exécutez un package déployé. Pour exécuter un package, vous pouvez choisir parmi plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
+- Exécutez un package déployé. Pour exécuter un package, vous pouvez choisir parmi plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
     - [Exécuter un package SSIS avec SSMS](./ssis-quickstart-run-ssms.md)
     - [Exécuter un package SSIS avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Exécuter un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

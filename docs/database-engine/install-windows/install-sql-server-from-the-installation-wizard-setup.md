@@ -1,7 +1,7 @@
 ---
-title: Installer SQL Server 2016 avec l’Assistant Installation (programme d’installation) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: Installer le service à l’aide de l’interface utilisateur graphique
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73962376"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259023"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73962376"
 
 Cet article explique comment installer SQL Server avec l’Assistant Installation. Il s’applique à [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] et [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
-Cet article fournit une procédure d’installation pas à pas d’une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l’Assistant Installation de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'Assistant Installation fournit une seule arborescence de fonctionnalités pour l'installation de tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’éviter de les installer individuellement. Pour installer les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuellement, consultez [Installer SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+Cet article fournit une procédure d’installation pas à pas d’une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l’Assistant Installation de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'Assistant Installation fournit une seule arborescence de fonctionnalités pour l'installation de tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’éviter de les installer individuellement. Pour installer les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] individuellement, consultez [Installer SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
 Pour les autres façons d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez :  
 
@@ -232,7 +232,7 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
    Pour continuer, sélectionnez **suivant**.
 
   
-1. Sur la page **Termes du contrat de licence**, consultez le contrat de licence. Si vous acceptez, cochez la case **J’accepte les termes du contrat de licence et la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement)** , puis sélectionnez **Suivant**.  
+1. Sur la page **Termes du contrat de licence**, consultez le contrat de licence. Si vous acceptez, cochez la case **J’accepte les termes du contrat de licence et la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement)**, puis sélectionnez **Suivant**.  
 
    >[!NOTE]
    > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).

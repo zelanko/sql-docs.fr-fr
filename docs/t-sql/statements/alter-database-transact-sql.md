@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 5acb6181d1878d7d657c8115f78e293427a037f0
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982155"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952447"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -49,7 +49,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -131,7 +131,7 @@ CURRENT **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
 
 Indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
-MODIFY NAME **=** _new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*.
+MODIFY NAME **=**_new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*.
 
 COLLATE *collation_name* Spécifie le classement de la base de données. *collation_name* peut être un nom de classement Windows ou SQL. S'il n'est pas spécifié, le classement par défaut de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera appliqué à la base de données.
 
@@ -142,14 +142,15 @@ Lors de la création de bases de données autrement qu'avec le classement par d�
 
 Pour plus d’informations sur les noms de classements Windows et SQL, voir [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=** 
+**\<delayed_durability_option> ::=**
 **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.
 
 Pour plus d’informations, voir [Options d’ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) et [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).
 
 **\<file_and_filegroup_options>::=** pour plus d’informations, consultez l’article [Options de fichiers et de groupes de fichiers ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
+
 Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
@@ -219,7 +220,7 @@ Requiert l'autorisation `ALTER` sur la base de données.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-changing-the-name-of-a-database"></a>A. Modification du nom d'une base de données
+### <a name="a-changing-the-name-of-a-database"></a>R. Modification du nom d'une base de données
 
 L'exemple suivant modifie le nom de la base de données `AdventureWorks2012` en `Northwind`.
 
@@ -250,7 +251,7 @@ COLLATE French_CI_AI ;
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -272,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br /> SQL Database \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -373,7 +374,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ACTUEL indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
-MODIFY NAME **=** _new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*. L’exemple suivant remplace le nom de la base de données `db1` par `db2` :
+MODIFY NAME **=**_new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*. L’exemple suivant remplace le nom de la base de données `db1` par `db2` :
 
 ```sql
 ALTER DATABASE db1
@@ -403,25 +404,25 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) Spécifie la taill
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
 |100 Mo|√|√|√|√|√|
 |250 Mo|√|√|√|√|√|
-|500 Mo|√|√|√|√|√|
+|500 Mo|√|√|√|√|√|
 |1 Go|√|√|√|√|√|
 |2 Go|√ (D)|√|√|√|√|
-|5 Go|Néant|√|√|√|√|
-|10 GB|Néant|√|√|√|√|
-|20 Go|Néant|√|√|√|√|
-|30 Go|Néant|√|√|√|√|
-|40 Go|Néant|√|√|√|√|
-|50 Go|Néant|√|√|√|√|
-|100 Go|Néant|√|√|√|√|
-|150 Go|Néant|√|√|√|√|
-|200 Go|Néant|√|√|√|√|
-|250 Go|Néant|√ (D)|√ (D)|√|√|
-|300 Go|Néant|√|√|√|√|
-|400 Go|Néant|√|√|√|√|
-|500 Go|Néant|√|√|√ (D)|√|
-|750 Go|Néant|√|√|√|√|
-|1 024 Go|Néant|√|√|√|√ (D)|
-|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go*|Néant|Néant|Néant|Néant|√|
+|5 Go|N/A|√|√|√|√|
+|10 Go|N/A|√|√|√|√|
+|20 Go|N/A|√|√|√|√|
+|30 Go|N/A|√|√|√|√|
+|40 Go|N/A|√|√|√|√|
+|50 Go|N/A|√|√|√|√|
+|100 Go|N/A|√|√|√|√|
+|150 Go|N/A|√|√|√|√|
+|200 Go|N/A|√|√|√|√|
+|250 Go|N/A|√ (D)|√ (D)|√|√|
+|300 Go|N/A|√|√|√|√|
+|400 Go|N/A|√|√|√|√|
+|500 Go|N/A|√|√|√ (D)|√|
+|750 Go|N/A|√|√|√|√|
+|1 024 Go|N/A|√|√|√|√ (D)|
+|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go*|N/A|N/A|N/A|N/A|√|
 
 \* P11 et P15 autorisent MAXSIZE jusqu’à 4 To, 1 024 Go étant la taille par défaut. P11 et P15 peuvent utiliser jusqu’à 4 To de stockage inclus sans frais supplémentaires. Au niveau Premium, une valeur MAXSIZE supérieure à 1 To est actuellement disponible dans les régions suivantes : USA Est 2, USA Ouest, US Gov Virginie, Europe Ouest, Allemagne Centre, Asie Sud-Est, Japon Est, Australie Est, Canada Centre et Canada Est. Pour plus d’informations sur les limitations des ressources du modèle DTU, consultez [Limites des ressources DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -433,25 +434,25 @@ La valeur MAXSIZE pour le modèle DTU, si elle est spécifiée, doit être une v
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
-|Taille maximale des données (Go)|1024|1024|1024|1536|1536|1536|
+|Taille maximale des données (Go)|1 024|1 024|1 024|1536|1536|1536|
 
 **Usage général - calcul provisionné - Gen4 (partie 2)**
 
 |MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
-|Taille maximale des données (Go)|1536|3072|3072|3072|4096|4096|
+|Taille maximale des données (Go)|1536|3 072|3 072|3 072|4096|4096|
 
 **Usage général - calcul provisionné - Gen5 (partie 1)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
-|Taille maximale des données (Go)|1024|1024|1024|1536|1536|1536|1536|
+|Taille maximale des données (Go)|1 024|1 024|1 024|1536|1536|1536|1536|
 
 **Usage général - calcul provisionné - Gen5 (partie 2)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
-|Taille maximale des données (Go)|3072|3072|3072|4096|4096|4096|4096|
+|Taille maximale des données (Go)|3 072|3 072|3 072|4096|4096|4096|4096|
 
 **Usage général - calcul provisionné - Fsv2-series (préversion)**
 
@@ -475,32 +476,31 @@ La valeur MAXSIZE pour le modèle DTU, si elle est spécifiée, doit être une v
 
 |Niveau de performance|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
-|Taille maximale des données (Go)|1024|1024|1024|1024|1024|1024|
+|Taille maximale des données (Go)|1 024|1 024|1 024|1 024|1 024|1 024|
 
 **Critique pour l’entreprise - calcul provisionné - Gen4 (partie 2)**
 
 |Niveau de performance|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
-|Taille maximale des données (Go)|1024|1024|1024|1024|1024|1024|
+|Taille maximale des données (Go)|1 024|1 024|1 024|1 024|1 024|1 024|
 
 **Critique pour l’entreprise - calcul provisionné - Gen5 (partie 1)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
-|Taille maximale des données (Go)|1024|1024|1024|1536|1536|1536|1536|
+|Taille maximale des données (Go)|1 024|1 024|1 024|1536|1536|1536|1536|
 
 **Critique pour l’entreprise - calcul provisionné - Gen5 (partie 2)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
-|Taille maximale des données (Go)|3072|3072|3072|4096|4096|4096|4096|
+|Taille maximale des données (Go)|3 072|3 072|3 072|4096|4096|4096|4096|
 
 **Critique pour l’entreprise - calcul provisionné - M-series (préversion)**
 
 |MAXSIZE|BC_M_128|
 |:----- | -------: |
 |Taille maximale des données (Go)|4096|
-
 
 Si aucune valeur `MAXSIZE` n’est définie lors de l’utilisation du modèle vCore, la valeur par défaut est de 32 Go. Pour plus d’informations sur les limitations des ressources du modèle vCore, consultez [Limites des ressources vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -522,15 +522,13 @@ SERVICE_OBJECTIVE
 
   - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif du service sont : `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`,`BC_Gen5_32`, `BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
 
-
 - **Pour les bases de données serverless**
 
   - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif du service sont : `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`.
 
-
 - **Pour les bases de données uniques du niveau de service Hyperscale**
 
-  - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif du service sont : `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
+  - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif du service sont : `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
 Pour plus d’informations sur les objectifs de service, ainsi que sur la taille, les éditions et les combinaisons d’objectifs de service, consultez [Niveaux de service et de performance d’Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Limites des ressources DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) et [Limites des ressources vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). La prise en charge des objectifs de service PRS a été supprimée. Pour poser des questions, utilisez cet alias de messagerie : premium-rs@microsoft.com.
 
@@ -585,7 +583,7 @@ Pendant un basculement forcé :
 > [!IMPORTANT]
 > L’utilisateur qui exécute la commande `FORCE_FAILOVER_ALLOW_DATA_LOSS` doit appartenir au rôle `dbmanager` pour le serveur principal et le serveur secondaire.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
@@ -606,7 +604,7 @@ Pour modifier une base de données, un compte de connexion doit être la princip
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-check-the-edition-options-and-change-them"></a>A. Vérifier et modifier les options d’édition
+### <a name="a-check-the-edition-options-and-change-them"></a>R. Vérifier et modifier les options d’édition
 
 Définit une taille d’édition et maximale pour la base de données db1 :
 
@@ -692,12 +690,12 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Instance managée<br />SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Instance managée<br />SQL Database \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-managed-instance"></a>Présentation : Instance managée Azure SQL Database
+## <a name="overview-azure-sql-database-managed-instance"></a>Présentation : Azure SQL Database Managed Instance
 
 Dans l’instance managée Azure SQL Database, utilisez cette instruction pour définir des options de base de données.
 
@@ -758,7 +756,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ACTUEL indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
@@ -813,14 +811,14 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Présentation : Azure SQL Data Warehouse.
+## <a name="overview-azure-synapse-analytics"></a>Présentation : Azure Synapse Analytics
 
-Dans Azure SQL Dta Warehouse, « MODIFIER BASE DE DONNÉES » modifie le nom, la taille maximale ou l’objectif des service pour la base de données.
+Dans Azure Synapse, « MODIFIER BASE DE DONNÉES » modifie le nom, la taille maximale ou l’objectif de service pour la base de données.
 
 En raison de sa longueur, la syntaxe d’ALTER DATABASE est divisée en plusieurs articles.
 
@@ -860,15 +858,15 @@ MODIFY NAME = *new_database_name* Renomme la base de données avec le nom spéci
 
 MAXSIZE La valeur par défaut est de 245 760 Go (240 To).
 
-**S’applique à :** Optimisé pour le calcul Gen1
+**S’applique à :** Optimisé pour le calcul Gen1
 
 Taille maximale autorisée pour la base de données. La base de données ne peut pas croître au-delà de MAXSIZE.
 
-**S’applique à :** Optimisé pour le calcul Gen2
+**S’applique à :** Optimisé pour le calcul Gen2
 
 Taille maximale autorisée pour les données rowstore dans la base de données. Les données stockées dans les tables rowstore, dans un deltastore d’index columnstore ou un index non cluster sur un index columnstore cluster ne peuvent pas croître au-delà de MAXSIZE. Les données compressées au format columnstore n’ont pas de taille limite et ne sont pas restreintes par MAXSIZE.
 
-SERVICE_OBJECTIVE Spécifie le niveau de performance. Pour plus d’informations sur les objectifs de service de SQL Data Warehouse, voir [Data Warehouse Units (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE Spécifie le niveau de performance. Pour plus d’informations sur les objectifs de service d’Azure Synapse, voir [Data Warehouse Units (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Autorisations
 
@@ -883,7 +881,10 @@ Le propriétaire de la base de données ne peut pas modifier la base de données
 
 La base de données actuelle doit être différente de celle que vous modifiez, par conséquent **ALTER doit être exécuté tout en étant connecté à la base de données master**.
 
-SQL Data Warehouse est défini sur COMPATIBILITY_LEVEL 130 et ne peut pas être modifié. Pour plus d’informations, consultez [Meilleures performances des requêtes avec le niveau de compatibilité 130 dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+COMPATIBILITY_LEVEL dans SQL Analytics affiche par défaut la valeur 130 qui n’est pas modifiable. Pour plus d’informations, consultez [Meilleures performances des requêtes avec le niveau de compatibilité 130 dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+
+> [!NOTE]
+> COMPATIBILITY_LEVEL s’applique uniquement aux ressources provisionnées (pools).
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 
@@ -899,7 +900,7 @@ Vous ne pouvez pas changer le classement de la base de données.
 
 Avant d’exécuter ces exemples, vérifiez que la base de données que vous modifiez n’est pas la base de données actuelle. La base de données actuelle doit être différente de celle que vous modifiez, par conséquent **ALTER doit être exécuté tout en étant connecté à la base de données master**.
 
-### <a name="a-change-the-name-of-the-database"></a>A. Changer le nom de la base de données
+### <a name="a-change-the-name-of-the-database"></a>R. Changer le nom de la base de données
 
 ```sql
 ALTER DATABASE AdventureWorks2012
@@ -924,17 +925,17 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
-- [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [Liste SQL Data Warehouse d’articles de référence](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [Liste des articles de référence Azure Synapse Analytics](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -1076,7 +1077,7 @@ Pour obtenir un exemple complet illustrant toutes les étapes de l’implémenta
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-### <a name="a-altering-the-autogrow-setting"></a>A. Modification du paramètre AUTOGROW
+### <a name="a-altering-the-autogrow-setting"></a>R. Modification du paramètre AUTOGROW
 
 Définissez AUTOGROW sur ON pour la base de données `CustomerSales`.
 
@@ -1137,7 +1138,7 @@ ALTER DATABASE
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)

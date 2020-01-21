@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,16 +27,16 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df02e167ae5014564357d42d7cbbf06a5937845a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f91edadf5e33c0938a6af0be0244fec7635dd36d
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983201"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952350"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
-Crée une connexion pour des bases de données SQL Server, SQL Database, SQL Data Warehouse ou Analytics Platform System. Cliquez sur l’un des onglets suivants pour accéder à la syntaxe, aux arguments, aux remarques et aux exemples propres à chaque version.
+Crée une connexion pour des bases de données SQL Server, SQL Database, Azure Synapse Analytics ou Analytics Platform System. Cliquez sur l’un des onglets suivants pour accéder à la syntaxe, aux arguments, aux remarques et aux exemples propres à chaque version.
 
 CREATE LOGIN participe aux transactions. Si CREATE LOGIN est exécutée dans une transaction et que la transaction est restaurée, la création de la connexion est restaurée. Si elle est exécutée dans une transaction, la connexion créée ne peut pas être utilisée jusqu’à ce que la transaction soit validée.
 
@@ -50,7 +50,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||||
 |-|-|-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -101,7 +101,7 @@ MUST_CHANGE S’applique uniquement aux connexions SQL Server. Si vous incluez c
 
 CREDENTIAL **=** _credential\_name_ Nom des informations d’identification à mapper sur le nouveau compte de connexion SQL Server. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Les informations d’identification ne peuvent pas être mappées à la connexion de l’administrateur système.
 
-SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. SID de connexion SQL Server : valeur littérale 16 octets (**binary(16)** ) basée sur un GUID. Par exemple, `SID = 0x14585E90117152449347750164BA00A7`.
+SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. SID de connexion SQL Server : valeur littérale 16 octets (**binary(16)** ) basée sur un GUID. Par exemple : `SID = 0x14585E90117152449347750164BA00A7`.
 
 DEFAULT_DATABASE **=** _database_ Spécifie la base de données par défaut à attribuer à la connexion. Si cette option est omise, la base de données par défaut est master.
 
@@ -157,7 +157,7 @@ Après la création d’une connexion, celle-ci peut se connecter à SQL Server,
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Création d'une connexion avec un mot de passe
+### <a name="a-creating-a-login-with-a-password"></a>R. Création d'une connexion avec un mot de passe
 
 L'exemple suivant crée une connexion pour un utilisateur particulier et attribue un mot de passe.
 
@@ -258,7 +258,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_**|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_**|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -278,13 +278,13 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Arguments
 
-*login_name* Spécifie le nom de la connexion créée. Le pool élastique/la base de données unique Azure SQL Database ne prend en charge que les connexions SQL.
+*login_name* Spécifie le nom de la connexion créée. Le pool élastique/la base de données unique Azure SQL Database ne prend en charge que les connexions SQL. Afin de créer des comptes pour les utilisateurs Azure Active Directory, utilisez l’instruction [CREATE USER](create-user-transact-sql.md).
 
 PASSWORD **='** password* *'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
-SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notes
 
@@ -330,7 +330,7 @@ Après la création d’une connexion, celle-ci peut se connecter à SQL Databas
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Création d'une connexion avec un mot de passe
+### <a name="a-creating-a-login-with-a-password"></a>R. Création d'une connexion avec un mot de passe
 
 L'exemple suivant crée une connexion pour un utilisateur particulier et attribue un mot de passe.
 
@@ -378,11 +378,11 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instance managée<br />SQL Database \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instance managée<br />SQL Database \*_**|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -408,7 +408,7 @@ PASSWORD **=** '*password*' Spécifie le mot de passe de la connexion SQL en cou
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
-SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notes
 
@@ -434,13 +434,13 @@ Par défaut, les autorisations standard accordées à une connexion Azure AD nou
 ### <a name="sql-database-managed-instance-logins"></a>Connexions à l’instance managée SQL Database
 
 - Doit avoir l’autorisation **ALTER ANY LOGIN** sur le serveur ou l’appartenance au rôle serveur fixe `securityadmin` ou `sysadmin`. Seul un compte Azure Active Directory (Azure AD) avec l’autorisation **ALTER ANY LOGIN** sur le serveur ou l’appartenance à l’un de ces rôles peut exécuter la commande create.
-- Si la connexion est un principal SQL, seules les connexions titulaires du rôle `sysadmin` peuvent utiliser la commande create pour créer des connexions pour un compte Azure AD.
+- Si la connexion est un principal SQL, seules les connexions faisant partie du rôle `sysadmin` peuvent utiliser la commande create afin de créer des connexions pour un compte Azure AD.
 - Doit être un membre d’Azure AD dans le même répertoire que celui utilisé pour l’instance managée Azure SQL.
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
 > [!NOTE]
-> L’administrateur Azure AD pour la fonctionnalité d’instance managée après la création a changé. Pour plus d’informations, consultez [Nouvelle fonctionnalité de l’administrateur Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> L’administrateur Azure AD de la fonctionnalité d’instance qui a été gérée après la création a changé. Pour plus d’informations, consultez [Nouvelle fonctionnalité d’administration Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 Après la création d’une connexion, celle-ci peut se connecter à une instance managée SQL Database, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 
@@ -450,10 +450,10 @@ Après la création d’une connexion, celle-ci peut se connecter à une instanc
   - Utilisez la commande suivante pour ajouter le rôle `sysadmin` à une connexion Azure AD : `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
-## <a name="limitations"></a>Limitations
+## <a name="limitations"></a>Limites
 
 - La définition d’une connexion Azure AD mappée à un groupe Azure AD en tant que propriétaire de base de données n’est pas prise en charge.
-- L’emprunt d’identité de principaux au niveau du serveur Azure AD à l’aide d’autres principaux Azure AD est pris en charge, par exemple avec la clause [EXECUTE AS](execute-as-transact-sql.md).
+- L’emprunt d’identité des principaux au niveau du serveur Azure AD à l’aide d’autres principaux Azure AD est pris en charge, par exemple avec la clause [EXECUTE AS](execute-as-transact-sql.md).
 - Seuls les principaux (connexions) au niveau du serveur SQL titulaires du rôle `sysadmin` peuvent exécuter les opérations suivantes ciblant des principaux Azure AD :
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
@@ -461,7 +461,7 @@ Après la création d’une connexion, celle-ci peut se connecter à une instanc
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Création d'une connexion avec un mot de passe
+### <a name="a-creating-a-login-with-a-password"></a>R. Création d'une connexion avec un mot de passe
 
 L'exemple suivant crée une connexion pour un utilisateur particulier et attribue un mot de passe.
 
@@ -554,16 +554,16 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse.
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
  { WITH <option_list> }
 
@@ -574,13 +574,13 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Arguments
 
-*login_name* Spécifie le nom de la connexion créée. Azure SQL Database prend uniquement en charge les connexions SQL.
+*login_name* Spécifie le nom de la connexion créée. SQL Analytics dans Azure Synapse prend uniquement en charge les connexions SQL. Afin de créer des comptes pour les utilisateurs Azure Active Directory, utilisez l’instruction [CREATE USER](create-user-transact-sql.md).
 
 PASSWORD **='** password* *'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
- SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Data Warehouse, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Analytics, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notes
 
@@ -594,15 +594,15 @@ Les mots de passe respectent la casse. Les mots de passe doivent comporter au mo
 
 L’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.
 
-Dans certaines méthodes de connexion à SQL Data Warehouse, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Data Warehouse au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>* @ *\<serveur>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database Warehouse est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
+Lorsque vous vous connectez à Azure Synapse en utilisant des outils comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Analytics au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>* @ *\<serveur>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Analytics est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
 
-Dans SQL Database Warehouse, vous devez être connecté à la base de données master pour créer une connexion.
+Pour créer une connexion, vous devez être connecté à la base de données master.
 
 Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
 
-Dans SQL Database Warehouse, les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
+Les données de connexion exigées pour authentifier une connexion et les règles de pare-feu au niveau du serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Pour plus d’informations sur les connexions SQL Data Warehouse, consultez [Gestion des bases de données et des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Pour plus d'informations sur les connexions , consultez [Gestion des bases de données et des connexions](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Autorisations
 
@@ -610,7 +610,7 @@ Seule la connexion principale au niveau du serveur (créée par le processus de 
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
-Après la création d’une connexion, celle-ci peut se connecter à SQL Database Warehouse, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
+Après la création d’une connexion, celle-ci peut se connecter à Azure Synapse, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
@@ -620,7 +620,7 @@ Après la création d’une connexion, celle-ci peut se connecter à SQL Databas
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-creating-a-login-with-a-password"></a>A. Création d'une connexion avec un mot de passe
+### <a name="a-creating-a-login-with-a-password"></a>R. Création d'une connexion avec un mot de passe
 
 L'exemple suivant crée une connexion pour un utilisateur particulier et attribue un mot de passe.
 
@@ -668,7 +668,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -732,7 +732,7 @@ Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
-Après la création d’une connexion, celle-ci peut se connecter à SQL Database Warehouse, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
+Après la création d’une connexion, celle-ci peut se connecter à Azure Synapse Analytics, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Créez un rôle serveur défini par l’utilisateur à l’aide de [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Utilisez **ALTER SERVER ROLE** ... **ADD MEMBER** pour ajouter la nouvelle connexion au rôle serveur défini par l’utilisateur. Pour plus d’informations, consultez [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).

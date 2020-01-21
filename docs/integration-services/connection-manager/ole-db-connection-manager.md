@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffc7da76c7291bbf8e0d4dd6003c572cd9610e92
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: aa5d978126807e1fb83c08a1d1b8d9d7b74d8368
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294383"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687172"
 ---
 # <a name="ole-db-connection-manager"></a>Gestionnaire de connexions OLE DB
 
@@ -94,54 +94,40 @@ Lors de l’exécution de packages SSIS sur le [runtime d’intégration Azure-S
 
 Pour utiliser l’authentification d’identité managée pour Azure SQL Database, suivez ces étapes afin de configurer votre base de données :
 
-1. Créez un groupe dans Azure AD. Faites de l’identité managée un membre du groupe.
-    
-   1. [Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID objet de l’identité managée**.
-    
-   1. Installez le module [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2). Connectez-vous à l’aide de la commande `Connect-AzureAD`. Exécutez les commandes suivantes pour créer un groupe et ajouter l’identité managée en tant que membre.
-      ```powershell
-      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
-      ```
-    
-1. [Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) pour votre serveur Azure SQL sur le portail Azure, si ce n’est pas déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 3 et 4. L’administrateur a un accès complet à la base de données.
+1. [Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) pour votre serveur Azure SQL sur le portail Azure, si ce n’est pas déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 2 et 3. L’administrateur a un accès complet à la base de données.
 
-1. [Créez des utilisateurs de base de données autonome](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) pour le groupe Azure AD. Connectez-vous à la base de données depuis ou vers laquelle vous souhaitez copier des données à l’aide d’outils tels que SSMS, avec une identité Azure AD qui a au moins l’autorisation ALTER ANY USER. Exécutez la commande T-SQL suivante : 
+1. [Créer des utilisateurs de base de données autonome](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) pour l’identité managée de Data Factory. Connectez-vous à la base de données depuis ou vers laquelle vous souhaitez copier des données à l’aide d’outils tels que SSMS, avec une identité Azure AD qui a au moins l’autorisation ALTER ANY USER. Exécutez la commande T-SQL suivante : 
     
     ```sql
-    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Accordez au groupe Azure AD les autorisations requises, comme vous le faites habituellement pour les utilisateurs SQL et autres. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Par exemple, exécutez le code suivant :
+1. Accordez les autorisations requises par l’identité managée Data Factory comme vous le feriez d’habitude pour des utilisateurs SQL et autres. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Exécutez le code suivant. Pour plus d’options, consultez [ce document](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
 
     ```sql
-    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
 Pour utiliser l’authentification d’identité managée pour l’instance managée Azure SQL Database, effectuez les étapes suivantes afin de configurer votre base de données :
     
-1. [Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) pour votre instance managée sur le portail Azure, si ce n’est pas déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 2 à 5. L’administrateur a un accès complet à la base de données.
+1. [Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) pour votre instance managée sur le portail Azure, si ce n’est pas déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 2 à 4. L’administrateur a un accès complet à la base de données.
 
-1. [Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID d’application de l’identité managée** (et non pas l’**ID d’objet de l’identité managée**).
+1. [Créez des connexions](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current) pour le l’identité managée Data Factory. Dans SQL Server Management Studio (SSMS), connectez-vous à votre instance managée à l’aide d’un compte SQL Server qui est un **sysadmin**. Dans la base de données de **référence**, exécutez le code T-SQL suivant :
 
-1. Convertissez l’identité managée de la fabrique de données en type binaire. Connectez-vous à la base de données **master** dans votre instance managée à l’aide d’outils tels que SSMS, avec votre compte d’administrateur SQL ou Active Directory. Exécutez la commande T-SQL suivante sur la base de données **master** pour obtenir votre ID d’application de l’identité managée sous forme binaire :
-    
     ```sql
-    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
-    select CAST(@applicationId AS varbinary)
+    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Ajoutez l’identité managée de la fabrique de données en tant qu’utilisateur dans l’instance managée Azure SQL Database. Exécutez la commande T-SQL suivante sur la base de données **MASTER** :
-    
+1. [Créer des utilisateurs de base de données autonome](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) pour l’identité managée de Data Factory. Connectez-vous à la base de données à partir de laquelle ou vers laquelle vous souhaitez copier des données, puis exécutez la commande T-SQL suivante : 
+  
     ```sql
-    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Octroyez à l’identité managée de la fabrique de données les autorisations requises. Pour connaître les rôles appropriés, consultez [Rôles au niveau de la base de données](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Exécutez la commande T-SQL suivante sur la base de données depuis ou vers laquelle vous souhaitez copier des données :
+1. Accordez les autorisations requises par l’identité managée Data Factory comme vous le feriez d’habitude pour des utilisateurs SQL et autres. Exécutez le code suivant. Pour plus d’options, consultez [ce document](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
 
     ```sql
-    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
     ```
 
 Ensuite, configurez le fournisseur OLE DB pour le gestionnaire de connexions OLE DB. Les options disponibles sont les suivantes :
@@ -171,7 +157,7 @@ Enfin, configurez l’authentification d’identité managée pour le gestionnai
 ## <a name="see-also"></a>Voir aussi    
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)     
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)     
- [Tache d'exécution de requêtes SQL](../../integration-services/control-flow/execute-sql-task.md)     
+ [Exécution de requêtes SQL, tâche](../../integration-services/control-flow/execute-sql-task.md)     
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
     
   

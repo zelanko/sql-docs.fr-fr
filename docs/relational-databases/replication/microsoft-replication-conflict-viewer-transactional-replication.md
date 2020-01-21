@@ -1,6 +1,7 @@
 ---
-title: Visionneuse des conflits de réplication Microsoft (réplication transactionnelle) | Microsoft Docs
-ms.custom: ''
+title: Visionneuse des conflits de réplication (égal à égal)
+description: Découvrez la Visionneuse des conflits de réplication et comment l'utiliser pour visualiser les conflits pour la réplication transactionnelle d’égal à égal et la réplication transactionnelle avec des abonnements de mise à jour en file d'attente.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770580"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321521"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visionneuse des conflits de réplication de Microsoft (réplication transactionnelle)
+# <a name="replication-conflict-viewer-transactional-replication"></a>Visionneuse des conflits de réplication (réplication transactionnelle)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La Visionneuse des conflits de réplication vous permet d'examiner les conflits qui se sont produits lors de la synchronisation pour la réplication transactionnelle d'égal à égal et la réplication transactionnelle avec des abonnements de mise à jour en attente. Pour plus d’informations, consultez [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
@@ -47,13 +48,13 @@ ms.locfileid: "68770580"
  **Appliquer ou supprimer le filtre**  
  Applique ou supprime un filtre défini dans la boîte de dialogue **Définir les filtres** .  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne tous les conflits de la grille.  
   
  **Aucune sélection**  
  Désélectionne tous les conflits de la grille.  
   
- **Supprimer**  
+ **Remove**  
  Supprime les conflits sélectionnés et leurs métadonnées associées des tables système de réplication.  
   
  **Afficher toutes les colonnes**  
@@ -62,13 +63,13 @@ ms.locfileid: "68770580"
  **Afficher les cinq premières colonnes et les autres colonnes qui contiennent des données conflictuelles**  
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
- **Informations sur la colonne** ( **…** )  
+ **Informations sur la colonne** (**…**)  
  Affiche les informations sur la colonne : **Nom de la table**, **Nom de la colonne**, **Type de données** et **Valeur de la colonne**.  
   
  **Consigner les détails de ce conflit**  
- Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration ( **...** ) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
+ Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration (**...**) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Détection de conflit dans la réplication d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   

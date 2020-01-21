@@ -1,7 +1,7 @@
 ---
 title: Feature Pack SQL Server Integration Services (SSIS) pour Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659585"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329951"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Le Feature Pack SQL Server Integration Services (SSIS) pour Azure
 
@@ -48,7 +48,7 @@ Les pages de téléchargement incluent également des informations sur les prér
 
     -   [Gestionnaire de connexions Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
     
-    -   [Gestionnaire de connexions de stockage Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
+    -   [Gestionnaire de connexions Stockage Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Gestionnaire de connexions d’abonnement Azure](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
@@ -66,7 +66,7 @@ Les pages de téléchargement incluent également des informations sur les prér
 
     -   [Tâche de suppression d’un cluster Azure HDInsight](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Tâche Hive Azure HDInsight](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Tâche Hive d’Azure HDInsight](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
     -   [Tâche Pig Azure HDInsight](../integration-services/control-flow/azure-hdinsight-pig-task.md)
 
@@ -100,7 +100,7 @@ Pour utiliser TLS 1.2, ajoutez une valeur `REG_DWORD` nommée `SchUseStrongCrypt
 
 ## <a name="dependency-on-java"></a>Dépendance envers Java
 
-Java est requis pour utiliser des formats de fichier ORC/Parquet avec des connecteurs de fichiers plats/Azure Data Lake Store.  
+Java est requis pour utiliser des formats de fichier ORC/Parquet avec des connecteurs de fichiers flexibles/Azure Data Lake Store.  
 L’architecture (32/64 bits) de la build Java doit correspondre à celle du runtime SSIS à utiliser.
 Les builds Java suivantes ont été testées.
 
@@ -119,6 +119,13 @@ Les builds Java suivantes ont été testées.
 7. Sélectionnez **OK** pour fermer la boîte de dialogue **Nouvelle Variable système**.
 8. Sélectionnez **OK** pour fermer la boîte de dialogue **Variables d’environnement**.
 9. Sélectionnez **OK** pour fermer la boîte de dialogue **Propriétés du système**.
+
+> [!TIP]
+> Si, en utilisant le format Parquet, vous obtenez une erreur indiquant « An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** », vous pouvez ajouter une variable d'environnement *`_JAVA_OPTIONS`* afin d’ajuster la taille de segment de mémoire minimale/maximale nécessaire pour la machine virtuelle Java.
+>
+>![jvm heap](media/azure-feature-pack-jvm-heap-size.png)
+>
+> Exemple : donnez la valeur *`_JAVA_OPTIONS`* à la variable *`-Xms256m -Xmx16g`*. L’indicateur Xms spécifie le pool d’allocation de mémoire initial pour une Machine virtuelle Java (JVM), tandis que Xmx spécifie le pool d’allocation de mémoire maximal. En d’autres termes, JVM démarrera avec la quantité de mémoire *`Xms`* et pourra au maximum utiliser la quantité de mémoire *`Xmx`*. Les valeurs par défaut sont min 64 Mo et Max 1G.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Configurer OpenJDK de Zulu sur Azure-SSIS Integration Runtime
 
@@ -139,6 +146,13 @@ En tant que point d'entrée, `main.cmd` déclenche l’exécution du script Powe
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Si, en utilisant le format Parquet, vous obtenez une erreur indiquant « An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** », vous pouvez ajouter une commande *`main.cmd`* afin d’ajuster la taille de segment de mémoire minimale/maximale nécessaire pour la machine virtuelle Java. Exemple :
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> L’indicateur Xms spécifie le pool d’allocation de mémoire initial pour une Machine virtuelle Java (JVM), tandis que Xmx spécifie le pool d’allocation de mémoire maximal. En d’autres termes, JVM démarrera avec la quantité de mémoire *`Xms`* et pourra au maximum utiliser la quantité de mémoire *`Xmx`*. Les valeurs par défaut sont min 64 Mo et Max 1G.
 
 **install_openjdk. ps1**
 

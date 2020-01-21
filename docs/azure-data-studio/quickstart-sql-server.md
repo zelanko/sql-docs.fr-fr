@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810794"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884050"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -35,7 +35,7 @@ Si vous n’avez pas accès à un serveur SQL Server, sélectionnez votre platef
 
 ## <a name="connect-to-a-sql-server"></a>Se connecter à un serveur SQL Server
 
-1. Démarrez **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
+1. Démarrez **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
 
 2. La première fois que vous exécutez [!INCLUDE[name-sos](../includes/name-sos-short.md)], la **page d’accueil** doit s’ouvrir. Si vous ne voyez pas la **page d’accueil**, sélectionnez **Aide** > **Bienvenue**. Sélectionnez **Nouvelle connexion** pour ouvrir le volet **Connexion** :
 
@@ -43,16 +43,16 @@ Si vous n’avez pas accès à un serveur SQL Server, sélectionnez votre platef
 
 3. Cet article utilise la *connexion SQL*, mais *l'authentification Windows* est prise en charge. Renseignez les champs comme suit :
 
-- **Nom du serveur** : entrez le nom du serveur. Par exemple, localhost.
+- **Nom du serveur :** Entrez un nom de serveur ici. Par exemple, localhost.
 - **Type d'authentification :** Connexion SQL
 - **Nom d'utilisateur :** Nom d’utilisateur pour SQL Server
 - **Mot de passe :** Mot de passe pour SQL Server
-- **Nom de la base de données :** laissez ce champ vide
+- **Nom de la base de données :** \<Par défaut\>
 - **Groupe de serveurs :** \<Par défaut\>
 
    ![Écran de nouvelle connexion](media/quickstart-sql-server/new-connection-screen.png)
 
-## <a name="create-a-database"></a>création d'une base de données ;
+## <a name="create-a-database"></a>Création d'une base de données
 
 La procédure suivante crée une base de données nommée **TutorialDB** :
 

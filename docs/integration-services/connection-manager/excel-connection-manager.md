@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58b73e5bd1f82d619f00e50d554d2043196d7884
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f9ce3042bedd23c5ee173b1df7669a09cce35351
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298548"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831751"
 ---
 # <a name="excel-connection-manager"></a>Gestionnaire de connexions Excel
 
@@ -68,7 +68,35 @@ ms.locfileid: "71298548"
   
  **La première ligne possède des noms de colonnes**  
  Permet de spécifier si la première ligne de données dans la feuille de calcul sélectionnée contient les noms des colonnes. La valeur par défaut de cette option est **True**.  
+
+## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>Solution pour importer des données de types mixtes à partir d'Excel
+
+Si vous utilisez des données contenant des types de données mixtes, par défaut, le pilote Excel lit les 8 premières lignes (configurées par la clé de registre **TypeGuessRows**). Sur la base des 8 premières lignes de données, le pilote Excel essaie de deviner le type de données de chaque colonne. Par exemple, si votre source de données Excel comporte des chiffres et du texte dans une colonne, si les 8 premières lignes contiennent des chiffres, le pilote peut déterminer, sur la base de ces 8 premières lignes, que les données de la colonne sont de type entier. Dans ce cas, SSIS ignore les valeurs de texte et les importe comme des données NULL dans la destination.
+
+Pour résoudre ce problème, vous pouvez essayer l'une des solutions suivantes :
+
+* Remplacez le type de colonne Excel par **Texte** dans le fichier Excel.
+* Ajoutez la propriété étendue IMEX à la chaîne de connexion pour remplacer le comportement par défaut du pilote. Lorsque vous ajoutez la propriété étendue « ;IMEX=1 » à la fin de la chaîne de connexion, Excel traite toutes les données comme du texte. Voir l’exemple suivant :
+    
+  ```ACE OLEDB connection string:
+  Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
+  ```
+
+   Pour que cette solution fonctionne de manière fiable, vous devrez peut-être également modifier les paramètres du registre. Le fichier main.cmd se présente comme suit :
   
+   ```cmd
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   ```
+
+* Enregistrez le fichier au format CSV et modifiez le package SSIS pour qu’il prenne en charge une importation CSV.
+
 ## <a name="related-tasks"></a>Tâches associées  
 [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Source Excel](../data-flow/excel-source.md)  

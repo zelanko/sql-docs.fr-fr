@@ -1,10 +1,10 @@
 ---
 title: À propos de la capture de données modifiées
 ms.custom: seo-dt-2019
-ms.date: 01/02/2019
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095330"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952457"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+> [!NOTE]
+> CDC est maintenant pris en charge pour SQL Server 2017 sur Linux à partir de CU18, et pour SQL Server 2019 sur Linux.
+
   La capture de données modifiées enregistre les activités d'insertion, de mise à jour et de suppression appliquées à une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle rend disponibles les détails des modifications dans un format relationnel simple à utiliser. Les informations sur les colonnes et les métadonnées nécessaires à l'application des modifications à un environnement cible sont capturées pour les lignes modifiées et stockées dans des tables de modification qui reflètent la structure de colonne des tables sources suivies. Des fonctions table sont fournies afin de procurer aux consommateurs un accès systématique aux données modifiées.  
   
  Les consommateurs de données auxquels s'adresse cette technologie sont par exemple les applications d'extraction, de transformation et de chargement (ETL). Une application ETL charge de façon incrémentielle les données modifiées à partir de tables sources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un entrepôt de données ou un mini-Data Warehouse. Même si la représentation des tables sources dans l'entrepôt de données doit refléter les modifications apportées aux tables sources, une technologie de bout en bout qui actualise un réplica de la source n'est pas appropriée. Au lieu de cela, il faut un flux de données modifiées fiable, structuré de sorte que les consommateurs puissent l'appliquer aux différentes représentations cibles des données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apporte cette technologie.  
@@ -30,7 +34,7 @@ ms.locfileid: "74095330"
 ## <a name="change-data-capture-data-flow"></a>Flux de données de capture de données modifiées  
  L'illustration suivante décrit le flux de données principal pour la capture de données modifiées.  
   
- ![Flux de données de capture des changements de données](../../relational-databases/track-changes/media/cdcdataflow.gif "Flux de données de capture de données modifiées")  
+ ![Flux de données de capture des changements de données](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
   
  La source des données modifiées pour la capture de données modifiées est le journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . À mesure que des insertions, des mises à jour et des suppressions sont appliquées aux tables sources suivies, les entrées qui décrivent ces modifications sont ajoutées au journal. Le journal sert d’entrée au processus de capture. Le journal est lu et les informations relatives aux modifications sont ajoutées à la table de modifications associée de la table faisant l’objet d’un suivi. Des fonctions sont fournies afin d'énumérer les modifications qui apparaissent dans les tables de modifications sur une plage spécifiée ; ces fonctions retournent les informations sous la forme d'un jeu de résultats filtré. Le jeu de résultats filtré est utilisé en général par un processus d'application pour mettre à jour une représentation de la source dans un environnement externe.  
   
@@ -133,7 +137,7 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Utiliser les données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593664"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884016"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Conseils d’installation pour SQL Server sur Linux
 
@@ -59,7 +59,7 @@ SQL Server est actuellement pris en charge sur Red Hat Enterprise Server (RHEL),
 
 | Plateforme | Version(s) prise(s) en charge | Obtenir
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obtenir RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Obtenir RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [Obtenir SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Moteur Docker** | 1.8+ | [Obtenir Docker](https://www.docker.com/get-started)
@@ -78,7 +78,7 @@ SQL Server présente la configuration requise suivante pour Linux :
 |||
 |-----|-----|
 | **Mémoire** | 2 Go |
-| **File System** | **XFS** ou **EXT4** (les autres systèmes de fichiers, tels que **BTRFS** ne sont pas pris en charge) |
+| **Système de fichiers** | **XFS** ou **EXT4** (les autres systèmes de fichiers, tels que **BTRFS** ne sont pas pris en charge) |
 | **Espace disque** | 6 Go |
 | **Vitesse du processeur** | 2 GHz |
 | **Cœurs du processeur** | 2 cœurs |

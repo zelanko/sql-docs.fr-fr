@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: eb7c770e06dd7ce498d9170ce3f90b65ea8ae009
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: cec8bc4c8f9d08ec03016f0373a22bbffa4411dd
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633413"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870999"
 ---
 # <a name="title-transact-sql"></a>Title (Transact-SQL)
 
@@ -38,7 +38,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](pick-a-product-template.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](pick-a-product-template.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](pick-a-product-template.md?view=azure-sqldw-latest)|||
+> |**_\* SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](pick-a-product-template.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](pick-a-product-template.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -50,7 +50,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br /> SQL Database \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -63,11 +63,11 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instance managée<br />SQL Database \*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instance managée<br />SQL Database \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 
 
@@ -76,11 +76,11 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse.
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>Syntaxe
 

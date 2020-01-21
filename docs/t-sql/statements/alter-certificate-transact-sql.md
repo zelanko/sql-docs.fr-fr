@@ -22,20 +22,20 @@ helpviewer_keywords:
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97cc55e271344ef571969fee9b20db647da027c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e333a149ca50531be3eb89b8b9d249ea4d5996b9
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982870"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871119"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Modifie le mot de passe utilisé pour chiffrer la clé privée d’un certificat, supprime la clé privée, ou importe la clé privée si aucune n’est présente. Affecte à un certificat la disponibilité [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +100,7 @@ ALTER CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Met le certificat à disposition de l'initiateur d'une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La clé privée doit correspondre à la clé publique spécifiée par *certificate_name*.  
   
  Vous pouvez omettre la clause DECRYPTION BY PASSWORD si le mot de passe dans le fichier est protégé par un mot de passe vide.  
@@ -123,7 +123,7 @@ ALTER CERTIFICATE certificate_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-removing-the-private-key-of-a-certificate"></a>A. Suppression de la clé privée d’un certificat  
+### <a name="a-removing-the-private-key-of-a-certificate"></a>R. Suppression de la clé privée d’un certificat  
   
 ```  
 ALTER CERTIFICATE Shipping04   
@@ -157,7 +157,7 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)  

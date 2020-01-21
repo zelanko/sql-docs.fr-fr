@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2019
+ms.date: 01/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2eeec689116946d99b348cadf0b41bca829848b1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
+ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982095"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75871129"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
 Modifie les propriétés d'un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="click-a-product"></a>Cliquez sur un produit !
 
@@ -45,7 +45,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||||
 |-|-|-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -96,22 +96,22 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE active ou désactive cette connexion. La désactivation d'une connexion n'a aucune incidence sur le comportement des connexions qui sont déjà en cours. (Utilisez l’instruction `KILL` pour mettre fin à des connexions existantes.) Les connexions désactivées conservent leurs autorisations et peuvent toujours être usurpées.
 
-PASSWORD **='** _password_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
+PASSWORD **='**_password_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
 
-PASSWORD **=** _hashed\_password_ s’applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée.
+PASSWORD **=**_hashed\_password_ S’applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée.
 
 > [!IMPORTANT]
 > Lorsqu'un compte de connexion (ou un utilisateur de base de données autonome) se connecte et est authentifié, la connexion met en cache les informations d'identité sur la connexion. Dans le cas d'une connexion d'authentification Windows, ces informations incluent des données sur l'appartenance aux groupes Windows. L'identité de la connexion reste authentifiée tant que la connexion est conservée. Pour imposer des modifications d'identité, une réinitialisation du mot de passe, par exemple, ou la modification de l'appartenance au groupe Windows, le compte de connexion doit fermer une session de l'autorité d'authentification (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et ouvrir une nouvelle session. Un membre du rôle serveur fixe **sysadmin** ou tout compte de connexion doté de l’autorisation **ALTER ANY CONNECTION** peut utiliser la commande **KILL** pour mettre fin à une connexion et obliger le compte de connexion à se reconnecter. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut réutiliser les informations de connexion lors de l’ouverture de plusieurs connexions dans les fenêtres de l’Explorateur d’objets et de l’éditeur de requête. Fermez toutes les connexions pour imposer une reconnexion.
 
 HASHED s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie que le mot de passe entré après l'argument PASSWORD est déjà haché. Si cette option n'est pas sélectionnée, le mot de passe est haché avant d'être stocké dans la base de données. Cette option doit être utilisée uniquement pour la synchronisation de connexion entre deux serveurs. N'utilisez pas l'option HASHED pour modifier des mots de passe de manière régulière.
 
-OLD_PASSWORD **='** _oldpassword_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
+OLD_PASSWORD **='**_oldpassword_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
 
 MUST_CHANGE s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous incluez cette option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande un mot de passe actualisé lors de la première utilisation de la connexion modifiée.
 
-DEFAULT_DATABASE **=** _database_ spécifie une base de données par défaut à affecter à la connexion.
+DEFAULT_DATABASE **=**_database_ spécifie une base de données par défaut à affecter à la connexion.
 
-DEFAULT_LANGUAGE **=** _language_ spécifie une langue par défaut à affecter à la connexion. La langue par défaut pour toutes les connexions SQL Database est l’anglais. Ceci ne peut pas être modifié. La langue par défaut de la connexion `sa` sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Linux est l’anglais, mais vous pouvez la modifier.
+DEFAULT_LANGUAGE **=**_language_ spécifie une langue par défaut à affecter à la connexion. La langue par défaut pour toutes les connexions SQL Database est l’anglais. Ceci ne peut pas être modifié. La langue par défaut de la connexion `sa` sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Linux est l’anglais, mais vous pouvez la modifier.
 
 NAME = *login_name* correspond au nouveau nom de la connexion à renommer. S'il s'agit d'une connexion Windows, le SID du principal Windows correspondant au nouveau nom doit correspondre au SID de la connexion dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nouveau nom d’une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas contenir une barre oblique inverse (\\).
 
@@ -129,7 +129,7 @@ ADD CREDENTIAL ajoute des informations d’identification du fournisseur EKM (Ex
 
 DROP CREDENTIAL supprime des informations d’identification du fournisseur EKM (Extensible Key Management) de la connexion. Pour plus d’informations, consultez [Gestion de clés extensible (EKM)] (../.. /relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Lorsque CHECK_POLICY a la valeur ON, l'argument HASHED ne peut pas être utilisé.
 
@@ -174,7 +174,7 @@ Un principal peut modifier le mot de passe, la langue et la base de données par
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-enabling-a-disabled-login"></a>A. Activation d'une connexion désactivée
+### <a name="a-enabling-a-disabled-login"></a>R. Activation d'une connexion désactivée
 
 L'exemple suivant active la connexion `Mary5`.
 
@@ -252,9 +252,9 @@ PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
-- [Informations d’identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [Informations d'identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
 - [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
 - [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
@@ -266,7 +266,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_**|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_**|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -277,7 +277,7 @@ GO
 ## <a name="syntax"></a>Syntaxe
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
   {
@@ -303,18 +303,18 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE active ou désactive cette connexion. La désactivation d'une connexion n'a aucune incidence sur le comportement des connexions qui sont déjà en cours. (Utilisez l’instruction `KILL` pour mettre fin à des connexions existantes.) Les connexions désactivées conservent leurs autorisations et peuvent toujours être usurpées.
 
-PASSWORD **='** _password_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
+PASSWORD **='**_password_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
 
 Des connexions actives en permanence à SQL Database nécessitent une réautorisation (effectuée par le moteur de base de données) au moins toutes les 10 heures. Le moteur de base de données tente une réautorisation en utilisant le mot de passe envoyé à l’origine et aucune entrée utilisateur n’est nécessaire. Pour des raisons de performances, quand un mot de passe est réinitialisé dans SQL Database, la connexion n’est pas authentifiée de nouveau, même si elle est réinitialisée suite à un regroupement de connexions. Cela est différent du comportement local de SQL Server. Si le mot de passe a été modifié depuis que la connexion a été initialement autorisée, la connexion doit être interrompue et une nouvelle connexion établie à l’aide du nouveau mot de passe. Un utilisateur avec l’autorisation KILL DATABASE CONNECTION peut mettre fin explicitement à une connexion à SQL Database à l’aide de la commande KILL. Pour plus d’informations, consultez [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Lorsqu'un compte de connexion (ou un utilisateur de base de données autonome) se connecte et est authentifié, la connexion met en cache les informations d'identité sur la connexion. Dans le cas d'une connexion d'authentification Windows, ces informations incluent des données sur l'appartenance aux groupes Windows. L'identité de la connexion reste authentifiée tant que la connexion est conservée. Pour imposer des modifications d'identité, une réinitialisation du mot de passe, par exemple, ou la modification de l'appartenance au groupe Windows, le compte de connexion doit fermer une session de l'autorité d'authentification (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et ouvrir une nouvelle session. Un membre du rôle serveur fixe **sysadmin** ou tout compte de connexion doté de l’autorisation **ALTER ANY CONNECTION** peut utiliser la commande **KILL** pour mettre fin à une connexion et obliger le compte de connexion à se reconnecter. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut réutiliser les informations de connexion lors de l’ouverture de plusieurs connexions dans les fenêtres de l’Explorateur d’objets et de l’éditeur de requête. Fermez toutes les connexions pour imposer une reconnexion.
 
-OLD_PASSWORD **='** _oldpassword_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
+OLD_PASSWORD **='**_oldpassword_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
 
 NAME = *login_name* correspond au nouveau nom de la connexion à renommer. S'il s'agit d'une connexion Windows, le SID du principal Windows correspondant au nouveau nom doit correspondre au SID de la connexion dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nouveau nom d’une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas contenir une barre oblique inverse (\\).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -335,7 +335,7 @@ Un principal peut modifier le mot de passe pour sa propre connexion.
 
 Ces exemples incluent également des exemples d’utilisation d’autres produits SQL. Vérifiez les arguments pris en charge ci-dessus.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Activation d'une connexion désactivée
+### <a name="a-enabling-a-disabled-login"></a>R. Activation d'une connexion désactivée
 
 L'exemple suivant active la connexion `Mary5`.
 
@@ -410,9 +410,9 @@ PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
-- [Informations d’identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [Informations d'identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
 - [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
 - [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
@@ -424,11 +424,11 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* Instance managée<br />SQL Database \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* Instance managée<br />SQL Database \*_**|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -469,7 +469,7 @@ ALTER LOGIN login_name
 ```
 
 > [!NOTE]
-> L’administrateur Azure AD pour la fonctionnalité d’instance managée après la création a changé. Pour plus d’informations, consultez [Nouvelle fonctionnalité de l’administrateur Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> L’administrateur Azure AD de la fonctionnalité d’instance qui a été gérée après la création a changé. Pour plus d’informations, consultez [Nouvelle fonctionnalité d’administration Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
@@ -497,21 +497,21 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE active ou désactive cette connexion. La désactivation d'une connexion n'a aucune incidence sur le comportement des connexions qui sont déjà en cours. (Utilisez l’instruction `KILL` pour mettre fin à une connexion existante.) Les connexions désactivées conservent leurs autorisations et peuvent toujours être usurpées.
 
-DEFAULT_DATABASE **=** _database_ spécifie une base de données par défaut à affecter à la connexion.
+DEFAULT_DATABASE **=**_database_ spécifie une base de données par défaut à affecter à la connexion.
 
-DEFAULT_LANGUAGE **=** _language_ spécifie une langue par défaut à affecter à la connexion. La langue par défaut pour toutes les connexions SQL Database est l’anglais. Ceci ne peut pas être modifié. La langue par défaut de la connexion `sa` sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Linux est l’anglais, mais vous pouvez la modifier.
+DEFAULT_LANGUAGE **=**_language_ spécifie une langue par défaut à affecter à la connexion. La langue par défaut pour toutes les connexions SQL Database est l’anglais. Ceci ne peut pas être modifié. La langue par défaut de la connexion `sa` sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Linux est l’anglais, mais vous pouvez la modifier.
 
 ### <a name="arguments-applicable-only-to-sql-logins"></a>Arguments applicables uniquement aux connexions SQL
 
-PASSWORD **='** _password_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse. Les mots de passe ne s’appliquent pas non plus en cas d’utilisation avec des connexions externes, telles que des connexions Azure AD.
+PASSWORD **='**_password_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse. Les mots de passe ne s’appliquent pas non plus en cas d’utilisation avec des connexions externes, telles que des connexions Azure AD.
 
 Des connexions actives en permanence à SQL Database nécessitent une réautorisation (effectuée par le moteur de base de données) au moins toutes les 10 heures. Le moteur de base de données tente une réautorisation en utilisant le mot de passe envoyé à l’origine et aucune entrée utilisateur n’est nécessaire. Pour des raisons de performances, quand un mot de passe est réinitialisé dans SQL Database, la connexion n’est pas authentifiée de nouveau, même si elle est réinitialisée suite à un regroupement de connexions. Cela est différent du comportement local de SQL Server. Si le mot de passe a été modifié depuis que la connexion a été initialement autorisée, la connexion doit être interrompue et une nouvelle connexion établie à l’aide du nouveau mot de passe. Un utilisateur avec l’autorisation KILL DATABASE CONNECTION peut mettre fin explicitement à une connexion à SQL Database à l’aide de la commande KILL. Pour plus d’informations, consultez [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
-PASSWORD **=** _hashed\_password_ s’applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée.
+PASSWORD **=**_hashed\_password_ S’applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée.
 
 HASHED s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie que le mot de passe entré après l'argument PASSWORD est déjà haché. Si cette option n'est pas sélectionnée, le mot de passe est haché avant d'être stocké dans la base de données. Cette option doit être utilisée uniquement pour la synchronisation de connexion entre deux serveurs. N'utilisez pas l'option HASHED pour modifier des mots de passe de manière régulière.
 
-OLD_PASSWORD **='** _oldpassword_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
+OLD_PASSWORD **='**_oldpassword_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
 
 MUST_CHANGE<br>
 S'applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous incluez cette option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande un mot de passe actualisé lors de la première utilisation de la connexion modifiée.
@@ -532,7 +532,7 @@ ADD CREDENTIAL ajoute des informations d’identification du fournisseur EKM (Ex
 
 DROP CREDENTIAL supprime des informations d’identification du fournisseur EKM (Extensible Key Management) de la connexion. Pour plus d’informations, consultez [Gestion de clés extensible (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Lorsque CHECK_POLICY a la valeur ON, l'argument HASHED ne peut pas être utilisé.
 
@@ -579,7 +579,7 @@ Seul un principal SQL avec des privilèges `sysadmin` peut exécuter une command
 
 Ces exemples incluent également des exemples d’utilisation d’autres produits SQL. Vérifiez les arguments pris en charge ci-dessus.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Activation d'une connexion désactivée
+### <a name="a-enabling-a-disabled-login"></a>R. Activation d'une connexion désactivée
 
 L'exemple suivant active la connexion `Mary5`.
 
@@ -661,9 +661,9 @@ L’exemple suivant désactive la connexion d’un utilisateur Azure AD, joe@con
 ALTER LOGIN [joe@contoso.com] DISABLE
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
-- [Informations d’identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [Informations d'identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
 - [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
 - [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
@@ -675,16 +675,16 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse.
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
 
 ## <a name="syntax"></a>Syntaxe
 
 ```
--- Syntax for Azure SQL Database and Azure SQL Data Warehouse
+-- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
   {
@@ -710,18 +710,18 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE active ou désactive cette connexion. La désactivation d'une connexion n'a aucune incidence sur le comportement des connexions qui sont déjà en cours. (Utilisez l’instruction `KILL` pour mettre fin à des connexions existantes.) Les connexions désactivées conservent leurs autorisations et peuvent toujours être usurpées.
 
-PASSWORD **='** _password_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
+PASSWORD **='**_password_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
 
 Des connexions actives en permanence à SQL Database nécessitent une réautorisation (effectuée par le moteur de base de données) au moins toutes les 10 heures. Le moteur de base de données tente une réautorisation en utilisant le mot de passe envoyé à l’origine et aucune entrée utilisateur n’est nécessaire. Pour des raisons de performances, quand un mot de passe est réinitialisé dans SQL Database, la connexion n’est pas authentifiée de nouveau, même si elle est réinitialisée suite à un regroupement de connexions. Cela est différent du comportement local de SQL Server. Si le mot de passe a été modifié depuis que la connexion a été initialement autorisée, la connexion doit être interrompue et une nouvelle connexion établie à l’aide du nouveau mot de passe. Un utilisateur avec l’autorisation KILL DATABASE CONNECTION peut mettre fin explicitement à une connexion à SQL Database à l’aide de la commande KILL. Pour plus d’informations, consultez [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Lorsqu'un compte de connexion (ou un utilisateur de base de données autonome) se connecte et est authentifié, la connexion met en cache les informations d'identité sur la connexion. Dans le cas d'une connexion d'authentification Windows, ces informations incluent des données sur l'appartenance aux groupes Windows. L'identité de la connexion reste authentifiée tant que la connexion est conservée. Pour imposer des modifications d'identité, une réinitialisation du mot de passe, par exemple, ou la modification de l'appartenance au groupe Windows, le compte de connexion doit fermer une session de l'autorité d'authentification (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et ouvrir une nouvelle session. Un membre du rôle serveur fixe **sysadmin** ou tout compte de connexion doté de l’autorisation **ALTER ANY CONNECTION** peut utiliser la commande **KILL** pour mettre fin à une connexion et obliger le compte de connexion à se reconnecter. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut réutiliser les informations de connexion lors de l’ouverture de plusieurs connexions dans les fenêtres de l’Explorateur d’objets et de l’éditeur de requête. Fermez toutes les connexions pour imposer une reconnexion.
 
-OLD_PASSWORD **='** _oldpassword_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
+OLD_PASSWORD **='**_oldpassword_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
 
 NAME = *login_name* correspond au nouveau nom de la connexion à renommer. S'il s'agit d'une connexion Windows, le SID du principal Windows correspondant au nouveau nom doit correspondre au SID de la connexion dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nouveau nom d’une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas contenir une barre oblique inverse (\\).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -742,7 +742,7 @@ Un principal peut modifier le mot de passe pour sa propre connexion.
 
 Ces exemples incluent également des exemples d’utilisation d’autres produits SQL. Vérifiez les arguments pris en charge ci-dessus.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Activation d'une connexion désactivée
+### <a name="a-enabling-a-disabled-login"></a>R. Activation d'une connexion désactivée
 
 L'exemple suivant active la connexion `Mary5`.
 
@@ -816,9 +816,9 @@ PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
-- [Informations d’identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [Informations d'identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
 - [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
 - [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)
@@ -830,7 +830,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
 
 &nbsp;
 
@@ -869,12 +869,12 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE active ou désactive cette connexion. La désactivation d'une connexion n'a aucune incidence sur le comportement des connexions qui sont déjà en cours. (Utilisez l’instruction `KILL` pour mettre fin à une connexion existante.) Les connexions désactivées conservent leurs autorisations et peuvent toujours être usurpées.
 
-PASSWORD **='** _password_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
+PASSWORD **='**_password_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie le mot de passe de la connexion en cours de modification. Les mots de passe respectent la casse.
 
 > [!IMPORTANT]
 > Lorsqu'un compte de connexion (ou un utilisateur de base de données autonome) se connecte et est authentifié, la connexion met en cache les informations d'identité sur la connexion. Dans le cas d'une connexion d'authentification Windows, ces informations incluent des données sur l'appartenance aux groupes Windows. L'identité de la connexion reste authentifiée tant que la connexion est conservée. Pour imposer des modifications d'identité, une réinitialisation du mot de passe, par exemple, ou la modification de l'appartenance au groupe Windows, le compte de connexion doit fermer une session de l'autorité d'authentification (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et ouvrir une nouvelle session. Un membre du rôle serveur fixe **sysadmin** ou tout compte de connexion doté de l’autorisation **ALTER ANY CONNECTION** peut utiliser la commande **KILL** pour mettre fin à une connexion et obliger le compte de connexion à se reconnecter. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut réutiliser les informations de connexion lors de l’ouverture de plusieurs connexions dans les fenêtres de l’Explorateur d’objets et de l’éditeur de requête. Fermez toutes les connexions pour imposer une reconnexion.
 
-OLD_PASSWORD **='** _oldpassword_ **'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
+OLD_PASSWORD **='**_oldpassword_**'** s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mot de passe actuel de la connexion à laquelle un nouveau mot de passe doit être attribué. Les mots de passe respectent la casse.
 
 MUST_CHANGE s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous incluez cette option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande un mot de passe actualisé lors de la première utilisation de la connexion modifiée.
 
@@ -886,7 +886,7 @@ CHECK_POLICY **=** { **ON** | OFF } s’applique uniquement aux connexions [!INC
 
 UNLOCK s’applique uniquement aux connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifie qu'une connexion verrouillée doit être déverrouillée.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Lorsque CHECK_POLICY a la valeur ON, l'argument HASHED ne peut pas être utilisé.
 
@@ -931,7 +931,7 @@ Un principal peut modifier le mot de passe, la langue et la base de données par
 
 Ces exemples incluent également des exemples d’utilisation d’autres produits SQL. Vérifiez les arguments pris en charge ci-dessus.
 
-### <a name="a-enabling-a-disabled-login"></a>A. Activation d'une connexion désactivée
+### <a name="a-enabling-a-disabled-login"></a>R. Activation d'une connexion désactivée
 
 L'exemple suivant active la connexion `Mary5`.
 
@@ -1005,9 +1005,9 @@ PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;
 GO
 ```
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
-- [Informations d’identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
+- [Informations d'identification](../../relational-databases/security/authentication-access/credentials-database-engine.md)
 - [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)
 - [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)
 - [CREATE CREDENTIAL](../../t-sql/statements/create-credential-transact-sql.md)

@@ -2,7 +2,7 @@
 title: Incorporation des fonctions UDF scalaires dans les bases de données Microsoft SQL | Microsoft Docs
 description: Fonctionnalité d’incorporation (inlining) des fonctions UDF scalaires pour améliorer les performances des requêtes qui appellent des fonctions UDF scalaires dans SQL Server (à partir de SQL Server 2019) et Azure SQL Database.
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926048"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831779"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -154,6 +154,7 @@ Selon la complexité de la logique dans la fonction UDF, le plan de requête obt
 - La fonction UDF ne référence pas de types définis par l’utilisateur.
 - Aucune signature n’est ajoutée à la fonction UDF.
 - La fonction UDF n’est pas une fonction de partition.
+- La fonction UDF ne contient aucune référence à des expressions de table commune (CTE)
 
 <sup>1</sup> `SELECT` avec une accumulation/agrégation de variable (par exemple, `SELECT @val += col1 FROM table1`) n’est pas pris en charge pour l’incorporation.
 
@@ -188,7 +189,7 @@ Si toutes les conditions préalables sont remplies et si [!INCLUDE[ssNoVersion](
 - Certains événements XEvents sont émis.
 
 ## <a name="enabling-scalar-udf-inlining"></a>Activation de l’incorporation des fonctions UDF scalaires
-Vous pouvez rendre les charges de travail automatiquement éligibles à l’incorporation des fonctions UDF scalaires en activant le niveau de compatibilité 150 pour la base de données. Vous pouvez définir cette option à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
+Vous pouvez rendre les charges de travail automatiquement éligibles à l’incorporation des fonctions UDF scalaires en activant le niveau de compatibilité 150 pour la base de données. Vous pouvez définir cette option à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :   
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -209,7 +210,7 @@ Pour réactiver l’incorporation des fonctions UDF scalaires pour la base de d
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-Lorsque l'option est activée (ON), ce paramètre apparaît activé dans [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). Vous pouvez également désactiver l’incorporation des fonctions UDF scalaires pour une requête spécifique en désignant `DISABLE_TSQL_SCALAR_UDF_INLINING` comme indicateur de requête `USE HINT`. Par exemple :
+Lorsque l'option est activée (ON), ce paramètre apparaît activé dans [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). Vous pouvez également désactiver l’incorporation des fonctions UDF scalaires pour une requête spécifique en désignant `DISABLE_TSQL_SCALAR_UDF_INLINING` comme indicateur de requête `USE HINT`. Par exemple : 
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
@@ -223,7 +224,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 Un indicateur de requête `USE HINT` est prioritaire par rapport à la configuration étendue à la base de données et par rapport à un paramètre de niveau de compatibilité.
 
 L’incorporation des fonctions UDF scalaires peut également être désactivée pour une fonction UDF spécifique à l’aide de la clause INLINE dans l’instruction `CREATE FUNCTION` ou `ALTER FUNCTION`.
-Par exemple :
+Par exemple : 
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))
@@ -248,7 +249,7 @@ END
 ```
 
 > [!NOTE]
-> La clause `INLINE` n'est pas obligatoire. Si la clause `INLINE` n’est pas spécifiée, elle est automatiquement définie sur `ON`/`OFF` selon que la fonction UDF peut ou non être incorporée. Si `INLINE = ON` est spécifié mais que la fonction UDF s’avère inéligible pour l’incorporation, une erreur est levée.
+> La clause `INLINE` n’est pas obligatoire. Si la clause `INLINE` n’est pas spécifiée, elle est automatiquement définie sur `ON`/`OFF` selon que la fonction UDF peut ou non être incorporée. Si `INLINE = ON` est spécifié mais que la fonction UDF s’avère inéligible pour l’incorporation, une erreur est levée.
 
 ## <a name="important-notes"></a>Remarques importantes
 Comme cela est décrit dans cet article, l’incorporation des fonctions UDF scalaires transforme une requête avec des fonctions UDF scalaires en une requête avec une sous-requête scalaire équivalente. En raison de cette transformation, les utilisateurs peuvent remarquer des différences de comportement dans les scénarios suivants :
@@ -260,7 +261,7 @@ Comme cela est décrit dans cet article, l’incorporation des fonctions UDF sca
 1. Il peut y avoir des différences de comportement de [Dynamic Data Masking](../security/dynamic-data-masking.md) avec l’incorporation des données UDF. Dans certaines situations (selon la logique utilisée dans la fonction UDF), l’incorporation peut être plus conservatrice que le masquage des colonnes de sortie. Dans les scénarios où les colonnes référencées dans une fonction UDF ne sont pas les colonnes de sortie, elles ne sont pas masquées. 
 1. Si une fonction UDF référence des fonctions intégrées telles que `SCOPE_IDENTITY()`, `@@ROWCOUNT` ou `@@ERROR`, la valeur retournée par la fonction intégrée change avec l’incorporation. Ce changement de comportement est dû au fait que l’incorporation modifie l’étendue des instructions au sein de la fonction UDF.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)     
 [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     

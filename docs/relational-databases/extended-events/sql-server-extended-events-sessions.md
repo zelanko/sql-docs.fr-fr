@@ -1,6 +1,5 @@
 ---
-title: Sessions Événements étendus SQL Server | Microsoft Docs
-ms.custom: ''
+title: Sessions Événements étendus SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009333"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242910"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
 
@@ -35,7 +34,7 @@ ms.locfileid: "68009333"
 ## <a name="session-states"></a>États de la session  
  L'illustration ci-dessous indique les divers états d'une session Événements étendus.  
   
- ![État de session d’événements étendus](../../relational-databases/extended-events/media/xesessionstate.gif "État de session d’événements étendus")  
+ ![État de session d'événements étendus](../../relational-databases/extended-events/media/xesessionstate.gif "État de session d'événements étendu")  
   
  En vous référant à l'illustration précédente, notez que l'état de la session change au fur et à mesure que les commandes DDL sont exécutées pour une session d'événements. Ces changements d'état sont décrits dans le tableau ci-dessous.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "68009333"
   
  La figure ci-dessous montre le contenu de la session et la relation entre packages et sessions.  
   
- ![Coexistence et partage d’objets dans des sessions.](../../relational-databases/extended-events/media/xesessions.gif "Coexistence et partage d’objets dans des sessions.")  
+ ![Coexistence et partage d'objets dans des sessions.](../../relational-databases/extended-events/media/xesessions.gif "Coexistence et partage d'objets dans des sessions.")  
   
  Faisant référence à l'illustration précédente, notez les points suivants :  
   
@@ -78,7 +77,7 @@ ms.locfileid: "68009333"
   
  L'architecture des Événements étendus fournit un système flexible qui permet d'utiliser conjointement divers objets pour résoudre des problèmes spécifiques.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

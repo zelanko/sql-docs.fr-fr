@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d22df5141535e5ebfdb8120161a1776db616aef1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281677"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947107"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Déployer un projet SSIS avec SQL Server Management Studio (SSMS)
 
@@ -30,7 +30,7 @@ Avant de commencer, vérifiez que vous disposez de la dernière version de SQL S
 
 La validation décrite dans cet article pour le déploiement sur Azure SQL Database nécessite SQL Server Data Tools (SSDT) version 17.4 ou ultérieure. Pour obtenir la dernière version de SSDT, consultez [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
+Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
@@ -42,16 +42,16 @@ Vous pouvez utiliser les informations de ce guide de démarrage rapide pour dép
 
 Vous ne pouvez pas utiliser les informations de ce guide de démarrage rapide pour déployer un package SSIS sur SQL Server sur Linux. Pour plus d’informations sur l’exécution de packages sur Linux, consultez [Extraire, transformer et charger des données sur Linux avec SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
-## <a name="for-azure-sql-database-get-the-connection-info"></a>Pour Azure SQL Database, obtenir les informations de connexion
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Pour Azure SQL Database, obtenez les informations de connexion.
 
 Pour déployer le projet sur Azure SQL Database, obtenez les informations de connexion dont vous avez besoin pour vous connecter à la base de données du catalogue SSIS (SSISDB). Vous avez besoin des informations de connexion et du nom de serveur complet dans les procédures qui suivent.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com/).
 2. Sélectionnez **Bases de données SQL** dans le menu de gauche, puis sélectionnez la base de données SSISDB dans la page **Bases de données SQL**. 
 3. Dans la page **Vue d’ensemble** de votre base de données, notez le nom complet du serveur. Pour voir l’option **Cliquer pour copier**, pointez sur le nom du serveur. 
-4. Si vous oubliez vos informations de connexion de serveur Azure SQL Database, accédez à la page du serveur SQL Database pour afficher le nom d’administrateur de serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
+4. Si vous avez oublié vos informations de connexion au serveur Azure SQL Database, accédez à la page du serveur SQL Database pour voir le nom de l’administrateur du serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
 
-## <a name="wizard_auth"></a> Méthodes d’authentification dans l’Assistant Déploiement
+## <a name="authentication-methods-for-deployment"></a>Méthodes d’authentification pour le déploiement
 
 Si vous déployez sur un serveur SQL Server avec l’Assistant Déploiement, vous devez utiliser l’authentification Windows. Vous ne pouvez pas utiliser l’authentification SQL Server.
 
@@ -63,17 +63,17 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
 
 1. Ouvrez SQL Server Management Studio.
 
-2. Dans la boîte de dialogue **Se connecter au serveur**, entrez les informations suivantes :
+2. Dans la fenêtre **Se connecter au serveur**, entrez les valeurs suivantes :
 
    | Paramètre       | Valeur suggérée | En savoir plus | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Nom complet du serveur | Si vous vous connectez à un serveur Azure SQL Database, le nom est au format suivant : `<server_name>.database.windows.net`. |
-   | **Authentification** | Authentification SQL Server | Avec l’authentification SQL Server, vous pouvez vous connecter à SQL Server ou à Azure SQL Database. Consultez [Méthodes d’authentification dans l’Assistant Déploiement](#wizard_auth) dans cet article. |
-   | **Connexion** | Compte Administrateur du serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
-   | **Mot de passe** | Mot de passe du compte Administrateur de votre serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
+   | **Authentification** | l’authentification SQL Server | Avec l’authentification SQL Server, vous pouvez vous connecter à SQL Server ou à Azure SQL Database. Consultez [Méthodes d’authentification dans le déploiement](#authentication-methods-for-deployment) dans cet article. |
+   | **Connexion** | Compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
+   | **Mot de passe** | Mot de passe de votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
 
-3. Cliquez sur **Se connecter**. La fenêtre Explorateur d’objets s’ouvre dans SSMS. 
+3. Cliquez sur **Connecter**. La fenêtre Explorateur d’objets s’ouvre dans SSMS. 
 
 4. Dans l’Explorateur d’objets, développez **Catalogues Integration Services**, puis développez **SSISDB** pour afficher les objets de la base de données de catalogues SSIS.
 
@@ -94,7 +94,7 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
   
 3.  Dans la page **Sélectionner la destination**, sélectionnez la destination du projet.
     -   Entrez le nom complet du serveur. Si le serveur cible est un serveur Azure SQL Database, le nom est au format suivant : `<server_name>.database.windows.net`.
-    -   Fournissez les informations d’authentification et sélectionnez **Se connecter**. Consultez [Méthodes d’authentification dans l’Assistant Déploiement](#wizard_auth) dans cet article.
+    -   Fournissez les informations d’authentification et sélectionnez **Se connecter**. Consultez [Méthodes d’authentification dans le déploiement](#authentication-methods-for-deployment) dans cet article.
     -   Sélectionnez ensuite **Parcourir** pour sélectionner le dossier cible dans SSISDB.
     -   Ensuite, sélectionnez **Suivant** pour ouvrir la page **Vérifier**. (Le bouton **Suivant** est activé seulement si vous sélectionnez **Se connecter**.)
   
@@ -116,7 +116,7 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
     - [Déployer un package SSIS à partir de l’invite de commandes](./ssis-quickstart-deploy-cmdline.md)
     - [Déployer un package SSIS avec PowerShell](ssis-quickstart-deploy-powershell.md)
     - [Déployer un package SSIS avec C#](./ssis-quickstart-deploy-dotnet.md) 
-- Exécutez un package déployé. Pour exécuter un package, vous pouvez choisir parmi plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
+- Exécutez un package déployé. Pour exécuter un package, vous pouvez choisir parmi plusieurs outils et langages. Pour plus d’informations, consultez les articles suivants :
     - [Exécuter un package SSIS avec SSMS](./ssis-quickstart-run-ssms.md)
     - [Exécuter un package SSIS avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Exécuter un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

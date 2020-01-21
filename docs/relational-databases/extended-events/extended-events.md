@@ -1,6 +1,5 @@
 ---
-title: Vue d’ensemble de XEvents - SQL Server | Microsoft Docs
-ms.custom: ''
+title: Vue d’ensemble de XEvents - SQL Server
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 34ebcae99f096d095839cb533fb6efe58b113050
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313698"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234598"
 ---
 # <a name="extended-events-overview"></a>Vue d’ensemble des événements étendus
 
@@ -130,7 +129,7 @@ SELECT
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)  
 [Prise en charge DAC pour les objets et versions SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
