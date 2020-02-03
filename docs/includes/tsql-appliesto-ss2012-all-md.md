@@ -1,9 +1,14 @@
 ---
-ms.openlocfilehash: 7b0e51cb705dd58cd197c5b193739c89338feda7
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+author: MikeRayMSFT
+ms.service: sql
+ms.topic: include
+ms.date: 01/13/2020
+ms.author: mikeray
+ms.openlocfilehash: 1cbedde99adc84327efce1755f1783ddac4842ea
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73590632"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037956"
 ---
 <Token>**S’APPLIQUE À :** ![oui](media/yes.png)SQL Server ![oui](media/yes.png)Azure SQL Database ![oui](media/yes.png)Azure Synapse Analytics (SQL DW) ![oui](media/yes.png)Parallel Data Warehouse </Token>

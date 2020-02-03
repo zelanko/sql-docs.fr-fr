@@ -11,10 +11,10 @@ ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5a9065123bbacc828c7949aabcb44de6136f62c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935986"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
@@ -32,7 +32,7 @@ bool PDOStatement::setFetchMode( $mode );
 #### <a name="parameters"></a>Paramètres  
 $*mode* : paramètre(s) valide(s) à passer à [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md).  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 true en cas de réussite, false dans le cas contraire.  
   
 ## <a name="remarks"></a>Notes  

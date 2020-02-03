@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844584"
 ---
 # <a name="extended-events-for-stretch-database"></a>Événements étendus pour Stretch Database
@@ -81,5 +81,5 @@ stretch_table_validation_error|Indique la fin de la validation d’une table qua
 stretch_unprovision_table_start|Indique le début de l’annulation de l’approvisionnement de la table d’extension.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Gérer Stretch Database et résoudre ses problèmes](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+[Gérer et dépanner Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 
