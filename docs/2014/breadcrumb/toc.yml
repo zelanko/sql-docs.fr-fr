@@ -45,13 +45,13 @@
                 - name: Trace SQL
                   tocHref: /sql/relational-databases/sql-trace/
                   topicHref: /sql/relational-databases/sql-trace/sql-trace
-                - name: Profiler
+                - name: Profileur
                   tocHref: /sql/tools/sql-server-profiler/
                   topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
                 - name: Suivi des modifications
                   tocHref: /sql/relational-databases/track-changes/
                   topicHref: /sql/relational-databases/track-changes/track-data-changes-sql-server
-                - name: Journaux
+                - name: Journaux d’activité
                   tocHref: /sql/relational-databases/logs/
                   topicHref: /sql/relational-databases/logs/log-file-viewer
                 - name: Performances
@@ -177,7 +177,7 @@
                 - name: Flux de contrôle
                   tocHref: /sql/integration-services/control-flow/
                   topicHref: /sql/integration-services/control-flow/control-flow
-                - name: Flux de données
+                - name: Data Flow
                   tocHref: /sql/integration-services/data-flow/
                   topicHref: /sql/integration-services/data-flow/data-flow
                   items:
@@ -239,7 +239,7 @@
                 - name: Partitions
                   tocHref: /sql/relational-databases/partitions/
                   topicHref: /sql/relational-databases/partitions/partitioned-tables-and-indexes
-                - name: Vues
+                - name: Les vues
                   tocHref: /sql/relational-databases/views/
                   topicHref: /sql/relational-databases/views/views
                 - name: Procédures stockées et OLE
@@ -260,7 +260,7 @@
                 - name: XML
                   tocHref: /sql/relational-databases/xml/
                   topicHref: /sql/relational-databases/xml/xml-data-sql-server
-                - name: Spatial
+                - name: spatial
                   tocHref: /sql/relational-databases/spatial/
                   topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
                 - name: Objet blob
@@ -300,7 +300,7 @@
                     - name: Erreurs et événements
                       tocHref: /sql/relational-databases/replication/errors-events/
                       topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
-                    - name: Fusion
+                    - name: Fusionner
                       tocHref: /sql/relational-databases/replication/merge/
                       topicHref: /sql/relational-databases/replication/merge/merge-replication
                     - name: Moniteur
@@ -309,7 +309,7 @@
                     - name: Non-SQL
                       tocHref: /sql/relational-databases/replication/non-sql/
                       topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
-                    - name: Publier
+                    - name: Publish
                       tocHref: /sql/relational-databases/replication/publish/
                       topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
                     - name: Transactionnelle
@@ -428,6 +428,6 @@
             - name: Tutoriel T-SQL
               tocHref: /sql/t-sql/
               topicHref: /sql/t-sql/tutorial-writing-transact-sql-statements
-            - name: Didacticiels
+            - name: Tutoriels
               tocHref: /sql/tutorials/
               topicHref: /sql/tutorials/tutorials-for-sql-server-2014

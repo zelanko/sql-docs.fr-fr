@@ -11,10 +11,10 @@ ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f7ca906c8689c1bf8f40e79875acff5b7ab7c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570296"
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>Tâches et autorisations - Tâches au niveau système
@@ -30,7 +30,7 @@ ms.locfileid: "65570296"
 |----------|-----------------|  
 |Exécuter les définitions de rapport|Exécuter les définitions de rapport (l'autorisation et la tâche portent le même nom)|  
 |Générer des événements|Générer des événements|  
-|Gérer les travaux|Lire les propriétés système<br /><br /> Mettre à jour les propriétés système|  
+|Gestion des travaux|Lire les propriétés système<br /><br /> Mettre à jour les propriétés système|  
 |Gérer les propriétés du serveur de rapports|Lire les propriétés système<br /><br /> Mettre à jour les propriétés système|  
 |Gérer les rôles|Créer les rôles<br /><br /> Supprimer les rôles<br /><br /> Lire les propriétés des rôles<br /><br /> Mettre à jour les propriétés des rôles|  
 |Gérer les planifications partagées|Créer les planifications|  

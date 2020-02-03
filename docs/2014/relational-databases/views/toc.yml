@@ -1,4 +1,4 @@
-- name: Vues
+- name: Les vues
   href: views.md
   items:
     - name: Créer des vues

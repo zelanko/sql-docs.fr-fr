@@ -21,7 +21,7 @@
       href: ../enable-package-logging-in-sql-server-data-tools.md
     - name: Activer la journalisation des exécutions de package sur le serveur SSIS
       href: ../enable-logging-for-package-execution-on-the-ssis-server.md
-- name: Compteurs de performances
+- name: Compteurs de performance
   href: performance-counters.md
   items:
     - name: Ajouter un journal pour les compteurs de performances de flux de données

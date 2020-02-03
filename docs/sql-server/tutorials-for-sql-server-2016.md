@@ -10,10 +10,10 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893082"
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "68893082"
  
 ## <a name="current-tutorials"></a>Didacticiels actuels  
   
-|Technologie|Description|  
+|Technology|Description|  
 |--------------|---------------|  
 |[Didacticiels pour Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
 |[Didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md)|Apprenez à vous connecter à une instance du moteur de base de données, puis à créer et à exécuter des instructions Transact-SQL.|  

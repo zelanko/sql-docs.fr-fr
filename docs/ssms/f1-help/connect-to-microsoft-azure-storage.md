@@ -1,6 +1,6 @@
 ---
-title: Se connecter au service Stockage Microsoft Azure | Microsoft Docs
-ms.custom: ''
+title: Se connecter au service Stockage Microsoft Azure
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155679"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245024"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Se connecter au service Stockage Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Spécifiez les informations suivantes sur votre compte Azure, puis cliquez sur *
    >[!NOTE]
    > Vous pouvez uniquement vous connecter à des [comptes de stockage à usage général](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services). La connexion à d’autres types de comptes de stockage peut entraîner une erreur similaire à celle qui suit :
    >
-   >  Le format de la valeur d’un des en-têtes HTTP n’est pas correct. (Microsoft.SqlServer.StorageClient).
+   >  The value for one of the HTTP headers is not in the correct format. (Le format de la valeur d’un des en-têtes HTTP est incorrect.) (Microsoft.SqlServer.StorageClient).
    >
    >  Le serveur distant a retourné une erreur : (400) Requête incorrecte. (Système)
 

@@ -11,10 +11,10 @@ ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570277"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Tâches et autorisations - Tâches au niveau élément
@@ -44,9 +44,9 @@ ms.locfileid: "65570277"
 |Gérer les rapports|Dossiers|Créer un rapport<br /><br /> s'applique également à la création de datasets partagés|  
 |Gérer les rapports|Rapports|Lire les propriétés<br /><br /> Supprimer les propriétés de mise à jour<br /><br /> Mettre à jour les paramètres<br /><br /> Lire les sources de données<br /><br /> Mettre à jour les sources de données<br /><br /> Lire la définition de rapport<br /><br /> Mettre à jour à la définition de rapport<br /><br /> Exécuter la stratégie de lecture<br /><br /> Mettre à jour la stratégie|  
 |Gérer les rapports|Datasets partagés|Lire les propriétés<br /><br /> Supprimer les propriétés de mise à jour<br /><br /> Mettre à jour les paramètres<br /><br /> Lire les sources de données<br /><br /> Mettre à jour les sources de données<br /><br /> Lire la définition de rapport<br /><br /> Mettre à jour à la définition de rapport<br /><br /> Exécuter la stratégie de lecture<br /><br /> Mettre à jour la stratégie|  
-|Gérer les ressources|Dossiers|Créer une ressource|  
-|Gérer les ressources|Ressources|Mettre à jour les propriétés<br /><br /> Supprimer le contenu de mise à jour<br /><br /> Lire les propriétés|  
-|Gérer les ressources|Parties de rapports|Mettre à jour les propriétés<br /><br /> Supprimer le contenu de mise à jour<br /><br /> Lire les propriétés|  
+|Gestion des ressources|Dossiers|Créer une ressource|  
+|Gestion des ressources|Ressources|Mettre à jour les propriétés<br /><br /> Supprimer le contenu de mise à jour<br /><br /> Lire les propriétés|  
+|Gestion des ressources|Parties de rapports|Mettre à jour les propriétés<br /><br /> Supprimer le contenu de mise à jour<br /><br /> Lire les propriétés|  
 |Définir la sécurité pour des éléments individuels|Rapports, ressources, sources de données, datasets Partagés, dossiers|Lire les stratégies de sécurité Mettre à jour les stratégies de sécurité|  
 |Afficher les sources de données|Sources de données|Lire le contenu<br /><br /> Lire les propriétés|  
 |Afficher les dossiers|Dossiers|Lire les propriétés<br /><br /> Exécuter et afficher<br /><br /> Répertorier l'historique de rapport|  

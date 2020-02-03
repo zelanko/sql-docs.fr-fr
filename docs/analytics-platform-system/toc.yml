@@ -86,7 +86,7 @@
           href: ../analytics-platform-system/grant-permissions.md
     - name: Messages d’erreur
       href: ../analytics-platform-system/error-messages.md
-    - name: Comportement de verrouillage
+    - name: Comportement du verrouillage
       href: ../analytics-platform-system/locking-behavior.md
     - name: Copie de table distante
       href: ../analytics-platform-system/remote-table-copy.md
@@ -104,7 +104,7 @@
           href: ../analytics-platform-system/reserved-database-names.md
         - name: base de données tempdb
           href: ../analytics-platform-system/tempdb-database.md
-        - name: base de données master
+        - name: master database
           href: ../analytics-platform-system/master-database.md
     - name: Sessions utilisateur
       href: ../analytics-platform-system/user-sessions.md
@@ -224,7 +224,7 @@
           href: ../analytics-platform-system/determine-which-cluster-node-failed.md
         - name: Présentation des alertes de la console d’administration
           href: ../analytics-platform-system/understanding-admin-console-alerts.md
-- name: Référence
+- name: Informations de référence
   items:
     - name: Éléments de langage T-SQL
       href: ../analytics-platform-system/tsql-language-elements.md

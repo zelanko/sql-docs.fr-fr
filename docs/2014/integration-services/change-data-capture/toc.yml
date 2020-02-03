@@ -59,7 +59,7 @@
           href: generate-and-run-the-supplemental-logging-script.md
         - name: Générer des tables miroir et des instances de capture de données modifiées
           href: generate-mirror-tables-and-cdc-capture-instances.md
-        - name: Terminer
+        - name: Finish
           href: finish.md
         - name: Modifier les propriétés d'instance
           href: edit-instance-properties.md
@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: 'Procédure : créer l''instance SQL Server de base de données de modifications'
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: 'Procédure : gérer une instance de capture de données modifiées'
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: 'Procédure : modifier les propriétés d''une instance de capture de données modifiées'
           href: how-to-edit-the-cdc-instance-properties.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: Créer et modifier un service de capture de données modifiées Oracle
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: Gérer un service de capture de données modifiées Oracle
+        - name: Gérer un Service de capture de données modifiées Oracle
           href: manage-an-oracle-cdc-service.md
         - name: Préparer SQL Server pour la capture de données modifiées
           href: prepare-sql-server-for-cdc.md
@@ -177,7 +177,7 @@
           href: ../data-flow/look-up-process-chain.md
         - name: Journal des requêtes
           href: ../data-flow/request-log.md
-        - name: Aperçu
+        - name: PRÉVERSION
           href: ../data-flow/preview.md
         - name: Éditeur de destination SAP BW (page Gestionnaire de connexions)
           href: ../data-flow/sap-bw-destination-editor-connection-manager-page.md

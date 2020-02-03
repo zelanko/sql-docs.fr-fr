@@ -76,7 +76,7 @@
 - name: Modèles
   href: models-master-data-services.md
   items:
-    - name: Créer un modèle
+    - name: Création d'un modèle
       href: create-a-model-master-data-services.md
     - name: Modifier un nom de modèle
       href: change-a-model-name-master-data-services.md

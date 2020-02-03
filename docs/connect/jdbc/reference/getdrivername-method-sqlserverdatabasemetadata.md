@@ -16,10 +16,10 @@ ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a87f82805cad4ce781345ace8b97f4539aa675ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983433"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>Méthode getDriverName (SQLServerDatabaseMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67983433"
 public java.lang.String getDriverName()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **String** contenant le nom du pilote JDBC.  
   
 ## <a name="exceptions"></a>Exceptions  

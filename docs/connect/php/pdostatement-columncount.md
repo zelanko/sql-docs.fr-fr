@@ -11,10 +11,10 @@ ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13b7df0010236103da8d5311ee37ea237e14bf2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936096"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
@@ -29,7 +29,7 @@ Retourne le nombre de colonnes dans un jeu de résultats.
 int PDOStatement::columnCount ();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Retourne le nombre de colonnes dans un jeu de résultats. Retourne zéro si le jeu de résultats est vide.  
   
 ## <a name="remarks"></a>Notes  

@@ -11,10 +11,10 @@ ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe0f0cc2ec15fcdb871f290f03565482a8477995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936269"
 ---
 # <a name="pdoerrorinfo"></a>PDO::ErrorInfo
@@ -29,7 +29,7 @@ Récupère les informations d’erreur étendues de la dernière opération effe
 array PDO::errorInfo();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Tableau d’informations d’erreur sur la dernière opération effectuée sur le handle de base de données. Le tableau comprend les champs suivants :  
   
 -   Le code d’erreur SQLSTATE  
@@ -61,7 +61,7 @@ print_r ($conn->errorInfo());
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

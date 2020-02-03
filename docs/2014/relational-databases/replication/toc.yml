@@ -128,7 +128,7 @@
               href: publish/set-the-expiration-period-for-subscriptions.md
             - name: Spécifier des options de schéma
               href: publish/specify-schema-options.md
-            - name: Réplique les modifications de schéma
+            - name: Répliquer les modifications de schéma
               href: publish/replicate-schema-changes.md
             - name: Gérer des colonnes d’identité
               href: publish/manage-identity-columns.md
@@ -316,7 +316,7 @@
           href: publish/specify-data-type-mappings-for-an-oracle-publisher.md
         - name: Travail d’un jeu de transactions pour un serveur de publication Oracle
           href: administration/configure-the-transaction-set-job-for-an-oracle-publisher.md
-        - name: Accorder une autorisation
+        - name: Accorder l’autorisation
           href: non-sql/script-to-grant-oracle-permissions.md
         - name: Gérer des espaces disque logiques Oracle
           href: non-sql/manage-oracle-tablespaces.md
@@ -443,7 +443,7 @@
               href: non-sql/ibm-db2-subscribers.md
             - name: Autres abonnés non-SQL
               href: non-sql/other-non-sql-server-subscribers.md
-- name: Didacticiels
+- name: Tutoriels
   href: replication-tutorials.md
   items:
     - name: Préparer un serveur à la réplication
@@ -452,7 +452,7 @@
       href: tutorial-replicating-data-between-continuously-connected-servers.md
     - name: Configurer la réplication de fusion
       href: tutorial-replicating-data-with-mobile-clients.md
-- name: Référence
+- name: Informations de référence
   items:
     - name: Propriétés des objets de réplication
       items:

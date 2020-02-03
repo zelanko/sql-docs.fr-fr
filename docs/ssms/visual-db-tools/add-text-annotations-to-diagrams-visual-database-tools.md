@@ -1,10 +1,7 @@
 ---
-title: Ajouter des annotations de texte aux schémas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Ajouter des annotations de texte à des schémas
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +10,21 @@ helpviewer_keywords:
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 653d1ee9a9b7f7be922fda223bcd3c000d2d1b0c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 18c94e1ba7ec3be03494f8163d07a2b884f774a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263724"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245352"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Ajouter des annotations de texte aux schémas (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Pour créer des notes ou des commentaires sur un schéma, vous pouvez ajouter des annotations de texte.  
   
 ### <a name="to-add-text-annotations-to-diagrams"></a>Pour ajouter des annotations de texte aux schémas  

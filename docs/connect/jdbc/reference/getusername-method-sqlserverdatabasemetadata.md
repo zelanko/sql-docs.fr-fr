@@ -16,10 +16,10 @@ ms.assetid: 1ae81034-5de3-4f4a-b3f2-7d9d198a73af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38da8d6666337c464d7a828952b025977336d373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978142"
 ---
 # <a name="getusername-method-sqlserverdatabasemetadata"></a>Méthode getUserName (SQLServerDatabaseMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67978142"
 public java.lang.String getUserName()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **Chaîne** qui contient le nom de l’utilisateur.  
   
 ## <a name="exceptions"></a>Exceptions  

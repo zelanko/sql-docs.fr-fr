@@ -11,10 +11,10 @@ ms.assetid: a0db4a00-9700-4f49-ab16-6522dd1101d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41a87a6444ce61af5b2b8a00aa61306dd90d0d8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993287"
 ---
 # <a name="pdocommit"></a>PDO::commit
@@ -29,7 +29,7 @@ Envoie à la base de données des commandes qui ont été émises après l’app
 bool PDO::commit();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 La valeur est true si l’appel de méthode a réussi, false dans le cas contraire.  
   
 ## <a name="remarks"></a>Notes  
@@ -40,7 +40,7 @@ Consultez [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) pou
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

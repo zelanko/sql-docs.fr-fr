@@ -1,10 +1,9 @@
 ---
-title: Supprimer un diagramme de base de données (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Supprimer un diagramme de base de données
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3eda893debd455b00a433657d57c5dc2a0e11a08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5ebe7109bd97f4e06b708436bbcbe90e690ca1c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263861"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244176"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Supprimer un diagramme de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ Lorsque vous n’avez plus besoin d’un diagramme de base de données, vous pou
   
 3.  Dans le menu contextuel, sélectionnez **Supprimer** .  
   
-4.  Un message vous demande de confirmer la suppression. Cliquez sur **Oui**.  
+4.  Un message vous demande de confirmer la suppression. Choisissez **Oui**.  
   
 Le diagramme de base de données est supprimé de la base de données. Lorsque vous supprimez un diagramme de base de données, ses tables sont préservées.  
   

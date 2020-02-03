@@ -1,10 +1,9 @@
 ---
-title: Effectuer des opérations de base concernant les requêtes (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Effectuer des opérations de base avec des requêtes
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01fd079810c59cd1b7f17d3c5503ed5083ee6998
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7fc8c17fc24ee9567e355a42dfae875d30335e49
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266353"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255405"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Effectuer des opérations de base concernant les requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -88,7 +89,7 @@ Fournit la procédure de personnalisation de l'aspect des tables et des objets t
 [Utiliser le Concepteur de requêtes et de vues avec des données internationales &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
 Décrit les fonctionnalités proposées par le Concepteur de requêtes et de vues pour faciliter l'utilisation des données internationales.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
 [Outils du concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
 Décrit les fonctionnalités et fonctions du Concepteur de requêtes et de vues.  
   

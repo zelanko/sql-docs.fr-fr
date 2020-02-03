@@ -1,10 +1,7 @@
 ---
-title: Se connecter à un serveur inscrit (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Se connecter à un serveur inscrit
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,21 +10,25 @@ helpviewer_keywords:
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac23937077e2712be05ca781532170e0db792848
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 925a3f29ddef590d27622f41be94b9f300111e64
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267751"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258901"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Se connecter à un serveur inscrit (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Cette rubrique explique comment se connecter à un serveur inscrit dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si le serveur ne fonctionne pas ou est introuvable sur le réseau, Serveurs inscrits affiche une erreur.  
-  
-##  <a name="SSMSProcedure"></a>  
-  
-#### <a name="to-connect-to-a-registered-server"></a>Pour se connecter à un serveur inscrit  
-  
-1.  Dans Serveurs inscrits, cliquez avec le bouton droit sur un serveur, pointez sur **Se connecter**, puis cliquez sur **Explorateur d’objets**.  
-  
-  
+
+Cette rubrique explique comment se connecter à un serveur inscrit dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si le serveur ne fonctionne pas ou est introuvable sur le réseau, Serveurs inscrits affiche une erreur.  
+
+##  <a name="SSMSProcedure"></a>
+
+### <a name="to-connect-to-a-registered-server"></a>Pour se connecter à un serveur inscrit
+
+1. Dans Serveurs inscrits, cliquez avec le bouton droit sur un serveur, pointez sur **Se connecter**, puis cliquez sur **Explorateur d’objets**.

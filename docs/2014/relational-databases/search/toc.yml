@@ -11,7 +11,7 @@
       href: limit-search-results-with-rank.md
     - name: Améliorer les performances des requêtes de texte intégral
       href: improve-the-performance-of-full-text-queries.md
-    - name: Rechercher les propriétés du document à l'aide des listes de propriétés de recherche
+    - name: Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
       href: search-document-properties-with-search-property-lists.md
     - name: Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
       href: find-property-set-guids-and-property-integer-ids-for-search-properties.md

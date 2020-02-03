@@ -51,7 +51,7 @@
       items:
         - name: Créer un domaine
           href: create-a-domain.md
-        - name: "Gestion de l’arborescence du domaine\_: Liste des domaines"
+        - name: 'Gestion de l''arborescence du domaine : Liste des domaines'
           href: domain-management-domain-list.md
         - name: Définir des propriétés de domaine
           href: set-domain-properties.md

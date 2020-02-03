@@ -172,7 +172,7 @@
       href: bi-wizard-add-dimension-intelligence-to-a-dimension.md
     - name: Ajouter une agrégation personnalisée à une dimension
       href: bi-wizard-add-a-custom-aggregation-to-a-dimension.md
-    - name: Définir des formules de membre personnalisées pour les attributs d'une dimension
+    - name: Définir des formules de membre personnalisées pour les attributs d’une dimension
       href: bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md
     - name: Définir le classement d'une dimension
       href: bi-wizard-define-the-ordering-for-a-dimension.md

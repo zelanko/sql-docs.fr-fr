@@ -1,6 +1,6 @@
 ---
-title: Propriétés d’Analysis Server (onglet Avancé) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de Analysis Server (onglet Avancé)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 27d5db4b4943400fd7a82a697f73a71c4a4ddee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: bbf3cee39d32cfa8b48de1f81228e623463a09fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010368"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306572"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Propriétés de Analysis Server (onglet Avancé)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68010368"
  Affiche l'emplacement où sont placés les vidages de mémoire en cas d'erreur.  
   
  **Rapport d'erreurs**  
- Quand cette option a pour valeur **Oui**, le programme Dr. Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ».  
+ Quand cette option a pour valeur **Oui**, le programme Dr Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ».  
   
  **ID de l'instance**  
  Indique l'instance qui utilise ce service.  

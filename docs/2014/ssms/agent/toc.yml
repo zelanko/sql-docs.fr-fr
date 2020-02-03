@@ -47,7 +47,7 @@
         - name: Créer des travaux
           href: create-jobs.md
           items:
-            - name: Créer un travail
+            - name: Création d’un travail
               href: create-a-job.md
             - name: Attribuer la propriété d'un travail à d'autres utilisateurs
               href: give-others-ownership-of-a-job.md
@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: Propriétés de l’opérateur et Nouvel opérateur (page Général)
       href: operator-properties-new-operator-general-page.md
-    - name: "Propriétés de l’opérateur\_: Nouvel opérateur (Page Notifications)"
+    - name: "Propriétés de l’opérateur\_: Nouvel opérateur (page Notifications)"
       href: operator-properties-new-operator-notifications-page.md
     - name: Propriétés Opérateur (page Historique)
       href: operator-properties-history-page.md

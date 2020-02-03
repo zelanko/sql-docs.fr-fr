@@ -1,10 +1,7 @@
 ---
-title: Élément Database pour le serveur (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Élément Database pour les serveurs (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5817a6d32ff94aaba7e4c0a573e6cd6a5fd586dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 832cdff550f29bc498ea1cdcbc24fb88b0172729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116930"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306616"
 ---
 # <a name="database-element-for-server-dta"></a>Élément Database pour les serveurs (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie la base de données que vous souhaitez paramétrer sur un serveur spécifique.  
+
+Spécifie la base de données que vous souhaitez paramétrer sur un serveur spécifique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +53,7 @@ ms.locfileid: "68116930"
 |Éléments enfants|[Name, élément pour les bases de données &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Schema, élément pour les bases de données &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément porte le nom **DatabaseDetailsTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Ne confondez pas cet élément **Database** avec celui dont le parent racine est l’élément **Configuration**. Pour plus d’informations, consultez [Database, élément pour les configurations &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/database-element-for-configuration-dta.md).  
+ Cet élément porte le nom **DatabaseDetailsTypecomplexType** dans le schéma XML de l’Assistant Paramétrage du moteur de base de données. Ne confondez pas cet élément **Database** avec celui dont le parent racine est l’élément **Configuration** . Pour plus d’informations, consultez [Database, élément pour les configurations &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de l’élément **Database** , consultez [Server, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/server-element-dta.md).  

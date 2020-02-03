@@ -1,6 +1,6 @@
 ---
-title: Exécuter des fichiers de script Transact-SQL à l’aide de sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46f4a1660fd2b33581482025cd5a9cf3bb16f770
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ed85470d8e054ba60ae0b2525f773f83d70d0da3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267647"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253212"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Exécuter des fichiers de script Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68267647"
   
 ## <a name="run-the-script-file"></a>Exécuter le fichier de script  
   
-1.  Ouvrez une fenêtre d'invite de commandes.  
+1.  Ouvrir une fenêtre d’invite de commandes.  
   
 2.  Dans la fenêtre d’invite de commandes, tapez : **sqlcmd -S myServer\instanceName -i C:\myScript.sql**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68267647"
 
 ## <a name="save-the-output-to-a-text-file"></a>Enregistrer la sortie dans un fichier texte
   
-1.  Ouvrez une fenêtre d'invite de commandes.  
+1.  Ouvrir une fenêtre d’invite de commandes.  
   
 2.  Dans la fenêtre d’invite de commandes, tapez : **sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68267647"
  Aucun résultat n'est retourné dans la fenêtre d'invite de commandes. Le résultat est au contraire envoyé dans le fichier EmpAdds.txt. Vous pouvez vérifier ce résultat en ouvrant le fichier EmpAdds.txt.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer l'utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
+ [Démarrer l’utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

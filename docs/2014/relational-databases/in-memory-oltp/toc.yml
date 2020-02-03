@@ -7,7 +7,7 @@
 - name: Exemples de code OLTP en mémoire
   href: in-memory-oltp-code-samples.md
   items:
-    - name: "Démonstration\_: Optimisation des performances de l'OLTP en mémoire"
+    - name: 'Démonstration : optimisation des performances de l''OLTP en mémoire'
       href: demonstration-performance-improvement-of-in-memory-oltp.md
     - name: Extensions à AdventureWorks pour présenter l'OLTP en mémoire
       href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md
@@ -156,7 +156,7 @@
       href: transact-sql-constructs-not-supported-by-in-memory-oltp.md
     - name: Implémentation de colonnes LOB dans une table mémoire optimisée
       href: ../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md
-    - name: Implémentation de SQL_VARIANT dans un tableau mémoire optimisé
+    - name: Implémentation de SQL_VARIANT dans une table optimisée en mémoire
       href: implementing-sql-variant-in-a-memory-optimized-table.md
     - name: Problèmes de migration pour les procédures stockées compilées en mode natif
       href: migration-issues-for-natively-compiled-stored-procedures.md

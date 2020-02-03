@@ -51,7 +51,7 @@
               href: role-definitions-create-delete-or-modify.md
             - name: Predefined Roles
               href: role-definitions-predefined-roles.md
-        - name: Attributions de rôles
+        - name: Affectations de rôles
           href: role-assignments.md
           items:
             - name: Modifier ou supprimer une attribution de rôle

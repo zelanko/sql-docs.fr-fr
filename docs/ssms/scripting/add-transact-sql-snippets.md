@@ -1,6 +1,6 @@
 ---
-title: Ajouter des extraits de code Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Ajouter des extraits de code Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256873"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246469"
 ---
 # <a name="add-transact-sql-snippets"></a>Ajouter des extraits de code Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68256873"
   
 2.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-3.  Cliquez sur le bouton **Ajouter** .  
+3.  Cliquez sur le bouton **Add** .  
   
 4.  Accédez au dossier qui contient vos extraits de code et cliquez sur le bouton **Sélectionner un dossier** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68256873"
   
 2.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-3.  Cliquez sur le bouton **Importer** .  
+3.  Cliquez sur le bouton **Import**.  
   
 4.  Accédez au dossier qui contient votre extrait de code, cliquez sur le fichier .snippet, puis cliquez sur le bouton **Ouvrir** .  
   
@@ -108,11 +108,11 @@ ms.locfileid: "68256873"
   
 3.  Sélectionnez le menu **Outils** et cliquez sur **Gestionnaire des extraits de code**.  
   
-4.  Cliquez sur le bouton **Importer** .  
+4.  Cliquez sur le bouton **Import**.  
   
 5.  Accédez au dossier qui contient TryCatch.snippet, cliquez sur le fichier TryCatch.snippet, puis cliquez sur le bouton **Ouvrir** . Vous ne devez pas avoir d'extrait de code TryCatch dans votre dossier **Mes extraits de code** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer des extraits de code d'entourage (surround-with) Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
+ [Insérer des extraits de code d’entourage (surround-with) Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   

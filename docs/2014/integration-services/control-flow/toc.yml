@@ -185,7 +185,7 @@
           href: select-a-package.md
     - name: tâche de notification d'opérateur
       href: notify-operator-task.md
-    - name: Tâche Reconstruire l'index
+    - name: tâche Reconstruire l'index
       href: rebuild-index-task.md
     - name: Tâche Réorganiser l'index
       href: reorganize-index-task.md

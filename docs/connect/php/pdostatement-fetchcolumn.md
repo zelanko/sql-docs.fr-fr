@@ -11,10 +11,10 @@ ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4021a6a5c550ea9674c0bf699462eece1d9c2f9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993038"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
@@ -32,7 +32,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 #### <a name="parameters"></a>Paramètres  
 $*column_number* : entier facultatif indiquant le numéro de colonne de base zéro. La valeur par défaut est 0 (la première colonne de la ligne).  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Une colonne ou la valeur false s’il n’y a plus de ligne.  
   
 ## <a name="remarks"></a>Notes  

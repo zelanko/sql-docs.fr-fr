@@ -1,6 +1,6 @@
 ---
-title: Démarrer l’utilitaire sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Démarrer l'utilitaire sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfc32e9ec7b4c56faf11c8cc675ae5ab2096416d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2571401f408babd0d3fe0ce114dbabbf3deeed26
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267661"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243474"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd : démarrer l’utilitaire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68267661"
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Démarrer l’utilitaire sqlcmd et établir une connexion à une instance nommée de SQL Server  
   
-1.  Ouvrez une fenêtre d’invite de commandes, puis tapez **sqlcmd -S**_mon_serveur\nom_instance_. Remplacez *mon_serveur\nom_instance[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le nom de l’ordinateur et de l’instance de*  à laquelle vous souhaitez vous connecter.  
+1.  Ouvrez une fenêtre d’invite de commandes, puis tapez **sqlcmd -S**_mon_serveur\nom_instance_. Remplacez *mon_serveur\nom_instance* par le nom de l’ordinateur et de l’instance de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous souhaitez vous connecter.  
   
 2.  Appuyez sur Entrée.  
   

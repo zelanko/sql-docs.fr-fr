@@ -12,10 +12,10 @@ ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e0b79b8a76b36071f8d5f0767ac313a6ed5489b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580052"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Fonctionnalités et tâches Reporting Services (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "65580052"
   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
  [Planifications](../reporting-services/subscriptions/schedules.md)  
   

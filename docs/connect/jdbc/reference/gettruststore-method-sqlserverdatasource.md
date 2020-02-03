@@ -16,10 +16,10 @@ ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f35a71cc741411f3aad3408d366f3f70218fecdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978524"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>Méthode getTrustStore (SQLServerDataSource)
@@ -34,7 +34,7 @@ ms.locfileid: "67978524"
 public java.lang.String getTrustStore()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  **String** contenant le chemin (y compris le nom de fichier) du fichier trustStore de certificat, ou Null si aucune valeur n’est définie.  
   
 ## <a name="remarks"></a>Notes  

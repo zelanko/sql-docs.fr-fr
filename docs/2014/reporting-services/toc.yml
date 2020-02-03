@@ -43,7 +43,7 @@
       items:
         - name: RSReportServer Configuration File
           href: report-server/rsreportserver-config-configuration-file.md
-        - name: Fichier de configuration ReportingServicesService
+        - name: fichier de configuration ReportingServicesService
           href: report-server/reportingservicesservice-configuration-file.md
         - name: fichier de configuration RSReportDesigner
           href: report-server/rsreportdesigner-configuration-file.md
@@ -79,7 +79,7 @@
       href: what-s-new-in-report-builder-for-sql-server-2014.md
     - name: Démarrer le Générateur de rapports
       href: report-builder/start-report-builder.md
-    - name: "Tutoriel\_: Créer un rapport de graphique rapide en mode hors connexion"
+    - name: 'Didacticiel : créer un rapport de graphique rapide en mode hors connexion'
       href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
     - name: Planification d'un rapport
       href: report-design/planning-a-report-report-builder.md

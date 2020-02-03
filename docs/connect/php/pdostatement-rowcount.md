@@ -11,10 +11,10 @@ ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9f6f7045c0729dad4fbb7d2875a645d370a1a5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935992"
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
@@ -29,7 +29,7 @@ Retourne le nombre de lignes ajoutées, supprimées ou modifiées par la derniè
 int PDOStatement::rowCount ();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Nombre de lignes ajoutées, supprimées ou modifiées.  
   
 ## <a name="remarks"></a>Notes  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658836"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Types de données pris en charge par Java et SQL Server
@@ -28,10 +28,10 @@ Les types de données SQL et Java suivants sont pris en charge pour les jeux de 
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| Int | INT      | | |
-| Real | FLOAT      | | |
+| Int | int      | | |
+| Real | float      | | |
 | Bigint | long      | | |
-| FLOAT | double      | | |
+| float | double      | | |
 | nchar(n) | String      | | |
 | nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
@@ -43,7 +43,7 @@ Les types de données SQL et Java suivants sont pris en charge pour les jeux de 
 | varchar(n) | String | Seules les chaînes UTF8 sont prises en charge | |
 | varchar(max) | String | Seules les chaînes UTF8 sont prises en charge | |
 | Date | java.sql.date  | | |
-| NUMERIC | java.math.BigDecimal  | | |
+| numeric | java.math.BigDecimal  | | |
 | Décimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
 | SMALLMONEY | java.math.BigDecimal  | | |

@@ -1,10 +1,9 @@
 ---
-title: Boîte de dialogue Mise en page | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Mise en page
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,18 +11,20 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a3354661aa51978bce2381553c978cac9a8fec9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bc09dffbff93e45ded3ed3fa4689ad88eb780f46
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263266"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252121"
 ---
 # <a name="page-setup-dialog-box"></a>Boîte de dialogue Mise en page
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Vous pouvez personnaliser votre conception de page à l'aide des options de la boîte de dialogue **Mise en page** . La disponibilité de certaines options dépend des langues qui sont installées et activées pour la modification.  
   
-## <a name="paper"></a>Papier  
+## <a name="paper"></a>Article  
 **Taille**  
 Sélectionnez une taille dans la liste.  
   
@@ -41,7 +42,7 @@ Le bord le plus long de la feuille se situe en haut de la page lors de l'impress
 Gauche  
 Définit la distance entre le bord gauche de la page et le bord gauche des lignes sans retrait alignées à gauche.  
   
-Droit  
+Right  
 Définit la distance entre le bord droit de la page et le bord droit des lignes sans retrait alignées à droite.  
   
 TOP  
@@ -51,7 +52,7 @@ Bas
 Définit la distance entre le bas de la page et le bas de la dernière ligne de la page.  
   
 ## <a name="other"></a>Autres  
-**Aperçu**  
+**Préversion**  
 L'aperçu affiche les effets des paramètres sélectionnés.  
   
 **En-tête de page**  

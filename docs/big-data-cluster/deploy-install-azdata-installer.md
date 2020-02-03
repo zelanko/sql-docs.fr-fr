@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594339"
 ---
 # <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Installer `azdata` pour gérer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] avec Windows Installer
@@ -24,7 +24,7 @@ Cet article explique comment installer `azdata` pour les clusters Big Data SQL S
 
 >Pour Linux (Ubuntu), consultez les informations relatives à l’[installation d’`azdata` à l’aide du programme d’installation](./deploy-install-azdata-linux-package.md).
 
-Il n’existe aucun gestionnaire de package permettant d’installer `azdata` sur d’autres systèmes d’exploitation ou distributions. Pour ces plateformes, consultez les informations relatives à l’[installation d’`azdata` sans gestionnaire de package](./deploy-install-azdata.md).
+Actuellement, il n’existe aucun gestionnaire de package permettant d’installer `azdata` sur d’autres systèmes d’exploitation ou distributions. Pour ces plateformes, consultez les informations relatives à l’[installation d’`azdata` sans gestionnaire de package](./deploy-install-azdata.md).
 
 ## <a name="install-azdata-with-the-microsoft-windows-installer"></a>Installer `azdata` avec Microsoft Windows Installer
 

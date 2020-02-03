@@ -94,19 +94,19 @@
       href: invalid-characters-and-escape-rules.md
     - name: Utiliser le mode RAW avec FOR XML
       href: use-raw-mode-with-for-xml.md
-    - name: 'Exemple : Récupération des informations de modèle de produit au format XML'
+    - name: 'Exemple : récupération des informations de modèle de produit au format XML'
       href: example-retrieving-product-model-information-as-xml.md
     - name: 'Exemple : spécification de XSINIL avec la directive ELEMENTS'
       href: example-specifying-xsinil-with-the-elements-directive.md
-    - name: 'Exemple : demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA'
+    - name: 'Exemple : demande de schémas comme résultats à l''aide des options XMLDATA et XMLSCHEMA'
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-    - name: 'Exemple : Extraction de données binaires'
+    - name: "Exemple\_: extraction de données binaires"
       href: example-retrieving-binary-data.md
-    - name: 'Exemple : Renommage de l’élément <row>'
+    - name: "Exemple\_: renommage de l’élément <row>"
       href: example-renaming-the-row-element.md
-    - name: 'Exemple : Spécification d’un élément racine pour les données XML générées par FOR XML'
+    - name: 'Exemple : spécification d''un élément racine pour les données XML générées par FOR XML'
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-    - name: 'Exemple : interrogation de colonnes de type XML'
+    - name: 'Exemple: interrogation de colonnes de type XML'
       href: example-querying-xmltype-columns.md
     - name: Utiliser le mode AUTO avec FOR XML
       href: use-auto-mode-with-for-xml.md
@@ -114,29 +114,29 @@
       href: use-the-binary-base64-option.md
     - name: Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées
       href: auto-mode-heuristics-in-shaping-returned-xml.md
-    - name: 'Exemples : Utilisation du mode AUTO'
+    - name: 'Exemples : utilisation du mode AUTO'
       href: examples-using-auto-mode.md
     - name: Utiliser le mode EXPLICIT avec FOR XML
       href: use-explicit-mode-with-for-xml.md
-    - name: 'Exemple : Extraction d’informations sur les employés'
+    - name: 'Exemple : extraction d''informations sur les employés'
       href: example-retrieving-employee-information.md
-    - name: 'Exemple : Spécification de la directive ELEMENT'
+    - name: 'Exemple : spécification de la directive ELEMENT'
       href: example-specifying-the-element-directive.md
     - name: 'Exemple : spécification de la directive ELEMENTXSINIL'
       href: example-specifying-the-elementxsinil-directive.md
-    - name: 'Exemple : Construction de frères à l’aide du mode EXPLICIT'
+    - name: 'Exemple : construction de frères à l''aide du mode EXPLICIT'
       href: example-constructing-siblings-with-explicit-mode.md
-    - name: 'Exemple : Spécification des directives ID et IDREF'
+    - name: 'Exemple : spécification des directives ID et IDREF'
       href: example-specifying-the-id-and-idref-directives.md
-    - name: 'Exemple : Spécification des directives ID et IDREF'
+    - name: 'Exemple : spécification des directives ID et IDREFS'
       href: example-specifying-the-id-and-idrefs-directives.md
     - name: 'Exemple : spécification de la directive HIDE'
       href: example-specifying-the-hide-directive.md
-    - name: 'Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité'
+    - name: 'Exemple : spécification de la directive ELEMENT et de l''encodage d''entité'
       href: example-specifying-the-element-directive-and-entity-encoding.md
-    - name: 'Exemple : Spécification de la directive CDATA'
+    - name: 'Exemple : spécification de la directive CDATA'
       href: example-specifying-the-cdata-directive.md
-    - name: 'Exemple : Spécification de la directive XMLTEXT'
+    - name: 'Exemple : spécification de la directive XMLTEXT'
       href: example-specifying-the-xmltext-directive.md
     - name: Utiliser le mode PATH avec FOR XML
       href: use-path-mode-with-for-xml.md
@@ -154,7 +154,7 @@
       href: columns-that-contain-a-null-value-by-default.md
     - name: Prise en charge d'espace de noms en mode PATH
       href: namespace-support-in-path-mode.md
-    - name: 'Exemples : Utilisation du mode PATH'
+    - name: 'Exemples : utilisation du mode PATH'
       href: examples-using-path-mode.md
     - name: Directive TYPE dans les requêtes FOR XML
       href: type-directive-in-for-xml-queries.md
@@ -191,7 +191,7 @@
 - name: OPENXML
   href: openxml-sql-server.md
   items:
-    - name: 'Exemples : Utilisation de OPENXML'
+    - name: 'Exemples : utilisation de OPENXML'
       href: examples-using-openxml.md
     - name: Spécifier des métapropriétés dans OPENXML
       href: specify-metaproperties-in-openxml.md

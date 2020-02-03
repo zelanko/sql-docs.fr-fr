@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570710"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migration du mode natif au mode SharePoint (SSRS)
@@ -46,10 +46,10 @@ ms.locfileid: "65570710"
 |Rapports|Oui|Après la migration, pour entrer à nouveau les mots de passe pour les sources de données.|  
 |Sources de données|Oui|Après la migration, reconnectez les rapports aux sources de données.|  
 |Modèles|Oui||  
-|Datasets|Oui||  
+|Groupes de données|Oui||  
 |Parties de rapports||Après la migration, vérifiez ou mettez à jour le chemin d'accès aux parties de rapports.|  
 |Planifications|Oui|Consultez la méthode ListSchedules [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Abonnements|oui|Consultez la méthode ListSubscriptions (dans [Méthodes d’abonnement et de remise](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) ) et la méthode <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.|  
+|Abonnements|Oui|Consultez la méthode ListSubscriptions (dans [Méthodes d’abonnement et de remise](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) ) et la méthode <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.|  
 |Instantanés|||
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -9,14 +9,14 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 21de137cefcfc61e91739ff33b2a9f0de4c3a05f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194376"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>Créer un rapport d’extraction (RDLC) avec des paramètres - ReportViewer
-Un rapport [d’extraction](https://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce didacticiel vous guide tout au long des leçons suivantes pour créer un rapport d’extraction avec des paramètres et une requête, en [mode local](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
+Un rapport [d’extraction](https://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce tutoriel vous guide tout au long des leçons suivantes pour créer un rapport d’extraction avec des paramètres et une requête, en [mode local](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
 ## <a name="requirements"></a>Spécifications  
 Pour suivre cette procédure pas à pas, vous devez avoir accès à l’exemple de base de données **AdventureWorks2014** . Pour plus d’informations sur la façon d’obtenir l’exemple de base de données **AdventureWorks2014**, consultez [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
@@ -26,7 +26,7 @@ Cette procédure pas à pas part du principe que vous connaissez les requêtes T
 Utilisez Visual Studio 2015 et l’application web ASP.NET pour créer une page web ASP.NET avec un contrôle ReportViewer. Le contrôle est configuré en vue d'afficher un rapport que vous créez. Pour cette procédure pas à pas, vous créez l'application dans Microsoft Visual C#.  
   
 ## <a name="tasks"></a>Tâches  
-[Leçon 1 : créer un nouveau site Web](../reporting-services/lesson-1-create-a-new-web-site.md)  
+[Leçon 1 : créer un nouveau site Web](../reporting-services/lesson-1-create-a-new-web-site.md)  
 [Leçon 2 : définir une connexion de données et une table de données pour le rapport parent](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
 [Leçon 3 : concevoir le rapport parent à l'aide de l'Assistant Rapport](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
 [Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
@@ -34,7 +34,7 @@ Utilisez Visual Studio 2015 et l’application web ASP.NET pour créer une page 
 [Leçon 6 : ajouter un contrôle ReportViewer à l'application](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
 [Leçon 7 : ajouter une action d’extraction dans le rapport parent](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [Leçon 8 : créer un filtre de données](../reporting-services/lesson-8-create-a-data-filter.md)  
-[Leçon 9 : générer et exécuter l'application](../reporting-services/lesson-9-build-and-run-the-application.md)  
+[Leçon 9 : générer et exécuter l’application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  

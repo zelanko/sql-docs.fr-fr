@@ -11,10 +11,10 @@ ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ac158f9005f66e49082b6be288c35f96b527f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993269"
 ---
 # <a name="pdoexec"></a>PDO::exec
@@ -32,7 +32,7 @@ int PDO::exec ($statement)
 #### <a name="parameters"></a>Paramètres  
 *$statement*: chaîne qui contient l’instruction SQL à exécuter.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Entier indiquant le nombre de lignes affectées.  
   
 ## <a name="remarks"></a>Notes  
@@ -66,7 +66,7 @@ Cet exemple supprime les lignes dans Table1 qui comportent « xxxyy » dans col1
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

@@ -222,11 +222,11 @@
       items:
         - name: "Liste de vérification\_: Reporting Services, Power View et PowerPivot pour SharePoint"
           href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-        - name: "Liste de vérification\_: scale-out en ajoutant des serveurs PowerPivot à une batterie SharePoint\_2010"
+        - name: "Liste de vérification\_: Montée en puissance en ajoutant des serveurs PowerPivot à une batterie de serveurs SharePoint\_2010"
           href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
-        - name: "Liste de vérification\_: installer Reporting Services dans une batterie de serveurs SharePoint existante"
+        - name: "Liste de vérification\_: Installer Reporting Services dans une batterie de serveurs SharePoint existante"
           href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
-        - name: "Liste de vérification\_: installation à plusieurs serveurs de PowerPivot pour SharePoint\_2010"
+        - name: "Liste de vérification\_: Installation à plusieurs serveurs de PowerPivot pour SharePoint\_2010"
           href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
         - name: "Liste de vérification\_: utiliser PowerShell pour vérifier PowerPivot pour SharePoint"
           href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md

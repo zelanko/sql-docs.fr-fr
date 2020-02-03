@@ -1,7 +1,7 @@
-- name: "Tutoriel\_: Écriture d’instructions Transact-SQL"
+- name: 'Didacticiel : écriture d''instructions Transact-SQL'
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: "Leçon\_1\_: Création des objets de base de données"
+    - name: 'Leçon 1 : Création des objets de base de données'
       href: lesson-1-creating-database-objects.md
       items:
         - name: Création d'une base de données (Didacticiel)
@@ -12,9 +12,9 @@
           href: lesson-1-3-inserting-and-updating-data-in-a-table.md
         - name: Lecture des données dans une table (Didacticiel)
           href: lesson-1-4-reading-the-data-in-a-table.md
-        - name: "Résumé\_: Création des objets de base de données"
+        - name: 'Résumé : Création des objets de base de données'
           href: lesson-1-5-summary-creating-database-objects.md
-    - name: "Leçon\_2\_: Configuration des autorisations sur des objets de base de données"
+    - name: 'Leçon 2 : Configuration des autorisations sur des objets de base de données'
       href: lesson-2-configuring-permissions-on-database-objects.md
       items:
         - name: Création d'une connexion
@@ -25,12 +25,12 @@
           href: lesson-2-3-creating-views-and-stored-procedures.md
         - name: Octroi de l'accès à un objet de base de données
           href: lesson-2-4-granting-access-to-a-database-object.md
-        - name: "Résumé\_: Configuration des autorisations sur des objets de base de données"
+        - name: 'Résumé : configuration des autorisations sur des objets de base de données'
           href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
-    - name: "Leçon\_3\_: Suppression des objets de base de données"
+    - name: 'Leçon 3 : Suppression des objets de base de données'
       href: lesson-3-1-deleting-database-objects.md
       items:
         - name: Suppression des objets de base de données
           href: lesson-3-deleting-database-objects.md
-    - name: "Résumé\_: Écriture d'instructions\_Transact-SQL"
+    - name: 'Résumé : Écriture d''instructions Transact-SQL'
       href: ../tutorials/summary-writing-transact-sql.md

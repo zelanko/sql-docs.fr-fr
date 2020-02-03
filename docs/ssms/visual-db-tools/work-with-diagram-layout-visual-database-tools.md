@@ -1,10 +1,9 @@
 ---
-title: Utiliser une disposition de schémas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Travailler avec la disposition du schéma
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 785d823f822e2c350c899bbed3a0e12e53c6edda
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c857e3113f2af09aa51edce03ecf8453c272a097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258782"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246199"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Utiliser une disposition de schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ Vous pouvez personnaliser l’apparence de vos diagrammes de base de données.
   
 [Modifier la couleur de police, la taille et le style dans les schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md)  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
   
 ## <a name="related-sections"></a>Sections connexes  
 [Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

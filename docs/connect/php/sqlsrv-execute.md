@@ -18,13 +18,13 @@ ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba15ea2e756e6c83b2fcdb6cf56c39511bd95296
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992751"
 ---
-# <a name="sqlsrvexecute"></a>sqlsrv_execute
+# <a name="sqlsrv_execute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Exécute une instruction préalablement préparée. Consultez [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) pour plus d’informations sur la préparation d’une instruction à exécuter.  
@@ -42,11 +42,11 @@ sqlsrv_execute( resource $stmt)
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: ressource spécifiant l’instruction à exécuter. Pour plus d’informations sur la création d’une ressource d’instruction, consultez [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Valeur booléenne : **true** si l’instruction a été exécutée avec succès. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant exécute une instruction qui met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) . L’exemple part du principe que SQL Server et la base de données AdventureWorks sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple suivant exécute une instruction qui met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works). L’exemple part du principe que SQL Server et la base de données AdventureWorks sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  

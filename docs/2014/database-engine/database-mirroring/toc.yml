@@ -93,7 +93,7 @@
       items:
         - name: Surveillance de la mise en miroir de bases de données
           href: monitoring-database-mirroring-sql-server.md
-        - name: "Quorum\_: Effets d’un témoin sur la disponibilité de la base de données"
+        - name: "Quorum\_: effets d'un témoin sur la disponibilité de la base de données"
           href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
         - name: Basculement de rôle durant une session de mise en miroir de bases de données
           href: role-switching-during-a-database-mirroring-session-sql-server.md
@@ -109,7 +109,7 @@
           href: the-database-mirroring-endpoint-sql-server.md
         - name: Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité AlwaysOn
           href: transport-security-database-mirroring-always-on-availability.md
-- name: Référence
+- name: Informations de référence
   items:
     - name: Configuration de la sécurité de mise en miroir de bases de données (Assistant)
       href: start-the-configuring-database-mirroring-security-wizard.md

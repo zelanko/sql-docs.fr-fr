@@ -171,7 +171,7 @@
           href: reporting-services-with-always-on-availability-groups-sql-server.md
         - name: Service Broker avec les groupes de disponibilité AlwaysOn
           href: service-broker-with-always-on-availability-groups-sql-server.md
-- name: Référence
+- name: Informations de référence
   items:
     - name: Vue d'ensemble des instructions Transact-SQL pour les groupes de disponibilité AlwaysOn
       href: transact-sql-statements-for-always-on-availability-groups.md
@@ -221,7 +221,7 @@
       items:
         - name: Propriétés du réplica de disponibilité (page Général)
           href: availability-replica-properties-general-page.md
-        - name: "Propriétés d’un groupe de disponibilité\_: Nouveau groupe de disponibilité (page Préférences de sauvegarde)"
+        - name: 'Propriétés d’un groupe de disponibilité : Nouveau groupe de disponibilité (page Préférences de sauvegarde)'
           href: availability-group-properties-new-availability-group-backup-preferences-page.md
     - name: Assistant Groupe de disponibilité
       items:

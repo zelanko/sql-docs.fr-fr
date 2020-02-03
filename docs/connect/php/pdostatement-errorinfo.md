@@ -11,10 +11,10 @@ ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15686a93c5e23a476968332479897d2fb5b90220
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993068"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
@@ -29,7 +29,7 @@ Récupère les informations d’erreur étendues de la dernière opération effe
 array PDOStatement::errorInfo();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Tableau d’informations d’erreur sur la dernière opération effectuée sur le handle d’instruction. Le tableau comprend les champs suivants :  
   
 -   Code d’erreur SQLSTATE  

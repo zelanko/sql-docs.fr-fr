@@ -11,10 +11,10 @@ ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 739565ae633140cef7d0df6531b6adfd6389d1e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993300"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
@@ -29,7 +29,7 @@ Désactive le mode de validation automatique et commence une transaction.
 bool PDO::beginTransaction();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 La valeur est true si l’appel de méthode a réussi, false dans le cas contraire.  
   
 ## <a name="remarks"></a>Notes  
@@ -60,7 +60,7 @@ L’exemple suivant utilise une base de données nommée Test et une table nomm�
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

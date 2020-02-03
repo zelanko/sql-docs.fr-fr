@@ -11,10 +11,10 @@ ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 632663b813db9a8b9a5b425c717613c24fa58ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993259"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
@@ -29,7 +29,7 @@ Retourne un tableau des pilotes PDO dans votre installation PHP.
 array PDO::getAvailableDrivers ();  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Tableau avec la liste des pilotes PDO.  
   
 ## <a name="remarks"></a>Notes  
@@ -48,7 +48,7 @@ print_r(PDO::getAvailableDrivers());
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Classe PDO](../../connect/php/pdo-class.md)
+[PDO, classe](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

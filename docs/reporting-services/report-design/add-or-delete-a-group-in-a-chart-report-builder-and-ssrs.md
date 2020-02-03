@@ -9,10 +9,10 @@ ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581971"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans un graphique (Générateur de rapports et SSRS)
@@ -54,6 +54,6 @@ Dans les rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
 2.  Cliquez avec le bouton droit sur le groupe dans la zone **Groupes de catégories** ou **Groupes de séries** , puis sélectionnez **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Graphiques (Générateur de rapports et SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
