@@ -1,10 +1,7 @@
 ---
-title: Importer des informations de serveur inscrit (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Importer des informations de serveur inscrit
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,16 +13,22 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ccbcc8465f713d23922fc10dfe483bb3cfbb774
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d65ed04166e8b3d10559c46c2f17301e9646a484
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267106"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256295"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importer des informations de serveur inscrit (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Cette rubrique explique comment importer les informations du serveur inscrit enregistrées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'exportation puis l'importation de fichiers de serveurs inscrits vous permet de configurer aisément plusieurs ordinateurs avec les mêmes serveurs dans Serveurs inscrits. Cela est utile lors de la gestion d'un grand nombre de serveurs à partir d'ordinateurs situés à des emplacements différents ou lorsque vous voulez configurer des paramètres de connexion de base pour un utilisateur peu expérimenté.  
+
+Cette rubrique explique comment importer les informations du serveur inscrit enregistrées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'exportation puis l'importation de fichiers de serveurs inscrits vous permet de configurer aisément plusieurs ordinateurs avec les mêmes serveurs dans Serveurs inscrits. Cela est utile lors de la gestion d'un grand nombre de serveurs à partir d'ordinateurs situés à des emplacements différents ou lorsque vous voulez configurer des paramètres de connexion de base pour un utilisateur peu expérimenté.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas importer d'informations sur les serveurs inscrits dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à partir des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

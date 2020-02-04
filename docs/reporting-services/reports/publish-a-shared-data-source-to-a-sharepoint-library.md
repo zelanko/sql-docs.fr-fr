@@ -13,10 +13,10 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577519"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>publier une source de données partagée sur une bibliothèque SharePoint
@@ -28,17 +28,17 @@ ms.locfileid: "65577519"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez un projet Report Server nouveau ou existant.  
   
-2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue **Pages de propriétés** de _\<projet_ s’affiche.  
+2.  Dans le menu **Projet** , cliquez sur **Propriétés**. La boîte de dialogue _Pages de propriétés\< de_ **projet** s’affiche.  
   
 3.  Choisissez la **Configuration** que vous utilisez pour publier sur un site SharePoint.  
   
 4.  Si vous voulez publier les sources de données partagées dans votre projet et remplacer celles précédemment publiées, attribuez à **OverwriteDataSources** la valeur **True**.  
   
-5.  (Facultatif) Pour **TargetDataSourceFolder**, tapez l’URL d’une bibliothèque SharePoint ou d’un dossier de bibliothèque. Par exemple, `https://TestServer/TestSite/Documents/DataSources`.  
+5.  (Facultatif) Pour **TargetDataSourceFolder**, tapez l’URL d’une bibliothèque SharePoint ou d’un dossier de bibliothèque. Par exemple : `https://TestServer/TestSite/Documents/DataSources`.  
   
      Si vous ne spécifiez pas de valeur, la valeur **TargetReportFolder** est utilisée.  
   
-6.  Pour **TargetReportFolder**, tapez l’URL d’une bibliothèque ou d’un dossier de bibliothèque. Par exemple, `https://TestServer/TestSite/Documents/Reports`.  
+6.  Pour **TargetReportFolder**, tapez l’URL d’une bibliothèque ou d’un dossier de bibliothèque. Par exemple : `https://TestServer/TestSite/Documents/Reports`.  
   
 7.  Pour **TargetServerURL**, tapez l’URL d’un sous-site ou d’un site SharePoint de niveau supérieur. Si vous ne spécifiez aucun site, le site de premier niveau par défaut est utilisé. Par exemple, `https://servername`, `https://servername/site` ou `https://servername/site/subsite`.  
   

@@ -18,15 +18,15 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574818"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Prise en charge des navigateurs pour Reporting Services et Power View
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Découvrez les versions de navigateurs prises en charge pour la gestion et l’affichage de SQL Server Reporting Services, des contrôles ReportViewer Controls et de Power View.
 
@@ -98,7 +98,7 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 |**Microsoft Internet Explorer**|Negociate, Kerberos, NTLM, Basic|Negotiate|Oui. Les paramètres d'authentification par défaut fonctionnent avec Internet Explorer.|
 |**Google Chrome**(+)|Negotiated, NTLM, Basic|Negotiate|Oui. Les paramètres d'authentification par défaut fonctionnent avec Chrome.|
 |**Mozilla Firefox**(+)|NTLM, Basic|NTLM|Oui. Les paramètres d'authentification par défaut fonctionnent avec Firefox.|
-|**Apple Safari**(+)|NTLM, Basic|Simple|Oui. Les paramètres d'authentification par défaut fonctionnent avec Safari.|
+|**Apple Safari**(+)|NTLM, Basic|De base|Oui. Les paramètres d'authentification par défaut fonctionnent avec Safari.|
 
  **(+)** Dernière version commercialisée
 
@@ -157,7 +157,7 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 [Recherche et affichage de rapports dans le portail Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Portail web (SSRS en mode natif)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[Visionneuse HTML et barre d’outils des rapports](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18e50d7344fb5d3d16c4fc0978137e169ba487ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: eb1af89c0641a50be503d1283f1f85a735a153f1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936495"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929416"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Procédure : gérer les erreurs et avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -130,7 +130,7 @@ $params = array(
                  array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                 );  
   
-/* Define and prepare the query to substract used vacation hours. */  
+/* Define and prepare the query to subtract used vacation hours. */  
 $tsql3 = "{call SubtractVacationHours(?, ?)}";  
 $stmt3 = sqlsrv_prepare($conn, $tsql3, $params);  
   
@@ -200,7 +200,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+[Guide pratique pour configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

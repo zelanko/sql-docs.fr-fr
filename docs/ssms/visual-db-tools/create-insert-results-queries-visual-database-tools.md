@@ -1,10 +1,9 @@
 ---
-title: Créer des requêtes Insert Results (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Créer des requêtes Insert Results
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 850d64df71644c5010cfda9a2c2624ab4bfd49cf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bf6436ae1ec235c2fb750df5ed57e640326c56aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264963"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254319"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Créer des requêtes Insert Results (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +86,7 @@ Lorsque vous créez une requête Insert Results, le volet Critères change afin 
   
 6.  Si vous souhaitez copier les lignes dans un ordre précis, spécifiez un ordre de tri. Pour plus d’informations, consultez [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   
-7.  Spécifiez les lignes à copier en entrant des conditions de recherche dans la colonne **Filtre**. Pour plus d’informations, consultez [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+7.  Spécifiez les lignes à copier en entrant des conditions de recherche dans la colonne **Filtre** . Pour plus d’informations, consultez [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Si vous ne spécifiez pas de condition de recherche, toutes les lignes de la table source seront copiées vers la table de destination.  
   

@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577134"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Fonctions du Générateur de rapports - Multilookup
@@ -33,15 +33,15 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**VariantArray**) Expression évaluée dans l’étendue actuelle et qui spécifie le jeu de noms ou de clés à rechercher. Par exemple, pour un paramètre à valeurs multiples, `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (**Variant**) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!ID.Value`.  
+ (**Variant**) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!ID.Value`.  
   
  *result_expression*  
- (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!Name.Value`.  
+ (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple : `=Fields!Name.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
   
-## <a name="return"></a>Return  
+## <a name="return"></a>Renvoie  
  Retourne une valeur **VariantArray**, ou **Nothing** si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
@@ -57,7 +57,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Pour récupérer une valeur unique dans un dataset avec les paires nom-valeur d’un nom spécifique, lorsqu’il existe une relation un-à-un, utilisez la [Fonction Lookup &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Pour récupérer plusieurs valeurs dans un dataset avec les paires nom-valeur d’un nom, lorsqu’il existe une relation un-à-plusieurs, utilisez une [Fonction LookupSet &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
   
- Les restrictions suivantes s'appliquent :  
+ Les restrictions suivantes s’appliquent :  
   
 -   **Multilookup** est évalué après que toutes les expressions de filtre ont été appliquées.  
   
@@ -88,7 +88,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Le dataset CategoryNames contient l'identificateur et le nom de catégorie, comme indiqué dans le tableau ci-dessous.  
   
-|ID|Créer une vue d’abonnement|  
+|id|Name|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  

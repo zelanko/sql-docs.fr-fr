@@ -1,24 +1,25 @@
 ---
-title: 'Procédure : structurer et ajouter des extraits de code à un script Transact-SQL | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Structurer et ajouter des extraits de code à un script Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035117"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241362"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procédure : Structurer et ajouter des extraits de code à un script Transact-SQL
-SQL Server Data Tools comprend une bibliothèque de codes composée d’extraits de code prêts à être insérés dans une application. Chaque extrait de code effectue une tâche de script complète, comme créer une fonction, une table, un déclencheur, un index, un affichage, un type de données défini par l’utilisateur, etc. Vous pouvez insérer un extrait de code dans votre code source en quelques clics. Ces extraits de code augmentent votre productivité en réduisant le temps passé à la saisie.  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procédure : structurer et ajouter des extraits de code à un script Transact-SQL
+
+SQL Server Data Tools comprend une bibliothèque de codes composée d’extraits de code prêts à être insérés dans une application. Chaque extrait de code effectue une tâche de script complète, par exemple créer une fonction, une table, un déclencheur, un index, un affichage, un type défini par l'utilisateur, etc. Vous pouvez insérer un extrait de code dans votre code source en quelques clics. Ces extraits de code augmentent votre productivité en réduisant le temps passé à la saisie.  
   
 Lorsque vous devez rechercher un extrait spécifique, vous pouvez utiliser le sélecteur d'extraits de code afin d'obtenir des listes classées d'extraits de code. Une fois que vous avez ajouté l'extrait à votre code, certaines parties devront peut-être être personnalisées, par exemple, remplacer le nom des variables par un nom plus adapté, ou insérer la logique réelle d'une procédure stockée. Vous noterez que le code de l'extrait inséré comporte un ou plusieurs points de remplacement mis en surbrillance dans le code à cet effet. Si vous positionnez le pointeur de votre souris sur le point de remplacement, une Info-bulle s'affiche pour vous expliquer comment modifier le code.  
   

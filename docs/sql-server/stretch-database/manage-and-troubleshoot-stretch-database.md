@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844608"
 ---
-# <a name="manage-and-troubleshoot-stretch-database"></a>Gérer Stretch Database et résoudre ses problèmes
+# <a name="manage-and-troubleshoot-stretch-database"></a>Gestion et dépannage de Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -42,7 +42,7 @@ GO
 ## <a name="manage-data-migration"></a>Gérer la migration des données  
   
 ### <a name="check-the-filter-function-applied-to-a-table"></a>Vérifier la fonction de filtre appliquée à une table  
- Ouvrez l’affichage catalogue **sys.remote_data_archive_tables** et vérifiez la valeur de la colonne **filter_predicate** pour identifier la fonction que Stretch Database utilise pour sélectionner les lignes à faire migrer. Si la valeur est null, la table entière peut être migrée. Pour plus d’informations, consultez [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) et [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
+ Ouvrez l’affichage catalogue **sys.remote_data_archive_tables** et vérifiez la valeur de la colonne **filter_predicate** pour identifier la fonction que Stretch Database utilise pour sélectionner les lignes à faire migrer. Si la valeur est null, la table entière est éligible à la migration. Pour plus d’informations, consultez [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) et [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ###  <a name="Migration"></a> Vérifier l’état de la migration des données  
  Sélectionnez **Tâches | Stretch | Monitor** pour une base de données dans SQL Server Management Studio afin de surveiller la migration des données dans Stretch Database Monitor. Pour plus d’informations, consultez [Surveiller et résoudre les problèmes de migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
@@ -72,7 +72,7 @@ Si vous souhaitez supprimer des données qui ont déjà migré vers Azure, suive
 ## <a name="manage-table-schema"></a>Gérer le schéma de table
 
 ### <a name="dont-change-the-schema-of-the-remote-table"></a>Ne modifiez pas le schéma de la table distante  
- Ne modifiez pas le schéma d’une table Azure distante associée à une table SQL Server configurée pour Stretch Database. Surtout, ne modifiez ni le nom ni le type de données d’une colonne. La fonctionnalité Stretch Database émet plusieurs hypothèses sur le schéma de la table distante par rapport au schéma de la table SQL Server. Si vous modifiez le schéma distant, Stretch Database cesse de fonctionner sur la table modifiée.  
+ Ne modifiez pas le schéma d’une table Azure distante associée à une table SQL Server configurée pour Stretch Database. Surtout, ne modifiez ni le nom ni le type de données d’une colonne. La fonctionnalité Stretch Database émet plusieurs hypothèses sur le schéma de la table distante par rapport au schéma de la table SQL Server. Si vous modifiez le schéma, Stretch Database cesse de fonctionner pour la table modifiée.  
 
 ### <a name="reconcile-table-columns"></a>Rapprocher des colonnes de table  
 Si vous avez accidentellement supprimé des colonnes de la table distante, exécutez **sp_rda_reconcile_columns** pour ajouter à la table distante des colonnes qui existent dans la table SQL Server compatible Stretch mais pas dans la table distante. Pour plus d’informations, consultez [sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md).  
@@ -84,8 +84,8 @@ Si vous avez accidentellement supprimé des colonnes de la table distante, exéc
  
 ## <a name="manage-performance-and-costs"></a>Gérer les coûts et performances  
   
-### <a name="troubleshoot-query-performance"></a>Résoudre les problèmes liés aux performances des requêtes  
-  Attendez-vous à ce que les requêtes incluant des tables Stretch s’exécutent plus lentement que celle incluant des tables non compatibles avec Stretch. Si les performances des requêtes se dégradent considérablement, procédez comme suit pour trouver une solution.  
+### <a name="troubleshoot-query-performance"></a>Dépannage de la performance des requêtes  
+  Attendez-vous à ce que les requêtes incluant des tables Stretch s’exécutent plus lentement que celle incluant des tables non compatibles avec Stretch. Si les performances des requêtes se dégradent considérablement, passez en revue les problèmes suivants.  
   
 -   Votre serveur Azure se trouve-t-il dans une autre région géographique que votre serveur SQL Server ? Configurez votre serveur Azure dans la même région géographique que votre serveur SQL Server pour réduire la latence du réseau.  
   
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>Effectuer des suppressions et mises à jour administratives  
+ ## <a name="adminHints"></a>Effectuer des mises à jour et des suppressions administratives  
  Par défaut, vous ne pouvez pas mettre à jour ou supprimer des lignes éligibles à la migration, ou des lignes qui ont déjà migré, dans une table compatible Stretch. Quand vous devez corriger un problème, un membre du rôle db_owner peut exécuter une opération UPDATE ou DELETE en ajoutant l’indicateur de requête **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *valeur* )** à l’instruction. L’indicateur de requête REMOTE_DATA_ARCHIVE_OVERRIDE peut avoir les valeurs suivantes.  
  -   **LOCAL_ONLY**. Met à jour ou supprime des données locales uniquement.  
    

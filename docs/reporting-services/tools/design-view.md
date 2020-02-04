@@ -13,13 +13,13 @@ ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577879"
 ---
-# <a name="design-view"></a>Vue Design
+# <a name="design-view"></a>Vue de conception
 Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , utilisez la vue Design pour disposer les éléments dans le rapport. Cette vue est parfois appelée aire de conception ou mode de conception.  
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)
 ## <a name="report-design-surface"></a>Aire de conception du rapport  
@@ -38,7 +38,7 @@ Utilisez la boîte à outils pour sélectionner les éléments à placer dans ce
   
  Pour ajouter des données et des images à un rapport, faites glisser les éléments depuis le volet des données de rapportvers les régions de données et les zones de texte de l'aire de conception.  
   
- Pour plus d’informations, consultez [Données du rapport, volet](../../reporting-services/report-data/report-data-pane.md).  
+ Pour plus d'informations, consultez [Report Data Pane](../../reporting-services/report-data/report-data-pane.md).  
   
 ## <a name="grouping-pane"></a>Volet de regroupement  
  Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Utilisez le volet Regroupement pour afficher les groupes définis pour une table, une matrice ou une région de données de type liste. Par défaut, le volet Regroupement affiche l’ensemble des groupes de la région de données sélectionnée sous forme de liste aplatie. Le volet Regroupement est désactivé pour les régions de données Graphique et Jauge.  
@@ -55,6 +55,6 @@ Utilisez la boîte à outils pour sélectionner les éléments à placer dans ce
   
 ## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Conseils de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Conseils de conception de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

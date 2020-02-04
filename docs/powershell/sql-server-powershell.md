@@ -10,10 +10,10 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 7a2725586a094aed0cb7d933553bc3fc389adfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67912214"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
@@ -23,7 +23,7 @@ ms.locfileid: "67912214"
 
 > [!NOTE]
 > Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
-> Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
+> Des versions précédentes du module **SqlServer***étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
 > Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
 
 **Pourquoi le module SQLPS s’appelle-t-il désormais SqlServer ?**
@@ -60,6 +60,6 @@ Utilisez l’applet de commande **Convert-UrnToPath** pour convertir un nom de r
 Les expressions de requête sont des chaînes qui utilise une syntaxe semblable à XPath pour spécifier un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier. Pour plus d’informations, consultez [Expressions de requête et noms URN](query-expressions-and-uniform-resource-names.md).       
 
 
-## <a name="cmdlet-reference"></a>Informations de référence sur les applets de commande
+## <a name="cmdlet-reference"></a>Référence des applets de commande
 * [Applets de commande SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)
 * [Applets de commande SQLPS](https://docs.microsoft.com/powershell/module/sqlps)

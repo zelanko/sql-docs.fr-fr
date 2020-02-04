@@ -15,10 +15,10 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577781"
 ---
 # <a name="enable-and-disable-my-reports"></a>Activer et désactiver Mes rapports
@@ -29,7 +29,7 @@ ms.locfileid: "65577781"
 ## <a name="how-to-enable-and-disable-my-reports"></a>Comment activer et désactiver Mes rapports  
  Pour activer Mes rapports à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance du serveur de rapports et ouvrez la page **Propriétés du serveur** . Puis sous l’onglet **Général** , sélectionnez l’option **Activer un dossier Mes rapports pour chaque utilisateur** .  
   
- La définition de rôle utilisée pour Mes rapports détermine les actions prises en charge dans l'espace de travail Mes rapports. Si, par exemple, le rôle Mes rapports exclut « Créer des rapports liés », les utilisateurs ne peuvent pas créer de rapports liés dans les dossiers Mes rapports. Pour plus d’informations, consultez [Sécuriser Mes rapports](../../reporting-services/security/secure-my-reports.md).  
+ La définition de rôle utilisée pour Mes rapports détermine les actions prises en charge dans l'espace de travail Mes rapports. Si, par exemple, le rôle Mes rapports exclut « Créer des rapports liés », les utilisateurs ne peuvent pas créer de rapports liés dans les dossiers Mes rapports. Pour plus d’informations, consultez [Sécuriser Mes Rapports](../../reporting-services/security/secure-my-reports.md).  
   
  Pour désactiver Mes rapports, désactivez l’option **Activer un dossier Mes rapports pour chaque utilisateur**. Le fait de désactiver Mes rapports masque pour les utilisateurs toutes les indications visibles du dossier Mes rapports. Les dossiers de stockage proprement dit (c'est-à-dire les sous-dossiers de Dossiers des utilisateurs) doivent être supprimés manuellement une fois la fonctionnalité désactivée.  
   

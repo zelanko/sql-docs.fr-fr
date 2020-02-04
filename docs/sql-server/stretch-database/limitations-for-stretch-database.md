@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843793"
 ---
 # <a name="limitations-for-stretch-database"></a>Limitations concernant Stretch Database
@@ -26,7 +26,7 @@ ms.locfileid: "73843793"
 
   En savoir plus sur les limitations concernant les tables compatibles Stretch et sur les limitations qui vous empêchent d’activer Stretch pour une table.  
   
-##  <a name="Caveats"></a> Limitations concernant les tables compatibles Stretch  
+##  <a name="Caveats"></a> Limites des tables Stretch  
   
 Les tables compatibles Stretch présentent les limitations suivantes.  
   
@@ -43,11 +43,11 @@ Les tables compatibles Stretch présentent les limitations suivantes.
   
 -   Les filtres sur les index [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas propagés à la table distante.  
   
-##  <a name="Limitations"></a> Limitations qui vous empêchent d’activer Stretch pour une table  
+##  <a name="Limitations"></a> Limites empêchant l’activation de Stretch pour une table  
    
  Les éléments suivants vous empêchent d’activer Stretch pour une table.  
   
- ### <a name="table-properties"></a>Propriétés de la table  
+ ### <a name="table-properties"></a>Propriétés des tables  
 -   Tables avec plus de 1 023 colonnes ou plus de 998 index  
   
 -   FileTables ou tables qui contiennent des données FILESTREAM  
@@ -59,7 +59,7 @@ Les tables compatibles Stretch présentent les limitations suivantes.
 ### <a name="data-types"></a>Types de données  
 -   text, ntext et image  
   
--   TIMESTAMP  
+-   timestamp  
   
 -   sql_variant  
   
@@ -84,7 +84,7 @@ Les tables compatibles Stretch présentent les limitations suivantes.
   
 -   Index spatiaux  
   
--   Vues indexées référençant la table  
+-   Vues indexées qui référencent la table  
   
 ## <a name="see-also"></a>Voir aussi  
  [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   

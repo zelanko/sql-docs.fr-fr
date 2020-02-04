@@ -11,10 +11,10 @@ ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573934"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Suppression des éléments du catalogue (Management Studio)
@@ -27,7 +27,7 @@ ms.locfileid: "65573934"
  Vous ne pouvez pas annuler une opération de suppression. Pour récupérer un élément supprimé, vous devez le recréer ou restaurer une copie de sauvegarde de la base de données du serveur de rapports.  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Spécifie le nom de l'élément à supprimer.  
   
  **Type**  
@@ -39,12 +39,12 @@ ms.locfileid: "65573934"
  **État**  
  Affiche les informations de progression d'une opération de suppression.  
   
- **Erreur**  
+ **Error**  
  Affiche un code d'erreur si une erreur se produit pendant la suppression d'un élément.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer un élément &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [Créer, modifier et supprimer des planifications](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

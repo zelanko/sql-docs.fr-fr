@@ -13,13 +13,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844542"
 ---
-# <a name="pause-and-resume-data-migration-stretch-database"></a>Suspension et reprise de la migration de données (Stretch Database)
+# <a name="pause-and-resume-data-migration-stretch-database"></a>Suspension et reprise de la migration des données (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -29,7 +29,7 @@ ms.locfileid: "73844542"
 
 ## <a name="pause-data-migration"></a>Suspendre la migration des données  
   
-### <a name="use-sql-server-management-studio-to-pause-data-migration"></a>Utilisation de SQL Server Management Studio pour suspendre la migration des données  
+### <a name="use-sql-server-management-studio-to-pause-data-migration"></a>SQL Server Management Studio permet de suspendre la migration des données  
   
 1.  Dans SQL Server Management Studio, dans l’Explorateur d’objets, sélectionnez la table pour laquelle vous souhaitez suspendre la migration des données.  
   
@@ -48,7 +48,7 @@ GO
   
 ## <a name="resume-data-migration"></a>Reprendre la migration des données  
   
-### <a name="use-sql-server-management-studio-to-resume-data-migration"></a>Utilisation de SQL Server Management Studio pour reprendre la migration des données  
+### <a name="use-sql-server-management-studio-to-resume-data-migration"></a>SQL Server Management Studio permet de reprendre la migration des données  
   
 1.  Dans SQL Server Management Studio, dans l’Explorateur d’objets, sélectionnez la table pour laquelle vous souhaitez reprendre la migration des données.  
   

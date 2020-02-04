@@ -1,21 +1,23 @@
 ---
-title: Boîte de dialogue Ajouter une référence de base de données | Microsoft Docs
+title: Boîte de dialogue Ajouter une référence de base de données (boîte de dialogue )
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984697"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256141"
 ---
 # <a name="add-database-reference-dialog-box"></a>Boîte de dialogue Ajouter une référence de base de données (boîte de dialogue )
+
 Cette rubrique décrit les procédures que vous pouvez effectuer dans la boîte de dialogue **Ajouter une référence de base de données**.  
   
 Les références de base de données vous permettent de :  
@@ -28,7 +30,8 @@ Dans un projet composite, les références de bases de données partitionnent un
   
 Les références de bases de données peuvent être créées dans un projet de base de données au sein de la solution actuelle ou bien dans un fichier DACPAC. L'ajout d'une référence de base de données à un projet modifie les dépendances du projet et l'ordre de création.  
   
-## <a name="selecting-the-database-to-reference"></a>Sélection de la base de données à référencer  
+## <a name="selecting-the-database-to-reference"></a>Sélection de la base de données à référencer
+
 Vous pouvez référencer un autre projet de base de données dans la même solution, dans une base de données système ou dans un fichier DACPAC.  
   
 S'il existe plus d'un projet de base de données dans votre solution, l'option **Projets de base de données dans la solution actuelle** est activée. Vous pouvez référencer une autre base de données dans la solution.  
@@ -37,7 +40,8 @@ Sélectionnez **Base de données système** si vous souhaitez sélectionner l'un
   
 Sélectionnez **Application de la couche Données (fichier .dacpac)** si vous référencez une base de données dans un fichier DACPAC, puis accédez au répertoire qui contient le fichier DACPAC.  
   
-## <a name="selecting-the-databases-relative-location"></a>Sélection de l’emplacement relatif de la base de données  
+## <a name="selecting-the-databases-relative-location"></a>Sélection de l’emplacement relatif de la base de données
+
 Après avoir sélectionné la base de données que vous souhaitez référencer, vous pouvez spécifier l'emplacement attendu de l'objet de base de données, par rapport au projet de référencement.  
   
 Les références peuvent être résolues pour des objets dans l'un des emplacements suivants :  
@@ -59,7 +63,8 @@ Si vous avez sélectionné **Autre base de données, autre serveur**, une variab
 > [!IMPORTANT]  
 > Dans certains cas, vous pouvez créer une référence de base de données qui a le même nom qu'une référence de base de données existante. Deux références de bases de données avec le même nom peuvent aboutir à un comportement inattendu. Dans ce cas, supprimez les deux références de bases de données.  
   
-## <a name="common-procedures"></a>Procédures courantes  
+## <a name="common-procedures"></a>Procédures courantes
+
 Voici les procédures courantes :  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>Pour créer une référence à une base de données sur le même serveur  
@@ -112,6 +117,6 @@ Lorsque vous publiez ce projet, vous pouvez déployer de projets composites dans
   
 3.  Dans la boîte de dialogue **Options de publication avancées**, assurez-vous que **Inclure des objets composite** est activé dans la liste **Options de déploiement avancées**.  
   
-## <a name="see-also"></a>Voir aussi  
-[Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>Voir aussi
+
+[Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md)

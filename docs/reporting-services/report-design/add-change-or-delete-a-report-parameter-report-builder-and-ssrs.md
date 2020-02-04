@@ -9,10 +9,10 @@ ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eb0d29f62a3751f0b8b6acd1c33c7b7f7eb10ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582071"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer un paramètre de rapport (Générateur de rapports et SSRS)
@@ -20,14 +20,14 @@ ms.locfileid: "65582071"
   
  Après la publication d'un rapport, vous pouvez modifier les valeurs par défaut, les valeurs disponibles et d'autres propriétés d'un paramètre de rapport sur le serveur de rapports. Vous pouvez fournir plusieurs jeux de valeurs de paramètre par défaut en créant des rapports liés. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
- Cet article porte sur l’ajout de paramètres de rapport à un rapport paginé dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ou le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également ajouter des paramètres de rapport à des rapports mobiles dans  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Consultez la rubrique [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) (éventuellement en anglais) pour plus d'informations.  
+ Cet article porte sur l’ajout de paramètres de rapport à un rapport paginé dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ou le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également ajouter des paramètres de rapport à des rapports mobiles dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Consultez la rubrique [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) (éventuellement en anglais) pour plus d'informations.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>Pour ajouter ou modifier un paramètre de rapport  
   
-1.  Dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans le volet **Données du rapport** , cliquez avec le bouton droit sur le nœud **Paramètres** , puis cliquez sur **Ajouter un paramètre**. La boîte de dialogue **Propriétés du paramètre de rapport** s'ouvre.  
+1.  Dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ou le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans le volet **Données du rapport**, cliquez avec le bouton droit sur le nœud **Paramètres**, puis cliquez sur **Ajouter un paramètre**. La boîte de dialogue **Propriétés du paramètre de rapport** s'ouvre.  
   
 2.  Dans **Nom**, tapez le nom du paramètre ou acceptez le nom par défaut.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "65582071"
  [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Références à la collection Parameters&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Ajouter un paramètre à valeurs multiples sur un rapport](../../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md)  
+ [Ajouter un paramètre à valeurs multiples à un rapport](../../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md)  
   
   

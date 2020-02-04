@@ -1,29 +1,28 @@
 ---
-title: Relire jusqu’à un curseur (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Relire jusqu’à un curseur
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- replaying cursors
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4a6a02576ac5c58c88cf1b2b489106d6cf8013e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9df4fe8bf442fae11aefeb2b3d4e3c95aa13037e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928858"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957783"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Relire jusqu'à un curseur (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique indique comment relire des fichiers ou des tables de trace suspendus lorsqu'un curseur est atteint à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. La suspension de traces sur des curseurs simplifie le débogage car vous pouvez ainsi fractionner la relecture de longs scripts de trace en courts segments se prêtant à l'analyse incrémentielle.  
+
+Cette rubrique indique comment relire des fichiers ou des tables de trace suspendus lorsqu'un curseur est atteint à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. La suspension de traces sur des curseurs simplifie le débogage car vous pouvez ainsi fractionner la relecture de longs scripts de trace en courts segments se prêtant à l'analyse incrémentielle.  
   
 ### <a name="to-replay-to-the-cursor"></a>Pour relire jusqu'au curseur  
   
@@ -35,7 +34,7 @@ ms.locfileid: "67928858"
   
 3.  Dans le menu **Relire** , cliquez sur **Exécuter jusqu’au curseur**, puis connectez-vous au serveur où vous souhaitez relire la trace.  
   
-4.  Dans la boîte de dialogue **Configuration de relecture** , vérifiez les paramètres, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Configuration de la relecture** , vérifiez les paramètres, puis cliquez sur **OK**.  
   
      La relecture commence, puis marque une pause lorsque le premier curseur est atteint.  
   

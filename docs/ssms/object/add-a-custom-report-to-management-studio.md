@@ -1,6 +1,6 @@
 ---
-title: Ajouter un rapport personnalisé à Management Studio | Microsoft Docs
-ms.custom: ''
+title: Ajouter un rapport personnalisé à Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84aee831cb03ebf419849fca8bf653803e5d5ced
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263460"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251365"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Ajouter un rapport personnalisé à Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ Cette rubrique explique comment créer un simple rapport [!INCLUDE[ssRSnoversion
   
 -   Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur un nœud dans l’Explorateur d’objets, pointez sur **Rapports**, puis cliquez sur **Rapports personnalisés**. Dans la boîte de dialogue **Ouvrir un fichier** , recherchez le dossier des rapports personnalisés, sélectionnez le fichier **ConnectionsReport.rdl** , puis cliquez sur **Ouvrir**.  
   
-    Quand un nouveau rapport personnalisé est ouvert pour la première fois depuis un nœud de l’Explorateur d’objets, il vient s’ajouter à la liste des derniers fichiers utilisés sous **Rapports personnalisés** dans le menu contextuel de ce nœud. Un rapport standard s’affiche aussi dans la liste des derniers rapports utilisés sous **Rapports personnalisés**quand vous l’ouvrez pour la première fois. En cas de suppression d'un fichier de rapport personnalisé, lorsque l'élément est à nouveau sélectionné, une invite apparaît et propose de supprimer l'élément de la liste des derniers fichiers utilisés.  
+    Quand un nouveau rapport personnalisé est ouvert pour la première fois à partir d’un nœud de l’Explorateur d’objets, il vient s’ajouter à la liste des derniers fichiers utilisés sous **Rapports personnalisés** dans le menu contextuel de ce nœud. Un rapport standard s’affiche aussi dans la liste des derniers rapports utilisés sous **Rapports personnalisés**quand vous l’ouvrez pour la première fois. En cas de suppression d'un fichier de rapport personnalisé, lorsque l'élément est à nouveau sélectionné, une invite apparaît et propose de supprimer l'élément de la liste des derniers fichiers utilisés.  
   
     1.  Pour modifier le nombre de fichiers dévoilés dans la liste des derniers fichiers utilisés, cliquez sur **Options** dans le menu **Outils** , développez le dossier **Environnement** , puis cliquez sur **Général**.  
   
@@ -70,7 +70,7 @@ Cette rubrique explique comment créer un simple rapport [!INCLUDE[ssRSnoversion
   
 ## <a name="see-also"></a>Voir aussi  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
-[Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
-[Annuler la suppression des avertissements d'exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Utiliser des rapports personnalisés avec les propriétés de nœud de l’Explorateur d’objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[Annuler la suppression des avertissements d’exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

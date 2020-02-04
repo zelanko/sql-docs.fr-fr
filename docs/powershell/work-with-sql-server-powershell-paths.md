@@ -10,10 +10,10 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68121353"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utiliser des chemins d'accès PowerShell SQL Server
@@ -23,7 +23,7 @@ Après avoir accédé à un nœud dans un chemin d'accès de fournisseur du [!IN
   
 > [!NOTE]
 > Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
-> Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
+> Des versions précédentes du module **SqlServer***étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
 > Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
 
   
@@ -40,7 +40,7 @@ Après avoir accédé à un nœud dans un chemin de fournisseur du [!INCLUDE[ssD
   
  Pour afficher les méthodes et propriétés disponibles pour des objets ou classes d’objets spécifiques, utilisez l’applet de commande **Get-Member** .  
   
-### <a name="examples-listing-methods-and-properties"></a>Exemples : Affichage de la liste des méthodes et des propriétés  
+### <a name="examples-listing-methods-and-properties"></a>Exemples : affichage de la liste des méthodes et des propriétés  
  Cet exemple affecte à une variable Windows PowerShell la classe <xref:Microsoft.SqlServer.Management.Smo.Database> SMO et répertorie les méthodes et les propriétés :  
   
 ```  
@@ -70,7 +70,7 @@ Get-Item . | Get-Member -Type Properties
   
  Pour effectuer un travail sur les objets d'un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../includes/ssde-md.md)] , vous pouvez utiliser les méthodes et les propriétés SMO.  
   
-### <a name="examples-using-methods-and-properties"></a>Exemples : Utilisation des méthodes et des propriétés  
+### <a name="examples-using-methods-and-properties"></a>Exemples : utilisation de méthodes et propriétés  
  L’exemple suivant utilise la propriété SMO **Schema** pour obtenir la liste des tables du schéma Sales dans AdventureWorks2012 :  
   
 ```  

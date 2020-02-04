@@ -1,25 +1,26 @@
 ---
-title: 'Procédure : mettre à jour une base de données connectée avec Power Buffer | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Mettre à jour une base de données connectée avec Power Buffer
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bad8fd64e0242d4dbe965b91d8d8be5ab9796591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034995"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244261"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procédure : Mettre à jour une base de données connectée avec Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procédure : mettre à jour une base de données connectée avec Power Buffer
+
 La technologie SQL Server Data Tools Power Buffer facilite l'application de modifications à votre base de données connectée en stockant toutes vos modifications dans la session active. Les erreurs dues à la modification dans la fenêtre Power Buffer (dans l'Éditeur Transact\-SQL ou le Concepteur de tables) s'affichent immédiatement dans le volet **Liste d'erreurs**, ce qui vous permet de suivre les erreurs identifiées pour la résolution. Vous pouvez vérifier vos modifications en attente jusqu'à ce que vous soyez prêt à les appliquer dans votre base de données. Au cours du processus de mise à jour, SSDT crée automatiquement un script ALTER basé sur vos modifications, et vous avertit de tout problème potentiel. Vous pouvez ensuite appliquer toutes les modifications accumulées dans les fenêtres Power Buffer ouvertes à la même base de données, ou enregistrer le script ALTER à déployer ultérieurement.  
   
 SSDT tient également compte de toute modification apportée à votre schéma de base de données hors de Visual Studio. Par exemple, si vous ajoutez une nouvelle table à une base de données existante dans SQL Server Management Studio, cette modification s'affiche immédiatement dans l'Explorateur d'objets SQL Server de Visual Studio sans actualisation manuelle. La fonctionnalité de détection de dérive garantit que vous consultez toujours la définition de schéma actuelle d'une base de données dans l'Explorateur d'objets SQL Server. Notez que les objets de base de données ouverts dans le Concepteur de tables ou l'Éditeur Transact\-SQL pour modification ne sont pas actualisés pour afficher les modifications hors de Visual Studio.  
@@ -62,5 +63,5 @@ Les procédures suivantes utilisent les entités créées dans les procédures p
 5.  Cliquez avec le bouton droit sur **Table_1**, puis sélectionnez **Supprimer**. Dans la boîte de dialogue **Aperçu des mises à jour de la base de données**, cliquez sur **Mettre à jour la base de données**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : corriger les erreurs](../ssdt/how-to-fix-errors.md)  
+[Procédure : résoudre les erreurs](../ssdt/how-to-fix-errors.md)  
   

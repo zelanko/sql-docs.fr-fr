@@ -16,10 +16,10 @@ ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90ea4731b4004c908cfcd60f31f51205f893431f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954948"
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute, méthode (SQLServerPreparedStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67954948"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[execute ()](../../../connect/jdbc/reference/execute-method.md)|Exécute l’instruction SQL dans cet objet [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), qui peut être n’importe quel type d’instruction SQL.|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|Exécute l'instruction SQL donnée, qui peut retourner plusieurs résultats.|  

@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843771"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurer des bases de données Stretch (Stretch Database)
@@ -38,7 +38,7 @@ Le service SQL Server Stretch Database sur Azure effectue une capture instantan�
 
 Pour restaurer une base de données Azure active à un point antérieur dans le temps à l’aide du portail Azure, procédez comme suit.
 
-1. Connectez-vous au [portail Azure][].
+1. Connectez-vous au [Azure portal][].
 2. Sur le côté gauche de l’écran, sélectionnez **PARCOURIR** , puis sélectionnez **Bases de données SQL**.
 3. Accédez à votre base de données et sélectionnez-la.
 4. En haut du panneau de la base de données, cliquez sur **Restaurer**.
@@ -50,7 +50,7 @@ Le service SQL Server Stretch Database sur Azure effectue une capture instantan�
 
 Pour restaurer une base de données Azure supprimée au point où elle a été supprimée à l’aide du portail Azure, procédez comme suit.
 
-1. Connectez-vous au [portail Azure][].
+1. Connectez-vous au [Azure portal][].
 2. Sur le côté gauche de l’écran, sélectionnez **PARCOURIR** , puis sélectionnez **Serveurs SQL**.
 3. Accédez à votre serveur et sélectionnez-le.
 4. Faites défiler le panneau de votre serveur jusqu’à Opérations, puis cliquez sur la vignette **Bases de données supprimées** .
@@ -82,7 +82,7 @@ Pour restaurer une base de données Azure supprimée au point où elle a été s
  [Gérer Stretch Database et résoudre ses problèmes](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
- [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Sauvegarder et restaurer des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
- [portail Azure]: https://portal.azure.com/
+ [Azure portal]: https://portal.azure.com/
  

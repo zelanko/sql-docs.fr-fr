@@ -1,10 +1,8 @@
 ---
-title: Spécifier un nombre d’accès | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Spécifier un nombre d'accès
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -13,19 +11,27 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862d99fd57b22e1643ce2591fccfb0478b664074
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03eed65b3295f1b9a1cc5b33de8809ce1d1c5c90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267691"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243541"
 ---
 # <a name="specify-a-hit-count"></a>Spécifier un nombre d'accès
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Un nombre d'accès à un point d'arrêt est un compteur incrémenté par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] chaque fois que le point d'arrêt est atteint. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
-  
-## <a name="hit-count-considerations"></a>Considérations sur le nombre d'accès  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Un nombre d'accès à un point d'arrêt est un compteur incrémenté par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] chaque fois que le point d'arrêt est atteint. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="hit-count-considerations"></a>Considérations sur le nombre d'accès
+
  Par défaut, l'exécution s'arrête pour chaque accès à un point d'arrêt. Vous pouvez choisir entre les options suivantes :  
   
 -   Toujours s'arrêter (valeur par défaut).  
@@ -71,6 +77,6 @@ ms.locfileid: "68267691"
 4.  Cliquez sur **OK** ou sur **Annuler** pour fermer la boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
+ [Spécifier une condition de point d’arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
   
   

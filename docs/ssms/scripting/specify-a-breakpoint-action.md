@@ -1,10 +1,8 @@
 ---
-title: Spécifier une action de point d’arrêt | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Spécifier une action de point d'arrêt
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -12,22 +10,30 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5209a5cd5d80529a71c545a11d8b59b46248bc96
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267733"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253649"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
-##  <a name="BKMK_ActionConsiderations"></a> Considérations sur l'action  
- L'action par défaut pour un point d'arrêt consiste à arrêter l'exécution lorsque le nombre d'accès et la condition de point d'arrêt sont tous les deux satisfaits. L’action **Lorsqu’il est atteint** dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] sert, quant à elle, principalement à afficher des informations dans la fenêtre **Sortie** du débogueur en spécifiant un message à afficher.  
+##  <a name="BKMK_ActionConsiderations"></a> Considérations sur l'action
+
+L'action par défaut pour un point d'arrêt consiste à arrêter l'exécution lorsque le nombre d'accès et la condition de point d'arrêt sont tous les deux satisfaits. L’action **Lorsqu’il est atteint** dans le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] sert, quant à elle, principalement à afficher des informations dans la fenêtre **Sortie** du débogueur en spécifiant un message à afficher.  
   
- Le message à afficher est indiqué dans l’option **Afficher un message** et spécifié comme une chaîne de texte qui inclut des expressions contenant des informations issues du [!INCLUDE[tsql](../../includes/tsql-md.md)] débogué. Ces expressions sont notamment les suivantes.  
+Le message à afficher est indiqué dans l’option **Afficher un message** et spécifié comme une chaîne de texte qui inclut des expressions contenant des informations issues du [!INCLUDE[tsql](../../includes/tsql-md.md)] débogué. Ces expressions sont notamment les suivantes.  
   
 -   Une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] comprise entre des accolades ({}). Les expressions peuvent inclure des variables [!INCLUDE[tsql](../../includes/tsql-md.md)] , des paramètres et des fonctions intégrées, par exemple {@MyVariable}, {@NameParameter}, {@@SPID} ou {SERVERPROPERTY(’ProcessID')}.  
   
@@ -67,4 +73,4 @@ ms.locfileid: "68267733"
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Spécifier un nombre d’accès](../../relational-databases/scripting/specify-a-hit-count.md)  

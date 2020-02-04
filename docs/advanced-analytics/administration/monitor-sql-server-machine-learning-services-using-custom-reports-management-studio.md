@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727744"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Surveiller l’exécution de scripts Python et R à l’aide de rapports personnalisés dans SQL Server Management Studio
@@ -77,5 +77,5 @@ Le [référentiel de rapports personnalisés SSMS dans GitHub](https://github.co
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Surveiller SQL Server Machine Learning Services à l’aide des vues de gestion dynamique (DMV)](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
+- [Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)](monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)
 - [Événements étendus pour R Services](../r/extended-events-for-sql-server-r-services.md)

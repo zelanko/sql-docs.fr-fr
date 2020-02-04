@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727690"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
@@ -75,7 +75,7 @@ Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s�
 
 Dans Windows, un service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] distinct est créé pour chaque instance de moteur de base de données à laquelle vous avez ajouté SQL Server Machine Learning Services. Il existe un service launchpad pour chaque instance de moteur de base de données. Par conséquent, si vous avez plusieurs instances avec prise en charge des scripts externes, vous aurez un service launchpad pour chacune d’elles. Une instance de moteur de base de données est liée au service launchpad qui a été créé pour celle-ci. Pour tous les appels de script externe d’une procédure stockée ou de T-SQL, le service SQL Server appelle le service launchpad créé pour la même instance.
 
-Pour exécuter des tâches dans un langage spécifique pris en charge, le service launchpad obtient un compte de travail sécurisé auprès du pool, puis démarre un processus satellite pour gérer le runtime externe. Chaque processus satellite hérite du compte d’utilisateur du service launchpad et utilise ce compte de travail pendant la durée d’exécution du script. Si le script utilise des processus parallèles, ceux-ci sont créés sous le même compte de travail.
+Pour exécuter des tâches dans un langage spécifique pris en charge, le service launchpad obtient un compte de travail sécurisé auprès du pool, puis démarre un processus satellite pour gérer le runtime externe. Chaque processus satellite hérite du compte d’utilisateur du service launchpad et utilise ce compte de travail pendant la durée d’exécution du script. Si le script utilise des processus parallèles, ils sont créés sous le même compte Worker unique.
 
 Dans Linux, une seule instance de moteur de base de données est prise en charge et un seul service launchpad est lié à l’instance. Quand un script est exécuté, le service launchpad lance un processus launchpad distinct avec le compte d’utilisateur à faibles privilèges **mssql_satellite**. Chaque processus satellite hérite du compte d’utilisateur mssql_satellite du service launchpad et l’utilise pendant la durée d’exécution du script.
 
@@ -139,7 +139,7 @@ Les protocoles de communication entre les composants et les plateformes de donn�
 
 + **Autres protocoles**
 
-  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données réel se fait via des objets blob encodés.
+  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données proprement dit s’effectue via des objets blob encodés.
 
 ## <a name="see-also"></a>Voir aussi
 

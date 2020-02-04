@@ -13,10 +13,10 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582165"
 ---
 # <a name="preview-view"></a>Vue Aperçu
@@ -84,6 +84,6 @@ Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
   
 ## <a name="see-also"></a>Voir aussi  
 + [Aperçu des rapports](../../reporting-services/reports/previewing-reports.md)
-+ [Aide sur le Concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)  
++ [Aide sur le concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)  
   
   

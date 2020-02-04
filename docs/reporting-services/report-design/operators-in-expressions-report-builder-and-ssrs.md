@@ -9,10 +9,10 @@ ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582235"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Opérateurs dans les expressions (Générateur de rapports et SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "65582235"
 |>|Supérieur à.|  
 |>=|Supérieur ou égal à.|  
 |=|Égal à.|  
-|<>|Différent de.|  
+|<>|Non égal à.|  
 |Correspond à|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés.<br /><br /> Le tableau suivant répertorie les caractères qui peuvent être utilisés comme caractères génériques :<br /><br /> % : toute chaîne de zéro caractère ou plus.<br /><br /> _ : tout caractère unique.<br /><br /> [ ] : tout caractère de la plage spécifiée (par exemple, [a-f]) ou de l’ensemble spécifié (par exemple, [aeiou]).<br /><br /> [^] : tout caractère hors de la plage spécifiée (par exemple, [^a-f]) ou de l’ensemble spécifié (par exemple, [^aeiou]).|  
 |Is|Compare deux références d'objet.|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65582235"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|And|Effectue une conjonction logique sur deux expressions booléennes ou une conjonction au niveau du bit sur deux expressions numériques.|  
+|and|Effectue une conjonction logique sur deux expressions booléennes ou une conjonction au niveau du bit sur deux expressions numériques.|  
 |Not|Effectue une négation logique sur une expression booléenne ou une négation au niveau du bit sur une expression numérique.|  
 |ou|Effectue une disjonction logique sur deux expressions booléennes ou une disjonction au niveau du bit sur deux valeurs numériques.|  
 |Xor|Effectue une exclusion logique sur deux expressions booléennes ou une exclusion au niveau du bit sur deux expressions numériques.|  

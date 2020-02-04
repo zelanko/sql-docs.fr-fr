@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580336"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
@@ -58,21 +58,21 @@ Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
   
 |Mot clé de graphique|Description|Applicable au type de graphique|Exemple d'expression simple équivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Valeur Y du point de données.|All|`=Fields!MyDataField.Value`|  
+|#VALY|Valeur Y du point de données.|Tous|`=Fields!MyDataField.Value`|  
 |#VALY2|Valeur Y n° 2 du point de données.|Graphique d'étendue, graphique à bulles|None|  
 |#VALY3|Valeur Y n° 3 du point de données.|Graphique boursier, graphique en chandelier|None|  
 |#VALY4|Valeur Y n° 4 du point de données.|Graphique boursier, graphique en chandelier|None|  
-|#SERIESNAME|Nom de la série.|All|None|  
-|#LABEL|Étiquette de point de données.|All|None|  
+|#SERIESNAME|Nom de la série.|Tous|None|  
+|#LABEL|Étiquette de point de données.|Tous|None|  
 |#AXISLABEL|Étiquette de point de données d'axe.|Graphique à base de formes|`=Fields!MyDataField.Value`|  
-|#INDEX|Index de point de données.|All|None|  
-|#PERCENT|Pourcentage de la valeur Y du point de données.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Total de toutes les valeurs Y de la série.|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Texte qui correspond au texte de l'élément de légende.|All|None|  
-|#AVG|Moyenne de toutes les valeurs Y de la série.|All|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|Index de point de données.|Tous|None|  
+|#PERCENT|Pourcentage de la valeur Y du point de données.|Tous|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Total de toutes les valeurs Y de la série.|Tous|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|Texte qui correspond au texte de l'élément de légende.|Tous|None|  
+|#AVG|Moyenne de toutes les valeurs Y de la série.|Tous|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimum de toutes les valeurs Y de la série.|Tous|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Maximum de toutes les valeurs Y de la série.|All|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|Première de toutes les valeurs Y de la série.|All|`=First(Fields!MyDataField.Value)`|  
+|#MAX|Maximum de toutes les valeurs Y de la série.|Tous|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|Première de toutes les valeurs Y de la série.|Tous|`=First(Fields!MyDataField.Value)`|  
   
  Pour mettre en forme le mot clé, mettez une chaîne de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre parenthèses. Par exemple, pour spécifier la valeur du point de données dans une info-bulle sous la forme d’un nombre à deux décimales, incluez la chaîne de format « N2 » entre accolades, telle que « #VALY{N2} » pour la propriété **ToolTip** de la série. Pour plus d'informations sur les chaînes de mise en forme [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , consultez [Mise en forme des types](https://go.microsoft.com/fwlink/?LinkId=112024) sur le site MSDN. Pour plus d’informations sur la mise en forme des nombres dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   

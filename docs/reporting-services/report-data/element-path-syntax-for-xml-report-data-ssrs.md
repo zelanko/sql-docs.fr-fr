@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72173836"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
@@ -75,11 +75,11 @@ XMLLocalName :: =
 |Element path|Définit la séquence de nœuds à parcourir dans le document XML afin de récupérer les données de champ d'un dataset avec une source de données XML.|  
 |**ElementNode**|Nœud XML dans le document XML. Les nœuds sont désignés par des balises et existent dans une relation hiérarchique avec d'autres nœuds. Par exemple, \<Customers> est le nœud de l’élément racine. \<Customer> est un sous-élément de \<Customers>.|  
 |**XMLName**|Nom du nœud. Par exemple, le nom du nœud Customers est Customers. **XMLName** peut porter comme préfixe un identificateur d’espace de noms qui identifie de façon unique chaque nœud.|  
-|**Encoding**|Indique que **Value** pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
+|**Encodage**|Indique que **Value** pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
 |**FieldList**|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée ( **{}** ), aucun champ de ce nœud n’est utilisé.<br /><br /> **FieldList** ne peut pas contenir à la fois **Value** et **Element** ou **ElementNode**.|  
-|**Field**|Spécifie les données qui sont extraites en tant que champ de dataset.|  
-|**Attribute**|Paire nom-valeur dans **ElementNode**. Par exemple, dans le nœud d’élément \<Customer ID="1">, **ID** est un attribut et **\@ID(Integer)** retourne « 1 » comme type d’entier dans l’**ID** de champ de données correspondant.|  
-|**Value**|Valeur de l'élément. **Value** ne peut être utilisé que sur le dernier **ElementNode** dans le chemin de l’élément. Par exemple, étant donné que \<Return> est un nœud terminal, si vous l’incluez à la fin du chemin d’un élément, la valeur de **Return {@}** est **Chair**.|  
+|**Champ**|Spécifie les données qui sont extraites en tant que champ de dataset.|  
+|**Attribut**|Paire nom-valeur dans **ElementNode**. Par exemple, dans le nœud d’élément \<Customer ID="1">, **ID** est un attribut et **\@ID(Integer)** retourne « 1 » comme type d’entier dans l’**ID** de champ de données correspondant.|  
+|**Valeur**|Valeur de l'élément. **Value** ne peut être utilisé que sur le dernier **ElementNode** dans le chemin de l’élément. Par exemple, étant donné que \<Return> est un nœud terminal, si vous l’incluez à la fin du chemin d’un élément, la valeur de **Return {@}** est **Chair**.|  
 |**Element**|Valeur du sous-élément nommé. Par exemple, Customers {}/Customer {}/LastName récupère des valeurs pour l'élément LastName uniquement.|  
 |**Type**|Type de données facultatif utilisé pour le champ créé à partir de cet élément.|  
 |**NamespacePrefix**|**NamespacePrefix** est défini dans l’élément de requête XML. S’il n’existe aucun élément de requête XML, les espaces de noms dans **ElementPath** XML sont ignorés. S’il existe un élément de requête XML, **ElementPath** XML possède un attribut **IgnoreNamespaces**facultatif. Si IgnoreNamespaces a la valeur **true**, les espaces de noms dans **ElementPath** XML et le document XML sont ignorés. Pour plus d’informations, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
@@ -92,7 +92,7 @@ XMLLocalName :: =
   
  **Exemple #1**: *Vide*  
   
-|JSON|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
+|JSON|Qté|id|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
 |Table de charge de travail|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
@@ -101,7 +101,7 @@ XMLLocalName :: =
   
  **Exemple 2**: `Customers {}/Customer`  
   
-|FirstName|LastName|ID|  
+|FirstName|LastName|id|  
 |---------------|--------------|--------|  
 |Bobby|Moore|11|  
 |Crystal|Hu|20|  
@@ -117,7 +117,7 @@ XMLLocalName :: =
   
  **Exemple 4**: `Customers {}/Customer {}/Orders/Order {@,@Qty}`  
   
-|JSON|Qty|  
+|JSON|Qté|  
 |-----------|---------|  
 |Chair|6|  
 |Table de charge de travail|1|  
@@ -126,7 +126,7 @@ XMLLocalName :: =
   
  **Exemple 5**: `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-|Order.ID|FirstName|LastName|ID|  
+|Order.ID|FirstName|LastName|id|  
 |--------------|---------------|--------------|--------|  
 |1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  

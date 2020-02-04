@@ -15,10 +15,10 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580414"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
@@ -68,7 +68,7 @@ ms.locfileid: "65580414"
   
 1.  Ouvrez une session en tant qu'administrateur local sur l'ordinateur où vous souhaitez activer l'administration à distance.  
   
-2.  Ouvrez une invite de commandes avec des privilèges d'administrateur.  
+2.  Ouvrez une invite de commandes avec les privilèges d’administrateur.  
   
 3.  Exécutez la commande suivante :  
   

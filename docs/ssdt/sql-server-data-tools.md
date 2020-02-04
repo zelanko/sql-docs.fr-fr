@@ -1,25 +1,26 @@
 ---
-title: SQL Server Data Tools | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server Data Tools
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bd026b76a7ce6e891c4267ad2c11b4e869a4d35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110692"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256341"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
+
 SQL Server Data Tools (SSDT) révolutionne le développement de bases de données en proposant un modèle déclaratif omniprésent qui couvre toutes les phases de développement des bases de données dans Visual Studio. Vous pouvez utiliser les fonctionnalités de conception Transact\-SQL de SSDT pour générer, déboguer, entretenir et refactoriser des bases de données. Vous pouvez vous aider d'un projet de base de données ou directement avec une instance de base de données connectée située sur site ou hors site.  
   
 Les développeurs peuvent utiliser les outils Visual Studio pour le développement de base de données. Outils tels que : la navigation dans le code, IntelliSense, la prise en charge du langage en parallèle à ce qui est disponible pour C# et Visual Basic, la validation spécifique à la plateforme, le débogage et la modification déclarative dans l'éditeur Transact\-SQL. SSDT fournit aussi un Concepteur de tables visuel pour créer et modifier des tables dans des projets de base de données ou des instances de base de données connectée. Lorsque vous utilisez des projets de base de données dans un environnement de travail en équipe, vous pouvez utiliser le contrôle de version pour tous les fichiers. Lorsque vient le moment de publier votre projet, vous pouvez effectuer la publication sur toutes les plateformes SQL prises en charge, notamment SQL Database et SQL Server. La fonctionnalité de validation de plateforme de SSDT garantit le fonctionnement de vos scripts sur la cible spécifiée.  
@@ -36,7 +37,7 @@ Les rubriques et sections suivantes traitent de l'utilisation de SSDT pour vous 
 |[Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)|Explique comment comparer des données dans une base de données source et une base de données cible, spécifier les valeurs qui doivent correspondre, puis mettre à jour la cible pour synchroniser les bases de données ou exporter le script de mise à jour vers l'éditeur Transact\-SQL ou vers un fichier.|  
 |[Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)|Les rubriques de cette section décrivent le mode d'utilisation de l'Éditeur Transact\-SQL, qui vous offre une expérience d'édition et de débogage enrichie lorsque vous utilisez des scripts.|  
 |[Gérer des tables et des relations, et résoudre les erreurs](../ssdt/manage-tables-relationships-and-fix-errors.md)|Les rubriques de cette section décrivent comment vous :<br /><br />-   Utilisez le Concepteur de tables pour concevoir des tables et gérer les relations entre tables.<br />-   Résolvez les erreurs courantes de syntaxe ou de sémantique.|  
-|[Vérification du code de la base de données à l'aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)|Explique comment utiliser des tests unitaires SQL Server pour générer un état de base de votre base de données, puis pour vérifier les modifications suivantes que vous apportez aux objets de base de données.|  
+|[Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)|Explique comment utiliser des tests unitaires SQL Server pour générer un état de base de votre base de données, puis pour vérifier les modifications suivantes que vous apportez aux objets de base de données.|  
 |[Extension des fonctionnalités de base de données](../ssdt/extending-the-database-features.md)|Vous pouvez créer des extensions de fonctionnalités qui vous permettent d'étendre des fonctionnalités telles que les tests unitaires et l'analyse du code de base de données.|  
 |[Autorisations nécessaires pour SQL Server Data Tools](../ssdt/required-permissions-for-sql-server-data-tools.md)|Explique l'autorisations d'accès nécessaire pour utiliser SQL Server Data Tools.|  
 |[Compatibilité avec DAC Framework](../ssdt/dac-framework-compatibility.md)|Décrit les problèmes de compatibilité avec DAC framework.|  

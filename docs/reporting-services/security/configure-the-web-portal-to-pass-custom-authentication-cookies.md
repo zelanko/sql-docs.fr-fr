@@ -12,10 +12,10 @@ ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f3200a17f00efedae3f52be7f3b17df31167765
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579429"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>Configurer le portail web pour passer des cookies d’authentification personnalisée
@@ -44,7 +44,7 @@ Pour activer la transmission de cookies supplémentaires via des requêtes HTTP 
 ## <a name="see-also"></a>Voir aussi
 
 [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
-[Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Présentation des extensions de sécurité](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

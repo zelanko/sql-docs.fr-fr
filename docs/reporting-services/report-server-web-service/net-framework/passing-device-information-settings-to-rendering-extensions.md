@@ -20,10 +20,10 @@ ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128889"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Transmission de paramètres d'informations de périphérique aux extensions de rendu
@@ -40,7 +40,7 @@ ms.locfileid: "63128889"
 </DeviceInfo>  
 ```  
   
- Lorsqu'un rapport est restitué sous la forme d'un fragment HTML, son contenu est placé dans un élément TABLE et aucun élément HTML ou BODY n'est utilisé. Vous pouvez utiliser ce fragment afin d'intégrer le rapport concerné à un document HTML existant. Pour plus d'informations sur les paramètres d'informations de périphérique utilisés pour le format HTML, consultez [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
+ Lorsqu'un rapport est restitué sous la forme d'un fragment HTML, son contenu est placé dans un élément TABLE et aucun élément HTML ou BODY n'est utilisé. Vous pouvez utiliser ce fragment afin d'intégrer le rapport concerné à un document HTML existant. Pour plus d’informations sur les paramètres d’informations de périphérique utilisés pour le format HTML, consultez [Paramètres d’informations de périphérique HTML](../../../reporting-services/html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Passage d'informations de périphérique à l'aide d'un accès URL  
  Vous pouvez également passer des paramètres d'informations de périphérique en utilisant un accès URL. Les paramètres d'informations de périphérique sont alors passés sous la forme de paramètres d'URL. La chaîne d'accès URL suivante peut être passée au serveur de rapports pour générer un rapport rendu ne comportant pas de barre d'outils de visionneuse HTML.  

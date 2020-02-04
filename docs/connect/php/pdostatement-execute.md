@@ -11,10 +11,10 @@ ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31e7465b2fca0d76f569afb83e3a7d8501fd6036
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936046"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
@@ -32,7 +32,7 @@ bool PDOStatement::execute ([ $input ] );
 #### <a name="parameters"></a>Paramètres  
 *$input* : (facultatif) tableau associatif qui contient les valeurs des marqueurs de paramètre.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 true en cas de réussite, false dans le cas contraire.  
   
 ## <a name="remarks"></a>Notes  

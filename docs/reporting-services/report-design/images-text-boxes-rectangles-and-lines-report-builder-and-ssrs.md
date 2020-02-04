@@ -9,10 +9,10 @@ ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c27c732f04d661d210e089948416d10e3274b9d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580235"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Images, zones de texte, rectangles et lignes (Générateur de rapports et SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65580235"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Zones de texte &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
  Les zones de texte peuvent être placées n'importe où dans le rapport et peuvent contenir des étiquettes, des champs ou des données calculées. La valeur à afficher dans une zone de texte lorsque vous visualisez un rapport peut être définie au moyen d'expressions.  
   
  Chaque cellule d'un tableau ou d'une matrice contient une zone de texte, que vous pouvez mettre en forme de la même manière que les zones de texte autonomes.  

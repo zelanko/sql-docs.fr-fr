@@ -1,6 +1,6 @@
 ---
-title: Options (Concepteurs - Page Concepteurs de bases de données et de tables) | Microsoft Docs
-ms.custom: ''
+title: Options (Concepteurs - Page Concepteurs de bases de données et de tables)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04204d6d6c83411d1a47caa8f573bdbc2601d9f0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262755"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245713"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Options (Concepteurs - Page Concepteurs de bases de données et de tables)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ Sélectionnez le mode d'affichage des tables dans les concepteurs :
   
     Affiche uniquement l'en-tête de la table avec son nom.  
   
--   **Custom**  
+-   **Personnalisée**  
   
     Permet de choisir les colonnes à afficher.  
   

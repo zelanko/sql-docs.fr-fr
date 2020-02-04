@@ -11,10 +11,10 @@ ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571358"
 ---
 # <a name="server-properties-history-page"></a>Propriétés du serveur (page Historique)
@@ -24,7 +24,7 @@ ms.locfileid: "65571358"
   
  Les instantanés d'historique de rapport sont stockés dans la base de données du serveur de rapports. Si vous conservez un nombre illimité d'instantanés, veillez à vérifier régulièrement la taille de la base de données pour vous assurer qu'elle n'augmente pas trop rapidement ni n'utilise trop d'espace disque.  
   
- Pour ouvrir cette page :
+ Pour ouvrir cette page
  1) Démarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  2) Connectez-vous à une instance de serveur de rapports.
  3) Cliquez avec le bouton droit sur le nom du serveur de rapports et sélectionnez **Propriétés**.

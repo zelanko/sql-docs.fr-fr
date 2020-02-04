@@ -13,10 +13,10 @@ ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575581"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Cause et résolution des erreurs Reporting Services
@@ -26,12 +26,12 @@ ms.locfileid: "65575581"
   
 |Error|Message|  
 |-----------|-------------|  
-|[rsAccessedDenied - Erreur Reporting Services](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|Les autorisations accordées à l'utilisateur 'mon_domaine\mon_compte' sont insuffisantes pour vous permettre d'accomplir cette opération. (rsAccessDenied) (ReportingServicesLibrary).|  
+|[rsAccessedDenied - erreur Reporting Services](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|Les autorisations accordées à l'utilisateur 'mon_domaine\mon_compte' sont insuffisantes pour vous permettre d'accomplir cette opération. (rsAccessDenied) (ReportingServicesLibrary).|  
 |[rsInternalError - Erreur Reporting Services](../../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md)|Une erreur interne s'est produite sur le serveur de rapports. Consultez le journal des erreurs pour plus d'informations.|  
-|[rsModelGenerationError - Erreur Reporting Services](../../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md)|Une erreur s'est produite lors de la génération du modèle. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
-|[rsProcessingError - Erreur Reporting Services](../../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md)|Des erreurs se sont produites lors du traitement du rapport.|  
-|[rsServerConfigurationError - Erreur Reporting Services](../../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md)|Le serveur de rapports a rencontré une erreur de configuration.|  
-|[rrRenderingError - Erreur Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Une erreur s'est produite lors du rendu du rapport. (rrRenderingError) %1.|  
+|[rsModelGenerationError - erreur Reporting Services](../../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md)|Une erreur s'est produite lors de la génération du modèle. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
+|[rsProcessingError - erreur Reporting Services](../../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md)|Des erreurs se sont produites lors du traitement du rapport.|  
+|[rsServerConfigurationError - erreur Reporting Services](../../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md)|Le serveur de rapports a rencontré une erreur de configuration.|  
+|[rrRenderingError - erreur Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Une erreur s'est produite lors du rendu du rapport. (rrRenderingError) %1.|  
 |[Service Windows Report Server &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Le service Windows Report Server (MSSQLSERVER) ne peut pas se connecter à la base de données du serveur de rapports.|  
   
 ## <a name="see-also"></a>Voir aussi  

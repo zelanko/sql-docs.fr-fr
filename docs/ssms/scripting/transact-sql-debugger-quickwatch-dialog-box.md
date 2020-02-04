@@ -1,5 +1,6 @@
 ---
 title: Boîte de dialogue Espion express
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -11,15 +12,15 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af12ca6fb0b8eb0b4461d95e75e8c1a3c62ed77e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 9cfd48c59a928481be28d03d970fb399ea10b720
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119250"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253023"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Débogueur Transact-SQL - Boîte de dialogue Espion express
 
@@ -47,7 +48,7 @@ Utilisez la boîte de dialogue **Espion express** pour consulter rapidement le t
   
     -   Expressions générées par l’application d’opérateurs à une ou plusieurs variables, un ou plusieurs paramètres ou une ou plusieurs fonctions système, comme @IntegerCounter + 1 ou FirstName + LastName.  
   
-    -   Instructions Transact-SQL qui retournent une valeur unique, comme : SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Instructions Transact-SQL qui retournent une seule valeur, par exemple : SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Cliquez sur **Réévaluer**.  
   
@@ -66,10 +67,10 @@ Utilisez la boîte de dialogue **Espion express** pour consulter rapidement le t
  **Grille Valeur**  
  Affiche les propriétés de l'expression actuellement surveillée.  
   
- **Name**  
+ **Nom**  
  Expression [!INCLUDE[tsql](../../includes/tsql-md.md)] actuellement surveillée.  
   
- **Value**  
+ **Valeur**  
  Affiche la valeur actuellement assignée à l'expression. Si l'expression n'a pas de valeur, un espace est affiché.  
   
  Si la longueur d'une expression dépasse la largeur de la colonne **Valeur** , une info-bulle affiche la valeur complète lorsque vous placez le pointeur sur la cellule **Valeur** de cette expression.  

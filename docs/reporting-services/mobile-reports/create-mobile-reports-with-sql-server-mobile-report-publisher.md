@@ -11,10 +11,10 @@ ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63200541"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server
@@ -31,7 +31,7 @@ Avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], vous pou
 * Disposez vos rapports mobiles sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles bien adaptés à la taille de votre écran. 
 * Ensuite, enregistrez ces rapports mobiles sur un serveur Reporting Services, puis affichez-les et exploitez-les dans un navigateur ou dans l’application mobile Power BI sur iPads, iPhones, téléphones ou tablettes Android et appareils Windows 10.
   
-## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Créer des rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
+## <a name="create-includessrsnoversion_mdincludesssrsnoversion-mdmd--mobile-reports"></a>Créer des rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
 Ces articles vous aideront à démarrer.
 -  Téléchargez [l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527).  
@@ -53,7 +53,7 @@ Ces articles vous aideront à démarrer.
 ## <a name="see-also"></a>Voir aussi  
   
 -   [Créer, modifier, puis supprimer des sources de données partagées (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
--   [Gérer des jeux de données partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
+-   [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
 -  [Utilisation des indicateurs de performance clés dans Reporting Services](../../reporting-services/working-with-kpis-in-reporting-services.md)  
 - [Activer un serveur de rapports pour un accès Power BI Mobile](../../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)  
 

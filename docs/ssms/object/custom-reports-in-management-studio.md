@@ -1,6 +1,6 @@
 ---
-title: Rapports personnalisés dans Management Studio | Microsoft Docs
-ms.custom: ''
+title: Rapports personnalisés dans Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f2fd6eb4e5c3c6b50f7fd96a0dd5ff51034d305
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0e5dafb96c0bb94fcb2dd0134fefb3f96b7c5708
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259513"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257234"
 ---
 # <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Vous pouvez exécuter un rapport personnalisé [!INCLUDE[ssManStudio](../../incl
   
 -   Cliquez avec le bouton droit sur un nœud dans l’Explorateur d’objets, pointez successivement sur **Rapports**et sur **Rapports personnalisés**, puis sélectionnez un rapport personnalisé dans la liste des fichiers récemment utilisés.  
   
-## <a name="limitations"></a>Limitations  
+## <a name="limitations"></a>Limites  
 Lorsque vous travaillez avec des rapports personnalisés, tenez compte des contraintes suivantes :  
   
 -   Pour éviter toute exécution imprévisible d'un code malveillant, vous ne pouvez pas configurer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en vue d'exécuter automatiquement un rapport, même si la configuration du système de fichiers autorise l'association de fichiers .rdl avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Les rapports ne peuvent être ni exécutés par programme [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , ni exécutés à partir de la ligne de commande via [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -75,6 +75,6 @@ Toutes les commandes [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] v
   
 ## <a name="see-also"></a>Voir aussi  
 [Ajouter un rapport personnalisé à Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
-[Annuler la suppression des avertissements d'exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Annuler la suppression des avertissements d’exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [Utiliser des rapports personnalisés avec les propriétés de nœud de l’Explorateur d’objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   

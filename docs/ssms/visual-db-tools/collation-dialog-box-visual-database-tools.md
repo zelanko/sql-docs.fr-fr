@@ -1,10 +1,9 @@
 ---
-title: Classement, boîte de dialogue (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Classement
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef284f2f09493ce0bd201efbd691c8ee1ba07c29
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1c926bd77ab1fd2abf048c15d93b8935b2ed679d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262591"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255485"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Boîte de dialogue Classement (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,5 +56,5 @@ Utilise les options de comparaison alphabétique. S'applique uniquement si vous 
 Applique à la colonne la séquence de classement par défaut pour la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser des colonnes dans des requêtes d’agrégation &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
+[Utiliser des colonnes dans des requêtes d'agrégation &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
   

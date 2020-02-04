@@ -9,10 +9,10 @@ ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573869"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Résoudre les problèmes de traitement des rapports Reporting Services
@@ -28,7 +28,7 @@ Par ailleurs, les expressions de rapport qui sont évaluées au moment de l'exé
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>Les expressions d'élément de rapport peuvent uniquement faire référence aux champs dans l'étendue actuelle du dataset ou, à l'intérieur d'un agrégat, dans l'étendue du dataset spécifiée.  
   
 Utilisez la liste suivante pour vous aider à déterminer la cause de l'erreur :  
-* Lorsqu'un rapport comprend plusieurs datasets, une expression d'agrégation dans une zone de texte sur le corps du rapport doit spécifier un paramètre d'étendue. Par exemple, `=First(Fields!FieldName.Value, "DataSet1")`.  
+* Lorsqu'un rapport comprend plusieurs datasets, une expression d'agrégation dans une zone de texte sur le corps du rapport doit spécifier un paramètre d'étendue. Par exemple : `=First(Fields!FieldName.Value, "DataSet1")`.  
   
 Pour spécifier un paramètre d'étendue, fournissez le nom d'un dataset, d'une région de données ou d'un groupe qui se trouve dans l'étendue de l'élément de rapport. Pour plus d’informations, voir [Présentation de l’étendue des expressions pour les totaux, les agrégats et les collections intégrées (Générateur de rapports version 3.0 et SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Référence d’expression (Générateur de rapports version 3.0 et SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md).  
   

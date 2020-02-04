@@ -9,10 +9,10 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499993"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Éléments requis pour les didacticiels (Générateur de rapports)
@@ -29,7 +29,7 @@ Pour exécuter les didacticiels du Générateur de rapports, vous devez réunir 
   
     Sur un serveur de rapports, sélectionnez **Nouveau** > **Rapport paginé**.
   
-    Sur un serveur de rapports en mode intégré SharePoint, sous l’onglet **Documents** , sélectionnez **Nouveau Document**et, dans la liste déroulante, sélectionnez **Rapport du Générateur de rapports**. Par exemple, `https://<servername>/sites/mySite/reports`. L'administrateur SharePoint doit activer la fonctionnalité Rapport du Générateur de rapports pour chaque bibliothèque de documents.  
+    Sur un serveur de rapports en mode intégré SharePoint, sous l’onglet **Documents** , sélectionnez **Nouveau Document**et, dans la liste déroulante, sélectionnez **Rapport du Générateur de rapports**. Par exemple : `https://<servername>/sites/mySite/reports`. L'administrateur SharePoint doit activer la fonctionnalité Rapport du Générateur de rapports pour chaque bibliothèque de documents.  
   
 -   URL pointant vers un serveur de rapports [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou un site SharePoint intégré à un serveur de rapports [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Vous devez être autorisé à enregistrer et consulter des rapports, des sources de données partagées, des datasets partagés, des parties de rapports et des modèles. Par défaut, l’URL d’un serveur de rapports est `https://<servername>/reportserver`. Par défaut, l’URL d’un site SharePoint est `https://<sitename>` ou `https://<server>/site`.  
   

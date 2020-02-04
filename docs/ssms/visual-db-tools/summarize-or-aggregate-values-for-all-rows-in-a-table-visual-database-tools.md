@@ -1,10 +1,9 @@
 ---
-title: Synthétiser ou regrouper des valeurs de toutes les lignes d’une table | Microsoft Docs
-ms.custom: ''
+title: Synthétiser ou regrouper des valeurs de toutes les lignes d’une table
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cfcb42df5c29fc0477e0a8575c6cfe299d3883b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0405898284fd40caf39743f901a70a7c60a75023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263192"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254924"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Synthétiser ou regrouper des valeurs de toutes les lignes d'une table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

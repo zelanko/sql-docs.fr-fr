@@ -16,10 +16,10 @@ ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09adf678236a636cfe0fbdfa581c094be1e7e619
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953002"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>getClob, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67953002"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet Clob dans le langage de programmation Java.|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string-sqlserverresultset.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet Clob dans le langage de programmation Java.|  

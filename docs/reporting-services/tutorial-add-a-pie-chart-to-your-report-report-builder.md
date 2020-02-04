@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041239"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
@@ -38,7 +38,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset incorporé, choisissez une source de données partagée et créez un graphique à secteurs.  
 
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -60,7 +60,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
 7.  Collez la requête suivante dans le volet de requête :  
 
     > [!NOTE]  
-    > Dans ce didacticiel, la requête contient les valeurs de données ; il n’est donc pas nécessaire de disposer d’une source de données externe. Cela rend la requête longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
+    > Dans ce didacticiel, la requête contient les valeurs des données : elle n’a donc pas besoin d’une source de données externe. Cela rend la requête longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
     ```  
     SELECT 'Advanced Digital Camera' AS Product, CAST(254995.21 AS money) AS Sales  
@@ -113,7 +113,7 @@ Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secte
   
 3.  Cliquez avec le bouton droit sur une étiquette, puis cliquez sur **Propriétés de l’étiquette de la série**.  
   
-4.  Dans la zone **Données de l’étiquette**, sélectionnez **#PERCENT**.  
+4.  Dans la zone **Données de l’étiquette** , sélectionnez **#PERCENT**.  
     
 5.  (Facultatif) Pour indiquer le nombre de décimales affichées sur l’étiquette, dans la zone **Données de l’étiquette** après **#PERCENT**, tapez **{Pn}** , où *n* correspond au nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez **#PERCENT{P0}** .  
 
@@ -211,7 +211,7 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 Votre rapport est enregistré sur le serveur de rapports.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Vous avez terminé le didacticiel d'ajout d'un graphique à secteurs à votre rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  

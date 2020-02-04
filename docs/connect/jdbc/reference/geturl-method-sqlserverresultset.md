@@ -16,10 +16,10 @@ ms.assetid: 738ffe3d-0df0-4884-9bd8-31b951e008c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd9812f87d3d5d253b6ea95db065506f75f2f126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978191"
 ---
 # <a name="geturl-method-sqlserverresultset"></a>getURL, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67978191"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getURL (int)](../../../connect/jdbc/reference/geturl-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet URL.|  
 |[getURL (java.lang.String)](../../../connect/jdbc/reference/geturl-method-java-lang-string-sqlserverresultset.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet URL.|  

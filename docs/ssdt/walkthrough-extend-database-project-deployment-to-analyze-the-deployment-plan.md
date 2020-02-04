@@ -1,23 +1,24 @@
 ---
-title: 'Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Étendre le déploiement du projet de base de données pour analyser le plan de déploiement
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 167667590df0b2172e05674c462cfa9833d45acd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912784"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242684"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement
+
 Vous pouvez créer des contributeurs de déploiement pour effectuer des actions personnalisées lorsque vous déployez un projet SQL. Vous pouvez créer soit un DeploymentPlanModifier soit un DeploymentPlanExecutor. Utilisez un DeploymentPlanModifier pour changer le plan avant son exécution et un DeploymentPlanExecutor pour effectuer des opérations alors que le plan est en cours d'exécution. Dans cette procédure pas à pas, vous allez créer un DeploymentPlanExecutor nommé DeploymentUpdateReportContributor qui crée un rapport sur les actions qui sont effectuées lorsque vous déployez un projet de base de données. Ce contributeur de génération acceptant un paramètre pour contrôler si le rapport est généré, vous devez effectuer une étape supplémentaire requise.  
   
 Au cours de cette procédure pas à pas, vous allez effectuer les tâches principales suivantes :  
@@ -250,7 +251,7 @@ Pour créer un contributeur de déploiement, vous devez effectuer les tâches su
   
     La méthode OnExecute se voit transmettre un objet [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) qui permet d'accéder à tous les arguments spécifiés, au modèle de base de données source et cible, aux propriétés de génération et aux fichiers d'extension. Dans cet exemple, nous obtenons le modèle, puis appelons les fonctions d'assistance pour obtenir des informations sur le modèle. Nous utilisons la méthode d'assistance PublishMessage dans la classe de base pour signaler des erreurs qui se produisent.  
   
-    Les types et méthodes supplémentaires dignes d’intérêt sont les suivants : [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) et [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Les types et méthodes supplémentaires dignes d'intérêt sont les suivantes : [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) et [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     Vous définissez ensuite la classe d'assistance qui entre dans les détails du plan de déploiement.  
   
@@ -525,7 +526,7 @@ Pour créer un contributeur de déploiement, vous devez effectuer les tâches su
     |-----------------|--------------------|  
     |Membres de classe|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Méthode WriteReport|XmlWriter et XmlWriterSettings|  
-    |Méthode ReportPlanOperations|Les types dignes d’intérêt sont les suivants : [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Il existe de nombreuses autres étapes. Consultez la documentation API pour en obtenir la liste complète.|  
+    |Méthode ReportPlanOperations|Les types dignes d'intérêt sont les suivants : [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Il existe de nombreuses autres étapes. Consultez la documentation API pour en obtenir la liste complète.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -549,7 +550,7 @@ Pour créer un contributeur de déploiement, vous devez effectuer les tâches su
   
 8.  Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
-9. Dans le menu **Générer** , cliquez sur **Générer la solution**.  
+9. Dans le menu **Générer**, cliquez sur **Générer la solution**.  
   
 Ensuite, vous devez installer l'assembly afin qu'il soit chargé lorsque vous générez et déployez des projets SQL.  
   
@@ -736,11 +737,11 @@ Votre projet peut être publié ou déployé normalement dans Visual Studio. Ouv
   
     En analysant le plan de déploiement lorsqu'il est exécuté, vous pouvez rendre compte de toutes les informations contenues dans le déploiement et intervenir sur les étapes de ce plan.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Vous pouvez créer des outils supplémentaires pour effectuer le traitement des fichiers XML en sortie. Il s'agit d'un exemple de [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Vous pouvez également créer un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) pour modifier un plan de déploiement avant son exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Procédure pas à pas : étendre le déploiement du projet de base de données pour modifier le plan de déploiement](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

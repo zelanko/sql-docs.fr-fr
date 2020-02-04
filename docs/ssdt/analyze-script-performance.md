@@ -1,25 +1,24 @@
 ---
-title: Analyser les performances de scripts | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Analyser les performances de script
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984680"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245561"
 ---
 # <a name="analyze-script-performance"></a>Analyser les performances de script
+
 Utilisez les outils fournis par SQL Server Data Tools pour déterminer si vous pouvez améliorer les performances de votre requête, de vos procédures stockées ou de vos scripts. Par exemple, en surveillant les statistiques du client, telles que les temps de réponse des requêtes les plus fréquentes, vous pouvez déterminer s'il faut modifier les requêtes ou les index des tables. Ces statistiques peuvent inclure le temps d'exécution du client, le profil de requête et les paquets/octets envoyés et reçus.  
   
 En outre, certains problèmes de performances sont mieux traités via l'analyse de l'application, des requêtes et des mises à jour que l'application envoie à la base de données, et de la façon dont ces requêtes et ces mises à jour interagissent avec le schéma de la base de données. Les plans d’exécution affichent graphiquement les méthodes d’extraction de données choisies par l’optimiseur de requête SQL Server, et montrent le coût d’exécution d’instructions et de requêtes en particulier. Ils peuvent ainsi aider à comprendre comment SQL Server traitera la requête SQL et à déterminer ce qui ralentit les performances.  
@@ -27,7 +26,7 @@ En outre, certains problèmes de performances sont mieux traités via l'analyse 
 ## <a name="using-client-statistics"></a>Utilisation des statistiques du client  
 Lorsque vous exécutez un script ou une requête dans l’Éditeur Transact\-SQL, vous pouvez choisir de recueillir des statistiques client, notamment sur le profil d’application, le réseau et la durée de l’exécution. Ces mesures permettent d'évaluer l'efficacité de votre script, ou d'effectuer des test d'évaluation de différents scripts.  
   
-Pour activer/désactiver la collecte de statistiques client, pointez sur **Éditeur Transact\-SQL** dans le menu **Données** lorsque l’Éditeur Transact\-SQL est ouvert et cliquez sur **Paramètres d’exécution**, puis sur **Inclure les statistiques client**. Vous pouvez également cliquer sur le bouton **Inclure les statistiques client** (le cinquième en partant de la droite) de la barre d’outils Éditeur Transact\-SQL, ou cliquer avec le bouton droit dans l’Éditeur Transact\-SQL et sélectionner **Paramètres d’exécution** et **Inclure les statistiques client**. Notez que pour collecter des statistiques pour une requête, vous devez activer cette fonctionnalité avant de l'exécuter.  
+Pour activer/désactiver la collecte de statistiques client, pointez sur \-Éditeur Transact**SQL** dans le menu **Données\- lorsque l’Éditeur Transact**SQL est ouvert et cliquez sur **Paramètres d’exécution**, puis sur **Inclure les statistiques client**. Vous pouvez également cliquer sur le bouton **Inclure les statistiques client** (le cinquième en partant de la droite) de la barre d’outils Éditeur Transact\-SQL, ou cliquer avec le bouton droit dans l’Éditeur Transact\-SQL et sélectionner **Paramètres d’exécution** et **Inclure les statistiques client**. Notez que pour collecter des statistiques pour une requête, vous devez activer cette fonctionnalité avant de l'exécuter.  
   
 Si les statistiques client sont activées, l’onglet **Statistiques** s’affiche à côté de l’onglet **Message** lors de l’exécution de la requête. Si elles sont désactivées, l’onglet **Statistiques** n’apparaît pas. Les statistiques provenant d'exécutions de requêtes successives sont répertoriées avec les valeurs moyennes.  
   

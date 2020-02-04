@@ -11,10 +11,10 @@ ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982957"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>Méthode getFunctions (SQLServerDatabaseMetaData)
@@ -44,7 +44,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  Nom d'une fonction.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -60,16 +60,16 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  Chaque description de fonction inclut les colonnes suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|FUNCTION_CAT|**String**|Nom de la base de données qui contient la fonction.|  
-|FUNCTION_SCHEM|**String**|Nom du schéma qui contient la fonction.|  
-|FUNCTION_NAME|**String**|Nom de la fonction.|  
-|NUM_INPUT_PARAMS|**Int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
-|NUM_OUTPUT_PARAMS|**Int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
-|NUM_RESULT_SETS|**Int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
-|REMARKS|**String**|Commentaires sur la fonction.|  
-|FUNCTION_TYPE|**short**|Type de la fonction. Il peut avoir une des valeurs suivantes :<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|FUNCTION_CAT|**Chaîne**|Nom de la base de données qui contient la fonction.|  
+|FUNCTION_SCHEM|**Chaîne**|Nom du schéma qui contient la fonction.|  
+|FUNCTION_NAME|**Chaîne**|Nom de la fonction.|  
+|NUM_INPUT_PARAMS|**int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
+|NUM_OUTPUT_PARAMS|**int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
+|NUM_RESULT_SETS|**int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
+|Remarques|**Chaîne**|Commentaires sur la fonction.|  
+|FUNCTION_TYPE|**short**|Type de la fonction. Ce peut être l’une des valeurs suivantes :<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  Toutes les descriptions dans le jeu de résultats retourné sont classées par FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME et SPECIFIC_NAME.  
   

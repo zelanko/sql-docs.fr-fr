@@ -1,6 +1,6 @@
 ---
-title: Ouvrir un éditeur (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Ouvrir un éditeur (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267016"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253779"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68267016"
 ### <a name="permissions"></a>Autorisations  
  Les opérations que vous réalisez dans un éditeur de codes sont soumises aux autorisations accordées au compte d'authentification que vous avez utilisé pour vous connecter. Par exemple, si vous ouvrez une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows, vous ne pouvez pas exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui font référence à des objets pour lesquels votre compte de connexion Windows ne dispose pas d'autorisation d'accès.  
   
-## <a name="how-to-open-editors"></a>Procédure : Ouvrir les éditeurs  
+## <a name="how-to-open-editors"></a>Procédure : ouvrir les éditeurs  
  Cette section explique comment ouvrir les différents éditeurs dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Utilisation du menu Fichier/Nouveau  

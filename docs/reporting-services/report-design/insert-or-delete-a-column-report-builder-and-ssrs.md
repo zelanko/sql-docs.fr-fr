@@ -9,10 +9,10 @@ ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2796447d65a7fcabe029c67f460a76284daf242f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580202"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Insérer ou supprimer une colonne (Générateur de rapports et SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "65580202"
   
 -   Cliquez avec le bouton droit sur une poignée de colonne à l’emplacement où vous souhaitez insérer une colonne, cliquez sur **Insérer une colonne**, puis sur **Gauche** ou **Droite**.  
   
-     -- ou --  
+     \- ou -  
   
 -   Cliquez avec le bouton droit sur une cellule de la région de données au niveau de laquelle vous souhaitez insérer une colonne, cliquez sur **Insérer une colonne**, puis sur **Gauche** ou **Droite**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65580202"
   
 -   Sélectionnez la ou les colonnes que vous souhaitez supprimer, cliquez avec le bouton droit sur la poignée de l’une des colonnes sélectionnées, puis cliquez sur **Supprimer les colonnes**.  
   
-     -- ou --  
+     \- ou -  
   
 -   Cliquez avec le bouton droit sur une cellule de la région de données au niveau de laquelle vous souhaitez supprimer une colonne, puis cliquez sur **Supprimer les colonnes**.  
   

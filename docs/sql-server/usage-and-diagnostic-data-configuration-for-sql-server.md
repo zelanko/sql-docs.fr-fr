@@ -9,10 +9,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028933"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurer les données d’utilisation et de diagnostic pour SQL Server (CEIP)
@@ -26,7 +26,7 @@ Par défaut, Microsoft SQL Server collecte des informations sur la façon dont s
 En particulier, Microsoft n’envoie par ce mécanisme aucune information de ces types :
 - valeurs des tables utilisateur ;
 - identifiants d’ouverture de session ou autres informations d’authentification ;
-- informations d’identification personnelle (PII).
+- Informations d’identification personnelle (PII)
 
 L’exemple de scénario suivant comprend des informations sur l’utilisation des fonctionnalités, qui permettent d’améliorer le produit.
 
@@ -84,7 +84,7 @@ Les clients d’entreprise peuvent configurer les paramètres de stratégie de g
     
     Nom de l'entrée de Registre = CustomerFeedback
     
-    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
+    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
     
     {InstanceID} fait référence au type d’instance et à l’instance, comme dans les exemples suivants :
 
@@ -98,7 +98,7 @@ Les clients d’entreprise peuvent configurer les paramètres de stratégie de g
     
     Nom de l'entrée de Registre = CustomerFeedback
     
-    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
+    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
 
 > [!NOTE]
 > {Major Version} fait référence à la version de SQL Server, par exemple, 140 pour SQL Server 2017
@@ -115,7 +115,7 @@ De façon similaire au comportement d’une version antérieure de SQL Server, l
 
     Nom RegEntry = EnableErrorReporting
 
-    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
+    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
  
     {InstanceID} fait référence au type d’instance et à l’instance, comme dans les exemples suivants : 
 
@@ -130,7 +130,7 @@ De façon similaire au comportement d’une version antérieure de SQL Server, l
 
     Nom RegEntry = EnableErrorReporting
 
-    Type d'entrée DWORD : 0 pour refuser ; 1 pour accepter
+    Type d’entrée DWORD : 0 pour accepter ; 1 pour refuser
 
 > [!NOTE]
 > {Major Version} fait référence à la version de SQL Server. Par exemple, « 140 » fait référence à SQL Server 2017.
@@ -142,7 +142,7 @@ SSMS ne collecte pas son propre vidage sur incident. Les vidages sur incident li
 
 La procédure pour activer ou désactiver cette fonctionnalité dépend de la version du système d’exploitation. Pour l’activer ou la désactiver, suivez les étapes de l’article correspondant à votre version de Windows.
  
-- Windows Server 2016 et Windows 10
+- Windows Server 2016 et Windows 10
 
     [Configurer les données de diagnostic Windows dans votre organisation](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 et Windows 7

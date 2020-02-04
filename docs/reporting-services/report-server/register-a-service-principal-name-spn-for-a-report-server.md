@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500234"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Inscrire un nom de principal du service (SPN) pour un serveur de rapports
@@ -21,7 +21,7 @@ ms.locfileid: "66500234"
 ## <a name="about-spns"></a>À propos des noms principaux de service  
  Un nom principal de service est un identificateur unique pour un service sur un réseau qui utilise l'authentification Kerberos. Il est composé d’une classe de service, d’un nom d’hôte et parfois d’un port. Les noms de principal du service HTTP ne nécessitent pas de port. Sur un réseau qui utilise l'authentification Kerberos, un nom principal de service pour le serveur doit être inscrit sous un compte d'ordinateur prédéfini (tel que NetworkService ou LocalSystem) ou un compte d'utilisateur. Les noms principaux de service sont enregistrés automatiquement pour les comptes intégrés. Toutefois, lorsque vous exécutez un service sous un compte d'utilisateur de domaine, vous devez inscrire manuellement le nom principal de service pour le compte que vous souhaitez utiliser.  
   
- Pour créer un SPN, vous pouvez utiliser l’utilitaire de ligne de commande **SetSPN** . Pour plus d'informations, consultez les documents suivants :  
+ Pour créer un SPN, vous pouvez utiliser l’utilitaire de ligne de commande **SetSPN** . Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
@@ -50,7 +50,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 2.  Ouvrez une session sur le contrôleur de domaine en tant qu'administrateur de domaine.  
   
-3.  Ouvrez une fenêtre d'invite de commandes.  
+3.  Ouvrez une fenêtre d’invite de commandes.  
   
 4.  Copiez la commande suivante, en remplaçant les valeurs d'espaces réservés par des valeurs réelles valides pour votre réseau :  
   

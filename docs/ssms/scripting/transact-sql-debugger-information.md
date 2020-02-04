@@ -1,10 +1,8 @@
 ---
-title: Informations du débogueur Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Informations du débogueur Transact-SQL
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253554"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253043"
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l'état d'exécution actuel.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l'état d'exécution actuel. 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>Fenêtres du débogueur  
- En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre principale de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Le débogueur affiche toutes ses informations dans ces deux fenêtres. Chaque fenêtre du débogueur contient des onglets que vous pouvez sélectionner pour contrôler le jeu d'informations à afficher dans la fenêtre. La fenêtre gauche du débogueur contient les onglets **Variables locales**, **Espion 1**, **Espion 2**, **Espion 3**et **Espion 4** . La fenêtre droite du débogueur contient les onglets **Pile des appels**, **Threads**, **Points d’arrêt**, **Fenêtre de commande**et **Sortie** .  
+
+En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre principale de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Le débogueur affiche toutes ses informations dans ces deux fenêtres. Chaque fenêtre du débogueur contient des onglets que vous pouvez sélectionner pour contrôler le jeu d'informations à afficher dans la fenêtre. La fenêtre gauche du débogueur contient les onglets **Variables locales**, **Espion 1**, **Espion 2**, **Espion 3**et **Espion 4** . La fenêtre droite du débogueur contient les onglets **Pile des appels**, **Threads**, **Points d’arrêt**, **Fenêtre de commande**et **Sortie** .  
   
 > [!NOTE]  
 >  Les descriptions précédentes s'appliquent aux emplacements par défaut des fenêtres du débogueur. Vous pouvez faire glisser un onglet pour le déplacer dans une autre fenêtre, ou vous pouvez détacher un onglet pour créer une nouvelle fenêtre que vous pouvez positionner où bon vous semble.  
@@ -41,11 +47,11 @@ ms.locfileid: "68253554"
 -   Dans la barre d’outils **Déboguer** , cliquez sur **Points d’arrêt**, puis sélectionnez la fenêtre désirée.  
   
 ## <a name="transact-sql-expressions"></a>Expressions Transact-SQL  
- Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres : **Variables locales, Espion1**, **Espion2**, **Espion3** et **Espion4**.  
+ Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres au maximum : **Variables locales, Espion 1**, **Espion 2**, **Espion 3**et **Espion 4**.  
   
  La fenêtre **Variables locales** affiche des informations sur les variables locales dans l’étendue actuelle du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’ensemble d’expressions répertorié dans la fenêtre **Variables locales** change à mesure que le débogueur exécute les différentes parties du code.  
   
- Les expressions figurant dans **Espion Express** et les quatre fenêtres **Espion** ne servent pas uniquement à indiquer l’identificateur d’une variable. Vous pouvez spécifier une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prend une valeur unique, comme l'ajout d'un nombre à une variable, ou une instruction SELECT qui prend une valeur unique. Les exemples comprennent :  
+ Les expressions figurant dans **Espion Express** et les quatre fenêtres **Espion** ne servent pas uniquement à indiquer l’identificateur d’une variable. Vous pouvez spécifier une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prend une valeur unique, comme l'ajout d'un nombre à une variable, ou une instruction SELECT qui prend une valeur unique. Voici quelques exemples :  
   
 -   Nom d’une variable de type, comme @IntegerCounter.  
   

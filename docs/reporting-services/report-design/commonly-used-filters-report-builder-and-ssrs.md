@@ -14,10 +14,10 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0757982d8e1e758a771d7ccdf880c88576f980f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581587"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtres couramment utilisés (Générateur de rapports et SSRS)
@@ -34,20 +34,20 @@ ms.locfileid: "65581587"
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Inclut des valeurs de données supérieures à 7.|  
 |`[SUM(Quantity)]`|**Integer**|**N supérieurs**|`10`|Inclut les 10 premières valeurs de données.|  
 |`[SUM(Quantity)]`|**Integer**|**% supérieurs**|`20`|Inclut les 20 premiers pour cent des valeurs de données.|  
-|`[Sales]`|**Texte**|**>**|`=CDec(100)`|Inclut toutes les valeurs de type System.Decimal (types de données money SQL) supérieures à 100 $.|  
+|`[Sales]`|**Text**|**>**|`=CDec(100)`|Inclut toutes les valeurs de type System.Decimal (types de données money SQL) supérieures à 100 $.|  
 |`[OrderDate]`|**DateTime**|**>**|`2088-01-01`|Inclut toutes les dates du 1er janvier 2008 à la date du jour.|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|Inclut les dates à partir du 1er janvier 2008 jusqu'au 1er février 2008 compris.|  
-|`[Territory]`|**Texte**|**LIKE**|`*east`|Tous les noms de secteurs qui se terminent par « est ».|  
-|`[Territory]`|**Texte**|**LIKE**|`%o%th*`|Tous les secteurs dont le nom commence par Nord et Sud.|  
-|`=LEFT(Fields!Subcat.Value,1)`|**Texte**|**IN**|`B, C, T`|Toutes les valeurs de sous-catégorie commençant par les lettres B, C ou T.|  
+|`[Territory]`|**Text**|**LIKE**|`*east`|Tous les noms de secteurs qui se terminent par « est ».|  
+|`[Territory]`|**Text**|**LIKE**|`%o%th*`|Tous les secteurs dont le nom commence par Nord et Sud.|  
+|`=LEFT(Fields!Subcat.Value,1)`|**Text**|**IN**|`B, C, T`|Toutes les valeurs de sous-catégorie commençant par les lettres B, C ou T.|  
   
 ## <a name="examples-with-report-parameters"></a>Exemples avec des paramètres de rapport  
  Le tableau suivant fournit des exemples d'expressions de filtre comprenant une référence de paramètre à valeur unique ou à valeurs multiples.  
   
 |Type de paramètre|Expression (de filtre)|Opérateur|Valeur|Type de données|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|Valeur unique|`[EmployeeID]`|=|`[@EmployeeID]`|Entier|  
-|Valeurs multiples|`[EmployeeID]`|IN|`[@EmployeeID]`|Entier|  
+|Valeur unique|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
+|Valeurs multiples|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

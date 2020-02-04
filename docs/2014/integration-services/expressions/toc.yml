@@ -16,7 +16,7 @@
           href: property-expressions-editor.md
 - name: Utiliser une expression dans un composant de flux de données
   href: ../use-an-expression-in-a-data-flow-component.md
-- name: Générateur d'expressions
+- name: Générateur d’expressions
   href: expression-builder.md
 - name: Tâche d'expression
   href: ../control-flow/expression-task.md

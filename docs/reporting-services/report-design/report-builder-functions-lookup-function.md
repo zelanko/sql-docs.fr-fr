@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579583"
 ---
 # <a name="report-builder-functions---lookup-function"></a>Fonctions du Générateur de rapports - Lookup
@@ -30,18 +30,18 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Paramètres  
  *source_expression*  
- (**Variant**) Expression évaluée dans l’étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple, `=Fields!ProdID.Value`.  
+ (**Variant**) Expression évaluée dans l’étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple : `=Fields!ProdID.Value`.  
   
  *destination_expression*  
- (**Variant**) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!ProductID.Value`.  
+ (**Variant**) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!ProductID.Value`.  
   
  *result_expression*  
- (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!ProductName.Value`.  
+ (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple : `=Fields!ProductName.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Products ».  
   
-## <a name="return"></a>Return  
+## <a name="return"></a>Renvoie  
  Retourne une valeur **Variant**, ou **Nothing** si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,7 +59,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  Pour récupérer plusieurs valeurs pour un seul champ de nom ou de clé dans lequel une relation un-à-plusieurs existe, utilisez [Fonction LookupSet &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Pour appeler **Lookup** pour un ensemble de valeurs, utilisez la [Fonction Multilookup &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Les restrictions suivantes s'appliquent :  
+ Les restrictions suivantes s’appliquent :  
   
 -   **Lookup** est évalué après que toutes les expressions de filtre ont été appliquées.  
   

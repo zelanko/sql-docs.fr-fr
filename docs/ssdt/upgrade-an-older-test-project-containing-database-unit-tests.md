@@ -1,29 +1,30 @@
 ---
-title: Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2ad973cf845817a0dbd251bbee23ac6f13d7c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 146d52de5abbd868d80e848636213cf273c468ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110586"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256300"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données
+
 Mettez à niveau un ancien projet de test créé dans Visual Studio 2010 et contenant des tests unitaires de base de données pour utiliser les nouveaux outils et runtime de test unitaire de base de données SQL Server Data Tools. Après avoir mis à niveau un projet antérieur, ajoutez des tests unitaires SQL Server au projet (pour plus d’informations, consultez [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  
   
 > [!TIP]  
 > Si vous utilisez Visual Studio 2010, après avoir ajouté des tests unitaires SQL Server à un projet de test, n'ajoutez pas de tests unitaires utilisant le modèle de test unitaire de base de données antérieur. Le cas échéant, vous devrez reconvertir le projet avant de pouvoir exécuter les tests.  
   
-Si vous avez un projet test de base de données qui a été créé dans une version antérieure à Visual Studio 2010, vous pouvez utiliser les informations contenues dans [Procédure : Mettre à niveau les tests unitaires de base de données à partir de versions précédentes de Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) pour mettre à niveau votre projet de base de données vers Visual Studio 2010, avant la mise à niveau du projet vers SQL Server Data Tools.  
+Si vous disposez d'un projet de base de données de test créé dans une version de Visual Studio antérieure à Visual Studio 2010, utilisez les informations de la rubrique [Procédure : mettre à niveau des tests unitaires de base de données de versions antérieures de Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) pour mettre à niveau votre projet de base de données vers Visual Studio 2010 avant de mettre à niveau le projet vers SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Initialisation d'une mise à niveau.  
   

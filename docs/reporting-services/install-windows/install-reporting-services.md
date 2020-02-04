@@ -8,15 +8,15 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952745"
 ---
 # <a name="install-sql-server-reporting-services"></a>Installation de SQL Server Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 L’installation de SQL Server Reporting Services comprend des composants serveur pour le stockage des éléments de rapport, le rendu des rapports et le traitement des services d’abonnement et autres services de rapport. 
 
@@ -95,9 +95,9 @@ Les réservations d'URL se composent d'un préfixe, d'un nom d'hôte, d'un port 
 
 |Élément|Description|
 |----------|-----------------|
-|Prefix|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), le programme d’installation tente de créer des réservations d’URL qui utilisent le préfixe HTTPS.|
-|Nom d'hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il indique que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, notamment `https://<computername>/reportserver`, `https://localhost/reportserver` ou`https://<IPAddress>/reportserver.`|
-|d’|Le port par défaut est 80. Si vous utilisez un port autre que le port 80, vous devez l’ajouter explicitement à l’URL lorsque vous ouvrez un portail web dans une fenêtre de navigateur.|
+|Préfixe|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), le programme d’installation tente de créer des réservations d’URL qui utilisent le préfixe HTTPS.|
+|Nom de l’hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il indique que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, notamment `https://<computername>/reportserver`, `https://localhost/reportserver` ou`https://<IPAddress>/reportserver.`|
+|Port|Le port par défaut est 80. Si vous utilisez un port autre que le port 80, vous devez l’ajouter explicitement à l’URL lorsque vous ouvrez un portail web dans une fenêtre de navigateur.|
 |Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer pour le service web Report Server et au format Reports pour le portail web. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Pour le portail web, le répertoire virtuel par défaut est **reports**.|
 
 Voici un exemple de chaîne URL complète :

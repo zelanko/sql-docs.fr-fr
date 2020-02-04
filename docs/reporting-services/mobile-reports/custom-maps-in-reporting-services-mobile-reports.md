@@ -11,10 +11,10 @@ ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62759645"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
@@ -23,7 +23,7 @@ Dans l’Éditeur de rapports mobiles SQL Server, les cartes géographiques son
 Ce format semi-ouvert étendu initialement conçu par une société privée est utilisé dans une grande partie des applications GIS. Pour se conformer à ce format, l’Éditeur de rapports mobiles requiert la fourniture de deux fichiers lors de la définition d’une carte :  
   
 - Un fichier .SHP pour les géométries de forme  
-- Un fichier .DBF pour les métadonnées  
+- Un fichier DBF pour les métadonnées  
   
 Les noms des fichiers de base doivent correspondre (par ex., *canada.shp* et *canada.dbf*). Les métadonnées doivent inclure le champ *NAME* avec la valeur du nom de la forme correspondante (key), pour être utilisées lors de l’ajout des données dans la carte.  
 
@@ -49,7 +49,7 @@ La création et la modification des fichiers de forme sont un processus complexe
 Il est possible de télécharger plusieurs fichiers de forme existants à partir de sites web comme Diva-GIS : [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data).  
 
 ## <a name="see-also"></a>Voir aussi  
-- [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+- [Cartes dans les rapports pour mobiles Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   

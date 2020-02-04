@@ -17,13 +17,13 @@ ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f109a264d394a47164966e602b264f0fcd337e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935844"
 ---
-# <a name="sqlsrvcancel"></a>sqlsrv_cancel
+# <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Annule une instruction. Cela signifie que les résultats de l’instruction en attente sont ignorés. Une fois que cette fonction a été appelée, l’instruction peut être réexécutée si elle a été préparée avec [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). L’appel de cette fonction n’est pas nécessaire si tous les résultats associés à l’instruction ont été consommés.  
@@ -38,7 +38,7 @@ sqlsrv_cancel( resource $stmt)
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: instruction à annuler.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Valeur booléenne : **true** si l’opération a réussi. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="example"></a>Exemple  

@@ -1,6 +1,6 @@
 ---
-title: Se connecter au moteur de base de données avec sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Se connecter au moteur de base de données avec sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -18,12 +18,12 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21e218bab023ef59f3f9785f85f982546f626006
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b286c817895cf45c2cdffbb75ef3ccf83fd01ccd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267681"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243480"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd : se connecter au moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

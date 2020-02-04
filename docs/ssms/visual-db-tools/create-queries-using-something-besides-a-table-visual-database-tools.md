@@ -1,10 +1,9 @@
 ---
-title: Créer des requêtes qui utilisent autre chose qu’une table | Microsoft Docs
-ms.custom: ''
+title: Créer des requêtes qui utilisent autre chose qu’une table
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 630cfd91df0d999d8866260eaee5152f2b4e91a5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 52ddb76ab1e4b6e04d043bd56c3ec55cef94e52b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264349"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254300"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Créer des requêtes qui utilisent autre chose qu'une table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +99,7 @@ FROM
 WHERE     type = 'psychology'  
 ```  
   
-Le texte en gras montre la requête existante utilisée comme source de données de la nouvelle requête. Remarquez que la nouvelle requête utilise un alias, « co_authored_books », pour indiquer la requête existante. Pour plus d’informations sur les alias, consultez [Créer des alias de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md) et [Créer des alias de colonnes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
+Le texte en gras montre la requête existante utilisée comme source de données de la nouvelle requête. Remarquez que la nouvelle requête utilise un alias, « co_authored_books », pour indiquer la requête existante. Pour plus d’informations sur les alias, consultez [Créer des alias de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md) et [Créer des alias de colonnes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
 De façon similaire, une requête peut participer à une opération JOIN. Par exemple, il est possible de rechercher les ventes de livres de luxe signés par plusieurs auteurs en créant une jointure entre la vue ExpensiveBooks et la requête d'extraction des livres signés par plusieurs auteurs. L'instruction SQL obtenue peut se présenter de la manière suivante :  
   
@@ -142,5 +143,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-« VPA30890F » est l'ID d'employé du responsable de l'équipe à extraire. Pour plus d’informations sur l’ajout d’une fonction définie par l’utilisateur à une requête, consultez [Ajouter des tables à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Pour obtenir une description complète des fonctions définies par l’utilisateur, consultez [Fonctions définies par l’utilisateur](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
+« VPA30890F » est l'ID d'employé du responsable de l'équipe à extraire. Pour plus d’informations sur l’ajout d’une fonction définie par l’utilisateur à une requête, consultez [Ajouter des tables à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Pour obtenir une description complète des fonctions définies par l’utilisateur, consultez [Fonctions définies par l’utilisateur](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   

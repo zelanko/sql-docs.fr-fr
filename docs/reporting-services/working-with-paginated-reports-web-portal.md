@@ -9,15 +9,15 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222629"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilisation des rapports paginés (portail web)
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Vous pouvez afficher et gérer les propriétés d’un rapport paginé dans le portail web. À partir du portail web, vous pouvez lancer le Générateur de rapports pour créer ou modifier des rapports paginés.  
    
@@ -62,7 +62,7 @@ Vous pouvez modifier les paramètres existants d’un rapport paginé. Pour ajou
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## <a name="data-source"></a>Source de données  
+## <a name="data-source"></a>source de données  
 Vous pouvez pointer sur une source de données partagée, ou entrer les informations de connexion pour une source de données personnalisée.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  

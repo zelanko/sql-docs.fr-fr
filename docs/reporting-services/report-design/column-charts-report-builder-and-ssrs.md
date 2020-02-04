@@ -9,10 +9,10 @@ ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 667f150ee0516b4f2ee63161509d6839b21e78e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581604"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "65581604"
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Didacticiel : Ajout d’un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

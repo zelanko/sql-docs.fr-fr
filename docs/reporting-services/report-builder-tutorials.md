@@ -9,10 +9,10 @@ ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330632"
 ---
 # <a name="report-builder-tutorials"></a>Didacticiels du Générateur de rapports
@@ -38,7 +38,7 @@ Suivez les étapes de ce didacticiel pour apprendre à ajouter et configurer une
 [Didacticiel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 Suivez les étapes de ce didacticiel pour apprendre à créer un rapport de forme libre entièrement nouveau. Ce rapport a l'apparence d'un bulletin d'informations.  
   
-[Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../reporting-services/tutorial-format-text-report-builder.md)  
+[Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../reporting-services/tutorial-format-text-report-builder.md)  
 Suivez les étapes de ce didacticiel pour apprendre quelques-unes des nombreuses manières de mettre en forme le texte de vos rapports.  
   
 [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)  
@@ -47,10 +47,10 @@ Suivez les étapes de ce didacticiel pour apprendre à ajouter un histogramme av
 [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
 Suivez les étapes de ce didacticiel pour apprendre à ajouter un graphique à secteurs à un rapport.  
   
-[Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+[Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
 Suivez les étapes de ce didacticiel pour apprendre à ajouter un graphique à barres à un rapport.  
   
-[Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports et SSRS&#41;](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+[Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports et SSRS&#41;](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
 Suivez les étapes de ce didacticiel pour apprendre à créer une matrice, puis à ajouter un jeu de graphiques sparkline à la matrice.  
   
 [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
@@ -65,7 +65,7 @@ Suivez les étapes de ce didacticiel pour apprendre à personnaliser l’apparen
 [Didacticiel : Création d’un rapport principal et d’un rapport d’extraction &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
 Suivez les étapes de ce didacticiel pour apprendre à créer des rapports pour un scénario d'extraction basé sur un cube Analysis Services. Vous allez créer le rapport principal et l'activer en vue de l'extraction, ainsi que le rapport cible de l'action d'extraction.  
   
-[Didacticiel : introduction aux expressions](../reporting-services/tutorial-introducing-expressions.md)  
+[Didacticiel : introduction aux expressions](../reporting-services/tutorial-introducing-expressions.md)  
 Suivez les étapes de ce didacticiel pour apprendre à utiliser des expressions pour concaténer, calculer et rechercher des valeurs de champs et les afficher dans un rapport. Vous apprendrez également à afficher de manière conditionnelle différents états d'image et d'indicateur à l'aide d'expressions.  
 
 ## <a name="next-steps"></a>Étapes suivantes

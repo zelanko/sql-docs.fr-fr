@@ -1,25 +1,26 @@
 ---
-title: Utilisation de conditions de test dans les tests unitaires SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Utilisation de conditions de test dans les tests unitaires SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140974"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243517"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilisation de conditions de test dans les tests unitaires SQL Server
+
 Dans un test unitaire SQL Server, un ou plusieurs scripts de test Transact\-SQL sont exécutés. Les résultats sont évalués dans le script Transact\-SQL et l'instruction THROW ou RAISERROR utilisée pour retourner une erreur et faire échouer le test, ou des conditions de test peuvent être définies dans le test pour évaluer les résultats. Le test retourne une instance de la classe [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). L'instance de cette classe contient un ou plusieurs DataSets, l'heure d'exécution et les lignes affectées par le script. Ces informations sont collectées pendant l'exécution du script. Vous pouvez évaluer ces résultats à l'aide de conditions de test. SQL Server Data Tools fournit un ensemble de conditions de test prédéfinies. Vous pouvez également créer et utiliser des conditions personnalisées ; consultez [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## <a name="predefined-test-conditions"></a>Conditions de test prédéfinies  
@@ -27,7 +28,7 @@ Le tableau suivant répertorie les conditions de test prédéfinies que vous pou
   
 |**Condition de test**|**Description de la condition de test**|  
 |----------------------|----------------------------------|  
-|Checksum de données|Échoue si la somme de contrôle du jeu de résultats retourné par le script Transact\-SQL ne correspond pas à la somme de contrôle attendue. Pour plus d'informations, consultez [Spécification d'un checksum de données](#SpecifyDataChecksum).<br /><br />**REMARQUE :** cette condition de test n’est pas recommandée si vous retournez des données qui varient entre les séries de test. Par exemple, si votre jeu de résultats contient des dates ou des heures générées, ou contient des colonnes d'identité, vos tests échouent, car la somme de contrôle est différente à chaque exécution.|  
+|Checksum de données|Échoue si la somme de contrôle du jeu de résultats retourné par le script Transact\-SQL ne correspond pas à la somme de contrôle attendue. Pour plus d'informations, consultez [Spécification d'un checksum de données](#SpecifyDataChecksum).<br /><br />**REMARQUE :** Cette condition de test n'est pas recommandée si vous retournez des données qui varient entre les séries de test. Par exemple, si votre jeu de résultats contient des dates ou des heures générées, ou contient des colonnes d'identité, vos tests échouent, car la somme de contrôle est différente à chaque exécution.|  
 |Jeu de résultats vide|Échoue si le jeu de résultats retourné par le script Transact\-SQL n'est pas vide.|  
 |Durée d'exécution|Échoue si le script de test Transact\-SQL prend plus de temps que prévu pour s'exécuter. La durée d'exécution par défaut est de 30 secondes.<br /><br />La durée d'exécution s'applique au test de script de test uniquement, et non pas au script d'avant test ou d'après test.|  
 |Schéma attendu|Échoue si les colonnes et les types de données du jeu de résultats ne correspondent pas à ceux de la condition de test. Vous devez spécifier un schéma via les propriétés de la condition de test. Pour plus d'informations, consultez [Spécification d'un schéma attendu](#SpecifyExpectedSchema).|  
@@ -41,9 +42,9 @@ Le tableau suivant répertorie les conditions de test prédéfinies que vous pou
 >   
 > La durée enregistrée ne contient pas le temps utilisé pour la génération de données et le déploiement du schéma, car ces opérations se produisent avant l'exécution des tests. Pour afficher la durée des tests, sélectionnez une série de tests dans la fenêtre **Résultats des tests**, cliquez avec le bouton droit, puis choisissez **Afficher les détails des résultats des tests**.  
   
-Ajoutez d'autres conditions de test à des tests unitaires SQL Server à l'aide du volet Conditions de test du Concepteur de test unitaire SQL Server. Pour plus d’informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+Ajoutez d'autres conditions de test à des tests unitaires SQL Server à l'aide du volet Conditions de test du Concepteur de test unitaire SQL Server. Pour plus d'informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
-Vous pouvez également modifier le code de la méthode de test directement pour ajouter des fonctionnalités. Pour plus d’informations, consultez [Procédure : ouvrir un test unitaire SQL Server à modifier](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md) et [Procédure : écrire un test unitaire SQL Server qui s’exécute dans l’étendue d’une seule transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md). Par exemple, ajoutez des fonctionnalités à une méthode de test en ajoutant des instructions Assert. Pour plus d’informations, consultez [Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md).  
+Vous pouvez également modifier le code de la méthode de test directement pour ajouter des fonctionnalités. Pour plus d’informations, consultez [Procédure : ouvrir un test unitaire SQL Server à modifier](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md) et [Procédure : écrire un test unitaire SQL Server qui s’exécute dans l’étendue d’une seule transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md). Par exemple, ajoutez des fonctionnalités à une méthode de test en ajoutant des instructions Assert. Pour plus d’informations, consultez [Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md).  
   
 ## <a name="expected-failures"></a>Échecs attendus  
 Créez des tests unitaires SQL Server pour tester le comportement qui doit échouer. Ces échecs attendus sont parfois appelés test négatif. Voici quelques exemples de cette situation :  
@@ -62,7 +63,7 @@ Pour marquer une méthode de test unitaire SQL Server par des exceptions attendu
 [ExpectedSqlException(MessageNumber = nnnnn, Severity = x, MatchFirstError = false, State = y)]  
 ```  
   
-Où :  
+Où :  
   
 -   *nnnnn* est le numéro du message attendu, par exemple 14025.  
   
@@ -72,7 +73,7 @@ Où :
   
 Tous les paramètres non spécifiés sont ignorés. Vous passez ces paramètres à l'instruction **THROW** dans votre code de base de données. Si vous spécifiez MatchFirstError = false, l'attribut correspond à une des erreurs SqlErrors dans l'exception. Le comportement par défaut (MatchFirstError = truei) n'est utilisé que pour correspondre à la première erreur qui se produit.  
   
-Pour obtenir un exemple d’utilisation des exceptions attendues et de test unitaire négatif SQL Server, consultez [Procédure pas à pas : création et exécution d’un test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Pour obtenir un exemple montrant comment utiliser les exceptions attendues et un test unitaire de SQL Server négatif, consultez [Procédure pas à pas : création et exécution d’un test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="SpecifyDataChecksum"></a>Spécification d'un checksum de données  
 Pour afficher le Concepteur de test unitaire SQL Server, double-cliquez sur le fichier de code source d'un test unitaire dans l'**Explorateur de solutions**.  
@@ -91,7 +92,7 @@ Après avoir ajouté une condition de test Checksum de données à un test unita
   
     La boîte de dialogue **Configuration de TestConditionName** s'affiche.  
   
-5.  Spécifiez une connexion à la base de données à tester. Pour plus d’informations, consultez [Procédure : créer une connexion de base de données](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Spécifiez une connexion à la base de données à tester. Pour plus d'informations, consultez [Procédure : créer une connexion de base de données](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  Par défaut, le corps Transact\-SQL de votre test s'affiche dans le volet d'édition. Modifiez le code si nécessaire, pour produire les résultats attendus. Par exemple, si le test possède du code dans l'avant test, vous devrez peut-être ajouter ce code.  
   
@@ -121,7 +122,7 @@ Après avoir ajouté une condition de test Schéma attendu à un test unitaire S
   
     La boîte de dialogue **Configuration de TestConditionName** s'affiche.  
   
-5.  Spécifiez une connexion à la base de données à tester. Pour plus d’informations, consultez [Procédure : créer une connexion de base de données](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Spécifiez une connexion à la base de données à tester. Pour plus d'informations, consultez [Procédure : créer une connexion de base de données](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  Par défaut, le corps Transact\-SQL de votre test s'affiche dans le volet d'édition. Modifiez le code si nécessaire, pour produire les résultats attendus. Par exemple, si le test possède du code dans l'avant test, vous devrez peut-être ajouter ce code.  
   
@@ -134,7 +135,7 @@ Après avoir ajouté une condition de test Schéma attendu à un test unitaire S
   
 8.  Si les résultats correspondent aux résultats attendus du test, cliquez sur **OK**. Sinon, modifiez le corps Transact\-SQL et répétez les étapes 6, 7 et 8 jusqu'à ce que les résultats correspondent à ceux attendus.  
   
-    Des informations sur le schéma attendu apparaissent dans la colonne **Valeur** de la condition de test. Par exemple, « Attendu : 2 tables » peut s’afficher.  
+    Des informations sur le schéma attendu apparaissent dans la colonne **Valeur** de la condition de test. Par exemple, « Attendu : 2 tables »  peut s'afficher.  
   
 ## <a name="extensible-test-conditions"></a>Conditions de test extensibles  
 Outre les six conditions de test prédéfinies, vous pouvez écrire de nouvelles conditions de test. Ces conditions de test seront affichées dans le volet Conditions de test du Concepteur de test unitaire SQL Server. Pour plus d’informations, consultez [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  

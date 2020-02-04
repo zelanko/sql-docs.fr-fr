@@ -15,13 +15,13 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570566"
 ---
-# <a name="role-assignments"></a>Attributions de rôles
+# <a name="role-assignments"></a>Affectations de rôles
 
 Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les *attributions de rôles* déterminent l’accès aux éléments stockés et au serveur de rapports proprement dit. Une attribution de rôle est composée des parties suivantes :  
   
@@ -30,10 +30,10 @@ Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les *attribu
 - Un utilisateur ou un groupe pouvant être authentifié par la sécurité Windows ou un autre mécanisme d'authentification.  
   
 - Les définitions de rôles définissent un ensemble de tâches autorisées et incluent :
-  - **Navigateur**
+  - **Browser**
   - **Gestionnaire de contenu**
   - **Mes rapports**
-  - **Serveur de publication**
+  - **Publisher**
   - **Générateur de rapports**
   - **Administrateur système**
   - **Utilisateur système**
@@ -57,8 +57,8 @@ Diagramme des attributions de rôles
  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la sécurité basée sur les rôles s'articule autour des niveaux suivants :
 
 - Les attributions de rôles au niveau élément contrôlent l’accès aux éléments dans la hiérarchie des dossiers du serveur de rapports, tels que :
-  - rapports
-  - Dossiers
+  - reports
+  - dossiers
   - Modèles de rapport
   - sources de données partagées
   - Autres ressources

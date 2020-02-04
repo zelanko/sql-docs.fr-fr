@@ -1,10 +1,7 @@
 ---
-title: Ajouter des lignes dans le volet de résultats (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Ajouter de nouvelles lignes au volet de résultats
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,21 @@ helpviewer_keywords:
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 844acf7ff29557e67edab6a4851216a119542cd4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: fed22c3c4922f74cb3462db4ac6617e6ee7a7c5f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263440"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253429"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Ajouter des lignes dans le volet de résultats (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Pour ajouter de nouvelles données, vous pouvez soit les taper, soit les coller à partir d'un autre programme, tel que le Bloc-notes ou Excel. Une ligne collée doit avoir exactement le même nombre et les mêmes types de colonnes que la table dans laquelle vous effectuez le collage. Vous pouvez coller plusieurs lignes à la fois dans le volet Résultats.  
   
 Pour plus d’informations sur la façon d’entrer des données, consultez [Règles relatives à la mise à jour des résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md).  

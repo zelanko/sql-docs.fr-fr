@@ -1,23 +1,24 @@
 ---
-title: 'Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Créer des conditions de test pour le Concepteur de test unitaire SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911789"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241482"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : Créer des conditions de test pour le Concepteur de test unitaire SQL Server
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server
+
 Utilisez la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) extensible pour créer des conditions de test. Vous pouvez, par exemple, créer une condition de test qui vérifie le nombre de colonnes ou valeurs dans un jeu de résultats.  
   
 ## <a name="to-create-a-test-condition"></a>Pour créer une condition de test  
@@ -48,7 +49,7 @@ Cette procédure explique comment créer une condition de test de façon à ce q
   
 10. Dérivez votre classe de la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Signez l'assembly avec un nom fort. Pour plus d’informations, consultez [Procédure : signer l’assembly avec un nom fort](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Signez l'assembly avec un nom fort. Pour plus d'informations, consultez [Procédure : signer un assembly avec un nom fort](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Générez la bibliothèque de classes.  
   

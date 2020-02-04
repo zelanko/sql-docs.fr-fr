@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.reviewer: ''
-ms.date: 03/14/2017
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8870849ef3cb83262284eab524b741c25a0a7ae
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: ab0abfe0e2221da335e069ef2f8ba6de38c1d3f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119219"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252991"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Débogueur Transact-SQL - Fenêtre Espion
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-La fenêtre **Espion** affiche des informations sur les expressions que vous avez sélectionnées. Il peut y avoir jusqu’à quatre fenêtres Espion : **Espion 1**, **Espion 2, Espion 3** et **Espion 4**. Les expressions sont évaluées dans l’étendue du frame de pile des appels actuellement sélectionné dans la fenêtre **Pile des appels** . Vous devez être en mode débogage pour surveiller les variables et les expressions.  
+La fenêtre **Espion** affiche des informations sur les expressions que vous avez sélectionnées. Les fenêtres Espion peuvent être au nombre de quatre, au maximum : **Espion 1**, **Espion 2, Espion 3**et **Espion 4**. Les expressions sont évaluées dans l’étendue du frame de pile des appels actuellement sélectionné dans la fenêtre **Pile des appels** . Vous devez être en mode débogage pour surveiller les variables et les expressions.  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -39,7 +39,7 @@ La fenêtre **Espion** affiche des informations sur les expressions que vous ave
 -   Cliquez avec le bouton droit sur l’expression, puis sélectionnez **Modifier la valeur**.  
   
 ## <a name="columns"></a>Colonnes  
- **Name**  
+ **Nom**  
  Expressions répertoriées par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les expressions suivantes sont prises en charge :  
   
 -   variables ;  
@@ -50,9 +50,9 @@ La fenêtre **Espion** affiche des informations sur les expressions que vous ave
   
 -   Expressions générées par l’application d’opérateurs à une ou plusieurs variables, un ou plusieurs paramètres ou une ou plusieurs fonctions système, comme @IntegerCounter + 1 ou FirstName + LastName.  
   
--   Instructions Transact-SQL qui retournent une valeur unique, comme : SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+-   Instructions Transact-SQL qui retournent une seule valeur, par exemple : SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Value**  
+ **Valeur**  
  Affiche la valeur retournée après que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] a évalué l’expression spécifiée dans **Nom**.  
   
  Si la longueur d'une expression dépasse la largeur de la colonne **Valeur** , une info-bulle affiche la valeur complète lorsque vous placez le pointeur sur la cellule **Valeur** de cette expression.  

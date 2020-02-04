@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619688"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
@@ -28,7 +28,7 @@ ms.locfileid: "65619688"
   
  Le journal d'exécution des rapports est stocké dans la base de données du serveur de rapports nommée par défaut **ReportServer**. Les vues SQL fournissent les informations associées au journal d'exécution. Les vues « 2 » et « 3 » ont été ajoutées dans les dernières versions et contiennent de nouveaux champs ou des champs avec des noms plus conviviaux que dans les versions précédentes. Les anciennes vues sont toujours présentes dans le produit de sorte que les applications personnalisées qui dépendent d'elles ne sont pas impactées. Si vous n'avez pas de dépendance sur une vue plus ancienne, par exemple ExecutionLog, il est recommandé d'utiliser la vue la plus récente, soit ExecutionLog**3**.  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Paramètres de configuration d'un serveur de rapports en mode SharePoint](#bkmk_sharepoint)  
   
@@ -106,23 +106,23 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande. Si votre environnement inclut plusieurs serveurs de rapports, vous pouvez analyser la distribution InstanceName pour surveiller et déterminer si votre programme d'équilibrage de la charge réseau distribue les requêtes entre les différents serveurs de rapports comme prévu.|  
 |ItemPath|Chemin de stockage d'un rapport ou d'un élément de rapport|  
 |UserName|Identificateur de l'utilisateur.|  
 |ExecutionID|Identificateur interne associé à une requête. Les requêtes sur les mêmes sessions utilisateur partagent le même ID d'exécution.|  
-|RequestType|Valeurs possibles :<br /><br /> Interactif<br /><br /> Abonnement<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
+|RequestType|Valeurs possibles :<br /><br /> Interactive<br /><br /> Subscription<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
-|ItemAction|Valeurs possibles :<br /><br /> Render<br /><br /> Trier<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|Valeurs possibles :<br /><br /> Rendu<br /><br /> Trier<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|Heures de début et de fin qui indiquent la durée d'un traitement de rapport.|  
 |TimeEnd||  
 |TimeDataRetrieval|Nombre de millisecondes passées pour la récupération des données.|  
 |TimeProcessing|Nombre de millisecondes passées pour le traitement du rapport.|  
 |TimeRendering|Nombre de millisecondes passées pour le rendu du rapport.|  
-|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> Live<br /><br /> Cache : indique une exécution mise en cache ; par exemple, les requêtes de jeu de données ne sont pas exécutées en direct.<br /><br /> Snapshot<br /><br /> Historique<br /><br /> AdHoc : indique soit un rapport d’extraction basé sur un modèle généré dynamiquement, soit un rapport du Générateur de rapports affiché en aperçu dans un client utilisant le serveur de rapports pour le traitement et le rendu.<br /><br /> Session : indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> Rdce : indique une extension RDCE (Report Definition Customization Extension). Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
-|État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
+|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> En direct<br /><br /> Cache : indique une exécution mise en cache ; par exemple, les requêtes de jeu de données ne sont pas exécutées en direct.<br /><br /> Instantané<br /><br /> Historique<br /><br /> AdHoc : indique soit un rapport d’extraction basé sur un modèle généré dynamiquement, soit un rapport du Générateur de rapports affiché en aperçu dans un client utilisant le serveur de rapports pour le traitement et le rendu.<br /><br /> Session : indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> Rdce : indique une extension RDCE (Report Definition Customization Extension). Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
+|Statut|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
 |AdditionalInfo|Conteneur de propriétés XML contenant des informations supplémentaires sur l'exécution. Le contenu peut être différent pour chaque ligne.|  
@@ -317,7 +317,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|------------------------------------------------------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
 |ReportPath|Structure du chemin d'accès au rapport. Un rapport enregistré dans le dossier racine, comme « test », a un ReportPath « /test ».<br /><br /> Pour un rapport nommé « test » qui est enregistré dans le dossier « samples », le ReportPath est « /Samples/test/ »|  
@@ -333,7 +333,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|Source de l'exécution du rapport (1=Direct, 2=Cache, 3=Instantané, 4=Historique).|  
-|État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
+|Statut|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
 |AdditionalInfo|Conteneur de propriétés XML contenant des informations supplémentaires sur l'exécution.|  
@@ -349,12 +349,12 @@ select * from ExecutionLog order by TimeStart DESC
   
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
 |ReportID|Identificateur du rapport.|  
 |UserName|Identificateur de l'utilisateur.|  
-|RequestType|Valeurs possibles :<br /><br /> True = Demande d'abonnement<br /><br /> False= Demande interactive|  
+|RequestType|Valeurs possibles :<br /><br /> True = Demande d'abonnement<br /><br /> False= Demande interactive|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
 |TimeStart|Heures de début et de fin qui indiquent la durée d'un traitement de rapport.|  
@@ -363,7 +363,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|Source d'exécution du rapport. Valeurs possibles : (1=Actif, 2=Cache, 3=Instantané, 4=Historique, 5=Adhoc, 6=Session, 7=RDCE).|  
-|État|Valeurs possibles : rsSuccess, rsProcessingAborted, ou un code d'erreur. Si plusieurs erreurs se produisent, seule la première erreur est enregistrée.|  
+|Statut|Valeurs possibles : rsSuccess, rsProcessingAborted, ou un code d'erreur. Si plusieurs erreurs se produisent, seule la première erreur est enregistrée.|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
   

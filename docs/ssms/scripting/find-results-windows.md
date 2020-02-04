@@ -1,6 +1,6 @@
 ---
-title: Fenêtres Résultats de la recherche | Microsoft Docs
-ms.custom: ''
+title: Fenêtres Résultats de la recherche
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1162aed479c7c895b21138e882c6fbdce51eec3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265443"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253840"
 ---
 # <a name="find-results-windows"></a>Fenêtres Résultats de la recherche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68265443"
 ## <a name="shortcut-keys"></a>Touches de raccourci  
  Vous pouvez utiliser les touches de raccourci suivantes pour naviguer rapidement dans les correspondances trouvées.  
   
- CTRL+ORIGINE  
+ Ctrl+Origine  
  Pour défiler vers le haut dans la fenêtre Résultats de la recherche.  
   
  CTRL+FIN  

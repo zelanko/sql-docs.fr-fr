@@ -10,15 +10,15 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330631"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installer côte à côte Reporting Services et Internet Information Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -39,7 +39,7 @@ Vous pouvez installer et exécuter SQL Server Reporting Services (SSRS) et Inter
   
  Les exemples suivants illustrent une plage de réservations d'URL, de la plus explicite à la moins explicite :  
   
-|Exemple|Demande|  
+|Exemple|Requête|  
 |-------------|-------------|  
 |`https://123.234.345.456:80/reports`|Reçoit toutes les requêtes envoyées à `https://123.234.345.456/reports` ou `https://\<computername>/reports` si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
 |`https://+:80/reports`|Reçoit toutes les requêtes envoyées à une adresse IP ou un nom d'hôte valide pour cet ordinateur, tant que l'URL contient le nom de répertoire virtuel « reports ».|  

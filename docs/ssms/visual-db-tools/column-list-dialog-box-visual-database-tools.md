@@ -1,10 +1,9 @@
 ---
-title: Liste des colonnes, boîte de dialogue (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Liste de colonnes
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7290121f2375033c9e731d86ed42b6110fe6f6d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: dc6739dff9103c842aca1439fe0cbe1a168794ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262542"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241250"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Boîte de dialogue Liste des colonnes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ Pour accéder à cette boîte de dialogue, dans le volet **Schéma** du menu Con
 Cette boîte de dialogue fournit la liste des colonnes contenues dans l'objet table sélectionné ainsi que les propriétés de base, telles que les types de données et une valeur indiquant si les colonnes autorisent ou non les valeurs null.  
   
 ## <a name="options"></a>Options  
-**Name**  
+**Nom**  
 Affiche le nom des colonnes contenues dans l'objet table sélectionné.  
   
 **Type de données**  

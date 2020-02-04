@@ -16,10 +16,10 @@ ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 98ff61142ff7b748ba6a16b632b256e8b0ec3c47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579410"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Définir la langue des paramètres de rapport dans une URL
@@ -41,6 +41,6 @@ https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Rende
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Référence de paramètre d'accès URL](../reporting-services/url-access-parameter-reference.md)  
+ [Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md)  
   
   

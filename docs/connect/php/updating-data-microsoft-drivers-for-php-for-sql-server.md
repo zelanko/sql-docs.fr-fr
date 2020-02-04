@@ -11,10 +11,10 @@ ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014841"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Mise à jour des données (Pilotes Microsoft SQL Server pour PHP)
@@ -34,8 +34,8 @@ Les étapes d’utilisation de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp
   
 |Rubrique|Description|  
 |---------|---------------|  
-|[Procédure : exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)|Décrit comment exécuter des requêtes paramétrables.|  
-|[Procédure : envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)|Décrit comment diffuser en continu des données vers le serveur.|  
+|[Guide pratique pour exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)|Décrit comment exécuter des requêtes paramétrables.|  
+|[Guide pratique pour envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)|Décrit comment diffuser en continu des données vers le serveur.|  
 |[Guide pratique pour effectuer des transactions](../../connect/php/how-to-perform-transactions.md)|Décrit comment utiliser des fonctions **sqlsrv** pour effectuer des transactions.|  
   
 ## <a name="see-also"></a>Voir aussi  

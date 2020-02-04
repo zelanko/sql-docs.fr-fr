@@ -16,10 +16,10 @@ ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 424dbb31ab96153dbf959c304456d8d1b2e4abd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573104"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensions pour le traitement des données et fournisseurs de données .NET Framework (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "65573104"
 ## <a name="understanding-a-data-provider"></a>Présentation d'un fournisseur de données  
  Une extension pour le traitement des données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (parfois connu sous le nom de pilote) prend en charge un jeu standard d’interfaces <xref:System.Data> pour lire, écrire et mettre à jour des données sur une source de données. Vous pouvez utiliser un fournisseur de données en l'absence d'extension pour le traitement des données pour un type spécifique de source de données. De nombreux fournisseurs de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard tiers sont disponibles.  
   
- Comme [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possède une architecture de fournisseur de données extensible, vous pouvez créer une extension pour le traitement des données personnalisée pour inclure les fonctionnalités supplémentaires fournies par les extensions pour le traitement de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Pour les extensions pour le traitement des données tierces, consultez la documentation associée.  
+ Comme [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possède une architecture de fournisseur de données extensible, vous pouvez créer une extension pour le traitement des données personnalisée pour inclure les fonctionnalités supplémentaires fournies par les extensions pour le traitement de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Pour les extensions pour le traitement des données tierces, consultez la documentation associée.  
   
 > [!NOTE]  
 >  Vous devez installer et inscrire un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ou une extension pour le traitement des données personnalisée avant de pouvoir les utiliser pour accéder à des données à partir d'une source de données. L'extension pour le traitement des données doit être installée et inscrite à la fois sur le client de création de rapports pour créer le rapport et sur le serveur de rapports pour afficher le rapport publié. Tous les fournisseurs de données ne sont pas conçus pour fonctionner dans un environnement serveur. Pour plus d’informations, consultez [Inscrire un fournisseur de données .NET Framework standard &#40;SSRS&#41;](../../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md) et [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).  

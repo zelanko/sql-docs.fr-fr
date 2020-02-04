@@ -11,10 +11,10 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571403"
 ---
 # <a name="schedule-properties-reports-page"></a>Propriétés de planification (page Rapports)
@@ -35,10 +35,10 @@ ms.locfileid: "65571403"
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ## <a name="options"></a>Options  
- **Dossier**  
+ **Folder**  
  Spécifie le chemin d'accès au rapport.  
   
- **Rapport**  
+ **Report**  
  Définit le nom du rapport qui utilise la planification.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -46,7 +46,7 @@ ms.locfileid: "65571403"
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configurer les propriétés générales d'un rapport (Gestionnaire de rapports)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Configurer les propriétés générales d’un rapport (Gestionnaire de rapports)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
   
   
 

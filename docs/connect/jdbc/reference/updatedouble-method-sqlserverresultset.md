@@ -16,10 +16,10 @@ ms.assetid: ce4ec01f-87a0-4787-81d4-a4bf490d1331
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1cc1a2febd12cdbc999f7b87d08e6453e850d25c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998976"
 ---
 # <a name="updatedouble-method-sqlserverresultset"></a>updateDouble, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998976"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[updateDouble (int, double)](../../../connect/jdbc/reference/updatedouble-method-int-double.md)|Met à jour la colonne désignée avec une valeur **double** en fonction de l’index de colonne.|  
 |[updateDouble (java.lang.String, double)](../../../connect/jdbc/reference/updatedouble-method-java-lang-string-double.md)|Met à jour la colonne désignée avec une valeur **double** en fonction du nom de colonne.|  

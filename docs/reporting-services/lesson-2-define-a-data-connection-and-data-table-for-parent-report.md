@@ -9,10 +9,10 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651597"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : définir une connexion de données et une table de données pour le rapport parent
@@ -65,7 +65,7 @@ Après avoir créé un projet de site Web à l'aide du modèle de site Web ASP.N
   
     Vous venez de terminer la configuration de l'objet ADO.NET DataTable comme source de données pour votre rapport. Sur la page Concepteur de DataSet dans Visual Studio, vous devez voir l'objet DataTable que vous venez d'ajouter, répertoriant les colonnes spécifiées dans la requête. DataSet1 contient les données de la table Product, en fonction de la requête.  
   
-12. Enregistrez le fichier.  
+12. Enregistrez le fichier .  
   
 13. Pour afficher un aperçu des données, sélectionnez **Aperçu des données** dans le menu **Données** , puis sélectionnez **Aperçu**.  
   

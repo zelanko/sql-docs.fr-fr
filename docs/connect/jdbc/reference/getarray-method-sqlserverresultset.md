@@ -16,10 +16,10 @@ ms.assetid: dc61c774-dcd9-49c0-8dfa-2e775fe2afa8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: accd36006c48d13c211d5e0d9db7ecf49cbfd91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954264"
 ---
 # <a name="getarray-method-sqlserverresultset"></a>getArray, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67954264"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getArray, méthode (int)](../../../connect/jdbc/reference/getarray-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet Array.|  
 |[getArray, méthode (java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string-sqlserverresultset.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet Array.|  

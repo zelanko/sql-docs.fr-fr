@@ -9,17 +9,17 @@ ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572119"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Résolution des problèmes d’abonnements et de remise de Reporting Services
   
     
 Utilisez cette rubrique pour résoudre les problèmes liés aux abonnements, aux planifications et à la remise de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] .  
-## <a name="log-information"></a>Informations des journaux
+## <a name="log-information"></a>Enregistrement d’informations
  
 La page Abonnement dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] inclut un état d’un abonnement, mais s’il existe un problème avec l’abonnement, les informations détaillées se trouvent dans les journaux [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 ![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
@@ -46,7 +46,7 @@ Si vous exécutez une application de messagerie électronique avec le protocole 
   
 où \<error message> est remplacé par des informations complémentaires sur les messages d’erreur retournées par des objets de données de collaboration (CDO).  
   
-### <a name="to-resolve-this-problem"></a>Pour rectifier ce problème :  
+### <a name="to-resolve-this-problem"></a>Pour résoudre ce problème :  
 * Définissez sur 1 la valeur de l’élément `SendUsing` dans le fichier **Rsreportserver.config** .  
 * Effacez la valeur de la propriété `SMTPServer` pour obtenir une propriété vide. Vous devrez également affecter une valeur à la propriété `SMTPServerPickupDirectory` .   
   

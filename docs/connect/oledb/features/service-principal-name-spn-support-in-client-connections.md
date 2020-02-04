@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e7b61536b335d6cbbcdc78e77e0ebbeb18618a22
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74056668"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
@@ -28,7 +28,7 @@ ms.locfileid: "74056668"
 
   À partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la prise en charge des noms de principal du service (SPN) a été étendue pour permettre une authentification mutuelle entre tous les protocoles. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les noms de principal du service étaient pris en charge uniquement pour Kerberos sur TCP quand le nom de principal du service par défaut de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] était inscrit auprès d’Active Directory.  
   
- Les noms principaux de service sont utilisés par le protocole d'authentification pour déterminer le compte dans lequel s'exécute une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si le compte de l'instance est connu, l'authentification Kerberos peut être utilisée pour fournir une authentification mutuelle par le client et le serveur. Si le compte de l'instance n'est pas connu, l'authentification NTLM, qui fournit uniquement une authentification du client par le serveur, est utilisée. Actuellement, OLE DB Driver pour SQL Server effectue la recherche d’authentification en faisant dériver le nom de principal du service du nom de l’instance et des propriétés de connexion réseau. Les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentent d’inscrire les noms de principal du service au démarrage, mais ces derniers peuvent également être inscrits manuellement. Toutefois, l'inscription échoue si les droits d'accès sont insuffisants pour le compte qui essaie d'inscrire les noms principaux de service.  
+ Les noms de principal du service sont utilisés par le protocole d’authentification pour déterminer le compte dans lequel s’exécute une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le compte de l'instance est connu, l'authentification Kerberos peut être utilisée pour fournir une authentification mutuelle par le client et le serveur. Si le compte de l'instance n'est pas connu, l'authentification NTLM, qui fournit uniquement une authentification du client par le serveur, est utilisée. Actuellement, OLE DB Driver pour SQL Server effectue la recherche d’authentification en faisant dériver le nom de principal du service du nom de l’instance et des propriétés de connexion réseau. Les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentent d’inscrire les noms de principal du service au démarrage, mais ces derniers peuvent également être inscrits manuellement. Toutefois, l'inscription échoue si les droits d'accès sont insuffisants pour le compte qui essaie d'inscrire les noms principaux de service.  
   
  Les comptes de domaine et d'ordinateur sont inscrits automatiquement dans Active Directory. Ils peuvent être utilisés comme noms principaux de service ; par ailleurs, les administrateurs peuvent définir leurs propres noms principaux de service. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rend l’authentification sécurisée plus gérable et plus fiable en autorisant les clients à spécifier directement le nom de principal du service à utiliser.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74056668"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>Utilisation  
+## <a name="usage"></a>Usage  
  Le tableau suivant décrit les scénarios les plus courants dans lesquels les applications clientes peuvent activer l'authentification sécurisée.  
   
 |Scénario|Description|  
@@ -78,7 +78,7 @@ ms.locfileid: "74056668"
   
 -   Sécurité : est-ce que le nom principal de service spécifié divulgue des informations protégées ?  
   
--   Fiabilité : pour permettre l'utilisation des noms principaux de service par défaut, le compte de service dans lequel s'exécute l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit avoir les privilèges suffisants pour mettre à jour Active Directory sur le centre de distribution de clés.  
+-   Fiabilité : pour permettre l’utilisation des noms de principal du service par défaut, le compte de service dans lequel s’exécute l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit avoir les privilèges suffisants pour mettre à jour Active Directory sur le centre de distribution de clés.  
   
 -   Commodité et transparence de l'emplacement : comment les noms principaux de service d'une application sont-ils affectés si la base de données correspondante est déplacée vers une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ? Cela s'applique à la fois au serveur principal et à son partenaire de basculement, si vous utilisez la mise en miroir de bases de données. Si une modification du serveur signifie une modification des noms principaux de service, comment cela affecte-t-il les applications ? Est-ce que les modifications sont gérées ?  
   
@@ -93,7 +93,7 @@ ms.locfileid: "74056668"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *fqdn* est un nom de domaine complet.|  
 |MSSQLSvc/*fqdn*:*port*|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé.<br /><br /> *port* est un numéro de port TCP.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *InstanceName* est un nom d'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|MSSQLSvc/*fqdn*:*InstanceName*|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *InstanceName* est le nom d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Nom principal de service mappé aux comptes d'ordinateur intégrés qui sont inscrits automatiquement par Windows.|  
 |*Username*@*Domain*|Spécification directe d'un compte de domaine.<br /><br /> *Username* est un nom de compte d'utilisateur Windows.<br /><br /> *Domain* est un nom de domaine ou nom de domaine complet Windows.|  
 |*MachineName*$@*Domain*|Spécification directe d'un compte d'ordinateur.<br /><br /> (Si le serveur auquel vous vous connectez s'exécute sous les comptes LOCAL SYSTEM ou NETWORK SERVICE, pour obtenir l'authentification Kerberos, **ServerSPN** peut être au format *MachineName*$@*Domain* .)|  

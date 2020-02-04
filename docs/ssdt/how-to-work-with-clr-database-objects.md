@@ -1,32 +1,33 @@
 ---
-title: 'Procédure : utilisation des objets de base de données CLR | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Travailler avec des objets de base de données CLR
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8ea668f0672a40e8af6fbb81bbce469652eeb54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f8aa504554cc973e5babbfe3c8512f59932fa147
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226729"
 ---
-# <a name="how-to-work-with-clr-database-objects"></a>Procédure : Travailler avec des objets de base de données CLR
+# <a name="how-to-work-with-clr-database-objects"></a>Procédure : utilisation des objets de base de données CLR
+
 Outre le langage de programmation Transact\-SQL, vous pouvez utiliser les langages .NET Framework pour créer des objets de base de données et récupérer et mettre à jour des données pour les bases de données SQL Server. Les objets de base de données écrits en code managé sont appelés objets de base de données Common Language Runtime (CLR) de SQL Server. Pour obtenir une explication des avantages de l'utilisation des objets de base de données CLR hébergés dans SQL Server, ainsi que sur le choix entre Transact\-SQL et CLR, consultez [Avantages de l'intégration du CLR](../relational-databases/clr-integration/clr-integration-overview.md) et [Avantages de l'utilisation du code managé pour créer des objets de base de données](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
   
 Pour créer un objet de base de données CLR avec SQL Server Data Tools, vous créez un projet de base de données, puis vous lui ajoutez un objet de base de données CLR. Contrairement aux versions précédentes de Visual Studio, vous n'avez pas besoin de créer un projet CLR distinct, puis de lui ajouter une référence à partir du projet de base de données. Lorsque vous générez et publiez le projet de base de données, vous publiez automatiquement les objets CLR dans le projet en même temps. Une fois ces objets CLR publiés, ils peuvent être appelés et exécutés comme les autres objets de base de données.  
   
 Les pages de propriétés CLR et Build CLR contiennent de nombreux paramètres d'utilisation des objets de base de données CLR dans votre projet. Plus particulièrement, la page de propriétés CLR dispose d'un paramètre de niveau d'autorisation pour définir les autorisations sur l'assembly CLR. Elle possède aussi le paramètre Générer le DDL pour contrôler si le DDL des objets de base de données CLR ajoutés au projet doit être généré. La page de propriétés Build CLR contient toutes les options du compilateur que vous pouvez définir pour configurer la compilation du code CLR dans le projet. Ces pages de propriétés sont accessibles en cliquant avec le bouton droit sur votre projet dans l'**Explorateur de solutions** et en sélectionnant **Propriétés**.  
   
-Pour activer le débogage des objets de base de données CLR, ouvrez l'**Explorateur d'objets SQL Server**. Cliquez avec le bouton droit sur le serveur contenant les artefacts de base de données CLR à déboguer, puis sélectionnez **Autoriser le débogage SQL CLR**. Une boîte de message affiche l’avertissement suivant : « Notez que pendant le débogage, tous les threads gérés sur ce serveur s’arrêtent. Voulez-vous activer le débogage SQL CLR sur ce serveur ? ». Lorsque vous déboguez des objets de base de données CLR, l'interruption de l'exécution interrompt tous les threads sur le serveur, ce qui affecte les autres utilisateurs. C'est pourquoi vous ne devez pas déboguer les applications pour des objets de base de données CLR sur un serveur de production. Notez également qu'une fois que vous avez commencé à déboguer, il est trop tard pour modifier des paramètres dans l'**Explorateur d'objets SQL Server**. Les modifications effectuées dans l'**Explorateur d'objets SQL Server** ne prendront pas effet avant le démarrage de la session de débogage suivante.  
+Pour activer le débogage des objets de base de données CLR, ouvrez l'**Explorateur d'objets SQL Server**. Cliquez avec le bouton droit sur le serveur contenant les artefacts de base de données CLR à déboguer, puis sélectionnez **Autoriser le débogage SQL CLR**. Une boîte de message affiche l'avertissement suivant : « Notez que pendant le débogage, tous les threads gérés sur ce serveur s'arrêtent. Voulez-vous activer le débogage SQL CLR sur ce serveur ? ». Lorsque vous déboguez des objets de base de données CLR, l'interruption de l'exécution interrompt tous les threads sur le serveur, ce qui affecte les autres utilisateurs. C'est pourquoi vous ne devez pas déboguer les applications pour des objets de base de données CLR sur un serveur de production. Notez également qu'une fois que vous avez commencé à déboguer, il est trop tard pour modifier des paramètres dans l'**Explorateur d'objets SQL Server**. Les modifications effectuées dans l'**Explorateur d'objets SQL Server** ne prendront pas effet avant le démarrage de la session de débogage suivante.  
   
 Pour plus d'informations sur les conditions de création d'objets de base de données CLR requises, consultez les rubriques appropriées dans [Création d'objets de base de données avec l'intégration CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
   
@@ -96,7 +97,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
   
 3.  Cliquez avec le bouton droit sur la table Suppliers et sélectionnez **Afficher les données**.  
   
-4.  Entrez **5** pour le champ **id**, **Contoso** pour **nom**, laissez le champ**Adresse** vide et entrez **425 3122 1222** pour le champ **téléphone**. Accédez par tabulation à un champ autre que le champ **téléphone`INSERT` et notez qu'un message s'affiche, indiquant que l'instruction**  est en conflit avec votre contrainte de validation existante, qui valide l'entrée du champ **téléphone** à l'aide d'un modèle de numéro de téléphone prédéfini.  
+4.  Entrez **5** pour le champ **id**, **Contoso** pour **nom**, laissez le champ**Adresse** vide et entrez **425 3122 1222** pour le champ **téléphone**. Accédez par tabulation à un champ autre que le champ **téléphone** et notez qu'un message s'affiche, indiquant que l'instruction `INSERT` est en conflit avec votre contrainte de validation existante, qui valide l'entrée du champ **téléphone** à l'aide d'un modèle de numéro de téléphone prédéfini.  
   
 5.  Remplacez l'entrée par **425 312 1222** et accédez par tabulation à un autre champ. Notez que cette fois-ci, l'entrée est acceptée.  
   

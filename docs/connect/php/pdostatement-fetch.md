@@ -11,10 +11,10 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993061"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
@@ -36,7 +36,7 @@ $*cursor_orientation* : symbole (entier) facultatif indiquant la ligne à récu
   
 $*cursor_offset* : symbole (entier) facultatif qui spécifie la ligne à récupérer quand $*cursor_orientation* a la valeur PDO::FETCH_ORI_ABS ou PDO::FETCH_ORI_REL et PDO::ATTR_CURSOR a la valeur PDO::CURSOR_SCROLL.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Valeur mixte qui retourne une ligne ou la valeur false.  
   
 ## <a name="remarks"></a>Notes  
@@ -45,7 +45,7 @@ Le curseur s’avance automatiquement à l’appel de fetch. Le tableau suivant 
 |$*fetch_style*|Description|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Spécifie un tableau indexé par nom de colonne.|  
-|PDO::FETCH_BOTH|Spécifie un tableau indexé par nom de colonne et dans l’ordre à partir de 0. Il s'agit du paramètre par défaut.|  
+|PDO::FETCH_BOTH|Spécifie un tableau indexé par nom de colonne et dans l’ordre à partir de 0. Il s’agit de la valeur par défaut.|  
 |PDO::FETCH_BOUND|Retourne true et attribue les valeurs comme les spécifie [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md).|  
 |PDO::FETCH_CLASS|Crée une instance et mappe les colonnes sur des propriétés nommées.<br /><br />Appelez [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) avant d’appeler fetch.|  
 |PDO::FETCH_INTO|Actualise une instance de la classe demandée.<br /><br />Appelez [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) avant d’appeler fetch.|  
@@ -59,7 +59,7 @@ Si le curseur peut défiler (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch le re
   
 |$*cursor_orientation*|Description|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|Récupère la ligne suivante. Il s'agit du paramètre par défaut.|  
+|PDO::FETCH_ORI_NEXT|Récupère la ligne suivante. Il s’agit de la valeur par défaut.|  
 |PDO::FETCH_ORI_PRIOR|Récupère la ligne précédente.|  
 |PDO::FETCH_ORI_FIRST|Récupère la première ligne.|  
 |PDO::FETCH_ORI_LAST|Récupère la dernière ligne.|  

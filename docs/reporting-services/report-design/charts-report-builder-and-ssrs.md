@@ -19,10 +19,10 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593793"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
@@ -111,7 +111,7 @@ Plus vous passerez du temps à préparer avec soin vos données et à les compre
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
  Décrit tous les types et sous-types de graphiques disponibles dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], avec notamment les points à prendre en considération et les bonnes pratiques pour utiliser les différents types de graphiques.  
   
- [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Mise en forme d’un graphique (Générateur de rapports et SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
  Utilise la mise en forme pour améliorer l'apparence globale et met en évidence les principaux points de données de votre graphique.  
   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
@@ -139,7 +139,7 @@ Plus vous passerez du temps à préparer avec soin vos données et à les compre
  [Images, zones de texte, rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   

@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70000449"
 ---
 # <a name="get-python-package-information"></a>Obtenir des informations sur les packages Python
@@ -24,7 +24,7 @@ Cet article vous explique comment obtenir des informations sur les packages Pyth
 
 ## <a name="default-python-library-location"></a>Emplacement par défaut de la bibliothèque Python
 
-Lorsque vous installez Machine Learning avec SQL Server, une seule bibliothèque de packages est créée au niveau de l’instance pour chaque langue que vous ajoutez. Sur Windows, la bibliothèque d’instances est un dossier sécurisé enregistré avec SQL Server.
+Lorsque vous installez Machine Learning avec SQL Server, une seule bibliothèque de packages est créée au niveau de l’instance pour chaque langage que vous installez. Sur Windows, la bibliothèque d’instances est un dossier sécurisé enregistré avec SQL Server.
 
 Tous les scripts ou les codes qui s’exécutent dans la base de données sur SQL Server doivent charger les fonctions à partir de la bibliothèque d’instances. SQL Server ne peut pas accéder aux packages installés dans d’autres bibliothèques. Cela s’applique également aux clients distants : tout code Python qui s’exécute dans le contexte de calcul du serveur peut uniquement utiliser des packages installés dans la bibliothèque d’instances.
 Pour protéger les ressources du serveur, la bibliothèque d’instances par défaut ne peut être modifiée que par un administrateur de l’ordinateur.
@@ -57,7 +57,7 @@ Pour en savoir plus sur la variable `sys.path` et sur la façon dont elle est ut
 
 Les packages Python suivants sont installés avec SQL Server Machine Learning Services lorsque vous sélectionnez la fonctionnalité Python au moment de l’installation.
 
-| . | Options de version |  Description |
+| . | Version |  Description |
 | ---------|---------|--------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | Utilisé pour les contextes de calcul distants, la diffusion en continu, l’exécution parallèle des fonctions rx pour l’importation et la transformation des données, la modélisation, la visualisation et l’analyse. |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Ajoute des algorithmes d’apprentissage automatique dans Python. |

@@ -10,15 +10,15 @@ ms.author: mathoma
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68067581"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Fichiers include SQL Server pour la gestion des versions et applies-to
 
-Les références de la documentation peuvent être facilement modifiées sans changer le texte des articles individuellement en utilisant des fichiers include dans Markdown. Il existe trois types de fichiers include dans le monde du contenu SQL : version SQL, applies-to et texte de référence. Les fichiers include de **version SQL** sont utilisés pour indiquer la version de SQL concernée, comme SQL Server 2016 ou 2017. Les fichiers include **applies-to** indiquent les services et produits SQL auquel s’applique le document, comme SQL Server sur Linux ou Azure SQL Database. Les fichiers include de **texte de référence** ne font pas partie des deux autres catégories, comme le fichier include « Get Help », qui est une liste de liens que les clients peuvent utiliser pour obtenir de l’aide sur SQL Server.
+Les références de la documentation peuvent être facilement modifiées sans changer le texte des articles individuellement en utilisant des fichiers include dans Markdown. Il existe trois types de fichiers include dans le contenu SQL : versions SQL, applies-to et texte de référence. Les fichiers include de **version SQL** sont utilisés pour indiquer la version de SQL concernée, comme SQL Server 2016 ou 2017. Les fichiers include **applies-to** indiquent les services et produits SQL auquel s’applique le document, comme SQL Server sur Linux ou Azure SQL Database. Les fichiers include de **texte de référence** ne font pas partie des deux autres catégories, comme le fichier include « Get Help », qui est une liste de liens que les clients peuvent utiliser pour obtenir de l’aide sur SQL Server.
 
 Cet article est destiné à être utilisé comme point de référence pour les deux premiers types de fichiers include. Vous pouvez parcourir la liste complète des fichiers include dans le [dépôt sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
@@ -44,7 +44,7 @@ Les rédacteurs de contenu SQL ont souvent besoin d’inclure le nom du produit 
 
 Ces fichiers include applies-to omettent la version de SQL Server.
 
-| Nom de fichier| Exemple dans Markdown |image|
+| Nom de fichier| Exemple dans Markdown |Image|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] |
 | appliesto-ss-asdb-asdw-pdw-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] |
@@ -66,7 +66,7 @@ Ces fichiers include applies-to omettent la version de SQL Server.
 
 Ces fichiers include applies-to indiquent les versions de SQL auxquelles s’applique la documentation.
 
-| Nom de fichier| Exemple dans Markdown |image|
+| Nom de fichier| Exemple dans Markdown |Image|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -110,7 +110,7 @@ Ces fichiers include applies-to indiquent les versions de SQL auxquelles s’app
 
 Ces fichiers include applies-to sont utilisés avec la documentation Analysis Services.
 
-| Nom de fichier| Exemple dans Markdown |image|
+| Nom de fichier| Exemple dans Markdown |Image|
 | :-------------| :----------| :-------------------|
 | ssas-appliesto-sql2016.md | `[!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)]` | [!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)] |
 | ssas-appliesto-sql2016-later.md | `[!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)]` | [!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)] |
@@ -127,7 +127,7 @@ Ces fichiers include applies-to sont utilisés avec la documentation Analysis Se
 
 Ces fichiers include applies-to sont utilisés avec la documentation Reporting Services.
 
-| Nom de fichier| Exemple dans Markdown |image|
+| Nom de fichier| Exemple dans Markdown |Image|
 | :-------------| :----------| :-------------------|
 | ssrs-appliesto-2017-and-later.md | `[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]` | [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)] |
 | ssrs-appliesto-not-pbirs.md | `[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]` | [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)] |

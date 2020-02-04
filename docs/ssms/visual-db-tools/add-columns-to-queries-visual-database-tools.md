@@ -1,10 +1,7 @@
 ---
-title: Ajouter des colonnes à des requêtes (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Ajouter des colonnes à des requêtes
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +12,19 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68c09e7162103cd027657beb81482803a1589a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: b6638a8b5a749c833d2d50ca0dc6fba78d61038c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264663"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244186"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Ajouter des colonnes à des requêtes (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Pour pouvoir utiliser une colonne dans une requête, vous devez l'ajouter à cette requête. Vous pouvez ajouter une colonne pour l'afficher dans le résultat d'une requête, l'utiliser à des fins de tri, y effectuer des recherches ou encore totaliser ses données. Vous pouvez spécifier les colonnes de la requête qui doivent être comprises dans le volet Résultats lors de l'exécution de la requête. Pour plus d’informations, consultez [Supprimer des colonnes des résultats d’une requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md).  
   
