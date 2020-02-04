@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992902"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV
@@ -45,8 +45,8 @@ Les étapes suivantes récapitulent la manière de récupérer des données sous
 |Rubrique|Description|  
 |---------|---------------|  
 |[Types de données avec prise en charge des flux à l’aide du pilote SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Répertorie les types de données SQL Server qui peuvent être récupérés sous forme de flux.|  
-|[Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données caractères sous la forme d’un flux.|  
-|[Procédure : récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données binaires sous la forme d’un flux.|  
+|[Guide pratique pour récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données caractères sous la forme d’un flux.|  
+|[Guide pratique pour récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données binaires sous la forme d’un flux.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)

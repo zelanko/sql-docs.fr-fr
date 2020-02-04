@@ -1,29 +1,28 @@
 ---
-title: Organiser les colonnes affichées dans une trace (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Organiser les colonnes affichées dans une trace
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- organizing trace columns displayed [SQL Server]
-- arranging trace columns displayed
-- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aba356e951abc0fd63b28a7247e8319d860c99ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 52fc0c568a3880be3ace28f9f0a65f6bfd6a1225
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911727"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307552"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organiser les colonnes affichées dans une trace (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Vous pouvez grouper les colonnes de données dans une trace en sélectionnant **Organiser les colonnes** dans la table de trace ou dans la boîte de dialogue **Propriétés du fichier de suivi** , ou bien lorsque vous définissez une trace. Le regroupement des colonnes de données vous permet de mieux analyser la sortie de trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Pour plus d’informations, consultez [Afficher et analyser des traces avec SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
+
+Vous pouvez grouper les colonnes de données dans une trace en sélectionnant **Organiser les colonnes** dans la table de trace ou dans la boîte de dialogue **Propriétés du fichier de suivi** , ou bien lorsque vous définissez une trace. Le regroupement des colonnes de données vous permet de mieux analyser la sortie de trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Pour plus d’informations, consultez [Afficher et analyser des traces avec SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   
  L’option**Organiser les colonnes** vous permet de grouper les événements de trace ou de les grouper et de les agréger en fonction des colonnes de données que vous sélectionnez.  
   

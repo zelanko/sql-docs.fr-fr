@@ -5,22 +5,22 @@ description: Découvrez comment déployer un cluster Big Data SQL Server avec un
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706337"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720820"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Déployer le nœud de nom HDFS et les services Spark partagés dans une configuration à haut niveau de disponibilité
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Outre le déploiement de l’instance maître SQL Server dans une configuration à haut niveau de disponibilité à l’aide de groupes de disponibilité, vous pouvez déployer d’autres services stratégiques dans le cluster Big Data pour garantir un niveau de fiabilité accru. Vous pouvez configurer le `HDFS name node` et les services Spark partagés regroupés sous `SparkHead` avec un réplica supplémentaire. Dans ce cas, `Zookeeper` est également déployé dans le cluster Big Data sur le serveur en tant que coordinateur de cluster et magasin de métadonnées pour les services suivants : 
+Outre le déploiement de l’instance maître SQL Server dans une configuration à haut niveau de disponibilité à l’aide de groupes de disponibilité, vous pouvez déployer d’autres services stratégiques dans le cluster Big Data pour garantir un niveau de fiabilité accru. Vous pouvez configurer le `HDFS name node` et les services Spark partagés regroupés sous `sparkhead` avec un réplica supplémentaire. Dans ce cas, `Zookeeper` est également déployé dans le cluster Big Data sur le serveur en tant que coordinateur de cluster et magasin de métadonnées pour les services suivants : 
 
 - Nœud de nom HDFS
 - Gestionnaire de ressources Yarn et Livy. 

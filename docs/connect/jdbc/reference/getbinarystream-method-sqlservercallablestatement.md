@@ -16,10 +16,10 @@ ms.assetid: b0d2cff1-1ab0-44c2-9824-70106fc43370
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d4f3b9010f8a2a4ba932ff774e6fe305b3767de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953648"
 ---
 # <a name="getbinarystream-method-sqlservercallablestatement"></a>Méthode getBinaryStream (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67953648"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getBinaryStream &#40;int&#41;](../../../connect/jdbc/reference/getbinarystream-int.md)|Récupère la valeur du paramètre désigné en tant que flux binaire d'octets ininterrompus en fonction de l'index de paramètre.|  
 |[getBinaryStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getbinarystream-java-lang-string.md)|Récupère la valeur du paramètre désigné en tant que flux binaire d'octets ininterrompus en fonction du nom du paramètre.|  

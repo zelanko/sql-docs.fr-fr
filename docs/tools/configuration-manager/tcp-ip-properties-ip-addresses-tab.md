@@ -1,6 +1,6 @@
 ---
-title: Propriétés TCP/IP (onglet adresses IP) | Microsoft Docs
-ms.custom: ''
+title: Propriétés TCP/IP (onglet Adresses IP)
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023810"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307566"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriétés TCP/IP (onglet Adresses IP)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68023810"
   
 ## <a name="see-also"></a>Voir aussi  
  [Choix d'un protocole réseau](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Création d’une chaîne de connexion valide avec TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Service SQL Server Browser](sql-server-browser-service.md)  
   
   

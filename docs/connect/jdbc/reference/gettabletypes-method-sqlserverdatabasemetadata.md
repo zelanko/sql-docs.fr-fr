@@ -16,10 +16,10 @@ ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8da791a53d6ee25dd56f7f015ccc69947999f3b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979156"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Méthode getTableTypes (SQLServerDatabaseMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67979156"
 public java.sql.ResultSet getTableTypes()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -45,9 +45,9 @@ public java.sql.ResultSet getTableTypes()
   
  Le jeu de résultats retourné par la méthode getTableTypes contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_TYPE|**String**|Le type de table.|  
+|TABLE_TYPE|**Chaîne**|Le type de table.|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTableTypes, consultez « sp_tables (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

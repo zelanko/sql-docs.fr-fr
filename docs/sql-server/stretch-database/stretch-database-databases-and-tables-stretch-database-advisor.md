@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843747"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identifier des bases de données et des tables pour Stretch Database avec Data Migration Assistant
@@ -37,7 +37,7 @@ ms.locfileid: "73843747"
 
 3.  Sélectionnez **SQL Server** à la fois comme **Source server type** (Type de serveur source) et **Target server type** (Type de serveur cible).
 
-4.  Sélectionnez **Créer**. 
+4.  Sélectionnez **Create** (Créer). 
 
 5. Dans la page **Options** (étape 1), sélectionnez **New features recommendation** (Nouvelle recommandation de fonctionnalités). Vous pouvez éventuellement effacer la sélection pour **Compatibility issues** (Problèmes de compatibilité).
 
@@ -45,7 +45,7 @@ ms.locfileid: "73843747"
 
 7.  Sélectionnez **Start Assessment** (Démarrer l’évaluation).
 
-## <a name="review-the-results"></a>Examiner les résultats  
+## <a name="review-the-results"></a>Passer en revue les résultats.  
   
 1.  Quand l’analyse est terminée, dans la page **Review results** (Passer en revue les résultats) (étape 3), sélectionnez l’option **Feature recommendations** (Recommandations de fonctionnalités), puis sélectionnez l’onglet **Storage** (Stockage).
 
@@ -65,7 +65,7 @@ Avec la publication de Data Migration Assistant, qui remplace et étend le Conse
   
 ## <a name="see-also"></a>Voir aussi  
  [Limitations concernant Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
- [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

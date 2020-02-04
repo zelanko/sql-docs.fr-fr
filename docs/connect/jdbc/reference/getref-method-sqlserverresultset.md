@@ -16,10 +16,10 @@ ms.assetid: 7c176547-daae-405e-8fbe-3cdab87ab5e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df48c23fb4bab06bba93d96931ebd7d520d3054f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980515"
 ---
 # <a name="getref-method-sqlserverresultset"></a>getRef, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67980515"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getRef (int)](../../../connect/jdbc/reference/getref-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet Ref dans le langage de programmation Java.|  
 |[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string-sqlserverresultset.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme d’objet Ref dans le langage de programmation Java.|  

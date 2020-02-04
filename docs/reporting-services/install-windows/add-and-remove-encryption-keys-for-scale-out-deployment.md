@@ -15,17 +15,17 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593859"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif
   Vous pouvez exécuter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un modèle de déploiement avec montée en puissance parallèle si vous configurez plusieurs serveurs de rapports pour qu'ils utilisent une base de données de serveur de rapports partagée. L'appartenance d'un serveur de rapports au déploiement évolutif dépend si ce serveur a déposé ou non une clé de chiffrement dans la base de données de serveurs de rapports. Vous pouvez contrôler un déploiement évolutif en ajoutant et en supprimant des clés de chiffrement pour des instances de serveurs de rapports spécifiques. Si vous supprimez des nœuds du déploiement, vous pouvez les supprimer dans n'importe quel ordre. Si vous ajoutez des nœuds à un déploiement, vous devez joindre toutes les nouvelles instances à partir d'un serveur de rapports faisant déjà partie du déploiement.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Utilisation de l'outil de configuration de Reporting Services pour configurer un déploiement évolutif  
- Le moyen le plus simple de configurer un déploiement évolutif consiste à utiliser l'outil de configuration de Reporting Services. Pour plus d’informations et pour obtenir des instructions détaillées, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Le moyen le plus simple de configurer un déploiement évolutif consiste à utiliser l'outil de configuration de Reporting Services. Pour plus d’informations et pour obtenir des instructions détaillées, consultez [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Utilisation de l'outil Rskeymgmt pour configurer un déploiement évolutif  
  Servez-vous de l’utilitaire **rskeymgmt** pour initialiser une instance de serveur de rapports afin qu’elle utilise une base de données de serveur de rapports partagée. L'ajout d'un serveur de rapports à un déploiement évolutif requiert l'initialisation du serveur de rapports. L'initialisation nécessite des autorisations d'administrateur. Vous devez disposer d'informations d'identification d'administrateur pour l'ordinateur distant qui héberge le serveur de rapports à intégrer au déploiement.  

@@ -1,25 +1,26 @@
 ---
-title: 'Procédure : voir les différences entre les données | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Afficher les différences entre les données
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec641fc027bae18a09e81d5cf14eee1bd8ab3ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930343"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226753"
 ---
-# <a name="how-to-view-data-differences"></a>Procédure : Afficher les différences entre les données
+# <a name="how-to-view-data-differences"></a>Guide pratique : Voir les différences entre les données
+
 Après avoir comparé les données de deux bases de données, vous pourrez voir chacun des *objets de base de données* que vous avez comparés ainsi que son état. Vous pouvez également afficher les résultats des enregistrements dans chaque objet, regroupés par état.  
   
 Après avoir affiché les différences, vous pourrez mettre à jour la *cible* de sorte qu’elle corresponde à la *source* pour une partie ou l’ensemble des objets ou des enregistrements qui sont différents, manquants ou nouveaux.  
@@ -35,5 +36,5 @@ Après avoir affiché les différences, vous pourrez mettre à jour la *cible* d
     -   Pour afficher les résultats des enregistrements d’un objet en particulier, cliquez sur cet objet dans le volet de résultats principal, puis sur un onglet du volet Vue des enregistrements. Chaque onglet affiche tous les enregistrements de cet objet qui ont un état particulier : différent, uniquement dans la source, uniquement dans la cible et en double. Les données s'affichent par enregistrement et colonne.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

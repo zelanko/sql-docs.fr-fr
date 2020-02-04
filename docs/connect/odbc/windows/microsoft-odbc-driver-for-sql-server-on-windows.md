@@ -11,10 +11,10 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c075c7adcc7eeae3ae7a83676256e72b4b86d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989431"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Pilote Microsoft ODBC pour SQL Server sur Windows
@@ -26,7 +26,7 @@ Microsoft ODBC Driver for SQL Server peut servir à créer des applications. Vou
 
 ## <a name="summary"></a>Résumé
 
-| Options de version       | Fonctionnalités prises en charge      |
+| Version       | Fonctionnalités prises en charge      |
 | ------------- |---------------| 
 | Microsoft ODBC Driver 17 for SQL Server | <ul><li>Prise en charge d’Always Encrypted pour l’API BCP</li><li>Le nouvel attribut de chaîne de connexion UseFMTONLY conduit le pilote à utiliser les métadonnées héritées dans les cas spéciaux nécessitant des tables temporaires</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>Groupes de disponibilité AlwaysOn</li></ul>   | 
@@ -39,7 +39,7 @@ Cette documentation sur Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../.
 -   [Notes de publication relatives à ODBC pour SQL Server sur Windows](../../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md)  
 -   [Fonctionnalités de Microsoft ODBC Driver for SQL Server sur Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
 -   [Configuration système requise, installation et fichiers de pilote](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
--   [Regroupement de connexions prenant en charge le pilote dans le pilote ODBC pour SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
+-   [Regroupement de connexions prenant en charge le pilote dans ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [Exemple d’exécution asynchrone &#40;méthode de notification&#41;](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Résilience de connexion du pilote ODBC Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
 -   [Utilisation d’Always Encrypted avec ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
@@ -48,11 +48,11 @@ Cette documentation sur Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../.
 
 ## <a name="community"></a>Communauté  
 - [Blog de l’équipe Microsoft ODBC Driver for SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [Forum d'accès aux données SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Forum sur l’accès aux données SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## <a name="see-also"></a>Voir aussi  
 - [À propos de SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [Génération d'applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
+- [Génération d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [Forum aux questions sur SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [Guide de référence du programmeur ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)   
 - [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

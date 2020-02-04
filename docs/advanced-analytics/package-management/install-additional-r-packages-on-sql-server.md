@@ -3,19 +3,19 @@ title: Installer de nouveaux packages R
 description: Découvrez comment utiliser sqlmlutils pour installer de nouveaux packages R sur une instance de SQL Server Machine Learning Services ou SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727496"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479431"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
@@ -36,10 +36,10 @@ Cet article décrit comment utiliser des fonctions du package [**sqlmlutils**](h
 
 - Le script R s’exécutant dans SQL Server peut utiliser uniquement des packages installés dans la bibliothèque d’instances par défaut. SQL Server ne peut pas charger les packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Cela comprend les bibliothèques R installées avec d’autres produits Microsoft.
 
-- Dans un environnement de SQL Server renforcé, vous souhaiterez peut-être éviter ce qui suit :
+- Dans un environnement SQL Server renforcé, vous souhaiterez peut-être éviter ce qui suit :
   - Les packages qui nécessitent un accès réseau
   - Les packages qui nécessitent un accès au système de fichiers élevé
-  - Les packages utilisés pour le développement web ou d’autres tâches qui ne bénéficient pas de l’exécution dans SQL Server
+  - Les packages utilisés pour le développement Web ou d’autres tâches qui ne bénéficient pas de l’exécution dans SQL Server
 
 ## <a name="install-sqlmlutils-on-the-client-computer"></a>Installer sqlmlutils sur l’ordinateur client
 
@@ -141,7 +141,7 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
    ```
 
    > [!TIP]
-   > **L’étendue** peut être **PUBLIQUE** ou **PRIVÉE**. L’étendue publique est utile pour que l’administrateur de base de données puisse installer des packages que tous les utilisateurs peuvent utiliser. L’étendue privée rend le package disponible uniquement pour l’utilisateur qui l’installe. Si vous ne spécifiez pas l’étendue, l’étendue par défaut est définie sur **PRIVÉE**.
+   > La valeur **scope** (étendue) peut être définie sur **PUBLIC** ou **PRIVATE**. L’étendue publique est utile pour que l’administrateur de base de données puisse installer des packages que tous les utilisateurs peuvent utiliser. L’étendue privée rend le package disponible uniquement pour l’utilisateur qui l’installe. Si vous ne spécifiez pas l’étendue, l’étendue par défaut est définie sur **PRIVÉE**.
 
 ### <a name="add-the-package-offline"></a>Ajouter le package hors connexion
 
@@ -205,7 +205,7 @@ Sur l’ordinateur client :
    ```
 
    > [!TIP]
-   > **L’étendue** peut être **PUBLIQUE** ou **PRIVÉE**. L’étendue publique est utile pour que l’administrateur de base de données puisse installer des packages que tous les utilisateurs peuvent utiliser. L’étendue privée rend le package disponible uniquement pour l’utilisateur qui l’installe. Si vous ne spécifiez pas l’étendue, l’étendue par défaut est définie sur **PRIVÉE**.
+   > La valeur **scope** (étendue) peut être définie sur **PUBLIC** ou **PRIVATE**. L’étendue publique est utile pour que l’administrateur de base de données puisse installer des packages que tous les utilisateurs peuvent utiliser. L’étendue privée rend le package disponible uniquement pour l’utilisateur qui l’installe. Si vous ne spécifiez pas l’étendue, l’étendue par défaut est définie sur **PRIVÉE**.
 
 ## <a name="use-the-package"></a>Utiliser le package
 

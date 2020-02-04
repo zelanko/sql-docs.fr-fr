@@ -11,10 +11,10 @@ ms.assetid: 1b148388-01a8-4e2e-bc72-470ce29164de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd21b8bcd3876186e76d0dcee10e900a0dccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974798"
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>Méthode setClob (SQLServerPreparedStatement)
@@ -24,7 +24,7 @@ ms.locfileid: "67974798"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[setClob, méthode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Définit le paramètre désigné selon un objet java.sql.Clob.|  
 |[setClob, méthode &#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Définit le paramètre désigné selon l’objet java.sql.Clob donné.|  

@@ -1,6 +1,6 @@
 ---
-title: Volet Détails de l’Explorateur d’objets | Microsoft Docs
-ms.custom: ''
+title: Volet Détails de l'Explorateur d'objets
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264082"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257151"
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ Détails de l'Explorateur d'objets comprend une barre d'outils contenant les ic�
 |--------|----------|  
 |**Précédent**|Passe aux éléments précédents affichés dans Détails de l'Explorateur d'objets. Réexécute une recherche lorsque l'affichage précédent est le résultat d'une opération de recherche.|  
 |**Suivant**|Passe à l’écran suivant après une opération **Précédent** .|  
-|**Monter**|Passe à l'objet ou au dossier parent.|  
+|**Haut**|Passe à l'objet ou au dossier parent.|  
 |**Synchroniser**|Définit l'objet sélectionné dans Détails de l'Explorateur d'objets comme focus de l'Explorateur d'objets.|  
 |**Filter**|Affiche, si disponible, un sous-ensemble configurable d'objets.|  
 |**Actualiser**|Actualise l'affichage dans Détails de l'Explorateur d'objets.|  
-|**Recherche**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
+|**action**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
   
 ### <a name="column-header-selections"></a>Sélections d'en-tête de colonne  
 Détails de l'Explorateur d'objets possède des colonnes sélectionnables. Vous pouvez cliquer avec le bouton droit sur n'importe quel en-tête de colonne et sélectionner les éléments à afficher. Vos sélections sont rendues persistantes à travers les différents objets que vous parcourez. Les sélections pour chaque utilisateur sont conservées lorsque vous quittez et redémarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -88,7 +88,7 @@ Détails de l'Explorateur d'objets prend en charge la sélection de plusieurs ob
 ## <a name="sql-server-object-search"></a>Recherche d'objets SQL Server  
 Caractères génériques  
   
--   Les caractères génériques standard sont pris en charge. Par exemple, la chaîne de recherche **dm_os%counters** retourne dm_os_memory_cache_counters et dm_os_performance_counters. Pour plus d’informations, consultez [Procédure : effectuer une recherche avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Les caractères génériques standard sont pris en charge. Par exemple, la chaîne de recherche **dm_os%counters** retourne dm_os_memory_cache_counters et dm_os_performance_counters. Pour plus d’informations, consultez [Procédure : exécution d’une recherche avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Étendue de recherche  
   
@@ -99,5 +99,5 @@ Jeux volumineux
 -   Les recherches portant sur des jeux d'objets volumineux peut prendre du temps et nuire aux performances du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Explorateur d'objets](../../ssms/object/object-explorer.md)  
+[l’Explorateur d’objets](../../ssms/object/object-explorer.md)  
   

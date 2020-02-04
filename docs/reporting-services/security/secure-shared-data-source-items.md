@@ -13,10 +13,10 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570581"
 ---
 # <a name="secure-shared-data-source-items"></a>Sécuriser les éléments de source de données partagée
@@ -42,6 +42,6 @@ ms.locfileid: "65570581"
  [Dossiers sécurisés](../../reporting-services/security/secure-folders.md)   
  [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Stocker des informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

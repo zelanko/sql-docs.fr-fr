@@ -14,10 +14,10 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68049112"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
@@ -28,7 +28,7 @@ Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manage
 
 > [!NOTE]
 > Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
-> Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
+> Des versions précédentes du module **SqlServer***étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
 > Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
 
   
@@ -53,7 +53,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Objet*  
+ *Object*  
  Spécifie le type d'objet qui est représenté au niveau de ce nœud par la chaîne d'expression. Chaque objet représente une classe de collection à partir de ces espaces de noms du modèle objet SMO :  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -126,7 +126,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-enumerating-objects-using-false"></a>A. Énumération d'objets à l'aide de false()  
+### <a name="a-enumerating-objects-using-false"></a>R. Énumération d'objets à l'aide de false()  
  Cette expression de requête énumère toutes les bases de données dont l’attribut **AutoClose** a la valeur false dans l’instance par défaut sur **MyComputer**.  
   
 ```  
@@ -161,7 +161,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>F. Énumération d'objets à l'aide de is_null  
+### <a name="f-enumerating-objects-using-is_null"></a>F. Énumération d'objets à l'aide de is_null  
  Cette expression de requête énumère toutes les tables dans la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] dont la propriété de date de dernière modification n'a pas la valeur NULL :  
   
 ```  

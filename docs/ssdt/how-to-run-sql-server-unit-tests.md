@@ -1,23 +1,24 @@
 ---
-title: 'Procédure : exécuter des tests unitaires SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Exécuter des tests unitaires SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035017"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244281"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Procédure : Exécuter des tests unitaires SQL Server
+# <a name="how-to-run-sql-server-unit-tests"></a>Procédure : exécuter des tests unitaires SQL Server
+
 Il existe différents moyens d’exécuter un test unitaire SQL Server, notamment en utilisant plusieurs fenêtres et une fenêtre d’invite de commandes.  
   
 > [!NOTE]  
@@ -57,7 +58,7 @@ Cette étape exécute tous les tests d'une série de tests active. Dès que vous
   
 ## <a name="see-also"></a>Voir aussi  
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Procédure : exécuter des tests automatisés à partir de Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Guide pratique : Exécuter des tests automatisés à partir de Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Exécuter des tests automatisés en ligne de commande (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Tester l’application (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

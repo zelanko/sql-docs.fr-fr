@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329275"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244399"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau
 
@@ -56,21 +56,21 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une entrée <`MachineKey`> unique que vous pouvez coller dans le fichier Web.config pour chaque instance du serveur de rapports dans le déploiement scale-out.  
+1. Générez une clé de validation et clé de déchiffrement en utilisant les fonctionnalités de création automatique fourni par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. À la fin, vous devez avoir une entrée <`machineKey`> unique que vous pouvez coller dans le fichier Web.config pour chaque instance du serveur de rapports dans le déploiement scale-out.  
   
     L'exemple suivant illustre la valeur que vous devez obtenir. Ne copiez pas cet exemple dans vos fichiers de configuration ; les valeurs de clé ne sont pas valides.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Ouvrez le fichier Web.config pour Reportserver, puis, dans la section <`system.web`>, collez l'élément <`MachineKey`> que vous avez généré. Par défaut, le fichier Web.config du Gestionnaire de rapports se trouve dans \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Ouvrez le fichier Web.config pour Reportserver, puis, dans la section <`system.web`>, collez l'élément <`machineKey`> que vous avez généré. Par défaut, le fichier Web.config du Gestionnaire de rapports se trouve dans \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
-3. Enregistrez le fichier.  
+3. Enregistrez le fichier .  
   
 4. Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
   
-5. Vérifiez que tous les fichiers Web.Config des dossiers \Reporting Services\Reportserver contiennent des éléments <`MachineKey`> identiques dans la section <`system.web`>.  
+5. Vérifiez que tous les fichiers Web.Config des dossiers \Reporting Services\Reportserver contiennent des éléments <`machineKey`> identiques dans la section <`system.web`>.  
 
 ::: moniker-end
 
@@ -84,7 +84,7 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. Enregistrez le fichier.
+2. Enregistrez le fichier .
 
 3. Répétez l'étape précédente pour chaque serveur de rapports impliqué dans le déploiement avec montée en puissance parallèle.  
 
@@ -118,7 +118,7 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
   
 4. Tapez une valeur pour **UrlRoot** qui inclut le nom virtuel du cluster au format https:// ou `https://<virtual_server>/<reportserver>`.  
   
-5. Enregistrez le fichier.  
+5. Enregistrez le fichier .  
   
 6. Répétez ces étapes dans chaque fichier RSReportServer.config de chaque serveur de rapports impliqué dans le déploiement par montée en puissance parallèle.  
   
@@ -144,5 +144,5 @@ Pour exécuter un déploiement avec montée en puissance parallèle sur un clust
 
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

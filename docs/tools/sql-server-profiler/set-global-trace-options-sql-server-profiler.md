@@ -1,27 +1,28 @@
 ---
-title: Définir les options globales de trace (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Définir les options globales des traces
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9605f5e12b1dcc206d50e958d8c1787750e98941
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104186"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307941"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Définir les options globales de trace (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique décrit la définition des options qui s'appliquent à toutes les traces créées avec une instance [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]spécifique.  
+
+Cette rubrique décrit la définition des options qui s'appliquent à toutes les traces créées avec une instance [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]spécifique.  
   
 ### <a name="to-set-global-trace-options"></a>Pour définir les options globales des traces  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68104186"
   
         |Valeur|Description|  
         |-----------|-----------------|  
-        |**1**|Valeur minimale. **1[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] signifie que** interroge les processus de blocage une fois par seconde.|  
+        |**1**|Valeur minimale. **1** signifie que[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] interroge les processus de blocage une fois par seconde.|  
         |**60**|Valeur par défaut. Interroge les processus de blocage une fois par minute.|  
         |**86400**|Valeur maximale. Interroge les processus de blocage une fois toutes les **86400** secondes (une fois par jour).|  
   

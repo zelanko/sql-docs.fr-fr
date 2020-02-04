@@ -1,10 +1,9 @@
 ---
-title: Types de requêtes (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Types de requêtes
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dfa34017e7308ae5b00461a507f101965b19c48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c42830f9e77815e1043a489808c054afe0dc10aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263146"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245311"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Types de requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +53,7 @@ Explique comment créer une requête qui fusionne les résultats de deux instruc
 [Créer des requêtes Update &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-update-queries-visual-database-tools.md)  
 Explique comment créer une requête qui met à jour une table.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
 [Propriétés de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 Décrit les propriétés disponibles lors de la conception de requêtes.  
   

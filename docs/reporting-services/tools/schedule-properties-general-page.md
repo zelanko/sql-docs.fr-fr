@@ -11,10 +11,10 @@ ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a05afd2a99ca8680d5c3d38538a9fcee03d5dc5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571396"
 ---
 # <a name="schedule-properties-general-page"></a>Propriétés de planification (page Général)
@@ -34,7 +34,7 @@ ms.locfileid: "65571396"
 >Cette fonctionnalité est disponible dans chaque édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et cette page n'apparaît pas lorsque vous exécutez une édition qui n'a pas cette fonctionnalité. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Indique le nom de la planification partagée.  
   
  **Commencer l'exécution de cette planification le**  

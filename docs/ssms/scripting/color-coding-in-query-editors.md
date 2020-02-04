@@ -1,6 +1,6 @@
 ---
-title: Codage en couleurs dans les éditeurs de requête | Microsoft Docs
-ms.custom: ''
+title: Codage en couleurs dans les éditeurs de requête
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a562e65b84abc7c952abe992ee2a63c9b0fa22d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 71801d025b8b761adbcd80b8b3a10be92cd5c5ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256684"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254022"
 ---
 # <a name="color-coding-in-query-editors"></a>Codage en couleurs dans les éditeurs de requête
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68256684"
   
 ## <a name="default-code-colors"></a>Couleurs du code par défaut  
   
-|Couleur|Catégorie|  
+|Couleur|Category|  
 |-----------|--------------|  
 |Rouge|Chaîne SQL|  
 |Vert foncé|Commentaire|  
@@ -39,7 +39,7 @@ ms.locfileid: "68256684"
 |Rouge foncé|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée|  
 |Gris foncé|Opérateurs|  
   
-## <a name="status-bar"></a>Barre d'état  
+## <a name="status-bar"></a>Barre d’état  
  Vous pouvez configurer les serveurs inscrits ou les serveurs du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l'Explorateur d'objets pour avoir des couleurs différentes dans la barre d'état de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Cela vous permet d'identifier à quel serveur chaque fenêtre d'éditeur est connectée lorsque plusieurs fenêtres sont ouvertes en même temps. Pour plus d’informations sur la définition des couleurs de la barre d’état, consultez [Barre d’état &#40;éditeur de requête du moteur de base de données&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
   
  Certains types d'éditeurs n'affichent pas la barre d'état ou ne prennent pas en charge plusieurs couleurs.  

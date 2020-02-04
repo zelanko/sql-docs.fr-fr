@@ -1,6 +1,6 @@
 ---
-title: Arguments pour outils externes | Microsoft Docs
-ms.custom: ''
+title: Arguments pour outils externes
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1f1cff589dfe005011c025b6083821d259f6e9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 80b7d5e3eec617f82cb49b67a80d928cb3df9328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267061"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252233"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments pour outils externes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ Les arguments sont des variables pour lesquelles l'environnement Studio fournit 
   
 Le tableau ci-dessous répertorie les arguments pour les outils externes.  
   
-|Créer une vue d’abonnement|Argument|Description|  
+|Name|Argument|Description|  
 |--------|------------|---------------|  
 |**Chemin d'accès de l'élément**|$(ItemPath)|Nom complet du fichier source en cours (sous la forme lecteur + chemin d'accès + nom du fichier) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Répertoire de l'élément**|$(ItemDir)|Répertoire de la source en cours (sous la forme lecteur + chemin d'accès) ; vide si la fenêtre active n'est pas une fenêtre source.|  
@@ -48,5 +48,5 @@ Le tableau ci-dessous répertorie les arguments pour les outils externes.
   
 ## <a name="see-also"></a>Voir aussi  
 [Boîte de dialogue Outils externes](../ssms/external-tools-dialog-box.md)  
-[Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
+[Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

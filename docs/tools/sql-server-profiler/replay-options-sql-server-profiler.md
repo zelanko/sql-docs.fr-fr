@@ -1,30 +1,28 @@
 ---
-title: Options de relecture (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Options de relecture
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
-- health monitor [SQL Server]
-- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031438"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307493"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Options de relecture (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Avant de relire une trace capturée avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], spécifiez les options de relecture dans la boîte de dialogue **Configuration de la relecture** . Pour accéder à cette boîte de dialogue, ouvrez le fichier ou la table de trace de relecture dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puis cliquez sur **Démarrer** dans le menu **Relire**. Pour savoir quelles autorisations sont nécessaires pour relire une trace, consultez [Autorisations nécessaires pour exécuter SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
+
+Avant de relire une trace capturée avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], spécifiez les options de relecture dans la boîte de dialogue **Configuration de la relecture** . Pour accéder à cette boîte de dialogue, ouvrez le fichier ou la table de trace de relecture dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puis cliquez sur **Démarrer** dans le menu **Relire**. Pour savoir quelles autorisations sont nécessaires pour relire une trace, consultez [Autorisations nécessaires pour exécuter SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  Cette rubrique décrit les options spécifiées avec la boîte de dialogue **Configuration de la relecture** .  
   
@@ -80,7 +78,7 @@ ms.locfileid: "68031438"
   
 ## <a name="see-also"></a>Voir aussi  
  [Relire des traces](../../tools/sql-server-profiler/replay-traces.md)   
- [Conditions préalables à la relecture](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Conditions requises pour la relecture](../../tools/sql-server-profiler/replay-requirements.md)   
  [Considérations sur la relecture des traces &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

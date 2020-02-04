@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140454"
 ---
 # <a name="report-server-http-log"></a>Journal HTTP Report Server
@@ -29,7 +29,7 @@ ms.locfileid: "67140454"
 |-|-|  
 |Nom de fichier|Par défaut, le nom de fichier est ReportServerService_HTTP_\<horodateur>.log. Vous pouvez personnaliser le préfixe du nom de fichier en modifiant l'attribut HttpTraceFileName dans le fichier ReportingServicesService.exe.config. L'horodateur est basé sur l'heure UTC (Coordinated Universal Time).|  
 |Emplacement du fichier|Le fichier se trouve à l’emplacement \Microsoft SQL Server\\*Instance \<* \Reporting Services\LogFiles.|  
-|Format du fichier|Le fichier est au format EN-US. Il s'agit d'un fichier texte ASCII.|  
+|Format de fichier|Le fichier est au format EN-US. Il s'agit d'un fichier texte ASCII.|  
 |Création et rétention du fichier|Le journal HTTP est créé une fois que vous l'avez activé dans le fichier de configuration, que vous avez redémarré le service, et que le serveur de rapports a géré une requête HTTP. Si vous configurez les paramètres mais que le fichier journal ne s'affiche pas, ouvrez un rapport ou démarrez une application du serveur de rapports (par exemple le portail web) afin de générer une requête HTTP pour créer le fichier.<br /><br /> Une nouvelle instance du fichier journal est créée chaque fois que le service redémarre et que la requête HTTP qui en résulte est envoyée au serveur de rapports.<br /><br /> Par défaut, les journaux des traces sont limités à 32 mégaoctets et sont supprimés après 14 jours.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Paramètres de configuration du journal HTTP Report Server  
@@ -54,20 +54,20 @@ ms.locfileid: "67140454"
 ## <a name="log-file-fields"></a>Champs du fichier journal  
  Le tableau suivant décrit les champs disponibles dans le journal. La liste des champs est configurable ; vous pouvez spécifier quels sont les champs à inclure via le paramètre de configuration **HTTPTraceSwitches** . La colonne **Default** spécifie si le champ doit être inclus automatiquement dans le fichier journal, si vous ne spécifiez pas **HTTPTraceSwitches**.  
   
-|Champ|Description|Valeur par défaut|  
+|Champ|Description|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Cette valeur est facultative. La valeur par défaut est ReportServerServiceHTTP_. Vous pouvez spécifier une autre valeur si vous souhaitez utiliser une convention d'affectation de noms de fichiers distincte (pour inclure le nom du serveur lorsque vous enregistrez les fichiers journaux dans un emplacement central, par exemple).|Oui|  
 |HTTPTraceSwitches|Cette valeur est facultative. Si vous le spécifiez, vous pouvez configurer les champs du fichier journal en utilisant le format délimité par des virgules.|Non|  
 |Date|Date à laquelle l'activité s'est produite.|Non|  
-|Time|Heure à laquelle l'activité s'est produite.|Non|  
+|Temps|Heure à laquelle l'activité s'est produite.|Non|  
 |ClientIp|Adresse IP du client qui accède au serveur de rapports.|Oui|  
 |UserName|Nom de l'utilisateur qui a accédé au serveur de rapports.|Non|  
 |ServerPort|Numéro de port utilisé pour la connexion.|Non|  
-|Hôte|Contenu de l'en-tête de l'hôte.|Non|  
+|Host|Contenu de l'en-tête de l'hôte.|Non|  
 |Méthode|Action ou méthode SOAP appelée à partir du client.|Oui|  
 |UriStem|Ressource ayant fait l'objet d'un accès.|Oui|  
 |UriQuery|Requête utilisée pour accéder à la ressource.|Non|  
-|ProtocolStatus|Code d'état HTTP.|Oui|  
+|ProtocolStatus|Code d’état HTTP.|Oui|  
 |BytesReceived|Nombre d'octets reçus par le serveur.|Non|  
 |TimeTaken|Délai écoulé (en millisecondes) entre le moment où HTTP.SYS retourne les données de requête et le moment où le serveur termine le dernier envoi, sans inclure la durée de transmission réseau.|Non|  
 |ProtocolVersion|Version de protocole utilisée par le client.|Non|  

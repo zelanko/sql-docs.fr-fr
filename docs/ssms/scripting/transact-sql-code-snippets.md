@@ -1,26 +1,28 @@
 ---
-title: Extraits de code Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Extraits de code Transact-SQL
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0766c4d8cdbd49ca6e6bc266072ca6c3eba7c674
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: aed4261773b7a7b6e539a60000d1b0748aca2602
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259171"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243357"
 ---
 # <a name="transact-sql-code-snippets"></a>Extraits de code Transact-SQL
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)]est un modèle contenant la structure de base d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un bloc. Vous pouvez utiliser les extraits de code comme point de départ lors de l'ajout d'instructions dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez insérer les extraits de code prédéfinis fournis avec SQL Server ou créer vos propres extraits de code.  
-  
+
+Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)]est un modèle contenant la structure de base d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un bloc. Vous pouvez utiliser les extraits de code comme point de départ lors de l'ajout d'instructions dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez insérer les extraits de code prédéfinis fournis avec SQL Server ou créer vos propres extraits de code.  
+
 ## <a name="transact-sql-code-snippet-tasks"></a>Tâches relatives aux extraits de code Transact-SQL  
   
 |Description de la tâche|Rubrique|  
@@ -30,7 +32,6 @@ ms.locfileid: "68259171"
 |Explique comment terminer la génération d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] complète ou d'un bloc après avoir inséré un extrait de code.|[Compléter des extraits de code Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
 |Explique comment générer vos propres extraits de code personnalisés et les ajouter à l'ensemble d'extraits de code SQL Server.|[Ajouter des extraits de code Transact-SQL](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+[Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)

@@ -18,13 +18,13 @@ ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c4f2534ec49c1d3467045d778e0c446f972573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992852"
 ---
-# <a name="sqlsrvcommit"></a>sqlsrv_commit
+# <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Valide la transaction actuelle sur la connexion spécifiée et retourne la connexion au mode de validation automatique. La transaction actuelle contient toutes les instructions sur la connexion spécifiée qui ont été exécutées après l’appel à [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) et avant tous les appels à [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) ou **sqlsrv_commit**.  
@@ -45,7 +45,7 @@ sqlsrv_commit( resource $conn )
 #### <a name="parameters"></a>Paramètres  
 *$conn*: connexion sur laquelle la transaction est active.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Valeur booléenne : **true** si la transaction a été correctement validée. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="example"></a>Exemple  

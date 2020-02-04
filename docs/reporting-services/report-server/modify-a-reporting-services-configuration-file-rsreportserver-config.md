@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581126"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -23,7 +23,7 @@ ms.locfileid: "65581126"
 > [!IMPORTANT]
 >  Soyez prudent lorsque vous modifiez les fichiers de configuration. Si vous modifiez un paramètre réservé à un usage interne, vous risquez de désactiver votre installation. En règle générale, il est déconseillé de modifier les paramètres de configuration, sauf pour essayer de résoudre un problème spécifique. Pour plus d’informations sur les paramètres qui peuvent être modifiés en toute sécurité, consultez [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) ou [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Pour plus d’informations sur les fichiers de configuration, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
- Dans cette rubrique :  
+ Dans cette rubrique :  
   
 -   [Lecture et utilisation des valeurs de configuration](#bkmk_read_values)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "65581126"
   
     -   [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
-5.  Enregistrez le fichier.  
+5.  Enregistrez le fichier .  
   
 6.  Consultez les fichiers journaux des traces pour vous assurer qu'aucune erreur ne s'est produite. Si vous trouvez une erreur, cela signifie qu'un paramètre ou sa valeur ont été spécifiés de manière incorrecte. Consultez l’article [Fichier de configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) pour connaître les valeurs valides du paramètre à l’origine de l’erreur. Pour plus d’informations sur l’affichage du journal des traces, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)(Journal des traces du service Report Server).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "65581126"
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Fichier de configuration ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Déploiement d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Déploiement d’une extension de remise](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Déploiement d’une extension de rendu](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  

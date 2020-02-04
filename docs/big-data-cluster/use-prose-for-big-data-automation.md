@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67957684"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Data wrangling avec l’accélérateur de code PROSE
@@ -45,7 +45,7 @@ Souvent, la lecture de fichiers dans un dataframe implique de consulter le conte
 
 L’accélérateur de code PROSE résout ce problème en analysant la structure du fichier de données et en générant automatiquement du code pour charger le fichier. Dans la plupart des cas, le code généré analyse correctement les données. Dans certains cas, vous devrez peut-être modifier le code pour répondre à vos besoins.
 
-Prenons l'exemple suivant :
+Prenons l’exemple suivant :
 
  ```python
 import prose.codeaccelerator as cx
@@ -113,7 +113,7 @@ Pour plus d’informations, consultez la [documentation](https://aka.ms/prose-co
 Un autre scénario courant consiste à détecter les modèles dans une colonne de chaîne à des fins de nettoyage ou de regroupement. Par exemple, vous pouvez avoir une colonne de date avec des dates dans plusieurs formats différents. Pour normaliser les valeurs, vous souhaiterez peut-être écrire des instructions conditionnelles à l’aide d’expressions régulières.
 
 
-|   |Nom                      |BirthDate      |
+|   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |

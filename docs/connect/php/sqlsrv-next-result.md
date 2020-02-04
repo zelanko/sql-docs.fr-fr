@@ -19,13 +19,13 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015001"
 ---
-# <a name="sqlsrvnextresult"></a>sqlsrv_next_result
+# <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Active le résultat suivant (jeu de résultats, nombre de lignes ou paramètre de sortie) de l’instruction spécifiée.  
@@ -43,7 +43,7 @@ sqlsrv_next_result( resource $stmt )
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: instruction exécutée sur laquelle le résultat suivant devient actif.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Si le résultat suivant est correctement devenu actif, la valeur booléenne **true** est retournée. Si une erreur s’est produite pour rendre le résultat suivant actif, **false** est retourné. Si aucun autre résultat n’est disponible, **Null** est retourné.  
   
 ## <a name="example"></a>Exemple  
@@ -271,7 +271,7 @@ sqlsrv_close( $conn );
 
 [Récupération de données](../../connect/php/retrieving-data.md)
 
-[Mise à jour des données &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+[Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Exemple d’application &#40;pilote SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 

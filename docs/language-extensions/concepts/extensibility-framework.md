@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658870"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Architecture d’extensibilité dans les extensions de langage SQL Server
@@ -56,7 +56,7 @@ Les composants incluent un service **Launchpad**, qui permet d’appeler les run
 
 | Lanceurs approuvés | Extension | Versions de SQL Server |
 |-------------------|-----------|---------------------|
-| JavaLauncher.dll pour Java | Extension Java | SQL Server 2019 |
+| JavaLauncher.dll pour Java | Extension Java | SQL Server 2019 |
 
 Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous **SQLRUserGroup**, qui utilise [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) pour l’isolation d’exécution.
 

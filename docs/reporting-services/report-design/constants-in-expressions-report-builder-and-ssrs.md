@@ -9,10 +9,10 @@ ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52b3fd24cf36aebeb87e41885b9e992fca1338a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581599"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>Constantes dans les expressions (Générateur de rapports et SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "65581599"
 ## <a name="literal-text"></a>Texte littéral  
  Dans une expression, le texte littéral est le texte qui figure entre guillemets doubles. Vous pouvez également taper le texte directement dans une zone de texte sans guillemets doubles s'il ne fait pas partie d'une expression. Si la valeur de la zone de texte ne commence pas par un signe égal (=), le texte est traité comme texte littéral. Le tableau suivant répertorie plusieurs exemples de texte littéral dans une expression.  
   
-|Constante|Texte affiché|Texte de l'expression|  
+|Constant|Texte affiché|Texte de l'expression|  
 |--------------|------------------|---------------------|  
 |Report run at:|<\<Expr>>|`="Report run at: " & Globals!ExecutionTime`|  
 |Adventure Works Cycles|Adventure Works Cycles|Adventure Works Cycles|  
@@ -46,7 +46,7 @@ ms.locfileid: "65581599"
 ## <a name="clr-constants"></a>Constantes CLR  
  Vous pouvez utiliser des constantes définies dans les classes CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dans une expression. Le tableau suivant contient un exemple de couleur définie par le système.  
   
-|Constante|Description|  
+|Constant|Description|  
 |--------------|-----------------|  
 |MistyRose|Lorsque vous créez une expression pour une propriété de rapport basée sur la couleur d'arrière-plan, vous pouvez spécifier une couleur par nom. Les noms valides sont répertoriés dans la boîte de dialogue **Expression** .|  
   

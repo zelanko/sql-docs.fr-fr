@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531941"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Gérer les clusters Big Data pour le tableau de bord du contrôleur SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "73531941"
 
 Outre **azdata** et le notebook d’état du cluster, il existe une autre façon d’afficher l’état d’un cluster Big Data SQL Server. Vous pouvez maintenant ajouter le contrôleur du cluster Big Data SQL Server via la viewlet **Connexions**. Cela vous permet de disposer d’un tableau de bord pour voir l’intégrité du cluster.
 
-![tableau de bord](media/manage-with-controller-dashboard/controller-dashboard.png)
+![dashboard](media/manage-with-controller-dashboard/controller-dashboard.png)
 ## <a name="prerequisites"></a>Conditions préalables requises
 
 Les prérequis suivants sont nécessaires pour lancer le notebook :
@@ -78,6 +78,6 @@ En plus de ce qui précède, un cluster Big Data SQL Server 2019 nécessite ég
 
 1. Si vous affichez un composant qui n’est pas sain, cliquez sur **Dépanner** dans la barre d’outils pour lancer un book Jupyter contenant un notebook afin de faciliter le diagnostic du problème.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur le contrôleur, consultez [notre documentation sur le contrôleur](concept-controller.md).

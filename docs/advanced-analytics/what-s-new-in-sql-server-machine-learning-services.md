@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707444"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Nouveautés de SQL Server Machine Learning Services
@@ -98,7 +98,7 @@ De plus, **SQL Server 2016 R Server (autonome)** a été publié comme moyen d�
 
 Pour voir la totalité des annonces concernant les fonctionnalités, consultez [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
-| Version |Mise à jour des fonctionnalités |
+| Libérer |Mise à jour des fonctionnalités |
 |---------|----------------|
 | Ajouts de CU | Le [**scoring en temps réel**](real-time-scoring.md) repose sur les bibliothèques C++ natives pour lire un modèle stocké dans un format binaire optimisé, puis générer des prédictions sans devoir appeler le runtime R. Cela rend les opérations de scoring beaucoup plus rapides. Avec le scoring en temps réel, vous pouvez exécuter une procédure stockée ou effectuer un scoring en temps réel à partir du code R. Le scoring en temps réel est également disponible pour SQL Server 2016, si l’instance est mise à niveau vers la dernière version de [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Version initiale | [**Intégration de R pour l’analytique dans la base de données**](r/sql-server-r-services.md). <br/><br/> Packages R pour appeler des fonctions R dans T-SQL, et vice versa. Les fonctions RevoScaleR fournissent l’analytique R à l’échelle en segmentant les données en composants du produit, en coordonnant et en gérant le traitement distribué et en agrégeant les résultats. Dans SQL Server 2016 R Services (dans la base de données), le moteur RevoScaleR est intégré à une instance du moteur de base de données, ce qui permet de rassembler les données et l’analytique dans le même contexte de traitement. <br/><br/>Intégration de T-SQL et R via [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Vous pouvez appeler n’importe quel code R à l’aide de cette procédure stockée. Cette infrastructure sécurisée permet le déploiement à l’échelle de l’entreprise de modèles et de scripts R pouvant être appelés à partir d’une application à l’aide d’une procédure stockée simple. Des gains de performances supplémentaires sont réalisés en diffusant des données de SQL vers des processus R et une parallélisation de sonnerie MPI. <br/><br/>Vous pouvez utiliser la fonction T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) pour effectuer un [scoring en natif](sql-native-scoring.md) sur un modèle préentraîné qui a déjà été enregistré au format binaire requis.|

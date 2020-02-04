@@ -1,6 +1,6 @@
 ---
-title: Personnaliser des menus et des touches de raccourci | Microsoft Docs
-ms.custom: ''
+title: Personnaliser des menus et des touches de raccourci
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532884"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243924"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
 
@@ -57,7 +57,7 @@ Les touches d’accès rapides pour les procédures stockées qui utilisent la t
   
 1.  Cliquez sur le bouton dans la barre d'outils.  
   
-2.  Dans la boîte de dialogue **Personnaliser**, sous l’onglet **Commandes**, cliquez sur **Modifier la sélection**.  
+2.  Dans la boîte de dialogue **Personnaliser** , sous l’onglet **Commandes** , cliquez sur **Modifier la sélection**.  
   
 3.  Dans la zone **Nom** du menu contextuel, tapez le nom du bouton de la barre d’outils en plaçant le signe & devant la lettre que vous souhaitez comme touche d’accès rapide.  
   
@@ -73,7 +73,7 @@ Les touches d’accès rapides pour les procédures stockées qui utilisent la t
   
 2.  Cliquez sur la commande du menu.  
   
-3.  Dans la boîte de dialogue **Personnaliser**, cliquez sur **Modifier la sélection**.  
+3.  Dans la boîte de dialogue **Personnaliser** , cliquez sur **Modifier la sélection**.  
   
 4.  Dans la zone **Nom** du menu contextuel, tapez le nom de la commande du menu en plaçant le signe & devant la lettre que vous souhaitez comme touche d’accès rapide.  
   
@@ -107,7 +107,7 @@ Les touches d’accès rapides pour les procédures stockées qui utilisent la t
   
 4.  Appuyez sur Tab pour accéder à la liste **Contrôles** et utilisez les touches de direction pour sélectionner le bouton que vous souhaitez modifier.  
   
-5.  Appuyez sur **Alt+M** pour sélectionner **Modifier la sélection**.  
+5.  Appuyez sur **Alt+M**pour sélectionner **Modifier la sélection**.  
   
 6.  Appuyez sur Tab pour accéder à la zone **Nom** du menu contextuel, tapez le nom du bouton de la barre d’outils en plaçant le signe & devant la lettre que vous souhaitez comme touche d’accès rapide.  
   

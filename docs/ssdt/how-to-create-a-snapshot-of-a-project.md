@@ -1,11 +1,7 @@
 ---
-title: 'Procédure : créer une capture instantanée d’un projet | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Créer une capture instantanée d’un projet
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897204"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241532"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : Créer une capture instantanée d’un projet
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : créer une capture instantanée d'un projet
+
 Chaque fichier d'**application de la couche Données** vous fournit une représentation en lecture seule du schéma de la base de données au moment de la création de l'instantané. Il est essentiellement traité comme un schéma de base de données à partir duquel vous pouvez réimporter les objets de schéma vers un projet. Vous pouvez aussi le comparer au schéma d'une base de données ou d'un projet, et mettre à jour la base de données ou le projet pour refléter le schéma défini dans l'instantané.  
   
 Si une erreur utilisateur se produit dans un projet de base de données source, vous pouvez rétablir le projet source dans l'état qui était le sien au moment où l'instantané a été créé. Vous pouvez aussi établir des instantanés à différentes phases de votre développement à des fins de référence.  
@@ -64,5 +65,5 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
     Vous pouvez facilement rechercher le delta d'autres instantanés à l'aide de Comparaison de schémas. Dans ce cas, vous pouvez découvrir comment votre projet évolue au cours du processus de développement.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

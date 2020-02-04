@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578095"
 ---
 # <a name="schedules"></a>Planifications
@@ -35,7 +35,7 @@ ms.locfileid: "65578095"
   
   
 ##  <a name="bkmk_whatyoucando"></a> Opérations réalisables avec les planifications  
- Vous pouvez utiliser le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] en mode natif et les pages d’administration de site SharePoint en mode SharePoint pour créer et gérer vos planifications. Vous pouvez :  
+ Vous pouvez utiliser le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] en mode natif et les pages d’administration de site SharePoint en mode SharePoint pour créer et gérer vos planifications. Vous pouvez :  
   
 -   Planifier la remise de rapports dans un abonnement standard ou piloté par des données.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65578095"
 ##  <a name="bkmk_credentials"></a> Stocker les informations d'identification et les comptes de traitement  
  La façon dont vous travaillez avec une planification dépend des tâches faisant partie de votre attribution de rôle. Si vous utilisez des rôles prédéfinis, les utilisateurs qui sont des gestionnaires de contenu et des administrateurs système peuvent créer et gérer n'importe quelle planification. Si vous utilisez des attributions de rôle par défaut, l'attribution de rôle doit inclure les tâches prenant en charge les opérations planifiées.  
   
-|Pour effectuer cette opération|Incluez cette tâche|Rôles prédéfinis du mode natif|Groupes du mode SharePoint|  
+|Action à réaliser|Incluez cette tâche|Rôles prédéfinis du mode natif|Groupes du mode SharePoint|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Créer, modifier ou supprimer des planifications partagées|Gérer les planifications partagées|Administrateur système|Propriétaires|  
 |Sélectionner les planifications partagées|Afficher les planifications partagées|Utilisateur système|Membres|  

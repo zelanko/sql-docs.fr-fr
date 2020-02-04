@@ -16,10 +16,10 @@ ms.assetid: daa3cff7-2481-4089-a41e-81fe9af1a462
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edb8443da58baba0207425a67d5c92810c5e17dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998932"
 ---
 # <a name="updatefloat-method-sqlserverresultset"></a>updateFloat, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998932"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Met à jour la colonne désignée avec une valeur **float** en fonction de l’index de colonne.|  
 |[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Met à jour la colonne désignée avec une valeur **float** en fonction du nom de colonne.|  

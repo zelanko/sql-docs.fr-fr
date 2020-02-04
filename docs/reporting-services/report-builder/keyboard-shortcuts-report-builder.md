@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037863"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
@@ -32,13 +32,13 @@ ms.locfileid: "67037863"
   
 |Description|Combinaison de touches|  
 |-----------------|---------------------|  
-|Ouvrir le menu du Générateur de rapports.|Alt+F|  
+|Ouvrir le menu du Générateur de rapports.|ALT + F|  
 |Créer un rapport.|Ctrl+N|  
 |Ouvrez un rapport.|Ctrl+O|  
 |Enregistrer un rapport.|Ctrl+S, Alt+S|  
 |Passer d'une zone à une autre dans le Générateur de rapports, à savoir, le ruban, l'aire de conception, le volet Regroupement, le volet Propriétés et le volet Données.|F6, Maj+F6|  
 |Accéder au ruban.|Alt|  
-|Accéder à l'onglet Accueil sur le ruban.|Alt+H|  
+|Accéder à l'onglet Accueil sur le ruban.|ALT + H|  
 |Accéder à l'onglet Insérer sur le ruban.|Alt+I|  
 |Accéder à l'onglet Affichage sur le ruban.|Alt+V|  
 |Activer les barres de division entre les zones, notamment la barre séparant le volet Regroupement et l'aire de conception.|Tab|  

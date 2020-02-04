@@ -9,10 +9,10 @@ ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d22a5971d2becebec841c5e343e2361cbe2f26a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500502"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports et SSRS)
@@ -81,7 +81,7 @@ ms.locfileid: "66500502"
   
 ### <a name="to-refresh-the-field-collection-in-the-report-data-pane-for-a-shared-dataset"></a>Pour actualiser la collection de champs dans le volet des données de rapport d'un dataset partagé  
   
-1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le dataset, puis sélectionnez **Requête**.  
+1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le dataset, puis cliquez sur **Requête**.  
   
 2.  Cliquez sur **Actualiser les champs**.  
   

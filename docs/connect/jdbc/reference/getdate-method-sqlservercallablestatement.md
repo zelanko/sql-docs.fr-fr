@@ -16,10 +16,10 @@ ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c308966a0aa474287709ac498db871c5202222b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983886"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>Méthode getDate (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67983886"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getDate (int)](../../../connect/jdbc/reference/getdate-method-int.md)|Récupère la valeur du paramètre désigné en tant qu'objet java.sql.Date dans le langage de programmation Java en fonction de l'index de paramètre.|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar.md)|Récupère la valeur du paramètre désigné en tant qu’objet java.sql.Date dans le langage de programmation Java en fonction de l’index du paramètre et de l’objet Calendar.|  

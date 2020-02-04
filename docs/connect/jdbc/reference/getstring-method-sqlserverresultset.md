@@ -16,10 +16,10 @@ ms.assetid: f81dde01-d328-4b32-8871-1efac645b68e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f474b2a15667df10bff8652239e8e00f1c923ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979381"
 ---
 # <a name="getstring-method-sqlserverresultset"></a>getString, méthode (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67979381"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getString (int)](../../../connect/jdbc/reference/getstring-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant que **chaîne** dans le langage de programmation Java.|  
 |[getString (java.lang.String)](../../../connect/jdbc/reference/getstring-method-java-lang-string-sqlserverresultset.md))|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de **String** dans le langage de programmation Java.|  

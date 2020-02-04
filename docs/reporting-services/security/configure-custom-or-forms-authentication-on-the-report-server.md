@@ -12,10 +12,10 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571166"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports
@@ -52,7 +52,7 @@ En outre, si vous souhaitez utiliser une authentification par formulaire ou une 
 
      Notez que vous ne pouvez pas utiliser **Custom** avec d'autres types d'authentification.
 
-5.  Enregistrez le fichier.
+5.  Enregistrez le fichier .
 
 6.  Ouvrez le fichier Web.config du serveur de rapports. Par défaut, celui-ci se trouve dans le dossier \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.
 
@@ -69,7 +69,7 @@ En outre, si vous souhaitez utiliser une authentification par formulaire ou une 
     ```
 9. Ajoutez la structure d’éléments **PassThroughCookies** au fichier de configuration. Pour plus d’informations, consultez [Configurer le portail web pour passer des cookies d’authentification personnalisée](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
   
-10. Enregistrez le fichier.  
+10. Enregistrez le fichier .  
   
 11. Si vous avez configuré un déploiement avec montée en puissance parallèle, répétez l’ensemble des étapes précédentes pour d'autres serveurs de rapports du déploiement.  
   

@@ -1,11 +1,7 @@
 ---
-title: 'Procédure : créer des objets de base de données à l’aide du Concepteur de tables | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Créer des objets de base de données avec le Concepteur de tables
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241502"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Procédure : Créer des objets de base de données avec le Concepteur de tables
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procédure : créer des objets de base de données à l'aide du Concepteur de tables
+
 Non seulement le nouveau nœud **SQL Server** de l'**Explorateur d'objets SQL Server** est très similaire à SSMS visuellement, mais vous pouvez aussi créer de nouveaux objets à l'aide de menus contextuels dont le fonctionnement est semblable à celui de leurs homologues SSMS.  
   
 Par exemple, vous pouvez créer une nouvelle base de données sous le nœud **Bases de données**. De la même façon, vous pouvez sélectionner une base de données spécifique et créer ou modifier des définitions de tables et leurs objets de programmation associés à la volée à l'aide du nouveau Concepteur de tables. Dans le Concepteur de tables, vous pouvez basculer vers un volet de script qui vous permet de modifier directement le script qui définit cette table.  
@@ -56,24 +57,24 @@ Par exemple, vous pouvez créer une nouvelle base de données sous le nœud **Ba
 5.  Ajoutez une autre colonne. Entrez **Adresse** pour le champ **Nom**, **nvarchar (MAX)** pour **Type de données**, et désactivez le champ **Autoriser les valeurs NULL**.  
   
     > [!WARNING]  
-    > Lorsque vous modifiez des objets d'une base de données connectée, ne les enregistrez pas sur le disque local. Pour enregistrer les modifications apportées à la base de données, suivez les étapes de la [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) suivante.  
+    > Lorsque vous modifiez des objets d'une base de données connectée, ne les enregistrez pas sur le disque local. Pour enregistrer correctement vos modifications dans la base de données, suivez les étapes de la prochaine [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Répétez les étapes précédentes pour créer une autre table nommée **Customer**. Cette fois-ci, ajoutez les colonnes suivantes à la table Customer à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Customer]`.  
   
-    |Créer une vue d’abonnement|Type de données|**Null autorisé**|  
+    |Name|Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  
-    |Id|INT|unchecked|  
-    |Créer une vue d’abonnement|nvarchar (128)|unchecked|  
+    |Id|int|non cochée|  
+    |Name|nvarchar (128)|non cochée|  
   
 7.  Créez une autre table nommée **Products**. Ajoutez les colonnes suivantes à la table Products à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Products]`.  
   
-    |Créer une vue d’abonnement|Type de données|**Null autorisé**|  
+    |Name|Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  
-    |Id|INT|unchecked|  
-    |Créer une vue d’abonnement|nvarchar (128)|unchecked|  
-    |ShelfLife|INT|checked|  
-    |SupplierId|INT|checked|  
-    |CustomerId|INT|checked|  
+    |Id|int|non cochée|  
+    |Name|nvarchar (128)|non cochée|  
+    |ShelfLife|int|cochée|  
+    |SupplierId|int|cochée|  
+    |CustomerId|int|cochée|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>Pour créer une nouvelle contrainte de validation à l'aide du Concepteur de tables  
   

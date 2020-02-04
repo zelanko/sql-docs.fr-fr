@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844567"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurer les fonctionnalités de SQL Server compatibles avec Stretch Database
@@ -36,7 +36,7 @@ Si vous souhaitez utiliser conjointement Always Encrypted et Stretch Database, v
 Si vous avez déjà activé la base de données Stretch sur la table et que vous souhaitez utiliser les colonnes Always Encrypted, vous devez effectuer les opérations suivantes.
 1.   Désactiver Stretch Database sur la table et afficher à nouveau les données distantes à partir d’Azure. Pour plus d’informations, consultez [Désactiver Stretch Database et récupérer les données distantes](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 2.   Configurez Always Encrypted sur les colonnes sélectionnées.
-3. Réactivez Stretch Database sur la table. Pour plus d’informations, consultez [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
+3. Réactivez Stretch Database sur la table. Pour plus d'informations, consultez [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
 
 ## <a name="configure-transparent-data-encryption-tde-with-stretch-database"></a>Configurer le chiffrement transparent des données (TDE) avec Stretch Database
 

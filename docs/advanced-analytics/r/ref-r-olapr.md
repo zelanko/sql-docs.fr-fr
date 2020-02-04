@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715005"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (bibliothèque R dans SQL Server)
@@ -40,7 +40,7 @@ La bibliothèque **olapr** est distribuée dans plusieurs produits Microsoft, ma
 
 Ce package est fourni dans les produits suivants, ainsi que sur plusieurs images de machine virtuelle sur Azure. L’emplacement du package varie en conséquence.
 
-Product | Emplacement |
+Produit | Location |
 --------|----------|
 SQL Server Machine Learning Services (avec intégration R) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library

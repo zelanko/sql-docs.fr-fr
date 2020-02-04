@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727467"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Créer une procédure stockée à l’aide de sqlrutils
@@ -21,7 +21,7 @@ ms.locfileid: "73727467"
 
 Cet article décrit les étapes nécessaires pour convertir votre code R pour qu’il s’exécute en tant que procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
 
-## <a name="bkmk_rewrite"></a>Étape 1. Réécrire le script R
+## <a name="bkmk_rewrite"></a>Étape 1. Réécrire le script R
 
 Pour obtenir les meilleurs résultats, vous devez réécrire votre code R pour l’encapsuler en tant que fonction unique.
 
@@ -35,15 +35,15 @@ Parmi les paramètres d’entrée, il peut y avoir au plus une trame de données
 
 Les objets à l’intérieur de la trame de données, ainsi que tous les autres paramètres d’entrée de la fonction, doivent être des types de données R suivants :
 - POSIXct
-- numérique
+- numeric
 - caractère
 - entier
 - logique
-- brut
+- raw
 
 Si un type d’entrée n’est pas l’un des types ci-dessus, il doit être sérialisé et transmis à la fonction en tant que type *brut*. Dans ce cas, la fonction doit également inclure du code pour désérialiser l’entrée.
 
-### <a name="outputs"></a>Sorties
+### <a name="outputs"></a>Outputs
 
 La fonction peut générer l’une des sorties suivantes :
 
@@ -51,7 +51,7 @@ La fonction peut générer l’une des sorties suivantes :
 - Une liste nommée contenant au plus une trame de données. Tous les membres de la liste doivent utiliser l’un des types de données pris en charge.
 - Une valeur NULL, si la fonction ne retourne pas de résultat.
 
-## <a name="step-2-generate-required-objects"></a>Étape 2. Générer les objets nécessaires
+## <a name="step-2-generate-required-objects"></a>Étape 2. Générer les objets nécessaires
 
 Une fois que votre code R a été nettoyé et peut être appelé en tant que fonction unique, vous allez utiliser les fonctions du package **sqlrutils** pour préparer les entrées et les sorties dans un format qui peut être passé au constructeur qui crée réellement la procédure stockée.
 
@@ -66,7 +66,7 @@ Si votre fonction accepte des entrées, pour chaque entrée, appelez les fonctio
 
 Lorsque vous effectuez chaque appel de fonction, un objet R est créé, que vous passerez ultérieurement comme argument dans `StoredProcedure`, pour créer la procédure stockée complète.
 
-### <a name="outputs"></a>Sorties
+### <a name="outputs"></a>Outputs
 
 **sqlrutils** fournit plusieurs fonctions permettant de convertir des objets R tels que des listes en la trame de données requises par SQL Server.
 Si votre fonction génère une trame de données directement, sans l’encapsuler au préalable dans une liste, vous pouvez ignorer cette étape.
@@ -79,11 +79,11 @@ Lors de la conversion d’une liste ou de l’obtention d’un élément particu
 
 Lorsque vous effectuez chaque appel de fonction, un objet R est créé, que vous passerez ultérieurement comme argument dans `StoredProcedure`, pour créer la procédure stockée complète.
 
-## <a name="step-3-generate-the-stored-procedure"></a>Étape 3. Générer la procédure stockée
+## <a name="step-3-generate-the-stored-procedure"></a>Étape 3. Générer la procédure stockée
 
 Lorsque tous les paramètres d’entrée et de sortie sont prêts, effectuez un appel au constructeur `StoredProcedure`.
 
-**Usage**
+**Utilisation**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

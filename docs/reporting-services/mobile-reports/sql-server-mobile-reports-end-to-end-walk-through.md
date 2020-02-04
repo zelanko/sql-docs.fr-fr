@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028892"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
@@ -22,7 +22,7 @@ ms.locfileid: "69028892"
 
 Créez des rapports mobiles sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles. Connectez-vous à diverses sources de données locales ou chargez des classeurs Excel pour créer des rapports mobiles. Enregistrez ensuite vos rapports sur un portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] et affichez-les dans un navigateur ou dans les applications mobiles Power BI.  
   
-Cet article explique comment :   
+Cet article vous guide tout au long des procédures suivantes :   
   
 - Créer un jeu de données et une source de données partagés sur le portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , avec la base de données AdventureWorks comme exemple de source de données.  
 - Créer un rapport mobile Reporting Services dans l’ [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
@@ -165,7 +165,7 @@ Quand vous ouvrez [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Cliquez sur l’onglet **Disposition** .  
+6. Cliquez sur l’onglet **Disposition**.  
   
 7. Cliquez sur l’onglet Options ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) en haut à droite de l’arborescence pour afficher le menu qu’il contient.   
   

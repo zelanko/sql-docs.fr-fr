@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992739"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Récupère la ligne suivante de données sous la forme d’un objet PHP.  
@@ -61,8 +61,8 @@ Pour plus d’informations sur ces valeurs, consultez [Spécification d’un typ
   
 *offset* [FACULTATIF] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
   
-## <a name="return-value"></a>Valeur retournée  
-Objet PHP avec des propriétés qui correspondent à des noms de champ du jeu de résultats. Les valeurs de propriété sont renseignées avec les valeurs de champ de jeu de résultats correspondantes. Si la classe spécifiée avec le paramètre *$className* facultatif n’existe pas ou s’il n’existe aucun jeu de résultats actif associé à l’instruction spécifiée, **false** est retourné. S’il n’y a plus aucune ligne à récupérer, la valeur **Null** est retournée.  
+## <a name="return-value"></a>Valeur de retour  
+Objet PHP avec des propriétés qui correspondent à des noms de champ du jeu de résultats. Les valeurs de propriété sont renseignées avec les valeurs de champ de jeu de résultats correspondantes. Si la classe spécifiée avec le paramètre *$className* facultatif n’existe pas ou s’il n’existe aucun jeu de résultats actif associé à l’instruction spécifiée, **false** est retourné. S’il n’y a plus aucune ligne à récupérer, la valeur **null** est retournée.  
   
 Le type de données d’une valeur dans l’objet retourné correspond au type de données PHP par défaut. Pour plus d’informations sur les types de données PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   

@@ -17,10 +17,10 @@ ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
 ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68731115"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
@@ -31,7 +31,7 @@ Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windo
   
 > [!NOTE]
 > Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
-> Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
+> Des versions précédentes du module **SqlServer***étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
 > Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
 
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Avantages du fournisseur PowerShell SQL Server
@@ -69,7 +69,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  Les nœuds de collection dans un chemin d'accès sont associés à une classe de collection dans le modèle objet associé. Les nœuds de noms d’objets sont associés à une classe d’objet dans le modèle objet associé, comme indiqué dans le tableau suivant :  
   
-|Chemin d'accès|Classe SMO|  
+|Path|Classe SMO|  
 |----------|---------------|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
@@ -78,9 +78,9 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
 |Description de la tâche|Article|  
 |----------------------|-----------|  
-|Explique comment utiliser des applets de commande Windows PowerShell pour parcourir les nœuds dans un chemin d'accès et obtenir la liste des objets au niveau de chaque nœud.|[Parcourir les chemins d'accès PowerShell SQL Server](navigate-sql-server-powershell-paths.md)|  
-|Explique comment utiliser les méthodes et les propriétés SMO pour signaler et effectuer un travail sur l'objet représenté par un nœud dans un chemin d'accès. Explique également comment obtenir la liste des méthodes et des propriétés SMO pour ce nœud.|[Utiliser des chemins d'accès PowerShell SQL Server](work-with-sql-server-powershell-paths.md)|  
-|Explique comment convertir une valeur URN (Uniform Resource Name) SMO en chemin d'accès de fournisseur SQL Server.|[Convertir des URN en chemins d'accès de fournisseur SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
+|Explique comment utiliser des applets de commande Windows PowerShell pour parcourir les nœuds dans un chemin d'accès et obtenir la liste des objets au niveau de chaque nœud.|[Parcourir les chemins SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
+|Explique comment utiliser les méthodes et les propriétés SMO pour signaler et effectuer un travail sur l'objet représenté par un nœud dans un chemin d'accès. Explique également comment obtenir la liste des méthodes et des propriétés SMO pour ce nœud.|[Utiliser des chemins SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
+|Explique comment convertir une valeur URN (Uniform Resource Name) SMO en chemin d'accès de fournisseur SQL Server.|[Convertir des URN en chemins de fournisseur SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
 |Explique comment ouvrir des connexions d'authentification SQL Server à l'aide du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Par défaut, le fournisseur utilise des connexions via l'authentification Windows établies à l'aide des informations d'identification du compte Windows qui exécute la session Windows PowerShell.|[Gérer l’authentification dans le moteur de base de données PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="next-steps"></a>Étapes suivantes

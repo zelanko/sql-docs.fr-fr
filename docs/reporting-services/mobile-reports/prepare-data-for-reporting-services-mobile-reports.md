@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499921"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
@@ -38,12 +38,12 @@ Les champs de date [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.m
 ## <a name="preparing-filter-data"></a>Préparer les données du filtre ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] peut filtrer les données en fonction des champs d’horodatage et des champs clés. Les champs clés peuvent être numériques, mais dans la plupart des cas, ils contiennent un ID ou une valeur de type chaîne. Pour préparer un champ de filtre à utiliser avec un élément de navigateur tel qu’une liste de sélection, la clé du filtre doit être une colonne unique de la table de données. Ainsi, vous pouvez regrouper les lignes de la table en fonction de la valeur dans la colonne du filtre. Le fait que plusieurs colonnes contiennent différentes clés de filtre (ou critères de filtrage) permet d’utiliser des rapports mobiles avec plusieurs navigateurs de filtre ensemble hiérarchique ou individuellement.  
   
-| Secteur  | Pays   | Région    |  
+| Secteur d’activité  | Country   | Région    |  
 | ------------- | ------------- | ------------- |  
 | Banques     | AFGHANISTAN   | ASIE      |  
 | Services commerciaux et professionnels | AFGHANISTAN | ASIE |  
 | Alimentation, boissons et tabac | AFGHANISTAN | ASIE |  
-| Support | AFGHANISTAN | ASIE |  
+| Médias | AFGHANISTAN | ASIE |  
 | Produits pharmaceutiques | AFGHANISTAN | ASIE |  
 | Vente au détail de produits alimentaires et de produits de première nécessité | ALBANIE | EUROPE |  
   
@@ -70,7 +70,7 @@ Dans cette table, les éléments ParentKey sont d’abord répertoriés dans la 
 | Alimentation, boissons et tabac |    Biens de consommation de première nécessité |  
 | Vente au détail de produits alimentaires et de produits de première nécessité |    Biens de consommation de première nécessité |  
 | Produits ménagers et personnels | Biens de consommation de première nécessité |  
-| Support | Biens de consommation non essentiels |  
+| Médias | Biens de consommation non essentiels |  
 | Automobiles et pièces |  Biens de consommation non essentiels |  
 | Biens de consommation durables et habillement |Biens de consommation non essentiels |  
 | Services aux consommateurs |   Biens de consommation non essentiels |  
@@ -82,8 +82,8 @@ Dans cette table, les éléments ParentKey sont d’abord répertoriés dans la 
 | Services de télécommunication |Technologies de l’information |  
   
 ### <a name="see-also"></a>Voir aussi  
-- [Préparer les données Excel pour les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
-- [Conserver la mise en forme des dates pour Analysis Services dans les rapports mobiles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
+- [Préparer des données Excel pour des rapports mobiles Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
+- [Conserver la mise en forme de la date pour Analysis Services dans les rapports mobiles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   

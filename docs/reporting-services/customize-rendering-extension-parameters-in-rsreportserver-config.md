@@ -16,10 +16,10 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571589"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config
@@ -127,14 +127,14 @@ ms.locfileid: "65571589"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichier de configuration RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Paramètres d'informations de périphérique CSV](../reporting-services/csv-device-information-settings.md)   
+ [Paramètres d’informations de périphérique CSV](../reporting-services/csv-device-information-settings.md)   
  [Paramètres d’informations de périphérique Excel](../reporting-services/excel-device-information-settings.md)   
  [Paramètres d’informations de périphérique HTML](../reporting-services/html-device-information-settings.md)   
  [Paramètres d’informations de périphérique pour l’image](../reporting-services/image-device-information-settings.md)   
  [Paramètres d’informations de périphérique pour le format de rendu MHTML](../reporting-services/mhtml-device-information-settings.md)   
- [Paramètres d'informations de périphérique PDF](../reporting-services/pdf-device-information-settings.md)   
- [Paramètres d'informations de périphérique XML](../reporting-services/xml-device-information-settings.md)  
+ [Paramètres d’informations de périphérique PDF](../reporting-services/pdf-device-information-settings.md)   
+ [Paramètres des informations de périphériques XML](../reporting-services/xml-device-information-settings.md)  
   
   

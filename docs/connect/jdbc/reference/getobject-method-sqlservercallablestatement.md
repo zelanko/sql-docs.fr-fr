@@ -16,10 +16,10 @@ ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb479f471f4df2a90521ec0f47d8d5396881f53f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981083"
 ---
 # <a name="getobject-method-sqlservercallablestatement"></a>Méthode getObject (SQLServerCallableStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67981083"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[getObject (int)](../../../connect/jdbc/reference/getobject-method-int.md)|Récupère la valeur du paramètre désigné en tant qu'objet dans le langage de programmation Java en fonction de l'index de paramètre.|  
 |[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map.md)|Récupère la valeur du paramètre désigné en tant qu’objet dans le langage de programmation Java en fonction de l’index de paramètre fourni, en utilisant l’objet Map spécifié.|  

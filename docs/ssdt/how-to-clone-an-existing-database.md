@@ -1,24 +1,25 @@
 ---
-title: 'Procédure : cloner une base de données existante | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Cloner une base de données existante
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017617"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241587"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Procédure : Cloner une base de données existante
-Cette tâche utilise certaines des étapes que vous avez apprises aux cours des procédures précédentes pour créer une nouvelle base de données et déplacer des données existantes. En outre, elle utilise les étapes abordées dans [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) pour synchroniser le schéma de base de données source et de projet.  
+# <a name="how-to-clone-an-existing-database"></a>Procédure : cloner une base de données existante
+
+Cette tâche utilise certaines des étapes que vous avez apprises aux cours des procédures précédentes pour créer une nouvelle base de données et déplacer des données existantes. En outre, il utilise les étapes abordées dans [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) pour synchroniser le schéma de base de données source et de projet.  
   
 Ces étapes vous permettront de créer facilement une base de données de développement ou de test à partir d'une base de données de production avec un schéma et des données identiques. Vous pouvez ensuite continuer à développer la base de données de test en mode connecté, ou à créer un projet de base de données à des fins de développement et de test en mode hors connexion, et tout cela sans interrompre le fonctionnement de la base de données de production.  
   
@@ -33,7 +34,7 @@ Ces étapes vous permettront de créer facilement une base de données de dével
   
 3.  Renommez la nouvelle base de données en **TradeDev**.  
   
-4.  Dans l’**Explorateur d'objets SQL Server**, cliquez avec le bouton droit sur **Trade** et sélectionnez **Comparaison de schémas**. Suivez les étapes décrites dans la rubrique [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) en sélectionnant la base de données **Trade** d’origine comme source et la nouvelle base de données **TradeDev** comme cible. Ainsi, la base de données **TradeDev** sera mise à jour avec le schéma de la base de données **Trade**.  
+4.  Dans l’**Explorateur d'objets SQL Server**, cliquez avec le bouton droit sur **Trade** et sélectionnez **Comparaison de schémas**. Suivez les étapes de la rubrique [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) en sélectionnant la base de données **Trade** d'origine comme source et la nouvelle base de données **TradeDev** comme cible. Ainsi, la base de données **TradeDev** sera mise à jour avec le schéma de la base de données **Trade**.  
   
 ### <a name="to-replicate-data"></a>Pour répliquer les données  
   
@@ -47,12 +48,12 @@ Ces étapes vous permettront de créer facilement une base de données de dével
   
 4.  Dans le menu déroulant **Base de données** en regard des boutons **Connecter**/**Déconnecter**, sélectionnez **TradeDev**. Cette opération est semblable à l'instruction Transact\-SQL`USE` et garantit que le script dans l'éditeur de code sera exécuté par rapport à la base de données **TradeDev**.  
   
-5.  Cliquez sur le bouton **Exécuter la requête`INSERT` pour exécuter les instructions** . Ainsi, toutes les lignes de la table `Suppliers` de la base de données `Trade` sont insérées dans la table `Suppliers` de la base de données `TradeDev`.  
+5.  Cliquez sur le bouton **Exécuter la requête** pour exécuter les instructions `INSERT`. Ainsi, toutes les lignes de la table `Suppliers` de la base de données `Trade` sont insérées dans la table `Suppliers` de la base de données `TradeDev`.  
   
 6.  Répétez les étapes ci-dessus pour toutes les tables de la base de donnés `Trade`, de façon à les répliquer dans la base de données `TradeDev`.  
   
 7.  Utilisez l'Éditeur de code pour vérifier que toutes les tables de la nouvelle base de données `TradeDev` ont été remplies.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   
