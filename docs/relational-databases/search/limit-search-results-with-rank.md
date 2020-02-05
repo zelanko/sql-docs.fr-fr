@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132277"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
@@ -38,7 +38,7 @@ ms.locfileid: "68132277"
   
 ##  <a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : Recherche des trois premières correspondances uniquement  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : recherche des trois premières correspondances uniquement  
  L'exemple suivant utilise CONTAINSTABLE pour retourner uniquement les trois premières correspondances.  
   
 ```  
@@ -69,7 +69,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple B : Recherche des dix premières correspondances  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple B : recherche des dix premières correspondances  
  L'exemple suivant utilise CONTAINSTABLE pour retourner la description des 5 premiers produits dont la colonne `Description` contient les mots « aluminum » à proximité du mot « light » ou « lightweight ».  
   
 ```  
@@ -142,7 +142,7 @@ GO
 ### <a name="rank-computation-issues"></a>Problèmes de calcul de rang  
  Le processus de calcul du rang dépend d'un certain nombre de facteurs.  Les analyseurs lexicaux des diverses langues créent des jetons de texte de manière différente. Par exemple, la chaîne « après-midi » peut être décomposée en « après » « midi » par un analyseur lexical et en « après-midi » par un autre. En d'autres termes, la correspondance et le classement varient en fonction de la langue spécifiée, car les mots sont différents et la longueur du document l'est également. La différence de longueur d'un document peut affecter le classement pour toutes les requêtes.  
   
- Les statistiques telles que **IndexRowCount** peuvent fortement varier. Par exemple, si un catalogue a 2 milliards de lignes dans l'index principal, un nouveau document est indexé dans un index intermédiaire en mémoire ; par ailleurs, les rangs de ce document qui sont basés sur le nombre de documents dans l'index en mémoire peuvent être incorrects par rapport aux rangs des documents de l'index principal. Par conséquent, lorsqu'un remplissage entraîne l'indexation ou la réindexation d'un grand nombre de lignes, il est recommandé de fusionner les index dans un index principal via l'instruction ALTER FULLTEXT CATALOG ... Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Le Moteur d'indexation et de recherche en texte intégral fusionne automatiquement les index en fonction de paramètres tels que le nombre et la taille des index intermédiaires.  
+ Les statistiques telles que **IndexRowCount** peuvent fortement varier. Par exemple, si un catalogue a 2 milliards de lignes dans l'index principal, un nouveau document est indexé dans un index intermédiaire en mémoire ; par ailleurs, les rangs de ce document qui sont basés sur le nombre de documents dans l'index en mémoire peuvent être incorrects par rapport aux rangs des documents de l'index principal. Par conséquent, lorsqu'un remplissage entraîne l'indexation ou la réindexation d'un grand nombre de lignes, il est recommandé de fusionner les index dans un index principal via l'instruction ALTER FULLTEXT CATALOG ... Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Le Moteur d'indexation et de recherche en texte intégral fusionne automatiquement les index en fonction de paramètres tels que le nombre et la taille des index intermédiaires.  
   
  Les valeurs**MaxOccurrence** sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Les documents ayant une longueur comprise dans la plage située entre les valeurs adjacentes 32 et 128 du tableau, ils sont effectivement traités comme s’ils avaient le même nombre de mots, c’est-à-dire 128 (32 < **docLength** <= 128).  
   

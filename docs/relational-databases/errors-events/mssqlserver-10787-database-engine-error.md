@@ -12,13 +12,13 @@ ms.assetid: fcc78e5f-e2cf-47df-8c3e-c169367f893b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c35a58b8db6c707c4921365e5b001421e3822176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025828"
 ---
-# <a name="mssqlserver10787"></a>MSSQLSERVER_10787
+# <a name="mssqlserver_10787"></a>MSSQLSERVER_10787
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68025828"
 |||  
 |-|-|  
 |Nom du produit|MSSQLSERVER|  
-|ID d'événement|10787|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10787|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|P3_HASH_INDEX|  
 |Texte du message|« *construction* » « *fonctionnalité* » n’est pas pris en charge avec un index de hachage.|  

@@ -12,13 +12,13 @@ ms.assetid: fce10907-4753-441b-b624-f28e00ed7520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6411b8eaf64daf16bc42636950f43fd37104629a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033454"
 ---
-# <a name="mssqlserver1461"></a>MSSQLSERVER_1461
+# <a name="mssqlserver_1461"></a>MSSQLSERVER_1461
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68033454"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1461|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1461|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBM_SAFETY_MISMATCH|  
 |Texte du message|Plusieurs niveaux de sécurité de mise en miroir de bases de données ont été détectés pour la base de données « %.*ls ». Le niveau de sécurité FULL sera utilisé.|  

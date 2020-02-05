@@ -14,10 +14,10 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995699"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, objet Statistiques des pools de ressources
@@ -31,18 +31,18 @@ ms.locfileid: "67995699"
 |**Quantité d'allocation de mémoire active (Ko)**|Quantité totale de mémoire actuellement allouée, en kilo-octets (Ko). Ces informations sont également disponibles dans [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).| 
 |**Nombre d'allocations de mémoire actives**|Nombre total actuel d'allocations de mémoire. Ces informations sont également disponibles dans [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  
 |**Millisecondes moyennes par lecture depuis le disque**|Durée moyenne, en millisecondes, d'une opération de lecture sur le disque.|  
-|**Base d’E/S de lecture sur le disque moy. (ms)**|À usage interne uniquement|
+|**Base d’E/S de lecture sur le disque moy. (ms)**|À usage interne uniquement.|
 |**Millisecondes moyennes par écriture sur le disque**|Durée moyenne, en millisecondes, d'une opération d'écriture sur le disque.|  
-|**Base d’E/S d’écriture sur le disque moy. (ms)**|À usage interne uniquement|
+|**Base d’E/S d’écriture sur le disque moy. (ms)**|À usage interne uniquement.|
 |**Cible mémoire pour le cache (Ko)**|Cible gestionnaire d'allocation mémoire actuelle, en kilo-octets (Ko), pour le cache.|  
 |**Cible mémoire pour la compilation (Ko)**|Cible gestionnaire d'allocation mémoire actuelle, en kilo-octets (Ko), pour les compilations de requête.|  
 |**% d'effet de contrôle de l'UC**|Effet de Resource Governor sur le pool de ressources. Calculé selon la formule (% d'utilisation de l'UC) / (% d'utilisation de l'UC sans Resource Governor).|  
 |**% processeur retardé**|UC du système retardée pour toutes les demandes dans l’instance spécifiée de l’objet de performance, en pourcentage de la durée active totale.|
-|**Base de % processeur retardé**|À usage interne uniquement|
+|**Base de % processeur retardé**|À usage interne uniquement.|
 |**% processeur effectif**|Utilisation de l’UC système par toutes les demandes dans l’instance spécifiée de l’objet de performance, en pourcentage de la durée active totale.|
-|**Base de % processeur effectif**|À usage interne uniquement|
+|**Base de % processeur effectif**|À usage interne uniquement.|
 |**% d'utilisation de l'UC**|Utilisation de la bande passante de l'UC sur toutes les demandes dans tous les groupes de charges de travail qui appartiennent à ce pool. Elle est mesurée en fonction de l'ordinateur et normalisée à tous les processeurs du système. Cette valeur se modifie selon la quantité d'UC disponible pour le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle n'est pas normalisée par rapport à ce que reçoit le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Base de % utilisation processeur**|À usage interne uniquement|
+|**Base de % utilisation processeur**|À usage interne uniquement.|
 |**% cible de l'utilisation de l'UC**|Valeur cible du pourcentage d'utilisation de l'UC pour le pool de ressources basée sur les paramètres de configuration du pool de ressources et de la charge du système.|  
 |**% non respecté**|Différence entre la réservation de l’UC et le pourcentage de planification effective.|
 |**Octets lus depuis le disque par seconde**|Nombre d'octets lus à partir du disque au cours de la dernière seconde.|  

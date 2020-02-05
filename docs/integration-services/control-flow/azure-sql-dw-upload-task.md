@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947194"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tâche de chargement Azure SQL Data Warehouse
@@ -50,9 +50,9 @@ Champ|Description
 -----|-----------
 LocalDirectory|Spécifie le répertoire local qui contient les fichiers de données à charger.
 Recursively|Spécifie s’il convient d’effectuer des recherches de façon récursive dans les sous-répertoires.
-FileName|Indique un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par ex. MaFeuille*.xsl\* inclut les fichiers MaFeuille001.xsl et MaFeuilleABC.xslx.
+FileName|Indique un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par exemple, MaFeuille*.xsl\* inclut les fichiers MaFeuille001.xsl et MaFeuilleABC.xslx.
 RowDelimiter|Spécifie le ou les caractères qui marquent la fin de chaque ligne.
-ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par ex. &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
+ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par exemple, &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
 IsFirstRowHeader|Spécifie si la première ligne de chaque fichier de données contient les noms de colonne au lieu des données réelles.
 AzureStorageConnection|Spécifie un gestionnaire de connexions de stockage Azure.
 BlobContainer|Spécifie le nom du conteneur d’objets blob sur lequel les données locales seront chargées et relayées vers Azure Data Warehouse via PolyBase. Un conteneur sera créé s’il n’existe pas.
@@ -73,7 +73,7 @@ AzureStorageConnection|Spécifie un gestionnaire de connexions de stockage Azure
 BlobContainer|Spécifie le nom de conteneur blob où se trouvent les données sources.
 BlobDirectory|Spécifie le répertoire blob (structure hiérarchique virtuelle) où se trouvent les données sources.
 RowDelimiter|Spécifie le ou les caractères qui marquent la fin de chaque ligne.
-ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par ex. &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
+ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par exemple, &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
 CompressionType|Spécifie le format de compression utilisé pour les données sources.
 AzureDwConnection|Spécifie un gestionnaire de connexions ADO.NET pour Azure SQL Data Warehouse.
 TableName|Spécifie le nom de la table de destination. Choisissez un nom de table existant ou créez-en un en choisissant **\<Nouvelle table ...>** .

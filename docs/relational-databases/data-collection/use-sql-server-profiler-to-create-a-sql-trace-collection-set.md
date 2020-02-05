@@ -12,10 +12,10 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5f11e6c98d53cd5008c72510282a0d31019a320d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056452"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL
@@ -38,7 +38,7 @@ ms.locfileid: "74056452"
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur **Annuler**.  
   
-3.  Pour ce scénario, veillez à ce que les valeurs de durée soient configurées pour s'afficher en millisecondes (la valeur par défaut). Pour cela, procédez comme suit :  
+3.  Pour ce scénario, veillez à ce que les valeurs de durée soient configurées pour s'afficher en millisecondes (la valeur par défaut). Pour ce faire, procédez comme suit :  
   
     1.  Dans le menu **Outils** , cliquez sur **Options**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "74056452"
   
 5.  Dans la boîte de dialogue **Se connecter au serveur** , sélectionnez le serveur auquel vous souhaitez vous connecter, puis cliquez sur **Se connecter**.  
   
-     La boîte de dialogue **Propriétés de la trace** apparaît.  
+     La boîte de dialogue **Propriétés de la trace** s'affiche.  
   
 6.  Sous l'onglet **Général** , effectuez les paramétrages suivants :  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74056452"
   
 4.  Cliquez sur **Exécuter** pour exécuter la requête et créer le jeu d'éléments de collecte.  
   
-5.  Dans l'Explorateur d'objets, vérifiez que le jeu d'éléments de collecte a été créé. Pour cela, procédez comme suit :  
+5.  Dans l'Explorateur d'objets, vérifiez que le jeu d'éléments de collecte a été créé. Pour ce faire, procédez comme suit :  
   
     1.  Cliquez avec le bouton droit sur **Gestion**, puis cliquez sur **Actualiser**.  
   

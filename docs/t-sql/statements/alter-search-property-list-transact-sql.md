@@ -24,10 +24,10 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001636"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
@@ -174,7 +174,7 @@ GO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-adding-a-property"></a>A. Ajout d'une propriété  
+### <a name="a-adding-a-property"></a>R. Ajout d'une propriété  
  L’exemple suivant ajoute plusieurs propriétés (`Title`, `Author` et `Tags`) à une liste de propriétés nommée `DocumentPropertyList`.  
   
 > [!NOTE]  

@@ -14,13 +14,13 @@ ms.assetid: 7d4dbed6-bb94-4908-bc03-2040a9cf63bc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 06a81eaa83b3420912494b61135790c4e8fabe29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039295"
 ---
-# <a name="mssqlserver3169"></a>MSSQLSERVER_3169
+# <a name="mssqlserver_3169"></a>MSSQLSERVER_3169
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -28,10 +28,10 @@ ms.locfileid: "68039295"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|3169|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|3169|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
-|Nom symbolique|N/A|  
+|Nom symbolique|N/D|  
 |Texte du message|La base de données a été sauvegardée sur un serveur exécutant la version %ls. Cette version est incompatible avec ce serveur, qui exécute la version %ls. Restaurez la base de données sur un serveur qui prend en charge la sauvegarde ou utilisez une sauvegarde compatible avec ce serveur.|  
   
 ## <a name="explanation"></a>Explication  

@@ -18,10 +18,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077974"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (moteur de base de données)
@@ -68,7 +68,7 @@ GetDescendant est déterministe. Par conséquent, si GetDescendant est appelée 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Insertion d'une ligne comme nœud le moins descendant  
+### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>R. Insertion d'une ligne comme nœud le moins descendant  
 Un nouvel employé est embauché, dont le responsable est un employé existant au nœud `/3/1/`. Exécutez le code suivant pour insérer la nouvelle ligne en utilisant la méthode GetDescendant sans arguments pour spécifier le nouveau nœud de lignes comme `/3/1/1/` :
   
 ```sql

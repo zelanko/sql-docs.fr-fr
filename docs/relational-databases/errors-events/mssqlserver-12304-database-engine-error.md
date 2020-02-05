@@ -12,13 +12,13 @@ ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6bf076dd8a3dc3dc912ec7ec2155e477dff83f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912143"
 ---
-# <a name="mssqlserver12304"></a>MSSQLSERVER_12304
+# <a name="mssqlserver_12304"></a>MSSQLSERVER_12304
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67912143"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|12304|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|12304|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_UNSUPPORTED_IDENTITY_TABLE_VAR|  
 |Texte du message|L'utilisation d'un type de table optimisée en mémoire utilisant la propriété IDENTITY avec l'une de ses colonnes n'est pas prise en charge lors de l'utilisation du type hors du contexte de la procédure stockée compilée en mode natif.|  

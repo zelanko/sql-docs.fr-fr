@@ -14,10 +14,10 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041094"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Égal à égal - Détection de conflit dans la réplication d’égal à égal
@@ -70,7 +70,7 @@ ms.locfileid: "68041094"
 ## <a name="enabling-conflict-detection"></a>Activation de la détection de conflit  
  Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure, et la détection doit être activée pour tous les nœuds. Dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et versions ultérieures, par défaut, la détection de conflit est activée dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Nous vous recommandons d'activer la détection, même dans les scénarios où vous ne prévoyez pas de conflits. La détection de conflit peut être activée et désactivée en utilisant [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ou les procédures stockées [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
--   Vous pouvez activer et désactiver la détection dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] en utilisant la page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** ou la page **Configurer la topologie** de l'Assistant Configurer la topologie d'égal à égal. Pour plus d'informations, consultez [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+-   Vous pouvez activer et désactiver la détection dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] en utilisant la page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** ou la page **Configurer la topologie** de l'Assistant Configurer la topologie d'égal à égal. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
      Si vous configurez la détection de conflit à l'aide de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], l'Agent de distribution est configuré pour cesser d'appliquer les modifications lorsqu'un conflit est détecté.  
   

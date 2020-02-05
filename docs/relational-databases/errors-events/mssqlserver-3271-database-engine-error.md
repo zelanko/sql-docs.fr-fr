@@ -12,13 +12,13 @@ ms.assetid: 21b8de4b-6624-4163-9561-1a6cc8fe3d51
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 893024c1a5908e8343d61a5e4e32f265ed3ceb40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908533"
 ---
-# <a name="mssqlserver3271"></a>MSSQLSERVER_3271
+# <a name="mssqlserver_3271"></a>MSSQLSERVER_3271
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67908533"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|3271|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|3271|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DMPIO_IO_ERROR|  
 |Texte du message|Une erreur d'E/S non récupérable s'est produite dans le fichier "%ls" : %ls|  

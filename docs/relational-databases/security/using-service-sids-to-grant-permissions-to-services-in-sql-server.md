@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095600"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Utilisation des SID de service pour accorder des autorisations aux services dans SQL Server
@@ -46,7 +46,7 @@ L’utilisation d’un Id de sécurité de service permet d’octroyer des autor
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-create-a-service-sid"></a>A. Créer un ID de service
+### <a name="a-create-a-service-sid"></a>R. Créer un ID de service
 
 La commande PowerShell suivante crée un SID de service au niveau service de contrôle d’intégrité d’Operations Manager.
 

@@ -15,10 +15,10 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930307"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (type de données geometry)
@@ -53,7 +53,7 @@ Retourne une approximation polygonale d’une instance **geometry** contenant de
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Utilisation d'une variable Geometry non initialisée et d'une instance vide  
+### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>R. Utilisation d'une variable Geometry non initialisée et d'une instance vide  
  Dans l’exemple suivant, la première instruction **SELECT** utilise une instance non initialisée de **geometry** pour appeler la méthode `STCurveToLine`, alors que la seconde instruction **SELECT** utilise une instance **geometry** vide. Ainsi, la méthode retourne **NULL** pour la première instruction et une collection **GeometryCollection** pour la seconde instruction.  
   
 ```

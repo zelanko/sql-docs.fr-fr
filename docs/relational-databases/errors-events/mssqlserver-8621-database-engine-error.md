@@ -12,13 +12,13 @@ ms.assetid: 67f59865-becd-4999-8bb0-90aedd7effbf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b013811054647a05dbb7298955ebc2f8c203d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101463"
 ---
-# <a name="mssqlserver8621"></a>MSSQLSERVER_8621
+# <a name="mssqlserver_8621"></a>MSSQLSERVER_8621
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68101463"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8621|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8621|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|OPTIMIZER_STACK_OVERFLOW_ERR|  
 |Texte du message|Espace de pile du processeur de requêtes insuffisant lors de l'optimisation de la requête. Simplifiez la requête.|  

@@ -12,13 +12,13 @@ ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 402d3a3cdb3d1c8eb52feaede9ff1115e745c563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116029"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,14 +26,14 @@ ms.locfileid: "68116029"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1205|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1205|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|LK_VICTIM|  
 |Texte du message|La transaction (ID de processus %d) a été bloquée sur les ressources %.*ls par un autre processus et a été choisie comme victime. Relancez la transaction.|  
   
 ## <a name="explanation"></a>Explication  
-L'accès aux ressources s'effectue dans un ordre conflictuel sur des transactions distinctes, ce qui cause un interblocage. Par exemple :  
+Des ressources sont accessibles dans un ordre conflictuel sur des transactions distinctes, ce qui provoque un blocage. Par exemple :  
   
 -   Transaction1 met à jour **Table1.Row1**, tandis que Transaction2 met à jour **Table2.Row2**.  
   
@@ -43,7 +43,7 @@ L'accès aux ressources s'effectue dans un ordre conflictuel sur des transaction
   
 -   Un blocage survient car Transaction1 attend que Transaction2 se termine, alors que Transaction2 attend que Transaction1 se termine.  
   
-Le système détectera ce blocage et choisira l'une des transactions impliquées comme 'victime' et émettra ce message, tout en annulant la transaction de la victime.  
+Dans ce cas, le système détecte le blocage et choisit une des transactions impliquées en tant que « victime », pour émettre ce message tout en annulant la transaction de la victime.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
 Exécutez de nouveau la transaction. Vous pouvez également réviser l'application pour éviter les blocages. La transaction qui a été choisie comme victime peut être retentée et réussira probablement, en fonction des opérations qui sont exécutées simultanément.  

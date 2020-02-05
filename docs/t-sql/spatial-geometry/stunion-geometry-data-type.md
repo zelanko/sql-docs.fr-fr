@@ -18,10 +18,10 @@ ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 868b344a18494e4b92cd3ee5944cb80ad15ab845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066221"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (type de données geometry)
@@ -50,7 +50,7 @@ Retourne un objet qui représente l’union entre une instance **geometry** et u
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-computing-the-union-of-two-polygon-instances"></a>A. Calcul de l'union de deux instances Polygon  
+### <a name="a-computing-the-union-of-two-polygon-instances"></a>R. Calcul de l'union de deux instances Polygon  
  L'exemple suivant utilise `STUnion()` pour calculer l'union de deux instances `Polygon`.  
   
 ```  

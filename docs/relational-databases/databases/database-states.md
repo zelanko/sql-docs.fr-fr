@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1aa8519092b90f34089cd2c31441b51b2b0da014
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109693"
 ---
 # <a name="database-states"></a>États d'une base de données
@@ -41,7 +41,7 @@ ms.locfileid: "68109693"
 ## <a name="database-state-definitions"></a>Définition des états d'une base de données  
  Le tableau ci-dessous définit les états de la base de données.  
   
-|État|Définition|  
+|State|Définition|  
 |-----------|----------------|  
 |ONLINE|La base de données est accessible. Le groupe de fichiers primaire est en ligne, mais il est possible que la phase de restauration de la récupération n'ait pas été réalisée.|  
 |OFFLINE|La base de données n'est pas disponible. Une base de données est mise hors connexion par une action explicite de l'utilisateur et reste dans cet état jusqu'à une nouvelle action de l'utilisateur. Par exemple, la base de données peut être mise hors connexion pour déplacer un fichier sur un nouveau disque. La base de données est ensuite ramenée en ligne une fois que le déplacement a eu lieu.|  

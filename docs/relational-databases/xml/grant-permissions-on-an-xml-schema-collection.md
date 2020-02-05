@@ -14,10 +14,10 @@ ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986437"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Accorder des autorisations sur une collection de schémas XML
@@ -67,7 +67,7 @@ ms.locfileid: "67986437"
 ## <a name="examples"></a>Exemples  
  Les scénarios proposés dans les exemples suivants illustrent le fonctionnement des autorisations sur les schémas XML. Chaque exemple crée la base de données de test, les schémas relationnels et les connexions nécessaires. Ces connexions reçoivent les autorisations nécessaires sur la collection de schémas XML. Chaque exemple effectue le nettoyage nécessaire à la fin.  
   
-### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Attribution d'autorisations de création d'une collection de schémas XML  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>R. Attribution d'autorisations de création d'une collection de schémas XML  
  L'exemple suivant montre comment accorder des autorisations pour qu'un principal puisse créer une collection de schémas XML. Il crée un exemple de base de données et un utilisateur de test, `TestLogin1`. `TestLogin1` reçoit l’autorisation `ALTER` sur le schéma relationnel et l’autorisation `CREATE XML SCHEMA COLLECTION` sur la base de données. Avec ces autorisations, `TestLogin1` réussit à créer un exemple de collection de schémas XML.  
   
 ```  

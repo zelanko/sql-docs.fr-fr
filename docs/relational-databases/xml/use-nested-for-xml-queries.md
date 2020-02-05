@@ -15,10 +15,10 @@ ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001722"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utiliser des requêtes FOR XML imbriquées
@@ -67,7 +67,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Étant donné que le résultat est de type **xml**, vous pouvez spécifier l’une des méthodes de type de données **xml** directement par rapport à ce document XML, comme le montre la requête suivante. Dans la requête, la [méthode query() (type de données xml)](../../t-sql/xml/query-method-xml-data-type.md) est utilisée pour extraire le premier élément enfant <`row`> de l’élément <`myRoot`>.  
+ Étant donné que le résultat est de type **xml** , vous pouvez spécifier l’une des méthodes de type de données **xml** directement par rapport à ce document XML, comme le montre la requête suivante. Dans la requête, la [méthode query() (type de données xml)](../../t-sql/xml/query-method-xml-data-type.md) est utilisée pour extraire le premier élément enfant <`row`> de l’élément <`myRoot`>.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -77,7 +77,7 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  

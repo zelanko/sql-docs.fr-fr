@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132254"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gérer et surveiller la recherche sémantique
@@ -64,7 +64,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
-### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Quelle est la taille totale des index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
+### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Quelle est la taille totale des index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
  Interrogez la propriété **IndexSize** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
 ```sql  
@@ -72,7 +72,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
-### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Combien d'éléments sont indexés dans les index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
+### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Combien d'éléments sont indexés dans les index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
  Interrogez la propriété **ItemCount** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
 ```sql  
@@ -85,7 +85,7 @@ GO
   
  Étant donné que l'indexation sémantique dépend de l'indexation de texte intégral, les index sémantiques ne sont remplis que lorsque les index de recherche en texte intégral associés le sont également.  
   
- **Exemple : Démarrer un remplissage complet des index sémantiques et de recherche en texte intégral**  
+ **Exemple : démarrer une alimentation complète des index sémantiques et de recherche en texte intégral**  
   
  L’exemple suivant démarre une alimentation complète des index sémantiques et de recherche en texte intégral en modifiant un index de recherche en texte intégral existant sur la table **Production.Document** dans l’exemple de base de données AdventureWorks2012.  
   
@@ -122,7 +122,7 @@ GO
 ##  <a name="SemanticIndexing"></a> À propos des phases d’indexation sémantique  
  Une recherche sémantique indexe deux types de données pour chaque colonne sur laquelle elle est activée :  
   
-1.  **Expressions clés**  
+1.  **Phrases clés**  
   
 2.  **Ressemblance de document**  
   
@@ -133,7 +133,7 @@ GO
 2.  **Phase 2**. L'index de ressemblance de document sémantique est rempli à son tour. Cet index dépend des deux index remplis à la phase précédente.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a>Problème : Les index sémantiques ne sont pas remplis  
+##  <a name="ProblemNotPopulated"></a> Problème : les index sémantiques ne sont pas alimentés  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>Les index de recherche en texte intégral associés sont-ils remplis ?  
  Étant donné que l'indexation sémantique dépend de l'indexation de texte intégral, les index sémantiques ne sont remplis que lorsque les index de recherche en texte intégral associés le sont également.  
   

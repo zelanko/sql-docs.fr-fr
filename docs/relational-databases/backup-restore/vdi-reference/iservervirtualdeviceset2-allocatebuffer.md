@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 8c28009fae8b52264b541ca3eb4281ab9abccf63
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847490"
 ---
 # <a name="iservervirtualdeviceset2allocatebuffer-vdi"></a>IServerVirtualDeviceSet2::AllocateBuffer (VDI)
@@ -40,9 +40,9 @@ HRESULT IServerVirtualDeviceSet2::AllocateBuffer (
 
 *dwAlignment* : spécifie la limite d’alignement pour la mémoire tampon. Par exemple, la valeur 4 096 garantit que la mémoire tampon est alignée sur une limite de 4 096 octets. Cela signifie que l’adresse retournée aurait les 12 bits de poids faible définis sur zéro. Ce paramètre doit être une puissance de 2.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | NOERROR | La mémoire tampon est retournée. |
 | VD_E_MEMORY | Une condition de mémoire insuffisante s’est produite. |

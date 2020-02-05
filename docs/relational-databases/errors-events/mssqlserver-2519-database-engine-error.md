@@ -12,13 +12,13 @@ ms.assetid: 8dc6ad98-5db8-4c88-8dea-6d455e63b839
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 233d7d3a6ae29fe2e83272f36ed3e952e8bdd1dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138483"
 ---
-# <a name="mssqlserver2519"></a>MSSQLSERVER_2519
+# <a name="mssqlserver_2519"></a>MSSQLSERVER_2519
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68138483"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2519|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2519|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_NO_EXPRESSION_EVALUATOR|  
 |Texte du message|Impossible de vérifier les colonnes calculées et les types définis par l'utilisateur pour l'ID d'objet O_ID (objet « O_NAME ») car l'évaluateur d'expression interne n'a pas pu être initialisé.|  

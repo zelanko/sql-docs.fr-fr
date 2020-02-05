@@ -14,19 +14,19 @@ ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987331"
 ---
-# <a name="sql-server-agent-jobs-object"></a>SQL Server Agent, objet Jobs
+# <a name="sql-server-agent-jobs-object"></a>Agent SQL Server, Objet Jobs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'objet de performances **Jobs** de SQL Server Agent contient des compteurs qui fournissent des informations sur les travaux de SQL Server Agent. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
  Le tableau ci-dessous contient les compteurs **SQLAgent:Jobs** .  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Travaux actifs**|Nombre de travaux en cours d'exécution.|  
 |**Travaux non réussis**|Nombre de travaux qui se sont terminés par un échec.|  

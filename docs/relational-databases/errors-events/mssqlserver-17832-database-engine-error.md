@@ -15,13 +15,13 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137235"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -29,8 +29,8 @@ ms.locfileid: "68137235"
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|17832|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17832|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SRV_BAD_LOGIN_PKT|  
 |Texte du message|Le paquet d'ouverture de session servant à ouvrir la connexion présente une structure non valide ; la connexion a été fermée. Contactez le fournisseur de la bibliothèque cliente.%.*ls|  
@@ -38,7 +38,7 @@ ms.locfileid: "68137235"
 ## <a name="explanation"></a>Explication  
 L'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas pu traiter le paquet d'ouverture de session du client, soit parce que le paquet n'a pas été créé correctement, soit parce qu'il a été endommagé pendant la transmission. Ce problème peut également être dû à la configuration de l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'adresse IP répertoriée correspond à l'adresse du client.  
   
-### <a name="more-information"></a>Informations supplémentaires  
+### <a name="more-information"></a>Informations complémentaires  
 Lorsque vous utilisez l'authentification Windows dans un environnement Kerberos, un client reçoit un ticket Kerberos qui contient un certificat PAC (Privilege Attribute Certificate). Le certificat PAC contient différents types de données d'autorisation, notamment les groupes dont l'utilisateur est membre, les droits dont il dispose et les stratégies qui s'appliquent à lui. Lorsque le client reçoit le ticket Kerberos, les informations contenues dans le certificat PAC sont utilisées pour générer le jeton d'accès de l'utilisateur. Le client présente le jeton à l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre du paquet d'ouverture de session.  
   
 Si le jeton a été créé incorrectement ou endommagé pendant la transmission, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas proposer d'informations supplémentaires sur le problème.  

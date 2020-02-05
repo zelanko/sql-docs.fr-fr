@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262792"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
@@ -53,11 +53,11 @@ ms.locfileid: "68262792"
 >  Pour plus d’informations sur les autres fonctionnalités abandonnées, consultez [Fonctionnalités Integration Services abandonnées dans SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## <a name="upgrading-integration-services"></a>mise à niveau d'Integration Services  
- Vous pouvez effectuer la mise à niveau au moyen de l'une des méthodes suivantes :  
+ Vous pouvez effectuer la mise à niveau au moyen de l'une des méthodes suivantes :  
   
 -   Exécutez le programme d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et sélectionnez l’option **Mise à niveau de SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
--   Exécutez le fichier **setup.exe** à l’invite de commandes et spécifiez l’option **/ACTION=upgrade**. Pour plus d’informations, consultez la section, « Scripts d’installation pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]», dans [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   Exécutez le fichier **setup.exe** à l’invite de commandes et spécifiez l’option **/ACTION=upgrade** . Pour plus d’informations, consultez la section, « Scripts d’installation pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]», dans [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
  Vous ne pouvez pas utiliser la mise à niveau pour exécuter les actions suivantes :  
   

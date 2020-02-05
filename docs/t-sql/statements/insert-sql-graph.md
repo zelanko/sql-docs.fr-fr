@@ -18,10 +18,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071172"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
@@ -32,7 +32,7 @@ Ajoute une ou plusieurs lignes à une table `node` ou `edge` dans [!INCLUDE[ssNo
 > [!NOTE]   
 >  Pour en savoir plus sur les instructions Transact-SQL standard, consultez [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
-![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>Syntaxe de l’instruction INSERT en vue d’une insertion dans une table de nœuds 
 La syntaxe permettant d’effectuer une insertion dans une table de nœuds est la même que celle utilisée pour une table standard. 
@@ -136,7 +136,7 @@ Pour exécuter INSERT avec l’option BULK de la fonction OPENROWSET, vous devez
 
 ## <a name="examples"></a>Exemples  
   
-#### <a name="a--insert-into-node-table"></a>A.  Insertion dans une table de nœuds  
+#### <a name="a--insert-into-node-table"></a>R.  Insertion dans une table de nœuds  
 L’exemple suivant crée une table de nœuds Person et y insère deux lignes.
 
 ```sql
@@ -163,6 +163,6 @@ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Al
   
 ## <a name="see-also"></a>Voir aussi  
 [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-[Traitement des graphiques avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+[Traitement des graphes avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

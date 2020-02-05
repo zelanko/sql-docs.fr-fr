@@ -12,13 +12,13 @@ ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4b523cd8519bbbb6affce403ca14695a4c18a603
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027941"
 ---
-# <a name="mssqlserver3260"></a>MSSQLSERVER_3260
+# <a name="mssqlserver_3260"></a>MSSQLSERVER_3260
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68027941"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|3260|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|3260|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DMPIO_BUFFER_OVERFLOW|  
 |Texte du message|Un tampon interne est saturé.|  
@@ -36,5 +36,5 @@ ms.locfileid: "68027941"
 Le serveur manque de mémoire.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Réessayez l'opération. Si l'erreur se répète, contactez votre fournisseur de support technique.  
+Retentez l’opération. Si l'erreur se répète, contactez votre fournisseur de support technique.  
   

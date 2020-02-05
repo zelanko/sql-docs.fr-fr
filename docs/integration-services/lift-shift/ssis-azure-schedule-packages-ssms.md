@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054602"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Planifier l’exécution de packages SSIS déployés dans Azure avec SQL Server Management Studio (SSMS)
@@ -29,7 +29,7 @@ Si vous utilisez SQL Database pour héberger le catalogue SSIS, `SSISDB`, vous p
 
 Quand vous vous servez de SSMS pour planifier un package, SSIS crée automatiquement trois objets Data Factory et les nomme selon le nom du package sélectionné et de l’horodatage. Par exemple, si le nom du package SSIS est **MonPackage**, SSMS crée des objets Data Factory semblables aux suivants :
 
-| Object | Créer une vue d’abonnement |
+| Object | Name |
 |---|---|
 | Pipeline | **Pipeline_MonPackage_2018-05-08T09_00_00Z** |
 | Activité Exécuter le package SSIS | **Activité_MonPackage_2018-05-08T09_00_00Z** |
@@ -76,4 +76,4 @@ Pour en savoir plus sur les autres méthodes de planification d’un package SSI
 
 Pour en savoir plus sur les pipelines, les activités et les déclencheurs Azure Data Factory, consultez les articles suivants :
 -   [Pipelines et activités dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Exécution de pipelines et déclencheurs dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Exécution et déclencheurs de pipelines dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

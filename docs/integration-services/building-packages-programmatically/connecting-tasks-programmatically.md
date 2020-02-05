@@ -18,10 +18,10 @@ ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 51cce76a41cfcc513e633a20b16ca5e861fa492a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299039"
 ---
 # <a name="connecting-tasks-programmatically"></a>Connexion de tâches par programme
@@ -37,8 +37,8 @@ ms.locfileid: "71299039"
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|Spécifie que le résultat de l'exécution détermine l'exécution de la tâche ou du conteneur contraint. Affectez la valeur souhaitée de l'énumération <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> de <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|Spécifie que la valeur d'une expression détermine l'exécution de la tâche ou du conteneur contraint. Définissez la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Spécifie que la contrainte doit produire un résultat et que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, et attribuez la valeur **true** à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Spécifie que la contrainte doit produire un résultat ou que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, et attribuez la valeur **false** à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Spécifie que la contrainte doit produire un résultat et que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, et attribuez la valeur <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>true**à la propriété**.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Spécifie que la contrainte doit produire un résultat ou que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, et attribuez la valeur <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>false**à la propriété**.|  
   
  L'exemple de code suivant illustre l'ajout de deux tâches à un package. Un <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> est créé entre elles pour empêcher l'exécution de la deuxième tâche tant que la première n'a pas fini de s'exécuter.  
   

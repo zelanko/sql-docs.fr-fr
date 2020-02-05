@@ -12,13 +12,13 @@ ms.assetid: a54de936-90c6-4845-aa96-29d32f154601
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 22767609a0281cc21a38d51716661ac98a8ffc24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118369"
 ---
-# <a name="mssqlserver9001"></a>MSSQLSERVER_9001
+# <a name="mssqlserver_9001"></a>MSSQLSERVER_9001
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68118369"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|9001|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|9001|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|LOG_NOT_AVAIL|  
 |Texte du message|Le journal de la base de données '%.*ls' n'est pas disponible. Consultez le journal des événements pour voir s'il contient des messages d'erreur liés à ce problème. Résolvez toutes les erreurs et redémarrez la base de données.|  

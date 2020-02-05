@@ -20,10 +20,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056100"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
@@ -82,7 +82,7 @@ ms.locfileid: "74056100"
   
 6.  Éventuellement, spécifiez une autre personne comme propriétaire de la liste de propriétés.  
   
-7.  Sélectionnez l'une des options suivantes :  
+7.  Sélectionnez l’une des options suivantes :  
   
     -   **Créer une liste de propriétés de recherche vide**  
   
@@ -195,7 +195,7 @@ GO
   
 5.  Cliquez avec le bouton droit sur la liste de propriétés, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Éditeur de liste de propriétés de recherche** , utilisez la grille des propriétés pour ajouter ou supprimer des propriétés de recherche :  
+6.  Dans la boîte de dialogue **Éditeur de liste de propriétés de recherche**, utilisez la grille des propriétés pour ajouter ou supprimer des propriétés de recherche :  
   
     1.  Pour supprimer une propriété de document, cliquez sur l'en-tête de ligne à gauche de la propriété et appuyez sur DEL.  
   

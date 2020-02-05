@@ -12,13 +12,13 @@ ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa8c6371ba5889cde5afe2c66b036a1ec8c031d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056802"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68056802"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|207|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|207|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQ_BADCOL|  
 |Texte du message|Nom de colonne non valide : '%.*ls'.|  
@@ -53,7 +53,7 @@ Cette erreur de requête peut être causée par l'un des problèmes suivants.
   
     1.  FROM  
   
-    2.  ON  
+    2.  ACTIVÉ  
   
     3.  JOIN  
   
@@ -115,7 +115,7 @@ Vérifiez les informations suivantes et corrigez l'instruction comme il convient
     GROUP BY Year;  
     ```  
   
--   La clause WHEN NOT MATCHED BY SOURCE de l'instruction MERGE fait référence à une valeur accessible. Modifiez l'instruction MERGE de façon qu'une ligne au moins soit retournée par la table source dans la clause WHEN NOT MATCHED BY SOURCE. Par exemple, vous devrez peut-être ajouter ou modifier le critère de recherche spécifié pour la clause. Vous pouvez aussi modifier la clause de façon à spécifier une valeur qui ne fait pas référence à la table source. Par exemple, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
+-   La clause WHEN NOT MATCHED BY SOURCE de l'instruction MERGE fait référence à une valeur accessible. Modifiez l'instruction MERGE de façon qu'une ligne au moins soit retournée par la table source dans la clause WHEN NOT MATCHED BY SOURCE. Par exemple, vous devrez peut-être ajouter ou modifier le critère de recherche spécifié pour la clause. Vous pouvez aussi modifier la clause de façon à spécifier une valeur qui ne fait pas référence à la table source. Par exemple : `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
 ## <a name="see-also"></a>Voir aussi  
 [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  

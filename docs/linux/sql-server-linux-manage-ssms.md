@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000093"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utiliser SQL Server Management Studio sur Windows pour gérer SQL Server sur Linux
@@ -63,9 +63,9 @@ Utilisez les étapes de base suivantes pour vous connecter :
    | **Connexion** | Entrez le nom d’un utilisateur ayant accès à une base de données sur le serveur (par exemple, le compte **SA** par défaut créé lors de l’installation). |
    | **Mot de passe** | Entrez le mot de passe de l’utilisateur spécifié (pour le compte **SA**, vous l’avez créé lors de l’installation). |
 
-    ![SQL Server Management Studio : Se connecter au serveur SQL Database](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio : se connecter à un serveur SQL Database](./media/sql-server-linux-manage-ssms/connect.png)
 
-1. Cliquez sur **Se connecter**.
+1. Cliquez sur **Connecter**.
 
     > [!TIP]
     > Si un échec de connexion s’affiche, tentez tout d’abord de diagnostiquer le problème à partir du message d’erreur. Examinez ensuite les [recommandations en matière de résolution des problèmes de connexion](sql-server-linux-troubleshooting-guide.md#connection).
@@ -91,7 +91,7 @@ Après vous être connecté à votre serveur, vous pouvez vous connecter à une 
 
 1. Cliquez sur le bouton **Exécuter** pour exécuter la requête et consulter les résultats.
 
-   ![Réussite. Se connecter au serveur SQL Database : SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Réussite. Se connecter à un serveur SQL Database : SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Bien qu’il soit possible d’effectuer quasiment n’importe quelle tâche de gestion avec des requêtes Transact-SQL, SSMS est un outil graphique qui facilite la gestion de SQL Server. Les sections suivantes fournissent des exemples d’utilisation de l’interface utilisateur graphique.
 
@@ -143,6 +143,6 @@ Lorsqu'un volet est développé, le Moniteur d'activité interroge l'instance po
 ## <a name="see-also"></a>Voir aussi
 - [Qu’est-ce que SSMS ?](../ssms/sql-server-management-studio-ssms.md)
 - [Exporter et importer une base de données avec SSMS](sql-server-linux-migrate-ssms.md)
-- [Tutoriel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [Tutoriel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [Didacticiel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Didacticiel : écriture d'instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Analyse des performances et surveillance de l'activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)

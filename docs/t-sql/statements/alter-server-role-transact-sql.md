@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070275"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68070275"
 
 Modifie l'appartenance d'un rôle serveur ou modifie le nom d'un rôle serveur défini par l'utilisateur. Les rôles serveur fixes ne peuvent pas être renommés.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -95,7 +95,7 @@ Pour ajouter un membre à un rôle serveur défini par l’utilisateur, vous dev
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-name-of-a-server-role"></a>A. Modification du nom d'un rôle de serveur  
+### <a name="a-changing-the-name-of-a-server-role"></a>R. Modification du nom d'un rôle de serveur  
 L'exemple suivant crée un rôle de serveur nommé `Product`, puis modifie le nom du rôle de serveur en `Production`.  
   
 ```  
@@ -127,7 +127,7 @@ ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Suppression d'un compte de connexion SQL Server d'un rôle de serveur  
-L’exemple suivant supprime le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Ted` du rôle serveur fixe `diskadmin`.  
+L’exemple suivant supprime le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted` du rôle serveur fixe `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  

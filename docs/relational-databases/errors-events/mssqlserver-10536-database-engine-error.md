@@ -12,10 +12,10 @@ ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 85901c0fc1a720849cb93f7392ade34ff1db35e0
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71174279"
 ---
 # <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
@@ -26,8 +26,8 @@ ms.locfileid: "71174279"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10536|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10536|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_TOO_MANY_STMTS|  
 |Texte du message|Impossible de créer le repère de plan « %.\*ls », car le lot ou le module correspondant au **\@plan_handle** spécifié contient plus de 1 000 instructions éligibles. Créez un repère de plan pour chaque instruction du lot ou module en indiquant une valeur **statement_start_offset** pour chacune.|  

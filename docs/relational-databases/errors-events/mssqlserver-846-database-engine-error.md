@@ -12,10 +12,10 @@ ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a3462dd0d57a65e7c1df1bfc298502555d99bd14
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874802"
 ---
 # <a name="mssqlserver_846"></a>MSSQLSERVER_846
@@ -26,10 +26,10 @@ ms.locfileid: "70874802"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|846|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|846|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
-|Nom symbolique|Néant|  
+|Nom symbolique|N/A|  
 |Texte du message|Un dépassement de délai s’est produit lors de l’attente du verrou de tampon -- type %d, bp %p, page %d:%d, état %#x, ID de base de données : %d, ID d’unité d’allocation : %I64d%ls, tâche 0x%p : %d, temps d’attente %d, indicateurs 0x%I64x, tâche propriétaire 0x%p. Pas de poursuite de l'attente.|  
   
 ## <a name="explanation"></a>Explication  

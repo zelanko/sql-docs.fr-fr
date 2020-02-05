@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf3fd2a6cd222320e55b7336272bf9f662b81694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009570"
 ---
 # <a name="database-event-category"></a>Catégorie d'événement Base de données
@@ -29,11 +29,11 @@ ms.locfileid: "68009570"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événements Data File Auto Grow](../../relational-databases/event-classes/data-file-auto-grow-event-class.md)|Indique que la taille du fichier de données a augmenté automatiquement. Cet événement n'est pas déclenché si la taille du fichier de données augmente de manière explicite par le biais d'ALTER DATABASE.|  
+|[Data File Auto Grow, classe d’événements](../../relational-databases/event-classes/data-file-auto-grow-event-class.md)|Indique que la taille du fichier de données a augmenté automatiquement. Cet événement n'est pas déclenché si la taille du fichier de données augmente de manière explicite par le biais d'ALTER DATABASE.|  
 |[Data File Auto Shrink, classe d’événements](../../relational-databases/event-classes/data-file-auto-shrink-event-class.md)|Indique que la taille du fichier de données a diminué.|  
-|[Classe d'événements de connexion de mise en miroir de bases de données](../../relational-databases/event-classes/database-mirroring-connection-event-class.md)|Événement généré pour signaler l'état d'une connexion de transport de la mise en miroir de bases de données.|  
-|[Classe d'événements Database Mirroring State Change](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md)|Indique l'état des modifications de la base de données en miroir.|  
-|[Classe d'événements Database Suspect Data Page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)|Indique qu’une page est ajoutée à la table **suspect_pages** dans la base de données **msdb** .|  
+|[Database Mirroring Connection, classe d’événements](../../relational-databases/event-classes/database-mirroring-connection-event-class.md)|Événement généré pour signaler l'état d'une connexion de transport de la mise en miroir de bases de données.|  
+|[Database Mirroring State Change, classe d’événements](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md)|Indique l'état des modifications de la base de données en miroir.|  
+|[Database Suspect Data Page, classe d’événements](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)|Indique qu’une page est ajoutée à la table **suspect_pages** dans la base de données **msdb** .|  
 |[Classe d'événements Log File Auto Grow](../../relational-databases/event-classes/log-file-auto-grow-event-class.md)|Indique que la taille du fichier journal croît automatiquement. Cet événement n'est pas déclenché si le fichier journal a été augmenté de manière explicite par le biais d'ALTER DATABASE.|  
 |[Log File Auto Shrink, classe d’événements](../../relational-databases/event-classes/log-file-auto-shrink-event-class.md)|Indique que la taille du fichier journal croît automatiquement. Cet événement n'est pas déclenché si la taille du fichier journal diminue explicitement par le biais d'ALTER DATABASE.|  
   

@@ -17,10 +17,10 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107135"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Espace disque nécessaire pour les opérations DDL d'index
@@ -80,9 +80,9 @@ ms.locfileid: "68107135"
  Les opérations d'index en ligne utilisent le contrôle de version de ligne pour isoler l'opération d'index des effets des modifications d'autres transactions. Ceci permet d'éviter de demander des verrous partagés sur des lignes qui ont été lues. Les opérations simultanées de suppression et de mise à jour d’utilisateur lors d’opérations d’index en ligne nécessitent de l’espace pour les enregistrements de version dans **tempdb**. Pour plus d’informations, consultez [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Exemple d’espace disque d’un index](../../relational-databases/indexes/index-disk-space-example.md)  
+ [Exemple d'espace disque d'un index](../../relational-databases/indexes/index-disk-space-example.md)  
   
- [Espace disque du journal des transactions pour les opérations d'index](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
+ [Espace disque du journal des transactions pour les opérations d’index](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
  [Estimer la taille d’une table](../../relational-databases/databases/estimate-the-size-of-a-table.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68107135"
   
  [Estimer la taille d'un index non-cluster](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)  
   
- [Estimer la taille d'un segment de mémoire](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
+ [Estimer la taille d’un segment de mémoire](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  

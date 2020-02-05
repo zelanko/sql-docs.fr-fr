@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944487"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67944487"
 
   Répète une valeur de chaîne un nombre spécifié de fois.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-replicate"></a>A. Utilisation de REPLICATE  
+### <a name="a-using-replicate"></a>R. Utilisation de REPLICATE  
  L'exemple suivant réplique un caractère `0` quatre fois devant un code de ligne de production dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -119,7 +119,7 @@ Varchar Column        Char Column
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C : Utilisation de REPLICATE  
+### <a name="c-using-replicate"></a>C. Utilisation de REPLICATE  
  L’exemple suivant réplique un caractère `0` quatre fois devant une valeur `ItemCode`.  
   
 ```  

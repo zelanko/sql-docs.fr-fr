@@ -11,10 +11,10 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b8704464f9921b441ddca6040503ca5a8a910502
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299082"
 ---
 # <a name="building-packages-programmatically"></a>Génération de packages par programme
@@ -79,7 +79,7 @@ ms.locfileid: "71299082"
  [Enregistrement d’un package par programmation](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Explique comment enregistrer un package par programme.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Répertorie les codes d'erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prédéfinis avec leur nom symbolique et leur description.  
   

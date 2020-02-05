@@ -15,10 +15,10 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051219"
 ---
 # <a name="value-method-xml-data-type"></a>value(), méthode (Type de données xml)
@@ -49,7 +49,7 @@ value (XQuery, SQLType)
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. Utilisation de la méthode value() sur une variable de type xml  
+### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>R. Utilisation de la méthode value() sur une variable de type xml  
  Dans l'exemple suivant, une instance XML est stockée dans une variable de type `xml`. La méthode `value()` récupère la valeur d'attribut `ProductID` à partir du code XML. La valeur est ensuite assignée à une variable `int`.  
   
 ```  

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.openlocfilehash: e7affa88f1856571d0b2142f7dcfdf762ed79197
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129353"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migrer des bases de données et des données structurées vers SQL Server sur Linux 
@@ -32,7 +32,7 @@ Pour obtenir un didacticiel sur la migration d’une base de données avec la sa
 
 - [Restaurer une base de données SQL Server de Windows à Linux](sql-server-linux-migrate-restore-database.md).
 
-Il est également possible d’exporter votre base de données vers un fichier BACPAC (fichier compressé contenant le schéma et les données de votre base de données). Si vous avez un fichier BACPAC, vous pouvez transférer ce fichier sur votre machine Linux, puis l’importer dans SQL Server. Pour plus d'informations, consultez les rubriques suivantes :
+Il est également possible d’exporter votre base de données vers un fichier BACPAC (fichier compressé contenant le schéma et les données de votre base de données). Si vous avez un fichier BACPAC, vous pouvez transférer ce fichier sur votre machine Linux, puis l’importer dans SQL Server. Pour plus d'informations, voir les rubriques suivantes :
 
 - [Exporter et importer une base de données avec SSMS ou SqlPackage.exe](sql-server-linux-migrate-ssms.md)
 

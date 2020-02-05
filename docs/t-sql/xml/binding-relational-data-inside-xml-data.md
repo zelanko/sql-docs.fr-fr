@@ -19,10 +19,10 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051331"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Liaison de données relationnelles dans des données XML
@@ -42,7 +42,7 @@ ms.locfileid: "68051331"
   
  En outre, cette liaison est destinée à un emploi en lecture seule. Cela signifie que vous ne pouvez pas écrire de données dans les colonnes qui utilisent ces fonctions. Par exemple, l’instruction sql:variable("\@x")="*expression quelconque"* n’est pas autorisée.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemple : requête inter-domaines utilisant sql:variable()  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>Exemple : requête inter-domaines utilisant sql:variable()  
  Cet exemple montre comment **sql:variable()** peut permettre à une application de paramétrer une requête. Le numéro ISBN est passé en utilisant une variable SQL @isbn. En remplaçant la constante par **sql:variable()** , vous pouvez utiliser la requête pour rechercher n’importe quel numéro ISBN et pas seulement le numéro 0-7356-1588-2.  
   
 ```  

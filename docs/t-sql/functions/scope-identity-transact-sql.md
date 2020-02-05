@@ -21,18 +21,18 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111331"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie la dernière valeur d'identité insérée dans une colonne d'identité dans la même étendue. Une étendue est un module : procédure stockée, déclencheur, fonction ou lot. Par conséquent, deux instructions sont dans la même étendue si elles se trouvent dans la même procédure stockée ou fonction, ou dans le même lot.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY avec des déclencheurs  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>R. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY avec des déclencheurs  
  L'exemple suivant crée deux tables, `TZ` et `TY`, ainsi qu'un déclencheur INSERT sur `TZ`. Lorsqu'une ligne est insérée dans la table `TZ`, le déclencheur (`Ztrig`) est activé et insère une ligne dans `TY`.  
   
 ```sql  
@@ -73,7 +73,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Jeu de résultats : Voici à quoi ressemble la table TZ.  
+Jeu de résultats : Voici à quoi ressemble la table TZ :  
   
 ```  
 Z_id   Z_name  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY() avec la réplication  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY() avec la réplication  
  Les exemples suivants indiquent comment utiliser `@@IDENTITY` et `SCOPE_IDENTITY()` pour des insertions dans une base de données qui est publiée pour la réplication de fusion. Les deux tables mentionnées à titre d'exemple appartiennent à la base de données exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] : `Person.ContactType` n'est pas publiée et `Sales.Customer` est publiée. La réplication de fusion ajoute des déclencheurs aux tables qui sont publiées. Par conséquent, `@@IDENTITY` peut retourner la valeur de l'insertion dans une table système de réplication au lieu de l'insertion dans une table utilisateur.  
   
  La table `Person.ContactType` a une valeur d’identité maximale de 20. Si vous insérez une ligne dans la table, `@@IDENTITY` et `SCOPE_IDENTITY()` retournent la même valeur.  

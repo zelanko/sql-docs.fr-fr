@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2d6a7318c8d45da6c6c029dcacc315fdd1b36460
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1fa2265ec7f53372eac007ecb668cb6801e50d21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809962"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287726"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "68809962"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14117|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14117|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|'%1!' n'est pas configuré comme base de données de distribution.|  
@@ -48,9 +48,9 @@ ms.locfileid: "68809962"
 ## <a name="user-action"></a>Action de l'utilisateur  
  Vérifiez que l'instance du serveur de distribution est inscrite correctement. Si le nom réseau de l'ordinateur et le nom de l'instance SQL Server diffèrent, effectuez une des actions suivantes :  
   
--   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, consultez la documentation Windows.  
+-   Ajoutez le nom de l'instance SQL Server comme nom réseau valide. Pour définir un autre nom réseau, une méthode possible consiste à l'ajouter au fichier hosts local. Le fichier hosts local est installé par défaut dans le répertoire WINDOWS\system32\drivers\etc ou WINNT\system32\drivers\etc. Pour plus d'informations, reportez-vous à la documentation Windows.  
   
-     Si, par exemple, le nom d'ordinateur est comp1, l'adresse IP de l'ordinateur 10.193.17.129 et le nom de l'instance inst1/nominst, ajoutez l'entrée suivante au fichier des hôtes :  
+     Si, par exemple, le nom d'ordinateur est comp1, l'adresse IP de l'ordinateur 10.193.17.129 et le nom de l'instance inst1/nominst, ajoutez l'entrée suivante au fichier des hôtes :  
   
      10.193.17.129 inst1  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68809962"
   
  Après avoir vérifié que l'instance du serveur de distribution est inscrite correctement, vérifiez que la base de données de distribution figure dans **msdb..MSdistributiondbs**. Si elle ne s'y trouve pas :  
   
-1.  Créez un script de la configuration de la distribution. Pour plus d’informations, voir [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
+1.  Créez un script de la configuration de la distribution. Pour plus d'informations, voir [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
 2.  Désactivez la distribution puis réactivez-la. Pour plus d'informations, voir [Configure Distribution](../../relational-databases/replication/configure-distribution.md).  
   

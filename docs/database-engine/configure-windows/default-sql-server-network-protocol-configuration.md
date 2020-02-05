@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011952"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuration des protocoles réseau par défaut de SQL Server
@@ -33,14 +33,14 @@ Le tableau suivant décrit la configuration après l'installation.
 
 |Édition | Nouvelle installation ou installation précédente présente | Mémoire partagée | TCP/IP | Canaux nommés|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
-|Standard | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
-|Web | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
-|Développeur | Nouvelle installation | Activé | Désactivé | Désactivés pour les connexions réseau.|
-|Evaluation | Nouvelle installation | Activé | Activé | Désactivés pour les connexions réseau.|
-|SQL Server Express | Nouvelle installation | Activé | Désactivé | Désactivés pour les connexions réseau.|
+|Entreprise | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
+|standard | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
+|Web | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
+|Développeur | Nouvelle installation | activé | Désactivé | Désactivés pour les connexions réseau.|
+|Évaluation | Nouvelle installation | activé | activé | Désactivés pour les connexions réseau.|
+|SQL Server Express | Nouvelle installation | activé | Désactivé | Désactivés pour les connexions réseau.|
 |Toutes les éditions | L'installation précédente est présente mais n'est pas mise à niveau. | Même configuration que pour une nouvelle installation | Même configuration que pour une nouvelle installation | Même configuration que pour une nouvelle installation|
-|Toutes les éditions | Mettre à niveau | Activé | Les paramètres de l'installation précédente sont conservés. | Les paramètres de l'installation précédente sont conservés.|
+|Toutes les éditions | Mettre à niveau | activé | Les paramètres de l'installation précédente sont conservés. | Les paramètres de l'installation précédente sont conservés.|
 
 
 >[!NOTE]
@@ -57,7 +57,7 @@ Pour obtenir des exemples de chaînes de connexion, consultez les rubriques suiv
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Paramètres de Browser
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Paramètres de Browser
 
 Le service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser peut être configuré pour démarrer automatiquement au cours de l'installation. Le paramètre par défaut est de démarrer automatiquement dans les conditions suivantes :
 

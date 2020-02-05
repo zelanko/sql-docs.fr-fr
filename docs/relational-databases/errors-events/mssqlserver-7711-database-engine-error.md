@@ -12,13 +12,13 @@ ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bdfc39abde5603287486cd13ed1c67e746640ad7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951585"
 ---
-# <a name="mssqlserver7711"></a>MSSQLSERVER_7711
+# <a name="mssqlserver_7711"></a>MSSQLSERVER_7711
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67951585"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7711|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7711|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PRT_RANGE_OVERLAP|  
 |Texte du message|L’option DATA_COMPRESSION a été spécifiée plusieurs fois pour la table, l’index, ou l’une de leurs partitions.|  

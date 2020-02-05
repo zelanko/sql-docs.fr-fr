@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916042"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Utiliser des groupes de disponibilité Always On sur Linux
@@ -76,13 +76,13 @@ Avant de commencer, sauvegardez chaque base de données.
 
    Si le type de cluster du groupe de disponibilité est `NONE`, effectuez un basculement manuel. Exécutez les étapes suivantes dans l'ordre :
 
-      A. La commande suivante convertit un réplica principal en réplica secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l'instance SQL Server qui héberge le réplica principal.
+      a. La commande suivante convertit un réplica principal en réplica secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l'instance SQL Server qui héberge le réplica principal.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. La commande suivante convertit un réplica secondaire synchrone en réplica principal. Exécutez la commande Transact-SQL suivante sur l'instance SQL Server cible (l'instance qui héberge le réplica secondaire synchrone).
+      b. La commande suivante convertit un réplica secondaire synchrone en réplica principal. Exécutez la commande Transact-SQL suivante sur l'instance SQL Server cible (l'instance qui héberge le réplica secondaire synchrone).
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995850"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
@@ -75,7 +75,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur*.  
   
--   CREATE \< *Élément sécurisable de base de données*>  
+-   CREATE \<*Élément sécurisable de base de données*>  
   
      Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données*.  
   
@@ -99,7 +99,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 ##  <a name="_securables"></a> Autorisations applicables à des éléments sécurisables spécifiques  
  Le tableau ci-dessous répertorie les principales classes d'autorisations et les types d'éléments sécurisables auxquels elles peuvent s'appliquer.  
   
-|Autorisation|S'applique à|  
+|Autorisation|S’applique à|  
 |----------------|----------------|  
 |ALTER|Toutes les classes d’objets, à l’exception de TYPE.|  
 |CONTROL|Toutes les classes d’objets : <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW et<br />XML SCHEMA COLLECTION|  
@@ -373,7 +373,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
     -   la connexion ;  
   
-    -   l'utilisateur ;  
+    -   L’utilisateur  
   
     -   les appartenances aux rôles ;  
   
@@ -426,7 +426,7 @@ Une instruction DENY sur la table est remplacée par une instruction GRANT sur u
 ##  <a name="_examples"></a> Exemples  
  Les exemples de cette section montrent comment récupérer des informations relatives aux autorisations.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Retour de la liste complète des autorisations accordables  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. Retour de la liste complète des autorisations accordables  
  L'instruction suivante retourne toutes les autorisations du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de la fonction `fn_builtin_permissions` . Pour plus d’informations, consultez [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
 ```sql  

@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959545"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>FAQ de [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
@@ -83,7 +83,7 @@ Non. Les investissements dans les outils phares Windows (SSMS, SSDT, PowerShell)
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Connexion à Azure|Oui|Oui|
-|Tableau de bord|Oui| |
+|tableau de bord|Oui| |
 |Extensions|Oui| |
 |Terminal intégré|Oui||
 |Explorateur d’objets|Oui|Oui|
@@ -94,7 +94,7 @@ Non. Les investissements dans les outils phares Windows (SSMS, SSDT, PowerShell)
 |Volet des tâches|Oui||
 |Thèmes|Oui||
 |Mode sombre|Oui||
-|Azure Resource Explorer|Aperçu||
+|Azure Resource Explorer|PRÉVERSION||
 |Assistant Générer des scripts||Oui
 |Importation/exportation de DACPAC||Oui|
 |Propriétés des objets||Oui|
@@ -108,7 +108,7 @@ Non. Les investissements dans les outils phares Windows (SSMS, SSDT, PowerShell)
 |Exportation des résultats au format CSV, JSON, XLSX|Oui||
 |IntelliSense|Oui|Oui|
 |Extraits de code|Oui|Oui|
-|Plan d’affichage|Aperçu|Oui|
+|Plan d’affichage|PRÉVERSION|Oui|
 |Statistiques du client||Oui|
 |Statistiques des requêtes dynamiques||Oui|
 |Options de requête||Oui|
@@ -130,18 +130,18 @@ Non. Les investissements dans les outils phares Windows (SSMS, SSDT, PowerShell)
 
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Assistant de données externes|Aperçu||
-|Intégration HDFS|Aperçu||
-|Notebooks|Aperçu||
+|Assistant de données externes|PRÉVERSION||
+|Intégration HDFS|PRÉVERSION||
+|Notebooks|PRÉVERSION||
 
 ### <a name="database-administration"></a>Administration de bases de données
 
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sauvegarder/restaurer|Oui|Oui|
-|Importation de fichiers plats|Aperçu|Oui|
-|Agent SQL|Aperçu|Oui|
-|SQL Profiler|Aperçu|Oui|
+|Importation de fichiers plats|PRÉVERSION|Oui|
+|SQL Agent|PRÉVERSION|Oui|
+|SQL Profiler|PRÉVERSION|Oui|
 |Always On||Oui|
 |Always Encrypted||Oui|
 |Assistant Copier des données||Oui|
@@ -154,7 +154,7 @@ Non. Les investissements dans les outils phares Windows (SSMS, SSDT, PowerShell)
 |PolyBase||Oui|
 |Magasin des requêtes||Oui|
 |Serveurs inscrits||Oui|
-|REPLICATION||Oui|
+|Réplication||Oui|
 |Gestion de la sécurité||Oui|
 |Service Broker||Oui|
 |SQL Mail||Oui|

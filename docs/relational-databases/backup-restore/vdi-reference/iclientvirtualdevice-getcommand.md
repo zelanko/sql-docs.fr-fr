@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847590"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
@@ -37,9 +37,9 @@ HRESULT IClientVirtualDevice::GetCommand (
 
 *dwTimeOut* : le délai d’attente en millisecondes. Utilisez INFINITE pour attendre indéfiniment. Utilisez 0 pour interroger une commande. VD_E_TIMEOUT est retourné si aucune commande n’est actuellement disponible. Si le délai d’expiration s’écoule, le client décide de l’action suivante.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | NOERROR | Une commande a été extraite. |
 | VD_E_CLOSE | L’appareil a été fermé par le serveur. |

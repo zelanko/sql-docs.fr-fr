@@ -13,10 +13,10 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115811"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Moniteur d'activité des travaux (Paramètres du filtre)
@@ -28,7 +28,7 @@ ms.locfileid: "68115811"
 ## <a name="all-jobs"></a>Tous les travaux  
  Ce groupe de critères de filtre est disponible lors du filtrage du Moniteur d'activité des travaux.  
   
- **Name**  
+ **Nom**  
  Permet de filtrer les travaux par leur nom.  
   
  **Prochaine exécution**  
@@ -62,7 +62,7 @@ ms.locfileid: "68115811"
  **Appliquer le filtre**  
  Pour appliquer le filtre, cliquez sur **Appliquer le filtre**, puis sur **OK**. Pour conserver les paramètres du filtre dans la boîte de dialogue **Paramètres du filtre**, sans les appliquer, désactivez l’option **Appliquer le filtre**, puis cliquez sur **OK** pour afficher toutes les lignes.  
   
- **Désactiver**  
+ **Clear**  
  Rétablit les paramètres par défaut du filtre.  
   
 ## <a name="see-also"></a>Voir aussi  

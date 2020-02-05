@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094652"
 ---
-# <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
+# <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette fonction retourne la valeur de gravité de l’erreur là où une erreur se produit, si cette erreur a entraîné l’exécution du bloc CATCH d’une construction TRY...CATCH.  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +43,9 @@ ERROR_SEVERITY ( )
 ```  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Quand elle est appelée dans un bloc CATCH où une erreur se produit, `ERROR_SEVERITY` retourne la valeur de gravité de l’erreur à l’origine de l’exécution du bloc `CATCH`.  
 
 `ERROR_SEVERITY` retourne NULL si l’appel a lieu en dehors de l’étendue d’un bloc CATCH.  
@@ -59,7 +59,7 @@ Quand elle est appelée dans un bloc CATCH où une erreur se produit, `ERROR_SEV
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Utilisation de ERROR_SEVERITY dans un bloc CATCH  
+### <a name="a-using-error_severity-in-a-catch-block"></a>R. Utilisation de ERROR_SEVERITY dans un bloc CATCH  
 L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. `ERROR_SEVERITY` retourne la valeur de gravité de cette erreur.  
 ```sql  
 BEGIN TRY  
@@ -85,7 +85,7 @@ ErrorSeverity
 
 ```  
   
-### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation de ERROR_SEVERITY dans un bloc CATCH avec d'autres outils de gestion des erreurs  
+### <a name="b-using-error_severity-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation de ERROR_SEVERITY dans un bloc CATCH avec d'autres outils de gestion des erreurs  
 L’exemple suivant montre une instruction `SELECT` qui génère une erreur de division par zéro. La procédure stockée retourne des informations sur cette erreur.  
 
 ```sql  

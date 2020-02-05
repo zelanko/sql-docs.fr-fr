@@ -17,10 +17,10 @@ ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cf804f934a08db335c55b15ab23b9e42a7ee9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051319"
 ---
 # <a name="delete-xml-dml"></a>delete (DML XML)
@@ -41,7 +41,7 @@ delete Expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. Suppression de nœuds d'un document stocké dans une variable xml non typée  
+### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>R. Suppression de nœuds d'un document stocké dans une variable xml non typée  
  L'exemple suivant montre comment supprimer différents nœuds d'un document. Tout d’abord, une instance XML est affectée à une variable de type **xml**. Ensuite, les instructions DML XML delete suivantes suppriment différents nœuds du document.  
   
 ```  

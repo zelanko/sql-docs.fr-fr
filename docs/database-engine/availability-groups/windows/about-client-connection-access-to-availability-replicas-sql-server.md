@@ -18,10 +18,10 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47e3c79bacbd75ca6761bdb250b05084caf2832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991730"
 ---
 # <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Types de connexions clientes aux réplicas dans un groupe de disponibilité Always On
@@ -67,15 +67,15 @@ ms.locfileid: "67991730"
 ##  <a name="HowConnectionAccessAffectsConnectivity"></a> Comment la configuration d'accès à la connexion affecte la connectivité client  
  Les paramètres d'accès à la connexion d'un réplica déterminent si une tentative de connexion échoue ou réussit. Le tableau suivant récapitule si une tentative de connexion donnée réussit ou échoue pour chaque paramètre d'accès à la connexion.  
   
-|Rôle de réplica|Accès à la connexion pris en charge sur le réplica|Intention de connexion|Résultat de la tentative de connexion|  
+|Rôle du réplica|Accès à la connexion pris en charge sur le réplica|Intention de connexion|Résultat de la tentative de connexion|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondary|All|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Réussi|  
-|Secondary|Aucun (il s'agit du comportement secondaire par défaut.)|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Failure|  
-|Secondary|Intention de lecture uniquement|Intention de lecture|Réussi|  
-|Secondary|Intention de lecture uniquement|Lecture-écriture ou aucune intention de connexion spécifiée|Failure|  
-|Principal|Tous (il s'agit du comportement principal par défaut.)|Lecture seule, lecture-écriture ou aucune intention de connexion spécifiée|Réussi|  
-|Principal|Lecture-écriture|Intention de lecture uniquement|Failure|  
-|Principal|Lecture-écriture|Lecture-écriture ou aucune intention de connexion spécifiée|Réussi|  
+|Secondary|Tous|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Succès|  
+|Secondary|Aucun (il s'agit du comportement secondaire par défaut.)|Intention de lecture, lecture-écriture, ou aucune intention de connexion spécifiée|Échec|  
+|Secondary|Intention de lecture uniquement|Intention de lecture|Succès|  
+|Secondary|Intention de lecture uniquement|Lecture-écriture ou aucune intention de connexion spécifiée|Échec|  
+|Principal|Tous (il s'agit du comportement principal par défaut.)|Lecture seule, lecture-écriture ou aucune intention de connexion spécifiée|Succès|  
+|Principal|Lecture-écriture|Intention de lecture uniquement|Échec|  
+|Principal|Lecture-écriture|Lecture-écriture ou aucune intention de connexion spécifiée|Succès|  
   
  Pour plus d’informations sur la configuration d’un groupe de disponibilité pour accepter les connexions clientes à ses réplicas, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "67991730"
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

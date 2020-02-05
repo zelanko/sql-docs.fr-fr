@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064542"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
@@ -35,7 +35,7 @@ ms.locfileid: "73064542"
   
 -   pour remplacer une procédure stockée.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -153,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Métadonnées  
  Cette section répertorie les vues de catalogue système que vous pouvez utiliser pour retourner des métadonnées sur les fonctions définies par l’utilisateur.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : Affiche la définition des fonctions définies par l’utilisateur [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : affiche la définition des fonctions définies par l’utilisateur [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
   
 ```sql  
 SELECT definition, type   
@@ -165,16 +165,16 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : Affiche des informations sur les paramètres définis dans les fonctions définies par l'utilisateur.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : affiche des informations sur les paramètres définis dans les fonctions définies par l’utilisateur.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Affiche les objets sous-jacents référencés par une fonction.  
+ [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : affiche les objets sous-jacents référencés par une fonction.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisation ALTER sur le schéma dans lequel la fonction est en cours de création.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Utilisation d’une fonction scalaire définie par l’utilisateur pour changer un type de données  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>R. Utilisation d’une fonction scalaire définie par l’utilisateur pour changer un type de données  
  Cette fonction simple prend un type de données **int** comme entrée et retourne un type de données **decimal(10,2)** comme sortie.  
   
 ```sql  

@@ -12,13 +12,13 @@ ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5b4872e87ffa3c84be8a93e5faeb597d90c722c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087620"
 ---
-# <a name="mssqlserver7923"></a>MSSQLSERVER_7923
+# <a name="mssqlserver_7923"></a>MSSQLSERVER_7923
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68087620"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7923|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7923|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_SUMMARY_TABLE_NAME|  
 |Texte du message|Table TABLE                Objet ID O_ID.|  

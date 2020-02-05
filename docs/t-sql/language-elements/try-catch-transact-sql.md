@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121558"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68121558"
 
   Implémente la gestion des erreurs pour [!INCLUDE[tsql](../../includes/tsql-md.md)], similaire à la gestion des exceptions dans les langages [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peut être contenu dans un bloc TRY. Si une erreur survient dans le bloc TRY, le contrôle est passé à un autre groupe d'instructions contenues dans un bloc CATCH.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -200,14 +200,14 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>Transactions non validables et XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>Transactions non validables et XACT_STATE  
  Si une erreur générée dans un bloc TRY entraîne l'invalidation de la transaction actuelle, elle est classifiée comme transaction non validable. Une erreur qui termine normalement une transaction en dehors d'un bloc TRY fait entrer la transaction dans un état non validable lorsqu'elle survient au sein d'un bloc TRY. Une transaction non validable ne peut effectuer que des opérations de lecture ou ROLLBACK TRANSACTION. La transaction ne peut exécuter aucune instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui générerait une opération d'écriture ou COMMIT TRANSACTION. La fonction XACT_STATE renvoie une valeur de -1 si une transaction a été classifiée comme non validable. Lorsqu'un traitement est terminé, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] restaure automatiquement toutes les transactions non validables actives. Si aucun message d'erreur n'a été envoyé lorsque la transaction est passée dans un état non validable, une erreur est envoyée à l'application cliente lorsque le traitement se termine. Cela indique qu'une transaction non validable a été détectée et annulée.  
   
  Pour plus d’informations sur les transactions non validables et la fonction XACT_STATE, consultez [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-trycatch"></a>A. Utilisation de TRY...CATCH  
+### <a name="a-using-trycatch"></a>R. Utilisation de TRY...CATCH  
  L'exemple suivant illustre une instruction `SELECT` qui génère une erreur de division par zéro. L'erreur entraîne le saut de l'exécution vers le bloc `CATCH` associé.  
   
 ```sql  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. Utilisation de TRY...CATCH avec XACT_STATE  
+### <a name="c-using-trycatch-with-xact_state"></a>C. Utilisation de TRY...CATCH avec XACT_STATE  
  L'exemple suivant montre comment utiliser la construction `TRY...CATCH` pour gérer les erreurs qui surviennent dans une transaction. La fonction `XACT_STATE` détermine si la transaction doit être validée ou annulée. Dans cet exemple, `SET XACT_ABORT` est `ON`. Cela rend la transaction non validable lorsque l'erreur de violation de contrainte se produit.  
   
 ```sql  

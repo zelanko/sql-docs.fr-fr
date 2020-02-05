@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223593"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -70,7 +70,7 @@ Requiert une autorisation ALTER ANY SENSITIVITY CLASSIFICATION. La classificatio
 ## <a name="examples"></a>Exemples  
 
 
-### <a name="a-dropping-classification-from-a-single-column"></a>A. Suppression de la classification d’une seule colonne
+### <a name="a-dropping-classification-from-a-single-column"></a>R. Suppression de la classification d’une seule colonne
 
 L'exemple de code suivant supprime la classification de la colonne `dbo.sales.price`.  
 

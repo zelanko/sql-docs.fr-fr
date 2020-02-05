@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048861"
 ---
 # <a name="event-notifications"></a>Notifications d'événements
@@ -69,7 +69,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Les déclencheurs DML sont détenus par le propriétaire des tables sur lesquelles ils sont appliqués.|Le propriétaire d'une notification d'événements sur une file d'attente peut être différent de celui de l'objet auquel la notification est appliquée.|  
 |Les déclencheurs prennent en charge la clause EXECUTE AS.|Les notifications d'événements ne prennent pas en charge la clause EXECUTE AS.|  
 |Les informations d’événement de déclencheur DDL peuvent être capturées à l’aide de la fonction EVENTDATA, qui retourne un type de données **xml** .|Les notifications d’événements envoient des informations d’événement **xml** à un service Service Broker. Les informations sont mises en forme dans le même schéma que celui de la fonction EVENTDATA.|  
-|Les métadonnées concernant les déclencheurs se trouvent dans les affichages catalogue **sys.triggers** et **sys.server_triggers** .|Les métadonnées concernant les notifications d’événements se trouvent dans les affichages catalogue **sys.event_notifications** et **sys.server_event_notifications**.|  
+|Les métadonnées concernant les déclencheurs se trouvent dans les affichages catalogue **sys.triggers** et **sys.server_triggers** .|Les métadonnées concernant les notifications d’événements se trouvent dans les affichages catalogue **sys.event_notifications** et **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notifications d'événements et Trace SQL  
  Le tableau suivant répertorie les similitudes et les différences dans l'utilisation des notifications d'événements et de Trace SQL dans le cadre de la surveillance des événements de serveur.  

@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040463"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68040463"
 
 Indique et corrige le nombre de pages et de lignes inexact dans les vues de catalogue. En raison de ces inexactitudes, la procédure stockée système sp_spaceused peut retourner des rapports incorrects en matière d'utilisation de l'espace.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ Nom ou identificateur de la table ou de la vue indexée dont les statistiques d'
 *index_id* | *index_name*  
 Identificateur ou nom de l'index à utiliser. Si aucun index n'est spécifié, l'instruction traite tous les index pour la table ou la vue indiquée.  
   
-par  
+WITH  
 Permet d'indiquer des options.  
   
 NO_INFOMSGS  
@@ -96,7 +96,7 @@ Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>A. Mise à jour du nombre de pages ou de lignes, ou les deux, pour tous les objets de la base de données active  
+### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>R. Mise à jour du nombre de pages ou de lignes, ou les deux, pour tous les objets de la base de données active  
 L'exemple suivant donne la valeur `0` au nom de la base de données et `DBCC UPDATEUSAGE` renvoie des informations mises à jour sur le nombre de pages ou de lignes dans la base de données active.
   
 ```sql

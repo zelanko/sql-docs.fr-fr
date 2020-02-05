@@ -18,10 +18,10 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9c4660fa212a85f3bba5812d6cc990f9c02c5539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101753"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (type de données geography)
@@ -39,10 +39,10 @@ Cette méthode de type de données **geography** prend en charge les instances *
 ```  
   
 ## <a name="arguments"></a>Arguments  
-_geography_  
+_Geography_  
 Autre instance **geography** sur laquelle `ReorientObject()` est appelé.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
 Type de retour CLR : **SqlGeography**  
