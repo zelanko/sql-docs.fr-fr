@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72173854"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72173854"
 
 Modifie une stratégie de sécurité.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -107,7 +107,7 @@ En outre, les autorisations suivantes sont requises pour chaque prédicat ajout�
 ## <a name="examples"></a>Exemples  
 Les exemples suivants illustrent l’utilisation de la syntaxe **ALTER SECURITY POLICY**. Pour obtenir un exemple de scénario de stratégie de sécurité complet, consultez [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md).  
   
-### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. Ajout d'un prédicat à une stratégie  
+### <a name="a-adding-an-additional-predicate-to-a-policy"></a>R. Ajout d'un prédicat à une stratégie  
 La syntaxe suivante modifie une stratégie de sécurité, en ajoutant un prédicat de filtre sur la table `mytable`.  
   
 ```  

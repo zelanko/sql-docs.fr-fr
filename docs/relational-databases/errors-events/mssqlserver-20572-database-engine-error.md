@@ -12,13 +12,13 @@ ms.assetid: 9d91d0fc-e8b1-4ba6-b97c-725864578a7b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 816ffc53761e3026cd9e2c281f417b129d9bd822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896708"
 ---
-# <a name="mssqlserver20572"></a>MSSQLSERVER_20572
+# <a name="mssqlserver_20572"></a>MSSQLSERVER_20572
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67896708"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|20572|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|20572|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum20572|  
 |Texte du message|L'Abonné '%s' avec un abonnement à l'article '%s' de la publication '%s' a été réinitialisé après l'échec de la validation.|  
