@@ -16,10 +16,10 @@ ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8967eef523332cdb25aa68ee8039373d7b8d209e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981165"
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>getObject, méthode (java.lang.String) (SQLServerResultSet)
@@ -39,7 +39,7 @@ public java.lang.Object getObject(java.lang.String columnName)
   
  Valeur **String** qui contient le nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **Object**.  
   
 ## <a name="exceptions"></a>Exceptions  

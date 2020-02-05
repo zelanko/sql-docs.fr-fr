@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 1e4d29fb73c11b727c21730a71eb8d97331296f6
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: f483b643d2d1b1c8ec1e58c0772de021092b2594
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68049779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656943"
 ---
 # <a name="sql-server-managing-partners"></a>Partenaires pour la gestion de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,13 +23,13 @@ Pour gérer vos services SQL Server, vous pouvez choisir parmi un large éventai
 
 | Partenaire | Description | Liens |
 | --- | --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL Compliance Manager est une solution d’audit complète qui montre qui a fait quoi, quand et comment sur les serveurs SQL Server, permettant de garantir la conformité avec les réglementations et les exigences de sécurité des données.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site Web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] | |
+|![idera][1] |**IDERA**<br>SQL Compliance Manager est une solution d’audit complète qui montre qui a fait quoi, quand et comment sur les serveurs SQL Server, permettant de garantir la conformité avec les réglementations et les exigences de sécurité des données.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] | |
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur quelques autres de nos partenaires, consultez [Partenaires pour la haute disponibilité et la récupération d’urgence][hadr_partners], [Partenaires pour la gestion][monitor_partners] et [Partenaires pour le développement][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 
 
 <!--Article links-->

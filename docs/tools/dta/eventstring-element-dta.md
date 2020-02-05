@@ -1,10 +1,7 @@
 ---
-title: Élément EventString (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: EventString, élément (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 157c50f419b7003a9dde862c3a2c74c4033fe794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a0bf4fe2b768fd0a9f714540946a84c126aa1679
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008803"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307692"
 ---
 # <a name="eventstring-element-dta"></a>EventString, élément (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie une charge de travail de script [!INCLUDE[tsql](../../includes/tsql-md.md)] directement dans le fichier d'entrée XML.  
+
+Spécifie une charge de travail de script [!INCLUDE[tsql](../../includes/tsql-md.md)] directement dans le fichier d'entrée XML.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +41,9 @@ ms.locfileid: "68008803"
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|**Weight**|Ce paramètre est facultatif. Spécifie le facteur de pondération de la requête (facteur d'importance) pour l'événement spécifié. Utilisez un type de données **float** pour spécifier la pondération. Par exemple, **Weight**="100.01". La valeur minimale que vous pouvez spécifier pour **Weight** est « 0 ».|  
+|**Poids**|facultatif. Spécifie le facteur de pondération de la requête (facteur d'importance) pour l'événement spécifié. Utilisez un type de données **float** pour spécifier la pondération. Par exemple, **Weight**="100.01". La valeur minimale que vous pouvez spécifier pour **Weight** est « 0 ».|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   

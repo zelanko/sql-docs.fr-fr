@@ -1,10 +1,7 @@
 ---
-title: Élément KeepExisting, (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: KeepExisting, élément (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7caf2afc79a61f33bd31665714cf6d2ba270a656
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 50741d36bfd0dd3b9f566954d1ef53b86be14609
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034818"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307643"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting, élément (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie les structures PDS (index, vues indexées ou partitions) que l'Assistant Paramétrage du moteur de base de données doit conserver lors de la génération de sa recommandation.  
+
+Spécifie les structures PDS (index, vues indexées ou partitions) que l'Assistant Paramétrage du moteur de base de données doit conserver lors de la génération de sa recommandation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +45,7 @@ ms.locfileid: "68034818"
 |**Type de données et longueur**|**string**, limite de longueur appliquée par le serveur.|  
 |**Valeurs autorisées**|**NONE**<br /> Aucune structure existante.<br /><br /> **ALL**<br /> Toutes les structures existantes.<br /><br /> **ALIGNED**<br /> Toutes les structures alignées sur les partitions.<br /><br /> **CL_IDX**<br /> Tous les index cluster sur les tables.<br /><br /> **IDX**<br /> Tous les index cluster et non cluster sur les tables.<br /><br /> Utilisez une seule de ces valeurs avec cet élément.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément **TuningOptions** .|  
+|**Occurrence**|facultatif. Ne peut être utilisé qu'une seule fois pour chaque élément **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

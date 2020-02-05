@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109352"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109352"
   
  Pour extraire un objet ou un tableau d’une chaîne JSON à la place d’une valeur scalaire, consultez [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). Pour obtenir des informations sur les différences entre **JSON_VALUE** et **JSON_QUERY**, consultez [Comparer JSON_VALUE et JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ JSON_VALUE ( expression , path )
  *path*  
  Chemin JSON qui spécifie la propriété à extraire. Pour plus d’informations, consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
 
-Dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et dans [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], vous pouvez fournir une variable comme valeur de *path*.
+Dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], vous pouvez fournir une variable comme valeur de *path*.
   
  Si le format de *path* n’est pas valide, **JSON_VALUE** retourne une erreur.  
   
@@ -92,11 +92,11 @@ SET @jsonInfo=N'{
   
  Le tableau suivant compare le comportement de **JSON_VALUE** en mode lax et en mode strict. Pour plus d’informations sur la spécification du mode de chemin facultatif (lax ou strict), consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Chemin d'accès|Valeur renvoyée en mode lax|Valeur renvoyée en mode strict|En savoir plus|  
+|Path|Valeur renvoyée en mode lax|Valeur renvoyée en mode strict|En savoir plus|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|Error|Valeur non scalaire.<br /><br /> Utilisez **JSON_QUERY** à la place.|  
-|$.info.type|N'1'|N'1'|N/a|  
-|$.info.address.town|N'Bristol'|N'Bristol'|N/a|  
+|$.info.type|N'1'|N'1'|n/a|  
+|$.info.address.town|N'Bristol'|N'Bristol'|n/a|  
 |$.info."address"|NULL|Error|Valeur non scalaire.<br /><br /> Utilisez **JSON_QUERY** à la place.|  
 |$.info.tags|NULL|Error|Valeur non scalaire.<br /><br /> Utilisez **JSON_QUERY** à la place.|  
 |$.info.type[0]|NULL|Error|Pas un tableau.|  

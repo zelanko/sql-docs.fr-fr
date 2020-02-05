@@ -1,10 +1,7 @@
 ---
-title: Élément StorageBoundInMB, (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: StorageBoundInMB, élément (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f206c59908ab5c44c1b5026e9c7d6dd054e33f1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: f6d83065a572e2d125b43830653fde5a2298eb2b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105975"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306622"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB, élément (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie l'espace maximal, en mégaoctets, pouvant être consommé par la recommandation de paramétrage de l'Assistant Paramétrage du moteur de base de données (jeu d'index et de partitions).  
+
+Spécifie l'espace maximal, en mégaoctets, pouvant être consommé par la recommandation de paramétrage de l'Assistant Paramétrage du moteur de base de données (jeu d'index et de partitions).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +44,7 @@ ms.locfileid: "68105975"
 |--------------------|-----------------|  
 |**Type de données et longueur**|**unsignedInt**, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour l'élément **TuningOptions** .|  
+|**Occurrence**|facultatif. Ne peut être utilisé qu'une seule fois pour l'élément **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

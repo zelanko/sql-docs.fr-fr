@@ -9,10 +9,10 @@ ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579536"
 ---
 # <a name="report-builder-functions---last-function"></a>Fonctions du Générateur de rapports - Last
@@ -30,9 +30,9 @@ Last(expression, scope)
   
 #### <a name="parameters"></a>Paramètres  
  *expression*  
- (**Variant** ou **Binary**) Expression sur laquelle effectuer l’agrégation ; par exemple, `=Fields!Fieldname.Value`.  
+ (**Variant** ou **Binaire**) Expression sur laquelle effectuer l’agrégation, par exemple `=Fields!Fieldname.Value`.  
   
- *portée*  
+ *scope*  
  (**String**) (Facultatif) Nom d’un dataset, d’une région de données ou d’un groupe qui contient les éléments de rapport auxquels appliquer la fonction. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
 ## <a name="return-type"></a>Type de retour  

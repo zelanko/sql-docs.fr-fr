@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4fb95da97a5fbe9df9024a48b30d581e771d2ea7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122010"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>Différent de (Transact SQL) - traditionnel
@@ -36,7 +36,7 @@ ms.locfileid: "68122010"
 
   Compare deux expressions (opérateur de comparaison). Lorsque vous comparez des expressions non nulles, le résultat est TRUE si l'opérande de gauche a une valeur différente de celui de droite ; si tel n'est pas le cas, le résultat est FALSE. Si l’une des opérandes ou les deux ont la valeur NULL, consultez la rubrique [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ expression <> expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using--in-a-simple-query"></a>A. Utilisation de <> dans une requête simple  
+### <a name="a-using--in-a-simple-query"></a>R. Utilisation de <> dans une requête simple  
  L'exemple suivant retourne toutes les lignes de la table `Production.ProductCategory` qui n'ont pas de valeur dans `ProductCategoryID` égale à la valeur 3 ou à la valeur 2.  
   
 ```  

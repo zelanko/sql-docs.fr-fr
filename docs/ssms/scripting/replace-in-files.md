@@ -1,6 +1,6 @@
 ---
-title: Remplacer dans les fichiers | Microsoft Docs
-ms.custom: ''
+title: Remplacer dans les fichiers
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265981"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253706"
 ---
 # <a name="replace-in-files"></a>Remplacer dans les fichiers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68265981"
 ## <a name="find-what"></a>Rechercher  
  Ces contrôles de l’onglet **Remplacer dans les fichiers** vous permettent de spécifier la chaîne ou l’expression à rechercher.  
   
- **Find what**  
+ **Rechercher**  
  Tapez le texte à rechercher. La boîte de dialogue tente de fournir le texte recherché, à l'aide du texte sélectionné avec le curseur avant l'ouverture de la boîte de dialogue, d'un texte proche ou d'un texte qui a fait l'objet d'une recherche antérieure. Vous pouvez réutiliser une des 20 dernières chaînes de recherche en la sélectionnant dans cette liste déroulante.  
   
  **[chaînes contenant des caractères génériques]**  
@@ -37,8 +37,8 @@ ms.locfileid: "68265981"
  **[expression régulière]**  
  Pour forcer le moteur de recherche à interpréter votre chaîne de recherche comme une expression régulière, cochez la case **Utiliser** sous **Options de recherche** , puis cliquez sur **Expressions régulières**.  
   
- **Générateur d'expressions**  
- Ce bouton triangulaire en regard de la zone **Rechercher** est disponible quand la case **Utiliser** est cochée sous **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, en fonction de l’option **Utiliser** sélectionnée. Choisir un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Rechercher** .  
+ **Générateur d’expressions**  
+ Ce bouton triangulaire en regard de la zone **Rechercher** est disponible quand la case **Utiliser** est cochée sous **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, selon l’option **Utiliser** qui est sélectionnée. Choisir un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Rechercher** .  
   
 ## <a name="replace-with"></a>Remplacer par  
  Ces contrôles vous permettent de spécifier ce qui doit être inséré à la place de la chaîne ou de l'expression trouvée.  
@@ -46,22 +46,22 @@ ms.locfileid: "68265981"
  **Replace with**  
  Pour remplacer les instances de la chaîne spécifiée dans **Rechercher** par une autre chaîne, entrez la chaîne de remplacement dans ce champ. Pour supprimer les instances de la chaîne spécifiée dans **Rechercher**, laissez cette zone vide. Sélectionnez la liste déroulante afin d'afficher les 20 dernières entrées. Pour inclure des expressions régulières dans la chaîne spécifiée dans la zone **Remplacer par** , cochez la case **Utiliser** et cliquez sur l’option **Expressions régulières** .  
   
- **Générateur d'expressions**  
- Ce bouton triangulaire placé à côté de la zone **Remplacer par** devient disponible quand la case **Utiliser** est cochée dans **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, en fonction de l’option **Utiliser** sélectionnée. Cliquer sur un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Remplacer par** .  
+ **Générateur d’expressions**  
+ Ce bouton triangulaire placé à côté de la zone **Remplacer par** devient disponible quand la case **Utiliser** est cochée dans **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, selon l’option **Utiliser** qui est sélectionnée. Cliquer sur un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Remplacer par** .  
   
- **Remplacer**  
+ **Replace**  
  Cliquez sur ce bouton pour remplacer l’instance actuelle de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans la zone **Remplacer par** et rechercher l’instance suivante dans l’étendue spécifiée dans **Regarder dans**.  
   
  **Remplacer tout**  
  Cliquez sur ce bouton pour remplacer toutes les instances de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans la zone **Remplacer par** , dans tous les fichiers de l’étendue spécifiée dans **Regarder dans**.  
   
 > [!CAUTION]  
->  Vérifiez que l’étendue définie dans **Regarder dans** inclut seulement les fichiers que vous souhaitez modifier.  
+>  Vérifiez que l’étendue définie dans **Rechercher dans** inclut seulement les fichiers que vous souhaitez modifier.  
   
  Un rappel avec une option **Conserver les fichiers modifiés ouverts** est affiché. Pour conserver l’option **Annuler** , vous devez sélectionner cette option. L’option**Annuler** est disponible uniquement dans les fichiers qui restent ouverts après avoir été modifiés.  
   
  **Ignorer le fichier**  
- Devient disponible quand **Regarder dans** inclut plusieurs fichiers. Cliquez sur ce bouton si vous ne voulez pas inspecter ni modifier le fichier actif. La recherche continue dans le fichier suivant de la liste **Regarder dans**.  
+ Devient disponible quand **Regarder dans** inclut plusieurs fichiers. Cliquez sur ce bouton si vous ne voulez pas inspecter ni modifier le fichier en cours. La recherche continue dans le fichier suivant de la liste **Regarder dans**.  
   
 ## <a name="look-in"></a>Regarder dans  
  L’option choisie dans la liste déroulante **Regarder dans** détermine si la fonction **Remplacer dans les fichiers** effectue la recherche uniquement dans les fichiers actuellement actifs ou dans tous les fichiers stockés dans certains dossiers. Sélectionnez une étendue de recherche dans la liste, tapez un chemin vers un dossier ou cliquez sur le bouton **Parcourir** pour afficher la boîte de dialogue **Choisir des dossiers de recherche** et choisir un ensemble de dossiers à inspecter.  
@@ -99,7 +99,7 @@ ms.locfileid: "68265981"
  **Mot entier**  
  Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec les mots entiers. Si vous recherchez **MonObjet** , par exemple, « MonObject » est retourné comme résultat, mais pas « CMonObjet » ou « MonObjetC ».  
   
- **Utiliser**  
+ **Utilisation**  
  Indique comment interpréter les caractères spéciaux qui sont entrés dans les zones de texte **Rechercher** et **Remplacer par** . Les options comprennent **Caractères génériques** et **Expressions régulières**.  
   
  **Regular Expressions**  

@@ -9,10 +9,10 @@ ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577188"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Fonctions du Générateur de rapports - RowNumber
@@ -29,7 +29,7 @@ RowNumber(scope)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *portée*  
+ *scope*  
  (**Chaîne**) Nom d’un dataset, d’une région de données ou d’un groupe, ou valeur Null (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer le nombre de lignes. **Nothing** spécifie le contexte le plus à l'extérieur, habituellement le dataset du rapport.  
   
 ## <a name="remarks"></a>Notes  
