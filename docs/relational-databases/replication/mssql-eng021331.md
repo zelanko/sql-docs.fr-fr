@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9a5ae9febb846c70937a68a3cc085d3ea558a56a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 85ca2ead5ff4b8b6a06f696733aad85ca313741f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770317"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288006"
 ---
-# <a name="mssqleng021331"></a>MSSQL_ENG021331
+# <a name="mssql_eng021331"></a>MSSQL_ENG021331
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -28,8 +28,8 @@ ms.locfileid: "68770317"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21331|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21331|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Impossible de copier le fichier de script utilisateur vers le distributeur.(%1!)|  

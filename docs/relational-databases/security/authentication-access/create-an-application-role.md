@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903151"
 ---
 # <a name="create-an-application-role"></a>Créer un rôle d'application
@@ -64,14 +64,14 @@ ms.locfileid: "72903151"
   
 6.  Dans la zone **Schéma par défaut** , spécifiez le schéma qui possédera les objets créés par ce rôle en entrant les noms d'objet. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Localiser le schéma**.  
   
-7.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouveau rôle. Entrez à nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
+7.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouveau rôle. Entrez de nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
   
 8.  Sous **Schémas appartenant à ce rôle**, sélectionnez ou affichez les schémas qui appartiendront à ce rôle. Un schéma ne peut appartenir qu'à un seul schéma ou rôle.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Rôle d'application - Nouveau** offre également des options sur deux pages supplémentaires : **Sécurisables** et **Propriétés étendues**.  
+ La boîte de dialogue **Rôle d’application - Nouveau** offre également des options dans deux pages supplémentaires : **Éléments sécurisables** et **Propriétés étendues**.  
   
 -   La page **Éléments sécurisables** répertorie tous les éléments sécurisables possibles et les autorisations sur ces éléments sécurisables qui peuvent être accordées à la connexion.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "72903151"
   
 #### <a name="to-create-an-application-role"></a>Pour créer un rôle d'application  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

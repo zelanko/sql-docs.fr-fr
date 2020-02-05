@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119817"
 ---
 # <a name="parse-database-engine"></a>Parse (moteur de base de données)
@@ -46,7 +46,7 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>Arguments  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]: valeur du type de données character converti.
+[!INCLUDE[tsql](../../includes/tsql-md.md)] : valeur du type de données character converti.
   
 CLR : valeur de chaîne évaluée.
   
@@ -60,7 +60,7 @@ Si Parse reçoit une valeur qui n’est pas une représentation de chaîne valid
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Conversion de valeurs Transact-SQL sans table  
+### <a name="a-converting-transact-sql-values-without-a-table"></a>R. Conversion de valeurs Transact-SQL sans table  
 L’exemple de code suivant utilise `ToString` pour convertir une valeur **hierarchyid** en une chaîne et `Parse` pour convertir une valeur de chaîne en **hierarchyid**.
   
 ```sql

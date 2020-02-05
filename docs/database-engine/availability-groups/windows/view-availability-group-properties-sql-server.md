@@ -13,10 +13,10 @@ ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 44328d275c962c1f6315e56e763c3a8550318ffb
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821813"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Afficher les propriétés d'un groupe de disponibilité (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74821813"
   
 3.  Cliquez avec le bouton droit sur le groupe de disponibilité dont vous souhaitez afficher les propriétés, puis sélectionnez la commande **Propriétés** .  
   
-4.  Dans la boîte de dialogue **Propriétés du groupe de disponibilité**, utilisez les pages **Général** et **Préférences de sauvegarde** pour afficher et, dans certains cas, pour modifier les propriétés du groupe de disponibilité sélectionné. Pour plus d’informations, consultez [Propriétés du groupe de disponibilité : Nouveau groupe de disponibilité &#40;page Général&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) et [Propriétés d’un groupe de disponibilité : Nouveau groupe de disponibilité &#40;page Préférences de sauvegarde&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  Dans la boîte de dialogue **Propriétés du groupe de disponibilité**, utilisez les pages **Général** et **Préférences de sauvegarde** pour afficher et, dans certains cas, pour modifier les propriétés du groupe de disponibilité sélectionné. Pour plus d’informations, consultez [Propriétés d’un groupe de disponibilité : nouveau groupe de disponibilité &#40;page Général&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) et [Propriétés d’un groupe de disponibilité : nouveau groupe de disponibilité &#40;page Préférences de sauvegarde&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      Utilisez la page **Autorisations** pour afficher les connexions, les rôles et les autorisations explicites actuellement associés au groupe de disponibilité. Pour plus d’informations, consultez la page [Autorisations ou Éléments sécurisables](../../../relational-databases/security/permissions-or-securables-page.md).  
   

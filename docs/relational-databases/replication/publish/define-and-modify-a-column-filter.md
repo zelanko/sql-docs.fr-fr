@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 761c6b6bd1c92e7dd22cc231e46417b4b971a614
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: efda97d51b3cbbe5137c89405c3534f48027a633
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846598"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286366"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Définir et modifier un filtre de colonne
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "70846598"
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>Pour définir un filtre de colonne pour un article publié dans une publication transactionnelle ou d'instantané  
   
-1.  Définissez l'article à filtrer. Pour plus d’informations, consultez [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Définissez l'article à filtrer. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Les colonnes à inclure ou à supprimer de l'article sont alors définies.  
   

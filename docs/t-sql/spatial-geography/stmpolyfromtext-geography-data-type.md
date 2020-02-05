@@ -18,10 +18,10 @@ ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 45be9818ed599365ca50648cb08a1c65825d5a11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121002"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (type de données geography)
@@ -46,7 +46,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 ## <a name="return-types"></a>Types de retour  
  Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
- Type de retour CLR : **SQL Geography**  
+ Type de retour CLR : **Sql Geography**  
   
  Type OGC : **MultiPolygon**  
   

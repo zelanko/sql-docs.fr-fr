@@ -11,13 +11,13 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73032998"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Les outils installés lors de l'installation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] dépendent de l'édition du produit et de la configuration choisies. Cette leçon passe en revue les outils principaux et décrit comment faire pour se connecter et exécuter une fonction de base (autorisation de plusieurs utilisateurs).  
@@ -80,7 +80,7 @@ Au moins un compte d’administrateur a été sélectionné pendant l’installa
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
-4.  Cliquez sur **Se connecter**.
+4.  Cliquez sur **Connecter**.
 
 > [!NOTE]
 > Ce didacticiel part du principe que vous ne connaissez pas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et que vous n’avez pas de problème de connexion particulier. Ainsi, il peut convenir au plus grand nombre et garde toute sa simplicité. Pour connaître les étapes de dépannage détaillées, consultez [Résoudre les problèmes de connexion au moteur de base de données SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
@@ -109,5 +109,5 @@ Une fois que vous êtes connecté à [!INCLUDE[ssNoVersion](../includes/ssnovers
 > Ces informations sont des notions de base destinées à vous aider au démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un environnement de sécurité de qualité. La sécurité est à l'évidence un aspect primordial des opérations de base de données.  
 
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Connexion à partir d’un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Leçon 2 : Connexion depuis un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

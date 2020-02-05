@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1c3032f2-23d1-4ead-94ee-16ac4d75cd0c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1c64d157b093483303b93ed1e383e39d31fe9677
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c65e6d67890f1f2a3bab91a6d61abcddd0f51a0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770369"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286846"
 ---
-# <a name="mssqleng020598"></a>MSSQL_ENG020598
+# <a name="mssql_eng020598"></a>MSSQL_ENG020598
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -28,8 +28,8 @@ ms.locfileid: "68770369"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|20598|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|20598|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|La ligne n'a pas été trouvée chez l'Abonné lorsque la commande répliquée est appliquée.|  

@@ -38,10 +38,10 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117339"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68117339"
 
   Crée une liaison qui définit les informations d'identification de sécurité à utiliser pour démarrer une conversation avec un service distant.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -96,7 +96,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-remote-service-binding"></a>A. Création d’une liaison de service distant  
+### <a name="a-creating-a-remote-service-binding"></a>R. Création d’une liaison de service distant  
  L'exemple suivant crée une liaison pour le service `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise le certificat appartenant au principal de base de données `APUser` pour s'authentifier auprès du service distant et échanger la clé de chiffrement de la session avec le service distant.  
   
 ```  

@@ -11,10 +11,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907344"
 ---
 # <a name="modify-a-partition-function"></a>Modifier une fonction de partition
@@ -42,7 +42,7 @@ ms.locfileid: "72907344"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Vous ne pouvez utiliser ALTER PARTITION FUNCTION que pour diviser une partition en deux ou pour fusionner deux partitions en une seule. Pour modifier le mode de partitionnement d'une table ou d'un index (par exemple, pour passer de 10 à 5 partitions), vous disposez de plusieurs options :  
+-   Vous ne pouvez utiliser ALTER PARTITION FUNCTION que pour diviser une partition en deux ou pour fusionner deux partitions en une seule. Pour modifier le mode de partitionnement d'une table ou d'un index (par exemple, pour passer de 10 à 5 partitions), vous disposez de plusieurs options :  
   
     -   Créez une nouvelle table partitionnée avec la fonction de partition de votre choix, puis insérez les données de l'ancienne table dans la nouvelle à l'aide de l'instruction INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de **l’Assistant gestion de partition** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -73,7 +73,7 @@ ms.locfileid: "72907344"
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour modifier une fonction de partition :**  
   
- Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier une fonction de partition, vous devez d'abord supprimer la fonction puis en créer une nouvelle avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d'informations, consultez  
+ Cette action spécifique ne peut pas être exécutée à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Afin de modifier une fonction de partition, vous devez d'abord supprimer la fonction puis en créer une nouvelle avec les propriétés souhaitées à l'aide de l'Assistant Création de partition. Pour plus d'informations, consultez la rubrique  
   
 #### <a name="to-delete-a-partition-function"></a>Pour supprimer une fonction de partition  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72907344"
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Pour fractionner une partition unique en deux partitions  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "72907344"
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>Pour fusionner deux partitions dans une partition  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

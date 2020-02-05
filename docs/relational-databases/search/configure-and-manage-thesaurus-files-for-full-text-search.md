@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056202"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
@@ -115,7 +115,7 @@ Un fichier de dictionnaire des synonymes vide standard contient le texte XML sui
 </XML>  
 ```
 
-### <a name="expansion"></a> Structure XML d’un jeu d’expansion  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  Chaque jeu d’expansion est compris dans un élément `<expansion>`. Dans cet élément, vous spécifiez une ou plusieurs substitutions dans un élément `<sub>`. Dans le jeu d'expansion, vous pouvez spécifier un groupe de substitutions synonymes les unes des autres.  
   
@@ -131,7 +131,7 @@ Voici à quoi ressemble la section du jeu d'expansion pour l'exemple ci-dessus :
 </expansion>  
 ```  
   
-### <a name="replacement"></a> Structure XML d’un jeu de remplacement  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 Chaque jeu de remplacement est compris dans un élément `<replacement>`. Dans cet élément, vous pouvez spécifier un ou plusieurs modèles dans un élément `<pat>` et zéro, une ou plusieurs substitutions dans des éléments `<sub>`, à raison d’un par synonyme. Vous pouvez spécifier un modèle de texte à remplacer par un jeu de substitution. Les modèles et les substitutions peuvent contenir un mot ou une suite de mots. L'absence de spécification d'une substitution pour un modèle a pour effet de supprimer le modèle de la requête de l'utilisateur.  
   
@@ -156,7 +156,7 @@ Si deux jeux de remplacement contiennent des motifs similaires en correspondance
 </replacement>  
 ```  
   
-et  
+and  
   
 ```xml  
 <replacement>  

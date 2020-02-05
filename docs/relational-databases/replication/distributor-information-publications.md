@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768592"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284011"
 ---
 # <a name="distributor-information-publications"></a>Informations du serveur de distribution, publications
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Error    
--   Réessayer    
+-   Recommencer    
 -   Exécution en cours    
 -   Non exécuté   
 -   Jamais démarré  
   
- **Serveur de publication**  
+ **Publisher**  
  Instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur de publication.  
   
  **Publication**  
@@ -76,7 +76,7 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
  **Dernière heure de début**  
  Dernière heure à laquelle l'Agent a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée pendant laquelle l'agent s'est exécuté. Cette durée représente le temps actuel si l'agent est en cours d'exécution ou le temps total d'exécution s'il a été exécuté et s'est terminé.  
   
  **Dernière action**  
@@ -103,7 +103,7 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
   
 -   Error  
   
--   Réessayer  
+-   Recommencer  
   
 -   Exécution en cours  
   
@@ -111,7 +111,7 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
   
 -   Jamais démarré  
   
- **Serveur de publication**  
+ **Publisher**  
  Instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur de publication.  
   
  **Publication**  
@@ -126,7 +126,7 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
  **Dernière heure de début**  
  Dernière heure à laquelle l'Agent a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée pendant laquelle l'agent s'est exécuté. Cette durée représente le temps actuel si l'agent est en cours d'exécution ou le temps total d'exécution s'il a été exécuté et s'est terminé.  
   
  **Dernière action**  

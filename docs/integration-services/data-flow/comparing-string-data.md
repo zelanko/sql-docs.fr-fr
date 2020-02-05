@@ -17,10 +17,10 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293235"
 ---
 # <a name="comparing-string-data"></a>comparaison de données de chaînes
@@ -37,7 +37,7 @@ ms.locfileid: "71293235"
   
 -   La transformation de fractionnement conditionnel peut utiliser des comparaisons de chaînes dans des expressions afin de déterminer à quelle sortie envoyer la ligne de données. Pour plus d'informations, consultez [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
   
--   La transformation de colonne dérivée peut utiliser des comparaisons de chaînes dans des expressions afin de générer de nouvelles valeurs de colonnes. Pour plus d'informations, consultez [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+-   La transformation de colonne dérivée peut utiliser des comparaisons de chaînes dans des expressions afin de générer de nouvelles valeurs de colonnes. Pour plus d'informations, consultez [Transformation de colonne dérivée](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
  Les variables, les mappages de variables et les contraintes de précédence utilisent également des expressions qui peuvent inclure des comparaisons de chaînes. Pour plus d’informations sur les expressions, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71293235"
  La balise de comparaison **FullySensitive** s'affiche dans la boîte de dialogue **Éditeur avancé** pour les transformations de regroupement probable et de recherche floue. Le fait de sélectionner l'indicateur de comparaison **FullySensitive** signifie que toutes les options de comparaison s'appliquent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données d'Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
+ [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
  [Analyse rapide](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Analyse standard](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   

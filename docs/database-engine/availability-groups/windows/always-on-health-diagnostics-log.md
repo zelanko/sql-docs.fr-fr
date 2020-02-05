@@ -11,10 +11,10 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: aa9d269333e5c39f12b82d739575652efdd6c2c4
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822069"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Journaux de diagnostic d’intégrité de la DLL de ressource SQL Server pour les groupes de disponibilité
@@ -25,7 +25,7 @@ ms.locfileid: "74822069"
   
  **Utiliser les journaux de diagnostic du cluster de basculement SQL Server**
  
- Tous les diagnostics d’intégrité envoyés par sp_server_diagnostics à la DLL de ressource SQL Server sont automatiquement enregistrés dans le répertoire Log par défaut de l’instance SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Ces journaux, appelés « journaux SQLDIAG », sont enregistrés au format de fichier XEL (événements étendus). Les fichiers contenus dans le répertoire Log SQL Server sont au format suivant : \<NOMHÔTE>_\<NOMINSTANCE>_SQLDIAG_X_XXXXXXXXX.xel. L’examen des journaux SQLDIAG peut vous aider à déterminer la cause racine de l’événement d’échec ou de basculement de la ressource du groupe disponibilité.  
+ Tous les diagnostics d’intégrité envoyés par sp_server_diagnostics à la DLL de ressource SQL Server sont automatiquement enregistrés dans le répertoire Log par défaut de l’instance SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Ces journaux, appelés « journaux SQLDIAG », sont enregistrés au format de fichier XEL (événements étendus). Les fichiers contenus dans le répertoire Log SQL Server sont au format suivant : \<NOMHÔTE>_\<NOMINSTANCE>_SQLDIAG_X_XXXXXXXXX.xel. L’examen des journaux SQLDIAG peut vous aider à déterminer la cause racine de l’événement d’échec ou de basculement de la ressource du groupe disponibilité.  
   
  Pour voir un journal SQLDIAG, faites glisser le fichier .xel dans SQL Server Management Studio.  
   

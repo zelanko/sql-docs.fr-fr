@@ -25,10 +25,10 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252188"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "72252188"
 
   Retourne l'identificateur du groupe de conversations pour le prochain message à recevoir et verrouille le groupe de conversations pour la conversation contenant ce message. L'identificateur du groupe de conversations peut être utilisé pour extraire des informations sur l'état des conversations avant d'extraire le message lui-même.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72252188"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. Obtention d'un groupe de conversations avec attente illimitée  
+### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>R. Obtention d'un groupe de conversations avec attente illimitée  
  L'exemple suivant attribue à `@conversation_group_id` l'identificateur de groupe de conversations pour le prochain message disponible dans `ExpenseQueue`. La commande attend jusqu'à ce qu'un message soit disponible.  
   
 ```  

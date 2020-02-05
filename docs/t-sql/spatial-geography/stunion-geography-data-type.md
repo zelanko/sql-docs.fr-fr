@@ -18,10 +18,10 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 34f63ee6609c93dd9435930bfe347a0fa610ce33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120759"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (type de données geography)
@@ -59,7 +59,7 @@ ms.locfileid: "68120759"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-computing-the-union-of-two-polygons"></a>A. Calcul de l'union de deux polygones  
+### <a name="a-computing-the-union-of-two-polygons"></a>R. Calcul de l'union de deux polygones  
  L'exemple suivant utilise `STUnion()` pour calculer l'union de deux instances `Polygon`.  
   
 ```  

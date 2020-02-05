@@ -15,10 +15,10 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908158"
 ---
 # <a name="specify-merge-replication-properties"></a>Spécifier les propriétés de la réplication de fusion
@@ -28,7 +28,7 @@ Cette rubrique explique comment spécifier différentes propriétés pour votre 
 ## <a name="merge-article-is-download-only"></a>Article sur la fusion en téléchargement uniquement
 Les articles en téléchargement uniquement sont conçus pour les applications dont les données ne sont pas mises à jour au niveau des Abonnés. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
    
-###  <a name="considerations"></a>Observations   
+###  <a name="considerations"></a>Considérations   
 -   Si vous spécifiez qu'un article est en téléchargement seul après l'initialisation des abonnements, tous les abonnements client qui ont reçu l'aticle doivent être réinitialisés. Les abonnements serveur n'ont pas besoin d'être réinitialisés. Pour plus d’informations sur les effets des modifications de propriétés, consultez [Changer des propriétés de publication et d’article](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ### <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio  
@@ -109,7 +109,7 @@ Dans la page **Articles** de l'Assistant Nouvelle publication, sélectionnez une
     -   `@publisher`, `@publisher_db` (la base de données publiée) et `@publication`.    
     -   La valeur **true** pour `@enabled_for_syncmgr`.    
     -   La valeur **true** pour `@use_interactive_resolver`.    
-    -   Les informations de compte de sécurité requises par l'Agent de fusion. Pour plus d’informations, consultez [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).    
+    -   Les informations de compte de sécurité requises par l'Agent de fusion. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md).    
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md).  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Définir un article qui prend en charge l’outil de résolution interactif  
@@ -133,7 +133,7 @@ Cette rubrique explique comment spécifier le niveau de suivi et de résolution 
   
 1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table.  
 2.  Cliquez sur **Propriétés de l'article**, puis cliquez sur **Définir les propriétés de l'article de Table en surbrillance** ou sur **Définir les propriétés de tous les articles de table**.   
-3.  Sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article\<Article>** , sélectionnez l’une des valeurs suivantes pour la propriété **Niveau de suivi** : **Suivi au niveau des lignes** ou **Suivi au niveau des colonnes**.   
+3.  Sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** , sélectionnez l’une des valeurs suivantes pour la propriété **Niveau de suivi** : **Suivi au niveau des lignes** ou **Suivi au niveau des colonnes**.   
 4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 ### <a name="use-transact-sql"></a>Utiliser Transact-SQL  

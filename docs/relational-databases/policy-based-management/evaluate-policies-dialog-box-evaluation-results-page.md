@@ -14,10 +14,10 @@ ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36ff10e317259547c03e6ee9e939229d68569b2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558251"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Boîte de dialogue Évaluer les stratégies, page Résultats d'évaluation
@@ -25,22 +25,22 @@ ms.locfileid: "75558251"
   Utilisez cette boîte de dialogue pour consulter les résultats d'évaluation d'une stratégie et pour appliquer des stratégies de la Gestion basée sur des stratégies à un jeu de cibles non conforme aux stratégies.  
   
 ## <a name="options"></a>Options  
- **Résultats : stratégie**  
+ **Résultats : Stratégie**  
  Nom de la stratégie évaluée. Cette zone est en lecture seule.  
   
- **Résultats : Message**  
+ **Résultats : Message**  
  Lien vers des informations si une erreur se produit.  
   
- **Détails sur les cibles : Serveur**  
+ **Détails sur les cibles : Serveur**  
  Instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour laquelle les stratégies sont évaluées.  
   
- **Détails sur les cibles : Cible**  
+ **Détails sur les cibles : Cible**  
  Cible pour laquelle les stratégies sont évaluées.  
   
- **Détails sur les cibles : Détails**  
+ **Détails sur les cibles : Détails**  
  Lien vers la boîte de dialogue **Vue détaillée des résultats** qui affiche les détails de l’évaluation des stratégies.  
   
- **Détails sur les cibles : Message**  
+ **Détails sur les cibles : Message**  
  Lien vers des informations si une erreur se produit.  
   
 ## <a name="see-also"></a>Voir aussi  

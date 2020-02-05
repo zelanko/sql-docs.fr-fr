@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1d9b1d88-1fbf-4089-b392-687d3b0220ca
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0a9300f76bb5447866a4de8d79b1b89492e4a197
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f7666e5b50c257b9d827eefde5bf0853eb9a70cc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766703"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286283"
 ---
-# <a name="mssqleng004929"></a>MSSQL_ENG004929
+# <a name="mssql_eng004929"></a>MSSQL_ENG004929
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -28,8 +28,8 @@ ms.locfileid: "68766703"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|4929|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|4929|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Impossible de modifier %1! '%2!' parce qu'elle est en cours d'édition pour la réplication.|  

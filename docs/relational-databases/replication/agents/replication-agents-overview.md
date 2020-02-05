@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 050197c7ce5a6098397b6ad3db13a933983270d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d4aba7ca9e46725d771ba36c50ccc4e380fabae7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770742"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288109"
 ---
 # <a name="replication-agents-overview"></a>Présentation des Agents de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68770742"
  L'Agent de distribution est utilisé dans la réplication d'instantané et dans la réplication transactionnelle. Il applique l'instantané initial sur l'Abonné et déplace les transactions conservées dans la base de données de distribution vers les Abonnés. L'Agent de distribution est exécuté sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Pour plus d'informations, consultez [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 ## <a name="merge-agent"></a>Agent de fusion  
- L'Agent de fusion est utilisé dans la réplication de fusion. Il applique l'instantané initial à l'Abonné et déplace puis rapproche les modifications de données incrémentielles effectuées. Chaque abonnement de fusion a son propre Agent de fusion qui se connecte à la fois au serveur de publication et à l'Abonné et les met à jour. L'Agent de fusion est généralement exécuté sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Par défaut, il télécharge les modifications de l'Abonné vers le serveur de publication puis du serveur de publication vers l'Abonné. Pour plus d’informations, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
+ L'Agent de fusion est utilisé dans la réplication de fusion. Il applique l'instantané initial à l'Abonné et déplace puis rapproche les modifications de données incrémentielles effectuées. Chaque abonnement de fusion a son propre Agent de fusion qui se connecte à la fois au serveur de publication et à l'Abonné et les met à jour. L'Agent de fusion est généralement exécuté sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Par défaut, il télécharge les modifications de l'Abonné vers le serveur de publication puis du serveur de publication vers l'Abonné. Pour plus d’informations, voir [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
 ## <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente  
  L'Agent de lecture de la file d'attente est utilisé dans le cadre de la réplication transactionnelle avec l'option de mise à jour en attente. Il s'exécute sur le serveur de distribution et redéplace les modifications effectuées sur l'Abonné vers le serveur de publication. Contrairement aux Agents de distribution et de fusion, il n'existe qu'une seule instance de l'Agent de lecture de file d'attente pour servir l'ensemble des serveurs de publication et des publications pour une base de données de distribution donnée. Pour plus d'informations sur l'Agent de lecture de la file d'attente, consultez [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md). Pour plus d'informations sur les abonnements pouvant être mis à jour, consultez [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "68770742"
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Exécuter des travaux de maintenance de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Concepts des exécutables de l’agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
+ [Concepts des exécutables de l’Agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

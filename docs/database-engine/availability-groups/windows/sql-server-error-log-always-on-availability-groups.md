@@ -11,10 +11,10 @@ ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251250"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>Journal des erreurs SQL Server (groupes de disponibilité Always On)
@@ -27,7 +27,7 @@ ms.locfileid: "75251250"
 -   État de connectivité des bases de données de disponibilité entre les réplicas principal et secondaire    
 -   États des points de terminaison de groupe de disponibilité    
 -   États des écouteurs de groupe de disponibilité    
--   État du bail entre la DLL de ressource SQL Server (en cours d’exécution dans le cluster WSFC) et l’instance SQL Server (pour plus d’informations, consultez [How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) (Fonctionnement : délai d’expiration de bail Always On SQL Server))    
+-   État du bail entre la DLL de ressource SQL Server (en cours d’exécution dans le cluster WSFC) et l’instance SQL Server (pour plus d’informations, consultez [Fonctionnement : délai d’expiration de bail Always On SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx))    
 -   Événements d’erreur dans le groupe de disponibilité  
 
 Les symptômes suivants doivent vous inciter à passer en revue le journal des erreurs SQL Server :  

@@ -20,10 +20,10 @@ ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982473"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982473"
 
   Retourne des informations sur les options SET actuelles.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73982473"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. Démonstration de l'impact des modifications sur le comportement  
+### <a name="a-demonstration-of-how-changes-affect-behavior"></a>R. Démonstration de l'impact des modifications sur le comportement  
  L’exemple suivant illustre la différence de comportement de concaténation avec deux paramétrages différents de l’option **CONCAT_NULL_YIELDS_NULL**.  
   
 ```  

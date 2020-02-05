@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212281"
----
 Cet article fournit une vue d’ensemble des solutions de continuité d’activité dans le cadre de la haute disponibilité et de la récupération d’urgence dans SQL Server. 
 
 Quand vous déployez SQL Server, vous devez toujours vérifier que toutes les instances SQL Server critiques et les bases de données qu’elles contiennent sont disponibles pour l’entreprise et les utilisateurs finaux, quels que soient l’heure ou le jour. L’objectif est de maintenir l’activité avec un minimum d’interruption voire sans interruption. Ce concept est également connu sous le nom de continuité d’activité.
@@ -19,7 +11,7 @@ Cet article traite en particulier des scénarios de disponibilité dans SQL Serv
 Les groupes de disponibilité, les instances FCI et la copie des journaux de transaction peuvent être utilisés de plusieurs façons et pas seulement à des fins de disponibilité. Les fonctionnalités de disponibilité sont utilisées dans quatre contextes principaux :
 
 * Haute disponibilité
-* La récupération d’urgence
+* Récupération d'urgence
 * Les migrations et les mises à niveau
 * La mise à plus haute échelle des copies accessibles en lecture d’une ou plusieurs bases de données
 
@@ -75,7 +67,7 @@ Il y a davantage de similitudes que de différences entre un cluster WSFC et Pac
 Parce que la pile de cluster est différente, les groupes de disponibilité sont modifiés, car SQL Server doit gérer une partie des métadonnées qui sont gérées en mode natif par un cluster WSFC. Le changement le plus [!IMPORTANT] est l’introduction d’un type de cluster pour un groupe de disponibilité. Il est stocké dans sys.availability_groups dans les colonnes cluster_type et cluster_type_desc. Il existe trois types de cluster :
 
 * WSFC 
-* External
+* Externe
 * None
 
 Tous les groupes de disponibilité qui ont besoin de disponibilité doivent utiliser un cluster sous-jacent. Dans le cas de SQL Server 2017, il s’agit d’un cluster WSFC ou de Pacemaker. Pour les groupes de disponibilité de base Windows Server qui utilisent un cluster WSFC sous-jacent, le type de cluster par défaut est WSFC et ne doit pas nécessairement être défini. Pour les groupes de disponibilité Linux, lors de la création du groupe de disponibilité, vous devez définir le type de cluster sur Externe. L’intégration à Pacemaker est configurée après la création du groupe de disponibilité, tandis que sur un cluster WSFC, elle est effectuée au moment de la création.
@@ -91,11 +83,11 @@ La capture d’écran ci-dessous montre la prise en charge des différents types
 
 ![Options de groupe de disponibilité dans SSMS](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 Dans SQL Server 2016, la prise en charge du nombre de réplicas synchrones est passée de deux à trois dans l’édition Entreprise. Toutefois, si un réplica secondaire était synchronisé, mais que l’autre rencontrait un problème, il n’existait aucun moyen de contrôler le comportement pour indiquer au réplica principal d’attendre le réplica concerné ou de continuer. Cela signifie que le réplica principal à un moment donné continue de recevoir du trafic en écriture, même si le réplica secondaire n’est pas synchronisé, ce qui implique une perte de données sur le réplica secondaire.
 Dans SQL Server 2017, il existe désormais une option pour contrôler le comportement en cas de réplicas synchrones : REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. L’option fonctionne de la façon suivante :
-* Il existe trois valeurs possibles : 0, 1 et 2
+* Il existe trois valeurs possibles : 0, 1 et 2
 * La valeur est le nombre de réplicas secondaires qui doivent être synchronisés, ce qui a des implications sur la perte de données, la disponibilité du groupe de disponibilité et le basculement
 * Pour les clusters WSFC et un type de cluster Aucun, la valeur par défaut est 0 et peut être définie manuellement sur 1 ou 2
 * Pour un type de cluster Externe, par défaut, le mécanisme de cluster définit cette valeur qui peut être remplacée manuellement. Pour les trois réplicas synchrones, la valeur par défaut est égale à 1.
@@ -142,7 +134,7 @@ Si les objectifs de point de récupération et de délai de récupération sont 
  
 Le principal avantage de l’utilisation de la copie des journaux de transaction dans une capacité est sans doute qu’elle prend en compte l’erreur humaine. L’application des journaux de transactions peut être différée. Par conséquent, si un utilisateur envoie une commande de type UPDATE sans clause WHERE, le serveur de secours peut ne pas avoir pris en compte le changement et vous pouvez donc l’utiliser pendant que vous réparez le système principal. Bien que la copie des journaux de transaction soit facile à configurer, le basculement du réplica principal sur un secours semi-automatique, appelé changement de rôle, est toujours manuel. Un changement de rôle est lancé via Transact-SQL et, tout comme pour un groupe de disponibilité, tous les objets qui ne sont pas capturés dans le journal des transactions doivent être synchronisés manuellement. Par ailleurs, la copie des journaux de transaction doit être configurée pour chaque base de données, tandis qu’un seul groupe de disponibilité peut contenir plusieurs bases de données. Contrairement au groupe de disponibilité ou à l’instance FCI, la copie des journaux de transaction ne récupère rien pour le changement de rôle. Les applications doivent être en mesure de le gérer. Des techniques comme l’alias DNS (CNAME) peuvent être utilisées, mais il existe des avantages et des inconvénients, par exemple, le temps que prend le système DNS pour l’actualisation après le basculement.
 
-## <a name="disaster-recovery"></a>La récupération d’urgence
+## <a name="disaster-recovery"></a>Récupération d'urgence
 
 Quand votre emplacement de disponibilité principal subit un événement catastrophique comme un tremblement de terre ou une inondation, l’entreprise doit être préparée à mettre ses systèmes en ligne ailleurs. Cette section décrit comment les fonctionnalités de disponibilité de SQL Server peuvent aider à assurer la continuité de l’activité.
 

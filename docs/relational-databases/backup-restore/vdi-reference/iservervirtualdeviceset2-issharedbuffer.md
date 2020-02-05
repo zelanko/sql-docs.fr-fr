@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd3e7abfd1d250a170e0de4ebc1b392bc5857468
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847360"
 ---
 # <a name="iservervirtualdeviceset2issharedbuffer-vdi"></a>IServerVirtualDeviceSet2::IsSharedBuffer (VDI)
@@ -34,9 +34,9 @@ HRESULT IServerVirtualDeviceSet2::IsSharedBuffer (
 
 *lpBuffer* : une adresse d’une mémoire tampon.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | TRUE | La mémoire tampon est une mémoire tampon partagée. |
 | FALSE | La mémoire tampon ne fait pas partie de l’ensemble d’appareils virtuels. |

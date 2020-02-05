@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057331"
----
 
 Nous accumulons et conservons la documentation des très anciennes versions de Microsoft SQL Server dans des groupes de pages web archivées. Les pages web archivées ne sont pas traitées par les moteurs de recherche tels que Bing.com et Google.com. Vous pouvez toutefois consulter ces archives sur notre site de documentation _previous-versions/sql/_ à l’adresse :
 
@@ -16,7 +8,7 @@ Ces archives incluent la documentation pour au moins les versions antérieures s
 - SQL Server 2012
 - SQL Server 2008 R2
 - SQL Server 2008
-- SQL Server 2005
+- SQL Server 2005
 
 La [documentation de SQL Server 2014](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) est toujours disponible à l’adresse principale de notre documentation.
 

@@ -14,10 +14,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292277"
 ---
 # <a name="parsing-data"></a>Analyse de données
@@ -28,7 +28,7 @@ ms.locfileid: "71292277"
   Les flux de données des packages extraient et chargent des données à partir de banques de données hétérogènes qui peuvent utiliser différents types de données standard et personnalisés. Dans un flux de données, les sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont chargées d’extraire les données, d’analyser les données de type string et de les convertir en données de type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les transformations effectuées par la suite peuvent analyser les données afin de les convertir en un type distinct ou créer des copies de colonnes avec d'autres types de données. Les expressions utilisées dans les composants peuvent également convertir les arguments et opérandes en d'autres types de données. Enfin, lorsque les données sont chargées dans une banque de données, la destination peut analyser les données afin de les convertir en un type de données utilisé par la destination. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="two-types-of-parsing"></a>Deux types d’analyses  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose deux types d'analyses en vue de convertir les données : Analyse rapide et analyse standard.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose deux types d’analyses en vue de convertir les données : l’analyse rapide et l’analyse standard.  
   
 -   L'analyse rapide est un ensemble de routines simple et rapide d'analyse des données. Elle ne prend pas en charge la conversion des données présentant des spécificités régionales et accepte uniquement les formats de date et d'heure les plus courants. 
   
@@ -51,7 +51,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
 ## <a name="numeric-data-formats-fast-parse"></a>Formats de données numériques (Analyse rapide)
 L'analyse rapide fournit un ensemble de routines simple, rapide et insensible aux paramètres régionaux pour l'analyse des données. Elle prend en charge uniquement un ensemble limité de formats pour les types de données integer.  
   
-### <a name="integer-data-type"></a>Type de données integer
+### <a name="integer-data-type"></a>Type de données Integer
  Les types de données integer fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 et DT_UI8. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  L'analyse rapide prend en charge les formats suivants pour les types de données integer :  
@@ -94,7 +94,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
     |------------|-----------------|  
     |AAAAMMJJ<br /><br /> AAAA-MM-JJ|Formats de base et étendus pour une année à quatre chiffres, un mois à deux chiffres et un jour à deux chiffres. Dans le format étendu, les parties de la date sont séparées par un tiret (-).|  
     |AAAA-MM|Formats à précision réduite de base et étendus pour une année à quatre chiffres et un mois à deux chiffres. Dans le format étendu, les parties de la date sont séparées par un tiret (-).|  
-    |AAAA|Le format à précision réduite est une année à quatre chiffres.|  
+    |YYYY|Le format à précision réduite est une année à quatre chiffres.|  
   
  L'analyse rapide ne prend pas en charge les formats suivants pour les données de date :  
   
@@ -112,7 +112,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
   
  Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="time-data-type"></a>Type de données d’heure
+### <a name="time-data-type"></a>Type de données Time
  L'analyse rapide prend en charge les formats de chaîne suivants pour les données d'heure :  
   
 -   Formats d'heure qui incluent des espaces de début. Par exemple, la valeur « 10:24» est valide.  
@@ -126,7 +126,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
     |HHMISS<br /><br /> HH:MI:SS|Formats de base et étendus pour une heure à deux chiffres, une minute à deux chiffres et une seconde à deux chiffres. Dans le format étendu, les parties de l'heure sont séparées par deux points (:).|  
     |HHMI<br /><br /> HH:MI|Format tronqué de base et étendu pour une heure à deux chiffres et une minute à deux chiffres. Dans le format étendu, les parties de l'heure sont séparées par deux points (:).|  
     |HH|Format tronqué pour une heure à deux chiffres.|  
-    |00:00:00<br /><br /> 000000<br /><br /> 0000<br /><br /> 00<br /><br /> 240000<br /><br /> 24:00:00<br /><br /> 2400<br /><br /> 24|Format pour minuit.|  
+    |00:00:00<br /><br /> 000000<br /><br /> 0000<br /><br /> 00<br /><br /> 240000<br /><br /> 24:00:00<br /><br /> 2 400<br /><br /> 24|Format pour minuit.|  
   
 -   Formats d'heure qui spécifient un fuseau horaire, répertoriés dans le tableau suivant :  
   
@@ -183,8 +183,8 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
 |Secondes|Ajout de 00.|  
 |Minutes|Ajouter 00:00.|  
 |Heure|Ajout de 00:00:00.|  
-|Jour|Ajout de 01 pour le jour du mois.|  
-|Mois|Ajout de 01 pour le mois de l'année.|  
+|jour|Ajout de 01 pour le jour du mois.|  
+|Month|Ajout de 01 pour le mois de l'année.|  
   
  Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   

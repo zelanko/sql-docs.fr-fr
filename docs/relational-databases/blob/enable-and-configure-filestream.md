@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908770"
 ---
 # <a name="enable-and-configure-filestream"></a>Activer et configurer FILESTREAM
@@ -78,7 +78,7 @@ ms.locfileid: "72908770"
 ||||||  
 |-|-|-|-|-|  
 |Niveau RAID|Performances en écriture|Performances en lecture|Tolérance de panne|Notes|  
-|RAID 5|Normale|Normale|Excellent|Les performances sont meilleures qu'avec un seul disque ou une simple concaténation de disques, mais elles sont moins bonnes qu'avec le niveau RAID 0 ou le niveau RAID 5 utilisant l'agrégation par bandes.|  
+|RAID 5|Normal|Normal|Excellent|Les performances sont meilleures qu'avec un seul disque ou une simple concaténation de disques, mais elles sont moins bonnes qu'avec le niveau RAID 0 ou le niveau RAID 5 utilisant l'agrégation par bandes.|  
 |RAID 0|Excellent|Excellent|None||  
 |RAID 5 + agrégation par bandes|Excellent|Excellent|Excellent|Option la plus chère.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

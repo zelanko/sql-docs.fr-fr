@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262225"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuration serveur avec la conformité des critères communs activée
@@ -42,7 +42,7 @@ L’option de conformité des critères communs active les éléments suivants q
   
  Si vous utilisez la procédure stockée système `sp_configure` pour changer sa valeur, vous ne pouvez changer l’option common criteria compliance enabled que si la valeur 1 a été attribuée à l’option show advanced options. Le paramétrage prend effet une fois le serveur redémarré. Les valeurs possibles sont 0 et 1 :  
   
--   0 signifie que la conformité des critères communs n'est pas activée. Il s'agit du paramètre par défaut.  
+-   0 signifie que la conformité des critères communs n'est pas activée. Il s’agit de la valeur par défaut.  
   
 -   1 signifie que la conformité des critères communs est activée.  
   
