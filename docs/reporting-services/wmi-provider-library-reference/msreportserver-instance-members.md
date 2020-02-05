@@ -16,13 +16,13 @@ ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 13b266ed09c4187070403837a47011b30b43aa99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572221"
 ---
-# <a name="msreportserverinstance-members"></a>Membres MSReportServer_Instance
+# <a name="msreportserver_instance-members"></a>Membres MSReportServer_Instance
   La classe MSReportServer_Instance fournit des informations de base nécessaires pour qu’un client puisse se connecter à un serveur de rapports installé.  
   
 ## <a name="public-properties"></a>Propri&#233;t&#233;s publiques  
@@ -32,7 +32,7 @@ ms.locfileid: "65572221"
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Retourne l'édition du serveur de rapports.|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Retourne le nom explicite de l'édition du serveur de rapports.|  
 |[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Cet objet prend en charge l'infrastructure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et ne doit pas être utilisé directement à partir de votre code.|  
-|[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. En lecture seule.|  
+|[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. Lecture seule.|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|Indique si le serveur de rapports est configuré pour le mode intégré SharePoint.|  
 |[Version](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Retourne la version du serveur de rapports.|  
   

@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982589"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982589"
 
   Crée un index spatial sur une table et une colonne spécifiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un index peut être créé avant que la table soit remplie de données. Les index peuvent être créés sur des tables ou des vues d'une autre base de données en spécifiant un nom de base de données qualifié. Les index spatiaux exigent que la table ait une clé primaire cluster. Pour plus d’informations sur les index spatiaux, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -164,8 +164,8 @@ CREATE SPATIAL INDEX index_name
 |-------------------------|-------------------------|  
 |**geometry**|GEOMETRY_GRID|  
 |**geometry**|GEOMETRY_AUTO_GRID|  
-|**geography**|GEOGRAPHY_GRID|  
-|**geography**|GEOGRAPHY_AUTO_GRID|  
+|**Geography**|GEOGRAPHY_GRID|  
+|**Geography**|GEOGRAPHY_AUTO_GRID|  
   
  Un index spatial peut être créé uniquement sur une colonne de type **geometry** ou **geography**, sinon une erreur est générée. Si un paramètre non valide pour un type donné est passé, une erreur est générée.  
   
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 Spécifie le remplissage de l'index. La valeur par défaut est OFF.  
   
-ON     
+ACTIVÉ     
 Indique que le pourcentage d’espace libre spécifié par *fillfactor* est appliqué aux pages du niveau intermédiaire de l’index.  
   
 OFF ou *fillfactor* n’est pas spécifié     
@@ -342,7 +342,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  Spécifie si les résultats temporaires du tri doivent être stockés dans tempdb. La valeur par défaut est OFF.  
   
- ON     
+ ACTIVÉ     
  Les résultats de tri intermédiaires utilisés pour créer l'index sont stockés dans tempdb. Cela permet de réduire la durée de création d'un index si tempdb n'est pas sur le même groupe de disques que la base de données utilisateur. Toutefois, une plus grande quantité d'espace disque est alors utilisée lors de la création de l'index.  
   
  OFF     
@@ -356,7 +356,7 @@ N'a aucun effet pour les index spatiaux, car le type d'index n'est jamais unique
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Spécifie si les statistiques de distribution sont recalculées. La valeur par défaut est OFF.  
   
- ON    
+ ACTIVÉ    
  Les statistiques obsolètes ne sont pas recalculées automatiquement.  
   
  OFF    
@@ -372,7 +372,7 @@ DROP_EXISTING = { ON | **OFF** }
   
  Spécifie que l'index spatial nommé préexistant est supprimé et reconstruit. La valeur par défaut est OFF.  
   
- ON     
+ ACTIVÉ     
  L'index existant est supprimé et recréé. Le nom d'index défini doit être identique à celui de l'index existant. Toutefois, la définition de l'index peut être modifiée. Par exemple, vous pouvez définir des colonnes, un ordre de tri, un schéma de partition ou des options d'indexation différentes.  
   
  OFF     
@@ -393,7 +393,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  Indique si les verrous de ligne sont autorisés ou non. La valeur par défaut est ON.  
   
- ON     
+ ACTIVÉ     
  Les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés.  
   
  OFF     
@@ -404,7 +404,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  Indique si les verrous de page sont autorisés. La valeur par défaut est ON.  
   
- ON    
+ ACTIVÉ    
  Les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.  
   
  OFF     
@@ -491,7 +491,7 @@ L'utilisateur doit disposer de l'autorisation `ALTER` sur la table ou l’affich
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Création d'un index spatial sur une colonne de type geometry
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>R. Création d'un index spatial sur une colonne de type geometry
 L’exemple suivant crée une table nommée `SpatialTable` qui contient une colonne de type **geometry**, `geometry_col`. L'exemple crée ensuite un index spatial, `SIndx_SpatialTable_geometry_col1`, sur la table `geometry_col`. L'exemple utilise le schéma de pavage par défaut et spécifie le rectangle englobant.  
   
 ```sql  

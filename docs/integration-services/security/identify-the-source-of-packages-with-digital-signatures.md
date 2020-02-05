@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295692"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
@@ -40,12 +40,12 @@ ms.locfileid: "71295692"
   
 -   Pour vérifier la signature numérique de tous les packages avant de charger les packages au moment de la conception, définissez l'option **Vérifier la signature numérique lors du chargement d'un package** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Cette option est un paramètre global pour tous les packages dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
--   Pour vérifier la signature numérique d’un package individuel, spécifiez l’option **/VerifyS[igned]** quand vous utilisez l’utilitaire **dtexec** pour exécuter le package. Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+-   Pour vérifier la signature numérique d’un package individuel, spécifiez l’option **/VerifyS[igned]** quand vous utilisez l’utilitaire **dtexec** pour exécuter le package. Pour plus d'informations, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="set-a-registry-value-to-check-package-signature"></a>Définir une valeur du Registre pour vérifier la signature d’un package  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend également en charge une valeur de Registre facultative, **BlockedSignatureStates**, que vous pouvez utiliser pour gérer la stratégie de chargement des packages signés et non signés d’une organisation. La valeur de Registre peut empêcher le chargement de packages si les packages ne sont pas signés ou s'ils possèdent des signatures non valides ou non approuvées. Pour plus d’informations sur la définition de cette valeur de Registre, consultez [Implémenter une stratégie de signature en définissant une valeur du Registre](#registry).  
   
-> **REMARQUE :** La valeur de Registre **BlockedSignatureStates** facultative peut spécifier un paramètre plus restrictif que l’option de signature numérique définie dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou au niveau de la ligne de commande **dtexec** . Dans cette situation, le paramètre du Registre plus restrictif a priorité sur les autres paramètres.  
+> **REMARQUE :** la valeur de Registre **BlockedSignatureStates** facultative peut spécifier un paramètre qui est plus restrictif que l’option de signature numérique définie dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou à la ligne de commande **dtexec** . Dans cette situation, le paramètre du Registre plus restrictif a priorité sur les autres paramètres.  
 
 ## <a name="registry"></a> Implémenter une stratégie de signature en définissant une valeur du Registre
   Vous pouvez utiliser une valeur du Registre facultative pour gérer la stratégie d'une organisation pour charger des packages signés ou non signés. Si vous utilisez cette valeur du Registre, vous devez créer cette valeur du Registre sur tous les ordinateurs sur lesquels les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s'exécuteront et sur lesquels vous souhaitez appliquer la stratégie. Une fois la valeur du Registre définie, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vérifiera les signatures avant de charger les packages.  
@@ -146,7 +146,7 @@ ms.locfileid: "71295692"
  **Signe**  
  Cliquez sur cette option pour ouvrir la boîte de dialogue **Sélectionner un certificat** et sélectionner le certificat à utiliser.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez sur cette option pour supprimer la signature numérique.  
 
 ## <a name="see-also"></a>Voir aussi  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c84d73c0ee48b75c8f31dda4dc87ecfbac5913f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059882"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059882"
 
   Renvoie le logarithme en base 10 de l’expression de type **float** spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ LOG10 ( float_expression )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>A. Calcul du logarithme de base 10 pour une variable.  
+### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>R. Calcul du logarithme de base 10 pour une variable.  
  L'exemple suivant calcule le `LOG10` de la variable spécifiée.  
   
 ```  
@@ -89,7 +89,7 @@ SELECT POWER (10, LOG10(5));
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C : Calcul du logarithme en base 10 d’une variable.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C. Calcul du logarithme en base 10 d’une variable.  
  L’exemple suivant calcule le `LOG10` de la valeur spécifiée.  
   
 ```  

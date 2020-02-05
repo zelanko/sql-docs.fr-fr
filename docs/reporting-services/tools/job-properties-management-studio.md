@@ -11,10 +11,10 @@ ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571128"
 ---
 # <a name="job-properties-management-studio"></a>Propriétés du travail (Management Studio)
@@ -41,7 +41,7 @@ ms.locfileid: "65571128"
  **État du travail**  
  Les valeurs valides sont **Nouveau** et **En cours d'exécution**. La valeur de l'état est toujours **Nouveau** lorsque le travail commence. Après 60 secondes, la valeur de l'état devient **En cours d'exécution**. Vous devez actualiser la page pour voir la modification.  
   
- **Type de travail**  
+ **Type de tâche**  
  Les valeurs valides sont **Utilisateur** et **Système**. Un travail utilisateur est un travail qui est initié par un utilisateur individuel. Il peut s'agir de l'exécution d'un rapport sur demande, de la création manuelle d'un instantané d'historique de rapport ou de la création manuelle d'un instantané d'exécution de rapport. Un abonnement standard en cours est également un travail utilisateur. Un travail système est un travail lancé par le serveur de rapports. Les travaux système incluent le traitement des rapports déclenché par une planification.  
   
  **Action du travail**  
@@ -62,7 +62,7 @@ ms.locfileid: "65571128"
  **Start Time**  
  Indique à quel moment le processus a démarré.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Pour les processus lancés par un utilisateur, cette colonne affiche le nom de l'utilisateur. Pour les travaux système, il s'agit du nom du serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  

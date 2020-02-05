@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72796639"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utiliser les paramètres table (Moteur de base de données)
@@ -71,7 +71,7 @@ Les paramètres table ont les restrictions suivantes :
 
 ## <a name="BulkInsert"></a> Paramètres table et opérations BULK INSERT
 
-L'utilisation de paramètres table est comparable à d'autres méthodes d'utilisation de variables basées sur des ensembles ; toutefois, l'utilisation de paramètres table peut souvent s'avérer plus rapide pour les grands ensembles de données. Comparé aux opérations en bloc, qui ont un coût de démarrage supérieur, les paramètres table sont particulièrement adaptés à l'insertion de moins de 1000 lignes.
+L'utilisation de paramètres table est comparable à d'autres méthodes d'utilisation de variables basées sur des ensembles ; toutefois, l'utilisation de paramètres table peut souvent s'avérer plus rapide pour les grands ensembles de données. Comparé aux opérations en bloc, qui ont un coût de démarrage supérieur, les paramètres table sont particulièrement adaptés à l'insertion de moins de 1000 lignes.
 
 Les paramètres table réutilisés tirent parti de la mise en cache de table temporaire. Cette mise en cache de table autorise une meilleure extensibilité que les opérations BULK INSERT équivalentes. En utilisant de petites opérations d'insertion de ligne, vous pouvez retirer un petit avantage en matière de performances en utilisant des listes de paramètres ou des instructions groupées au lieu d'opérations BULK INSERT ou de paramètres table. Toutefois, ces méthodes sont moins commodes à programmer et les performances diminuent rapidement à mesure que le nombre de lignes augmente.
 

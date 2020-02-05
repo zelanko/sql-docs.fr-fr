@@ -11,10 +11,10 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52ce0e96ce131b1ea1a69f2ba9f7466850cbf4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290942"
 ---
 # <a name="xml-source-custom-properties"></a>Propriétés personnalisées des sources XML
@@ -28,8 +28,8 @@ ms.locfileid: "71290942"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Entier|Mode utilisé pour accéder aux données XML.|  
-|UseInlineSchema|Booléen|Valeur qui indique si une définition de schéma inséré doit être utilisée dans la source XML. La valeur par défaut de cette propriété est **False**.|  
+|AccessMode|Integer|Mode utilisé pour accéder aux données XML.|  
+|UseInlineSchema|Boolean|Valeur qui indique si une définition de schéma inséré doit être utilisée dans la source XML. La valeur par défaut de cette propriété est **False**.|  
 |XMLData|String|Fichier ou variables à partir desquels les données XML sont extraites.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
 |XMLSchemaDefinition|String|Chemin d'accès et nom de fichier du fichier de définition de schéma (.xsd).<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
   

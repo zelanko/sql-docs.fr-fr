@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155830"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "70155830"
 
   Supprime une ou plusieurs définitions de table ainsi que toutes les données, index, déclencheurs, contraintes et spécifications d'autorisation se rapportant à celles-ci. Toute vue ou procédure stockée faisant référence à la table supprimée doit être supprimée explicitement au moyen de l’instruction [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) ou [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). Pour signaler les dépendances sur une table, utilisez [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +74,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Azure SQL Database prend en charge le format de nom en trois parties nom_bd.[nom_schéma].nom_objet lorsque nom_bd correspond à la base de données active ou lorsque nom_bd est tempdb et nom_objet commence par #. Azure SQL Database ne prend pas en charge les noms en quatre parties.  
   
  *IF EXISTS*  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Supprime, de manière conditionnelle, la table uniquement si elle existe déjà.  
   
@@ -105,7 +105,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dropping-a-table-in-the-current-database"></a>A. Suppression d'une table dans la base de données active  
+### <a name="a-dropping-a-table-in-the-current-database"></a>R. Suppression d'une table dans la base de données active  
  Cet exemple supprime la table `ProductVendor1` ainsi que ses données et ses index de la base de données active.  
   
 ```  
@@ -140,7 +140,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. Suppression d’une table à l’aide de IF EXISTS  
   
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  L’exemple suivant crée une table nommée T1. Ensuite, la deuxième instruction supprime la table. La troisième instruction n’effectue aucune action, car la table est déjà supprimée, mais elle ne génère pas d’erreur.  
   

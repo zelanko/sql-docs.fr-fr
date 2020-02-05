@@ -14,10 +14,10 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570683"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports
@@ -30,7 +30,7 @@ ms.locfileid: "65570683"
 |Niveau d'autorisation|Abréviation|  
 |----------------------|------------------|  
 |Contrôle total|**F**|  
-|Collaboration|**C**|  
+|Participez|**C**|  
 |Visiteur|**V**|  
   
  Les autorisations sans incidence sur un serveur de rapports ne sont pas répertoriées. Toutes les autorisations de personnalisation sont exclues de cet article de référence. Même si vous pouvez inclure des éléments du serveur de rapports dans un site Web personnalisé, le serveur de rapports ne traite pas directement les opérations ou les demandes de personnalisation.  

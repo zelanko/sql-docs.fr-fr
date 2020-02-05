@@ -1,5 +1,5 @@
 ---
-title: Quelles sont les fonctions de base de données Microsoft SQL ? | Microsoft Docs
+title: Quelles sont les fonctions de base de données Microsoft SQL ? | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843709"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quelles sont les fonctions de base de données SQL ?
@@ -34,7 +34,7 @@ Découvrez les catégories de fonctions intégrées que vous pouvez utiliser ave
   
 ## <a name="aggregate-functions"></a>Fonctions d'agrégation
 
-Les fonctions d'agrégation effectuent un calcul sur un ensemble de valeurs et retournent une valeur unique. Elles sont autorisées dans la liste SELECT ou dans la clause HAVING d’une instruction SELECT. Vous pouvez utiliser une agrégation en combinaison avec la clause GROUP BY pour calculer l’agrégation sur les catégories de lignes. Utilisez la clause OVER pour calculer l’agrégation sur une plage spécifique de valeurs. La clause OVER ne peut pas suivre les agrégations GROUPING et GROUPING_ID.
+Les fonctions d’agrégation effectuent un calcul sur un ensemble de valeurs et renvoient une valeur unique. Elles sont autorisées dans la liste SELECT ou dans la clause HAVING d’une instruction SELECT. Vous pouvez utiliser une agrégation en combinaison avec la clause GROUP BY pour calculer l’agrégation sur les catégories de lignes. Utilisez la clause OVER pour calculer l’agrégation sur une plage spécifique de valeurs. La clause OVER ne peut pas suivre les agrégations GROUPING et GROUPING_ID.
 
 Toutes les fonctions d’agrégation sont déterministes, ce qui signifie qu’elles renvoient toujours la même valeur lorsqu’elles s’exécutent sur les mêmes valeurs d’entrée. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).|
 

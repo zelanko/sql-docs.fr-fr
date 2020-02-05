@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165217"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec versions gérées par le système
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Les colonnes **PERIOD** sont toujours considérées comme n’acceptant pas les valeurs Null, même si la possibilité de valeur Null n’est pas spécifiée. Si les colonnes **PERIOD** sont explicitement définies comme acceptant les valeurs Null, l’instruction **CREATE TABLE** échoue.
 - La table de l’historique doit toujours être alignée par schéma sur la table actuelle ou temporelle, en termes de nombre de colonnes, de noms de colonnes, de classement et de types de données.
 - Une table de l’historique anonyme est créée automatiquement sur le même schéma que la table en cours ou temporelle.
-- Le nom de la table de l’historique anonyme a le format suivant : *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . Le suffixe est facultatif. Il est ajouté uniquement si la première partie du nom de la table n’est pas unique.
+- Le nom de la table de l’historique anonyme a le format suivant : *MSSQL_TemporalHistoryFor_<ID_objet_table_temporelle_actuelle>_ [suffixe]* . Le suffixe est facultatif. Il est ajouté uniquement si la première partie du nom de la table n’est pas unique.
 - La table de l’historique est créée en tant que table rowstore. Un compression de page est appliquée si possible. Autrement, la table de l’historique est décompressée. Par exemple, certaines configurations de table, telles des colonnes fragmentées, n’autorisent pas la compression.
 - Un index cluster par défaut est créé pour la table de l’historique avec un nom généré automatiquement au format *IX_<nom_table_historique>* . L’index cluster contient les colonnes **PERIOD** (début, fin).
 - Pour créer la table actuelle comme table optimisée en mémoire, consultez [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).

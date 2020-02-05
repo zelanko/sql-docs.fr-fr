@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064753"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68064753"
 
 La fonction `CHECKSUM` retourne la valeur de somme de contrôle calculée à partir de la ligne d’une table ou à partir d’une liste d’expressions. Utilisez `CHECKSUM` pour générer des index de hachage.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ Cet argument spécifie que le calcul de la somme de contrôle couvre toutes les 
 - **cursor**
 - **image**
 - **ntext**
-- **texte**
+- **text**
 - **XML**
 
 Un autre type de données incomparable est **sql_variant** avec l’un des types précédents comme type de base.
@@ -56,7 +56,7 @@ Un autre type de données incomparable est **sql_variant** avec l’un des types
 [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type quelconque, à l’exception d’un type de données incomparable.
   
 ## <a name="return-types"></a>Types de retour
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
 `CHECKSUM` calcule une valeur de hachage, appelée somme de contrôle, sur sa liste d’arguments. Utilisez cette valeur de hachage pour générer des index de hachage. Un index de hachage est obtenu si la fonction `CHECKSUM` a des arguments de colonne et qu’un index est créé sur la valeur `CHECKSUM` calculée. qui peut être utilisé dans des recherches d'égalité sur les colonnes.
