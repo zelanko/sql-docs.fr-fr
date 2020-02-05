@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251297"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Utilisation du magasin de requêtes avec l'OLTP en mémoire
@@ -47,7 +47,7 @@ Toutefois, il existe quelques aspects spécifiques que les utilisateurs doivent 
     
 -   Lorsque vous exécutez le magasin de requêtes dans une base de données avec une charge de travail mixte, vous pouvez utiliser le champ **is_natively_compiled** à partir de [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) pour trouver rapidement les plans de requête générés par la compilation de code en mode natif.  
   
--   Le magasin de requêtes (paramètre *QUERY_CAPTURE_MODE* dans l’instruction **ALTER TABLE**) n’affecte pas les requêtes à partir des modules compilés en mode natif, car elles sont toujours capturées, quelle que soit la valeur configurée. Cela comprend la définition de `QUERY_CAPTURE_MODE = NONE`.  
+-   Le magasin de requêtes (paramètre*QUERY_CAPTURE_MODE* dans l’instruction **ALTER TABLE** ) n’affecte pas les requêtes à partir des modules compilés en mode natif, car elles sont toujours capturées, quelle que soit la valeur configurée. Cela comprend la définition de `QUERY_CAPTURE_MODE = NONE`.  
   
 -   La durée de compilation des requêtes capturée par le magasin de requêtes comprend uniquement le temps passé à l'optimisation des requêtes, avant la génération du code natif. Plus précisément, elle n'inclut pas le temps de compilation du code C et de la génération des structures internes nécessaires à la génération du code C.  
   
@@ -134,11 +134,11 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)   
- [Procédures stockées du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   

@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091766"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -104,7 +104,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-exporting-a-certificate-to-a-file"></a>A. Exportation d'un certificat dans un fichier  
+### <a name="a-exporting-a-certificate-to-a-file"></a>R. Exportation d'un certificat dans un fichier  
  Dans l'exemple ci-dessous, un certificat est exporté dans un fichier.  
   
 ```  

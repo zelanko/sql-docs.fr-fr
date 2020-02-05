@@ -11,10 +11,10 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293172"
 ---
 # <a name="create-new-infoobject"></a>Créer un nouvel InfoObject
@@ -24,7 +24,7 @@ ms.locfileid: "71293172"
 
   Utilisez la boîte de dialogue **Créer un nouvel InfoObject** pour créer un InfoObject dans le système SAP Netweaver BW.  
   
- Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Vous pouvez ouvrir la boîte de dialogue **Créer un nouvel InfoObject** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [Destination SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
@@ -65,7 +65,7 @@ ms.locfileid: "71293172"
  **Nom de l'InfoObject**  
  Entrez le nom de l'InfoObject.  
   
- **Description courte**  
+ **Brève description**  
  Entrez une brève description pour l'InfoObject.  
   
  **Description longue**  
@@ -137,7 +137,7 @@ ms.locfileid: "71293172"
 |-----------|-----------------|  
 |CHA|Caractéristiques|  
 |KYF|Chiffres clés|  
-|UNI|Unités|  
+|UNI|Units|  
 |TIM|Caractéristiques de temps|  
   
 ### <a name="attributes-options"></a>Options des attributs  
@@ -153,7 +153,7 @@ ms.locfileid: "71293172"
   
  Pour créer et ajouter un nouvel InfoObject, cliquez sur Nouveau, puis utilisez une nouvelle instance de la boîte de dialogue **Créer un nouvel InfoObject** pour créer l’InfoObject.  
   
- **Supprimer**  
+ **Remove**  
  Supprimez l’InfoObject sélectionné de la liste **Attributs** .  
   
 ## <a name="see-also"></a>Voir aussi  

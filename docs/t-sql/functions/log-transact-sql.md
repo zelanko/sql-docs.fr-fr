@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982256"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982256"
 
   Renvoie le logarithme népérien de l’expression **float** spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,11 +65,11 @@ LOG ( float_expression )
   
  Le logarithme népérien est le logarithme en base **e**, où **e** est une constante irrationnelle environ égale à 2,718281828.  
   
- Le logarithme naturel de la valeur exponentielle d’un nombre est le nombre lui-même : LOG( EXP( *n* ) ) = *n*. Et la valeur exponentielle du logarithme naturel d’un nombre est le nombre lui-même : EXP( LOG( *n* ) ) = *n*.  
+ Le logarithme népérien de l’exponentiel d’un nombre est le nombre lui-même : LOG( EXP( *n* ) ) = *n*. De même, l’exponentiel du logarithme népérien d’un nombre est le nombre lui-même : EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-calculating-the-logarithm-for-a-number"></a>A. Calcul du logarithme d'un nombre  
+### <a name="a-calculating-the-logarithm-for-a-number"></a>R. Calcul du logarithme d'un nombre  
  L’exemple suivant calcule le `LOG` de l’expression **float** spécifiée.  
   
 ```  
@@ -88,7 +88,7 @@ The LOG of the variable is: 2.30259
 ```  
   
 ### <a name="b-calculating-the-logarithm-of-the-exponent-of-a-number"></a>B. Calcul du logarithme de l'exposant d'un nombre  
- L'exemple suivant calcule le logarithme (`LOG`) de l'exposant d'un nombre.  
+ L’exemple suivant calcule la valeur `LOG` pour l’exposant d’un nombre.  
   
 ```  
 SELECT LOG (EXP (10));  

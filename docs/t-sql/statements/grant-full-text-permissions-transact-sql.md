@@ -19,10 +19,10 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050836"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT - Autorisations relatives au texte intégral (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68050836"
   
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ] ON
  Indique la liste de mots vides de texte intégral pour laquelle l'autorisation est accordée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
- Spécifie le principal auquel l'autorisation est accordée. Il peut s'agir :  
+ Spécifie le principal auquel l'autorisation est accordée. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
 -   d'un rôle de base de données ;  
@@ -75,7 +75,7 @@ GRANT OPTION
  Indique que le principal a également la possibilité d'accorder l'autorisation spécifiée à d'autres principaux.  
   
 AS *granting_principal*  
- Spécifie un principal dont le principal qui exécute cette requête dérive son droit d'accorder l'autorisation. Il peut s'agir :  
+ Spécifie un principal dont le principal qui exécute cette requête dérive son droit d'accorder l'autorisation. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
 -   d'un rôle de base de données ;  
@@ -132,7 +132,7 @@ AS *granting_principal*
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. Octroi d'autorisations à un catalogue de texte intégral  
+### <a name="a-granting-permissions-to-a-full-text-catalog"></a>R. Octroi d'autorisations à un catalogue de texte intégral  
  L'exemple suivant accorde à `Ted` l'autorisation `CONTROL` pour le catalogue de texte intégral `ProductCatalog`.  
   
 ```  

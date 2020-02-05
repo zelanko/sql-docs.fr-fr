@@ -11,10 +11,10 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822191"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
@@ -28,15 +28,15 @@ Pendant la mise à niveau d’une instance [!INCLUDE[ssNoVersion](../../../inclu
 ## <a name="prerequisites"></a>Conditions préalables requises  
 Avant de commencer, passez en revue les informations importantes suivantes :  
   
-- [Mises à niveau de version et d’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) : vérifiez que vous pouvez procéder à une mise à niveau vers SQL Server 2016 à partir de votre version du système d’exploitation Windows et de la version de SQL Server. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+- [Mises à niveau des éditions et versions prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md) : Vérifiez que votre version de SQL Server et votre version de système d’exploitation Windows sont compatibles avec la mise à niveau vers SQL Server 2016. Par exemple, vous ne pouvez pas mettre à niveau directement une instance SQL Server 2005 vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-- [Choisir une méthode de mise à niveau du moteur de base de données](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) : pour procéder à une mise à niveau ordonnée, sélectionnez la méthode et les étapes de mise à niveau en fonction des mises à niveau de version et d’édition prises en charge et des autres composants installés dans votre environnement.  
+- [Choisir une méthode de mise à niveau du moteur de base de données](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) : Pour effectuer la mise à niveau dans l’ordre, sélectionnez la méthode et les étapes de mise à niveau appropriées d’après l’article sur les mises à niveau des éditions et versions prises en charge, et en fonction des autres composants installés dans votre environnement.  
   
-- [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) : consultez les notes de publication et les problèmes de mise à niveau connus ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
+- [Planifier et tester le plan de mise à niveau du moteur de base de données](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) : Consultez les notes de publication et les problèmes de mise à niveau connus, ainsi que la liste de contrôle préalable à la mise à niveau, puis développez et testez votre plan de mise à niveau.  
   
-- [Configurations matérielle et logicielle requises pour l’installation de SQL Server  2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) :  passez en revue les configurations matérielle et logicielle requises pour l’installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
+- [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) : Consultez la configuration logicielle requise pour installer [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si des logiciels supplémentaires sont nécessaires, installez-les sur chaque nœud avant de commencer le processus de mise à niveau pour réduire les éventuels temps d’arrêt.  
 
-- [Vérifier si la capture des changements de données ou la réplication est utilisée pour les bases de données du groupe de disponibilité](#special-steps-for-change-data-capture-or-replication) : si des bases de données du groupe de disponibilité sont activées pour la capture des changements de données (CDC), suivez ces [instructions](#special-steps-for-change-data-capture-or-replication).
+- [Vérifier si la capture de données modifiées ou la réplication est utilisée pour une base de données de groupe de disponibilité](#special-steps-for-change-data-capture-or-replication) : Si une base de données dans le groupe de disponibilité est activée pour la capture de données modifiées (CDC), suivez ces [instructions](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >Avoir plusieurs versions différentes des instances de SQL Server dans le même groupe de disponibilité n’est pas pris en charge en dehors d’une mise à niveau propagée. En outre, cet état ne devrait pas durer pendant de longues périodes, étant donné que la mise à niveau doit avoir lieu rapidement. L’autre option pour la mise à niveau de SQL Server 2016 et versions ultérieures est via un groupe de disponibilité distribué.
@@ -202,7 +202,7 @@ Pour effectuer une mise à niveau propagée d’un groupe de disponibilité dist
 
 >[!IMPORTANT]
 >- Vérifiez la synchronisation entre chaque étape. Avant de passer à l’étape suivante, vérifiez que vos réplicas en validation synchrone sont synchronisés dans le groupe de disponibilité, et que votre réplica principal global est synchronisé avec le redirecteur dans le groupe de disponibilité distribué. 
->- **Recommandation** : chaque fois que vous vérifiez la synchronisation, actualisez le nœud de base de données et le nœud de groupe de disponibilité distribué dans SQL Server Management Studio. Une fois que tout est synchronisé, enregistrez une capture d’écran de l’état de chaque réplica. Elle vous permettra de savoir à quelle étape vous êtes, de fournir la preuve que tout fonctionnait correctement avant l’étape suivante et vous aidera à résoudre les problèmes en cas de défaillance. 
+>- **Recommandation** : Chaque fois que vous vérifiez la synchronisation, actualisez le nœud de la base de données et le nœud du groupe de disponibilité distribué dans SQL Server Management Studio. Une fois que tout est synchronisé, enregistrez une capture d’écran de l’état de chaque réplica. Elle vous permettra de savoir à quelle étape vous êtes, de fournir la preuve que tout fonctionnait correctement avant l’étape suivante et vous aidera à résoudre les problèmes en cas de défaillance. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Exemple de diagramme d’une mise à niveau propagée d’un groupe de disponibilité distribué
@@ -234,7 +234,7 @@ Si un troisième réplica existait dans chaque groupe de disponibilité, il sera
 
 >[!IMPORTANT]
 >- Vérifiez la synchronisation entre chaque étape. Avant de passer à l’étape suivante, vérifiez que vos réplicas en validation synchrone sont synchronisés dans le groupe de disponibilité, et que votre réplica principal global est synchronisé avec le redirecteur dans le groupe de disponibilité distribué. 
->- Recommendation : chaque fois que vous vérifiez la synchronisation, actualisez le nœud de base de données et le nœud de groupe de disponibilité distribué dans SQL Server Management Studio. Une fois que tout est synchronisé, prenez une capture d’écran et enregistrez-la. Elle vous permettra de savoir à quelle étape vous êtes, de fournir la preuve que tout fonctionnait correctement avant l’étape suivante et vous aidera à résoudre les problèmes en cas de défaillance. 
+>- Recommandation : Chaque fois que vous vérifiez la synchronisation, actualisez le nœud de la base de données et le nœud du groupe de disponibilité distribué dans SQL Server Management Studio. Une fois que tout est synchronisé, prenez une capture d’écran et enregistrez-la. Elle vous permettra de savoir à quelle étape vous êtes, de fournir la preuve que tout fonctionnait correctement avant l’étape suivante et vous aidera à résoudre les problèmes en cas de défaillance. 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Étapes spéciales pour la capture de données modifiées ou la réplication

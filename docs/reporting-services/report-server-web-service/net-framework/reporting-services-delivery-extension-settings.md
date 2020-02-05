@@ -21,10 +21,10 @@ ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128853"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Paramètres des extensions de remise de Reporting Services
@@ -39,9 +39,9 @@ ms.locfileid: "63128853"
 |Paramètre|Valeur|  
 |-------------|-----------|  
 |**TO**|Adresse e-mail qui s’affiche sur la ligne **À** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. Obligatoire.|  
-|**CC**|Adresse e-mail qui s’affiche sur la ligne **Cc** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. Facultatif.|  
-|**BCC**|Adresse e-mail qui s’affiche sur la ligne **Cci** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. Facultatif.|  
-|**ReplyTo**|Adresse e-mail qui s’affiche dans l’en-tête **Répondre à** de l’e-mail. Il doit s'agir d'une adresse de messagerie unique. Facultatif.|  
+|**CC**|Adresse e-mail qui s’affiche sur la ligne **Cc** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. facultatif.|  
+|**BCC**|Adresse e-mail qui s’affiche sur la ligne **Cci** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. facultatif.|  
+|**ReplyTo**|Adresse e-mail qui s’affiche dans l’en-tête **Répondre à** de l’e-mail. Il doit s'agir d'une adresse de messagerie unique. facultatif.|  
 |**IncludeReport**|Valeur indiquant si le rapport doit être inclus dans la remise par messagerie. La valeur **true** indique que le rapport est remis dans le corps de l’e-mail.|  
 |**RenderFormat**|Nom de l'extension de rendu à utiliser pour générer le rapport rendu. Ce nom doit correspondre à l'une des extensions de rendu visibles installées sur le serveur de rapports. Cette valeur est obligatoire si le paramètre **IncludeReport** est défini sur **true**.|  
 |**Priorité**|Priorité avec laquelle le message électronique est envoyé. Les valeurs valides sont **LOW**, **NORMAL** et **HIGH**. La valeur par défaut est **NORMAL**.|  

@@ -35,10 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982834"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
@@ -61,7 +61,7 @@ ms.locfileid: "73982834"
   
  Pour plus d’informations sur les sortes de recherches en texte intégral prises en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md).  
  
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -285,7 +285,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Notez que le terme de recherche interne, `CC`, n'est pas compté.  
   
  **MAX**  
- Retourne toutes les lignes qui contiennent les termes spécifiés indépendamment de la distance qui les sépare. Il s'agit du paramètre par défaut.  
+ Retourne toutes les lignes qui contiennent les termes spécifiés indépendamment de la distance qui les sépare. Il s’agit de la valeur par défaut.  
   
  \<match_order>  
  Spécifie si les termes doivent apparaître dans l'ordre spécifié pour être retournés par une requête de recherche. Pour spécifier \<match_order>, vous devez également spécifier \<maximum_distance>.  
@@ -298,7 +298,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **FALSE**  
  Ignore l'ordre spécifié. Par exemple, `NEAR(A,B)` correspondrait à la fois à `A ... B` et à `B ... A`.  
   
- Il s'agit du paramètre par défaut.  
+ Il s’agit de la valeur par défaut.  
   
  Par exemple, le terme de proximité suivant recherche les mots « `Monday` », « `Tuesday` » et « `Wednesday` » dans l'ordre spécifié, indépendamment de la distance qui les sépare :  
   
@@ -354,7 +354,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Vous pouvez utiliser un nom en quatre parties dans le prédicat CONTAINS ou [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) pour faire des requêtes sur les colonnes indexées en texte intégral dans les tables cibles d’un serveur lié. Pour préparer un serveur distant à recevoir des requêtes de texte intégral, créez un index de recherche en texte intégral sur les tables et colonnes cibles du serveur distant, puis ajoutez le serveur distant comme serveur lié.  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>Comparaison entre LIKE et la recherche en texte intégral  
- Contrairement à la recherche en texte intégral, le prédicat [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne uniquement sur les modèles de caractères. En outre, vous ne pouvez pas utiliser le prédicat LIKE pour interroger des données binaires mises en forme. De plus, une requête LIKE portant sur un important volume de données de texte non structurées est beaucoup plus lente qu'une requête de texte intégral équivalente exécutée sur les mêmes données. Une requête LIKE portant sur des millions de lignes de données de texte peut prendre plusieurs minutes pour retourner un résultat alors qu'une requête de texte intégral retourne en quelques secondes à peine le même résultat, en fonction du nombre de lignes retournées et de leur taille. Une autre considération à prendre en compte est que LIKE effectue uniquement une analyse de modèle simple d'une table entière. Par opposition, une requête de texte intégral est consciente de la langue et applique des transformations spécifiques au niveau de l'index et de l'heure de requête, telles que le filtrage de mots vides et l'ajout au dictionnaire des synonymes et aux formes fléchies. Ces transformations permettent aux requêtes de texte intégral d'améliorer le rappel et le dernier classement de leurs résultats.  
+ Contrairement à la recherche en texte intégral, le prédicat [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne uniquement sur les modèles de caractères. En outre, vous ne pouvez pas utiliser le prédicat LIKE pour interroger des données binaires mises en forme. De plus, une requête LIKE portant sur un important volume de données de texte non structurées est beaucoup plus lente qu'une requête de texte intégral équivalente exécutée sur les mêmes données. Une requête LIKE portant sur des millions de lignes de données de texte peut prendre plusieurs minutes pour retourner un résultat alors qu'une requête de texte intégral retourne en quelques secondes à peine le même résultat, en fonction du nombre de lignes retournées et de leur taille. Une autre considération à prendre en compte est que LIKE effectue uniquement une analyse de modèle simple d'une table entière. Par opposition, une requête de texte intégral est consciente de la langue et applique des transformations spécifiques au niveau de l'index et de l'heure de requête, telles que le filtrage de mots vides et l'ajout au dictionnaire des synonymes et aux formes fléchies. Ces transformations permettent aux requêtes de texte intégral d'améliorer le rappel et le dernier classement de leurs résultats.  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>Interrogation de plusieurs colonnes (recherche en texte intégral)  
  Vous pouvez interroger plusieurs colonnes en spécifiant une liste de colonnes à rechercher. Les colonnes doivent être issues de la même table.  
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-contains-with-simple_term"></a>A. Utilisation de CONTAINS avec \<simple_term>  
+### <a name="a-using-contains-with-simple_term"></a>R. Utilisation de CONTAINS avec \<simple_term>  
  L'exemple ci-dessous recherche tous les produits qui contiennent le mot `$80.99` et qui coûtent `Mountain`.  
   
 ```sql  

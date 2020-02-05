@@ -1,10 +1,9 @@
 ---
-title: Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Naviguer dans le Concepteur de diagrammes de base de données
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bba0d3bab215a745161581b79beccc528b274010
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3a43ab4d45ddb30a655beefa9b39713f1d451054
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267463"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75225551"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Vous pouvez travailler dans le Concepteur de diagrammes de base de données à l’aide du clavier ou de la souris. Pour connaître les méthodes spécifiques utilisées dans le Concepteur de diagrammes de base de données, consultez les tableaux suivants.  
   
-|**Pour**|**Appuyez sur**|  
+|**To**|**Appuyez sur**|  
 |----------|-------------|  
 |Accéder au menu Diagramme de base de données|Alt+M|  
 |Vous déplacer au sein des tables et des relations éventuelles|Tab ou Maj+Tab|  
@@ -35,7 +36,7 @@ Vous pouvez travailler dans le Concepteur de diagrammes de base de données à l
 |Déplacer des tables sur la surface du schéma|Ctrl+ Haut ou Ctrl+Bas|  
 |Faire défiler vers la droite/gauche et vers le haut/bas|Pg. préc/Pg. suiv pour un déplacement vertical, Ctrl+Pg. préc/Pg. suiv pour un déplacement horizontal|  
 |Redimensionner des tables et des annotations|Ctrl+Maj+Touches de direction|  
-|Modifier la quantité d'informations affichées dans une table|Ctrl+T|  
+|Modifier la quantité d'informations affichées dans une table|CTRL+T|  
 |Zoom|Ctrl+Touche Plus ou Moins|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072251"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concaténation de chaîne) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072251"
 
   Opérateur dans une expression de chaîne qui concatène des chaînes binaires ou des chaînes de deux caractères ou plus, des colonnes ou une combinaison de chaînes et de noms de colonnes, pour former une seule expression (un opérateur chaîne).  L’exemple `SELECT 'book'+'case';` retourne `bookcase`.
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +74,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-string-concatenation"></a>A. Utilisation de la concaténation de chaîne  
+### <a name="a-using-string-concatenation"></a>R. Utilisation de la concaténation de chaîne  
  L'exemple suivant crée une seule colonne sous l'en-tête `Name` à partir de plusieurs colonnes de caractères, avec le nom de famille de la personne suivi d'une virgule, d'un espace puis de son prénom. Le jeu de résultats est classé par ordre alphabétique croissant sur le nom de famille puis sur le prénom.  
   
 ```sql  

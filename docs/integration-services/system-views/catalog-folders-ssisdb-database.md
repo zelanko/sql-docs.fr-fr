@@ -11,10 +11,10 @@ ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14930bfd90b242f30a8b3f265f6ed3b367bd07f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296538"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (base de données SSISDB)
@@ -26,10 +26,10 @@ ms.locfileid: "71296538"
 
   Affiche les dossiers dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |id|**bigint**|Identificateur unique du dossier.|  
-|NAME|**sysname(nvarchar(128)**|Nom du dossier, qui est unique dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
+|name|**sysname(nvarchar(128)**|Nom du dossier, qui est unique dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
 |description|**nvarchar(1024)**|Description du dossier.|  
 |created_by_sid|**varbinary(85)**|Identificateur de sécurité (SID) unique de l'utilisateur qui a créé le dossier.|  
 |created_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a créé le dossier.|  

@@ -11,10 +11,10 @@ ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f3450320f28a2f0abd133c93d1b43512484d446
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296576"
 ---
 # <a name="catalogexecution_data_taps"></a>catalog.execution_data_taps 
@@ -26,14 +26,14 @@ ms.locfileid: "71296576"
 
   Affiche des informations pour chaque drainage de données défini dans une exécution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |data_tap_id|**bigint**|Identificateur (ID) unique du drainage de données.|  
 |execution_id|**bigint**|Identificateur unique (ID) de l'instance d'exécution.|  
 |package_path|**nvarchar(max)**|Chemin d'accès au package pour la tâche de flux de données où les données sont drainées.|  
 |dataflow_path_id_string|**nvarchar(4000)**|Chaîne d'identification du chemin d'accès de flux de données.|  
 |dataflow_task_guid|**uniqueidentifier**|Identificateur (ID) unique de la tâche de flux de données.|  
-|max_rows|**Int**|Nombre de lignes à capturer. Si cette valeur n'est spécifiée, toutes les lignes sont capturées.|  
+|max_rows|**int**|Nombre de lignes à capturer. Si cette valeur n'est spécifiée, toutes les lignes sont capturées.|  
 |filename|**nvarchar(4000)**|Nom du fichier de vidage de données. Pour plus d’informations, voir [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).|  
   
 ## <a name="permissions"></a>Autorisations  

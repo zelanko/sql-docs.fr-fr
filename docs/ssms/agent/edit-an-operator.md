@@ -1,10 +1,9 @@
 ---
-title: Modifier un opérateur | Microsoft Docs
-ms.custom: ''
+title: Modifier un opérateur
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 918bb57b0798645ea3968247e1182d22b2de6df3
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 1b69797d3a308d6fe34fa96751143cbaa480f3ea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552894"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242411"
 ---
 # <a name="edit-an-operator"></a>Modifier un opérateur
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Cette rubrique explique comment modifier la disponibilité d'un opérateur pour 
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opérateurs.  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
@@ -58,7 +59,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opéra
   
 4.  Cliquez avec le bouton droit sur l’opérateur que vous souhaitez modifier, puis sélectionnez **Propriétés**.  
   
-    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue **Propriétés de**_nom\_opérateur_, consultez :  
+    Pour plus d’informations sur les options disponibles contenues dans la boîte de dialogue _Propriétés de\__ nom**opérateur**, consultez :  
   
     -   [Propriétés des opérateurs - Nouvel opérateur &#40;page Général&#41;$$$](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
@@ -72,7 +73,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opéra
   
 #### <a name="to-edit-an-operator"></a>Pour modifier un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

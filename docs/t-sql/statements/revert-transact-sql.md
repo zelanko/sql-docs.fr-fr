@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252174"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "72252174"
 
   Restaure le contexte d'exécution de l'appelant de la dernière instruction EXECUTE AS.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,7 +86,7 @@ EXECUTE dbo.usp_myproc;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. Utilisation de EXECUTE AS et REVERT pour changer de contexte  
+### <a name="a-using-execute-as-and-revert-to-switch-context"></a>R. Utilisation de EXECUTE AS et REVERT pour changer de contexte  
  L'exemple ci-dessous crée une pile de contextes d'exécution à l'aide de plusieurs principaux. L'instruction REVERT y est ensuite utilisée pour rendre le contexte d'exécution à l'appelant précédent. L'instruction REVERT est exécutée plusieurs fois en remontant dans la pile, jusqu'à ce que le contexte d'exécution revienne à l'appelant d'origine.  
   
 ```  

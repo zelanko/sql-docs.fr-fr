@@ -9,15 +9,15 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251912"
 ---
 # <a name="branding-the-web-portal"></a>Personnalisation du portail web
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Vous pouvez modifier l'apparence du portail web en le personnalisant à l’image de votre entreprise. Cette opération s'effectue via un package de marque. Le package de marque est conçu pour vous permettre de le créer même si vous n’avez pas les connaissances approfondies nécessaires en matière de feuille de style en cascade (CSS).
 
@@ -93,13 +93,13 @@ La section Interface est divisée selon les regroupements suivants.
   
 |Section|Description|  
 |---|---|  
-|primary|Couleurs du bouton et du curseur.|  
+|Principal|Couleurs du bouton et du curseur.|  
 |Secondary|Barre de titre, barre de recherche, menu de gauche (si affiché) et couleur du texte de ces éléments.|  
 |Principal neutre|Arrière-plans de la page d’accueil et des rapports.|  
 |Neutre secondaire|Arrière-plans de la zone de texte et des options de dossier, et menu des paramètres.|  
 |Neutre tertiaire|Arrière-plans des paramètres du site.|  
 |Messages de danger/avertissement/réussite|Couleurs de ces messages.|  
-|Indicateur de performance clé|Contrôle les couleurs des états bon (1), neutre (0), neutre (-1) et aucun.|  
+|KPI|Contrôle les couleurs des états bon (1), neutre (0), neutre (-1) et aucun.|  
   
 La première fois que vous vous connectez à un serveur avec l'Éditeur de rapports mobiles, sur lequel un package de marque a été déployé, le thème sera ajouté aux thèmes disponibles que vous pouvez utiliser dans le menu supérieur droit de l'application.  
   

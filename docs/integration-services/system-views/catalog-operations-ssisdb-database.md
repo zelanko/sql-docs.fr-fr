@@ -14,10 +14,10 @@ ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296547"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (base de données SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71296547"
 
   Affiche les détails de toutes les opérations dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|Identificateur (ID) unique de l'opération.|  
 |operation_type|**smallint**|Type d’opération.|  
@@ -37,12 +37,12 @@ ms.locfileid: "71296547"
 |object_type|**smallint**|Type d'objet affecté par l'opération. L'objet peut être un dossier (`10`), un projet (`20`), un package (`30`), un environnement (`40`) ou une instance d'exécution (`50`).|  
 |object_id|**bigint**|ID de l'objet affecté par l'opération.|  
 |object_name|**nvarchar(260)**|Nom de l'objet.|  
-|status|**Int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**int**|L’état de l’opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |start_time|**datetimeoffset**|Heure de début de l'opération, si disponible.|  
 |end_time|**datetimeoffsset**|Heure à laquelle l'opération s'est terminée.|  
 |caller_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur si l'Authentification Windows a été utilisée pour se connecter.|  
 |caller_name|**nvarchar(128)**|Nom du compte qui a effectué l'opération.|  
-|process_id|**Int**|ID de processus externe, le cas échéant.|  
+|process_id|**int**|ID de processus externe, le cas échéant.|  
 |stopped_by_sid|**varbinary(85)**|SID de l'utilisateur qui a arrêté l'opération.|  
 |stopped_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a arrêté l'opération.|  
 |server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

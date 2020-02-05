@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495470"
 ---
 # <a name="set-operators---union-transact-sql"></a>Opérateurs de jeu - UNION (Transact-SQL)
@@ -47,7 +47,7 @@ Voici les règles de base pour combiner les jeux de résultats de deux requêtes
   
 -   Les types de données doivent être compatibles.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,7 +71,7 @@ Incorpore toutes les lignes dans les résultats, notamment les doublons. S'il n'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-a-simple-union"></a>A. Utilisation de l'opérateur UNION simple  
+### <a name="a-using-a-simple-union"></a>R. Utilisation de l'opérateur UNION simple  
 Dans l'exemple suivant, le jeu de résultats comprend le contenu des colonnes `ProductModelID` et `Name` des deux tables `ProductModel` et `Gloves`.  
  
 ```sql

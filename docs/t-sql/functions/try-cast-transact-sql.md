@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: 915ea023442ab9d787a481cab44259b1fc4a3857
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70151956"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70151956"
 
   Retourne une valeur convertie en type de données spécifié si la conversion aboutit ; sinon, retourne NULL.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +61,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-try_cast-returns-null"></a>A. TRY_CAST retourne une valeur Null  
+### <a name="a-try_cast-returns-null"></a>R. TRY_CAST retourne une valeur Null  
  L'exemple suivant montre que TRY_CAST retourne Null lorsque la conversion échoue.  
   
 ```sql  
