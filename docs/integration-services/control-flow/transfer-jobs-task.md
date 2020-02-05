@@ -17,10 +17,10 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293869"
 ---
 # <a name="transfer-jobs-task"></a>Tâche de transfert de travaux
@@ -83,10 +83,10 @@ ms.locfileid: "71293869"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour donner un nom et une description à la tâche de transfert de travaux.  
   
 > [!NOTE]  
->  Seuls les membres du rôle serveur fixe **sysadmin** ou l'un des rôles de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur de destination peuvent y créer des travaux. Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles de base de données fixe de l’Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+>  Seuls les membres du rôle serveur fixe **sysadmin** ou l'un des rôles de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur de destination peuvent y créer des travaux. Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique à la tâche de transfert de travaux. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -135,7 +135,7 @@ ms.locfileid: "71293869"
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des travaux de même nom existent déjà sur le serveur de destination.|  
 |**Remplacer**|La tâche remplace les travaux de même nom sur le serveur de destination.|  
-|**Ignorer**|La tâche ignore les travaux de même nom qui existent sur le serveur de destination.|  
+|**Skip**|La tâche ignore les travaux de même nom qui existent sur le serveur de destination.|  
   
  **EnableJobsAtDestination**  
  Déterminez si les travaux copiés sur le serveur de destination doivent être activés.  

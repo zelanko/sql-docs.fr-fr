@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742845"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
@@ -90,13 +90,13 @@ Les autorisations accordées aux rôles de base de données fixe ne peuvent pas 
 
 Ces rôles de base de données existent uniquement dans la base de données MASTER virtuelle. Leurs autorisations sont limitées aux actions effectuées dans MASTER. Seuls les utilisateurs de base de données de MASTER peuvent être ajoutés à ces rôles. Aucune connexion ne peut être ajoutée à ces rôles, toutefois les utilisateurs peuvent être créés en fonction des connexions et ensuite ces utilisateurs peuvent être ajoutés aux rôles. Les utilisateurs de base de données autonome dans MASTER peuvent également être ajoutés à ces rôles. Toutefois, les utilisateurs de base de données autonome ajoutés au rôle **dbmanager** dans MASTER ne peuvent pas être utilisés pour créer de nouvelles bases de données.
 
-|Nom du rôle|Description|  
+|Nom de rôle|Description|  
 |--------------------|-----------------|
 |**dbmanager** | Permet de créer et de supprimer des bases de données. Un membre du rôle dbmanager qui crée une base de données en devient le propriétaire, ce qui lui permet de se connecter à cette base de données en tant qu’utilisateur dbo. L’utilisateur dbo possède toutes les autorisations de base de données dans la base de données. Les membres du rôle dbmanager n’ont pas nécessairement l’autorisation d’accéder aux bases de données qui ne leur appartiennent pas.|
 |**loginmanager** | Peut créer et supprimer des connexions dans la base de données MASTER virtuelle.|
 
 > [!NOTE]
-> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation SQL Database : Octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> Le principal de niveau du serveur et l’administrateur Azure Active Directory (s’il est configuré) détiennent toutes les autorisations dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sans avoir besoin d’être membres de tous les rôles. Pour plus d’informations, voir [Authentification et autorisation de base de données SQL : octroi de l’accès](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Rôles de msdb  
  La base de données msdb contient les rôles à usages spéciaux présentés dans le tableau ci-dessous.  
@@ -110,15 +110,15 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 |**dbm_monitor**|Créé dans la base de données **msdb** lorsque la première base de données est inscrite dans le moniteur de mise en miroir de bases de données. Le rôle **dbm_monitor** ne comporte aucun membre tant qu’un administrateur système n’affecte pas d’utilisateurs au rôle.|  
   
 > [!IMPORTANT]  
->  Les membres du rôle **db_ssisadmin** et du rôle **dc_admin** peuvent être en mesure d’élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour empêcher cette élévation de privilège lors de l’exécution de plans de maintenance, de jeux d’éléments de collecte de données et d’autres packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configurez les travaux de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent qui exécutent des packages de façon à utiliser un compte proxy doté de privilèges limités ou ajoutez uniquement des membres **sysadmin** aux rôles **db_ssisadmin** et **dc_admin** .  
+>  Les membres du rôle **db_ssisadmin** et du rôle **dc_admin** peuvent être en mesure d’élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour empêcher cette élévation de privilège durant l’exécution de plans de maintenance, de jeux d’éléments de collecte de données et d’autres packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configurez les travaux de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent qui exécutent des packages de façon à utiliser un compte proxy doté de privilèges limités ou ajoutez uniquement des membres **sysadmin** aux rôles **db_ssisadmin** et **dc_admin** .  
 
 ## <a name="working-with-r-services"></a>Utilisation de R Services  
 
-**S’applique à :** SQL Server à compter de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**S’applique à :** SQL Server à partir de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 Quand vous installez R Services, vous disposez de rôles de base de données supplémentaires pour la gestion des packages. Pour plus d’informations, consultez [Gestion des packages R pour SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 
-|Nom du rôle |Description|  
+|Nom de rôle |Description|  
 |-------------|-----------------|
 |**rpkgs-users** |Permet aux utilisateurs d’employer tous les packages partagés qui ont été installés par des membres du rôle rpkgs-shared.|
 |**rpkgs-private** |Fournit l’accès aux packages partagés avec les mêmes autorisations que le rôle rpkgs-users. Les membres de ce rôle peuvent également installer, supprimer et utiliser des packages à étendue privée.|
@@ -135,13 +135,13 @@ Quand vous installez R Services, vous disposez de rôles de base de données sup
 |[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|Métadonnées|Retourne des informations sur les membres d'un rôle dans la base de données actuelle.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|Métadonnées|Retourne une ligne pour chaque membre de chaque rôle de base de données.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|Métadonnées|Indique si l'utilisateur actuel est membre du groupe Microsoft Windows ou du rôle de base de données Microsoft SQL Server spécifié.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Command|Crée un rôle de base de données dans la base de données active.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Command|Modifie le nom ou l’appartenance à un rôle de base de données.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Command|Supprime un rôle de la base de données.|  
-|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|Crée un rôle de base de données dans la base de données active.|  
-|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Supprime un rôle de base de données de la base de données actuelle.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|
+|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Commande|Crée un rôle de base de données dans la base de données active.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Commande|Modifie le nom ou l’appartenance à un rôle de base de données.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Commande|Supprime un rôle de la base de données.|  
+|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Commande|Crée un rôle de base de données dans la base de données active.|  
+|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Commande|Supprime un rôle de base de données de la base de données actuelle.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Commande|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Commande|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Autorisations | Ajoute l’autorisation à un rôle.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Autorisations | Refuse une autorisation à un rôle.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Autorisations | Supprime des autorisations accordées ou refusées antérieurement.

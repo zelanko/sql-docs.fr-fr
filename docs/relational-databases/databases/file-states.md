@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934443"
 ---
 # <a name="file-states"></a>États des fichiers
@@ -45,7 +45,7 @@ ms.locfileid: "67934443"
 ## <a name="file-state-definitions"></a>Définitions de l'état d'un fichier  
  Le tableau suivant décrit les états d'un fichier.  
   
-|État|Définition|  
+|State|Définition|  
 |-----------|----------------|  
 |ONLINE|Le fichier est accessible pour toutes les opérations. Les fichiers du groupe de fichiers primaire sont toujours en ligne lorsque la base de données elle-même l'est. Si un fichier du groupe de fichiers primaire n'est pas en ligne, la base de données n'est pas en ligne et les états des fichiers secondaires ne sont pas définis.|  
 |OFFLINE|Le fichier n'est pas accessible et il se peut qu'il ne soit pas présent sur le disque. Les fichiers prennent l'état hors connexion du fait d'une action explicite de l'utilisateur et restent hors connexion tant qu'une autre action n'est pas exécutée.<br /><br /> **\*\* Attention \*\*** L’état d’un fichier peut être défini hors connexion quand il est endommagé, mais peut être restauré. Un fichier mis hors connexion ne peut être remis en ligne qu'en étant restauré à partir d'une sauvegarde. Pour plus d’informations sur la restauration d’un fichier unique, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md). <br /><br /> Un fichier de base de données est également défini en mode hors connexion quand une base de données est en mode de récupération complet ou utilisant les journaux de transactions et qu’un fichier est supprimé. L’entrée dans sys.master_files persiste jusqu’à ce qu’un journal des transactions soit tronqué au-delà de la valeur drop_lsn. Pour plus d’informations, consultez [Troncation du journal des transactions](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation). |  
@@ -57,7 +57,7 @@ ms.locfileid: "67934443"
 ## <a name="related-content"></a>Contenu associé  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
- [États d'une base de données](../../relational-databases/databases/database-states.md)  
+ [États d’une base de données](../../relational-databases/databases/database-states.md)  
   
  [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708686"
 ---
 # <a name="back-up-files-and-filegroups"></a>Sauvegarder des fichiers et des groupes de fichiers
@@ -59,9 +59,9 @@ Les autorisations `BACKUP DATABASE` et `BACKUP LOG` reviennent par défaut aux m
   
 1. Dans la liste **Base de données** , vérifiez le nom de la base de données. Vous pouvez éventuellement sélectionner une autre base de données dans la liste.  
   
-1. Dans la liste **Type de sauvegarde** , sélectionnez **Complète** ou **Différentielle**.  
+1. Dans la liste **Type de sauvegarde**, sélectionnez **Complète** ou **Différentielle**.  
   
-1. Pour l'option **Composant de sauvegarde** , cliquez sur **Fichier et groupes de fichiers**.  
+1. Pour l'option **Composant de sauvegarde**, cliquez sur **Fichier et groupes de fichiers**.  
   
 1. Dans la boîte de dialogue **Sélection de fichiers et de groupes de fichiers** , sélectionnez les fichiers et les groupes de fichiers que vous voulez sauvegarder. Vous pouvez sélectionner un ou plusieurs fichiers individuellement, ou vous pouvez activer la case qui permet de sélectionner automatiquement tous les fichiers d'un groupe de fichiers.  
   
@@ -123,7 +123,7 @@ Les autorisations `BACKUP DATABASE` et `BACKUP LOG` reviennent par défaut aux m
 
 ## <a name="using-transact-sql"></a>Utilisation de Transact-SQL
   
-Pour créer une sauvegarde de fichier ou de groupe de fichiers, utilisez une instruction [BACKUP DATABASE <fichier_ou_groupe_de_fichiers>](../../t-sql/statements/backup-transact-sql.md). Au minimum, cette instruction doit spécifier les actions suivantes :  
+Pour créer une sauvegarde de fichier ou de groupe de fichiers, utilisez une instruction [BACKUP DATABASE <fichier_ou_groupe_de_fichiers>](../../t-sql/statements/backup-transact-sql.md). Au minimum, cette instruction doit spécifier les actions suivantes :  
   
   - Nom de la base de données.  
   
@@ -161,7 +161,7 @@ Dans les exemples suivants, vous procédez à une sauvegarde d'un ou plusieurs f
   
 - Un groupe de fichiers nommé `SalesGroup2` avec les fichiers `SGrp2Fi1` et `SGrp2Fi2`.  
   
-#### <a name="a-create-a-file-backup-of-two-files"></a>A. Créer une sauvegarde de fichiers de deux fichiers  
+#### <a name="a-create-a-file-backup-of-two-files"></a>R. Créer une sauvegarde de fichiers de deux fichiers  
 Dans l'exemple suivant, vous créez une sauvegarde de fichiers différentiel contenant seulement le fichier `SGrp1Fi2` du `SalesGroup1` et le fichier `SGrp2Fi2` du groupe de fichiers `SalesGroup2` .  
   
 ```sql  
@@ -201,9 +201,9 @@ GO
   
 ## <a name="PowerShellProcedure"></a> Utilisation de PowerShell
 
-Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
+Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   
-Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Files** comme valeur du paramètre **-BackupAction** . Spécifiez également l'un des paramètres suivants :  
+Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Files** comme valeur du paramètre **-BackupAction**. Spécifiez également l'un des paramètres suivants :  
   
 - Pour sauvegarder un fichier spécifique, spécifiez le paramètre _-DatabaseFile_*String* , où *String* représente un ou plusieurs fichiers de base de données à sauvegarder.  
   

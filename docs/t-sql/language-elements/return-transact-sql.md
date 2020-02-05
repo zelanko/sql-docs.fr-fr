@@ -25,10 +25,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072370"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68072370"
 
   Permet de quitter sans condition une requête ou une procédure. RETURN a une action immédiate et complète, et elle est utilisable à tout moment pour quitter une procédure, un traitement ou un bloc d'instructions. Les instructions qui suivent RETURN ne sont pas exécutées.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ RETURN [ integer_expression ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-from-a-procedure"></a>A. Sortie d'une procédure  
+### <a name="a-returning-from-a-procedure"></a>R. Sortie d'une procédure  
  Cet exemple montre que si aucun nom d'utilisateur n'est fourni en tant que paramètre lors de l'exécution de `findjobs`, `RETURN` met un terme à la procédure après envoi d'un message à l'utilisateur. Si en revanche un nom d'utilisateur est fourni, les noms de tous les objets créés par celui-ci dans la base de données active sont récupérés dans les tables système adéquates.  
   
 ```  

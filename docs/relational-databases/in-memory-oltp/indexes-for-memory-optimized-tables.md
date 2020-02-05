@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929696"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire
@@ -215,7 +215,7 @@ Aucun de ces types d’index n’est utile si la clause `WHERE` spécifie unique
   
 Le tableau suivant répertorie toutes les opérations qui sont prises en charge par les différents types d’index. *Oui* signifie que l’index peut traiter efficacement la demande et *Non* signifie que l’index ne peut pas la traiter efficacement. 
   
-| Opération | Index optimisé en mémoire, <br/> hachage | Index optimisé en mémoire, <br/> non-cluster | Index sur disque, <br/> (non) cluster |  
+| Opération | Index optimisé en mémoire, <br/> Hachage | Index optimisé en mémoire, <br/> non-cluster | Index sur disque, <br/> (non) cluster |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Analyse d'index, récupère toutes les lignes de la table. | Oui | Oui | Oui |  
 | Recherche d’index sur les prédicats d’égalité (=). | Oui <br/> (Une clé complète est requise.) | Oui  | Oui |  

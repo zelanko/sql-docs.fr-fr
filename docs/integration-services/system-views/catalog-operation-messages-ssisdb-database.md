@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295161"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (base de données SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71295161"
 
   Affiche des messages entrés pendant des opérations dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Identificateur (ID) unique du message.|  
 |operation_id|**bigint**|ID unique de l'opération.|  
@@ -49,7 +49,7 @@ ms.locfileid: "71295161"
 |-1|Unknown|  
 |120|Error|  
 |110|Avertissement|  
-|70|Informations|  
+|70|Information|  
 |10|Pré-valider|  
 |20|Post-valider|  
 |30|Pré-exécuter|  

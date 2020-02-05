@@ -16,10 +16,10 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 53869016813d3950f35fa5b926cbba295df63237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133607"
 ---
 # <a name="manage-data-collection"></a>Gérer la collecte de données
@@ -31,11 +31,11 @@ ms.locfileid: "68133607"
   
 -   [Configurer l’entrepôt de données de gestion &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
--   [Configurer les propriétés d'un collecteur de données](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)  
+-   [Configurer les propriétés d’un collecteur de données](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)  
   
 -   [Activer ou désactiver la collecte de données](../../relational-databases/data-collection/enable-or-disable-data-collection.md)  
   
--   [Démarrer ou arrêter un jeu d'éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
+-   [Démarrer ou arrêter un jeu d’éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
 -   [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68133607"
   
 -   [Activer ou désactiver la collecte de données](../../relational-databases/data-collection/enable-or-disable-data-collection.md)  
   
--   [Démarrer ou arrêter un jeu d'éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
+-   [Démarrer ou arrêter un jeu d’éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
 -   [Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "68133607"
   
  Le tableau suivant décrit les vues que vous pouvez utiliser pour obtenir des informations de configuration et des données du journal des exécutions.  
   
-|Nom de la vue|Description|  
+|Nom de l’affichage|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Obtenir la configuration du collecteur de données.|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Obtenir des informations sur des éléments de collecte.|  

@@ -29,10 +29,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297935"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
@@ -71,7 +71,7 @@ ms.locfileid: "71297935"
   
  Vous pouvez personnaliser le regroupement effectué par la transformation en définissant les propriétés des colonnes dans l'entrée de la transformation du regroupement probable. Par exemple, la propriété FuzzyComparisonFlags spécifie comment la transformation compare les données de chaîne dans une colonne, et la propriété ExactFuzzy indique si la transformation effectue une correspondance approximative ou exacte.  
   
- Vous pouvez configurer la quantité de mémoire utilisée par la transformation de regroupement probable en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0 pour permettre à la transformation d'utiliser une quantité dynamique de mémoire en fonction de ses besoins et de la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété au moment du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../../integration-services/expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ Vous pouvez configurer la quantité de mémoire utilisée par la transformation de regroupement probable en définissant la propriété personnalisée MaxMemoryUsage. Vous pouvez spécifier le nombre de mégaoctets (Mo) ou utiliser la valeur 0 pour permettre à la transformation d'utiliser une quantité dynamique de mémoire en fonction de ses besoins et de la mémoire physique disponible. La propriété personnalisée MaxMemoryUsage peut être mise à jour par une expression de la propriété au moment du chargement du package. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41; ](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Expressions de propriété dans des packages](../../../integration-services/expressions/use-property-expressions-in-packages.md) et [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71297935"
  **Colonnes d'entrée disponibles**  
  Sélectionnez dans cette liste les colonnes d'entrée utilisées pour regrouper les lignes comportant des doublons.  
   
- **Name**  
+ **Nom**  
  Permet d'afficher le nom des colonnes d'entrée disponibles.  
   
  **Transfert direct**  

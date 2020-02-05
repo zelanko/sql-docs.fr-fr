@@ -41,13 +41,13 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5db7d4d73c4d6c03ce31935a9eb874bdd605fa99
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769901"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287606"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68769901"
 |Tables partitionnées|X|X|  
 |Procédures stockées – Définition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|X|  
 |Procédures stockées – Exécution ([!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR)|X|non|  
-|Vues|X|X|  
+|Les vues|X|X|  
 |Vues indexées|X|X|  
 |Vues indexées comme des tables|X|non|  
 |Types définis par l'utilisateur (CLR)|X|X|  
@@ -82,7 +82,7 @@ ms.locfileid: "68769901"
 -   Nom et description de la publication.  
   
  Pour plus d'informations sur la manière de travailler avec des publications, consultez les rubriques suivantes :    
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md)    
 -   [Définir un article](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
 -   [Afficher et modifier les propriétés d’un article](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
@@ -97,7 +97,7 @@ ms.locfileid: "68769901"
   
 -   [Filtrer des données publiées](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
+-   [Options d’articles pour la réplication de fusion](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Lors de la publication d'une table pour la réplication, vous pouvez spécifier les objets de schéma qui doivent être copiés vers l'Abonné, tels que l'intégrité référentielle déclarée (contraintes de clé primaire, contraintes référentielles, contraintes uniques), des index, des déclencheurs DML utilisateur (des déclencheurs DDL qui ne peuvent pas être répliqués), des propriétés étendues et des classements. Les propriétés étendues sont répliquées uniquement dans la synchronisation initiale entre le serveur de publication et l'Abonné. Si vous ajoutez ou modifiez une propriété étendue après la synchronisation initiale, la modification n'est pas répliquée.  
@@ -226,13 +226,13 @@ ms.locfileid: "68769901"
     |Plage d'identités du serveur de publication|**\@pub_identity_range**|  
     |Plage d'identités|**\@identity_range**|  
     |Seuil de plage d'identités|**\@threshold**|  
-    |Options de la partition|**\@partition_options**|  
+    |Options de partition|**\@partition_options**|  
     |Diffusion de colonne de BLOB|**\@stream_blob_columns**|  
     |Type de filtre|**\@filter_type** (paramètre dans **sp_addmergefilter**)|  
   
      Pour plus d’informations sur ces paramètres, consultez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) et [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   La réplication transactionnelle et la réplication de fusion non filtrée prennent en charge la publication d'une table dans plusieurs publications, puis les abonnements dans une table unique de la base de données d'abonnement (communément appelée un scénario de cumul (roll up)). Le cumul est souvent utilisé pour agréger en une seule table des sous-ensembles de données provenant de plusieurs emplacements sur un Abonné central. Les publications de fusion filtrées ne prennent pas en charge le scénario avec un Abonné central. Pour la réplication de fusion, le cumul est généralement mis en œuvre via une seule publication avec des filtres de lignes personnalisés. Pour plus d'informations, voir [Filtres de ligne paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   La réplication transactionnelle et la réplication de fusion non filtrée prennent en charge la publication d'une table dans plusieurs publications, puis les abonnements dans une table unique de la base de données d'abonnement (communément appelée un scénario de cumul (roll up)). Le cumul est souvent utilisé pour agréger en une seule table des sous-ensembles de données provenant de plusieurs emplacements sur un Abonné central. Les publications de fusion filtrées ne prennent pas en charge le scénario avec un Abonné central. Pour la réplication de fusion, le cumul est généralement mis en œuvre via une seule publication avec des filtres de lignes personnalisés. Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter et supprimer des articles de publications existantes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   

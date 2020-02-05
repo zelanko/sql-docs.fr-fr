@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903822"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
@@ -47,7 +47,7 @@ ms.locfileid: "72903822"
   
 5.  **Colonne de type.** Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
 
-> **REMARQUE :** L’option **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
+> **REMARQUE :** L’option  **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
   
 6. **Sémantique statistique.** Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -78,17 +78,17 @@ ms.locfileid: "72903822"
   
 9.  **Sélectionner un catalogue de recherche en texte intégral**  
 
-     **Sélectionner un catalogue :** Sélectionnez un catalogue de texte intégral dans la liste. Le catalogue par défaut pour la base de données devient l'élément sélectionné par défaut dans la liste. Si aucun catalogue n’est disponible, cette dernière est désactivée, et la case **Créer un nouveau catalogue** est cochée, mais désactivée.  
+     **Sélectionner un catalogue :** Sélectionnez un catalogue de texte intégral dans la liste. Le catalogue par défaut pour la base de données devient l'élément sélectionné par défaut dans la liste. Si aucun catalogue n’est disponible, cette dernière est désactivée, et la case **Créer un nouveau catalogue** est cochée, mais désactivée.  
   
   OR
   
- 10. **Créer un nouveau catalogue**
+ 10. **Créer un catalogue**
  - Sélectionnez un catalogue de recherche en texte intégral.  
   
-    A. **Name**  
+    a. **Nom**  
      Entrez le nom de votre nouveau catalogue de texte intégral.  
   
-     B. **Définir en tant que catalogue par défaut**  
+     b. **Définir en tant que catalogue par défaut**  
      Sélectionnez cette option afin que le catalogue devienne la valeur par défaut pour cette base de données.  
   
      c. **Respect des accents**  
@@ -136,10 +136,10 @@ ms.locfileid: "72903822"
   
 5.  Affichage ou contrôle de la progression de l'Assistant Indexation de texte intégral.  
   
-     **Arrêter**  
+     **Stop**  
      Interrompt l'opération en cours et empêche l'Assistant d'exécuter les opérations de texte intégral suivantes au cours de cette session.  
   
-     **Rapport**  
+     **Report**  
      Lorsque toutes les opérations ont fini de s'exécuter, cliquez sur ce bouton pour accéder à un rapport sur les opérations effectuées. Vous pouvez afficher le rapport, l'imprimer dans un fichier, le copier dans le Presse-papiers ou l'envoyer par courrier électronique.  
   
   

@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037584"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Attacher et détacher une base de données (SQL Server)
@@ -67,7 +67,7 @@ Une base de données ne peut pas être détachée si l'une des conditions suivan
   
     La base de données ne peut pas être détachée tant que la session n'est pas interrompue. Pour plus d’informations, consultez [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
--   La base de données est suspecte. Une base de données suspecte ne peut pas être détachée ; avant de pouvoir le faire, vous devez la mettre en mode urgence. Pour plus d’informations sur la manière de mettre une base de données en mode urgence, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+-   La base de données est suspecte. Une base de données suspecte ne peut pas être détachée ; avant de pouvoir le faire, vous devez la mettre en mode urgence. Pour plus d’informations sur la manière de mettre une base de données en mode urgence, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 -  La base de données est une base de données système.  
   

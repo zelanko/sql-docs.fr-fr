@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134791"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraire une DAC d'une base de données
@@ -66,7 +66,7 @@ ms.locfileid: "68134791"
   
  **Ne plus afficher cette page.** - Cochez la case pour ne plus afficher la page à l'avenir.  
   
- **Suivant >** - Passe à la page **Choisir une méthode**.  
+ **Suivant >** : passe à la page **Choisir une méthode**.  
   
  **Annuler** - Termine l’Assistant sans extraire une application de la couche Données de la base de données.  
   

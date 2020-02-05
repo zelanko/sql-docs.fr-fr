@@ -23,18 +23,18 @@ ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071503"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Cette fonction retourne le numéro d'identification (ID) du nom du fichier pour le nom logique spécifié d’un fichier journal, de données ou de texte intégral de la base de données active. 
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ FILE_IDEX ( file_name )
 Une expression de type **sysname** qui retourne la valeur d’ID de fichier 'FILE_IDEX' pour le nom du fichier. 
   
 ## <a name="return-types"></a>Types de retour  
-**Int**  
+**int**  
   
 **NULL** en cas d’erreur  
   
@@ -58,7 +58,7 @@ Utilisez `FILE_IDEX` dans une liste SELECT, une clause WHERE, ou à n’importe 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Extraction de l'ID d'un fichier spécifié  
+### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>R. Extraction de l'ID d'un fichier spécifié  
 Cet exemple retourne l'ID du fichier `AdventureWorks_Data`.  
   
 ```sql  

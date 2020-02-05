@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707142"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Comment utiliser Visual Studio Code pour déployer des applications sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -27,7 +27,7 @@ Cet article explique comment déployer des applications sur un cluster Big Data 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Cluster Big Data SQL Server](big-data-cluster-overview.md)
 
-## <a name="capabilities"></a>Fonctions
+## <a name="capabilities"></a>Fonctionnalités
 
 Cette extension prend en charge les tâches suivantes dans Visual Studio Code :
 
@@ -42,7 +42,7 @@ Cette extension prend en charge les tâches suivantes dans Visual Studio Code :
 
 Les sections suivantes vous guident tout au long du processus d’installation et fournissent une vue d’ensemble du fonctionnement de l’extension. 
 
-### <a name="install"></a>Installation
+### <a name="install"></a>Installer
 
 Installez d’abord l’extension de déploiement d’application dans Visual Studio Code :
 
@@ -120,7 +120,7 @@ Le code source de l’application se trouve dans le dossier de l’espace de tra
 
 Si vous ne voulez pas d’un modèle structuré et que vous préférez simplement un fichier `spec.yaml` pour le déploiement d’une application que vous avez déjà générée, cliquez sur le bouton `New Deploy Spec` en regard du bouton `New App Template` et suivez le même processus : vous recevrez alors simplement le fichier `spec.yaml`, que vous pouvez modifier comme vous le souhaitez.
 
-### <a name="deploy-app"></a>Déployer l’application
+### <a name="deploy-app"></a>Déployer une application
 
 Vous pouvez déployer instantanément cette application via le CodeLens `Deploy App` dans le fichier `spec.yaml` ou en appuyant sur le bouton du dossier avec un éclair en regard du fichier `spec.yaml` dans le menu Spécifications de l’application. L’extension va décompresser tous les fichiers dans le répertoire où se trouve `spec.yaml`, puis déployer votre application sur le cluster. 
 
@@ -149,7 +149,7 @@ Vous pouvez voir dans la barre latérale toutes les applications que vous avez d
 - paramètres de sortie
 - liens
   - fichier Swagger
-  - détails
+  - details
 
 Si vous cliquez sur `Links`, vous voyez que vous pouvez accéder au fichier `swagger.json` de votre application déployée, ce qui vous permet d’écrire vos propres clients qui appellent votre application :
 
@@ -184,7 +184,7 @@ Lors de l’appel d’une application déployée, si des paramètres d’entrée
 - Vecteur
     - `inputs:`
         - `x: [1, 2, 3]`
-- Matrice
+- Matrix
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
 - Object

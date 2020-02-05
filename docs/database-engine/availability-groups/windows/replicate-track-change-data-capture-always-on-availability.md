@@ -16,10 +16,10 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235391"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
@@ -196,9 +196,9 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 -   Lors de l'utilisation de la réplication de fusion, si la base de données de publication se trouve dans un groupe de disponibilité :  
   
-    -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Abonnement par extraction : le serveur de publication, le serveur de distribution et les bases de données de l’abonné doivent s’exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
+    -   Abonnement par extraction de données : le serveur de publication, le serveur de distribution et les bases de données de l'abonné doivent s'exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
   
 -   Les instances de serveur de publication satisfont toutes les conditions préalables pour faire partie d’un groupe de disponibilité Always On. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -208,7 +208,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
 |||||  
 |-|-|-|-|  
 ||**Publisher**|**Serveur de distribution**|**Abonné**|  
-|**Transactionnelle**|Oui<br /><br /> Remarque : N’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
+|**Transactionnelle**|Oui<br /><br /> Remarque : n’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
 |**P2P**|Non|Non|Non|  
 |**Fusionner**|Oui|Non|Non|  
 |**Instantané**|Oui|Non|Oui|
@@ -252,7 +252,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
  [Abonnés de réplication et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Groupes de disponibilité Always On : Interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Groupes de disponibilité Always On : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [À propos du suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

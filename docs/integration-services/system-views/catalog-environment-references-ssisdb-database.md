@@ -11,10 +11,10 @@ ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 848e337ecfacd16df1b34a60e392b572b612735d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295196"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (base de données SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71295196"
 
   Affiche les références environnementales pour tous les projets dans le catalogue **SSISDB**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|Identificateur (ID) unique de la référence.|  
 |project_id|**bigint**|ID unique du projet.|  

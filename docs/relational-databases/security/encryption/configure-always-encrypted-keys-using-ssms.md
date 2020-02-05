@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595754"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Provisionner des clés Always Encrypted avec SQL Server Management Studio
@@ -103,7 +103,7 @@ Pour plus d’informations, consultez [Créer et stocker des clés principales d
 
 L’[Assistant Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md) est un outil de chiffrement, de déchiffrement et de rechiffrement de colonnes de base de données sélectionnées. Bien qu’il puisse utiliser des clés déjà configurées, il vous permet également de générer une nouvelle clé principale de colonne et un nouveau chiffrement de colonne. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 - [Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted](always-encrypted-wizard.md)
 - [Configurer le chiffrement de colonne en utilisant Always Encrypted avec un package DAC](configure-always-encrypted-using-dacpac.md)
 - [Effectuer une rotation des clés Always Encrypted avec SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)

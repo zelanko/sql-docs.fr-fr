@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072212"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68072212"
 
   Lève une exception et transfère l’exécution à un bloc CATCH d’une construction TRY...CATCH dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,7 +71,7 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-throw-to-raise-an-exception"></a>A. Utilisation de THROW pour lever une exception  
+### <a name="a-using-throw-to-raise-an-exception"></a>R. Utilisation de THROW pour lever une exception  
  L’exemple suivant montre comment utiliser l’instruction `THROW` pour lever une exception.  
   
 ```sql  

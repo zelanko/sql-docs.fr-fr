@@ -15,10 +15,10 @@ ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dd303efebcf988d07d068f5518dd340b9ae74fbc
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055556"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Afficher un rapport de jeu d'éléments de collecte (SQL Server Management Studio)
@@ -51,7 +51,7 @@ ms.locfileid: "74055556"
  **Heure de début**  
  Entrez une heure de début pour les données du rapport ou spécifiez-la en cliquant sur les flèches.  
   
- **Duration**  
+ **Durée**  
  Spécifiez la plage de temps à inclure dans le rapport. La valeur par défaut est 240 minutes. Les valeurs possibles pour la sélection sont 15 minutes, 60 minutes, 240 minutes (4 heures), 720 minutes (12 heures) et 1440 minutes (24 heures).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -19,10 +19,10 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a1cf7a4bb37abd60f7067381ba4da6a2d44328ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946988"
 ---
 # <a name="considerations-for-using-test-servers"></a>Observations relatives à l'utilisation de serveurs de test
@@ -56,7 +56,7 @@ ms.locfileid: "67946988"
   
 -   Après le paramétrage, l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit supprimer toutes les métadonnées qu'il a créées sur le serveur de test pendant le processus de paramétrage, y compris la structure de base de données. Si vous exécutez une série de sessions de paramétrage avec les mêmes serveurs de production et de test, vous souhaiterez éventuellement conserver cette structure de base de données pour gagner du temps. Dans le fichier d’entrée XML, spécifiez le sous-élément **RetainShellDB** avec les autres sous-éléments sous l’élément parent **TuningOptions** . Si ces options sont utilisées, l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] conserve la base de données shell. Pour plus d’informations, consultez [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
--   Des bases de données shell risquent d’être laissées sur le serveur de test après la réussite d’une session de paramétrage du serveur de test ou du serveur de production, même si vous n’avez pas spécifié le sous-élément **RetainShellDB**. Ces bases de données shell indésirables risquent d'interférer avec les sessions de paramétrage suivantes et elles doivent être supprimées avant qu'une autre session de paramétrage du serveur de test ou du serveur de production soit effectuée. De plus, si une session de paramétrage existe de manière inattendue, les bases de données shell sur le serveur de test et les objets de ces bases de données risquent d'être laissés sur le serveur de test. Vous devez également supprimer ces bases de données et ces objets avant de démarrer une nouvelle session de paramétrage du serveur de test ou du serveur de production.  
+-   Des bases de données shell risquent d’être laissées sur le serveur de test après la réussite d’une session de paramétrage du serveur de test ou du serveur de production, même si vous n’avez pas spécifié le sous-élément **RetainShellDB** . Ces bases de données shell indésirables risquent d'interférer avec les sessions de paramétrage suivantes et elles doivent être supprimées avant qu'une autre session de paramétrage du serveur de test ou du serveur de production soit effectuée. De plus, si une session de paramétrage existe de manière inattendue, les bases de données shell sur le serveur de test et les objets de ces bases de données risquent d'être laissés sur le serveur de test. Vous devez également supprimer ces bases de données et ces objets avant de démarrer une nouvelle session de paramétrage du serveur de test ou du serveur de production.  
   
 ## <a name="issues-related-to-the-tuning-process"></a>Problèmes liés au processus de paramétrage  
   

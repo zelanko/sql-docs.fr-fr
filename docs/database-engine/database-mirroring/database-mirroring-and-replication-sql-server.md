@@ -14,10 +14,10 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661432"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mise en miroir de bases de données et réplication (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "68661432"
   
      L'agent de distribution et le contrôle ActiveX SQL Distribution n'ont pas ce paramètre puisqu'ils ne se connectent pas au serveur de publication.  
   
-     Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer. Les paramètres peuvent être définis dans les profils d'agent et à l'invite de commandes. Pour plus d'informations, consultez :  
+     Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer. Les paramètres peuvent être définis dans les profils d'agent et à l'invite de commandes. Pour plus d'informations, consultez les pages suivantes :  
   
     -   [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68661432"
 |--------------------|------------------------------------------------------------|  
 |Mode haute sécurité avec basculement automatique|Si le miroir n'est pas disponible, l'Agent de lecture du journal propage les commandes vers la base de données de distribution. Le principal ne peut pas basculer sur le miroir tant que ce dernier n'est pas connecté et que toutes les transactions du principal n'y figurent pas.|  
 |Mode hautes performances|Si le miroir n'est pas disponible, la base de données principale s'exécute sans filet (elle n'est pas mise en miroir). Toutefois, l'Agent de lecture du journal réplique les transactions renforcées sur le miroir. Si le service est forcé et que le serveur miroir joue le rôle de principal, l'Agent de lecture du journal travaille en fonction du miroir et commence à collecter les nouvelles transactions.<br /><br /> Sachez que la durée de latence de la réplication augmente si le miroir se trouve derrière le principal.|  
-|Mode haute sécurité sans basculement automatique|Toutes les transactions validées sont renforcées sur le disque dur du miroir. L'Agent de lecture du journal ne réplique que les transactions renforcées du miroir. Si le miroir n'est pas disponible, le principal empêche toute autre activité dans la base de données. L'Agent de lecture du journal n'a plus aucune transaction à répliquer.|  
+|Mode Haute sécurité sans basculement automatique|Toutes les transactions validées sont renforcées sur le disque dur du miroir. L'Agent de lecture du journal ne réplique que les transactions renforcées du miroir. Si le miroir n'est pas disponible, le principal empêche toute autre activité dans la base de données. L'Agent de lecture du journal n'a plus aucune transaction à répliquer.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md)   

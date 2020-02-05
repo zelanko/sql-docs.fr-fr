@@ -22,10 +22,10 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297948"
 ---
 # <a name="export-column-transformation"></a>Transformation d'exportation de colonne
@@ -38,7 +38,7 @@ ms.locfileid: "71297948"
 ## <a name="append-and-truncate-options"></a>Options d'ajout et de troncation  
  Le tableau suivant décrit l'impact des paramètres des options d'ajout et de troncation sur les résultats.  
   
-|Ajouter|Tronqué|Le fichier existe|Résultats|  
+|Ajouter|Tronquer|Le fichier existe|Résultats|  
 |------------|--------------|-----------------|-------------|  
 |False|False|Non|La transformation crée un nouveau fichier et y écrit les données.|  
 |True|False|Non|La transformation crée un nouveau fichier et y écrit les données.|  
@@ -61,7 +61,7 @@ ms.locfileid: "71297948"
     > [!NOTE]  
     >  Une marque d'ordre d'octet n'est écrite que lorsque les données ne sont pas ajoutées à un fichier existant et qu'elles sont du type de données DT_NTEXT.  
   
- La transformation utilise des paires de colonnes d'entrée : une colonne contient un nom de fichier, l'autre comporte des données. Chaque ligne du jeu de données peut spécifier un fichier différent. À mesure que la transformation traite des lignes, les données sont insérées dans le fichier spécifié. Au moment de l'exécution, la transformation crée les fichiers, s'ils n'existent pas déjà, puis y écrit les données. Les données à écrire doivent être du type de données DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+ La transformation utilise des paires de colonnes d'entrée : une colonne contient un nom de fichier, l'autre comporte des données. Chaque ligne du jeu de données peut spécifier un fichier différent. À mesure que la transformation traite des lignes, les données sont insérées dans le fichier spécifié. Au moment de l'exécution, la transformation crée les fichiers, s'ils n'existent pas déjà, puis y écrit les données. Les données à écrire doivent être du type de données DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Cette transformation a une entrée, une sortie et une sortie d'erreur.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71297948"
  **Colonne**  
  Affiche les colonnes de sortie sélectionnées à la page **Colonnes** de la boîte de dialogue **Éditeur de transformation d’exportation de colonne** .  
   
- **Erreur**  
+ **Error**  
  Indiquez ce qui doit se produire en cas d'erreur : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Troncation**  

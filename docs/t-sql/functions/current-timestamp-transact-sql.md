@@ -32,13 +32,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026414"
 ---
-# <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
+# <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette fonction retourne l’horodatage du système de base de données actif sous forme de valeur **DateHeure**, sans le décalage lié au fuseau horaire de la base de données. `CURRENT_TIMESTAMP` tire cette valeur du système d’exploitation de l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.
@@ -50,7 +50,7 @@ Cette fonction est l’équivalent SQL ANSI de [GETDATE](../../t-sql/functions/g
   
 Consultez [Types de données et fonctions de date et d’heure](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +72,7 @@ Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent faire réf�
 ## <a name="examples"></a>Exemples  
 Ces exemples utilisent les six fonctions système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui retournent les valeurs de date et d’heure actuelles pour retourner la date, l’heure ou les deux. Comme les exemples retournent les valeurs en série, leurs fractions de seconde peuvent être différentes. Notez que les valeurs réelles retournées reflètent le jour et/ou l’heure d’exécution réels.
   
-### <a name="a-get-the-current-system-date-and-time"></a>A. Obtention des date et heure système actuelles  
+### <a name="a-get-the-current-system-date-and-time"></a>R. Obtention des date et heure système actuelles  
   
 ```sql
 SELECT SYSDATETIME()  

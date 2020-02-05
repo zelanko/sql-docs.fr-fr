@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a329c8d8564e92319be773250761085f34643df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a752b21460c2dd337d12ee43acdd981dadd4335b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770786"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288269"
 ---
 # <a name="replication-agent-profiles"></a>Profils de l'Agent de réplication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68770786"
 ## <a name="snapshot-agent-profiles"></a>Profils de l'Agent d'instantané  
  Le tableau suivant montre les paramètres définis dans le profil par défaut de l'Agent d'instantané. Pour plus d'informations sur ces paramètres, consultez [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  
   
-||par défaut|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -56,7 +56,7 @@ ms.locfileid: "68770786"
 ## <a name="log-reader-agent-profiles"></a>Profils de l'Agent de lecture du journal  
  Le tableau suivant montre les paramètres définis dans les profils de l'Agent de lecture du journal. Chaque colonne du tableau représente un profil nommé. Pour plus d'informations sur ces paramètres, consultez [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
-||par défaut|historique commenté|  
+||default|historique commenté|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -68,18 +68,18 @@ ms.locfileid: "68770786"
 ## <a name="distribution-agent-profiles"></a>Profils de l'Agent de distribution  
  Le tableau suivant montre les paramètres définis dans les profils de l'Agent de distribution. Chaque colonne du tableau représente un profil nommé. Pour plus d'informations sur ces paramètres, consultez [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-||par défaut|historique commenté|Gestionnaire de synchronisation Windows|Continuer avec les erreurs de cohérence des données|Profil de distribution du flux de données OLEDB|  
+||default|historique commenté|Gestionnaire de synchronisation Windows|Continuer avec les erreurs de cohérence des données|Profil de distribution du flux de données OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
+|**-BcpBatchSize**|100000|100000|1 000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
-|**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
+|**-CommitBatchThreshold**|1 000|1 000|1 000|1 000|1 000|  
 |**-HistoryVerboseLevel**|1|2|1|1|1|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
 |**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
-|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
-|**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
+|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32 768|  
+|**-PacketSize**|NULL|NULL|NULL|NULL|32 768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
 |**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
@@ -89,10 +89,10 @@ ms.locfileid: "68770786"
 ## <a name="merge-agent-profiles"></a>Profils de l'Agent de fusion  
  Le tableau suivant montre les paramètres définis dans les profils de l'Agent de fusion. Chaque colonne du tableau représente un profil nommé. Pour plus d'informations sur ces paramètres, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
-||par défaut|historique commenté|Gestionnaire de synchronisation Windows|validation du nombre de lignes|validation du nombre de lignes et du total de contrôle|liaison lente|serveur à serveur haut volume|  
+||default|historique commenté|Gestionnaire de synchronisation Windows|validation du nombre de lignes|validation du nombre de lignes et du total de contrôle|liaison lente|serveur à serveur haut volume|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
-|**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
-|**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
+|**-BcpBatchSize**|100000|100000|1 000|100000|100000|100000|100000|  
+|**-ChangesPerHistory**|100|50|50|100|100|100|1 000|  
 |**-DestThreads**|2|1|1|1|1|1|4|  
 |**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  
@@ -120,7 +120,7 @@ ms.locfileid: "68770786"
 ## <a name="queue-reader-agent-profiles"></a>Profils de l'Agent de lecture de la file d'attente  
  Le tableau suivant montre les paramètres définis dans le profil par défaut de l'Agent de lecture de la file d'attente. Pour plus d'informations sur ces paramètres, consultez [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md).  
   
-||par défaut|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
@@ -130,6 +130,6 @@ ms.locfileid: "68770786"
 ## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

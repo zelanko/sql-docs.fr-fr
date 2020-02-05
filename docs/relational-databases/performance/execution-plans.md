@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9bf75c2d176c4ea2c596f29f1ddda910e794ae12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68232019"
 ---
 # <a name="execution-plans"></a>Plans d’exécution
@@ -52,7 +52,7 @@ Un plan d'exécution de requête permet de définir :
 -   [Repères de plan](../../relational-databases/performance/plan-guides.md)  
 
 ## <a name="see-also"></a>Voir aussi  
- [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)    
  [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)     

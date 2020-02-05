@@ -11,10 +11,10 @@ ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 359e5f8f8916a698be802cd7cc05d800e5997d82
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294543"
 ---
 # <a name="the-oracle-cdc-instance"></a>Instance Oracle CDC
@@ -26,13 +26,13 @@ ms.locfileid: "71294543"
   
  La section suivante décrit les tâches effectuées par l'instance Oracle CDC :  
   
--   **Gestion de la vérification du démarrage du service** : une fois démarrée, l’instance CDC charge sa configuration à partir de la table **xdbcdc_config** et exécute une série de vérifications d’état qui garantissent que l’état persistant de l’instance de capture de données modifiées est cohérent et qu’elle peut commencer le traitement des modifications.  
+-   **Gestion de la vérification du démarrage du service**: une fois démarrée, l’instance de capture de données modifiées charge sa configuration à partir de la table **xdbcdc_config** et exécute une série de vérifications d’état qui garantissent que l’état persistant de l’instance de capture de données modifiées est cohérent et qu’elle peut commencer le traitement des modifications.  
   
--   **Préparation de la capture des modifications** : lorsque la vérification réussit, l'instance Oracle CDC analyse toutes les instances de capture actuellement définies et prépare les requêtes Oracle LogMiner et d'autres structures de prise en charge nécessaires pour la capture des modifications. En outre, l'instance Oracle charge de nouveau l'état interne de capture qui a été enregistré lors de la dernière exécution de l'instance Oracle CDC.  
+-   **Préparation de la capture des modifications**: lorsque la vérification réussit, l'instance Oracle CDC analyse toutes les instances de capture actuellement définies et prépare les requêtes Oracle LogMiner et d'autres structures de prise en charge nécessaires pour la capture des modifications. En outre, l'instance Oracle charge de nouveau l'état interne de capture qui a été enregistré lors de la dernière exécution de l'instance Oracle CDC.  
   
--   **Capture des modifications à partir d’Oracle** : l'instance Oracle CDC extrait les modifications à partir d'Oracle au moyen de la fonctionnalité Oracle LogMiner, les trie en fonction de la validation de transaction, puis modifie le temps dans une transaction et les écrit dans les tables de modifications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la base de données CDC.  
+-   **Capture des modifications à partir d'Oracle**: l'instance Oracle CDC extrait les modifications à partir d'Oracle au moyen de la fonctionnalité Oracle LogMiner, les trie en fonction de la validation de transaction, puis modifie le temps dans une transaction et les écrit dans les tables de modifications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la base de données CDC.  
   
--   **Gestion de l’arrêt du service** : le cycle de vie de l'instance Oracle CDC est géré par le service de capture de données modifiées Oracle. Lorsque l'instance Oracle CDC doit s'arrêter, elle effectue les tâches suivantes :  
+-   **Gestion de l'arrêt du service**: le cycle de vie de l'instance Oracle CDC est géré par le service de capture de données modifiées Oracle. Lorsque l'instance Oracle CDC doit s'arrêter, elle effectue les tâches suivantes :  
   
     -   elle cesse de lire dans le journal des transactions Oracle ;  
   
@@ -42,9 +42,9 @@ ms.locfileid: "71294543"
   
     -   dans un thread distinct, elle écrit autant d’enregistrements mis en mémoire cache que possible dans la table de transactions intermédiaires pendant au plus 30 secondes (de la transaction la plus ancienne à la plus récente), puis elle met à jour la table **xdbcdc_state** et valide les modifications.  
   
--   **Gestion des modifications de configuration** : l’instance Oracle CDC est avertie des modifications de configuration par le service de capture de données modifiées ou la détection d’une nouvelle version dans la table **cdc.xdbcdc_config** . La plupart des modifications ne requièrent pas le redémarrage de l'instance Oracle CDC (par exemple, ajout ou suppression des instances de capture). Toutefois, certaines modifications, telles que la modification de la chaîne de connexion Oracle ou des informations d'identification d'accès requièrent le redémarrage de l'instance de capture de données modifiées.  
+-   **Gestion des modifications de configuration**: l’instance Oracle CDC est avertie des modifications de configuration par le service de capture de données modifiées ou la détection d’une nouvelle version dans la table **cdc.xdbcdc_config** . La plupart des modifications ne requièrent pas le redémarrage de l'instance Oracle CDC (par exemple, ajout ou suppression des instances de capture). Toutefois, certaines modifications, telles que la modification de la chaîne de connexion Oracle ou des informations d'identification d'accès requièrent le redémarrage de l'instance de capture de données modifiées.  
   
--   **Gestion de la récupération** : quand une instance Oracle CDC démarre, son état interne est restauré à partir des tables **xdbcdc_state** et **xdbcdc_staged_transactions**. Une fois l'état restauré, l'instance de capture de données modifiées s'exécute de manière habituelle.  
+-   **Gestion de la récupération**: quand une instance Oracle CDC démarre, son état interne est restauré à partir des tables **xdbcdc_state** et **xdbcdc_staged_transactions** . Une fois l'état restauré, l'instance de capture de données modifiées s'exécute de manière habituelle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs](../../integration-services/change-data-capture/error-handling.md)  

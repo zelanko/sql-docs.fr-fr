@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934049"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
@@ -85,7 +85,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
     ```  
   
-     \- Ou -  
+     -Ou-  
   
     ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
@@ -135,7 +135,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
   
 2.  Développez la base de données que vous souhaitez, développez **Programmabilité**, puis développez **Procédures stockées**.  
   
-3.  Cliquez avec le bouton droit sur la procédure stockée définie par l’utilisateur à supprimer, puis cliquez sur **Exécuter la procédure stockée**.  
+3.  Cliquez avec le bouton droit sur la procédure stockée définie par l’utilisateur à executer, puis cliquez sur **Exécuter la procédure stockée**.  
   
 4.  Dans la boîte de dialogue **Exécuter la procédure** , entrez une valeur pour chaque paramètre et indiquez si le paramètre doit passer une valeur Null.  
   
@@ -151,7 +151,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
      **Passer les valeurs de type NULL**  
      Permet le passage d'une valeur NULL en tant que valeur du paramètre.  
   
-     **Value**  
+     **Valeur**  
      Tapez la valeur du paramètre lors de l'appel de la procédure.  
   
 5.  Pour exécuter la procédure stockée, cliquez sur **OK**.  

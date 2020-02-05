@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661445"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
@@ -38,7 +38,7 @@ Les fonctions ROW_NUMBER et RANK sont similaires. ROW_NUMBER numérote toutes le
 > [!NOTE]
 > RANK est une valeur temporaire calculée quand la requête est exécutée. Pour conserver les nombres dans un tableau, consultez [IDENTITY (propriété)](../../t-sql/statements/create-table-transact-sql-identity-property.md) et [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-ranking-rows-within-a-partition"></a>A. Classement des lignes d'une partition  
+### <a name="a-ranking-rows-within-a-partition"></a>R. Classement des lignes d'une partition  
  L'exemple suivant classe les produits d'inventaire aux emplacements d'inventaire suivants en fonction de leurs quantités. Le jeu de résultats est partitionné par `LocationID` et classé logiquement par `Quantity`. Notez que les produits 494 et 495 ont la même quantité. Étant liés, ils sont tous deux classés numéro un.  
   
 ```sql  
@@ -131,7 +131,7 @@ BusinessEntityID Rate                  RankBySalary
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C : Classement des lignes d'une partition  
+### <a name="c-ranking-rows-within-a-partition"></a>C. Classement des lignes d’une partition  
  L’exemple suivant classe par rang les représentants commerciaux dans chaque secteur de vente en fonction de leurs ventes totales. L'ensemble de lignes est partitionné par `SalesTerritoryGroup` et trié par `SalesAmountQuota`.  
   
 ```sql  

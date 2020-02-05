@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099995"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099995"
 
 Contrôle le verrouillage et le comportement de contrôle de version de ligne des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] émises par une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,7 +100,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  Des verrous partagés sont placés sur toutes les données lues par chaque instruction de la transaction et maintenus jusqu'à la fin de la transaction. Cela évite que d'autres transactions modifient des lignes qui ont été lues par la transaction active. D'autres transactions peuvent insérer de nouvelles lignes lorsque celles-ci correspondent aux conditions de recherche des instructions émises par la transaction active. Si par la suite la transaction active réexécute l'instruction, elle récupère les nouvelles lignes, ce qui aboutit à des lectures fantômes. Comme les verrous partagés sont maintenus jusqu'à la fin d'une transaction au lieu d'être débloqués à la fin de chaque instruction, l'accès concurrentiel est moindre qu'avec le niveau d'isolation READ COMMITTED par défaut. Utilisez cette option uniquement si c'est nécessaire.  
   
  SNAPSHOT  
- Spécifie que les données lues par n’importe quelle instruction d’une transaction représentent la version cohérente d’un point de vue transactionnel des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Autrement dit, les modifications de données effectuées par d'autres transactions après le début de la transaction active ne sont pas visibles pour les instructions qui s'exécutent dans le cadre de ladite transaction. Tout se passe comme si les instructions d'une transaction obtenaient un instantané des données validées telles qu'elles existaient au début de cette transaction.  
+ Spécifie que les données lues par n’importe quelle instruction d’une transaction représentent la version cohérente d’un point de vue transactionnel des données qui existaient au début de la transaction. La transaction peut seulement reconnaître les modifications de données qui ont été validées avant qu'elle ne commence. Autrement dit, les modifications de données effectuées par d'autres transactions après le début de la transaction active ne sont pas visibles pour les instructions qui s'exécutent dans le cadre de ladite transaction. C’est comme si les instructions d’une transaction obtenaient un instantané des données validées telles qu’elles existaient au début de la transaction.  
   
  Sauf lors de la récupération d'une base de données, les transactions SNAPSHOT ne demandent pas de verrouillage lors de la lecture des données. Les transactions SNAPSHOT qui lisent des données n'empêchent pas d'autres transactions d'écrire des données. De même, les transactions qui écrivent des données n'empêchent pas des transactions SNAPSHOT de lire des données.  
   
@@ -163,7 +163,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 |Lecture renouvelable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non pris en charge|  
 |Sérialisable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Non pris en charge|  
 |Capture instantanée Read Committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Snapshot|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|Instantané|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant définit le paramètre `TRANSACTION ISOLATION LEVEL` pour la session. Pour chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintient tous les verrous partagés jusqu'à la fin de la transaction.  

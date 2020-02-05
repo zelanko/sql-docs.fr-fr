@@ -10,10 +10,10 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bef4e8032ad605382b3312cac11840ed959a7571
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296355"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "71296355"
 Cette rubrique vous montre comment se connecter à une source de données de **fichier plat** (fichier texte) à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Ces deux pages de l’Assistant présentent des jeux d’options différents pour les fichiers plats, ainsi cette rubrique décrit la source de fichier plat et la destination de fichier plat séparément.
 
 ## <a name="an-alternative-for-simple-text-import"></a>Une alternative pour l’importation de texte simple
-Si vous devez importer un fichier texte dans SQL Server et que vous n’avez pas besoin de tous les options de configuration qui sont disponibles dans l’Assistant Importation et Exportation, envisagez d’utiliser l **’Assistant Importation de fichier plat** dans SQL Server Management Studio (SSMS). Pour plus d’informations, consultez les articles suivants :
+Si vous devez importer un fichier texte dans SQL Server et que vous n’avez pas besoin de tous les options de configuration qui sont disponibles dans l’Assistant Importation et Exportation, envisagez d’utiliser l **’Assistant Importation de fichier plat** dans SQL Server Management Studio (SSMS). Pour plus d’informations, consultez les articles suivants :
 - [Nouveautés de SQL Server Management Studio 17.3 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Présentation du nouvel Assistant Importation de fichier plat dans SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -32,12 +32,12 @@ Si vous devez importer un fichier texte dans SQL Server et que vous n’avez pas
  
  L’utilisation de fichiers plats comme sources de données représente quatre pages d’options. Cela fait un grand nombre de pages ! Toutefois, vous n’êtes pas obligé de passer trop de temps sur chaque page. Voici les tâches à prendre en compte.
  
-Radiomessagerie|Recommandation  |Type  
+Page|Recommandation  |Type  
 ----|---------|---------
-**Général**|Assurez-vous de mettre à jour les options de la section **Format**.|Recommandation    
-**Colonnes**|Veillez à contrôler les délimiteurs de colonnes et de lignes (pour un fichier délimité), ou de marquer les colonnes (pour un fichier de largeur fixe).|Recommandation
-**Avancé**|Si vous le souhaitez, vérifiez les types de données ainsi que d’autres propriétés attribuées par défaut aux colonnes.|Ce paramètre est facultatif
-**Aperçu**|Le cas échéant, prévisualisez un échantillon de données en utilisant les paramètres que vous avez spécifiés.|Ce paramètre est facultatif
+**Généralités**|Assurez-vous de mettre à jour les options de la section **Format**.|Recommandé    
+**Colonnes**|Veillez à contrôler les délimiteurs de colonnes et de lignes (pour un fichier délimité), ou de marquer les colonnes (pour un fichier de largeur fixe).|Recommandé
+**Avancée**|Si vous le souhaitez, vérifiez les types de données ainsi que d’autres propriétés attribuées par défaut aux colonnes.|Facultatif
+**Préversion**|Le cas échéant, prévisualisez un échantillon de données en utilisant les paramètres que vous avez spécifiés.|Facultatif
 
 ## <a name="general-page-source"></a>Page Général (source)
  Dans la page **Général**, accédez au fichier, puis vérifiez les paramètres de la section **Format**.
@@ -66,7 +66,7 @@ Radiomessagerie|Recommandation  |Type
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Délimité|Les colonnes sont séparées par des délimiteurs. Vous spécifiez le délimiteur dans la page **Colonnes**.|  
+|Delimited|Les colonnes sont séparées par des délimiteurs. Vous spécifiez le délimiteur dans la page **Colonnes**.|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
 |En drapeau à droite|Dans les fichiers en drapeau à droite, chaque colonne a une largeur fixe, sauf la dernière qui est délimitée par le séparateur de lignes.|  
   
@@ -206,7 +206,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Name**|Précisez un nom de colonne descriptif. Si vous n’entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
+|**Nom**|Précisez un nom de colonne descriptif. Si vous n’entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}** . Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}** . Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}** . Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}** . Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}** . Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}** . Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}** . Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}** . Les colonnes sont séparées par une barre verticale.|
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Un séparateur de lignes s'applique.|  
 |**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne à conserver en nombre d’octets. Pour les fichiers Unicode, cette valeur est un nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|
@@ -214,7 +214,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
 |**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales.|
 |**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles.<br/>Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur correspond à un nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources. Dans le modèle objet, le nom de la propriété est MaximumWidth.|  
-|**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : Les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont PAS qualifiées.|  
+|**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont pas qualifiées.|  
   
 **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
@@ -289,7 +289,7 @@ Pour une destination de fichier plat, il n’existe qu’une seule page d’opti
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Délimité|Les colonnes sont séparées par des délimiteurs. Vous spécifiez le délimiteur dans la page **Colonnes**.|  
+|Delimited|Les colonnes sont séparées par des délimiteurs. Vous spécifiez le délimiteur dans la page **Colonnes**.|  
 |Largeur fixe|Les colonnes ont une largeur fixe.|  
 |En drapeau à droite|Dans les fichiers en drapeau à droite, chaque colonne a une largeur fixe, sauf la dernière qui est délimitée par le séparateur de lignes.|  
   

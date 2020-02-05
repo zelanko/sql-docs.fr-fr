@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e97480b767e10a27c7e9647c2e6ae7369d4b37f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040235"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68040235"
 
 Cette fonction retourne la moyenne des valeurs dans un groupe. Elle ignore les valeurs null.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,9 +61,9 @@ Le résultat évalué de l’*expression* détermine le type de retour.
   
 |Résultat de l'expression|Type de retour|  
 |---|---|
-|**tinyint**|**Int**|  
-|**smallint**|**Int**|  
-|**Int**|**Int**|  
+|**tinyint**|**int**|  
+|**smallint**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
 |Catégorie **decimal** (p, s)|**décimal(38, min(s,6))**|  
 |Catégorie **money** et **smallmoney**|**money**|  
@@ -78,7 +78,7 @@ AVG est une fonction déterministe lorsqu'elle est utilisée sans les clauses OV
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. Utilisation des fonctions SUM et AVG pour des calculs  
+### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>R. Utilisation des fonctions SUM et AVG pour des calculs  
 Cet exemple calcule la moyenne des heures de congés, ainsi que la somme des heures de congés maladie utilisées par les vice-présidents d'[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Chacune de ces fonctions d'agrégation produit une valeur de résumé unique pour toutes les lignes récupérées. L'exemple utilise la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql

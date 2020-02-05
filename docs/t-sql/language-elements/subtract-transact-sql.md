@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09d6eb369d7e4dd1678ea2c344686bb5b672a8c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121643"
 ---
 # <a name="--subtraction-transact-sql"></a>- (Soustraction) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68121643"
 
   Effectue une soustraction entre deux nombres (opérateur de soustraction arithmétique). Peut également soustraire un nombre de jours d'une date.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ expression - expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-subtraction-in-a-select-statement"></a>A. Utilisation de la soustraction dans une instruction SELECT  
+### <a name="a-using-subtraction-in-a-select-statement"></a>R. Utilisation de la soustraction dans une instruction SELECT  
  L'exemple suivant calcule la différence de taux de taxe entre l'État ou la province ayant le taux de taxe le plus élevé et l'État ou la province ayant le taux de taxe le plus bas.  
   
  **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -92,7 +92,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C : Utilisation de la soustraction dans une instruction SELECT  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C. Utilisation de la soustraction dans une instruction SELECT  
  L’exemple suivant calcule la différence de taux de base entre l’employé dont le taux de base est le plus élevé et l’employé dont le taux de base est le plus faible, à partir de la table `dimEmployee`.  
   
 ```  

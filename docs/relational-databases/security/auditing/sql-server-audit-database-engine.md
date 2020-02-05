@@ -17,16 +17,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903846"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans des journaux d'événements ou des fichiers d'audit.  
+  L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans les journaux d’événements ou les fichiers d’audit.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -112,7 +112,7 @@ ms.locfileid: "72903846"
 
  Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-## <a name="considerations"></a>Observations  
+## <a name="considerations"></a>Considérations  
  En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **-f** sur la ligne de commande.  
   
  Lorsqu'un échec de l'audit provoque l'arrêt ou empêche le démarrage du serveur car l'instruction ON_FAILURE=SHUTDOWN est spécifiée pour l'audit, l'événement MSG_AUDIT_FORCED_SHUTDOWN est écrit dans le journal. Étant donné que l'arrêt se produit lors de la première rencontre de ce paramètre, l'événement est écrit une seule fois. Cet événement est écrit après le message d'échec d'audit qui provoque l'arrêt. Un administrateur peut contourner les arrêts provoqués par l’audit en démarrant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode mono-utilisateur, à l’aide de l’indicateur **-m**. Un démarrage en mode mono-utilisateur rétrograde les audits pour lesquels ON_FAILURE=SHUTDOWN est spécifié pour s'exécuter dans cette session comme ON_FAILURE=CONTINUE. Quand [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarré à l’aide de l’indicateur **-m**, le message MSG_AUDIT_SHUTDOWN_BYPASSED est écrit dans le journal des erreurs.  
@@ -214,7 +214,7 @@ ms.locfileid: "72903846"
  [Déclencheurs DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Explique comment utiliser des déclencheurs DDL (Data Definition Language) pour effectuer le suivi des modifications de vos bases de données.  
   
- [Microsoft TechNet - TechCenter SQL Server : Sécurité et protection SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet : SQL Server TechCenter : SQL Server 2005 – Sécurité et protection](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fournit des informations à jour sur la sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

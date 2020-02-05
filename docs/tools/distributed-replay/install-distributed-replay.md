@@ -1,7 +1,6 @@
 ---
-title: Installer Distributed Replay | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Installer Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,22 +8,26 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950037"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992181"
 ---
 # <a name="install-distributed-replay"></a>Installer Distributed Replay
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Vous pouvez installer Distributed Replay de trois manières :  
+
+Vous pouvez installer Distributed Replay de trois manières :  
   
 -   [Installer Distributed Replay à partir de l’Assistant Installation](#bkmk_wizard)  
   
--   [Installer Distributed Replay à partir de l'invite de commandes](#bkmk_command_prompt)  
+-   [Installer Distributed Replay à partir de l’invite de commandes](#bkmk_command_prompt)  
   
--   [Installer Distributed Replay à l'aide d'un fichier de configuration](#bkmk_configuration_file)  
+-   [Installer Distributed Replay à l’aide d’un fichier de configuration](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> Installer Distributed Replay à partir de l’Assistant Installation  
  Installer les fonctionnalités [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay avec l’Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour décider de l'emplacement où installer ces fonctionnalités, tenez compte des éléments suivants :  
@@ -44,7 +47,7 @@ ms.locfileid: "67950037"
 > [!NOTE]  
 >  Pour supprimer ou modifier des fonctionnalités Distributed Replay, utilisez la fenêtre **Programmes et fonctionnalités** du **Panneau de configuration**Windows. Sélectionnez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dans la fenêtre **Désinstaller ou modifier un programme** , puis cliquez sur **Supprimer** pour ouvrir l'Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Dans la page **Sélectionner les composants** , sélectionnez les fonctionnalités Distributed Replay à supprimer.  
   
- **Configuration requise :**  
+ **Configuration requise :**  
   
 -   Assurez-vous que les ordinateurs que vous voulez utiliser présentent la configuration décrite dans la rubrique [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md).  
   
@@ -61,7 +64,7 @@ ms.locfileid: "67950037"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Outils  
   
-     \- - OU -  
+     \- OR -  
   
      \<Répertoire des fonctionnalités partagées\Tools\\(répertoire alternatif des fonctionnalités partagées, fourni par l’utilisateur)  
   
@@ -69,7 +72,7 @@ ms.locfileid: "67950037"
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- - OU -  
+     \- OR -  
   
      \<Répertoire des fonctionnalités partagées (x86)>\Tools\\(répertoire alternatif des fonctionnalités partagées (x86), fourni par l’utilisateur)  
   
@@ -97,7 +100,7 @@ ms.locfileid: "67950037"
   
      **Important**: lorsque vous configurez Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
   
-    -   Compte d'utilisateur de domaine  
+    -   Compte d’utilisateur de domaine  
   
     -   Compte d'utilisateur local créé par l'utilisateur  
   
@@ -115,7 +118,7 @@ ms.locfileid: "67950037"
   
     2.  Sur les ordinateurs 64 bits, le chemin d’installation par défaut est **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-9. Lorsque vous avez terminé, cliquez sur **Suivant**.  
+9. Quand vous avez terminé, cliquez sur **Suivant**.  
   
 10. Dans la page **Règles d'installation** , le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide la configuration de votre ordinateur. Une fois que le processus de validation est terminé, cliquez sur **Suivant**.  
   
@@ -146,7 +149,7 @@ ms.locfileid: "67950037"
 |---------------|---------------|  
 |Distributed Replay Controller|**DREPLAY_CTLR**|  
 |Distributed Replay Client|**DREPLAY_CLT**|  
-|Outil d'administration|**Outils**|  
+|Outil d'administration|**outils**|  
   
 > [!IMPORTANT]  
 >  Une fois que vous avez installé Distributed Replay, vous devez créer des règles de pare-feu sur le contrôleur et les ordinateurs clients, et accorder des autorisations à chaque ordinateur client sur le serveur cible. Pour plus d’informations, consultez [Suivre les étapes consécutives à l’installation](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
@@ -157,11 +160,11 @@ ms.locfileid: "67950037"
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Facultatif**|Compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
 |/CTLRSVCPASSWORD<br /><br /> **Facultatif**|Mot de passe du compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
-|/CTLRSTARTUPTYPE<br /><br /> **Ce paramètre est facultatif**|Type de démarrage pour le compte de service Distributed Replay Controller.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
-|/CTLRUSERS<br /><br /> **Facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de chaînes de compte d'utilisateur utilisant «   » (espace) comme séparateur<br /><br /> **Important**: lorsque vous configurez le service Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d'utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Remarque : les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
+|/CTLRSTARTUPTYPE<br /><br /> **Facultatif**|Type de démarrage pour le compte de service Distributed Replay Controller.|Automatique<br /><br /> Désactivé<br /><br /> Manuel|  
+|/CTLRUSERS<br /><br /> **Facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de chaînes de compte d'utilisateur utilisant «   » (espace) comme séparateur<br /><br /> **Important**: lorsque vous configurez le service Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d’utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Remarque : les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
 |/CLTSVCACCOUNT<br /><br /> **Facultatif**|Compte de service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
 |/CLTSVCPASSWORD<br /><br /> **Facultatif**|Mot de passe du compte du service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
-|/CLTSTARTUPTYPE<br /><br /> **Facultatif**|Type de démarrage du compte du service Distributed Replay Client.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
+|/CLTSTARTUPTYPE<br /><br /> **Facultatif**|Type de démarrage du compte du service Distributed Replay Client.|Automatique<br /><br /> Désactivé<br /><br /> Manuel|  
 |/CLTCTLRNAME<br /><br /> **Facultatif**|Nom de l'ordinateur avec lequel le client communique pour le service Distributed Replay Controller.||  
 |/CLTWORKINGDIR<br /><br /> **Facultatif**|Répertoire de travail du service Distributed Replay Client.|Chemin d'accès valide|  
 |/CLTRESULTDIR<br /><br /> **Facultatif**|Répertoire des résultats du service Distributed Replay Client.|Chemin d'accès valide|  
@@ -219,6 +222,6 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

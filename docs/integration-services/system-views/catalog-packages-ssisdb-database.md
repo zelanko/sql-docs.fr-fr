@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295166"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (base de données SSISDB)
@@ -29,16 +29,16 @@ ms.locfileid: "71295166"
 
   Affiche les détails pour tous les packages qui s’affichent dans le catalogue **SSISDB**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|Identificateur (ID) unique du package.|  
-|NAME|**nvarchar (256)**|Nom unique du package.|  
+|name|**nvarchar (256)**|Nom unique du package.|  
 |package_guid|**uniqueidentifier**|Identificateur global unique (GUID) qui identifie le package.|  
 |description|**nvarchar(1024)**|Description facultative du package.|  
-|package_format_version|**Int**|Version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour développer le package.|  
-|version_major|**Int**|Version principale du package.|  
-|version_minor|**Int**|Version secondaire du package.|  
-|version_build|**Int**|Version de la build du package.|  
+|package_format_version|**int**|Version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour développer le package.|  
+|version_major|**int**|Version principale du package.|  
+|version_minor|**int**|Version secondaire du package.|  
+|version_build|**int**|Version de la build du package.|  
 |version_comments|**nvarchar(1024)**|Commentaires facultatifs sur la version du package.|  
 |version_guid|**uniqueidentifier**|GUID qui identifie de manière unique la version du package.|  
 |project_id|**bigint**|ID unique du projet.|  

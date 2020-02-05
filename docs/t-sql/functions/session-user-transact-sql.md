@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843344"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73843344"
 
   SESSION_USER retourne le nom d'utilisateur du contexte actuel dans la base de données active.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ SESSION_USER
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. Utilisation de SESSION_USER pour obtenir le nom d'utilisateur de la session active  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>R. Utilisation de SESSION_USER pour obtenir le nom d'utilisateur de la session active  
  L'exemple suivant déclare une variable de type `nchar`, lui affecte la valeur actuelle de `SESSION_USER`, puis imprime la variable avec un texte descriptif.  
   
 ```  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C : Utilisation de SESSION_USER pour obtenir le nom d'utilisateur de la session active  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C. Utilisation de SESSION_USER pour obtenir le nom d’utilisateur de la session en cours  
  L’exemple suivant renvoie l’utilisateur de la session en cours.  
   
 ```  

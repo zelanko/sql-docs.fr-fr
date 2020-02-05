@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f22f838bc78d4791e73a1d107cd253aae314d205
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727517"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Mappages de types de données entre Python et SQL Server
@@ -36,11 +36,11 @@ Ce tableau répertorie les conversions implicites qui sont fournies. Les autres 
 |SQLtype|Type Python|
 |-------|-----------|
 |**bigint**|`numeric`|
-|**binaire**|`raw`|
+|**binary**|`raw`|
 |**bit**|`bool`|
 |**char**|`str`|
 |**float**|`float64`|
-|**Int**|`int32`|
+|**int**|`int32`|
 |**nchar**|`str`|
 |**nvarchar**|`str`|
 |**nvarchar(max)**|`str`|

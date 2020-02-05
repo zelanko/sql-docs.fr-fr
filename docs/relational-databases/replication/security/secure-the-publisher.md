@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769639"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287267"
 ---
 # <a name="secure-the-publisher"></a>Sécuriser le serveur de publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Les Agents de réplication suivants se connectent au serveur de publication :
 ## <a name="ftp-snapshot-delivery"></a>Remise d'un instantané via FTP  
  Si vous spécifiez que les instantanés doivent être remis via un partage FTP plutôt qu'un partage UNC, vous devez spécifier une connexion et un mot de passe lors de la configuration de l'accès à FTP : Pour plus d’informations, consultez [Remettre un instantané via FTP](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
-## <a name="log-reader-agent"></a>Agent de lecture du journal  
+## <a name="log-reader-agent"></a>l'Agent de lecture du journal ;  
  Il existe un Agent de lecture du journal pour chaque base de données publiée en vue de la réplication transactionnelle. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente  

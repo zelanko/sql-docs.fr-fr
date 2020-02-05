@@ -14,10 +14,10 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e85eb7e41a3211f132ea32858bf859c153f15de7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290284"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expression SSIS)
@@ -35,7 +35,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *partie de date*  
+ *datepart*  
  Paramètre qui indique la partie de date pour laquelle il faut retourner une nouvelle valeur.  
   
  *date*  
@@ -53,13 +53,13 @@ DATEPART(datepart, date)
   
 |partie de date|Abréviations|  
 |--------------|-------------------|  
-|Année|yy, yyyy|  
+|Year|yy, yyyy|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Jour de l'année|dy, y|  
-|Jour|dd, d|  
+|jour|dd, d|  
 |Week|wk, ww|  
-|JourSem|dw|  
+|Jour de la semaine|dw|  
 |Heure|Hh|  
 |Minute|mi, n|  
 |Seconde|ss, s|  

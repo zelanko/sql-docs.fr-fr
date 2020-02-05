@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040212"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Retourne la valeur de total de contrôle binaire calculée à partir d'une ligne d'une table ou d'une liste d'expressions.
   
-![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ Indique que le calcul englobe toutes les colonnes de la table. BINARY_CHECKSUM i
 * **cursor**  
 * **image**  
 * **ntext**  
-* **texte**  
+* **text**  
 * **xml**  
 
 et les types définis par l’utilisateur CLR (Common Language Runtime) incomparables.
@@ -54,7 +54,7 @@ et les types définis par l’utilisateur CLR (Common Language Runtime) incompar
 [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de tout type. BINARY_CHECKSUM ignore les expressions de types de données incomparables dans son calcul.
 
 ## <a name="return-types"></a>Types de retour  
- **Int**
+ **int**
   
 ## <a name="remarks"></a>Notes  
 `BINARY_CHECKSUM(*)`, calculé sur n’importe quelle ligne d’une table, retourne la même valeur tant que la ligne n’est pas modifiée. `BINARY_CHECKSUM` a les propriétés d'une fonction de hachage : lorsque c’est appliqué à deux listes d'expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type et ont une valeur égale lorsqu'ils sont comparés à l'aide de l'opérateur d'égalité (=). Pour cette définition, nous disons que les valeurs NULL d’un type spécifié apparaissent comme étant équivalentes. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle des expressions peut également changer. Cependant, cette modification n’est pas garantie. Nous conseillons donc d’utiliser `BINARY_CHECKSUM` pour vérifier si des valeurs ont changé, uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser `HASHBYTES` à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que `HASHBYTES` retourne le même résultat pour deux entrées différentes est beaucoup plus faible qu’avec `BINARY_CHECKSUM`.
@@ -70,7 +70,7 @@ et les types définis par l’utilisateur CLR (Common Language Runtime) incompar
 * **nvarchar**  
 * **varchar**  
 
-ou Gestionnaire de configuration  
+or  
 
 * **sql_variant** (si le type de base de **sql_variant** est un type de données de chaîne).  
   
