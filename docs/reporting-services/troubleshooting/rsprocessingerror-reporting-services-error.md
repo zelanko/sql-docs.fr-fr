@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573819"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
@@ -24,8 +24,8 @@ ms.locfileid: "65573819"
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|rsProcessingError|  
-|Source de l'événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
+|ID de l’événement|rsProcessingError|  
+|Source de l’événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
 |Composant|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texte du message|Des erreurs se sont produites lors du traitement du rapport.|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "65573819"
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Étendue de dataset par défaut pour une zone de texte de niveau supérieur  
- N'utilisez pas d'étendue par défaut pour une zone de texte ajoutée à l'aire de conception du rapport lorsque le rapport a plusieurs dataset. Utilisez une expression qui inclut le nom du dataset comme étendue, et une fonction d'agrégation. Par exemple, `=First(Fields!FieldName.Value, "DataSet2")`.  
+ N'utilisez pas d'étendue par défaut pour une zone de texte ajoutée à l'aire de conception du rapport lorsque le rapport a plusieurs dataset. Utilisez une expression qui inclut le nom du dataset comme étendue, et une fonction d'agrégation. Par exemple : `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

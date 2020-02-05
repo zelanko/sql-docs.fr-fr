@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077900"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint et tinyint (Transact-SQL)
@@ -43,7 +43,7 @@ Types de données représentant des valeurs numériques exactes qui utilisent de
 |Type de données|Plage|Stockage|  
 |---|---|---|
 |**bigint**|-2^63 (-9 223 372 036 854 775 808) à 2^63-1 (9 223 372 036 854 775 807)|Huit octets|  
-|**Int**|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|Quatre octets|  
+|**int**|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|Quatre octets|  
 |**smallint**|-2^15 (-32 768) à 2^15-1 (32 767)|Deux octets|  
 |**tinyint**|0 à 255|Un octet|  
   

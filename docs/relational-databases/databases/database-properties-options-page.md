@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049034"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
@@ -29,7 +29,7 @@ ms.locfileid: "68049034"
  Spécifiez le classement de la base de données en le sélectionnant dans la liste. Pour plus d’informations, voir [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Mode de récupération**  
- Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc** ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc**ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Niveau de compatibilité**  
  Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Pour connaître les valeurs possibles, consultez [Niveau de compatibilité avec ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quand une base de données SQL Server est mise à niveau, le niveau de compatibilité pour cette base de données est conservé si possible, ou remplacé par le niveau minimal pris en charge pour le nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -40,7 +40,7 @@ ms.locfileid: "68049034"
 > [!IMPORTANT]  
 >  L'activation de bases de données autonomes partielle transfère le contrôle de l'accès à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux propriétaires de la base de données. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## <a name="automatic"></a>Automatic  
+## <a name="automatic"></a>Automatique  
  **Fermeture automatique**  
  Spécifiez si la base de données doit être fermée proprement et doit libérer des ressources lorsque le dernier utilisateur ferme sa session. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, la base de données est fermée proprement et ses ressources sont libérées à la fermeture de session du dernier utilisateur.  
 
@@ -131,7 +131,7 @@ Quand une connexion à Azure SQL Database a été établie, cette section contie
  Spécifiez le nom de répertoire pour les données FILESTREAM associées à la base de données sélectionnée.  
   
  **Accès FILESTREAM non transactionnel**  
- Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY** ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY**ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Divers  
 **Autoriser l’isolement d’instantané**  
@@ -216,18 +216,18 @@ Propriété de Service Broker en lecture seule.
 **Identificateur de Service Broker**  
 Identificateur en lecture seule.  
 
-## <a name="state"></a>État  
+## <a name="state"></a>State  
  **Base de données en lecture seule**  
  Spécifiez si la base de données est en lecture seule. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, les utilisateurs peuvent uniquement lire les données de la base de données. Ils ne peuvent pas modifier les données ou les objets de la base de données. Toutefois, la base de données elle-même peut être supprimée à l’aide de l’instruction `DROP DATABASE`. La modification de la configuration de l'option **Base de données en lecture seule** n'est possible que si la base de données n'est pas en cours d'utilisation. La base de données master est l'exception à la règle mais seul l'administrateur système peut utiliser la base de données master pendant la configuration de cette option.  
   
  **État de la base de données**  
- Affiche l'état actuel de la base de données. Ce champ n'est pas modifiable. Pour plus d'informations sur l'option **État de la base de données**, consultez [Database States](../../relational-databases/databases/database-states.md).  
+ Affiche l'état actuel de la base de données. Elle n’est pas modifiable. Pour plus d'informations sur l'option **État de la base de données**, consultez [Database States](../../relational-databases/databases/database-states.md).  
 
  **Chiffrement activé**  
  Quand la valeur est **True**, cette base de données est activée pour le chiffrement. Une clé de chiffrement de base de données est alors requise pour effectuer le chiffrement. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
  
  **Restreindre l'accès**  
- Spécifiez les utilisateurs autorisés à accéder à la base de données. Les valeurs possibles sont :  
+ Spécifiez les utilisateurs autorisés à accéder à la base de données. Les valeurs possibles sont les suivantes :  
   
 -   **Multiple**  
   

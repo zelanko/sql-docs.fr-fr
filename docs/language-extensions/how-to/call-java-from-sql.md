@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658896"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Guide pratique pour appeler le runtime Java dans les extensions de langage SQL Server
@@ -117,4 +117,4 @@ Pour plus d’informations, consultez [CREATE EXTERNAL LIBRARY](https://docs.mic
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-+ [Tutoriel : Rechercher une chaîne à l’aide d’expressions régulières en Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Tutorial: Search for a string using regular expressions in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

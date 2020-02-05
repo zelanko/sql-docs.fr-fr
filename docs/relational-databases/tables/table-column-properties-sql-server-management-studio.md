@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016242"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriétés des colonnes de table (SQL Server Management Studio)
@@ -28,15 +28,15 @@ ms.locfileid: "68016242"
   Ces propriétés apparaissent dans le volet en bas du Concepteur de tables. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés lorsque la colonne est sélectionnée. Les **Propriétés des colonnes** peuvent être affichées par catégories ou par ordre alphabétique. Un grand nombre de propriétés apparaissent uniquement ou peuvent uniquement être modifiées pour certains types de données.  
   
 > [!NOTE]  
->  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
+>  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
- **Général**  
+ **Généralités**  
  Peut être développée pour afficher **Nom**, **Autoriser les valeurs NULL**, **Type de données**, **Valeur ou liaison par défaut**, **Longueur**, **Précision**et **Échelle**.  
   
- **Name**  
+ **Nom**  
  Affiche le nom de la colonne sélectionnée.  
   
- **Autoriser les valeurs NULL**  
+ **Null autorisé**  
  Indique si la colonne accepte la valeur null. Pour modifier cette propriété, activez la case à cocher Null autorisé correspondant à la colonne dans le volet en haut du Concepteur de tables.  
   
  **Type de données**  
@@ -48,7 +48,7 @@ ms.locfileid: "68016242"
  **Longueur**  
  Affiche le nombre de caractères autorisés pour les types de données texte. Cette propriété est uniquement disponible pour les types de données basés sur les caractères.  
   
- **Échelle**  
+ **Mettre à l'échelle**  
  Affiche le nombre maximal de chiffres autorisé à droite de la virgule décimale pour les valeurs de cette colonne. Cette propriété affiche **0** pour les types de données non numériques.  
   
  **Précision**  
@@ -125,7 +125,7 @@ ms.locfileid: "68016242"
  **Pas pour la réplication**  
  Indique si les valeurs d'identité d'origine sont préservées pendant la réplication. Pour plus d'informations sur la réplication, consultez CREATE TABLE. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
- **Répliquée**  
+ **Répliqué**  
  Indique si cette colonne est répliquée dans un autre emplacement.  
   
  **RowGuid**  

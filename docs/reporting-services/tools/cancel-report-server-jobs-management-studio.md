@@ -11,10 +11,10 @@ ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574217"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Annuler les travaux du serveur de rapports (Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "65574217"
 >  Cette fonctionnalité n'est pas prise en charge dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. La page n'apparaît pas lorsque vous exécutez [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Affiche le nom du rapport. Les abonnements sont identifiés par leur description.  
   
  **Type**  
@@ -43,7 +43,7 @@ ms.locfileid: "65574217"
  **Start Time**  
  Indique à quel moment le travail a démarré.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Pour les travaux lancés par un utilisateur, cette colonne affiche le nom de l'utilisateur.  
   
  **État**  

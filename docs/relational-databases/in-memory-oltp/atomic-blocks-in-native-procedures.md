@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951221"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocs atomiques dans des procédures en mode natif
@@ -126,7 +126,7 @@ ORDER BY c1
 GO  
 ```  
   
- Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S’ils se produisent dans l’étendue d’un bloc atomique, la transaction est abandonnée : 10772, 41301, 41302, 41305, 41325, 41332, 41333 et 41839.  
+ Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S’ils apparaissent dans l’étendue d’un bloc Atomic, ils entraînent l’abandon de la transaction : 10772, 41301, 41302, 41305, 41325, 41332, 41333 et 41839.  
   
 ## <a name="session-settings"></a>Paramètres de session  
  Les paramètres de session dans les blocs Atomic sont fixes lorsque la procédure stockée est compilée. Certains paramètres peuvent être spécifiés avec **BEGIN ATOMIC** tandis que les autres paramètres sont toujours fixes avec la même valeur.  
@@ -150,16 +150,16 @@ GO
   
 |Option SET|Valeur système par défaut pour les blocs Atomic|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|ACTIVÉ|  
+|ANSI_PADDING|ACTIVÉ|  
+|ANSI_WARNING|ACTIVÉ|  
+|ARITHABORT|ACTIVÉ|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|ACTIVÉ|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|ACTIVÉ|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|ACTIVÉ|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Les exceptions qui ne sont pas interceptées entraînent la restauration des blocs Atomic, mais pas l'abandon de la transaction, sauf si l'erreur condamne la transaction.|  

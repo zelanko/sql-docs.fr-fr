@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637986"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
@@ -40,7 +40,7 @@ Dans la boîte de dialogue Prise en main, créez un rapport de matrice à l’ai
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -88,7 +88,7 @@ Une connexion de données contient les informations nécessaires pour se connect
   
     La page **Choisir une connexion à une source de données** s’affiche.  
   
-12. Pour vérifier que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
+12. Pour vous assurer que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
   
     Le message **La connexion a été correctement créée** s’affiche.  
   
@@ -208,7 +208,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
 3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
-## <a name="DFormat"></a>2. Mettre en forme les données en tant que devises  
+## <a name="DFormat"></a>2. Mettre en forme les données de devise  
 Appliquez une mise en forme de devise aux champs de montant des ventes dans le rapport d'extraction.  
   
 #### <a name="to-format-data-as-currency"></a>Pour mettre en forme les données en tant que devise  

@@ -20,10 +20,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914596"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67914596"
 
   OPENXML fournit une vue de l'ensemble des lignes d'un document XML. En tant que fournisseur d'ensembles de lignes, OPENXML peut être inclus dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans lesquelles certains fournisseurs d'ensembles de lignes peuvent apparaître (notamment une table, une vue ou la fonction OPENROWSET).  
   
- ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans un contexte d'extraction, cet indicateur spécifie que les données consommées ne doivent pas être copiées sur la propriété de dépassement **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Définition de schéma du formulaire : _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ Définition de schéma de la forme : _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Nom de la colonne dans l'ensemble de lignes.  
@@ -85,21 +85,21 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Le tableau suivant décrit la structure de la table **edge**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID unique du nœud du document.<br /><br /> L’ID de l’élément racine a pour valeur 0. Les valeurs négatives d'ID sont réservées.|  
 |**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent ; il dépend du nodetype du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
-|**nodetype**|**Int**|Identifie le type de nœud. Il s'agit d'un entier qui correspond à la numérotation des types de nœud XML DOM.<br /><br /> Les types de nœuds sont :<br /><br /> 1 = Nœud d'élément<br /><br /> 2 = Nœud d'attribut<br /><br /> 3 = Nœud de texte|  
+|**nodetype**|**int**|Identifie le type de nœud. Il s'agit d'un entier qui correspond à la numérotation des types de nœud XML DOM.<br /><br /> Les types de nœuds sont :<br /><br /> 1 = Nœud d'élément<br /><br /> 2 = Nœud d'attribut<br /><br /> 3 = Nœud de texte|  
 |**localname**|**nvarchar**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
 |**prefix**|**nvarchar**|Préfixe de l'espace de noms du nom de nœud.|  
 |**namespaceuri**|**nvarchar**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  
 |**datatype**|**nvarchar**|Type de données réel de la ligne d'éléments ou d'attributs, sinon NULL. Le type de données est déduit de la DTD en ligne ou du schéma en ligne.|  
 |**prev**|**bigint**|ID XML de l'élément frère précédent. Vaut NULL en l'absence de frère précédent direct.|  
-|**texte**|**ntext**|Contient la valeur de l’attribut ou le contenu de l’élément sous forme textuelle (ou NULL si l’entrée de table **edge** n’exige pas de valeur).|  
+|**text**|**ntext**|Contient la valeur de l’attribut ou le contenu de l’élément sous forme textuelle (ou NULL si l’entrée de table **edge** n’exige pas de valeur).|  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Utilisation d'une instruction SELECT simple avec OPENXML  
+### <a name="a-using-a-simple-select-statement-with-openxml"></a>R. Utilisation d'une instruction SELECT simple avec OPENXML  
  Cet exemple crée une représentation interne de l'image XML à l'aide de `sp_xml_preparedocument`. Une instruction `SELECT` est alors exécutée sur la représentation interne du document XML, en utilisant un fournisseur d'ensembles de lignes `OPENXML`.  
   
  La valeur *flag* est définie sur `1`. Cette valeur indique un mappage **centré sur l’attribut**. Par conséquent, les attributs XML sont mappés sur les colonnes de l'ensemble de lignes. Le paramètre *rowpattern* spécifié en tant que `/ROOT/Customer` identifie les nœuds `<Customers>` à traiter.  

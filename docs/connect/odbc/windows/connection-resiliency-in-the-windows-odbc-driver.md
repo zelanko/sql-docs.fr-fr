@@ -11,10 +11,10 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008432"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
@@ -35,7 +35,7 @@ ms.locfileid: "68008432"
   
      Vous pouvez modifier le nombre de tentatives de connexion quand vous :  
   
-    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Nombre de tentatives de connexion** .  
+    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Nombre de nouvelles tentatives de connexion**.  
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryCount** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008432"
   
      Vous pouvez modifier l’intervalle de nouvelle tentative de connexion quand vous :  
   
-    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Intervalle avant nouvelle tentative de connexion** .  
+    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Intervalle avant nouvelle tentative de connexion**.  
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryInterval** .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68008432"
   
  Les codes d’état suivants sont retournés par toute fonction qui exécute une commande sur le serveur :  
   
-|État|Message|  
+|State|Message|  
 |-----------|-------------|  
 |IMC01|La connexion est interrompue et la récupération n’est pas possible. Le pilote du client a tenté de rétablir la connexion une fois ou plus et toutes les tentatives ont échoué. Augmentez la valeur de ConnectRetryCount pour augmenter le nombre de tentatives de récupération.|  
 |IMC02|Le serveur n’a pas reconnu une tentative de récupération. La récupération de la connexion est impossible.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68008432"
 |IMC06|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le pilote du client comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows. Le nom de source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et spécifie l’identifiant utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows. Le nom de source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et spécifie l’identifiant utilisateur. **func1** then retrieves the number of connection retries with **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** utilise **SQLDriverConnect**, le mot clé de chaîne de connexion **ConnectRetryCount** et les attributs de connexion pour récupérer le paramètre pour les tentatives de connexion et l’intervalle avant nouvelle tentative.  
   
@@ -173,6 +173,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pilote Microsoft ODBC pour SQL Server sur Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
+ [Microsoft ODBC Driver for SQL Server sur Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

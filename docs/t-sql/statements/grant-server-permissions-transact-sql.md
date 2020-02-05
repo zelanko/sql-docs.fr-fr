@@ -18,10 +18,10 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050791"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT – octroi d'autorisations de serveur (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68050791"
 
   Permet d'accorder des autorisations sur un serveur. 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -144,8 +144,8 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-granting-a-permission-to-a-login"></a>A. Octroi d'une autorisation à une connexion  
- Dans l'exemple ci-dessous, l'autorisation `CONTROL SERVER` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `TerryEminhizer`.  
+### <a name="a-granting-a-permission-to-a-login"></a>R. Octroi d'une autorisation à une connexion  
+ Dans l'exemple ci-dessous, l'autorisation `CONTROL SERVER` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`TerryEminhizer`.  
   
 ```  
 USE master;  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Octroi d'une autorisation qui possède l'autorisation GRANT  
- Dans l'exemple suivant, l'autorisation `ALTER ANY EVENT NOTIFICATION` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves` avec le droit d'accorder cette autorisation à une autre connexion.  
+ Dans l'exemple suivant, l'autorisation `ALTER ANY EVENT NOTIFICATION` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves` avec le droit d'accorder cette autorisation à une autre connexion.  
   
 ```  
 USE master;  

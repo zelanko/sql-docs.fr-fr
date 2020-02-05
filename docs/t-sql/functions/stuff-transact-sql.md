@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342000"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "71342000"
 
   La fonction STUFF permet d'insérer une chaîne dans une autre chaîne. Elle efface d'abord le nombre de caractères spécifié dans la première chaîne à partir de la position de début. Ensuite, elle insère la seconde chaîne dans la première à partir de la position de début.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
   
 ## <a name="arguments"></a>Arguments  
  *expression_caractère*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données caractères. *character_expression* peut être une constante, une variable ou une colonne de données de type caractère ou binaire.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaires ou caractères.  
   
  *start*  
  Entier précisant la position de départ de la suppression et de l'insertion. Si *start* est négatif ou nul, une chaîne NULL est renvoyée. Si *start* est plus long que le premier argument *character_expression*, une chaîne NULL est renvoyée. *start* peut être de type **bigint**.  
@@ -55,7 +55,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Entier spécifiant le nombre de caractères à supprimer. Si *length* est négatif, une chaîne NULL est renvoyée. Si *length* est plus long que le premier argument *character_expression*, la suppression s’effectue jusqu’au dernier caractère du dernier argument *character_expression*.  Si *length*est égal à zéro, l’insertion se produit à l’emplacement *start* et aucun caractère n’est supprimé. *length* peut être de type **bigint**.
 
  *replaceWith_expression*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données caractères. *character_expression* peut être une constante, une variable ou une colonne de données de type caractère ou binaire. Cette expression remplace *length* caractères de *character_expression* en commençant à *start*. Le fait de fournir `NULL` comme argument *replaceWith_expression* supprime les caractères sans rien insérer.   
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaires ou caractères. Cette expression remplace *length* caractères de *character_expression* en commençant à *start*. Le fait de fournir `NULL` comme argument *replaceWith_expression* supprime les caractères sans rien insérer.   
   
 ## <a name="return-types"></a>Types de retour  
  Renvoie des données caractères si *character_expression* correspond à l’un des types de données caractères pris en charge. Renvoie des données binaires si *character_expression* correspond à l’un des types de données binaires pris en charge.  

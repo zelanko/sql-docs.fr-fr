@@ -1,6 +1,6 @@
 ---
-title: Aide de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Aide de SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d541d10f86e1ca0f12b421bee71b4923088214b7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5d44d4d2c4c825e671eb8f4210994324b3a0c094
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260142"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240534"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Cette section contient l’aide accessible par le biais de la touche F1 pour les boîtes de dialogue et les pages accessibles à partir de la barre de menus dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+This section contains F1 Help for the dialog boxes and pages available from the menu bar in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [À propos de SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   
@@ -44,7 +44,7 @@ Cette section contient l’aide accessible par le biais de la touche F1 pour les
   
 [Enregistrer sous](../../ssms/menu-help/save-as.md)  
   
-[Enregistrer les modifications](../../ssms/menu-help/save-changes.md)  
+[Save Changes](../../ssms/menu-help/save-changes.md)  
   
 [Boîte de dialogue Fenêtres &#40;Aide de Microsoft Document Explorer&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   

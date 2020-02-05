@@ -1,5 +1,5 @@
 ---
-title: Méthode Connect (SQLServerDriver) | Microsoft Docs
+title: connect Method (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518be09d4a4929a06866eec253a49a39d7865263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955419"
 ---
 # <a name="connect-method-sqlserverdriver"></a>Méthode connect (SQLServerDriver)
@@ -44,14 +44,14 @@ public java.sql.Connection connect(java.lang.String Url,
   
  Ensemble de paires de valeurs de chaîne utilisé comme arguments de connexion.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet Connection.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode Connect est spécifiée par la méthode Connect dans l’interface java. Sql. Driver.  
+ This connect method is specified by the connect method in the java.sql.Driver interface.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDriver, méthodes](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

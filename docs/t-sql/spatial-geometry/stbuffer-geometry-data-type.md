@@ -18,10 +18,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930368"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (type de données geometry)
@@ -70,7 +70,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Appel de STBuffer() avec parameter_value < 0 sur une instance géométrique unidimensionnelle  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>R. Appel de STBuffer() avec parameter_value < 0 sur une instance géométrique unidimensionnelle  
  L'exemple suivant retourne une instance `GeometryCollection` vide :  
   
 ```
@@ -78,7 +78,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Appel de STBuffer() avec parameter_value < 0 sur une instance Polygon  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>B. Appel de STBuffer() avec parameter_value < 0 sur une instance Polygon  
  L'exemple suivant retourne une instance `Polygon` avec une mémoire tampon négative :  
   
 ```
@@ -86,7 +86,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. Appel de STBuffer() avec parameter_value < 0 sur une instance CurvePolygon  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>C. Appel de STBuffer() avec parameter_value < 0 sur une instance CurvePolygon  
  L'exemple suivant retourne une instance `Polygon` avec une mémoire tampon négative d'une instance `CurvePolygon` :  
   
 ```
@@ -107,7 +107,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
  Cette instruction **SELECT** retourne `GEOMETRYCOLLECTION EMPTY.`  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Appel de STBuffer() avec parameter_value = 0  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. Appel de STBuffer() avec parameter_value = 0  
  L'exemple suivant retourne une copie de l'instance `geometry` appelante :  
   
 ```
@@ -124,7 +124,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. Appel de STBuffer() avec parameter_value > 0  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>G. Appel de STBuffer() avec parameter_value > 0  
  L'exemple suivant retourne une instance `Polygon` :  
   
 ```

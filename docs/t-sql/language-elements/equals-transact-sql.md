@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075268"
 ---
 # <a name="-equals-transact-sql"></a>= (Equals) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075268"
 
   Compare l'égalité de deux expressions (opérateur de comparaison) dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ expression = expression
  Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Si les expressions n'ont pas le même type de données, le type de données d'une expression doit être implicitement convertible dans le type de données de l'autre. La conversion se base sur les règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Types des résultats  
- Booléen  
+ Boolean  
   
 ## <a name="remarks"></a>Notes  
  Quand vous effectuez une comparaison à l’aide d’une expression NULL, le résultat dépend du paramètre `ANSI_NULLS` :  
@@ -62,7 +62,7 @@ Pour plus d’informations, consultez [SET ANSI_NULLS &#40;Transact-SQL&#41;](..
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using--in-a-simple-query"></a>A. Utilisation de = dans une requête simple  
+### <a name="a-using--in-a-simple-query"></a>R. Utilisation de = dans une requête simple  
  L'exemple suivant utilise l'opérateur d'égalité pour retourner toutes les lignes de la table `HumanResources.Department` dans lesquelles la valeur de la colonne `GroupName` est égale au mot « Manufacturing ».  
   
 ```  
