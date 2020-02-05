@@ -16,10 +16,10 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293280"
 ---
 # <a name="cdc-source"></a>Source CDC
@@ -45,18 +45,18 @@ ms.locfileid: "71293280"
   
 -   Le nom de la variable de package d'état de capture de données modifiées à partir de laquelle la plage de traitement de capture de données modifiées est déterminée. La source CDC ne modifie pas cette variable.  
   
- Les données retournées par la source CDC sont les mêmes que celles retournées par les fonctions CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<nom-instance-capture>** ou **cdc.fn_cdc_get_net_changes_\<nom-instance-capture>** (si disponibles). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md).  
+ Les données retournées par la source CDC sont les mêmes que celles retournées par les fonctions CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<nom-instance-capture>** ou **cdc.fn_cdc_get_net_changes_\<nom-instance-capture>** (si disponibles). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md).  
   
  La source CDC a une sortie normale et une sortie d'erreur.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
  la source CDC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d'erreur** : La valeur est toujours -1.  
+-   **Code d’erreur**: la valeur est toujours -1.  
   
--   **Colonne d’erreur** : colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
--   **Colonnes de ligne d’erreur** : Données d’enregistrement à l’origine de l’erreur.  
+-   **Colonnes de ligne d’erreur**: données d’enregistrement à l’origine de l’erreur.  
   
  Selon le comportement paramétré pour les erreurs, la source CDC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur.  
   
@@ -156,15 +156,15 @@ use <cdc-enabled-database-name>
  **Mode de traitement CDC**  
  Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
   
--   **Tout** : retourne les modifications apportées à la plage CDC actuelle sans les valeurs **Avant la mise à jour**.  
+-   **Tout**: retourne les modifications apportées à la plage de capture de données modifiées actuelle sans les valeurs **Avant la mise à jour** .  
   
--   **Tout avec les anciennes valeurs** : retourne les modifications apportées à la plage de traitement CDC actuelle, dont les anciennes valeurs (**Avant la mise à jour**). Chaque opération de mise à jour utilise deux lignes, une avec les valeurs avant la mise à jour et une avec la valeur après la mise à jour.  
+-   **Tout avec les anciennes valeurs**: retourne les modifications apportées à la plage de traitement de capture de données modifiées actuelle, dont les anciennes valeurs (**Avant la mise à jour**). Chaque opération de mise à jour utilise deux lignes, une avec les valeurs avant la mise à jour et une avec la valeur après la mise à jour.  
   
--   **Net** : retourne une seule ligne de modification par ligne source modifiée dans la plage CDC actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
+-   **Net**: retourne une seule ligne de modification par ligne source modifiée dans la plage de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
   
--   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Changed** qui indique les colonnes modifiées dans la ligne de modification active.  
+-   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Modifié** qui indique les colonnes modifiées dans la ligne de modification active.  
   
--   **Net avec fusion** : Ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
+-   **Net avec fusion**: ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   
 > [!NOTE]  
 >  Pour toutes les options de modifications Net, la table source doit avoir une clé primaire ou un index unique. Pour les tables sans clé primaire ou sans index unique, vous devez utiliser l’option **Tout** .  
@@ -220,7 +220,7 @@ use <cdc-enabled-database-name>
  **Colonne**  
  Affichez les colonnes externes (sources) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source CDC** .  
   
- **Erreur**  
+ **Error**  
  Sélectionnez la façon dont la source CDC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Troncation**  
@@ -249,6 +249,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/) (Modes de traitement pour la source CDC), sur mattmasson.com.  
+-   Entrée de blog, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)(Modes de traitement pour la source CDC), sur mattmasson.com.  
   
   

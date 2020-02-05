@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902701"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67902701"
   
 Pour créer une table externe, consultez [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe
   
@@ -170,7 +170,7 @@ PolyBase utilise uniquement le format de date personnalisé pour l’importation
   
 -   DateTimeOffset : 'yyyy-MM-dd HH:mm:ss'  
   
--   Time : 'HH:mm:ss'  
+-   Time : 'HH:mm:ss'  
   
 Des **exemples de formats de date** se trouvent dans le tableau suivant :
   
@@ -190,11 +190,11 @@ Remarques sur ce tableau :
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, pas de secondes, et la mention AM, am, PM ou pm.|  
 |Date|DATE_FORMAT =  'yyyy-MM-dd'|L’année, le mois et le jour. Aucun élément d’heure n’est inclus.|  
 |Date|DATE_FORMAT = 'yyyy-MMM-dd'|L’année, le mois et le jour. Quand le mois est spécifié avec 3 M, la valeur d’entrée est une des chaînes suivantes : Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov ou Dec.|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes, ainsi que 7 chiffres pour les millisecondes.|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, ainsi que la mention AM, am, PM ou pm.|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes, ainsi que 7 chiffres pour les millisecondes.|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, ainsi que la mention AM, am, PM ou pm.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 23 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, ainsi que le décalage des fuseaux horaires que vous placez dans le fichier ainsi : `{+&#124;-}HH:ss`. Par exemple, étant donné que l’heure de Los Angeles, sans l’heure d’été, est en retard de 8 heures par rapport à l’heure UTC, la valeur -08:00, dans le fichier d’entrée va spécifier le fuseau horaire de Los Angeles.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 11 heures, de 00 à 59 minutes, de 00 à 59 secondes, 7 chiffres pour les millisecondes, la mention AM, am, PM ou pm, et le décalage des fuseaux horaires. Voir la description à la ligne précédente.|  
-|Time|DATE_FORMAT = 'HH:mm:ss'|Il n’existe aucune valeur de date, seulement de 00 à 23 heures, de 00 à 59 minutes et de 00 à 59 secondes.|  
+|Temps|DATE_FORMAT = 'HH:mm:ss'|Il n’existe aucune valeur de date, seulement de 00 à 23 heures, de 00 à 59 minutes et de 00 à 59 secondes.|  
   
  Voici tous les formats de date pris en charge :
   
@@ -303,7 +303,7 @@ Remarques sur ce tableau :
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-create-a-delimitedtext-external-file-format"></a>A. Créer un format de fichier externe DELIMITEDTEXT  
+### <a name="a-create-a-delimitedtext-external-file-format"></a>R. Créer un format de fichier externe DELIMITEDTEXT  
  Cet exemple crée un format de fichier externe nommé *textdelimited1* pour un fichier texte délimité. Les options répertoriées pour FORMAT\_OPTIONS spécifient que les champs du fichier doivent être séparés par le caractère « | ». Le fichier texte est également compressé avec le codec Gzip. Si DATA\_COMPRESSION n’est pas spécifié, le fichier texte est décompressé.
   
  Pour un fichier texte délimité, la méthode de compression des données peut être le Codec par défaut, « org.apache.hadoop.io.compress.DefaultCodec », ou le Codec Gzip « org.apache.hadoop.io.compress.GzipCodec ».

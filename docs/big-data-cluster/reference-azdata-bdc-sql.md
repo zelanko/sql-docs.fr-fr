@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 898bb623d81a9a661cbe4d123226d88136b0edeb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 42d6b93c1a5b16abffa9fcc53c75d45c0eb6f67f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531720"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821018"
 ---
 # <a name="azdata-bdc-sql"></a>azdata bdc sql
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L’article suivant fournit des références sur les commandes `sql` dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md)
+L’article suivant fournit des références sur les commandes `bdc sql` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
 |     |     |

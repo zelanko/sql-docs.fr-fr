@@ -18,10 +18,10 @@ ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140902"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE – révocation d'autorisations d'objet (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68140902"
 
   Permet de révoquer des autorisations sur une table, une vue, une fonction table, une procédure stockée, une procédure stockée étendue, une fonction scalaire, une fonction d'agrégation, une file d'attente de service ou un synonyme. 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -148,7 +148,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-revoking-select-permission-on-a-table"></a>A. Révocation d'une autorisation SELECT sur une table  
+### <a name="a-revoking-select-permission-on-a-table"></a>R. Révocation d'une autorisation SELECT sur une table  
  Dans l'exemple ci-dessous, l'autorisation `SELECT` est révoquée pour l'utilisateur `RosaQdM` sur la table `Person.Address` dans la base de données `AdventureWorks2012`.  
   
 ```  
