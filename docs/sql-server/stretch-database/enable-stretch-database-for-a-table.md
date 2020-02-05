@@ -12,17 +12,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843808"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Pour configurer une table pour Stretch Database, sélectionnez **Stretch | Activer** pour une table dans SQL Server Management Studio afin d’ouvrir l’Assistant **Activer la table pour Stretch**. Vous pouvez également utiliser Transact-SQL pour activer Stretch Database sur une table existante, ou pour créer une table avec Stretch Database.  
+  Pour configurer une table pour Stretch Database, sélectionnez **Stretch | Activer** pour une table dans SQL Server Management Studio afin d’ouvrir l’Assistant **Activer la table pour Stretch** . Vous pouvez également utiliser Transact-SQL pour activer Stretch Database sur une table existante, ou pour créer une table avec Stretch Database.  
   
 -   Si vous stockez des données à froid dans une table distincte, vous pouvez migrer la table entière.  
   
@@ -30,13 +30,13 @@ ms.locfileid: "73843808"
  
  **Conditions préalables**. Si vous sélectionnez **Stretch | Activer** pour une table et que vous n’avez pas encore activé Stretch Database pour la base de données, l’Assistant configure d’abord la base de données pour Stretch Database. Suivez les étapes de la [Mise en route en exécutant l’Assistant Activer la base de données pour Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) au lieu des étapes décrites dans cet article.  
   
- **Les autorisations**. L’activation de Stretch Database sur une table ou une base de données nécessite les autorisations db_owner. L'activation de Stretch Database requiert également des autorisations ALTER sur la table.  
+ **Autorisations**. L’activation de Stretch Database sur une table ou une base de données nécessite les autorisations db_owner. L’activation de Stretch Database sur une table nécessite également l’autorisation ALTER sur la table.  
 
  > [!NOTE]
  > Ultérieurement, n’oubliez pas que la désactivation de Stretch Database pour une table ou une base de données ne supprime pas l’objet distant. Si vous souhaitez supprimer la table distante ou la base de données distante, vous devez la supprimer à l'aide du portail de gestion Azure. Les objets distants continuent d’entraîner des coûts Azure tant qu’ils n’ont pas été supprimés manuellement.
  
 ##  <a name="EnableWizardTable"></a> Utilisation de l’assistant pour activer Stretch Database sur une table  
- **Lancer l'Assistant**  
+ **Lancer l’Assistant**  
  1.  Dans l’Explorateur d’objets de SQL Server Management Studio, sélectionnez la table pour laquelle vous souhaitez activer Stretch.  
   
 2.  Cliquez avec le bouton droit et sélectionnez **Stretch**, puis sélectionnez **Activer** pour lancer l’Assistant.  
@@ -44,7 +44,7 @@ ms.locfileid: "73843808"
  **Introduction**  
  Passez en revue l'objectif de l'assistant et les conditions préalables.  
   
- **Sélectionner des tables de base de données**  
+ **Sélectionnez des tables de base de données**  
  Vérifiez que la table que vous souhaitez activer est affichée et sélectionnée.  
   
  Vous pouvez migrer une table entière ou spécifier une fonction de filtre simple dans l’Assistant. Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionner les lignes à migrer, effectuez l’une des opérations suivantes.  
@@ -59,7 +59,7 @@ ms.locfileid: "73843808"
  Passez en revue les valeurs que vous avez entrées et les options que vous avez sélectionnées dans l’Assistant. Puis sélectionnez **Terminer** pour activer Stretch.  
   
  **Résultats**  
- Examinez les résultats.  
+ Passez en revue les résultats.  
   
 ##  <a name="EnableTSQLTable"></a> Utilisation de Transact-SQL pour activer Stretch Database sur une table  
  Vous pouvez activer Stretch Database pour une table existante ou créer une table avec Stretch Database activée à l'aide de Transact-SQL.  

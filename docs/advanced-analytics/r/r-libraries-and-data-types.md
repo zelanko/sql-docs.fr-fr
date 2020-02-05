@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727417"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mappages de types de données entre R et SQL Server
@@ -49,14 +49,14 @@ Le tableau suivant présente les modifications de types de données et de valeur
 |**date**|`POSIXct`|**datetime**|Représenté au format GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
-|**Int**|`integer`|**Int**||
+|**int**|`integer`|**int**||
 |**money**|`numeric`|**float**||
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Représenté au format GMT|
-|**smallint**|`integer`|**Int**||
+|**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**Int**||
+|**tinyint**|`integer`|**int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
@@ -106,7 +106,7 @@ Si un type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## <a name="examples"></a>Exemples
 
-### <a name="example-1-implicit-conversion"></a>Exemple 1 : Conversion implicite
+### <a name="example-1-implicit-conversion"></a>Exemple 1 : conversion implicite
 
 L’exemple suivant montre comment les données sont transformées lors de la boucle entre SQL Server et R.
 
@@ -168,7 +168,7 @@ Vous pouvez voir que les conversions de types de données suivantes ont été ef
 -   **Colonne C4**. La colonne contient des valeurs générées par le script R et non présentes dans les données d’origine.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Exemple 2 : sélection de colonnes dynamiques à l’aide de R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Exemple 2 : sélection de colonnes dynamiques à l’aide de R
 
 L’exemple suivant montre comment vous pouvez utiliser le code R pour vérifier les types de colonnes non valides. La requête extrait le schéma d’une table spécifiée à l’aide des vues système SQL Server et supprime toutes les colonnes qui ont un type non valide spécifié.
 

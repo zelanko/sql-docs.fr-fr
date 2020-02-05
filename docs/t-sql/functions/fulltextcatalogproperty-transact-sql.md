@@ -20,10 +20,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940221"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67940221"
 
 Renvoie des informations concernant les propriétés de catalogue de texte intégral dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>Arguments  
   
 > [!NOTE]  
->  Les propriétés suivantes seront supprimées dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **LogSize** et **PopulateStatus**. Évitez par conséquent d'utiliser ces propriétés dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  
+>  Les propriétés suivantes seront supprimées dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **LogSize** et **PopulateStatus**. Évitez par conséquent d'utiliser ces propriétés dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  
   
 _catalog\_name_  
 Expression contenant le nom du catalogue de texte intégral.  
@@ -64,7 +64,7 @@ Expression contenant le nom de la propriété de catalogue de texte intégral. L
 |**ImportStatus**|Indique si le catalogue de texte intégral est en cours d’importation.<br /><br /> 0 = Le catalogue de texte intégral n’est pas en cours d’importation.<br /><br /> 1 = Indique que le catalogue de texte intégral est en cours d'importation.|  
   
 ## <a name="return-types"></a>Types de retour  
-**Int**  
+**int**  
   
 ## <a name="exceptions"></a>Exceptions  
 Retourne NULL en cas d’erreur ou si un appelant n’est pas autorisé à voir l’objet.  

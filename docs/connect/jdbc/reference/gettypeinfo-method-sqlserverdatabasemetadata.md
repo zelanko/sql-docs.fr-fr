@@ -16,10 +16,10 @@ ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978513"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Méthode getTypeInfo (SQLServerDatabaseMetaData)
@@ -34,7 +34,7 @@ ms.locfileid: "67978513"
 public java.sql.ResultSet getTypeInfo()  
 ```  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
@@ -45,26 +45,26 @@ public java.sql.ResultSet getTypeInfo()
   
  Le jeu de résultats retourné par la méthode getTypeInfo contient les informations suivantes :  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
-|TYPE_NAME|**String**|Nom du type de données.|  
+|TYPE_NAME|**Chaîne**|Nom du type de données.|  
 |DATA_TYPE|**short**|Type de données SQL de java.sql.Types.|  
-|PRECISION|**Int**|Nombre total de chiffres significatifs.|  
-|LITERAL_PREFIX|**String**|Caractère(s) utilisé(s) devant une constante.|  
-|LITERAL_SUFFIX|**String**|Caractère(s) utilisé(s) pour terminer une constante.|  
-|CREATE_PARAMS|**String**|Description des paramètres de création du type de données.|  
-|NULLABLE|**short**|Indique si la colonne peut contenir une valeur Null. Il peut avoir une des valeurs suivantes :<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|PRECISION|**int**|Nombre total de chiffres significatifs.|  
+|LITERAL_PREFIX|**Chaîne**|Caractère(s) utilisé(s) devant une constante.|  
+|LITERAL_SUFFIX|**Chaîne**|Caractère(s) utilisé(s) pour terminer une constante.|  
+|CREATE_PARAMS|**Chaîne**|Description des paramètres de création du type de données.|  
+|NULLABLE|**short**|Indique si la colonne peut contenir une valeur Null. Ce peut être l’une des valeurs suivantes :<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Indique si le type de donnée respecte la casse. « **true** » si le type respecte la casse ; sinon, « **false** ».|  
-|SEARCHABLE|**short**|Indique si la colonne désignée peut être utilisée dans une clause SQL WHERE. Il peut avoir une des valeurs suivantes :<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**short**|Indique si la colonne désignée peut être utilisée dans une clause SQL WHERE. Ce peut être l’une des valeurs suivantes :<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indique le signe du type de données. « **true** » si le type est non signé ; sinon, « **false** ».|  
 |FIXED_PREC_SCALE|**boolean**|Indique que le type de données peut être une valeur monétaire. « **true** » si le type de données est money ; sinon, « **false** ».|  
 |AUTO_INCREMENT|**boolean**|Indique que le type de données peut être incrémenté automatiquement. « **true** » si le type ne peut pas être incrémenté automatiquement ; sinon, « **false** ».|  
-|LOCAL_TYPE_NAME|**String**|Nom localisé du type de données.|  
+|LOCAL_TYPE_NAME|**Chaîne**|Nom localisé du type de données.|  
 |MINIMUM_SCALE|**short**|Nombre maximal de chiffres situés à droite de la virgule décimale.|  
 |MAXIMUM_SCALE|**short**|Nombre minimal de chiffres situés à droite de la virgule décimale.|  
-|SQL_DATA_TYPE|**Int**|Non pris en charge par le pilote JDBC.|  
-|SQL_DATETIME_SUB|**Int**|Non pris en charge par le pilote JDBC.|  
-|NUM_PREC_RADIX|**Int**|Nombre de bits ou de chiffres pour le calcul du nombre maximal pouvant être contenu dans la colonne.|  
+|SQL_DATA_TYPE|**int**|Non pris en charge par le pilote JDBC.|  
+|SQL_DATETIME_SUB|**int**|Non pris en charge par le pilote JDBC.|  
+|NUM_PREC_RADIX|**int**|Nombre de bits ou de chiffres pour le calcul du nombre maximal pouvant être contenu dans la colonne.|  
 |INTERVAL_PRECISION|**smallint**|Valeur de la précision d'en-tête de l'intervalle.|  
 |USERTYPE|**smallint**|Valeur **usertype** de la table **systypes**. Pour plus d'informations, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   

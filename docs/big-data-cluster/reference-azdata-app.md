@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 371321c8b91d3d7c56ac2721deb29a664209f004
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531906"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820969"
 ---
 # <a name="azdata-app"></a>azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L’article suivant fournit des informations de référence sur les commandes `sql` de l’outil `azdata`. Pour plus de détails sur les autres commandes `azdata`, consultez les [informations de référence relatives à azdata](reference-azdata.md)
+L’article suivant fournit des références sur les commandes `app` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
 |     |     |
@@ -64,7 +64,7 @@ azdata app init --name reduce --template ssis
 #### `--spec -s`
 Générez simplement une application spec.yaml.
 #### `--name -n`
-Nom de l'application.
+Nom de l’application.
 #### `--version -v`
 Version de l'application.
 #### `--template -t`
@@ -156,7 +156,7 @@ azdata app list
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--name -n`
-Nom de l'application.
+Nom de l’application.
 #### `--version -v`
 Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
@@ -183,7 +183,7 @@ azdata app delete --name reduce --version v1
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--name -n`
-Nom de l'application.
+Nom de l’application.
 #### `--version -v`
 Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
@@ -219,7 +219,7 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--name -n`
-Nom de l'application.
+Nom de l’application.
 #### `--version -v`
 Version de l'application.
 ### <a name="optional-parameters"></a>Paramètres facultatifs
@@ -252,7 +252,7 @@ azdata app describe --name reduce --version v1
 #### `--spec -s`
 Chemin d’accès à un répertoire contenant un fichier de spécification YAML décrivant l’application.
 #### `--name -n`
-Nom de l'application.
+Nom de l’application.
 #### `--version -v`
 Version de l'application.
 ### <a name="global-arguments"></a>Arguments globaux
@@ -269,4 +269,4 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus de détails sur les autres commandes `azdata`, consultez les [informations de référence relatives à azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil `azdata`, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil `azdata`, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

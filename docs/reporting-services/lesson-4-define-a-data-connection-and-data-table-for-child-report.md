@@ -9,14 +9,14 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651359"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant
-Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données s’établit avec la base de données AdventureWorks2014.  
+Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données doit s’établir avec la base de données AdventureWorks2014.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Pour définir une connexion de données et un objet DataTable en ajoutant un DataSet (pour le rapport enfant)  
   
@@ -30,7 +30,7 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
   
 4.  Dans la page **Choisir votre connexion de données** , vous pouvez sélectionner la connexion que vous avez créée à la Leçon 2. Si vous l’avez déjà fait, sélectionnez **Suivant** et passez à l’étape 8. Sinon, sélectionnez **Nouvelle connexion**.  
   
-5.  Dans la boîte de dialogue **Ajouter une connexion** , procédez comme suit :  
+5.  Dans la boîte de dialogue **Ajouter une connexion** , effectuez les étapes suivantes :  
   
     1.  Dans la zone **Nom du serveur** , entrez le serveur sur lequel se trouve la base de données **AdventureWorks2014** .  
   
@@ -48,7 +48,7 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
   
 8.  Dans la page **Choisissez un type de commande** , sélectionnez **Utiliser des instructions SQL**, puis sélectionnez **Suivant**.  
   
-9. Dans la page **Entrez une instruction SQL** , entrez la requête Transact-SQL suivante pour récupérer des données de la base de données **AdventureWorks2014** , puis sélectionnez **Suivant**.  
+9. Dans la page **Entrez une instruction SQL** , entrez la requête Transact-SQL ci-après pour récupérer des données de la base de données **AdventureWorks2014** , puis sélectionnez **Suivant**.  
   
     ```  
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
@@ -59,11 +59,11 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
 10. Dans la page **Choisir les méthodes à générer** , décochez **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)** , puis sélectionnez **Terminer**.  
   
     > [!WARNING]  
-    > Veillez à décocher **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)**  
+    > Veillez à décocher **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)** .  
   
     Vous avez maintenant terminé la configuration de l’objet ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) comme source de données de votre rapport. Dans la page du Concepteur de DataSet dans Visual Studio, vous devez voir l’objet **DataTable** que vous avez ajouté, qui répertorie les colonnes spécifiées dans la requête. DataSet2 contient les données de la table PurchaseOrderDetail, en fonction de la requête.  
   
-11. Enregistrez le fichier.  
+11. Enregistrez le fichier .  
   
 12. Pour afficher un aperçu des données, sélectionnez **Aperçu des données** dans le menu **Données** , puis sélectionnez **Aperçu**.  
   

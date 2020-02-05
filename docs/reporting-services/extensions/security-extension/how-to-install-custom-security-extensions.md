@@ -9,15 +9,15 @@ ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68223228"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Guide pratique pour installer des extensions de sécurité personnalisées
 
-[!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services 2016 introduit un nouveau portail web pour héberger de nouvelles API Odata, ainsi que de nouvelles charges de travail de rapport telles que les rapports mobiles et les indicateurs de performance clés. Ce nouveau portail s’appuie sur des technologies plus récentes et s’exécute dans un processus séparé, car il est isolé de l’utilitaire ReportingServicesService classique. Ce processus n’est pas une application hébergée ASP.NET et par conséquent rompt avec les extensions de sécurité personnalisées existantes. De plus, les interfaces actuelles des extensions de sécurité personnalisées ne permettent pas de transmettre un contexte externe, laissant aux implémenteurs l’unique option d’inspecter des objets ASP.NET globaux connus ; il était donc nécessaire d’apporter des modifications à l’interface.
 
