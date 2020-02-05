@@ -18,10 +18,10 @@ ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066100"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68066100"
   Ajoute une signature numérique à une procédure stockée, une fonction, un assembly ou un déclencheur. Ajoute également une contre-signature à une procédure stockée, une fonction, un assembly ou un déclencheur.  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -103,7 +103,7 @@ Toutefois, en contresignant procSelectT1 avec le même certificat que celui util
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Signature d'une procédure stockée à l'aide d'un certificat  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>R. Signature d'une procédure stockée à l'aide d'un certificat  
  L'exemple suivant signe la procédure stockée `HumanResources.uspUpdateEmployeeLogin` avec le certificat `HumanResourcesDP`.  
   
 ```  

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245271"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importer des données d’Excel vers SQL Server ou Azure SQL Database
@@ -252,7 +252,7 @@ Comme décrit précédemment dans la section [Prérequis](#prereq), vous devez e
 Pour plus d’informations sur l’Assistant Copie, consultez les rubriques suivantes :
 
 - [Assistant Data Factory Copy](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Tutoriel : Créer un pipeline avec activité de copie à l’aide de l’Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
+- [Didacticiel : Créer un pipeline avec activité de copie à l’aide de l’Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
 
 ## <a name="adf"></a> Azure Data Factory
 
@@ -269,7 +269,7 @@ Pour plus d’informations sur l’utilisation de ces sources et récepteurs Dat
 Pour apprendre à copier des données avec Azure Data Factory, consultez les rubriques suivantes :
 
 - [Déplacer des données à l’aide de l’activité de copie](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Tutoriel : Créer un pipeline avec activité de copie à l’aide du Portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Didacticiel : Créer un pipeline avec l’activité de copie à l’aide du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Erreurs courantes
 

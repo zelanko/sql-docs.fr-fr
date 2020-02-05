@@ -28,10 +28,10 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948068"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67948068"
 > [!NOTE]  
 >  Pour créer un index relationnel, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md). Pour plus d'informations sur la création d’un index spatial, consultez [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Spécifie le type d'index XML secondaire.  
   
- Value  
+ VALEUR  
  Crée un index XML secondaire sur les colonnes dans lesquelles les colonnes de clé (valeur et chemin de nœud) proviennent de l'index XML primaire.  
   
  PATH  
@@ -139,7 +139,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PAD_INDEX **=** { ON | **OFF** }  
  Spécifie le remplissage de l'index. La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  Le pourcentage d’espace libre indiqué par *fillfactor* est appliqué aux pages de niveau intermédiaire de l’index.  
   
  OFF ou *fillfactor* n’est pas spécifié  
@@ -163,7 +163,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  Spécifie s’il faut stocker les résultats temporaires du tri dans **tempdb**. La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  Les résultats intermédiaires du tri utilisés pour créer l’index sont stockés dans **tempdb**. Cela peut réduire le temps nécessaire pour créer un index si **tempdb** ne se trouve pas sur le même groupe de disques que la base de données utilisateur. Toutefois, une plus grande quantité d'espace disque est alors utilisée lors de la création de l'index.  
   
  OFF  
@@ -177,7 +177,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  DROP_EXISTING **=** { ON | **OFF** }  
  Spécifie que l'index XML nommé préexistant est supprimé et reconstruit. La valeur par défaut est OFF.  
   
- ON  
+ ACTIVÉ  
  L'index existant est supprimé et recréé. Le nom d'index défini doit être identique à celui de l'index existant. Toutefois, la définition de l'index peut être modifiée. Par exemple, vous pouvez définir des colonnes, un ordre de tri, un schéma de partition ou des options d'indexation différentes.  
   
  OFF  
@@ -191,12 +191,12 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Une opération d'index hors connexion qui crée, reconstruit ou supprime un index XML acquiert un verrou Sch-M (Modification du schéma) sur la table. Cela empêche tous les utilisateurs d'accéder à la table sous-jacente pendant la durée de l'opération.  
   
 > [!NOTE]
->  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Indique si les verrous de ligne sont autorisés ou non. La valeur par défaut est ON.  
   
- ON  
+ ACTIVÉ  
  Les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés.  
   
  OFF  
@@ -205,7 +205,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  Indique si les verrous de page sont autorisés. La valeur par défaut est ON.  
   
- ON  
+ ACTIVÉ  
  Les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.  
   
  OFF  
@@ -245,7 +245,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-primary-xml-index"></a>A. Création d'un index XML primaire  
+### <a name="a-creating-a-primary-xml-index"></a>R. Création d'un index XML primaire  
  L'exemple suivant crée un index XML primaire sur la colonne `CatalogDescription` de la table `Production.ProductModel`.  
   
 ```sql  

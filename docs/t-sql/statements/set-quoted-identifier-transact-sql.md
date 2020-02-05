@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008889"
 ---
-# <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
+# <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à suivre les règles ISO se rapportant aux guillemets qui délimitent les identificateurs et les chaînes littérales. Les identificateurs entre guillemets doubles peuvent être des mots clés réservés [!INCLUDE[tsql](../../includes/tsql-md.md)] ou ils peuvent contenir des caractères généralement interdits dans les conventions de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] concernant les identificateurs.
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -105,7 +105,7 @@ Nécessite l'appartenance au rôle public.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>A. Utilisation de l'option QUOTED IDENTIFIER et de noms d'objets avec des mots réservés
+### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>R. Utilisation de l'option QUOTED IDENTIFIER et de noms d'objets avec des mots réservés
 
 L'exemple suivant montre que l'option `SET QUOTED_IDENTIFIER` doit être `ON`, et les mots clés figurant dans les noms de tables doivent être placés entre guillemets doubles pour pouvoir créer et utiliser des objets dont les noms sont des mots clés réservés.
 
@@ -205,7 +205,7 @@ GO
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
 - [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Types de données](../../t-sql/data-types/data-types-transact-sql.md)
+- [Data types](../../t-sql/data-types/data-types-transact-sql.md)
 - [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
 - [SELECT](../../t-sql/queries/select-transact-sql.md)
 - [Instructions SET](../../t-sql/statements/set-statements-transact-sql.md)

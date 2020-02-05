@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121777"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Affecte à une variable locale la valeur d’une expression.  
   
  Pour affecter des valeurs aux variables, il est recommandé d’utiliser [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) à la place de SELECT @*local_variable*.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,7 +83,7 @@ Opérateur d'assignation composé :
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Utiliser SELECT @local_variable pour retourner une valeur unique  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>R. Utiliser SELECT @local_variable pour retourner une valeur unique  
  Dans l'exemple suivant, la variable `@var1` reçoit la valeur `Generic Name`. La requête sur la table `Store` ne retourne aucune ligne car la valeur spécifiée pour `CustomerID` n'existe pas dans la table. La variable conserve la valeur `Generic Name`.  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. Utiliser SELECT @local_variable pour retourner une valeur Null  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. Utiliser SELECT @local_variable pour retourner une valeur Null  
  Dans l'exemple suivant, une sous-requête est utilisée pour affecter une valeur à `@var1`. Comme la valeur demandée pour `CustomerID` n'existe pas, la sous-requête ne retourne pas de valeur et la variable se voit affecter la valeur `NULL`.  
   
 ```sql  
