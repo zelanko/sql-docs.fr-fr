@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066071"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68066071"
 
   Permet de modifier les propriétés d'une clé asymétrique.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,9 +73,9 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
 |Changer la protection|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|De l'ancien mot de passe au nouveau mot de passe|Requis|Requis|  
-|Du mot de passe à la clé principale|Omettre|Requis|  
-|De la clé principale au mot de passe|Requis|Omettre|  
+|De l'ancien mot de passe au nouveau mot de passe|Obligatoire|Obligatoire|  
+|Du mot de passe à la clé principale|Omettre|Obligatoire|  
+|De la clé principale au mot de passe|Obligatoire|Omettre|  
   
  La clé principale de base de données doit être ouverte pour pouvoir être utilisée pour protéger une clé privée. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
   
@@ -86,7 +86,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-password-of-the-private-key"></a>A. Modification du mot de passe de la clé privée  
+### <a name="a-changing-the-password-of-the-private-key"></a>R. Modification du mot de passe de la clé privée  
  Dans l'exemple ci-dessous, le mot de passe utilisé pour protéger la clé privée de la clé asymétrique `PacificSales09` est modifié. Le nouveau mot de passe est `<enterStrongPasswordHere>`.  
   
 ```  

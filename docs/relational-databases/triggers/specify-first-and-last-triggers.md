@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055989"
 ---
 # <a name="specify-first-and-last-triggers"></a>Spécifier les premier et dernier déclencheurs
@@ -33,7 +33,7 @@ ms.locfileid: "68055989"
 |------------|-----------------|  
 |**Première**|Spécifie que le déclencheur DML est le premier déclencheur AFTER activé dans le cadre d'une action de déclenchement.|  
 |**Dernière**|Spécifie que le déclencheur DML est le dernier déclencheur AFTER activé dans le cadre d'une action de déclenchement.|  
-|**Aucune**|Spécifie qu'il n'existe aucun ordre spécifique pour l'activation du déclencheur DML. Cette option est principalement destinée à réinitialiser un déclencheur qui était le premier ou le dernier déclencheur.|  
+|**Aucun**|Spécifie qu'il n'existe aucun ordre spécifique pour l'activation du déclencheur DML. Cette option est principalement destinée à réinitialiser un déclencheur qui était le premier ou le dernier déclencheur.|  
   
  L’exemple suivant illustre l’utilisation de la procédure stockée **sp_settriggerorder**:  
   
@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  Si une instruction ALTER TRIGGER modifie un premier ou un dernier déclencheur, l’attribut **First** ou **Last** est supprimé et l’ordre d’exécution prend la valeur **None**. L’ordre d’exécution doit être réinitialisé à l’aide de **sp_settriggerorder**.  
   
- La fonction OBJECTPROPERTY signale si un déclencheur est défini comme le premier ou le dernier à l’aide des propriétés suivantes : **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** et **ExecIsLastDeleteTrigger**.  
+ La fonction OBJECTPROPERTY signale si un déclencheur est premier ou dernier utilisant les propriétés suivantes : **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** et **ExecIsLastDeleteTrigger**.  
   
  La réplication génère automatiquement un premier déclencheur pour toute table qui est incluse dans un abonnement avec mise à jour immédiate ou en attente. Elle nécessite un déclencheur qui soit le premier. Elle génère une erreur si vous essayez d'inclure une table détenant un premier déclencheur dans un abonnement mis à jour immédiatement ou en attente. Si vous tentez de définir un déclencheur comme premier déclencheur après qu’une table a été incluse dans un abonnement, **sp_settriggerorder** retourne une erreur. Si vous utilisez ALTER sur le déclencheur de réplication ou si vous utilisez **sp_settriggerorder** pour que l’ordre corresponde au premier déclencheur ou pour qu’il n’y ait aucun ordre spécifique, l’abonnement ne fonctionnera pas correctement.  
   

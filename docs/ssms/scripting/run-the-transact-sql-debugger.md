@@ -19,15 +19,15 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097891"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253789"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
 
@@ -45,7 +45,7 @@ La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../incl
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.
 
-- La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est un membre du rôle serveur fixe sysadmin.
+- La fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à l’aide d’une connexion via l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est membre du rôle serveur fixe sysadmin.
   
 - La fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être connectée à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) ou version ultérieure. Vous ne pouvez pas exécuter le débogueur lorsque la fenêtre de l'éditeur de requête est connectée à une instance en mode mono-utilisateur.  
   
@@ -103,7 +103,7 @@ La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../incl
 |**Pas à pas sortant**|Non disponible|**Pas à pas sortant**|Maj+F11|Exécute le code restant dans un déclencheur, une fonction ou une procédure stockée sans stopper aux points d'arrêt. Le mode débogage normal reprend lorsque le contrôle est retourné au code ayant appelé le module.|  
 |Non disponible|**Exécuter jusqu'au curseur**|Non disponible|Ctrl+F10|Exécute la totalité du code du dernier emplacement d'arrêt à l'emplacement du curseur actuel sans stopper aux points d'arrêt.|  
 |**Espion express**|**Espion express**|Non disponible|Ctrl+Alt+Q|Affiche la fenêtre **Espion express** .|  
-|**Basculer le point d'arrêt**|**Point d'arrêt/Insérer un point d'arrêt**|Non disponible|F9|Positionne un point d'arrêt sur l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] actuelle ou sélectionnée.|  
+|**Basculer le point d’arrêt**|**Point d'arrêt/Insérer un point d'arrêt**|Non disponible|F9|Positionne un point d'arrêt sur l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] actuelle ou sélectionnée.|  
 |Non disponible|**Point d'arrêt/Supprimer un point d'arrêt**|Non disponible|Non disponible|Supprime le point d'arrêt de la ligne sélectionnée.|  
 |Non disponible|**Point d'arrêt/Désactiver un point d'arrêt**|Non disponible|Non disponible|Désactive le point d'arrêt sur la ligne sélectionnée. Le point d'arrêt reste sur la ligne de code, mais il n'arrête pas l'exécution tant qu'il n'est pas réactivé.|  
 |Non disponible|**Point d'arrêt/Activer le point d'arrêt**|Non disponible|Non disponible|Active le point d'arrêt sur la ligne sélectionnée.|  

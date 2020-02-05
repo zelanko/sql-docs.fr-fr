@@ -11,10 +11,10 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295278"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (base de données SSISDB)
@@ -49,7 +49,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
  Nom du projet qui contient le paramètre. *project_name* est de type **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Nom du paramètre. *parameter_name* est de type **nvarchar(128)** .  
+ Le nom du paramètre. *parameter_name* est de type **nvarchar(128)** .  
   
  [@parameter_value =] *parameter_value*  
  Valeur du paramètre. *parameter_value* est de type **sql_variant**.  
