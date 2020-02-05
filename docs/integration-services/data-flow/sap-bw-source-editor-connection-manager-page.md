@@ -13,10 +13,10 @@ ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298079"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Éditeur de source SAP BW (page Gestionnaire de connexions)
@@ -67,7 +67,7 @@ ms.locfileid: "71298079"
 |**A - Attendre la notification**|Attendez la notification du système SAP Netweaver BW pour démarrer l'extraction des données. Dans ce cas, le système SAP Netweaver BW démarre le processus d'extraction.|  
 |**E - Extraire uniquement**|Récupérez les données associées à un ID de demande particulier. Dans ce cas, le système SAP Netweaver BW a déjà extrait les données dans une table interne et le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se contente de lire les données.|  
   
- **Aperçu**  
+ **Préversion**  
  Ouvrez la boîte de dialogue **Aperçu** dans laquelle vous pouvez afficher un aperçu des résultats. Pour plus d’informations, consultez [Aperçu](../../integration-services/data-flow/preview.md).  
   
 > [!IMPORTANT]  
@@ -124,7 +124,7 @@ ms.locfileid: "71298079"
  Recherchez la destination RFC à l’aide de la boîte de dialogue **Rechercher la destination RFC** . Pour plus d'informations sur cette boîte de dialogue, consultez [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 ### <a name="execution-mode--e---extract-only"></a>Mode d'exécution - E = Extraire uniquement  
- **ID de demande**  
+ **ID de la demande**  
  Entrez l'ID de demande qui est associé à l'extraction.  
   
 ## <a name="see-also"></a>Voir aussi  

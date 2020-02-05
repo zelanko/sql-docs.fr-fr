@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026490"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68026490"
 
 Cette fonction retourne le nombre d’éléments figurant dans un groupe. `COUNT` fonctionne comme la fonction [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md). Ces fonctions diffèrent uniquement par les types de données des valeurs qu’elles retournent. `COUNT` retourne toujours une valeur de type de données **int**. `COUNT_BIG` retourne toujours une valeur de type de données **bigint**.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,7 +65,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 *partition_by_clause* divise le jeu de résultats généré par la clause `FROM` en partitions auxquelles la fonction `COUNT` est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique de l’opération. Consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) pour plus d’informations. 
 
 ## <a name="return-types"></a>Types de retour
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
 COUNT(\*) renvoie le nombre d'éléments figurant dans un groupe. y compris les valeurs NULL et les doublons.
@@ -80,7 +80,7 @@ Pour les valeurs de retour supérieures à 2^31-1, `COUNT` renvoie une erreur. D
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-count-and-distinct"></a>A. Utilisation de COUNT et DISTINCT  
+### <a name="a-using-count-and-distinct"></a>R. Utilisation de COUNT et DISTINCT  
 Cet exemple retourne le nombre de titres différents qu’un employé [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] peut porter.
   
 ```sql
@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. Utilisation de la clause OVER  
-Cet exemple utilise les fonctions `MIN`, `MAX`, `AVG` et `COUNT` avec la clause `OVER` afin de retourner des valeurs agrégées pour chaque service dans la table `HumanResources.Department` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+Cet exemple utilise les fonctions `MIN`, `MAX`, `AVG` et `COUNT` avec la clause `OVER` afin de retourner des valeurs agrégées pour chaque service dans la table [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de la base de données `HumanResources.Department`.
   
 ```sql
 SELECT DISTINCT Name  

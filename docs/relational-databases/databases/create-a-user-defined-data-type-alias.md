@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909122"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Créer un type de données d'alias défini par l'utilisateur
@@ -61,10 +61,10 @@ ms.locfileid: "72909122"
      **Autoriser les valeurs NULL**  
      Spécifiez si le type de données défini par l'utilisateur accepte les valeurs NULL. L'acceptation de valeurs Null par un type de données défini par l'utilisateur existant n'est pas modifiable.  
   
-     **Data type**  
+     **Type de données**  
      Sélectionnez le type de données de base dans la zone de liste. La zone de liste affiche tous les types de données à l’exception des types de données **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** et **xml** . Le type de données d'un type de données défini par l'utilisateur existant n'est pas modifiable.  
   
-     **Default**  
+     **Par défaut**  
      (Facultatif) Sélectionnez une valeur par défaut pour la liaison à l’alias de type de données défini par l’utilisateur.  
   
      **Longueur/Précision**  
@@ -72,13 +72,13 @@ ms.locfileid: "72909122"
   
      La longueur n’est pas affichée pour les types de données **nvarchar(max)** , **varchar(max)** ou **varbinary(max)** .  
   
-     **Name**  
+     **Nom**  
      Si vous créez un nouvel alias de type de données défini par l'utilisateur, tapez un nom unique à utiliser dans la base de données pour représenter le type de données défini par l'utilisateur. Le nombre maximal de caractères doit correspondre au type de données système **sysname** . Le nom d'un alias de type de données défini par l'utilisateur existant n'est pas modifiable.  
   
      **Règle**  
      (Facultatif) Sélectionnez une règle pour la liaison à l'alias de type de données défini par l'utilisateur.  
   
-     **Échelle**  
+     **Mettre à l'échelle**  
      Spécifie le nombre maximal de chiffres décimaux pouvant figurer à droite de la virgule décimale.  
   
      **Schéma**  
@@ -108,7 +108,7 @@ ms.locfileid: "72909122"
   
 6.  Activez **Autoriser les valeurs NULL** si le nouvel alias de type de données peut autoriser les valeurs NULL.  
   
-7.  Dans la zone **Liaison** , renseignez les zones **Par défaut** ou **Règle** pour lier une valeur par défaut ou une règle au nouvel alias de type de données. Vous ne pouvez pas créer de valeurs par défaut, ni de règles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilisez plutôt [!INCLUDE[tsql](../../includes/tsql-md.md)] Un exemple de code de création de valeurs par défaut et de règles est disponible dans l'Explorateur de modèles.  
+7.  Dans la zone **Liaison** , renseignez les zones **Par défaut** ou **Règle** pour lier une valeur par défaut ou une règle au nouvel alias de type de données. Vous ne pouvez pas créer de valeurs par défaut, ni de règles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilisez [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un exemple de code de création de valeurs par défaut et de règles est disponible dans l'Explorateur de modèles.  
 
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

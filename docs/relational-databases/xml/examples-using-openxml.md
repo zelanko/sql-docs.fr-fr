@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : Utilisation d’OPENXML | Microsoft Docs'
+title: 'Exemples : Utilisation de OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -27,13 +27,13 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943386"
 ---
-# <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
+# <a name="examples-using-openxml"></a>Exemples : utilisation de OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Les exemples de cette rubrique montrent comment utiliser OPENXML pour créer une vue d'un ensemble de lignes d'un document XML. Pour plus d’informations sur la syntaxe d’OPENXML, consultez [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Les exemples montrent tous les aspects de OPENXML, sauf la spécification des métapropriétés. Pour plus d’informations sur la spécification de métapropriétés dans OPENXML, consultez [Spécifier des métapropriétés dans OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
@@ -42,12 +42,12 @@ ms.locfileid: "67943386"
   
  La valeur *flags* fournit le mappage par défaut. Si aucun *ColPattern* n’est spécifié dans *SchemaDeclaration*, le mappage défini par la valeur *flags* est appliqué. La valeur *flags* est ignorée si *ColPattern* est spécifié dans *SchemaDeclaration*. Le paramètre *ColPattern* spécifié détermine le mappage (centré sur l’attribut ou sur l’élément), ainsi que la façon dont les données en excès ou non consommées sont traitées.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Exécution d'une instruction SELECT simple avec OPENXML  
- Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients dans un ensemble de lignes à deux colonnes (**CustomerID** et **ContactName**) à partir du document XML.  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>R. Exécution d'une instruction SELECT simple avec OPENXML  
+ Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients dans un ensemble de lignes à deux colonnes ( **CustomerID** et **ContactName**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/ROOT/Customer) identifie les nœuds <`Customer`> à traiter.  
   
@@ -144,7 +144,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Spécification de ColPattern pour effectuer un mappage entre les colonnes d'un ensemble de lignes et les attributs/éléments XML  
  Cet exemple montre comment le modèle XPath est défini dans le paramètre facultatif *ColPattern* pour fournir un mappage entre les colonnes d’un ensemble de lignes et les attributs/éléments XML.  
   
- Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients et les commandes sous la forme d’un ensemble de lignes (**CustomerID**, **OrderDate**, **ProdID** et **Qty**) à partir du document XML.  
+ Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients et les commandes sous la forme d’un ensemble de lignes (**CustomerID**, **OrderDate**, **ProdID**et **Qty**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
@@ -203,7 +203,7 @@ OrderID CustomerID        OrderDate          ProdID    Qty
 10283    LILAS     1996-08-16 00:00:00.000     72        3  
 ```  
   
- Le modèle XPath défini comme *ColPattern* peut également être spécifié pour mapper les éléments XML sur les colonnes de l’ensemble de lignes (aboutissant ainsi à un mappage centré sur l'élément). Dans l'exemple suivant, <`CustomerID`> et <`OrderDate`> du document XML sont des sous-éléments de l'élément <`Orders`>. Dans la mesure où *ColPattern* se substitue au mappage spécifié dans le paramètre *flags*, il n’y a pas lieu de spécifier le paramètre *flags* dans OPENXML.  
+ Le modèle XPath défini comme *ColPattern* peut également être spécifié pour mapper les éléments XML sur les colonnes de l’ensemble de lignes (aboutissant ainsi à un mappage centré sur l'élément). Dans l'exemple suivant, <`CustomerID`> et <`OrderDate`> du document XML sont des sous-éléments de l'élément <`Orders`>. Dans la mesure où *ColPattern* se substitue au mappage spécifié dans le paramètre *flags* , il n’y a pas lieu de spécifier le paramètre *flags* dans OPENXML.  
   
 ```  
 DECLARE @docHandle int  
@@ -342,9 +342,9 @@ O4    10000.0       NULL
 ```  
   
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Spécification de TableName dans la clause WITH  
- Dans cet exemple, *TableName* est spécifié dans la clause WITH au lieu de *SchemaDeclaration*. Cela est utile si vous disposez d’une table dont la structure vous convient et qu’aucun modèle de colonne (paramètre *ColPattern*) n’est requis.  
+ Dans cet exemple, *TableName* est spécifié dans la clause WITH au lieu de *SchemaDeclaration*. Cela est utile si vous disposez d’une table dont la structure vous convient et qu’aucun modèle de colonne (paramètre *ColPattern* ) n’est requis.  
   
- Dans cet exemple, le document XML est constitué des éléments <`Customer`> et <`Order`>. L’instruction OPENXML extrait les informations sur les commandes dans un ensemble de lignes à trois colonnes (**oid**, **date** et **amount**) à partir du document XML.  
+ Dans cet exemple, le document XML est constitué des éléments <`Customer`> et <`Order`>. L’instruction OPENXML extrait les informations sur les commandes dans un ensemble de lignes à trois colonnes (**oid**, **date**et **amount**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
@@ -408,7 +408,7 @@ O4    1996-01-20 00:00:00.000     10000.0
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
- L'instruction OPENXML contient les éléments suivants :  
+ L'instruction OPENXML contient les éléments suivants :  
   
 -   *rowpattern* (/ROOT/Customer) identifie les nœuds <`Customer`> à traiter.  
   
@@ -463,7 +463,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Spécification du paramètre rowpattern, terminé par un attribut  
- Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait les informations sur le détail des commandes dans un ensemble de lignes à trois colonnes (**ProductID**, **Quantity** et **OrderID**) à partir du document XML.  
+ Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait les informations sur le détail des commandes dans un ensemble de lignes à trois colonnes (**ProductID**, **Quantity**et **OrderID**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
@@ -524,7 +524,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Spécification d'un document XML comprenant plusieurs nœuds de texte  
- Si vous disposez d’un document XML comprenant plusieurs nœuds de texte, une instruction SELECT avec un paramètre *ColPattern* **text()** renvoie uniquement le premier nœud de texte, et non la totalité. Par exemple :  
+ Si vous disposez d’un document XML comprenant plusieurs nœuds de texte, une instruction SELECT avec un paramètre *ColPattern***text()** renvoie uniquement le premier nœud de texte, et non la totalité. Par exemple :  
   
 ```  
 DECLARE @h int  
@@ -594,11 +594,11 @@ id  lname   xmlname                   OverFlow
                                    </Address></row>  
 ```  
   
- Notez les points suivants par rapport au résultat obtenu :  
+ Notez les points suivants par rapport au résultat obtenu :  
   
 -   Pour la colonne **lname** de type **varchar(30)** , la valeur est récupérée à partir de l’élément <`lname`> correspondant.  
   
--   Pour la colonne **xmlname** de type **xml**, le même élément name est renvoyé en tant que valeur.  
+-   Pour la colonne **xmlname** de type **xml** , le même élément name est renvoyé en tant que valeur.  
   
 -   L'indicateur prend la valeur 10, soit 2 + 8, où 2 indique qu'il s'agit d'un mappage centré sur l'élément et 8 indique que seules les données XML non consommées doivent être ajoutées à la colonne OverFlow définie dans la clause WITH. Si vous définissez l'indicateur à 2, l'ensemble du document XML est copié dans la colonne OverFlow spécifiée dans la clause WITH.  
   
@@ -635,7 +635,7 @@ id  lname   xmlname                   OverFlow
   
          Extrait les ID individuels des étudiants de chaque élément \<Course>. Une table edge est utilisée pour extraire ces valeurs.  
   
- Voici les étapes de l'opération :  
+ Voici la procédure à suivre :  
   
 ```  
 -- Create these tables:  

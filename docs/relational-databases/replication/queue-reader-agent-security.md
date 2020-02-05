@@ -15,10 +15,10 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92b80f727ce87606b0c1c58954b0743734880422
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021260"
 ---
 # <a name="queue-reader-agent-security"></a>Sécurité de l'Agent de lecture de la file d'attente
@@ -37,7 +37,7 @@ ms.locfileid: "68021260"
 ## <a name="see-also"></a>Voir aussi  
  [Identité et contrôle d’accès pour la réplication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Modèle de sécurité de l’Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Vue d’ensemble des agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
+ [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

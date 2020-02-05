@@ -15,10 +15,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295772"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
@@ -73,11 +73,11 @@ ms.locfileid: "71295772"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Never**|Spécifie que le fichier de point de contrôle n'est pas utilisé et que le package est exécuté à partir du début du flux de travail du package.|  
-|**Always**|Spécifie que le fichier de point de contrôle est toujours utilisé et que le package redémarre à partir du point de l'échec de la précédente exécution. Si le fichier de point de contrôle est introuvable, le package échoue.|  
+|**Toujours**|Spécifie que le fichier de point de contrôle est toujours utilisé et que le package redémarre à partir du point de l'échec de la précédente exécution. Si le fichier de point de contrôle est introuvable, le package échoue.|  
 |**IfExists**|Spécifie que le fichier de point de contrôle est utilisé s'il existe. Si le fichier de point de contrôle existe, le package redémarre à partir du point de l'échec de la précédente exécution. Sinon il est exécuté à partir du début du flux de travail du package.|  
   
 > [!NOTE]  
->  L’option **/CheckPointing on** de dtexec revient à affecter la valeur **True** à la propriété **SaveCheckpoints**du package et la valeur Always à la propriété **CheckpointUsage** . Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+>  L’option **/CheckPointing on** de dtexec revient à affecter la valeur **True** à la propriété **SaveCheckpoints**du package et la valeur Always à la propriété **CheckpointUsage** . Pour plus d'informations, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sécurisation des fichiers de point de contrôle  
  La protection au niveau du package n'inclut pas la protection des fichiers de point de contrôle ; vous devez donc sécuriser ces fichiers séparément. Les données de point de contrôle peuvent être stockées uniquement dans le système de fichiers et vous devez utiliser une liste de contrôle d'accès au système d'exploitation pour sécuriser l'emplacement ou le dossier de stockage du fichier. Il est important de sécuriser les fichiers de point de contrôle car ceux-ci contiennent des informations sur l'état du package, notamment les valeurs actuelles des variables. Une variable peut ainsi contenir un ensemble d'enregistrements doté de plusieurs lignes de données privées, telles que des numéros de téléphone. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../../integration-services/security/security-overview-integration-services.md#files).  

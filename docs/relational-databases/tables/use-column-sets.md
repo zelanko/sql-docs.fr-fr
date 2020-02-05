@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326139"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
@@ -112,7 +112,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Utilisation du Type de données sql_variant  
  Le type de données **sql_variant** peut stocker plusieurs types de données différents, tels que **int**, **char**et **date**. Les jeux de colonnes retournent les informations de type de données telles que l’échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur **sql_variant** sous la forme d’attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
   
-|Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Précision|Échelle|  
+|Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Precision|Scale|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|'Par défaut'|0|0|8000|Non applicable**|Non applicable|  
 |**nvarchar**|-1|'Par défaut'|0|0|4000|Non applicable|Non applicable|  
@@ -142,7 +142,7 @@ GO
 ## <a name="examples"></a>Exemples  
  Dans les exemples suivants, une table de documents contient le jeu de colonnes commun `DocID` et `Title`. Le groupe Production souhaite avoir une colonne `ProductionSpecification` et `ProductionLocation` pour tous les documents de production. Le groupe Marketing souhaite avoir une colonne `MarketingSurveyGroup` pour les documents de marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Création d'une table qui a un jeu de colonnes  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>R. Création d'une table qui a un jeu de colonnes  
  L'exemple suivant crée la table qui utilise des colonnes éparses et inclut le jeu de colonnes `SpecialPurposeColumns`. L'exemple insère deux lignes dans la table, puis sélectionne des données de la table.  
   
 > [!NOTE]  

@@ -13,10 +13,10 @@ ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068490"
 ---
 # <a name="device-contents-sql-server"></a>Contenu de l'unité (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "68068490"
 -   [Afficher les propriétés et le contenu d’une unité de sauvegarde logique &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Options  
- **Support**  
+ **Média**  
  Disque ou jeu de bandes sur lequel sont stockées les informations de sauvegarde.  
   
  **Séquence du support**  
@@ -42,7 +42,7 @@ ms.locfileid: "68068490"
  **Support de sauvegarde**  
  Un support de sauvegarde est une collection ordonnée de supports de sauvegarde dans lesquels une ou plusieurs opérations de sauvegarde ont effectué des écritures en utilisant un nombre constant d'unités de sauvegarde.  
   
- **Name**  
+ **Nom**  
  Affiche le nom du support de sauvegarde.  
   
  **Description**  
@@ -56,15 +56,15 @@ ms.locfileid: "68068490"
   
 |En-tête|Valeurs|  
 |------------|------------|  
-|**Name**|Nom du jeu de sauvegarde.|  
-|**Type**|Type de sauvegarde effectuée : Complète, Différentielle ou Journal des transactions.|  
-|**Composant**|Composant sauvegardé : Base de données, Fichier ou *\<vide>* (pour des journaux de transactions).|  
-|**Server**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
+|**Nom**|Nom du jeu de sauvegarde.|  
+|**Type**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
+|**Composant**|Composant sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
+|**Serveur**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
 |**Sauvegarde de la base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  
 |**Date**|Date et heure de fin de l'opération de sauvegarde, exprimée d'après les paramètres régionaux du client.|  
 |**Taille**|Taille du jeu de sauvegarde, exprimée en octets.|  
-|**Nom d'utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
+|**Nom d’utilisateur**|Nom de l'utilisateur qui a exécuté l'opération de sauvegarde.|  
 |**Expiration**|La date et l'heure d'expiration du jeu de sauvegarde.|  
   
 ## <a name="see-also"></a>Voir aussi  

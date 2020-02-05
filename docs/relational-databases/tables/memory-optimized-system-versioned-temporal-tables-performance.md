@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 01db1809ae4a16183673291c135e178dfac5cd7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139632"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Performances des tables temporelles optimisées en mémoire avec gestion de version par le système
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Cette rubrique décrit certaines considérations relatives aux performances lors de l’utilisation de tables temporelles optimisées en mémoire avec gestion de version par le système.
+Cette rubrique décrit certaines considérations relatives aux performances lors de l’utilisation de tables temporelles optimisées en mémoire à version contrôlée par le système.
 
 - L’ajout du contrôle de version à une table non temporelle a un impact sur les opérations de mise à jour et de suppression, car la table historique est mise à jour automatiquement.
 - Chaque mise à jour et chaque suppression sont enregistrées dans la table historique interne optimisée en mémoire. Vous pouvez donc constater une consommation importante de mémoire, si votre charge de travail exécute ces deux opérations massivement. Par conséquent, voici ce que nous vous conseillons :
@@ -37,7 +37,7 @@ Cette rubrique décrit certaines considérations relatives aux performances lors
 
 - [Tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Création d’une table temporelle avec contrôle de version par le système à mémoire optimisée](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)
-- [Utilisation des tables temporelles avec contrôle de version par le système à mémoire optimisée](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
+- [Utilisation des tables temporelles avec versions gérées par le système et à mémoire optimisée](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
 - [Surveillance des tables temporelles avec contrôle de version par le système à mémoire optimisée](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)
 - [Tables temporelles](../../relational-databases/tables/temporal-tables.md)
 - [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)
