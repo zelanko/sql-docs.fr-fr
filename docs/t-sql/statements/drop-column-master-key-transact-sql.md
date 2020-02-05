@@ -20,10 +20,10 @@ ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: f6267189a83816f1c77740e5df176cc2dda86428
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594159"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73594159"
 
   Supprime une clé principale de colonne d’une base de données. Il s’agit d’une opération sur les métadonnées.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ DROP COLUMN MASTER KEY key_name;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dropping-a-column-master-key"></a>A. Suppression d’une clé principale de colonne  
+### <a name="a-dropping-a-column-master-key"></a>R. Suppression d’une clé principale de colonne  
  L’exemple suivant supprime une clé principale de colonne appelée `MyCMK`.  
   
 ```  
@@ -68,6 +68,6 @@ GO
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Gérer des clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

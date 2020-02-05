@@ -1,10 +1,7 @@
 ---
-title: Alertes | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Alertes
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383793"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252687"
 ---
 # <a name="alerts"></a>Alertes
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -52,9 +54,9 @@ Chaque alerte doit posséder un nom. Les noms d’alertes doivent être uniques 
 ## <a name="selecting-an-event-type"></a>Sélection d'un type d'événement  
 Une alerte est une réponse à un événement d'un type spécifique. Les alertes répondent aux types d'événements suivants :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Événements  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Des événements.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conditions de performance  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Des conditions de performance.  
   
 -   Événements WMI  
   
@@ -82,7 +84,7 @@ Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à un ou plusieu
 ## <a name="selecting-a-performance-condition"></a>Sélection d'une condition de performances  
 Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à une condition de performances déterminée. Dans ce cas, vous indiquez le compteur de performances qui doit être surveillé, un seuil d'alerte et le comportement que doit afficher le compteur si l'alerte se produit. Pour définir une condition de performances, vous devez définir les éléments suivants dans la page [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Général **de la boîte de dialogue** Nouvelle alerte **ou** Propriétés de l’alerte **de** Agent :  
   
--   **Objet**  
+-   **Object**  
   
     L'objet est l'élément de performance à surveiller.  
   
@@ -98,7 +100,7 @@ Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à une condition
   
     Indique le seuil d'alerte et le comportement qui déclenche l'alerte. Le seuil est une valeur numérique. Le comportement est l’un **des suivants : tombe sous**, **devient égal à**ou **s’élève au-dessus d’une valeur numérique déterminée**. La **valeur** est un nombre qui décrit le compteur des conditions de performances. Par exemple, pour définir le déclenchement d’une alerte pour l’objet de performances **SQLServer:Locks** quand le **Temps d’attente des verrous** dépasse 30 minutes, vous choisiriez **s’élève au-dessus** et **indiqueriez une valeur de 30**.  
   
-    De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)**, **tombe sous**, et une **valeur** de **1000**.  
+    De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)** , **tombe sous**, et une **valeur** de **1000**.  
   
     > [!NOTE]  
     > Les données de performances sont régulièrement échantillonnées, ce qui peut entraîner un léger décalage (de quelques secondes) entre l'atteinte du seuil et le déclenchement de l'alerte de performance.  
@@ -158,6 +160,6 @@ Vous trouverez ci-dessous des liens traitant des tâches courantes :
   
 -   [Transact-SQL](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [sp_update_alert (Transact-SQL)](https://msdn.microsoft.com/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
   

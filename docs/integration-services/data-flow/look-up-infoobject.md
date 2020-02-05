@@ -11,10 +11,10 @@ ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e77890725659f05d8616156f6e84712dc20323eb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292315"
 ---
 # <a name="look-up-infoobject"></a>Rechercher un InfoObject
@@ -39,11 +39,11 @@ ms.locfileid: "71292315"
   
 4.  Sur la page **Gestionnaire de connexions** , dans la zone de groupe **Créer des objets SAP BW** , sélectionnez l'une des options suivantes :  
   
-    1.  Sélectionnez **InfoCube**. Puis, cliquez sur **Créer**. Dans la boîte de dialogue **Créer un InfoCube pour les données de transaction** , cliquez sur **Rechercher** dans la colonne **IObject** pour l'une des lignes de la liste. Chaque ligne représente une colonne dans le flux de données du package.  
+    1.  Sélectionnez **InfoCube**. Cliquez sur **Créer**. Dans la boîte de dialogue **Créer un InfoCube pour les données de transaction** , cliquez sur **Rechercher** dans la colonne **IObject** pour l'une des lignes de la liste. Chaque ligne représente une colonne dans le flux de données du package.  
   
-    2.  Sélectionnez **InfoSource**. Puis, cliquez sur **Créer**. Dans la boîte de dialogue **Créer un InfoSource** , sélectionnez **Données de transaction**. Dans la boîte de dialogue **Créer un InfoSource pour les données de transaction** , cliquez sur **Rechercher** dans la colonne **IObject** pour l'une des lignes de la liste. Chaque ligne représente une colonne dans le flux de données du package.  
+    2.  Sélectionnez **InfoSource**. Cliquez ensuite sur **Créer**. Dans la boîte de dialogue **Créer un InfoSource** , sélectionnez **Données de transaction**. Dans la boîte de dialogue **Créer un InfoSource pour les données de transaction** , cliquez sur **Rechercher** dans la colonne **IObject** pour l'une des lignes de la liste. Chaque ligne représente une colonne dans le flux de données du package.  
   
-    3.  Sélectionnez **InfoSource**. Puis, cliquez sur **Créer**. Dans la boîte de dialogue **Créer un InfoSource** , sélectionnez **Données maîtres**. Dans la boîte de dialogue **Créer un InfoSource pour les données maîtres** , cliquez sur **Rechercher**.  
+    3.  Sélectionnez **InfoSource**. Cliquez ensuite sur **Créer**. Dans la boîte de dialogue **Créer un InfoSource** , sélectionnez **Données maîtres**. Dans la boîte de dialogue **Créer un InfoSource pour les données maîtres** , cliquez sur **Rechercher**.  
   
  Vous pouvez également ouvrir la boîte de dialogue **Rechercher un InfoObject** en cliquant sur **Ajouter** dans la section **Attributs** de la boîte de dialogue **Créer un nouvel InfoObject** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71292315"
  **Caractéristiques de temps**  
  Recherchez des InfoObjects qui représentent des caractéristiques de temps.  
   
- **Name**  
+ **Nom**  
  Entrez le nom de l'InfoObject à rechercher, ou un nom partiel avec le caractère générique astérisque (*). Sinon, utilisez le caractère générique astérisque seul pour inclure tous les InfoObjects.  
   
  **Description**  
@@ -89,6 +89,6 @@ ms.locfileid: "71292315"
  [Créer un InfoSource pour les données maîtres](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Créer un nouvel InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
  [Éditeur de destination SAP BW &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

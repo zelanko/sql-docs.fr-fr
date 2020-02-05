@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582053"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes
@@ -72,7 +72,7 @@ ms.locfileid: "65582053"
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
 |**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**Float**|**Single**, **Double**, **Decimal**|  
-|**Texte**|**String**, **Char**, **GUID**, **Timespan**|  
+|**Text**|**String**, **Char**, **GUID**, **Timespan**|  
   
  Dans les cas où vous devez spécifier un type de données, vous pouvez spécifier votre propre conversion dans la partie Valeur de l’expression.  
   

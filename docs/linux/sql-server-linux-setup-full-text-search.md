@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874763"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
@@ -86,7 +86,7 @@ Si vous avez besoin d’une installation hors connexion, recherchez le télécha
 
 La recherche en texte intégral utilise des [séparateurs de mots](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier des mots individuels en fonction de la langue. Vous pouvez obtenir la liste des séparateurs de mots inscrits en interrogeant l'affichage du catalogue **sys.fulltext_languages**. Les séparateurs de mots pour les langues suivantes sont installés avec SQL Server :
 
-| Langue | ID de langue |
+| Langage | ID de langue |
 |---|---|
 | Neutre | 0 |
 | Arabe | 1025 |
@@ -100,13 +100,13 @@ La recherche en texte intégral utilise des [séparateurs de mots](../relational
 | Chinese (Macao (R.A.S.)) | 5124 |
 | Chinese (Singapore) | 4100 |
 | Croate | 1050 |
-| Czech | 1029 |
-| Danish | 1030 |
+| Tchèque | 1029 |
+| Danois | 1030 |
 | Néerlandais | 1043 |
 | Anglais | 1033 |
 | Français | 1036 |
-| German | 1031 |
-| Greek | 1032 |
+| Allemand | 1031 |
+| Grec | 1032 |
 | Goudjrati | 1095 |
 | Hébreu | 1037 |
 | Hindi | 1081 |
@@ -126,8 +126,8 @@ La recherche en texte intégral utilise des [séparateurs de mots](../relational
 | Pendjabi | 1094 |
 | Roumain | 1048 |
 | Russe | 1049 |
-| Serbian (Cyrillic) | 3098 |
-| Serbian (Latin) | 2074 |
+| Serbe (cyrillique) | 3098 |
+| Serbe (latin) | 2074 |
 | Chinois simplifié | 2052 |
 | Slovaque | 1051 |
 | Slovène | 1060 |
@@ -135,7 +135,7 @@ La recherche en texte intégral utilise des [séparateurs de mots](../relational
 | Suédois | 1053 |
 | Tamoul | 1097 |
 | Télougou | 1098 |
-| Thaïlandais | 1054 |
+| Thaï | 1054 |
 | Chinois traditionnel | 1028 |
 | Turc | 1055 |
 | Ukrainien | 1058 |
@@ -148,7 +148,7 @@ La recherche en texte intégral fonctionne également avec du texte stocké dans
 
 Vous pouvez consulter une liste des filtres installés en appelant **sp_help_fulltext_system_components ’Filter'** . Pour SQL Server, les filtres suivants sont installés :
 
-| Nom du composant | ID de classe | Options de version |
+| Nom du composant | ID de classe | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

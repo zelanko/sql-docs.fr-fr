@@ -12,10 +12,10 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cab49b0f07caff685bd216ec9090f9e851a1d38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581490"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Performances, instantanés, mise en cache (Reporting Services)
@@ -38,7 +38,7 @@ ms.locfileid: "65581490"
 -   Pour plus d’informations sur la façon d’atténuer les problèmes de performances en réglant les paramètres de configuration liés à la gestion de mémoire, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
+ [Contrôle des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  Décrit les objets de performances dont vous pouvez vous servir pour assurer le suivi de la charge de traitement sur votre serveur.  
   
  [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)  

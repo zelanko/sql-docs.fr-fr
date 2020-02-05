@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297756"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
@@ -241,7 +241,7 @@ ms.locfileid: "71297756"
  Indique que le score correspond à la fréquence du terme.  
   
  **TFIDF**  
- Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes et de la fréquence inverse de documents, défini comme suit : TFIDF d’un terme T = (fréquence de T) * journal((nombre de lignes en entrée) / (nombre de lignes comportant T))  
+ Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d’un terme T = (fréquence de T) * log((#lignes en entrée) / (#lignes ayant T))  
   
  **Seuil de fréquence**  
  Définissez le nombre d'occurrences d'un mot ou d'une expression avant son extraction. La valeur par défaut est 2.  
@@ -252,7 +252,7 @@ ms.locfileid: "71297756"
  **Utiliser l'extraction de terme respectant la casse**  
  Indiquez si l'extraction doit respecter la casse. La valeur par défaut est **False**.  
   
- **Configurer la sortie d'erreur**  
+ **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  

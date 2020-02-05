@@ -1,10 +1,9 @@
 ---
-title: Propriétés de la requête (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de la requête
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5365ffd384ae7feeee35924388ad0f89b03d629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0be86ddee956542e2637547acc989cf35407f2dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266289"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255330"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriétés de la requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ Ces propriétés apparaissent dans la fenêtre Propriétés lorsque vous avez un
 **Catégorie Identité**  
 Se développe pour afficher la propriété **Nom** .  
   
-**Name**  
+**Nom**  
 Affiche le nom de la requête en cours. Ne peut pas être modifié dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Database Name**  
@@ -77,7 +78,7 @@ Utilisez cette zone pour modifier le nombre de lignes à retourner ou pour spéc
 **Expression**  
 Spécifie le nombre ou le pourcentage de lignes que la requête doit retourner. Si vous affectez à **Pour cent** la valeur Oui, le nombre indique le pourcentage de lignes que la requête doit retourner ; si vous affectez à **Pour cent** la valeur Non, le nombre représente le nombre de lignes à retourner. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
-**Pour cent**  
+**Pourcentage**  
 Spécifie que la requête doit retourner uniquement les *n* premiers pour cent de lignes dans le jeu de résultats. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
 **Avec liens**  

@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
 ms.openlocfilehash: e77f176e9c49d095a5f12aa1d653fa7be41ca25e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165630"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Démarrer l’Assistant Importation et Exportation SQL Server
@@ -78,7 +78,7 @@ Exécutez la version 64 bits de l’Assistant, sauf si vous savez que votre sour
 
 ### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>Démarrage de l’Assistant Importation et Exportation SQL Server à partir de SQL Server Management Studio (SSMS)
 
-1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. Développez **Bases de données**.
 

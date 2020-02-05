@@ -9,10 +9,10 @@ ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62512391"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : créer un filtre de données
@@ -148,7 +148,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.
             }  
         ```  
   
-6.  Enregistrez le fichier.  
+6.  Enregistrez le fichier .  
   
 ## <a name="query-filter"></a>Filtre de requête  
 Vous devez effectuer les tâches suivantes pour implémenter un filtre de requête.  
@@ -284,7 +284,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de requê
             }  
         ```  
   
-6.  Enregistrez le fichier.  
+6.  Enregistrez le fichier .  
   
 ## <a name="next-task"></a>Tâche suivante  
 Vous venez de créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant. Vous allez à présent générer et exécuter l'application de site Web. Consultez [Leçon 9 : Générer et exécuter l’application](../reporting-services/lesson-9-build-and-run-the-application.md).  

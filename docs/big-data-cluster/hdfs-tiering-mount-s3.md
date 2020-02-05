@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69652307"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Guide pratique pour monter S3 pour la hiérarchisation HDFS dans un cluster Big Data
@@ -33,7 +33,7 @@ Les sections suivantes fournissent un exemple de configuration de la hiérarchis
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Définir la variable d’environnement pour les informations d’identification de la clé d’accès
 
-Ouvrez une invite de commandes sur une machine cliente pouvant accéder à votre cluster Big Data. Définissez une variable d’environnement au format suivant. Notez que les informations d’identification doivent figurer dans une liste de valeurs séparées par des virgules. La commande « set » est utilisée sur Windows. Si vous êtes sur Linux, utilisez « export » à la place.
+Ouvrez une invite de commandes sur une machine client pouvant accéder à votre cluster Big Data. Définissez une variable d’environnement au format suivant. Notez que les informations d’identification doivent figurer dans une liste de valeurs séparées par des virgules. La commande « set » est utilisée sur Windows. Si vous êtes sur Linux, utilisez « export » à la place.
 
    ```text
     set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
@@ -47,7 +47,7 @@ Ouvrez une invite de commandes sur une machine cliente pouvant accéder à votre
 
 Une fois que vous avez préparé un fichier d’informations d’identification avec les clés d’accès, vous pouvez commencer le montage. Les étapes suivantes permettent de monter le stockage HDFS distant dans S3 vers le stockage HDFS local de votre cluster Big Data.
 
-1. Utilisez **kubectl** pour trouver l’adresse IP du service **controller-svc-external** du point de terminaison dans votre cluster Big Data. Recherchez **External-IP**.
+1. Utilisez **kubectl** pour rechercher l’adresse IP du service **controller-svc-external** du point de terminaison dans votre cluster Big Data. Recherchez **External-IP**.
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>

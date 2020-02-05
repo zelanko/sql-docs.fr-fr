@@ -14,10 +14,10 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2699b5d76f15ea81875256cddcd63af1b6451f04
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293389"
 ---
 # <a name="azure-data-lake-store-source"></a>Source Azure Data Lake Store
@@ -25,7 +25,7 @@ ms.locfileid: "71293389"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Le composant **Source Azure Data Lake Store** permet à un package SSIS de lire des données dans Azure Data Lake Store. Les formats de fichier pris en charge sont : Texte et Avro.
+  Le composant **Source Azure Data Lake Store** permet à un package SSIS de lire des données dans Azure Data Lake Store. Les formats de fichier pris en charge sont le format texte et Avro.
   
  **Source Azure Data Lake Store** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   

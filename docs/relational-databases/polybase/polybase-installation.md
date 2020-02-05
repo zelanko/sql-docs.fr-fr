@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908671"
 ---
 # <a name="install-polybase-on-windows"></a>Installer PolyBase sur Windows
@@ -33,7 +33,7 @@ Pour installer une version d’essai de SQL Server, accédez à [Versions d’é
    
 - Espace libre minimal sur le disque dur : 2 Go.
   
-- Recommandé : Au moins 16 Go de RAM.
+- Recommandé : 16 Go de RAM au minimum.
    
 - TCP/IP doit être activé pour que PolyBase fonctionne correctement. TCP/IP est activé par défaut sur toutes les éditions de SQL Server, sauf sur les éditions SQL Server Express et Developer. Pour que PolyBase fonctionne correctement sur les éditions Express et Developer, vous devez activer la connectivité TCP/IP. Consultez [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -104,14 +104,14 @@ Utilisez les valeurs de cette table pour créer des scripts d'installation. Le M
 
 |composant SQL Server|Paramètre et valeurs|Description|  
 |--------------------------|--------------------------|-----------------|  
-|Contrôle d'installation de SQL Server|**Requis**<br /><br /> /FEATURES=PolyBase|Sélectionne la fonctionnalité PolyBase.|  
+|Contrôle d'installation de SQL Server|**Obligatoire**<br /><br /> /FEATURES=PolyBase|Sélectionne la fonctionnalité PolyBase.|  
 |Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCACCOUNT|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCPASSWORD|Spécifie le mot de passe du compte du service de moteur.|  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage du moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
+|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage pour le Moteur PolyBase : automatique (par défaut), désactivé ou manuel.|  
 |Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCACCOUNT|Spécifie le compte pour le service Mouvement de données. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCPASSWORD|Spécifie le mot de passe du compte de déplacement des données.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service de déplacement des données : Automatique (par défaut), Désactivé ou Manuel.|  
-|PolyBase|**Facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
+|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service Mouvement de données : automatique (par défaut), désactivé ou manuel.|  
+|PolyBase|**Facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
 |PolyBase|**Facultatif**<br /><br /> /PBPORTRANGE|Spécifie une plage de ports avec au moins six ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
@@ -123,11 +123,11 @@ Utilisez les valeurs de cette table pour créer des scripts d'installation. Le M
 |Contrôle d'installation de SQL Server|**Obligatoire**<br /><br /> /FEATURES= PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installe la prise en charge de toutes les fonctionnalités de PolyBase, à l’exception de la connectivité Hadoop. PolyBaseJava active la connectivité Hadoop. PolyBase installe les deux. |  
 |Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCACCOUNT|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCPASSWORD|Spécifie le mot de passe du compte du service de moteur.|  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage du moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
+|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage pour le Moteur PolyBase : automatique (par défaut), désactivé ou manuel.|  
 |Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCACCOUNT|Spécifie le compte pour le service de déplacement des données. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCPASSWORD|Spécifie le mot de passe du compte de déplacement des données.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service de déplacement des données : Automatique (par défaut), Désactivé ou Manuel.|  
-|PolyBase|**Facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
+|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service Mouvement de données : automatique (par défaut), désactivé ou manuel.|  
+|PolyBase|**Facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
 |PolyBase|**Facultatif**<br /><br /> /PBPORTRANGE|Spécifie une plage de ports avec au moins six ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end

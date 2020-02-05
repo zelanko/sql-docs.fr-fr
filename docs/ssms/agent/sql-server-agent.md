@@ -1,8 +1,7 @@
 ---
-title: SQL Server Agent | Microsoft Docs
+title: SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552669"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257931"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
@@ -43,7 +44,7 @@ ms.locfileid: "69552669"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise les composants ci-après pour définir les tâches à exécuter et quand les exécuter, et pour signaler si elles ont réussi ou échoué.  
   
 ### <a name="jobs"></a>travaux  
-Un *travail* est une suite d'actions effectuées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Utilisez les travaux pour définir une tâche administrative, afin qu'elle soit exécutée une ou plusieurs fois et que son résultat (échec ou réussite) soit contrôlé. Un travail peut être exécuté sur un serveur local ou sur plusieurs serveurs distants.  
+Un *travail* est une suite d'actions effectuées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Utilisez des travaux pour définir une tâche d’administration qui peut être exécutée une ou plusieurs fois, et dont la réussite ou l’échec sont surveillés. Un travail peut s’exécuter sur un serveur local ou sur plusieurs serveurs distants.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux qui s'exécutent au moment d'un événement de basculement sur une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne reprennent pas sur un autre nœud de cluster de basculement après le basculement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent : Les travaux qui s’exécutent au moment où un nœud Hyper-V est suspendu ne reprennent pas si la pause provoque un basculement vers un autre nœud. Les travaux qui commencent mais ne peuvent pas se terminer à cause d'un événement de basculement sont enregistrés comme commencés, mais n'affichent pas d'entrées de journal supplémentaires pour l'achèvement ou l'échec. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans ces scénarios semblent ne s'être jamais terminés.  
@@ -61,9 +62,9 @@ Chaque action d'un travail est appelée *étape du travail*. Par exemple, une é
 Chaque étape s'exécute dans un contexte de sécurité spécifique. Pour les étapes qui utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)], utilisez l'instruction EXECUTE AS pour définir le contexte de sécurité. Pour les autres types d'étapes, utilisez un compte proxy.  
   
 ### <a name="schedules"></a>Planifications  
-Une *planification* programme l'exécution d'un travail. Une même planification peut porter sur plusieurs travaux, et plusieurs planifications peuvent impliquer le même travail. Une planification peut prévoir l'exécution d'un travail :  
+Une *planification* programme l'exécution d'un travail. Plusieurs travaux peuvent s’exécuter sur la même planification, et plusieurs planifications peuvent appliquer le même travail. Une planification peut définir les conditions suivantes pour l’heure d’exécution d’un travail :  
   
--   Au moment où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent démarre.  
+-   au moment où l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre ;  
   
 -   au moment où l'utilisation de l'UC atteint le niveau d'inactivité que vous avez défini ;  
   
@@ -88,12 +89,12 @@ Une alerte peut :
   
 -   prévenir un ou plusieurs opérateurs ;  
   
--   exécuter un travail.  
+-   Exécuter une tâche  
   
 Pour plus d’informations, consultez [Alertes](../../ssms/agent/alerts.md).  
   
 ### <a name="operators"></a>Opérateurs  
-Un *opérateur* est une personne responsable de la maintenance d'une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans certaines sociétés, les responsabilités d'opérateur sont affectées à une seule personne. Dans les entreprises qui ont de nombreux serveurs, plusieurs personnes peuvent se partager les responsabilités d'opérateur. Un opérateur ne contient pas d'informations de sécurité et ne définit pas de principal de sécurité.  
+Un *opérateur* est une personne responsable de la maintenance d'une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans certaines sociétés, les responsabilités d'opérateur sont affectées à une seule personne. Dans les entreprises qui ont de nombreux serveurs, plusieurs personnes peuvent se partager les responsabilités d'opérateur. Un opérateur ne contient pas d’informations de sécurité et ne définit pas de principal de sécurité.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut notifier les opérateurs à propos d’alertes par :  
   
@@ -143,7 +144,7 @@ Un sous-système est un objet prédéfini qui représente la fonctionnalité dis
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent applique les restrictions des sous-systèmes même si le principal de sécurité du proxy a généralement l'autorisation d'exécuter cette tâche dans l'étape de travail. Par exemple, un proxy pour un utilisateur qui est membre du rôle de serveur fixe sysadmin ne peut pas exécuter d'étape de travail [!INCLUDE[ssIS](../../includes/ssis_md.md)] , à moins que le proxy ait accès au sous-système [!INCLUDE[ssIS](../../includes/ssis_md.md)] , même si l'utilisateur peut exécuter des packages [!INCLUDE[ssIS](../../includes/ssis_md.md)] .  
   
-### <a name="proxies"></a>Proxys  
+### <a name="proxies"></a>Proxies  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise les proxys pour gérer les contextes de sécurité. Un proxy peut être utilisé dans plusieurs étapes de travail. Les membres du rôle de serveur fixe **sysadmin** peuvent créer des proxys.  
   
 Chaque proxy correspond à des informations d'identification de sécurité. Chaque proxy peut être associé à un ensemble de sous-systèmes et de connexions. Le proxy peut être utilisé uniquement pour les étapes de travail qui utilisent un sous-système associé au proxy. Pour créer une étape de travail qui utilise un proxy spécifique, le propriétaire du travail doit utiliser une connexion associée à ce proxy ou être membre d'un rôle sans restriction d'accès aux proxys. Les membres du rôle de serveur fixe **sysadmin** disposent d'un accès sans restriction aux proxys. Les membres des rôles **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole** peuvent utiliser uniquement les proxys pour lesquels un accès spécifique leur a été accordé. Chaque utilisateur membre de l'un des rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit disposer d'un accès à des proxys spécifiques de façon à pouvoir créer les étapes de travail qui les utilisent.  
@@ -166,10 +167,10 @@ Utilisez les tâches suivantes pour démarrer [!INCLUDE[ssNoVersion](../../inclu
   
 |Description|Rubrique|  
 |-----------|-----|  
-|Explique comment configurer SQL Server Agent.|[Configurer SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
+|Explique comment configurer SQL Server Agent.|[Configurer l'Agent SQL Server](../../ssms/agent/configure-sql-server-agent.md)|  
 |Explique comment démarrer, arrêter et interrompre le service SQL Server Agent.|[Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Décrit les considérations à prendre en compte lors de la spécification d'un compte pour le service SQL Server Agent.|[Sélectionner un compte pour le service SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
-|Explique comment utiliser le journal des erreurs de SQL Server Agent.|[Journal des erreurs de SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)|  
+|Explique comment utiliser le journal des erreurs de SQL Server Agent.|[Journal des erreurs de l'Agent SQL Server](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Explique comment utiliser des objets de performances.|[Utiliser des objets de performance](../../ssms/agent/use-performance-objects.md)|  
 |Décrit l'Assistant Plan de maintenance qui est un utilitaire permettant de créer des travaux, des alertes et des opérateurs en vue d'automatiser l'administration d'une instance de SQL Server.|[Utiliser l'Assistant Plan de maintenance](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |Explique comment automatiser des tâches administratives à l'aide de l'Agent SQL Server.|[Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  

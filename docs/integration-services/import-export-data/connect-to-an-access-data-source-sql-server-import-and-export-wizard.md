@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296295"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Access (Assistant Importation et Exportation SQL Server)
@@ -54,7 +54,7 @@ Spécifiez le chemin et le nom de fichier du fichier Access. Par exemple, **C:\\
  **Parcourir**  
  Permet de rechercher le fichier de la base de données à l’aide de la boîte de dialogue **Ouvrir**.  
   
- **User name**  
+ **Nom d'utilisateur**  
 Si un fichier de groupe de travail est associé à la base de données, fournissez un nom d’utilisateur valide.  
   
  **Mot de passe**  
@@ -62,17 +62,17 @@ Si un fichier de groupe de travail est associé à la base de données, fourniss
  
 Si la base de données est protégée par un mot de passe unique pour tous les utilisateurs, consultez [Le fichier de base de données est-il protégé par un mot de passe ?](#database_password).
   
- **Avancé**  
+ **Avancée**  
 Spécifiez les options avancées, comme le mot de passe de la base de données ou un autre fichier de groupe de travail que celui défini par défaut, dans la boîte de dialogue **Propriétés des liaisons de données**.  
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>Je ne vois pas Access dans la liste des sources de données
 Si vous ne voyez pas Access dans la liste des sources de données, utilisez-vous l’Assistant 64 bits ? Les fournisseurs pour Excel et Access sont généralement en 32 bits et ils ne sont donc pas visibles dans l’Assistant 64 bits. Exécutez l’Assistant 32 bits à la place.
 
 > [!NOTE]
-> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, notamment la version 32 bits de l’Assistant.
+> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
 
 ## <a name="officeDownloads"></a>Se procurer les fichiers nécessaires pour se connecter à Access  
-Vous devrez peut-être télécharger les composants de connectivité pour les sources de données Microsoft Office, notamment Access et Excel, s’ils ne sont pas déjà installés. Téléchargez la dernière version des composants de connectivité pour les fichiers Excel et Access ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+Vous devrez peut-être télécharger les composants de connectivité pour les sources de données Microsoft Office, notamment Access et Excel, s’ils ne sont pas déjà installés. Téléchargez la dernière version des composants de connectivité pour les fichiers Excel et Access ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
 La dernière version des composants peut ouvrir des fichiers créés dans des versions antérieures d’Access.
 

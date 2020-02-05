@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103422"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
@@ -81,7 +81,7 @@ ms.locfileid: "68103422"
      **Colonnes de statistiques**  
      Cette grille montre les colonnes décrites par ce jeu de statistiques. Toutes les valeurs contenues dans la grille sont en lecture seule.  
   
-     **Name**  
+     **Nom**  
      Affiche le nom de la colonne décrite par les statistiques. Cela peut être une colonne individuelle ou une combinaison de colonnes dans une table individuelle.  
   
      **Type de données**  
@@ -90,7 +90,7 @@ ms.locfileid: "68103422"
      **Taille**  
      Indique la taille du type de données de chaque colonne.  
   
-     **Identity**  
+     **Identité**  
      Indique une colonne d'identité lorsque l'option est activée.  
   
      **Null autorisé**  
@@ -99,7 +99,7 @@ ms.locfileid: "68103422"
      **Ajouter**  
      Permet d'ajouter des colonnes supplémentaires de la table dans la grille des statistiques.  
   
-     **Supprimer**  
+     **Remove**  
      Permet de supprimer la colonne sélectionnée de la grille des statistiques.  
   
      **Monter**  
@@ -123,7 +123,7 @@ ms.locfileid: "68103422"
   
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Sélectionner les colonnes** . Ces informations sont en lecture seule.  
   
-     **Name**  
+     **Nom**  
      Affiche le nom de la colonne décrite par les statistiques. Cela peut être une colonne individuelle ou une combinaison de colonnes dans une table individuelle.  
   
      **Type de données**  
@@ -132,10 +132,10 @@ ms.locfileid: "68103422"
      **Taille**  
      Indique la taille du type de données de chaque colonne.  
   
-     **Identity**  
+     **Identité**  
      Indique une colonne d'identité lorsque l'option est cochée.  
   
-     **Allow NULLs**  
+     **Autoriser les valeurs NULL**  
      Indique si la colonne accepte les valeurs NULL.  
   
 6.  Dans la boîte de dialogue **Sélectionner les colonnes** , activez la ou les cases à cocher de chaque colonne pour laquelle vous voulez créer une statistique, puis cliquez sur **OK**.  
@@ -146,7 +146,7 @@ ms.locfileid: "68103422"
   
 #### <a name="to-create-statistics"></a>Pour créer des statistiques  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

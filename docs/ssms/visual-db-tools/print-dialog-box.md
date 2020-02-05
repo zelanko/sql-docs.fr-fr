@@ -1,10 +1,9 @@
 ---
-title: Imprimer, boîte de dialogue | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Imprimer
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,19 +11,21 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7591ac6ca80aabe5a9895b729184c2b4a6c4beb1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8c1eb1ef3959052fb285c713bf172521b74bc46b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266341"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255351"
 ---
-# <a name="print-dialog-box"></a>Imprimer, boîte de dialogue
+# <a name="print-dialog-box"></a>Boîte de dialogue Imprimer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Vous pouvez spécifier la façon dont vous souhaitez imprimer un document en sélectionnant des options dans la boîte de dialogue **Imprimer** .  
   
 ## <a name="printer"></a>Imprimante  
-**Name**  
+**Nom**  
 Spécifie l'imprimante. Sélectionnez une imprimante dans la liste. L'imprimante que vous sélectionnez devient l'imprimante par défaut jusqu'à ce que vous fermiez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou que vous sélectionniez une autre imprimante. Les informations qui apparaissent dans les champs au-dessous de la liste s'appliquent à l'imprimante sélectionnée.  
   
 **État**  
@@ -33,7 +34,7 @@ Décrit l’état de l’imprimante sélectionnée, par exemple Occupé ou Prêt
 **Type**  
 Identifie l'imprimante sélectionnée.  
   
-**Où**  
+**Where**  
 Identifie l'emplacement de l'imprimante sélectionnée et le port qu'elle utilise.  
   
 **Commentaire**  
@@ -46,7 +47,7 @@ Cliquez pour ouvrir la boîte de dialogue \<*Propriétés <nom_imprimante*>.
 Imprime votre document dans un fichier au lieu de l'envoyer à l'imprimante.  
   
 ## <a name="page-range"></a>Étendue de pages  
-**Tous**  
+**Tout**  
 Imprime la totalité du document.  
   
 **Sélection**  

@@ -1,30 +1,28 @@
 ---
-title: Conditions requises pour la relecture | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Conditions préalables à la relecture
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event classes [SQL Server], replaying traces
-- traces [SQL Server], replaying
-- replaying traces
-- TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4a4cf18a4bf6131e41e45343244a747c4651a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928896"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307484"
 ---
 # <a name="replay-requirements"></a>Conditions préalables à la relecture
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Pour relire les données de trace avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Distributed Replay Utility, un jeu spécifique de classes et de colonnes d'événements doit être capturé dans la trace. Ces paramètres sont activés par défaut si le modèle de trace **TSQL_Replay** est utilisé pour configurer une trace utilisée ultérieurement pour la relecture. Cette rubrique décrit ces paramètres et d’autres configurations préalables à la relecture.  
+
+Pour relire les données de trace avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou Distributed Replay Utility, un jeu spécifique de classes et de colonnes d'événements doit être capturé dans la trace. Ces paramètres sont activés par défaut si le modèle de trace **TSQL_Replay** est utilisé pour configurer une trace utilisée ultérieurement pour la relecture. Cette rubrique décrit ces paramètres et d’autres configurations préalables à la relecture.  
   
 > [!NOTE]  
 >  Nous recommandons d'utiliser Distributed Replay Utility pour relire des applications OLTP exigeantes (avec de nombreuses connexions simultanées actives ou un débit élevé). Distributed Replay Utility peut relire les données de trace de plusieurs ordinateurs, en simulant mieux les charges de travail sensibles. Pour plus d'informations, consultez [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
@@ -71,13 +69,13 @@ ms.locfileid: "67928896"
   
 -   **TextData**  
   
--   **Application Name**  
+-   **Nom d’application**  
   
 -   **LoginName**  
   
 -   **DatabaseName**  
   
--   **ID de la base de données**  
+-   **ID de base de données**  
   
 -   **ClientProcessID**  
   
@@ -99,7 +97,7 @@ ms.locfileid: "67928896"
   
 -   **NTUserName**  
   
--   **Erreur**  
+-   **Error**  
   
 > [!NOTE]  
 >  Utilisez le modèle de trace **TSQL_Replay** pour les traces qui capturent des données à des fins de relecture.  

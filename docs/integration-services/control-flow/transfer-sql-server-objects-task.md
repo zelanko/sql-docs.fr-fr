@@ -17,10 +17,10 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293841"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "71293841"
 |Object|  
 |------------|  
 |Tables|  
-|Vues|  
+|Les vues|  
 |Procédures stockées|  
 |Fonctions définies par l'utilisateur|  
 |Valeurs par défaut|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293841"
 >  L’utilisateur qui crée la tâche de transfert d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir les autorisations suffisantes sur les objets du serveur source pour pouvoir les sélectionner pour la copie, ainsi que l’autorisation d’accéder à la base de données du serveur de destination où les objets seront transférés.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique à la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -173,7 +173,7 @@ ms.locfileid: "71293841"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Remplacer**|Les données du serveur de destination seront remplacées.|  
+|**Replace**|Les données du serveur de destination seront remplacées.|  
 |**Append**|Les données copiées à partir du serveur source seront ajoutées aux données existantes sur le serveur de destination.|  
   
 > [!NOTE]  
