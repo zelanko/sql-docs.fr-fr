@@ -11,10 +11,10 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 13c40349ea5d46ecf1264ae5c7b7aee341d6d8f2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295849"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector pour SAP BW
@@ -52,10 +52,10 @@ ms.locfileid: "71295849"
  [Installation de Microsoft Connector pour SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  
  Décrit la configuration requise pour l’installation de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW.  
   
- [Composants Microsoft Connector 1.1 pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
  Décrit chaque composant de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW.  
   
- [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Aide (F1) sur Microsoft Connector pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  Décrit l’interface utilisateur de chaque composant de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW.  
   
   

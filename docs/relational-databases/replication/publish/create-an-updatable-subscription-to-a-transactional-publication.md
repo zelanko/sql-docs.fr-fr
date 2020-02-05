@@ -15,10 +15,10 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321243"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle
@@ -201,7 +201,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour en file d’attente en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 
     * Si la valeur de allow_queued_tran dans le jeu de résultats est 1, la publication prend en charge les abonnements avec mise à jour immédiate.
-    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, consultez Guide pratique pour activer les abonnements avec mise à jour pour les publications transactionnelles (programmation Transact-SQL de la réplication).
+    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, voir Procédure : activer les abonnements avec mise à jour pour les publications transactionnelles (programmation Transact-SQL de la réplication).
 
 2. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements par émission de données en exécutant [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md). 
 

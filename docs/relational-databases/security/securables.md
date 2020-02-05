@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986567"
 ---
 # <a name="securables"></a>Éléments sécurisables
@@ -31,7 +31,7 @@ ms.locfileid: "67986567"
 
   Les éléments sécurisables sont les ressources auxquelles le système d'autorisation du moteur de base de données [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] régule l'accès. Par exemple, une table est un élément sécurisable. Certains éléments sécurisables peuvent être contenus dans d'autres, de façon à créer des hiérarchies imbriquées appelées « étendues », pouvant elles-mêmes être sécurisées. L'étendue de ces éléments sécurisables est constituée par le **serveur**, la **base de données**et le **schéma**.  
   
-## <a name="securable-scope-server"></a>Étendue sécurisable : Serveur  
+## <a name="securable-scope-server"></a>Étendue des éléments sécurisables : serveur  
  Les éléments sécurisables du **serveur** sont les suivants :  
   
 -   Groupe de disponibilité  
@@ -40,11 +40,11 @@ ms.locfileid: "67986567"
   
 -   Connexion  
   
--   Rôle serveur  
+-   Rôle du serveur  
   
 -   Base de données  
   
-## <a name="securable-scope-database"></a>Étendue sécurisable : Base de données  
+## <a name="securable-scope-database"></a>Étendue des éléments sécurisables : base de données  
  Les éléments sécurisables de la **base de données** sont les suivants :  
   
 -   Rôle d'application  
@@ -67,7 +67,7 @@ ms.locfileid: "67986567"
   
 -   Rôle (de base de données)  
   
--   Itinéraire  
+-   Routage  
   
 -   schéma  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67986567"
   
 -   Utilisateur  
   
-## <a name="securable-scope-schema"></a>Étendue sécurisable : schéma  
+## <a name="securable-scope-schema"></a>Étendue des éléments sécurisables : schéma  
  Les éléments sécurisables du **schéma** sont les suivants :  
   
 -   Type  

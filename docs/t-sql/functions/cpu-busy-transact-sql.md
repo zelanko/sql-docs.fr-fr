@@ -24,13 +24,13 @@ ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b385caa4146f40a1395c74fa0f26b5be518ff149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026480"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Cette fonction retourne le temps qu’a passé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une opération active depuis son dernier démarrage. `@@CPU_BUSY` retourne un résultat exprimé en incréments de temps processeur ou « cycles ». Cette valeur étant cumulée pour tous les processeurs, elle peut être supérieure au temps écoulé réel. Pour la convertir en microsecondes, multipliez-la par [@@TIMETICKS](./timeticks-transact-sql.md).
@@ -38,7 +38,7 @@ Cette fonction retourne le temps qu’a passé [!INCLUDE[ssNoVersion](../../incl
 > [!NOTE]  
 >  Si le temps renvoyé dans @@CPU_BUSY ou @@IO_BUSY dépasse approximativement 49 jours de temps processeur cumulé, vous risquez de recevoir un avertissement de dépassement arithmétique. Dans ce cas, la valeur des variables `@@CPU_BUSY`, `@@IO_BUSY` et `@@IDLE` n’est pas précise.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   

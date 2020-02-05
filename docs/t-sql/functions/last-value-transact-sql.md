@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109193"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retourne la dernière valeur dans un jeu de valeurs ordonné dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. Utilisation de LAST_VALUE sur les partitions  
+### <a name="a-using-last_value-over-partitions"></a>R. Utilisation de LAST_VALUE sur les partitions  
  L'exemple suivant retourne la date d'embauche du dernier employé dans chaque service pour le salaire donné (taux). La clause PARTITION BY décompose les employés par service et la fonction LAST_VALUE est appliquée à chaque partition indépendamment. La clause ORDER BY spécifiée dans la clause OVER détermine l'ordre logique dans lequel la fonction LAST_VALUE est appliquée aux lignes dans chaque partition.  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Utilisation de FIRST_VALUE et LAST_VALUE dans une expression calculée  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. Utilisation de FIRST_VALUE et LAST_VALUE dans une expression calculée  
  L'exemple suivant utilise les fonctions FIRST_VALUE et LAST_VALUE dans des expressions calculées pour afficher la différence entre la valeur de quota de ventes pour le trimestre actuel et, respectivement, le premier trimestre et le dernier trimestre de l'année pour un nombre donné d'employés. La fonction FIRST_VALUE retourne la valeur du quota de ventes pour le premier trimestre de l'année et la soustrait de la valeur du quota de ventes du trimestre en cours. Elle est retournée dans la colonne dérivée intitulée DifferenceFromFirstQuarter. Pour le premier trimestre d'une année, la valeur de la colonne DifferenceFromFirstQuarter est 0. La fonction LAST_VALUE retourne la valeur de quota de ventes pour le dernier trimestre de l'année et la soustrait de la valeur actuelle de quota de ventes du trimestre actuel. Elle est retournée dans la colonne dérivée intitulée DifferenceFromLastQuarter. Pour le dernier trimestre de l'année, la valeur de la colonne DifferenceFromLastQuarter est 0.  
   
  La clause « RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING » est obligatoire dans cet exemple pour les valeurs non nulles à retourner dans la colonne DifferenceFromLastQuarter, comme illustré ci-dessous. La plage par défaut est « RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW ». Dans cet exemple, l'utilisation de la plage par défaut (ou le fait de ne pas inclure de plage, ce qui entraînerait l'utilisation de la plage par défaut) provoquerait le renvoi de valeurs nulles dans la colonne DifferenceFromLastQuarter. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

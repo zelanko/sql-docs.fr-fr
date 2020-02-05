@@ -17,10 +17,10 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284166"
 ---
 # <a name="integration-services-user-interface"></a>Interface utilisateur d'Integration Services
@@ -43,13 +43,13 @@ ms.locfileid: "71284166"
   
  Ce tableau répertorie les boîtes de dialogue disponibles à partir du menu **SSIS** et des surfaces de dessin du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-|Boîte de dialogue|Fonction|Accès|  
+|Boîte de dialogue|Objectif|Accès|  
 |----------------|-------------|------------|  
-|**Mise en route**|Accédez aux exemples, didacticiels et vidéos.|Sur l’aire de conception de l’onglet **Flux de contrôle** ou de l’onglet **Flux de données** , cliquez avec le bouton droit, puis cliquez sur **Prise en main**.<br /><br /> Pour afficher automatiquement la fenêtre **Mise en route** lorsque vous créez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Afficher toujours dans un nouveau projet** en bas de la fenêtre.|  
-|**Configurer les journaux SSIS**|Configuration de la journalisation pour un package et ses tâches en ajoutant des journaux et en définissant des détails de journalisation.|Dans le menu **SSIS** , cliquez sur **Enregistrement**.<br /><br /> \- ou -<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Journalisation**.|  
+|**Prise en main**|Accédez aux exemples, didacticiels et vidéos.|Sur l’aire de conception de l’onglet **Flux de contrôle** ou de l’onglet **Flux de données** , cliquez avec le bouton droit, puis cliquez sur **Prise en main**.<br /><br /> Pour afficher automatiquement la fenêtre **Mise en route** lorsque vous créez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Afficher toujours dans un nouveau projet** en bas de la fenêtre.|  
+|**Configurer les journaux SSIS**|Configuration de la journalisation pour un package et ses tâches en ajoutant des journaux et en définissant des détails de journalisation.|Dans le menu **SSIS** , cliquez sur **Enregistrement**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Journalisation**.|  
 |**Bibliothèque des configurations du package**|Ajout et modification de configurations de package. L'exécution de l'Assistant Configuration de package s'effectue à partir de cette boîte de dialogue.|Dans le menu **SSIS** , cliquez sur **Configurations du package**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Configurations du package**.|  
 |**Signature numérique**|Signature d'un package ou suppression de la signature d'un package.|Dans le menu **SSIS** , cliquez sur **Signature numérique**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Signature numérique**.|  
-|**Définir des points d'arrêt**|Activation des points d'arrêt sur des tâches et définition des propriétés des points d'arrêt.|Sur l’aire de conception de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur une tâche ou un conteneur, puis cliquez sur **Modifier les points d’arrêt**. Pour définir un point d’arrêt sur le package, cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Modifier les points d’arrêt**.|  
+|**Définir des points d’arrêt**|Activation des points d'arrêt sur des tâches et définition des propriétés des points d'arrêt.|Sur l’aire de conception de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur une tâche ou un conteneur, puis cliquez sur **Modifier les points d’arrêt**. Pour définir un point d’arrêt sur le package, cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Modifier les points d’arrêt**.|  
   
  La fenêtre **Mise en route** fournit des liens vers des exemples, des didacticiels et des vidéos. Pour ajouter des liens à des contenus supplémentaires, modifiez le fichier SamplesSites.xml inclus avec la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Nous vous recommandons de ne pas modifier la valeur de l’élément \<GettingStartedSamples> qui spécifie l’URL du flux RSS. Le fichier se trouve dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn. Sur un ordinateur 64 bits, le fichier se trouve dans le dossier *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71284166"
   
  Ce tableau répertorie les fenêtres disponibles à partir des menus **SSIS** et **Affichage** et des surfaces de dessin du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-|Fenêtre|Fonction|Accès|  
+|Fenêtre|Objectif|Accès|  
 |------------|-------------|------------|  
 |**Variables**|Ajout et gestion de variables personnalisées.|Dans le menu **SSIS** , cliquez sur **Variables**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception des onglets **Flux de contrôle** et **Flux de données** , puis cliquez sur **Variables**.<br /><br /> -ou-<br /><br /> Dans le menu **Affichage** , pointez sur **Autres fenêtres**, puis cliquez sur **Variables**.|  
 |**Journaux d'événements**|Affichage des entrées de journaux au moment de l'exécution.|Dans le menu **SSIS** , cliquez sur **Journaux d'événements**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception des onglets **Flux de contrôle** et **Flux de données** , puis cliquez sur **Journaux d’événements**.<br /><br /> -ou-<br /><br /> Dans le menu **Affichage** , pointez sur **Autres fenêtres**, puis cliquez sur **Journaux d'événements**.|  

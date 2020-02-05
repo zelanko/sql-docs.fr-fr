@@ -14,10 +14,10 @@ ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 12bd415093b8ea35ee82d6d8be2d1591a4f4fbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987269"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server Agent, objet Statistics
@@ -26,7 +26,7 @@ ms.locfileid: "67987269"
   
  Le tableau ci-dessous décrit le compteur de **SQLAgent:Statistics** .  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |**Redémarrages de SQL Server**|Nombre de redémarrages réussis de Microsoft SQL Server effectués par l'Agent SQL Server depuis le dernier démarrage de ce dernier.|  
   

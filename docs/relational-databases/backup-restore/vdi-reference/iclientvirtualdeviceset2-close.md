@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5f87b375773b9c81b29b3b5cac11ea97121c45df
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847380"
 ---
 # <a name="iclientvirtualdeviceset2close-vdi"></a>IClientVirtualDeviceSet2::Close (VDI)
@@ -28,9 +28,9 @@ La fonction **Close** ferme l’ensemble d’appareils virtuels créé par IClie
 HRESULT IClientVirtualDeviceSet2::Close ();
 ```
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | NOERROR | Cette valeur est retournée lorsque l’ensemble d’appareils virtuels a été correctement fermé. |
 | VD_E_PROTOCOL | Aucune action n’a été effectuée, car l’ensemble d’appareils virtuels n’était pas ouvert. |

@@ -12,10 +12,10 @@ ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 68829d55be0b080e9b4beb9d7b284e3f57a46581
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305911"
 ---
 # <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
@@ -26,8 +26,8 @@ ms.locfileid: "72305911"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10507|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10507|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_STMT_DOES_NOT_MATCH|  
 |Texte du message|Impossible de créer le repère de plan '%.\*ls', car l’instruction spécifiée par **\@stmt** et **\@module_or_batch** ou par **\@plan_handle** et **\@statement_start_offset** ne correspond à aucune instruction dans le module ou lot spécifié. Modifiez les valeurs pour qu'elles correspondent à une instruction dans le module ou le lot.|  

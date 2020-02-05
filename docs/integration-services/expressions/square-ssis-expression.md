@@ -14,10 +14,10 @@ ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06bf3ea82f026a36fece8266354e79992473df44
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288643"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expression SSIS)
@@ -35,7 +35,7 @@ SQUARE(numeric_expression)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *expression_numérique*  
+ *numeric_expression*  
  Expression numérique d'un type de données numérique. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  

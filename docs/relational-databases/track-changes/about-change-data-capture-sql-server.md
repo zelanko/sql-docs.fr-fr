@@ -15,10 +15,10 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952457"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "75952457"
 ## <a name="change-data-capture-data-flow"></a>Flux de données de capture de données modifiées  
  L'illustration suivante décrit le flux de données principal pour la capture de données modifiées.  
   
- ![Flux de données de capture des changements de données](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
+ ![Flux de données de capture des changements de données](../../relational-databases/track-changes/media/cdcdataflow.gif "Flux de données de capture de données modifiées")  
   
  La source des données modifiées pour la capture de données modifiées est le journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . À mesure que des insertions, des mises à jour et des suppressions sont appliquées aux tables sources suivies, les entrées qui décrivent ces modifications sont ajoutées au journal. Le journal sert d’entrée au processus de capture. Le journal est lu et les informations relatives aux modifications sont ajoutées à la table de modifications associée de la table faisant l’objet d’un suivi. Des fonctions sont fournies afin d'énumérer les modifications qui apparaissent dans les tables de modifications sur une plage spécifiée ; ces fonctions retournent les informations sous la forme d'un jeu de résultats filtré. Le jeu de résultats filtré est utilisé en général par un processus d'application pour mettre à jour une représentation de la source dans un environnement externe.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75952457"
   
  Chaque opération d'insertion ou de suppression appliquée à une table source apparaît comme une ligne unique dans la table de modifications. Les colonnes de données de la ligne qui résulte d'une opération d'insertion contiennent les valeurs de colonne après l'insertion. Les colonnes de données de la ligne qui résulte d'une opération de suppression contiennent les valeurs de colonne avant la suppression. Une opération de mise à jour requiert une entrée de ligne pour identifier les valeurs de colonne avant la mise à jour et une deuxième entrée de ligne pour identifier les valeurs de colonne après la mise à jour.  
   
- Chaque ligne d'une table de modifications contient également des métadonnées supplémentaires permettant d'interpréter l'activité de changement. La colonne __$start_lsn identifie le numéro séquentiel dans le journal de validation affecté à la modification. Ce numéro identifie les modifications qui ont été validées dans la même transaction et il ordonne ces transactions. La colonne \_\_$seqval peut être utilisée pour ordonner davantage de modifications qui ont lieu dans la même transaction. La colonne \_\_$operation enregistre l’opération qui est associée à la modification : 1 = supprimer, 2 = insérer, 3 = mettre à jour (avant l’image) et 4 = mettre à jour (après l’image). La colonne \_\_$update_mask est un masque de bits variable avec un bit défini pour chaque colonne capturée. Pour les entrées d'insertion et de suppression, tous les bits du masque de mise à jour sont toujours définis. Toutefois, pour les lignes de mise à jour, seuls les bits correspondant aux colonnes modifiées sont définis.  
+ Chaque ligne d'une table de modifications contient également des métadonnées supplémentaires permettant d'interpréter l'activité de changement. La colonne __$start_lsn identifie le numéro séquentiel dans le journal de validation affecté à la modification. Ce numéro identifie les modifications qui ont été validées dans la même transaction et il ordonne ces transactions. La colonne \_\_$seqval peut être utilisée pour ordonner davantage de modifications qui ont lieu dans la même transaction. La colonne \_\_$operation enregistre l’opération associée à la modification : 1 = suppression, 2 = insertion, 3 = mise à jour (image avant) et 4 = mise à jour (image après). La colonne \_\_$update_mask est un masque de bits variable avec un bit défini pour chaque colonne capturée. Pour les entrées d'insertion et de suppression, tous les bits du masque de mise à jour sont toujours définis. Toutefois, pour les lignes de mise à jour, seuls les bits correspondant aux colonnes modifiées sont définis.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervalle de validité de capture de données modifiées pour une base de données  
  L'intervalle de validité de capture de données modifiées pour une base de données est la durée pendant laquelle les données modifiées sont disponibles pour les instances de capture. L'intervalle de validité commence lorsque la première instance de capture est créée pour une table de base de données et il se poursuit jusqu'au moment présent.  
@@ -137,7 +137,7 @@ CREATE TABLE T1(
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
  [Utiliser les données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

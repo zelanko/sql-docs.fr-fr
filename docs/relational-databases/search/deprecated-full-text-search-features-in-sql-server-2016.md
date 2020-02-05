@@ -16,24 +16,24 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daf20c621f00529313498c4802cd1d7dfce0fd8b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056224"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Fonctionnalités de recherche en texte intégral dépréciées dans SQL Server 2016
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique décrit les fonctionnalités de la recherche en texte intégral qui sont dépréciées et toujours disponibles dans SQL Server. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version. N’utilisez pas de fonctions déconseillées dans les nouvelles applications.  
   
-Surveillez l’utilisation des fonctionnalités dépréciées à l’aide du compteur de performance de l’objet **SQL Server:Deprecated Features** et des événements de suivi. Pour plus d’informations, consultez [Utilisation des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
+Surveillez l’utilisation des fonctionnalités dépréciées à l’aide du compteur de performance de l’objet **SQL Server:Deprecated Features** et des événements de suivi. Pour plus d’informations, consultez [Utiliser des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 ## <a name="features-no-longer-supported"></a>Fonctionnalités abandonnées  
 
   
 |Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
-|Propriété FULLTEXTCATALOGPROPERTY : LogSize|Aucun.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
+|Propriété FULLTEXTCATALOGPROPERTY : LogSize|Aucun.|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
 |Propriété FULLTEXTSERVICEPROPERTY :<br /><br /> ConnectTimeout<br /><br /> DataTimeout|Aucun.|FULLTEXTSERVICEPROPERTY **('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY **('DataTimeout'** )|210<br /><br /> 209|  
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85 %|  
@@ -46,13 +46,13 @@ Surveillez l’utilisation des fonctionnalités dépréciées à l’aide du com
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Fonctionnalités non prises en charge dans une future version de SQL Server  
  Les fonctionnalités suivantes de recherche en texte intégral sont prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas été déterminée.  
   
- La valeur **Nom de la fonctionnalité** apparaît dans les événements de suivi comme ObjectName et dans les compteurs de performance et sys.dm_os_performance_counters comme nom de l’instance. La valeur **ID de la fonctionnalité** apparaît dans les événements de suivi comme ObjectId.  
+ La valeur **Nom de la fonctionnalité** apparaît dans les événements de suivi comme ObjectName et dans les compteurs de performances et sys.dm_os_performance_counters comme nom de l’instance. La valeur de l’ **ID de la fonctionnalité** apparaît dans les événements de suivi comme ObjectId.  
   
 |Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
 |Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,...*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,...*n*] )<br /><br /> [,<distance> [,<order>] ]<br /><br /> }<br /><br /> )<br /><br /> <distance> ::= {*entier* &#124; **MAX**}<br /><br /> <order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Option CREATE FULLTEXT CATALOG :<br /><br /> IN PATH '*chemin_racine*'<br /><br /> ON FILEGROUP *filegroup*|Aucun.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Aucun.<sup>*</sup>|237<br /><br /> Aucun.*|  
-|Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
+|Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Option sp_detach_db :<br /><br /> [ @keepfulltextindexfile = ] '*conserver_fichier_index_recherche_en_texte-intégral*'|Aucun.|sp_detach_db @keepfulltextindexfile|226|  
 |Valeurs d’action sp_fulltext_service : resource_usage n’a pas de fonction.|None|sp_fulltext_service @action=resource_usage|200|  
   

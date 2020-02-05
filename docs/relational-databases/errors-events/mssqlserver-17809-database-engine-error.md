@@ -12,13 +12,13 @@ ms.assetid: d7f81e0a-13f7-42b2-bddf-1f6b95321fa7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 997fcb3e658422f53956ee3d86100675e7989f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131621"
 ---
-# <a name="mssqlserver17809"></a>MSSQLSERVER_17809
+# <a name="mssqlserver_17809"></a>MSSQLSERVER_17809
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68131621"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|17809|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17809|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SRV_NOFREESRVPROC|  
 |Texte du message|Connexion impossible car le nombre maximal de connexions d'utilisateur '%ld' a déjà été atteint. L'administrateur système peut utiliser sp_configure pour augmenter la valeur maximale. La connexion a été fermée.%.*ls|  

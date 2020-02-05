@@ -14,10 +14,10 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73632995"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modifier une trace existante (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73632995"
   
      Lorsque vous modifiez le paramètre **\@on**, pensez à son interaction avec le paramètre **\@columnid** :  
   
-    |ON|ID de la colonne|Résultats|  
+    |ACTIVÉ|ID de la colonne|Résultats|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|Événement activé. Toutes les colonnes sont effacées.|  
     ||NOT NULL|La colonne est activée pour l'événement spécifié.|  

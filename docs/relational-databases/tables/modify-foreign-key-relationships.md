@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139599"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
@@ -75,7 +75,7 @@ ms.locfileid: "68139599"
      **Ajouter**  
      Crée une nouvelle relation. Une relation valide exige que la **Spécification de tables et colonnes** soit définie.  
   
-     **Delete**  
+     **Supprimer**  
      Supprime la relation sélectionnée dans la liste **Relation sélectionnée** . Pour annuler l'ajout d'une relation, supprimez la relation à l'aide de ce bouton.  
   
      **Catégorie Général**  
@@ -102,7 +102,7 @@ ms.locfileid: "68139599"
      **Catégorie Identité**  
      Se développe pour afficher les champs de propriété pour le **Nom** et la **Description**.  
   
-     **Name**  
+     **Nom**  
      Indique le nom de la relation. Lorsqu'une nouvelle relation est créée, elle obtient un nom par défaut basé sur la table affichée dans la fenêtre active du **Concepteur de tables**. Vous pouvez modifier le nom à tout moment.  
   
      **Description**  
@@ -111,7 +111,7 @@ ms.locfileid: "68139599"
      **Catégorie Concepteur de tables**  
      Se développe pour afficher des informations relatives aux options **Vérifier les données existantes à la création ou à la réactivation** et **Appliquer la réplication**.  
   
-     **Enforce For Replication**  
+     **Appliquer la réplication**  
      Indique si la contrainte doit être appliquée lorsqu'un Agent de réplication effectue une requête Insert, Update ou Delete sur cette table.  
   
      **Appliquer la contrainte de clé étrangère**  
@@ -142,7 +142,7 @@ ms.locfileid: "68139599"
   
     -   **Définir la valeur par défaut** Affecte la valeur par défaut définie pour la colonne si toutes les colonnes clés étrangères de la table ont des valeurs par défaut définies.  
   
-4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+4.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une clé étrangère**  

@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115305"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Fonctionnalités et tâches de l'utilitaire SQL Server
@@ -42,23 +42,23 @@ ms.locfileid: "68115305"
 |||  
 |-|-|  
 |**Description**|**Rubrique**|  
-|Décrit des éléments à prendre en considération lors de la configuration d'un serveur pour exécuter des jeux d'éléments de collecte d'utilitaire et de non-utilitaire sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considérations sur l'exécution de jeux d'éléments de collecte de l'utilitaire et non-utilitaire sur la même instance de SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
+|Décrit des éléments à prendre en considération lors de la configuration d'un serveur pour exécuter des jeux d'éléments de collecte d'utilitaire et de non-utilitaire sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considérations sur l’exécution de jeux d’éléments de collecte de l’utilitaire et non-utilitaire sur la même instance de SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Décrit comme créer un point de contrôle d'utilitaire SQL Server.|[Créer un point de contrôle de l’utilitaire SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Décrit comment se connecter à un Utilitaire SQL Server.|[Se connecter à un utilitaire SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  
 |Décrit comment inscrire une instance de SQL Server auprès d'un point de contrôle d'utilitaire.|[Inscrire une instance de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)|  
-|Décrit comment utiliser l'Explorateur d'utilitaire pour gérer l'Utilitaire SQL Server.|[Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)|  
+|Décrit comment utiliser l'Explorateur d'utilitaire pour gérer l'Utilitaire SQL Server.|[Utiliser l’Explorateur d’utilitaire pour gérer l’utilitaire SQL Server](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)|  
 |Décrit comment surveiller les instances de SQL Server dans l'Utilitaire SQL Server.|[Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)|  
 |Décrit comment afficher les résultats d'une stratégie de contrôle d'intégrité des ressources.|[Consulter les résultats d’une stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)|  
-|Décrit comment modifier une définition de stratégie de contrôle d'intégrité des ressources.|[Modifier une définition de la stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)|  
+|Décrit comment modifier une définition de stratégie de contrôle d'intégrité des ressources.|[Modifier une définition de la stratégie de contrôle d’intégrité des ressources &#40;Utilitaire SQL Server&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)|  
 |Décrit comment configurer votre entrepôt de données UCP.|[Configurer votre entrepôt de données de point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)|  
 |Décrit comment configurer les stratégies de contrôle d'intégrité de l'utilitaire.|[Configurer des stratégies de contrôle d’intégrité &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)|  
 |Décrit comment ajuster l'atténuation dans les stratégies d'utilisation du processeur.|[Réduire le bruit dans les stratégies d’utilisation du processeur &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
-|Décrit comment supprimer une instance de SQL Server d'un UCP.|[Supprimer une instance de SQL Server de l'utilitaire SQL Server](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
+|Décrit comment supprimer une instance de SQL Server d'un UCP.|[Supprimer une instance de SQL Server de l’utilitaire SQL Server](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
 |Décrit comment modifier le compte proxy pour le collecteur de données de l'utilitaire sur une instance gérée de SQL Server.|[Modifier le compte proxy pour le jeu d’éléments de collecte de l’utilitaire sur une instance gérée de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Décrit comment déplacer un UCP d'une instance de SQL Server vers une autre.|[Déplacer un UCP d’une instance de SQL Server vers une autre &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Décrit comment supprimer un UCP.|[Supprimer un point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|Décrit comment résoudre les problèmes de l'utilitaire SQL Server.|[Résolution des problèmes liés à l'utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|Décrit comment résoudre les problèmes de l'utilitaire SQL Server.|[Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |Décrit comment résoudre les problèmes d'intégrité des ressources de SQL Server.|[Résoudre les problèmes de contrôle d’intégrité de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
-|Liens vers les rubriques d'aide (F1) de l'Explorateur d'utilitaire.|[Aide sur l'Explorateur d'objets accessible via la touche F1](../../relational-databases/manage/utility-explorer-f1-help.md)|  
+|Liens vers les rubriques d'aide (F1) de l'Explorateur d'utilitaire.|[Aide (F1) sur l’Explorateur d’utilitaire](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   
   

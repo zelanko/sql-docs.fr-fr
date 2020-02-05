@@ -23,18 +23,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5aa5e2a60189a82fb60cd416b7f87b35824e236f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118980"
 ---
-# <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
+# <a name="db_name-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette fonction retourne le nom de la base de données spécifiée.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ Si l’appelant de `DB_NAME` ne possède pas une base de données non **MASTER**
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-current-database-name"></a>A. Renvoi du nom de la base de données active  
+### <a name="a-returning-the-current-database-name"></a>R. Renvoi du nom de la base de données active  
 L’exemple suivant retourne le nom de la base de données active.
   
 ```sql

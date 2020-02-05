@@ -14,10 +14,10 @@ ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 286513b2c78c87a1a0275b94d3e09ad961c4ff8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026617"
 ---
 # <a name="load-xml-data"></a>Charger des données XML
@@ -33,7 +33,7 @@ ms.locfileid: "68026617"
 ## <a name="bulk-loading-xml-data"></a>Chargement en masse de données XML  
  Vous pouvez charger en masse des données XML sur le serveur en utilisant les fonctions de chargement en masse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme bcp. OPENROWSET vous permet de charger des données dans une colonne XML à partir de fichiers. L'exemple suivant illustre ce comportement :  
   
-##### <a name="example-loading-xml-from-files"></a>Exemple : Chargement de données XML à partir de fichiers  
+##### <a name="example-loading-xml-from-files"></a>Exemple : chargement de données XML à partir de fichiers  
  Cet exemple montre comment insérer une ligne dans la table T. La valeur de la colonne XML est chargée à partir du fichier C:\MyFile\xmlfile.xml en tant que CLOB, et la colonne integer prend la valeur 10.  
   
 ```  
@@ -53,7 +53,7 @@ FROM    (SELECT *
   
 -   Pour utiliser un encodage explicite, utilisez le type **varbinary()** , qui n’a aucune interaction avec les pages de codes, ou utilisez un type chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : Spécification implicite d’un encodage  
+### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : mention explicite d'un encodage  
  Supposez que vous avez un document XML, vcdoc, stocké au format **varchar(max)** , qui ne comporte aucune déclaration XML explicite. L’instruction ci-dessous permet d’ajouter une déclaration XML mentionnant l’encodage « iso8859-1 », de concaténer le document XML, de convertir le résultat au format **varbinary(max)** de façon à conserver la représentation en octets, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
   
 ```  

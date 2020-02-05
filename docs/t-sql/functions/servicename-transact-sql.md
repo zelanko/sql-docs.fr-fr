@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: adae0818964e55bffb71dd415dde9cb74297f3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906110"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67906110"
 
   Renvoie le nom de la clé de registre sous laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution. @@SERVICENAME renvoie 'MSSQLSERVER' si l’instance en cours est l’instance par défaut ; cette fonction renvoie le nom de l’instance si l’instance en cours est une instance nommée.  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67906110"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute en tant que service nommé MSSQLServer.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant illustre l'utilisation de `@@SERVICENAME`.  
+ L’exemple suivant montre l’utilisation de `@@SERVICENAME`.  
   
 ```  
 SELECT @@SERVICENAME AS 'Service Name';  

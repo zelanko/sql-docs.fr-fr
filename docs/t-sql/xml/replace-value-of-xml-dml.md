@@ -18,10 +18,10 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051227"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
@@ -46,7 +46,7 @@ Identifie la nouvelle valeur du nœud. Peut être une expression qui retourne un
 ## <a name="examples"></a>Exemples  
 Les exemples ci-dessous d’instruction DML XML DML **replace value of** montrent comment mettre à jour des nœuds dans un document XML.  
   
-### <a name="a-replacing-values-in-an-xml-instance"></a>A. Remplacement de valeurs dans une instance XML  
+### <a name="a-replacing-values-in-an-xml-instance"></a>R. Remplacement de valeurs dans une instance XML  
 Dans l’exemple suivant, une instance de document est d’abord affectée à une variable de type **xml**. Ensuite, des instructions DML XML **replace value of** mettent à jour des valeurs dans le document.  
   
 ```sql

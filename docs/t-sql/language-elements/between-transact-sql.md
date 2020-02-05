@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947761"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67947761"
 
   Définit un intervalle sur lequel la recherche doit porter.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,10 +51,10 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  Indique la négation du résultat du prédicat.  
   
  *begin_expression*  
- Toute expression valide. *begin_expression* doit être du même type de données que *test_expression* et *end_expression*.  
+ Peut être toute expression valide. *begin_expression* doit être du même type de données que *test_expression* et *end_expression*.  
   
  *end_expression*  
- Toute expression valide. *end_expression* doit être du même type de données que *test_expression* et *begin_expression*.  
+ Peut être toute expression valide. *end_expression* doit être du même type de données que *test_expression* et *begin_expression*.  
   
  AND  
  Agit en tant qu’espace réservé qui indique que *test_expression* doit se trouver dans la plage indiquée par *begin_expression* et *end_expression*.  
@@ -72,7 +72,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-between"></a>A. Utilisation de BETWEEN  
+### <a name="a-using-between"></a>R. Utilisation de BETWEEN  
  L’exemple suivant retourne des informations sur les rôles de base de données dans une base de données. La première requête retourne tous les rôles. Le deuxième exemple utilise la clause `BETWEEN` pour limiter les rôles aux valeurs `database_id` spécifiées.  
   
 ```sql  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a8362ab1cdf55af1c3735ee9ab27fb9991b07e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0c0ad89bed910450618c043e7ab5dd2d96fff342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770833"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288300"
 ---
 # <a name="agent-profiles-single-agent"></a>Profils de l'Agent (agent unique)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "68770833"
  **Valeur par défaut pour nouveau**  
  Sélectionnez le profil à utiliser lorsque des travaux sont créés pour un agent d'un type donné. Par exemple, si vous créez plusieurs abonnements à une publication de fusion, le travail de l'Agent de fusion pour chaque abonnement utilisera le profil sélectionné. Si vous souhaitez modifier le profil de travaux existants, sélectionnez un profil, puis cliquez sur **Modifier les Agents existants**.  
   
- **Name**  
- Nom du profil  
+ **Nom**  
+ Nom du profil.  
   
  **Type**  
- Type de profil : **Utilisateur** (défini par l’utilisateur) ou **Système** (prédéfini).  
+ Type de profil : **Utilisateur** (défini par l'utilisateur) ou **Système** (prédéfini).  
   
  **Propriétés (...)**  
  Cliquez sur cette option pour voir les valeurs utilisées pour chaque paramètre dans le profil de l'agent.  

@@ -11,10 +11,10 @@ ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295563"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (base de données SSISDB)
@@ -39,7 +39,7 @@ catalog.create_environment [@folder_name =] folder_name
  Nom du dossier destiné à contenir l’environnement. *folder_name* est de type **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- Nom de l'environnement. *environment_name* est de type **nvarchar(128)** .  
+ Nom de l’environnement. *environment_name* est de type **nvarchar(128)** .  
   
  [@environment_description=] *environment_description*  
  Description facultative de l'environnement. *environment_description* est de type **nvarchar(1024)** .  

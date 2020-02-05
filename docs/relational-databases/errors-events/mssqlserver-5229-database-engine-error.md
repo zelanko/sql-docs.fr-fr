@@ -12,13 +12,13 @@ ms.assetid: 0d9e50da-4f42-4b3a-bc84-daf05cf0e0e5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebbb795ff7f4a90a99aad21e7435e63c82858409
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122965"
 ---
-# <a name="mssqlserver5229"></a>MSSQLSERVER_5229
+# <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "68122965"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|5229|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|5229|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE) ; il existe une colonne « antimatière », mais il ne s’agit pas d’un index non-cluster.|  
+|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) ; il existe une colonne « anti-matière », mais il ne s'agit pas d'un index non cluster.|  
   
 ## <a name="explanation"></a>Explication  
 Un segment de mémoire ou un index cluster contient une colonne « antimatière » alors qu'il ne devrait pas.  

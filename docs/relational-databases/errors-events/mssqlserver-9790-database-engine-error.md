@@ -12,13 +12,13 @@ ms.assetid: 83fd379f-5deb-4f97-8cb4-282e3d3fed94
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 67aa62efb3f77c82aec4b1f5d654532cfadd74fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903821"
 ---
-# <a name="mssqlserver9790"></a>MSSQLSERVER_9790
+# <a name="mssqlserver_9790"></a>MSSQLSERVER_9790
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67903821"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|9790|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|9790|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SB3_XMIT_ERROR_ENTRANCE_BROKER_SINGLE_USER|  
 |Texte du message|Impossible d'acheminer le message entrant. La base de données MSDB système contenant les informations d'acheminement est en mode SINGLE USER.|  

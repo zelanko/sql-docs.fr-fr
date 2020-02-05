@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094574"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68094574"
 
 Cette fonction retourne des informations sur les événements de serveur et de base de données. Lorsqu’une notification d’événement est déclenchée et que le Service Broker spécifié reçoit les résultats, `EVENTDATA` est appelé. Un déclencheur DDL ou d’ouverture de session prend également en charge l’utilisation interne de `EVENTDATA`.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,15 +73,15 @@ Les données retournées par `EVENTDATA` ne sont pas valides après une transact
 Les mots de passe ne s’affichent pas pendant l’exécution d’instructions `CREATE LOGIN` ou `ALTER LOGIN` de façon à préserver la sécurité de connexion.  
   
 ## <a name="schemas-returned"></a>Schémas retournés  
-EVENTDATA renvoie une valeur dont le type de données est **xml**. Par défaut, la définition de schéma pour tous les événements est installée dans ce répertoire : [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA renvoie une valeur dont le type de données est **xml**. Par défaut, la définition de schéma de tous les événements s’installe dans ce répertoire : [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
 La page web [Schémas XML Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) comporte également le schéma d’événement.  
   
-Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `EVENT_INSTANCE_DROP_TABLE`, recherchez `DROP_TABLE` dans le schéma.  
+Pour extraire le schéma pour un événement particulier, recherchez dans le schéma le type complexe `EVENT_INSTANCE_<event_type>`. Par exemple, pour extraire le schéma de l’événement `DROP_TABLE`, recherchez `EVENT_INSTANCE_DROP_TABLE` dans le schéma.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. Interrogation des données d'événement dans un déclencheur DDL  
+### <a name="a-querying-event-data-in-a-ddl-trigger"></a>R. Interrogation des données d'événement dans un déclencheur DDL  
 Cet exemple crée un déclencheur DDL qui empêche la création de nouvelles tables de base de données. La requête XQuery effectuée sur les données XML générées par `EVENTDATA` a pour effet de capturer l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui active le déclencheur. Voir [Informations de référence sur le langage XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md) pour plus d’informations.  
   
 > [!NOTE]  

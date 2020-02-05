@@ -12,13 +12,13 @@ ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a38a5470c51145141eda81d30eaadd8ff9f72e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002024"
 ---
-# <a name="mssqlserver2579"></a>MSSQLSERVER_2579
+# <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "68002024"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2579|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2579|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_EXTENT_OUT_OF_RANGE|  
-|Texte du message|Erreur de table, l’extension P_ID, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE) est en dehors des limites de cette base de données.|  
+|Texte du message|Erreur de table : l'extension P_ID, ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) est en dehors des limites de cette base de données.|  
   
 ## <a name="explanation"></a>Explication  
 *P_ID* est un ID de page de la forme *(filenum:pageinfile)* . La valeur de *pageinfile* de cette extension est supérieure à la taille physique du fichier (*filenum*) de la base de données. L'extension est marquée comme étant allouée dans une page IAM pour l'ID d'unité d'allocation indiquée.  

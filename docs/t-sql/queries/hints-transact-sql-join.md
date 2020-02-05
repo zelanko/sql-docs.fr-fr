@@ -23,10 +23,10 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902018"
 ---
 # <a name="hints-transact-sql---join"></a>Indicateurs (Transact-SQL) - Jointure
@@ -37,7 +37,7 @@ ms.locfileid: "67902018"
 > [!CAUTION]  
 >  Étant donné que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d'exécution pour une requête, nous vous recommandons de ne recourir à ces conseils qu'en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté.
   
- **S’applique à :**  
+ **S’applique à :**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67902018"
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67902018"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-hash"></a>A. Utilisation d'HASH  
+### <a name="a-using-hash"></a>R. Utilisation d'HASH  
  L'exemple suivant spécifie que l'opération `JOIN` figurant dans la requête est effectuée par une jointure `HASH`. L'exemple utilise la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

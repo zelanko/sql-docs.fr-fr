@@ -19,10 +19,10 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9fdcc10cd21714681578489fd1c71db607226086
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284399"
 ---
 # <a name="integration-services-developer-documentation"></a>Documentation Integration Services pour les développeurs
@@ -76,7 +76,7 @@ ms.locfileid: "71284399"
  [Exécution et gestion de packages par programmation](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Décrit comment énumérer, exécuter et gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] par programme.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
  Répertorie les codes d'erreur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prédéfinis, avec leur nom symbolique et leur description.  
   

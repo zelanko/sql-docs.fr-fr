@@ -14,15 +14,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126856"
 ---
-# <a name="sql-injection"></a>Injection SQL
+# <a name="sql-injection"></a>l’injection de code SQL ;
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Une attaque par injection SQL consiste à insérer un code malveillant dans les chaînes transmises ultérieurement à une instance de SQL Server en vue de leur analyse et de leur exécution. Les procédures qui permettent de créer des instructions SQL doivent être vérifiées et analysées à la recherche d’éventuelles failles autorisant cette injection, car SQL Server exécute toutes les requêtes syntaxiquement correctes qu’il reçoit. Même les données paramétrables peuvent être manipulées par un pirate compétent et déterminé.  
+  Une attaque par injection de code SQL est une attaque dans laquelle un code malveillant est inséré dans les chaînes transmises ultérieurement à une instance de SQL Server pour analyse et exécution. Les procédures qui permettent de créer des instructions SQL doivent être vérifiées et analysées à la recherche d’éventuelles failles autorisant cette injection, car SQL Server exécute toutes les requêtes syntaxiquement correctes qu’il reçoit. Même les données paramétrables peuvent être manipulées par un pirate compétent et déterminé.  
   
 ## <a name="how-sql-injection-works"></a>Comment fonctionne l’injection SQL  
  Les injections SQL prennent principalement la forme d'insertions directes de code dans les variables d'entrée utilisateur qui sont concaténées avec des commandes SQL et exécutées. Des attaques par injection moins directes insèrent un code malveillant dans les chaînes destinées à être stockées dans une table ou en tant que métadonnées. Lorsque les chaînes stockées sont ensuite concaténées dans une commande SQL dynamique, le code nuisible est exécuté.  
@@ -85,14 +85,14 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Ne concaténez jamais une entrée utilisateur qui n'est pas validée. La concaténation de chaîne est le point d'entrée principal pour l'injection de scripts.  
   
--   N’acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, COM1 à COM8, CON, CONFIG$, LPT1 à LPT8, NUL et PRN.  
+-   N'acceptez pas les chaînes suivantes dans les champs à partir desquels les noms de fichiers peuvent être construits : AUX, CLOCK$, de COM1 à COM8, CON, CONFIG$, de LPT1 à LPT8, NUL et PRN.  
   
  Si possible, rejetez les entrées qui contiennent les caractères suivants.  
   
 |Caractère entré|Signification dans Transact-SQL|  
 |---------------------|------------------------------|  
 |**;**|Délimiteur de requête|  
-|**»**|Délimiteur de chaîne de données de caractères|  
+|**'**|Délimiteur de chaîne de données de caractères|  
 |**--**|Délimiteur de chaîne de données de caractères<br />.|  
 |**/\*** ... **\*/**|Délimiteurs de commentaire. Le serveur n’évalue pas le texte qui figure entre les caractères **/\*** et **\*/** .|  
 |**xp_**|Figure au début du nom des procédures stockées étendues de catalogue, telles que `xp_cmdshell`.|  

@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298475"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestionnaire de connexions SAP BW
@@ -40,7 +40,7 @@ ms.locfileid: "71298475"
   
 -   Fournissez le numéro d'hôte et du système pour un serveur d'applications unique, ou fournissez le serveur de messages, le groupe et le SID pour un groupe de serveurs à charge équilibrée.  
   
--   Activez la journalisation personnalisée des appels de fonction RFC pour les composants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. (Cette journalisation diffère de la journalisation facultative que vous pouvez activer sur les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].) Pour activer la journalisation des appels de fonction RFC, spécifiez un répertoire dans lequel stocker les fichiers journaux qui sont créés avant et après chaque appel de fonction RFC. (Cette fonctionnalité de journalisation crée un grand nombre de fichiers journaux au format XML. Comme ces fichiers journaux contiennent également toutes les lignes de données qui sont transférées, ils peuvent occuper beaucoup d'espace sur le disque.) Si vous ne sélectionnez pas de répertoire de journal, la journalisation n'est pas activée.  
+-   Activez la journalisation personnalisée des appels de fonction RFC pour les composants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. (Cette journalisation diffère de la journalisation facultative que vous pouvez activer sur les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .) Pour activer la journalisation des appels de fonction RFC, spécifiez un répertoire dans lequel stocker les fichiers journaux qui sont créés avant et après chaque appel de fonction RFC. (Cette fonctionnalité de journalisation crée un grand nombre de fichiers journaux au format XML. Comme ces fichiers journaux contiennent également toutes les lignes de données qui sont transférées, ils peuvent occuper beaucoup d'espace sur le disque.) Si vous ne sélectionnez pas de répertoire de journal, la journalisation n'est pas activée.  
   
     > [!IMPORTANT]  
     >  Si les données qui sont transférées contiennent des informations sensibles, les fichiers journaux contiendront également ces informations sensibles.  
@@ -87,7 +87,7 @@ ms.locfileid: "71298475"
  **Langage**  
  Spécifiez la langue utilisée par le système. Par exemple, spécifiez **FR** pour le français.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Spécifiez le nom d'utilisateur qui sera utilisé pour se connecter au système.  
   
  **Mot de passe**  
@@ -121,7 +121,7 @@ ms.locfileid: "71298475"
 > [!NOTE]  
 >  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser l’équilibrage de charge** .  
   
- **Grouper**  
+ **Groupe**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez le nom du groupe de serveurs.  
   
 > [!NOTE]  
@@ -152,6 +152,6 @@ ms.locfileid: "71298475"
  Testez la connexion à l'aide des valeurs que vous avez fournies. Après avoir cliqué sur **Tester la connexion**, un message apparaît et indique si la connexion a été établie ou si elle a échoué.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

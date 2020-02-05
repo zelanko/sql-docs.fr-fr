@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594148"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73594148"
 
 Crée les informations d’identification d’une base de données. Les informations d’identification d’une base de données ne sont pas mappées à un compte de connexion de serveur ou à un utilisateur de la base de données. Les informations d’identification sont utilisées par la base de données pour accéder à l’emplacement externe chaque fois que la base de données effectue une opération nécessitant un accès.
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -86,7 +86,7 @@ Exige l’autorisation **CONTROL** sur la base de données.
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Création d’informations d’identification délimitées à la base de données pour votre application
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>R. Création d’informations d’identification délimitées à la base de données pour votre application
 
 L’exemple suivant crée des informations d’identification délimitées à la base de données nommées `AppCred`. Les informations d’identification délimitées à la base de données contiennent l’utilisateur Windows `Mary5` et un mot de passe.
 

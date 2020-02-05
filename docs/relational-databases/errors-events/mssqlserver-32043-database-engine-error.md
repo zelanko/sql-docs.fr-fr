@@ -12,13 +12,13 @@ ms.assetid: a0c48ae3-4c8c-419c-afb5-579fcefac01d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8d7de359bcc478f821252f35344dd1b539a8beed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041174"
 ---
-# <a name="mssqlserver32043"></a>MSSQLSERVER_32043
+# <a name="mssqlserver_32043"></a>MSSQLSERVER_32043
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68041174"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|32043|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|32043|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum32043|  
 |Texte du message|L'alerte relative au journal non restauré s'est déclenchée. La valeur actuelle de '%d' dépasse le seuil '%d'.|  

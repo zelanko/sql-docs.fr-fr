@@ -14,10 +14,10 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a7ecbe24971e4138dfc55c847d07efa5e901f1f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295263"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (base de données SSISDB)
@@ -63,7 +63,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  [ @reference_id = ] *reference_id*  
  ID unique de la référence environnementale. Ce paramètre est obligatoire uniquement quand une référence environnementale unique est incluse dans la validation, quand *environment_scope* est `S`. *reference_id* est de type **bigint**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  

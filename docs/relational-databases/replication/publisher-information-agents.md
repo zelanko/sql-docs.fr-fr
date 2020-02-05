@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c0670e972dfb3c93a3b41dea67ebe5300c534843
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769735"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287488"
 ---
 # <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "68769735"
 ## <a name="options"></a>Options  
  Pour afficher des informations sur un agent ou un travail, sélectionnez l'option de votre choix dans le menu déroulant **Types d'agents et de travaux** . Pour des informations plus détaillées et obtenir des tâches en relation avec un Agent ou un travail, cliquez avec le bouton droit sur la ligne correspondant à cet Agent ou à ce travail, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Trier** : cette option vous permet d’effectuer un tri sur une ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes**.  
+-   **Trier**: cette option vous permet d'effectuer un tri sur ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes** .  
   
--   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
+-   **Choisir les colonnes à afficher**: cette option vous permet de sélectionner les colonnes à afficher et l'ordre d'affichage dans la boîte de dialogue **Choisir les colonnes** .  
   
--   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
+-   **Filtre**: cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre** .  
   
--   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
+-   **Effacer le filtre**: cette option vous permet d'effacer tous les paramètres du filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "68769735"
   
 -   Error  
   
--   Réessayer  
+-   Recommencer  
   
 -   Exécution en cours  
   
--   Terminé  
+-   Completed  
   
  **Publication**  
  Nom de la publication à laquelle l'agent est associé.  
@@ -79,7 +79,7 @@ ms.locfileid: "68769735"
  **Dernière heure de début**  
  Dernière heure à laquelle l'Agent a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée pendant laquelle l'agent s'est exécuté. Cette durée représente le temps actuel si l'agent est en cours d'exécution ou le temps total d'exécution s'il a été exécuté et s'est terminé.  
   
  **Dernière action**  
@@ -100,7 +100,7 @@ ms.locfileid: "68769735"
   
 -   Error  
   
--   Réessayer  
+-   Recommencer  
   
 -   Exécution en cours  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68769735"
  **Dernière heure de début**  
  Dernière heure à laquelle l'Agent a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée pendant laquelle l'agent s'est exécuté. Cette durée représente le temps actuel si l'agent est en cours d'exécution ou le temps total d'exécution s'il a été exécuté et s'est terminé.  
   
  **Dernière action**  
@@ -139,7 +139,7 @@ ms.locfileid: "68769735"
   
 -   Error  
   
--   Réessayer  
+-   Recommencer  
   
 -   Exécution en cours  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68769735"
  **Dernière heure de début**  
  Dernière heure à laquelle l'Agent a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée pendant laquelle l'agent s'est exécuté. La durée correspond au délai écoulé si l'Agent est actif ou au délai total si l'Agent a déjà été exécuté.  
   
  **Dernière action**  
@@ -178,7 +178,7 @@ ms.locfileid: "68769735"
   
 -   Error  
   
--   Réessayer  
+-   Recommencer  
   
 -   Exécution en cours  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68769735"
  **Dernière heure de début**  
  Dernière heure à laquelle le travail a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution du travail. Cette durée correspond au temps écoulé si le travail est en cours d'exécution et à la durée totale si le travail a été accompli précédemment.  
   
  **Dernière action**  

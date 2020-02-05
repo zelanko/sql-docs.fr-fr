@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111762"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
@@ -91,7 +91,7 @@ END
   
 -   Elles ne peuvent pas être supprimées ou modifiées si elles sont référencées par une procédure stockée liée à un schéma ou par une fonction définie par l’utilisateur.  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  Les fonctions scalaires définies par l'utilisateur compilées en mode natif prennent en charge SHOWPLAN_XML. Elles sont conformes au schéma SHOWPLAN_XML générales, comme les procédures stockées compilées en mode natif. L’élément de base des fonctions définies par l’utilisateur est `<UDF>`.  
   
  STATISTICS XML n’est pas pris en charge pour les fonctions scalaires définies par l’utilisateur compilées en mode natif. Lorsque vous exécutez une requête faisant référence à la fonction définie par l’utilisateur avec STATISTICS XML activé, le contenu XML est retourné sans la partie de la fonction définie par l’utilisateur.  
@@ -103,6 +103,6 @@ END
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Enregistrer un plan d'exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
+ [Enregistrer un plan d’exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

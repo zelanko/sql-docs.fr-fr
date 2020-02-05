@@ -12,13 +12,13 @@ ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e915f74e6bd3e686916aeb2de2f78d8d2e9ae439
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67937957"
 ---
-# <a name="mssqlserver926"></a>MSSQLSERVER_926
+# <a name="mssqlserver_926"></a>MSSQLSERVER_926
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67937957"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|926|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|926|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DB_SUSPECT|  
 |Texte du message|La base de données '%.*ls' ne peut pas être ouverte. Elle a été marquée SUSPECT lors de la récupération. Pour plus d’informations, consultez le journal des erreurs SQL Server.|  
@@ -49,8 +49,8 @@ Si la récupération a échoué en raison d'une erreur d'E/S permanente, d'une p
 Si vous n'arrivez pas à résoudre ce problème, contactez votre fournisseur d'assistance principal. Fournissez-lui le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin qu'il puisse l'examiner.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Sauvegarde et restauration des bases de données SQL Server](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+[Sauvegarder et restaurer des bases de données SQL Server](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
 [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
 [sys.sysdatabases &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
-[Attacher et détacher une base de données &#40;SQL Server&#41;](~/relational-databases/databases/database-detach-and-attach-sql-server.md)  
+[Attacher et détacher une base de données &#40;SQL Server&#41;](~/relational-databases/databases/database-detach-and-attach-sql-server.md)  
   

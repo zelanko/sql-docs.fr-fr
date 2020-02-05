@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940240"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary et varbinary (Transact-SQL)
@@ -43,7 +43,7 @@ Quand la valeur de _n_ n’est pas spécifiée dans une définition de données 
 
 | Type de données | Utilisation quand... |
 | --- | --- |
-| **binaire** | les tailles des entrées de données de la colonne sont cohérentes.|
+| **binary** | les tailles des entrées de données de la colonne sont cohérentes.|
 | **varbinary** | les tailles des entrées de données de la colonne varient considérablement.|
 | **varbinary(max)** | la taille des entrées de données de la colonne dépasse 8 000 octets.|
 
@@ -55,9 +55,9 @@ Lors de la conversion de données de type chaîne en type **binary** ou **varbin
 * **varchar**
 * **nchar**
 * **nvarchar**
-* **binaire**
+* **binary**
 * **varbinary**
-* **texte**
+* **text**
 * **ntext**
 * **image**
 

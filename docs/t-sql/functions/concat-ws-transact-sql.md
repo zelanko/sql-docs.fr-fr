@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075330"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Cette fonction retourne une chaîne qui résulte de la concaténation ou de la jointure de deux valeurs de chaîne ou plus, de bout en bout. Elle sépare ces valeurs de chaîne concaténées avec le délimiteur spécifié dans le premier argument de la fonction. (`CONCAT_WS` indique *concaténer avec un séparateur*.)
@@ -62,7 +62,7 @@ Si un scénario implique des valeurs NULL séparées par un délimiteur, utilise
 
 ## <a name="examples"></a>Exemples   
 
-### <a name="a--concatenating-values-with-separator"></a>A.  Concaténer des valeurs avec séparateur
+### <a name="a--concatenating-values-with-separator"></a>R.  Concaténer des valeurs avec séparateur
 Cet exemple concatène trois colonnes de la table sys.databases, en séparant les valeurs par `-`.   
 
 ```sql

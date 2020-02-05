@@ -12,13 +12,13 @@ ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087591"
 ---
-# <a name="mssqlserver7933"></a>MSSQLSERVER_7933
+# <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "68087591"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7933|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7933|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Texte du message|Erreur de table, un ID de répertoire Filestream F_ID existe pour une partition, mais la partition correspondante n’existe pas dans la base de données.|  
+|Texte du message|Erreur de table : un ID de répertoire FILESTREAM F_ID existe pour une partition, mais la partition correspondante n'existe pas dans la base de données.|  
   
 ## <a name="explanation"></a>Explication  
 Au cours de l'exécution de DBCC CHECKDB, un répertoire d'ensemble de lignes a été trouvé dans l'espace de données FILESTREAM ; toutefois, sa partition correspondante reste introuvable dans la base de données.  

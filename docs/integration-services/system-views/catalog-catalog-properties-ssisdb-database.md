@@ -11,10 +11,10 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295227"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (base de données SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71295227"
 
   Affiche les propriétés du catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar (256)**|Nom de la propriété de catalogue.|  
 |property_value|**nvarchar (256)**|Valeur de la propriété de catalogue.|  
@@ -37,11 +37,11 @@ ms.locfileid: "71295227"
 |Nom de la propriété|Description|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|Mode d’exécution par défaut à l’échelle du serveur pour les packages : `Server` (0) ou `Scale Out` (1). |
-|**ENCRYPTION_ALGORITHM**|Type d'algorithme de chiffrement utilisé pour chiffrer des données sensibles. Les valeurs prises en charge incluent : `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` et `AES_256`. Remarque : La base de données de catalogue doit être en mode mono-utilisateur pour modifier cette propriété.|
+|**ENCRYPTION_ALGORITHM**|Type d'algorithme de chiffrement utilisé pour chiffrer des données sensibles. Les valeurs prises en charge incluent : `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` et `AES_256`. Remarque : la base de données de catalogue doit être en mode mono-utilisateur pour modifier cette propriété.|
 |**IS_SCALEOUT_ENABLED**|Si la valeur est `True`, la fonctionnalité SSIS Scale Out est activée. Si vous n’avez pas activé Scale Out, cette propriété peut ne pas apparaître dans la vue.|
 |**MAX_PROJECT_VERSIONS**|Nombre de nouvelles versions du projet qui sont conservées pour un projet unique. Quand le nettoyage de version est permis, les versions antérieures au-delà de ce nombre sont supprimées.|  
 |**OPERATION_CLEANUP_ENABLED**|Quand la valeur est `TRUE`, les détails et les messages de l’opération plus anciens que **RETENTION_WINDOW** (jours) sont supprimés du catalogue. Lorsque la valeur est `FALSE`, tous les détails et les messages de l'opération sont stockés dans le catalogue. Remarque : un travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue le nettoyage de l'opération.|  
-|**RETENTION_WINDOW**|Nombre de jours que les détails et les messages de l'opération sont stockés dans le catalogue. Lorsque la valeur est `-1`, la période de conservation est infinie. Remarque : Si aucun nettoyage n’est souhaité, affectez à **OPERATION_CLEANUP_ENABLED** la valeur **FALSE**.|
+|**RETENTION_WINDOW**|Nombre de jours que les détails et les messages de l'opération sont stockés dans le catalogue. Lorsque la valeur est `-1`, la période de conservation est infinie. Remarque : Si aucun nettoyage n’est souhaité, définissez **OPERATION_CLEANUP_ENABLED** sur **FALSE**.|
 |**SCHEMA_BUILD**|Numéro de build du schéma de la base de données du catalogue SSISDB. Ce numéro change chaque fois que le catalogue SSISDB est créé ou mis à niveau.|
 |**SCHEMA_VERSION**|Numéro de version principale du schéma de la base de données du catalogue SSISDB. Ce numéro change chaque fois que le catalogue SSISDB est créé ou que la version principale est mise à niveau.|
 |**VALIDATION_TIMEOUT**|Les validations sont arrêtées si elles ne s’achèvent pas dans le nombre de secondes spécifié par cette propriété.|  

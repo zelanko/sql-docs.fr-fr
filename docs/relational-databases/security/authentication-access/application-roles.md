@@ -22,17 +22,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903787"
 ---
-# <a name="application-roles"></a>Rôles d'applications
+# <a name="application-roles"></a>Rôles d’application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un rôle d'application est un principal de base de données qui permet à une application de s'exécuter avec ses propres autorisations de type utilisateur. Vous pouvez utiliser les rôles d'application pour permettre l'accès à des données spécifiques aux utilisateurs qui se connectent via une application spécifique. À la différence des rôles de base de données, les rôles d'application ne contiennent pas de membres et sont inactifs par défaut. Les rôles d’application sont activés grâce à **sp_setapprole**qui nécessite un mot de passe. Les rôles d’application étant un principal au niveau des bases de données, ils peuvent uniquement accéder à d’autres bases de données par le biais des autorisations accordées dans ces bases de données à **invité**. Toute base de données où **invité** a été désactivé est donc inaccessible aux rôles d’application des autres bases de données.  
   
- Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les rôles d'application ne peuvent pas accéder à des métadonnées au niveau serveur, car ils ne sont pas associés à un principal au niveau serveur Pour désactiver cette restriction et permettre ainsi aux rôles d'application d'accéder aux métadonnées de niveau serveur, définissez l'indicateur global 4616. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) et [DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).  
+ Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les rôles d'application ne peuvent pas accéder à des métadonnées au niveau serveur, car ils ne sont pas associés à un principal au niveau serveur Pour désactiver cette restriction et permettre ainsi aux rôles d'application d'accéder aux métadonnées de niveau serveur, définissez l'indicateur global 4616. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) et [DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).  
   
 ## <a name="connecting-with-an-application-role"></a>Connexion avec un rôle d'application  
  Les étapes suivantes composent le processus par lequel un rôle d'application fait basculer les contextes de sécurité :  

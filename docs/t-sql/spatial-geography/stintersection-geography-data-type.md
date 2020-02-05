@@ -18,10 +18,10 @@ ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a06620641fd69479bba3c3b46ab04e337c2dc18d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042050"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (type de données geography)
@@ -56,7 +56,7 @@ ms.locfileid: "68042050"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Calcul de l'intersection d'une instance Polygon et LineString  
+### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>R. Calcul de l'intersection d'une instance Polygon et LineString  
  L'exemple suivant utilise `STIntersection()` pour calculer l'intersection d'un `Polygon` et d'un `LineString`.  
   
 ```  

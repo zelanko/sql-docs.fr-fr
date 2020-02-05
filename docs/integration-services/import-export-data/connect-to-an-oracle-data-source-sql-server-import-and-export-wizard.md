@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285435"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Oracle (Assistant Importation et Exportation SQL Server)
@@ -61,11 +61,11 @@ Pour vous connecter à Oracle au moyen du pilote ODBC pour Oracle, assemblez une
 **Driver**  
 Nom du pilote ODBC, **Microsoft ODBC for Oracle**.
 
-**Server**  
+**Serveur**  
 Nom du serveur Oracle. 
 
 **UID** et **Pwd**   
-Id d’utilisateur et mot de passe pour se connecter.
+ID d’utilisateur et mot de passe pour se connecter.
 
 ### <a name="connection-string-format"></a>Format de la chaîne de connexion
 Voici le format d’une chaîne de connexion standard.
@@ -86,7 +86,7 @@ Exécutez une des requêtes suivantes pour obtenir le nom de votre serveur Oracl
 
 `SELECT host_name FROM v$instance`
 
-ou Gestionnaire de configuration
+or
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

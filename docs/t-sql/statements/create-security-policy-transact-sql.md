@@ -26,10 +26,10 @@ ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117293"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117293"
 
   Crée une stratégie de sécurité pour la sécurité au niveau des lignes.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -107,7 +107,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent l'utilisation de la syntaxe **CREATE SECURITY POLICY** . Pour obtenir un exemple de scénario de stratégie de sécurité complet, consultez [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md).  
   
-### <a name="a-creating-a-security-policy"></a>A. Création d'une stratégie de sécurité  
+### <a name="a-creating-a-security-policy"></a>R. Création d'une stratégie de sécurité  
  La syntaxe suivante crée une stratégie de sécurité avec un prédicat de filtre pour la table Customer et laisse la stratégie de sécurité désactivée.  
   
 ```  

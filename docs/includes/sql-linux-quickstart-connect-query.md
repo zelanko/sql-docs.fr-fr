@@ -44,7 +44,7 @@ La procédure suivante crée une base de données nommée `TestDB`.
    ```
 
 > [!TIP]
-> Pour en savoir plus sur l’écriture de requêtes et d’instructions Transact-SQL, consultez [Didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Pour plus d’informations sur l’écriture de requêtes d’instructions Transact-SQL, consultez la page [Didacticiel : écrire des instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Insertion des données
 

@@ -33,10 +33,10 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211214"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "70211214"
 
   Démarre le minuteur. Quand le délai d’attente expire, [!INCLUDE[ssSB](../../includes/sssb-md.md)] place un message de type `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` sur la file d’attente locale de la conversation.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,13 +56,13 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
+ BEGIN CONVERSATION TIMER **(** _conversation\_handle_ **)**  
  Indique la conversation à minuter. *conversation_handle* doit être de type **uniqueidentifier**.  
   
  TIMEOUT  
  Indique, en secondes, le délai qui doit s'écouler avant le placement du message dans la file d'attente.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un minuteur de conversation permet à une application de recevoir un message sur une conversation après un délai spécifié. Appeler BEGIN CONVERSATION TIMER sur une conversation avant l'expiration du délai permet de définir une nouvelle valeur d'expiration. Contrairement à la durée de vie d'une conversation, chaque partie d'une conversation dispose d'un minuteur indépendant. Le message **DialogTimer** arrive dans la file d’attente locale sans affecter le côté distant de la conversation. Par conséquent, une application peut utiliser un message de minuteur à quelque fin que ce soit.  
   
  Par exemple, vous pouvez utiliser le minuteur pour éviter à une application d'attendre trop longtemps une réponse. Si l'application est censée terminer un dialogue en 30 secondes, vous pouvez définir le minuteur pour ce dialogue sur 60 secondes (30 secondes plus une période de grâce de 30 secondes). Si le dialogue est toujours ouvert une fois les 60 secondes écoulées, l'application reçoit un message d'expiration du délai dans la file d'attente de ce dialogue.  
@@ -85,7 +85,7 @@ BEGIN CONVERSATION TIMER (@dialog_handle)
 TIMEOUT = 120 ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)  

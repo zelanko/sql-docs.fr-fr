@@ -12,13 +12,13 @@ ms.assetid: bf838f02-7186-4b33-b01e-361b0c02de1f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a11f78e1ef38e432ba2b999877e6e5384ac1f386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043658"
 ---
-# <a name="mssqlserver3452"></a>MSSQLSERVER_3452
+# <a name="mssqlserver_3452"></a>MSSQLSERVER_3452
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68043658"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|3452|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|3452|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|REC_CHECKIDENTITY|  
 |Texte du message|La récupération de la base de données '%.*ls' (%d) a détecté une possible incohérence de valeurs d'identité dans la table ID %d. Exécutez DBCC CHECKIDENT (’%.\*ls’).|  

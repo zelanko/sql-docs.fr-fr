@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077472"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Déployer un cluster Pacemaker pour SQL Server sur Linux
@@ -29,7 +29,7 @@ Ce tutoriel décrit les tâches requises pour déployer un cluster Pacemaker Lin
 > * Créez le cluster Pacemaker.
 > * Installez les packages HA et SQL Server Agent de SQL Server.
  
-## <a name="prerequisite"></a>Condition préalable
+## <a name="prerequisite"></a>Configuration requise
 [Installer SQL Server 2017](sql-server-linux-setup.md).
 
 ## <a name="install-the-high-availability-add-on"></a>Installer le module complémentaire de haute disponibilité

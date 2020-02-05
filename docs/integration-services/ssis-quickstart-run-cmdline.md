@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295720"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Exécuter un package SSIS à partir de l’invite de commandes avec DTExec.exe
@@ -43,7 +43,7 @@ Si le dossier qui contient `DTExec.exe` ne figure pas dans votre variable d’en
 
 Avec les valeurs de paramètres utilisées dans l’exemple suivant, le programme exécute le package qui se trouve au chemin de dossier spécifié sur le serveur SSIS, autrement dit le serveur qui héberge la base de données du catalogue SSIS (SSISDB). Le paramètre `/Server` fournit le nom du serveur. Le programme se connecte en tant que l’utilisateur actuel avec l’Authentification intégrée de Windows. Pour utiliser l’authentification SQL, spécifiez les paramètres `/User` et `Password` avec les valeurs appropriées.
 
-1. Ouvrez une fenêtre d'invite de commandes.
+1. Ouvrez une fenêtre d’invite de commandes.
 
 2. Exécutez `DTExec.exe` et fournissez des valeurs pour au moins les paramètres `ISServer` et `Server`, comme indiqué dans l’exemple suivant :
 

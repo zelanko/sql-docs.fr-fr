@@ -12,13 +12,13 @@ ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3efa12b744d331949fc0af18f555e603f18e33ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123100"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68123100"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|4186|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|4186|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
 |Texte du message|La colonne '%ls.%.*ls' ne peut pas être référencée dans la clause OUTPUT parce que la définition de colonne contient une sous-requête ou référence une fonction qui offre un accès aux données utilisateur ou système. Une fonction est censée par défaut offrir un accès aux données si elle n'est pas liée au schéma. Pensez à supprimer la sous-requête ou la fonction de la définition de colonne ou à supprimer la colonne de la clause OUTPUT.|  

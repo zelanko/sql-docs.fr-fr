@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 482991f4faad8fff3747556c47166096ae4974ec
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633503"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287856"
 ---
-# <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programmation
+# <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programme
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Le moniteur de réplication est un outil graphique permettant d'analyser une topologie de réplication. Vous pouvez accéder par programmation aux mêmes données d'analyse en utilisant les procédures stockées de réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou les objets RMO (Replication Management Objects). Ces objets permettent de programmer les tâches suivantes :  
   
@@ -138,7 +138,7 @@ ms.locfileid: "69633503"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationMonitor>.  
   
 3.  Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "69633503"
   
 2.  Récupérez un objet <xref:Microsoft.SqlServer.Replication.PublisherMonitor> par l'un ou l'autre de ces moyens.  
   
-    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Définissez la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> pour le serveur de publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, le nom du serveur de publication n'a pas été correctement défini ou la publication n'existe pas.  
+    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor>. Définissez la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> pour le serveur de publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, le nom du serveur de publication n'a pas été correctement défini ou la publication n'existe pas.  
   
     -   Depuis le <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> accessible au moyen de la propriété <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> d'un objet <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> existant.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "69633503"
   
 2.  Récupérez un objet <xref:Microsoft.SqlServer.Replication.PublicationMonitor> par l'un ou l'autre de ces moyens.  
   
-    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, les propriétés de publication n'ont pas été correctement définies ou la publication n'existe pas.  
+    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, les propriétés de publication n'ont pas été correctement définies ou la publication n'existe pas.  
   
     -   Depuis le <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> accessible au moyen de la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> d'un objet <xref:Microsoft.SqlServer.Replication.PublisherMonitor> existant.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "69633503"
   
 2.  Récupérez un objet <xref:Microsoft.SqlServer.Replication.PublicationMonitor> par l'un ou l'autre de ces moyens.  
   
-    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, les propriétés de publication n'ont pas été correctement définies ou la publication n'existe pas.  
+    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, les propriétés de publication n'ont pas été correctement définies ou la publication n'existe pas.  
   
     -   Depuis le <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> accessible au moyen de la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> d'un objet <xref:Microsoft.SqlServer.Replication.PublisherMonitor> existant.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "69633503"
   
 2.  Récupérez un objet <xref:Microsoft.SqlServer.Replication.PublicationMonitor> par l'un ou l'autre de ces moyens.  
   
-    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, les propriétés de publication n'ont pas été correctement définies ou la publication n'existe pas.  
+    -   Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A>et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec le <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé au cours de l'étape 1. Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, les propriétés de publication n'ont pas été correctement définies ou la publication n'existe pas.  
   
     -   Depuis le <xref:Microsoft.SqlServer.Replication.PublicationMonitorCollection> accessible au moyen de la propriété <xref:Microsoft.SqlServer.Replication.PublisherMonitor.PublicationMonitors%2A> d'un objet <xref:Microsoft.SqlServer.Replication.PublisherMonitor> existant.  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013352"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>Le service de cluster WSFC est hors connexion
@@ -31,7 +31,7 @@ ms.locfileid: "68013352"
 |-|-|  
 |**Nom de la stratégie**|État du cluster WSFC|  
 |**Problème**|Le service de cluster WSFC est hors connexion.|  
-|**Catégorie**|**Critique**|  
+|**Catégorie**|**Critical**|  
 |**Facette**|Instance de SQL Server|  
   
 ## <a name="description"></a>Description  

@@ -17,10 +17,10 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072203"
 ---
 # <a name="transaction-isolation-levels"></a>Niveaux d'isolement des transactions
@@ -48,7 +48,7 @@ ms.locfileid: "68072203"
   
  Le tableau suivant comporte une synthèse d'accès aux métadonnées pour les différents niveaux d'isolement.  
   
-|Niveau d'isolation|Pris en charge|Respect|  
+|Niveau d'isolation|Prise en charge|Respect|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|Non|Non garanti|  
 |READ COMMITTED|Oui|Oui|  

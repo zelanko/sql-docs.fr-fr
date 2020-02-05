@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981922"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -48,7 +48,7 @@ Met fin à un processus utilisateur basé sur l'ID de session ou sur l'unité de
   
 KILL met fin à une connexion normale, ce qui arrête en interne les transactions associées à l'ID de session spécifié. Il est possible que Distributed Transaction Coordinator (MS DTC) [!INCLUDE[msCoName](../../includes/msconame-md.md)] soit en cours d’utilisation. Si MS DTC est en cours d’utilisation, vous pouvez également utiliser l’instruction pour mettre fins à des transactions distribuées orphelines et incertaines.  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -123,13 +123,13 @@ Cette erreur se produit également si aucun ID de session ni aucun UOW ne sont e
 Le même rapport d’état peut être obtenu en répétant la même instruction KILL _session ID_|_UOW_ sans utiliser l’option WITH STATUSONLY. Toutefois, il n’est pas recommandé de répéter l’option de cette façon. Si vous répétez une instruction KILL _session ID_, il est possible que le nouveau processus s’arrête si la restauration est achevée et que l’ID de session a été réaffecté à une nouvelle tâche avant l’exécution de la nouvelle instruction KILL. Empêchez le nouveau processus de s’arrêter en spécifiant WITH STATUSONLY.  
   
 ## <a name="permissions"></a>Autorisations  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Nécessite l’autorisation ALTER ANY CONNECTION. ALTER ANY CONNECTION est incluse avec appartenance au rôle de serveur fixe sysadmin ou processadmin.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** Nécessite l’autorisation ALTER ANY CONNECTION. ALTER ANY CONNECTION est incluse avec appartenance au rôle de serveur fixe sysadmin ou processadmin.  
   
-**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Nécessite l’autorisation KILL DATABASE CONNECTION. La connexion du principal au niveau du serveur a l’autorisation KILL DATABASE CONNECTION.  
+**[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :** Nécessite l’autorisation KILL DATABASE CONNECTION. La connexion du principal au niveau du serveur a l’autorisation KILL DATABASE CONNECTION.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-kill-to-stop-a-session"></a>A. Utilisation de KILL pour arrêter une session  
+### <a name="a-using-kill-to-stop-a-session"></a>R. Utilisation de KILL pour arrêter une session  
  L'exemple suivant indique comment arrêter l'ID de session `53`.  
   
 ```sql  

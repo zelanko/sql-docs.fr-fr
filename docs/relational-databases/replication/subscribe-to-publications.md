@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768357"
 ---
 # <a name="subscribe-to-publications"></a>S'abonner à des publications
@@ -38,7 +38,7 @@ ms.locfileid: "68768357"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-|Abonnement|Caractéristiques|Cas d'utilisation|  
+|Subscription|Caractéristiques|Cas d'utilisation|  
 |------------------|---------------------|--------------|  
 |Abonnement envoyé|Avec un abonnement par envoi de données, le serveur de publication propage les modifications à un Abonné sans que ce dernier en ait fait la demande. Les modifications peuvent être envoyées à des Abonnés à la demande, en continu ou selon un horaire planifié. L'Agent de distribution ou l'Agent de fusion s'exécute sur le serveur de distribution.|Les données sont censées être synchronisées de façon permanente ou à intervalles fréquents et périodiques.<br /><br /> La publication nécessite un transfert en temps réel (ou presque) des données.<br /><br /> L'augmentation de la charge imposée au processeur d'un serveur de distribution n'affecte pas les performances.<br /><br /> Le plus souvent utilisé avec la réplication d'instantané et la réplication transactionnelle.|  
 |Abonnement extrait|Dans le cas d'un abonnement par extraction, l'Abonné demande à recevoir les modifications apportées sur le serveur de publication. Ce type d'abonnement permet à l'utilisateur sur l'Abonné de déterminer le moment où les modifications sont synchronisées. L'Agent de distribution ou l'Agent de fusion s'exécute sur l'Abonné.|Avec ce type d'abonnement, les données sont en général synchronisées à la demande ou selon un horaire planifié plutôt qu'en continu.<br /><br /> La publication compte un grand nombre d'Abonnés et l'exécution de tous les agents sur un seul site ou sur le serveur de distribution entraînerait une consommation excessive des ressources.<br /><br /> Les abonnés sont autonomes, non connectés et/ou mobiles. Ils déterminent à quel moment ils se connectent et synchronisent les modifications.<br /><br /> Le plus souvent utilisé avec la réplication de fusion.|  
@@ -68,7 +68,7 @@ ms.locfileid: "68768357"
   
  **Pour créer un abonnement envoyé**  
   
- [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md)  
+ [Créer un abonnement par émission de données](../../relational-databases/replication/create-a-push-subscription.md)  
   
  **Pour afficher ou modifier les propriétés d'un abonnement par envoi de données**  
   
@@ -76,14 +76,14 @@ ms.locfileid: "68768357"
   
  **Pour supprimer un abonnement par envoi de données**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Supprimer un abonnement par émission (push)](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Supprimer un abonnement par émission de données](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  La suppression d'un abonnement n'entraîne pas la suppression des objets publiés sur l'Abonné.  
   
  **Pour créer un abonnement par extraction de données**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Créer un abonnement par extraction (pull)](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **Pour afficher ou modifier les propriétés d'un abonnement extrait**  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68768357"
   
  **Pour supprimer un abonnement extrait**  
   
- [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)  
+ [Supprimer un abonnement par extraction (pull)](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécuriser l’abonné](../../relational-databases/replication/security/secure-the-subscriber.md)   

@@ -12,13 +12,13 @@ ms.assetid: d63b67d5-59f5-4f77-904e-5ba67f2dd850
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 676f0d1d131e8cc1a1c5265384bcd53cf11e9dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116179"
 ---
-# <a name="mssqlserver1101"></a>MSSQLSERVER_1101
+# <a name="mssqlserver_1101"></a>MSSQLSERVER_1101
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68116179"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1101|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1101|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|NOALLOCPG|  
 |Texte du message|Impossible d’allouer une nouvelle page pour la base de données ’%.*ls’ en raison d’un espace disque insuffisant dans le groupe de fichiers ’%.\*ls’. Créez l'espace nécessaire en supprimant des objets dans le groupe de fichiers, en ajoutant des fichiers supplémentaires au groupe de fichiers ou en définissant Autogrowth à ON pour les fichiers existants dans le groupe de fichiers.|  

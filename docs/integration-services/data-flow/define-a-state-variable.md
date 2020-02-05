@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292937"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
@@ -49,7 +49,7 @@ ms.locfileid: "71292937"
   
  Le tableau suivant décrit les valeurs possibles d'état de capture de données modifiées.  
   
-|État|Description|  
+|State|Description|  
 |-----------|-----------------|  
 |(INITIAL)|Il s'agit de l'état initial avant l'exécution d'un package sur le groupe CDC actuel. Il s'agit également de l'état correspondant à une capture de données modifiées vide.|  
 |ILSTART (charge initiale démarrée)|Il s'agit de l'état au démarrage du package de charge initiale, après l'appel de l'opération **MarkInitialLoadStart** à la tâche de contrôle CDC.|  

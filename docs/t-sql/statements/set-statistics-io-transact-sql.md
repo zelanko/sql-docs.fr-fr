@@ -26,10 +26,10 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941849"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67941849"
 
   Force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à afficher des informations sur la quantité d’activité générée sur le disque par les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ SET STATISTICS IO { ON | OFF }
 |Élément de sortie|Signification|  
 |-----------------|-------------|  
 |**Table**|Nom de la table.|  
-|**Nombre d’analyses**|Nombre de recherches ou d’analyses démarrées après avoir atteint le niveau feuille dans n’importe quelle direction afin de récupérer toutes les valeurs pour construire le dataset final de la sortie.<br /><br /> Le nombre d’analyses est 0 si l’index utilisé est un index unique ou un index cluster sur une clé principale et que vous recherchez une seule valeur. Par exemple, `WHERE Primary_Key_Column = <value>`.<br /><br /> Le nombre d’analyses est 1 quand vous recherchez une valeur à l’aide d’un index cluster non unique défini sur une colonne clé non primaire. Ce processus permet de rechercher les valeurs en double de la valeur de clé que vous recherchez. Par exemple, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Le nombre d’analyses est N quand N correspond au nombre de recherches ou d’analyses différentes à gauche ou à droite au niveau feuille après avoir recherché une valeur de clé à l’aide de la clé d’index.|  
+|**Nombre d’analyses**|Nombre de recherches ou d’analyses démarrées après avoir atteint le niveau feuille dans n’importe quelle direction afin de récupérer toutes les valeurs pour construire le dataset final de la sortie.<br /><br /> Le nombre d’analyses est 0 si l’index utilisé est un index unique ou un index cluster sur une clé principale et que vous recherchez une seule valeur. Par exemple : `WHERE Primary_Key_Column = <value>`.<br /><br /> Le nombre d’analyses est 1 quand vous recherchez une valeur à l’aide d’un index cluster non unique défini sur une colonne clé non primaire. Ce processus permet de rechercher les valeurs en double de la valeur de clé que vous recherchez. Par exemple : `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Le nombre d’analyses est N quand N correspond au nombre de recherches ou d’analyses différentes à gauche ou à droite au niveau feuille après avoir recherché une valeur de clé à l’aide de la clé d’index.|  
 |**Lectures logiques**|Nombre de pages lues à partir du cache de données.|  
 |**Lectures physiques**|Nombre de pages lues depuis le disque.|  
 |**Lectures anticipées**|Nombre de pages placées dans le cache pour la requête.|  

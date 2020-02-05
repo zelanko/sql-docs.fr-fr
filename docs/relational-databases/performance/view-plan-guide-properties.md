@@ -15,10 +15,10 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987140"
 ---
 # <a name="view-plan-guide-properties"></a>Afficher les propriétés du repère de plan
@@ -62,7 +62,7 @@ ms.locfileid: "67987140"
      **Est désactivé**  
      Affiche l'état du repère de plan. Les valeurs possibles sont **True** et **False**.  
   
-     **Name**  
+     **Nom**  
      Affiche le nom du repère de plan.  
   
      **Paramètres**  
@@ -89,7 +89,7 @@ ms.locfileid: "67987140"
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Pour afficher les propriétés d'un repère de plan  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

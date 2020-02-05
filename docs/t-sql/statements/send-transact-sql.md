@@ -25,10 +25,10 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211428"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211428"
 
 Envoie un message à l'aide d'une ou de plusieurs conversations existantes.  
   
-![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,9 +57,9 @@ MESSAGE TYPE *message_type_name*
 Spécifie le type du message envoyé. Ce type de message doit être inclus dans les contrats de service qu'utilisent ces conversations. Ces contrats doivent autoriser l'envoi de ce type de message depuis cette partie de la conversation. Par exemple, les services cibles des conversations ne peuvent envoyer que les messages spécifiés dans le contrat comme SENT BY TARGET ou SENT BY ANY. Si cette clause est omise, le message est du type DEFAULT.  
   
 *message_body_expression*  
-Fournit une expression représentant le corps du message. *message_body_expression* est facultatif. Toutefois, si *message_body_expression* est présent, le type d’expression doit pouvoir être converti vers le type **varbinary(max)**. Cette expression ne peut pas avoir la valeur NULL. Si cette clause est omise, le corps du message est vide.  
+Fournit une expression représentant le corps du message. *message_body_expression* est facultatif. Toutefois, si *message_body_expression* est présent, le type d’expression doit pouvoir être converti vers le type **varbinary(max)** . Cette expression ne peut pas avoir la valeur NULL. Si cette clause est omise, le corps du message est vide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
 >  Si l’instruction SEND n’est pas la première instruction d’un traitement ou d’une procédure stockée, celle qui précède doit se terminer par un point-virgule (;).  
@@ -96,7 +96,7 @@ L’instruction SEND n’est pas valide dans une fonction définie par l’utili
 Pour envoyer un message, l'utilisateur actuel doit avoir l'autorisation RECEIVE sur la file d'attente de chaque service qui envoie le message.  
   
 ## <a name="examples"></a>Exemples  
-L'exemple ci-dessous illustre le début d'un dialogue et l'envoi d'un message XML dans le cadre du dialogue. Pour envoyer le message, l’exemple convertit l’objet xml au format **varbinary(max)**.  
+L'exemple ci-dessous illustre le début d'un dialogue et l'envoi d'un message XML dans le cadre du dialogue. Pour envoyer le message, l’exemple convertit l’objet xml au format **varbinary(max)** .  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -144,7 +144,7 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
     (@OrderMsg) ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
 [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   

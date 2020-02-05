@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050191"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
@@ -98,7 +98,7 @@ ms.locfileid: "68050191"
   
  S’il n’existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s’affiche pas.  
   
- Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Classements et pages de code](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
+ Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
   
  Vous pouvez configurer les paramètres suivants pour la clé primaire :  
   

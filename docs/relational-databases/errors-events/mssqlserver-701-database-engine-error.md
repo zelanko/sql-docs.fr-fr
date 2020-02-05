@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907717"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -26,14 +26,14 @@ ms.locfileid: "72907717"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|701|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|701|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|NOSYSMEM|  
 |Texte du message|Mémoire système insuffisante pour exécuter cette requête.|  
   
 ## <a name="explanation"></a>Explication  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas réussi à allouer suffisamment de mémoire pour exécuter la requête. Cela peut être dû à plusieurs causes, notamment aux paramètres du système d'exploitation, à la mémoire physique disponible ou aux limites de la mémoire sur la charge de travail courante. La plupart du temps, la transaction qui échoue n'est pas la cause de l'erreur.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas réussi à allouer suffisamment de mémoire pour exécuter la requête. Cela peut être dû à diverses raisons, notamment des paramètres de système d’exploitation, une disponibilité de mémoire physique ou des limites de mémoire sur la charge de travail en cours. Dans la plupart des cas, la transaction qui a échoué n’est pas la cause de cette erreur.  
   
 Les requêtes de diagnostic, telles que les instructions DBCC, peuvent échouer parce que la mémoire du serveur est insuffisante.  
   

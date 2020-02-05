@@ -13,10 +13,10 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298991"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Appliquer des modifications à la destination
@@ -27,7 +27,7 @@ ms.locfileid: "71298991"
   Dans le flux d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la troisième et dernière tâche consiste à appliquer les modifications à votre destination. Vous aurez besoin de trois composants : un pour appliquer les insertions, un pour appliquer les mises à jour et un pour appliquer les suppressions.  
   
 > [!NOTE]  
->  La deuxième tâche pour concevoir le flux de données d'un package qui effectue un chargement incrémentiel des données modifiées consiste à séparer les insertions, les mises à jour et les suppressions. Pour plus d’informations sur ce composant, consultez [Traiter les insertions, les mises à jour et les suppressions](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md). Pour obtenir une description du processus global de création d’un package qui effectue un chargement incrémentiel des données modifiées, consultez [Capture de données modifiées &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
+>  La deuxième tâche pour concevoir le flux de données d'un package qui effectue un chargement incrémentiel des données modifiées consiste à séparer les insertions, les mises à jour et les suppressions. Pour plus d’informations sur ce composant, consultez [Traiter les insertions, les mises à jour et les suppressions](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md). Pour obtenir une description du processus global de création d’un package qui effectue un chargement incrémentiel des données modifiées, consultez [Capture des données modifiées &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
 ## <a name="applying-inserts"></a>Application d'insertions  
  Pour appliquer des insertions, vous utilisez une destination OLE DB car les nouvelles lignes ne requièrent pas de traitement spécial.  

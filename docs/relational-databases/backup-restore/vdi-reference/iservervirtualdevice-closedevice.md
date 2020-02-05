@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c73649e2a4301e94f8e68504222cc0122061f25f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847430"
 ---
 # <a name="iservervirtualdeviceclosedevice-vdi"></a>IServerVirtualDevice::CloseDevice (VDI)
@@ -28,9 +28,9 @@ La fonction **CloseDevice** ferme un appareil virtuel qui avait été ouvert ave
 HRESULT IServerVirtualDevice::CloseDevice ();
 ```
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | VD_E_CLOSE | L’appareil est déjà fermé. |
 | VD_E_ABORT | L’interface est dans un état Abort (Abandon). |

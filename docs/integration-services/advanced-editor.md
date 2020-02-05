@@ -17,10 +17,10 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eedc7754a9bb5f48a07b4865cfb426f7e234d192
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294982"
 ---
 # <a name="advanced-editor"></a>Éditeur avancé
@@ -50,7 +50,7 @@ ms.locfileid: "71294982"
   
 -   [Propriétés personnalisées des transformations](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Propriétés du chemin d'accès](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Propriétés du chemin](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  Pour plus d'informations sur le composant spécifique que vous modifiez, consultez la description du composant dans la section « Composants des flux de données » de la documentation Objets et concepts d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   

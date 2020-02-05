@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412545"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server
@@ -283,7 +283,7 @@ Lorsque le plan de requête d’une procédure native nécessite une phase d’a
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Conception d'application : Transactions et logique de nouvelle tentative
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Conception de l’application : transactions et logique des nouvelles tentatives
 
 Une transaction impliquant une table optimisée en mémoire peut devenir dépendante d’une autre transaction qui implique la même table. Si le nombre de transactions dépendantes dépasse la valeur maximale autorisée, toutes les opérations dépendantes échouent.
 

@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903911"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
@@ -26,7 +26,7 @@ ms.locfileid: "72903911"
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ##  <a name="BeforeYouBegin"></a> Rubriques connexes 
- Outre la consultation des propriétés des entités de Resource Governor, vous pouvez effectuer plusieurs tâches de configuration à l'aide de la page **ropriétés de Resource Governor** . Pour plus d'informations, consultez ces rubriques :  
+ Outre la consultation des propriétés des entités de Resource Governor, vous pouvez effectuer plusieurs tâches de configuration à l'aide de la page **ropriétés de Resource Governor** . Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72903911"
  **Pools de ressources**  
  Créez ou modifiez la configuration des pools de ressources et des pools de ressources externes à l’aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un pool de ressources, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
- **Name**  
+ **Nom**  
  Spécifiez le nom du pool de ressources.  
   
  **% processeur minimal**  
@@ -92,7 +92,7 @@ ms.locfileid: "72903911"
  **Groupes de charge de travail pour le pool de ressources**  
  Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un groupe de charges de travail, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
- **Name**  
+ **Nom**  
  Spécifiez le nom du groupe de charges de travail.  
   
  **Importance**  

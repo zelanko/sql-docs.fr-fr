@@ -26,16 +26,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948287"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Récupère des lignes de la base de données et permet de sélectionner une ou plusieurs lignes ou colonnes d'une ou de plusieurs tables dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La syntaxe complète de l'instruction SELECT est complexe mais en voici les principales clauses :  
+  Récupère des lignes de la base de données et permet de sélectionner une ou plusieurs lignes ou colonnes d’une ou de plusieurs tables dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La syntaxe complète de l'instruction SELECT est complexe mais en voici les principales clauses :  
   
 [ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
@@ -51,7 +51,7 @@ ms.locfileid: "67948287"
   
  Les opérateurs UNION, EXCEPT et INTERSECT peuvent être utilisés entre plusieurs requêtes pour combiner ou comparer leurs résultats dans un seul jeu de résultats.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -120,11 +120,11 @@ SELECT <select_criteria>
   
  Certaines restrictions syntaxiques s'appliquent aux instructions SELECT impliquant des tables distantes.  
   
-## <a name="logical-processing-order-of-the-select-statement"></a>Ordre de traitement logique de l'instruction SELECT  
+## <a name="logical-processing-order-of-the-select-statement"></a>Ordre logique de traitement de l’instruction SELECT  
  Les étapes suivantes indiquent l'ordre de traitement logique, ou ordre de liaison, d'une instruction SELECT. Cet ordre détermine à quel moment les objets définis au cours d'une étape deviennent disponibles pour les clauses des étapes suivantes. Par exemple, si le processeur de requêtes peut se lier (accéder) aux tables ou vues définies dans la clause FROM, ces objets et leurs colonnes deviennent disponibles pour toutes les étapes suivantes. À l'inverse, puisque la clause SELECT correspond à l'étape 8, aucun alias de colonne ni aucune colonne dérivée défini(e) dans cette clause ne peut être référencé(e) par les clauses précédentes. Cependant, ils peuvent être référencés par les clauses suivantes telles que la clause ORDER BY. L’exécution physique réelle de l’instruction est déterminée par le processeur de requêtes, et l’ordre peut différer de cette liste.  
   
 1.  FROM  
-2.  ON  
+2.  ACTIVÉ  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -146,7 +146,7 @@ SELECT <select_criteria>
 ## <a name="examples"></a>Exemples :   
 Les exemples suivants utilisent la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
-### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilisation de SELECT pour extraire des lignes et des colonnes  
+### <a name="a-using-select-to-retrieve-rows-and-columns"></a>R. Utilisation de SELECT pour extraire des lignes et des colonnes  
  Cette section présente trois exemples de code. Le premier exemple de code retourne toutes les lignes (aucune clause WHERE n’est définie) et toutes les colonnes (en utilisant `*`) de la table `DimEmployee`.  
   
 ```sql  

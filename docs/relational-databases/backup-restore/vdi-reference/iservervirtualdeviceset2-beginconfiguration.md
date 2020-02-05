@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847480"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -46,9 +46,9 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 
 *dwTimeout* : nombre de millisecondes à attendre que le client principal termine de déclarer les zones de mémoire tampon qu’il fournit.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | NOERROR | L’ensemble d’appareils virtuels est dans l’état Configurable. |
 | VD_E_ABORT | SignalAbort a été appelé. |

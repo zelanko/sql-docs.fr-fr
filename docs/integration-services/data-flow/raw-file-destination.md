@@ -21,10 +21,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292179"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
@@ -156,7 +156,7 @@ ms.locfileid: "71292179"
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
 ###  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
- **Mode d'accès**  
+ **Mode d’accès**  
  Sélectionnez la façon dont le nom de fichier est spécifié. Sélectionnez **Nom de fichier** pour entrer directement le nom de fichier et le chemin d'accès, ou bien **Nom de fichier à partir d'une variable** pour spécifier une variable qui contient le nom de fichier.  
   
  **Nom de fichier** ou **Nom de la variable**  
@@ -198,7 +198,7 @@ ms.locfileid: "71292179"
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
 ###  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
- **Mode d'accès**  
+ **Mode d’accès**  
  Sélectionnez la façon dont le nom de fichier est spécifié. Sélectionnez **Nom de fichier** pour entrer directement le nom de fichier et le chemin d'accès, ou bien **Nom de fichier à partir d'une variable** pour spécifier une variable qui contient le nom de fichier.  
   
  **Nom de fichier** ou **Nom de la variable**  

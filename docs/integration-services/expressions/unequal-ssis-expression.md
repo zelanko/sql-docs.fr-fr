@@ -14,10 +14,10 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67aa61e65bc89246cfb0c685d08a32371a5fc4df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287902"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Différent de) (expression SSIS)
@@ -39,7 +39,7 @@ expression1 != expression2
   
 ## <a name="arguments"></a>Arguments  
  *expression1, expression2*  
- Toute expression valide.  
+ Peut être toute expression valide.  
   
 ## <a name="result-types"></a>Types des résultats  
  DT_BOOL  
@@ -56,7 +56,7 @@ expression1 != expression2
     > [!NOTE]  
     >  Les comparaisons de chaîne respectent la casse, les accents, le jeu de caractères Kana et la largeur.  
   
--   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
+-   **Date, Heure ou Date/Heure** : *expression1* et *expression2* doivent toutes deux s’évaluer à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  
@@ -85,12 +85,12 @@ expression1 != expression2
   
 -   **Binaire** : *expression1* et *expression2* doivent toutes deux s’évaluer au type de données DT_BYTES.  
   
--   **BLOB** : *expression1* et *expression2* doivent toutes deux correspondre au même type de données BLOB (Binary Large Object Block) : DT_TEXT, DT_NTEXT ou DT_IMAGE.  
+-   **BLOB** : *expression1* et *expression2* doivent toutes deux s’évaluer au même type de données BLOB (Binary Large Object Block) : DT_TEXT, DT_NTEXT ou DT_IMAGE.  
   
  Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- L'exemple suivant renvoie la valeur TRUE uniquement si la date actuelle n'est pas le 4 juillet 2003. Pour plus d’informations, consultez [GETDATE &#40;expression SSIS&#41;](../../integration-services/expressions/getdate-ssis-expression.md).  
+ L'exemple suivant renvoie la valeur TRUE uniquement si la date actuelle n'est pas le 4 juillet 2003. Pour plus d’informations, consultez [GETDATE &#40;expression SSIS&#41;](../../integration-services/expressions/getdate-ssis-expression.md).  
   
 ```  
 "7/4/2003" != GETDATE()  

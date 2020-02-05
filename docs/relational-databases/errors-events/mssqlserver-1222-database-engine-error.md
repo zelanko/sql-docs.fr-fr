@@ -12,10 +12,10 @@ ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 99add77f12934928a72354e40e87b5025bdd6ec7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908637"
 ---
 # <a name="mssqlserver_1222"></a>MSSQLSERVER_1222
@@ -26,8 +26,8 @@ ms.locfileid: "72908637"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1222|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1222|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|LK_TIMEOUT|  
 |Texte du message|Délai de requête de verrou dépassé.|  

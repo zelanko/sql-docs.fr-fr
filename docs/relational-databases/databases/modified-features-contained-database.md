@@ -13,10 +13,10 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067340"
 ---
 # <a name="modified-features-contained-database"></a>Fonctionnalités modifiées (base de données autonome)
@@ -46,7 +46,7 @@ ms.locfileid: "68067340"
  Les tables temporaires ne peuvent pas faire référence aux types définis par l'utilisateur, aux collections de schémas XML ou aux fonctions définies par l'utilisateur.  
   
 ## <a name="collation"></a>Classement  
- Dans le modèle de base de données non autonome, il existe trois types de classement distincts : le classement de base de données, le classement d’instance et le classement TempDB. Les bases de données autonomes utilisent uniquement deux classements, le classement de base de données et le nouveau classement de catalogue. Consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md) pour plus d’informations sur le classement de bases de données autonomes.  
+ Dans le modèle de base de données non autonome, il existe trois types de classement distincts : classement de base de données, classement d’instance et classement tempdb. Les bases de données autonomes utilisent uniquement deux classements, le classement de base de données et le nouveau classement de catalogue. Consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md) pour plus d’informations sur le classement de bases de données autonomes.  
   
 ## <a name="user-options"></a>Options utilisateur  
  Au moment d’activer les bases de données autonomes, l’option [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) doit avoir la valeur 0 pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
