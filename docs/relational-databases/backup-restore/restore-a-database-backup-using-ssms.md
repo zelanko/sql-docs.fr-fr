@@ -20,10 +20,10 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70278768"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restaurer une sauvegarde de base de données à l’aide de SSMS
@@ -38,23 +38,23 @@ Lors de la restauration d’une base de données d’une autre instance, tenez c
     
 Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique utilisé(e) pour chiffrer la base de données. Sans le certificat ou la clé asymétrique, vous ne pouvez pas restaurer cette base de données. Vous devez conserver le certificat utilisé pour chiffrer la clé de chiffrement de base de données tant que vous en avez besoin pour enregistrer la sauvegarde. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).    
     
-Si vous restaurez une base de données de version antérieure vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], cette base de données est mise à niveau automatiquement vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ainsi, la base de données ne peut pas être utilisée avec une version antérieure du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Toutefois, cela concerne la mise à niveau des métadonnées et n’affecte pas le [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Si vous restaurez une base de données de version antérieure vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], cette base de données est mise à niveau automatiquement vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ainsi, la base de données ne peut pas être utilisée avec une version antérieure du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Toutefois, cela concerne la mise à niveau des métadonnées et n’affecte pas le [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 En général, la base de données est immédiatement disponible. Toutefois si une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, en fonction du paramètre de la propriété de serveur **Option de mise à niveau du catalogue de texte intégral** . Si vous affectez la valeur **Importer** ou **Reconstruire**à l’option de mise à niveau, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. En fonction du volume de données indexé, l’importation peut prendre plusieurs heures et la reconstruction jusqu’à dix fois plus longtemps.     
     
-Quand vous affectez la valeur **Importer**à l’option de mise à niveau, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral**, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Quand vous affectez la valeur **Importer**à l’option de mise à niveau, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Pour plus d’informations sur la restauration SQL Server à partir du service de stockage d’objets blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
 ## <a name="examples"></a>Exemples
     
-### <a name="a-restore-a-full-database-backup"></a>A. Restaurer une sauvegarde complète de base de données   
+### <a name="a-restore-a-full-database-backup"></a>R. Restaurer une sauvegarde complète de base de données   
     
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
     
 2.  Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.    
     
-3.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l'une des options suivantes :    
+3.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l’une des options suivantes :    
     
     -   **Sauvegarde de la base de données**    
     
@@ -63,22 +63,22 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
         > [!NOTE]
         > Si la sauvegarde est prise à partir d'un serveur différent, le serveur de destination ne disposera pas des informations d'historique de sauvegarde pour la base de données spécifiée. Dans ce cas, sélectionnez **Unité** pour spécifier manuellement le fichier ou l'unité à restaurer. 
     
-    -   **Unité**    
+    -   **Appareil**    
     
          Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . 
          
         -   Boîte de dialogue**Sélectionner les unités de sauvegarde**  
         
             **Type de support de sauvegarde**  
-         Sélectionnez un type de support dans la liste déroulante **Type de support de sauvegarde** .  Remarque : L'option **Bande** s'affiche uniquement si un lecteur de bande est connecté à l'ordinateur et l'option **Unité de sauvegarde**, seulement si au moins une unité de sauvegarde est connectée.
+         Sélectionnez un type de support dans la liste déroulante **Type de support de sauvegarde** .  Remarque : L’option **Bande** s’affiche uniquement si un lecteur de bande est connecté à l’ordinateur, et l’option **Unité de sauvegarde** seulement si au moins une unité de sauvegarde est connectée.
 
             **Ajouter**  
             En fonction du type de support sélectionné dans la liste déroulante **Support de sauvegarde** , quand vous cliquez sur **Ajouter** , l’une des boîtes de dialogue suivantes s’ouvre. (Si la liste dans la zone de liste **Support de sauvegarde** est pleine, le bouton **Ajouter** n’est pas disponible.)
 
             |Type de support|Boîte de dialogue|Description|    
             |----------------|----------------|-----------------|    
-            |**Fichier**|**Localiser le fichier de sauvegarde**|Dans cette boîte de dialogue, vous pouvez sélectionner un fichier local depuis l'arborescence ou un fichier distant en utilisant son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
-            |**Unité**|**Sélectionner l'unité de sauvegarde**|Dans cette boîte de dialogue, vous pouvez effectuer une sélection à partir d'une liste d'unités logiques de sauvegarde définies sur l'instance de serveur.|    
+            |**File**|**Localiser le fichier de sauvegarde**|Dans cette boîte de dialogue, vous pouvez sélectionner un fichier local depuis l'arborescence ou un fichier distant en utilisant son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
+            |**Appareil**|**Sélectionner l’unité de sauvegarde**|Dans cette boîte de dialogue, vous pouvez effectuer une sélection à partir d'une liste d'unités logiques de sauvegarde définies sur l'instance de serveur.|    
             |**Bande**|**Sélectionner la bande de sauvegarde**|Dans cette boîte de dialogue, vous pouvez effectuer une sélection à partir d'une liste de lecteurs de bande physiquement connectés à l'ordinateur exécutant l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|    
             |**URL**|**Sélectionner un emplacement de fichier de sauvegarde**|Dans cette boîte de dialogue, vous pouvez sélectionner des informations d’identification SQL Server ou un conteneur de stockage Azure existant, ajouter un nouveau conteneur de stockage Azure avec une signature d’accès partagé, ou générer une signature d’accès partagé et des informations d’identification SQL Server pour un conteneur de stockage existant.  Voir aussi [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).|  
          
@@ -93,7 +93,7 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
     
              Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .    
     
-         Dans la zone de liste **Source : Unité : Base de données**, sélectionnez le nom de la base de données à restaurer.    
+         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.    
     
          > [!NOTE]
          > Cette liste n’est disponible que quand **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.    
@@ -146,9 +146,9 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 7.  Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)** .
 
     > [!NOTE]
-    > Ne pas vérifier cette option peut entraîner le message d’erreur suivant : "System.Data.SqlClient.SqlError: Le jeu de sauvegarde contient la sauvegarde d'une base de données qui n'est pas la base de données '`Sales`' existante. (Microsoft.SqlServer.SmoExtended) »
+    > Si vous ne sélectionnez pas cette option, le message d’erreur suivant risque de s’afficher : « System.Data.SqlClient.SqlError : Le jeu de sauvegarde contient la sauvegarde d’une base de données qui n’est pas la base de données '`Sales`' existante. (Microsoft.SqlServer.SmoExtended) »
 
-8.  Dans la section **Sauvegarde de la fin du journal**, décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
+8.  Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
 
     > [!NOTE]
     > Les scénarios de restauration ne nécessitent pas tous une sauvegarde de la fin du journal. Vous n'avez pas besoin d'une sauvegarde de la fin du journal si le point de récupération est contenu dans une sauvegarde de journal antérieure. En outre, une sauvegarde de la fin du journal est inutile si vous déplacez ou remplacez (par écrasement) la base de données et ne souhaitez pas la restaurer à un point donné après la sauvegarde la plus récente. Pour plus d’informations, consultez [Sauvegardes de la fin du journal (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
@@ -158,7 +158,7 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 9.  Dans la section **Connexions au serveur** , sélectionnez **Fermer les connexions existantes à la base de données de destination**.
 
     > [!NOTE]
-    > Ne pas vérifier cette option peut entraîner le message d’erreur suivant : "System.Data.SqlClient.SqlError: Impossible d'obtenir l'accès exclusif car la base de données est en cours d'utilisation. (Microsoft.SqlServer.SmoExtended) »
+    > Si vous ne sélectionnez pas cette option, le message d’erreur suivant risque de s’afficher : « System.Data.SqlClient.SqlError : Impossible d’obtenir l’accès exclusif car la base de données est en cours d’utilisation. (Microsoft.SqlServer.SmoExtended) »
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -181,13 +181,13 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 
     > [!NOTE]
     > Si vous obtenez le message d’erreur suivant :      
-    > "System.Data.SqlClient.SqlError: La fin du journal pour la base de données "`Sales`" n'a pas été sauvegardée. Utilisez `BACKUP LOG WITH NORECOVERY` pour sauvegarder le journal s’il contient des travaux que vous ne voulez pas perdre. Utilisez la clause `WITH REPLACE` ou `WITH STOPAT` de l’instruction `RESTORE` pour remplacer simplement le contenu du journal. (Microsoft.SqlServer.SmoExtended) ».      
+    > « System.Data.SqlClient.SqlError : La fin du journal pour la base de données « `Sales` » n’a pas été sauvegardée. Utilisez `BACKUP LOG WITH NORECOVERY` pour sauvegarder le journal s’il contient des travaux que vous ne voulez pas perdre. Utilisez la clause `WITH REPLACE` ou `WITH STOPAT` de l’instruction `RESTORE` pour remplacer simplement le contenu du journal. (Microsoft.SqlServer.SmoExtended) ».      
     > Cela signifie probablement que n’avez pas entré le nouveau nom de base de données à l’Étape 6 ci-dessus. Généralement, la restauration empêche le remplacement accidentel d'une base de données par une autre. Si la base de données nommée dans l’instruction `RESTORE` existe déjà sur le serveur actif et que le GUID de famille de la base de données spécifié ne correspond pas à celui qui est enregistré dans le jeu de sauvegarde, la base de données n’est pas restaurée. Cette mesure de sécurité est très importante,
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  Restaurer des sauvegardes sur disque antérieures à une limite dans le temps
 L'exemple suivant restaure une base de données dans l'état où elle se trouvait le `1:23:17 PM` à `May 30, 2016` et décrit une opération de restauration impliquant plusieurs sauvegardes de fichiers journaux. La base de données n’existe pas sur le serveur actuellement.
 
-1.  Dans l’**Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
 2.  Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.  
 3.  Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
 4.  Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Cliquez sur **Ajouter** et accédez à votre sauvegarde complète et à toutes les sauvegardes des journaux de transactions pertinentes.  Cliquez sur **OK** après avoir sélectionné vos fichiers de sauvegarde sur disque.
@@ -208,7 +208,7 @@ Les deux exemples ci-dessous effectuent une restauration de `Sales` à partir d�
 3.  Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
 4.  Cliquez sur le bouton Parcourir (...) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** .    
 5.  Sélectionnez **URL** dans la liste déroulante **Type de support de sauvegarde** .
-6.  Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde**.
+6.  Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner un emplacement de fichier de sauvegarde** .
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   Restaurer une sauvegarde distribuée sur une base de données existante quand il existe une signature d’accès partagé.
 Une stratégie d’accès stockée a été créée avec des droits de lecture, écriture, suppression et liste.  Une signature d’accès partagé associée à la stratégie d’accès stockée a été créée pour le conteneur `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.  Les étapes sont essentiellement les mêmes s’il existe déjà des informations d’identification SQL Server.  La base de données `Sales` existe actuellement sur le serveur.  Les fichiers de sauvegarde sont `Sales_stripe1of2_20160601.bak` et `Sales_stripe2of2_20160601.bak`.  

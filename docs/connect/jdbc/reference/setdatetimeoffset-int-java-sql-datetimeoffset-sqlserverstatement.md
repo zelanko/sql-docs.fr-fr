@@ -11,10 +11,10 @@ ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 166c9ddbd4b5c11b3c032a5a4ecf43c95f183473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974532"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
@@ -44,13 +44,13 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 ## <a name="remarks"></a>Notes  
  Le format DateTimeOffset est « AAAA-MM-JJ HH-MM-SS[.nnnnnnn] [+][-] HH:MM ». Utilisez le tableau suivant à titre de référence.  
   
-|Type SQL|Insert|  
+|Type SQL|Insérer|  
 |--------------|------------|  
 |DATETIME|Peut insérer uniquement : « AAAA-MM-JJ hh:mm:ss[.nnn] »|  
 |smalldatetime|Peut insérer uniquement : « AAAA-MM-JJ hh:mm:ss »|  
-|Time|Peut insérer uniquement : « hh:mm:ss[.nnnnnnn] »|  
+|Temps|Peut insérer uniquement : « hh:mm:ss[.nnnnnnn] »|  
 |Date|Peut insérer uniquement : « AAAA-MM-JJ »|  
-|datetime2|Peut insérer uniquement : « AAAA-MM-JJ hh:mm:ss[.nnnnnnn] »|  
+|DateTime2|Peut insérer uniquement : « AAAA-MM-JJ hh:mm:ss[.nnnnnnn] »|  
   
 ## <a name="see-also"></a>Voir aussi  
  [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   

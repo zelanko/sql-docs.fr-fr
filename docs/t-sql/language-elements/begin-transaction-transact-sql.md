@@ -31,10 +31,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910084"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67910084"
 
   Indique le début d'une transaction locale explicite. Les transactions explicites commencent avec l’instruction BEGIN TRANSACTION et se terminent avec l’instruction COMMIT ou ROLLBACK.  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,17 +66,17 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Arguments  
  *transaction_name*  
- **S’APPLIQUE À :** SQL Server (à compter de 2008), Azure SQL Database
+ **S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
  
  Nom attribué à la transaction. *transaction_name* doit respecter les règles applicables aux identificateurs, mais les identificateurs de plus de 32 caractères ne sont pas autorisés. Utilisez les noms de transaction seulement sur la paire la plus extérieure des instructions BEGIN...COMMIT ou BEGIN...ROLLBACK imbriquées. *transaction_name* respecte toujours la casse, même si l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’en tient pas compte.  
   
  @*tran_name_variable*  
- **S’APPLIQUE À :** SQL Server (à compter de 2008), Azure SQL Database
+ **S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
  
  Nom d'une variable définie par l'utilisateur et contenant un nom de transaction valide. La variable doit être déclarée avec un type de données **char**, **varchar**, **nchar** ou **nvarchar**. Si plus de 32 caractères sont passés à la variable, seuls les 32 premiers caractères seront utilisés et les autres seront tronqués.  
   
  WITH MARK [ '*description*' ]  
-**S’APPLIQUE À :** SQL Server (à compter de 2008), Azure SQL Database
+**S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
 
 Indique que la transaction est marquée dans le journal. *description* est une chaîne qui décrit la marque. Une *description* de plus de 128 caractères est tronquée à 128 caractères avant d’être stockée dans la table msdb.dbo.logmarkhistory.  
   
@@ -133,7 +133,7 @@ COMMIT TRAN T1;
   
  « BEGIN TRAN M2 WITH MARK ...; »  
   
- « Serveur : Msg 3920, Niveau 16, État 1, Ligne 3 »  
+ « Serveur : Msg 3920, Niveau 16, État 1, Ligne 3 »  
   
  « L'option WITH MARK s'applique uniquement à la première instruction BEGIN TRAN WITH MARK. »  
   
@@ -144,8 +144,8 @@ COMMIT TRAN T1;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Utilisation d’une transaction explicite
-**S’APPLIQUE À :** SQL Server (à compter de 2008) Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+### <a name="a-using-an-explicit-transaction"></a>R. Utilisation d’une transaction explicite
+**S’APPLIQUE À :** SQL Server (à partir de 2008) Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 Cet exemple utilise AdventureWorks. 
 
@@ -157,7 +157,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. Restauration d’une transaction
-**S’APPLIQUE À :** SQL Server (à compter de 2008) Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+**S’APPLIQUE À :** SQL Server (à partir de 2008) Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 L’exemple suivant montre l’effet de la restauration d’une transaction. Dans cet exemple, l’instruction ROLLBACK restaure l’instruction INSERT, mais la table créée continue d’exister.
 
@@ -172,7 +172,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. Attribution d'un nom à une transaction 
-**S’APPLIQUE À :** SQL Server (à compter de 2008), Azure SQL Database
+**S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
 
 L'exemple suivant montre comment nommer une transaction.  
   
@@ -190,7 +190,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. Marquage d'une transaction  
-**S’APPLIQUE À :** SQL Server (à compter de 2008), Azure SQL Database
+**S’APPLIQUE À :** SQL Server (à partir de 2008), Azure SQL Database
 
 L'exemple suivant montre comment marquer une transaction. La transaction `CandidateDelete` est marquée.  
   

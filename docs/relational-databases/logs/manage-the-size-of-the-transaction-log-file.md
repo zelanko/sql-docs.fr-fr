@@ -15,10 +15,10 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084020"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
@@ -94,7 +94,7 @@ Voici une série de recommandations générales à suivre pendant l’utilisatio
     -  N’oubliez pas que les journaux des transactions ne peuvent pas tirer parti de [l’initialisation instantanée de fichiers](../../relational-databases/databases/database-instant-file-initialization.md) ; les temps de croissance de journal étendus sont donc particulièrement critiques. 
     -  En guise de bonne pratique, ne définissez pas l’option `FILEGROWTH` sur une valeur supérieure à 1 024 Mo pour les journaux des transactions. Les valeurs par défaut pour l’option `FILEGROWTH` sont les suivantes :  
   
-      |Options de version|Valeurs par défaut|  
+      |Version|Valeurs par défaut|  
       |-------------|--------------------|  
       |À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|64 Mo de données. 64 Mo de fichiers journaux.|  
       |À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|1 Mo de données. 10 % de fichiers journaux.|  

@@ -15,10 +15,10 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290177"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (expression SSIS)
@@ -39,7 +39,7 @@ DATEADD(datepart, number, date)
  *datepart*  
  Paramètre spécifiant la partie de la date à laquelle ajouter un nombre.  
   
- *nombre*  
+ *number*  
  Valeur utilisée pour incrémenter *datepart*. La valeur doit être une valeur entière connue au moment de l'analyse de l'expression.  
   
  *date*  
@@ -53,13 +53,13 @@ DATEADD(datepart, number, date)
   
 |partie de date|Abréviations|  
 |--------------|-------------------|  
-|Année|yy, yyyy|  
+|Year|yy, yyyy|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Jour de l'année|dy, y|  
-|Jour|dd, d|  
+|jour|dd, d|  
 |Week|wk, ww|  
-|JourSem|dw, w|  
+|Jour de la semaine|dw, w|  
 |Heure|Hh|  
 |Minute|mi, n|  
 |Seconde|ss, s|  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844376"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73844376"
 
   Retourne une valeur NULL si les deux expressions spécifiées sont égales. Par exemple, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` retourne la valeur NULL pour la première colonne (4 et 4) car les deux valeurs d’entrée sont identiques. La deuxième colonne retourne la première valeur (5) car les deux valeurs d’entrée sont différentes. 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +57,7 @@ NULLIF ( expression , expression )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-budget-amounts-that-have-not-changed"></a>A. Retour des montants de budget qui n'ont pas changé  
+### <a name="a-returning-budget-amounts-that-have-not-changed"></a>R. Retour des montants de budget qui n'ont pas changé  
  L'exemple suivant crée une table `budgets` où sont répertoriés un service (`dept`), son budget pour l'année en cours (`current_year`) et son budget pour l'année précédente (`previous_year`). Pour l'année en cours, `NULL` est utilisé pour les services dont les budgets n'ont pas été modifiés par rapport à l'année précédente et `0` est utilisé pour les budgets qui n'ont pas été déterminés. Pour obtenir la moyenne des seuls services auxquels un budget a été attribué et pour inclure la valeur budgétaire de l'année précédente (utilisez la valeur `previous_year` dans les cas où la valeur pour `current_year` est `NULL`), combinez les fonctions `NULLIF` et `COALESCE`.  
   
 ```sql  
@@ -111,7 +111,7 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C : Retour des montants de budget qui ne contiennent aucune donnée  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. Retour des montants de budget qui ne contiennent aucune donnée  
  L’exemple suivant crée une table `budgets`, charge les données et utilise `NULLIF` pour retourner une valeur Null si `current_year` et `previous_year` ne contiennent aucune donnée.  
   
 ```sql  
