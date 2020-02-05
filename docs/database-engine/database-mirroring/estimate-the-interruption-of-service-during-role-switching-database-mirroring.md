@@ -19,10 +19,10 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75253570"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Estimer l'interruption de service au cours d'un basculement de rôle (mise en miroir de bases de données)
@@ -47,7 +47,7 @@ ms.locfileid: "75253570"
  Le temps de basculement est principalement constitué du temps nécessaire au serveur miroir précédent pour restaurer par progression tout journal restant dans sa file d’attente de restauration par progression, plus un court temps supplémentaire. Pour plus d’informations sur la manière dont le serveur miroir traite les enregistrements de journal, consultez [Mise en miroir de base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)). Pour plus d'informations sur l'estimation du temps de basculement, consultez la section Estimation du taux de restauration par progression du basculement, plus loin dans cette rubrique.  
   
 > [!IMPORTANT]  
->  Si le basculement se produit au cours d'une transaction dans laquelle un index ou une table sont créés puis modifiés, le basculement peut prendre plus de temps qu'habituellement.  Par exemple, un basculement effectué au cours des opérations ci-dessous peut prendre plus de temps :  BEGIN TRANSACTION, CREATE INDEX sur une table et SELECT INTO dans la table. La possibilité d'augmentation de la durée de basculement au cours d'une telle transaction demeure jusqu'à ce que la transaction soit terminée par une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
+>  Si le basculement se produit au cours d'une transaction dans laquelle un index ou une table sont créés puis modifiés, le basculement peut prendre plus de temps qu'habituellement.  Par exemple, un basculement effectué au cours des opérations ci-dessous peut prendre plus de temps : BEGIN TRANSACTION, CREATE INDEX sur une table et SELECT INTO dans la table. La possibilité d'augmentation de la durée de basculement au cours d'une telle transaction demeure jusqu'à ce que la transaction soit terminée par une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>File d'attente de restauration par progression  
  La restauration par progression de la base de données implique l'application de tous les enregistrements de journal figurant actuellement dans la file d'attente de restauration par progression sur le serveur miroir. La *file d’attente de restauration par progression* est constituée des enregistrements de journal écrits sur le disque du serveur miroir, mais qui ne sont pas encore restaurés par progression dans la base de données miroir.  

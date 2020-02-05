@@ -1,6 +1,6 @@
 ---
-title: Éditeur de requête du moteur de base de données (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Éditeur de requête du moteur de base de données (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263502"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253942"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Éditeur de requête du moteur de base de données (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "68263502"
 ## <a name="working-with-the-database-engine-query-editor"></a>Utilisation de l'éditeur de requête du moteur de base de données  
  L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est l'un des quatre éditeurs implémentés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour obtenir une description de la fonctionnalité implémentée dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et des tâches principales que vous pouvez effectuer à l’aide de l’éditeur, consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
-## <a name="sql-editor-toolbar"></a>Barre d'outils Éditeur SQL  
+## <a name="sql-editor-toolbar"></a>Barre d'outils Éditeur SQL  
  Quand vous ouvrez l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , la barre d’outils Éditeur SQL s’affiche avec les boutons suivants.  
   
- **Se connecter**  
+ **Connexion**  
  Ouvre la boîte de dialogue **Se connecter au serveur** . Utilisez cette boîte de dialogue pour établir une connexion à un serveur.  
   
- **Déconnecter**  
+ **Déconnexion**  
  Déconnecte l'éditeur de requête actuel du serveur.  
   
  **Modifier la connexion**  
@@ -70,10 +70,10 @@ ms.locfileid: "68263502"
  **Bases de données disponibles**  
  Permet de se connecter à une autre base de données sur le même serveur.  
   
- **Execute**  
+ **Exécuter**  
  Exécute le code sélectionné ou, si aucun code n'est sélectionné, exécute la totalité du code figurant dans l'éditeur de requête.  
   
- **Débogage**  
+ **Déboguer**  
  Active le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce débogueur prend en charge les actions de débogage comme la définition de points d’arrêt, la surveillance de variables et l’exécution pas à pas du code.  
   
  **Annuler l'exécution de la requête**  

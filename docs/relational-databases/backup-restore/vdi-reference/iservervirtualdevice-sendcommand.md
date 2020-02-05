@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847510"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
@@ -40,9 +40,9 @@ void callbackFunction ( VDS_Command *pCmd);
 
 Ce rappel est effectué par l’agent d’achèvement quand le client indique qu’une commande a été exécutée. SQL Server définit le champ completionContext du pCmd. Son objectif est de fournir un contexte à la fonction de rappel.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | NOERROR | La commande est correctement mise en file d’attente sur le client. |
 | VD_E_QUEUE_FULL | La file d’attente de l’appareil est pleine. |

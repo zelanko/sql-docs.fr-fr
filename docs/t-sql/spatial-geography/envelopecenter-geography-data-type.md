@@ -18,10 +18,10 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066430"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (type de données geography)
@@ -49,7 +49,7 @@ Type de retour CLR : **SqlGeography**
 Cette méthode retourne un **point**. En cas d’utilisation avec `EnvelopeAngle()`, `EnvelopeCenter()` retourne un cercle englobant d’une instance **geography**.  
   
 > [!NOTE]  
->  `EnvelopeCenter()` retourne un cercle englobant pour une instance **geography**, mais il n’est pas garanti que les résultats produisent le cercle englobant minimal. En revanche, la méthode de type de données **geometry** `STEnvelope()` retourne de manière certaine le rectangle englobant minimal quand elle est appliquée à une instance **geometry**.  
+>  `EnvelopeCenter()` retourne un cercle englobant pour une instance **geography**, mais il n’est pas garanti que les résultats produisent le cercle englobant minimal. En revanche, la méthode de type de données **geometry**`STEnvelope()` retourne de manière certaine le rectangle englobant minimal quand elle est appliquée à une instance **geometry**.  
   
 Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions ultérieures, retourne le centre du cercle qui représente l’enveloppe de cette instance en tant que **point**. Pour tous les objets volumineux, tels qu'ils sont définis par `EnvelopeAngle()` = 180, `EnvelopeCenter()` retourne (90,0).  
   

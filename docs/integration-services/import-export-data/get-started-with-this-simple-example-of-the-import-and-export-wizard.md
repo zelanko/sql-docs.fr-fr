@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285215"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation
@@ -24,7 +24,7 @@ ms.locfileid: "71285215"
 Découvrez la série des opérations de l’Assistant Importation et exportation SQL Server en suivant un scénario courant : l’importation de données à partir d’une feuille de calcul Excel dans une base de données SQL Server. Même si vous envisagez d’utiliser une source et une destination différentes, cette rubrique vous montre l’essentiel de ce que vous devez savoir sur l’exécution de l’Assistant.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prérequis - l’Assistant est-il installé sur votre ordinateur ?
-Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+Si vous souhaitez exécuter l’Assistant, mais que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Voici les données sources Excel pour cet exemple
 Voici les données sources que vous allez copier : une petite table de deux colonnes dans la feuille de calcul WizardWalkthrough du classeur Excel WizardWalkthrough.xlsx.
@@ -68,7 +68,7 @@ Pour obtenir plus d’informations sur cette page de l’Assistant, consultez [C
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>Étape 4 - Choix de SQL Server en tant que destination
 À la page suivante, **Choisir une destination**, vous sélectionnez Microsoft SQL Server comme destination en désignant dans la liste un fournisseur de données qui se connecte à SQL Server. Dans cet exemple, vous sélectionnez le **Fournisseur de données .NET Framework pour SQL Server**.
 
-La page affiche une liste de propriétés du fournisseur. Bon nombre d’entre elles comportent des noms inconnus et des paramètres inhabituels. Heureusement, pour vous connecter à une base de données d’entreprise, vous ne devez généralement fournir que trois éléments d’information. Vous pouvez ignorer les valeurs par défaut des autres paramètres.
+La page affiche une liste de propriétés du fournisseur. Nombre d’entre elles portent des noms inconnus et ont des paramètres inhabituels. Heureusement, pour vous connecter à une base de données d’entreprise, vous ne devez généralement fournir que trois éléments d’information. Vous pouvez ignorer les valeurs par défaut des autres paramètres.
 
 |Informations nécessaires|Propriété du fournisseur de données .NET Framework pour SQL Server|
 |---|---|

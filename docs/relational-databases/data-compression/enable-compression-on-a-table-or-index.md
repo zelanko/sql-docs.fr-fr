@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007164"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Activer la compression sur une table ou un index
@@ -77,7 +77,7 @@ ms.locfileid: "68007164"
   
 4.  Dans l'Assistant Compression de données, sur la page **Assistant Compression de données** , cliquez sur **Suivant**.  
   
-5.  Dans la page **Sélectionner le type de compression** , sélectionnez le type de compression à appliquer à chaque partition de la table ou de l'index que vous souhaitez compresser. Lorsque vous avez terminé, cliquez sur **Suivant**.  
+5.  Dans la page **Sélectionner le type de compression** , sélectionnez le type de compression à appliquer à chaque partition de la table ou de l'index que vous souhaitez compresser. Une fois que vous avez terminé, cliquez sur **Suivant**.  
   
      Les options suivantes sont disponibles dans la page **Sélectionner le type de compression** :  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68007164"
      **Message**  
      Indique les messages d'erreur ou d'avertissement retournés par le processus.  
   
-     **Rapport**  
+     **Report**  
      Crée un rapport qui contient les résultats de l'Assistant Création de partition. Les options sont **Afficher le rapport**, **Enregistrer le rapport dans un fichier**, **Copier le rapport dans le Presse-papiers**et **Envoyer le rapport sous forme de courrier électronique**.  
   
      **Afficher le rapport**  
@@ -205,7 +205,7 @@ ms.locfileid: "68007164"
   
 #### <a name="to-enable-compression-on-a-table"></a>Pour activer la compression sur une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "68007164"
   
 #### <a name="to-enable-compression-on-an-index"></a>Pour activer la compression sur un index  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68007164"
  Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) et [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Compression des données](../../relational-databases/data-compression/data-compression.md)   
+ [Compression de données](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   
   

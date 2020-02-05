@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Test des packages déployés | Microsoft Docs'
+title: 'Étape 3 : Test des packages déployés | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac260f2c3703260e5472d5be399333a93574f2c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283255"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Leçon 3-3 : Test des packages déployés
@@ -75,7 +75,7 @@ Les dossiers de niveau supérieur dans le dossier Packages stockés représenten
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données** dans la liste **Type du serveur** , fournissez le nom du serveur sur lequel vous avez installé les packages du didacticiel ou tapez (local) dans la zone **Nom du serveur** , et sélectionnez un mode d’authentification. Si vous utilisez l'authentification SQL Server, vous devez fournir un nom d'utilisateur et un mot de passe.  
   
-3.  Cliquez sur **Se connecter**.  
+3.  Cliquez sur **Connecter**.  
   
 4.  Dans la fenêtre de requêtes, tapez ou collez l'instruction SQL suivante :  
   
@@ -95,7 +95,7 @@ Les dossiers de niveau supérieur dans le dossier Packages stockés représenten
   
 2.  Si vous êtes invité à vous reconnecter, dans la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données** dans la liste **Type du serveur** , fournissez le nom du serveur sur lequel vous avez installé les packages du didacticiel ou tapez (local) dans la zone **Nom du serveur** , et sélectionnez un mode d’authentification. Si vous utilisez l'authentification SQL Server, vous devez fournir un nom d'utilisateur et un mot de passe.  
   
-3.  Cliquez sur **Se connecter**.  
+3.  Cliquez sur **Connecter**.  
   
 4.  Dans la fenêtre de requêtes, tapez ou collez l'instruction SQL suivante :  
   

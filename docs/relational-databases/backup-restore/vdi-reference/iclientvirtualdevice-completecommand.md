@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 0fb96d94ae330fdf55d82625ed71217ba71e50ff
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847400"
 ---
 # <a name="iclientvirtualdevicecompletecommand-vdi"></a>IClientVirtualDevice::CompleteCommand (VDI)
@@ -43,9 +43,9 @@ HRESULT IClientVirtualDevice::CompleteCommand (
 
 *dwlPosition* : une réponse à la commande GetPosition uniquement.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
-|Valeur retournée | Explication |
+|Valeur de retour | Explication |
 |---|---|
 | NOERROR | La saisie semi-automatique a été correctement notée. |
 | VD_E_INVALID | pCmd n’était pas une commande active. |

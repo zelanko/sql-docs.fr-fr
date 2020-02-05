@@ -14,10 +14,10 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995646"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objet Transactions
@@ -35,10 +35,10 @@ ms.locfileid: "67995646"
 |**Espace disponible dans tempdb (Ko)**|Quantité d’espace (en kilo-octets) disponible dans **tempdb**. Il faut suffisamment d'espace libre pour contenir le magasin de versions avec niveau d'isolement d'instantané et tous les nouveaux objets temporaires créés dans cette instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Délai le plus long d'exécution de transaction**|Durée d'attente (en secondes) depuis le démarrage de la transaction qui a été active plus longtemps que toute autre transaction actuelle. Ce compteur ne montre une activité que lorsque la base de données est exécutée avec le niveau d'isolement d'instantané de lecture validée. Il ne consigne aucune activité si la base de données se trouve dans n'importe quel autre niveau d'isolement.|  
 |**Transactions de versions non liées à des instantanés**|Nombre de transactions actives n'utilisant pas le niveau d'isolement d'instantané et ayant apporté des modifications aux données, qui ont généré des versions de lignes dans le magasin de versions **tempdb** .|  
-|**Transactions d'instantanés**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané.<br /><br /> Remarque : Le compteur d’objets **Transactions d’instantanés** répond lors du premier accès aux données et non lors de l’émission de l’instruction `BEGIN TRANSACTION`.|  
+|**Transactions d'instantanés**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané.<br /><br /> Remarque : Le compteur d’objets **Transactions de captures instantanées** répond lors du premier accès aux données et pas lors de l’émission de l’instruction `BEGIN TRANSACTION` .|  
 |**Transactions**|Nombre de transactions actives de tous types.|  
 |**Proportion de conflits de mise à jour**|Pourcentage des transactions utilisant le niveau d'isolement d'instantané et qui ont rencontré des conflits de mise à jour au cours de la dernière seconde. Un conflit de mise à jour se produit lorsqu'une transaction de niveau d'isolement d'instantané tente de modifier une ligne dont la dernière modification a été effectuée par une autre transaction qui n'était pas validée lors du démarrage de la transaction de niveau d'isolement d'instantané.|  
-|**Base de la proportion de conflits de mise à jour**|À usage interne uniquement|
+|**Base de la proportion de conflits de mise à jour**|À usage interne uniquement.|
 |**Transactions d'instantanés de mise à jour**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané et qui ont modifié des données.|  
 |**Taux de nettoyage de version (Ko/s)**|Taux (en kilo-octets par seconde) auquel des versions de lignes sont supprimées de la banque de versions avec isolement d’instantané dans **tempdb**.|  
 |**Taux de génération de version (Ko/s)**|Taux (en kilo-octets par seconde) auquel de nouvelles versions de lignes sont ajoutées à la banque de versions avec isolement d’instantané dans **tempdb**.|  

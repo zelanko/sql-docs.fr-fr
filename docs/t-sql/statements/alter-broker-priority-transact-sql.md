@@ -21,10 +21,10 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065999"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68065999"
 
   Modifie les propriétés d'une priorité de conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ FOR CONVERSATION
  Spécifie le nom de la priorité de conversation à modifier. Le nom doit faire référence à une priorité de conversation dans la base de données active.  
   
  SET  
- Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. SET est obligatoire et doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL.  
+ Spécifie les critères permettant de déterminer si la priorité de conversation s'applique à une conversation. SET est requis et doit contenir au moins un critère : CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME ou PRIORITY_LEVEL.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Spécifie le nom d'un contrat à utiliser comme critère pour déterminer si la priorité de conversation s'applique à une conversation. *ContractName* est un identificateur [!INCLUDE[ssDE](../../includes/ssde-md.md)], et vous devez spécifier le nom d’un contrat de base de données active.  
@@ -117,7 +117,7 @@ FOR CONVERSATION
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>A. Modification portant uniquement sur le niveau de priorité d'une priorité de conversation existante  
+### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>R. Modification portant uniquement sur le niveau de priorité d'une priorité de conversation existante  
  Modifie le niveau de priorité, mais ne modifie pas le contrat, le service local ni les propriétés du service distant.  
   
 ```  

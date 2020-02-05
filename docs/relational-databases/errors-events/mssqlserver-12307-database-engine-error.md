@@ -12,13 +12,13 @@ ms.assetid: 768cf6a8-e0f6-4668-9ab6-7c171a88fd86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4002b2a11816446d59e242771c3f8745b190f878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002905"
 ---
-# <a name="mssqlserver12307"></a>MSSQLSERVER_12307
+# <a name="mssqlserver_12307"></a>MSSQLSERVER_12307
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68002905"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|12307|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|12307|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_UNSUPPORTED_PARAM_DEFAULT|  
 |Texte du message|Les valeurs par défaut des paramètres dans « *construction* » doivent être des constantes.|  

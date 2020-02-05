@@ -18,10 +18,10 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059751"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Fonctions logiques - CHOOSE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68059751"
 
   Retourne l'élément à l'index spécifié à partir d'une liste de valeurs dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
   
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-simple-choose-example"></a>A. Exemple CHOOSE simple
+### <a name="a-simple-choose-example"></a>R. Exemple CHOOSE simple
 
  L'exemple suivant retourne le troisième élément de la liste de valeurs fournie.  
  

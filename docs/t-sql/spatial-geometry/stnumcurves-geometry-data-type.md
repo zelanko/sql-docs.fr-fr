@@ -15,10 +15,10 @@ ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089000"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (type de données geometry)
@@ -43,7 +43,7 @@ Cette méthode retourne le nombre de courbes d’une instance **geometry** quand
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. Utilisation de STNumCurves() sur une instance CircularString  
+### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>R. Utilisation de STNumCurves() sur une instance CircularString  
  L'exemple suivant indique comment obtenir le nombre de courbes dans une instance `CircularString` :  
   
 ```

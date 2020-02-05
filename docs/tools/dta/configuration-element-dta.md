@@ -1,10 +1,7 @@
 ---
-title: Configuration, élément (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Configuration, élément (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 767bc5c9d84d8ee0ee14bb74a5b5722604ee9f93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 79073bca20afa853c1b6fbf548ed804f71f074fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949826"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307983"
 ---
 # <a name="configuration-element-dta"></a>Configuration, élément (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie une configuration spécifiée par l'utilisateur se composant de structures PDS existantes et hypothétiques en vue d'être analysée par l'Assistant Paramétrage du moteur de base de données lors du paramétrage d'une charge de travail.  
+
+Spécifie une configuration spécifiée par l'utilisateur se composant de structures PDS existantes et hypothétiques en vue d'être analysée par l'Assistant Paramétrage du moteur de base de données lors du paramétrage d'une charge de travail.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +46,7 @@ ms.locfileid: "67949826"
   
 |Attribut de configuration|Description|  
 |-----------------------------|-----------------|  
-|**SpecificationMode**|Facultatif. Spécifie si l'Assistant Paramétrage du moteur de base de données doit analyser la configuration spécifiée en relation avec la configuration existante active ou comme une configuration autonome entièrement nouvelle. Utilisez un type de données **string** pour spécifier cet attribut avec l'une des valeurs autorisées suivantes :<br /><br /> **Relative**:<br />                  Évalue la configuration spécifiée en relation avec la configuration existante active des structures PDS (index, vues indexées, partitions) dans la base de données en cours de paramétrage. Par exemple :<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  Évalue la configuration spécifiée comme une configuration autonome. Lorsque la valeur Absolute est spécifiée, l'Assistant Paramétrage du moteur de base de données ne prend pas en compte la configuration existante. Par exemple :<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
+|**SpecificationMode**|facultatif. Spécifie si l'Assistant Paramétrage du moteur de base de données doit analyser la configuration spécifiée en relation avec la configuration existante active ou comme une configuration autonome entièrement nouvelle. Utilisez un type de données **string** pour spécifier cet attribut avec l'une des valeurs autorisées suivantes :<br /><br /> **Relative**:<br />                  Évalue la configuration spécifiée en relation avec la configuration existante active des structures PDS (index, vues indexées, partitions) dans la base de données en cours de paramétrage. Par exemple :<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  Évalue la configuration spécifiée comme une configuration autonome. Lorsque la valeur Absolute est spécifiée, l'Assistant Paramétrage du moteur de base de données ne prend pas en compte la configuration existante. Par exemple :<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
@@ -51,7 +54,7 @@ ms.locfileid: "67949826"
 |--------------------|-----------------|  
 |**Type de données et longueur**|Aucun.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Peut être utilisé une seule fois pour chaque élément **DTAInput** .|  
+|**Occurrence**|facultatif. Peut être utilisé une seule fois pour chaque élément **DTAInput** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

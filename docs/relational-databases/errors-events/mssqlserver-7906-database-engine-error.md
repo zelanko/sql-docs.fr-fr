@@ -12,13 +12,13 @@ ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951438"
 ---
-# <a name="mssqlserver7906"></a>MSSQLSERVER_7906
+# <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "67951438"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7906|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7906|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Texte du message|Erreur de base de données : le fichier "FILE" n’est pas un fichier Filestream valide.|  
+|Texte du message|Erreur de base de données : la base de données %d contient des métadonnées incohérentes.|  
   
 ## <a name="explanation"></a>Explication  
 À l'exception de certains fichiers spéciaux, tels que « filestream.hdr », aucun fichier ne doit figurer directement dans l'espace de données Filestream.  

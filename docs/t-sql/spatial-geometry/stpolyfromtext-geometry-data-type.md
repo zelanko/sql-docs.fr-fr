@@ -18,10 +18,10 @@ ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 292f043085cc04ee58a29ead730518b723854ed9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066342"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (type de données geometry)
@@ -48,7 +48,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  Type de retour CLR : **SqlGeometry**  
   
- Type OGC : **Polygone**  
+ Type OGC : **Polygon**  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  

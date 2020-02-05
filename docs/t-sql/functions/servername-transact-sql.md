@@ -19,17 +19,17 @@ ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 09a7e9d6199b3227b51cb67a0687c2b812bd21d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031580"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie le nom du serveur local qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68031580"
  En revanche, @@SERVERNAME ne signale pas les modifications de ce type. @@SERVERNAME signale les modifications apportées au nom du serveur local à l'aide de la procédure stockée **sp_addserver** ou **sp_dropserver**.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant illustre l'utilisation de `@@SERVERNAME`.  
+ L’exemple suivant montre l’utilisation de `@@SERVERNAME`.  
   
 ```  
 SELECT @@SERVERNAME AS 'Server Name'  

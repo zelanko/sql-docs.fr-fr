@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986716"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, objet Catalog Metadata
@@ -31,7 +31,7 @@ Le tableau suivant décrit les objets de performance **Métadonnées de catalogu
 |**Nombre d’entrées de cache**|Nombre d’entrées dans le cache de métadonnées de catalogue.|
 |**Nombre d’entrées de cache épinglées**|Nombre d’entrées épinglées du cache de métadonnées de catalogue.|
 |**Taux d'accès au cache**|Rapport entre les accès au cache de métadonnées de catalogue et les recherches.|
-|**Base du taux d’accès au cache**|À usage interne uniquement|
+|**Base du taux d’accès au cache**|À usage interne uniquement.|
 
 Il existe une instance du compteur pour chaque base de données.
 

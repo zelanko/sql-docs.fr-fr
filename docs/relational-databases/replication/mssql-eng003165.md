@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ab8f39970447b670dde3f5a653de4642a9d890e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ac57d8427196b432f133f83f2e26be1ede88543f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766870"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287820"
 ---
-# <a name="mssqleng003165"></a>MSSQL_ENG003165
+# <a name="mssql_eng003165"></a>MSSQL_ENG003165
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -28,8 +28,8 @@ ms.locfileid: "68766870"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|3165|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|3165|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|La base de données « %ls » a été restaurée, cependant, une erreur a été rencontrée pendant la restauration/suppression de la réplication. La base de données est restée hors ligne. Consultez la rubrique MSSQL_ENG003165 dans la documentation en ligne de SQL Server.|  

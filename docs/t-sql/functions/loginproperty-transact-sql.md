@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059765"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68059765"
 
   Retourne des informations sur les paramètres de stratégie de connexion.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,7 +76,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|Retourne la date à laquelle le mot de passe actuel a été défini.|  
 |**PasswordHashAlgorithm**|Retourne l'algorithme utilisé pour hacher le mot de passe.|  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Le type de données dépend de la valeur demandée.  
   
  **IsLocked**, **IsExpired** et **IsMustChange** sont de type **int**.  
@@ -119,8 +119,8 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Détermination de la nécessité de modifier le mot de passe d'un compte de connexion  
- L’exemple suivant vérifie si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `John3` doit changer son mot de passe la prochaine fois qu’elle se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="a-checking-whether-a-login-must-change-its-password"></a>R. Détermination de la nécessité de modifier le mot de passe d'un compte de connexion  
+ L’exemple suivant vérifie si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`John3` doit changer son mot de passe la prochaine fois qu’elle se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -128,7 +128,7 @@ GO
 ```  
   
 ### <a name="b-checking-whether-a-login-is-locked-out"></a>B. Vérification du verrouillage d'une connexion  
- L'exemple suivant vérifie si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `John3` est verrouillée.  
+ L'exemple suivant vérifie si la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`John3` est verrouillée.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  

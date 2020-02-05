@@ -13,13 +13,13 @@ ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b202f2856e066047c5458ef8ed1f40b2422b391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021693"
 ---
-# <a name="set-the-autoshrink-database-option-to-off"></a>Définir l'option de base de données AUTO_SHRINK sur OFF
+# <a name="set-the-auto_shrink-database-option-to-off"></a>Définir l'option de base de données AUTO_SHRINK sur OFF
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette règle vérifie si l'option de base de données AUTO_SHRINK est définie avec la valeur OFF. La réduction et le développement fréquents d'une base de données peuvent entraîner une fragmentation physique.  
   
@@ -30,6 +30,6 @@ ms.locfileid: "68021693"
  Article [315512](https://go.microsoft.com/fwlink/?linkid=117750)de la Base de connaissances Microsoft  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contrôler et appliquer les meilleures pratiques à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Contrôler et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

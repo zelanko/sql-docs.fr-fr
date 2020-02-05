@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908558"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
@@ -32,7 +32,7 @@ ms.locfileid: "72908558"
 ## <a name="before-you-begin"></a>Avant de commencer  
  Pour vous connecter aux fichiers journaux hors connexion, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être installée sur l'ordinateur que vous utilisez pour consulter les fichiers journaux hors connexion, ainsi que sur l'ordinateur où se trouvent les fichiers journaux en question. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée sur les deux ordinateurs, vous pouvez afficher les fichiers hors connexion pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et pour les instances qui exécutent des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur ces ordinateurs.  
   
- Si vous utilisez des serveurs inscrits, l'instance à laquelle vous voulez vous connecter doit être enregistrée sous **Groupes de serveurs locaux** ou **Serveurs de gestion centralisée** (l'instance peut être enregistrée seule ou être membre d'un groupe de serveurs). Pour plus d'informations sur l'ajout d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des serveurs inscrits, consultez les rubriques suivantes :  
+ Si vous utilisez des serveurs inscrits, l'instance à laquelle vous voulez vous connecter doit être enregistrée sous **Groupes de serveurs locaux** ou **Serveurs de gestion centralisée** (l'instance peut être enregistrée seule ou être membre d'un groupe de serveurs). Pour plus d'informations sur l'ajout d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour des serveurs inscrits, consultez les rubriques suivantes :  
   
 -   [Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72908558"
   
 3.  Dans l'arborescence de la console, trouvez l'instance sur laquelle vous voulez afficher les fichiers hors connexion.  
   
-4.  Procédez de l'une des manières suivantes :  
+4.  Effectuez l’une des actions suivantes :  
   
     -   Si l’instance est sous **Groupes de serveurs locaux**, développez **Groupes de serveurs locaux**, développez le groupe de serveurs (si l’instance est un membre d’un groupe), cliquez avec le bouton droit sur l’instance, puis cliquez sur **Afficher le journal SQL Server**.  
   

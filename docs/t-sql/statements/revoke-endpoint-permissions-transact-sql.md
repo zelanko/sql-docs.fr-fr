@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082281"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de point de terminaison (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082281"
 
   Permet de révoquer des autorisations accordées ou refusées sur un point de terminaison.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -103,8 +103,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. Révocation d'une autorisation VIEW DEFINITION sur un point de terminaison  
- Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le point de terminaison `Mirror7` est révoquée pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
+### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>R. Révocation d'une autorisation VIEW DEFINITION sur un point de terminaison  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le point de terminaison `Mirror7` est révoquée pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Révocation d'une autorisation TAKE OWNERSHIP avec l'option CASCADE  
- Dans l’exemple ci-dessous, l’autorisation `TAKE OWNERSHIP` sur le point de terminaison `Shipping83` est révoquée pour l’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` et pour tous les principaux auxquels `PKomosinski` a accordé l’autorisation `TAKE OWNERSHIP` sur `Shipping83`.  
+ Dans l’exemple ci-dessous, l’autorisation `TAKE OWNERSHIP` sur le point de terminaison `Shipping83` est révoquée pour l’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` et pour tous les principaux auxquels `PKomosinski` a accordé l’autorisation `TAKE OWNERSHIP` sur `Shipping83`.  
   
 ```  
 USE master;  

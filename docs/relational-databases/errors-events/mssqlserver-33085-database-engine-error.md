@@ -12,13 +12,13 @@ ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6eb560fb30d71ba16a153b3101c6f85a2194ca3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908446"
 ---
-# <a name="mssqlserver33085"></a>MSSQLSERVER_33085
+# <a name="mssqlserver_33085"></a>MSSQLSERVER_33085
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67908446"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|33085|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|33085|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SEC_CRYPTOPROVE_METHOD_CANNOT_FOUND|  
 |Texte du message|Une ou plusieurs méthodes restent introuvables dans la bibliothèque du fournisseur de services de chiffrement '%.*ls'.|  
@@ -35,7 +35,7 @@ ms.locfileid: "67908446"
 ## <a name="explanation"></a>Explication  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu utiliser le fournisseur de services de chiffrement répertorié dans le message d’erreur. Le fournisseur de services de chiffrement n'a pas pris en charge une méthode requise. L'état de l'erreur indique quelle méthode était introuvable.  
   
-|État|Description|  
+|State|Description|  
 |---------|---------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  

@@ -12,13 +12,13 @@ ms.assetid: 7ce6afca-221d-402f-89df-da7e74a339a8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d9da9052aa4de65f93d1d2e166f1ef82df51ca62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076680"
 ---
-# <a name="mssqlserver17130"></a>MSSQLSERVER_17130
+# <a name="mssqlserver_17130"></a>MSSQLSERVER_17130
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68076680"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|17130|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17130|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|INIT_NOLOCKSPACE|  
 |Texte du message|Mémoire insuffisante pour le nombre de verrous configuré. Tentative de démarrage avec une table de hachage de verrou moins importante en cours, ce qui risque d'influer sur les performances. Contactez l'administrateur de base de données pour configurer une quantité de mémoire plus importante pour cette instance du moteur de base de données.|  

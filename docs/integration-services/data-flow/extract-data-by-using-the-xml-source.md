@@ -15,10 +15,10 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f149ca01b71b7611264f28d14532d7827554585f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292541"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extraire des données à l'aide de la source XML
@@ -68,7 +68,7 @@ ms.locfileid: "71292541"
 ## <a name="see-also"></a>Voir aussi  
  [Source XML](../../integration-services/data-flow/xml-source.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Chemins Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
  [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   

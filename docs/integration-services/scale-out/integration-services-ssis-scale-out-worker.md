@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082070"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
@@ -53,7 +53,7 @@ Vous pouvez configurer le service Scale Out Worker avec le fichier `\<drive\>:\P
 |ExecutionLogMaxInMemoryBufferCount|Quantité maximale de mémoires tampon de journal d’exécution en mémoire pour les journaux d’exécution.|10|
 |ExecutionLogRetryCount|Nombre de nouvelles tentatives en cas d’échec de journalisation de l’exécution.|3|
 |ExecutionLogRetryTimeout|Délai d’expiration des nouvelles tentatives en cas d’échec de journalisation de l’exécution. ExecutionLogRetryCount est ignoré si ExecutionLogRetryTimeout est atteint. |7.00:00:00 (7 jours)|
-|AgentId|ID d’agent de Worker du Scale Out Worker|Généré automatiquement.|
+|AgentID|ID d’agent de Worker du Scale Out Worker|Généré automatiquement.|
 ||||    
 
 ## <a name="view-the-scale-out-worker-log"></a>Afficher le journal Scale Out Worker

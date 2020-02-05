@@ -13,10 +13,10 @@ ms.assetid: b0862c3a-926b-490c-a37f-382e50146a3e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8a392547d4e8b43430c2608f36790944eb88287f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043311"
 ---
 # <a name="sql-server-login-password-strength"></a>Force du mot de passe de connexion SQL Server
@@ -34,6 +34,6 @@ ms.locfileid: "68043311"
  [Stratégie de mot de passe](../../relational-databases/security/password-policy.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contrôler et appliquer les meilleures pratiques à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Contrôler et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

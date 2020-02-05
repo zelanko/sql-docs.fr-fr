@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017659"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
@@ -48,7 +48,7 @@ ms.locfileid: "68017659"
   
  Vous pouvez appliquer plusieurs contraintes CHECK à une seule colonne. Vous pouvez aussi appliquer une seule contrainte CHECK à plusieurs colonnes en la créant au niveau de la table. Ainsi, vous pouvez utiliser une contrainte CHECK sur plusieurs colonnes pour confirmer que les lignes comportant la valeur **USA** dans leur colonne **country_region** possèdent également une valeur à deux caractères dans leur colonne **state** . Cela permet de vérifier plusieurs conditions au même emplacement.  
   
- Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. Leur différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : les contraintes FOREIGN KEY obtiennent la liste des valeurs valides d’une autre table, tandis que les contraintes CHECK déterminent ces valeurs sur la base d’une expression logique.  
+ Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. Leur différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : les contraintes FOREIGN KEY obtiennent la liste des valeurs valides d'une autre table, tandis que les contraintes CHECK déterminent ces valeurs sur la base d'une expression logique.  
   
 > [!CAUTION]  
 >  Les contraintes qui incluent une conversion de type de données implicite ou explicite peuvent causer l'échec de certaines opérations. Par exemple, ces contraintes définies sur des tables qui sont les sources d'une commutation de partition peuvent causer l'échec d'une opération ALTER TABLE...SWITCH. Évitez les conversions de types de données dans les définitions des contraintes.  
@@ -96,10 +96,10 @@ DELETE CheckTbl WHERE col1 = 10;
 |----------|-----------|  
 |Décrit comment créer une contrainte unique.|[Créer des contraintes uniques](../../relational-databases/tables/create-unique-constraints.md)|  
 |Décrit comment modifier une contrainte unique.|[Modifier des contraintes uniques](../../relational-databases/tables/modify-unique-constraints.md)|  
-|Décrit comment supprimer une contrainte unique.|[Supprimer des contraintes UNIQUE](../../relational-databases/tables/delete-unique-constraints.md)|  
-|Décrit comment désactiver une contrainte de validation lorsque l'Agent de réplication insère ou met à jour les données dans votre table.|[Désactiver des contraintes de validation lors de la réplication](../../relational-databases/tables/disable-check-constraints-for-replication.md)|  
+|Décrit comment supprimer une contrainte unique.|[Supprimer des contraintes uniques](../../relational-databases/tables/delete-unique-constraints.md)|  
+|Décrit comment désactiver une contrainte de validation lorsque l'Agent de réplication insère ou met à jour les données dans votre table.|[Désactiver des contraintes de validation pour la réplication](../../relational-databases/tables/disable-check-constraints-for-replication.md)|  
 |Décrit comment désactiver une contrainte de validation lorsque vous ajoutez, mettez à jour ou supprimez des données dans une table.|[Désactiver des contraintes de validation avec des instructions INSERT et UPDATE](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
-|Décrit comment modifier l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.|[Modifier des contraintes CHECK](../../relational-databases/tables/modify-check-constraints.md)|  
+|Décrit comment modifier l'expression de contrainte ou les options qui activent ou désactivent la contrainte pour des conditions spécifiques.|[Modifier des contraintes de validation](../../relational-databases/tables/modify-check-constraints.md)|  
 |Décrit comment supprimer une contrainte de validation.|[Supprimer des contraintes de validation](../../relational-databases/tables/delete-check-constraints.md)|  
 |Décrit comment afficher les propriétés d'une contrainte de validation.|[Contraintes uniques et contraintes de validation](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   

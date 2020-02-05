@@ -16,10 +16,10 @@ ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078002"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utiliser le mode AUTO avec FOR XML
@@ -83,7 +83,7 @@ where Cust.CustomerID = OrderHeader.CustomerID
 for xml auto  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <OrderHeader CustomerID="1" SalesOrderID="43860" Status="5">  
@@ -133,11 +133,11 @@ FOR XML AUTO, ELEMENTS
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur le mode AUTO :  
   
--   [Utiliser l'option BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  
+-   [Utiliser l’option BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  
   
 -   [Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées](../../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Exemples : Utilisation du mode AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
+-   [Exemples : utilisation du mode AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

@@ -12,10 +12,10 @@ ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006076"
 ---
 # <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
@@ -26,8 +26,8 @@ ms.locfileid: "72006076"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10519|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10519|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INCOMPATIBLE_STMT_AND_HINTS|  
 |Texte du message|Impossible de créer le repère de plan '%.\*ls', car les indicateurs spécifiés dans **\@hints** ne peuvent pas être appliqués à l'instruction spécifiée par **\@stmt** ou par **\@statement_start_offset**. Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  

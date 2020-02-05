@@ -21,18 +21,18 @@ ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914894"
 ---
-# <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
+# <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie le texte source [!INCLUDE[tsql](../../includes/tsql-md.md)] de la définition de l'objet spécifié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -79,11 +79,11 @@ OBJECT_DEFINITION ( object_id )
 -   V = Vue  
   
 ## <a name="permissions"></a>Autorisations  
- Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>A. Renvoi du texte source d'un objet défini par l'utilisateur  
+### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>R. Renvoi du texte source d'un objet défini par l'utilisateur  
  L'exemple suivant renvoie la définition d'un déclencheur défini par l'utilisateur, `uAddress`, dans le schéma `Person`. La fonction intégrée `OBJECT_ID` est utilisée pour renvoyer l'identificateur d'objet du déclencheur de l'instruction `OBJECT_DEFINITION`.  
   
 ```  

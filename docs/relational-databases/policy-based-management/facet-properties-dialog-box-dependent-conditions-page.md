@@ -13,10 +13,10 @@ ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d977fe6650ea6d2f28b1762cfb44aaa89164d772
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087370"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Boîte de dialogue Propriétés de la facette, page Conditions dépendantes
@@ -24,7 +24,7 @@ ms.locfileid: "68087370"
   Utilisez cette boîte de dialogue pour afficher la liste des conditions qui font actuellement référence à cette facette de la Gestion basée sur des stratégies.  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Répertorie le nom de chaque condition qui fait référence à la facette actuelle.  
   
 ## <a name="see-also"></a>Voir aussi  

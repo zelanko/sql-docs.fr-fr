@@ -12,13 +12,13 @@ ms.assetid: 4ff04042-8367-46f3-8a16-c94682d6eedb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 634a54eab92eccf6c03f76419bdb2f3004d57978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123126"
 ---
-# <a name="mssqlserver41396"></a>MSSQLSERVER_41396
+# <a name="mssqlserver_41396"></a>MSSQLSERVER_41396
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68123126"
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|41396|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|41396|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|MAX_SORT_ROWS_EXCEEDED|  
 |Texte du message|L'opération de tri a dépassé la limite de la mémoire tampon. L'exécution de la procédure stockée a été abandonnée. Consultez la documentation en ligne de SQL Server pour plus d'informations.|  

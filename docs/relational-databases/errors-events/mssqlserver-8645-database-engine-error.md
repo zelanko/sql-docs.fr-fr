@@ -12,10 +12,10 @@ ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d867839a68e3b6fc595f0753872b8224f3bf51fb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908316"
 ---
 # <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
@@ -26,8 +26,8 @@ ms.locfileid: "72908316"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8645|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8645|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|MEMTIMEDOUT_ERR|  
 |Texte du message|Dépassement du délai lors de l'attente des ressources mémoire pour l'exécution de la requête. Réexécutez la requête.|  
@@ -42,7 +42,7 @@ La liste suivante présente les procédures générales à suivre pour résoudre
   
 1.  Vérifiez si d'autres applications ou services consomment de la mémoire sur ce serveur. Reconfigurez les applications ou les services moins importants pour consommer moins de mémoire.  
   
-2.  Démarrez la collecte des compteurs de l’analyseur de performances pour **SQL Server : Buffer Manager**, **SQL Server : Memory Manager**.  
+2.  Commencez la collecte des compteurs de l’analyseur de performances pour **SQL Server : Buffer Manager**, **SQL Server : Memory Manager**.  
   
 3.  Vérifiez les paramètres de configuration de la mémoire de SQL Server suivants :  
   

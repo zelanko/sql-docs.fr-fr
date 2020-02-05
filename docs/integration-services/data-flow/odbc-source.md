@@ -16,10 +16,10 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298167"
 ---
 # <a name="odbc-source"></a>Source ODBC
@@ -44,9 +44,9 @@ ms.locfileid: "71298167"
 ## <a name="error-handling"></a>Gestion des erreurs  
  La source ODBC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d'erreur** : Numéro qui correspond à l’erreur actuelle.Numéro qui correspond à l’erreur actuelle. Consultez la documentation de la base de données ODBC que vous utilisez pour obtenir une liste d'erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
+-   **Code d’erreur**: numéro qui correspond à l’erreur actuelle. Consultez la documentation de la base de données ODBC que vous utilisez pour obtenir une liste d'erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
   
--   **Colonne d’erreur** : Colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
 -   Colonnes de données de sortie standard.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "71298167"
 ## <a name="extract-options"></a>Options d'extraction  
  La source ODBC s’exécute en mode **Lot** ou **Ligne par ligne** . Le mode utilisé est déterminé par la propriété **FetchMethod** . La liste suivante décrit les différents modes.  
   
--   **Lot** : les composants tentent d’utiliser la méthode de récupération la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs ODBC modernes, il s’agit de SQLFetchScroll avec une liaison de table (où la taille de la table est déterminée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
+-   **Lot**: les composants tentent d’utiliser la méthode de récupération la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs ODBC modernes, il s’agit de SQLFetchScroll avec une liaison de table (où la taille de la table est déterminée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
   
--   **Ligne par ligne** : le composant utilise SQLFetch pour extraire les lignes une par une.  
+-   **Ligne par ligne**: le composant utilise SQLFetch pour extraire les lignes une par une.  
   
  Pour plus d’informations sur la propriété **FetchMethod** , consultez [Propriétés personnalisées des sources ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>Parallélisme  
  Il n'existe aucune limitation quant au nombre de composants de source ODBC pouvant s'exécuter en parallèle sur la même table ou des tables différentes, sur le même ordinateur ou sur des ordinateurs différents (autre que les limites de session globale habituelles).  
   
  Toutefois, les limites du fournisseur ODBC utilisé peuvent limiter le nombre de connexions simultanées par le fournisseur. Ces limites restreignent le nombre d'instances parallèles prises en charge pour la source ODBC. Le développeur SSIS doit avoir connaissance des limites de tout fournisseur ODBC utilisé et en tenir compte lors de la génération de packages SSIS.  
@@ -104,7 +104,7 @@ ms.locfileid: "71298167"
 #### <a name="connection-manager"></a>Gestionnaire de connexions  
  Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur **Nouveau** pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
   
-#### <a name="new"></a>Nouvelle  
+#### <a name="new"></a>Nouveau  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l'Éditeur du gestionnaire de connexions ODBC** s'ouvre et vous permet de créer un nouveau gestionnaire de connexions ODBC.  
   
 #### <a name="data-access-mode"></a>Mode d'accès aux données  
@@ -113,14 +113,14 @@ ms.locfileid: "71298167"
 |Option|Description|  
 |------------|-----------------|  
 |Nom de la table|Permet de récupérer les données d'une table ou d'une vue dans la source de données ODBC. Lorsque vous sélectionnez cette option, sélectionnez une valeur parmi les suivantes dans la liste :|  
-||**Nom de la table ou de la vue** : sélectionnez une table ou une vue disponible dans la liste ou tapez une expression régulière pour identifier la table.|  
+||**Nom de la table ou de la vue**: sélectionnez une table ou une vue disponible dans la liste ou tapez une expression régulière pour identifier la table.|  
 ||Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.|  
 |Commande SQL|Extrayez les données de la source de données ODBC à l'aide d'une requête SQL. Vous devez écrire la requête dans la syntaxe de la base de données source dans laquelle vous travaillez. Lorsque vous sélectionnez cette option, entrez une requête selon l'une des méthodes suivantes :|  
 ||Entrez le texte de la requête SQL dans le champ **Texte de la commande SQL** .|  
 ||Cliquez sur **Parcourir** pour charger la requête SQL à partir d'un fichier texte.|  
 ||Pour vérifier la syntaxe du texte de la requête, cliquez sur **Analyser** .|  
   
-#### <a name="preview"></a>Aperçu  
+#### <a name="preview"></a>PRÉVERSION  
  Cliquez sur **Aperçu** pour afficher les 200 premières lignes de données extraites de la table ou de la vue sélectionnée.  
   
 ## <a name="odbc-source-editor-columns-page"></a>Éditeur de source ODBC (page Colonnes)
@@ -165,7 +165,7 @@ ms.locfileid: "71298167"
 #### <a name="inputoutput"></a>Entrée/sortie  
  Affichez le nom de la source de données.  
   
-#### <a name="column"></a>colonne  
+#### <a name="column"></a>Colonne  
  Non utilisé.  
   
 #### <a name="error"></a>Error  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5ff96f07db7b368acc7ee36296516e047bc0475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126003"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68126003"
 ## <a name="remarks"></a>Notes  
 Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimise le stockage des colonnes de **bit**. Si une table contient 8 colonnes de **bits** ou moins, celles-ci sont stockées comme 1 octet. S’il y a entre 9 et 16 colonnes de **bit**, elles sont stockées sous la forme de 2 octets, etc.
   
-Les valeurs de chaîne TRUE et FALSE peuvent être converties en valeurs de **bit** : TRUE est convertie en 1 et FALSE est convertie en 0.
+Les valeurs de chaîne TRUE et FALSE peuvent être converties en valeurs de **bit** : la valeur TRUE est convertie en 1 et la valeur FALSE en 0.
   
 Lors d'une conversion en bit, toute valeur différente de zéro est changée en 1.
   

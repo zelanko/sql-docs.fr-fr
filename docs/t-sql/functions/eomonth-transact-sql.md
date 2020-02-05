@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904387"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67904387"
 
 Cette fonction retourne le dernier jour du mois contenant une date spécifiée, avec un décalage facultatif.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ La fonction `EOMONTH` peut être exécutée à distance sur les serveurs [!INCLU
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-eomonth-with-explicit-datetime-type"></a>A. EOMONTH avec type datetime explicite  
+### <a name="a-eomonth-with-explicit-datetime-type"></a>R. EOMONTH avec type datetime explicite  
   
 ```  
 DECLARE @date DATETIME = '12/1/2011';  
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH avec et sans le paramètre month_to_add  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. EOMONTH avec et sans le paramètre month_to_add  
   
 Remarque : Les valeurs indiquées dans ces jeux de résultats reflètent une date d’exécution inclusivement entre les dates suivantes :
         

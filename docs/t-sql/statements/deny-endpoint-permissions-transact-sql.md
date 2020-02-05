@@ -18,10 +18,10 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114851"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY – refus d'autorisations de point de terminaison (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68114851"
   Permet de refuser des autorisations sur un point de terminaison.  
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -95,8 +95,8 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Refus d'une autorisation VIEW DEFINITION sur un point de terminaison  
- Dans l’exemple ci-dessous, l’autorisation `VIEW DEFINITION` sur le point de terminaison `Mirror7` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
+### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>R. Refus d'une autorisation VIEW DEFINITION sur un point de terminaison  
+ Dans l’exemple ci-dessous, l’autorisation `VIEW DEFINITION` sur le point de terminaison `Mirror7` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Refus d'une autorisation TAKE OWNERSHIP avec l'option CASCADE  
- Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le point de terminaison `Shipping83` est refusée à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` et aux principaux auxquels `PKomosinski` a accordé l'autorisation `TAKE OWNERSHIP`.  
+ Dans l'exemple ci-dessous, l'autorisation `TAKE OWNERSHIP` sur le point de terminaison `Shipping83` est refusée à l'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` et aux principaux auxquels `PKomosinski` a accordé l'autorisation `TAKE OWNERSHIP`.  
   
 ```  
 USE master;  

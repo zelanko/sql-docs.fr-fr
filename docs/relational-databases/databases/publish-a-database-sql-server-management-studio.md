@@ -11,10 +11,10 @@ ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bbcec1ab749b87f37397f94425226e5f4f523132
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908520"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publier une base de données (SQL Server Management Studio)
@@ -47,6 +47,6 @@ ms.locfileid: "72908520"
 
 ## <a name="see-also"></a>Voir aussi  
  [Générer des scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
- [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+ [Copier des bases de données sur d’autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   
   

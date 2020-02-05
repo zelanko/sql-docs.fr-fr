@@ -13,10 +13,10 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093503"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objet FileTable
@@ -47,15 +47,15 @@ Le tableau suivant décrit les objets de performance **FileTable** SQL Server.
 |**FileTable item update reqs/sec**|Nombre total de demandes de mise à jour d’élément FileTable par seconde.|
 |**FileTable kill handle ops/sec**|Nombre total d’opérations de suppression de handle FileTable par seconde.|
 |**FileTable table operations/sec**|Nombre total d’événements opérationnels de table traités par le composant de stockage FileTable par seconde.|
-|**Temps de suppression de l’élément FileTable (BASE)**|À usage interne uniquement|
-|**Time FileTable enumeration BASE**|À usage interne uniquement|
-|**Time FileTable handle kill BASE**|À usage interne uniquement|
-|**Time move FileTable item BASE**|À usage interne uniquement|
-|**Time per file I/O request BASE**|À usage interne uniquement|
-|**Time per file I/O response BASE**|À usage interne uniquement|
-|**Time rename FileTable item BASE**|À usage interne uniquement|
-|**Time to get FileTable item BASE**|À usage interne uniquement|
-|**Time update FileTable item BASE**|À usage interne uniquement| 
+|**Temps de suppression de l’élément FileTable (BASE)**|À usage interne uniquement.|
+|**Time FileTable enumeration BASE**|À usage interne uniquement.|
+|**Time FileTable handle kill BASE**|À usage interne uniquement.|
+|**Time move FileTable item BASE**|À usage interne uniquement.|
+|**Time per file I/O request BASE**|À usage interne uniquement.|
+|**Time per file I/O response BASE**|À usage interne uniquement.|
+|**Time rename FileTable item BASE**|À usage interne uniquement.|
+|**Time to get FileTable item BASE**|À usage interne uniquement.|
+|**Time update FileTable item BASE**|À usage interne uniquement.| 
  
 ## <a name="see-also"></a>Voir aussi  
 [Analyser l'utilisation des ressources (Moniteur système)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

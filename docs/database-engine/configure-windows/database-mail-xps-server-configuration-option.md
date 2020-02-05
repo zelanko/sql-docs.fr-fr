@@ -14,10 +14,10 @@ ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011960"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs (option de configuration de serveur)
@@ -26,9 +26,9 @@ ms.locfileid: "68011960"
 
 Utilisez **l’option** pour activer la messagerie de base de données sur ce serveur. Les valeurs possibles sont les suivantes :  
   
-- `0`: Database Mail n’est pas disponible (par défaut).  
+- `0` : Database Mail n’est pas disponible (par défaut).  
   
-- `1`: Database Mail est disponible.  
+- `1` : Database Mail est disponible.  
   
  Le paramètre prend effet immédiatement, sans arrêt et redémarrage du serveur.  
   

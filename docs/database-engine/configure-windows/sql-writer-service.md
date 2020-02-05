@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816678"
 ---
 # <a name="sql-writer-service"></a>Service SQL Writer
@@ -34,7 +34,7 @@ ms.locfileid: "71816678"
   
  Le service SQL Writer est installé automatiquement. Il doit être en cours d'exécution lorsque l'application VSS (Volume Shadow Copy Service) demande une sauvegarde ou une restauration. Pour configurer le service, utilisez l'applet des services [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Le service SQL Writer s'installe sur tous les systèmes d'exploitation.  
   
-## <a name="purpose"></a>Fonction  
+## <a name="purpose"></a>Objectif  
  Lors de son exécution, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] verrouille les fichiers de données pour être seul à pouvoir y accéder. Lorsque le service SQL Writer n'est pas exécuté, les programmes de sauvegarde exécutés dans Windows n'ont pas accès à ces fichiers de données, et les sauvegardes doivent s'effectuer au moyen de la sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Utilisez le service SQL Writer pour permettre aux programmes de sauvegarde de Windows de copier les fichiers de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] même lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution.  
@@ -45,7 +45,7 @@ ms.locfileid: "71816678"
  Ce service capture et copie des images stables pour la sauvegarde sur des systèmes en cours d'utilisation, en particulier des serveurs, sans dégradation superflue des performances et de la stabilité des services qu'ils assurent. Pour plus d'informations sur le service VSS, consultez votre documentation Windows.  
 
 > [!NOTE]
-> Lorsque VSS est utilisé pour sauvegarder une machine virtuelle qui héberge un groupe de disponibilité de base et des bases de données dans un état secondaire, ces bases de données *ne seront pas* sauvegardées avec la machine virtuelle à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9.  En effet, les groupes de disponibilité de base ne prennent pas en charge la sauvegarde des bases de données sur le réplica secondaire.  Avant ces versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la sauvegarde échoue avec une erreur.
+> Lorsque VSS est utilisé pour sauvegarder une machine virtuelle qui héberge un groupe de disponibilité de base et des bases de données dans un état secondaire, ces bases de données [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ne seront pas[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sauvegardées avec la machine virtuelle à partir de *SP2 CU2 et* CU9.  En effet, les groupes de disponibilité de base ne prennent pas en charge la sauvegarde des bases de données sur le réplica secondaire.  Avant ces versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la sauvegarde échoue avec une erreur.
   
 ## <a name="virtual-backup-device-interface-vdi"></a>Interface d'unité de sauvegarde virtuelle  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une API appelée « Interface d’unité de sauvegarde virtuelle » qui permet aux éditeurs de logiciels indépendants d’intégrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans leurs produits pour la prise en charge des opérations de sauvegarde et de restauration. Conçues pour fournir une fiabilité et des performances optimales, ces API prennent en charge l'éventail complet de fonctions de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris la gamme totale des sauvegardes à chaud et instantanées. Si une application de fournisseur tiers demande une sauvegarde d’instantané (VSS), le service SQL Writer appelle les fonctions de l’API VDI afin d’effectuer les sauvegardes réelles. Notez que l’API VDI est indépendante de VSS et qu’elle est souvent utilisée dans les solutions logicielles qui n’utilisent pas les API VSS.

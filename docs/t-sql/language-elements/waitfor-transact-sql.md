@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086116"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68086116"
 
   Bloque l’exécution d’un lot, d’une procédure stockée ou d’une transaction jusqu’à ce que l’heure ou l’intervalle de temps indiqué soit atteint ou qu’une instruction spécifiée modifie ou retourne au moins une ligne.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ WAITFOR
  '*time_to_pass*'  
  Durée de l'attente. *time_to_pass* peut être spécifié dans un format de données **datetime** ou en tant que variable locale. Vous ne pouvez pas spécifier de dates ; par conséquent, la partie date de la valeur **datetime** n’est pas autorisée. *time_to_pass* est au format hh:mm[[:ss].mss].
   
- TIME  
+ TEMPS  
  Heure spécifiée de l'exécution du traitement d'instructions, de la procédure stockée ou de la transaction.  
   
  '*time_to_execute*'  
@@ -106,7 +106,7 @@ WAITFOR
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-waitfor-time"></a>A. Utilisation de WAITFOR TIME  
+### <a name="a-using-waitfor-time"></a>R. Utilisation de WAITFOR TIME  
  L'exemple suivant exécute la procédure stockée `sp_update_job` dans la base de données msdb à 22 h 20. (`22:20`).  
   
 ```  

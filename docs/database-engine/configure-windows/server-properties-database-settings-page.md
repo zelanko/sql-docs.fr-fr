@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.custom: ''
 ms.date: 05/23/2019
 ms.openlocfilehash: bdefcbbfe6d5987de4ac69ab60d1e80b004a5db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025449"
 ---
 # <a name="server-properties---database-settings-page"></a>Propriétés du serveur - page Paramètres de base de données
@@ -73,7 +73,7 @@ Cette option vous permet d’activer le paramètre sp_configure pour le *paramè
 
 Définit le nombre maximal de minutes par base de données pour la récupération des bases de données. La valeur par défaut est égale à 0, ce qui correspond à une configuration automatique par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour les bases de données actives, cette option représente concrètement une durée de récupération inférieure à une minute et un point de contrôle chaque minute environ. Pour plus d'informations, consultez [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
-### <a name="data"></a>data
+### <a name="data"></a>Données
 
 Spécifie l'emplacement par défaut des fichiers de données. Cliquez sur le bouton Parcourir pour accéder à un nouvel emplacement par défaut. N’entre pas en vigueur tant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas redémarré.  
   

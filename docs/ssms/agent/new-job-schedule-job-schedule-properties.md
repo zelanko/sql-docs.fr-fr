@@ -1,10 +1,9 @@
 ---
-title: Nouvelle planification du travail - Propriétés de la planification du travail | Microsoft Docs
-ms.custom: ''
+title: Nouvelle planification du travail - Propriétés de la planification du travail
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,13 +12,15 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4e7500e61be6167271388f688428b6c1530e8d58
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ace04d16e537e50c10e0eaa5c4fa432d1db7055f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262996"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245206"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Nouvelle planification du travail - Propriétés de la planification du travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68262996"
 Cette page vous permet d'afficher et de modifier les propriétés de la planification.  
   
 ## <a name="options"></a>Options  
-**Name**  
+**Nom**  
 Tapez un nouveau nom pour la planification.  
   
 **Travaux planifiés**  
