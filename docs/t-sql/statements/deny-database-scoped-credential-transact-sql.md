@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbcf7c136bfe9ff80b1ea9129e5c6d453aec9e01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114864"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY – Refuser des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68114864"
   Permet de refuser des autorisations sur des informations d’identification délimitées à la base de données.  
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ DENY permission  [ ,...n ]
  Spécifie les informations d’identification délimitées à la base de données sur lesquelles l’autorisation est refusée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
- Spécifie le principal auquel l'autorisation est refusée. Il peut s'agir :  
+ Spécifie le principal auquel l'autorisation est refusée. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   
@@ -75,7 +75,7 @@ DENY permission  [ ,...n ]
  Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
   
  *denying_principal*  
- Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation. Il peut s'agir :  
+ Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   

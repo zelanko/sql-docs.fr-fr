@@ -16,10 +16,10 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943120"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "67943120"
 
 Cette fonction compresse l’expression d’entrée à l’aide de l’algorithme GZIP. La fonction retourne un tableau d’octets de type **varbinary(max)** .
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ Un
 * **varbinary(***n***)**
 * **varchar(max)**
 
-ou Gestionnaire de configuration
+or
 
 * **varchar(***n***)**
 
@@ -64,7 +64,7 @@ La fonction `COMPRESS` compresse les données d’expression d’entrée. Vous d
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. Compresser les données durant l’insertion dans la table  
+### <a name="a-compress-data-during-the-table-insert"></a>R. Compresser les données durant l’insertion dans la table  
 Cet exemple montre comment compresser les données insérées dans une table :
   
 ```sql

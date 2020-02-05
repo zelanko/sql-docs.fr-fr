@@ -19,18 +19,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ec722f337e24bd08b3b41ffe7d7e8e1539e2ff58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914322"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne la valeur de l'expression spécifiée à la puissance indiquée.  
+  Retourne la valeur de l’expression spécifiée élevée à la puissance spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ POWER ( float_expression , y )
 |----------|-----------|  
 |**float**, **real**|**float**|
 |**decimal(*p*, *s*)**|**decimal(38, *s*)**|
-|**int**, **smallint**, **tinyint**|**Int**|
+|**int**, **smallint**, **tinyint**|**int**|
 |**bigint**|**bigint**|
 |**money**, **smallmoney**|**money**|
 |**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
@@ -61,7 +61,7 @@ Si le résultat ne tient pas dans le type de retour, une erreur de dépassement 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-power-to-return-the-cube-of-a-number"></a>A. Utilisation de la fonction POWER pour retourner le cube d'un nombre  
+### <a name="a-using-power-to-return-the-cube-of-a-number"></a>R. Utilisation de la fonction POWER pour retourner le cube d'un nombre  
  L'exemple suivant montre comment élever un nombre à la puissance 3 (le cube du nombre).  
   
 ```  
@@ -148,7 +148,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D : Utilisation de la fonction POWER pour retourner le cube d'un nombre  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D : Utilisation de la fonction POWER pour renvoyer le cube d’un nombre  
  L’exemple suivant retourne les résultats de `POWER` pour `2.0` à la puissance 3.  
   
 ```  

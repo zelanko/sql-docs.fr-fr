@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ba656a13c71792a176b7f625a2f561f1f422e4b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769429"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287058"
 ---
 # <a name="subscription-synchronization-history"></a>Abonnement, Historique de synchronisation
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68769429"
   
 -   Error  
   
--   Terminé  
+-   Completed  
   
 -   Nouvel essai  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68769429"
  **Heure de fin**  
  Heure de fin de la session. Si l'agent ne s'est pas arrêté, ce champ est vide.  
   
- **Duration**  
+ **Durée**  
  Durée d'exécution de l'Agent de fusion au cours d'une session. La durée correspond au délai écoulé si l'Agent est actif ou au délai total si l'Agent a déjà été exécuté.  
   
  **Commandes téléchargées**  
@@ -57,7 +57,7 @@ ms.locfileid: "68769429"
  **Commandes téléchargées**  
  Nombre de lignes téléchargées en aval au cours de la session de l'Agent de fusion.  
   
- **Message d'erreur**  
+ **Message d’erreur**  
  Si la session s'est terminée par une erreur, ce champ contient le dernier message d'erreur consigné par l'Agent de fusion. Dans le cas contraire, ce champ est vide.  
   
  **Article**  
@@ -76,7 +76,7 @@ ms.locfileid: "68769429"
  **% du total**  
  Pourcentage du temps de traitement total correspondant à chaque phase dans la session sélectionnée.  
   
- **Duration**  
+ **Durée**  
  Durée passée dans chaque phase de traitement. La durée correspond au délai écoulé si l'Agent de fusion est en cours d'exécution au cours de la session ou au délai total s'il a déjà été exécuté.  
   
  **Inserts**  
