@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8834e05acdbb3a38fb8688e96c75935da6778563
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74762856"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "74762856"
 
   Retourne le numéro d'erreur pour la dernière instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutée.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

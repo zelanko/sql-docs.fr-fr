@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903746"
 ---
 # <a name="create-a-database-schema"></a>Créer un schéma de base de données
@@ -65,7 +65,7 @@ ms.locfileid: "72903746"
 > Aucune boîte de dialogue ne s’affiche si vous créez un schéma à l’aide de SSMS à partir d’**Azure SQL Database** ou d’**Azure SQL Data Warehouse**. Vous devez exécuter l’instruction T-SQL Create Schema Template qui est générée.
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Schéma- Nouveau** offre également des options sur deux pages supplémentaires : **Autorisations** et **Propriétés étendues**.  
+ La boîte de dialogue **Schéma - Nouveau** offre également des options dans deux pages supplémentaires : **Autorisations** et **Propriétés étendues**.  
   
 -   La page **Autorisations** répertorie tous les éléments sécurisables possibles et les autorisations sur les éléments sécurisables qui peuvent être accordées à la connexion.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72903746"
   
 #### <a name="to-create-a-schema"></a>Pour créer un schéma  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

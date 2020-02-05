@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 523b082be7b61991db13d588a7203ad4ce5597ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055432"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Désactiver la compression sur une table ou un index
@@ -67,7 +67,7 @@ ms.locfileid: "68055432"
   
 4.  Dans l'Assistant Compression de données, sur la page **Assistant Compression de données** , cliquez sur **Suivant**.  
   
-5.  Dans la page **Sélectionner le type de compression** , sélectionnez le type de compression **None** pour qu'aucune compression ne soit appliquée aux partitions de l'index. Lorsque vous avez terminé, cliquez sur **Suivant**.  
+5.  Dans la page **Sélectionner le type de compression** , sélectionnez le type de compression **None** pour qu'aucune compression ne soit appliquée aux partitions de l'index. Une fois que vous avez terminé, cliquez sur **Suivant**.  
   
      Les options suivantes sont disponibles dans la page **Sélectionner le type de compression** :  
   
@@ -174,7 +174,7 @@ ms.locfileid: "68055432"
      **Message**  
      Indique les messages d'erreur ou d'avertissement retournés par le processus.  
   
-     **Rapport**  
+     **Report**  
      Crée un rapport qui contient les résultats de l'Assistant Création de partition. Les options sont **Afficher le rapport**, **Enregistrer le rapport dans un fichier**, **Copier le rapport dans le Presse-papiers**et **Envoyer le rapport sous forme de courrier électronique**.  
   
      **Afficher le rapport**  
@@ -195,7 +195,7 @@ ms.locfileid: "68055432"
   
 #### <a name="to-disable-compression-on-a-table"></a>Pour désactiver la compression sur une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -211,7 +211,7 @@ ms.locfileid: "68055432"
   
 #### <a name="to-disable-compression-on-an-index"></a>Pour désactiver la compression sur un index  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

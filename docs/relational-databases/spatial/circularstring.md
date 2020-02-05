@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 19ac88cbc9db29dfeb06614a50869adfe8d3cc6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048796"
 ---
 # <a name="circularstring"></a>CircularString
@@ -83,7 +83,7 @@ Dans les cas suivants un segment d'arc de cercle sera traité comme un segment d
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Instanciation d'une instance géométrique à l'aide d'un CircularString vide  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>R. Instanciation d'une instance géométrique à l'aide d'un CircularString vide  
  Cet exemple indique comment créer une instance **CircularString** vide :  
   
 ```sql  
@@ -158,7 +158,7 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   
  [MakeValid &#40;type de données geography&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
  [MakeValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)   
- [STIsValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
+ [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [STIsValid &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)   
  [STLength &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   

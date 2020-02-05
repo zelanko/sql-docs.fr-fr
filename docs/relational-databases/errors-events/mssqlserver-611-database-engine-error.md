@@ -12,13 +12,13 @@ ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c54c9e2f5e0e3d0a640935d80f22537a96876903
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903911"
 ---
-# <a name="mssqlserver611"></a>MSSQLSERVER_611
+# <a name="mssqlserver_611"></a>MSSQLSERVER_611
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67903911"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|611|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|611|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|VAR_SIZE_TOO_BIG|  
 |Texte du message|Impossible d'insérer ou de mettre à jour une ligne, car la taille totale de colonne variable, surcharge comprise, dépasse la limite de %d octets.|  

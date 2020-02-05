@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6ce63dc5a35b9359e24bc410be2a0d53f80cfc99
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246900"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Exemple : Spécification d’un élément racine pour les données XML générées par FOR XML
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Exemple : spécification d'un élément racine pour les données XML générées par FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En spécifiant l'option `ROOT` dans la requête `FOR XML` , vous pouvez demander un élément de niveau supérieur unique pour les données XML résultantes, comme illustré dans cette requête. L'argument spécifié pour la directive `ROOT` fournit le nom de l'élément racine.  
   

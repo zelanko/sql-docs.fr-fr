@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b81f630227c0c8732414c237e31e6efc84593e09
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 697c7052a11856670e3af37c9bc47c41a0031264
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710969"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287789"
 ---
 # <a name="mssql_eng014152"></a>MSSQL_ENG014152
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "71710969"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14152|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14152|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Réplication-%s : agent %s programmé pour réessayer. %s|  

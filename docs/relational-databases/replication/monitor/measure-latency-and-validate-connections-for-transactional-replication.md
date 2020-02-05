@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321848"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288151"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "75321848"
   
 3.  Cliquez sur **Insérer un suivi**.  
   
-4.  Affichez la durée calendaire pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Pour afficher les informations d'un jeton de suivi inséré précédemment  
   
@@ -101,7 +101,7 @@ ms.locfileid: "75321848"
   
 3.  Sélectionnez une heure dans la liste déroulante **Heure de l'insertion** .  
   
-4.  Affichez la durée calendaire pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
     > [!NOTE]  
     >  Les informations de jeton de suivi sont conservées pour la même durée que toute autre donnée d'historique, elles-mêmes étant régies par la période de rétention des historiques définie dans la base de données de distribution. Pour plus d’informations sur la modification des propriétés de base de données de distribution, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  

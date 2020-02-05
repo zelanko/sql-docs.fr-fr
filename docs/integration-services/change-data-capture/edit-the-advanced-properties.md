@@ -13,10 +13,10 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 03d0bab629c717b39e09d66e37f7664e1491ef65
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298758"
 ---
 # <a name="edit-the-advanced-properties"></a>Modifier les propriétés avancées
@@ -39,6 +39,6 @@ ms.locfileid: "71298758"
   
 ## <a name="see-also"></a>Voir aussi  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
+ [Guide pratique pour modifier les propriétés d’une instance CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   

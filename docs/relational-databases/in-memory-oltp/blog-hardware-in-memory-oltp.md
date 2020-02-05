@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951136"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Considérations matérielles pour l’OLTP en mémoire dans SQL Server
@@ -33,7 +33,7 @@ L’OLTP en mémoire n’utilise pas la mémoire et le disque de la même façon
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
 -->
 
-## <a name="cpu"></a>Unité centrale
+## <a name="cpu"></a>UC
 
 L’OLTP en mémoire ne nécessite pas un serveur haut de gamme pour prendre en charge une charge de travail OLTP à débit élevé. Nous recommandons d’utiliser un serveur de milieu de gamme avec 2 sockets CPU. En raison du débit plus élevé produit par l’OLTP en mémoire, 2 sockets sont probablement suffisants pour les besoins de votre entreprise.
 

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142762514f9bdbd7c7984dff218e5ea665d1d4d4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843313"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843313"
 
   Retourne le nombre d'instructions BEGIN TRANSACTION qui se sont produites sur la connexion actuelle.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73843313"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. Illustration des effets des instructions BEGIN et COMMIT  
+### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>R. Illustration des effets des instructions BEGIN et COMMIT  
  L'exemple suivant illustre l'effet des instructions `BEGIN` et `COMMIT` imbriqués sur la variable `@@TRANCOUNT`.  
   
 ```  

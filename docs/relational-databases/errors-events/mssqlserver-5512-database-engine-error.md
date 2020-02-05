@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: badc2269bd84bdaa32a5e48bde9492c306eb01be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903954"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -27,8 +27,8 @@ ms.locfileid: "67903954"
 |||  
 |-|-|  
 |Nom du produit|MSSQLSERVER|  
-|ID d'événement|5512|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|5512|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|FS_TRUNCATEDIR_FAILED|  
 |Texte du message|L'erreur 0x%x (% ls) a été rencontrée pendant la troncation du répertoire « '%.*ls ».|  

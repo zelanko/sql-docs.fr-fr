@@ -1,10 +1,7 @@
 ---
-title: Annuler l’inscription de plusieurs serveurs cibles dans un serveur maître | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,20 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dc5ad3034885805272ed1d507e0168d5884c4c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dcce797597d2f0ed4700ad17d716d31c49a4cffa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267227"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254724"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -52,5 +54,5 @@ Cette rubrique explique comment annuler l'inscription de plusieurs serveurs cibl
 ## <a name="see-also"></a>Voir aussi  
 [Créer un environnement multi-serveur](../../ssms/agent/create-a-multiserver-environment.md)  
 [Administration automatisée à l'échelle d'une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-[Annuler l'inscription d'un serveur cible dans un serveur maître](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  
+[Annuler l’inscription d’un serveur cible dans un serveur maître](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  
   

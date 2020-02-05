@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908267"
 ---
 # <a name="delete-a-push-subscription"></a>Supprimer un abonnement par émission (push)
@@ -93,7 +93,7 @@ ms.locfileid: "72908267"
   
 1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>et <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> .  
   
@@ -107,7 +107,7 @@ ms.locfileid: "72908267"
   
 1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>et <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> .  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72908267"
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

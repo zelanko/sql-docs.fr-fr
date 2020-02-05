@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810972"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Spécification du kit de développement logiciel (SDK) de client VDI pour SQL Server sur Linux
@@ -81,7 +81,7 @@ Ce chapitre contient les descriptions de chacune des fonctions clientes. Les des
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| | **nom** | Identifie l’ensemble des appareils virtuels. Les règles pour les noms utilisés par CreateFileMapping() doivent être suivies. N’importe quel caractère à l’exception de la barre oblique inverse (\) peut être utilisé. Il s’agit d’une chaîne de caractères. Il est recommandé de préfixer la chaîne avec le nom de la société ou du produit de l’utilisateur et le nom de la base de données. |
+| | **name** | Identifie l’ensemble des appareils virtuels. Les règles pour les noms utilisés par CreateFileMapping() doivent être suivies. N’importe quel caractère à l’exception de la barre oblique inverse (\) peut être utilisé. Il s’agit d’une chaîne de caractères. Il est recommandé de préfixer la chaîne avec le nom de la société ou du produit de l’utilisateur et le nom de la base de données. |
 | |**cfg** | Il s’agit de la configuration du jeu d’appareils virtuels. Pour plus d’informations, consultez la section « Configuration » plus loin dans ce document.
 
 | Valeurs de retour | Argument | Explication
@@ -129,7 +129,7 @@ Ce chapitre contient les descriptions de chacune des fonctions clientes. Les des
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| | **nom** |Identifie l’ensemble des appareils virtuels.
+| | **name** |Identifie l’ensemble des appareils virtuels.
 | | **ppVirtualDevice** |Lorsque la fonction réussit, un pointeur vers l’appareil virtuel est retourné. Cet appareil est utilisé pour GetCommand et CompleteCommand.
 
 | Valeurs de retour | Argument | Explication

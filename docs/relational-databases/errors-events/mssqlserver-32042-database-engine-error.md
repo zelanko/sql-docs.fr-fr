@@ -12,13 +12,13 @@ ms.assetid: 53a51c7a-dcd4-4c15-b4d2-6aaa9dce76da
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d68d356991db028aff47ce65658ef057f3e9b753
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107207"
 ---
-# <a name="mssqlserver32042"></a>MSSQLSERVER_32042
+# <a name="mssqlserver_32042"></a>MSSQLSERVER_32042
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68107207"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|32042|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|32042|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum32042|  
 |Texte du message|L'alerte relative au journal non envoyé s'est déclenchée. La valeur actuelle de '%d' dépasse le seuil '%d'.|  

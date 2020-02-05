@@ -14,13 +14,13 @@ ms.assetid: f37a7b7d-26e1-4b9e-bcb4-57f7805393d2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 09a5cbc03debdb4fc87986111fb0ac69138715bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903765"
 ---
-# <a name="mssqlserver-2"></a>MSSQLSERVER_-2
+# <a name="mssqlserver_-2"></a>MSSQLSERVER_-2
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -28,11 +28,11 @@ ms.locfileid: "67903765"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|-2|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|-2|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
-|Texte du message|Délai d'expiration dépassé.  Période de délai d'attente écoulée avant l'achèvement de l'opération, ou le serveur ne répond pas. (Microsoft SQL Server, erreur : -2)|  
+|Texte du message|Délai expiré.  Période de délai d'attente écoulée avant l'achèvement de l'opération, ou le serveur ne répond pas. (Microsoft SQL Server, erreur : -2)|  
   
 ## <a name="explanation"></a>Explication  
 Le client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas se connecter au serveur. Cette erreur s'est peut-être produite parce que le pare-feu sur le serveur a refusé la connexion.  

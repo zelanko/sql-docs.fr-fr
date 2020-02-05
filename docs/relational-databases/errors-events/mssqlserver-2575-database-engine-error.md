@@ -12,13 +12,13 @@ ms.assetid: 92dfe449-a122-4730-942b-e1d319862d20
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 954ca0de8de0584ac2ec03133367f6d9fec700fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996099"
 ---
-# <a name="mssqlserver2575"></a>MSSQLSERVER_2575
+# <a name="mssqlserver_2575"></a>MSSQLSERVER_2575
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67996099"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2575|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2575|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_IAM_PAGE_WAS_NOT_SEEN|  
 |Texte du message|La page IAM (Index Allocation Map) P_ID1 est désignée par le prochain pointeur de la page IAM P_ID2 dans l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE), mais elle n'a pas été détectée lors de l'analyse.|  

@@ -13,10 +13,10 @@ ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 216fb75c9dcdffc83e8f4f21469aaa9cfc1b11d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934417"
 ---
 # <a name="log-shipping-monitor-settings"></a>Paramètres du moniteur d'envoi des journaux
@@ -29,7 +29,7 @@ ms.locfileid: "67934417"
  **Instance du serveur moniteur**  
  Affiche le nom de l'instance du serveur actuellement configurée comme serveur moniteur dans la configuration d'envoi des journaux.  
   
- **Se connecter**  
+ **Connexion**  
  Sélectionnez et connectez-vous à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser comme serveur moniteur. Le compte utilisé pour se connecter doit être membre du rôle serveur fixe sysadmin sur l'instance de serveur secondaire.  
   
  **En imitant le compte proxy du travail**  

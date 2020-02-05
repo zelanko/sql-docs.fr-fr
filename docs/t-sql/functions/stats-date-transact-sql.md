@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d6e0b563d7c75a46c8fd8ea0731c046d3159d94
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843331"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73843331"
   
  Pour plus d’informations sur la mise à jour de statistiques, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +66,7 @@ STATS_DATE ( object_id , stats_id )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>A. Retourner les dates des statistiques les plus récentes pour une table  
+### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>R. Retourner les dates des statistiques les plus récentes pour une table  
  L'exemple suivant retourne la date de la mise à jour la plus récente de chaque objet de statistiques dans la table `Person.Address`.  
   
 ```sql  

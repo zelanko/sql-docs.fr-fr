@@ -18,10 +18,10 @@ ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 758a57b7060c2f9669c6f3564eef507e129ab7c0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255622"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Afficher les fichiers de données et les fichiers journaux dans un jeu de sauvegarde (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "75255622"
   
 #### <a name="to-view-the-data-and-log-files-in-a-backup-set"></a>Pour afficher les données et les fichiers journaux dans un jeu de sauvegarde  
   
-1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   

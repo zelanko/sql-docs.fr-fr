@@ -1,10 +1,9 @@
 ---
-title: Modifier l’appartenance d’une catégorie de travaux | Documents Microsoft
-ms.custom: ''
+title: Modifier l'appartenance d'une catégorie de travaux
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 818136fc1d995af3dec7c5e0581ff790a051eb98
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fc3bf68b927cfd162694cc78983a9a6155b25786
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553275"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254730"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modifier l'appartenance d'une catégorie de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Pour modifier l'appartenance d'une catégorie de travaux  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bfff0348cfb8f8a4bcdc5db1b107bd6f2235fbeb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 745026d5b2c2ddf7bc04fdf39884962ea9aa05fe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766141"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288493"
 ---
-# <a name="mssqleng018752"></a>MSSQL_ENG018752
+# <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -28,8 +28,8 @@ ms.locfileid: "68766141"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|18752|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|18752|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Un seul Agent de lecture du journal ou une seule procédure liée au journal (sp_repldone, sp_replcmds et sp_replshowcmds) peut se connecter à une base de données à la fois. Si vous avez exécuté une procédure liée au journal, supprimez la connexion à travers laquelle fut exécutée la procédure ou exécutez sp_replflush sur cette connexion avant de démarrer l'Agent de lecture du journal ou d'exécuter toute autre procédure liée au journal.|  

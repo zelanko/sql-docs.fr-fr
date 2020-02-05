@@ -14,13 +14,13 @@ ms.assetid: 95c4ad45-a518-4165-a5c4-6e6b932b0570
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: df788cebac293db707c9fd153724b6add3b39e92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903862"
 ---
-# <a name="mssqlserver948"></a>MSSQLSERVER_948
+# <a name="mssqlserver_948"></a>MSSQLSERVER_948
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -28,10 +28,10 @@ ms.locfileid: "67903862"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|948|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|948|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
-|Nom symbolique|N/A|  
+|Nom symbolique|N/D|  
 |Texte du message|La base de données '%.*ls' ne peut pas être ouverte, car sa version est %d. Ce serveur prend en charge la version %d et les versions précédentes. Un chemin de mise à niveau vers une version antérieure n'est pas pris en charge.|  
   
 ## <a name="explanation"></a>Explication  

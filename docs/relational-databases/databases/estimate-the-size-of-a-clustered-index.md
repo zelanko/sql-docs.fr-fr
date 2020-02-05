@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051112"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimer la taille d’un index cluster
@@ -42,7 +42,7 @@ ms.locfileid: "68051112"
   
 3.  Faites la somme des valeurs calculées.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68051112"
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index  
  Vous pouvez estimer la quantité d'espace nécessaire au stockage des niveaux supérieurs de l'index en procédant comme suit :  
   
 1.  Spécifiez le nombre de colonnes de longueur fixe et de longueur variable de la clé d'index et calculez l'espace nécessaire à leur stockage :  
@@ -198,7 +198,7 @@ ms.locfileid: "68051112"
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## <a name="step-3-total-the-calculated-values"></a>Étape 3. Faire la somme des valeurs calculées  
+## <a name="step-3-total-the-calculated-values"></a>Étape 3. Faire la somme des valeurs calculées  
  Faites la somme des valeurs obtenues à partir des deux étapes précédentes :  
   
  Taille de l’index cluster (octets) = ***Leaf_Space_Used*** + ***Index_Space_used***  

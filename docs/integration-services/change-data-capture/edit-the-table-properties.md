@@ -13,10 +13,10 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294740"
 ---
 # <a name="edit-the-table-properties"></a>Modifier les propriétés d'une table
@@ -44,13 +44,13 @@ ms.locfileid: "71294740"
   
 2.  Enregistrez l'instance de capture comme un des éléments suivants :  
   
-    -   **Nouvelle instance de capture** : dans ce cas, une nouvelle instance de capture est enregistrée et l’ancienne n’est pas supprimée.  
+    -   **Nouvelle instance de capture**: dans ce cas, une nouvelle instance de capture est enregistrée et l'ancienne instance de capture n'est pas supprimée.  
   
-         **Remarque** : il n’est pas possible d’avoir plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
+         **Remarque**: vous ne pouvez pas avoir plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
   
-    -   **Remplacer l’instance de capture existante** : dans ce cas, l’instance de capture actuelle est supprimée et remplacée par celle que vous avez créée. Si deux instances de capture sont définies pour cette table, vous devez en sélectionner une à remplacer.  
+    -   **Remplacer l'instance de capture existante**: dans ce cas, l'instance de capture actuelle est supprimée et remplacée par l'instance de capture que vous avez créée. Si deux instances de capture sont définies pour cette table, vous devez en sélectionner une à remplacer.  
   
- **Remarque** : vous pouvez supprimer une instance de capture de la liste des tables dans l’onglet **Table** .  
+ **Remarque**: vous pouvez supprimer une instance de capture de la liste des tables sous l'onglet **Table** .  
   
  Une fois les informations entrées dans cette boîte de dialogue, cliquez sur **OK** pour accepter les modifications.  
   

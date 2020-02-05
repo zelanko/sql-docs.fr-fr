@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Spécification de la directive XMLTEXT | Microsoft Docs'
+title: 'Exemple : spécification de la directive XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006678"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Exemple : Spécification de la directive XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
@@ -47,7 +47,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Dans le document XML obtenu :  
+ Dans le document XML obtenu :  
   
 -   Comme *AttributeName* n’est pas spécifié pour la colonne `Overflow` et que la directive `xmltext` est spécifiée, les attributs de l’élément <`overflow`> sont ajoutés à la liste d’attributs de l’élément englobant <`Parent`>.  
   
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- Dans l’élément de requête suivant, l’argument *directive* est spécifié pour l’attribut `PersonName`. Par conséquent, `PersonName` est ajouté en tant que sous-élément de l'élément englobant <`Parent`>. Les attributs de <`xmltext`> sont néanmoins ajoutés à l'élément englobant <`Parent`>. Le contenu de l'élément <`overflow`>, les sous-éléments, sont ajoutés avant les autres sous-éléments des éléments englobants <`Parent`>.  
+ Dans l’élément de requête suivant, l’argument *directive* est spécifié pour l’attribut `PersonName` . Par conséquent, `PersonName` est ajouté en tant que sous-élément de l'élément englobant <`Parent`>. Les attributs de <`xmltext`> sont néanmoins ajoutés à l'élément englobant <`Parent`>. Le contenu de l'élément <`overflow`>, les sous-éléments, sont ajoutés avant les autres sous-éléments des éléments englobants <`Parent`>.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  

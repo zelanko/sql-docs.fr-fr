@@ -14,15 +14,15 @@ ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 68d4d824dc95fcbc9c56fe13493c16d0a8f6a0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947810"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objet Workload Group Stats
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  L'objet SQLServer:Workload Group Stats contient des compteurs de performance qui créent des rapports d'information sur les statistiques des groupes de charges de travail de Resource Governor.  
+  L'objet SQLServer :Statistiques des groupes de charges de travail contient des compteurs de performance qui créent des rapports d'information sur les statistiques des groupes de charges de travail de Resource Governor.  
   
  Chaque groupe de charges de travail actif crée une instance de l'objet SQLServer : statistiques des groupes de charges de travail ayant le même nom d'instance que le nom de groupe de charges de travail de Resource Governor. Le tableau suivant décrit les compteurs pris en charge sur cette instance.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "67947810"
 |**Demandes actives**|Nombre de demandes qui sont en cours d'exécution dans ce groupe de charges de travail. Il doit être équivalent au nombre de lignes à partir de sys.dm_exec_requests filtrées par ID de groupe.|  
 |**Demandes bloquées**|Nombre actuel de demandes bloquées dans le groupe de charges de travail. Peut être utilisé pour déterminer des caractéristiques de charge de travail.|  
 |**% processeur retardé**|UC du système retardée pour toutes les demandes dans l’instance spécifiée de l’objet de performance, en pourcentage de la durée active totale.| 
-|**Base de % processeur retardé**|À usage interne uniquement| 
+|**Base de % processeur retardé**|À usage interne uniquement.| 
 |**% processeur effectif**|Utilisation de l’UC système par toutes les demandes dans l’instance spécifiée de l’objet de performance, en pourcentage de la durée active totale.| 
-|**Base de % processeur effectif**|À usage interne uniquement| 
+|**Base de % processeur effectif**|À usage interne uniquement.| 
 |**% d'utilisation de l'UC**|Utilisation de la bande passante de l'UC par toutes les demandes dans ce groupe de charges de travail évaluée en fonction de l'ordinateur et normalisée à tous les processeurs du système. Cette valeur se modifie selon la quantité d'UC disponible pour le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle n'est pas normalisée par rapport à ce que reçoit le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .| 
-|**Base de % utilisation processeur**|À usage interne uniquement| 
+|**Base de % utilisation processeur**|À usage interne uniquement.| 
 |**% non respecté**|Différence entre la réservation de l’UC et le pourcentage de planification effective.|  
 |**Temps processeur max. par requête (ms)**|Temps processeur maximal, en millisecondes, utilisé par une demande en cours d'exécution dans le groupe de charges de travail.|  
 |**Quantité max. de mémoire par requête (Ko)**|Valeur maximale de la quantité de mémoire, en kilo-octets (Ko), pour une requête.|  
@@ -48,7 +48,7 @@ ms.locfileid: "67947810"
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, objet Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
+ [SQLServer, objet Statistiques des pools de ressources](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)  
   
   

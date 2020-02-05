@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ede5586c8ea7fab69360c12394834fa681eb113c
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6c33925b1a518cb975ebd427c252d0538cfb6ed2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846557"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287643"
 ---
 # <a name="delete-a-publication"></a>Supprimer une publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70846557"
   
 #### <a name="to-delete-a-snapshot-or-transactional-publication"></a>Pour supprimer une publication d'instantané ou une publication transactionnelle  
   
-1.  Procédez de l'une des manières suivantes :  
+1.  Effectuez l’une des actions suivantes :  
   
     -   Pour supprimer une publication unique, exécutez [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) sur la base de données de publication du serveur de publication.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "70846557"
   
 #### <a name="to-delete-a-merge-publication"></a>Pour supprimer une publication de fusion  
   
-1.  Procédez de l'une des manières suivantes :  
+1.  Effectuez l’une des actions suivantes :  
   
     -   Pour supprimer une publication unique, exécutez [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) sur la base de données de publication du serveur de publication.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "70846557"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "70846557"
   
 6.  (Facultatif) Si aucune autre publication transactionnelle n'existe pour cette base de données, vous pouvez désactiver la base de données pour la publication transactionnelle en procédant comme suit :  
   
-    1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1.  
+    1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1.  
   
     2.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si cette méthode retourne **false**, confirmez que la base de données existe.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "70846557"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "70846557"
   
 6.  (Facultatif) Si aucune autre publication de fusion n'existe pour cette base de données, vous pouvez désactiver la base de données pour la publication de fusion en procédant comme suit :  
   
-    1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1.  
+    1.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1.  
   
     2.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si cette méthode retourne **false**, vérifiez que la base de données existe.  
   

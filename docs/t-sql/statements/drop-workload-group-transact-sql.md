@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e75e84884bca1fef4d42a64056e2ef38111e6db
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952340"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
@@ -55,7 +55,7 @@ DROP WORKLOAD GROUP group_name
 
 *group_name* : nom d'un groupe de charges de travail défini par l'utilisateur existant.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L'instruction DROP WORKLOAD GROUP n'est pas autorisée sur les groupes interne ou par défaut du gouverneur de ressources.
 
@@ -86,7 +86,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)
 - [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)  
@@ -122,7 +122,7 @@ DROP WORKLOAD GROUP group_name
 *group_name*  
 Nom d'un groupe de charges de travail défini par l'utilisateur existant.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Un groupe de charge de travail ne peut pas être supprimé si des classifieurs ont été définis pour lui.  Vous devez supprimer les classifieurs existants avant de supprimer le groupe de charge de travail.  Si des requêtes actives utilisant des ressources du groupe de charge de travail sont supprimées, l’instruction de suppression du groupe de charge de travail est bloquée.
 

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02bd8c4d017d391755eb9d61ef7685883a5ade51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115901"
 ---
 # <a name="objects-event-category"></a>Catégorie d'événement Objets
@@ -29,10 +29,10 @@ ms.locfileid: "68115901"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événements Auto Stats](../../relational-databases/event-classes/auto-stats-event-class.md)|Indique qu'une mise à jour automatique des statistiques d'index et de colonne a eu lieu.|  
-|[Classe d'événements : Object:Altered](../../relational-databases/event-classes/object-altered-event-class.md)|Indique qu'un objet a été modifié, par exemple avec l'instruction ALTER DATABASE ou ALTER TABLE.|  
+|[Auto Stats, classe d’événements](../../relational-databases/event-classes/auto-stats-event-class.md)|Indique qu'une mise à jour automatique des statistiques d'index et de colonne a eu lieu.|  
+|[Object:Altered, classe d’événements](../../relational-databases/event-classes/object-altered-event-class.md)|Indique qu'un objet a été modifié, par exemple avec l'instruction ALTER DATABASE ou ALTER TABLE.|  
 |[Classe d'événements Object:Created](../../relational-databases/event-classes/object-created-event-class.md)|Indique qu'un objet a été créé, par exemple avec l'instruction CREATE INDEX, CREATE TABLE  ou CREATE DATABASE.|  
-|[Classe d'événements Object:Deleted](../../relational-databases/event-classes/object-deleted-event-class.md)|Indique qu'un objet a été supprimé, par exemple avec l'instruction DROP INDEX ou DROP TABLE.|  
+|[Object:Deleted, classe d’événements](../../relational-databases/event-classes/object-deleted-event-class.md)|Indique qu'un objet a été supprimé, par exemple avec l'instruction DROP INDEX ou DROP TABLE.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  

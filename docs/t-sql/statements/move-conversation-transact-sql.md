@@ -24,10 +24,10 @@ ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e4deadd4f48457557019ac02337133466b3df33
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211349"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "70211349"
 
   Déplace une conversation vers un groupe de conversations différent.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,11 +53,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Variable ou constante contenant l'identificateur du groupe de conversations destinataire. *conversation_group_id* doit être de type **uniqueidentifier**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’instruction MOVE CONVERSATION déplace la conversation spécifiée par *conversation_handle* vers le groupe de conversations identifié par *conversation_group_id*. Les dialogues ne peuvent être redirigés qu'entre des groupes de conversation associés à la même file d'attente.  
   
 > [!IMPORTANT]  
->  Si l’instruction MOVE CONVERSATION n’est pas la première d’un lot ou d’une procédure stockée, l’instruction qui précède doit se terminer par un point-virgule (**;**), le terminateur d’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Si l’instruction MOVE CONVERSATION n’est pas la première d’un lot ou d’une procédure stockée, l’instruction qui précède doit se terminer par un point-virgule ( **;** ), le terminateur d’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  L’instruction MOVE CONVERSATION verrouille le groupe de conversations associé à *conversation_handle* et celui spécifié par *conversation_group_id* jusqu’à la validation ou la restauration de la transaction contenant cette instruction.  
   
@@ -81,7 +81,7 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

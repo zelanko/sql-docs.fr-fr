@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594502"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted
@@ -38,7 +38,7 @@ L’Assistant déplace les données hors de la base de données et en effectuant
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Si vous utilisez [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] et que votre instance SQL Server est configurée avec une enclave sécurisée, vous pouvez exécuter des opérations de chiffrement sur place, sans déplacer les données hors de la base de données. Consultez [Configurer le chiffrement de colonne sur place à l’aide d’Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-configure-encryption.md). Notez que l’Assistant ne prend pas en charge le chiffrement sur place.
+> Si vous utilisez [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] et que votre instance SQL Server est configurée avec une enclave sécurisée, vous pouvez exécuter des opérations de chiffrement sur place, sans déplacer les données en dehors de la base de données. Consultez [Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-configure-encryption.md). Notez que l’Assistant ne prend pas en charge le chiffrement sur place.
 
 ::: moniker-end
 
@@ -48,7 +48,7 @@ Utilisez PowerShell.
     - [Protéger les données sensibles dans Azure SQL Database avec Always Encrypted et des clés principales de colonne dans le magasin de certificats Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
     - [Protéger les données sensibles dans Azure SQL Database avec Always Encrypted et des clés principales de colonne dans Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
- - Consultez [Prise en main d’Always Encrypted avec SSMS](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)pour regarder une vidéo qui traite de l’utilisation de l’Assistant. Consultez également le blog de l’équipe de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Assistant de chiffrement SSMS - Activer Always Encrypted en quelques étapes](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
+ - Consultez [Prise en main d’Always Encrypted avec SSMS](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)pour regarder une vidéo qui traite de l’utilisation de l’Assistant. Consultez également le blog de l’équipe de sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Assistant de chiffrement SSMS - Activer Always Encrypted en quelques étapes](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
  - Pour plus d’informations sur les clés Always Encrypted, consultez [Vue d’ensemble de la gestion de clés pour Always Encrypted](overview-of-key-management-for-always-encrypted.md).
  - Pour plus d’informations sur les types de chiffrement pris en charge dans Always Encrypted, consultez [Sélection du chiffrement déterministe ou aléatoire](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
@@ -101,14 +101,14 @@ Pour plus d’informations sur la création et le stockage des clés principales
 > [!TIP]
 > L’Assistant vous permet de parcourir et créer des clés uniquement dans le magasin de certificats Windows et Azure Key Vault. Par ailleurs, il génère automatiquement les noms des nouvelles clés et des nouveaux objets de métadonnées de base de données décrivant les clés. Si vous avez besoin de contrôler davantage le provisionnement de vos clés (et d’avoir plus de choix pour le magasin de clés contenant votre clé principale de colonne), vous pouvez utiliser les boîtes de dialogue **Nouvelle clé principale de colonne** et **Nouvelle clé de chiffrement de colonne** pour d’abord créer les clés, puis exécuter l’Assistant et choisir les clés que vous avez créées. Consultez [Provisionner des clés principales de colonne dans la boîte de dialogue Nouvelle clé principale de colonne](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) et [Provisionner des clés de chiffrement de colonne dans la boîte de dialogue Nouvelle clé de chiffrement de colonne](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
 
-## <a name="next-steps"></a>Next Steps
-- [Interroger les colonnes à l’aide d’Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
-- [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md)
+## <a name="next-steps"></a>Étapes suivantes
+- [Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Développer des applications avec Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Voir aussi  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Vue d’ensemble de la gestion des clés pour Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configurer Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
- - [Provisionner des clés Always Encrypted à l’aide de PowerShell](configure-always-encrypted-keys-using-powershell.md)
- - [Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec PowerShell](configure-column-encryption-using-powershell.md)
- - [Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec un package DAC](configure-always-encrypted-using-dacpac.md)
+ - [Provisionner des clés Always Encrypted en utilisant PowerShell](configure-always-encrypted-keys-using-powershell.md)
+ - [Configurer le chiffrement de colonne avec Always Encrypted en utilisant PowerShell](configure-column-encryption-using-powershell.md)
+ - [Configurer le chiffrement de colonne en utilisant Always Encrypted avec un package DAC](configure-always-encrypted-using-dacpac.md)

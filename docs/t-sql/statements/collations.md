@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271913"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "71271913"
 
 Définit un classement pour une colonne de base de données ou de table, ou un cast de classement lors d’une application à une expression de chaîne de caractères. Le nom du classement peut être un nom de classement Windows ou SQL. Si aucun classement n’est spécifié pendant la création de la base de données, le classement par défaut de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est attribué à la base de données. Si aucun classement n’est spécifié pendant la création d’une colonne de table, le classement par défaut de la base de données est attribué à la colonne.
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -103,7 +103,7 @@ FROM fn_helpcollations();
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-specifying-collation-during-a-select"></a>A. Spécification d’un classement pendant une opération SELECT
+### <a name="a-specifying-collation-during-a-select"></a>R. Spécification d’un classement pendant une opération SELECT
 
 L'exemple suivant crée une table simple et insère 4 lignes. Il applique ensuite deux classements lors de la sélection de données de la table, montrant comment `Chiapas` est trié différemment.
 
@@ -148,9 +148,9 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>B. Autres exemples
+### <a name="b-additional-examples"></a>B. Exemples supplémentaires
 
-Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple **G. Créer une base de données et spécifier un nom et des options de classement** de la rubrique [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) et l’exemple **V. Modifier le classement des colonnes** de la rubrique [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
+Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple [G. Créer une base de données et spécifier un nom et des options de classement](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) de la rubrique **CREATE DATABASE** et l’exemple [V. Modifier le classement des colonnes](../../t-sql/statements/alter-table-transact-sql.md#alter_column) de la rubrique **ALTER TABLE**.
 
 ## <a name="see-also"></a>Voir aussi
 

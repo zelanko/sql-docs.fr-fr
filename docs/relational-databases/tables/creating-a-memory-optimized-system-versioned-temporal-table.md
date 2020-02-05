@@ -12,13 +12,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79831c782524a1a9b0b7acea55ccce437e5733fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123627"
 ---
-# <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Création d’une table temporelle à mémoire optimisée avec version gérée par le système
+# <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Création d’une table temporelle de contrôle de version du système à mémoire optimisée
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 

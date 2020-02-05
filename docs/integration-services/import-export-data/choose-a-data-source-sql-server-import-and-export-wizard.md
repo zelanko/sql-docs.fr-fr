@@ -12,10 +12,10 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71951943"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
@@ -69,7 +69,7 @@ Pour se connecter à une source de données couramment utilisée, consultez une 
 -   [Se connecter à PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [Se connecter à MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
-Pour plus d’informations sur la façon de se connecter à une source de données qui n’est pas répertoriée ici, consultez [The Connection Strings Reference](https://www.connectionstrings.com/) (Références en matière de chaînes de connexion). Ce site tiers contient des exemples de chaînes de connexion et des renseignements complémentaires sur les fournisseurs de données et les informations de connexion dont ils ont besoin.
+Pour plus d’informations sur la connexion à une source de données qui n’est pas répertoriée ici, consultez [The Connection Strings Reference](https://www.connectionstrings.com/). Ce site tiers contient des exemples de chaînes de connexion et des renseignements complémentaires sur les fournisseurs de données et les informations de connexion dont ils ont besoin.
 
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
  Une fois que vous avez fourni les informations relatives à la source de vos données et indiqué comment s’y connecter, la page **Choisir une destination**s’affiche. Dans cette page, vous fournissez les informations relatives à la destination de vos données et à la façon de s’y connecter. Pour plus d’informations, consultez [Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

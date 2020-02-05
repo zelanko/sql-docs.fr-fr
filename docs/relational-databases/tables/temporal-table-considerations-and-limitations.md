@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70958337"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considérations et limitations liées aux tables temporelles
@@ -49,10 +49,10 @@ Prenez les points suivants en compte lorsque vous travaillez avec des tables tem
 - Les déclencheurs**INSTEAD OF** ne sont pas autorisés sur la table actuelle ou sur la table d’historique pour éviter l’invalidation de la logique DML. Les déclencheurs**AFTER** sont autorisés uniquement dans la table actuelle. Ils sont bloqués dans la table d’historique afin d’éviter l’invalidation de la logique DML.
 - L’utilisation de technologies de réplication est limitée :
 
-  - **Always On (Toujours active) :** entièrement prise en charge
-  - **Capture de données modifiées et suivi des modifications :** uniquement prise en charge sur la table actuelle
-  - **Capture instantanée et réplication transactionnelle** : uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »). L’utilisation de plusieurs abonnés n’est pas prise en charge car ce scénario peut entraîner une incohérence des données temporelles, chacune d’elles dépendant de l’horloge système locale.
-  - **Réplication de fusion :** non prise en charge pour les tables temporelles
+  - **Always On (Toujours active)** : entièrement prise en charge
+  - **Capture de données modifiées et Suivi des modifications de données** : uniquement prises en charge dans la table actuelle
+  - **Capture instantanée et réplication transactionnelle**: uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »). L’utilisation de plusieurs abonnés n’est pas prise en charge car ce scénario peut entraîner une incohérence des données temporelles, chacune d’elles dépendant de l’horloge système locale.
+  - **Réplication de fusion** : non prise en charge pour les tables temporelles
 
 - Les requêtes régulières affectent uniquement les données dans la table actuelle. Pour interroger des données dans la table d’historique, vous devez utiliser des requêtes temporelles. Ces points sont abordés dans ce document dans la section Interrogation des données temporelles.
 - Une stratégie d’indexation optimale inclut stockage de colonnes d’index en cluster et / ou un index rowstore d’arbre B (B-tree) dans la table actuelle et un index columnstore en cluster dans la table d’historique pour des performances et une taille de stockage optimales. Si vous créez / utilisez votre propre table d’historique, nous vous recommandons vivement de créer ce type d’index comportant des colonnes de période en commençant à la fin de la colonne de période pour accélérer le traitement des requêtes temporelles et des requêtes qui font partie de la vérification de cohérence des données. La table d’historique par défaut a un index rowstore en cluster créé selon les colonnes de période (début, fin). Nous recommandons au minimum un index rowstore non-cluster.

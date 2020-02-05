@@ -11,10 +11,10 @@ ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 70e8c3cbc08837bce7c3b8aa9afeb3222165996c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298912"
 ---
 # <a name="advanced-connection-properties"></a>Propriétés avancées de connexion
@@ -37,6 +37,6 @@ ms.locfileid: "71298912"
   
 ## <a name="see-also"></a>Voir aussi  
  [Accéder à la console du concepteur CDC](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [Connexion SQL Server pour la création d'une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+ [Connexion SQL Server pour la création d’une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
   

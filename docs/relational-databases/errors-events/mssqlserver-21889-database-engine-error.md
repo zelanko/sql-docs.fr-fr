@@ -12,10 +12,10 @@ ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 177da1486d7cab622bacaea56cd886bd8dc06d06
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251488"
 ---
 # <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
@@ -26,8 +26,8 @@ ms.locfileid: "72251488"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21889|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21889|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum21889|  
 |Texte du message|L’instance SQL Server '%s' n’est pas un serveur de publication de réplication. Exécutez **sp_adddistributor** sur l’instance SQL Server « %s » avec le serveur de distribution '%s' pour permettre à l’instance d’héberger la base de données de publication '%s'. Veillez à spécifier la même connexion et mot de passe que ceux utilisés pour le serveur de publication d'origine.|  

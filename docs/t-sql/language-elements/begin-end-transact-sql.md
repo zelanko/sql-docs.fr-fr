@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e278e41fa2f27684b1ce249bb45b1dc78356753
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325561"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "75325561"
 
   Délimite une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour permettre l'exécution groupée d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. BEGIN et END sont des mots clés du langage de contrôle de flux.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

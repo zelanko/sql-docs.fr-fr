@@ -14,10 +14,10 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294261"
 ---
 # <a name="cdc-control-task"></a>Tâche de contrôle de capture de données modifiées
@@ -45,16 +45,16 @@ ms.locfileid: "71294261"
 |Opération|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|Cette opération est utilisée avant d'appeler le flux de données qui utilise le flux de données de la source CDC. Elle établit une plage de numéros LSN que le flux de données de la source CDC lit lorsqu'il est appelé. La plage est stockée dans une variable de package SSIS qui est utilisée par la source CDC pendant le traitement du flux de données.<br /><br /> Pour plus d’informations sur les états stockés, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|: Cette opération est exécutée après que chaque exécution de la capture de données modifiées (une fois le flux de données de capture de données modifiées terminé avec succès) pour consigner le dernier NSE qui a été entièrement traité dans le cadre de l'exécution de la capture de données modifiées. Lors de la prochaine exécution de GetProcessingRange, cette position constitue le début de la plage de traitement.|  
+|MarkProcessedRange|Cette opération est exécutée après que chaque exécution de la capture de données modifiées (une fois le flux de données de capture de données modifiées terminé avec succès) pour consigner le dernier NSE qui a été entièrement traité dans le cadre de l'exécution de la capture de données modifiées. Lors de la prochaine exécution de GetProcessingRange, cette position constitue le début de la plage de traitement.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Gestion de la permanence de l'état de capture de données modifiées  
  La tâche de contrôle de capture de données modifiées conserve un état permanent entre les activations. Les informations stockées dans l'état de capture de données modifiées sont utilisées pour déterminer et gérer la plage de traitement pour le package de capture de données modifiées et pour détecter les conditions d'erreur. L'état permanent est stocké sous forme de chaîne. Pour plus d’informations, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).  
   
  La tâche de contrôle de capture de données modifiées prend en charge deux types de permanence d'état :  
   
--   Permanence d'état manuelle : Dans ce cas, la tâche de contrôle de capture de données modifiées gère l'état stocké dans une variable de package, mais le développeur de package doit lire la variable dans un stockage permanent avant d'appeler le contrôle de capture de données modifiées, puis la réécrire dans ce stockage permanent après le dernier appel du contrôle de capture de données modifiées et une fois l'exécution de la capture de données modifiées terminée.  
+-   Permanence d'état manuelle : dans ce cas, la tâche de contrôle de capture de données modifiées gère l'état stocké dans une variable de package, mais le développeur de package doit lire la variable dans un stockage permanent avant d'appeler le contrôle de capture de données modifiées, puis la réécrire dans ce stockage permanent après le dernier appel du contrôle de capture de données modifiées et une fois l'exécution de la capture de données modifiées terminée.  
   
--   Permanence d'état automatique : L'état de capture de données modifiées est stocké dans une table dans une base de données. L’état est stocké sous un nom fourni par la propriété **StateName** dans une table nommée de la propriété **Table à utiliser pour le stockage de l’état** , qui se trouve dans un gestionnaire de connexions sélectionné pour le stockage de l’état. La valeur par défaut est le gestionnaire de connexions source, mais la pratique courante consiste à utiliser le gestionnaire de connexions cible. La tâche de contrôle de capture de données modifiées met à jour la valeur d'état dans la table d'état et celle-ci est validée dans le cadre de la transaction en cours.  
+-   Permanence d'état automatique : l'état de capture de données modifiées est stocké dans une table dans une base de données. L’état est stocké sous un nom fourni par la propriété **StateName** dans une table nommée de la propriété **Table à utiliser pour le stockage de l’état** , qui se trouve dans un gestionnaire de connexions sélectionné pour le stockage de l’état. La valeur par défaut est le gestionnaire de connexions source, mais la pratique courante consiste à utiliser le gestionnaire de connexions cible. La tâche de contrôle de capture de données modifiées met à jour la valeur d'état dans la table d'état et celle-ci est validée dans le cadre de la transaction en cours.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
  La tâche de contrôle de capture de données modifiées peut signaler une erreur dans les conditions suivantes :  
@@ -105,27 +105,27 @@ ms.locfileid: "71294261"
  **Opération de contrôle de capture de données modifiées**  
  Sélectionnez l'opération à exécuter pour cette tâche. Toutes les opérations utilisent la variable d'état qui est stockée dans une variable de package SSIS qui stocke l'état et le passe entre les différents composants du package.  
   
--   **Marquer le début de la charge initiale** : Cette opération est utilisée en exécutant une charge initiale d'une base de données active sans instantané. Elle est invoquée au début d'un package de chargement initial pour enregistrer le numéro LSN actuel dans la base de données source avant que le package de chargement initial commence à lire les tables sources. Cela requiert une connexion à la base de données source.  
+-   **Marquer le début de la charge initiale**: cette opération est utilisée en exécutant une charge initiale d'une base de données active sans instantané. Elle est invoquée au début d'un package de chargement initial pour enregistrer le numéro LSN actuel dans la base de données source avant que le package de chargement initial commence à lire les tables sources. Cela requiert une connexion à la base de données source.  
   
      Si vous sélectionnez **Marquer le début de la charge initiale** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être  **db_owner** ou **sysadmin**.  
   
--   **Marquer la fin de la charge initiale** : Cette opération est utilisée en exécutant une charge initiale d'une base de données active sans instantané. Elle est invoquée à la fin d'un package de chargement initial pour enregistrer le numéro LSN actuel dans la base de données source une fois que le package de chargement initial a fini de lire les tables sources. Ce numéro LSN est déterminé en enregistrant l'heure à laquelle cette opération s'est produite, puis en interrogeant la table de mappage `cdc.lsn_time_`dans la base de données CDC afin de rechercher une modification survenue après cette heure.  
+-   **Marquer la fin de la charge initiale**: cette opération est utilisée en exécutant une charge initiale d'une base de données active sans instantané. Elle est invoquée à la fin d'un package de chargement initial pour enregistrer le numéro LSN actuel dans la base de données source une fois que le package de chargement initial a fini de lire les tables sources. Ce numéro LSN est déterminé en enregistrant l'heure à laquelle cette opération s'est produite, puis en interrogeant la table de mappage `cdc.lsn_time_`dans la base de données CDC afin de rechercher une modification survenue après cette heure.  
   
      Si vous sélectionnez **Marquer la fin de la charge initiale** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être  **db_owner** ou **sysadmin**.  
   
--   **Marquer le début CDC** : Cette opération est utilisée lorsque la charge initiale est effectuée à partir d'un fichier de base de données d'instantanés ou d'une base de données inactive. Elle est appelée à n'importe quel stade du package de charge initiale. L'opération accepte un paramètre qui peut être un numéro LSN d'instantané, un nom de base de données d'instantanés (de laquelle le numéro LSN d'instantané dérive automatiquement) ou qui peut être laissé vide, auquel cas le numéro LSN de la base de données actuelle est utilisé comme dernier numéro LSN pour le package de traitement des modifications.  
+-   **Marquer le début CDC** : cette opération est utilisée lorsque la charge initiale est effectuée à partir d'un fichier de base de données d'instantanés ou d'une base de données inactive. Elle est appelée à n'importe quel stade du package de charge initiale. L'opération accepte un paramètre qui peut être un numéro LSN d'instantané, un nom de base de données d'instantanés (de laquelle le numéro LSN d'instantané dérive automatiquement) ou qui peut être laissé vide, auquel cas le numéro LSN de la base de données actuelle est utilisé comme dernier numéro LSN pour le package de traitement des modifications.  
   
      Cette opération est utilisée à la place des opérations Marquer le début/la fin de la charge initiale.  
   
      Si vous sélectionnez **Marquer le début CDC** quand vous travaillez sur la capture de données modifiées [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (autrement dit, hors d’Oracle) l’utilisateur spécifié dans le gestionnaire de connexions doit être  **db_owner** ou **sysadmin**.  
   
--   **Obtenir la plage de traitement** : Cette opération est utilisée dans un package de traitement des modifications avant d'appeler le flux de données qui utilise le flux de données source CDC. Elle établit une plage de numéros LSN que le flux de données de la source CDC lit lorsqu'il est appelé. La plage est stockée dans une variable de package SSIS qui est utilisée par la source CDC pendant le traitement du flux de données.  
+-   **Get processing range**: cette opération est utilisée dans un package de traitement des modifications avant d'appeler le flux de données qui utilise le flux de données source CDC. Elle établit une plage de numéros LSN que le flux de données de la source CDC lit lorsqu'il est appelé. La plage est stockée dans une variable de package SSIS qui est utilisée par la source CDC pendant le traitement du flux de données.  
   
      Pour plus d’informations sur les états CDC stockés, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).  
   
--   **Marquer la plage traitée** : Cette opération est utilisée dans un package de traitement des modifications à la fin d’une exécution CDC (après que le flux de données CDC s’est terminé correctement) pour inscrire le dernier numéro LSN qui était complètement traité dans l’exécution CDC. Lors de la prochaine exécution de `GetProcessingRange` , cette position détermine le début de la prochaine plage de traitement.  
+-   **Marquer la plage traitée**: cette opération est utilisée dans un package de traitement des modifications à la fin d’une exécution CDC (après que le flux de données CDC s’est terminé correctement) pour inscrire le dernier numéro LSN qui était complètement traité dans l’exécution CDC. Lors de la prochaine exécution de `GetProcessingRange` , cette position détermine le début de la prochaine plage de traitement.  
   
--   **Réinitialiser l’état CDC** : Cette opération est utilisée pour réinitialiser l'état permanent de capture de données modifiées associé au contexte de capture de données modifiées actuel. Une fois cette opération effectuée, le numéro LSN maximal actuel de la table d’horodatage des LSN `sys.fn_cdc_get_max_lsn` devient le début de la plage de traitement suivante. Cette opération requiert une connexion à la base de données source.  
+-   **Réinitialiser l'état CDC**: cette opération est utilisée pour réinitialiser l'état de capture de données modifiées (CDC) permanent associé au contexte CDC actuel. Une fois cette opération effectuée, le numéro LSN maximal actuel de la table d’horodatage des LSN `sys.fn_cdc_get_max_lsn` devient le début de la plage de traitement suivante. Cette opération requiert une connexion à la base de données source.  
   
      Cette opération est notamment utilisée lorsque vous souhaitez traiter uniquement les enregistrements de modifications récents et ignorer tous les anciens enregistrements de modifications.  
   

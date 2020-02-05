@@ -13,13 +13,13 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987196"
 ---
-# <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, objet Batch Resp Statistics
+# <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Objet Batch Resp Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 L’objet de performance **SQLServer:Batch Resp Statistics** fournit des compteurs pour suivre les temps de réponse de lot SQL Server.
 
@@ -56,5 +56,5 @@ Chaque compteur de l'objet contient les instances suivantes :
 |**Temps écoulé:Total(ms)**|Le temps écoulé du lot.|  
 
 ## <a name="see-also"></a>Voir aussi
-[SQL Server - Objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
+[SQL Server, objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [Analyser l'utilisation des ressources (Moniteur système)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

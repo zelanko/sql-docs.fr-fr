@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595814"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>Effectuer une rotation de clés activées pour les enclaves
@@ -38,12 +38,12 @@ Les étapes générales ci-dessous incluent des liens vers des articles détaill
     - Pour obtenir des instructions détaillées sur la rotation des clés, consultez [Effectuer la rotation de clés Always Encrypted avec SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) et [Effectuer la rotation de clés Always Encrypted avec PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
     
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 - [Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-query-columns.md)
 - [Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-configure-encryption.md)
 - [Activer Always Encrypted avec enclaves sécurisées pour les colonnes chiffrées existantes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Développer des applications en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-client-development.md)  
 
 ## <a name="see-also"></a>Voir aussi  
-- [Gérer les clés pour Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-manage-keys.md)
+- [Gérer des clés pour Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-manage-keys.md)
 

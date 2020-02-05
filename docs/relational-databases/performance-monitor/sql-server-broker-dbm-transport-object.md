@@ -14,10 +14,10 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987062"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server, objet Broker - DBM Transport
@@ -42,9 +42,9 @@ ms.locfileid: "67987062"
 |**Fragments de message reçus/s**|Ce compteur reprend le nombre de fragments de message reçus sur le réseau par seconde.|   
 |**Fragments de message envoyés/s**|Ce compteur désigne le nombre de fragments de message de toutes les priorités envoyés sur le réseau par seconde.|  
 |**Taille moyenne des fragments de message reçus**|Ce compteur précise la taille moyenne des fragments de message reçus sur le réseau.|  
-|**Base de taille moyenne des fragments de message reçus**|À usage interne uniquement| 
+|**Base de taille moyenne des fragments de message reçus**|À usage interne uniquement.| 
 |**Taille moyenne des fragments de message envoyés**|Ce compteur précise la taille moyenne des fragments de message envoyés sur le réseau.|  
-|**Base de taille moyenne des fragments de message envoyés**|À usage interne uniquement|
+|**Base de taille moyenne des fragments de message envoyés**|À usage interne uniquement.|
 |**Nombre de connexions ouvertes**|Ce compteur désigne le nombre de connexions réseau que le Service Broker a d'ouvertes.|  
 |**Octets en attente pour les E/S reçues**|Ce compteur indique le nombre d'octets contenus dans les fragments de message reçus du réseau mais n'ayant pas encore été placés dans la file d'attente ou ayant été abandonnés.|  
 |**Octets en attente pour les E/S envoyées**|Ce compteur reprend le nombre total d'octets dans les fragments de message prêts à être envoyés sur le réseau.|  
@@ -53,14 +53,14 @@ ms.locfileid: "67987062"
 |**Octets d'E/S reçus/s**|Ce compteur reprend le nombre total d'octets reçus par seconde sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.|  
 |**Total des octets d'E/S reçus**|Ce compteur indique le nombre total d'octets reçus sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.|  
 |**Longueur moyenne des E/S reçues**|Ce compteur désigne le nombre moyen d'octets pour une opération de réception de transport.|  
-|**Base de longueur moyenne des E/S reçues**|À usage interne uniquement|
+|**Base de longueur moyenne des E/S reçues**|À usage interne uniquement.|
 |**E/S reçues/s**|Ce compteur indique le nombre d'opérations d'E/S du transport en réception par seconde que la couche Service Broker/DBM transport a effectuées. Il se peut qu'une opération de réception du transport contienne plusieurs fragments de message.|  
 |**Octets de copies de tampon par les E/S reçues/s**|Vitesse à laquelle les opérations d’E/S de transport reçues ont dû déplacer des fragments de tampon en mémoire.|
 |**Nombre de copies de tampon par les E/S reçues**|Nombre de fois où les opérations d’E/S de transport reçues ont dû déplacer des fragments de tampon en mémoire.| 
 |**Octets d'E/S envoyés/s**|Ce compteur reprend le nombre total d'octets envoyés par seconde sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.|   
 |**Total des octets d'E/S envoyés**|Ce compteur indique le nombre total d'octets transmis sur le réseau par les points de terminaison Service Broker et de mise en miroir de bases de données.| 
 |**Longueur moyenne des E/S envoyées**|Ce compteur précise la taille moyenne en octets des opérations d'envoi de transport. Il se peut qu'une opération d'envoi du transport contienne plusieurs fragments de message.|  
-|**Base de longueur moyenne des E/S envoyées**|À usage interne uniquement|
+|**Base de longueur moyenne des E/S envoyées**|À usage interne uniquement.|
 |**E/S envoyées/s**|Ce compteur indique le nombre d'opérations d'E/S du transport en envoi par seconde qui ont été effectuées. Il se peut qu'une opération d'envoi du transport contienne plusieurs fragments de message.|  
   
 ## <a name="see-also"></a>Voir aussi  

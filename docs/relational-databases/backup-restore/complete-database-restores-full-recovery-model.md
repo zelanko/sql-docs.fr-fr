@@ -18,10 +18,10 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908968"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération complète)
@@ -82,7 +82,7 @@ Pour plus d’informations sur la prise en charge de sauvegardes provenant de ve
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu’au point de défaillance (Transact-SQL)  
+###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu'au point de défaillance (Transact-SQL)  
  L'exemple [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant indique les principales options d'une séquence de restauration qui restaure la base de données jusqu'au point de défaillance. L'exemple crée une sauvegarde de la fin du journal de la base de données. Ensuite, il restaure une sauvegarde complète de base de données et une sauvegarde de fichier journal, puis restaure la sauvegarde de la fin du journal. L'exemple récupère la base de données dans une dernière étape séparée.  
   
 > [!NOTE]  

@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 4803a99e0fb1435b545ec775b2a8abe063d9fd8d
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890922"
----
 Le compte **SA** est un administrateur système sur l’instance SQL Server qui est créée lors de l’installation. Une fois le conteneur SQL Server créé, la variable d’environnement `MSSQL_SA_PASSWORD` que vous avez spécifiée peut être découverte en exécutant `echo $MSSQL_SA_PASSWORD` dans le conteneur. Pour des raisons de sécurité, changez le mot de passe pour SA :
 
 1. Choisissez un mot de passe fort à utiliser pour l’utilisateur SA.

@@ -15,10 +15,10 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294496"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers
@@ -53,7 +53,7 @@ ms.locfileid: "71294496"
  **Modifier**  
  Sélectionnez un fichier ou dossier, puis remplacez-le par un autre fichier ou dossier à l’aide de la boîte de dialogue **Sélectionner les fichiers** ou **Rechercher un dossier** .  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un fichier ou dossier, puis supprimez-le de la liste à l’aide du bouton **Supprimer** .  
   
  **Boutons de direction**  

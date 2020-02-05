@@ -12,13 +12,13 @@ ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056710"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68056710"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21879|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21879|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum21879|  
 |Texte du message|Impossible d'interroger le serveur redirigé '%s' pour le serveur de publication d'origine '%s' et la base de données du serveur de publication '%s' pour déterminer le nom du serveur distant ; erreur %d, message d'erreur '%s'.|  

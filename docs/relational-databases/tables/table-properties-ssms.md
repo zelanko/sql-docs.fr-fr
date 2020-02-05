@@ -18,13 +18,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905950"
 ---
-# <a name="table-properties---ssms"></a>Propriétés de la table - SSMS
+# <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Cette rubrique décrit les propriétés de table qui sont affichées dans la boîte de dialogue Propriétés d'une table dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la façon d’afficher ces propriétés, consultez [Afficher la définition de table](../../relational-databases/tables/view-the-table-definition.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "72905950"
  **Sauvegarde de la base de données**  
  Nom de la base de données qui contient cette table.  
   
- **Server**  
+ **Serveur**  
  Nom de l'instance actuelle du serveur.  
   
  **Utilisateur**  
@@ -52,7 +52,7 @@ ms.locfileid: "72905950"
  **Date de création**  
  Date et heure de création de la table.  
   
- **Name**  
+ **Nom**  
  Nom de la table.  
   
  **Schéma**  
@@ -68,7 +68,7 @@ ms.locfileid: "72905950"
  Indique si l'objet a été créé avec l'option d'identificateur entre guillemets activée (ON). Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Escalade de verrous**  
- Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
+ Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont les suivantes :  
   
  AUTO  
  Cette option permet au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de sélectionner la granularité de l'escalade de verrous appropriée pour le schéma de la table.  
@@ -155,7 +155,7 @@ ms.locfileid: "72905950"
  Quantité d'espace occupée par les données dans la table, en mégaoctets.  
   
 ### <a name="partitioning"></a>Partitionnement  
- Cette section est disponible uniquement si la table est partitionnée. Pour plus d’informations, consultez [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Cette section est disponible uniquement si la table est partitionnée. Pour plus d’informations, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Colonne de partition**  
  Nom de la colonne sur laquelle la table est partitionnée.  

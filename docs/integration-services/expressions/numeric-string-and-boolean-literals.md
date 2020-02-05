@@ -18,10 +18,10 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297452"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Littéraux numériques, booléens et de chaîne
@@ -60,10 +60,10 @@ ms.locfileid: "71297452"
 |------------------------|-----------------|  
 |{D}+{IS}|Littéral numérique intégral avec au moins un chiffre (D) et éventuellement le suffixe long et/ou le suffixe non signé (IS).  Exemples : 457, 785u, 986L et 7945ul.|  
 |{D}+{E}{FS}|Littéral numérique non intégral avec au moins un chiffre (D), la notation scientifique et le suffixe long ou flottant.  Exemples : 4E8l, 13e-2f et 5E+L.|  
-|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6,45E3f, ,89E-2l et 1,05E+7F.|  
-|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1,E-4f, 4,6E6L et 8,365E+2f.|  
+|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6.45E3f, .89E-2l et 1.05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1.E-4f, 4.6E6L et 8.365E+2f.|  
 |{D}*.{D}+|Littéral numérique non intégral avec précision et échelle. Il a une décimale et une fraction décimale d'au moins un chiffre (D). Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 0,9, 5,8 et 0,346.|  
-|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6., 0.2 et 8.0.|  
+|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6,0, 0,2 et 8,0.|  
 |#{D}+|Identificateur de lignage. Il est composé du signe dièse ( # ) et d'au moins un chiffre (D). Exemples : #123.|  
 |0[xX]{H}+{uU}|Littéral numérique en notation hexadécimale. Il comprend un zéro, un « x » majuscule ou minuscule, au moins un « H » majuscule et, éventuellement, le suffixe non signé. Exemples : 0xFF0A et 0X000010000U.|  
   
@@ -78,14 +78,14 @@ ms.locfileid: "71297452"
   
 -   Un littéral numérique intégral est mappé avec un type de données integer comme suit :  
   
-    |Suffixe|Type du résultat|  
+    |Suffixe|Type de résultat|  
     |------------|-----------------|  
     |None|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
   
-    > **IMPORTANT !** Si le suffixe long (« L » ou « l ») est absent, l'évaluateur d'expression mappe les valeurs signées avec le type de données DT_I4 et les valeurs non signées avec le type de données DT_UI4, même si la valeur dépasse le type de données.  
+    > **IMPORTANT** Si le suffixe long (« L » ou « l ») est absent, l'évaluateur d'expression mappe les valeurs signées avec le type de données DT_I4 et les valeurs non signées avec le type de données DT_UI4, même si la valeur dépasse le type de données.  
   
 -   Un littéral numérique qui comprend un exposant est converti vers le type de données DT_R4 ou DT_R8. Si l'expression comprend le suffixe long, elle est convertie vers le type de données DT_R8 ; si elle comprend le suffixe flottant, elle est convertie vers le type de données DT_R4.  
   
@@ -114,8 +114,8 @@ ms.locfileid: "71297452"
 |\xhhhh|Caractère Unicode en notation hexadécimale|  
   
 ## <a name="boolean-literals"></a>Littéraux booléens  
- L'évaluateur d'expression prend en charge les littéraux booléens habituels : **True** et **False**. L'évaluateur d'expression ne respecte pas la casse ; toute combinaison de lettres majuscules et minuscules y est autorisée. Par exemple, « TRUE » fonctionne de la même façon que « True ».  
+ L’évaluateur d’expression prend en charge les littéraux booléens habituels : **True** et **False**. L'évaluateur d'expression ne respecte pas la casse ; toute combinaison de lettres majuscules et minuscules y est autorisée. Par exemple, « TRUE » fonctionne de la même façon que « True ».  
   
-> **REMARQUE :** Dans une expression, un littéral booléen doit être délimité par des espaces.  
+> **REMARQUE :** Dans une expression, un littéral booléen doit être délimité par des espaces.  
   
   

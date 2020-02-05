@@ -16,10 +16,10 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70809950"
 ---
 # <a name="database-mail-messaging-objects"></a>Objets de messagerie de base de données
@@ -33,13 +33,13 @@ ms.locfileid: "70809950"
   
  Ces objets sont l'interface de la messagerie de base de données au sein de la base de données hôte de messagerie. D'autres objets sont installés pour implémenter les fonctions proposées par les objets répertoriés ci-dessus. Cependant, ces objets sont réservés à une utilisation interne.  
   
-|Nom|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Afficher**|Liste tous les messages soumis à la messagerie de base de données.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Afficher**|Liste les messages sur le comportement du [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
 |[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**Afficher**|Informations sur les messages que la messagerie de base de données n'a pas pu envoyer|  
 |[sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**Afficher**|Informations sur les pièces jointes aux messages de la messagerie de base de données.|  
-|[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**Affichage**|Informations sur les messages envoyés au moyen de la messagerie de base de données.|  
+|[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**Afficher**|Informations sur les messages envoyés au moyen de la messagerie de base de données.|  
 |[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**Afficher**|Informations sur les messages que la messagerie de base de données est en train d'envoyer|  
 |[sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)|**Procédure stockée**|Envoie des messages électroniques à l'aide de la messagerie de base de données.|  
 |[sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|**Procédure stockée**|Efface les messages du journal de la messagerie de base de données.|  

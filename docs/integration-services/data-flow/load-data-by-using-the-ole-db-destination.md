@@ -15,10 +15,10 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 235491b5a3595098b42689f77fdc9077efd9b758
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292343"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Charger des données à l'aide de la destination OLE DB
@@ -46,7 +46,7 @@ ms.locfileid: "71292343"
   
     -   **Table ou vue** : sélectionnez une table ou une vue dans la base de données qui contient les données.  
   
-    -   **Table ou vue – chargement rapide** : sélectionnez une table ou une vue dans la base de données contenant les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs Null**, **Verrou de table**, **Vérifier les contraintes**, **Lignes par lot** ou **Taille maximale de validation d’insertion**.  
+    -   **Table ou vue - chargement rapide** : sélectionnez une table ou une vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Contrainte de validation**, **Lignes par lot**ou **Taille de validation d’insertion maximale**.  
   
     -   **Variable de nom de table ou de vue** : sélectionnez la variable définie par l’utilisateur qui contient le nom d’une table ou d’une vue dans la base de données.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71292343"
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Chemins Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
  [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   

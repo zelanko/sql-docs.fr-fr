@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258759"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Instructions RESTORE pour la restauration, la récupération et la gestion des sauvegardes (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "75258759"
 |.|Description|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|Décrit les instructions Transact-SQL, RESTORE DATABASE et RESTORE LOG, qui sont utilisées pour restaurer et récupérer une base de données à partir des sauvegardes réalisées via la commande BACKUP. RESTORE DATABASE s'utilise pour les bases de données avec tous les modes de récupération, tandis que RESTORE LOG s'utilise uniquement en mode de récupération complète utilisant les journaux de transactions. RESTORE DATABASE permet également de rétablir une base de données en instantané de base de données.|  
-|[Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Documente les arguments décrits dans les sections « Syntaxe » de l’instruction RESTORE et du jeu associé d’instructions auxiliaires : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY. La plupart des arguments sont pris en charge seulement par un sous-ensemble de ces six instructions. Cette prise en charge est précisée dans la description de chacun des arguments.|  
+|[Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Obtient des informations sur les arguments décrits dans les sections « Syntaxe » de l'instruction RESTORE et du jeu associé d'instructions auxiliaires : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY. La plupart des arguments sont pris en charge seulement par un sous-ensemble de ces six instructions. Cette prise en charge est précisée dans la description de chacun des arguments.|  
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Décrit l'instruction RESTORE FILELISTONLY de Transact-SQL, qui est utilisée pour renvoyer un ensemble de résultats contenant une liste des fichiers journaux et des fichiers de la base de données contenus dans le jeu de sauvegarde.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Décrit l'instruction RESTORE HEADERONLY de Transact-SQL, qui est utilisée pour renvoyer un ensemble de résultats contenant toutes les informations d'en-tête pour tous les jeux de sauvegarde sur une unité de sauvegarde particulière.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Décrit l'instruction RESTORE LABELONLY de Transact-SQL, qui est utilisée pour renvoyer un ensemble de résultats contenant des informations sur les supports de sauvegarde identifiés par l'unité de sauvegarde donnée.|  

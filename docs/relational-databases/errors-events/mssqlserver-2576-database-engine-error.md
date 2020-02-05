@@ -12,13 +12,13 @@ ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7d7b080dacab0b3cac77eac962571f7a5deb7a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023032"
 ---
-# <a name="mssqlserver2576"></a>MSSQLSERVER_2576
+# <a name="mssqlserver_2576"></a>MSSQLSERVER_2576
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68023032"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2576|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2576|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_IAM_PARENT_PAGE_WAS_NOT_SEEN|  
 |Texte du message|La page IAM P_ID1 est désignée par le pointeur antérieur de la page IAM P_ID2 dans l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE), mais elle n'a pas été détectée lors de l'analyse.|  

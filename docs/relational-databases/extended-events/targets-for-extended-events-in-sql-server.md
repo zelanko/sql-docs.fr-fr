@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
-ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75501983"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
@@ -37,7 +37,7 @@ La [section ring_buffer section](#h2_target_ring_buffer) inclut un exemple d’u
 ### <a name="prerequisites"></a>Conditions préalables requises
 
 
-- Familiarisez-vous avec les concepts de base des événements étendus, décrits dans [Démarrage rapide : Événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
+- Familiarisez-vous avec les concepts de base des événements étendus, comme décrit dans [Démarrage rapide : événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 
 - Avez installé une version récente de l’utilitaire fréquemment mis à jour SQL Server Management Studio (SSMS.exe). Pour plus d’informations, consultez :

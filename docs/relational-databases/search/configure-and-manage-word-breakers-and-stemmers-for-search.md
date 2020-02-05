@@ -22,17 +22,17 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056263"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Ils effectuent une analyse linguistique de l'ensemble des données indexées en texte intégral. L’analyse linguistique effectue les deux opérations suivantes :
 
--   **Recherche des limites de mots (analyse lexicale)** . L’*analyseur lexical* identifie des mots individuels en déterminant l’emplacement des limites de mots d’après les règles lexicales de cette langue. Chaque mot (également appelé *jeton*) est inséré dans l’index de recherche en texte intégral dans une représentation compressée afin de réduire sa taille.
+-   **Recherche des limites de mots (analyse lexicale)** . Le *analyseur lexical* identifie des mots individuels en déterminant l’emplacement des limites de mots d’après les règles lexicales de cette langue. Chaque mot (également appelé *jeton*) est inséré dans l’index de recherche en texte intégral dans une représentation compressée afin de réduire sa taille.
 
 -   **Conjugaison des verbes (recherche de radical)** . Le *générateur de formes dérivées* génère des formes flexionnelles d’un mot particulier selon les règles spécifiques d’une langue (par exemple, « running », « ran » et « runner » constituent différentes formes du mot « run »).
 
@@ -70,7 +70,7 @@ Pour plus d’informations et pour obtenir des options supplémentaires, consult
 Si vous ajoutez, supprimez ou modifiez un analyseur lexical, vous devez actualiser la liste des identificateurs de paramètres régionaux Microsoft Windows pris en charge pour l'indexation et les requêtes de texte intégral. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Définir l’option de langue de texte intégral par défaut  
- Dans le cas d’une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit l’option **Langue de texte intégral par défaut** en fonction de la langue du serveur s’il existe une correspondance appropriée. Pour une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’anglais est la **langue de texte intégral par défaut** .  
+ Dans le cas d’une version localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit l’option **default full-text** en fonction de la langue du serveur s’il existe une correspondance appropriée. Pour une version non localisée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’anglais est la **langue de texte intégral par défaut** .  
   
  Quand vous créez ou modifiez un index de recherche en texte intégral, vous pouvez spécifier une langue différente pour chaque colonne indexée de texte intégral. Si aucune langue n’est spécifiée pour une colonne, la valeur par défaut est déterminée par l’option de configuration **Langue de texte intégral par défaut**.  
   
@@ -98,8 +98,8 @@ Pour plus d’informations et pour obtenir des options supplémentaires, consult
 |Propriété|Valeur|
 |-|-|
 |Nom du produit|SQL Server|  
-|ID d'événement|30053|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|30053|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|FTXT_QUERY_E_WORDBREAKINGTIMEOUT|  
 |Texte du message|L'analyse lexicale a expiré pour la chaîne de requête de texte intégral. Cela peut se produire si l'analyseur lexical a mis beaucoup de temps à traiter la chaîne de requête de texte intégral ou si un grand nombre de requêtes sont exécutées sur le serveur. Essayez de réexécuter la requête en condition de charge moins élevée.|  
@@ -122,7 +122,7 @@ Pour plus d’informations et pour obtenir des options supplémentaires, consult
 #### <a name="user-action"></a>Action de l'utilisateur  
  Sélectionnez l'action utilisateur appropriée en fonction de la cause probable du délai d'attente, comme suit :  
   
-|Cause probable|Action de l’utilisateur|  
+|Cause probable|Action requise|  
 |--------------------|-----------------|  
 |L'analyseur lexical du langage de requête est configuré de manière incorrecte.|Si vous utilisez un analyseur lexical tiers, il est peut-être enregistré de manière incorrecte auprès du système d'exploitation. Dans ce cas, réenregistrez l'analyseur lexical. Pour plus d’informations, consultez [Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche](revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |L'analyseur lexical présente des dysfonctionnements pour une chaîne de requête spécifique.|Si l'analyseur lexical est pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contactez le service clientèle et le support technique Microsoft.|  

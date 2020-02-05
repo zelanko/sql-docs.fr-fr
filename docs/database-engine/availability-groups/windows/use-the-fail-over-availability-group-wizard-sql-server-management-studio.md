@@ -21,10 +21,10 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821946"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "74821946"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Avant votre premier basculement manuel planifié, consultez la section « Avant de commencer » dans [Effectuer un basculement manuel planifié d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
- Avant votre premier basculement forcé, consultez les sections « Avant de commencer » et « Suivi : Tâches essentielles après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+ Avant votre premier basculement forcé, consultez les sections « Avant de commencer » et « Suivi : tâches essentielles après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74821946"
   
      Pour plus d’informations, consultez [Page Résultats &#40;Assistants de groupe de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
   
-11. Après un basculement forcé, consultez la section « Suivi : Après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
+11. Après un basculement forcé, consultez la section « Suivi : après un basculement forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>Aide sur les pages qui sont exclusives à cet Assistant  
  Cette section décrit les pages qui sont propres à l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)].  
