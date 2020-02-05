@@ -28,10 +28,10 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100463"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
@@ -47,7 +47,7 @@ ms.locfileid: "68100463"
   
  Les procédures ci-dessous s'appliquent au déplacement des fichiers de base de données au sein de la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour déplacer une base de données vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou vers un autre serveur, utilisez les opérations de [sauvegarde et restauration](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) .  
 
- Les procédures de cette rubrique requièrent le nom logique des fichiers de base de données. Pour obtenir ce nom, interrogez la colonne name dans l’affichage catalogue [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md).  
+ Les procédures de cette rubrique requièrent le nom logique des fichiers de base de données. Pour obtenir ce nom, interrogez la colonne name dans l’affichage catalogue [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  Si vous déplacez une base de données système et que vous recréez ultérieurement la base de données master, vous devez redéplacer la base de données système car l'opération de recréation installe toutes les bases de données système à leur emplacement par défaut.  
@@ -191,7 +191,7 @@ ms.locfileid: "68100463"
 ##  <a name="Resource"></a> Déplacement de la base de données Resources  
  L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
   
-##  <a name="Follow"></a> Suivi : Après le déplacement de toutes les bases de données système  
+##  <a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
   
 -   Modifiez le chemin d'accès du journal de l'Agent SQL Server. Si vous ne mettez pas à jour ce chemin d'accès, l'Agent SQL Server ne démarre pas.  
@@ -218,7 +218,7 @@ ms.locfileid: "68100463"
   
 ##  <a name="Examples"></a> Exemples  
   
-### <a name="a-moving-the-tempdb-database"></a>A. Déplacement de la base de données tempdb  
+### <a name="a-moving-the-tempdb-database"></a>R. Déplacement de la base de données tempdb  
  Dans l'exemple suivant, les fichiers de données et les fichiers journaux de la base de données `tempdb` sont déplacés vers un nouvel emplacement dans le cadre d'une opération planifiée.  
   
 > [!NOTE]  

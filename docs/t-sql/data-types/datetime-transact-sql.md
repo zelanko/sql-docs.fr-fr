@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113722"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -42,7 +42,7 @@ Définit une date qui est associée à une heure de la journée avec des fractio
 |Propriété|Valeur|  
 |---|---|
 |Syntaxe|**datetime**|  
-|Utilisation|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
+|Usage|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
 |Formats de littéraux de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|Non applicable|  
 |Plage de dates|Du 1er janvier 1753 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.997|  
@@ -187,7 +187,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Type de données|Sortie|  
+|Type de données|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

@@ -13,10 +13,10 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099603"
 ---
 # <a name="database-properties-general-page"></a>Propriétés de base de données (page Général)
@@ -30,7 +30,7 @@ ms.locfileid: "68099603"
  **Dernière sauvegarde du journal de la base de données**  
  Affiche la date à laquelle le journal des transactions de la base de données a été sauvegardé pour la dernière fois.  
   
- **Name**  
+ **Nom**  
  Affiche le nom de la base de données.  
   
  **État**  
@@ -56,7 +56,7 @@ ms.locfileid: "68099603"
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE (Base de données Azure SQL)](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)  
   

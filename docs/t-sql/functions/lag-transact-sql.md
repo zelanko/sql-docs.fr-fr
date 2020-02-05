@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cf79a93edcdd8eda031d98a641d0164cc68f9da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109275"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68109275"
 
   Accède aux données d’une ligne précédente dans le même jeu de résultats sans recourir à une jointure réflexive, à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG permet d'accéder à une ligne à un décalage physique donné qui précède la ligne actuelle. Utilisez cette fonction analytique dans une instruction SELECT pour comparer des valeurs sur la ligne actuelle avec des valeurs sur une ligne précédente.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +61,7 @@ LAG (scalar_expression [,offset] [,default])
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-compare-values-between-years"></a>A. Comparer des valeurs entre des années  
+### <a name="a-compare-values-between-years"></a>R. Comparer des valeurs entre des années  
  L'exemple suivant utilise la fonction LAG pour retourner la différence dans les quotas de ventes pour un employé spécifique sur les années précédentes. Notez que la valeur par défaut zéro (0) est retournée en raison de l'absence d'une valeur de décalage pour la première ligne.  
   
 ```sql   
@@ -141,7 +141,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D : Comparer des valeurs entre des trimestres  
+### <a name="d-compare-values-between-quarters"></a>D. Comparer des valeurs entre des trimestres  
  L’exemple suivant illustre la fonction LAG. La requête utilise la fonction LAG pour renvoyer la différence dans les quotas de ventes pour un employé spécifique sur les trimestres calendaires précédents. Notez que la valeur par défaut zéro (0) est retournée en raison de l'absence d'une valeur de décalage pour la première ligne.  
   
 ```sql   
