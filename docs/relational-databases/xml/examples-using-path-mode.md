@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : Utilisation du mode PATH | Microsoft Docs'
+title: 'Exemples : utilisation du mode PATH | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943376"
 ---
-# <a name="examples-using-path-mode"></a>Exemples : Utilisation du mode PATH
+# <a name="examples-using-path-mode"></a>Exemples : utilisation du mode PATH
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Les exemples suivants montrent comment utiliser le mode PATH pour générer un document XML à partir d'une requête SELECT. Nombre de ces requêtes sont spécifiées par rapport aux documents XML des instructions de fabrication de bicyclettes stockés dans la colonne Instructions de la table ProductModel.  
   
@@ -38,7 +38,7 @@ FOR XML PATH;
 GO  
 ```  
   
- Le résultat suivant est un document XML centré sur l'élément dans lequel chaque valeur de colonne de l'ensemble de lignes obtenu est incluse dans un élément. Étant donné que la clause `SELECT` ne spécifie aucun alias pour les noms de colonnes, les noms d'éléments enfants générés sont les mêmes que les noms de colonnes correspondants dans la clause `SELECT`. Pour chaque ligne de l'ensemble de lignes, une balise <`row`> est ajoutée.  
+ Le résultat suivant est un document XML centré sur l'élément dans lequel chaque valeur de colonne de l'ensemble de lignes obtenu est incluse dans un élément. Étant donné que la clause `SELECT` ne spécifie aucun alias pour les noms de colonnes, les noms d'éléments enfants générés sont les mêmes que les noms de colonnes correspondants dans la clause `SELECT` . Pour chaque ligne de l'ensemble de lignes, une balise <`row`> est ajoutée.  
   
  ```
 <row>  
@@ -243,7 +243,7 @@ GO
 </ProductModelData>
 ```
   
- La requête ci-après génère le document XML souhaité :  
+ La requête ci-après génère le document XML souhaité :  
   
 ```  
 USE AdventureWorks2012;  

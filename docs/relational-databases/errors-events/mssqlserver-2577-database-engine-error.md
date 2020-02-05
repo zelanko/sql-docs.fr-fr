@@ -12,13 +12,13 @@ ms.assetid: f53256a2-2fb0-47fd-9ed9-c45389104145
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7fb2c67a1d2e0ea80f0fb54c0136831109a9c3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023060"
 ---
-# <a name="mssqlserver2577"></a>MSSQLSERVER_2577
+# <a name="mssqlserver_2577"></a>MSSQLSERVER_2577
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68023060"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2577|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2577|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_IAM_CHAIN_SEQUENCE_OUT_OF_ORDER|  
 |Texte du message|Les numéros de séquence de chaînes sont désordonnés dans la chaîne IAM de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE). La page P_ID1 avec le numéro de séquence SEQUENCE1 pointe vers la page P_ID2 avec le numéro de séquence SEQUENCE2.|  

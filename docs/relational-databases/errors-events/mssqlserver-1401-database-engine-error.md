@@ -12,13 +12,13 @@ ms.assetid: 02928770-aa63-4509-8713-406c73e4cedc
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 81b05138940f89da7540762e4f6f68f952fff4aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002733"
 ---
-# <a name="mssqlserver1401"></a>MSSQLSERVER_1401
+# <a name="mssqlserver_1401"></a>MSSQLSERVER_1401
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68002733"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1401|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1401|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBM_MASTERSTARTUP|  
 |Texte du message|Le démarrage de la routine du thread principal pour le processus de mise en miroir de la base de données a échoué pour la raison suivante : %ls. Corrigez la cause de cette erreur et redémarrez le service SQL Server.|  

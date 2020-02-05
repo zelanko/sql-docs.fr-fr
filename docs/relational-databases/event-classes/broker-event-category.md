@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8efa6f503f552965e3885d92626e8b5da453e29b
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69494096"
 ---
 # <a name="broker-event-category"></a>Catégorie d'événement Broker
@@ -31,13 +31,13 @@ La catégorie d’événement **Broker** contient des événements généraux de
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événement Broker:Activation](../../relational-databases/event-classes/broker-activation-event-class.md)|Événement généré lorsqu'un moniteur de file d'attente démarre une procédure stockée d'activation.|  
-|[Classe d'événement Broker:Connection](../../relational-databases/event-classes/broker-connection-event-class.md)|Événement généré pour signaler l'état d'une connexion de transport gérée par Service Broker.|  
-|[Classe d'événements Broker:Conversation](../../relational-databases/event-classes/broker-conversation-event-class.md)|Événement généré pour rapporter les progrès d'une conversation.|  
-|[Classe d'événement Broker:Conversation Group](../../relational-databases/event-classes/broker-conversation-group-event-class.md)|Événement généré lorsque la base de données crée ou supprime un groupe de conversations.|  
-|[Classe d'événements Broker:Corrupted Message](../../relational-databases/event-classes/broker-corrupted-message-event-class.md)|Événement généré pour indiquer que la base de données a reçu un message endommagé.|  
-|[Classe d'événements Broker:Forwarded Message Dropped](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md)|Événement généré lorsque SQL Server supprime un message Service Broker qui aurait dû être transféré.|  
-|[Broker:Forwarded Message Sent (classe d'événements)](../../relational-databases/event-classes/broker-forwarded-message-sent-event-class.md)|Événement généré lorsque SQL Server transfère un message Service Broker.|  
+|[Broker:Activation, classe d’événements](../../relational-databases/event-classes/broker-activation-event-class.md)|Événement généré lorsqu'un moniteur de file d'attente démarre une procédure stockée d'activation.|  
+|[Broker:Connection, classe d’événements](../../relational-databases/event-classes/broker-connection-event-class.md)|Événement généré pour signaler l'état d'une connexion de transport gérée par Service Broker.|  
+|[Broker:Conversation, classe d’événements](../../relational-databases/event-classes/broker-conversation-event-class.md)|Événement généré pour rapporter les progrès d'une conversation.|  
+|[Broker:Conversation Group, classe d’événements](../../relational-databases/event-classes/broker-conversation-group-event-class.md)|Événement généré lorsque la base de données crée ou supprime un groupe de conversations.|  
+|[Broker:Corrupted Message, classe d’événements](../../relational-databases/event-classes/broker-corrupted-message-event-class.md)|Événement généré pour indiquer que la base de données a reçu un message endommagé.|  
+|[Broker:Forwarded Message Dropped, classe d’événements](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md)|Événement généré lorsque SQL Server supprime un message Service Broker qui aurait dû être transféré.|  
+|[Broker:Forwarded Message Sent, classe d’événements](../../relational-databases/event-classes/broker-forwarded-message-sent-event-class.md)|Événement généré lorsque SQL Server transfère un message Service Broker.|  
 |[Classe d'événements Broker:Message Classify](../../relational-databases/event-classes/broker-message-classify-event-class.md)|Événement généré lorsque Service Broker détermine le routage d'un message.|  
 |[Classe d'événements Broker:Message Drop](../../relational-databases/event-classes/broker-message-drop-event-class.md)|Événement généré lorsque Service Broker ne peut pas conserver un message reçu qui aurait dû être remis à un service dans cette instance.|  
 |[Classe d'événements Broker:Remote Message Ack](../../relational-databases/event-classes/broker-remote-message-ack-event-class.md)|Événement généré lorsque Service Broker envoie ou reçoit un accusé de réception du message.|  

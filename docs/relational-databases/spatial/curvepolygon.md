@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816744"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -30,7 +30,7 @@ ms.locfileid: "71816744"
   
 -   L'intérieur de l'instance **CurvePolygon** désigne l'espace situé entre l'anneau extérieur et tous les anneaux intérieurs.  
   
- Une instance **CurvePolygon** diffère d’une instance **Polygon** en cela qu’une instance **CurvePolygon** peut contenir les segments d’arc de cercle suivants : **CircularString** et **CompoundCurve**.  
+ Une instance **CurvePolygon** diffère d'une instance **Polygon** en cela qu'une instance **CurvePolygon** peut contenir les segments d'arc de cercle suivants : **CircularString** et **CompoundCurve**.  
   
 ## <a name="compoundcurve-instances"></a>Instances CompoundCurve  
  L'illustration ci-dessous montre des figures de **CurvePolygon** valides :  
@@ -114,7 +114,7 @@ SELECT @g.STIsValid();
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Instanciation d'une instance geometry avec un CurvePolygon Vide  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>R. Instanciation d'une instance geometry avec un CurvePolygon Vide  
  Cet exemple indique comment créer une instance **CurvePolygon** vide :  
   
 ```sql  

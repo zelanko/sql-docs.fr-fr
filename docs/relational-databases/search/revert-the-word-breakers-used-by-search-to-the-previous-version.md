@@ -12,10 +12,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055186"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche (Recherche SQL Server)
@@ -39,9 +39,9 @@ ms.locfileid: "74055186"
   
 |Fichier actuel|Fichier précédent|Nombre de langues affectées|Action pour les fichiers|Action pour les entrées de Registre|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
-|NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtenez et installez une version précédente de NaturalLanguage6.dll en remplaçant la version actuelle du fichier.|Aucune action n'est requise.<br /><br /> Les clés de Registre et les valeurs n'ont pas changé pour cette version.|  
+|NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtenez et installez une version précédente de NaturalLanguage6.dll en remplaçant la version actuelle du fichier.|Aucune action requise.<br /><br /> Les clés de Registre et les valeurs n'ont pas changé pour cette version.|  
 |(Autre nom de fichier)|NaturalLanguage6.dll|5|Obtenez et installez une version précédente de NaturalLanguage6.dll en remplaçant la version actuelle du fichier.|Modifiez un ensemble d'entrées de Registre pour spécifier la version précédente des composants.|  
-|(Autre nom de fichier)|(Autre nom de fichier)|6|Aucune action n'est requise.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copie la version actuelle et la version précédente des composants dans le dossier Binn.|Modifiez un ensemble d'entrées de Registre pour spécifier la version précédente des composants.|  
+|(Autre nom de fichier)|(Autre nom de fichier)|6|Aucune action requise.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copie la version actuelle et la version précédente des composants dans le dossier Binn.|Modifiez un ensemble d'entrées de Registre pour spécifier la version précédente des composants.|  
   
 > [!WARNING]  
 >  Si vous remplacez la version actuelle du fichier NaturalLanguage6.dll par une version différente, le comportement de toutes les langues qui utilisent ce fichier est affecté.  
@@ -58,7 +58,7 @@ ms.locfileid: "74055186"
   
  **Liste des langues affectées**  
   
-|Langue|Abréviation<br />utilisée dans le<br />Registre|LCID|  
+|Langage|Abréviation<br />utilisée dans le<br />Registre|LCID|  
 |--------------|---------------------------------------|----------|  
 |Bengali|ben|1093|  
 |Bulgare|bgr|1026|  
@@ -80,14 +80,14 @@ ms.locfileid: "74055186"
 |Malais|msl|1086|  
 |Neutre|Neutre|0000|  
 |Norvégien (bokmål)|nor|1044|  
-|Pendjabi|pan|1094|  
+|Pendjabi|panoramique|1094|  
 |Portugais (Brésil)|ptb|1046|  
 |Portugais|ptg|2070|  
 |Roumain|rom|1048|  
 |Slovaque|sky|1051|  
 |Slovène|slv|1060|  
-|Serbe (cyrillique)|srb|3098|  
-|Serbe (latin)|srl|2074|  
+|Serbe - Cyrillique|srb|3098|  
+|Serbe - Latin|srl|2074|  
 |Suédois|sve|1053|  
 |Tamoul|tam|1097|  
 |Télougou|tel|1098|  
@@ -129,10 +129,10 @@ ms.locfileid: "74055186"
   
  **Liste des langues affectées**  
   
-|Langue|Abréviation<br />utilisée dans le<br />Registre|LCID|  
+|Langage|Abréviation<br />utilisée dans le<br />Registre|LCID|  
 |--------------|---------------------------------------|----------|  
 |Arabe|ara|1025|  
-|German|deu|1031|  
+|Allemand|deu|1031|  
 |Japonais|jpn|1041|  
 |Néerlandais|nld|1043|  
 |Russe|rus|1049|  
@@ -258,13 +258,13 @@ ms.locfileid: "74055186"
   
  **Liste des langues affectées**  
   
-|Langue|Abréviation<br />utilisée dans le<br />Registre|LCID|  
+|Langage|Abréviation<br />utilisée dans le<br />Registre|LCID|  
 |--------------|---------------------------------------|----------|  
 |Chinois simplifié|chs|2052|  
 |Chinois traditionnel|cht|1028|  
-|Thaïlandais|tha|1054|  
-|Chinois (traditionnel)|zh-hk|3076|  
-|Chinois (traditionnel)|zh-mo|5124|  
+|Thaï|tha|1054|  
+|Chinois traditionnel|zh-hk|3076|  
+|Chinois traditionnel|zh-mo|5124|  
 |Chinois (simplifié)|zh-sg|4100|  
   
  Le tableau précédent est trié par ordre alphabétique selon la colonne Abréviation.  

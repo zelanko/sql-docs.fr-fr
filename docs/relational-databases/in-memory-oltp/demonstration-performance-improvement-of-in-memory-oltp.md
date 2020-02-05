@@ -12,13 +12,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412729"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : Optimisation des performances de l'OLTP en mémoire
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : optimisation des performances de l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   l’exemple de code de cette rubrique illustre les performances rapides des tables optimisées en mémoire. L’optimisation des performances est évidente quand l’accès aux données dans une table optimisée en mémoire s’effectue à partir d’un [!INCLUDE[tsql](../../includes/tsql-md.md)]traditionnel et interprété. Cette amélioration des performances est encore supérieure lorsque les données dans les tables optimisées en mémoire sont accédées au moyen d’une procédure stockée compilée en mode natif (NCSProc).  
@@ -32,7 +32,7 @@ Pour voir une démonstration plus complète des améliorations des performances 
 ## <a name="code-example"></a>Exemple de code  
  Les sous-sections suivantes décrivent chaque étape.  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Étape 1 a : Condition préalable requise si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Étape 1a : Condition préalable requise si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Les étapes de cette première sous-section s’appliquent uniquement si vous exécutez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; elles ne s’appliquent pas si vous exécutez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Effectuez les actions suivantes :  
   
 1.  Utilisez SQL Server Management Studio (SSMS.exe) pour vous connecter à votre serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sinon, tout autre outil similaire à SSMS.exe convient.  
@@ -58,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Étape 1b : Condition préalable requise si vous utilisez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Étape 1b : Condition préalable requise si vous utilisez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Cette sous-section s’applique uniquement si vous utilisez [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Effectuez les actions suivantes :  
   
 1.  Décidez quelle base de données test existante vous allez utiliser pour l’exemple de code.  
@@ -67,7 +67,7 @@ go
   
  Pour des instructions concernant l’utilisation du portail Azure, consultez [Prise en main de la base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Étape 2 : Créer des tables optimisées en mémoire et une NSCProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Étape 2 : Créer des tables optimisées en mémoire et une NSCProc  
  Cette étape permet de créer des tables optimisées en mémoire et une procédure stockée compilée en mode natif (NCSProc). Effectuez les actions suivantes :  
   
 1.  Utilisez SSMS.exe pour vous connecter à votre nouvelle base de données.  

@@ -13,10 +13,10 @@ ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942743"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Réglage des performances pour les serveurs de publication Oracle
@@ -25,7 +25,7 @@ ms.locfileid: "67942743"
   
  Il existe en outre pour les serveurs de publication Oracle deux options liées aux performances :  
   
--   Spécification de l’option de publication adéquate : Oracle ou Oracle Gateway.  
+-   Spécification des options de publication adéquates : Oracle ou Oracle Gateway.  
   
 -   Configuration du travail du jeu de transactions pour traiter les changements sur le serveur de publication selon une périodicité appropriée.  
   

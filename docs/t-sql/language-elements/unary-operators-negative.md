@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 992d0b8d0a2b3781af732aaa83983882a9938112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072146"
 ---
 # <a name="unary-operators---negative"></a>Opérateurs unaires - Négatif
@@ -35,11 +35,11 @@ ms.locfileid: "68072146"
 |--------------|-------------|  
 |[+ (Positif)](../../t-sql/language-elements/unary-operators-positive.md)|La valeur numérique est positive.|  
 |[- (Négatif)](../../t-sql/language-elements/unary-operators-negative.md)|La valeur numérique est négative.|  
-|[~ (NOT au niveau du bit)](../../t-sql/language-elements/bitwise-not-transact-sql.md)|Renvoie le complément à un du nombre.|  
+|[~ (Opérateur NOT au niveau du bit)](../../t-sql/language-elements/bitwise-not-transact-sql.md)|Renvoie le complément à un du nombre.|  
   
  Les opérateurs + (positif) et - (négatif) peuvent s'utiliser dans toute expression de n'importe quel type de données de la catégorie des types numériques. L'opérateur ~ (NOT au niveau du bit) ne peut s'utiliser que dans des expressions dont le type de données appartient à la catégorie des types entiers. 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68072146"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-setting-a-variable-to-a-negative-value"></a>A. Affectation d'une valeur négative à une variable  
+### <a name="a-setting-a-variable-to-a-negative-value"></a>R. Affectation d'une valeur négative à une variable  
  L'exemple suivant affecte une valeur négative à une variable.  
   
 ```  
@@ -114,7 +114,7 @@ USE ssawPDW;
 SELECT TOP (1) - 17 FROM DimEmployee;  
 ```  
   
- Valeur renvoyée  
+ Retours  
   
 ```  
 -17  
@@ -129,7 +129,7 @@ USE ssawPDW;
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
 ```  
   
- Valeur renvoyée  
+ Retours  
   
 ```  
 17  

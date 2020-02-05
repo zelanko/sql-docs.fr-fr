@@ -18,10 +18,10 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077932"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (moteur de base de données)
@@ -51,7 +51,7 @@ Sert à déterminer le nœud racine dans une arborescence hiérarchique.
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-transact-sql-example"></a>A. Exemple Transact-SQL  
+### <a name="a-transact-sql-example"></a>R. Exemple Transact-SQL  
 L'exemple suivant retourne la racine de l'arborescence hiérarchique :
   
 ```sql

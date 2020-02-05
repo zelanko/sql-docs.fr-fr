@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4384164d7baa79559d8810114494473435894f8c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 96de733839deb644968303e58bcf069894aae160
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770510"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286327"
 ---
 # <a name="mssql_eng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "68770510"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2601|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2601|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nom symbolique|Néant|  
-|Texte du message|Impossible d’insérer une ligne de clé en double dans l’objet '%.*ls' avec un index unique '%.\*ls'.|  
+|Nom symbolique|N/A|  
+|Texte du message|Impossible d’insérer une ligne de clé en double dans l’objet '%1!' avec un index unique '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explication  
  C'est une erreur générale qui peut être déclenchée qu'une base de données soit répliquée ou non. Dans les bases de données répliquées, l'erreur est généralement déclenchée car les clés primaires n'ont pas été gérés de manière appropriée à travers la topologie. Dans un environnement distribué, il est primordial de s'assurer que la même valeur n'est pas insérée dans une colonne de clé primaire ou toute autre colonne unique sur plus d'un seul nœud. Les raisons peuvent être les suivantes :  
@@ -43,7 +43,7 @@ ms.locfileid: "68770510"
   
 -   Une table avec une colonne d'identité est utilisée, mais la colonne n'est par gérée de façon appropriée.  
   
--   Dans la réplication de fusion, cette erreur peut également se produire durant une insertion dans la table système **MSmerge_contents**. L’erreur générée est semblable à celle-ci : Impossible d’insérer une ligne de clé en double dans l’objet 'MSmerge_contents' avec un index unique 'ucl1SycContents'.  
+-   Dans la réplication de fusion, cette erreur peut également se produite lors d'une insertion dans une table système **MSmerge_contents**; l'erreur déclenchée est similaire à : impossible d'insérer une ligne de clé dupliquée dans l'objet « MSmerge_contents » d'index unique « ucl1SycContents ».  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  L'action requise dépend de la raison du déclenchement de l'erreur :  

@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095733"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expressions de chemin JSON (SQL Server)
@@ -67,7 +67,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   Noms de clés. Par exemple, `$.name` et `$."first name"`. Si le nom de clé commence par un signe dollar ou contient des caractères spéciaux tels que des espaces, placez-le entre guillemets.   
   
-    -   Éléments du tableau. Par exemple, `$.product[3]`. Les tableaux sont de base zéro.  
+    -   Éléments du tableau. Par exemple : `$.product[3]`. Les tableaux sont de base zéro.  
   
     -   L’opérateur point (`.`) indique un membre d’un objet. Par exemple, dans `$.people[1].surname`, `surname` est un enfant de `people`.
   
@@ -93,7 +93,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |---------------------|-----------|  
 |$.people[0].name|John|  
 |$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
-|$.people[1].surname|Null|  
+|$.people[1].surname|null|  
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Comment les fonctions intégrées gèrent-elles les chemins en double ?  

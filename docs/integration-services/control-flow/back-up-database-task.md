@@ -19,10 +19,10 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e45060a494fad2fbd0310a31bdf433e624becdc2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294300"
 ---
 # <a name="back-up-database-task"></a>Tâche Sauvegarder la base de données
@@ -30,7 +30,7 @@ ms.locfileid: "71294300"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  La tâche Sauvegarder la base de données effectue différents types de sauvegardes de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+  La tâche Sauvegarder la base de données effectue différents types de sauvegardes de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  La tâche Sauvegarder la base de données permet à un package de sauvegarder une ou plusieurs bases de données. Si la tâche ne sauvegarde qu'une seule base de données, vous pouvez choisir le composant de sauvegarde : la base de données ou ses fichiers et groupes de fichiers.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "71294300"
   
 |mode de récupération|Base de données|Base de données différentielle|Journal des transactions|Fichier ou différentielle de fichiers|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|Requis|Ce paramètre est facultatif|Non pris en charge|Non pris en charge|  
-|Complète|Requis|Ce paramètre est facultatif|Requis|Ce paramètre est facultatif|  
-|Bulk-logged|Requis|Ce paramètre est facultatif|Requis|Ce paramètre est facultatif|  
+|Simple|Obligatoire|Facultatif|Non pris en charge|Non pris en charge|  
+|Complète|Obligatoire|Facultatif|Obligatoire|Facultatif|  
+|Bulk-logged|Obligatoire|Facultatif|Obligatoire|Facultatif|  
   
  La tâche Sauvegarder la base de données encapsule une instruction Transact-SQL BACKUP. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   

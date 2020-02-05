@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096016"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Créer de déclencheurs DML pour gérer plusieurs lignes de données
@@ -36,7 +36,7 @@ ms.locfileid: "74096016"
 ## <a name="examples"></a>Exemples  
  Les déclencheurs DML des exemples suivants sont conçus pour stocker le total cumulé d'une colonne dans une autre table de l'exemple de bases de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. Stockage d'un total cumulé pour l'insertion d'une seule ligne  
+### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>R. Stockage d'un total cumulé pour l'insertion d'une seule ligne  
  La première version du déclencheur DML fonctionne correctement pour l'insertion d'une seule ligne, lorsqu'une ligne de données est chargée dans la table `PurchaseOrderDetail` . Le déclencheur DML est activé par une instruction INSERT et la nouvelle ligne est chargée dans la table **inserted** pendant la durée d’exécution du déclencheur. L'instruction `UPDATE` lit la valeur de la colonne `LineTotal` correspondant à la ligne et l'ajoute à la valeur existante dans la colonne `SubTotal` de la table `PurchaseOrderHeader` . La clause `WHERE` garantit que la ligne mise à jour dans la table `PurchaseOrderDetail` correspond à la valeur `PurchaseOrderID` de la ligne dans la table **inserted** .  
   
 ```  

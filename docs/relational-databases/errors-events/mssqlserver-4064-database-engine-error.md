@@ -12,13 +12,13 @@ ms.assetid: 32112b90-0a2f-4834-a027-756811732be7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 81537ea994fa22ee9cafb2ba031677a1d5544dcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123367"
 ---
-# <a name="mssqlserver4064"></a>MSSQLSERVER_4064
+# <a name="mssqlserver_4064"></a>MSSQLSERVER_4064
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "68123367"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|4064|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|4064|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DB_UFAIL_FATAL|  
-|Texte du message|Impossible d'ouvrir la base de données par défaut de l'utilisateur. Échec de la connexion.|  
+|Texte du message|La base de données utilisateur par défaut ne peut pas être ouverte. Échec de la connexion.|  
   
 ## <a name="explanation"></a>Explication  
 La connexion SQL Server n'a pas pu se connecter en raison d'un problème avec sa base de données par défaut. Soit la base de données n'est pas valide, soit la connexion ne dispose pas de l'autorisation CONNECT sur la base de données.  

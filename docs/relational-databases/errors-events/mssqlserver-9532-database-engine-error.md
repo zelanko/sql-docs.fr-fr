@@ -12,13 +12,13 @@ ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6cb06f095b51d4fb5e10f571d8918ffbb20c67ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903828"
 ---
-# <a name="mssqlserver9532"></a>MSSQLSERVER_9532
+# <a name="mssqlserver_9532"></a>MSSQLSERVER_9532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67903828"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|9532|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|9532|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|XMLERR_COLUMNSET_CANNOT_CONVERT_FROM_TO|  
 |Texte du message|Dans l’opération de requête/DML impliquant le jeu de colonnes '%.*ls', la conversion a échoué lors de la conversion du type de données '%ls' en type de données '%ls' pour la colonne '%.\*ls'.|  

@@ -12,13 +12,13 @@ ms.assetid: f94281ef-331b-4432-9e59-839d3b0e6897
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e9c2db3908d18270690de8cb878660dedbe7b99c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896690"
 ---
-# <a name="mssqlserver20557"></a>MSSQLSERVER_20557
+# <a name="mssqlserver_20557"></a>MSSQLSERVER_20557
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67896690"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|20557|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|20557|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum20557|  
 |Texte du message|Arrêt de l'Agent. Pour plus d'informations, reportez-vous à l'historique des travaux de l'Agent SQL Server pour le travail « %s ».|  

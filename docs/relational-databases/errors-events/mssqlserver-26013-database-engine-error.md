@@ -12,13 +12,13 @@ ms.assetid: 7362fca4-b005-4872-bdfa-a3e32f834db8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a5e132dbb34b6047f4828b3590e496db433468c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67996092"
 ---
-# <a name="mssqlserver26013"></a>MSSQLSERVER_26013
+# <a name="mssqlserver_26013"></a>MSSQLSERVER_26013
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67996092"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|26013|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|26013|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SNI_SSL_READY|  
 |Texte du message|Le certificat [Cert Hash(sha1) "%hs"] a été chargé en vue d'un chiffrement.|  

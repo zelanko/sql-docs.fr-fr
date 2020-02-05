@@ -15,13 +15,13 @@ ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 40efe03850259a3b900375e3a47c12d80a448b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040073"
 ---
-# <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell (option de configuration de serveur)
+# <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   L’option **xp_cmdshell** est une option de configuration de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux administrateurs système de contrôler l’autorisation d’exécuter la procédure stockée étendue **xp_cmdshell** sur un système. Par défaut, l’option **xp_cmdshell** est désactivée sur les nouvelles installations. Avant d’activer cette option, il est important de prendre en compte les implications de sécurité potentielles associées à son utilisation. Un code récemment développé ne doit pas utiliser cette option, qui doit généralement rester désactivée. Certaines applications héritées nécessitent qu’elle soit activée ; si vous ne pouvez pas les modifier de manière à éviter l’utilisation de cette option, vous pouvez l’activer à l’aide de la gestion basée sur des stratégies ou en exécutant la procédure stockée système **sp_configure**, comme l’illustre l’exemple de code suivant :  

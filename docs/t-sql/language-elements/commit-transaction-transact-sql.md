@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278108"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72278108"
 
   Marque la fin d'une transaction implicite ou explicite réussie. Si @@TRANCOUNT a la valeur 1, COMMIT TRANSACTION rend permanentes toutes les modifications de données effectuées dans la base de données depuis le début de la transaction, libère les ressources détenues par la transaction et décrémente @@TRANCOUNT à 0. Si @@TRANCOUNT est supérieur à 1, COMMIT TRANSACTION décrémente @@TRANCOUNT de 1 seulement et la transaction reste active.  
   
- ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -94,7 +94,7 @@ Nom d'une variable définie par l'utilisateur et contenant un nom de transaction
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-committing-a-transaction"></a>A. Validation d’une transaction  
+### <a name="a-committing-a-transaction"></a>R. Validation d’une transaction  
 **S’APPLIQUE À :** SQL Server, Azure SQL Database, Azure SQL Data Warehouse et Parallel Data Warehouse   
 
 L'exemple suivant supprime un candidat à un emploi. Il utilise AdventureWorks. 

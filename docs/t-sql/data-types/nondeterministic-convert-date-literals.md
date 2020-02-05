@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119850"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversion non déterministe de chaînes de date littérale en valeurs DATE
@@ -27,7 +27,7 @@ Vous contrôlez ces conversions non déterministes en prenant en considération 
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>Exemple avec SET LANGUAGE : Nom de mois en polonais
+## <a name="set-language-example-month-name-in-polish"></a>Exemple pour SET LANGUAGE : nom du mois en polonais
 
 - `SET LANGUAGE Polish;`
 
@@ -119,12 +119,12 @@ YMD-Interpretation--?--NotGuaranteed
 
 Dans l’exemple de code précédent, le dernier exemple montre une non-correspondance entre le format **ymd** (amj) et la chaîne d’entrée. Le troisième nœud de la chaîne d’entrée représente une valeur numérique qui est trop grande pour être un jour. Microsoft ne garantit pas la valeur de la sortie dans le cas de ces non-correspondances.
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT offre des codes explicites pour le contrôle _déterministe_ des formats de date
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT offre des codes explicites pour le contrôle _déterministe_ des formats de date
 
 Notre article documentant CAST et CONVERT liste les codes explicites que vous pouvez utiliser avec la fonction CONVERT pour contrôler _de façon déterministe_ les conversions de date. L’article concerné a chaque mois un nombre de visualisations de page parmi les plus élevés.
 
-- [CAST et CONVERT (Transact-SQL) : Styles de date et d’heure](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST et CONVERT (Transact-SQL) : Certaines conversions de date/heure sont non déterministes](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST et CONVERT (Transact-SQL) : styles de date et d’heure](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST et CONVERT (Transact-SQL) : certaines conversions de date/heure sont non déterministes](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 

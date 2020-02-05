@@ -12,13 +12,13 @@ ms.assetid: ee501d13-0bd9-4627-896c-ed5b1bdb88b3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6ffd88524bcb6d19c2882e77f7fc8b9c151c2f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037541"
 ---
-# <a name="mssqlserver945"></a>MSSQLSERVER_945
+# <a name="mssqlserver_945"></a>MSSQLSERVER_945
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68037541"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|945|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|945|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DB_IS_SHUTDOWN|  
 |Texte du message|La base de données '%.*ls' ne peut pas être ouverte, car des fichiers sont inaccessibles, ou la mémoire ou l'espace disque sont insuffisants.  Pour plus d’informations, consultez le journal des erreurs de SQL Server.|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c8c9685865bc3430bd3b991e5cf8f4dd0bd99bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911146"
 ---
 # <a name="sessions-event-category"></a>Catégorie d'événements Sessions
@@ -29,6 +29,6 @@ ms.locfileid: "67911146"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événements ExistingConnection](../../relational-databases/event-classes/existingconnection-event-class.md)|Indique les propriétés des connexions utilisateur existantes lorsque la trace a été démarrée.|  
+|[ExistingConnection, classe d’événements](../../relational-databases/event-classes/existingconnection-event-class.md)|Indique les propriétés des connexions utilisateur existantes lorsque la trace a été démarrée.|  
   
   

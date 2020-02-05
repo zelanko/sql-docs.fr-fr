@@ -12,10 +12,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930317"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
@@ -23,7 +23,7 @@ ms.locfileid: "67930317"
 
 Réduit la taille du journal des transactions *sur l’appliance* pour la base de données [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] actuelle. Les données sont défragmentées afin de réduire le journal des transactions. Avec le temps, le journal des transactions de la base de données peut être fragmenté et inefficace. Utilisez DBCC SHRINKLOG pour réduire la fragmentation et la taille du journal.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ Nécessite l’autorisation ALTER SERVER STATE.
 DBCC SHRINKLOG ne modifie pas la taille de journal stockée dans les métadonnées de la base de données. Les métadonnées continuent de contenir le paramètre LOG_SIZE qui a été spécifié dans l’instruction CREATE DATABASE ou ALTER DATABASE.
   
 ## <a name="examples"></a>Exemples 
-### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. Réduire le journal des transactions à la taille d’origine spécifiée par CREATE DATABASE.  
+### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>R. Réduire le journal des transactions à la taille d’origine spécifiée par CREATE DATABASE.  
 Supposons que le journal des transactions pour la base de données Addresses a été défini sur 100 Mo lors de la création de la base de données Addresses. Autrement dit, l’instruction CREATE DATABASE pour Addresses indiquait LOG_SIZE = 100 Mo. Supposons maintenant que le journal a atteint une taille de 150 Mo que vous voulez ramener à 100 Mo.
   
 Chacune des instructions suivantes va tenter de réduire le journal des transactions pour la base de données Addresses à la taille par défaut de 100 Mo. Si la réduction du journal à 100 Mo entraîne une perte de données, DBCC SHRINKLOG ramène le journal à la plus petite taille possible, supérieure à 100 Mo, sans perte de données.

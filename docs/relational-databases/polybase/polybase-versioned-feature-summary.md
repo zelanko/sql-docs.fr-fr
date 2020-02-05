@@ -10,10 +10,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710453"
 ---
 # <a name="polybase-features-and-limitations"></a>Fonctionnalités et limitations de PolyBase
@@ -28,7 +28,7 @@ Ce tableau contient les principales fonctionnalités de PolyBase et les produits
   
 ||||||
 |-|-|-|-|-|   
-|**Fonctionnalité**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+|**Fonctionnalité**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
 |Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|Non|Oui|
 |Importer des données depuis Hadoop|Oui|Non|Non|Oui|
 |Exporter des données vers Hadoop  |Oui|Non|Non| Oui|
@@ -49,7 +49,7 @@ Dans SQL Server et APS, tous les opérateurs T-SQL ne peuvent pas être transmis
 |**Type d’opérateur**|**Transmissible à Hadoop**|**Transmissible au stockage d’objets blob**|
 |Projections de colonne|Oui|Non|
 |Prédicats|Oui|Non|
-|Agrégats|Partielle|Non|
+|Agrégats|Partiel|Non|
 |Jointures entre les tables externes|Non|Non|
 |Jointures entre les tables externes et les tables locales|Non|Non|
 |Tris|Non|Non|

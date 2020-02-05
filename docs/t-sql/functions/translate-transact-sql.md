@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098829"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -57,7 +57,7 @@ Le comportement de la fonction `TRANSLATE` est similaire à l’utilisation de p
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Remplacer les crochets et les accolades par des parenthèses
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>R. Remplacer les crochets et les accolades par des parenthèses
 
 La requête suivante remplace les crochets et les accolades dans la chaîne d’entrée par des parenthèses :
 

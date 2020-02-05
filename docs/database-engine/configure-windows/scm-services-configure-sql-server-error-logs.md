@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127482"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Services SCM - Configurer les journaux des erreurs SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "74127482"
 
 2. Dans la boîte de dialogue **Configurer les journaux d'erreurs SQL Server** , choisissez l'une des options suivantes.
 
-    A. Nombre de fichiers journaux
+    a. Nombre de fichiers journaux
 
       **Limiter le nombre de fichiers de journaux d'erreurs avant qu'ils ne soient recyclés**
 
@@ -40,7 +40,7 @@ ms.locfileid: "74127482"
 
       Spécifiez le nombre maximal de fichiers journaux des erreurs archivés pouvant être créés avant le recyclage. La valeur par défaut est 6, en plus du fichier journal actuel. Cette valeur détermine le nombre de journaux de sauvegarde précédents que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve avant de les recycler.
 
-    B. Taille du fichier journal
+    b. Taille du fichier journal
 
       **Taille maximale du fichier journal des erreurs en Ko**
 

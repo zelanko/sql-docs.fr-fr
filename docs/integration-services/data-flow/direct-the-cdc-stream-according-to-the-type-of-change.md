@@ -11,10 +11,10 @@ ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7af6ce4ebf3e412c2283e16e008cfd97cd34df0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292836"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Diriger le flux de capture de données modifiées en fonction du type de modification
@@ -40,15 +40,15 @@ ms.locfileid: "71292836"
   
 6.  Sélectionnez l'une des sorties suivantes :  
   
-    -   Sortie de suppression : Sortie vers laquelle les lignes de modification DELETE sont dirigées.  
+    -   Sortie de suppression : sortie vers laquelle les lignes de modification DELETE sont dirigées.  
   
-    -   Sortie d’insertion : Sortie vers laquelle les lignes de modification INSERT sont dirigées.  
+    -   Sortie d'insertion : sortie vers laquelle les lignes de modification INSERT sont dirigées.  
   
-    -   Sortie de mise à jour : Sortie vers laquelle les lignes de modification avant/après UPDATE et les lignes de modification MERGE sont dirigées.  
+    -   Sortie de mise à jour : sortie vers laquelle les lignes de modification avant/après UPDATE et les lignes de modification MERGE sont dirigées.  
   
 7.  Éventuellement, vous pouvez configurer les propriétés avancées à l'aide de la boîte de dialogue **Éditeur avancé** .  
   
-     La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programmation.  
+     La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
      Pour ouvrir la boîte de dialogue **Éditeur avancé** :  
   

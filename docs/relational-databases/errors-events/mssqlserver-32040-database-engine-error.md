@@ -12,13 +12,13 @@ ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b5a78df53c3841ac84c59c8ef84233a8d7785b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105157"
 ---
-# <a name="mssqlserver32040"></a>MSSQLSERVER_32040
+# <a name="mssqlserver_32040"></a>MSSQLSERVER_32040
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68105157"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|32040|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|32040|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum32040|  
 |Texte du message|L'alerte relative à la transaction non envoyée la plus ancienne s'est déclenchée. La valeur actuelle de '%d' dépasse le seuil '%d'.|  

@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594109"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion de clés pour Always Encrypted
@@ -58,7 +58,7 @@ Si l’on considère les rôles ci-dessus, il existe deux façons d’effectuer 
 ## <a name="managing-keys-with-role-separation"></a>Gestion des clés avec séparation des rôles
 Quand les clés Always Encrypted sont gérées avec séparation des rôles, différentes personnes au sein d’une organisation assument les rôles d’administrateur de sécurité et d’administrateur de base de données. Un processus de gestion des clés avec séparation des rôles garantit que les administrateurs de base de données n’ont pas accès aux clés ou aux magasins de clés contenant les clés, et que les administrateurs de sécurité n’ont pas accès à la base de données contenant des données sensibles. La gestion des clés avec séparation des rôles est recommandée si votre objectif est de garantir que les administrateurs de base de données de votre organisation ne peuvent pas accéder aux données sensibles. 
 
-**Remarque :** Les administrateurs de sécurité génèrent et utilisent des clés en texte en clair. Ils ne doivent donc jamais effectuer leurs tâches sur les mêmes ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles des par des DBA ou toute autre personne pouvant être un adversaire potentiel. 
+**Remarque :** les administrateurs de sécurité génèrent et utilisent des clés en texte clair. Ils ne doivent donc jamais effectuer leurs tâches sur des ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles par les administrateurs de base de données ou toute autre personne pouvant être un adversaire potentiel. 
 
 ## <a name="managing-keys-without-role-separation"></a>Gestion des clés sans séparation des rôles
 Quand les clés Always Encrypted sont gérées sans séparation des rôles, une seule personne peut assumer les rôles d’administrateur de base de données et d’administrateur de sécurité. Cette personne doit donc pouvoir accéder aux clés, aux magasins de clés et aux métadonnées de clés, et les gérer. La gestion des clés sans séparation des rôles est recommandée pour les organisations qui utilisent le modèle DevOps, ou si la base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de base de données) aux données sensibles.
@@ -71,9 +71,9 @@ Vous pouvez gérer les clés Always Encrypted à l’aide de [SQL Server Managem
 
 - **SQL Server Management Studio (SSMS)**  : fournit des boîtes de dialogue et des Assistants qui combinent des tâches impliquant l’accès au magasin de clés et l’accès à la base de données. SSMS ne prend pas en charge la séparation des rôles, mais il simplifie la configuration des clés. Pour plus d’informations sur la gestion des clés à l’aide de SSMS, consultez :
     - [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-    - [Permuter des clés Always Encrypted à l’aide de SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+    - [Effectuer une rotation des clés Always Encrypted avec SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 
-- **SQL Server PowerShell** : inclut des applets de commande pour la gestion des clés Always Encrypted avec et sans séparation des rôles. Pour plus d'informations, consultez :
+- **SQL Server PowerShell** : inclut des applets de commande pour la gestion des clés Always Encrypted avec et sans séparation des rôles. Pour plus d'informations, consultez les pages suivantes :
     - [Configurer des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Permuter des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -92,11 +92,11 @@ Pour qu’Always Encrypted soit efficace contre ces types d’attaques, votre pr
 - Ne générez jamais de clés principales de colonne ou de clés de chiffrement de colonne sur un ordinateur qui héberge votre base de données. Au lieu de cela, générez les clés sur un ordinateur distinct dédié à la gestion de clés ou hébergeant des applications qui auront besoin d’un accès aux clés. Cela signifie que **vous ne devez jamais exécuter les outils utilisés pour générer les clés sur l’ordinateur qui héberge votre base de données** car, si un intrus accède à un ordinateur utilisé pour provisionner ou gérer vos clés Always Encrypted, il risque d’obtenir vos clés, même si elles apparaissent uniquement dans la mémoire de l’outil pendant une courte durée.
 - Pour vous assurer que votre processus de gestion de clés ne révèle pas par inadvertance les clés principales de colonne ou les clés de chiffrement de colonne, vous devez impérativement identifier les adversaires potentiels et les menaces de sécurité avant de définir et d’implémenter un processus de gestion de clés. Par exemple, si votre objectif est de vous assurer que les administrateurs de base de données n’ont pas accès aux données sensibles, un administrateur de base de données ne doit pas être responsable de la génération des clés. En revanche, un administrateur de base de données *peut* gérer les métadonnées de clés dans la base de données, puisqu’elles ne contiennent pas les clés en clair.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 - [Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted](always-encrypted-wizard.md)
 - [Créer et stocker des clés principales de colonne pour Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
 - [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-- [Provisionner des clés Always Encrypted à l’aide de PowerShell](configure-always-encrypted-keys-using-powershell.md)
+- [Provisionner des clés Always Encrypted en utilisant PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
 ## <a name="see-also"></a>Voir aussi
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

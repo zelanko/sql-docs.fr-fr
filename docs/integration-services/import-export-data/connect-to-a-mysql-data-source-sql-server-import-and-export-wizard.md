@@ -10,10 +10,10 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285682"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données MySQL (Assistant Importation et Exportation SQL Server)
@@ -37,7 +37,7 @@ Après avoir sélectionné le **Fournisseur de données .NET Framework pour MySQ
 
 |Informations nécessaires|Fournisseur de données .NET Framework pour la propriété MySQL|
 |---|---|
-|Nom du serveur|**Server**|
+|Nom du serveur|**Serveur**|
 |Nom de la base de données|**Sauvegarde de la base de données**|
 |Informations d’authentification (connexion)|**ID d’utilisateur** et **Mot de passe**|
 
@@ -50,7 +50,7 @@ Il n’est pas nécessaire d’entrer la chaîne de connexion dans le champ **Co
 ## <a name="connect-to-mysql-with-the-mysql-odbc-driver"></a>Se connecter à MySQL à l’aide du pilote ODBC MySQL
 Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données dans la page **Choisir une source de données** ou **Choisir une destination**. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
 
-Voici l’écran générique qui s’affiche immédiatement après que vous avez sélectionné le fournisseur de données .NET Framework pour ODBC.
+Voici l’écran générique que vous voyez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
 
 ![Connexion à SQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
@@ -67,7 +67,7 @@ Pour vous connecter à MySQL au moyen du pilote ODBC MySQL, assemblez une chaîn
 **Driver**  
 Nom du pilote ODBC.
 
-**Server**  
+**Serveur**  
 Nom du serveur MySQL. 
 
 **Sauvegarde de la base de données**  

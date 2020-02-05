@@ -14,10 +14,10 @@ ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986696"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>Objet SQLServer:Cursor Manager by Type
@@ -30,7 +30,7 @@ ms.locfileid: "67986696"
 |-------------------------------------|-----------------|  
 |**Curseurs actifs**|Nombre de curseurs actifs.|  
 |**Taux d'accès au cache**|Rapport entre les présences dans le cache et les recherches.|  
-|**Base du taux d’accès au cache**|À usage interne uniquement| 
+|**Base du taux d’accès au cache**|À usage interne uniquement.| 
 |**Nombres de curseurs mis en cache**|Nombre de curseurs d'un type donné dans le cache.|  
 |**Nombre d'utilisations du cache de curseurs/s**|Nombre d'utilisations de chaque type de curseur en cache.|  
 |**Mémoire utilisée par les curseurs**|Quantité de mémoire consommée par les curseurs en kilo-octets (Ko).|  

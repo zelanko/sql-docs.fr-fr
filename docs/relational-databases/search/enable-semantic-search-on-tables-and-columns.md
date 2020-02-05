@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082898"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
@@ -43,7 +43,7 @@ ms.locfileid: "68082898"
   
 -   Vous pouvez créer un index sémantique sur des colonnes présentant l'un des types de données pris en charge pour l'indexation de texte intégral. Pour plus d’informations, consultez [Créer et gérer des index de recherche en texte intégral](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
--   Vous pouvez spécifier tout type de document pris en charge pour l’indexation de texte intégral pour des colonnes **varbinary(max)** . Pour plus d’informations, consultez [Guide pratique pour déterminer les types de documents pouvant être indexés](#doctypes) dans cette rubrique.  
+-   Vous pouvez spécifier tout type de document pris en charge pour l’indexation de texte intégral pour des colonnes **varbinary(max)** . Pour plus d'informations, consultez [Procédure : déterminer les types de documents pouvant être indexés](#doctypes) dans cette rubrique.  
   
 -   L’indexation sémantique crée deux types d’index pour les colonnes que vous sélectionnez : un index d’expressions clés et un index de similarité de document. Vous ne pouvez pas sélectionner un seul type d'index lorsque vous activez l'indexation sémantique. En revanche, vous interroger ces deux index de manière indépendante. Pour plus d’informations, consultez [Rechercher des expressions clés dans les documents avec la recherche sémantique](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) et [Rechercher des documents similaires ou connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68082898"
  
  Appelez l’instruction **CREATE FULLTEXT INDEX** et spécifiez **STATISTICAL_SEMANTICS** pour chaque colonne sur laquelle vous souhaitez créer un index sémantique. Pour plus d’informations sur toutes les options de cette instruction, consultez [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
- **Exemple 1 : Créer un index unique, un index de recherche en texte intégral et un index sémantique**  
+ **Exemple 1 : créer un index unique, un index de recherche en texte intégral et un index sémantique**  
   
  L’exemple suivant crée un catalogue de texte intégral par défaut, **ft**. L’exemple crée ensuite un index unique sur la colonne **JobCandidateID** de la table **HumanResources.JobCandidate** de l’exemple de base de données AdventureWorks2012. Cet index unique est requis en tant que colonne clé pour un index de recherche en texte intégral. L’exemple crée ensuite un index de recherche en texte intégral et un index sémantique sur la colonne **Resume** .  
   
@@ -80,7 +80,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **Exemple 2 : Créer un index sémantique et de recherche en texte intégral sur plusieurs colonnes avec remplissage différé de l’index**  
+ **Exemple 2 : créer un index sémantique et de recherche en texte intégral sur plusieurs colonnes avec remplissage différé de l'index**  
   
  L’exemple suivant crée un catalogue de texte intégral, **documents_catalog**, dans l’exemple de base de données AdventureWorks2012. L'exemple crée ensuite un index de recherche en texte intégral qui utilise ce nouveau catalogue. L’index de recherche en texte intégral est créé sur les colonnes **Title**, **DocumentSummary**et **Document** de la table **Production.Document** , tandis que l’index sémantique est uniquement créé sur la colonne **Document** . Cet index de recherche en texte intégral utilise le catalogue de texte intégral nouvellement créé et un index de clé unique existant, **PK_Document_DocumentID**. Comme recommandé, cette clé d'index est créée sur une colonne d'entiers, **DocumentID**. L'exemple spécifie le LCID de l'anglais, 1033, qui est la langue des données dans les colonnes.  
   
@@ -131,7 +131,7 @@ GO
   
 -   Pour ajouter l’indexation sémantique à une colonne dont l’indexation de texte intégral est déjà activée, utilisez l’option **ADD STATISTICAL_SEMANTICS** . Vous ne pouvez ajouter l'indexation sémantique qu'à une colonne dans une instruction **ALTER** individuelle.  
   
- **Exemple : Ajouter l’indexation sémantique à une colonne dont l’indexation de texte intégral est déjà activée**  
+ **Exemple : ajouter l'indexation sémantique à une colonne dont l'indexation de texte intégral est déjà activée**  
   
  L’exemple suivant modifie un index de recherche en texte intégral existant sur la table **Production.Document** de l’exemple de base de données AdventureWorks2012. Il ajoute un index sémantique sur la colonne **Document** de la table **Production.Document** , qui comporte déjà un index de recherche en texte intégral. L'exemple spécifie que l'index ne sera pas rempli à nouveau automatiquement.  
   
@@ -256,10 +256,10 @@ GO
   
  Les langues suivantes sont prises en charge pour l'indexation sémantique. Cette liste représente la sortie de l’affichage catalogue [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md), classée par LCID.  
   
-|Langue|LCID|  
+|Langage|LCID|  
 |--------------|----------|  
-|German|1031|  
-|Anglais (États-Unis)|1033|  
+|Allemand|1031|  
+|Anglais (US)|1033|  
 |Français|1036|  
 |Italien|1040|  
 |Portugais (Brésil)|1046|  
@@ -274,10 +274,10 @@ GO
   
  Si le type de document que vous souhaitez indexer ne figure pas dans la liste des types pris en charge, vous devrez peut-être rechercher, télécharger et installer des filtres supplémentaires. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Bonne pratique : Créer un groupe de fichiers distinct pour les index sémantiques et de recherche en texte intégral  
+##  <a name="BestPracticeFilegroup"></a> Meilleure pratique : créer un groupe de fichiers distinct pour les index sémantiques et de recherche en texte intégral  
  Créez un groupe de fichiers séparé pour les index sémantiques et de recherche en texte intégral si l'allocation d'espace disque pose problème. Les index sémantiques sont créés dans le même groupe de fichiers que l'index de recherche en texte intégral. Un index sémantique entièrement rempli peut contenir un grand nombre de données.  
  
-##  <a name="IssueNoResults"></a> Problème : La recherche sur une colonne spécifique ne retourne aucun résultat  
+##  <a name="IssueNoResults"></a> Problème : La recherche sur une colonne spécifique ne retourne aucun résultat  
  **Est-ce qu'un LCID non-Unicode a été spécifié pour une langue Unicode ?**  
  Il est possible d'activer l'indexation sémantique sur un type de colonne non-Unicode avec un LCID de langue qui comporte uniquement des termes Unicode, tels que LCID 1049 pour le russe. Dans ce cas, aucun résultat ne sera jamais retourné des index sémantiques sur cette colonne.  
   

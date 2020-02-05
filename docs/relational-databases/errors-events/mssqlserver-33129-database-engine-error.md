@@ -12,13 +12,13 @@ ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8db538178402ffe7728c9b97c4c4a81d3f4bc214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908389"
 ---
-# <a name="mssqlserver33129"></a>MSSQLSERVER_33129
+# <a name="mssqlserver_33129"></a>MSSQLSERVER_33129
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67908389"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|33129|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|33129|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SEC_CANNOT_DISABLE_WIN_GROUP|  
 |Texte du message|Impossible d'utiliser ALTER_LOGIN avec l'argument DISABLE pour refuser l'accès à un groupe Windows.|  

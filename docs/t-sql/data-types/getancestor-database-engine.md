@@ -18,10 +18,10 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077983"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (moteur de base de données)
@@ -59,7 +59,7 @@ Si un nombre négatif est passé, une exception est levée.
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-finding-the-child-nodes-of-a-parent"></a>A. Recherche des nœuds enfants d'un parent  
+### <a name="a-finding-the-child-nodes-of-a-parent"></a>R. Recherche des nœuds enfants d'un parent  
 `GetAncestor(1)` retourne les employés qui ont `david0` pour ancêtre immédiat (leur parent). L'exemple suivant utilise `GetAncestor(1)`.
   
 ```sql

@@ -12,10 +12,10 @@ ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2dde7bedad58273cb207b05f54824c9c5ddff5c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305849"
 ---
 # <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
@@ -26,8 +26,8 @@ ms.locfileid: "72305849"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10521|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10521|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_PARAM_NEEDED|  
 |Texte du message|Impossible de créer le repère de plan '%.\*ls', car **\@type** a été spécifié en tant que '%ls' et le paramètre '%ls' a la valeur Null. Ce type requiert une valeur autre que Null pour le paramètre. Spécifiez une valeur autre que Null pour le paramètre ou remplacez le type par un type qui autorise une valeur Null pour le paramètre.|  

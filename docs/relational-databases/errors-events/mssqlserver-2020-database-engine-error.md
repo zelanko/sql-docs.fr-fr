@@ -12,13 +12,13 @@ ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896759"
 ---
-# <a name="mssqlserver2020"></a>MSSQLSERVER_2020
+# <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67896759"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2020|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2020|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
 |Texte du message|Les dépendances signalées pour l'entité "%.*ls" n'incluent pas de références aux colonnes. Cela est dû au fait que l'entité fait référence à un objet inexistant ou que l'une ou plusieurs instructions de l'entité comportent une erreur.  Avant de réexécuter la requête, assurez-vous que l'entité ne comporte aucune erreur et que tous les objets référencés par l'entité existent.|  

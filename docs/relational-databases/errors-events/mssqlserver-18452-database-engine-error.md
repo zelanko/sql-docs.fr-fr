@@ -13,13 +13,13 @@ ms.assetid: 21da332c-e81d-4dee-a9d2-95598911b3be
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 09f5703621f0904572da530744206a88de094cec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137108"
 ---
-# <a name="mssqlserver18452"></a>MSSQLSERVER_18452
+# <a name="mssqlserver_18452"></a>MSSQLSERVER_18452
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -27,8 +27,8 @@ ms.locfileid: "68137108"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|18452|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|18452|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|LOGON_INVALID_CONNECT|  
 |Texte du message|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Il s’agit d’un compte de connexion SQL Server, qui ne peut pas être utilisé avec l’authentification Windows.%.\*ls.|  

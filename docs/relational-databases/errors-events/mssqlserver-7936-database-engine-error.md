@@ -12,13 +12,13 @@ ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e094c571498c315ec57471f216b65376f76eb2aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987748"
 ---
-# <a name="mssqlserver7936"></a>MSSQLSERVER_7936
+# <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "67987748"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7936|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7936|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Texte du message|Erreur de table, le répertoire FileStream existe pour l’ID de colonne C_ID de l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, mais cette colonne n'est pas une colonne FileStream.|  
+|Texte du message|Erreur de table : le répertoire FileStream existe pour l'ID de colonne C_ID de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, mais cette colonne n'est pas une colonne FileStream.|  
   
 ## <a name="explanation"></a>Explication  
 Au cours de l’exécution de DBCC CHECKDB, un répertoire FILESTREAM a été trouvé pour la colonne spécifiée ; toutefois, la colonne n’est pas de type **FILESTREAM**.  

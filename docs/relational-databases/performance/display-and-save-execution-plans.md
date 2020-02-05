@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11c33865990bd67e62436de3106282f873e5d0fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946835"
 ---
 # <a name="display-and-save-execution-plans"></a>Afficher et enregistrer des plans d'exécution
@@ -39,10 +39,10 @@ Pour plus d’informations sur les plans d’exécution de requête, consultez l
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Affichage du plan d'exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md)  
+-   [Afficher le plan d’exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md)  
   
 -   [Afficher un plan d'exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md)  
   
--   [Enregistrer un plan d'exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
+-   [Enregistrer un plan d’exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

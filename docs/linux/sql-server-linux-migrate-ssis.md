@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943819"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraire, transformer et charger des données sur Linux avec SSIS
@@ -71,7 +71,7 @@ Il existe trois façons d'exécuter un package SSIS chiffré avec un mot de pass
 
 ## <a name="design-packages"></a>Concevoir des packages
 
-**Se connecter à des sources de données ODBC**. Avec SSIS sur Linux CTP 2.1 Refresh et versions ultérieures, les packages SSIS peuvent utiliser les connexions ODBC sur Linux. Cette fonctionnalité a été testée avec les pilotes SQL Server et MySQL ODBC, mais elle devrait également fonctionner avec tout pilote ODBC Unicode conforme au standard ODBC. Au moment de la conception, vous pouvez fournir un DSN ou une chaîne de connexion pour vous connecter aux données ODBC ; vous pouvez également utiliser l'authentification Windows. Pour plus d'informations, voir [le billet de blog annonçant la prise en charge d’ODBC sur Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Se connecter à des sources de données ODBC**. Avec SSIS sur Linux CTP 2.1 Refresh et versions ultérieures, les packages SSIS peuvent utiliser les connexions ODBC sur Linux. Cette fonctionnalité a été testée avec les pilotes SQL Server et MySQL ODBC, mais elle devrait également fonctionner avec tout pilote ODBC Unicode conforme au standard ODBC. Au moment de la conception, vous pouvez fournir un DSN ou une chaîne de connexion pour vous connecter aux données ODBC ; vous pouvez également utiliser l'authentification Windows. Pour plus d'informations, consultez le [billet de blog annonçant le support d’ODBC sur Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 **Chemins d'accès**. Fournissez des chemins de style Windows dans vos packages SSIS. SSIS sur Linux ne prend pas en charge les chemins de style Linux, mais mappe les chemins de style Windows aux chemins de style Linux lors de l'exécution. Ensuite, par exemple, SSIS sur Linux mappe le chemin de style Windows `C:\test` au chemin de style Linux `/test`.
 

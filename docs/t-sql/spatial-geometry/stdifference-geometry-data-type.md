@@ -18,10 +18,10 @@ ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127368"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (type de données geometry)
@@ -50,7 +50,7 @@ Retourne un objet qui représente l’ensemble de points d’une instance **geom
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-computing-the-difference-between-two-polygon-instances"></a>A. Calcul de la différence entre deux instances Polygon  
+### <a name="a-computing-the-difference-between-two-polygon-instances"></a>R. Calcul de la différence entre deux instances Polygon  
  L'exemple suivant utilise `STDifference()` pour calculer la différence entre deux polygones.  
   
 ```  

@@ -12,10 +12,10 @@ ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72005989"
 ---
 # <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
@@ -26,8 +26,8 @@ ms.locfileid: "72005989"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10532|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10532|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_NO_ELIGIBLE_STMT|  
 |Texte du message|Impossible de créer le repère de plan '%.\*ls', car le module ou lot spécifié par **\@plan_handle** ne contient pas d'instruction éligible pour un repère de plan. Indiquez une autre valeur pour **\@plan_handle**.|  

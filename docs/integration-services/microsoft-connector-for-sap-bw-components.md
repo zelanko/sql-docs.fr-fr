@@ -11,10 +11,10 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295868"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Composants Microsoft Connector 1.1 pour SAP BW
@@ -37,13 +37,13 @@ ms.locfileid: "71295868"
 >  La documentation de Microsoft Connector 1.1 pour SAP BW suppose que vous êtes familiarisé avec l'environnement SAP Netweaver BW. Pour plus d'informations sur SAP Netweaver BW, ou sur la configuration des objets et des processus SAP Netweaver BW objets, consultez la documentation SAP.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [Gestionnaire de connexions SAP BW](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  Décrit le gestionnaire de connexions SAP BW. Le gestionnaire de connexions connecte la source SAP BW ou la destination SAP BW à un système SAP Netweaver BW version 7.  
   
- [SAP BW Source](../integration-services/data-flow/sap-bw-source.md)  
+ [Source SAP BW](../integration-services/data-flow/sap-bw-source.md)  
  Décrit la source SAP BW qui vous permet d'extraire des données d'un système SAP Netweaver BW.  
   
- [SAP BW Destination](../integration-services/data-flow/sap-bw-destination.md)  
+ [Destination SAP BW](../integration-services/data-flow/sap-bw-destination.md)  
  Décrit la destination SAP BW qui vous permet de charger des données dans un système SAP Netweaver BW.  
   
   

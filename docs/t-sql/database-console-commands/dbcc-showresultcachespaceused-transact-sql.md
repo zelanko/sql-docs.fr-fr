@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4a701a56ba5a71037317f6c404fa394a466febba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729887"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "73729887"
 
 Affiche la mise en cache du jeu de résultats utilisée par l’espace de stockage pour une base de données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Azure.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,17 +43,17 @@ Requiert l'autorisation VIEW SERVER STATE.
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|colonne|Type de données|Description|  
+|Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|Espace total utilisé pour la base de données, en Ko. Ce nombre est modifié à mesure que le jeu de résultats mis en cache augmente.|  
-|data_space|BIGINT|Espace utilisé pour les données, en Ko.|  
-|index_space|BIGINT|Espace utilisé pour les index, en Ko.|  
-|unused_space|BIGINT|Espace qui fait partie de l’espace réservé et non utilisé, en Ko.|  
+|reserved_space|bigint|Espace total utilisé pour la base de données, en Ko. Ce nombre est modifié à mesure que le jeu de résultats mis en cache augmente.|  
+|data_space|bigint|Espace utilisé pour les données, en Ko.|  
+|index_space|bigint|Espace utilisé pour les index, en Ko.|  
+|unused_space|bigint|Espace qui fait partie de l’espace réservé et non utilisé, en Ko.|  
 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Réglage des performances avec mise en cache du jeu de résultats](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[Optimisation des performances avec la mise en cache des jeux de résultats](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

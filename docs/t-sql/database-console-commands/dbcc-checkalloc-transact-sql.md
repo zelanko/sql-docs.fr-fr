@@ -27,10 +27,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056353"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74056353"
 
 Vérifie la cohérence des structures d'allocation de l'espace disque pour une base de données spécifiée.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,7 +82,7 @@ Les noms de base de données doivent suivre les règles applicables aux [identif
  Non applicable.  
  N'utilisez les options REPAIR qu'en dernier recours. Pour réparer les erreurs, nous vous recommandons d'effectuer une restauration à partir d'une sauvegarde. Les opérations de réparation ne prennent en compte aucune des contraintes qui peuvent exister sur les tables ou entre tables. Si la table spécifiée est impliquée dans une ou plusieurs contraintes, nous vous recommandons d'exécuter DBCC CHECKCONSTRAINTS après une réparation. Si vous devez utiliser REPAIR, exécutez la commande DBCC CHECKDB sans option de réparation afin de déterminer le niveau de réparation à utiliser. Si vous utilisez le niveau REPAIR_ALLOW_DATA_LOSS, nous vous recommandons de sauvegarder la base de données avant d'exécuter la commande DBCC CHECKDB avec cette option.
 
- par  
+ WITH  
  Permet de spécifier des options.
 
  ALL_ERRORMSGS  
@@ -113,7 +113,7 @@ DBCC CHECKALLOC utilise un instantané interne de la base de données pour assur
 ## <a name="understanding-dbcc-error-messages"></a>Présentation des messages d'erreur de DBCC  
 Une fois la commande DBCC CHECKALLOC exécutée, un message est consigné dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la commande DBCC est correctement exécutée, le message indique que l'exécution a réussi, ainsi que la durée d'exécution de la commande. Si la commande DBCC est interrompue avant la fin de la vérification en raison d’une erreur, le message indique que la commande n’a pas abouti et précise une valeur d’état ainsi que la durée d’exécution de la commande. Le tableau suivant répertorie et décrit les valeurs d'état pouvant être incluses dans le message.
   
-|État|Description|  
+|State|Description|  
 |---|---|  
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|  
 |1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|  

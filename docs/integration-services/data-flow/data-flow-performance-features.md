@@ -24,10 +24,10 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637957"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
@@ -80,7 +80,7 @@ ms.locfileid: "73637957"
  N'augmentez pas la taille du tampon au point de déclencher la pagination sur le disque. Cela aurait des effets plus néfastes sur les performances que la non-optimisation de la taille du tampon. Pour déterminer si la pagination est en cours, surveillez le compteur de performances « Mémoires tampon spoulées » dans le composant logiciel enfichable Performance de la console MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurer le package pour une exécution parallèle  
- L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l'exécution parallèle de tâches différentes dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : **MaxConcurrentExecutables** et **EngineThreads**.  
+ L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l’exécution parallèle de différentes tâches dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : **MaxConcurrentExecutables** et **EngineThreads**.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>La propriété MaxConcurrentExcecutables  
  La propriété **MaxConcurrentExecutables** est une propriété du package lui-même. Cette propriété définit le nombre de tâches pouvant s'exécuter simultanément. La valeur par défaut est -1, ce qui correspond au nombre de processeurs physiques ou logiques plus 2.  
@@ -98,7 +98,7 @@ ms.locfileid: "73637957"
 ## <a name="configuring-individual-data-flow-components"></a>Configuration de composants de flux de données individuels  
  Pour configurer des composants de flux de données individuels afin d'obtenir de meilleures performances, il y a plusieurs règles générales que vous pouvez suivre. D'autres règles spécifiques s'appliquent également à chaque type de composant de flux de données : source, transformation et destination.  
   
-### <a name="general-guidelines"></a>Règles générales  
+### <a name="general-guidelines"></a>Instructions générales  
  Indépendamment du composant de flux de données, deux règles générales sont à suivre pour améliorer les performances : optimiser les requêtes et éviter les chaînes inutiles.  
   
 #### <a name="optimize-queries"></a>Optimisation des requêtes  
@@ -143,7 +143,7 @@ ms.locfileid: "73637957"
 #### <a name="lookup-transformation"></a>Transformation de recherche  
  Réduisez la taille des données de référence en mémoire en entrant une instruction SELECT qui recherche uniquement les colonnes dont vous avez besoin. Cette approche est plus performante que la sélection d'une table ou d'une vue entière qui retourne une quantité importante de données inutiles.  
   
-#### <a name="merge-join-transformation"></a>Merge Join Transformation  
+#### <a name="merge-join-transformation"></a>transformation de jointure de fusion  
  Vous n'avez plus à configurer la valeur de la propriété **MaxBuffersPerInput** car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme de la mémoire en excès. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente  
@@ -151,7 +151,7 @@ ms.locfileid: "73637957"
   
  En général, les composants les plus lents de la transformation de dimension à variation lente sont les transformations de commande OLE DB qui effectuent des mises à jour sur une ligne à la fois. Par conséquent, le moyen le plus efficace pour améliorer les performances de la transformation de dimension à variation lente consiste à remplacer les transformations de commande OLE DB. Vous pouvez remplacer ces transformations par des composants de destination qui enregistrent toutes les lignes à mettre à jour dans une table de transit. Ensuite, vous pouvez ajouter une tâche d'exécution SQL qui effectue une opération UPDATE Transact-SQL basée sur un jeu unique sur toutes les lignes en même temps.  
   
- Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Unique dimension scenario » (scénario à dimension unique) dans le livre blanc [Project REAL : Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582) (en anglais).  
+ Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Scénario de dimension Unique » dans le livre blanc [Projet REAL: Pratiques de conception ETL Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### <a name="destinations"></a>Destinations  
  Pour obtenir de meilleures performances avec les destinations, songez à utiliser une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à tester les performances de la destination.  
@@ -174,9 +174,9 @@ ms.locfileid: "73637957"
 ## <a name="related-content"></a>Contenu associé  
  **Articles et publications de blog**  
   
--   Article technique, [SQL Server 2005 Integration Services : stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899) sur technet.microsoft.com  
+-   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
   
--   Technical article, [Integration Services : techniques de réglage du niveau de performance](https://go.microsoft.com/fwlink/?LinkId=98900) on technet.microsoft.com  
+-   Article technique, [Integration Services : techniques de réglage des performances](https://go.microsoft.com/fwlink/?LinkId=98900), sur le site technet.microsoft.com  
   
 -   Article technique [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) dans _SQLCAT's Guide to BI and Analytics_
   
@@ -206,6 +206,6 @@ ms.locfileid: "73637957"
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l'exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

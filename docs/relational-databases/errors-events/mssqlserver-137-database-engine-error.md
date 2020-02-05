@@ -12,10 +12,10 @@ ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305037"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
@@ -26,8 +26,8 @@ ms.locfileid: "72305037"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|137|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|137|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|P_SCALAR_VAR_NOTFOUND|  
 |Texte du message|La variable scalaire « %.*ls » doit être déclarée.|  

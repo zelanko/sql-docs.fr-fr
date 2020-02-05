@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059925"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059925"
 
   Retourne la partie de gauche d'une chaîne de caractères avec le nombre spécifié de caractères.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ LEFT ( character_expression , integer_expression )
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données binaires ou caractères. *character_expression* peut être une constante, une variable ou une colonne. *character_expression* peut être de n’importe quel type de données, à l’exception de **text** et **ntext**, qui peut être converti implicitement en **varchar** ou **nvarchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
   
  *integer_expression*  
- Entier positif qui spécifie le nombre de caractères de *character_expression* à renvoyer. Si *integer_expression* est négatif, une erreur est renvoyée. Si *integer_expression* est de type **bigint** et contient une valeur de grande taille, *character_expression* doit être d’un type de données de grande taille, tel que **varchar(max)** .  
+ Entier positif qui spécifie le nombre de caractères de *character_expression* à renvoyer. Si *integer_expression* est négatif, une erreur est retournée. Si *integer_expression* est de type **bigint** et contient une valeur de grande taille, *character_expression* doit être d’un type de données de grande taille, tel que **varchar(max)** .  
   
  Le paramètre *integer_expression* compte un caractère de substitution UTF-16 comme un caractère.  
   
@@ -60,7 +60,7 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-left-with-a-column"></a>A. Utilisation de LEFT avec une colonne  
+### <a name="a-using-left-with-a-column"></a>R. Utilisation de LEFT avec une colonne  
  L'exemple suivant retourne les cinq caractères les plus à gauche de chaque nom de produit dans la table `Product` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

@@ -13,10 +13,10 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947347"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Système de fichiers Azure Data Lake Store, tâche
@@ -35,8 +35,8 @@ Pour ajouter une tâche de système de fichiers Azure Data Lake Store à un pack
 
 La propriété **Opération** indique l’opération de système de fichiers à réaliser. Sélectionnez l’une des opérations suivantes :
 
-- **CopyToADLS :** Télécharger des fichiers vers ADLS.
-- **CopyFromADLS :** Télécharger des fichiers depuis ADLS.
+- **CopyToADLS :** charger des fichiers dans ADLS.
+- **CopyFromADLS :** télécharger des fichiers depuis ADLS.
 
 ## <a name="configure-the-properties-for-the-operation"></a>Configurer les propriétés de l’opération
 Pour toute opération, vous devez spécifier un gestionnaire de connexions Azure Data Lake.
@@ -44,7 +44,7 @@ Pour toute opération, vous devez spécifier un gestionnaire de connexions Azure
 Voici les propriétés spécifiques à chaque opération :
 
 ### <a name="copytoadls"></a>CopyToADLS
-- **LocalDirectory :** spécifie le répertoire source local qui contient des fichiers à charger.
+- **LocalDirectory :** spécifie le répertoire source local qui contient les fichiers à charger.
 - **FileNamePattern :** spécifie un filtre de nom de fichier pour les fichiers sources. Seuls les fichiers dont le nom correspond au modèle spécifié sont chargés. Les caractères génériques `*` et `?` sont pris en charge.
 - **SearchRecursively :** indique si des fichiers à charger doivent être recherchés de manière récursive dans le répertoire source.
 - **AzureDataLakeDirectory :** spécifie le répertoire de destination ADLS dans lequel charger les fichiers.
@@ -52,5 +52,5 @@ Voici les propriétés spécifiques à chaque opération :
 
 ### <a name="copyfromadls"></a>CopyFromADLS
 - **AzureDataLakeDirectory :** spécifie le répertoire source ADLS qui contient les fichiers à télécharger.
-- **SearchRecursively :** indique si des fichiers à charger doivent être recherchés de manière récursive dans le répertoire source.
+- **SearchRecursively :** indique si des fichiers à télécharger doivent être recherchés de manière récursive dans le répertoire source.
 - **LocalDirectory :** spécifie le répertoire de destination dans lequel stocker les fichiers téléchargés.

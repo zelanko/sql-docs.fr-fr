@@ -13,10 +13,10 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294761"
 ---
 # <a name="create-the-sql-server-change-database"></a>Créer la base de données de modification SQL Server
@@ -39,16 +39,16 @@ ms.locfileid: "71294761"
  **Instance Oracle CDC**  
  Entrez les informations suivantes sur l'instance CDC que vous créez.  
   
--   **Nom**: nom du nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
+-   **Nom**: tapez le nom du nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
   
--   **Description** : description de la nouvelle instance permettant de l’identifier plus facilement. Ce paramètre est facultatif.  
+-   **Description**: tapez une description de la nouvelle instance pour vous aider à l'identifier. Ce paramètre est facultatif.  
   
  **Base de données modifiée SQL Server**  
  Cette section est utilisée pour créer la base de données.  
   
-1.  **Modifier la base de données** : nom de la nouvelle base de données modifiée. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
+1.  **Modifier la base de données**: nom de la nouvelle base de données modifiée. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
   
-2.  **Créer une base de données** : cliquez sur **Créer une base de données** pour créer la base de données.  
+2.  **Créer une base de données**: cliquez sur **Créer une base de données** pour créer la base de données.  
   
      Pour créer la base de données, la connexion doit posséder le rôle serveur `sysasmin` . Pour plus d'informations, consultez la remarque sur la sécurité ci-dessus.  
   

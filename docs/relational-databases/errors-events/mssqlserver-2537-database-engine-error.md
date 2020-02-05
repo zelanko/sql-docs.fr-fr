@@ -12,13 +12,13 @@ ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b6f07d54fbc04d3ddd9ff6d0a25c2f940f0ca54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103620"
 ---
-# <a name="mssqlserver2537"></a>MSSQLSERVER_2537
+# <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "68103620"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2537|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2537|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_RECORD_CHECK_FAILED|  
-|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE), page P_ID, ligne ROW_ID. Échec du contrôle de l'enregistrement (CHECK_TEXT). Les valeurs sont VALUE1 et VALUE2.|  
+|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE), page P_ID, ligne ROW_ID. Échec du contrôle de l'enregistrement (CHECK_TEXT). Les valeurs sont VALUE1 et VALUE2.|  
   
 ## <a name="explanation"></a>Explication  
 La ligne ROW_ID (ou une colonne de la ligne) ne remplit pas les conditions décrites dans CHECK_TEXT ou n'a pas réussi ce test.  

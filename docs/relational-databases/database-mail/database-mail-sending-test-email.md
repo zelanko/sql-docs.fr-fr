@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906070"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Envoyer un e-mail de test avec Database Mail  
@@ -32,10 +32,10 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir utiliser la 
 ## <a name="procedure"></a>Procédure
 
 1. À l’aide de l’Explorateur d’objets dans [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md), connectez-vous à une instance du moteur de base de données SQL Server où Database Mail est configuré, développez Gestion, cliquez avec le bouton droit sur Database Mail, puis sélectionnez Envoyer un message électronique de test. S’il n’existe aucun profil Database Mail, une boîte de dialogue invite l’utilisateur à en créer un et ouvre l’Assistant Configuration de Database Mail.
-1. Dans la boîte de dialogue **Envoyer un message électronique de test à partir de** <instance name>, dans la zone Profil Database Mail, sélectionnez le profil à tester.
+1. Dans la boîte de dialogue **Envoyer un message électronique de test à partir de**<instance name>, dans la zone Profil Database Mail, sélectionnez le profil à tester.
 1. Dans la zone **À**, tapez l’adresse e-mail du destinataire de l’e-mail de test.
-1. Dans la zone **Objet**, tapez l’objet de l’e-mail de test. Modifiez le texte d’objet par défaut pour mieux identifier le message à des fins de dépannage.
-1. Dans la zone **Corps**, tapez le texte de l’e-mail de test. Modifiez le texte d’objet par défaut pour mieux identifier le message à des fins de dépannage.
+1. Dans la zone **Objet**, tapez l’objet de l’e-mail de test. Modifiez le texte par défaut pour mieux identifier le message relatif au dépannage.
+1. Dans la zone **Corps**, tapez le texte de l’e-mail de test. Modifiez le texte par défaut pour mieux identifier le message relatif au dépannage.
 1. Sélectionnez **Envoyer un message électronique de test** pour envoyer l’e-mail de test dans la file d’attente de Database Mail.
 1. L’envoi de l’e-mail de test ouvre la boîte de dialogue E-mail de test de Database Mail. Notez le chiffre affiché dans la zone Message envoyé. Il s’agit de la valeur mailitem_id de l’e-mail de test. Sélectionnez OK.
 1. Dans la barre d’outils, sélectionnez Nouvelle requête pour ouvrir une fenêtre de l’Éditeur de requête. Exécutez l’instruction T-SQL suivante pour déterminer l’état de l’e-mail de test :
@@ -47,7 +47,7 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir utiliser la 
 
     La colonne sent_status indique si l’e-mail de test a été envoyé.
 
-1. En cas d’erreur, exécutez l’instruction suivante pour afficher le message d’erreur :
+1. En cas d'erreur, exécutez l'instruction suivante pour afficher le message d'erreur :
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 
@@ -61,6 +61,6 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir utiliser la 
 -   [Objets de messagerie de base de données](../../relational-databases/database-mail/database-mail-messaging-objects.md)
 -   [Programme externe de la messagerie de base de données](../../relational-databases/database-mail/database-mail-external-program.md)
 -   [Journal et audits de la messagerie de base de données](../../relational-databases/database-mail/database-mail-log-and-audits.md)
--   [Configurer la messagerie de SQL Server Agent en vue de l’utilisation de la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)
+-   [Configurer la messagerie SQL Server Agent en vue d’utiliser la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)
   
   

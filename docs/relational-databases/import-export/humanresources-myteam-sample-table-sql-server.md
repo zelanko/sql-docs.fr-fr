@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035685"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Exemple de table HumanResources.myTeam (SQL Server)
@@ -31,12 +31,12 @@ ms.locfileid: "68035685"
   
  La table **myTeam** contient les colonnes suivantes.  
   
-|colonne|Type de données|Possibilité de valeurs nulles|Description|  
+|Colonne|Type de données|Possibilité de valeurs nulles|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Non Null|Clé primaire des lignes. EmployeeID d'un membre de l'équipe.|  
-|**Name**|**nvarchar(50)**|Non Null|Name est un membre de l'équipe.|  
-|**Title**|**nvarchar(50)**|Nullable|Fonction occupée par l'employé au sein de l'équipe.|  
-|**Arrière-plan**|**nvarchar(50)**|Non Null|Date et heure de dernière mise à jour de la ligne (Par défaut)|  
+|**Nom**|**nvarchar(50)**|Non Null|Name est un membre de l'équipe.|  
+|**Titre**|**nvarchar(50)**|Nullable|Fonction occupée par l'employé au sein de l'équipe.|  
+|**Contexte**|**nvarchar(50)**|Non Null|Date et heure de dernière mise à jour de la ligne (Par défaut)|  
   
 **Pour créer HumanResources.myTeam**  
   

@@ -29,10 +29,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073161"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68073161"
 
 Réduit la taille des fichiers de données et journaux dans la base de données spécifiée.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ Supprime tous les messages d'information dont les niveaux de gravité sont compr
 ## <a name="result-sets"></a>Jeux de résultats  
 Le tableau suivant décrit les colonnes du jeu de résultats.
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**DbId**|Numéro d'identification de base de données du fichier que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente de réduire.|  
 |**FileId**|Numéro d'identification du fichier que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente de réduire.|  
@@ -120,7 +120,7 @@ Par exemple, si vous spécifiez un _target\_percent_ de 25 pour réduire **mydb
   
 Supposons que le fichier de données de **mydb** contient 7 Mo de données. Si vous spécifiez un _target\_percent_ de 30, le fichier de données peut être réduit à 30 % d’espace libre. En revanche, si vous spécifiez un _target\_percent_ de 40, le fichier de données ne peut pas être réduit, car le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas réduire un fichier à une taille inférieure à celle qu’occupent les données actuellement. 
 
-Ce problème peut également être envisagé autrement : 40 % d’espace libre souhaité ajoutés à 70 % pour la taille du fichier de données (7 Mo sur 10 Mo) dépassent 100 %. Toute valeur _target\_size_ supérieure à 30 n’entraîne pas la réduction du fichier de données. En effet, la somme du pourcentage d’espace libre souhaité et du pourcentage actuel occupé par le fichier de données est supérieure à 100 %.
+En d’autres termes : si vous ajoutez 40 % d’espace libre souhaité à 70 % d’espace occupé dans le fichier de données (7 Mo sur un total de 10 Mo), vous obtenez plus de 100 %. Toute valeur _target\_size_ supérieure à 30 n’entraîne pas la réduction du fichier de données. En effet, la somme du pourcentage d’espace libre souhaité et du pourcentage actuel occupé par le fichier de données est supérieure à 100 %.
   
 Dans le cas des fichiers journaux, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise _target\_percent_ pour calculer la taille cible de l’ensemble du journal. _target\_percent_ correspond donc à la quantité d’espace libre dans le journal après l’opération de réduction. La taille cible pour le journal complet est alors convertie en taille cible pour chaque fichier journal.
   
@@ -156,7 +156,7 @@ Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>A. Réduction de la taille d'une base de données et spécification d'un pourcentage d'espace libre  
+### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>R. Réduction de la taille d'une base de données et spécification d'un pourcentage d'espace libre  
 L’exemple suivant diminue la taille des fichiers de données et journaux de la base de données utilisateur `UserDB` pour obtenir 10 % d’espace libre dans la base de données.  
   
 ```sql  

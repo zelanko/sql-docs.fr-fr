@@ -14,10 +14,10 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c28f8dbaa649e0755c6f18f7cc0f1485f022e4a6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289561"
 ---
 # <a name="hex-ssis-expression"></a>HEX (expression SSIS)
@@ -46,7 +46,7 @@ HEX(integer_expression)
   
  L’argument *integer_expression* doit correspondre à un nombre entier. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
- Le résultat obtenu ne comprend pas de qualificateurs tels que le préfixe « 0x ». Pour inclure un préfixe, utilisez l'opérateur « + » (concaténer). Pour plus d’informations, consultez [+ &#40;Concaténer&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/concatenate-ssis-expression.md).  
+ Le résultat obtenu ne comprend pas de qualificateurs tels que le préfixe « 0x ». Pour inclure un préfixe, utilisez l'opérateur « + » (concaténer). Pour plus d’informations, consultez [+ &#40;Concaténer&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/concatenate-ssis-expression.md).  
   
  Les lettres « A » à « F », utilisées en notation hexadécimale, apparaissent en caractères majuscules.  
   

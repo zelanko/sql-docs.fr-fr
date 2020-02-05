@@ -11,10 +11,10 @@ ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fae988015ab20018a919883aa53b2d61c9ccc0ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294830"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Concepteur de capture de données modifiées pour Oracle par Attunity : rubrique Procédures
@@ -26,7 +26,7 @@ ms.locfileid: "71294830"
   
 ## <a name="learn-how-to-use-the-oracle-cdc-designer-console"></a>Apprendre à utiliser la console du concepteur de capture de données modifiées Oracle  
   
--   [Procédure : gérer un service de capture de données modifiées à partir de la console du concepteur CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)  
+-   [Guide pratique pour gérer un service CDC à partir de la console du concepteur CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)  
   
 -   [Guide pratique pour créer l’instance de base de données de modifications SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
@@ -34,6 +34,6 @@ ms.locfileid: "71294830"
   
 -   [Guide pratique pour modifier les propriétés d’une instance CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
--   [Procédure : afficher les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)  
+-   [Guide pratique pour afficher les propriétés d’une instance CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)  
   
   

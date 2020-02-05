@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278144"
 ---
 # <a name="spatial-data-sql-server"></a>Données spatiales (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Les données spatiales représentent des informations relatives à l'emplacement physique et à la forme d'objets géométriques. Ces objets peuvent être des emplacements de points ou des objets plus complexes tels que des pays, des routes ou des lacs.  
+  Données spatiales représentent des informations sur l’emplacement physique et la forme d’objets géométriques. Ces objets peuvent être des emplacements précis ou des objets plus complexes, tels que des pays, des routes ou des lacs.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de données spatiales : le type de données **geometry** et le type de données **geography** .  
   
@@ -39,16 +39,16 @@ ms.locfileid: "72278144"
  Ces deux types de données sont implémentés comme types de données CLR .NET dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="reltasks"></a> Tâches associées  
- [Créer, construire et interroger des instances geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
+ [Créer, construire et interroger des instances géométriques](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  Décrit les méthodes que vous pouvez utiliser avec des instances du type de données geometry.  
   
- [Créer, construire et interroger des instances geography](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
+ [Créer, construire et interroger des instances géographiques](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  Décrit les méthodes que vous pouvez utiliser avec des instances du type de données geography.  
   
  [Interroger des données spatiales au sujet du plus proche voisin](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
  Décrit le modèle de requête commun qui est utilisé pour rechercher les objets spatiaux les plus proches d'un objet spatial spécifique.  
   
- [Créer, modifier et supprimer les index spatiaux](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
+ [Créer, modifier et supprimer des index spatiaux](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Fournit des informations sur la création, la modification et la suppression d'un index spatial.  
   
 ## <a name="related-content"></a>Contenu associé  
@@ -63,7 +63,7 @@ ms.locfileid: "72278144"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [Polygone](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72278144"
   
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
   
- [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
+ [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
  Présente les index spatiaux et décrit le pavage et les schémas de pavage.  
   
   

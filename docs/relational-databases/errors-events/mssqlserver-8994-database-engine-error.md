@@ -12,13 +12,13 @@ ms.assetid: 8f4b0e2f-04c0-46e4-9208-20a7085d7a1a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 917884670872daf6db0fa66c479c3d10a603e227
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118380"
 ---
-# <a name="mssqlserver8994"></a>MSSQLSERVER_8994
+# <a name="mssqlserver_8994"></a>MSSQLSERVER_8994
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68118380"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8994|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8994|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_MISSING_FORWARDING_ROW|  
 |Texte du message|ID d'objet O_ID, page de ligne transmise P_ID1, l'emplacement S_ID1 doit être référencé par la page de ligne transmise P_ID2, emplacement S_ID2. Aucune ligne transmise n'a été trouvée. Une erreur d'allocation s'est peut-être produite.|  

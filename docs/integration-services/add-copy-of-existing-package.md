@@ -15,10 +15,10 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299119"
 ---
 # <a name="add-copy-of-existing-package"></a>Ajouter une copie des packages existants
@@ -32,13 +32,13 @@ ms.locfileid: "71299119"
  **Emplacement du package**  
  Sélectionnez le type d'emplacement de stockage à partir duquel copier le package.  
   
- **Server**  
+ **Serveur**  
  En cas de copie à partir de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou du magasin de packages SSIS, tapez le nom d'un serveur ou sélectionnez-en un dans la liste.  
   
- **Type d'authentification**  
+ **Type d’authentification**  
  En cas de copie à partir de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez un type d'authentification.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , entrez un nom d’utilisateur.  
   
  **Mot de passe**  

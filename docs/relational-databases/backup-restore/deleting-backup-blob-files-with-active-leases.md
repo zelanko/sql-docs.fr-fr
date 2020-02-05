@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908936"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Supprimer des fichiers blob de sauvegarde avec des baux actifs
@@ -40,7 +40,7 @@ Les étapes suivantes décrivent la procédure de nettoyage après l'échec d'un
     > [!TIP]  
     > SQL Server génère un ID de bail pour établir un accès exclusif pendant l'opération de restauration. L'ID de bail de la restauration est BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-1. **Supprimer l’objet blob :** pour supprimer un objet blob avec un bail actif, vous devez d’abord résilier le bail.  
+1. **Supprimer l’objet blob :** Pour supprimer un objet blob avec un bail actif, vous devez d’abord résilier le bail.  
 
 ###  <a name="Code_Example"></a> Exemple de script PowerShell  
   
@@ -127,4 +127,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>Voir aussi
 
-[Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

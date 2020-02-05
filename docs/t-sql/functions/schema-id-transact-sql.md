@@ -23,18 +23,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5882a98a856916ebeaa0ad30d545d29cdf21071c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089868"
 ---
-# <a name="schemaid-transact-sql"></a>SCHEMA_ID (Transact-SQL)
+# <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie l'ID d'un schéma associé à un nom de schéma.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +49,7 @@ SCHEMA_ID ( [ schema_name ] )
 |*schema_name*|Nom du schéma. *schema_name* est de type **sysname**. Si *schema_name* n’est pas spécifié, SCHEMA_ID renvoie l’ID du schéma par défaut de l’appelant.|  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
  La valeur NULL est renvoyée si *schema_name* n’est pas un schéma valide.  
   
@@ -58,7 +58,7 @@ SCHEMA_ID ( [ schema_name ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-default-schema-id-of-a-caller"></a>A. Renvoi de l'ID du schéma par défaut d'un appelant  
+### <a name="a-returning-the-default-schema-id-of-a-caller"></a>R. Renvoi de l'ID du schéma par défaut d'un appelant  
   
 ```  
 SELECT SCHEMA_ID();  

@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9176052b413293d25acd7696701e4f118adba03f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595724"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Sauvegarder et restaurer des bases de données avec Always Encrypted 
@@ -32,7 +32,7 @@ Pour plus d’informations sur la façon de sauvegarder et de restaurer une base
 - [Vue d’ensemble de la sauvegarde (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Restaurer une base de données sur une instance managée](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 - [Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Développer des applications en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-client-development.md) 
 

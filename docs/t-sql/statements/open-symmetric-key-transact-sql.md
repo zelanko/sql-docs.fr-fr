@@ -19,10 +19,10 @@ ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129388"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68129388"
 
   Déchiffre une clé symétrique et la met à disposition pour l'utiliser.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -89,7 +89,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. Ouverture d'une clé symétrique à l'aide d'un certificat  
+### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>R. Ouverture d'une clé symétrique à l'aide d'un certificat  
  L'exemple suivant ouvre la clé symétrique `SymKeyMarketing3` et la déchiffre à l'aide de la clé privée du certificat `MarketingCert9`.  
   
 ```  

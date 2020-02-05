@@ -1,5 +1,5 @@
 ---
-title: 'Étape 5 : Test des packages mis à jour | Microsoft Docs'
+title: 'Étape 5 : Test des packages mis à jour | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e90af0ecf9972b7365f42fcc307181c4d657e3c5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296108"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>Leçon 1-5 : Test des packages mis à jour
@@ -45,7 +45,7 @@ Si les packages ne s'exécutent pas correctement, vous devez les corriger avant 
 3.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Créer le bundle de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

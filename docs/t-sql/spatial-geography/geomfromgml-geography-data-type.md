@@ -19,10 +19,10 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930732"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (type de données geography)
@@ -30,7 +30,7 @@ ms.locfileid: "67930732"
 
 Construit une instance **geography** en fonction d’une représentation du sous-ensemble [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du langage GML (Geography Markup Language).
   
-Pour plus d’informations sur GML, consultez les spécifications Open Geospatial Consortium suivantes : [Spécifications OGC, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
+Pour plus d’informations sur le langage GML, consultez les spécifications OGC (Open Geospatial Consortium) suivantes : [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.
   

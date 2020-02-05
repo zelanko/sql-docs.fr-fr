@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982034"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982034"
 
   Modifie un objet d'audit du serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,7 +88,7 @@ ALTER SERVER AUDIT audit_name
  Taille maximale que peut atteindre le fichier d'audit. La valeur *max_size* doit être un entier suivi de **MB**, **GB**, **TB** ou **UNLIMITED**. La taille minimale que vous pouvez spécifier pour *max_size* est 2 **MB** et la taille maximale est 2 147 483 647 **TB**. Quand **UNLIMITED** est spécifié, la taille du fichier croît jusqu’à ce que le disque soit saturé. La spécification d’une valeur inférieure à 2 Mo génère l’erreur MSG_MAXSIZE_TOO_SMALL. La valeur par défaut est **UNLIMITED**.  
   
  MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
- Spécifie le nombre maximal de fichiers à conserver dans le système de fichiers. Quand le paramètre MAX_ROLLOVER_FILES=0 est défini, aucune limite n’est imposée quant au nombre de fichiers de substitution créés. La valeur par défaut est 0 : Le nombre maximal de fichiers qui peuvent être spécifiés est 2 147 483 647.  
+ Spécifie le nombre maximal de fichiers à conserver dans le système de fichiers. Quand le paramètre MAX_ROLLOVER_FILES=0 est défini, aucune limite n’est imposée quant au nombre de fichiers de substitution créés. La valeur par défaut est 0. Le nombre maximal de fichiers qui peuvent être spécifiés est 2 147 483 647.  
   
  MAX_FILES =*integer*  
  Spécifie le nombre maximal de fichiers d'audit qui peuvent être créés. N’effectue pas de substitution par le premier fichier quand la limite est atteinte. Quand la limite MAX_FILES est atteinte, toute action qui entraîne la génération d’événements d’audit supplémentaires échoue avec une erreur.  
@@ -151,7 +151,7 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-a-server-audit-name"></a>A. Modification du nom d'un audit du serveur  
+### <a name="a-changing-a-server-audit-name"></a>R. Modification du nom d'un audit du serveur  
  L'exemple suivant remplace le nom de l'audit du serveur `HIPAA_Audit` par `HIPAA_Audit_Old`.  
   
 ```  

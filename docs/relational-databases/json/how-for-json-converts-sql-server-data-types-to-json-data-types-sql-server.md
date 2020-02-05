@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 537ad4d796792c7d4fce56eda25adcca8b1fea01
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095798"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Conversion par FOR JSON des types de données SQL Server en types de données JSON (SQL Server)
@@ -24,15 +24,15 @@ ms.locfileid: "74095798"
 
   La clause **FOR JSON** utilise les règles ci-après pour convertir les types de données SQL Server en types JSON dans la sortie JSON.  
   
-|Catégorie|Type de données SQL Server|Type de données JSON|  
+|Category|Type de données SQL Server|Type de données JSON|  
 |--------------|--------------|---------------|  
-|Types caractères et chaînes|char, nchar, varchar, nvarchar|chaîne|  
+|Types caractères et chaînes|char, nchar, varchar, nvarchar|string|  
 |Types valeurs numériques|int, bigint, float, decimal, numeric|nombre|  
 |Types bits|bit|Booléen (true ou false)|  
-|Types dates et heures|date, datetime, datetime2, time, datetimeoffset|chaîne|  
+|Types dates et heures|date, datetime, datetime2, time, datetimeoffset|string|  
 |Types données binaires|varbinary, binary, image, timestamp, rowversion|Chaîne codée en Base64|  
 |Types CLR|geometry, geography, autres types CLR|Non pris en charge. Ces types renvoient une erreur.<br /><br /> Dans l’instruction SELECT, utilisez CAST ou CONVERT, ou bien une propriété ou méthode CLR, pour convertir les données sources en type de données SQL Server pouvant être converti correctement en type JSON. Par exemple, utilisez **STAsText()** pour le type geometry, ou **ToString()** pour un type CLR. Le type de la valeur de sortie JSON est ensuite dérivé du type de retour de la conversion que vous appliquez dans l’instruction SELECT.|  
-|Autres types|uniqueidentifier, money|chaîne|  
+|Autres types|uniqueidentifier, money|string|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>En savoir plus sur JSON dans SQL Server et Azure SQL Database  
   

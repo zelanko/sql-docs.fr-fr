@@ -11,10 +11,10 @@ ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6fc55d4d0e68d83db7c7684d9c0d5cee3982a6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086910"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nœud Gestion de la stratégie (Explorateur d'objets)
@@ -33,7 +33,7 @@ ms.locfileid: "68086910"
   
 -   [Boîte de dialogue Créer une nouvelle condition ou Ouvrir une condition, page Description](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)  
   
--   [Boîte de dialogue Afficher les stratégies](../../relational-databases/policy-based-management/view-policies-dialog-box.md)  
+-   [Afficher les stratégies, boîte de dialogue](../../relational-databases/policy-based-management/view-policies-dialog-box.md)  
   
 -   [Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-policy-selection-page.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68086910"
   
 -   [Exporter en tant que stratégie, boîte de dialogue](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)  
   
--   [Boîte de dialogue Importer des stratégies](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
+-   [Importer des stratégies, boîte de dialogue](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: b63620b7-1c6d-46f7-90ea-3a8e99af8de4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c19dee32a305bdd41e2918ba35f246fef558926
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9ff7cf8f23c1c874734e92c5cd52fd0ddfb532e0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770330"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288018"
 ---
-# <a name="mssqleng021286"></a>MSSQL_ENG021286
+# <a name="mssql_eng021286"></a>MSSQL_ENG021286
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Détails du message  
@@ -28,8 +28,8 @@ ms.locfileid: "68770330"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21286|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21286|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|La table de conflits '%1!' n'existe pas.|  

@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 36a0a6f82499a617a37b7cc9b848a33ec29c2ce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050129"
 ---
 # <a name="migrating-computed-columns"></a>Migration de colonnes calculées
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Les colonnes calculées ne sont pas prises en charge dans les tables optimisées en mémoire. Toutefois, vous pouvez simuler une colonne calculée.
+Les colonnes calculées ne sont pas prises en charge dans les tables mémoire optimisées. Toutefois, vous pouvez simuler une colonne calculée.
 
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.
 

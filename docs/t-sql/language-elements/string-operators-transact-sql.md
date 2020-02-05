@@ -18,10 +18,10 @@ ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121650"
 ---
 # <a name="string-operators-transact-sql"></a>Opérateurs d'enchaînement (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68121650"
 Les opérateurs d'enchaînement génériques peuvent correspondre à un ou plusieurs caractères dans une opération de comparaison de chaînes. LIKE et PATINDEX sont des exemples de deux de ces opérations.  
   
 ## <a name="section-heading"></a>Titre de section  
-[+ (Concaténation de chaînes)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+[+ (Concaténation de chaîne)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
 [+= (Affectation après concaténation de chaînes)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   

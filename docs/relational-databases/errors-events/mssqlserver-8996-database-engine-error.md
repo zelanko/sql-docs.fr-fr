@@ -12,13 +12,13 @@ ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a0b64656d68874e5cf5dc87c2b70da0abccc5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037550"
 ---
-# <a name="mssqlserver8996"></a>MSSQLSERVER_8996
+# <a name="mssqlserver_8996"></a>MSSQLSERVER_8996
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68037550"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8996|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8996|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_IAM_PAGE_RANGE_IN_WRONG_FILEGROUP|  
 |Texte du message|La page IAM P_ID pour l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) contrôle les pages du groupe de fichiers FG_ID1, lesquelles doivent être dans le groupe de fichiers FG_ID2.|  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094561"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Étapes de résolution des problèmes généraux liés à Database Mail 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Le dépannage de Database Mail implique de vérifier les aspects généraux du système Database Mail décrits ci-dessous. Ces procédures sont présentées dans un ordre logique, mais elles peuvent être évaluées dans n’importe quel ordre.
+Le dépannage de la messagerie de base de données implique de vérifier les aspects généraux du système de messagerie de base de données décrits ci-dessous. Ces procédures sont présentées dans un ordre logique, mais elles peuvent être évaluées dans n'importe quel ordre.
 
 ## <a name="permissions"></a>Autorisations
 
@@ -43,9 +43,9 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir dépanner to
     ```
 
    Dans le volet de résultats, vérifiez que run_value pour [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) est défini sur 1.
-   Si run_value n’est pas 1, Database Mail n’est pas activé. Database Mail n’est pas activée automatiquement, afin de réduire le nombre de fonctionnalités disponibles en cas d’attaque par un utilisateur malveillant. Pour plus d’informations, consultez [Présentation de la configuration de la surface d’exposition](../security/surface-area-configuration.md).
+   Si run_value n’est pas 1, Database Mail n’est pas activé. La messagerie de base de données n'est activée automatiquement, et ce, afin de réduire le nombre de fonctionnalités disponibles en cas d'attaque par un utilisateur malveillant. Pour plus d’informations, consultez [Présentation de la configuration de la surface d’exposition](../security/surface-area-configuration.md).
 
-1. Si vous décidez que Database Mail peut être activé, exécutez le code suivant :
+1. Si vous décidez que la messagerie de base de données peut être activée, exécutez le code suivant :
 
     ```sql
     sp_configure 'Database Mail XPs', 1; 
@@ -81,13 +81,13 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir dépanner to
     ,@membername = '<database user>';
     ```
 
-1. Pour envoyer du courrier à l’aide de Database Mail, les utilisateurs doivent avoir accès à au moins un profil Database Mail. Pour afficher les utilisateurs (principaux) et les profils auxquels ils ont accès, exécutez l’instruction suivante :
+1. Pour pouvoir envoyer des messages à l'aide de la messagerie de base de données, les utilisateurs doivent avoir accès à au moins un profil de messagerie de base de données. Pour afficher les utilisateurs (principaux) et les profils auxquels ils ont accès, exécutez l'instruction suivante :
 
     ```sql
     EXEC msdb.dbo.sysmail_help_principalprofile_sp;
     ```
 
-1. Utilisez l’Assistant Configuration de Database Mail pour créer des profils et pour accorder l’accès aux profils aux utilisateurs.
+1. Utilisez l'Assistant Configuration de la messagerie de base de données pour créer des profils et pour accorder l'accès des profils aux utilisateurs.
  
 ## <a name="is-database-mail-started"></a>Database Mail est-il démarré ?
 
@@ -96,19 +96,19 @@ Vous devez être membre du rôle serveur fixe sysadmin pour pouvoir dépanner to
     ```sql
     EXEC msdb.dbo.sysmail_help_status_sp;
     ```
-1. Si l’activation de Database Mail n’est pas démarrée, exécutez l’instruction suivante pour la démarrer :
+1. Si l'activation de la messagerie de base de données n'est pas démarrée, exécutez l'instruction suivante pour la démarrer :
 
     ```sql
     EXEC msdb.dbo.sysmail_start_sp;
     ```
 
-1. Si le programme externe Database Mail est démarré, vérifiez l’état de la file d’attente des messages à l’aide de l’instruction suivante :
+1. Si le programme externe de messagerie de base de données est démarré, vérifiez l'état de la file d'attente des messages à l'aide de l'instruction suivante :
 
     ```sql
     EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'mail';
     ```
   
-   La file d’attente des messages doit être à l’état RECEIVES_OCCURRING. L’état de la file d’attente peut varier d’un moment à l’autre. Si l’état de la file d’attente des messages n’est pas RECEIVES_OCCURRING, essayez de redémarrer la file d’attente. Arrêtez la file d’attente à l’aide de l’instruction suivante :
+   La file d’attente des messages doit être à l’état RECEIVES_OCCURRING. La file d'attente des états peut varier d'un moment à l'autre. Si l’état de la file d’attente des messages n’est pas RECEIVES_OCCURRING, essayez de redémarrer la file d’attente. Arrêtez la file d’attente à l’aide de l’instruction suivante :
    
 ```sql
 EXEC msdb.dbo.sysmail_stop_sp;
@@ -125,29 +125,29 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="do-problems-affect-some-or-all-accounts"></a>Les problèmes affectent-ils tous les comptes ou seulement certains d’entre eux ?
 
-1. Si vous avez déterminé que certains profils, mais pas tous, peuvent envoyer des messages, il se peut que les problèmes viennent des comptes Database Mail utilisés par les profils affectés par les problèmes. Pour déterminer quels comptes parviennent à envoyer des messages, exécutez l’instruction suivante :
+1. Si vous avez déterminé que certains profils, mais pas tous, peuvent envoyer des messages, il se peut que les problèmes viennent des comptes de messagerie de base de données utilisés par les profils affectés par les problèmes. Pour déterminer quels comptes parviennent à envoyer des messages, exécutez l'instruction suivante :
 
     ```sql
     SELECT sent_account_id, sent_date FROM msdb.dbo.sysmail_sentitems;
     ```
 
 1. Si un profil défaillant n’utilise aucun des comptes listés, il est possible qu’aucun des comptes disponibles pour ce profil ne fonctionne correctement. Pour tester des comptes individuels, utilisez l’Assistant Configuration de Database Mail pour créer un nouveau profil associé à un compte unique, puis utilisez la boîte de dialogue Envoyer un message électronique de test pour envoyer un message à l’aide du nouveau compte. 
-1. Pour afficher les messages d’erreur renvoyés par Database Mail, exécutez l’instruction suivante :
+1. Pour afficher les messages d'erreur renvoyés par la messagerie de base de données, exécutez l'instruction suivante :
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log;
     ```
 
    > [!NOTE]
-   > Database Mail considère qu’un message a été envoyé quand il est remis à un serveur de messagerie SMTP. Les erreurs qui se produisent après, par exemple à cause d’une adresse de destinataire non valide, peuvent empêcher la remise du message, mais elles n’apparaissent pas dans le journal de Database Mail.
+   > Database Mail considère qu’un message a été envoyé quand il est remis à un serveur de messagerie SMTP. Les erreurs qui se produisent après, par exemple à cause d'une adresse de destinataire non valide, peuvent empêcher la remise du message, mais elles n'apparaissent pas dans le journal de la messagerie de base de données.
 
 ## <a name="retry-mail-delivery"></a>Nouvelles tentatives de remise de courrier
 
-1. Si vous avez déterminé que Database Mail échoue car le serveur SMTP ne peut pas être contacté de façon fiable, vous pourrez peut-être augmenter le taux de réussite de la remise des messages en augmentant le nombre de tentatives d’envoi de chaque message. Démarrez l’Assistant Configuration de Database Mail et sélectionnez l’option Afficher ou modifier les paramètres du système. Pour résoudre ce problème, vous pouvez également associer des comptes supplémentaires au profil ; ainsi, en cas de basculement du compte principal, Database Mail utilisera le compte de remplacement pour envoyer les messages.
+1. Si vous avez déterminé que la messagerie de base de données échoue parce que le serveur SMTP ne peut pas être contacté de façon fiable, vous pourrez peut-être augmenter le taux de réussite de la remise des messages en augmentant le nombre de tentatives d'envoi de chaque message. Démarrez l’Assistant Configuration de Database Mail et sélectionnez l’option Afficher ou modifier les paramètres du système. Pour résoudre ce problème, vous pouvez également associer des comptes supplémentaires au profil ; ainsi, en cas de basculement du compte principal, la messagerie de base de données utilisera le compte de remplacement pour envoyer les messages.
 1. Dans la page Configurer les paramètres du système, le nombre de Tentatives de reprises de comptes est de 60 par défaut, et le Délai entre reprises de comptes est de cinq secondes par défaut, ce qui signifie que la remise des messages échouera si le serveur SMTP ne peut pas être atteint dans un délai de cinq minutes. Augmentez ces paramètres pour accroître le délai imparti avant l’échec de la remise du courrier.
 
     > [!NOTE]
-    > Quand un grand nombre de messages est envoyé, l’utilisation de valeurs par défaut élevées peut améliorer la fiabilité, mais elle entraîne également une augmentation considérable de l’utilisation des ressources pour permettre à Database Mail d’envoyer à plusieurs reprises ces nombreux messages. Attaquez-vous au problème de base en essayant de résoudre le problème de réseau ou de serveur SMTP qui empêche Database Mail de contacter rapidement le serveur SMTP.
+    > Lorsqu'un grand nombre de messages est envoyé, l'utilisation de valeurs par défaut élevées peut améliorer la fiabilité, mais elle entraîne également une augmentation considérable de l'utilisation des ressources pour permettre à la messagerie de base de données d'envoyer à plusieurs reprises ces nombreux messages. Attaquez-vous au problème de base en essayant de résoudre le problème de réseau ou de serveur SMTP qui empêche la messagerie de base de données de contacter rapidement le serveur SMTP.
 
 
 
@@ -161,7 +161,7 @@ EXEC msdb.dbo.sysmail_start_sp;
   
 -   [Journal et audits de la messagerie de base de données](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
--   [Configurer la messagerie de SQL Server Agent en vue de l’utilisation de la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+-   [Configurer la messagerie SQL Server Agent en vue d’utiliser la messagerie de base de données](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
   
   

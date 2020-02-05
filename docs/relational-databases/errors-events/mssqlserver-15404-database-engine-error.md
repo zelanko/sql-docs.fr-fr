@@ -12,13 +12,13 @@ ms.assetid: 69677f02-bc81-4e4a-99b8-5c1bd1de36df
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: caa8f9a9de287b5628518c286a1c411d10d7f7fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908553"
 ---
-# <a name="mssqlserver15404"></a>MSSQLSERVER_15404
+# <a name="mssqlserver_15404"></a>MSSQLSERVER_15404
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67908553"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|15404|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|15404|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SEC_NTGRP_ERROR|  
 |Texte du message|Impossible d’obtenir des informations sur l’utilisateur ou le groupe ’*utilisateur*’, code d’erreur *code*.|  

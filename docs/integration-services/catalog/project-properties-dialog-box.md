@@ -14,10 +14,10 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9aee0d7233b5f163a5f9c39f9053b9f0842aa7e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298944"
 ---
 # <a name="project-properties-dialog-box"></a>Propriétés du projet, boîte de dialogue
@@ -54,7 +54,7 @@ ms.locfileid: "71298944"
 ##  <a name="general"></a> Définir les options sur la page Général  
  Utilisez la page Général pour afficher les propriétés du projet.  
   
- **Name**  
+ **Nom**  
  Indique le nom du projet.  
   
  **Identificateur**  
@@ -75,13 +75,13 @@ ms.locfileid: "71298944"
  ...  
  Cliquez sur **Parcourir** pour sélectionner les utilisateurs et les rôles auxquels vous souhaitez affecter des autorisations à l’aide de la boîte de dialogue **Parcourir tous les principaux** .  
   
- **Name**  
+ **Nom**  
  Indique le nom de l'utilisateur ou du rôle.  
   
  **Type**  
  Indique le type d'utilisateur ou de rôle.  
   
- **Autorisation**  
+ **Permission**  
  Indique les autorisations.  
   
  **Fournisseur d'autorisations**  
@@ -90,7 +90,7 @@ ms.locfileid: "71298944"
  **Octroyer**  
  Si **Accorder** est sélectionné, l’autorisation est accordée à l’utilisateur ou au rôle sélectionné.  
   
- **Refuser**  
+ **Deny**  
  Si **Refuser** est sélectionné, l’autorisation est refusée à l’utilisateur ou au rôle sélectionné.  
   
   

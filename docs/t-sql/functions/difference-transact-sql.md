@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe01e0d9465495cbf4943ba7867ebf262a1f3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135931"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68135931"
 
 Cette fonction retourne sous la forme d’un entier la différence entre les valeurs [SOUNDEX()](./soundex-transact-sql.md) de deux expressions de caractères différentes.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ DIFFERENCE ( character_expression , character_expression )
 [Expression](../../t-sql/language-elements/expressions-transact-sql.md) alphanumérique de données caractères. *character_expression* peut être une constante, une variable ou une colonne.  
   
 ## <a name="return-types"></a>Types de retour  
-**Int**  
+**int**  
  
 ## <a name="remarks"></a>Notes  
 `DIFFERENCE` compare deux valeurs `SOUNDEX` différentes, et retourne une valeur entière. Cette valeur mesure le degré de correspondance des valeurs `SOUNDEX`, sur une échelle de 0 à 4. La valeur 0 indique une similarité faible ou nulle entre les valeurs SOUNDEX ; 4 indique des valeurs SOUNDEX fortement similaires, ou même identiques.  

@@ -13,10 +13,10 @@ ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 716e82df7167c5ccb8a79119bceac05304ad870e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298867"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Aide sur le concepteur de capture de données modifiées pour Oracle par Attunity via la touche F1
@@ -32,11 +32,11 @@ ms.locfileid: "71298867"
   
 -   [Gérer un service CDC](../../integration-services/change-data-capture/manage-a-cdc-service.md)  
   
--   [Gérer une instance de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
+-   [Gérer une instance CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
 -   [Utiliser l’Assistant Nouvelle instance](../../integration-services/change-data-capture/use-the-new-instance-wizard.md) (ou accéder directement à l’une des tâches suivantes)  
   
-    -   [Créer la base de données de modification SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
+    -   [Créer la base de données de modifications SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
     -   [Se connecter à une base de données source Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
@@ -50,13 +50,13 @@ ms.locfileid: "71298867"
   
     -   [Générer et exécuter le script de journalisation supplémentaire](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
-    -   [Générer des tables miroir et des instances de capture de données modifiées](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
+    -   [Générer des tables miroir et des instances de capture CDC](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
     -   [Terminer](../../integration-services/change-data-capture/finish.md)  
   
 -   [Modifier les propriétés d’instance](../../integration-services/change-data-capture/edit-instance-properties.md)(ou accéder directement à l’une des tâches suivantes)  
   
-    -   [Modifier les propriétés d'une base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
+    -   [Modifier les propriétés d’une base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
   
     -   [Modifier des tables](../../integration-services/change-data-capture/edit-tables.md)  
   

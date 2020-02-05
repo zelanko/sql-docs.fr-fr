@@ -15,10 +15,10 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bd315c62eee3bc26fe858f194cbc851ced8feef0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291197"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Fractionner un dataset à l'aide de la transformation de fractionnement conditionnel
@@ -68,7 +68,7 @@ ms.locfileid: "71291197"
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Types de données d’Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
- [tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   
+ [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   
  [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

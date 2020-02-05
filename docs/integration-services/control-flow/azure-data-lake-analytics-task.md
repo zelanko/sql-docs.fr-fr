@@ -14,10 +14,10 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947355"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tâche Azure Data Lake Analytics
@@ -70,7 +70,7 @@ La configuration des travaux spécifie les propriétés de soumission des travau
 
 - **JobName :** nom du travail U-SQL. 
 - **AnalyticsUnits :** nombre d’unités analytiques du travail U-SQL.
-- **Priority :** priorité du travail U-SQL. Vous pouvez le définir entre 0 et 1000. Plus le nombre est faible, plus la priorité est haute.
+- **Priority :** priorité du travail U-SQL. Vous pouvez le définir entre 0 et 1000. Plus le nombre est faible, plus la priorité est haute.
 - **RuntimeVersion :** version du runtime Data Lake Analytics du travail U-SQL. Valeur par défaut : « default ». En général, il n’est pas nécessaire de modifier cette propriété.
 - **Synchronous :** valeur booléenne indiquant si la tâche attend ou non la fin de l’exécution du travail. Si la valeur est définie sur true, la tâche est marquée en tant que **réussie** une fois le travail terminé. Si la valeur est définie sur false, la tâche est marquée en tant que **réussie** une fois la phase de préparation du travail terminée.
 
@@ -85,7 +85,7 @@ La configuration des travaux spécifie les propriétés de soumission des travau
 
 Sur la page **Mappage des paramètres** de la boîte de dialogue **Éditeur de tâches Azure Data Lake Analytics**, mappez les variables avec les paramètres (variables U-SQL) dans le script U-SQL.
 
-- **Nom de la variable :** après avoir ajouté un mappage des paramètres en sélectionnant **Ajouter**, sélectionnez une variable système ou définie par l’utilisateur dans la liste. Vous pouvez également sélectionner <**Nouvelle variable...** > pour ajouter une nouvelle variable avec la boîte de dialogue **Ajouter une Variable**. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
+- **Nom de la variable :** après avoir ajouté un mappage des paramètres en sélectionnant **Ajouter**, sélectionnez un système ou une variable définie par l’utilisateur dans la liste. Vous pouvez également sélectionner <**Nouvelle variable...** > pour ajouter une nouvelle variable avec la boîte de dialogue **Ajouter une Variable**. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
 
 - **Nom du paramètre :** nom de paramètre/variable dans le script U-SQL. Vérifiez que le nom du paramètre commence par le signe \@, comme \@Param1. 
 
@@ -123,8 +123,8 @@ Notez que les chemins d’accès d’entrée et de sortie sont définis dans les
 
 |Nom de la variable|Nom du paramètre|
 |-------------|--------------|
-|Utilisateur : Variable1|\@entrée|
-|Utilisateur : Variable2|\@sortie| 
+|User: Variable1|\@entrée|
+|User: Variable2|\@sortie| 
 
 ## <a name="expression-page-configuration"></a>Configuration de la page Expression
 

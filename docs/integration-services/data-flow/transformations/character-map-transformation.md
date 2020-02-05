@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291666"
 ---
 # <a name="character-map-transformation"></a>Transformation de la table de caractères
@@ -105,7 +105,7 @@ ms.locfileid: "71291666"
 |Nouvelle colonne|Enregistre les données dans une nouvelle colonne. Définissez le nom de la colonne sous **Alias de sortie**.|  
 |Modification sur place|Enregistre les données modifiées dans la colonne existante.|  
   
- **Opération**  
+ **opération**  
  Dans la liste, sélectionnez les fonctions de chaîne à appliquer aux données de la colonne.  
   
 |Valeur|Description|  

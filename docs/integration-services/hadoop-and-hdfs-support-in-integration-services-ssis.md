@@ -13,10 +13,10 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285869"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Prise en charge de Hadoop et HDFS dans Integration Services (SSIS)
@@ -24,7 +24,7 @@ ms.locfileid: "71285869"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  SQL Server 2016 Integration Services (SSIS) inclut les composants ci-après qui offrent une prise en charge de Hadoop et HDFS en local.  
+  SQL Server 2016 Integration Services (SSIS) inclut les composants ci-après qui offrent une prise en charge de Hadoop et HDFS en local.  
   
  Pour plus d’informations sur les composants Integration Services qui prennent en charge HDInsight et d’autres fonctionnalités de Microsoft Azure, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
@@ -42,8 +42,8 @@ ms.locfileid: "71285869"
   
 -   Flux de données - Source et destination des données  
   
-    -   [HDFS File Source](../integration-services/data-flow/hdfs-file-source.md)  
+    -   [Source de fichier HDFS](../integration-services/data-flow/hdfs-file-source.md)  
   
-    -   [HDFS File Destination](../integration-services/data-flow/hdfs-file-destination.md)  
+    -   [Destination de fichier HDFS](../integration-services/data-flow/hdfs-file-destination.md)  
   
   

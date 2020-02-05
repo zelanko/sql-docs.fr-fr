@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101904"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -40,7 +40,7 @@ Supprime tous les éléments du cache du plan, supprime un plan spécifique du c
 >[!NOTE]
 >DBCC FREEPROCCACHE n'efface pas les statistiques d'exécution pour les procédures stockées compilées en mode natif. Le cache de procédures ne contient pas d'informations relatives aux procédures stockées compilées en mode natif. Toutes les statistiques d’exécution collectées à partir des exécutions de procédure s’affichent dans les vues de gestion dynamique de statistiques d’exécution : [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) et [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
 Syntaxe de SQL Server :
@@ -80,7 +80,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Supprime tous les messages d'information.  
   
  COMPUTE  
- Vide le cache du plan de requête à partir de chaque nœud de calcul. Il s'agit de la valeur par défaut.  
+ Vide le cache du plan de requête à partir de chaque nœud de calcul. Il s’agit de la valeur par défaut.  
   
  ALL  
  Vide le cache du plan de requête à partir de chaque nœud de calcul et du nœud de contrôle.  
@@ -112,7 +112,7 @@ Les opérations de reconfiguration suivantes effacent également le cache de pro
 -   user options  
   
 ## <a name="result-sets"></a>Jeux de résultats  
-Quand la clause WITH NO_INFOMSGS n’est pas spécifiée, l’instruction DBCC FREEPROCCACHE retourne : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
+Quand la clause WITH NO_INFOMSGS n’est pas spécifiée, l’instruction DBCC FREEPROCCACHE retourne : « Exécution de DBCC terminée. Si DBCC vous a adressé des messages d'erreur, contactez l'administrateur système. »
   
 ## <a name="permissions"></a>Autorisations  
 S’applique à : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -137,7 +137,7 @@ Une nouvelle ligne est ajoutée à la vue système sys.pdw_exec_requests lors de
 
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Exemples : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Effacement d'un plan de requête du cache du plan  
+### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>R. Effacement d'un plan de requête du cache du plan  
 L'exemple suivant efface un plan de requête du cache du plan en spécifiant le descripteur du plan de requête. Pour vérifier que l'exemple de requête se trouve dans le cache du plan, la requête est d'abord exécutée. Les vues de gestion dynamique `sys.dm_exec_cached_plans` et `sys.dm_exec_sql_text` sont interrogées pour retourner le handle de plan de la requête. 
 
 Puis, la valeur du descripteur de plan extraite du jeu de résultats est insérée dans l'instruction `DBCC FREEPROCACHE` pour supprimer uniquement le plan du cache du plan.

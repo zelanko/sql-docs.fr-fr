@@ -24,10 +24,10 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974405"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71974405"
 
   Récupère une ligne spécifique d'un curseur côté serveur [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,7 +100,7 @@ FETCH
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-fetch-in-a-simple-cursor"></a>A. Utilisation de FETCH dans un curseur simple  
+### <a name="a-using-fetch-in-a-simple-cursor"></a>R. Utilisation de FETCH dans un curseur simple  
  L'exemple suivant déclare un curseur simple pour les lignes de la table `Person.Person` dont le nom commence par `B`, et il utilise `FETCH NEXT` pour parcourir les lignes. L'instruction `FETCH` renvoie la valeur de la colonne spécifiée dans `DECLARE CURSOR` comme un jeu de résultats sur une seule ligne.  
   
 ```sql  

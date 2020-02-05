@@ -12,13 +12,13 @@ ms.assetid: 915f97de-9b74-41f8-8bd5-b2d061416718
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4419796b75fbd10ab866cbf78b67fcab0c1e2ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68023160"
 ---
-# <a name="mssqlserver1406"></a>MSSQLSERVER_1406
+# <a name="mssqlserver_1406"></a>MSSQLSERVER_1406
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68023160"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1406|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1406|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBM_BADSTATEFORFORCESERVICE|  
 |Texte du message|Impossible de forcer le service en toute sécurité. Supprimez la mise en miroir de bases de données et récupérez la base de données "%.*ls" pour y accéder.|  

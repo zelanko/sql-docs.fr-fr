@@ -18,10 +18,10 @@ ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1a15d3bdc505c4406c1c5d09dbc9d6f007c34fe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930386"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (type de données geometry)
@@ -46,7 +46,7 @@ ms.locfileid: "67930386"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Utilisation de STBoundary() sur une instance LineString avec des points de terminaison différents  
+### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>R. Utilisation de STBoundary() sur une instance LineString avec des points de terminaison différents  
  L’exemple suivant crée une instance `LineString``geometry`. `STBoundary()` retourne la limite de `LineString`.  
   
 ```  

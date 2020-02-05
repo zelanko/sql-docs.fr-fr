@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032219"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitations et problèmes connus pour SSIS sur Linux
@@ -53,7 +53,7 @@ Les composants Integration Services intégrés suivants sont pris en charge sur 
 
 ## <a name="control-flow-tasks-supported-with-limitations"></a>Tâches de flux de contrôle prises en charge avec limitations
 
-| Tâche | Limitations |
+| Tâche | Limites |
 |------------|---|
 | Tâche d’exécution de processus | Prend uniquement en charge le mode in-process. |
 | Tâche de système de fichiers | Les actions *Déplacer le répertoire* et *Définir les attributs du fichier* ne sont pas prises en charge. |
@@ -91,7 +91,7 @@ Les tâches de plan de maintenance suivantes sont prises en charge sur Linux :
 
 ## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Sources et destinations du flux de données prises en charge avec des limitations
 
-| Composant | Limitations |
+| Composant | Limites |
 |------------|---|
 | Source et destination ADO.NET | Ne prend en charge que le fournisseur de données SQLClient. |
 | Source et destination fichier plat | Ne prend en charge que les chemins d’accès aux fichiers de style Windows auxquels la règle de mappage de chemin d’accès par défaut est appliquée. Par exemple `D:\home\ssis\travel.csv` devient `/home/ssis/travel.csv`. |
@@ -113,8 +113,8 @@ Les tâches de plan de maintenance suivantes sont prises en charge sur Linux :
 - Regroupement probable
 - Recherche floue
 - Importation de colonne
-- Lookup
-- Fusion
+- Recherche
+- Fusionner
 - Merge Join
 - Multidiffusion
 - Tableau croisé dynamique
@@ -127,7 +127,7 @@ Les tâches de plan de maintenance suivantes sont prises en charge sur Linux :
 
 ## <a name="data-flow-transformations-supported-with-limitations"></a>Transformations du flux de données prises en charge avec limitations
 
-| Composant | Limitations |
+| Composant | Limites |
 |------------|---|
 | transformation de commande OLE DB | Mêmes limitations que la source et la destination OLE DB. |
 | composant Script | Prend uniquement en charge les API .NET Framework standard. |

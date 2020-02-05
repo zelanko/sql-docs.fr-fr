@@ -18,10 +18,10 @@ ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107839"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (type de données geometry)
@@ -58,11 +58,11 @@ FROM @temp;
   
  L'exemple retourne ensuite les dimensions de chaque instance `geometry`.  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
 |Point|0|  
 |LineString|1|  
-|Polygon|2|  
+|Polygone|2|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

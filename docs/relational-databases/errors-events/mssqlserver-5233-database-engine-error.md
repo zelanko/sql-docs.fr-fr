@@ -12,13 +12,13 @@ ms.assetid: 7a855afa-2d3b-49b7-adef-197b99fc98b1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 78b381311aa5a3552550ae8ae480b9eec48125f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122950"
 ---
-# <a name="mssqlserver5233"></a>MSSQLSERVER_5233
+# <a name="mssqlserver_5233"></a>MSSQLSERVER_5233
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68122950"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|5233|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|5233|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_INCORRECT_VALUE_IN_PAGE_HEADER_NO_METADATA|  
 |Texte du message|Erreur de table : ID d'unité d'allocation A_ID, page P_ID. Échec du test (TEST). Les valeurs sont VAL1 et VAL2.|  

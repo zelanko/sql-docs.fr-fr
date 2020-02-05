@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929318"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (type de données geometry)
@@ -75,7 +75,7 @@ Type de retour SQL Server : **geometry**
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. Appel de BufferWithCurves() avec une valeur de paramètre < 0 sur une instance géométrique unidimensionnelle  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>R. Appel de BufferWithCurves() avec une valeur de paramètre < 0 sur une instance géométrique unidimensionnelle  
  L'exemple suivant retourne une instance `GeometryCollection` vide :  
   
 ```

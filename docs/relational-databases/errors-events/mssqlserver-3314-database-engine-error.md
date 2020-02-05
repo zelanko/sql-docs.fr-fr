@@ -12,13 +12,13 @@ ms.assetid: f3a5ca6a-b502-4cab-b3b1-4bc753763fa9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fbc8b9b406b291d3d3424f438c09aca22ec419fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908364"
 ---
-# <a name="mssqlserver3314"></a>MSSQLSERVER_3314
+# <a name="mssqlserver_3314"></a>MSSQLSERVER_3314
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "67908364"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|3314|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|3314|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|ERR_LOG_RID2|  
 |Texte du message|Une erreur s'est produite sur l'enregistrement de journal % S_LSN en annulant une opération journalisée dans la base de données '%.*ls'. En général, l'erreur spécifique est déjà journalisée dans le service de journal d'événements Windows. Restaurez la base de données ou le fichier à partir d'une sauvegarde, ou réparez la base de données.|  

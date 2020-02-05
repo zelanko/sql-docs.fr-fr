@@ -12,10 +12,10 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285875"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Choisir une destination (Assistant Importation et Exportation SQL Server)
@@ -40,7 +40,7 @@ La capture d’écran suivante montre la première partie de la page **Choisir u
 
 -   **Si vous avez un pilote ODBC pour votre destination**, sélectionnez le fournisseur de données .NET Framework pour ODBC. Entrez ensuite les informations propres au pilote. Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des destinations. Le fournisseur de données .NET Framework pour ODBC agit comme un wrapper autour du pilote ODBC. Pour plus d’informations, consultez [Se connecter à une source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
--   **Plusieurs fournisseurs peuvent être disponibles pour votre destination.** En général, vous pouvez sélectionner n’importe quel fournisseur qui fonctionne avec votre destination. Par exemple, pour vous connecter à Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez utiliser le fournisseur de données .NET Framework pour SQL Server ou le pilote ODBC de SQL Server. (D’autres fournisseurs sont également toujours présents dans la liste, mais ils ne sont plus pris en charge.) 
+-   **Plusieurs fournisseurs peuvent être disponibles pour votre destination.** En général, vous pouvez sélectionner n’importe quel fournisseur qui fonctionne avec votre destination. Par exemple, pour vous connecter à Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez utiliser le fournisseur de données .NET Framework pour SQL Server ou le pilote ODBC de SQL Server. (D’autres fournisseurs sont également toujours présents dans la liste, mais ne sont plus pris en charge.) 
 
 ## <a name="my-destination-isnt-in-the-list"></a>Ma destination n’est pas dans la liste
 -   **Vous pouvez être amené à télécharger le fournisseur de données** à partir de Microsoft ou d’un tiers. La liste des fournisseurs de données disponibles affichée dans la liste **Destination** comprend uniquement les fournisseurs installés sur votre ordinateur. Pour plus d’informations sur les destinations que vous pouvez utiliser, consultez [Quelles sources de données et quelles destinations puis-je utiliser ?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
@@ -50,7 +50,7 @@ La capture d’écran suivante montre la première partie de la page **Choisir u
 -   **Fournisseurs 32 bits et 64 bits.** Si vous exécutez l’Assistant 64 bits, vous ne voyez pas les destinations pour lesquelles seul un fournisseur 32 bits est installé, et vice versa.
 
 > [!NOTE]
-> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
+> Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
 
 ## <a name="after-you-choose-a-destination"></a>Après avoir choisi une destination
 Après avoir choisi une destination, le reste de la page **Choisir une destination** présente un nombre variable d’options qui dépendent du fournisseur de données choisi.

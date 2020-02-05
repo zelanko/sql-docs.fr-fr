@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101013"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>Types spatiaux - geometry (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68101013"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Illustration de l'ajout et de l'interrogation des données géométriques  
+### <a name="a-showing-how-to-add-and-query-geometry-data"></a>R. Illustration de l'ajout et de l'interrogation des données géométriques  
  Les deux exemples suivants montrent comment ajouter et interroger des données géométriques. Le premier exemple crée une table avec une colonne d’identité et une colonne `geometry`, `GeomCol1`. Une troisième colonne restitue la colonne `geometry` dans sa représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) et utilise la méthode `STAsText()` . Deux lignes sont ensuite insérées : une ligne contient une instance `LineString` de `geometry`et une ligne contient une instance `Polygon` .  
   
 ```sql 

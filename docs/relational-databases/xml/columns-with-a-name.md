@@ -13,10 +13,10 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113052"
 ---
 # <a name="columns-with-a-name"></a>Colonnes avec nom
@@ -36,7 +36,7 @@ Les conditions suivantes sont celles dans lesquelles les colonnes de l'ensemble 
 -   Une colonne porte un nom différent.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Le nom de colonne commence par un arobase (\@)  
- Si le nom de colonne commence par un arobase (`row`) et qu’il ne contient pas de barre oblique (/), un attribut de l’élément \@ possédant la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes à deux colonnes (\@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément `row` correspondant et une valeur de ProductModelID lui est affectée.  
+ Si le nom de colonne commence par un arobase (\@) et qu’il ne contient pas de barre oblique (/), un attribut de l’élément `row` possédant la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes à deux colonnes (\@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément `row` correspondant et une valeur de ProductModelID lui est affectée.  
   
 ```sql
 SELECT ProductModelID as "@PmId",  

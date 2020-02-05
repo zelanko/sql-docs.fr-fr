@@ -12,13 +12,13 @@ ms.assetid: c7fe3109-8c10-4725-ab19-28e244f5aeee
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 487a7129809a94c433f95402c5551692574cd061
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131753"
 ---
-# <a name="mssqlserver17147"></a>MSSQLSERVER_17147
+# <a name="mssqlserver_17147"></a>MSSQLSERVER_17147
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68131753"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|17147|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17147|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|STARTUP_SERVERKILLED|  
 |Texte du message|SQL Server se termine à cause d'un arrêt du système. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.|  

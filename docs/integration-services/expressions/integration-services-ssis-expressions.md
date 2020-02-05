@@ -17,10 +17,10 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2e884e7a34af6cae14b4b057038e54b20255200
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289687"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressions Integration Services (SSIS)
@@ -56,7 +56,7 @@ ms.locfileid: "71289687"
 ## <a name="icon-markers-for-expressions"></a>Marqueurs d'icône pour les expressions  
  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un marqueur d'icône spécial s'affiche en regard des gestionnaires de connexions, des variables et des tâches contenant des expressions. La propriété **HasExpressions** est disponible sur tous les objets SSIS qui prennent en charge les expressions, à l’exception des variables. La propriété vous permet d'identifier facilement les objets qui ont des expressions.  
   
-## <a name="expression-builder"></a>Générateur d'expressions  
+## <a name="expression-builder"></a>Générateur d’expressions  
  Le générateur d'expressions est un outil graphique de génération d'expressions. Disponible dans les boîtes de dialogue **Éditeur de transformation de fractionnement conditionnel**, **Éditeur de transformation de colonne dérivée** et **Générateur d’expression** , il s’agit d’un outil graphique qui permet de créer des expressions.  
   
  Le générateur d'expression fournit des dossiers contenant des éléments spécifiques aux packages, et des dossiers contenant les fonctions, les conversions de type et les opérateurs fournis par le langage d'expressions. Les éléments spécifiques aux packages comprennent les variables système et les variables définies par l'utilisateur. Dans les boîtes de dialogue **Éditeur de transformation de fractionnement conditionnel** et **Éditeur de transformation de colonne dérivée** , vous pouvez également afficher des colonnes de données. Pour générer des expressions pour les transformations, vous pouvez faire glisser des éléments des dossiers vers la colonne **Condition** ou **Expression** , ou vous pouvez taper l’expression directement dans la colonne. Le générateur d'expressions ajoute automatiquement les éléments syntaxiques requis, tels que le préfixe \@ des noms des variables.  

@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125170"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "68125170"
  [Créer, modifier et supprimer des FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
  Décrit la procédure de création d'un nouveau FileTable, ou de modification ou de suppression d'un FileTable existant.  
   
- [Charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md)  
+ [Charger des fichiers dans des FileTables](../../relational-databases/blob/load-files-into-filetables.md)  
  Explique comment charger ou migrer des fichiers dans FileTables.  
   
  [Travailler avec des répertoires et des chemins d’accès dans des FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
@@ -126,11 +126,11 @@ ms.locfileid: "68125170"
  [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md)  
  Décrit les tâches d'administration courantes permettant de gérer des FileTables.  
   
-##  <a name="relcontent"></a> Contenu connexe  
+##  <a name="relcontent"></a> Contenu associé  
  [Schéma de FileTable](../../relational-databases/blob/filetable-schema.md)  
  Décrit le schéma prédéfini et fixe d'un FileTable.  
   
- [Compatibilité de FileTable avec d'autres fonctionnalités SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  
+ [Compatibilité de FileTable avec d’autres fonctionnalités SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  
  Décrit le fonctionnement de FileTables avec d'autres fonctionnalités de SQL Server.  
   
  [DDL, fonctions, procédures stockées et vues FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  

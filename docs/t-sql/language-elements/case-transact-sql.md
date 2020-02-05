@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950359"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "67950359"
   
  CASE peut être utilisé dans n'importe quelle instruction ou clause qui autorise une expression valide. Par exemple, vous pouvez utiliser CASE dans les instructions telles que SELECT, UPDATE, DELETE et SET, ainsi que dans les clauses telles que select_list, IN, WHERE, ORDER BY et HAVING.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -137,7 +137,7 @@ FROM Data ;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. Utilisation d'une instruction SELECT avec une expression CASE simple  
+### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>R. Utilisation d'une instruction SELECT avec une expression CASE simple  
  Dans une instruction `SELECT`, une expression `CASE` simple permet seulement de vérifier s'il y a égalité ; aucune autre comparaison n'est effectuée. L'exemple suivant utilise l'expression `CASE` pour modifier la présentation des catégories de gammes de produits pour en faciliter la lecture.  
   
 ```  

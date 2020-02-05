@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050672"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet système (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68050672"
 
   Permet d'accorder des autorisations sur des objets système tels que des procédures stockées système, des procédures stockées étendues, des fonctions et des vues.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,8 +75,8 @@ GO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-granting-select-permission-on-a-view"></a>A. Octroi d'une autorisation SELECT sur une vue  
- L’exemple suivant accorde au compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Sylvester1` l’autorisation de sélectionner une vue qui répertorie les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le code accorde ensuite l'autorisation supplémentaire requise pour afficher les métadonnées sur les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui n'appartiennent pas à l'utilisateur.  
+### <a name="a-granting-select-permission-on-a-view"></a>R. Octroi d'une autorisation SELECT sur une vue  
+ L’exemple suivant accorde au compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Sylvester1` l’autorisation de sélectionner une vue qui répertorie les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le code accorde ensuite l'autorisation supplémentaire requise pour afficher les métadonnées sur les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui n'appartiennent pas à l'utilisateur.  
   
 ```  
 USE AdventureWorks2012;  

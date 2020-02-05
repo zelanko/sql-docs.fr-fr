@@ -12,13 +12,13 @@ ms.assetid: 712b1a10-2f87-41df-a111-1ed9f14102d4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1461bf8fd10324c610e5df99c8bfe48da0d397e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031080"
 ---
-# <a name="mssqlserver5242"></a>MSSQLSERVER_5242
+# <a name="mssqlserver_5242"></a>MSSQLSERVER_5242
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68031080"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|5242|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|5242|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
 |Texte du message|Une incohérence a été détectée durant une opération interne dans la base de données '%.*ls'(ID : %d), dans la page %S_PGID. Contactez le support technique. Numéro de référence %ld.|  

@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297635"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
@@ -41,7 +41,7 @@ ms.locfileid: "71297635"
   
  [Énumérateurs de boucles Foreach](#Foreach)  
   
- [Tâches](#Tasks)  
+ [Tâches :](#Tasks)  
   
  [Tâches du plan de maintenance](#MaintenancePlanTasks)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans DTSPackageType|Valeur numérique|  
 |-------------------------------------|-------------------|  
-|Valeur par défaut|0|  
+|Default|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -65,17 +65,17 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans DTSCheckpointUsage|Valeur numérique|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|Jamais|0|  
 |IfExists|1|  
-|Always|2|  
+|Toujours|2|  
   
  Propriété **PackagePriorityClass** : définie à l’aide de valeurs provenant de l’énumération **DTSPriorityClass**.  
   
 |Nom convivial dans DTSPriorityClass|Valeur numérique|  
 |---------------------------------------|-------------------|  
-|Valeur par défaut|0|  
+|Default|0|  
 |AboveNormal|1|  
-|Normale|2|  
+|Normal|2|  
 |BelowNormal|3|  
 |Idle|4|  
   
@@ -104,8 +104,8 @@ ms.locfileid: "71297635"
   
 |Nom convivial|Valeur numérique|  
 |-------------------|-------------------|  
-|Réussi|0|  
-|Failure|1|  
+|Succès|0|  
+|Échec|1|  
 |Completion|2|  
 |Opération annulée|3|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans EnumerationType|Valeur numérique|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
+|Navigateur|0|  
 |Nœud|1|  
 |NodeText|2|  
 |ElementCollection|3|  
@@ -143,7 +143,7 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans InnerElementType|Valeur numérique|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
+|Navigateur|0|  
 |Nœud|1|  
 |NodeText|2|  
   
@@ -207,10 +207,10 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans DTSFileSystemAttributes|Valeur numérique|  
 |----------------------------------------------|-------------------|  
-|Normale|0|  
-|Archive|1|  
+|Normal|0|  
+|Archivage|1|  
 |Hidden|2|  
-|En lecture seule|4|  
+|Lecture seule|4|  
 |Système|8|  
   
 ### <a name="ftp-task"></a>Tâche FTP  
@@ -218,7 +218,7 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans DTSFTPOp|Valeur numérique|  
 |-------------------------------|-------------------|  
-|Send|0|  
+|Envoyer|0|  
 |Recevoir|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
@@ -266,8 +266,8 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans MailPriority|Valeur numérique|  
 |-----------------------------------|-------------------|  
-|Élevée|1|  
-|Normale|3|  
+|Élevé|1|  
+|Normal|3|  
 |Faible|5|  
   
 ### <a name="transfer-database-task"></a>Tâche de transfert de bases de données  
@@ -334,8 +334,8 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans ExistingData|Valeur numérique|  
 |-----------------------------------|-------------------|  
-|Remplacer|0|  
-|Append|1|  
+|Replace|0|  
+|Ajouter|1|  
   
 ### <a name="web-service-task"></a>Tâche de service Web  
  Propriété **OutputType** : définie à l’aide de valeurs provenant de l’énumération **DTSOutputType**.  
@@ -423,9 +423,9 @@ ms.locfileid: "71297635"
 |Valider|0|  
 |XSLT|1|  
 |XPATH|2|  
-|Fusion|3|  
+|Fusionner|3|  
 |Diff|4|  
-|Patch|5|  
+|Correctif|5|  
   
  Propriétés **SourceType**, **SecondOperandType** et **XPathSourceType** : définies à l’aide de valeurs provenant de l’énumération **DTSXMLSourceType**.  
   
@@ -453,7 +453,7 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans DTSXMLXPathOperation|Valeur numérique|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|Évaluation|0|  
 |Valeurs|1|  
 |NodeList|2|  
   
@@ -492,18 +492,18 @@ ms.locfileid: "71297635"
 |Nom convivial dans DatabaseSelection|Valeur numérique|  
 |----------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
+|Tous|1|  
 |Système|2|  
 |Utilisateur|3|  
-|Specific|4|  
+|Spécifique|4|  
   
  Propriété **TableSelectionType** : définie à l’aide de valeurs provenant de l’énumération **TableSelection**.  
   
 |Nom convivial dans TableSelection|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
-|Specific|2|  
+|Tous|1|  
+|Spécifique|2|  
   
  Propriété **ObjectTypeSelection** : définie à l’aide de valeurs provenant de l’énumération **ObjectType**.  
   
@@ -558,19 +558,19 @@ ms.locfileid: "71297635"
   
 |Nom convivial dans TimeUnitType|Valeur numérique|  
 |-----------------------------------|-------------------|  
-|Jour|0|  
+|jour|0|  
 |Week|1|  
 |Month|2|  
-|Année|3|  
+|Year|3|  
   
 ### <a name="update-statistics-task"></a>Tâche Mettre à jour les statistiques  
  Propriété **UpdateType** : définie à l’aide de valeurs provenant de l’énumération SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **StatisticsTarget**.  
   
 |Nom convivial dans StatisticsTarget|Valeur numérique|  
 |---------------------------------------|-------------------|  
-|colonne|1|  
+|Colonne|1|  
 |Index|2|  
-|All|3|  
+|Tous|3|  
   
 ##  <a name="CommonProperties"></a> Propriétés communes  
  Les packages, les tâches et les conteneurs de boucles Foreach, de boucles For et de séquences peuvent utiliser les énumérations suivantes pour définir les propriétés spécifiées.  
@@ -580,8 +580,8 @@ ms.locfileid: "71297635"
 |Nom convivial dans DTSForcedExecResult|Valeur numérique|  
 |------------------------------------------|-------------------|  
 |None|-1|  
-|Réussi|0|  
-|Failure|1|  
+|Succès|0|  
+|Échec|1|  
 |Completion|2|  
   
  Propriété **IsolationLevel** : définie à l’aide de valeurs provenant de l’énumération **IsolationLevel**. Pour plus d’informations, consultez la bibliothèque de classes .NET Framework dans [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
@@ -591,7 +591,7 @@ ms.locfileid: "71297635"
 |Nom convivial dans DTSLoggingMode|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Activé|1|  
+|activé|1|  
 |Désactivé|2|  
   
  Propriété **TransactionOption** : définie à l’aide de valeurs provenant de l’énumération **DTSTransactionOption**.  
@@ -599,8 +599,8 @@ ms.locfileid: "71297635"
 |Nom convivial dans DTSTransactionOption|Valeur numérique|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Pris en charge|1|  
-|Requis|2|  
+|Prise en charge|1|  
+|Obligatoire|2|  
   
 ## <a name="related-tasks"></a>Tâches associées  
  [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md)  

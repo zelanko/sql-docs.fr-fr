@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295800"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
@@ -27,7 +27,7 @@ ms.locfileid: "71295800"
 
   Vous pouvez surveiller les exécutions des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les validations de projet et d’autres opérations en utilisant un ou plusieurs des outils suivants. Certains outils tels que les drainages de données ne sont disponibles que pour les projets déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
--   Journaux  
+-   Journaux d’activité  
   
      Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71295800"
   
      Pour plus d'informations, consultez [Reports for the Integration Services Server](#reports).  
   
--   Vues  
+-   Les vues  
   
      Pour plus d’informations, consultez [Vues &#40;Catalogue Integration Services&#41;](../../integration-services/system-views/views-integration-services-catalog.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71295800"
 > Bien que vous puissiez également exécuter des packages SSIS sur Linux, aucun outil de monitoring n’est fourni sur Linux. Pour plus d’informations, consultez [Extraire, transformer et charger des données sur Linux avec SSIS](../../linux/sql-server-linux-migrate-ssis.md).
 
 ## <a name="operation-types"></a>Types d'opération  
- Plusieurs types d’opérations différents sont surveillés dans le catalogue **SSISDB** , sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Plusieurs messages peuvent être associés à chaque opération. Chaque message peut être classifié dans l'un des différents types. Par exemple, un message peut être de type Informations, Warning ou Error. Pour obtenir la liste complète des types de messages, consultez la documentation de la vue Transact-SQL [catalog.operation_messages &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Pour obtenir une liste complète des types d’opérations, consultez [catalog.operations &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
+ Plusieurs types d’opérations différents sont surveillés dans le catalogue **SSISDB** , sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Plusieurs messages peuvent être associés à chaque opération. Chaque message peut être classifié dans l'un des différents types. Par exemple, un message peut être de type Informations, Warning ou Error. Pour obtenir la liste complète des types de messages, consultez la documentation de la vue Transact-SQL [catalog.operation_messages &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Pour obtenir une liste complète des types d’opérations, consultez [catalog.operations &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   
  Neuf types d'état différents sont utilisés pour indiquer l'état d'une opération. Pour obtenir une liste complète des types de statuts, consultez la vue [catalog.operations &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
 
@@ -84,9 +84,9 @@ ms.locfileid: "71295800"
 |Arrêter l'opération (arrêt d'une validation ou d'une exécution)|202|  
 |Valider le projet|300|  
 |Valider le package|301|  
-|Configurer le catalogue|1000|  
+|Configurer le catalogue|1 000|  
   
- **Arrêter**  
+ **Stop**  
  Cliquez pour arrêter une opération en cours d'exécution.  
 
 ## <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Affichage et arrêt des packages exécutés sur le serveur Integration Services
@@ -209,4 +209,4 @@ ms.locfileid: "71295800"
 
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de projets et de packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Dépannage des rapports pour l'exécution des packages](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Rapports de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cfe1638d6bb1bc1d56e7160ec51cd15138be1f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940655"
 ---
 # <a name="progress-report-event-category"></a>Catégorie d'événement de rapport de progression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La catégorie d’événement de **rapport de progression** contient la classe d’événements **Progress Report: Online Index Operation**.  
+  La catégorie d’événement **Rapports de progression** comprend la classe d’événements **Progress Report: Online Index Operation** .  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d’événements Progress Report: Online Index Operation](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|Indique l'état d'avancement d'une opération de création d'index en ligne.|  
+|[Progress Report: Online Index Operation, classe d’événements](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|Indique l'état d'avancement d'une opération de création d'index en ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: 3533d69ebaac7cf535de0e835bdbfdef9c5fbb4b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70152052"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70152052"
 
   Retourne le résultat d'une expression, traduit en type de données demandé, ou NULL si la conversion échoue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez TRY_PARSE uniquement pour effectuer une conversion d'une chaîne en un type date/heure ou numérique.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,18 +67,18 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  Les valeurs du paramètre *data_type* sont limitées aux types répertoriés avec les styles dans le tableau ci-dessous. Les informations sur le style sont fournies pour aider à déterminer les types de modèles autorisés. Pour plus d’informations sur les styles, consultez la documentation du .NET Framework pour les énumérations **System.Globalization.NumberStyles** et **DateTimeStyles**.  
   
-|Catégorie|Type|Type .NET|Styles utilisés|  
+|Category|Type|Type .NET|Styles utilisés|  
 |--------------|----------|---------------|-----------------|  
-|Numérique|BIGINT|Int64|NumberStyles.Number|  
-|Numérique|INT|Int32|NumberStyles.Number|  
+|Numérique|bigint|Int64|NumberStyles.Number|  
+|Numérique|int|Int32|NumberStyles.Number|  
 |Numérique|SMALLINT|Int16|NumberStyles.Number|  
 |Numérique|TINYINT|Byte|NumberStyles.Number|  
-|Numérique|Décimal|Décimal|NumberStyles.Number|  
-|Numérique|NUMERIC|Décimal|NumberStyles.Number|  
-|Numérique|FLOAT|Double|NumberStyles.Float|  
-|Numérique|REAL|Unique|NumberStyles.Float|  
-|Numérique|SMALLMONEY|Décimal|NumberStyles.Currency|  
-|Numérique|money|Décimal|NumberStyles.Currency|  
+|Numérique|Décimal|Decimal|NumberStyles.Number|  
+|Numérique|numeric|Decimal|NumberStyles.Number|  
+|Numérique|float|Double|NumberStyles.Float|  
+|Numérique|real|Unique|NumberStyles.Float|  
+|Numérique|SMALLMONEY|Decimal|NumberStyles.Currency|  
+|Numérique|money|Decimal|NumberStyles.Currency|  
 |Date et heure|Date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Date et heure|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Date et heure|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -92,26 +92,26 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |Nom complet|Alias|LCID|Culture spécifique|  
 |---------------|-----------|----------|----------------------|  
-|us_english|Anglais|1033|en-US|  
-|Deutsch|German|1031|de-DE|  
+|us_english|Anglais|1033|fr-FR|  
+|Deutsch|Allemand|1031|de-DE|  
 |Français|Français|1036|fr-FR|  
 |日本語|Japonais|1041|ja-JP|  
-|Dansk|Danish|1030|da-DK|  
+|Dansk|Danois|1030|da-DK|  
 |Español|Espagnol|3082|es-ES|  
 |Italiano|Italien|1040|it-IT|  
 |Nederlands|Néerlandais|1043|nl-NL|  
 |Norsk|Norvégien|2068|nn-NO|  
 |Português|Portugais|2070|pt-PT|  
-|Suomi|Finlandais|1035|fi-FI|  
+|Suomi|Finnois|1035|fi-FI|  
 |Svenska|Suédois|1053|sv-SE|  
-|čeština|Czech|1029|Cs-CZ|  
+|čeština|Tchèque|1029|Cs-CZ|  
 |magyar|Hongrois|1038|Hu-HU|  
 |polski|Polonais|1045|Pl-PL|  
 |română|Roumain|1048|Ro-RO|  
 |hrvatski|Croate|1050|hr-HR|  
 |slovenčina|Slovaque|1051|Sk-SK|  
 |slovenski|Slovène|1060|Sl-SI|  
-|ελληνικά|Greek|1032|El-GR|  
+|ελληνικά|Grec|1032|El-GR|  
 |български|Bulgare|1026|bg-BG|  
 |русский|Russe|1049|Ru-RU|  
 |Türkçe|Turc|1055|Tr-TR|  
@@ -119,16 +119,16 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |eesti|Estonien|1061|Et-EE|  
 |latviešu|Letton|1062|lv-LV|  
 |lietuvių|Lituanien|1063|lt-LT|  
-|Português (Brasil)|Brésilien|1046|pt-BR|  
+|Português (Brasil)|Brésilien|1046|pt-br|  
 |繁體中文|Chinois traditionnel|1028|zh-TW|  
 |한국어|Coréen|1042|Ko-KR|  
 |简体中文|Chinois simplifié|2052|zh-CN|  
 |Arabe|Arabe|1025|ar-SA|  
-|ไทย|Thaïlandais|1054|Th-TH|  
+|ไทย|Thaï|1054|Th-TH|  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-simple-example-of-try_parse"></a>A. Exemple simple de TRY_PARSE  
+### <a name="a-simple-example-of-try_parse"></a>R. Exemple simple de TRY_PARSE  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  

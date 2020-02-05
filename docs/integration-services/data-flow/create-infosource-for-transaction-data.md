@@ -11,10 +11,10 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293305"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Créer un InfoSource pour les données de transaction
@@ -45,7 +45,7 @@ ms.locfileid: "71293305"
  **Nom de l'InfoSource**  
  Entrez un nom pour le nouvel InfoSource.  
   
- **Description courte**  
+ **Brève description**  
  Entrez une brève description pour le nouvel InfoSource.  
   
  **Description longue**  
@@ -88,7 +88,7 @@ ms.locfileid: "71293305"
 |Valeur|Description|  
 |-----------|-----------------|  
 |CHA|Caractéristiques|  
-|UNI|Unités|  
+|UNI|Units|  
 |KYF|Chiffres clés|  
 |TIM|Caractéristiques de temps|  
   

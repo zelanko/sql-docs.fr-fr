@@ -16,10 +16,10 @@ ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a61d3a72990914599efa807e388e94f96b0f9754
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297486"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (expression SSIS)
@@ -55,7 +55,7 @@ LOWER(character_expression)
 LOWER("New York")  
 ```  
   
- L’exemple suivant convertit tous les caractères de la colonne d’entrée **Color** , à l’exception du premier caractère, en caractères minuscules. Si la colonne Color a pour valeur JAUNE, le résultat obtenu est « Jaune ». Pour plus d’informations, consultez [SUBSTRING &#40;expression SSIS&#41;](../../integration-services/expressions/substring-ssis-expression.md).  
+ L’exemple suivant convertit tous les caractères de la colonne d’entrée **Color** , à l’exception du premier caractère, en caractères minuscules. Si la colonne Color a pour valeur JAUNE, le résultat obtenu est « Jaune ». Pour plus d’informations, consultez [SUBSTRING &#40;expression SSIS&#41;](../../integration-services/expressions/substring-ssis-expression.md).  
   
 ```  
 LOWER(SUBSTRING(Color, 2, 15))  

@@ -12,13 +12,13 @@ ms.assetid: 5a65a9fb-6db1-40dd-b410-3199bb410261
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 13bfc260c89cd89a6ea96bf07641bd806f1a8fdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002928"
 ---
-# <a name="mssqlserver12305"></a>MSSQLSERVER_12305
+# <a name="mssqlserver_12305"></a>MSSQLSERVER_12305
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68002928"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|12305|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|12305|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_UNSUPPORTED_TABLE_VAR|  
 |Texte du message|Les variables de table inline ne sont pas prises en charge avec « *construction* ».|  

@@ -14,10 +14,10 @@ ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a90f68a55b10234e0397aba480b8d78a9cea1d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039122"
 ---
 # <a name="use-xml-in-computed-columns"></a>Utiliser des données XML dans les colonnes calculées
@@ -88,6 +88,6 @@ FROM T
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Décrit comment utiliser la promotion de propriété avec des colonnes calculées et des tables de propriétés.|  
+|[Promouvoir les valeurs XML les plus fréquentes à l’aide de colonnes calculées](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Décrit comment utiliser la promotion de propriété avec des colonnes calculées et des tables de propriétés.|  
   
   

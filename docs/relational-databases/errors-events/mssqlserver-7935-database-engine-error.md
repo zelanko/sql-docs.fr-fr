@@ -12,13 +12,13 @@ ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 818eb89fb0e8ae68486e7ecf9a16c7da99dfb2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987757"
 ---
-# <a name="mssqlserver7935"></a>MSSQLSERVER_7935
+# <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,11 +26,11 @@ ms.locfileid: "67987757"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7935|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7935|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_MISSING_COLUMN|  
-|Texte du message|Erreur de table, Un ID de répertoire FILESTREAM F_ID existe pour une colonne de l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, mais cette colonne n’existe pas dans la partition.|  
+|Texte du message|Erreur de table : un ID de répertoire FILESTREAM F_ID existe pour une colonne de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, mais cette colonne n'existe pas dans la partition.|  
   
 ## <a name="explanation"></a>Explication  
 Au cours de l'exécution de DBCC CHECKDB, un répertoire FILESTREAM a été trouvé pour une colonne de l'objet spécifié ; toutefois, la colonne n'a pas été trouvée dans les métadonnées correspondantes de la partition.  

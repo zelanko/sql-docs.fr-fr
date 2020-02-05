@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117283"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68117283"
 
   Crée une liste de propriétés de recherche. Une liste de propriétés de recherche permet de spécifier une ou plusieurs propriétés de recherche que vous souhaitez inclure dans un index de recherche en texte intégral.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Nom de la nouvelle liste des propriétés de recherche. *new_list_name* est un identificateur avec un maximum de 128 caractères. *new_list_name* doit être unique parmi toutes les listes de propriétés dans la base de données active et respecter les règles applicables aux identificateurs. *new_list_name* est utilisé une fois que l’index de recherche en texte intégral est créé.  
   
  *database_name*  
- Nom de la base de données dans laquelle se trouve la liste de propriétés spécifiée par *source_list_name*. Si aucun nom n’est spécifié, *database_name* est par défaut le nom de la base de données active.  
+ Nom de la base de données dans laquelle se trouve la liste de propriétés spécifiée par *source_list_name*. Si aucun nom n’est spécifié, *database_name* correspond par défaut à la base de données actuelle.  
   
  *database_name* doit spécifier le nom d’une base de données existante. Le compte de la connexion actuelle doit être associé à un ID d’utilisateur existant de la base de données spécifiée par *database_name*. Vous devez également disposer des [autorisations](#Permissions) exigées sur la base de données.  
   
@@ -95,7 +95,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. Création d'une liste de propriétés vide et association à un index  
+### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>R. Création d'une liste de propriétés vide et association à un index  
  L'exemple suivant crée une nouvelle liste de propriétés de recherche nommée `DocumentPropertyList`. L’exemple utilise ensuite une instruction [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) pour associer la nouvelle liste de propriétés à l’index de recherche en texte intégral de la table `Production.Document` dans la base de données `AdventureWorks`, sans démarrer un remplissage.  
   
 > [!NOTE]  

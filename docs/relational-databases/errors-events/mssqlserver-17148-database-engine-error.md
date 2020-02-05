@@ -12,13 +12,13 @@ ms.assetid: acc6bb58-7248-4237-8bd6-4b3ed2c11446
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4581b68f15b78060b359429eaa2599003fa497b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131713"
 ---
-# <a name="mssqlserver17148"></a>MSSQLSERVER_17148
+# <a name="mssqlserver_17148"></a>MSSQLSERVER_17148
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68131713"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|17148|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17148|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|STARTUP_SERVERUNINSTALL|  
 |Texte du message|SQL Server se termine en réponse à une demande d'arrêt (stop) du Gestionnaire de contrôle des services. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.|  

@@ -19,10 +19,10 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914947"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67914947"
 > [!WARNING]  
 >  La fonction UuidCreateSequential a des dépendances matérielles. Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], des clusters de valeurs séquentielles peuvent se développer lors du déplacement de bases de données (par exemple, des bases de données autonomes) vers d’autres ordinateurs. Lorsque vous utilisez Always On sur [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], des clusters de valeurs séquentielles peuvent se développer si la base de données bascule vers un autre ordinateur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

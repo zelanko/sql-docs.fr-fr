@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74119186"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74119186"
 
 Retourne la valeur du code ASCII du caractère situé le plus à gauche dans une expression de caractères.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ ASCII ( character_expression )
 [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de type **char** ou **varchar**.
   
 ## <a name="return-types"></a>Types de retour
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes
 ASCII est l’abréviation d’**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Il s’agit d’une norme de codage de caractères pour les ordinateurs modernes. Consultez la section **Caractères imprimables** de la rubrique [ASCII](https://www.wikipedia.org/wiki/ASCII) pour obtenir la liste des caractères ASCII.
@@ -55,7 +55,7 @@ Le code ASCII est un jeu de caractères 7 bits. Le code ASCII étendu est un je
 
 ## <a name="examples"></a>Exemples 
 
-### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. Cet exemple considère un jeu de caractères ASCII et retourne la valeur `ASCII` de 6 caractères.
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>R. Cet exemple considère un jeu de caractères ASCII et retourne la valeur `ASCII` de 6 caractères.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   

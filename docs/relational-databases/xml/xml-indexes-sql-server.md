@@ -34,10 +34,10 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096916"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "68096916"
   
 -   Index XML secondaires  
   
- Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l’index XML primaire, les trois types d’index secondaires suivants sont pris en charge : PATH, VALUE et PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
+ Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE, and PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas créer ou modifier d'index XML à moins que les options de base de données ne soient définies correctement pour utiliser le type de données **xml** . Pour plus d’informations, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -98,7 +98,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//ContactRecord/PhoneNumber` , où seuls les deux derniers niveaux sont connus ;  
   
- \- ou -  
+ OR  
   
 -   `/Book/*/Title` où le caractère générique (`*`) est mentionné au milieu de l’expression.  
   
@@ -110,7 +110,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- Concernant l'index XML primaire, au lieu de fragmenter chaque instance d'objet blob XML se trouvant dans la table de base, les lignes de l'index correspondant à chaque objet blob XML sont soumises à des recherches séquentielles pour retrouver l'expression indiquée dans la méthode `exist()`. Si le chemin d'accès est retrouvé dans la colonne Path de l'index, l'élément <`Summary`> ainsi que ses sous-arborescences sont extraits de l'index XML primaire, puis convertis en objet blob XML suite à l'exécution de la méthode `query()`.  
+ Concernant l'index XML primaire, au lieu de fragmenter chaque instance d'objet blob XML se trouvant dans la table de base, les lignes de l'index correspondant à chaque objet blob XML sont soumises à des recherches séquentielles pour retrouver l'expression indiquée dans la méthode `exist()` . Si le chemin d'accès est retrouvé dans la colonne Path de l'index, l'élément <`Summary`> ainsi que ses sous-arborescences sont extraits de l'index XML primaire, puis convertis en objet blob XML suite à l'exécution de la méthode `query()`.  
   
  Notez que l'index XML primaire n'est pas sollicité lors de la récupération d'une instance XML complète. Par exemple, la requête suivante extrait de la table l'instance XML tout entière décrivant les instructions de fabrication d'un modèle de produit donné.  
   
@@ -142,7 +142,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` , n'indiquant que son chemin d'accès ;  
   
- \- ou -  
+ OR  
   
 -   `/root/Location/@LocationID[.="10"]` , où le chemin et la valeur du nœud sont précisés.  
   

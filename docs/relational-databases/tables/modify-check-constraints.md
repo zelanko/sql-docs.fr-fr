@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907265"
 ---
 # <a name="modify-check-constraints"></a>Modifier des contraintes de validation
@@ -59,7 +59,7 @@ ms.locfileid: "72907265"
   
 4.  Effectuez l'une des actions décrites dans le tableau suivant :  
   
-    |Pour|Procédez comme suit|  
+    |À|Procédez comme suit|  
     |--------|------------------------|  
     |Modifier l'expression de contrainte|Tapez la nouvelle expression dans le champ **Expression** .|  
     |Renommer la contrainte|Tapez un nouveau nom dans le champ **Nom** .|  
@@ -72,7 +72,7 @@ ms.locfileid: "72907265"
   
 5.  Cliquez sur **Fermer**.  
   
-6.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+6.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
 
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier une contrainte de validation**  

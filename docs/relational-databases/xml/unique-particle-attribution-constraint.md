@@ -18,10 +18,10 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078011"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Contrainte d'attribution de particule unique
@@ -41,7 +41,7 @@ ms.locfileid: "68078011"
 </xsd:element>  
 ```  
   
- Le modèle de contenu suivant est également ambigu :  
+ Le modèle de contenu suivant est également ambigu :  
   
 ```  
 <xsd:element name="root">  
@@ -81,11 +81,11 @@ ms.locfileid: "68078011"
 ## <a name="finding-more-information"></a>Sources d'informations complémentaires  
  Le document suivant est publié par le World Wide Web Consortium (W3C) et contient la description technique de la contrainte d'attribution de particule unique :  
   
- « XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation » :  
+ « XML Schema Part 1 : Structures Second Edition, W3C Proposed Edited Recommendation » :  
   
--   Section 3.8.6 : Constraints on Model Group Schema Components  
+-   Section 3.8.6 : Constraints on Model Group Schema Components  
   
--   Appendix H : Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   Appendix H : Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  Pour lire le document, consultez [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

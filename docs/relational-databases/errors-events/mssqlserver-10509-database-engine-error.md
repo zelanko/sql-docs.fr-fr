@@ -12,10 +12,10 @@ ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305887"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
@@ -26,8 +26,8 @@ ms.locfileid: "72305887"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10509|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10509|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INVALID_STMT|  
 |Texte du message|Impossible de créer le repère de plan '%.\*ls', car l’instruction spécifiée par **\@stmt** ou **\@statement_start_offset** contient une erreur de syntaxe ou n’est pas éligible pour le repère de plan. Fournissez une seule instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide ou une position de départ de l'instruction valide dans le lot. Pour obtenir une position de départ valide, interrogez la colonne statement_start_offset de la fonction de gestion dynamique sys.dm_exec_query_stats.|  

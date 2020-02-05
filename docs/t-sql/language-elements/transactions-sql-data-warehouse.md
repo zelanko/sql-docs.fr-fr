@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121588"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
@@ -30,7 +30,7 @@ ms.locfileid: "68121588"
   
 -   Les *transactions de validation automatique* se lancent automatiquement au sein d’une session et ne commencent pas par l’instruction BEGIN TRANSACTION. Quand le paramètre AUTOCOMMIT a la valeur ON, chaque instruction s’exécute dans une transaction et aucune instruction COMMIT ou ROLLBACK explicite n’est nécessaire. Lorsque le paramètre AUTOCOMMIT a la valeur OFF, une instruction COMMIT ou ROLLBACK est nécessaire pour déterminer le résultat de la transaction. Dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], les transactions validées automatiquement commencent immédiatement après une instruction COMMIT ou ROLLBACK, ou bien après une instruction SET AUTOCOMMIT OFF.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET AUTOCOMMIT { **ON** | OFF }  
  Détermine la façon dont les transactions peuvent commencer et se terminer.  
   
- ON  
+ ACTIVÉ  
  Chaque instruction s’exécute sous sa propre transaction et aucune instruction COMMIT ou ROLLBACK explicite n’est nécessaire. Les transactions explicites sont autorisées quand AUTOCOMMIT a la valeur ON.  
   
  OFF  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Si une erreur autre qu’une erreur d’instruction au moment de l’exécution entrave le bon déroulement d’une transaction explicite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] la restaure automatiquement et libère toutes les ressources bloquées par la transaction. Par exemple, si la connexion réseau du client à une instance de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est interrompue ou que le client se déconnecte de l’application, toutes les transactions non validées pendant la connexion sont restaurées quand le réseau notifie l’instance de l’interruption.  
   
- Si une erreur d’instruction au moment de l’exécution se produit dans un lot, le comportement de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est conforme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** dont la valeur est **ON** et toute la transaction est restaurée. Pour plus d’informations sur le paramètre **XACT_ABORT**, consultez [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Si une erreur d’instruction au moment de l’exécution se produit dans un lot, le comportement de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est conforme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** dont la valeur est **ON** et toute la transaction est restaurée. Pour plus d’informations sur le paramètre **XACT_ABORT**, consultez [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Une session ne peut exécuter qu’une seule transaction à un moment donné ; les points de sauvegarde et les transactions imbriquées ne sont pas pris en charge.  
@@ -101,7 +101,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Utilisation d’une transaction explicite  
+### <a name="a-using-an-explicit-transaction"></a>R. Utilisation d’une transaction explicite  
   
 ```  
 BEGIN TRANSACTION;  

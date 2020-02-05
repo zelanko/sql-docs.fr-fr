@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070332"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070332"
   
  Une séquence est un objet lié au schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après une spécification. De nouvelles valeurs sont générées à partir d'une séquence par appel de la fonction NEXT VALUE FOR. Utilisez **sp_sequence_get_range** pour obtenir plusieurs numéros séquentiels à la fois. Pour obtenir des informations et des scénarios qui utilisent à la fois CREATE SEQUENCE, **sp_sequence_get_range** et la fonction NEXT VALUE FOR, consultez [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -102,7 +102,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ## <a name="examples"></a>Exemples  
  Pour obtenir des exemples de création de séquences et d’utilisation de la fonction **NEXT VALUE FOR** pour générer des numéros séquentiels, consultez [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-### <a name="a-altering-a-sequence"></a>A. Modification d'une séquence  
+### <a name="a-altering-a-sequence"></a>R. Modification d'une séquence  
  L’exemple suivant crée un schéma nommé Test et une séquence nommée TestSeq à l’aide du type de données **int**, avec une plage comprise entre 100 et 200. La séquence démarre à 125 et est incrémentée de 25 chaque fois qu'un nombre est généré. Étant donné que la séquence est configurée pour se répéter, lorsque la valeur dépasse la valeur maximale de 200, la séquence redémarre à la valeur minimale de 100.  
   
 ```  

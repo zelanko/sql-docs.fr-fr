@@ -15,10 +15,10 @@ ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d913a0e7bbe29ab6f6f303519c73304238afd7df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127403"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (type de données geography)
@@ -48,7 +48,7 @@ ms.locfileid: "68127403"
  Dans les cas où l’instance spatiale non valide croise l’équateur et où EnvelopeAngle() = 180, une instance **FullGlobe** est retournée. La méthode de type de données de `MakeValid()`**geography** tente de retourner des instances valides, mais l’exactitude ou la précision des résultats n’est pas garantie.  
   
 > [!NOTE]  
->  Les objets qui ne sont pas valides peuvent être stockés dans la base de données. Les méthodes qui peuvent être exécutées sur des instances non valides (ces instances pour lesquelles STIsValid() retourne False) sont des méthodes qui vérifient la validité ou permettent l’exportation : STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() et AsGml().  
+>  Les objets qui ne sont pas valides peuvent être stockés dans la base de données. Les méthodes qui peuvent être exécutées sur des instances non valides (les instances pour lesquelles STIsValid() retourne False) sont des méthodes qui vérifient la validité ou permettent l’exportation : STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() et AsGml().  
   
  Cette méthode n'est pas précise.  
   

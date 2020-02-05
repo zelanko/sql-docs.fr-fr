@@ -15,10 +15,10 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278286"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
@@ -107,7 +107,7 @@ ms.locfileid: "72278286"
   
 -   **IMPORT** : l’utilisateur peut importer le schéma et les données dans une nouvelle base de données du serveur hôte.  
   
- Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : SQL Server Management Studio, le portail Azure et l’API DACFx.  
+ Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : SQL Server Management Studio, le portail Azure et l’API DACFx.  
   
 ## <a name="permissions"></a>Autorisations  
  Vous devez être membre du rôle **dbmanager** ou disposer d'autorisations **CREATE DATABASE** pour pouvoir créer une base de données, notamment en déployant un package DAC. Vous devez être membre du rôle **dbmanager** ou disposer d'autorisations **DROP DATABASE** pour pouvoir supprimer une base de données.  
@@ -118,11 +118,11 @@ ms.locfileid: "72278286"
 |----------------------|-----------|  
 |Explique comment utiliser un fichier de package DAC pour créer une nouvelle instance de la DAC.|[Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)|  
 |Explique comment utiliser un nouveau fichier de package DAC pour mettre à niveau une instance vers une nouvelle version de la DAC.|[Mettre à niveau une application de la couche Données](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)|  
-|Explique comment supprimer une instance DAC. Vous pouvez également choisir de détacher ou de supprimer la base de données associée, ou de laisser la base de données intacte.|[Supprimer une application de couche Données](../../relational-databases/data-tier-applications/delete-a-data-tier-application.md)|  
+|Explique comment supprimer une instance DAC. Vous pouvez également choisir de détacher ou de supprimer la base de données associée, ou de laisser la base de données intacte.|[Supprimer une application de la couche Données](../../relational-databases/data-tier-applications/delete-a-data-tier-application.md)|  
 |Explique comment afficher l'état des DAC actuellement déployées à l'aide de l'utilitaire SQL Server.|[Analyser les applications de la couche Données](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)|  
 |Explique comment créer un fichier .bacpac contenant une archive des données et des métadonnées dans une DAC.|[Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)|  
 |Explique comment utiliser un fichier d'archive DAC (.bacpac) pour effectuer une restauration logique d'une DAC ou pour migrer la DAC vers une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)|  
-|Indique comment importer un fichier BACPAC pour créer une nouvelle base de données utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraire une DAC d’une base de données](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
+|Indique comment importer un fichier BACPAC pour créer une nouvelle base de données utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraire une DAC d'une base de données](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
 |Explique comment promouvoir une base de données existante en tant qu'instance DAC. Une définition de DAC est créée et stockée dans les bases de données système.|[Inscrire une base de données en tant que DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
 |Explique comment vérifier le contenu d'un package DAC et les actions associées à la mise à niveau d'une DAC avant d'utiliser le package dans un système de production.|[Valider un package DAC](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
 |Explique comment placer le contenu d'un package DAC dans un dossier où un administrateur de base de données peut vérifier ce que fait la DAC avant de la déployer dans un serveur de production.|[Décompresser un package DAC](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  

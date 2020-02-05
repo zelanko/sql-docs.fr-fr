@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064652"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73064652"
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST, and DROP FULLTEXT STOPLIST sont uniquement pris en charge avec le niveau de compatibilité 100. Elles ne le sont pas avec un niveau de compatibilité égal à 80 ou 90. Toutefois, quel que soit le niveau de compatibilité, la liste de mots vides système est automatiquement associée aux nouveaux index de recherche en texte intégral.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +61,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  *stoplist_name* est utilisé une fois que l’index de recherche en texte intégral est créé.  
   
  *database_name*  
- Nom de la base de données dans laquelle se trouve la liste de mots vides spécifiée par *source_stoplist_name*. Si aucun nom n’est spécifié, *database_name* est par défaut le nom de la base de données active.  
+ Nom de la base de données dans laquelle se trouve la liste de mots vides spécifiée par *source_stoplist_name*. Si aucun nom n’est spécifié, *database_name* correspond par défaut à la base de données actuelle.  
   
  *source_stoplist_name*  
  Spécifie que la nouvelle liste de mots vides est créée en copiant une liste de mots vides existante. Si *source_stoplist_name* n’existe pas ou si l’utilisateur de la base de données ne dispose pas des autorisations appropriées, CREATE FULLTEXT STOPLIST échoue avec une erreur. Si des langues spécifiées dans les mots vides de la liste de mots vides source ne sont pas inscrits dans la base de données actuelle, l'exécution de CREATE FULLTEXT STOPLIST réussit, mais des avertissements sont retournés et les mots vides correspondants ne sont pas ajoutés.  
@@ -83,7 +83,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-new-full-text-stoplist"></a>A. Création d'une nouvelle liste de mots vides de texte intégral  
+### <a name="a-creating-a-new-full-text-stoplist"></a>R. Création d'une nouvelle liste de mots vides de texte intégral  
  L'exemple ci-dessous crée une nouvelle liste de mots vides de texte intégral nommée `myStoplist`.  
   
 ```sql  

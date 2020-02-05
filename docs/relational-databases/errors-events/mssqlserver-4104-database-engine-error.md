@@ -12,13 +12,13 @@ ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120593"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68120593"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|4104|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|4104|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|ALG_MULTI_ID_BAD|  
 |Texte du message|L'identificateur en plusieurs parties "%.*ls" ne peut pas être lié.|  
@@ -79,7 +79,7 @@ L'erreur 4104 indique que l'identificateur en plusieurs parties spécifié n'a p
     SELECT a.c2 FROM a, b;   
     ```  
   
-    En supposant que l’UDT `myudt2`ne dispose pas d’une propriété nommée `c2`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas déterminer si l’identificateur `a.c2` fait référence à la colonne `c2` dans la table `a` ou à la colonne `b`, propriété `a` dans la table `c2`.  
+    En supposant que l’UDT `myudt2`ne dispose pas d’une propriété nommée `c2`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas déterminer si l’identificateur `a.c2` fait référence à la colonne `c2` dans la table `a` ou à la colonne `a`, propriété `c2` dans la table `b`.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
   
@@ -113,7 +113,7 @@ L'erreur 4104 indique que l'identificateur en plusieurs parties spécifié n'a p
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    ou Gestionnaire de configuration  
+    or  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

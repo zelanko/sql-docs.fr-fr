@@ -14,10 +14,10 @@ ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28fb816554093c78c1ce71d7a3712ca8804fd4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115660"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de maintenance (Propriétés du sous-plan)
@@ -25,13 +25,13 @@ ms.locfileid: "68115660"
   Utilisez la boîte de dialogue **Plan de maintenance (Propriétés du sous-plan)** pour spécifier un nom, une description et une planification de sous-plan de maintenance de plan. Cliquez sur **Propriétés du sous-plan** sous l’onglet **Conception** du plan de maintenance ou double-cliquez sur un sous-plan dans la grille du concepteur pour afficher cette boîte de dialogue.  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Entrez un nom pour le sous-plan. Le nom est limité à 128 caractères.  
   
  **Description**  
  Entrez une description pour le sous-plan. La description est limitée à 512 caractères.  
   
- **Planifier**  
+ **Planification**  
  Cliquez sur l'icône de planification pour spécifier quand exécuter les tâches de sous-plan ou cliquez sur l'icône de planification avec une x rouge pour supprimer la planification du sous-plan existant.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -12,13 +12,13 @@ ms.assetid: 83a53507-ac76-4cb9-b116-daf6f42aea1f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b11a405708d2a388fca9847e01ef3026044a946e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131809"
 ---
-# <a name="mssqlserver17142"></a>MSSQLSERVER_17142
+# <a name="mssqlserver_17142"></a>MSSQLSERVER_17142
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68131809"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|17142|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17142|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|INIT_SRVC_PAUSED|  
 |Texte du message|Le service SQL Server a été interrompu. Aucune nouvelle connexion ne sera autorisée. Pour reprendre le service, utilisez SQL Computer Manager ou l'application Services du Panneau de configuration.|  

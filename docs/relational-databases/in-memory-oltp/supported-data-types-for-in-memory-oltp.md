@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075888"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Types de données pris en charge pour l’OLTP en mémoire
@@ -54,7 +54,7 @@ Pour les types de données de chaîne et binaires précédents, à partir de SQL
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identifier des objets LOB et d’autres colonnes qui sont hors ligne
 
-À compter de SQL Server 2016, les tables optimisées en mémoire [prennent en charge les colonnes hors ligne](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), ce qui permet à une ligne de table unique de dépasser 8 060 octets. L’instruction Transact-SQL SELECT suivante signale toutes les colonnes qui sont hors ligne pour des tables optimisées en mémoire. Sachez que :
+À compter de SQL Server 2016, les tables optimisées en mémoire [prennent en charge les colonnes hors ligne](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), ce qui permet à une ligne de table unique de dépasser 8 060 octets. L’instruction Transact-SQL SELECT suivante signale toutes les colonnes qui sont hors ligne pour des tables optimisées en mémoire. Notez les points suivants :
 
 - Toutes les colonnes de clés d’index sont stockées dans la ligne.
   - Les clés d’index non unique peuvent maintenant inclure des colonnes autorisant les valeurs Null sur des tables optimisées en mémoire.

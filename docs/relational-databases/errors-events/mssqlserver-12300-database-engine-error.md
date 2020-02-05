@@ -12,13 +12,13 @@ ms.assetid: ac71e2e1-5857-4115-a720-7dae08769926
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3919664215ba4689ca4569c4f8cc20034aca9600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115997"
 ---
-# <a name="mssqlserver12300"></a>MSSQLSERVER_12300
+# <a name="mssqlserver_12300"></a>MSSQLSERVER_12300
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68115997"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|12300|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|12300|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_UNSUPPORTED_COMPUTED_COLUMNS|  
 |Texte du message|Les colonnes calculées ne sont pas prises en charge par *construction*.|  
