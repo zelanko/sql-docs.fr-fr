@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593894"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73593894"
 
 Crée un objet de métadonnées de clé principale de colonne dans une base de données. Une entrée de métadonnées de clé principale de colonne représente une clé stockée dans un magasin de clés externes. Cette clé protège (chiffre) les clés de chiffrement de colonne lorsque vous utilisez [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Plusieurs clés principales de colonne autorisent la rotation périodique de clés pour améliorer la sécurité. Créez une clé principale de colonne dans un magasin de clés et son objet de métadonnées associé dans la base de données en utilisant l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou PowerShell. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -96,7 +96,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
   
     **Format du chemin de clé :** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
-     Où :  
+     Où :  
   
     *emplacement_magasin_certificats*  
     Emplacement du magasin de certificats, qui doit être Current User ou Local Machine. Pour plus d’informations, consultez [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
@@ -107,7 +107,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
     *empreinte_certificat*  
     Empreinte du certificat.  
   
-    **Exemples :**  
+    **Exemples :**  
   
     ```  
     N'CurrentUser/My/BBF037EC4A133ADCA89FFAEC16CA5BFA8878FB94'  
@@ -119,7 +119,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
   
     **Format du chemin de clé :** *ProviderName*/*KeyIdentifier*  
   
-    Où :  
+    Où :  
   
     *ProviderName*  
     Nom d’un fournisseur de service de chiffrement (CSP), qui implémente CAPI pour le magasin de clés principales de la colonne. Si vous utilisez un module HSM comme magasin de clés, le nom du fournisseur CSP doit être celui qui vous a fourni votre module HSM. Le fournisseur doit être installé sur un ordinateur client.  
@@ -127,7 +127,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
     *identificateur_clé*  
     Identificateur de la clé, utilisé comme clé principale de colonne, dans le magasin de clés.  
   
-    **Exemples :**  
+    **Exemples :**  
   
     ```  
     N'My HSM CSP Provider/AlwaysEncryptedKey1'  
@@ -137,7 +137,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
   
     **Format du chemin de clé :** *ProviderName*/*KeyIdentifier*  
   
-    Où :  
+    Où :  
   
     *ProviderName*  
     Nom du fournisseur de stockage de clé (KSP), qui implémente l’API Cryptography: Next Generation (CNG) pour le magasin de clés principales de colonne. Si vous utilisez un module HSM comme magasin de clés, le nom du fournisseur doit être celui du fournisseur KSP qui vous a fourni votre module HSM. Le fournisseur doit être installé sur un ordinateur client.  
@@ -145,7 +145,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
     *identificateur_clé*  
     Identificateur de la clé, utilisé comme clé principale de colonne, dans le magasin de clés.  
   
-    **Exemples :**  
+    **Exemples :**  
   
     ```  
     N'My HSM CNG Provider/AlwaysEncryptedKey1'  
@@ -155,7 +155,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
   
     **Format du chemin de clé :** *URL_clé*  
   
-    Où :  
+    Où :  
   
     *URL_clé*  
     URL de la clé dans Azure Key Vault.
@@ -179,7 +179,7 @@ Nécessite l’autorisation **ALTER ANY COLUMN MASTER KEY**.
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-column-master-key"></a>A. Création d’une clé principale de colonne  
+### <a name="a-creating-a-column-master-key"></a>R. Création d’une clé principale de colonne  
 L’exemple suivant crée une entrée de métadonnées de clé principale de colonne avec pour une clé principale de colonne. La clé principale de colonne est stockée dans le magasin de certificats des applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE pour accéder à la clé principale de colonne :  
   
 ```sql  
@@ -250,5 +250,5 @@ WITH (
 * [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 * [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
-* [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+* [Gérer des clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

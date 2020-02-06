@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982879"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982879"
 
   Change la propriété d'un élément sécurisable.    
     
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntaxe    
     
@@ -229,10 +229,10 @@ Le tableau suivant récapitule les conditions requises :
   
 Exécuteur  |Cible  |Résultats    
 ---------|---------|---------  
-Connexion d’authentification SQL Server     |Connexion d’authentification SQL Server         |Réussi  
-Connexion d’authentification SQL Server     |Utilisateur Azure AD         |Échec           
-Utilisateur Azure AD     |Connexion d’authentification SQL Server         |Réussi           
-Utilisateur Azure AD     |Utilisateur Azure AD         |Réussi           
+Connexion d’authentification SQL Server     |Connexion d’authentification SQL Server         |Succès  
+Connexion d’authentification SQL Server     |Utilisateur Azure AD         |Échec           
+Utilisateur Azure AD     |Connexion d’authentification SQL Server         |Succès           
+Utilisateur Azure AD     |Utilisateur Azure AD         |Succès           
   
 Pour vérifier un propriétaire Azure AD de la base de données, exécutez la commande Transact-SQL suivante dans une base de données utilisateur (`testdb` dans cet exemple).  
     
@@ -253,7 +253,7 @@ ON d.owner_sid = sl.sid;
     
 ```    
   
-### <a name="best-practice"></a>Meilleure pratique  
+### <a name="best-practice"></a>Bonne pratique  
   
 Au lieu d’utiliser des utilisateurs Azure AD comme propriétaires individuels de la base de données, utilisez un groupe Azure AD comme membre du rôle de base de données fixe **db_owner**. Les étapes suivantes montrent comment configurer un compte de connexion désactivé comme propriétaire de la base de données et rendre un groupe Azure Active Directory (`mydbogroup`) membre du rôle **db_owner**. 
 1.  Connectez-vous à SQL Server comme administrateur Azure AD, puis remplacez le propriétaire de la base de données par un compte de connexion d’authentification SQL Server désactivé. Par exemple, à partir de la base de données utilisateur, exécutez :  
@@ -287,7 +287,7 @@ La valeur de retour 1 indique que l’utilisateur est membre du rôle.
     
 ## <a name="examples"></a>Exemples    
     
-### <a name="a-transfer-ownership-of-a-table"></a>A. Transfert de la propriété d'une table    
+### <a name="a-transfer-ownership-of-a-table"></a>R. Transfert de la propriété d'une table    
  L'exemple suivant transfère la propriété de la table `Sprockets` à l'utilisateur `MichikoOsada`. La table se trouve dans le schéma `Parts`.    
     
 ```    
