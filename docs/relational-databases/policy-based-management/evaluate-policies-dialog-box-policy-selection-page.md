@@ -14,10 +14,10 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 84e9e7577f74aa3ea43d99bc6b3c12cd5637c9ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558214"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie
@@ -34,13 +34,13 @@ ms.locfileid: "75558214"
  **Serveur**  
  Sélectionnez cette option pour vous connecter à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui contient la stratégie souhaitée.  
   
- **Stratégies : stratégie**  
+ **Stratégies : Stratégie**  
  Cliquez sur cette option pour ouvrir la boîte de dialogue de la stratégie spécifiée.  
   
- **Stratégies : Catégorie**  
+ **Stratégies : Catégorie**  
  Indique la catégorie de la stratégie. Cette zone est en lecture seule.  
   
- **Stratégies : Facette**  
+ **Stratégies : Facette**  
  Indique la facette implémentée par la stratégie. Cette zone est en lecture seule.  
   
  **Evaluate**  

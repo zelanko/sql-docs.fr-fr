@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad62ae2b8e9b62e209900df47dfbba9d30557cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999634"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe d’événements Broker:Message Undeliverable
@@ -29,20 +29,20 @@ ms.locfileid: "67999634"
   
 |Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**Application Name**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
+|**Nom d’application**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |**BigintData1**|**bigint**|Numéro de séquence du message non remis.|52|Non|  
 |**BigintData2**|**bigint**|Numéro de séquence du dernier message ayant été pris en considération.|53|Non|  
-|**ClientProcessID**|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
-|**DatabaseID**|**Int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|**Erreur**|**Int**|ID du message dans **sys.messages** destiné au texte de l’événement.|31|Non|  
-|**EventClass**|**Int**|Type de classe d'événements capturée. Renvoie toujours **160** pour **Broker:MessageUndeliverable**.|27|Non|  
-|**EventSequence**|**Int**|Numéro de séquence de cet événement.|51|Non|  
+|**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
+|**DatabaseID**|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|**Error**|**int**|ID du message dans **sys.messages** destiné au texte de l’événement.|31|Non|  
+|**EventClass**|**int**|Type de classe d'événements capturée. Renvoie toujours **160** pour **Broker:MessageUndeliverable**.|27|Non|  
+|**EventSequence**|**int**|Numéro de séquence de cet événement.|51|Non|  
 |**EventSubClass**|**nvarchar**|Indique si le message non remis correspondait à un message en séquence. Prend l'une des deux valeurs :<br /><br /> **Message en séquence**. Le message non remis correspondait à un message en séquence.<br /><br /> **Message sans séquence**. Le message non remis ne correspondait pas à un message en séquence.|21|Oui|  
 |**GUID**|**uniqueidentifier**|ID de la conversation à laquelle le message non remis appartient. Cet identifiant est transmis en tant que partie intégrante du message et est partagé par les deux intervenants de la conversation.|54|Non|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
-|**IntegerData**|**Int**|Numéro de fragment du message non remis.|25|Non|  
-|**IntegerData2**|**Int**|Numéro du fragment de message que le message non remis était en train de prendre en compte.|55|Non|  
-|**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Non|  
+|**IntegerData**|**int**|Numéro de fragment du message non remis.|25|Non|  
+|**IntegerData2**|**int**|Numéro du fragment de message que le message non remis était en train de prendre en compte.|55|Non|  
+|**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Non|  
 |**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion Windows au format DOMAINE\nom_utilisateur).|11|Non|  
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
@@ -50,10 +50,10 @@ ms.locfileid: "67999634"
 |**ObjectName**|**nvarchar**|Descripteur de conversation du dialogue.|34|Non|  
 |**RoleName**|**nvarchar**|Rôle du descripteur de conversation. Il peut prendre la valeur **initiator** ou la valeur **target**.|38|Non|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
-|**Severity**|**Int**|Numéro de gravité du texte de l'événement.|29|Non|  
-|**SPID**|**Int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
+|**Niveau de gravité**|**int**|Numéro de gravité du texte de l'événement.|29|Non|  
+|**SPID**|**int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
-|**État**|**Int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|Non|  
+|**State**|**int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|Non|  
 |**TextData**|**ntext**|Raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu remettre le message.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   

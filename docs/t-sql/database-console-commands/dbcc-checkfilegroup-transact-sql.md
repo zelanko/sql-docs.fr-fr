@@ -26,16 +26,16 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102032"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 Vérifie l'allocation et l'intégrité de la structure de toutes les tables et vues indexées dans le groupe de fichiers spécifié de la base de données active.
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -92,7 +92,7 @@ DBCC CHECKFILEGROUP
 >  En raison de la spécification de PHYSICAL_ONLY, DBCC CHECKFILEGROUP ignore toutes les vérifications des données FILESTREAM.  
   
  MAXDOP  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Remplace l’option de configuration **max degree of parallelism** de **sp_configure** pour l’instruction. MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec Resource Governor, le moteur de base de données utilise la valeur MAXDOP de Resource Governor, décrite dans ALTER WORKLOAD GROUP (Transact-SQL). Toutes les règles sémantiques utilisées avec l'option de configuration max degree of parallelism sont applicables lorsque vous utilisez l'indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -131,7 +131,7 @@ Lorsqu'une table partitionnée existe sur plusieurs groupes de fichiers, DBCC CH
 ## <a name="understanding-dbcc-error-messages"></a>Présentation des messages d'erreur de DBCC  
 Une fois la commande DBCC CHECKFILEGROUP exécutée, un message est consigné dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la commande DBCC est correctement exécutée, le message indique que l'exécution a réussi, ainsi que la durée d'exécution de la commande. Si la commande DBCC est interrompue avant la fin de la vérification en raison d’une erreur, le message indique que la commande n’a pas abouti et précise une valeur d’état ainsi que la durée d’exécution de la commande. Le tableau suivant répertorie et décrit les valeurs d'état pouvant être incluses dans le message.
   
-|État|Description|  
+|State|Description|  
 |-----------|-----------------|  
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|  
 |1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|  
@@ -196,7 +196,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  
-### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. Vérification du groupe de fichiers PRIMARY d'une base de données  
+### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>R. Vérification du groupe de fichiers PRIMARY d'une base de données  
 L'exemple suivant vérifie le groupe de fichiers primaire de la base de données active.
   
 ```sql  

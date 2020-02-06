@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050821"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050821"
   
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ GRANT <permission> [ ,...n ] ON
   
 - Autorisations de fonction scalaire : EXECUTE, REFERENCES.  
 - Autorisations de fonction table : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- Autorisations de procédure stockée : EXECUTE.  
+- Autorisations de procédure stockée : EXECUTE.  
 - Autorisations de table : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Autorisations de vue : DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
@@ -115,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
->  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Par exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l’exécuter. Dans ce cas, l'utilisateur aurait également besoin de l'autorisation SELECT sur la colonne calculée.  
+>  Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l'exécuter. Dans ce cas, l'utilisateur aurait également besoin de l'autorisation SELECT sur la colonne calculée.  
   
  Des informations sur les objets sont consultables dans différents affichages catalogue. Pour plus d’informations, consultez [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
@@ -154,7 +154,7 @@ PRIVILEGES
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-granting-select-permission-on-a-table"></a>A. Octroi d'une autorisation SELECT sur une table  
+### <a name="a-granting-select-permission-on-a-table"></a>R. Octroi d'une autorisation SELECT sur une table  
  Dans l'exemple ci-dessous, l'autorisation `SELECT` est accordée à l'utilisateur `RosaQdM` sur la table `Person.Address` dans la base de données `AdventureWorks2012`.  
   
 ```  

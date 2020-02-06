@@ -11,10 +11,10 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025773"
 ---
 # <a name="using-the-jdbc-driver"></a>Utilisation du pilote JDBC
@@ -227,7 +227,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 Lorsque la méthode getConnection de la classe DriverManager est appelée, un pilote correspondant est localisé parmi l’ensemble des pilotes JDBC inscrits. Le fichier sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar inclut le fichier « META-INF/services/java.sql.Driver », qui contient **com.microsoft.sqlserver.jdbc.SQLServerDriver** comme pilote inscrit. Les applications existantes, qui chargent actuellement les pilotes à l’aide de la méthode Class.forName, continueront de fonctionner sans modification.  
   
 > [!NOTE]  
-> Vous ne pouvez pas utiliser les bibliothèques de classe sqljdbc4.jar, sqljdbc41.jar et sqljdbc42.jar avec les anciennes versions de Java Runtime Environment (JRE). Pour obtenir la liste des versions de JRE prises en charge par [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> Vous ne pouvez pas utiliser les bibliothèques de classe sqljdbc4.jar, sqljdbc41.jar et sqljdbc42.jar avec les anciennes versions de Java Runtime Environment (JRE). Pour obtenir la liste des versions de JRE prises en charge par [, voir ](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)Configuration requise pour le pilote JDBC[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
 
 Pour savoir comment se connecter avec des sources de données et utiliser une URL de connexion, voir [Créer l'URL de connexion](../../connect/jdbc/building-the-connection-url.md) et [Définir les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   

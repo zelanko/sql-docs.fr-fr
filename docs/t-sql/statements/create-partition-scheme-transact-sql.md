@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048150"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68048150"
 >[!NOTE]
 >Dans Azure SQL Database, seuls les groupes de fichiers primaires sont pris en charge.  
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,7 +86,7 @@ AS PARTITION partition_function_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>A. Création d'un schéma de partition qui mappe chaque partition à un groupe de fichiers différent  
+### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>R. Création d'un schéma de partition qui mappe chaque partition à un groupe de fichiers différent  
  L'exemple suivant crée une fonction de partition pour partitionner une table ou un index en quatre partitions. Un schéma de partition est ensuite créé ; il spécifie les groupes de fichiers qui contiennent chacune des quatre partitions. Cet exemple suppose que les groupes de fichiers existent déjà dans la base de données.  
   
 ```  

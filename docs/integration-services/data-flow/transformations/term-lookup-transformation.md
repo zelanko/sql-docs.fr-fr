@@ -24,10 +24,10 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291204"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
@@ -67,7 +67,7 @@ ms.locfileid: "71291204"
 |----------|-----------|  
 |Terme entré|Windows 7 Professionnel|  
 |Termes de référence|Windows, Windows 7 Professionnel|  
-|Sortie|Windows|  
+|Output|Windows|  
   
  La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants : %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
   

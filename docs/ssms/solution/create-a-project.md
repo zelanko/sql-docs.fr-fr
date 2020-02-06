@@ -1,5 +1,5 @@
 ---
-title: Créer un projet | Microsoft Docs
+title: Créer un projet
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 35d326a7820cb8c002dd08b7176f8dc4e30f4c80
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2ad58a10987050bcd89e17e2a3dbef4fd39586d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264814"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251935"
 ---
 # <a name="create-a-project"></a>Créer un projet
 
@@ -35,7 +35,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
     **Modèles**  
     Dans la zone **Modèles** , sélectionnez un modèle. Une brève description du modèle de projet sélectionné apparaît sous la zone **Modèles** .  
   
-    **Name**  
+    **Nom**  
     Entrez le nom du projet de script que vous voulez créer. Un dossier avec un nom identique à celui du projet est également créé à l’emplacement indiqué dans le champ **Emplacement** . Pour certains projets, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crée des fichiers sources et de prise en charge, qu'il place dans le dossier du nouveau projet.  
   
     > [!NOTE]  
@@ -71,7 +71,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
   
     -   noms réservés pour Microsoft Windows ou MS-DOS (« nul », « aux », « con », « com1 », « lpt1 », etc.)  
   
-    **Emplacement**  
+    **Lieu**  
     Entrez l'emplacement dans lequel vous voulez créer votre projet ou choisissez-en un dans la liste.  
   
     **Parcourir**  
@@ -93,14 +93,14 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
   
 4.  Cliquez sur **OK**.  
   
-Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut des dossiers de projets de scripts est le suivant : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
+Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut pour les dossiers de projets de scripts est : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Voir aussi
 
-[l’Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
+[Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Ajouter un projet existant à une solution](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Ajouter de nouveaux éléments à un projet](../../ssms/solution/add-new-items-to-a-project.md)  
 [Ajouter des éléments existants à un projet](../../ssms/solution/add-existing-items-to-a-project.md)  
-[Modifier l'emplacement par défaut des projets](../../ssms/solution/change-the-default-location-for-projects.md)  
+[Modifier l’emplacement par défaut des projets](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Enlever ou supprimer un élément ou un projet](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Supprimer une solution](../../ssms/solution/delete-a-solution.md)  

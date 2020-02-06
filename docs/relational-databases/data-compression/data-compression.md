@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055450"
 ---
 # <a name="data-compression"></a>Data Compression
@@ -84,7 +84,7 @@ Pour les tables et les index columnstore, tous utilisent toujours la compression
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
   
-### <a name="basics"></a>Principes de base  
+### <a name="basics"></a>Concepts de base  
  Les tables et les index columnstore sont toujours enregistrés avec la compression columnstore. Limitez encore davantage la taille des données columnstore en configurant une compression supplémentaire appelée compression d'archivage.  Pour exécuter la compression d'archivage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l'algorithme de compression Microsoft XPRESS sur les données. Ajoutez ou supprimez la compression d'archivage en utilisant les types de compression de données suivants :  
 -   Utilisez la compression des données **COLUMNSTORE_ARCHIVE** pour compresser les données columnstore au moyen de la compression d’archivage.  
 -   Utilisez la compression des données **COLUMNSTORE** pour décompresser la compression d'archivage. Les données résultantes continuent à être compressées au moyen de la compression columnstore.  
@@ -168,7 +168,7 @@ La procédure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../.
      La suppression d'un index cluster HORS CONNEXION est une opération très rapide, car seuls les niveaux supérieurs des index clusters sont supprimés. Lorsqu'un index cluster est supprimé EN LIGNE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit reconstruire le segment de mémoire deux fois, une fois pour l'étape 1 et une fois pour l'étape 2.  
   
 ## <a name="how-compression-affects-replication"></a>Impact de la compression sur la réplication 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
 Lorsque vous utilisez la compression des données avec la réplication, assurez-vous de prendre en compte les considérations suivantes :  
 -   Quand l’Agent d’instantané génère le script de schéma initial, le nouveau schéma utilise les mêmes paramètres de compression pour la table et ses index. La compression ne peut être activée simplement sur la table et pas sur l'index.  
 -   Pour la réplication transactionnelle, l'option de schéma d'article détermine les objets et propriétés dépendants qui doivent être écrits. Pour plus d’informations, consultez [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
@@ -186,7 +186,7 @@ Le tableau suivant illustre les paramètres de réplication qui contrôlent la c
 |Compresser la table sur l'Abonné si toutes les partitions sont compressées sur le serveur de publication, mais ne pas répliquer le schéma de partition.|False|True|Vérifie si toutes les partitions sont activées pour la compression.<br /><br /> Exclut la compression du script au niveau de la table.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Impact de la compression sur les autres composants SQL Server 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  La compression se produit dans le moteur de stockage et les données sont présentées à la plupart des autres composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un état non compressé. Cela limite les effets de la compression sur les autres composants de la manière suivante :  
 -   Opérations d'importation et d'exportation en bloc  

@@ -19,10 +19,10 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137324"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
@@ -65,7 +65,7 @@ D’autres points sont susceptibles d’affecter cette procédure :
  Pour éviter des erreurs et des conséquences inattendues, avant l’opération de restauration, vous pouvez utiliser la table d’historique [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) pour identifier la base de données et les fichiers journaux de la sauvegarde que vous envisagez de restaurer.  
   
 ## <a name="moving-the-database-files"></a>Déplacement des fichiers de la base de données  
- Si les fichiers figurant dans la sauvegarde de la base de données ne peuvent pas être restaurés sur l’ordinateur de destination, il est nécessaire de transférer les fichiers vers un nouvel emplacement lors de leur restauration. Exemple :  
+ Si les fichiers figurant dans la sauvegarde de la base de données ne peuvent pas être restaurés sur l’ordinateur de destination, il est nécessaire de transférer les fichiers vers un nouvel emplacement lors de leur restauration. Par exemple :  
   
 -   Vous voulez restaurer une base de données depuis des sauvegardes créées dans l'emplacement par défaut de la version antérieure.  
   

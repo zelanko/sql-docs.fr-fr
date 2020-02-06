@@ -22,10 +22,10 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902846"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
@@ -36,7 +36,7 @@ Crée un objet appelé default (valeur par défaut). Lorsqu'elle est liée à un
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des définitions par défaut créées à l'aide du mot clé DEFAULT ou de ALTER TABLE ou CREATE TABLE.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -79,8 +79,8 @@ AS constant_expression [ ; ]
   
 |Définition de la colonne|Pas d'entrée, pas de valeur par défaut|Pas d'entrée, valeur par défaut|Entrée NULL, pas de valeur par défaut|Entrée NULL, valeur par défaut|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|par défaut|NULL|NULL|  
-|**NOT NULL**|Error|par défaut|erreur|erreur|  
+|**NULL**|NULL|default|NULL|NULL|  
+|**NOT NULL**|Error|default|error|error|  
   
  Pour renommer une valeur par défaut, utilisez **sp_rename**. Pour obtenir un rapport sur une valeur par défaut, utilisez **sp_help**.  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-simple-character-default"></a>A. Création d'une valeur par défaut simple de type caractère  
+### <a name="a-creating-a-simple-character-default"></a>R. Création d'une valeur par défaut simple de type caractère  
  L'exemple suivant crée une valeur par défaut de type caractère appelée `unknown`.  
   
 ```sql  

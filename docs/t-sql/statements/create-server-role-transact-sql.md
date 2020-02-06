@@ -25,10 +25,10 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117128"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117128"
 
   Crée un rôle de serveur défini par l'utilisateur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>A. Création d'un rôle de serveur détenu par un compte de connexion  
+### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>R. Création d'un rôle de serveur détenu par un compte de connexion  
  L'exemple suivant crée le rôle de serveur `buyers` détenue par le compte de connexion `BenMiller`.  
   
 ```  

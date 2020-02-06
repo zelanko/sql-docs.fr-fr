@@ -16,10 +16,10 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294215"
 ---
 # <a name="data-profile-viewer"></a>Visionneuse du profil des données
@@ -114,10 +114,10 @@ ms.locfileid: "71294215"
  **Longueur**  
  Affiche les longueurs de colonne trouvées dans la colonne profilée.  
   
- **Compter**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la valeur de la colonne profilée a la longueur affichée dans la colonne **Longueur** .  
   
- **Pourcentage**  
+ **Percentage**  
  Affiche le pourcentage de lignes dans lesquelles la valeur de la colonne profilée a la longueur affichée dans la colonne **Longueur** .  
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Type de profil = Profil de ratio de colonne Null  
@@ -139,10 +139,10 @@ ms.locfileid: "71294215"
  Affiche le nombre de lignes présentes dans la table ou la vue.  
   
 ##### <a name="pattern-distribution-pane"></a>Volet Distribution de modèles  
- **Motif**  
+ **Modèle**  
  Affiche les modèles calculés pour la colonne profilée.  
   
- **Pourcentage**  
+ **Percentage**  
  Affiche le pourcentage de lignes dont les valeurs correspondent au modèle affiché dans la colonne **Modèle** .  
   
 #### <a name="profile-type--column-statistics-profile"></a>Type de profil = Profil de statistiques de colonnes  
@@ -154,7 +154,7 @@ ms.locfileid: "71294215"
  **Maximum**  
  Affiche la valeur maximale trouvée dans la colonne profilée.  
   
- **Moyenne**  
+ **Mean**  
  Affiche la moyenne des valeurs trouvées dans la colonne profilée.  
   
  **Écart type**  
@@ -170,13 +170,13 @@ ms.locfileid: "71294215"
  Affiche le nombre de lignes présentes dans la table ou la vue.  
   
 ##### <a name="detailed-value-distribution-pane"></a>Volet de distribution de valeurs détaillé  
- **Value**  
+ **Valeur**  
  Affiche les valeurs distinctes trouvées dans la colonne profilée.  
   
- **Compter**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée a la valeur affichée dans la colonne **Valeur** .  
   
- **Pourcentage**  
+ **Percentage**  
  Affiche le pourcentage de lignes dans lesquelles la colonne profilée a la valeur affichée dans la colonne **Valeur** .  
   
 #### <a name="profile-type--candidate-key-profile"></a>Type de profil = Profil de clé candidate  
@@ -192,7 +192,7 @@ ms.locfileid: "71294215"
  **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs dupliquées qui ont été détectées dans la colonne profilée.  
   
- **Compter**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Type de profil = Profil de dépendance fonctionnelle  
@@ -243,6 +243,6 @@ ms.locfileid: "71294215"
  **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs de la colonne ou des colonnes du sous-ensemble qui étaient introuvables dans la colonne ou les colonnes du sur-ensemble.  
   
- **Compter**  
+ **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   

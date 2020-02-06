@@ -13,10 +13,10 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006423"
 ---
 # <a name="database-mirroring-history"></a>Historique de la mise en miroir de bases de données
@@ -63,14 +63,14 @@ ms.locfileid: "68006423"
 > [!NOTE]  
 >  Cette boîte de dialogue n'actualise pas automatiquement la liste historique. Pour ce faire, cliquez sur **Actualiser** ou sélectionnez une autre option de filtre. Seuls les membres du rôle de serveur fixe **sysadmin** peuvent mettre à jour l’historique de la mise en miroir.  
   
- **Historique**  
+ **History**  
  Affiche la liste historique. Cliquez sur un en-tête de colonne pour trier la grille par rapport à cette colonne. La liste comporte les colonnes suivantes :  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**Durée enregistrée**|Horodatage de la ligne d'historique.|  
 |**Rôle**|Rôle actuel de la mise en miroir de l'instance de serveur pour cette base de données : Principal ou Miroir.|  
-|**État de la mise en miroir**|État de la base de données :<br /><br /> Déconnecté<br /><br /> Basculement en attente<br /><br /> Suspendu<br /><br /> Synchronisé<br /><br /> Synchronisation<br /><br /> Unknown|  
+|**État de la mise en miroir**|État de la base de données :<br /><br /> Déconnecté<br /><br /> Basculement en attente<br /><br /> Interrompu<br /><br /> Synchronisé<br /><br /> Synchronisation<br /><br /> Unknown|  
 |**Connexion témoin**|État de la connexion témoin dans la session de mise en miroir de la base de données : Connecté ou Déconnecté. En l'absence de témoin, la valeur est NULL.|  
 |**Journal non envoyé**|Taille, en kilo-octets (Ko), du journal non envoyé dans la file d'attente d'envoi sur l'instance de serveur principal.|  
 |**Durée à envoyer**|Durée approximative requise par l’instance de serveur principal pour envoyer le journal qui se trouve actuellement dans la file d’attente d’envoi vers l’instance de serveur miroir ( *taux d’envoi*). Étant donné que le taux de transactions entrantes peut varier sensiblement, la durée d'envoi du journal est une estimation. Cependant, le taux d'envoi peut être utile pour obtenir une estimation approximative de la durée requise pour effectuer un basculement manuel.|  

@@ -1,6 +1,6 @@
 ---
-title: Paramètres de filtre (Explorateur d’objets et Explorateur de l’utilitaire) | Microsoft Docs
-ms.custom: ''
+title: Paramètres de filtre (Explorateur d'objets et Explorateur de l'utilitaire)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3a5cfecc4bf111e16da6451b56637abe9214c65
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe88e33261171b0c1584c89561e9fac2f081b816
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264106"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257182"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Paramètres de filtre (Explorateur d'objets et Explorateur de l'utilitaire)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Permet de sélectionner la manière dont le filtre applique la valeur à la prop
   
     Le filtre affiche les éléments pour lesquels la propriété et la valeur correspondent exactement.  
   
--   **Contient**  
+-   **Contains**  
   
     Le filtre affiche les éléments pour lesquels la propriété contient la valeur. La propriété peut contenir du texte supplémentaire.  
   
@@ -67,7 +67,7 @@ Permet de sélectionner la manière dont le filtre applique la valeur à la prop
   
     Disponible pour les dates, ce filtre affiche les éléments dont la date est antérieure ou postérieure aux deux dates fournies. Sélectionnez **Non compris entre** et quittez la colonne **Opérateur** à l’aide des tabulations pour ajouter une ligne afin d’entrer la seconde date.  
   
-**Value**  
+**Valeur**  
 Tapez la valeur à comparer à la propriété. Pour une date, cliquez sur la flèche vers le bas pour afficher un calendrier vous permettant de sélectionner la date.  
   
 **Effacer le filtre**  

@@ -18,10 +18,10 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114778"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY – refus d'autorisations de serveur (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68114778"
 
   Permet de refuser des autorisations sur un serveur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -149,8 +149,8 @@ L’utilisation de AS dans cette instruction n’implique pas la possibilité d�
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. Refus d'une autorisation CONNECT SQL à une connexion SQL Server et aux principaux auxquels la connexion a accordé à son tour l'autorisation  
- Dans l'exemple ci-dessous, l'autorisation `CONNECT SQL` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Annika` et aux principaux auxquels elle a accordé l'autorisation.  
+### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>R. Refus d'une autorisation CONNECT SQL à une connexion SQL Server et aux principaux auxquels la connexion a accordé à son tour l'autorisation  
+ Dans l'exemple ci-dessous, l'autorisation `CONNECT SQL` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Annika` et aux principaux auxquels elle a accordé l'autorisation.  
   
 ```  
 USE master;  
