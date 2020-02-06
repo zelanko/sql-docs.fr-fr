@@ -40,10 +40,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981710"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - Clause ORDER BY (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "73981710"
   
 -   Déterminer l’ordre dans lequel les valeurs de [fonction de classement](../../t-sql/functions/ranking-functions-transact-sql.md) sont appliquées au jeu de résultats.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  ORDER BY n’est pas pris en charge dans les instructions SELECT/INTO ou CREATE TABLE AS SELECT (CTAS) dans [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
@@ -199,7 +199,7 @@ ORDER BY SchemaName + ''; -- wrong
   
 ## <a name="examples"></a>Exemples  
   
-|Catégorie|Éléments syntaxiques proposés|  
+|Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
 |[Syntaxe de base](#BasicSyntax)|ORDER BY|  
 |[Spécification de l’ordre croissant et décroissant](#SortOrder)|DESC • ASC|  
@@ -212,7 +212,7 @@ ORDER BY SchemaName + ''; -- wrong
 ###  <a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de la clause ORDER BY en utilisant la syntaxe minimale requise.  
   
-#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Spécification d'une colonne unique définie dans la liste de sélection  
+#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>R. Spécification d'une colonne unique définie dans la liste de sélection  
  L'exemple suivant classe le jeu de résultats selon la colonne `ProductID` numérique. Étant donné qu'aucun ordre de tri spécifique n'est spécifié, la valeur par défaut (ordre croissant) est utilisée.  
   
 ```sql
@@ -262,7 +262,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ###  <a name="SortOrder"></a> Spécification de l’ordre de tri croissant et décroissant  
   
-#### <a name="a-specifying-a-descending-order"></a>A. Spécification d'un ordre de tri décroissant  
+#### <a name="a-specifying-a-descending-order"></a>R. Spécification d'un ordre de tri décroissant  
  L'exemple suivant classe le jeu de résultats selon la colonne `ProductID` numérique par ordre décroissant.  
   
 ```sql
@@ -366,7 +366,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Spécification de constantes entières pour les valeurs OFFSET et FETCH  
+#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>R. Spécification de constantes entières pour les valeurs OFFSET et FETCH  
  L'exemple suivant spécifie une constante entière comme valeur pour les clauses OFFSET et FETCH. La première requête retourne toutes les lignes triées selon la colonne `DepartmentID`. Comparez les résultats retournés par cette requête avec les résultats des deux requêtes qui la suivent. La requête suivante utilise la clause `OFFSET 5 ROWS` pour ignorer les 5 premières lignes et retourner toutes les lignes restantes. La dernière requête utilise la clause `OFFSET 0 ROWS` pour démarrer avec la première ligne, puis utilise `FETCH NEXT 10 ROWS ONLY` pour limiter les lignes retournées à 10 depuis le jeu de résultats trié.  
   
 ```sql

@@ -13,10 +13,10 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099608"
 ---
 # <a name="database-properties-files-page"></a>Propriétés de la base de données (page Fichiers)
@@ -65,7 +65,7 @@ ms.locfileid: "68099608"
   
  Pour les fichiers des groupes de fichiers optimisés en mémoire, ce champ doit avoir la valeur **Illimité**.  
   
- **Chemin d'accès**  
+ **Chemin d’accès**  
  Affiche le chemin d'accès du fichier sélectionné. Pour spécifier le chemin d'accès d'un nouveau fichier, cliquez sur le bouton Modifier en regard du chemin d'accès du fichier et parcourez l'arborescence jusqu'au dossier de destination. Vous ne pouvez pas modifier le chemin d'accès d'un fichier existant.  
   
  Pour les fichiers FILESTREAM, le chemin d'accès est un dossier. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crée les fichiers sous-jacents dans ce dossier.  
@@ -78,7 +78,7 @@ ms.locfileid: "68099608"
  **Ajouter**  
  Ajoutez un nouveau fichier à la base de données.  
   
- **Supprimer**  
+ **Remove**  
  Supprimez le fichier sélectionné de la base de données. Un fichier ne peut pas être supprimé s'il n'est pas vide. Le fichier de données primaire et le fichier journal ne peuvent pas être supprimés.  
   
  Pour plus d’informations sur les fichiers, consultez [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md).  

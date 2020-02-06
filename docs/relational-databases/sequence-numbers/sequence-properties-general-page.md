@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126985"
 ---
 # <a name="sequence-properties-general-page"></a>Propriétés de séquence (page Général)
@@ -38,13 +38,13 @@ ms.locfileid: "68126985"
  Spécifiez le schéma qui détiendra cette séquence.  
   
  **Type de données**  
- Une séquence peut être définie comme tout type entier. Cela inclut :  
+ Une séquence peut être définie comme tout type entier. notamment :  
   
 |Type de données|Plage|  
 |---------------|-----------|  
 |**tinyint**|0 à 255|  
 |**smallint**|-32 768 à 32 767|  
-|**Int**|-2 147 483 648 à 2 147 483 647|  
+|**int**|-2 147 483 648 à 2 147 483 647|  
 |**bigint**|-9 223 372 036 854 775 808 à 9 223 372 036 854 775 807|  
   
 -   **décimal** ou **numérique** avec une échelle de 0.  

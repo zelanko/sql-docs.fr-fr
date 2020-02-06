@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254054"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recommandations : Après avoir modifié le mode de récupération  
+##  <a name="FollowUp"></a> Recommandations : Après avoir modifié le mode de récupération  
   
 -   **Après un changement de mode de récupération complète ou de mode de récupération utilisant les journaux de transactions**  
   
@@ -110,13 +110,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Après être passé du mode de récupération utilisant les journaux de transactions au mode de récupération complète, sauvegardez le journal.  
   
-        >**REMARQUE :** Votre stratégie de sauvegarde ne change pas : continuez à effectuer régulièrement des sauvegardes des bases de données, des sauvegardes des journaux et des sauvegardes différentielles.  
+        >**REMARQUE :** votre stratégie de sauvegarde ne change pas : continuez à effectuer régulièrement des sauvegardes des bases de données, des sauvegardes des journaux et des sauvegardes différentielles.  
   
 -   **Après basculement à partir du mode de récupération simple**  
   
     -   Aussitôt après être passé en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions, procédez à une sauvegarde de base de données complète ou différentielle pour lancer la séquence de journaux.  
   
-        >**REMARQUE :** Le passage au mode de restauration complète ou mode de récupération utilisant les journaux de transactions n'est effectif qu'après la première sauvegarde de base de données.  
+        >**REMARQUE :** le passage au mode de restauration complète ou mode de récupération utilisant les journaux de transactions n’est effectif qu’après la première sauvegarde de base de données.  
   
     -   Planifiez des sauvegardes de journaux régulières et mettez à jour votre plan de restauration en conséquence.  
   

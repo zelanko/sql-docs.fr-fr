@@ -1,5 +1,5 @@
 ---
-title: "Tutoriel : Signature de procédures stockées à l'aide d'un certificat"
+title: "Didacticiel : signature de procédures stockées à l'aide d'un certificat"
 ms.custom: seo-dt-2019
 ms.date: 08/23/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095666"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutoriel : Signature de procédures stockées à l'aide d'un certificat
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Didacticiel : signature de procédures stockées à l'aide d'un certificat
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Ce didacticiel explique comment signer des procédures stockées à l'aide d'un certificat généré par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Créez et signez une procédure stockée à l'aide du certificat  
-Utilisez le code suivant pour créer une procédure stockée qui sélectionne des données de la table `Vendor` dans le schéma de la base de données `Purchasing`, ce qui limite l'accès uniquement aux sociétés qui ont une cote de solvabilité de 1. Notez que la première section de la procédure stockée affiche le contexte du compte d'utilisateur qui exécute la procédure stockée, à des fins de démonstration des concepts uniquement. Il n'est pas nécessaire pour répondre aux conditions requises.  
+Utilisez le code suivant pour créer une procédure stockée qui sélectionne des données de la table `Vendor` dans le schéma de la base de données `Purchasing` , ce qui limite l'accès uniquement aux sociétés qui ont une cote de solvabilité de 1. Notez que la première section de la procédure stockée affiche le contexte du compte d'utilisateur qui exécute la procédure stockée, à des fins de démonstration des concepts uniquement. Il n'est pas nécessaire pour répondre aux conditions requises.  
   
 ```sql  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -138,7 +138,7 @@ GO
 Pour plus d’informations sur l’accord d’autorisations à des objets, consultez [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="6-display-the-access-context"></a>6. Affichez le contexte d'accès  
-Pour afficher les droits associés à l'accès de la procédure stockée, exécutez le code suivant pour accorder des droits d'exécution de la procédure stockée à l'utilisateur `TestCreditRatingUser`.  
+Pour afficher les droits associés à l'accès de la procédure stockée, exécutez le code suivant pour accorder des droits d'exécution de la procédure stockée à l'utilisateur `TestCreditRatingUser` .  
   
 ```sql  
 GRANT EXECUTE   
@@ -285,7 +285,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
