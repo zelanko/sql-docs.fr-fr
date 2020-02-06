@@ -1,10 +1,9 @@
 ---
-title: Utiliser des objets de performance | Microsoft Docs
-ms.custom: ''
+title: Utiliser des objets de performance
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,13 +19,15 @@ helpviewer_keywords:
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73e36b4d0ee10d42ec7774e20693d217ee274344
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ee697990c729a28872f8562241cd5dbfdc3225b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260908"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257822"
 ---
 # <a name="use-performance-objects"></a>Utiliser des objets de performance
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,14 +41,14 @@ Les compteurs et les objets de performance du service [!INCLUDE[ssNoVersion](../
   
 Le tableau suivant décrit la dénomination des objets de performance du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent :  
   
-|Type d’instance|Nom de l'objet|  
+|Type d’instance|Nom d’objet|  
 |-----------------|---------------|  
-|Valeur par défaut|**SQLAgent:** _objet_:_compteur_|  
-|Nommé|**SQLAgent$**<br /> **&#42;nom_instance&#42; :** _objet_:_compteur_|  
+|Default|**SQLAgent:** _objet_:_compteur_|  
+|named|**SQLAgent$**<br /> **&#42;nom_instance&#42; :** _objet_:_compteur_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprend les objets de performance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent suivants.  
   
-|Nom de l'objet|Description|  
+|Nom d’objet|Description|  
 |---------------|---------------|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Informations de performance relatives aux travaux démarrés, aux taux de réussite et à l'état actuel|  
 |[SQLAgent:JobSteps](../../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Informations d'état relatives aux étapes de travail|  
@@ -55,6 +56,6 @@ Le tableau suivant décrit la dénomination des objets de performance du service
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|Informations générales sur les performances|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-[Procédure : Démarrer le moniteur système (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[Surveillance et réglage des performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
+[Procédure : démarrer le Moniteur système (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096037"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Utiliser OPENJSON avec le schéma par défaut (SQL Server)
@@ -36,9 +36,9 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **Résultats**  
   
-|Key|Valeur|  
+|Clé|Valeur|  
 |---------|-----------|  
-|NAME|John|  
+|name|John|  
 |surname|Doe|  
 |age|45|  
   
@@ -52,7 +52,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **Résultats**  
   
-|Key|Valeur|  
+|Clé|Valeur|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -85,9 +85,9 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Résultats**  
   
-|Key|Valeur|Type|  
+|Clé|Valeur|Type|  
 |---------|-----------|----------|  
-|Type|1|0|  
+|type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |tags|[ "Sport", "Water polo" ]|4|  
   

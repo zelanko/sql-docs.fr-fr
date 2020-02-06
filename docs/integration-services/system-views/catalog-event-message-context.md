@@ -11,10 +11,10 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296678"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
@@ -26,11 +26,11 @@ ms.locfileid: "71296678"
 
   Affiche des informations sur les conditions associées aux messages d'événements d'exécution, pour les exécutions sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|BIGINT|ID unique du contexte de l'erreur.|  
-|Event_message_id|BIGINT|ID unique du message auquel le contexte est associé.|  
-|Context_depth|INT|À mesure que la profondeur augmente, le contexte s'éloigne de l'erreur. Lorsqu'une erreur se produit, la profondeur du contexte commence à 1. La valeur 0 indique l'état du package avant le démarrage de l'exécution.|  
+|Context_id|bigint|ID unique du contexte de l'erreur.|  
+|Event_message_id|bigint|ID unique du message auquel le contexte est associé.|  
+|Context_depth|int|À mesure que la profondeur augmente, le contexte s'éloigne de l'erreur. Lorsqu'une erreur se produit, la profondeur du contexte commence à 1. La valeur 0 indique l'état du package avant le démarrage de l'exécution.|  
 |Package_path|Nvarchar(max)|Chemin d'accès au package de la source du contexte.|  
 |Context_type|SMALLINT|Type de l'objet qui est la source du contexte. Consultez la section **Remarques** pour obtenir la liste des types de contexte.|  
 |Context_source_name|Nvarchar(4000)|Nom de l'objet qui est la source du contexte.|  

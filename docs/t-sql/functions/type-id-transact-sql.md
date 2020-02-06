@@ -22,18 +22,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71e719d816e1afb9457d99049fa69c4749c18c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098743"
 ---
-# <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
+# <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie l'ID d'un nom de type de données spécifié.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ TYPE_ID ( [ schema_name ] type_name )
  Nom du type de données. *type_name* est de type **nvarchar**. *type_name* peut être un type de données défini par l’utilisateur ou un type de données système.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.  
@@ -58,7 +58,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>A. Recherche des valeurs TYPE ID pour des noms de types à une ou deux composantes  
+### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>R. Recherche des valeurs TYPE ID pour des noms de types à une ou deux composantes  
  L'exemple suivant renvoie la valeur TYPE ID pour des noms de types à une ou deux composantes.  
   
 ```  
@@ -86,7 +86,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C : Recherche de la valeur TYPE ID d'un type de données système  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C. Recherche de la valeur TYPE ID d’un type de données système  
  L'exemple suivant renvoie la valeur `TYPE ID` pour le type de données système `datetime`.  
   
 ```  

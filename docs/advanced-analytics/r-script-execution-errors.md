@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727504"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Erreurs de script R dans SQL Server
@@ -37,7 +37,7 @@ Si le runtime R fonctionne mais que votre script retourne des erreurs, nous vous
 
 Nous vous recommandons également de passer en revue le script et de le réécrire un peu afin de corriger tout problème lié aux types de données susceptible de se produire quand vous déplacez des données entre R et le moteur de base de données. Pour plus d’informations, consultez [Types de données et bibliothèques R](r/r-libraries-and-data-types.md).
 
-Vous pouvez également utiliser le package sqlrutils pour placer votre script R dans une procédure stockée, ce format pouvant être plus facilement consommé. Pour plus d'informations, consultez :
+Vous pouvez également utiliser le package sqlrutils pour placer votre script R dans une procédure stockée, ce format pouvant être plus facilement consommé. Pour plus d'informations, consultez les pages suivantes :
 * [Package sqlrutils](r/ref-r-sqlrutils.md)
 * [Créer une procédure stockée à l’aide de sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

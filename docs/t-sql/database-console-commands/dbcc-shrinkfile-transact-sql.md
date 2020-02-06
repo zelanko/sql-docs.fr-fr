@@ -30,10 +30,10 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930327"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67930327"
 
 Réduit la taille de fichier journal ou de données de la base de données active. Vous pouvez l’utiliser pour déplacer des données entre fichiers du même groupe de fichiers, ce qui a pour effet de supprimer le fichier d’origine et de permettre sa suppression de la base de données. Il est possible de réduire un fichier à une taille inférieure à celle qu’il avait à sa création, réinitialisant ainsi la taille de fichier minimale sur la nouvelle valeur.
   
-![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -96,7 +96,7 @@ Supprime tous les messages d'information.
 ## <a name="result-sets"></a>Jeux de résultats  
 Le tableau suivant décrit les colonnes du jeu de résultats.
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |---|---|
 |**DbId**|Numéro d'identification de base de données du fichier que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente de réduire.|  
 |**FileId**|Numéro d’identification du fichier que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduire.|  

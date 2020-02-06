@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014991"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Crée une ressource d’instruction associée à la connexion spécifiée. Cette fonction est utile pour exécuter plusieurs requêtes.  
@@ -43,11 +43,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$params* [FACULTATIF] : objet **array** de valeurs qui correspondent aux paramètres d’une requête paramétrable. Chaque élément du tableau peut être l’un des éléments suivants :
   
--   Valeur littérale  
+-   Une valeur littérale  
   
 -   Référence à une variable PHP  
   
--   Objet **array** avec la structure suivante :  
+-   Un objet **array** avec la structure suivante :  
   
     ```  
     array(&$value [, $direction [, $phpType [, $sqlType]]])  
@@ -67,7 +67,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [FACULTATIF] : tableau associatif qui définit les <a name="properties">propriétés de la requête</a>. Le tableau suivant liste les clés prises en charge et les valeurs correspondantes :
 
-|Key|Valeurs prises en charge|Description|  
+|Clé|Valeurs prises en charge|Description|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Entier positif|Configure la taille de la mémoire tampon qui contient le jeu de résultats pour un curseur côté client.<br /><br />La valeur par défaut est 10 240 Ko. Pour plus d’informations, voir [Spécifier un type de curseur et sélectionner des lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Entier compris entre 0 et 4 (inclus)|Spécifie le nombre de décimales pour le formatage des valeurs monétaires extraites.<br /><br />Les entiers négatifs et les valeurs supérieures à 4 sont ignorés.<br /><br />Cette option fonctionne seulement si FormatDecimals est **true**.|
@@ -77,7 +77,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 |Défilement|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** ou **false**<br /><br />La valeur par défaut est **true**.|Configure le pilote pour envoyer toutes les données de flux au moment de l’exécution (**true**), ou pour les envoyer par blocs (**false**). La valeur par défaut est **true**. Pour plus d’informations, consultez [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
 Ressource d’instruction. Si la ressource d’instruction ne peut pas être créée, la valeur **false** est retournée.  
   
 ## <a name="remarks"></a>Notes  

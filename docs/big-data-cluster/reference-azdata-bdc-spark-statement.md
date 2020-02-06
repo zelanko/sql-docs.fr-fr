@@ -1,26 +1,26 @@
 ---
 title: Informations de référence sur azdata bdc spark statement
-titleSuffix: SQL Server big data clusters
 description: Article de référence sur les commandes azdata bdc spark statement.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8fcfb09201e9995b9c86f47adeab54fc037b866
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 38d556944db9e8c269fb8acf8f3089050fb8b1d8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531769"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258612"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L’article suivant fournit des références sur les commandes `sql` dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md)
+L’article suivant fournit des références sur les commandes `bdc spark statement` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
 |     |     |
@@ -52,7 +52,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par d
 #### `--query -q`
 Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Augmentez le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
 Crée et exécute une nouvelle instruction dans une session donnée.  Si l’instruction EXECUTE est rapide, le résultat contient la sortie de l’exécution.  Sinon, le résultat peut être récupéré à l’aide de « spark session info » une fois l’instruction terminée.
 ```bash
@@ -66,7 +66,7 @@ azdata spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--session-id -i`
-ID de session Spark.
+Numéro d’ID de session Spark.
 #### `--code -c`
 Chaîne contenant le code à exécuter dans le cadre de l’instruction.
 ### <a name="global-arguments"></a>Arguments globaux
@@ -79,7 +79,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par d
 #### `--query -q`
 Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Augmentez le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
 Permet d’obtenir l’état de l’exécution et le résultat de l’exécution si l’instruction est terminée. L’ID d’instruction est retourné à partir de « spark statement create ».
 ```bash
@@ -93,7 +93,7 @@ azdata spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--session-id -i`
-ID de session Spark.
+Numéro d’ID de session Spark.
 #### `--statement-id -s`
 ID de l’instruction Spark dans l’ID de session donné.
 ### <a name="global-arguments"></a>Arguments globaux
@@ -106,7 +106,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Valeur par d
 #### `--query -q`
 Chaîne de requêtes JMESPath. Pour obtenir plus d’informations et des exemples, consultez [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Augmentez le niveau de détail de la journalisation. Utilisez --debug pour obtenir des journaux de débogage complets.
+Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des journaux de débogage complets.
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
 Annule une instruction dans une session Spark donnée. L’ID d’instruction est retourné à partir de « spark statement create ».
 ```bash
@@ -120,7 +120,7 @@ azdata spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--session-id -i`
-ID de session Spark.
+Numéro d’ID de session Spark.
 #### `--statement-id -s`
 ID de l’instruction Spark dans l’ID de session donné.
 ### <a name="global-arguments"></a>Arguments globaux

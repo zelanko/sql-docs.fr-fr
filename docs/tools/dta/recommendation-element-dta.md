@@ -1,10 +1,7 @@
 ---
-title: Recommendation, élément (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Recommendation, élément (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4fb9df2d769161213090b33755e1f2ecb018afef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a6ad8f298dc633959a3da16376c3e2a486ee807c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034572"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306030"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation, élément (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contient des informations sur les index hypothétiques qui font partie d'une configuration spécifiée par l'utilisateur.  
+
+Contient des informations sur les index hypothétiques qui font partie d'une configuration spécifiée par l'utilisateur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +47,7 @@ ms.locfileid: "68034572"
 |--------------------|-----------------|  
 |**Type de données et longueur**|Aucun.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Utilisable une seule fois par élément **Table** .|  
+|**Occurrence**|facultatif. Utilisable une seule fois par élément **Table** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

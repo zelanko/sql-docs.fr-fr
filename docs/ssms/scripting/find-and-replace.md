@@ -1,6 +1,6 @@
 ---
-title: Rechercher et remplacer | Microsoft Docs
-ms.custom: ''
+title: Rechercher et remplacer
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ddfadb13d2c1882b0c489f8e0567ea26dd2165
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e9af0cfad0823af262595d54242fe65575253c4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265511"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253887"
 ---
 # <a name="find-and-replace"></a>Rechercher et remplacer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "68265511"
  **[expression régulière]**  
  Pour forcer le moteur de recherche à interpréter votre chaîne de recherche comme une expression régulière, cochez la case **Utiliser** sous **Options de recherche** , puis cliquez sur **Expressions régulières**.  
   
- **Générateur d'expressions**  
- Ce bouton triangulaire en regard de la zone **Rechercher** est disponible quand la case **Utiliser** est cochée sous **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, en fonction de l’option **Utiliser** sélectionnée. Choisir un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Rechercher** .  
+ **Générateur d’expressions**  
+ Ce bouton triangulaire en regard de la zone **Rechercher** est disponible quand la case **Utiliser** est cochée sous **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, selon l’option **Utiliser** qui est sélectionnée. Choisir un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Rechercher** .  
   
 ## <a name="replace-with"></a>Remplacer par  
  Ces contrôles vous permettent de spécifier ce qui doit être inséré à la place de la chaîne ou de l'expression trouvée.  
@@ -50,10 +50,10 @@ ms.locfileid: "68265511"
  **Replace with**  
  Pour remplacer les occurrences de la chaîne spécifiée dans la zone **Rechercher** par une autre chaîne de caractères, tapez la chaîne de remplacement dans ce champ. Pour supprimer les occurrences de la chaîne spécifiée dans la zone **Rechercher** , laissez ce champ vide. Sélectionnez la liste déroulante afin d'afficher les 20 dernières entrées. Pour inclure des expressions régulières dans la chaîne spécifiée dans la zone **Remplacer par** , cochez la case **Utiliser** , puis cliquez sur **Expressions régulières**.  
   
- **Générateur d'expressions**  
- Ce bouton triangulaire placé à côté de la zone **Remplacer par** devient disponible quand la case **Utiliser** est cochée dans **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, en fonction de l’option **Utiliser** sélectionnée. Cliquer sur un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Remplacer par** .  
+ **Générateur d’expressions**  
+ Ce bouton triangulaire placé à côté de la zone **Remplacer par** devient disponible quand la case **Utiliser** est cochée dans **Options de recherche**. Cliquez sur ce bouton pour afficher la liste des caractères génériques ou des expressions régulières, selon l’option **Utiliser** qui est sélectionnée. Cliquer sur un élément dans cette liste permet de l’ajouter à la chaîne spécifiée dans la zone **Remplacer par** .  
   
- **Remplacer**  
+ **Replace**  
  Cliquez sur ce bouton pour remplacer l’occurrence en cours de la chaîne spécifiée dans la zone **Rechercher** par la chaîne spécifiée dans la zone **Remplacer par** et pour rechercher l’occurrence suivante à l’intérieur de la zone de recherche spécifiée dans **Regarder dans**.  
   
  **Remplacer tout**  
@@ -68,7 +68,7 @@ ms.locfileid: "68265511"
  Ce bouton est activé lorsque la valeur spécifiée pour **Regarder dans** inclut plusieurs fichiers. Cliquez sur ce bouton si vous ne voulez pas inspecter ni modifier le fichier en cours. La recherche continue dans le fichier suivant de la liste **Regarder dans**.  
   
 ## <a name="look-in"></a>Regarder dans  
- **Regarder dans**  
+ **Look in**  
  Sélectionnez l’emplacement dans lequel vous souhaitez rechercher le texte spécifié dans **Rechercher**. Les options disponibles incluent **Document actif**, qui permet d’effectuer la recherche dans la fenêtre de document qui était active au moment de l’ouverture de la boîte de dialogue, et **Tous les documents ouverts**, qui permet d’effectuer la recherche dans toutes les fenêtres qui sont actuellement ouvertes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-options"></a>Options de recherche  
@@ -78,7 +78,7 @@ ms.locfileid: "68265511"
  Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec le contenu et la casse. Par exemple, si vous recherchez «**MonObjet**» en cochant la case **Respecter la casse** , la recherche va retourner « MonObjet », mais pas « monobjet » ni « MONOBJET».  
   
  **Mot entier**  
- Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec les mots entiers. Si vous recherchez **MonObjet** , par exemple, « MonObjet » sera retourné comme résultat, mais pas « CMonObjet » ou « MonObjetC ».  
+ Quand cette case est cochée, les fenêtres de résultats de la recherche n’affichent que les instances de la chaîne spécifiée dans **Rechercher** qui concordent avec les mots entiers. Si vous recherchez **MonObjet** , par exemple, « MonObject » est retourné comme résultat, mais pas « CMonObjet » ou « MonObjetC ».  
   
  **Rechercher vers le haut**  
  Effectuez la recherche à partir de l'emplacement du curseur jusqu'au début du document.  
@@ -86,7 +86,7 @@ ms.locfileid: "68265511"
  **Rechercher le texte masqué**  
  Recherchez les occurrences dans le texte qui est masqué ou réduit.  
   
- **Utiliser**  
+ **Utilisation**  
  Indique comment interpréter les caractères spéciaux qui sont entrés dans les zones de texte **Rechercher** et **Remplacer par** . Les options comprennent **Caractères génériques** et **Expressions régulières**.  
   
  **Regular Expressions**  
@@ -98,7 +98,7 @@ ms.locfileid: "68265511"
  **Suivant**  
  Commence à rechercher le texte spécifié dans la zone **Rechercher** .  
   
- **Remplacer**  
+ **Replace**  
  Cliquez sur ce bouton pour remplacer l’occurrence en cours de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans **Remplacer par**et pour rechercher l’occurrence suivante à l’intérieur de la zone de recherche spécifiée dans **Regarder dans**.  
   
  **Replace All**  

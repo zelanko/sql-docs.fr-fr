@@ -9,10 +9,10 @@ ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 255201c7f24f013becd8230e9329e41a6d6a8d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576392"
 ---
 # <a name="report-builder-functions---avg-function"></a>Fonctions du Générateur de rapports - Avg
@@ -32,10 +32,10 @@ Avg(expression, scope, recursive)
  *expression*  
  (**Flottant**) Expression sur laquelle effectuer l’agrégation.  
   
- *portée*  
+ *scope*  
  (**Chaîne**) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
- *récursifs*  
+ *recursive*  
  (**Type énuméré**) Facultatif. **Simple** (par défaut) ou **RdlRecursive**. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  

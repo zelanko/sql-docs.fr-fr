@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909483"
 ---
 # <a name="filter-a-trace"></a>Filtrer une trace
@@ -63,7 +63,7 @@ ms.locfileid: "72909483"
   
 |Opérateur relationnel|Symbole d'opérateur|Description|  
 |-------------------------|---------------------|-----------------|  
-|Correspond à|Correspond à|Indique que les données d'événements de trace doivent correspondre au texte entré. Autorise plusieurs valeurs.|  
+|Correspond à|LIKE|Indique que les données d'événements de trace doivent correspondre au texte entré. Autorise plusieurs valeurs.|  
 |Ne correspond pas à|Ne correspond pas à|Indique que les données d'événements de trace ne doivent pas correspondre au texte entré. Autorise plusieurs valeurs.|  
 |Égal à|=|Indique que les données d'événements de trace doivent être égales à la valeur entrée. Autorise plusieurs valeurs.|  
 |Différent de|<>|Indique que les données d'événements de trace ne doivent pas être égales à la valeur entrée. Autorise plusieurs valeurs.|  
@@ -82,13 +82,13 @@ ms.locfileid: "72909483"
 |**BinaryData**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
-|**Unité centrale**|=, <>, >=, <=|  
+|**UC**|=, <>, >=, <=|  
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Duration**|=, <>, >=, \<=|  
+|**Durée**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
-|**Erreur**|=, <>, >=, <=|  
+|**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE, NOT LIKE|  
 |**GUID**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
@@ -115,20 +115,20 @@ ms.locfileid: "72909483"
 |**OwnerID**|=, <>, >=, <=|  
 |**OwnerName**|LIKE, NOT LIKE|  
 |**ParentName**|LIKE, NOT LIKE|  
-|**Autorisations**|=, <>, >=, <=|  
+|**autorisations**|=, <>, >=, <=|  
 |**ProviderName**|LIKE, NOT LIKE|  
 |**Reads**|=, <>, >=, <=|  
 |**RequestID**|=, <>, >=, <=|  
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**Niveau de gravité**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
-|**État**|=, <>, >=, <=|  
-|**Réussi**|=, <>, >=, <=|  
+|**State**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour filtrer les événements de cette colonne de données. Pour plus d’informations, consultez [Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  

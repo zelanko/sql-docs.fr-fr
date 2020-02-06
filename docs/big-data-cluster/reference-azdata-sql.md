@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 951598c895fe322ee1a8b32cbbc2dc29b20c8e1a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f8fa1ca8df7f4d72c6df9b252d639f8771dee30c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531663"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908736"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L’article suivant fournit des informations de référence sur les commandes `sql` de l’outil `azdata`. Pour plus de détails sur les autres commandes `azdata`, consultez les [informations de référence relatives à azdata](reference-azdata.md)
+L’article suivant fournit des références sur les commandes `sql` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Commandes
 |     |     |
@@ -51,13 +51,12 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 ## <a name="azdata-sql-query"></a>azdata sql query
 La commande query permet l’exécution d’une requête T-SQL.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q --database -d
 ```
 ### <a name="examples"></a>Exemples
 Sélectionner la liste des noms des tables.  La base de données est « master » par défaut.
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query -q 'SELECT name FROM SYS.TABLES'
 ```
 ### <a name="required-parameters"></a>Paramètres obligatoires
 #### `--database -d`
@@ -78,4 +77,4 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus de détails sur les autres commandes `azdata`, consultez les [informations de référence relatives à azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil `azdata`, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](reference-azdata.md). Pour plus d’informations sur l’installation de l’outil `azdata`, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](deploy-install-azdata.md).

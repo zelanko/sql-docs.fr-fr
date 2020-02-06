@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906882"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67906882"
 
   Renvoie des données de type caractère converties à partir de données numériques.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +46,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  Expression de type de données numérique approché (**float**) avec une virgule décimale.  
   
  *length*  
- Longueur totale. Inclut la virgule décimale, le signe, les chiffres et les espaces. La valeur par défaut est 10.  
+ Longueur totale. Inclut la virgule décimale, le signe, les chiffres et les espaces. La valeur par défaut est de 10.  
   
  *decimal*  
  Représente le nombre de décimales à droite de la virgule décimale. La valeur *decimal* doit être inférieure ou égale à 16. Si la valeur *decimal* est supérieure à 16, le résultat est tronqué à seize chiffres à droite de la virgule décimale.  

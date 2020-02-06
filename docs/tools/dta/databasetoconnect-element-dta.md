@@ -1,10 +1,7 @@
 ---
-title: Élément DatabaseToConnect, (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: DatabaseToConnect, élément (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e37bef50b77ded9d41fde856cbe4beebdf05cb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 5ea514d4f401eeebc822e8d6bbaafcf09282da34
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119792"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306908"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect, élément (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie la première base de données à laquelle l'Assistant Paramétrage du moteur de base de données se connecte lors du paramétrage d'une charge de travail.  
+
+Spécifie la première base de données à laquelle l'Assistant Paramétrage du moteur de base de données se connecte lors du paramétrage d'une charge de travail.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +43,7 @@ ms.locfileid: "68119792"
 |--------------------|-----------------|  
 |**Type de données et longueur**|**string**, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Peut être utilisé une seule fois pour chaque élément **TuningOptions** .|  
+|**Occurrence**|facultatif. Peut être utilisé une seule fois pour chaque élément **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

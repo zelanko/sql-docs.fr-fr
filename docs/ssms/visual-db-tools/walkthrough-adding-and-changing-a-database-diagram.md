@@ -1,10 +1,9 @@
 ---
-title: 'Procédure pas à pas : ajouter et modifier un diagramme de base de données | Microsoft Docs'
-ms.custom: ''
+title: ajouter et modifier un diagramme de base de données
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +13,16 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258921"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246248"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un diagramme de base de données
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajout et modification d’un diagramme de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cette procédure pas à pas montre comment créer et modifier un diagramme de base de données et apporter des modifications à la base de données par l’intermédiaire du composant des diagrammes de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
   
@@ -45,7 +46,7 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 3.  Cliquez avec le bouton droit sur le nœud Diagrammes de base de données et sélectionnez **Nouveau diagramme de base de données**.  
   
-    Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
+    Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Choisissez **Oui**.  
   
     La boîte de dialogue **Ajouter une table** s’affiche.  
   
@@ -59,7 +60,7 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 1.  Cliquez avec le bouton droit sur la table `Address` . Dans le menu contextuel, pointez sur **Vue Table**, puis cliquez sur **Standard**.  
   
-    La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
+    La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
   
 2.  Cliquez avec le bouton droit sur la table `Address` , cliquez sur **Vue Table** et sélectionnez **Clés**.  
   
@@ -73,15 +74,15 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 2.  Dans la boîte de dialogue **Choisir un nom** , cliquez sur **OK** pour accepter le nom par défaut **Table1**.  
   
-    Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
+    Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
   
 3.  Ajoutez les informations suivantes à la **Table1**:  
   
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**Int**|checked|  
-    |**T1col2**|**varchar(50)**|checked|  
-    |**T1col3**|**float**|checked|  
+    |**T1col1**|**int**|cochée|  
+    |**T1col2**|**varchar(50)**|cochée|  
+    |**T1col3**|**float**|cochée|  
   
 4.  Cliquez avec le bouton droit sur `T1col1` , puis sélectionnez **Définir la clé primaire**.  
   
@@ -122,9 +123,9 @@ Vous pouvez ajouter des contraintes de validation et établir des relations entr
   
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |-------------------|-----------------|-------------------|  
-    |**T2col1**|**Int**|non validé|  
-    |**T2col2**|**varchar(50)**|checked|  
-    |**T2col3**|**xml**|checked|  
+    |**T2col1**|**int**|non validé|  
+    |**T2col2**|**varchar(50)**|cochée|  
+    |**T2col3**|**xml**|cochée|  
   
     > [!NOTE]  
     > Les colonnes situées du côté clé primaire d'une relation de clé étrangère doivent faire partie d'une clé primaire ou d'une contrainte unique.  
@@ -196,7 +197,7 @@ Toutes les modifications apportées au schéma ne sont publiées dans la base de
   
 3.  En cas d’erreurs, la boîte de dialogue **Notifications post-enregistrement** affiche les erreurs et leurs origines. Corrigez les erreurs et réenregistrez le schéma.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Il s'agit d'un schéma de base contenant deux nouvelles tables et deux tables existantes, mais il illustre la possibilité de créer un schéma d'une base de données existante ou de créer un nouveau schéma visuel. Suggestions pour des recherches approfondies :  
   
 -   Créer des nouveaux schémas contenant des groupes de tables associées  

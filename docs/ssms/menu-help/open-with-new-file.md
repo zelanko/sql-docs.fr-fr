@@ -1,6 +1,6 @@
 ---
-title: Ouvrir avec (Nouveau fichier) | Microsoft Docs
-ms.custom: ''
+title: Ouvrir avec (Nouveau fichier)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252053"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245782"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Cliquez sur **Ouvrir** pour ouvrir le document dans l’éditeur sélectionné.
 **Ajouter**  
 Cliquez sur ce bouton pour ajouter un programme à la liste **Sélectionnez le programme à ouvrir**. Vous pouvez soit taper le chemin du programme dans le champ **Nom du programme** , soit rechercher l’emplacement du programme en cliquant sur **Parcourir**. Dans le champ **Nom convivial**, entrez un nom de programme à afficher dans la liste **Sélectionnez le programme à ouvrir**.  
   
-**Supprimer**  
+**Remove**  
 Pour supprimer un programme, sélectionnez-le, puis cliquez sur **Supprimer**.  
   
 **Par défaut**  

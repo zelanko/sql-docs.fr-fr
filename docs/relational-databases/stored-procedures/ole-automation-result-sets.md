@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eebab07a066192b473aaf0a303515aa894be2aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136821"
 ---
 # <a name="ole-automation-result-sets"></a>Jeux de résultats OLE Automation
@@ -38,8 +38,8 @@ ms.locfileid: "68136821"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||**Int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
-|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+||**int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
+|**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  

@@ -1,10 +1,9 @@
 ---
-title: Index de texte intégral, boîte de dialogue (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Index de texte intégral
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254616"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247262"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ Affiche le nom du catalogue de texte intégral dans lequel cet index de texte in
 **Catégorie Identité**  
 Développée, elle affiche le champ Nom de cet index.  
   
-**Name**  
+**Nom**  
 Affiche le nom spécifié par le système de cet index de texte intégral.  
   
 **Catégorie Concepteur de tables**  
@@ -88,12 +89,12 @@ Affiche la date et l'heure de démarrage de l'analyse actuelle ou de la dernièr
 Affiche la date et l'heure de démarrage de la prochaine analyse.  
   
 **Type de l'analyse actuelle ou de la dernière analyse**  
-Affiche le type de l’analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
+Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
   
 **Nom d'index unique**  
 Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser l'Assistant Indexation de texte intégral](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
+[Utiliser l’Assistant Indexation de texte intégral](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
 [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
   

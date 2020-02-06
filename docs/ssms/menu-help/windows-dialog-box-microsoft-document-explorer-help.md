@@ -1,6 +1,6 @@
 ---
-title: Fenêtres, boîte de dialogue (Aide de Microsoft Document Explorer) | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Fenêtres (Aide de Microsoft Document Explorer)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,28 +12,28 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93f9f21bd681abdd95ca326e44ee4911f2e365ed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3b909491eb6228225fe9e54390842e26e590d8dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263413"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240569"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Boîte de dialogue Fenêtres (Aide de Microsoft Document Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cette boîte de dialogue vous permet d'afficher, de fermer et d'organiser les documents ouverts dans les éditeurs et concepteurs. Vous pouvez afficher cette boîte de dialogue en cliquant sur **Fenêtres** dans le menu **Fenêtre** .  
   
 ## <a name="options"></a>Options  
-**Name**  
+**Nom**  
 Affiche les noms des fenêtres de documents et d'outils, avec l'élément actif sélectionné.  
   
-**Chemin d'accès**  
+**Chemin d’accès**  
 Affiche le chemin d'accès complet des documents. Les fenêtres n'utilisent généralement pas de chemin d'accès.  
   
-**Activate**  
+**Activer**  
 Fait de la fenêtre de document ou d’outil sélectionnée l’élément actif dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] Document Explorer.  
   
-**Enregistrer**  
+**Save**  
 Enregistre la fenêtre sélectionnée. Toutes les fenêtres ne peuvent pas être enregistrées.  
   
 **Fermer les fenêtres**  

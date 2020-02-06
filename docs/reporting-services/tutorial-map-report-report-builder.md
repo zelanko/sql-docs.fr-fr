@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041572"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
@@ -41,7 +41,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
 ### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Pour ajouter une carte dans un nouveau rapport à l'aide de l'Assistant Carte  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou depuis le mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -118,7 +118,7 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
   
 1.  Sous l’onglet **Exécuter** > **Conception** pour rebasculer en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click the **New layer wizard** button ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -234,7 +234,7 @@ Utilisez l'Assistant Couche pour ajouter une couche qui affiche un itinéraire e
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur le bouton **Assistant Nouvelle couche** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click the **New layer wizard** button ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Dans la page **Choisir une source de données spatiales** , sélectionnez **Requête spatiale SQL Server** et cliquez sur **Suivant**.  
   
@@ -289,7 +289,7 @@ Dans cette section, vous ajoutez une couche qui affiche un arrière-plan de mosa
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **Ajouter une couche** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click **Add Layer** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
   
@@ -453,7 +453,7 @@ Pour représenter un nouveau magasin qui n’a pas encore été mis en place, da
   
 1.  Basculez en mode Conception.  
   
-2.  Double-cliquez sur la carte pour afficher le volet **Couches** . Dans la barre d’outils, cliquez sur **Ajouter une couche** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), puis cliquez sur **Couche de points**.  
+2.  Double-cliquez sur la carte pour afficher le volet **Couches** . On the toolbar, click **Add Layer**  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), then click **Point Layer**.  
   
     Une nouvelle couche de points est ajoutée à la carte. Par défaut, le type de données spatiales de la couche de points est **Incorporé**.  
   
@@ -536,7 +536,7 @@ Si vous l’enregistrez sur un serveur de rapports, vous pouvez le voir ici.
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Ceci conclut la procédure pas à pas décrivant comment ajouter une carte à votre rapport.  
   
 Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  

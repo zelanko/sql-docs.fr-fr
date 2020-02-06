@@ -9,10 +9,10 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577173"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Fonctions du Générateur de rapports - RunningValue
@@ -35,7 +35,7 @@ RunningValue(expression, function, scope)
  *function*  
  (**Enum**) Nom de la fonction d’agrégation à appliquer à l’expression, par exemple **Sum**. Cette fonction ne peut pas être de type **RunningValue**, **RowNumber**ou **Aggregate**.  
   
- *portée*  
+ *scope*  
  (**String**) Constante de chaîne qui représente le nom d’un dataset, d’une région de données ou d’un groupe, ou Null (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer l’agrégation. **Nothing** spécifie le contexte le plus à l'extérieur, habituellement le dataset du rapport.  
   
 ## <a name="return-type"></a>Type de retour  
