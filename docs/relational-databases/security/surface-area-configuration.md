@@ -18,10 +18,10 @@ ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d366634dcfc81fc62dded3205320fca53b193b52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127074"
 ---
 # <a name="surface-area-configuration"></a>Configuration de la surface d'exposition
@@ -42,7 +42,7 @@ ms.locfileid: "68127074"
   
     -   Utilisez la zone **Configuration du réseau SQL Server** pour activer des protocoles de connexion et des options de connexion telles que les ports TCP/IP fixes ou le forçage du chiffrement.  
   
- Pour plus d’informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). La connectivité distante peut également dépendre de la configuration correcte d'un pare-feu. Pour plus d’informations, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). La connectivité distante peut également dépendre de la configuration correcte d'un pare-feu. Pour plus d’informations, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="enabling-and-disabling-features"></a>Activation et désactivation de fonctionnalités  
  L'activation et la désactivation de fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être configurée à l'aide de facettes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -61,7 +61,7 @@ ms.locfileid: "68127074"
   
  Pour vérifier périodiquement la configuration d'une facette, utilisez la Gestion basée sur des stratégies. Pour plus d’informations sur la gestion basée sur des stratégies, consultez [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
- Vous pouvez également définir des options du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de la procédure stockée **sp_configure**. Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Vous pouvez également définir des options du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de la procédure stockée **sp_configure** . Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  Pour modifier la propriété **EnableIntegrated Security** de [!INCLUDE[ssRS](../../includes/ssrs.md)], utilisez les paramètres de propriété dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour modifier les propriétés **Événements programmés et remise du rapport activés** et **Service Web et accès HTTP activés** , modifiez le fichier de configuration **RSReportServer.config** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68127074"
  Pour désactiver des points de terminaison, utilisez la Gestion basée sur des stratégies. Pour créer et modifier les propriétés de points de terminaison, utilisez [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) et [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
 ## <a name="related-content"></a>Contenu associé  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

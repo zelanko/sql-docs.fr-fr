@@ -22,18 +22,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135922"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette fonction retourne le rang de chaque ligne dans une partition de jeu de résultats, sans vide dans les valeurs de classement. Le rang d’une ligne spécifique est égal à un plus le nombre de valeurs de rang distinctes précédant cette ligne particulière.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Arguments  
  \<partition_by_clause>  
-Divise d’abord le jeu de résultats produit par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions. La fonction `DENSE_RANK` est ensuite appliquée à chaque partition. Pour connaître la syntaxe de `PARTITION BY`, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+Divise d’abord le jeu de résultats produit par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions. La fonction `DENSE_RANK` est ensuite appliquée à chaque partition. Pour connaître la syntaxe de [, consultez ](../../t-sql/queries/select-over-clause-transact-sql.md)OVER, clause &#40;Transact-SQL&#41;`PARTITION BY`.  
   
  \<order_by_clause>  
 Détermine l’ordre dans lequel la fonction `DENSE_RANK` s’applique aux lignes d’une partition.  
@@ -60,7 +60,7 @@ L’ordre de tri utilisé pour l’ensemble de la requête détermine l’ordre 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-ranking-rows-within-a-partition"></a>A. Classement des lignes d'une partition  
+### <a name="a-ranking-rows-within-a-partition"></a>R. Classement des lignes d'une partition  
 L’exemple suivant classe les produits de l’inventaire par les emplacements d’inventaire spécifiés, en fonction de leurs quantités. `DENSE_RANK` partitionne le jeu de résultats par `LocationID` et classe logiquement le jeu de résultats par `Quantity`. Notez que les produits 494 et 495 ont la même quantité. Étant donné que tous les deux ont la même valeur de quantité, ils ont tous les deux la valeur de rang 1.  
   
 ```  
@@ -174,7 +174,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D : Classement des lignes d'une partition  
+### <a name="d-ranking-rows-within-a-partition"></a>D. Classement des lignes dans une partition  
 L’exemple suivant classe les commerciaux de chaque secteur de vente en fonction de leurs ventes totales. `DENSE_RANK` partitionne l’ensemble de lignes par `SalesTerritoryGroup` et trie le jeu de résultats par `SalesAmountQuota`.  
   
 ```  

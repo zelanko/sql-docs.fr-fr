@@ -13,10 +13,10 @@ ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c19a71b12b16ddd408e7cdd356debc5ec87de43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096983"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valeurs pour les déclarations &lt;xsd:simpleType&gt;
@@ -38,7 +38,7 @@ ms.locfileid: "68096983"
 |**decimal**|Les valeurs de ce type doivent être conformes au format du type numérique SQL. Ce type représente en interne la prise en charge des nombres jusqu'à un total de 38 chiffres, 10 de ces positions étant réservées à la précision fractionnelle.|  
 |**float**|Les valeurs de ce type doivent être conformes au format du type **real** SQL.|  
 |**double**|Les valeurs de ce type doivent être conformes au format du type **float** SQL.|  
-|**chaîne**|Les valeurs de ce type doivent être conformes au format du type **nvarchar(max)** SQL.|  
+|**string**|Les valeurs de ce type doivent être conformes au format du type **nvarchar(max)** SQL.|  
 |**anyURI**|Les valeurs de ce type ne peuvent excéder 4 000 caractères Unicode.|  
   
 ## <a name="see-also"></a>Voir aussi  

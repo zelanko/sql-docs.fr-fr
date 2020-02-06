@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041317"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
@@ -43,7 +43,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
 ### <a name="to-create-a-chart-report"></a>Pour créer un rapport de graphique  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , ou en mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -279,7 +279,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 6.  (Facultatif) Vous devrez peut-être agrandir la zone de texte **Titre** pour contenir les deux lignes de texte. Tirez sur les flèches gauche-droite quand vous cliquez au milieu du bord inférieur. Et vous devrez peut-être faire glisser le haut du graphique pour que le titre soit visible.  
   
-    Ce titre s’affiche dans la partie supérieure du rapport. Quand aucun en-tête de page n’est défini, les éléments situés en haut du corps du rapport font office d’en-tête de rapport.  
+    Ce titre s’affiche dans la partie supérieure du rapport. En l’absence d’en-tête de page défini, les éléments situés au-dessus du corps du rapport font office d’en-tête de rapport.  
   
 7.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -297,7 +297,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 4.  Cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914271"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de serveur (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67914271"
 
   Permet de supprimer des autorisations GRANT et DENY au niveau serveur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -145,8 +145,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-revoking-a-permission-from-a-login"></a>A. Révocation d'une autorisation pour une connexion  
- Dans l'exemple ci-dessous, l'autorisation `VIEW SERVER STATE` est révoquée pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`.  
+### <a name="a-revoking-a-permission-from-a-login"></a>R. Révocation d'une autorisation pour une connexion  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW SERVER STATE` est révoquée pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof`.  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. Révocation de l'option WITH GRANT  
- Dans l'exemple ci-dessous, le droit d'accorder l'autorisation `CONNECT SQL` est révoqué pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves`.  
+ Dans l'exemple ci-dessous, le droit d'accorder l'autorisation `CONNECT SQL` est révoqué pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves`.  
   
 ```  
 USE master;  

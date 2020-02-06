@@ -1,10 +1,9 @@
 ---
-title: Opérateurs | Microsoft Docs
-ms.custom: ''
+title: Opérateurs
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260079"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247630"
 ---
 # <a name="operators"></a>Opérateurs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ Les informations de contact d'un opérateur définissent la façon dont l'opéra
   
         **Cc**:  
   
-        **Pour**:  
+        **À** :  
   
     > [!NOTE]  
     > Si vous utilisez un système de radiomessagerie alphanumérique à faible capacité, vous pouvez raccourcir le texte à envoyer en éliminant le texte d'erreur de la notification par radiomessagerie. C'est le cas par exemple des systèmes limités à 64 caractères par page.  
@@ -123,7 +124,7 @@ Un ou plusieurs des éléments suivants sont nécessaires pour avertir un opéra
   
 |||  
 |-|-|  
-|**Tâches**|**Rubrique**|  
+|**Tâches :**|**Rubrique**|  
 |Tâches associées à la création d'un opérateur|[Créer un opérateur](../../ssms/agent/create-an-operator.md)<br /><br />[Désigner un opérateur de prévention de défaillance](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Tâches associées à l'affectation d'alertes|[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

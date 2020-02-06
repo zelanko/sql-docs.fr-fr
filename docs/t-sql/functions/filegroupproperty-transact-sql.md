@@ -21,10 +21,10 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071430"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68071430"
 
 Cette fonction retourne la valeur de propriété du groupe de fichiers pour un nom spécifié et une valeur de groupe de fichiers.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ Expression de type **varchar(128)** qui retourne le nom de la propriété du gro
 |**IsDefault**|Groupe de fichiers par défaut.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = entrée non valide.|  
   
 ## <a name="return-types"></a>Types de retour  
-**Int**  
+**int**  
   
 ## <a name="remarks"></a>Notes  
 *filegroup_name* correspond à la colonne **name** de la vue de catalogue **sys.filegroups**.  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155797"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70155797"
 
 Retourne une valeur mise en forme avec la culture facultative et le format spécifiés. Utilisez la fonction FORMAT pour la mise en forme comme chaînes de valeurs de date/heure et de valeurs numériques compatibles avec les paramètres régionaux. Pour les conversions de type de données général, continuez à utiliser CAST ou CONVERT.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,18 +74,18 @@ FORMAT ( value, format [, culture ] )
   
  Le tableau suivant répertorie les types de données acceptables pour l’argument *value*, ainsi que leurs types équivalents de mappage .NET Framework.  
   
-|Catégorie|Type|Type .NET|  
+|Category|Type|Type .NET|  
 |--------------|----------|---------------|  
-|Numérique|BIGINT|Int64|  
-|Numérique|INT|Int32|  
+|Numérique|bigint|Int64|  
+|Numérique|int|Int32|  
 |Numérique|SMALLINT|Int16|  
 |Numérique|TINYINT|Byte|  
 |Numérique|Décimal|SqlDecimal|  
-|Numérique|NUMERIC|SqlDecimal|  
-|Numérique|FLOAT|Double|  
-|Numérique|REAL|Unique|  
-|Numérique|SMALLMONEY|Décimal|  
-|Numérique|money|Décimal|  
+|Numérique|numeric|SqlDecimal|  
+|Numérique|float|Double|  
+|Numérique|real|Unique|  
+|Numérique|SMALLMONEY|Decimal|  
+|Numérique|money|Decimal|  
 |Date et heure|Date|DateTime|  
 |Date et heure|time|TimeSpan|  
 |Date et heure|DATETIME|DateTime|  
@@ -95,7 +95,7 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-simple-format-example"></a>A. Exemple FORMAT simple
+### <a name="a-simple-format-example"></a>R. Exemple FORMAT simple
 
  L'exemple suivant retourne une date simple mise en forme pour différentes cultures.  
   

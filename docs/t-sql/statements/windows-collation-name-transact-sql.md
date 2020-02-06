@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874463"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70874463"
 
 Spécifie le nom de classement Windows dans la clause COLLATE dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nom de classement Windows est composé d'un indicateur de classement et de styles de comparaison.
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,7 +54,7 @@ Spécifie les règles de classement de base utilisées par le classement Windows
 - Les règles de tri et de comparaison appliquées quand le tri de dictionnaire est spécifié. Les règles de tri sont basées sur l'alphabet ou la langue ;
 - La page de codes utilisée pour stocker les données **varchar**.
 
-Exemples :
+Quelques exemples :
 
 - Latin1\_General ou Français : les deux utilisent la page de codes 1252.
 - Turkish : utilise la page de code 1254.
@@ -72,12 +72,12 @@ L’oubli de cette option ne suit pas les caractères Kana, alors que **KS** les
 L’oubli de cette option ne tient pas compte des largeurs, alors que **WS** les respecte.
 
 *VariationSelectorSensitivity*  
-- **S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **S’applique à** : Depuis [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - L’oubli de cette option spécifie le non-respect du sélecteur de variation, **VSS** spécifie le respect du sélecteur de variation.
 
 **UTF8**  
-- **S’applique à** : À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **S’applique à** : Depuis [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Spécifie l’encodage UTF-8 à utiliser pour les types de données éligibles. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -139,7 +139,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Amharique (Éthiopie)|Latin1_General_100_|Non disponible|
 |Arménien (Arménie)|Cyrillic_General_100_|Non disponible|
 |Assamais (Inde)|Assamese_100_ <sup>1</sup>|Non disponible|
-|Bangla (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponible|
+|Bengali (Bangladesh)|Bengali_100_<sup>1</sup>|Non disponible|
 |Bachkir (Russie)|Bashkir_100_|Non disponible|
 |Basque (Basque)|Latin1_General_100_|Non disponible|
 |Bengali (India)|Bengali_100_<sup>1</sup>|Non disponible|
@@ -199,7 +199,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Sami (Lule, Norvège)|Sami_Norway_100_|Non disponible|
 |Same de Lule (Suède)|Sami_Sweden_Finland_100_|Non disponible|
 |Same du nord (Finlande)|Sami_Sweden_Finland_100_|Non disponible|
-|Sami (Nord, Norvège)|Sami_Norway_100_|Non disponible|
+|Same du nord (Norvège)|Sami_Norway_100_|Non disponible|
 |Same du nord (Suède)|Sami_Sweden_Finland_100_|Non disponible|
 |Same de Skolt (Finlande)|Sami_Sweden_Finland_100_|Non disponible|
 |Same du sud (Norvège)|Sami_Norway_100_|Non disponible|
@@ -233,7 +233,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Hindi|Hindi|
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Lithuanian_Classic|Lithuanian_Classic|
-|Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Macedonian|Macedonian|
+|Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Macédonien|Macédonien|
 
 <sup>1</sup> Les classements Windows Unicode seulement ne peuvent être appliqués qu’à des données de niveau colonne ou de niveau expression. Ils ne peuvent pas être utilisés en tant que classements de serveur ou de base de données.
 

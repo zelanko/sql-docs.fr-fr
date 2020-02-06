@@ -1,10 +1,7 @@
 ---
-title: Élément Banner (ssbdiagnose) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Élément Banner
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +11,23 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 202652271b9d8de9603706b9d1c7be8ca9411bb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 446a022570781aa6f965ee6f4728e833620158c2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986209"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257698"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Élément Banner (ssbdiagnose)
+
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Identifie quel utilitaire a généré le fichier de sortie XML **ssbdiagnose** .  
+
+Identifie quel utilitaire a généré le fichier de sortie XML **ssbdiagnose** .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +41,7 @@ ms.locfileid: "67986209"
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |**title**|Identifie l’utilitaire qui a généré le fichier de sortie XML **ssbdiagnose** .|  
 |**product**|Identifie le produit qui a généré le fichier de sortie XML **ssbdiagnose** .|  

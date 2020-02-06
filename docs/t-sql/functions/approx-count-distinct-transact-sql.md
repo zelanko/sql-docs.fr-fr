@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962342"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73962342"
 
 Cette fonction retourne le nombre approximatif de valeurs non NULL uniques dans un groupe. 
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ L’implémentation de la fonction garantit un taux d’erreur pouvant atteindre
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-approx_count_distinct"></a>A. Utilisation d’APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>R. Utilisation d’APPROX_COUNT_DISTINCT 
 Cet exemple retourne le nombre approximatif de clés d’ordre différent de la table d’ordres.
   
 ```sql
