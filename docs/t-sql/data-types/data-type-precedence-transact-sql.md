@@ -19,10 +19,10 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70030354"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Priorité des types de données (Transact-SQL)
@@ -47,12 +47,12 @@ Quand un opérateur combine des expressions de types de données différents, le
 1. **money**  
 1. **smallmoney**  
 1. **bigint**  
-1. **Int**  
+1. **int**  
 1. **smallint**  
 1. **tinyint**  
 1. **bit**  
 1. **ntext**  
-1. **texte**  
+1. **text**  
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  

@@ -21,10 +21,10 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135854"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68135854"
 
   Chiffre les données à l'aide d'une clé symétrique.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -95,9 +95,9 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  L'utilisation des fonctions de chiffrement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjointement au paramètre ANSI_PADDING OFF peut entraîner la perte de données en raison de conversions implicites. Pour plus d’informations sur ANSI_PADDING, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
- La fonctionnalité illustrée dans les exemples suivants utilise les clés et les certificats créés dans [Procédure : Chiffrer une colonne de données](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ La fonctionnalité illustrée dans les exemples suivants utilise les clés et les certificats créés dans [Guide pratique pour chiffrer une colonne de données](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
-### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Chiffrer une chaîne à l'aide d'une clé symétrique  
+### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>R. Chiffrer une chaîne à l'aide d'une clé symétrique  
  L'exemple de code suivant ajoute une colonne à la table `Employee`, puis chiffre la valeur du numéro de sécurité sociale stockée dans la colonne `NationalIDNumber`.  
   
 ```  

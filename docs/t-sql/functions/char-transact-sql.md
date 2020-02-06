@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113698"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68113698"
 
 Cette fonction convertit un code ASCII **int** en une valeur de caractère.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +68,7 @@ Utilisez `CHAR` pour insérer des caractères de contrôle dans des chaînes de 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. Utilisation d'ASCII et CHAR pour imprimer les valeurs ASCII d'une chaîne  
+### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>R. Utilisation d'ASCII et CHAR pour imprimer les valeurs ASCII d'une chaîne  
 Cet exemple imprime la valeur et le caractère ASCII de chacun des caractères de la chaîne `New Moon`.
   
 ```sql

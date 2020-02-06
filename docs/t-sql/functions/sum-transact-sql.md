@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f549af8bd9e594d14407fe16186ee5d308e546
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117628"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117628"
 
   Retourne la somme de toutes les valeurs, ou uniquement des valeurs distinctes (DISTINCT) de l'expression. Les fonctions SUM ne s'emploient que sur des colonnes de type numérique. Les valeurs NULL sont ignorées.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,9 +67,9 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 |Résultat de l'expression|Type de retour|  
 |-----------------------|-----------------|  
-|**tinyint**|**Int**|  
-|**smallint**|**Int**|  
-|**Int**|**Int**|  
+|**tinyint**|**int**|  
+|**smallint**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
 |Catégorie **decimal** (p, s)|**decimal(38, s)**|  
 |Catégorie **money** et **smallmoney**|**money**|  
@@ -80,7 +80,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-sum-to-return-summary-data"></a>A. Utilisation de SUM pour retourner des données de synthèse  
+### <a name="a-using-sum-to-return-summary-data"></a>R. Utilisation de SUM pour retourner des données de synthèse  
  Les exemples suivants illustrent l'utilisation de la fonction SUM pour retourner des données de synthèse dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8de2f7c47572e8f25fdc38ce6bb537dadfc38d7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042660"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (type de données geography)
@@ -40,7 +40,7 @@ ms.locfileid: "68042660"
  *expression*  
  Expression **int** comprise entre 1 et le nombre d’anneaux d’une instance **polygon**.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
  Type de retour CLR : **SqlGeography**  

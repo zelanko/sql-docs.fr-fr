@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Ajout de packages et autres fichiers | Microsoft Docs'
+title: 'Étape 3 : Ajout de packages et autres fichiers | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283841"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Leçon 1-3 : Ajout de packages et autres fichiers
@@ -49,7 +49,7 @@ Au cours de la tâche suivante, vous allez ajouter des configurations aux packag
   
 1.  Si [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] n’est pas déjà ouvert, dans le menu **Démarrer**, pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server**et cliquez sur **SQL Server Data Tools**.  
   
-2.  Dans le menu **Fichier** , cliquez sur **Ouvrir**, sur **Projet/Solution**, sur le dossier **Didacticiel de déploiement** et sur **Ouvrir**, puis double-cliquez sur **Deployment Tutorial.sln**.  
+2.  Dans le menu **Fichier** , cliquez successivement sur **Ouvrir**, sur **Projet/Solution**, sur le dossier **Didacticiel de déploiement** et sur **Ouvrir**, puis double-cliquez sur **Deployment Tutorial.sln**.  
   
 3.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur Didacticiel de déploiement, cliquez sur **Ajouter**, puis sur **Package existant**.  
   
@@ -72,7 +72,7 @@ Au cours de la tâche suivante, vous allez ajouter des configurations aux packag
 4.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 4 : Ajout de configurations au package](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Étape 4 : Ajout de configurations de package](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

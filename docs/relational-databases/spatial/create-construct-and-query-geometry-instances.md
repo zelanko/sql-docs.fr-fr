@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f3b5cc1721483534307acf797a58e4dc70b5c81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048732"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Créer, construire et interroger des instances geometry
@@ -218,7 +218,7 @@ ms.locfileid: "68048732"
   
   
 ###  <a name="empty"></a> Vide  
- Une instance **geometry** _vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon**, **CurvePolygon**et **MultiPolygon** vides est 0.  
+ Une instance _geometry_**vide** n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon**, **CurvePolygon**et **MultiPolygon** vides est 0.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -271,7 +271,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a> Fermeture  
- Une instance **geometry** _fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+ Une instance _geometry_**fermée** est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   

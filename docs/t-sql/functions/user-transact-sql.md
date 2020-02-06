@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844319"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73844319"
 
   Permet d'insérer dans une table une valeur système si aucune valeur par défaut n'a été spécifiée pour le nom de l'utilisateur actuel.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +57,7 @@ USER
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-user-to-return-the-database-user-name"></a>A. Utilisation de USER pour retourner le nom d'utilisateur de la base de données  
+### <a name="a-using-user-to-return-the-database-user-name"></a>R. Utilisation de USER pour retourner le nom d'utilisateur de la base de données  
  L'exemple suivant déclare une variable `char`, lui attribue la valeur actuelle de USER et l'imprime avec une description de texte.  
   
 ```  

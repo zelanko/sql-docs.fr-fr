@@ -16,10 +16,10 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a48d827f621f37e73d82d4a8fa144bb1b95515e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293816"
 ---
 # <a name="update-statistics-task"></a>Tâche Mettre à jour les statistiques
@@ -27,7 +27,7 @@ ms.locfileid: "71293816"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  La tâche Mettre à jour les statistiques met à jour les informations sur la distribution des valeurs de clé pour un ou plusieurs groupes de statistiques (collections) dans la table ou la vue indexée spécifiées. Pour plus d'informations, consultez [Statistics](../../relational-databases/statistics/statistics.md).  
+  La tâche Mettre à jour les statistiques met à jour les informations sur la distribution des valeurs de clé pour un ou plusieurs groupes de statistiques (collections) dans la table ou la vue indexée spécifiées. Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
  La tâche Mettre à jour les statistiques permet à un package de mettre à jour les statistiques d'une ou plusieurs bases de données. Si la tâche met à jour uniquement les statistiques d'une base de données, vous pouvez choisir les vues ou les tables concernées par cette mise à jour. Vous pouvez configurer la mise à jour de manière à actualiser toutes les statistiques ou uniquement celles des colonnes ou des index.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "71293816"
   
 -   Si la mise à jour s'applique uniquement aux index, la clause WITH INDEX est incluse.  
   
- Si la tâche Mettre à jour les statistiques met à jour les statistiques dans plusieurs bases de données, elle exécute plusieurs instructions UPDATE STATISTICS, à raison d'une pour chaque table ou vue. Toutes les instances de l’instruction UPDATE STATISTICS utilisent la même clause, mais différentes valeurs pour *nom_table* ou pour *nom_vue*. Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) et [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
+ Si la tâche Mettre à jour les statistiques met à jour les statistiques dans plusieurs bases de données, elle exécute plusieurs instructions UPDATE STATISTICS, à raison d'une pour chaque table ou vue. Toutes les instances de l’instruction UPDATE STATISTICS utilisent la même clause, mais différentes valeurs pour *nom_table* ou pour *nom_vue* . Pour plus d’informations, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) et [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Le temps que prend la tâche à créer l'instruction Transact-SQL qu'elle exécute est proportionnel au nombre de statistiques qu'elle met à jour. Si la tâche est configurée de manière à mettre à jour les statistiques de toutes les tables et vues d'une base de données avec un grand nombre d'index ou à mettre à jour les statistiques de plusieurs bases de données, elle peut prendre beaucoup de temps pour générer l'instruction Transact-SQL.  
