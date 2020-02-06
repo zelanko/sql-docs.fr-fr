@@ -1,6 +1,6 @@
 ---
-title: Propriétés de SQL Server (onglet Avancé) | Microsoft Docs
-ms.custom: ''
+title: Propriétés de SQL Server (onglet Avancé)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b64a1c1b9d40061d5319d1e629d0f2215df72e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023968"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306834"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propriétés de SQL Server (onglet Avancé)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68023968"
  Affiche l'emplacement où sont placés les vidages de mémoire en cas d'erreur.  
   
  **Rapport d'erreurs**  
- Quand cette option a pour valeur **Oui**, le programme Dr. Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ». Pour modifier cette valeur, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur votre serveur, cliquez sur **Propriétés**, puis sur la page **Paramètres divers du serveur**. Les options figurent dans la zone **Rapport d’information** .  
+ Quand cette option a pour valeur **Oui**, le programme Dr Watson transfère les informations à [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou au serveur d'erreur en cas de problème sérieux. Pour plus d'informations sur les rapports d'erreurs, recherchez dans la documentation en ligne la rubrique « Paramètres des rapports d'erreurs et d'utilisation ». Pour modifier cette valeur, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , cliquez avec le bouton droit sur votre serveur, cliquez sur **Propriétés**, puis sur la page **Paramètres divers du serveur** . Les options figurent dans la zone **Rapport d’information** .  
   
  **Version de fichier**  
  Affiche la version de l'exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

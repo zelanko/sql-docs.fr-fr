@@ -1,5 +1,5 @@
 ---
-title: Considérations sur la sécurité pour une installation SQL Server | Microsoft Docs
+title: Considérations relatives à la sécurité
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 302b29901b9f20c70799704bdf75938270900173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019811"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258962"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considérations sur la sécurité pour une installation SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -121,9 +121,9 @@ ms.locfileid: "68019811"
   
 -   Après avoir installé sur un ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous ne pouvez pas modifier l'ordinateur d'un contrôleur de domaine en un membre de domaine. Vous devez désinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de modifier l'ordinateur hôte en un membre de domaine.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas prises en charge lorsque les nœuds du cluster sont des contrôleurs de domaine.  
+-   Les instances de cluster de basculement[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont pas prises en charge quand les nœuds du cluster sont des contrôleurs de domaine.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation ne peut pas créer de groupes de sécurité ni configurer de comptes de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine en lecture seule. Dans ce scénario, le programme d'installation échoue.  
+-   Le programme d'installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas créer de groupes de sécurité ni configurer de comptes de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine en lecture seule. Dans ce scénario, le programme d'installation échoue.  
   
 ## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Pendant ou après l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Après l'installation, vous pouvez renforcer la sécurité de l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en suivant les recommandations suivantes pour les comptes et les modes d'authentification :  

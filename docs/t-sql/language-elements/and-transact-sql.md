@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927371"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927371"
 
   Combine deux expressions booléennes et retourne la valeur **TRUE** lorsque les deux expressions ont la valeur **TRUE**. Lorsque plusieurs opérateurs logiques sont utilisés dans une instruction, les opérateurs **AND** sont évalués en premier. Vous pouvez modifier l'ordre de traitement en utilisant des parenthèses.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Arguments  
  *boolean_expression*  
- Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide qui retourne une valeur booléenne : **TRUE**, **FALSE** ou **UNKNOWN**.  
+ Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide retournant une valeur booléenne : **TRUE**, **FALSE** ou **UNKNOWN**.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
@@ -63,7 +63,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-and-operator"></a>A. Utilisation de l'opérateur AND  
+### <a name="a-using-the-and-operator"></a>R. Utilisation de l'opérateur AND  
  L'exemple suivant sélectionne des informations sur les employés qui ont à la fois le titre de `Marketing Assistant` et plus de `41` heures de congés disponibles.  
   
 ```  

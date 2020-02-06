@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907537"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
@@ -157,7 +157,7 @@ SELECT object_name(object_id) AS Name
    FROM sys.dm_db_xtp_table_memory_stats  
 ```  
   
- **Résultat de l'exemple**  
+ **Exemple de sortie**  
   
 ```  
 Name       object_id   memory_allocated_for_table_kb memory_used_by_table_kb memory_allocated_for_indexes_kb memory_used_by_indexes_kb  
@@ -185,7 +185,7 @@ SELECT memory_consumer_desc
    FROM sys.dm_xtp_system_memory_consumers  
 ```  
   
- **Résultat de l'exemple**  
+ **Exemple de sortie**  
   
 ```  
 memory_consumer_ desc allocated_bytes_kb   used_bytes_kb        allocation_count  
@@ -224,7 +224,7 @@ SELECT memory_object_address
    FROM sys.dm_os_memory_objects WHERE type LIKE '%xtp%'  
 ```  
   
- **Résultat de l'exemple**  
+ **Exemple de sortie**  
   
 ```  
 memory_object_address pages_ in_bytes bytes_used type  
@@ -260,7 +260,7 @@ SELECT type
   
  L'exemple de résultat indique que la mémoire allouée totale pour la consommation de mémoire au niveau du système est de 18 Mo, et 1358 Mo sont alloués à l'ID de base de données 5. Puisque cette base de données est mappée à un pool de ressources dédié, cette mémoire est comptabilisée dans ce pool de ressources.  
   
- **Résultat de l'exemple**  
+ **Exemple de sortie**  
   
 ```  
 type                 name       memory_node_id pages_MB  
@@ -285,7 +285,7 @@ MEMORYCLERK_XTP      Default    64             0
 3.  Agissez pour atténuer les éventuels problèmes de mémoire. Pour plus d’informations, consultez [Résoudre les problèmes de mémoire insuffisante](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   
   
