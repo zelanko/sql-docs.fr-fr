@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fc6da38a122f2397c41232cb1a0ec5ad0831cd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098632"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68098632"
 
   Renvoie des informations sur un type de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,11 +52,11 @@ TYPEPROPERTY (type , property)
 |**AllowsNull**|Type de données autorisant les valeurs NULL.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Type de données introuvable.|  
 |**OwnerId**|Propriétaire du type.<br /><br /> Remarque : Le propriétaire du schéma n’est pas nécessairement le propriétaire du type.|Non NULL = ID utilisateur de base de données du propriétaire du type.<br /><br /> NULL = Type non pris en charge, ou ID de type non valide.|  
 |**Précision**|Précision du type de données.|Nombre de chiffres ou de caractères.<br /><br /> -1 = **xml** ou type de données de valeur de grande taille<br /><br /> NULL = Type de données introuvable.|  
-|**Échelle**|Échelle du type de données.|Nombre de décimales pour le type de données.<br /><br /> NULL = Le type de données n’est pas **numeric** ou est introuvable.|  
+|**Mettre à l'échelle**|Échelle du type de données.|Nombre de décimales pour le type de données.<br /><br /> NULL = Le type de données n’est pas **numeric** ou est introuvable.|  
 |**UsesAnsiTrim**|Le paramètre de remplissage ANSI était activé lors de la création du type de données.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Type de données introuvable ou différent d'un type de données binaire ou chaîne.|  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.  
@@ -65,7 +65,7 @@ TYPEPROPERTY (type , property)
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-identifying-the-owner-of-a-data-type"></a>A. Identification du propriétaire d'un type de données  
+### <a name="a-identifying-the-owner-of-a-data-type"></a>R. Identification du propriétaire d'un type de données  
  L'exemple suivant retourne le propriétaire d'un type de données.  
   
 ```  

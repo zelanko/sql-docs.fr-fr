@@ -17,10 +17,10 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293863"
 ---
 # <a name="transfer-logins-task"></a>Tâche de transfert de connexions
@@ -89,7 +89,7 @@ ms.locfileid: "71293863"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de connexions** pour donner un nom et une description à la tâche de transfert de connexions.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique à la tâche de transfert de connexions. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -135,7 +135,7 @@ ms.locfileid: "71293863"
 |-----------|-----------------|  
 |**FailTask**|La tâche échoue si des connexions de même nom existent déjà sur le serveur de destination.|  
 |**Remplacer**|La tâche remplace les connexions de même nom sur le serveur de destination.|  
-|**Ignorer**|La tâche ignore les connexions de même nom qui existent sur le serveur de destination.|  
+|**Skip**|La tâche ignore les connexions de même nom qui existent sur le serveur de destination.|  
   
  **CopySids**  
  Déterminez si les identificateurs de sécurité associés aux connexions doivent être copiés sur le serveur de destination. **CopySids** doit prendre la valeur **True** si la tâche de transfert de connexions est utilisée en parallèle à la tâche de transfert de bases de données. Dans le cas contraire, les connexions copiées ne seront pas reconnues par la base de données transférée.  

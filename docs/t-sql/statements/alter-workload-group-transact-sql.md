@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026230"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026230"
 
   Modifie une configuration de groupe de charge de travail Resource Governor existante, et éventuellement l’assigne à un pool de ressources Resource Governor.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -156,7 +156,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états Resource Governor. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT : dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la création d’index est autorisée à utiliser une mémoire d’espace de travail supérieure à celle initialement allouée afin d’améliorer les performances. Cette gestion spéciale est prise en charge par le Gouverneur de ressources dans les versions ultérieures, toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
+ REQUEST_MEMORY_GRANT_PERCENT : dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la création d'index est autorisée à utiliser une mémoire d'espace de travail supérieure à celle qui lui a été initialement allouée, en vue d'améliorer les performances. Cette gestion spéciale est prise en charge par le Gouverneur de ressources dans les versions ultérieures, toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
   
  **Création d’un index sur une table partitionnée**  
   

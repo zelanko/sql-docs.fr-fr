@@ -1,10 +1,9 @@
 ---
-title: Index spatiaux, boîte de dialogue (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Index spatiaux
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263571"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254969"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +83,7 @@ Spécifie la coordonnée y de l'angle supérieur droit du rectangle englobant. C
 **Min. Y**  
 Spécifie la coordonnée y de l'angle inférieur gauche du rectangle englobant. Cette propriété est estompée si le **Schéma de pavage** est une **Grille géographique**.  
   
-**Identity**  
+**Identité**  
 Développée, elle affiche les champs de propriétés de **Nom** et **Description** .  
   
 **(Nom)**  
@@ -117,5 +118,5 @@ Spécifie si de nouvelles statistiques sont calculées une fois l'index créé. 
 Spécifie si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
+[Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072103"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072103"
 
   Supprime une ou plusieurs vues de la base de données active. DROP VIEW peut être exécuté sur des vues indexées.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,7 +81,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-drop-a-view"></a>A. Supprimer une vue  
+### <a name="a-drop-a-view"></a>R. Supprimer une vue  
  Cet exemple supprime la vue `Reorder`.  
   
 ```sql

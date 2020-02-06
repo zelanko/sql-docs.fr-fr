@@ -16,10 +16,10 @@ ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12645120f543094015f2da03eca224c40e16ab6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998470"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>Méthode updateObject (java.lang.String, java.lang.Object, int)

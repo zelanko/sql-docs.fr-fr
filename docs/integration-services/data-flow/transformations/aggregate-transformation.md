@@ -20,10 +20,10 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291764"
 ---
 # <a name="aggregate-transformation"></a>Transformation d'agrégation
@@ -38,15 +38,15 @@ ms.locfileid: "71291764"
   
 |Opération|Description|  
 |---------------|-----------------|  
-|Group by|Divise les datasets en groupes. Les colonnes contenant tout type de données peuvent être utilisées pour le regroupement. Pour plus d’informations, consultez [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
+|Regrouper par|Divise les datasets en groupes. Les colonnes contenant tout type de données peuvent être utilisées pour le regroupement. Pour plus d’informations, consultez [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |SUM|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d’informations, consultez [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
-|Moyenne|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d’informations, consultez [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
-|Compter|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d’informations, consultez [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
+|Average|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d’informations, consultez [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
+|Count|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d’informations, consultez [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |Count distinct|Retourne le nombre de valeurs non NULL uniques d'un groupe.|  
 |Minimum|Renvoie la valeur minimale figurant dans un groupe. Pour plus d’informations, consultez [MIN &#40;Transact-SQL&#41;](../../../t-sql/functions/min-transact-sql.md). À la différence de la fonction Transact-SQL MIN, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
-|Maximum|Renvoie la valeur maximale figurant dans un groupe. Pour plus d’informations, consultez [MAX &#40;Transact-SQL&#41;](../../../t-sql/functions/max-transact-sql.md). À la différence de la fonction Transact-SQL MAX, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
+|Maximale|Renvoie la valeur maximale figurant dans un groupe. Pour plus d’informations, consultez [MAX &#40;Transact-SQL&#41;](../../../t-sql/functions/max-transact-sql.md). À la différence de la fonction Transact-SQL MAX, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
   
- La transformation d'agrégation traite les valeurs null de la même manière que le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce comportement est défini dans la norme SQL-92. Les règles suivantes s'appliquent :  
+ La transformation d'agrégation traite les valeurs null de la même manière que le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce comportement est défini dans la norme SQL-92. Les règles suivantes s’appliquent :  
   
 -   Dans une clause GROUP BY, les valeurs NULL sont traitées comme toute autre valeur de colonne. Si la colonne de regroupement contient plusieurs valeurs null, ces valeurs sont placées dans un seul groupe.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "71291764"
 ## <a name="performance-considerations"></a>Considérations relatives aux performances  
  La transformation d'agrégation comprend un ensemble de propriétés que vous pouvez définir pour améliorer ses performances.  
   
--   Quand vous effectuez une opération **Group by** , définissez les propriétés Keys ou KeysScale du composant et les sorties du composant. Grâce à Keys, vous pouvez spécifier le nombre exact de clés que la transformation doit normalement traiter. (Dans ce contexte, Keys fait référence au nombre de groupes attendus d’une opération **Group by**.) Grâce à KeysScale, vous pouvez spécifier un nombre approximatif de clés. Quand vous spécifiez une valeur appropriée pour Keys ou KeyScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
+-   Quand vous effectuez une opération **Group by** , définissez les propriétés Keys ou KeysScale du composant et les sorties du composant. Grâce à Keys, vous pouvez spécifier le nombre exact de clés que la transformation doit normalement traiter. (Dans ce contexte, Keys fait référence au nombre de groupes attendus d’une opération **Group by** .) Grâce à KeysScale, vous pouvez spécifier un nombre approximatif de clés. Quand vous spécifiez une valeur appropriée pour Keys ou KeyScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
   
--   Quand vous effectuez une opération **Comptage de valeurs** , définissez les propriétés CountDistinctKeys ou CountDistinctScale du composant. Grâce à CountDistinctKeys, vous pouvez indiquer le nombre exact de clés que la transformation doit normalement traiter pour une opération Count Distinct. (Dans ce contexte, CountDistinctKeys fait référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs**.) La propriété CountDistinctScale permet d’indiquer un nombre approximatif de clés pour une opération Count Distinct. Quand vous spécifiez une valeur appropriée pour CountDistinctKeys ou CountDistinctScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
+-   Quand vous effectuez une opération **Comptage de valeurs** , définissez les propriétés CountDistinctKeys ou CountDistinctScale du composant. Grâce à CountDistinctKeys, vous pouvez indiquer le nombre exact de clés que la transformation doit normalement traiter pour une opération Count Distinct. (Dans ce contexte, CountDistinctKeys fait référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs** .) La propriété CountDistinctScale permet d’indiquer un nombre approximatif de clés pour une opération Count Distinct. Quand vous spécifiez une valeur appropriée pour CountDistinctKeys ou CountDistinctScale, vous améliorez les performances car la transformation peut allouer la mémoire adéquate pour les données mises en cache par la transformation.  
   
 ## <a name="aggregate-transformation-configuration"></a>Configuration de la transformation d'agrégation  
  La transformation d'agrégation est configurée au niveau de la transformation, de la sortie et de la colonne.  
@@ -106,7 +106,7 @@ ms.locfileid: "71291764"
   
  La transformation d'agrégation est asynchrone, ce qui signifie qu'elle ne consomme pas les données et ne les publie pas ligne par ligne. Au lieu de cela, elle consomme tout l'ensemble de lignes, effectue les regroupements et les agrégations, puis publie les résultats.  
   
- Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l'entrée d'une transformation d'agrégation peut contenir trois colonnes : **PaysRégion**, **Ville** et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
+ Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l’entrée d’une transformation d’agrégation peut contenir trois colonnes : **PaysRegion**, **Ville**et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
   
  Vous pouvez également ajouter plusieurs sorties à la transformation d'agrégation et diriger chaque agrégation vers une sortie différente. Par exemple, si la transformation d’agrégation applique les fonctions Sum et Average, chaque agrégation peut être dirigée vers une sortie différente.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "71291764"
   Utilisez l’onglet **Agrégations** de la boîte de dialogue **Éditeur de transformation d’agrégation** pour spécifier les colonnes destinées à l’agrégation et les propriétés de cette agrégation. Vous pouvez appliquer plusieurs agrégations. Ce type de transformation ne génère pas d'erreur de sortie.  
   
 > [!NOTE]  
->  Les options concernant le nombre et l’échelle de clés d’une part et le nombre et l’échelle de clés distinctes d’autre part s’appliquent au niveau du composant quand ces options sont indiquées sous l’onglet **Avancé** , au niveau de la sortie quand elles sont précisées dans l’affichage avancé de l’onglet **Agrégations** ou encore au niveau des colonnes quand elles sont spécifiées dans la liste de colonnes se trouvant dans la partie inférieure de l’onglet **Agrégations** .  
+>  Les options concernant le nombre et l’échelle de clés d’une part, et le nombre et l’échelle de clés distinctes d’autre part, s’appliquent au niveau du composant quand ces options sont indiquées sous l’onglet **Avancé** , au niveau de la sortie quand elles sont précisées dans l’affichage avancé de l’onglet **Agrégations** , ou encore au niveau des colonnes quand elles sont spécifiées dans la liste de colonnes se trouvant dans la partie inférieure de l’onglet **Agrégations** .  
 >   
 >  Dans la transformation d’agrégation, **Clés** et **Échelle de clé** font référence au nombre de groupes attendus d’une opération **Regrouper par** . **Nombre de clés distinctes** et **Échelle de nombre des valeurs distinctes** font référence au nombre de valeurs distinctes attendues d’une opération **Comptage de valeurs** .  
   
@@ -159,12 +159,12 @@ ms.locfileid: "71291764"
 |Non spécifié|La propriété Échelle de clé n'est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
 |Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
-|Élevée|L'agrégation peut écrire plus de 25 000 000 clés.|  
+|Élevé|L'agrégation peut écrire plus de 25 000 000 clés.|  
   
  **Clés**  
  Dans l'écran Avancé, permet d'indiquer éventuellement le nombre exact de clés que l'agrégation peut écrire. Si la valeur des propriétés **Échelle de clé** et **Clés** sont toutes deux précisées, celle de la propriété **Clés** prévaut alors.  
   
- **Colonnes d’entrée disponibles**  
+ **Colonnes d'entrée disponibles**  
  Permet de sélectionner les colonnes dans la liste des colonnes d'entrée disponibles en cochant ou décochant les cases du tableau.  
   
  **Colonne d'entrée**  
@@ -173,7 +173,7 @@ ms.locfileid: "71291764"
  **Alias de sortie**  
  Permet de saisir un alias pour chaque colonne. Par défaut, il s'agit du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
   
- **Opération**  
+ **opération**  
  Permet de choisir dans la liste parmi les opérations disponibles, d'après le tableau suivant.  
   
 |Opération|Description|  
@@ -181,7 +181,7 @@ ms.locfileid: "71291764"
 |**GroupBy**|Divise les datasets en groupes. Les colonnes incluant tout type de données peuvent être utilisées pour le regroupement. Pour plus d'informations, consultez GROUP BY.|  
 |**Sum**|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d'informations, consultez SUM.|  
 |**Moyenne**|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d'informations, consultez AVG.|  
-|**Compter**|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d'informations, consultez COUNT.|  
+|**Count**|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d'informations, consultez COUNT.|  
 |**CountDistinct**|Retourne le nombre de valeurs non NULL uniques d'un groupe. Pour plus d'informations, consultez COUNT et Distinct.|  
 |**Minimum**|Renvoie la valeur minimale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
 |**Maximum**|Renvoie la valeur maximale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
@@ -197,7 +197,7 @@ ms.locfileid: "71291764"
 |Non spécifié|La propriété **CountDistinctScale** n’est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
 |Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
-|Élevée|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
+|Élevé|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
   
  **Count Distinct Keys**  
  Permet de spécifier éventuellement le nombre exact de valeurs distinctes que l'agrégation peut écrire. Si la valeur des propriétés **CountDistinctScale** et **CountDistinctKeys** sont toutes deux précisées, celle de la propriété **CountDistinctKeys** prévaut alors.  
@@ -219,7 +219,7 @@ ms.locfileid: "71291764"
 |Non spécifié|La propriété **KeyScale** n’est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
 |Moyenne|L'agrégation peut écrire environ 5 000 000 clés.|  
-|Élevée|L'agrégation peut écrire plus de 25 000 000 clés.|  
+|Élevé|L'agrégation peut écrire plus de 25 000 000 clés.|  
   
  **Nombre de clés**  
  Permet de spécifier le nombre exact de clés attendu par l'agrégation (facultatif). La transformation utilise ces informations afin d'optimiser la taille initiale de son cache. Si les deux options **Échelle de clé** et **Nombre de clés** sont spécifiées, **Nombre de clés** est prioritaire.  
@@ -232,7 +232,7 @@ ms.locfileid: "71291764"
 |Non spécifié|La propriété CountDistinctScale n'est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
 |Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
-|Élevée|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
+|Élevé|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
   
  **Nombre de clés distinctes**  
  Permet de spécifier éventuellement le nombre exact de valeurs distinctes que l'agrégation peut écrire. Si les deux options **Échelle de nombre des valeurs distinctes** et **Nombre de clés distinctes** sont spécifiées, **Nombre de clés distinctes** est prioritaire.  
