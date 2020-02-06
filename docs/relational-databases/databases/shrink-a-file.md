@@ -20,10 +20,10 @@ ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71961929"
 ---
 # <a name="shrink-a-file"></a>Réduire un fichier
@@ -85,7 +85,7 @@ ms.locfileid: "71961929"
      **Nom de fichier**  
      Sélectionnez un fichier dans la liste des fichiers disponibles pour le groupe de fichiers et le type de fichier choisis.  
   
-     **Emplacement**  
+     **Lieu**  
      Affiche le chemin d'accès complet au fichier actuellement sélectionné. Le chemin d'accès n'est pas modifiable, mais il peut être copié dans le Presse-papiers.  
   
      **Espace actuellement alloué**  

@@ -1,22 +1,23 @@
 ---
-title: Répertorier les informations de catégorie de travaux | Microsoft Docs
-ms.custom: ''
+title: Répertorier les informations de catégorie de travaux
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 178e2e6305cb7be46d1ae8f398d100427b91b34d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: db86e18a399b4107e57bab926f0f91338565c43d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267560"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242199"
 ---
 # <a name="list-job-category-information"></a>Répertorier les informations de catégorie de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 #### <a name="to-list-job-category-information"></a>Pour répertorier les informations de catégorie de travaux  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

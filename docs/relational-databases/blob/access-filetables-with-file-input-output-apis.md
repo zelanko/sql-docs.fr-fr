@@ -13,10 +13,10 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908775"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
@@ -64,7 +64,7 @@ ms.locfileid: "72908775"
 ##  <a name="supported"></a> Opérations du système de fichiers prises en charge  
  Les FileTables prennent en charge les API de système de fichiers associées aux opérations de système de fichiers suivantes :  
   
--   Gestion des répertoires  
+-   Gestion de répertoires  
   
 -   Gestion des fichiers  
   
@@ -103,7 +103,7 @@ ms.locfileid: "72908775"
   
 ##  <a name="funclist"></a> Fonctionnalités de système de fichiers prises en charge dans les FileTables  
   
-|Fonctionnalité|Pris en charge|Commentaires|  
+|Fonctionnalité|Prise en charge|Commentaires|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Oui|La prise en charge du niveau 2, du niveau 1, des oplocks Lot et Filtre est assurée.|  
 |**Attributs étendus**|Non||  

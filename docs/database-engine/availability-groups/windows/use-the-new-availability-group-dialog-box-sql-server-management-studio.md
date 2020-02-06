@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821954"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)
@@ -45,7 +45,7 @@ ms.locfileid: "74821954"
 -   Joindre les réplicas secondaires au groupe de disponibilité.    
 -   Effectuer la synchronisation des données initiale.  
   
- Pour plus d’informations sur ces tâches de configuration, consultez [Suivi : Après avoir créé un groupe de disponibilité](#FollowUp), plus loin dans cette rubrique.  
+ Pour plus d'informations sur ces tâches de configuration, consultez [Suivi : Après la création d'un groupe de disponibilité](#FollowUp), plus loin dans cette rubrique.  
   
 ##  <a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
@@ -70,13 +70,13 @@ ms.locfileid: "74821954"
     > [!TIP]  
     >  Si vous avez ajouté un réplica et ne pouvez pas vous connecter à l'instance de serveur hôte, vous pouvez supprimer le réplica et en ajouter un nouveau. Pour plus d’informations, consultez [Supprimer un réplica secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) et [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  Dans le volet **Sélectionner une page** de la boîte de dialogue, cliquez sur **Préférences de sauvegarde**. Puis, sur la page **Préférences de sauvegarde** , spécifiez à quel endroit les sauvegardes doivent se produire en fonction du rôle de réplica et attribuez des priorités de sauvegarde à chacune des instances de serveur qui hébergeront un réplica de disponibilité pour ce groupe de disponibilité. Pour plus d’informations, consultez [Propriétés du groupe de disponibilité : Nouveau groupe de disponibilité &#40;page Préférences de sauvegarde&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+8.  Dans le volet **Sélectionner une page** de la boîte de dialogue, cliquez sur **Préférences de sauvegarde**. Puis, sur la page **Préférences de sauvegarde** , spécifiez à quel endroit les sauvegardes doivent se produire en fonction du rôle de réplica et attribuez des priorités de sauvegarde à chacune des instances de serveur qui hébergeront un réplica de disponibilité pour ce groupe de disponibilité. Pour plus d’informations, consultez [Propriétés de groupe de disponibilité : nouveau groupe de disponibilité &#40;page Préférences de sauvegarde&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
 9. Pour créer le groupe de disponibilité, cliquez sur **OK**. Cette action entraîne la vérification par la boîte de dialogue du respect de la configuration requise par les bases de données spécifiées.  
   
      Pour quitter la boîte de dialogue sans créer le groupe de disponibilité, cliquez sur **Annuler**.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
+##  <a name="FollowUp"></a> Suivi : Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
   
 -   Vous devez vous connecter en retour à chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité et procéder comme suit :  
   

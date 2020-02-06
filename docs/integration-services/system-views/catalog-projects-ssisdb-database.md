@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296528"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (base de données SSISDB)
@@ -26,13 +26,13 @@ ms.locfileid: "71296528"
 
   Affiche les détails pour tous les projets qui s’affichent dans le catalogue **SSISDB**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|Identificateur (ID) unique du projet.|  
 |folder_id|**bigint**|ID unique du dossier où le projet réside.|  
-|NAME|**sysname**|Nom du projet.|  
+|name|**sysname**|Nom du projet.|  
 |description|**nvarchar(1024)**|Description facultative du projet.|  
-|project_format_version|**Int**|Version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour développer le projet.|  
+|project_format_version|**int**|Version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée pour développer le projet.|  
 |deployed_by_sid|**varbinary(85)**|Identificateur de sécurité (SID) de l'utilisateur qui a installé le projet.|  
 |deployed_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a installé le projet.|  
 |last_deployed_time|**datetimeoffset(7)**|Date et heure auxquelles le projet a été déployé ou a été redéployé.|  

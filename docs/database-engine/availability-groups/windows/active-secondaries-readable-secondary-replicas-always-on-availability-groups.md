@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822403"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On
@@ -130,7 +130,7 @@ ms.locfileid: "74822403"
  Cela signifie qu'il y a une certaine latence, en général de quelques secondes, entre les réplicas principal et secondaire. Dans des cas exceptionnels, toutefois, par exemple si des problèmes réseau réduisent le débit, la latence peut devenir importante. La latence augmente en cas de survenue de goulots d'étranglement d'E/S et lorsque le déplacement des données est suspendu. Pour surveiller le déplacement des données suspendu, utilisez le [Tableau de bord Always On](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou la vue de gestion dynamique [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latence des données sur des bases de données avec des tables optimisées en mémoire  
- Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], la latence des données sur les secondaires actifs faisait l’objet de considérations spéciales. Consultez [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Secondaires actifs : réplicas secondaires accessibles en lecture](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , la latence des données ne fait plus l’objet de considérations spéciales pour les tables optimisées en mémoire. La latence des données attendue pour les tables optimisées en mémoire est comparable à celle des tables sur disque.  
+ Dans [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], la latence des données sur les secondaires actifs faisait l’objet de considérations spéciales. consultez [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secondaires actifs : réplicas secondaires accessibles en lecture](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). À partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , la latence des données ne fait plus l’objet de considérations spéciales pour les tables optimisées en mémoire. La latence des données attendue pour les tables optimisées en mémoire est comparable à celle des tables sur disque.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Impact d'une charge de travail en lecture seule  
  Lorsque vous configurez un réplica secondaire pour l'accès en lecture seule, vos charges de travail en lecture seule sur les bases de données secondaires consomment des ressources système, telles que le processeur et les E/S (pour les tables sur disque) des threads de phase de restauration par progression, surtout si les charges de travail en lecture seule sur les tables sur disque nécessitent de nombreuses E/S. Aucun impact n'est à constater sur les E/S lors de l'accès aux tables optimisées en mémoire, car toutes les lignes résident en mémoire.  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844548"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Sélectionner les lignes à migrer à l’aide d’une fonction de filtre (Stretch Database)
@@ -51,7 +51,7 @@ RETURN  SELECT 1 AS is_eligible
         WHERE <predicate>  
 ```  
   
- Les paramètres de la fonction doivent être des identificateurs de colonnes de la table.  
+ Les paramètres de la fonction doivent être des identificateurs pour les colonnes de la table.  
   
  Une liaison de schéma est obligatoire pour empêcher la suppression ou la modification de colonnes utilisées par la fonction de filtre.  
   
@@ -65,7 +65,7 @@ RETURN  SELECT 1 AS is_eligible
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]  
 ```  
   
- Chaque condition peut à son tour consister en une condition primitive ou plusieurs conditions primitives jointes avec l’opérateur logique OR.  
+ Chaque condition peut à son tour se composer d’une condition primitive ou de plusieurs conditions primitives jointes avec l’opérateur logique OR.  
   
 ```  
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
@@ -84,7 +84,7 @@ RETURN  SELECT 1 AS is_eligible
   
 ```  
   
--   Comparer un paramètre de fonction à une expression constante. Par exemple, `@column1 < 1000`.  
+-   Comparer un paramètre de fonction à une expression constante. Par exemple : `@column1 < 1000`.  
   
      Voici un exemple qui vérifie si la valeur d’une colonne *date* est &lt; 1/1/2016.  
   
@@ -104,9 +104,9 @@ RETURN  SELECT 1 AS is_eligible
   
     ```  
   
--   Appliquer l’opérateur IS NULL ou IS NOT NULL à un paramètre de fonction.  
+-   Appliquez l’opérateur IS NULL ou IS NOT NULL à un paramètre de fonction.  
   
--   Utiliser l’opérateur IN pour comparer un paramètre de fonction à une liste de valeurs constantes.  
+-   Utilisez l’opérateur IN pour comparer un paramètre de fonction à une liste de valeurs constantes.  
   
      Voici un exemple qui vérifie si la valeur d’une colonne *shipment_status*  est `IN (N'Completed', N'Returned', N'Cancelled')`.  
   
@@ -138,13 +138,13 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>Expressions constantes  
  Les constantes utilisées dans une fonction de filtre peuvent être toute expression déterministe évaluable lors de la définition de la fonction. Les expressions constantes peuvent contenir les éléments suivants.  
   
--   littéraux. Par exemple, `N'abc', 123`.  
+-   littéraux. Par exemple : `N'abc', 123`.  
   
--   Expressions algébriques. Par exemple, `123 + 456`.  
+-   Expressions algébriques. Par exemple : `123 + 456`.  
   
--   Fonctions déterministes Par exemple, `SQRT(900)`.  
+-   Fonctions déterministes Par exemple : `SQRT(900)`.  
   
--   Conversions déterministes utilisant les fonctions CAST ou CONVERT. Par exemple, `CONVERT(datetime, '1/1/2016', 101)`.  
+-   Conversions déterministes utilisant les fonctions CAST ou CONVERT. Par exemple : `CONVERT(datetime, '1/1/2016', 101)`.  
   
 ### <a name="other-expressions"></a>Autres expressions  
  Si, après remplacement des opérateurs BETWEEN et NOT BETWEEN par les expressions AND et OR équivalentes, la fonction obtenue est conforme aux règles décrites ici, vous pouvez utiliser les opérateurs BETWEEN et NOT BETWEEN.  
@@ -259,7 +259,7 @@ GO
   
 -   La fonction doit être déterministe. Par conséquent, vous ne pouvez pas créer une fonction qui recalcule automatiquement la fenêtre glissante au fil du temps.  
   
--   La fonction utilise une liaison de schéma. Ainsi, vous ne pouvez pas mettre à jour quotidiennement la fonction « sur place » en appelant l’instruction **ALTER FUNCTION** pour déplacer la fenêtre glissante.  
+-   La fonction utilise la liaison de schéma. Ainsi, vous ne pouvez pas mettre à jour quotidiennement la fonction « sur place » en appelant l’instruction **ALTER FUNCTION** pour déplacer la fenêtre glissante.  
   
  Commencez avec une fonction de filtre comme dans l’exemple suivant, qui migre les lignes dans lesquelles la colonne **systemEndTime** contient une valeur antérieure au 1er janvier 2016.  
   
@@ -288,7 +288,7 @@ SET (
   
 ```  
   
- Lorsque vous voulez mettre à jour la fenêtre glissante, procédez comme suit.  
+ Lorsque vous souhaitez mettre à jour la fenêtre glissante, procédez comme suit.  
   
 1.  Créez une fonction spécifiant la nouvelle fenêtre glissante. L’exemple suivant sélectionne les dates antérieures au 2 janvier 2016, au lieu du 1er janvier 2016.  
   
@@ -382,7 +382,7 @@ COMMIT ;
   
     ```  
   
-     Après remplacement des opérateurs BETWEEN et NOT BETWEEN par les expressions AND et OR équivalentes, la fonction précédente équivaut à la fonction suivante.  
+     La fonction qui précède est équivalente à la fonction suivante une fois que vous avez remplacé les opérateurs BETWEEN et NOT BETWEEN par les expressions AND et OR équivalentes.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
@@ -436,7 +436,7 @@ COMMIT ;
   
     ```  
   
--   Les fonctions suivantes ne sont pas valides, car des expressions utilisant des opérateurs algébriques ou des fonctions intégrées doivent prendre la valeur d’une constante lors de la définition de la fonction. Vous ne pouvez inclure des références de colonnes dans des expressions algébriques ou des appels de fonction.  
+-   Les fonctions suivantes ne sont pas valides, car des expressions utilisant des opérateurs algébriques ou des fonctions intégrées doivent prendre la valeur d’une constante lors de la définition de la fonction. Vous ne pouvez pas inclure des références de colonne dans les expressions algébriques ou les appels de fonction.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
@@ -510,7 +510,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   La nouvelle fonction ne peut pas contenir d’opérateurs absents de l’ancienne fonction.  
   
--   L’ordre des arguments des opérateurs ne peut pas changer.  
+-   L’ordre des arguments d’opérateur ne peut être modifié.  
   
 -   Seules des valeurs constantes faisant partie d’une comparaison `<, <=, >, >=`  peuvent être modifiées d’une manière rendant la fonction moins restrictive.  
   

@@ -25,17 +25,17 @@ ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b9a43e33b9476c874b2d5a0f64d17d48aec46605
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816750"
 ---
 # <a name="move-user-databases"></a>Déplacer des bases de données utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez déplacer les fichiers de données, les fichiers journaux et les fichiers de catalogues de texte intégral d’une base de données utilisateur vers un nouvel emplacement, en spécifiant le nouvel emplacement de fichier dans la clause FILENAME de l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Cette méthode s'applique au déplacement des fichiers de base de données dans la même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour déplacer une base de données vers une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou vers un autre serveur, utilisez les opérations de [sauvegarde et de restauration](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) ou les [opérations de détachement et d'attachement](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
   
-## <a name="considerations"></a>Observations  
+## <a name="considerations"></a>Considérations  
  Lorsque vous déplacez une base de données sur une autre instance de serveur, pour garantir une expérience cohérente aux utilisateurs et aux applications, vous devrez peut-être recréer tout ou partie des métadonnées de la base de données. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  Certaines fonctionnalités du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] modifient la façon dont le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stocke les informations dans les fichiers de base de données. Ces fonctionnalités sont limitées à des éditions spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une base de données qui contient ces fonctionnalités ne peut pas être déplacée vers une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne les prend pas en charge. Utilisez la vue de gestion dynamique sys.dm_db_persisted_sku_features pour répertorier toutes les fonctions spécifiques à l'édition activées dans la base de données actuelle.  

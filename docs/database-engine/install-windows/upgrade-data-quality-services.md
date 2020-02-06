@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934854"
 ---
 # <a name="upgrade-data-quality-services"></a>Mettre à niveau Data Quality Services
@@ -78,7 +78,7 @@ Cet article fournit des informations sur la mise à niveau de votre installation
     5.  Un message d'achèvement s'affiche une fois la mise à niveau du schéma des bases de données DQS terminée.  
   
 ##  <a name="Verify"></a> Vérification de la mise à niveau du schéma des bases de données DQS  
- Pour vérifier que le schéma de bases de données DQS a été correctement mis à niveau, vérifiez la version actuelle dans les bases de données DQS_MAIN et DQS_PROJECTS en interrogeant la table A_DB_VERSION dans chaque base de données. Pour cela :  
+ Pour vérifier que le schéma de bases de données DQS a été correctement mis à niveau, vérifiez la version actuelle dans les bases de données DQS_MAIN et DQS_PROJECTS en interrogeant la table A_DB_VERSION dans chaque base de données. Pour ce faire :  
   
 1.  Démarrez SQL Server Management Studio et connectez-vous à l'instance de SQL Server qui contient les bases de données DQS mises à niveau.  
   
@@ -91,10 +91,10 @@ Cet article fournit des informations sur la mise à niveau de votre installation
   
 3.  La sortie indiquera une entrée pour chaque mise à niveau, avec la date correspondante. Les valeurs VERSION_ID et ASSEMBLY_VERSION maximales de la dernière date correspondent à la version actuelle. Une valeur de 2 dans la colonne STATUS indique que l'opération a réussi. Si une erreur s'est produite, elle sera indiquée dans la colonne ERROR. Exemple de sortie :  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|d’erreur|  
+    |id|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUT|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAINE\nom d’utilisateur>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAINE\nom d’utilisateur>|2||  
+    |1 000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAINE\nom d’utilisateur>|2||  
+    |1001|2013-09-19 15:09:37.750|1 600|12.0.xxxx.0|\<DOMAINE\nom d’utilisateur>|2||  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

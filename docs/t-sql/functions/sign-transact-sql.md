@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0c9a0803b3f90a244fdd4ca05298e5c34eb8c984
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139290"
 ---
 # <a name="sign-transact-sql"></a>SIGN (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68139290"
 
   Renvoie le chiffre positif (+1), zéro (0) ou négatif (-1) de l'expression spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ SIGN ( numeric_expression )
 |Expression spécifiée|Type de retour|  
 |--------------------------|-----------------|  
 |**bigint**|**bigint**|  
-|**int/smallint/tinyint**|**Int**|  
+|**int/smallint/tinyint**|**int**|  
 |**money/smallmoney**|**money**|  
 |**numeric/decimal**|**numeric/decimal**|  
 |**Autres types**|**float**|  

@@ -13,10 +13,10 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a9eb015bbab987c37df2390eee81af2f3338644b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297598"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (expression SSIS)

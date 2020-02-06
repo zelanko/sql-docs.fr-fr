@@ -16,10 +16,10 @@ ms.assetid: 069c68ff-442d-4104-917f-3445a3ad264a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5724c84323f24bd86d423fbcdafdbd733ba3d78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953465"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>getByte, méthode (java.lang.String) (SQLServerResultSet)
@@ -39,7 +39,7 @@ public byte getByte(java.lang.String columnName)
   
  Valeur **String** qui contient le nom de la colonne.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **d’octet**.  
   
 ## <a name="exceptions"></a>Exceptions  

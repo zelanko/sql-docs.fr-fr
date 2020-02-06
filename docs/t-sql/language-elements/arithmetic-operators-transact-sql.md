@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 94d617f0da60b73ecfc7a0dcdd4530a3a36f3ca7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927369"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Opérateurs arithmétiques (Transact-SQL)
@@ -31,9 +31,9 @@ Les opérateurs arithmétiques exécutent des opérations mathématiques sur deu
   
 |Opérateur|Signification|  
 |--------------|-------------|  
-|[+ (Additionner)](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
-|[- (Soustraire)](../../t-sql/language-elements/subtract-transact-sql.md)|Soustraction|  
-|[* (Multiplier)](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplication|  
+|[+ (Ajout)](../../t-sql/language-elements/add-transact-sql.md)|Addition|  
+|[- (Soustraction)](../../t-sql/language-elements/subtract-transact-sql.md)|Soustraction|  
+|[* (Multiplication)](../../t-sql/language-elements/multiply-transact-sql.md)|Multiplication|  
 |[/ (Diviser)](../../t-sql/language-elements/divide-transact-sql.md)|Division|  
 |[% (Modulo)](../../t-sql/language-elements/modulo-transact-sql.md)|Retourne le reste entier d'une division. Par exemple, 12 % 5 = 2 parce que le reste de 12 divisé par 5 est 2.|  
   

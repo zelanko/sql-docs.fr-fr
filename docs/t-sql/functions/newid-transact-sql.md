@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843654"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73843654"
 
   Crée une valeur unique de type **uniqueidentifier**.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ NEWID ( )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-newid-function-with-a-variable"></a>A. Utilisation de la fonction NEWID avec une variable  
+### <a name="a-using-the-newid-function-with-a-variable"></a>R. Utilisation de la fonction NEWID avec une variable  
  L’exemple suivant utilise `NEWID()` pour attribuer une valeur à une variable déclarée de type **uniqueidentifier**. La valeur de la variable de type **uniqueidentifier** est imprimée avant d’être testée.  
   
 ```  

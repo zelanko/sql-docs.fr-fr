@@ -23,10 +23,10 @@ ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 414c5df86e58472bc1aa3f5df9ee25a54f8bc590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927545"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927545"
 
   Teste si les données signées numériquement ont été modifiées depuis leur dernière signature.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  Signature attachée aux données signées. *signature* est de type **varbinary**.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
  Retourne 1 lorsque les signatures correspondent, sinon 0.  
   
@@ -66,7 +66,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-testing-for-data-with-a-valid-signature"></a>A. Test de données ayant une signature valide  
+### <a name="a-testing-for-data-with-a-valid-signature"></a>R. Test de données ayant une signature valide  
  Le code exemple suivant retourne 1 si les données sélectionnées n'ont pas été modifiées depuis leur dernière signature avec la clé asymétrique `WillisKey74`. Le code exemple retourne 0 si les données ont été modifiées.  
   
 ```  

@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75693068e1aa030f9027b1918becd27e8ec9cc5c
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843613"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73843613"
 
   Détermine si une expression est un type numérique valide.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ ISNUMERIC ( expression )
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) à évaluer.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
  ISNUMERIC retourne 1 lorsque l'expression entrée correspond à un type de données numérique valide ; dans le cas contraire, ISNUMERIC retourne 0. Parmi les [types de données numériques](../../t-sql/data-types/numeric-types.md) valides, citons les suivants :  

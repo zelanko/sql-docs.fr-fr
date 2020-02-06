@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72008457"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Mettre à niveau ou corriger des bases de données répliquées
@@ -36,8 +36,8 @@ ms.locfileid: "72008457"
     - Un abonné à une publication de fusion peut avoir toute version égale ou inférieure à la version de l’éditeur qui est prise en charge selon le cycle de prise en charge du cycle de vie des versions.  
  
 Le chemin de mise à niveau vers SQL Server dépend du modèle de déploiement. SQL Server offre deux chemins de mise à niveau en général :
-- Côte à côte Déployez un environnement parallèle et déplacez les bases de données ainsi que les objets de niveau instance associés, tels que les connexions et les travaux, vers le nouvel environnement. 
-- Mise à niveau sur place : Autorisez le support d’installation de SQL Server à mettre à niveau l’installation de SQL Server existante en remplaçant les bits de SQL Server et en mettant à niveau les objets de base de données. Pour les environnements exécutant des groupes de disponibilité Always On ou des instances de cluster de basculement, une mise à niveau sur place est combinée avec une [mise à niveau propagée](choose-a-database-engine-upgrade-method.md#rolling-upgrade) pour réduire les temps d’arrêt. 
+- Côte à côte : déployez un environnement parallèle et déplacez les bases de données ainsi que les objets de niveau instance associés, tels que les connexions et les travaux, vers le nouvel environnement. 
+- Mise à niveau sur place : autorisez le support d’installation de SQL Server à mettre à niveau l’installation de SQL Server existante en remplaçant les bits de SQL Server et en mettant à niveau les objets de base de données. Pour les environnements exécutant des groupes de disponibilité Always On ou des instances de cluster de basculement, une mise à niveau sur place est combinée avec une [mise à niveau propagée](choose-a-database-engine-upgrade-method.md#rolling-upgrade) pour réduire les temps d’arrêt. 
 
 Une approche courante qui a été adoptée pour les mises à niveau côte à côte de topologies de réplication consiste à déplacer des paires éditeur/abonné par lots vers le nouvel environnement côte à côte, au lieu de procéder à un déplacement de la topologie complète. Cette approche par phases aide à maîtriser les temps d’arrêt et, dans une certaine mesure, à réduire l’impact sur les activités qui dépendent de la réplication.  
 

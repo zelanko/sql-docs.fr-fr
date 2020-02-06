@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846725"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
@@ -47,7 +47,7 @@ Crée une table graphique SQL en tant que table `NODE` ou `EDGE`.
 > [!NOTE]   
 >  Pour plus d’informations sur les instructions Transact-SQL standard, consultez [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -136,7 +136,7 @@ Une table de nœuds/arêtes de graphique non partitionnée ne peut pas devenir u
  
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-create-a-node-table"></a>A. Créer une table `NODE`
+### <a name="a-create-a-node-table"></a>R. Créer une table `NODE`
  L’exemple suivant montre comment créer une table `NODE`.
 
 ```

@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943156"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Générer un schéma XSD en ligne
@@ -155,7 +155,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
  `</xsd:schema>`  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Dans le résultat, <`SalesOrderHeader`> et <`SalesOrderDetail`> sont des éléments d'entité. Pour cette raison, ils sont déclarés globalement dans le schéma. Ainsi, la déclaration apparaît au plus haut niveau au sein de l'élément <`Schema`>.  
   
@@ -222,7 +222,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Conflits de noms d'éléments  
  Dans FOR XML, le même nom peut être utilisé pour indiquer deux sous-éléments. Par exemple, la requête ci-dessous récupère les valeurs ListPrice et DealerPrice des produits, mais la requête spécifie le même alias, Price, pour ces deux colonnes. Par conséquent, l'ensemble de lignes résultant possèdera deux colonnes du même nom.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas n° 1 : les deux sous-éléments sont des colonnes non-clés du même type et acceptent la valeur NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Cas 1 : les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL  
  Dans la requête ci-dessous, les deux sous-éléments sont des colonnes non-clés du même type et ils acceptent la valeur NULL.  
   
 ```  
@@ -314,7 +314,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas n° 2 : une colonne clé et une colonne non-clé du même type  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Cas 2 : une colonne clé et une colonne non-clé du même type  
  La requête ci-dessous illustre une colonne clé et une colonne non-clé du même type.  
   
 ```  
@@ -332,7 +332,7 @@ FROM T
 FOR XML RAW, ELEMENTS, XMLSCHEMA  
 ```  
   
- Voici l'ensemble de résultats. Seul un fragment du schéma XSD en ligne est indiqué :  
+ Voici l'ensemble de résultats. Seul un fragment du schéma XSD en ligne est indiqué :  
   
  `...`  
   
@@ -392,7 +392,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Notez dans le schéma XSD en ligne que l'élément <`Col`> correspondant à Col2 a une valeur minOccurs égale à 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas n° 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Cas 3 : les deux éléments sont de types différents et les colonnes correspondantes acceptent la valeur NULL  
  La requête ci-dessous est spécifiée sur l'exemple de table défini dans le cas 2 :  
   
 ```  
@@ -461,11 +461,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
- Notez les éléments suivants dans le schéma XSD en ligne :  
+ Notez les éléments suivants dans le schéma XSD en ligne :  
   
 -   Comme Col2 et Col3 acceptent la valeur NULL, la déclaration d'élément <`Col`> spécifie une valeur minOccurs égale à 0 et une valeur maxOccurs égale à 2.  
   
--   Comme les deux éléments <`Col`> sont frères, le schéma contient une seule déclaration d'élément. En outre, comme les deux éléments sont également de types différents, bien qu'ils soient tous les deux d'un type simple, le type de l'élément dans le schéma est `xsd:anySimpleType`. Dans le résultat, chaque type d'instance est identifié par l'attribut `xsi:type`.  
+-   Comme les deux éléments <`Col`> sont frères, le schéma contient une seule déclaration d'élément. En outre, comme les deux éléments sont également de types différents, bien qu'ils soient tous les deux d'un type simple, le type de l'élément dans le schéma est `xsd:anySimpleType`. Dans le résultat, chaque type d'instance est identifié par l'attribut `xsi:type` .  
   
 -   Dans le résultat, chaque instance de l'élément <`Col`> fait référence à son type d'instance en utilisant l'attribut `xsi:type`.  
   

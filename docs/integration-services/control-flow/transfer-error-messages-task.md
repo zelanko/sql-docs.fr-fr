@@ -17,10 +17,10 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 363a2761472f544e2c995fba25f4650ee6242b36
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293879"
 ---
 # <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur
@@ -86,7 +86,7 @@ ms.locfileid: "71293879"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de messages d'erreur** pour donner un nom et une description à la tâche de transfert de messages d'erreur. La tâche de transfert de messages d’erreur transfère un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définis par l’utilisateur entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique à la tâche de transfert de messages d'erreur. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

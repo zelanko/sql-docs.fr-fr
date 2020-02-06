@@ -15,10 +15,10 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946968"
 ---
 # <a name="create-a-new-plan-guide"></a>Créer un repère de plan
@@ -71,7 +71,7 @@ Un repère de plan applique un plan de requête fixe et/ou des indicateurs de re
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
 ##  <a name="TsqlProcedure"></a> Créer un repère de plan à l’aide de T-SQL  
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

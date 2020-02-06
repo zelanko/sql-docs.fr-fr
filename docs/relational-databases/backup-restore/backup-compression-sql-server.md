@@ -18,15 +18,15 @@ ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940835"
 ---
 # <a name="backup-compression-sql-server"></a>Compression de sauvegardes (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique décrit la compression des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notamment les restrictions, les compromis en termes de performances pour la compression des sauvegardes, la configuration pour la compression des sauvegardes et le taux de compression.  La compression de la sauvegarde est prise en charge uniquement sur les éditions [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Entreprise, Standard et Développeur.  Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée. 
+  Cette rubrique décrit la compression des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notamment les restrictions, les compromis en termes de performances pour la compression des sauvegardes, la configuration pour la compression des sauvegardes et le taux de compression.  La compression de sauvegarde est prise en charge sur les éditions [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Entreprise, Standard et Développeur.  Chaque édition de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieure peut restaurer une sauvegarde compressée. 
  
   
 ##  <a name="Benefits"></a> Avantages  

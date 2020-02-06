@@ -26,10 +26,10 @@ helpviewer_keywords:
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73882410"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)
@@ -108,7 +108,7 @@ Requiert une autorisation ALTER ANY SENSITIVITY CLASSIFICATION. La classificatio
 
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-classifying-two-columns"></a>A. Classification de deux colonnes
+### <a name="a-classifying-two-columns"></a>R. Classification de deux colonnes
 
 L’exemple suivant classifie les colonnes **dbo.sales.price** et **dbo.sales.discount** avec l’étiquette de sensibilité **Hautement confidentiel** et le Type d’informations **Financier**.
 

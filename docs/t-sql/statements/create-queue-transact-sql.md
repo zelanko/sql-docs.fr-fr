@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326094"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "71326094"
 
 Crée une file d'attente dans une base de données. Les files d'attente stockent les messages. Lorsqu'un message destiné à un service se présente, [!INCLUDE[ssSB](../../includes/sssb-md.md)] le place dans la file d'attente associée au service.
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -128,7 +128,7 @@ Une file d'attente est un objet appartenant à un schéma. Les files d'attente a
 
 Le tableau suivant donne la liste des colonnes d'une file d'attente.
 
-|Nom de colonne|Type de données|Description|
+|Nom de la colonne|Type de données|Description|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|État du message. L’instruction RECEIVE retourne tous les messages pour lesquels status est égal à **1**. Si la rétention des messages est activée, status a la valeur 0. Si la rétention des messages est désactivée, le message est supprimé de la file d'attente. Dans la file d’attente, les messages peuvent contenir l’une des valeurs suivantes :<br /><br /> **0** = Message reçu conservé<br /><br /> **1** = Prêt à recevoir<br /><br /> **2** = Pas encore terminé<br /><br /> **3** = Message envoyé conservé|
 |priority|**tinyint**|Niveau de priorité assigné à ce message.|
@@ -137,11 +137,11 @@ Le tableau suivant donne la liste des colonnes d'une file d'attente.
 |conversation_handle|**uniqueidentifier**|Descripteur de conversation dont ce message fait partie.|
 |message_sequence_number|**bigint**|Numéro de séquence du message dans la conversation.|
 |service_name|**nvarchar(512)**|Nom du service auquel la conversation est destinée.|
-|service_id|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|
+|service_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|
 |service_contract_name|**nvarchar (256)**|Nom du contrat suivi par la conversation.|
-|service_contract_id|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|
+|service_contract_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|
 |message_type_name|**nvarchar (256)**|Nom du type de message décrivant le message.|
-|message_type_id|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|
+|message_type_id|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|
 |validation|**nchar(2)**|Validation utilisée pour le message.<br /><br /> E=Vide<br /><br /> N=Aucune<br /><br /> X=XML|
 |message_body|**varbinary(max)**|Contenu du message.|
 |message_id|**uniqueidentifier**|Identificateur unique du message.|
@@ -156,7 +156,7 @@ L’autorisation `RECEIVE` pour une file d’attente est accordée par défaut a
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-creating-a-queue-with-no-parameters"></a>A. Création d'une file d'attente sans paramètres
+### <a name="a-creating-a-queue-with-no-parameters"></a>R. Création d'une file d'attente sans paramètres
 
 L'exemple suivant crée une file d'attente disponible pour la réception de messages. Aucune procédure stockée d'activation n'est spécifiée pour la file d'attente.
 

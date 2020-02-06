@@ -19,10 +19,10 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294928"
 ---
 # <a name="creating-a-package-programmatically"></a>Création d'un package par programme
@@ -75,7 +75,7 @@ End Module
   
  **vbc /target:library /out: \<nom_fichier_sortie>.dll \<nom_fichier>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Vous pouvez également créer un package en chargeant un package existant enregistré sur le disque, dans le système de fichiers ou dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La différence est que l'objet <xref:Microsoft.SqlServer.Dts.Runtime.Application> est d'abord créé, puis l'objet de package est renseigné par l'une des méthodes surchargées de l'application : **LoadPackage** pour les fichiers plats, **LoadFromSQLServer** pour les packages enregistrés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> pour les packages enregistrés dans le système de fichiers. L'exemple suivant charge un package existant à partir du disque, puis consulte plusieurs propriétés sur le package.  
+ Vous pouvez également créer un package en chargeant un package existant enregistré sur le disque, dans le système de fichiers ou dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La différence est que l’objet <xref:Microsoft.SqlServer.Dts.Runtime.Application> est d’abord créé, puis l’objet de package est renseigné par l’une des méthodes surchargées de l’application : **LoadPackage** pour les fichiers plats, **LoadFromSQLServer** pour les packages enregistrés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> pour les packages enregistrés dans le système de fichiers. L'exemple suivant charge un package existant à partir du disque, puis consulte plusieurs propriétés sur le package.  
   
 ```csharp  
 using System;  

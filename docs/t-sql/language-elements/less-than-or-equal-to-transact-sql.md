@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5209f679888833a532849a694f0683c6d1283b13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122236"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (Inférieur ou égal à) (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68122236"
   
  Contrairement à l’opérateur de comparaison = (égalité), le résultat de la comparaison >= de deux valeurs NULL ne dépend pas du paramètre ANSI_NULLS.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ expression <= expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using--in-a-simple-query"></a>A. Utilisation de <= dans une requête simple  
+### <a name="a-using--in-a-simple-query"></a>R. Utilisation de <= dans une requête simple  
  L'exemple suivant retourne toutes les lignes de la table `HumanResources.Department` qui ont une valeur dans `DepartmentID` inférieure ou égale à la valeur 3.  
   
 ```  

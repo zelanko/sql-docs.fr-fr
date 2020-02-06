@@ -1,6 +1,6 @@
 ---
-title: Ajouter des éléments existants à un projet | Microsoft Docs
-ms.custom: ''
+title: Ajouter des éléments existants à un projet
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cfdc8405fd958efb34a607736648eddf5f4732dc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9f17139dfae9a04fe71c8b4d493b0be24d875c4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252838"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241891"
 ---
 # <a name="add-existing-items-to-a-project"></a>Ajouter des éléments existants à un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité de l'application. Un élément existant peut être une requête ou un fichier divers. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contient deux types de projets : les projets de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les projets de script Analysis Services. Les fichiers de requête que vous pouvez ajouter au projet sont déterminés par le type du projet. Par exemple, vous pouvez ajouter une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] (fichier doté de l'extension .sql) à un projet de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais vous ne pouvez pas l'ajouter à un projet de script de services d'analyse. Pour associer d'autres extensions de fichier à un type de projet, consultez [Procédure : Associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité de l'application. Un élément existant peut être une requête ou un fichier divers. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] comporte deux types de projets : les projets de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les projets de script Analysis Services. Les fichiers de requête que vous pouvez ajouter au projet sont déterminés par le type du projet. Par exemple, vous pouvez ajouter une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] (fichier doté de l'extension .sql) à un projet de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais vous ne pouvez pas l'ajouter à un projet de script de services d'analyse. Pour associer d’autres extensions de fichier à un type de projet, consultez [Procédure : associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Pour ajouter une requête existante ou un fichier divers à un projet  
   

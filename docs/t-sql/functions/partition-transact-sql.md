@@ -19,10 +19,10 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914390"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67914390"
 
   Retourne le numéro de la partition dans laquelle un ensemble de valeurs de colonnes de partitionnement doit être mappé afin de pouvoir être utilisé par une fonction de partition précise dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67914390"
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) dont le type de données doit correspondre au type de données de sa colonne de partitionnement correspondante ou être convertible de façon implicite en celui-ci. *expression* peut également représenter le nom d’une colonne de partitionnement participant actuellement à *partition_function_name*.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
  $PARTITION renvoie une valeur de type **int** comprise entre 1 et le nombre de partitions de la fonction de partition.  
@@ -59,7 +59,7 @@ ms.locfileid: "67914390"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. Obtention du numéro de partition pour un ensemble de valeurs de colonnes de partitionnement  
+### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>R. Obtention du numéro de partition pour un ensemble de valeurs de colonnes de partitionnement  
  L'exemple suivant crée une fonction de partition appelée `RangePF1`, chargée de partitionner une table ou un index en quatre partitions. $PARTITION permet de déterminer si la valeur `10`, correspondant à la colonne de partitionnement de `RangePF1`, doit être placée dans la partition 1 de la table.  
   
 ```  

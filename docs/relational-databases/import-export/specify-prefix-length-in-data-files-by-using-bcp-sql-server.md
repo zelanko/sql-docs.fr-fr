@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056370"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp (SQL Server)
@@ -60,7 +60,7 @@ ms.locfileid: "74056370"
 |**nvarchar**|2|2|2|2|  
 |**text***|4|4|4|4|  
 |**ntext***|4|4|4|4|  
-|**binaire**|2|2|2|2|  
+|**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
 |**datetime**|0|1|0|1|  
@@ -69,7 +69,7 @@ ms.locfileid: "74056370"
 |**numeric**|1|1|1|1|  
 |**float**|0|1|0|1|  
 |**real**|0|1|0|1|  
-|**Int**|0|1|0|1|  
+|**int**|0|1|0|1|  
 |**bigint**|0|1|0|1|  
 |**smallint**|0|1|0|1|  
 |**tinyint**|0|1|0|1|  

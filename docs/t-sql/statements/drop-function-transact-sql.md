@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044228"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68044228"
   
  La fonction DROP prend en charge les fonctions définies par l’utilisateur scalaires compilées en mode natif. Pour plus d’informations, consultez [Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,7 +75,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dropping-a-function"></a>A. Suppression d'une fonction  
+### <a name="a-dropping-a-function"></a>R. Suppression d'une fonction  
  L’exemple suivant supprime la fonction définie par l’utilisateur `fn_SalesByStore` du schéma `Sales` de l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Pour créer cette fonction, consultez l’exemple B dans [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ```  

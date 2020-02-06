@@ -18,10 +18,10 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294373"
 ---
 # <a name="multiple-files-connection-manager"></a>Gestionnaire de connexions de fichiers multiples
@@ -63,7 +63,7 @@ ms.locfileid: "71294373"
   
  \<*chemin*>|\<*chemin*>  
   
- Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte du lecteur C, la valeur de la propriété **ConnectionString** peut être définie sur C:\\*.txt.  
+ Vous pouvez également spécifier plusieurs fichiers ou dossiers en utilisant des caractères génériques. Par exemple, pour référencer tous les fichiers texte du lecteur C, la valeur de la propriété **ConnectionString** peut être définie sur C:\\\*.txt.  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   

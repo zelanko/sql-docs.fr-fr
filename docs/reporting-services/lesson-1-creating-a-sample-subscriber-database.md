@@ -9,10 +9,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513161"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d'un exemple de base de données de l'abonné
@@ -55,11 +55,11 @@ Cette leçon part du principe que vous utilisez [!INCLUDE[ssManStudioFull_md](..
     GO  
     ```  
   
-7.  Cliquez sur  **! Exécuter** dans la barre d’outils.  
+7.  Cliquez sur **! Exécuter** dans la barre d’outils.  
   
 8.  Utilisez une instruction SELECT pour vérifier que votre table comporte bien trois lignes de données. Par exemple : `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 + Vous avez créé les données d'abonnement sur lesquelles seront basées la distribution des rapports et en fonction desquelles les résultats des rapports varieront pour chaque abonné. 
 + Ensuite, vous allez modifier les propriétés de la source de données du rapport pour utiliser des informations d’identification stockées. 
 + Vous allez également modifier la conception du rapport afin d'inclure un paramètre que l'abonnement utilisera avec les données d'abonné. [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  

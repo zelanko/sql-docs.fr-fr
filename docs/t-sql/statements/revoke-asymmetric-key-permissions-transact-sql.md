@@ -17,10 +17,10 @@ ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082359"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE (Autorisations de clé asymétrique) (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082359"
 
   Révoque les autorisations associées à une clé asymétrique.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  Spécifie la clé asymétrique sur laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
- Spécifie le principal pour lequel l'autorisation est révoquée. Il peut s'agir :  
+ Spécifie le principal pour lequel l'autorisation est révoquée. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   Utilisateur de base de données  
   
@@ -80,7 +80,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
  AS *revoking_principal*  
- Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. Il peut s'agir :  
+ Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   Utilisateur de base de données  
   

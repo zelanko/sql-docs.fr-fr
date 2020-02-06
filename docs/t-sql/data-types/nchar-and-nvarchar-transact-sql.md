@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68354589"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar et nvarchar (Transact-SQL)
@@ -36,7 +36,7 @@ Données de type chaîne de taille fixe. *n* définit la taille de chaîne en pa
 Données de type chaîne de taille variable. *n* définit la taille de chaîne en paires d’octets et peut être une valeur comprise entre 1 et 4 000. **max** indique que la taille de stockage maximale est de 2^30-1 caractères (2 Go). La taille de stockage est deux fois *n* octets + 2 octets. Pour l'encodage [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), la taille de stockage est deux fois *n* octets + 2 octests et le nombre de caractères pouvant être stockés est également *n*. Pour l'encodage UTF-16, la taille de stockage est toujours deux fois *n* octets + 2 octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*, car les caractères supplémentaires utilisent deux paires d'octets (également appelées [paires de remplacement](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Les synonymes ISO de **nvarchar** sont **national char varying** et **national character varying**.
   
 ## <a name="remarks"></a>Notes  
-Contrairement à l’idée fausse qui circule sur [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* ne définit pas le nombre de caractères. Dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* définit la longueur de chaîne en **paires d’octets** (0-4 000). *n* ne définit jamais le nombre de caractères pouvant être stockés. Cette définition est similaire à celle de [CHAR(*n*) et de VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
+Contrairement à l’idée fausse qui circule sur [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* ne définit pas le nombre de caractères. Dans [NCHAR(*n*) et NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* définit la longueur de chaîne en **paires d’octets** (0-4 000). *n* ne définit jamais des nombres de caractères pouvant être stockés. Cette définition est similaire à celle de [CHAR(*n*) et de VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
 En fait, lors de l’utilisation de caractères définis dans la plage Unicode 0-65 535, un caractère peut être stocké pour chaque paire d’octets, d’où cette idée fausse. Toutefois, dans les plages Unicode supérieures (65 536-1 114 111), un caractère peut utiliser deux paires d’octets. Par exemple, dans une colonne définie en tant que NCHAR(10), [!INCLUDE[ssde_md](../../includes/ssde_md.md)] peut stocker 10 caractères qui utilisent une paire d’octets (plage Unicode 0-65 535), mais moins de 10 caractères lors de l’utilisation de deux paires d’octets (plage Unicode 65 536-1 114 111). Pour plus d’informations sur le stockage Unicode et les plages de caractères, consultez [Différences de stockage entre UTF-8 et UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).     
 
 Quand la valeur de *n* n’est spécifiée ni dans une définition de données ni dans une instruction de déclaration de variable, la longueur par défaut est 1. Quand la valeur de *n* n’est pas précisée avec la fonction CAST, la longueur par défaut est 30.

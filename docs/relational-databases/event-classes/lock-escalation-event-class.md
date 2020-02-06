@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: faad3614a308efc8dfa8994b176cec148520522a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118281"
 ---
 # <a name="lockescalation-event-class"></a>Classe d'événements Lock:Escalation
@@ -29,35 +29,35 @@ ms.locfileid: "68118281"
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
-|**ClientProcessID**|**Int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|**DatabaseID**|**Int**|ID de la base de données dans laquelle le verrou a été obtenu. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|**ClientProcessID**|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
+|**DatabaseID**|**int**|ID de la base de données dans laquelle le verrou a été obtenu. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**DatabaseName**|**nvarchar**|Nom de la base de données dans laquelle a eu lieu la promotion.|35|Oui|  
-|**EventClass**|**Int**|Type d’événement = 60.|27|Non|  
-|**EventSubClass**|**Int**|Cause de l'escalade de verrous :<br /><br /> **0 - LOCK_THRESHOLD** indique que l’instruction a dépassé le seuil de verrou.<br /><br /> **1 - MEMORY_THRESHOLD** indique que l’instruction a dépassé le seuil de la mémoire.|21|Oui|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
-|**GroupID**|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
+|**EventClass**|**int**|Type d’événement = 60.|27|Non|  
+|**EventSubClass**|**int**|Cause de l'escalade de verrous :<br /><br /> **0 - LOCK_THRESHOLD** indique que l’instruction a dépassé le seuil de verrou.<br /><br /> **1 - MEMORY_THRESHOLD** indique que l’instruction a dépassé le seuil de la mémoire.|21|Oui|  
+|**EventSequence**|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
+|**GroupID**|**int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
-|**IntegerData**|**Int**|Nombre de verrous HoBT. Nombre de verrous pour HoBT au moment de l'escalade de verrous.|25|Oui|  
-|**IntegerData2**|**Int**|Nombre de verrous escaladés. Nombre total des verrous convertis. Ces structures de verrou sont libérées parce qu'elles sont déjà couvertes par le verrou escaladé.|55|Oui|  
-|**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
-|**LineNumber**|**Int**|Numéro de ligne de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .|5|Oui|  
+|**IntegerData**|**int**|Nombre de verrous HoBT. Nombre de verrous pour HoBT au moment de l'escalade de verrous.|25|Oui|  
+|**IntegerData2**|**int**|Nombre de verrous escaladés. Nombre total des verrous convertis. Ces structures de verrou sont libérées parce qu'elles sont déjà couvertes par le verrou escaladé.|55|Oui|  
+|**IsSystem**|**int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
+|**LineNumber**|**int**|Numéro de ligne de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .|5|Oui|  
 |**LoginName**|**nvarchar**|Nom de la connexion de l'utilisateur (soit la connexion de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soit les informations d'identification de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows au format DOMAINE\nom_utilisateur).|11|Oui|  
 |**LoginSid**|**image**|Numéro d'identification de sécurité (SID) de l'utilisateur connecté. Vous pouvez trouver ces informations dans l’affichage catalogue **sys.server_principals** . Chaque connexion possède un SID unique au niveau du serveur.|41|Oui|  
-|**Mode**|**Int**|Mode de verrouillage obtenu après l'escalade :<br /><br /> 0=NULL - Compatible avec tous les autres modes de verrouillage (LCK_M_NL)<br /><br /> 1=Verrou de stabilité de schéma (LCK_M_SCH_S)<br /><br /> 2 = verrou de modification de schéma (LCK_M_SCH_M)<br /><br /> 3 = verrou partagé (LCK_M_S)<br /><br /> 4 = verrou de mise à jour (LCK_M_U)<br /><br /> 5 = verrou exclusif (LCK_M_X)<br /><br /> 6 = verrou Intent partagé (LCK_M_IS)<br /><br /> 7 = verrou Intent de mise à jour (LCK_M_IU)<br /><br /> 8 = verrou Intent exclusif (LCK_M_IX)<br /><br /> 9 = verrou partagé avec mise à jour Intent (LCK_M_SIU)<br /><br /> 10 = verrou partagé avec Intent exclusif (LCK_M_SIX)<br /><br /> 11 = verrou mise à jour avec Intent exclusif (LCK_M_UIX)<br /><br /> 12 = verrou de mise à jour en bloc (LCK_M_BU)<br /><br /> 13 = verrou d'étendue de clés partagé/de ressources partagé (LCK_M_RS_S)<br /><br /> 14 = verrou d'étendue de clés partagé/de ressources partagé (LCK_M_RS_U)<br /><br /> 15 = verrou d'étendue de clés d'insertion de valeurs NULL (LCK_M_RI_NL)<br /><br /> 16 = verrou d'étendue de clés d'insertion partagé (LCK_M_RI_S)<br /><br /> 17 = verrou d'étendue de clés d'insertion de mise à jour (LCK_M_RI_U)<br /><br /> 18 = verrou d'étendue de clés d'insertion exclusif (LCK_M_RI_X)<br /><br /> 19 = verrou d'étendue de clés exclusif partagé (LCK_M_RX_S)<br /><br /> 20 = verrou d'étendue de clés exclusif de mise à jour (LCK_M_RX_U)<br /><br /> 21 = verrou d'étendue de clés exclusif/de ressources exclusif (LCK_M_RX_X)|32|Oui|  
+|**Mode**|**int**|Mode de verrouillage obtenu après l'escalade :<br /><br /> 0=NULL - Compatible avec tous les autres modes de verrouillage (LCK_M_NL)<br /><br /> 1=Verrou de stabilité de schéma (LCK_M_SCH_S)<br /><br /> 2 = verrou de modification de schéma (LCK_M_SCH_M)<br /><br /> 3 = verrou partagé (LCK_M_S)<br /><br /> 4 = verrou de mise à jour (LCK_M_U)<br /><br /> 5 = verrou exclusif (LCK_M_X)<br /><br /> 6 = verrou Intent partagé (LCK_M_IS)<br /><br /> 7 = verrou Intent de mise à jour (LCK_M_IU)<br /><br /> 8 = verrou Intent exclusif (LCK_M_IX)<br /><br /> 9 = verrou partagé avec mise à jour Intent (LCK_M_SIU)<br /><br /> 10 = verrou partagé avec Intent exclusif (LCK_M_SIX)<br /><br /> 11 = verrou mise à jour avec Intent exclusif (LCK_M_UIX)<br /><br /> 12 = verrou de mise à jour en bloc (LCK_M_BU)<br /><br /> 13 = verrou d'étendue de clés partagé/de ressources partagé (LCK_M_RS_S)<br /><br /> 14 = verrou d'étendue de clés partagé/de ressources partagé (LCK_M_RS_U)<br /><br /> 15 = verrou d'étendue de clés d'insertion de valeurs NULL (LCK_M_RI_NL)<br /><br /> 16 = verrou d'étendue de clés d'insertion partagé (LCK_M_RI_S)<br /><br /> 17 = verrou d'étendue de clés d'insertion de mise à jour (LCK_M_RI_U)<br /><br /> 18 = verrou d'étendue de clés d'insertion exclusif (LCK_M_RI_X)<br /><br /> 19 = verrou d'étendue de clés exclusif partagé (LCK_M_RX_S)<br /><br /> 20 = verrou d'étendue de clés exclusif de mise à jour (LCK_M_RX_U)<br /><br /> 21 = verrou d'étendue de clés exclusif/de ressources exclusif (LCK_M_RX_X)|32|Oui|  
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
-|**ObjectID**|**Int**|ID assigné par système de la table pour laquelle l'escalade de verrous a été déclenchée.|22|Oui|  
+|**ObjectID**|**int**|ID assigné par système de la table pour laquelle l'escalade de verrous a été déclenchée.|22|Oui|  
 |**ObjectID2**|**bigint**|ID de l'objet ou de l'entité associé. (ID HoBT pour lequel l'escalade de verrous a été déclenchée.)|56|Oui|  
-|**Offset**|**Int**|Décalage de départ de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Oui|  
-|**OwnerID**|**Int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Oui|  
-|**RequestID**|**Int**|ID de la demande contenant l'instruction.|49|Oui|  
+|**Offset**|**int**|Décalage de départ de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Oui|  
+|**OwnerID**|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Oui|  
+|**RequestID**|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
+|**SPID**|**int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**TextData**|**ntext**|Texte de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a provoqué l'escalade de verrous.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
-|**Type**|**Int**|Granularité de l'escalade de verrous :<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (niveau table)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|Oui|  
+|**Type**|**int**|Granularité de l'escalade de verrous :<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (niveau table)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|Oui|  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant utilise la procédure `sp_trace_create` pour créer une trace, utilise `sp_trace_setevent` pour ajouter des colonnes d'escalade de verrous à la trace, puis utilise `sp_trace_setstatus` pour démarrer la trace. Dans les instructions telles que `EXEC sp_trace_setevent @TraceID, 60, 22, 1`, le nombre `60` désigne la classe d’événements d’escalade, `22` désigne la colonne **ObjectID** et `1` affecte à l’événement de trace la valeur ON.  

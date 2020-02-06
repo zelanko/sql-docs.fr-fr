@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b2bce8ef0c47a26ef1b1a095160ce6cc7357a00f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127364"
 ---
 # <a name="system-databases"></a>Bases de données système
@@ -71,7 +71,7 @@ ms.locfileid: "68127364"
 ## <a name="related-tasks"></a>Tâches associées  
  [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Masquer les objets système dans l'Explorateur d'objets](../../ssms/object/hide-system-objects-in-object-explorer.md)  
+ [Masquer les objets système dans l’Explorateur d’objets](../../ssms/object/hide-system-objects-in-object-explorer.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

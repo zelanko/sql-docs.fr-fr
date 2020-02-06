@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708735"
 ---
 # <a name="back-up-a-transaction-log"></a>Sauvegarder un journal des transactions
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell
 
-Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Log** comme valeur du paramètre **-BackupAction** .  
+Configurez et utilisez le [fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Utilisez l’applet de commande **Backup-SqlDatabase** et spécifiez **Log** comme valeur du paramètre **-BackupAction**.  
   
 L'exemple suivant crée une sauvegarde de fichier journal de la base de données `<myDatabase>` à l'emplacement de sauvegarde par défaut de l'instance de serveur `Computer\Instance`.  
   

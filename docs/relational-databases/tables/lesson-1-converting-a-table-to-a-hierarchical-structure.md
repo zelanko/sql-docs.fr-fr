@@ -13,13 +13,13 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907296"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Leçon 1 : Conversion d’une table en une structure hiérarchique
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Leçon 1 : Conversion d'une table en structure hiérarchique
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Les clients qui ont des tables utilisant des jointures réflexives pour exprimer des relations hiérarchiques peuvent convertir leurs tables en structure hiérarchique en suivant les procédures fournies dans cette leçon. Il est relativement facile d'effectuer une migration de cette représentation vers une autre à l'aide de **hierarchyid**. Après la migration, les utilisateurs disposeront d'une représentation hiérarchique compacte et facile à comprendre, qui peut être indexée de plusieurs façons pour que les requêtes soient efficaces.  
   
@@ -33,7 +33,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Téléchargez les [exemples de bases de données AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Étudier la structure actuelle de la table Employee
 L’exemple de base de données Adventureworks2017 (ou ultérieur) contient une table **Employee** dans le schéma **HumanResources**. Afin d'éviter de modifier la table d'origine, cette étape effectue une copie de la table **Employee** , nommée **EmployeeDemo**. Pour simplifier l'exemple, vous ne copiez que cinq colonnes de la table d'origine. Vous interrogez ensuite la table **HumanResources.EmployeeDemo** pour vérifier comment sont structurées les données dans une table sans utiliser le type de données **hierarchyid** .  
@@ -223,7 +223,7 @@ Cette tâche crée une table et la remplit avec les données de la table **Emplo
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>Optimisation de la table NewOrg
-La table **NewOrd** que vous avez créée dans la tâche [Remplissage d’une table avec des données hiérarchiques existantes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contient toutes les informations relatives aux employés et représente la structure hiérarchique à l’aide d’un type de données **hierarchyid**. Cette tâche ajoute de nouveaux index pour prendre en charge les recherches sur la colonne **hierarchyid** .  
+La table **NewOrd** que vous avez créée dans la tâche [Remplissage d’une table avec des données hiérarchiques existantes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contient toutes les informations relatives aux employés et représente la structure hiérarchique à l’aide d’un type de données **hierarchyid** . Cette tâche ajoute de nouveaux index pour prendre en charge les recherches sur la colonne **hierarchyid** .  
   
 
 La colonne **hierarchyid** (**OrgNode**) est la clé primaire de la table **NewOrg** . Quand la table a été créée, elle contenait un index cluster nommé **PK_NewOrg_OrgNode** pour forcer l’unicité de la colonne **OrgNode** . Cet index cluster prend également en charge une recherche à profondeur prioritaire de la table.  
@@ -272,7 +272,7 @@ La colonne **hierarchyid** (**OrgNode**) est la clé primaire de la table **NewO
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-    Index de profondeur prioritaire : Les enregistrements d'employés sont stockés à proximité de leur responsable.  
+    Index à profondeur prioritaire : les enregistrements d'employés sont stockés à proximité de leur responsable.  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID
@@ -289,7 +289,7 @@ La colonne **hierarchyid** (**OrgNode**) est la clé primaire de la table **NewO
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    Index **EmployeeID** prioritaire : Les lignes sont stockées dans la séquence **EmployeeID**.  
+    Index avec**EmployeeID**prioritaire : les lignes sont stockées dans l’ordre des **EmployeeID** .  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

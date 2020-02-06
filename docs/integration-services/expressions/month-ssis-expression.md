@@ -14,10 +14,10 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29e4b7af3c9799f5b0c396c8b66aa4f7caa5804f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297478"
 ---
 # <a name="month-ssis-expression"></a>MONTH (expression SSIS)
@@ -47,7 +47,7 @@ MONTH(date)
  Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  La validation de l'expression échoue lorsqu'un littéral de date est explicitement converti en un des types de données de date suivants : DT_DBTIMESTAMPOFFSET et DT_DBTIMESTAMP2.  
+>  La validation de l'expression échoue lorsqu'un littéral de date est explicitement converti en un des types de données de date suivants : DT_DBTIMESTAMPOFFSET et DT_DBTIMESTAMP2.  
   
  L'utilisation de la fonction MONTH est plus directe mais équivalente à celle de la fonction DATEPART("Month", date).  
   

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082271"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE - Révoquer des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68082271"
 
   Permet de révoquer des autorisations sur des informations d’identification délimitées à la base de données.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  Spécifie les informations d’identification délimitées à la base de données sur lesquelles l’autorisation est révoquée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
- Spécifie le principal pour lequel l'autorisation est révoquée. Il peut s'agir :  
+ Spécifie le principal pour lequel l'autorisation est révoquée. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   
@@ -83,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  Une révocation en cascade d'une autorisation accordée avec l'option WITH GRANT OPTION entraîne la révocation des deux options GRANT et DENY de cette autorisation.  
   
  AS *revoking_principal*  
- Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. Il peut s'agir :  
+ Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l'autorisation. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   

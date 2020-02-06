@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3e939138f92f7a754e99ce8b5b7510b915e8b1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906932"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67906932"
 
   Renvoie l'écart type statistique de toutes les valeurs dans l'expression spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-stdev"></a>A : Utilisation de STDEV  
+### <a name="a-using-stdev"></a>A. Utilisation de STDEV  
  Dans l'exemple suivant, la procédure retourne l'écart type pour toutes les valeurs de bonus de la table `SalesPerson` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -78,7 +78,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdev"></a>B : Utilisation de STDEV  
+### <a name="b-using-stdev"></a>B. Utilisation de STDEV  
  L’exemple suivant renvoie l’écart-type de toutes les valeurs de quota de ventes de la table `dbo.FactSalesQuota`. La première colonne contient l’écart-type de toutes les valeurs distinctes, alors que la seconde colonne contient l’écart-type de toutes les valeurs, y compris des valeurs en double.  
   
 ```  

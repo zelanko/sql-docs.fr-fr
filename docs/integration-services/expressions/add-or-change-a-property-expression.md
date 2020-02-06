@@ -14,10 +14,10 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f3aef5f587e590dcad0ab0490679a480529387a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290503"
 ---
 # <a name="add-or-change-a-property-expression"></a>Ajouter ou modifier une expression de propriété
@@ -27,7 +27,7 @@ ms.locfileid: "71290503"
 
   Vous pouvez créer des expressions de propriété pour les packages, les tâches, les conteneurs de boucles For ou Foreach, les conteneurs de séquences, les gestionnaires d'événements, les gestionnaires de connexions aux niveaux des packages et du projet, ainsi que les modules fournisseurs d'informations.  
   
- Pour créer ou modifier des expressions de propriété, vous pouvez utiliser l’ **Éditeur d’expressions de la propriété** ou le **Générateur d’expressions**. L’ **Éditeur d’expressions de la propriété** est accessible à partir des éditeurs personnalisés disponibles pour les tâches et conteneurs, et à partir de la fenêtre **Propriétés** . Le**Générateur d’expressions** est accessible à partir de l’ **Éditeur d’expressions de la propriété**. Vous pouvez écrire des expressions à la fois dans l’**Éditeur d’expressions de la propriété** et dans le **Générateur d’expressions**, mais le **Générateur d’expressions** fournit un ensemble graphique d’outils qui simplifie la construction d’expressions complexes.  
+ Pour créer ou modifier des expressions de propriété, vous pouvez utiliser l’ **Éditeur d’expressions de la propriété** ou le **Générateur d’expressions**. L’ **Éditeur d’expressions de la propriété** est accessible à partir des éditeurs personnalisés disponibles pour les tâches et conteneurs, et à partir de la fenêtre **Propriétés** . Le**Générateur d’expressions** est accessible à partir de l’ **Éditeur d’expressions de la propriété**. Vous pouvez écrire des expressions à la fois dans l’ **Éditeur d’expressions de la propriété** et dans le **Générateur d’expressions**, mais le **Générateur d’expressions** fournit un ensemble graphique d’outils qui simplifie la construction d’expressions complexes.  
   
  Pour en savoir plus sur la syntaxe, les opérateurs et les fonctions fournis par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md). La rubrique relative à chaque opérateur ou fonction inclut des exemples d'utilisation de cet opérateur ou de cette fonction dans une expression. Pour obtenir des exemples d’expressions plus complexes, consultez [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   

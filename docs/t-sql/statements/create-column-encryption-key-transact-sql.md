@@ -29,10 +29,10 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593904"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73593904"
 
 Crée un objet de métadonnées de clé de chiffrement de colonne pour [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Un objet de métadonnées de clé de chiffrement de colonne contient une ou deux valeurs chiffrées d’une clé de chiffrement de colonne qui est utilisée pour chiffrer les données dans une colonne. Chaque valeur est chiffrée à l’aide d’une clé principale de colonne. 
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -94,7 +94,7 @@ Nécessite l’autorisation **ALTER ANY COLUMN ENCRYPTION KEY**.
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-column-encryption-key"></a>A. Création d’une clé de chiffrement de colonne  
+### <a name="a-creating-a-column-encryption-key"></a>R. Création d’une clé de chiffrement de colonne  
 L’exemple suivant crée une clé de chiffrement de colonne nommée `MyCEK`.  
   
 ```sql  
@@ -138,6 +138,6 @@ GO
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
-[Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+[Gérer des clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

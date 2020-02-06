@@ -11,10 +11,10 @@ ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4bb010a6f3b9c21661cfa840e6975cec51f90c84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582185"
 ---
 # <a name="new-system-role-management-studio"></a>Nouveau rôle système (Management Studio)
@@ -24,7 +24,7 @@ ms.locfileid: "65582185"
 >  Les définitions de rôles sont utilisées uniquement sur un serveur de rapports qui s'exécute en mode natif. Si le serveur de rapports est configuré pour l'intégration SharePoint, cette page n'est pas disponible.  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Tapez le nom de la définition de rôle. Un nom de définition de rôle doit être unique dans l'espace de noms du serveur de rapports. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères suivants dans le nom :  
   
  ; ? : \@ & = + , $ / * < >  
@@ -35,7 +35,7 @@ ms.locfileid: "65582185"
  Fournit une description qui explique l'utilisation du rôle et énumère les éléments pris en charge par ce dernier.  
   
  **Tâche**  
- Sélectionnez les tâches au niveau système qui peuvent être effectuées par ce rôle. Vous ne pouvez pas créer de nouvelles tâches ni modifier les tâches existantes qui sont prises en charge par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous ne pouvez pas choisir des tâches au niveau élément pour la définition d'un rôle système.  
+ Sélectionnez les tâches au niveau système qui peuvent être effectuées par ce rôle. Vous ne pouvez pas créer de tâches ou modifier les tâches existantes qui sont prises en charge par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous ne pouvez pas choisir des tâches au niveau élément pour la définition d'un rôle système.  
   
  **Description de la tâche**  
  Affiche une description de la tâche qui énumère les opérations ou les autorisations prises en charge par cette dernière.  

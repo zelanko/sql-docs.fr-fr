@@ -14,10 +14,10 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133599"
 ---
 # <a name="master-database"></a>Base de données master
@@ -51,16 +51,16 @@ Le tableau suivant indique la valeur par défaut de chaque option de la base de 
 
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Non|  
+|ALLOW_SNAPSHOT_ISOLATION|ACTIVÉ|Non|  
 |ANSI_NULL_DEFAULT|OFF|Oui|  
 |ANSI_NULLS|OFF|Oui|  
 |ANSI_PADDING|OFF|Oui|  
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
 |AUTO_CLOSE|OFF|Non|  
-|AUTO_CREATE_STATISTICS|ON|Oui|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_SHRINK|OFF|Non|  
-|AUTO_UPDATE_STATISTICS|ON|Oui|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
 |CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
@@ -68,9 +68,9 @@ Le tableau suivant indique la valeur par défaut de chaque option de la base de 
 |CURSOR_DEFAULT|GLOBAL|Oui|  
 |Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|Non|  
+|DB_CHAINING|ACTIVÉ|Non|  
 |ENCRYPTION|OFF|Non|  
-|MIXED_PAGE_ALLOCATION|ON|Non|  
+|MIXED_PAGE_ALLOCATION|ACTIVÉ|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM|Oui|  
 |PARAMETERIZATION|SIMPLE|Oui|  

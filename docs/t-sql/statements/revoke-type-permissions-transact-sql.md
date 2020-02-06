@@ -17,10 +17,10 @@ ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 29bf592fcc169f112eb938af19077aa59621b843
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982903"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de type (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "73982903"
 
   Permet de révoquer des autorisations sur un type.  
   
-  ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -81,7 +81,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Spécifie un rôle de base de données.  
   
  *Application_role*  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Spécifie un rôle d'application.  
   
