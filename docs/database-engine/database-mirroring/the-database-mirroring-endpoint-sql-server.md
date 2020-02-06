@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68047992"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Point de terminaison de mise en miroir de bases de données (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "68047992"
   
  L'illustration suivante montre comment deux instances de serveur sur un même serveur sont identifiées de manière univoque. Les adresses réseau du serveur des deux instances de serveur contiennent le même nom de système ( `MYSYSTEM`) et le même nom de domaine ( `Adventure-Works.MyDomain.com`). Afin de permettre au système de diriger les connexions vers une instance de serveur, l'adresse réseau de serveur comprend le numéro de port associé au point de terminaison de mise en miroir d'une instance de serveur spécifique.  
   
- ![Adresses réseau du serveur d’une instance par défaut](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Adresses réseau du serveur d’une instance par défaut")  
+ ![Adresses réseau de serveur d’une instance par défaut](../../database-engine/availability-groups/windows/media/dbm-2-instances-ports-1-system.gif "Adresses réseau de serveur d’une instance par défaut")  
   
  Par défaut, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne contient pas de point de terminaison de mise en miroir de bases de données. Les points de terminaison doivent être créés manuellement lors de la configuration d'une session de mise en miroir de bases de données. L'administrateur système doit créer un point de terminaison distinct dans chaque instance de serveur participant à la mise en miroir de bases de données. Notez que si plusieurs instances de serveur sur un ordinateur donné requièrent un point de terminaison de mise en miroir de bases de données, vous devez spécifier un numéro de port différent pour chaque point de terminaison.  
   

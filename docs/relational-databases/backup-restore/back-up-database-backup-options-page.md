@@ -14,10 +14,10 @@ ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940974"
 ---
 # <a name="back-up-database-backup-options-page"></a>Sauvegarder la base de données (page Options de sauvegarde)
@@ -41,7 +41,7 @@ ms.locfileid: "67940974"
 ### <a name="backup-set"></a>Jeu de sauvegarde  
  Les options du volet **Jeu de sauvegarde** vous permettent de spécifier des informations facultatives concernant le jeu de sauvegarde créé par l'opération de sauvegarde.  
   
- **Name**  
+ **Nom**  
  Spécifiez le nom du jeu de sauvegarde. Le système suggère automatiquement un nom par défaut en fonction du nom de la base de données et du type de sauvegarde.  
   
  Pour plus d’informations sur les jeux de sauvegarde, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "67940974"
   
 |||  
 |-|-|  
-|**After**|Spécifiez le nombre de jours qui doivent s'écouler avant que le jeu de sauvegarde expire et puisse être écrasé. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.<br /><br /> La valeur par défaut d’expiration de sauvegarde correspond à la valeur définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** . Pour accéder à cette option, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et cliquez sur **Propriétés**; ensuite, cliquez sur la page **Paramètres de base de données** de la boîte de dialogue **Propriétés du serveur** .|  
+|**Après**|Spécifiez le nombre de jours qui doivent s'écouler avant que le jeu de sauvegarde expire et puisse être écrasé. Cette valeur doit être comprise entre 0 et 99999 jours ; une valeur de 0 jour signifie que le jeu de sauvegarde n'expirera jamais.<br /><br /> La valeur par défaut d’expiration de sauvegarde correspond à la valeur définie dans l’option **Délai de rétention par défaut du support de sauvegarde (jours)** . Pour accéder à cette option, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets et cliquez sur **Propriétés**; ensuite, cliquez sur la page **Paramètres de base de données** de la boîte de dialogue **Propriétés du serveur** .|  
 |**Actif**|Spécifiez une date spécifique à laquelle le jeu de sauvegarde expire et peut être écrasé.|  
   
 ### <a name="compression"></a>Compression  

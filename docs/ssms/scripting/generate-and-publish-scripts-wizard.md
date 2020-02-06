@@ -1,6 +1,6 @@
 ---
-title: Assistant Générer et publier des scripts | Microsoft Docs
-ms.custom: ''
+title: Assistant Générer et publier des scripts
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -43,18 +43,18 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122999"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253903"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Vous pouvez utiliser l’ **Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
 
-Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Générer et publier des scripts, consultez [Didacticiel : Assistant Générer des scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer et publier des scripts, consultez [Tutoriel : Générer et publier des scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -192,7 +192,7 @@ Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Génér
   
 -   **Script USE DATABASE** - Ajoute l’instruction **USE DATABASE** au script. Pour vous assurer que les objets de base de données sont créés dans la base de données correcte, incluez l'instruction **USE DATABASE** . Lorsqu'il est prévu que le script soit utilisé dans une base de données différente, sélectionnez **False** afin d'omettre l'instruction **USE DATABASE** . La valeur par défaut est **True**. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
--   **Types de données à inclure dans le script** : sélectionne ce qui doit être inclus dans le script : **Données uniquement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma uniquement**.  
+-   **Types de données à inclure dans le script** - Sélectionne ce qui doit être inclus dans le script : **Données seulement**, **Schéma uniquement**ou les deux. La valeur par défaut est **Schéma uniquement**.  
   
  **Options de table/vue** - Les options suivantes s’appliquent uniquement aux scripts des tables et des vues.  
   
@@ -242,7 +242,7 @@ Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Génér
   
 1.  **Convertir les UDDT en types de base** - Lorsque cette option a la valeur **True**, les types de données définis par l’utilisateur (UDDT) sont convertis en types de données de base sous-jacents, ceux-là même qui ont été utilisés pour les créer. Utilisez **True** lorsque l'UDDT n'existe pas dans la base de données où le script s'exécutera. Lorsque cette option a la valeur **False**, les UDDT sont utilisés. La valeur par défaut est **False**.  
   
-2.  **Publier le classement** - Inclut les informations de classement pour les colonnes de table. La valeur par défaut est **False**. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+2.  **Publier le classement** - Inclut les informations de classement pour les colonnes de table. La valeur par défaut est **False**. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 3.  **Publication par défaut** - Inclut les objets par défaut utilisés pour définir les valeurs par défaut dans les colonnes de table. La valeur par défaut est **True**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
@@ -262,7 +262,7 @@ Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Génér
   
 11. **Liaisons de scripts** - Inclut la liaison pour les objets de règle et les objets par défaut dans le script envoyé au fournisseur pour la publication. La valeur par défaut est **True**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) et [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
-12. **Types de données à publier** : sélectionne ce qui doit être inclus dans le script : **Données uniquement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma et données**.  
+12. **Types de données à publier** - Sélectionne ce qui doit être inclus dans le script : **Données seulement**, **Schéma uniquement**ou les deux. La valeur par défaut est **Schéma et données**.  
   
  **Options de publication** - Spécifie s’il faut utiliser des transactions lors de la publication dans le fournisseur de serveur web.  
   
@@ -286,7 +286,7 @@ Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Génér
   
 8.  **Publier le suivi des modifications** - Inclut le suivi des modifications dans le processus de publication, s’il est activé sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **False**. Pour plus d’informations, consultez [À propos du suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-9. **Publier les options de compression de données** - Inclut les options de compression de données dans le processus de publication, si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **True**. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+9. **Publier les options de compression de données** - Inclut les options de compression de données dans le processus de publication, si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **True**. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).  
   
 ###  <a name="ProvConfig"></a> Page Configuration du fournisseur  
  Utilisez cette boîte de dialogue pour afficher ou modifier des paramètres de fournisseur d'hébergement. Cette boîte de dialogue permet d'effectuer les opérations suivantes :  
@@ -347,8 +347,8 @@ Pour générer des scripts sur des objets avec la syntaxe [!INCLUDE[ssSDW_md](..
 
 1. Cliquez sur **outils** , puis **Options**.  
 2. Sous **Options de script générales** , définissez :  
-    1. Script pour le type de moteur de base de données : **Microsoft Azure SQL Database**.  
-    2. Script pour l'édition du moteur de base de données : **Édition Microsoft Azure SQL Data Warehouse**.  
+    1. Script pour le type de moteur de base de données : **Base de données SQL Microsoft Azure**.  
+    2. Script pour l’édition de moteur de base de données : **Édition Microsoft Azure SQL Data Warehouse**.  
 3. Cliquez sur **OK**.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Comment générer des scripts pour SQL Data Warehouse quand il ne s’agit pas de l’option de script par défaut  
@@ -359,14 +359,14 @@ Si vous définissez [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] en tant qu�
 2. Sélectionnez **Générer des scripts**.  
 3. Sélectionnez les objets pour lesquels vous voulez générer des scripts.  
 4. Dans **Options de script**, cliquez sur **Avancé**. Sous **Général** , définissez :  
-    1. Script pour le type de moteur de base de données : **Microsoft Azure SQL Database**.  
-    2. Script pour l'édition du moteur de base de données : **Édition Microsoft Azure SQL Data Warehouse**.  
+    1. Script pour le type de moteur de base de données : **Base de données SQL Microsoft Azure**.  
+    2. Script pour l’édition de moteur de base de données : **Édition Microsoft Azure SQL Data Warehouse**.  
 5. Cliquez sur **Enregistrer ou publier des scripts** , puis sur **Terminer**.  
 
 Les options définies à l’étape 4 ne seront pas mémorisées. Si vous préférez qu’elles le soient, suivez les instructions données dans **Comment définir les options de script par défaut sur SQL Data Warehouse**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installation de SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
- [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+ [Copier des bases de données sur d’autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   
   
