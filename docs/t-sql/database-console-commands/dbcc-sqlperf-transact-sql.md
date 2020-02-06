@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982407"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -36,7 +36,7 @@ Fournit des statistiques sur le taux d'utilisation de l'espace du journal des tr
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,7 +69,7 @@ Supprime tous les messages d'information dont les niveaux de gravité sont compr
 ## <a name="result-sets"></a>Jeux de résultats  
  Le tableau suivant décrit les colonnes du jeu de résultats.  
   
-|Nom de colonne|Définition|  
+|Nom de la colonne|Définition|  
 |---|---|
 |**Database Name**|Nom de la base de données pour les statistiques du journal affichées.|  
 |**Taille du journal (Mo)**|Taille actuelle allouée au journal. Cette valeur est toujours inférieure à la quantité initialement allouée pour l’espace du journal, car le [!INCLUDE[ssDE](../../includes/ssde-md.md)] réserve une petite quantité d’espace disque pour les informations d’en-tête internes.|  
@@ -88,7 +88,7 @@ Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium et Critiq
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-log-space-information-for-all-databases"></a>A. Affichage des informations relatives à l'utilisation de l'espace du journal pour toutes les bases de données  
+### <a name="a-displaying-log-space-information-for-all-databases"></a>R. Affichage des informations relatives à l'utilisation de l'espace du journal pour toutes les bases de données  
 L'exemple suivant affiche les informations `LOGSPACE` pour toutes les bases de données contenues dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ```sql  

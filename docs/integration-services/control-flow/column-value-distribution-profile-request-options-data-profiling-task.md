@@ -13,10 +13,10 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd0f778495220f227e2dd1fca42c8f5104ea7d2b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294234"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Options Demande de profil de distribution de valeurs de colonne (tâche de profilage des données)
@@ -36,7 +36,7 @@ ms.locfileid: "71294234"
   
 -   **Données**, qui incluent les options **TableOrView** et **Column**  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294234"
   
  Pour plus d'informations, consultez la section « Options TableorView » dans cette rubrique.  
   
- **Column**  
+ **Colonne**  
  Sélectionnez la colonne existante à profiler. Sélectionnez **(\*)** pour profiler toutes les colonnes.  
   
  Pour plus d'informations, consultez la section « Options de colonne » dans cette rubrique.  
@@ -76,7 +76,7 @@ ms.locfileid: "71294234"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
+|**Par défaut**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
 |**DictionarySort**|Trie et compare des données d'après les règles de tri et de comparaison telles que définies dans les dictionnaires de la langue ou de l'alphabet associé.|  
   

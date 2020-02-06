@@ -1,10 +1,9 @@
 ---
-title: Modifier la disponibilité d’un opérateur | Microsoft Docs
-ms.custom: ''
+title: Modifier la disponibilité d’un opérateur
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,13 +21,15 @@ helpviewer_keywords:
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b9fa196aefb37de169439853704e9b52153c6a7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 21445e5a736159123c797e18d4dae3ece58c6a02
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553329"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255710"
 ---
 # <a name="change-an-operator39s-availability"></a>Modifier la disponibilité d’un opérateur
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ Cette rubrique explique comment modifier la disponibilité d'un opérateur pour 
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opérateurs.  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
@@ -57,7 +58,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opéra
   
 4.  Cliquez avec le bouton droit sur l’opérateur que vous souhaitez activer ou désactiver et sélectionnez **Propriétés**, puis cliquez sur l’onglet **Général** .  
   
-5.  Dans la boîte de dialogue **Propriétés de**_nom\_opérateur_, cochez ou décochez la case **Activé**.  
+5.  Dans la boîte de dialogue _Propriétés de\__ nom**opérateur**, cochez ou décochez la case **Activé**.  
   
 6.  Cliquez sur **OK**.  
   
@@ -65,7 +66,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opéra
   
 #### <a name="to-change-an-operators-availability"></a>Pour modifier la disponibilité d'un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

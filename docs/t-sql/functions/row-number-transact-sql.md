@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095380"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Numérote la sortie d’un jeu de résultats. Plus particulièrement, retourne le numéro séquentiel d’une ligne dans une partition d’un jeu de résultats, en commençant à 1 pour la première ligne de chaque partition. 
@@ -38,7 +38,7 @@ Numérote la sortie d’un jeu de résultats. Plus particulièrement, retourne l
 > [!NOTE]
 > `ROW_NUMBER` est une valeur temporaire calculée lorsque la requête est exécutée. Pour conserver les nombres dans un tableau, consultez [IDENTITY (propriété)](../../t-sql/statements/create-table-transact-sql-identity-property.md) et [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -50,7 +50,7 @@ ROW_NUMBER ( )
   
 ## <a name="arguments"></a>Arguments  
  PARTITION BY *value_expression*  
- Divise le jeu de résultats généré par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions auxquelles la fonction ROW_NUMBER est appliquée. *value_expression* spécifie la colonne par laquelle le jeu de résultats est partitionné. Si `PARTITION BY` n’est pas spécifié, la fonction traite toutes les lignes du jeu de résultats de la requête comme un seul groupe. Pour plus d’informations, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Divise le jeu de résultats généré par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions auxquelles la fonction ROW_NUMBER est appliquée. *value_expression* spécifie la colonne par laquelle le jeu de résultats est partitionné. Si `PARTITION BY` n’est pas spécifié, la fonction traite toutes les lignes du jeu de résultats de la requête comme un seul groupe. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
  La clause `ORDER BY` détermine la séquence dans laquelle les lignes d’une partition spécifique reçoivent leur valeur `ROW_NUMBER` unique. Elle est obligatoire. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -71,7 +71,7 @@ ROW_NUMBER ( )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-simple-examples"></a>A. Exemples simples 
+### <a name="a-simple-examples"></a>R. Exemples simples 
 
 La requête suivante retourne les quatre tables système dans l’ordre alphabétique.
 
@@ -85,7 +85,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
@@ -104,7 +104,7 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |FULL |
@@ -123,7 +123,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |master |SIMPLE |
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. Utilisation de Using ROW_NUMBER() avec PARTITION  
+### <a name="d-using-row_number-with-partition"></a>D. Utilisation de Using ROW_NUMBER() avec PARTITION  
  L'exemple suivant utilise l'argument `PARTITION BY` pour partitionner le jeu de résultats d'une requête par la colonne `TerritoryName`. La clause `ORDER BY` spécifiée dans la clause `OVER` classe les lignes de chaque partition par la colonne `SalesYTD`. La clause `ORDER BY` dans l'instruction `SELECT` détermine l'ordre du jeu de résultats de la requête entier par `TerritoryName`.  
   
 ```sql  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. Utilisation de Using ROW_NUMBER() avec PARTITION  
+### <a name="f-using-row_number-with-partition"></a>F. Utilisation de Using ROW_NUMBER() avec PARTITION  
  L'exemple suivant illustre l'utilisation de la fonction `ROW_NUMBER` avec l'argument `PARTITION BY`. Dans ce cas, la fonction `ROW_NUMBER` numérote les lignes dans chaque partition.  
   
 ```sql  

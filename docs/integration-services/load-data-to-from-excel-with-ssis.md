@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295858"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)
@@ -55,7 +55,7 @@ Vous pouvez utiliser les outils suivants pour importer des données à partir d�
 
 Avant de pouvoir importer des données à partir d’Excel ou exporter des données vers Excel avec SSIS, vous devrez peut-être télécharger les composants de connectivité pour Excel s’ils n’ont pas été installés. Les composants de connectivité pour Excel ne sont pas installés par défaut.
 
-Téléchargez la dernière version des composants de connectivité pour Excel ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920). La dernière version des composants peut ouvrir les fichiers créés dans des versions antérieures d’Excel.
+Téléchargez la dernière version des composants de connectivité pour Excel ici : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920). La dernière version des composants peut ouvrir les fichiers créés dans des versions antérieures d’Excel.
 
 ### <a name="notes-about-the-download-and-installation"></a>Notes sur le téléchargement et l’installation
 
@@ -67,7 +67,7 @@ Téléchargez la dernière version des composants de connectivité pour Excel ic
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    Si vous ne parvenez pas à installer 2016 Redistribuable, installez 2010 Redistribuable à la place à partir d’ici : [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Il n’y a pas de version Redistribuable pour Excel 2013.)
+    Si vous ne parvenez pas à installer 2016 Redistribuable, installez 2010 Redistribuable à la place à partir de [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). (Il n’y a pas de version Redistribuable pour Excel 2013.)
 
 ## <a name="specify-excel"></a> Spécifier Excel comme source de données
 
@@ -89,7 +89,7 @@ Si vous ne voyez pas Excel dans la liste des sources de données, assurez-vous d
 
 ## <a name="excel-file"></a> Nom et chemin du fichier Excel
 
-Les premières informations à fournir sont le nom et le chemin du fichier Excel. Entrez ces informations dans **l’Éditeur du gestionnaire de connexions Excel** dans un package SSIS, ou dans la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation.
+Les premières informations à fournir sont le nom et le chemin du fichier Excel. Entrez cette information dans **l’Éditeur du gestionnaire de connexions Excel** dans un package SSIS, ou dans la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation.
 
 Entrez le nom et le chemin du fichier au format suivant :
 

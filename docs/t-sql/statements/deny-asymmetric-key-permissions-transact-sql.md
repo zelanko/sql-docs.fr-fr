@@ -20,10 +20,10 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114988"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY - Autorisations de clé asymétrique (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68114988"
   Refuse des autorisations sur une clé asymétrique.  
    
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ DENY { permission  [ ,...n ] }
  Indique la clé asymétrique sur laquelle l'autorisation est refusée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
- Spécifie le principal auquel l'autorisation est refusée. Il peut s'agir :  
+ Spécifie le principal auquel l'autorisation est refusée. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   
@@ -75,7 +75,7 @@ DENY { permission  [ ,...n ] }
  Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
   
  *denying_principal*  
- Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation. Il peut s'agir :  
+ Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation. Celui-ci peut avoir l'une des valeurs suivantes :  
   
 -   d'un utilisateur de base de données ;  
   

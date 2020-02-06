@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995741"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68995741"
 
 Cette fonction retourne le numéro d’identification (ID) de la base de données spécifiée.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ DB_ID ( [ 'database_name' ] )
 Nom de la base de données dont le numéro d’ID `DB_ID` est retourné. Si l’appel à `DB_ID` omet *database_name*, `DB_ID` retourne l’ID de la base de données active.
   
 ## <a name="return-types"></a>Types de retour
-**Int**
+**int**
 
 ## <a name="remarks"></a>Notes
 `DB_ID` ne peut être utilisé que pour retourner l’identificateur de la base de données active dans Azure SQL Database. La valeur NULL est retournée si le nom spécifié n’est pas celui de la base de données active.
@@ -64,7 +64,7 @@ Si l’appelant de `DB_ID` ne possède pas une base de données non **MASTER** o
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-database-id-of-the-current-database"></a>A. Retour de l'ID de la base de données active  
+### <a name="a-returning-the-database-id-of-the-current-database"></a>R. Retour de l'ID de la base de données active  
 L’exemple suivant retourne l’ID de la base de données active.
   
 ```sql

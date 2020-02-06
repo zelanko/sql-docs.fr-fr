@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088973"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -101,7 +101,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-diagnostics-session"></a>A. Création d’une session de diagnostic  
+### <a name="a-creating-a-diagnostics-session"></a>R. Création d’une session de diagnostic  
  Cet exemple crée une session de diagnostic permettant d’enregistrer des métriques des performances du moteur de base de données. L’exemple crée une session de diagnostic qui écoute les événements en cours d’exécution/de fin de requête de moteur et un événement DMS de blocage. Le texte de la commande, le nom de l’ordinateur, l’ID de la requête et la session sur laquelle l’événement a été créé sont ainsi retournés.  
   
 ```  

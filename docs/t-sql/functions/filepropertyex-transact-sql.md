@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425931"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68425931"
 
   Retourne la valeur de propriétés de fichier étendues spécifiée lorsqu'un nom de fichier dans la base de données active et un nom de propriété sont fournis. Retourne la valeur NULL pour les fichiers qui ne sont pas dans la base de données active ou pour les propriétés de fichier étendues qui n’existent pas. Actuellement, les propriétés de fichier étendues s’appliquent uniquement aux bases de données qui se trouvent dans le stockage blob Azure.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +40,7 @@ FILEPROPERTYEX ( name , property )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom*  
+ *name*  
  Expression composée du nom du fichier associé à celui de la base de données actuelle dont les informations de propriété doivent être retournées. *file_name* est de type **nchar(128)** .  
   
  *property*  

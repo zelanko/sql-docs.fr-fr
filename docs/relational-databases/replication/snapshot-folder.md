@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 92abee758d5eda99aebddc874550eb9cd2e87ca5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c33897a3597bfecf58a36ee371821a6f944e44ce
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769511"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287157"
 ---
 # <a name="snapshot-folder"></a>Dossier d'instantanés
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Le dossier d'instantanés correspond à un simple répertoire que vous définiss
 Pour une instance managée Azure SQL Database, le dossier d’instantanés doit être un partage de fichiers Azure. 
   
 ## <a name="options"></a>Options  
- **Snapshot folder**  
+ **Dossier d'instantanés**  
  Entrez le chemin d'accès au dossier où vous souhaitez stocker les fichiers d'instantanés.  
   
 > [!NOTE]  

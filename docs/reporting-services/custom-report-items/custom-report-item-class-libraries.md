@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194103"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
@@ -34,13 +34,13 @@ ms.locfileid: "63194103"
   
 |||  
 |-|-|  
-|**Name**|Nom de l'élément de rapport personnalisé.|  
+|**Nom**|Nom de l'élément de rapport personnalisé.|  
 |**Type**|Type de l'élément de rapport personnalisé.|  
 |**CustomData**|Objet <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> qui encapsule les propriétés des données de l'élément de rapport personnalisé, spécifiées au moment de la conception.|  
 |**CustomProperties**|Collection de propriétés personnalisées destinées à l'élément de rapport personnalisé.|  
 |**Height**|Hauteur du contrôle de l'élément de rapport personnalisé.|  
 |**Width**|Largeur du contrôle de l'élément de rapport personnalisé.|  
-|**Rapport**|Conteneur pour les propriétés figurant au niveau du rapport, telles que la liste des datasets contenus dans ce rapport.|  
+|**Report**|Conteneur pour les propriétés figurant au niveau du rapport, telles que la liste des datasets contenus dans ce rapport.|  
 |**AltReportItem**|Objet de remplacement d'élément de rapport, à utiliser lorsque le contrôle DTC de l'élément de rapport personnalisé n'est pas pris en charge.|  
 |**Style**|Propriétés de style destinées à l'élément de rapport personnalisé.|  
 |**Adornment**|Fenêtre d'ornement utilisée pour modifier de manière interactive le contrôle.|  

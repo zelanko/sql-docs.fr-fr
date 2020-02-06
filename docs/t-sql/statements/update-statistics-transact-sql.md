@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982562"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971451"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Met à jour les statistiques d'optimisation de requête d'une table ou d'une vue
   
 La mise à jour des statistiques est l'assurance que les requêtes sont compilées avec des statistiques à jour. Toutefois, la mise à jour des statistiques entraîne une recompilation des requêtes. À ce titre, il est déconseillé de mettre à jour les statistiques de façon trop régulière eu égard aux performances. Un compromis doit être trouvé entre le souhait d'améliorer les plans de requête et le temps nécessaire à la recompilation des requêtes. Ce compromis peut varier en fonction de votre application. `UPDATE STATISTICS` peut utiliser tempdb pour trier l’échantillon de lignes à des fins statistiques.  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -111,7 +111,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  Pour la plupart des charges de travail, une analyse complète n’est pas nécessaire, et l’échantillonnage par défaut suffit.  
 Toutefois, certaines charges de travail qui sont sensibles aux distributions de données à grande variation peuvent nécessiter une taille d’échantillon plus élevée, voire une analyse complète.  
-Pour plus d’informations, consultez le [blog CSS SQL Escalation Services](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
+Pour plus d’informations, consultez le [blog CSS SQL Escalation Services](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
  RESAMPLE  
  Met à jour chaque statistique à l'aide de son taux d'échantillonnage le plus récent.  
@@ -151,7 +151,7 @@ Si vous spécifiez **ON**, les statistiques conserveront le pourcentage d’éch
  Pour plus d’informations sur l’option AUTO_UPDATE_STATISTICS, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  INCREMENTAL = { ON | OFF }  
- Quand la valeur **ON** est définie, les statistiques sont recréées par partition. Quand la valeur **OFF** est définie, l’arborescence des statistiques est supprimée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcule les statistiques. La valeur par défaut est **OFF**.  
+ Quand la valeur **ON** est définie, les statistiques sont recréées par partition. Si la valeur est **OFF**, l’arborescence des statistiques est supprimée et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcule les statistiques. La valeur par défaut est **OFF**.  
   
  Si les statistiques par partition ne sont pas prises en charge, une erreur est générée. Les statistiques incrémentielles ne sont pas prises en charge pour les types de statistiques suivants :  
   
@@ -166,7 +166,7 @@ Si vous spécifiez **ON**, les statistiques conserveront le pourcentage d’éch
 **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur
 
 MAXDOP = *max_degree_of_parallelism*  
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Remplace l’option de configuration **max degree of parallelism** pendant la durée de l’opération statistique. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
@@ -234,7 +234,7 @@ update statistics t1 (a) with stats_stream = 0x01;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-update-all-statistics-on-a-table"></a>A. Mettre à jour toutes les statistiques d'une table  
+### <a name="a-update-all-statistics-on-a-table"></a>R. Mettre à jour toutes les statistiques d'une table  
  L’exemple suivant met à jour les statistiques de tous les index de la table `SalesOrderDetail`.  
   
 ```sql  

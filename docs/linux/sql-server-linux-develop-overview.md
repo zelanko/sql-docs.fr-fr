@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077411"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Comment commencer à développer des applications pour SQL Server sur Linux
@@ -52,7 +52,7 @@ Les outils qui s’exécutent actuellement sur Windows, tels que SSMS, SSDT et P
 Pour plus d'informations, consultez les rubriques ci-dessous :
 
 - [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
-- [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
+- [Outils SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 - [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
 > [!Note]
@@ -62,7 +62,7 @@ Pour plus d'informations, consultez les rubriques ci-dessous :
 
 Vous pouvez utiliser la nouvelle [extension mssql](https://aka.ms/mssql-marketplace) pour [Visual Studio Code](https://code.visualstudio.com) sur Linux, macOS et Windows. Pour une procédure pas à pas, consultez le tutoriel suivant :
 
-- [Utilisez Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Utiliser Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
 Vous pouvez également utiliser de nouveaux outils en ligne de commande qui sont natifs pour Linux. Ces outils incluent les éléments suivants :
 

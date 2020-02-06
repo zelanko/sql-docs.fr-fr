@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148832"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -40,7 +40,7 @@ Définit une date qui est associée à une heure de la journée qui prend en cha
 |Propriété|Valeur|  
 |---|---|
 |Syntaxe|**datetimeoffset** [ (*précision à la fraction de seconde*) ]|  
-|Utilisation|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|Usage|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formats de littéraux de chaîne par défaut (utilisés pour le client de bas niveau)|AAAA-MM-JJ hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage de dates|0001-01-01 à 9999-12-31<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.9999999|  
@@ -208,7 +208,7 @@ Les conversions de littéraux de chaîne en types de date et d'heure sont autori
 |TIME uniquement|La partie DATE a pour valeur par défaut 1900-1-1. TIMEZONE aura pour valeur par défaut +00:00.|  
 |TIMEZONE uniquement|Les valeurs par défaut sont fournies|  
 |DATE + TIME|TIMEZONE a pour valeur par défaut +00:00.|  
-|DATE + TIMEZONE|Non autorisées|  
+|DATE + TIMEZONE|Non autorisé|  
 |TIME + TIMEZONE|La partie DATE a pour valeur par défaut 1900-1-1.|  
 |DATE + TIME + TIMEZONE|Simple|  
   
@@ -232,12 +232,12 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Type de données|Sortie|  
+|Type de données|Output|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
 |**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
-|**DateTime**|2007-05-08 12:35:29.123|  
+|**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   

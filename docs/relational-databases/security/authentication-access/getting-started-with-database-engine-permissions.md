@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903023"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
@@ -40,7 +40,7 @@ ms.locfileid: "72903023"
 ##### <a name="database-users"></a>Utilisateurs de base de données  
  Pour qu’une connexion puisse accéder à une base de données, un utilisateur de base de données doit être créé dans une base de données, puis mappé à la connexion. En général, le nom d’utilisateur de base de données est le même que le nom de connexion, mais ce n’est pas obligatoire. Chaque utilisateur de base de données est mappé à une seule connexion. Une connexion ne peut être mappée qu’à un seul utilisateur dans une base de données, mais peut être mappée comme utilisateur de base de données dans plusieurs bases de données.  
   
- En outre, les utilisateurs de base de données peuvent être créés sans avoir de connexion correspondante. Ils sont appelés *utilisateurs de base de données autonome*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourage l’utilisation de ces utilisateurs, car elle facilite le déplacement de votre base de données vers un autre serveur. Comme une connexion, un utilisateur de base de données autonome peut utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ En outre, les utilisateurs de base de données peuvent être créés sans avoir de connexion correspondante. Ils sont appelés *utilisateurs de base de données autonome*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourage l’utilisation de ces utilisateurs, car elle facilite le déplacement de votre base de données vers un autre serveur. Comme une connexion, un utilisateur de base de données autonome peut utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Il existe 12 types d’utilisateurs, qui varient légèrement selon la façon dont ils s’authentifient et qui ils représentent. Pour voir une liste d’utilisateurs, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
@@ -225,19 +225,19 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Les rubriques suivantes vous aideront à démarrer :  
   
--   [Tutoriel : Bien démarrer avec le moteur de base de données](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+-   [Didacticiel : mise en route du moteur de base de données](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [Création d’une base de données &#40;Didacticiel&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [Tutoriel : SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Didacticiel : SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [Tutoriel : Écriture d’instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [Didacticiel : écriture d'instructions Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Fonctions et vues de gestion dynamique relatives à la sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3d8792020e540e67bc81aa1bba7453084fa8a65f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908529"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285969"
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908529"
  [Configurer la distribution](../../../relational-databases/replication/configure-distribution.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour configurer la publication et la distribution.  
   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  Les rubriques de cette section indiquent comment utiliser RMO pour créer, supprimer et modifier des publications et des articles.  
   
  [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "72908529"
   
 1.  Démarrez Visual Studio.  
   
-2.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**. La boîte de dialogue **Nouveau projet** s'affiche.  
+2.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**. La boîte de dialogue **Nouveau projet** apparaît.  
   
 3.  Dans la boîte de dialogue **Types de projets**, sélectionnez **Projets Visual C#** . Dans le volet **Modèles**, sélectionnez **Application Windows**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "72908529"
   
 1.  Démarrez Visual Studio.  
   
-2.  Dans le menu **Fichier**, sélectionnez **Nouveau projet**. La boîte de dialogue **Nouveau projet** s'affiche.  
+2.  Dans le menu **Fichier**, sélectionnez **Nouveau projet**. La boîte de dialogue **Nouveau projet** apparaît.  
   
 3.  Dans le volet Types de projets, sélectionnez **Visual Basic**. Dans le volet Modèles, sélectionnez **Application Windows**.  
   

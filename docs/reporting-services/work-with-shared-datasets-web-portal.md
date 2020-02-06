@@ -9,15 +9,15 @@ ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68222710"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Utilisation de datasets partagés (portail web)
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 Avec un dataset partagé, vous pouvez gérer les paramètres d'un jeu de données (dataset) séparément des rapports et des autres éléments de catalogue qui l'utilisent. Les datasets partagés sont utilisables avec des rapports paginés et mobiles, ainsi qu’avec des indicateurs de performance clés.
 
@@ -37,7 +37,7 @@ Procédez comme suit pour créer un dataset partagé.
   
 4.  Dans la boîte de dialogue **Nouveau rapport ou Dataset** , sélectionnez une source de données connexion à utiliser pour ce jeu de données. Vous devrez peut-être naviguer jusqu’à l’emplacement de la source des données partagée.  
   
-5.  Sélectionnez **Créer**.  
+5.  Sélectionnez **Create** (Créer).  
   
 6.  Créez votre dataset, puis sélectionnez l’icône **Enregistrer** dans l’angle supérieur gauche pour enregistrer le dataset dans le serveur de rapports.  
   

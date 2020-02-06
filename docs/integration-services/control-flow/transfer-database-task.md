@@ -19,10 +19,10 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293897"
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
@@ -94,7 +94,7 @@ ms.locfileid: "71293897"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de bases de données** pour donner un nom et une description à la tâche de transfert de base de données. La tâche de transfert de bases de données copie ou déplace une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette tâche peut également servir à copier une base de données sur le même serveur.   
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Donnez un nom unique à la tâche de transfert de bases de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

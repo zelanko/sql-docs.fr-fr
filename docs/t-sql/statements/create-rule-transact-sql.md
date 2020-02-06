@@ -30,10 +30,10 @@ ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006491"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68006491"
   
  Une colonne ou un type de données alias ne peut avoir qu'une seule règle liée. Cependant, une colonne peut être liée à une règle et à une ou plusieurs contraintes CHECK. Dans ce cas, toutes les restrictions sont évaluées.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,10 +87,10 @@ AS condition_expression
   
  Vous pouvez lier une nouvelle règle à une colonne ou à un type de données sans supprimer la liaison précédente ; dans ce cas, la nouvelle règle supplante l'ancienne. Les règles liées à des colonnes ont toujours priorité sur les règles liées à des types de données alias. La liaison d'une règle à une colonne remplace la règle déjà liée à un type de données alias de cette colonne. En revanche, la liaison d'une règle à un type de données ne remplace pas une règle liée à une colonne de ce type de données alias. Le tableau ci-dessous montre l'ordre de priorité en vigueur lors de la liaison de règles à des colonnes ou à des types de données alias pour lesquelles il existe déjà des règles.  
   
-|Nouvelle règle liée à|ancienne règle liée à<br /><br /> un type de données alias|ancienne règle liée à<br /><br /> colonne|  
+|Nouvelle règle liée à|ancienne règle liée à<br /><br /> un type de données alias|ancienne règle liée à<br /><br /> Colonne|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |Type de données d'alias|Ancienne règle remplacée|Aucun changement|  
-|colonne|Ancienne règle remplacée|Ancienne règle remplacée|  
+|Colonne|Ancienne règle remplacée|Ancienne règle remplacée|  
   
  Si une valeur par défaut et une règle sont toutes deux liées à une colonne, la valeur par défaut doit être cohérente avec le domaine défini par la règle. Une valeur par défaut qui est en conflit avec une règle n'est jamais insérée. Le moteur de base de données SQL Server génère un message d'erreur à chaque tentative d'insertion d'une telle valeur.  
   
@@ -99,7 +99,7 @@ AS condition_expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-rule-with-a-range"></a>A. Création d'une règle avec une plage de valeurs  
+### <a name="a-creating-a-rule-with-a-range"></a>R. Création d'une règle avec une plage de valeurs  
  L'exemple suivant crée une règle qui limite la plage des entiers insérés dans la ou les colonnes auxquelles la règle est liée.  
   
 ```  

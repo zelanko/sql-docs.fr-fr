@@ -16,10 +16,10 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9d0296e1427d4af206e101513bd54b0d67f7ff46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013630"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Utiliser le volet Détails de l’Explorateur d’objets pour surveiller les groupes de disponibilité
@@ -57,7 +57,7 @@ ms.locfileid: "68013630"
 ##  <a name="AvGroupsDetails"></a> Détails du groupe de disponibilité  
  L'écran détaillé **Groupes de disponibilité** affiche les colonnes suivantes :  
   
- **Name**  
+ **Nom**  
  Répertorie les dossiers des écouteurs **Réplicas de disponibilité**, **Bases de données de disponibilité**et **Groupe de disponibilité** du groupe de disponibilité sélectionné.  
   
 ##  <a name="AvReplicaDetails"></a> Détails du réplica de disponibilité  
@@ -95,7 +95,7 @@ ms.locfileid: "68013630"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Non synchronisé**|La base de données n'est pas synchronisée ou n'a pas encore été jointe au groupe de disponibilité.|  
-|**Synchronisé**|La base de données est synchronisée avec la base de données primaire sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.<br /><br /> Remarque : En mode de performances, la base de données n’est jamais à l’état Synchronisée.|  
+|**Synchronisée**|La base de données est synchronisée avec la base de données primaire sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.<br /><br /> Remarque : en mode de performances, la base de données n’est jamais dans l’état synchronisé.|  
 |**NULL**|État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).|  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "68013630"
 ##  <a name="AvDbDetails"></a> Détails de la base de données de disponibilité  
  L'écran détaillé **Base de données de disponibilité** affiche les propriétés suivantes des bases de données de disponibilité d'un groupe de disponibilité donné :  
   
- **Name**  
+ **Nom**  
  Nom de la base de données de disponibilité.  
   
  **État de synchronisation**  
@@ -114,7 +114,7 @@ ms.locfileid: "68013630"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Synchronisation|La base de données secondaire a reçu les enregistrements du journal des transactions de la base de données primaire qui ne sont pas encore écrits sur le disque (renforcé).<br /><br /> Remarque : En mode de validation asynchrone, l’état de synchronisation est toujours **Synchronisation**.|  
+|Synchronisation|La base de données secondaire a reçu les enregistrements du journal des transactions de la base de données primaire qui ne sont pas encore écrits sur le disque (renforcé).<br /><br /> Remarque : En mode de validation asynchrone, l’état de synchronisation est toujours **Synchronisation**.|  
 |||  
   
  **Suspendu**  

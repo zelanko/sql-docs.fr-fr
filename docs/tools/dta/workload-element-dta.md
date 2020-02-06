@@ -1,10 +1,7 @@
 ---
-title: Charge de travail, élément (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Workload, élément (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb526f31bb36ca7d4dd046f8a0f3a4f7962c6ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 22331332715639b12f7a2cc82d8b71d723a1fecd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105942"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307893"
 ---
 # <a name="workload-element-dta"></a>Workload, élément (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie la charge de travail à utiliser pour une session de paramétrage.  
+
+Spécifie la charge de travail à utiliser pour une session de paramétrage.  
   
 ## <a name="syntax"></a>Syntaxe  
   

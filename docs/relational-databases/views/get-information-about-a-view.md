@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909890"
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
@@ -68,7 +68,7 @@ ms.locfileid: "72909890"
      **Sauvegarde de la base de données**  
      Nom de la base de données contenant cette vue.  
   
-     **Server**  
+     **Serveur**  
      Nom de l'instance actuelle du serveur.  
   
      **Utilisateur**  
@@ -77,7 +77,7 @@ ms.locfileid: "72909890"
      **Date de création**  
      Affiche la date de création de la vue.  
   
-     **Name**  
+     **Nom**  
      Nom de la vue actuelle.  
   
      **Schéma**  
@@ -120,7 +120,7 @@ ms.locfileid: "72909890"
      **Schéma**  
      Affiche le schéma propriétaire de la vue.  
   
-     **Nom du serveur**  
+     **Nom de serveur**  
      Nom de l'instance actuelle du serveur.  
   
      **Lier au schéma**  
@@ -153,7 +153,7 @@ ms.locfileid: "72909890"
      **Pourcentage**  
      Indique que la requête doit contenir une clause **TOP** , qui ne retourne que les n premiers pour cent des lignes du jeu de résultats.  
   
-     **With Ties**  
+     **Avec liens**  
      Spécifie que la vue inclura une clause **WITH TIES** . **WITH TIES** est utile si une vue inclut une clause **ORDER BY** et une clause **TOP** basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause **ORDER BY** , la vue est agrandie de façon à inclure ces lignes.  
   
      **Spécification de mise à jour**  
@@ -181,7 +181,7 @@ ms.locfileid: "72909890"
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Pour obtenir la définition et les propriétés d'une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -211,7 +211,7 @@ ms.locfileid: "72909890"
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>Pour obtenir les dépendances d'une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

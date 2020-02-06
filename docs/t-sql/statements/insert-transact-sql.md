@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982226"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73982226"
 
 Ajoute une ou plusieurs lignes à une table ou une vue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir des exemples, consultez [Exemples](#InsertExamples).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -413,7 +413,7 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
   
 ##  <a name="InsertExamples"></a> Exemples  
   
-|Catégorie|Éléments syntaxiques proposés|  
+|Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
 |[Syntaxe de base](#BasicSyntax)|INSERT • constructeur de valeurs de table|  
 |[Gestion de valeurs de colonnes](#ColumnValues)|IDENTITY • NEWID • valeurs par défaut • types définis par l'utilisateur|  
@@ -427,7 +427,7 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
 ###  <a name="BasicSyntax"></a> Syntaxe de base  
  Les exemples fournis dans cette section présentent les fonctionnalités de base de l'instruction INSERT en utilisant la syntaxe minimale requise.  
   
-#### <a name="a-inserting-a-single-row-of-data"></a>A. Insertion d'une seule ligne de données  
+#### <a name="a-inserting-a-single-row-of-data"></a>R. Insertion d'une seule ligne de données  
  L'exemple suivant insère une ligne dans la table `Production.UnitMeasure` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Les colonnes de cette table sont `UnitMeasureCode`, `Name` et `ModifiedDate`. Étant donné que les valeurs de toutes les colonnes sont fournies et qu’elles sont répertoriées dans le même ordre que les colonnes de la table, il n’est pas nécessaire de spécifier les noms de colonnes dans la liste de colonnes *.*  
   
 ```sql
@@ -970,7 +970,7 @@ GO
 SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
 ```  
 
-#### <a name="w-inserting-data-using-the-select-option"></a>W. Insertion de données à l’aide de l’option SELECT  
+#### <a name="w-inserting-data-using-the-select-option"></a>Heure standard Insertion de données à l’aide de l’option SELECT  
  L’exemple suivant montre comment insérer plusieurs lignes de données à l’aide d’une instruction INSERT avec une option SELECT. La première instruction `INSERT` utilise une instruction `SELECT` directement pour récupérer des données à partir de la table source, puis stocke le jeu de résultats dans la table `EmployeeTitles`.  
   
 ```sql

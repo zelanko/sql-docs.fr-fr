@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296615"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296615"
   
  Un exécutable est une tâche ou un conteneur que vous ajoutez au flux de contrôle d'un package.  
   
-|Nom de colonne|**Data type**|Description|  
+|Nom de la colonne|**Type de données**|Description|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|Identificateur unique du fichier exécutable.|  
 |execution_id|**bigint**|Identificateur unique de l'instance d'exécution.|  

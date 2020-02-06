@@ -16,10 +16,10 @@ ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075986"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transactions différées (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "68075986"
 |------------|-----------------------------------------------------------------------|  
 |Démarrage du serveur|transaction différée|  
 |Restaurer|transaction différée|  
-|Attacher|Échec de l'attachement|  
+|Joindre|Échec de l'attachement|  
 |Redémarrage automatique|transaction différée|  
 |Création d'une base de données ou d'un instantané de base de données|Échec de la création|  
 |Restauration par progression sur mise en miroir de bases de données|transaction différée|  
@@ -85,7 +85,7 @@ ms.locfileid: "68075986"
   
          Pour plus d’informations sur le mode urgence, consultez [États d’une base de données](../../relational-databases/databases/database-states.md).  
   
-    -   Ensuite, réparez la base de données à l’aide de l’option DBCC REPAIR_ALLOW_DATA_LOSS dans l’une des instructions DBCC suivantes : [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) ou [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Ensuite, réparez la base de données à l’aide de l’option DBCC REPAIR_ALLOW_DATA_LOSS dans l’une des instructions DBCC suivantes : [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)ou [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          Lorsque la commande DBCC rencontre la page erronée, elle la désalloue et répare les éventuelles erreurs associées. Cette approche permet de remettre en ligne la base de données dans un état physique cohérent. Il se peut néanmoins que d'autres données soient perdues ; c'est pourquoi cette approche ne doit être adoptée qu'en dernier recours.  
   

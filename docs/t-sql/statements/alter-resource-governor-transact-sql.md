@@ -21,10 +21,10 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982022"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73982022"
   
 -   Définir les opérations d'E/S maximales par volume disque.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -110,7 +110,7 @@ ALTER RESOURCE GOVERNOR
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-starting-the-resource-governor"></a>A. Démarrage du gouverneur de ressources  
+### <a name="a-starting-the-resource-governor"></a>R. Démarrage du gouverneur de ressources  
  Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé pour la première fois, le gouverneur de ressources est désactivé. L'exemple suivant permet de démarrer le gouverneur de ressources. Après l'exécution de l'instruction, le gouverneur de ressources s'exécute et peut utiliser les groupes de charges de travail et pools de ressources prédéfinis.  
   
 ```  

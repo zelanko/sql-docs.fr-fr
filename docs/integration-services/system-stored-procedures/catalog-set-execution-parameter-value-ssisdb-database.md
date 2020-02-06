@@ -11,10 +11,10 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295312"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (base de données SSISDB)
@@ -65,7 +65,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* est de type **smallint**.  
   
  [ @parameter_name = ] *parameter_name*  
- Nom du paramètre. *parameter_name* est de type **nvarchar(128)** .  
+ Le nom du paramètre. *parameter_name* est de type **nvarchar(128)** .  
   
  [ @parameter_value = ] *parameter_value*  
  Valeur du paramètre. *parameter_value* est de type **sql_variant**.  
@@ -80,7 +80,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|None<br /><br /> La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
-|1|Simple<br /><br /> Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s'agit de la valeur par défaut.|  
+|1|De base<br /><br /> Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s’agit de la valeur par défaut.|  
 |2|Performances<br /><br /> Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.|  
 |3|Commentaires<br /><br /> Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic. <br />Les événements personnalisés sont notamment ces événements consignés par les tâches Integration Services. Pour plus d’informations, consultez [Messages personnalisés pour la journalisation](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Lignage de l’exécution<br /><br /> Collecte les données nécessaires au suivi du lignage dans le flux de données.|  

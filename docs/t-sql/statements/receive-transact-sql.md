@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211441"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70211441"
 
   Récupère un ou plusieurs messages dans une file d'attente. Selon le paramètre de rétention défini pour la file d'attente, supprime le message de la file d'attente ou met à jour l'état du message dans la file d'attente.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -105,7 +105,7 @@ ms.locfileid: "70211441"
  TIMEOUT *timeout*  
  Indique le temps, en millisecondes, pendant lequel l'instruction attend un message. Cette clause ne peut être utilisée qu'avec la clause WAITFOR. Si cette clause n’est pas spécifiée ou si le délai d’expiration a la valeur -**1**, le délai d’attente est illimité. Si le délai expire, l'instruction RECEIVE retourne un jeu de résultats vide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
 >  Si l'instruction RECEIVE n'est pas la première instruction dans un lot ou une procédure stockée, l'instruction précédente doit se terminer par un point-virgule (;).  
@@ -155,20 +155,20 @@ ms.locfileid: "70211441"
 ## <a name="queue-columns"></a>Colonnes de la file d'attente  
  Le tableau suivant répertorie les colonnes d'une file d'attente :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|État du message. Pour les messages retournés par la commande RECEIVE, l’état a toujours la valeur **0**. Dans la file d'attente, les messages peuvent contenir l'une des valeurs suivantes :<br /><br /> **0**= Prêt**1**= Message reçu**2**= Pas encore terminé**3**= Message envoyé conservé|  
+|**statut**|**tinyint**|État du message. Pour les messages retournés par la commande RECEIVE, l’état a toujours la valeur **0**. Dans la file d'attente, les messages peuvent contenir l'une des valeurs suivantes :<br /><br /> **0**= Prêt**1**= Message reçu**2**= Pas encore terminé**3**= Message envoyé conservé|  
 |**priority**|**tinyint**|Niveau de priorité de conversation appliqué au message.|  
 |**queuing_order**|**bigint**|Numéro d'ordre du message dans la file d'attente.|  
 |**conversation_group_id**|**uniqueidentifier**|Identificateur du groupe de conversations auquel ce message appartient.|  
 |**conversation_handle**|**uniqueidentifier**|Descripteur de conversation dont ce message fait partie.|  
 |**message_sequence_number**|**bigint**|Numéro de séquence du message dans la conversation.|  
 |**service_name**|**nvarchar(512)**|Nom du service auquel la conversation est destinée.|  
-|**service_id**|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|  
+|**service_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du service auquel la conversation est destinée.|  
 |**service_contract_name**|**nvarchar (256)**|Nom du contrat suivi par la conversation.|  
-|**service_contract_id**|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
+|**service_contract_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
 |**message_type_name**|**nvarchar (256)**|Nom du type de message qui décrit le format du message. Les messages peuvent être des types de messages d'application ou des messages système Service Broker.|  
-|**message_type_id**|**Int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
+|**message_type_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
 |**validation**|**nchar(2)**|Validation utilisée pour le message.<br /><br /> **E**=Empty**N**=None**X**=XML|  
 |**message_body**|**varbinary(MAX)**|Contenu du message.|  
   
@@ -177,7 +177,7 @@ ms.locfileid: "70211441"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. Réception de toutes les colonnes de tous les messages d'un groupe de conversations  
+### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>R. Réception de toutes les colonnes de tous les messages d'un groupe de conversations  
  L'exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d'attente `ExpenseQueue`. L'instruction retourne les messages en tant que jeu de résultats.  
   
 ```  
@@ -327,7 +327,7 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

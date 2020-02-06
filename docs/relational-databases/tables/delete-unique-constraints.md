@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016439"
 ---
 # <a name="delete-unique-constraints"></a>Supprimer des contraintes UNIQUE
@@ -54,7 +54,7 @@ ms.locfileid: "68016439"
   
 1.  Dans l'Explorateur d'objets, développez la table qui contient la contrainte unique puis développez **Contraintes**.  
   
-2.  Cliquez sur la clé avec le bouton droit, puis sélectionnez **Supprimer**.  
+2.  Cliquez avec le bouton droit sur la clé, puis sélectionnez **Supprimer**.  
   
 3.  Dans la boîte de dialogue **Supprimer un objet** , vérifiez que la clé correcte est spécifiée et cliquez sur **OK**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68016439"
   
 #### <a name="to-delete-a-unique-constraint"></a>Pour supprimer une contrainte unique  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

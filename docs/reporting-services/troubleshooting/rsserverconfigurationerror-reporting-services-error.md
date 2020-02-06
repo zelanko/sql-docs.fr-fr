@@ -11,10 +11,10 @@ ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572135"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Erreur Reporting Services
@@ -24,8 +24,8 @@ ms.locfileid: "65572135"
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|rsServerConfiguration|  
-|Source de l'événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|ID de l’événement|rsServerConfiguration|  
+|Source de l’événement|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |Composant|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texte du message|Le serveur de rapports a rencontré une erreur de configuration.|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65572135"
 ## <a name="internal-only"></a>Interne uniquement  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichiers de configuration Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114803"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY – refus d'autorisations d'objet (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68114803"
   Refuse des autorisations à un membre de la classe OBJECT d'éléments sécurisables. Il s'agit des membres de la classe OBJECT : tables, vues, fonctions table, procédures stockées, procédures stockées étendues, fonctions scalaires, fonctions d'agrégation, files d'attente de service et synonymes.  
 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -139,7 +139,7 @@ PRIVILEGES
 ## <a name="examples"></a>Exemples  
 Les exemples suivants utilisent la base de données AdventureWorks.
   
-### <a name="a-denying-select-permission-on-a-table"></a>A. Refus d'une autorisation SELECT sur une table  
+### <a name="a-denying-select-permission-on-a-table"></a>R. Refus d'une autorisation SELECT sur une table  
  Dans l’exemple ci-dessous, l’autorisation `SELECT` est refusée à l’utilisateur `RosaQdM` sur la table `Person.Address`.  
   
 ```  
