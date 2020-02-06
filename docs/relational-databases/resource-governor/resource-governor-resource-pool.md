@@ -14,10 +14,10 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942668"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
@@ -57,7 +57,7 @@ Le tableau suivant illustre quelques-uns des concepts précédents. Le tableau p
 |Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
-|par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|default|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
 |Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
 |Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
 
@@ -78,7 +78,7 @@ Sur la base du tableau précédent donné en exemple, détaillons les ajustement
 |Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
-|par défaut|0|100|25|25|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50+5)) = 25. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
+|default|0|100|25|25|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50+5)) = 25. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
 |Pool 1|20|100|45|25|La valeur MAX effectif est calculée comme suit : min(100,100-55) = 45. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
 |Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-25) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
 |Pool 3|5|100|30|25|La valeur MAX effectif est calculée comme suit : min(100,100-70) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
@@ -124,9 +124,9 @@ Les pools de ressources définis par l'utilisateur sont ceux que vous créez pou
 |Décrit comment supprimer un pool de ressources.|[Supprimer un pool de ressources](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)   
- [Groupe de charge de travail du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
- [Fonction classifieur du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
+ [Groupe de charge de travail de Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
+ [Fonction classifieur de Resource Governor](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
  [Configurer le gouverneur de ressources à l'aide d'un modèle](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
  [Afficher les propriétés du gouverneur de ressources](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   

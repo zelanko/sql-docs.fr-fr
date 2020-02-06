@@ -11,10 +11,10 @@ ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa3c4060f0d82ff590b6307bc35a3c11a86b3201
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296594"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (base de données SSISDB)
@@ -26,14 +26,14 @@ ms.locfileid: "71296594"
 
   Affiche uniquement les autorisations affectées explicitement à l'utilisateur.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Type d'objet sécurisable. Les types d'objets sécurisables incluent le dossier (`1`), le projet (`2`), l'environnement (`3`) et l'opération (`4`).|  
 |object_id|**bigint**|Identificateur unique (ID) ou clé primaire de l'objet sécurisé.|  
-|principal_id|**Int**|ID du principal de base de données.|  
+|principal_id|**int**|ID du principal de base de données.|  
 |permission_type|**smallint**|Type de l'autorisation.|  
 |is_deny|**bit**|Indique si l'autorisation a été refusée ou accordée. Lorsque la valeur est `1`, l'autorisation a été refusée. Lorsque la valeur est `0`, l'autorisation n'a pas été refusée.|  
-|grantor_id|**Int**|ID du principal qui a accordé l'autorisation.|  
+|grantor_id|**int**|ID du principal qui a accordé l'autorisation.|  
   
 ## <a name="remarks"></a>Notes  
  Cette vue affiche les types d'autorisation répertoriés dans le tableau suivant :  

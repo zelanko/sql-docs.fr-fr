@@ -14,10 +14,10 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290161"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Conditionnel) (expression SSIS)
@@ -40,10 +40,10 @@ boolean_expression?expression1:expression2
  Expression valide qui renvoie TRUE, FALSE ou NULL.  
   
  *expression1*  
- Toute expression valide.  
+ Peut être toute expression valide.  
   
  *expression2*  
- Toute expression valide.  
+ Peut être toute expression valide.  
   
 ## <a name="result-types"></a>Types des résultats  
  Type de données de *expression1* ou de *expression2*.  
@@ -59,11 +59,11 @@ boolean_expression?expression1:expression2
   
  L’ensemble d’expressions, *expression1* et *expression2*, doit s’évaluer à des types de données valides et être conforme à une des règles suivantes :  
   
--   **Numérique** : *expression1* et *expression2* doivent toutes deux être d’un type de données numériques. L'intersection des types de données doit être de type de données numérique, comme le spécifient les règles relatives aux conversions numériques implicites effectuées par l'évaluateur d'expression. L'intersection des deux types de données numériques ne peut pas être NULL. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
+-   **Numérique** : *expression1* et *expression2* doivent toutes deux être d’un type de données numérique. L'intersection des types de données doit être de type de données numérique, comme le spécifient les règles relatives aux conversions numériques implicites effectuées par l'évaluateur d'expression. L'intersection des deux types de données numériques ne peut pas être NULL. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
 -   **Chaîne** : *expression1* et *expression2* doivent toutes deux être d’un type de données chaîne : DT_STR ou DT_WSTR. Les deux expressions peuvent avoir une valeur de types de données chaîne différents. Le résultat a le type de données DT_WSTR et une longueur équivalente à celle de l'argument le plus long.  
   
--   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
+-   **Date, Heure ou Date/Heure** : *expression1* et *expression2* doivent toutes deux s’évaluer à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  

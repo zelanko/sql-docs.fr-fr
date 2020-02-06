@@ -17,10 +17,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907989"
 ---
 # <a name="oracle-subscribers"></a>Abonnés Oracle
@@ -32,7 +32,7 @@ ms.locfileid: "72907989"
   
 1.  Installez et configurez le logiciel réseau client Oracle et le fournisseur OLE DB Oracle sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , afin que le serveur de distribution puisse se connecter à l'Abonné Oracle. Le logiciel réseau client Oracle doit être la version la plus récente. Oracle recommande aux utilisateurs d'installer les versions les plus récentes des logiciels clients. Par conséquent, il est fréquent que le logiciel client soit plus récent que le logiciel de base de données. La façon la plus simple d'installer le logiciel consiste à utiliser le programme d'installation Oracle Universal Installer sur le disque Oracle Client. Dans Oracle Universal Installer, vous devez fournir les informations suivantes :  
   
-    |Informations|Description|  
+    |Information|Description|  
     |-----------------|-----------------|  
     |Oracle Home|Chemin d'accès du répertoire d'installation des logiciels Oracle. Acceptez le chemin par défaut (C:\oracle\ora90 ou équivalent) ou entrez un autre chemin. Pour plus d'informations sur Oracle Home, consultez la section « Considérations sur Oracle Home » plus loin dans cette rubrique.|  
     |Nom d'Oracle Home|Alias pour le chemin du répertoire d'origine Oracle Home.|  
@@ -63,7 +63,7 @@ ms.locfileid: "72907989"
   
 2.  Tapez `cmd` puis cliquez sur **OK**.  
   
-3.  À l'invite de commandes, tapez :  
+3.  À l’invite de commandes, tapez :  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -111,11 +111,11 @@ ms.locfileid: "72907989"
 |**decimal(1-38, 0-38)**|NUMBER(1-38, 0-38)|  
 |**float(53)**|FLOAT|  
 |**float**|FLOAT|  
-|**geography**|BLOB|  
+|**Geography**|BLOB|  
 |**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
 |**image**|BLOB|  
-|**Int**|NUMBER(10,0)|  
+|**int**|NUMBER(10,0)|  
 |**money**|NUMBER(19,4)|  
 |**nchar(1-1000)**|CHAR(1-1000)|  
 |**nchar(1001-4000)**|NCLOB|  
@@ -128,9 +128,9 @@ ms.locfileid: "72907989"
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  
-|**sql_variant**|Néant|  
+|**sql_variant**|N/A|  
 |**sysname**|VARCHAR2(128)|  
-|**texte**|CLOB|  
+|**text**|CLOB|  
 |**time(0-7)**|VARCHAR(16)|  
 |**timestamp**|RAW (8)|  
 |**tinyint**|NUMBER(3,0)|  

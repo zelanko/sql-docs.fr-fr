@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000554"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
@@ -42,7 +42,7 @@ Définit une date qui est associée à une heure de la journée. L'heure est bas
 |||  
 |-|-|  
 |Syntaxe|**smalldatetime**|  
-|Utilisation|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
+|Usage|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Formats de littéraux de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|Non applicable|  
 |Plage de dates|1900-01-01 à 2079-06-06<br /><br /> Du 1er janvier 1900 au 6 juin 2079|  
 |Plage temporelle|00:00:00 à 23:59:59<br /><br /> 2007-05-09 23:59:59 sera arrondi à<br /><br /> 2007-05-10 00:00:00|  
@@ -147,7 +147,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime2 AS ' datetime2(4)';
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>A. Conversion de littéraux de chaîne avec secondes en smalldatetime  
+### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>R. Conversion de littéraux de chaîne avec secondes en smalldatetime  
 L'exemple suivant compare la conversion de secondes dans les littéraux de chaîne en `smalldatetime`.
   
 ```sql
@@ -157,7 +157,7 @@ SELECT
     ,CAST('2007-05-08 12:59:59.998' AS smalldatetime);  
 ```  
   
-|Entrée|Sortie|  
+|Entrée|Output|  
 |---|---|
 |2007-05-08 12:35:29|2007-05-08 12:35:00|  
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  
@@ -179,7 +179,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|Type de données|Sortie|  
+|Type de données|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

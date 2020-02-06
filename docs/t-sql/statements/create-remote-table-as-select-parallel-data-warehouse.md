@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401707"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
@@ -24,7 +24,7 @@ ms.locfileid: "74401707"
   
  Pour configurer le serveur distant, consultez « Copie de table distante » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Nom de l’ordinateur serveur distant ou adresse IPv4 du serveur distant. Les adresses IPv6 ne sont pas prises en charge. Vous pouvez spécifier une instance nommée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format **nom_ordinateur\nom_instance** ou **adresse_IP\nom_instance**. Le serveur doit être distant et ne peut donc pas être spécifié comme (local).  
   
  Numéro de *port* TCP  
- Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Par exemple :  **ServerA,1450** ou **10.192.14.27,1435**  
+ Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Par exemple : **ServerA, 1450** ou **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Nous vous recommandons de vous connecter à un serveur distant à l’aide de l’adresse IP. En fonction de votre configuration réseau, la connexion à l’aide du nom de l’ordinateur peut nécessiter des étapes supplémentaires afin d’utiliser votre serveur DNS non-appliance pour résoudre le nom au serveur approprié. Cette étape n’est pas nécessaire lors de la connexion avec une adresse IP. Pour plus d’informations, consultez « Utiliser un redirecteur DNS pour résoudre les noms DNS non-appliance (Analytics Platform System) » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  

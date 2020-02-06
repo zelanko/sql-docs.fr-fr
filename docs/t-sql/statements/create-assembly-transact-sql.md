@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 276e7a88d7cd10f6ee98a6dde80d3f86c39b2c08
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981988"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73981988"
 > [!WARNING]
 >  CLR utilise la sécurité d’accès du code (CAS) dans le .NET Framework, qui n’est plus pris en charge comme limite de sécurité. Un assembly CLR créé avec `PERMISSION_SET = SAFE` peut être en mesure d’accéder à des ressources système externes, d’appeler du code non managé et d’acquérir des privilèges sysadmin. À compter de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], une option de `sp_configure` appelée `clr strict security` est introduite pour renforcer la sécurité des assemblys CLR. `clr strict security` est activée par défaut et traite les assemblys `SAFE` et `EXTERNAL_ACCESS` comme s’ils étaient marqués `UNSAFE`. L’option `clr strict security` peut être désactivée pour assurer une compatibilité descendante, mais ceci n’est pas recommandé. Microsoft recommande que tous les assemblys soient signés par un certificat ou une clé asymétrique avec une connexion correspondante à laquelle a été accordée l’autorisation `UNSAFE ASSEMBLY` dans la base de données master. Pour plus d’informations, consultez [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -128,7 +128,7 @@ Lors d’une tentative d’accès à l’assembly spécifié dans \<client_assem
   
 -   Le fichier assembly binaire se compose de métadonnées et de segments de code valides et ces segments de code contiennent des instructions MSIL (Microsoft Intermediate language) valides.  
   
--   Le jeu d’assemblys système qu'il référence est l’un des assemblys suivants pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll et System.Xml.Linq.dll. D'autres assemblys système peuvent être référencés, mais ils doivent être inscrits explicitement dans la base de données.  
+-   Le jeu d'assemblys système qu'il référence est l'un des assemblys suivants pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll, et System.Xml.Linq.dll. D'autres assemblys système peuvent être référencés, mais ils doivent être inscrits explicitement dans la base de données.  
   
 -   Pour les assemblys créés à l'aide des ensembles d'autorisations SAFE ou EXTERNAL ACCESS :  
   
@@ -167,7 +167,7 @@ Les autorisations suivantes sont requises pour créer un assembly CLR quand `CLR
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple A : création d’un assembly à partir d’une dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple A : Création d’un assembly à partir d’une dll  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
@@ -182,7 +182,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > Azure SQL Database ne prend pas en charge la création d’un assembly à partir d’un fichier.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple B : création d’un assembly à partir de bits d’assembly  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple B : Création d’un assembly à partir de bits d’assembly  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   

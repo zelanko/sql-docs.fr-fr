@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594076"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
@@ -30,8 +30,8 @@ ms.locfileid: "73594076"
   
 |Élément|Description|  
 |----------|-----------------|  
-|Nom d'hôte|Un réseau TCP/IP utilise une adresse IP pour identifier de manière unique un périphérique sur le réseau. Il existe une adresse IP physique pour chaque carte réseau installée dans un ordinateur. Si l'adresse IP est résolue en en-tête d'hôte, vous pouvez spécifier l'en-tête de l'hôte. Si vous déployez le serveur de rapports sur un réseau d'entreprise, vous pouvez utiliser le nom réseau de l'ordinateur.|  
-|d’|Un port TCP est un point de terminaison sur le périphérique. Le serveur de rapports écoute les demandes sur un port désigné.|  
+|Nom de l’hôte|Un réseau TCP/IP utilise une adresse IP pour identifier de manière unique un périphérique sur le réseau. Il existe une adresse IP physique pour chaque carte réseau installée dans un ordinateur. Si l'adresse IP est résolue en en-tête d'hôte, vous pouvez spécifier l'en-tête de l'hôte. Si vous déployez le serveur de rapports sur un réseau d'entreprise, vous pouvez utiliser le nom réseau de l'ordinateur.|  
+|Port|Un port TCP est un point de terminaison sur le périphérique. Le serveur de rapports écoute les demandes sur un port désigné.|  
 |Répertoire virtuel|Un port est souvent partagé par plusieurs applications ou services Web. Pour cette raison, une URL de serveur de rapports inclut toujours un répertoire virtuel qui correspond à l'application obtenant la demande. Vous devez spécifier des noms de répertoire virtuel uniques pour chaque application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui écoute sur les mêmes port et adresse IP.|  
 |Paramètres SSL|Les URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurées pour utiliser un certificat SSL existant que vous avez installé précédemment sur l'ordinateur. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
@@ -46,8 +46,8 @@ ms.locfileid: "73594076"
   
 |Élément|Valeur|Explication|  
 |----------|-----------|-----------------|  
-|Adresse IP|Assigné|Le service DNS (Domain Name Service) de votre réseau résout le nom d'hôte sur l'URL en adresse IP de l'ordinateur. Tant que l'adresse IP est spécifiée dans l'URL que vous définissez, une demande envoyée à un hôte spécifique atteint sa cible.|  
-|d’|80|Le port 80 est le port par défaut pour les connexions TCP/IP sur un ordinateur. Comme le serveur de rapports écoute sur le port 80, vous pouvez omettre le numéro de port de l'URL. Si vous spécifiez un autre port, vous devez le spécifier dans l'URL.|  
+|Adresse IP|Assigné|Le service DNS (Domain Name Service) de votre réseau résout le nom d'hôte sur l'URL en adresse IP de l'ordinateur. Tant que l'adresse IP est spécifiée dans l'URL que vous définissez, une demande envoyée à un hôte spécifique atteint sa cible.|  
+|Port|80|Le port 80 est le port par défaut pour les connexions TCP/IP sur un ordinateur. Comme le serveur de rapports écoute sur le port 80, vous pouvez omettre le numéro de port de l'URL. Si vous spécifiez un autre port, vous devez le spécifier dans l'URL.|  
 |Répertoire virtuel|ReportServer|Remarquez que les deux exemples d'URL incluent le nom de répertoire virtuel. À moins que vous ne personnalisiez la définition d'URL, vous devez toujours spécifier le nom du répertoire virtuel de l'application dans l'URL.|  
   
 > [!NOTE]  

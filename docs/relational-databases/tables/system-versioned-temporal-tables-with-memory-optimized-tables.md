@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165460"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
@@ -52,9 +52,9 @@ Les points suivants sur les tables temporelles à système par version avec tabl
 
 La table de mise en lots interne optimisée en mémoire est un objet interne créé par le système pour optimiser les opérations DML.
 
-- Le nom de la table est généré au format suivant : **Memory_Optimized_History_Table_<ID_objet>** , où *<ID_objet>* est l’identificateur de la table temporelle actuelle.
+- Le nom de la table est généré au format suivant : **Memory_Optimized_History_Table_<ID_objet>** , où *<ID_objet>* est l’identificateur de la table temporelle actuelle.
 - La table réplique le schéma de la table temporelle actuelle et une colonne BIGINT. Cette colonne supplémentaire garantit l’unicité des lignes déplacées vers la mémoire tampon de l’historique interne.
-- La colonne supplémentaire est au format suivant : **Change_ID[_<suffixe>]** , où *_\<suffixe>* est également ajouté dans les cas où la table contient déjà une colonne *Change_ID*.
+- Le nom de la colonne supplémentaire est au format suivant : **Change_ID[_<suffixe>]** , où *_\<suffixe>* est également ajouté dans les cas où la table contient déjà une colonne *Change_ID*.
 - La taille de ligne maximale pour une table à système par version optimisée en mémoire est réduite de 8 octets en raison de la colonne BIGINT supplémentaire dans la table de mise en lots. La nouvelle valeur maximale est désormais 8 052 octets.
 - La table de mise en lots interne optimisée en mémoire n’est pas représentée dans l’Explorateur d’objets de SQL Server Management Studio.
 - Les métadonnées relatives à cette table, ainsi que sa connexion à la table temporelle actuelle, sont disponibles dans [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md).

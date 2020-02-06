@@ -18,10 +18,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314614"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "71314614"
 
   Indique si un objet est signé par un certificat spécifié ou une clé asymétrique.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ IS_OBJECTSIGNED (
  Empreinte numérique SHA de l'objet. *\@thumbprint* est du type **varbinary(32)** .  
   
 ## <a name="returned-types"></a>Types retournés  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
  IS_OBJECTSIGNED retourne les valeurs suivantes :  
@@ -76,7 +76,7 @@ IS_OBJECTSIGNED (
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-extended-properties-on-a-database"></a>A. Affichage des propriétés étendues d'une base de données  
+### <a name="a-displaying-extended-properties-on-a-database"></a>R. Affichage des propriétés étendues d'une base de données  
  L’exemple suivant teste si la table spt_fallback_db dans la base de données **master** est signée par le certificat de signature de schéma.  
   
 ```  

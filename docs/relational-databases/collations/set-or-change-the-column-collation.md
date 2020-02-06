@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74908710"
 ---
 # <a name="set-or-change-the-column-collation"></a>Définir ou changer le classement des colonnes
@@ -122,7 +122,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Comme **tempdb** utilise le classement du serveur par défaut et que `TestPermTab.Col1` utilise un autre classement, SQL Server affiche l’erreur suivante : « Impossible de résoudre le conflit de classement entre 'Latin1_General_CI_AS_KS_WS' et 'Estonian_CS_AS' dans l’opération Égal à. »  
+ Comme **tempdb** utilise le classement par défaut du serveur et que `TestPermTab.Col1` utilise un autre classement, SQL Server affiche l’erreur suivante : impossible de résoudre le conflit de classement entre « Latin1_General_100_CI_AS_KS_WS » et « Chinese_Simplified_Pinyin_100_CI_AS » dans l’opération égal à.  
   
  Pour éviter l'erreur, vous pouvez utiliser une des solutions suivantes :  
   

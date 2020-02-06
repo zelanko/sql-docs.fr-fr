@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000710"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Index XML sélectifs (SXI)
@@ -120,7 +120,7 @@ FOR
   
 -   Indexation des nœuds avec des types de données binaires XS : par exemple, base64Binary et hexBinary.  
   
--   Spécification des nœuds à indexer avec des expressions XPath qui se terminent par le caractère générique `*` : Par exemple, `/a/b/c/*`, `/a//b/*` ou `/a/b/*:c`.  
+-   Spécification des nœuds à indexer avec des expressions Xpath qui contiennent le caractère générique `*` à la fin : par exemple,  `/a/b/c/*`, `/a//b/*`ou `/a/b/*:c`.  
   
 -   Indexation d'un axe autre que l'enfant, l'attribut ou le descendant. `//<step>` est autorisé comme un cas particulier.  
   
@@ -129,7 +129,7 @@ FOR
 -   Spécification et récupération de l'identificateur d'un nœud en utilisant la fonction id().  
   
   
-###  <a name="prereq"></a> Configuration requise  
+###  <a name="prereq"></a> Conditions préalables  
  Les conditions suivantes doivent être réunies avant de pouvoir créer un index XML sélectif sur une colonne XML dans une table utilisateur :  
   
 -   Un index cluster doit exister dans la clé primaire de la table utilisateur.  
@@ -196,7 +196,7 @@ FOR
 |||  
 |-|-|  
 |**Tâche**|**Rubrique**|  
-|Spécifiez les chemins d'accès du nœud que vous souhaitez indexer et les indicateurs facultatifs d'optimisation lorsque vous créez ou modifiez un index XML sélectif.|[Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
+|Spécifiez les chemins d'accès du nœud que vous souhaitez indexer et les indicateurs facultatifs d'optimisation lorsque vous créez ou modifiez un index XML sélectif.|[Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Créez, modifiez ou supprimez un index XML sélectif.|[Créer, modifier ou supprimer des index XML sélectifs](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Créez, modifiez ou supprimez un index XML secondaire sélectif.|[Créer, modifier ou supprimer des index XML secondaires sélectifs](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   

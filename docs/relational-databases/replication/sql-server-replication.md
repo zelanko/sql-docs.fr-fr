@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958352"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287116"
 ---
 # <a name="sql-server-replication"></a>Réplication SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Pour obtenir des informations sur la compatibilité descendante, consultez [Comp
   
 ## <a name="publications-and-articles"></a>Publications et articles 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [Créer une publication](publish/create-a-publication.md)    
 -   [Définir un article](publish/define-an-article.md)   
 -   [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
 -   [Afficher et modifier les propriétés d’un article](publish/view-and-modify-article-properties.md)    
@@ -89,11 +89,11 @@ Pour obtenir des informations sur la compatibilité descendante, consultez [Comp
 ## <a name="manage-subscriptions"></a>Gérer les abonnements  
   
 -   [Créer un abonnement par extraction de données (pull)](create-a-pull-subscription.md)    
--   [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md)    
+-   [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md)    
 -   [Supprimer un abonnement par extraction (pull)](delete-a-pull-subscription.md)    
 -   [Créer un abonnement par émission de données](create-a-push-subscription.md)   
--   [Afficher et modifier les propriétés d’un abonnement par émission de données](view-and-modify-push-subscription-properties.md)   
--   [Supprimer un abonnement par émission de données](delete-a-push-subscription.md)   
+-   [Afficher et modifier les propriétés d’un abonnement par émission (push)](view-and-modify-push-subscription-properties.md)   
+-   [Supprimer un abonnement par émission (push)](delete-a-push-subscription.md)   
 -   [Spécifier des planifications de synchronisation](specify-synchronization-schedules.md)    
 -   [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [Créer un abonnement pour un abonné non SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  

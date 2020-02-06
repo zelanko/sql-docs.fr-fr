@@ -1,32 +1,33 @@
 ---
-title: Utilisation de MSDeploy avec le fournisseur dbSqlPackage | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9279a433d848108b204cadc6990803695f9e82d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140979"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243563"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
+
 **DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/SQL Azure. **DbSqlPackage** prend en charge les actions suivantes :  
   
--   **Extraire** : crée un fichier d’instantané de base de données (.dacpac) à partir de bases de données SQL Server ou SQL Azure actives.  
+-   **Extraire** : crée un fichier d'instantané de base de données (.dacpac) à partir de bases de données SQL Server ou SQL Azure actives.  
   
--   **Publier** : met à jour de manière incrémentielle un schéma de base de données pour qu’il corresponde au schéma d’un fichier .dacpac source.  
+-   **Publier** : met à jour de manière incrémentielle un schéma de base de données pour qu'il corresponde au schéma d'un fichier .dacpac source.  
   
 -   **DeployReport** (déployer un rapport) : crée un rapport XML sur les modifications devant être apportées par une action de publication.  
   
--   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l’action Publier.  
+-   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l'action Publier.  
   
 Pour plus d’informations concernant DACFx, consultez la documentation sur l’API gérée par DACFx sous [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (outil en ligne de commande DACFx).  
   
@@ -52,40 +53,40 @@ Vous devez spécifier les verbes MS-Deploy à l’aide du commutateur **-verb** 
 ## <a name="dbsqlpackage-source"></a>Source dbSqlPackage  
 Le fournisseur **dbSqlPackage** accepte une entrée qui correspond à une chaîne de connexion SQL Server/SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.  La syntaxe de spécification de la source d'entrée pour le fournisseur est la suivante :  
   
-|Entrée|Valeur par défaut|Description|  
+|Entrée|Default|Description|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=** {*input*}|**N/A**|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.<br /><br />**REMARQUE :** Les seules propriétés de chaîne de connexion prises en charge lors de l’utilisation d’une chaîne de connexion comme source d’entrée sont *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* et *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=** {*input*}|**N/A**|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.<br /><br />**REMARQUE :** les seules propriétés de chaîne de connexion prises en charge lors de l’utilisation d’une chaîne de connexion comme source d'entrée sont *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* et *ConnectionTimeout*.|  
   
 Si votre source d'entrée correspond à une chaîne de connexion à une base de données SQL Server/SQL Azure active, **dbSqlPackage** extrait un instantané de base de données au format de fichier .dacpac à partir d'une base de données SQL Server/Azure active.  
   
 Les paramètres **sources** sont :  
   
-|Paramètre|Valeur par défaut|Description|  
+|Paramètre|Default|Description|  
 |-------------|-----------|---------------|  
-|**Profile** :{ *string*}|Néant|Spécifie le chemin d'accès à un profil de publication DAC. Le profil définit une collection de propriétés et de variables à utiliser lors de la génération du fichier .dacpac. Le profil de publication est transmis à la destination et utilisé en tant qu'options par défaut lors de l'exécution d'une action **Publier**, **Script** ou **DeployReport**.|  
+|**Profile** :{ *string*}|N/A|Spécifie le chemin d'accès à un profil de publication DAC. Le profil définit une collection de propriétés et de variables à utiliser lors de la génération du fichier .dacpac. Le profil de publication est transmis à la destination et utilisé en tant qu'options par défaut lors de l'exécution d'une action **Publier**, **Script** ou **DeployReport**.|  
 |**DacApplicationName**={ *string* }|Nom de la base de données|Définit le nom de l'application à stocker dans les métadonnées DACPAC. La chaîne par défaut est le nom de la base de données.|  
 |**DacMajorVersion** ={*integer*}|**1**|Définit la version principale à stocker dans les métadonnées DACPAC.|  
 |**DacMajorVersion** ={*integer*}|**0**|Définit la version secondaire à stocker dans les métadonnées DACPAC.|  
-|**DacApplicationDescription**={ *string* }|Néant|Définit la description de l'application à stocker dans les métadonnées DACPAC.|  
+|**DacApplicationDescription**={ *string* }|N/A|Définit la description de l'application à stocker dans les métadonnées DACPAC.|  
 |**ExtractApplicationScopedObjectsOnly={True &#124; False}**|**True**|Si la valeur est **True**, extrait uniquement les objets à portée d'application depuis la source. Si la valeur est **False**, extrait à la fois les objets à portée et hors de portée des applications.|  
 |**ExtractReferencedServerScopedElements={True &#124; False}**|**True**|Si la valeur est **True**, extrait les objets de connexion, d’audit de serveur et d’informations d’identification référencés par les objets de base de données source.|  
 |**ExtractIgnorePermissions={True &#124; False}**|**False**|Si la valeur est **True**, ignore les autorisations d'extraction des objets extraits. Si la valeur est **False**, aucune extraction n'est effectuée.|  
-|**ExtractStorage={File&#124;Memory}**|**Fichier**|Spécifie le type de stockage de sauvegarde pour le modèle de schéma utilisé lors de l'extraction.|  
+|**ExtractStorage={File&#124;Memory}**|**File**|Spécifie le type de stockage de sauvegarde pour le modèle de schéma utilisé lors de l'extraction.|  
 |**ExtractIgnoreExtendedProperties={True&#124;False}**|**False**|Spécifie si les propriétés étendues doivent être ignorées.|  
 |**VerifyExtraction = {True&#124;False}**|**False**|Spécifie si le fichier dacpac extrait doit être vérifié.|  
   
 ## <a name="dbsqlpackage-destination"></a>Destination dbSqlPackage  
 Le fournisseur **dbSqlPackage** accepte une entrée qui correspond à une chaîne de connexion SQL Server/SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque en tant qu'entrée de destination.  La syntaxe de spécification de la destination pour le fournisseur est la suivante :  
   
-|Entrée|Valeur par défaut|Description|  
+|Entrée|Default|Description|  
 |---------|-----------|---------------|  
-|-**dest:dbSqlPackage**={*input*}|Néant|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès complet ou partiel à un fichier .dacpac présent sur le disque. Si *entrée* est un chemin d'accès de fichier, aucun autre paramètre ne peut être spécifié.|  
+|-**dest:dbSqlPackage**={*input*}|N/A|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès complet ou partiel à un fichier .dacpac présent sur le disque. Si *entrée* est un chemin d'accès de fichier, aucun autre paramètre ne peut être spécifié.|  
   
 Les paramètres **Destination** suivants sont disponibles pour toutes les opérations **dbSqlPackage** :  
   
-|Propriété|Valeur par défaut|Description|  
+|Propriété|Default|Description|  
 |------------|-----------|---------------|  
-|**Action={Publish&#124;DeployReport&#124;Script}**|Néant|Paramètre facultatif indiquant l'action à effectuer sur la **Destination**.|  
+|**Action={Publish&#124;DeployReport&#124;Script}**|N/A|Paramètre facultatif indiquant l'action à effectuer sur la **Destination**.|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|Spécifie si la publication **SqlClr** doit supprimer les assemblys bloquants dans le cadre d'un plan de déploiement. Par défaut, les assemblys bloquants ou de référence bloquent la mise à jour d'assembly si l'assembly de référence doit être supprimé.|  
 |**AllowIncompatiblePlatform={True &#124; False}**|**False**|Spécifie si l'action de publication doit être effectuée malgré la possibilité d'une incompatibilité avec les plateformes SQL Server.|  
 |**BackupDatabaseBeforeChanges={True &#124; False}**|**False**|Sauvegarde la base de données avant le déploiement des modifications.|  
@@ -122,7 +123,7 @@ Les paramètres **Destination** suivants sont disponibles pour toutes les opéra
 |**IgnoreFileSize= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau de la taille des fichiers doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau des facteurs de remplissage doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
   
-|Propriété|Valeur par défaut|Description|  
+|Propriété|Default|Description|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau du chemin d'accès aux fichiers d'index de recherche en texte intégral doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de la valeur initiale d'une colonne d'identité doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
@@ -171,9 +172,9 @@ Les paramètres **Destination** suivants sont disponibles pour toutes les opéra
   
 Les paramètres **Destination** suivants sont disponibles uniquement pour les opérations **DeployReport** et **Script** :  
   
-|Paramètre|Valeur par défaut|Description|  
+|Paramètre|Default|Description|  
 |-------------|-----------|---------------|  
-|**OutputPath**={ *string* }|Néant|Paramètre facultatif qui indique à **dbSqlPackage** de créer le fichier de sortie XML DeployReport ou Script SQL à l'emplacement de disque spécifié par *chaîne*. Cette action remplace tous les scripts présents à l'emplacement fourni par chaîne.|  
+|**OutputPath**={ *string* }|N/A|Paramètre facultatif qui indique à **dbSqlPackage** de créer le fichier de sortie XML DeployReport ou Script SQL à l'emplacement de disque spécifié par *chaîne*. Cette action remplace tous les scripts présents à l'emplacement fourni par chaîne.|  
   
 > [!NOTE]  
 > Si le paramètre **OutputPath** n'est pas spécifié pour une action **DeployReport** ou **Script**, un message est retourné.  

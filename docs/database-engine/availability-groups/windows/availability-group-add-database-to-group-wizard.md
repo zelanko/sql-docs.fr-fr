@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934888"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Ajouter une base de données à un groupe de disponibilité Always On avec « l’Assistant Groupe de disponibilité »
@@ -64,13 +64,13 @@ ms.locfileid: "67934888"
   
      Si la base de données contient une clé principale de base de données, entrez le mot de passe de la clé principale de base de données dans la colonne **Mot de passe** .  
   
-5.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
+5.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l’une des options suivantes :  
 
     - **Amorçage automatique**
       
       Sélectionnez cette option pour utiliser l’amorçage automatique. L’amorçage automatique utilise le transport de flux de journaux pour transmettre en continu la sauvegarde à l’aide de VDI vers le réplica secondaire pour chaque base de données du groupe de disponibilité, en utilisant les points de terminaison configurés. Cette opération restaure la sauvegarde de la base de données sur le réplica secondaire, ce qui évite d’avoir à le faire manuellement. Pour plus d’informations sur l’amorçage automatique, voir [Amorçage automatique](automatic-seeding-secondary-replicas.md).
   
-    -   **Complet**  
+    -   **Complète**  
   
          Sélectionnez cette option si votre environnement répond aux conditions requises pour démarrer automatiquement la synchronisation initiale des données (pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations](#Prerequisites), plus haut dans cette rubrique).  
   
@@ -93,9 +93,9 @@ ms.locfileid: "67934888"
   
 6.  Sur la page **Se connecter à des réplicas secondaires existants** , si les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité sont toutes exécutées en tant que service dans le même compte d'utilisateur, cliquez sur **Se connecter à tous**. Si l'une des instances de serveur s'exécute en tant que service sous des comptes différents, cliquez sur le bouton **Se connecter** individuel figurant à droite du nom de chaque instance de serveur.  
   
-     Pour plus d’informations, consultez la [page Se connecter à des réplicas secondaires existants &#40;Assistant Ajout de réplica : Assistant Ajout de bases de données&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+     Pour plus d’informations, consultez [Se connecter à la page à des réplicas secondaires existants &#40;Assistant Ajout de réplica : Assistant Ajout de bases de données&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-7.  La page **Validation** vérifie si les valeurs que vous avez spécifiées dans cet Assistant répondent aux exigences de l'Assistant Nouveau groupe de disponibilité. Pour effectuer un changement, vous pouvez cliquer sur **Précédent** pour revenir à une page antérieure de l'assistant pour modifier une ou plusieurs valeurs. Cliquez sur **Suivant** pour revenir à la page **Validation**, puis cliquez sur **Réexécuter la validation**.  
+7.  La page **Validation** vérifie si les valeurs que vous avez spécifiées dans cet Assistant répondent aux exigences de l'Assistant Nouveau groupe de disponibilité. Pour effectuer un changement, vous pouvez cliquer sur **Précédent** pour revenir à une page antérieure de l'assistant pour modifier une ou plusieurs valeurs. Cliquez sur **Suivant** pour revenir à la page **Validation** , puis cliquez sur **Réexécuter la validation**.  
   
      Pour plus d’informations, consultez [Page Validation &#40;Assistants de groupe de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md).  
   

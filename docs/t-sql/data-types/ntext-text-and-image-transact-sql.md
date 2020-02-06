@@ -22,10 +22,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086731"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>Types ntext, text et image (Transact-SQL)
@@ -40,7 +40,7 @@ Types de données de longueur fixe et variable, permettant de stocker un grand n
 **ntext**  
 Données Unicode de longueur variable ne pouvant pas dépasser 2^30 - 1 octets (c'est-à-dire 1 073 741 823). La taille de stockage, en octets, est le double de la longueur de chaîne entrée. Le synonyme ISO de **ntext** est **national text**.
   
-**texte**  
+**text**  
 Données non-Unicode de longueur variable figurant dans la page de codes du serveur et ne pouvant pas dépasser en longueur 2^31 - 1 octets (2 147 483 647). Lorsque la page de codes du serveur utilise des caractères sur deux octets, le stockage est tout de même de 2 147 483 647 octets. En fonction de la chaîne de caractères, la taille de stockage peut être inférieure à 2 147 483 647 octets.
   
 **image**  

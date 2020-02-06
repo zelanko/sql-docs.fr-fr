@@ -13,10 +13,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cf3c23908b3ec391afc7b9073796ab4c2f47100
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298266"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Options Demande de profil de dépendance fonctionnelle (tâche de profilage des données)
@@ -50,7 +50,7 @@ ms.locfileid: "71298266"
   
 -   **Données**, qui inclut les options **DeterminantColumns** et **DependentColumn**  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "71298266"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
+|**Par défaut**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
 |**DictionarySort**|Trie et compare des données d'après les règles de tri et de comparaison telles que définies dans les dictionnaires de la langue ou de l'alphabet associé.|  
   
@@ -107,7 +107,7 @@ ms.locfileid: "71298266"
  **RequestID**  
  Tapez un nom descriptif pour identifier cette demande de profil. En règle générale, il n'est pas nécessaire de modifier la valeur générée automatiquement.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Options  
  **ThresholdSetting**  
  Spécifiez le paramètre de seuil. La valeur par défaut de cette propriété est **Specified**.  
   

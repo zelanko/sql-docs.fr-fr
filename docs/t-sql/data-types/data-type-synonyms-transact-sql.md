@@ -17,10 +17,10 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72689844"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Synonymes des types de données (Transact-SQL)
@@ -40,7 +40,7 @@ Les synonymes des types de données sont inclus dans [!INCLUDE[ssNoVersion](../.
 |**Double precision**|**float**|  
 |**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
 |**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
-|**entier**|**Int**|  
+|**entier**|**int**|  
 |**national character(** _n_ **)**|**nchar(n)**|  
 |**national char(** _n_ **)**|**nchar(n)**|  
 |**national character varying(** _n_ **)**|**nvarchar(n)**|  

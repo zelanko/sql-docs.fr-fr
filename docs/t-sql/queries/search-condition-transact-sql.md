@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027651"
 ---
 # <a name="search-condition-transact-sql"></a>Condition de recherche (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68027651"
 
   Combinaison d'un ou de plusieurs prédicats qui utilisent les opérateurs logiques AND, OR et NOT.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68027651"
  AND  
  Combine deux conditions et a la valeur TRUE lorsque les deux conditions ont l'une et l'autre la valeur TRUE. Pour plus d’informations, consultez [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md).  
   
- \- ou -  
+ OR  
  Combine deux conditions et a la valeur TRUE lorsque l'une des deux conditions a la valeur TRUE. Pour plus d’informations, consultez [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md).  
   
  \< predicate >  
@@ -205,7 +205,7 @@ ms.locfileid: "68027651"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Utilisation de WHERE avec la syntaxe LIKE et ESCAPE  
+### <a name="a-using-where-with-like-and-escape-syntax"></a>R. Utilisation de WHERE avec la syntaxe LIKE et ESCAPE  
  L’exemple suivant recherche les lignes dans lesquelles la colonne `LargePhotoFileName` contient les caractères `green_`. Il utilise l’option `ESCAPE`, car _ est un caractère générique. Sans l’option `ESCAPE`, la requête rechercherait toutes les valeurs de description contenant le mot `green` suivi de n’importe quel caractère autre que le caractère _.  
   
 ```  

@@ -9,12 +9,12 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c865464022ba18e03be5baa5b66b4b4a87ce2799
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095853"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656754"
 ---
 # <a name="sql-server-development-partners"></a>Partenaires pour le développement avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ Pour la prise en charge du développement de solutions de base de données SQL S
 
 | Partenaire | Description | Liens |
 | --- | --- | --- |
-|![idera][1] |**IDERA**<br>Rapid SQL est un environnement de développement intégré SQL intelligent, permettant aux développeurs et aux administrateurs de base de données de créer du code SQL à hautes performances sur toutes les plateformes de base de données principales incluant SQL Server, à partir d’une même interface.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site Web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. donne à la communauté des développeurs une flexibilité dans le choix des langages de programmation, des frameworks et des services, ainsi que dans l’utilisation de l’ensemble d’outils approprié. En utilisant le kit de ressources Click2Cloud, les développeurs peuvent créer des conteneurs « SQL sur Linux » et les attacher à une application, tout en mettant en œuvre une architecture multilocataire sécurisée. Les conteneurs peuvent être déployés indépendamment sur n’importe quelle plateforme de conteneurs cloud.|[Place de marché][click2cloud_marketplace]<br>[Site Web][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vidéo][click2cloud_youtube] |
+|![idera][1] |**IDERA**<br>Rapid SQL est un environnement de développement intégré SQL intelligent, permettant aux développeurs et aux administrateurs de base de données de créer du code SQL à hautes performances sur toutes les plateformes de base de données principales incluant SQL Server, à partir d’une même interface.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] |
+|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. donne à la communauté des développeurs une flexibilité dans le choix des langages de programmation, des frameworks et des services, ainsi que dans l’utilisation de l’ensemble d’outils approprié. En utilisant le kit de ressources Click2Cloud, les développeurs peuvent créer des conteneurs « SQL sur Linux » et les attacher à une application, tout en mettant en œuvre une architecture multilocataire sécurisée. Les conteneurs peuvent être déployés indépendamment sur n’importe quelle plateforme de conteneurs cloud.|[Place de marché][click2cloud_marketplace]<br>[Site web][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Vidéo][click2cloud_youtube] |
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur quelques autres de nos partenaires, consultez [Partenaires pour la haute disponibilité et la récupération d’urgence][hadr_partners], [partenaires pour la gestion][management_partners] et [partenaires pour la supervision][monitor_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
+[2]: ./media/partner-hadr-sql-server/click2cloud-logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -42,7 +42,7 @@ Pour plus d’informations sur quelques autres de nos partenaires, consultez [Pa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.com/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

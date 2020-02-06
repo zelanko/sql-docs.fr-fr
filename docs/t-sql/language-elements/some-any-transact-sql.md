@@ -22,10 +22,10 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072260"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072260"
 
   Compare une valeur scalaire avec un ensemble de valeurs appartenant à une seule colonne. SOME et ANY sont équivalents.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,11 +63,11 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME ou ANY retourne la valeur **TRUE** quand la comparaison spécifiée a la valeur TRUE pour une paire (_scalar_expression_ **,** _x_) où *x* est une valeur du jeu de valeurs sur une seule colonne ; dans le cas contraire, la valeur **FALSE** est retournée.  
   
 ## <a name="remarks"></a>Notes  
- SOME nécessite que *scalar_expression* corresponde à au moins une valeur retournée par la sous-requête. Pour les instructions qui nécessitent que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête, consultez [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = SOME (sous-requête) prend la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE, étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  
+ SOME nécessite que *scalar_expression* corresponde à au moins une valeur retournée par la sous-requête. Pour les instructions qui nécessitent que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête, consultez [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* = SOME (sous-requête) prend la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE, étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-running-a-simple-example"></a>A. Exécution d'un exemple simple  
+### <a name="a-running-a-simple-example"></a>R. Exécution d'un exemple simple  
  Les instructions suivantes créent une table simple et ajoutent les valeurs `1`, `2`, `3` et `4` à la colonne `ID`.  
   
 ```  

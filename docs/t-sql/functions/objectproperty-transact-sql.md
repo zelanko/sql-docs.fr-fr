@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982510"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982510"
 
   Retourne des informations concernant les objets étendus aux schémas dans la base de données actuelle. Pour obtenir la liste de tous les objets délimités aux schémas, consultez [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Cette fonction ne peut pas être utilisée pour les objets non étendus aux schémas, tels que les déclencheurs DDL et les notifications d'événements.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -114,7 +114,7 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|Tout objet étendu aux schémas|Contrainte UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table de charge de travail|Table définie par l'utilisateur.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Affichage|Vue.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Tout objet étendu aux schémas|Propriétaire de l'objet.<br /><br /> **Remarque :**  Le propriétaire du schéma n’est pas nécessairement le propriétaire de l’objet. Par exemple, les objets enfants (ceux où *parent_object_id* est non-NULL) retournent toujours le même ID de propriétaire que leur parent.<br /><br /> Non NULL = ID utilisateur de base de données du propriétaire de l'objet.|  
+|OwnerId|Tout objet étendu aux schémas|Propriétaire de l'objet.<br /><br /> **Remarque :** Le propriétaire du schéma n’est pas nécessairement le propriétaire de l’objet. Par exemple, les objets enfants (ceux où *parent_object_id* est non-NULL) retournent toujours le même ID de propriétaire que leur parent.<br /><br /> Non NULL = ID utilisateur de base de données du propriétaire de l'objet.|  
 |SchemaId|Tout objet étendu aux schémas| ID du schéma auquel appartient l’objet.| 
 |TableDeleteTrigger|Table de charge de travail|La table comporte un déclencheur DELETE.<br /><br /> >1 = ID du premier déclencheur du type spécifié.|  
 |TableDeleteTriggerCount|Table de charge de travail|La table comporte le nombre de déclencheurs DELETE spécifié.<br /><br /> >0 = Nombre de déclencheurs DELETE.|  
@@ -153,13 +153,13 @@ OBJECTPROPERTY ( id , property )
 |TableIsMemoryOptimized|Table de charge de travail|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> La table est optimisée en mémoire<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Type de données de base : **int**<br /><br /> Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Table de charge de travail|La table est épinglée pour être conservée dans le cache de données.<br /><br /> 0 = False<br /><br /> Cette fonctionnalité n'est pas prise en charge par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures|  
 |TableTextInRowLimit|Table de charge de travail|Nombre maximal d'octets autorisé pour text in row.<br /><br /> 0 si l'option text in row n'est pas définie.|  
-|TableUpdateTrigger|Table de charge de travail|La table comporte un déclencheur UPDATE.<br /><br /> > 1 = ID du premier déclencheur du type spécifié.|  
+|TableUpdateTrigger|Table de charge de travail|La table comporte un déclencheur UPDATE.<br /><br /> > 1 = ID du premier déclencheur du type spécifié.|  
 |TableUpdateTriggerCount|Table de charge de travail|La table comporte le nombre de déclencheurs UPDATE spécifié.<br /><br /> > 0 = Nombre de déclencheurs UPDATE.|  
 |TableHasColumnSet|Table de charge de travail|La table comporte un jeu de colonnes.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|  
 |TableTemporalType|Table de charge de travail|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.<br /><br /> Spécifie le type de table.<br /><br /> 0 = table non temporelle<br /><br /> 1 = table historique de la table à système par version<br /><br /> 2 = table temporelle à système par version|  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.  
@@ -184,7 +184,7 @@ GO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-verifying-that-an-object-is-a-table"></a>A. Vérification qu'un objet est une table  
+### <a name="a-verifying-that-an-object-is-a-table"></a>R. Vérification qu'un objet est une table  
  L'exemple suivant teste si `UnitMeasure` est une table dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
@@ -217,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C : Recherche des tables appartenant à un schéma spécifique  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Recherche des tables appartenant à un schéma spécifique  
  L’exemple suivant retourne toutes les tables figurant dans le schéma dbo.  
   
 ```  
@@ -232,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D : Vérification qu'un objet est une table  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D. Vérification qu’un objet est une table  
  L'exemple suivant teste si `dbo.DimReseller` est une table dans la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  

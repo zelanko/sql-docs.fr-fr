@@ -1,10 +1,7 @@
 ---
-title: Propriétés de l’opérateur - Nouvel opérateur (page Notifications) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Nouvel opérateur (Page Notifications)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7eab713ea833832b46b36bbd8a7e4af17d33124
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5bad4791f749e8932b4a4ccfe84ff0522476f694
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260048"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247648"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Propriétés des opérateurs - Nouvel opérateur (page Notifications)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -32,7 +34,7 @@ Utilisez cette page pour définir les alertes et les travaux qui notifient l'op�
 **Alertes**  
 Affiche les alertes dans l'instance.  
   
-**Travaux**  
+**Tâches**  
 Affiche les travaux dans l'instance.  
   
 **Liste d'alertes**  
@@ -43,13 +45,13 @@ Affiche la liste des travaux dans l'instance.
   
 Les options suivantes sont disponibles à la fois dans la liste d'alertes et dans la liste des travaux :  
   
-**Courrier électronique**  
+**Messagerie électronique**  
 Notifie cet opérateur à l'aide d'un courrier électronique.  
   
-**Récepteur de radiomessagerie**  
+**Radiomessagerie**  
 Notifie cet opérateur en envoyant un courrier électronique à son adresse de radiomessagerie.  
   
-**Net send**  
+**Envoi réseau**  
 Notifie cet opérateur à l’aide de **net send**.  
   
 ## <a name="see-also"></a>Voir aussi  

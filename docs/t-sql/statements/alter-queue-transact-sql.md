@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982054"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982054"
 
   Modifie les propriétés d'une file d'attente.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -173,7 +173,7 @@ Contrairement à REORGANIZE sur les tables utilisateur, REORGANIZE sur une file 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-making-a-queue-unavailable"></a>A. Mise en indisponibilité d'une file d'attente  
+### <a name="a-making-a-queue-unavailable"></a>R. Mise en indisponibilité d'une file d'attente  
  L'exemple suivant indique comment rendre la file d'attente `ExpenseQueue` indisponible pour la réception des messages.  
   
 ```  
@@ -241,7 +241,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I. Déplacement d’une table interne de file d’attente vers un autre groupe de fichiers  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I : Déplacement d’une table interne de file d’attente vers un autre groupe de fichiers  
   
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.  
   

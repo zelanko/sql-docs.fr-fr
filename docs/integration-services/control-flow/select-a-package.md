@@ -15,10 +15,10 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 561495eaad4dbe41a0af05e80d3c2ba35d91cb74
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293963"
 ---
 # <a name="select-a-package"></a>Sélectionner un package
@@ -29,7 +29,7 @@ ms.locfileid: "71293963"
   Utilisez la boîte de dialogue **Sélectionner un package** pour spécifier le package à partir duquel la tâche MSMQ peut recevoir des messages.  
   
 ## <a name="static-options"></a>Options statiques  
- **Emplacement**  
+ **Lieu**  
  Spécifiez l'emplacement du package. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Valeur|Description|  
@@ -43,7 +43,7 @@ ms.locfileid: "71293963"
  **Nom du package**  
  Sélectionnez un package stocké sur le serveur spécifié.  
   
- **Server**  
+ **Serveur**  
  Tapez le nom d'un serveur ou sélectionnez-en un dans la liste.  
   
  **Utiliser l'authentification Windows**  
@@ -52,7 +52,7 @@ ms.locfileid: "71293963"
  **Utiliser l’authentification SQL Server**  
  Cliquez pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **User name**  
+ **Nom d'utilisateur**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fournissez un nom d’utilisateur à utiliser pour ouvrir une session sur le serveur.  
   
  **Mot de passe**  
