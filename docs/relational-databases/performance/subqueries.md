@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113286"
 ---
 # <a name="subqueries-sql-server"></a>Sous-requêtes (SQL Server)
@@ -486,7 +486,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-Cette instruction ne peut pas être convertie en jointure. La jointure analogue non égale revêt une autre signification : elle trouve les noms des produits qui se trouvent dans certaines sous-catégories différentes d’un vélo fini.      
+Cette instruction ne peut pas être convertie en jointure. La jointure analogue « non égal à » revêt une autre signification : elle trouve les noms des produits qui se trouvent dans une sous-catégorie différente de « produits finis ».      
 
 ### <a name="upsert"></a> Sous-requêtes dans les instructions UPDATE, DELETE et INSERT
 Les sous-requêtes peuvent être imbriquées dans les instructions de manipulation de données (DML, Data Manipulation Language) `UPDATE`, `DELETE`, `INSERT` et `SELECT`.    

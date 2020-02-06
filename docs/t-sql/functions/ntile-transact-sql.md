@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914905"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914905"
 
   Distribue les lignes d'une partition triée dans un nombre spécifié de groupes. Les groupes sont numérotés à partir de un. Pour chaque ligne, NTILE retourne le numéro du groupe auquel la ligne appartient.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +61,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dividing-rows-into-groups"></a>A. Division des lignes en groupes  
+### <a name="a-dividing-rows-into-groups"></a>R. Division des lignes en groupes  
  L'exemple suivant divise les lignes en quatre groupes d'employés en fonction de leurs ventes de l'année. Dans la mesure où le nombre total de lignes n'est pas divisible par le nombre de groupes, les deux premiers groupes contiennent quatre lignes tandis que les autres en possèdent trois chacun.  
   
 ```  

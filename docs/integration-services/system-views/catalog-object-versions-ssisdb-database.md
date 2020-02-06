@@ -11,10 +11,10 @@ ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296517"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (base de données SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71296517"
 
   Affiche les versions d'objets dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Dans cette version, seules les versions des projets sont prises en charge par cette vue.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_version_lsn|**bigint**|Identificateur unique (ID) de la version de l'objet. Ce nombre n'est pas obligatoirement séquentiel.|  
 |object_id|**bigint**|ID unique de l'objet.|  
