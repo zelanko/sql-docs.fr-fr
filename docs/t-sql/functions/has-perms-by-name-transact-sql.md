@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982950"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982950"
 
   Évalue l'autorisation effective de l'utilisateur actuel sur un élément sécurisable. Une fonction associée est [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +68,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l’argument sub-securable_class est valide uniquement si l’argument securable_class a la valeur **OBJECT**. Si l’argument securable_class a la valeur **OBJECT**, l’argument sub-securable_class doit être défini sur **COLUMN**.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+ **int**  
   
  Renvoie NULL lorsque la requête échoue.  
   
@@ -95,15 +95,15 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  Les classements suivants sont utilisés :  
   
--   Classement de la base de données actuelle : éléments sécurisables au niveau base de données qui comprennent des éléments sécurisables non contenus dans un schéma ; éléments sécurisables sur l’étendue d’un schéma en une ou deux parties ; base de données cible lors de l’utilisation d’un nom en trois parties.  
+-   Classement de la base de données active : éléments sécurisables au niveau base de données qui comprennent des éléments sécurisables non contenus dans un schéma ; éléments sécurisables sur l'étendue d'un schéma en une ou deux parties ; base de données cible lors de l'utilisation d'un nom en trois parties.  
   
--   Classement de la base de données MASTER : éléments sécurisables au niveau serveur.  
+-   Classement de la base de données master : éléments sécurisables au niveau serveur.  
   
 -   « ANY » n'est pas pris en charge pour les contrôles au niveau colonne. Vous devez spécifier l'autorisation appropriée.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Ai-je l'autorisation VIEW SERVER STATE au niveau serveur ?  
+### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>R. Ai-je l'autorisation VIEW SERVER STATE au niveau serveur ?  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et ultérieur
   

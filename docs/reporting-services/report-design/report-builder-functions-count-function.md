@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579716"
 ---
 # <a name="report-builder-functions---count-function"></a>Fonctions du Générateur de rapports - Count
@@ -32,10 +32,10 @@ Count(expression, scope, recursive)
  *expression*  
  (**Variant** ou **Binaire**) Expression sur laquelle effectuer l’agrégation, par exemple `=Fields!FieldName.Value`.  
   
- *portée*  
+ *scope*  
  (**Chaîne**) Nom d’un dataset, d’un groupe ou d’une région de données qui contient les éléments de rapport auxquels appliquer la fonction d’agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
- *récursifs*  
+ *recursive*  
  (**Type énuméré**) Facultatif. **Simple** (par défaut) ou **RdlRecursive**. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  

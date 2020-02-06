@@ -1,10 +1,7 @@
 ---
-title: Élément table pour Schema (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Table, élément pour les schémas (Assistant Paramétrage de base de données)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0064376a229e2fe9f87fe09048c9e923810d4172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 419420c9d1ecec501ca8a7d92ef6a23a658db713
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105958"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307860"
 ---
 # <a name="table-element-for-schema-dta"></a>Table, élément pour les schémas (Assistant Paramétrage de base de données)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Spécifie la table pour le paramétrage.  
+
+Spécifie la table pour le paramétrage.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,9 +39,9 @@ ms.locfileid: "68105958"
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
-|**NumberOfRows**|Facultatif. Entier qui vous permet de simuler des tables de différentes tailles.|  
+|**NumberOfRows**|facultatif. Entier qui vous permet de simuler des tables de différentes tailles.|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
@@ -46,7 +49,7 @@ ms.locfileid: "68105958"
 |--------------------|-----------------|  
 |**Type de données et longueur**|**string**, entre 1 et 255 caractères.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Répertoriez autant de tables que nécessaire pour votre charge de travail.|  
+|**Occurrence**|facultatif. Répertoriez autant de tables que nécessaire pour votre charge de travail.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

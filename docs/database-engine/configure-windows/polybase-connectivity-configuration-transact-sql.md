@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997916"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuration de la connectivité PolyBase (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67997916"
 
   Affiche ou modifie les paramètres de configuration globale pour la connectivité du stockage d'objets blob Azure et PolyBase Hadoop.
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,48 +56,48 @@ RECONFIGURE
   
  Voici les paramètres de connectivité Hadoop et leurs sources de données Hadoop prises en charge correspondantes. Un seul paramètre peut être activé à la fois. Les options 1, 4 et 7 permettent de créer plusieurs types de sources de données externes et de les utiliser dans toutes les sessions sur le serveur.  
   
--   Option 0 : désactiver la connectivité Hadoop  
+-   Option 0 : désactiver la connectivité Hadoop  
   
--   Option n°1 : Hortonworks HDP 1.3 sur Windows Server  
+-   Option 1 : Hortonworks HDP 1.3 sur Windows Server  
   
--   Option n°1 : Azure Storage Blob (WASB[S])  
+-   Option 1 : stockage d’objets blob Azure (WASB[S])  
   
--   Option n°2 : Hortonworks HDP 1.3 sur Linux  
+-   Option 2 : Hortonworks HDP 1.3 sur Linux  
   
--   Option 3 : Cloudera CDH 4.3 sur Linux  
+-   Option 3 : Cloudera CDH 4.3 sur Linux  
   
--   Option 4 : Hortonworks HDP 2.0 sur Windows Server  
+-   Option 4 : Hortonworks HDP 2.0 sur Windows Server  
   
--   Option 4 : Azure Storage Blob (WASB[S])  
+-   Option 4 : stockage d’objets blob Azure (WASB[S])  
   
--   Option 5 : Hortonworks HDP 2.0 sur Linux  
+-   Option 5 : Hortonworks HDP 2.0 sur Linux  
   
--   Option 6 : Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 et 5.13 sur Linux  
+-   Option 6 : Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 et 5.13 sur Linux  
   
--   Option 7 : Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 sur Linux  
+-   Option 7 : Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 sur Linux  
   
--   Option 7 : Hortonworks 2.1, 2.2 et 2.3 sur Windows Server  
+-   Option 7 : Hortonworks 2.1, 2.2 et 2.3 sur Windows Server  
   
--   Option 7 : Azure Storage Blob (WASB[S])  
+-   Option 7 : stockage d’objets blob Azure (WASB[S])  
   
  **RECONFIGURE**  
  Met à jour la valeur d'exécution (run_value) afin qu’elle corresponde à la valeur de configuration (config_value). Pour connaître les définitions des valeurs run_value et config_value, consultez [Jeux de résultats](#ResultSets) . La nouvelle valeur de configuration définie par sp_configure n’est pas effective tant que la valeur d'exécution n’a pas été définie par l'instruction RECONFIGURE.  
   
  Après l'exécution de RECONFIGURE, vous devez arrêter et redémarrer le service SQL Server. Notez que lors de l'arrêt du service SQL Server, les deux services supplémentaires du moteur PolyBase et du déplacement des données s’arrêteront automatiquement. Après le redémarrage du service du moteur SQL Server, redémarrez les deux services (s’ils ne démarrent pas automatiquement).  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ##  <a name="ResultSets"></a> Jeux de résultats  
  Lorsqu’elle est exécutée sans paramètres, la valeur **sp_configure** renvoie un jeu de résultats à cinq colonnes.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nvarchar(35)**|Nom de l'option de configuration.|  
-|**minimum**|**Int**|Valeur minimale de l'option de configuration.|  
-|**maximum**|**Int**|Valeur maximale de l'option de configuration.|  
-|**config_value**|**Int**|Valeur qui avait été définie à l’aide de **sp_configure**.|  
-|**run_value**|**Int**|Valeur actuelle en cours d'utilisation par PolyBase. Cette valeur est définie en exécutant RECONFIGURE.<br /><br /> Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.<br /><br /> Un redémarrage peut être nécessaire pour obtenir une valeur d'exécution précise, si la reconfiguration est en cours.|  
+|**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
+|**minimum**|**int**|Valeur minimale de l'option de configuration.|  
+|**maximum**|**int**|Valeur maximale de l'option de configuration.|  
+|**config_value**|**int**|Valeur qui avait été définie à l’aide de **sp_configure**.|  
+|**run_value**|**int**|Valeur actuelle en cours d'utilisation par PolyBase. Cette valeur est définie en exécutant RECONFIGURE.<br /><br /> Les valeurs **config_value** et **run_value** sont généralement identiques, sauf si la valeur est en cours de modification.<br /><br /> Un redémarrage peut être nécessaire pour obtenir une valeur d'exécution précise, si la reconfiguration est en cours.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], après exécution de RECONFIGURE, vous devez redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pour activer la connectivité hadoop.  
@@ -113,7 +113,7 @@ Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], après exécution de RECONFI
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-list-all-available-configuration-settings"></a>A. Liste de tous les paramètres de configuration disponibles  
+### <a name="a-list-all-available-configuration-settings"></a>R. Liste de tous les paramètres de configuration disponibles  
  L'exemple suivant montre comment afficher toutes les options de configuration.  
   
 ```  

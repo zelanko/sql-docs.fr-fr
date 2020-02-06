@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72915990"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Valider les packages SSIS (SQL Server Integration Services) déployés sur Azure
@@ -41,7 +41,7 @@ L’Assistant inspecte certains gestionnaires de connexions à la recherche des 
 
 L’Assistant effectue les contrôles de validation suivants pour les gestionnaires de connexions dans la liste.
 
-| Gestionnaire de connexions | Authentification Windows | Chemins d'accès au fichier | Chemin UNC | Nom d'hôte | Fournisseur ou pilote |
+| Gestionnaire de connexions | Authentification Windows | Chemins d'accès au fichier | Chemin UNC | Nom de l’hôte | Fournisseur ou pilote |
 |--------------------|----------|-----------|-----|-----------|-------------------|
 | Ado                | âœ“        |           |     | âœ“         | âœ“                 |
 | AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |

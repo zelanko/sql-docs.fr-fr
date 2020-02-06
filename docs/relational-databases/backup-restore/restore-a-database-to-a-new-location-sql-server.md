@@ -20,10 +20,10 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72989559"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurer une base de données à un nouvel emplacement (SQL Server)
@@ -64,21 +64,21 @@ ms.locfileid: "72989559"
   
 2.  Cliquez avec le bouton droit sur **Bases de données**, puis cliquez sur **Restaurer la base de données**. La boîte de dialogue **Restaurer la base de données** s'ouvre.  
   
-3.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l'une des options suivantes :  
+3.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l’une des options suivantes :  
   
     -   **Sauvegarde de la base de données**  
   
          Sélectionnez la base de données à restaurer dans la liste déroulante. La liste contient uniquement les bases de données qui ont été sauvegardées selon l'historique de sauvegarde **msdb** .  
   
-    > **REMARQUE :** Si la sauvegarde est prise à partir d'un serveur différent, le serveur de destination ne disposera pas des informations d'historique de sauvegarde pour la base de données spécifiée. Dans ce cas, sélectionnez **Unité** pour spécifier manuellement le fichier ou l'unité à restaurer.  
+    > **REMARQUE :** Si la sauvegarde est prise à partir d’un serveur différent, le serveur de destination ne disposera pas des informations d’historique de sauvegarde pour la base de données spécifiée. Dans ce cas, sélectionnez **Unité** pour spécifier manuellement le fichier ou l'unité à restaurer.  
   
-    1.  **Unité**  
+    1.  **Appareil**  
   
          Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
-         Dans la zone de liste **Source : Unité : Base de données**, sélectionnez le nom de la base de données à restaurer.  
+         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.  
   
          **Remarque** Cette liste n'est disponible que lorsque **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72989559"
   
 6.  Dans la grille **Jeux de sauvegarde à restaurer** , sélectionnez les sauvegardes à restaurer. Cette grille affiche les sauvegardes disponibles pour l'emplacement spécifié. Par défaut, un plan de récupération est suggéré. Pour ignorer le plan de récupération suggéré, vous pouvez modifier les sélections dans la grille. Les sauvegardes qui dépendent de la restauration d'une sauvegarde antérieure sont automatiquement désélectionnées dès lors que la sauvegarde antérieure est désélectionnée.  
   
-     Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer**, consultez [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer** , consultez [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
 7.  Pour spécifier le nouvel emplacement des fichiers de base de données, sélectionnez la page **Fichiers** , puis cliquez sur **Déplacer tous les fichiers dans le dossier**. Fournissez un nouvel emplacement pour les dossiers **Fichier de données** et **Fichier journal**. Pour plus d’informations sur cette grille, consultez [Restaurer la base de données &#40;page Fichiers&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72989559"
   > [!NOTE]
   > Si vous restaurez la base de données vers une autre instance de serveur, vous pouvez conserver son nom d'origine au lieu d'en utiliser un nouveau.  
   
-  *backup_device* [ **,** ...*n* ]  
+  *unité_sauvegarde* [ **,** ...*n* ]  
   Spécifie une liste séparée par des virgules de 1 à 64 unités de sauvegarde à partir desquelles la sauvegarde de la base de données sera restaurée. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :  
   
   {DISQUE | TAPE} **=** _nom_unité_sauvegarde_physique_  
@@ -162,14 +162,14 @@ ms.locfileid: "72989559"
   
   |Option|Description|  
   |------------|-----------------|  
-  |*nom_fichier_logique_dans_sauvegarde*|Indique le nom logique d'un fichier de données ou d'un fichier journal du jeu de sauvegarde. Le nom de fichier logique d'un fichier de données ou journal dans un jeu de sauvegarde correspond au nom logique qu'il portait dans la base de données au moment de la création du jeu de sauvegarde.<br /><br /> <br /><br /> Remarque : Utilisez [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) pour obtenir une liste des fichiers logiques contenus dans le jeu de sauvegarde.|  
+  |*nom_fichier_logique_dans_sauvegarde*|Indique le nom logique d'un fichier de données ou d'un fichier journal du jeu de sauvegarde. Le nom de fichier logique d'un fichier de données ou journal dans un jeu de sauvegarde correspond au nom logique qu'il portait dans la base de données au moment de la création du jeu de sauvegarde.<br /><br /> <br /><br /> Remarque : utilisez [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)pour obtenir une liste des fichiers logiques contenus dans le jeu de sauvegarde.|  
   |*nom_fichier_système_d’exploitation*|Spécifie un nouvel emplacement pour le fichier spécifié par *nom_fichier_logique_dans_sauvegarde*. Le fichier sera restauré à cet emplacement.<br /><br /> Éventuellement, *nom_fichier_système_d’exploitation* spécifie un nouveau nom de fichier pour le fichier restauré. Cette option est nécessaire si vous créez une copie d'une base de données existante sur la même instance de serveur.|  
   |*n*|Est un espace réservé indiquant que vous pouvez spécifier des instructions MOVE supplémentaires.|  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple crée une base de données nommée `MyAdvWorks` en restaurant une sauvegarde de l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , qui comprend deux fichiers : [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data et [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Cette base de données utilise le mode de récupération simple. La base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe déjà sur l'instance de serveur, de sorte que les fichiers de la sauvegarde doivent être restaurés à un nouvel emplacement. L'instruction RESTORE FILELISTONLY permet de déterminer le nombre et le nom des fichiers de la base de données en cours de restauration. La sauvegarde de la base de données est la première sauvegarde définie sur l'unité de sauvegarde.  
   
-> **REMARQUE :** Les exemples de sauvegarde et de restauration du journal des transactions, notamment les restaurations dans le temps, utilisent la base de données `MyAdvWorks_FullRM` qui est créée à partir de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , comme dans l'exemple `MyAdvWorks` suivant. Toutefois, la base de données `MyAdvWorks_FullRM` ainsi obtenue doit être modifiée pour utiliser le mode de récupération complète à l’aide de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante : ALTER DATABASE <nom_base_de_données> SET RECOVERY FULL.  
+> **REMARQUE :** Les exemples de sauvegarde et de restauration du journal des transactions, notamment les restaurations dans le temps, utilisent la base de données `MyAdvWorks_FullRM` qui est créée à partir de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], comme dans l’exemple `MyAdvWorks` suivant. Toutefois, la base de données `MyAdvWorks_FullRM` ainsi obtenue doit être modifiée pour utiliser le mode de récupération complète à l'aide de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante : ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
 ```sql  
 USE master;  

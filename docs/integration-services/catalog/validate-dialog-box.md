@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294871"
 ---
 # <a name="validate-dialog-box"></a>Boîte de dialogue Valider
@@ -50,7 +50,7 @@ ms.locfileid: "71294871"
 5.  Cliquez avec le bouton droit sur le projet ou le package, puis cliquez sur **Valider**.  
   
 ##  <a name="general"></a> Définir les options sur la page Général  
- **Environnement**  
+ **Environment**  
  Sélectionnez l'environnement à utiliser pour valider le projet ou le package.  
   
  **Runtime 32 bits**  
@@ -64,7 +64,7 @@ ms.locfileid: "71294871"
  **Paramètre**  
  Indique le nom des paramètres.  
   
- **Value**  
+ **Valeur**  
  Indique la valeur du paramètre.  
   
  L'onglet **Gestionnaires de connexions** indique les valeurs de propriétés du gestionnaire de connexions que vous utilisez pour valider le projet ou le package.  
@@ -74,13 +74,13 @@ ms.locfileid: "71294871"
  **Conteneur**  
  Indique l'objet qui contient le gestionnaire de connexions.  
   
- **Name**  
+ **Nom**  
  Indique le nom du gestionnaire de connexions.  
   
  **Nom de la propriété**  
  Indique le nom de la propriété du gestionnaire de connexions.  
   
- **Value**  
+ **Valeur**  
  Indique la valeur affectée à la propriété du gestionnaire de connexions.  
   
   

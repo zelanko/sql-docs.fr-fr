@@ -12,10 +12,10 @@ ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571610"
 ---
 # <a name="csv-device-information-settings"></a>Paramètres d'informations de périphérique CSV
@@ -25,7 +25,7 @@ ms.locfileid: "65571610"
   
 |Paramètre|Valeur|  
 |-------------|-----------|  
-|**Encoding**|Nom IANA (Internet Assigned Numbers Authority) d'un encodage de caractères pris en charge par le .NET Framework. La valeur par défaut est **UTF-8**. Les exemples d'autres valeurs incluent ASCII, UTF-7 et UTF-16.|  
+|**Encodage**|Nom IANA (Internet Assigned Numbers Authority) d'un encodage de caractères pris en charge par le .NET Framework. La valeur par défaut est **UTF-8**. Les exemples d'autres valeurs incluent ASCII, UTF-7 et UTF-16.|  
 |**ExcelMode**|Indique que la sortie cible est destinée à Excel. La valeur par défaut est **true**.|  
 |**FieldDelimiter**|Chaîne de séparateur à placer dans le résultat. La valeur par défaut est une virgule (,). Vous devez encoder la valeur de cette information de périphérique pour la transmettre à une URL. Par exemple, un caractère de tabulation utilisé en tant que séparateur doit être codé par « %09 ».<br /><br /> Vous pouvez changer de séparateur de champs par défaut et utiliser le caractère de votre choix, y compris TAB, en modifiant les paramètres d'informations de périphérique dans le fichier de configuration. Par exemple, pour utiliser TAB, remplacez le paramètre FieldDelimiter par \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> Dans l'exemple, [TAB] est une vraie tabulation, ce qui signifie que l'espace blanc apparaît dans le fichier de configuration. L'attribut « xml:space » indique aux analyseurs de conserver l'espace blanc.|  
 |**FileExtension**|Extension de fichier à placer dans le résultat. La valeur par défaut est **.CSV**. Si **FileExtension** et **Extension** sont tous deux spécifiés, **FileExtension** est prioritaire.|  
@@ -38,7 +38,7 @@ ms.locfileid: "65571610"
 ## <a name="see-also"></a>Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

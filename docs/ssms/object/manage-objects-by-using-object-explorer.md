@@ -1,6 +1,6 @@
 ---
-title: Gérer les objets à l’aide de l’Explorateur d’objets | Microsoft Docs
-ms.custom: ''
+title: Gérer les objets à l'aide de l'Explorateur d'objets
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb52261160cc693193e4cc983a4c2e28baa28686
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d499666f51605e7df90332174c82681f8a386017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264105"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257220"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gérer les objets à l'aide de l'Explorateur d'objets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,12 +52,12 @@ Vous exécutez des actions sur les objets en cliquant avec le bouton droit sur l
 Lorsque l'Explorateur d'objets est connecté à un serveur, vous pouvez ouvrir une nouvelle fenêtre d'éditeur de code à l'aide des paramètres de connexion de l'Explorateur d'objets. Pour ouvrir une nouvelle fenêtre d’éditeur de code, cliquez avec le bouton droit sur le nom du serveur dans l’Explorateur d’objets, puis cliquez sur **Nouvelle requête**. Pour ouvrir une fenêtre d’éditeur à l’aide d’une base de données, cliquez avec le bouton droit sur le nom de la base de données, puis cliquez sur **Nouvelle requête**. Lorsque vous ouvrez une nouvelle requête pour un serveur Analysis Services, vous pouvez sélectionner des requêtes DMX, MDX ou XMLA.  
   
 ### <a name="start-powershell"></a>Démarrer PowerShell  
-Vous pouvez démarrer une session PowerShell en cliquant avec le bouton droit sur la plupart des dossiers et objets dans l’arborescence de l’Explorateur d’objets et en sélectionnant **Démarrer PowerShell**. Cette opération démarre une session PowerShell pour laquelle la prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell est activée, et dont le chemin est défini sur l’objet sur lequel vous avez cliqué avec le bouton droit dans l’Explorateur d’objets. Vous pouvez entrer ensuite des commandes PowerShell dans un environnement PowerShell interactif. Pour en savoir plus, consultez [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Vous pouvez démarrer une session PowerShell en cliquant avec le bouton droit sur la plupart des dossiers et objets dans l’arborescence de l’Explorateur d’objets et en sélectionnant **Démarrer PowerShell**. Cette opération démarre une session PowerShell pour laquelle la prise en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell est activée, et dont le chemin est défini sur l’objet sur lequel vous avez cliqué avec le bouton droit dans l’Explorateur d’objets. Vous pouvez entrer ensuite des commandes PowerShell dans un environnement PowerShell interactif. Pour plus d’informations, consultez [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="see-also"></a>Voir aussi  
 [l’Explorateur d’objets](../../ssms/object/object-explorer.md)  
 [Ouvrir et configurer l’Explorateur d’objets](../../ssms/object/open-and-configure-object-explorer.md)  
 [Se connecter à une instance à partir de l’Explorateur d’objets](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
-[Volet Détails de l'Explorateur d'objets](../../ssms/object/object-explorer-details-pane.md)  
+[Détails de l’Explorateur d’objets, volet](../../ssms/object/object-explorer-details-pane.md)  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   

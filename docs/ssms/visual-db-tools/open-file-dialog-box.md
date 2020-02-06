@@ -1,10 +1,9 @@
 ---
-title: Boîte de dialogue Ouvrir un fichier | Microsoft Docs
-ms.custom: ''
+title: Boîte de dialogue Ouvrir un fichier
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263321"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251452"
 ---
 # <a name="open-file-dialog-box"></a>Boîte de dialogue Ouvrir un fichier
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,13 +69,13 @@ Supprime les fichiers ou dossiers sélectionnés du support de stockage.
 **Nouveau dossier**  
 Affiche la boîte de dialogue **Nouveau dossier** . Utilisez cette option pour créer un dossier enfant sous le dossier sélectionné dans la zone de liste déroulante **Regarder dans** .  
   
-## <a name="views"></a>Vues  
+## <a name="views"></a>Les vues  
 Fournit des options permettant d’organiser et d’afficher le contenu de l’élément sélectionné dans la zone de liste déroulante **Vues** .  
   
 **Miniatures**  
 Affiche les éléments sous la forme de miniatures dans le volet d'informations.  
   
-**Mosaïques**  
+**Vignettes**  
 Affiche les fichiers et les dossiers sous la forme de grandes icônes.  
   
 **Icônes**  

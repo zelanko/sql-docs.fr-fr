@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251232"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transactions - Groupes de disponibilité Always On et mise en miroir de bases de données
@@ -45,13 +45,13 @@ Pour plus d’informations, consultez :
 - [Guide du développeur de DTC](https://msdn.microsoft.com/library/ms679938.aspx)
 - [Informations de référence pour les programmeurs de DTC](https://msdn.microsoft.com/library/ms686108.aspx)
 
-## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 et versions antérieures : Prise en charge des transactions entre bases de données dans la même instance de SQL Server  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 et versions antérieures : Prise en charge des transactions entre bases de données dans la même instance de SQL Server  
 
 Dans SQL Server 2016 SP1 et versions antérieures, les transactions entre bases de données dans la même instance de SQL Server ne sont pas prises en charge pour les groupes de disponibilité. Une même instance de SQL Server ne peut pas héberger deux bases de données d’une transaction entre bases de données si l’une ou les deux bases de données sont dans un groupe de disponibilité. Cette limitation s’applique aussi quand ces bases de données font partie du même groupe de disponibilité.  
   
 En outre, les transactions de bases de données croisées ne sont non plus prises en charge pour la mise en miroir de bases de données.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 et versions antérieures : Prise en charge des transactions distribuées  
+##  <a name="dtcsupport"></a> SQL Server 2016 SP1 et versions antérieures : Prise en charge des transactions distribuées  
 Les transactions distribuées sont prises en charge avec les groupes de disponibilité quand les bases de données sont hébergées par différentes instances de SQL Server. Cela s’applique aussi aux transactions distribuées entre des instances de SQL Server et un autre serveur compatible DTC.  
  
 MSDTC (Microsoft Distributed Transaction Coordinator ou DTC) est un service Windows qui fournit une infrastructure de transaction pour les systèmes distribués. MSDTC permet aux applications clientes d’intégrer plusieurs sources de données dans une transaction, laquelle est ensuite validée sur tous les serveurs inclus dans la transaction. Par exemple, vous pouvez utiliser MSDTC pour coordonner des transactions qui s’étendent sur plusieurs bases de données sur des serveurs différents.
@@ -91,6 +91,6 @@ SQL Server 2016 introduit la possibilité d’utiliser des transactions distribu
 >  L’utilisation de la mise en miroir de bases de données ou de groupes de disponibilité avec DTC d’une façon non approuvée dans cet article n’est pas prise en charge.  Cela ne signifie pas que certains aspects du produit sans rapport avec DTC ne sont pas pris en charge, mais qu’aucun problème résultant de l’utilisation incorrecte des transactions distribuées n’est traité.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Groupes de disponibilité Always On : Interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

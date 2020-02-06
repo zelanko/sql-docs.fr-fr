@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d76080b714d2ede1f2368ab2a98e8d3a216bf85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906916"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67906916"
 
   Renvoie l'écart type de remplissage pour toutes les valeurs de l'expression spécifiée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +68,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-stdevp"></a>A : Utilisation de STDEVP  
+### <a name="a-using-stdevp"></a>A. Utilisation de STDEVP  
  Dans l'exemple suivant, la procédure retourne l'écart type de remplissage pour toutes les valeurs de bonus de la table `SalesPerson` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -79,7 +79,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>B : Utilisation de STDEVP  
+### <a name="b-using-stdevp"></a>B. Utilisation de STDEVP  
  L’exemple suivant renvoie l’écart-type (`STDEVP`) des valeurs de quota de ventes dans la table `dbo.FactSalesQuota`. La première colonne contient l’écart-type de toutes les valeurs distinctes, alors que la seconde colonne contient l’écart-type de toutes les valeurs, y compris des valeurs en double.  
   
 ```  

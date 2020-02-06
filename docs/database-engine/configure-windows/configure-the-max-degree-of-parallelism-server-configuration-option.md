@@ -17,10 +17,10 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2e0296f410c84705e0a31ed6ab3e347b188c180e
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72260334"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur max degree of parallelism
@@ -40,7 +40,7 @@ ms.locfileid: "72260334"
   
 -   Seul un administrateur de base de données qualifié ou un spécialiste agréé doit changer cette option avancée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Pour permettre au serveur de déterminer le degré maximal de parallélisme, définissez cette option sur 0, c'est-à-dire la valeur par défaut. Attribuer la valeur 0 à l'option Degré maximal de parallélisme permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'utiliser tous les processeurs disponibles, dans la limite de 64. Pour supprimer la génération de plans parallèles, attribuez la valeur 1 à l'option **Degré maximal de parallélisme** . Affectez la valeur à un nombre compris entre 1 et 32 767 pour spécifier le nombre maximal de noyaux de processeurs qui peuvent être utilisés par une seule exécution. Si une valeur supérieure au nombre de processeurs disponibles est spécifiée, le nombre réel de processeurs disponibles est utilisé. Si votre ordinateur est équipé d'un seul processeur, la valeur de l'option **max degree of parallelism** est ignorée.  
+-   Pour permettre au serveur de déterminer le degré maximal de parallélisme, définissez cette option sur 0, c'est-à-dire la valeur par défaut. Attribuer la valeur 0 à l'option Degré maximal de parallélisme permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'utiliser tous les processeurs disponibles, dans la limite de 64. Pour supprimer la génération de plans parallèles, attribuez **la valeur** 1 à l'option. Affectez la valeur à un nombre compris entre 1 et 32 767 pour spécifier le nombre maximal de noyaux de processeurs qui peuvent être utilisés par une seule exécution. Si une valeur supérieure au nombre de processeurs disponibles est spécifiée, le nombre réel de processeurs disponibles est utilisé. Si votre ordinateur est équipé d'un seul processeur, la valeur de l'option **max degree of parallelism** est ignorée.  
   
 -   Vous pouvez remplacer la valeur de l'option max degree of parallelism dans les requêtes en spécifiant l'indicateur de requête MAXDOP dans l'instruction de requête. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -49,9 +49,9 @@ ms.locfileid: "72260334"
 -   En plus des requêtes et des opérations d'index, cette option gère également le parallélisme de DBCC CHECKTABLE, DBCC CHECKDB et DBCC CHECKFILEGROUP. Vous pouvez désactiver les plans d'exécution parallèle pour ces instructions en utilisant l'indicateur de trace 2528. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Pour définir cette option au niveau de la requête, utilisez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.     
-> Pour le faire au niveau de la base de données, utilisez la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.      
-> Pour ce faire, au niveau de la charge de travail, utilisez l’[option de configuration de groupe de charges de travail Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.      
+> Pour définir cette option au niveau de la requête, utilisez l’**indicateur de requête** [MAXDOP](../../t-sql/queries/hints-transact-sql-query.md).     
+> Pour le faire au niveau de la base de données, utilisez la **configuration étendue à la base de données** [MAXDOP](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).      
+> Pour ce faire au niveau de la charge de travail, utilisez l’**option de configuration de groupe de charge de travail Resource Governor** [MAX_DOP](../../t-sql/statements/create-workload-group-transact-sql.md).      
 
 ###  <a name="Guidelines"></a> Instructions  
 Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], lors du démarrage du service, si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte plus de huit cœurs physiques par socket ou nœud NUMA au démarrage, des nœuds soft-NUMA sont créés automatiquement par défaut. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] place les processeurs logiques du même cœur physique dans différents nœuds soft-NUMA. Les recommandations contenues dans le tableau ci-dessous ont pour but de conserver tous les threads de travail d’une requête parallèle au sein du même nœud soft-NUMA. Cela améliorera les performances des requêtes et la distribution des threads de travail entre les nœuds NUMA pour la charge de travail. Pour plus d’informations, consultez [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
@@ -118,7 +118,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option max degree of parallelism  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option max degree of parallelism  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

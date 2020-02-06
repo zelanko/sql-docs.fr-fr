@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997716"
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
@@ -31,7 +31,7 @@ Le masquage dynamique des données permet d’empêcher les accès non autorisé
 * Le masquage dynamique des données a des fonctions de masquage complet et partiel, ainsi qu’un masque aléatoire pour les données numériques.
 * Des commandes [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples définissent et gèrent les masques.
 
-Par exemple, une personne assurant le support technique au sein d’un centre d’appels peut identifier des appelants à l’aide de quelques chiffres de leur numéro de sécurité sociale ou de carte de crédit.  Ces données ne doivent pas lui être entièrement révélées. Il est ainsi possible de définir une règle de masquage qui cache tout, sauf les quatre derniers chiffres d’un numéro de sécurité sociale ou de carte de crédit, dans le jeu de résultats de toute requête. Autre exemple, en utilisant un masque de données approprié pour protéger les informations d’identification personnelle (PII), un développeur peut interroger des environnements de production à des fins de dépannage sans violer les réglementations de conformité.
+Par exemple, une personne assurant le support technique au sein d’un centre d’appels peut identifier des appelants à l’aide de quelques chiffres de leur numéro de sécurité sociale ou de carte de crédit.  Ces données ne doivent pas lui être entièrement révélées. Une règle de masquage peut être définie pour ne faire apparaître que les quatre derniers chiffres du numéro de sécurité sociale ou de carte de crédit dans l'ensemble de résultats de chaque requête. Autre exemple, en utilisant un masque de données approprié pour protéger les informations d’identification personnelle (PII), un développeur peut interroger des environnements de production à des fins de dépannage sans violer les réglementations de conformité.
 
 Le masquage dynamique des données vise à limiter l’exposition de données sensibles, en empêchant des utilisateurs ne devant pas avoir accès à celles-ci de les consulter. En revanche, le masquage dynamique des données n’a pas pour but d’empêcher des utilisateurs d’une base de données de se connecter directement à celle-ci ou d’exécuter des requêtes exhaustives ayant pour effet d’exposer des éléments de données sensibles. Le masquage dynamique des données est complémentaire à d’autres fonctionnalités de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (audit, chiffrement, sécurité au niveau des lignes...). Il est vivement recommandé de l’utiliser conjointement avec celles-ci pour mieux protéger les données sensibles contenues dans la base de données.  
   
@@ -42,10 +42,10 @@ Le masquage des données dynamiques est disponible dans [!INCLUDE[ssSQL15](../..
   
 |Fonction|Description|Exemples|  
 |--------------|-----------------|--------------|  
-|Valeur par défaut|Masquage complet en fonction des types de données des champs désignés.<br /><br /> Pour les données de type chaîne (string), utilisez XXXX, ou moins de X si la taille du champ est inférieure à 4 caractères (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Pour les données de type numérique, utilisez une valeur zéro (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Pour les données de type date et heure, utilisez 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Pour les données de type binaire, utilisez un seul octet de valeur ASCII 0 (**binary**, **varbinary**, **image**).|Exemple de syntaxe de définition de colonne : `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Default|Masquage complet en fonction des types de données des champs désignés.<br /><br /> Pour les données de type chaîne (string), utilisez XXXX, ou moins de X si la taille du champ est inférieure à 4 caractères (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Pour les données de type numérique, utilisez une valeur zéro (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Pour les données de type date et heure, utilisez 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Pour les données de type binaire, utilisez un seul octet de valeur ASCII 0 (**binary**, **varbinary**, **image**).|Exemple de syntaxe de définition de colonne : `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Méthode de masquage qui affiche la première lettre d’une adresse de messagerie et le suffixe de constante « .com », sous la forme d’une adresse de messagerie. `aXXX@XXXX.com`.|Exemple de syntaxe de définition : `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
-|Nombre aléatoire|Fonction de masquage aléatoire à utiliser sur tout type de données numérique pour masquer la valeur d’origine à l’aide d’une valeur aléatoire dans une plage spécifiée.|Exemple de syntaxe de définition : `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|Chaîne personnalisée|Méthode de masquage qui affiche les première et dernière lettres, et ajoute une chaîne de remplissage personnalisée au milieu. `prefix,[padding],suffix`<br /><br /> Remarque : Si la valeur d’origine est trop courte pour occuper la totalité du masque, une partie du préfixe ou du suffixe n’est pas exposée.|Exemple de syntaxe de définition : `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Autres exemples :<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|Aléatoire|Fonction de masquage aléatoire à utiliser sur tout type de données numérique pour masquer la valeur d’origine à l’aide d’une valeur aléatoire dans une plage spécifiée.|Exemple de syntaxe de définition : `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
+|Chaîne personnalisée|Méthode de masquage qui affiche les première et dernière lettres, et ajoute une chaîne de remplissage personnalisée au milieu. `prefix,[padding],suffix`<br /><br /> Remarque : si la valeur d’origine est trop courte pour occuper la totalité du masque, une partie du préfixe ou du suffixe n’est pas exposée.|Exemple de syntaxe de définition : `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Exemple de syntaxe alter : `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Autres exemples :<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
 ## <a name="permissions"></a>Autorisations  
  Vous n’avez pas besoin d’autorisation particulière pour créer une table avec un masque dynamique des données. Les autorisations de schéma standard **CREATE TABLE** et **ALTER** suffisent.  
@@ -93,7 +93,7 @@ WHERE is_masked = 1;
  L’ajout d’un masque de données dynamiques est implémenté comme un changement de schéma de la table sous-jacente, et ne peut donc pas être effectué sur une colonne ayant des dépendances. Pour contourner cette restriction, vous pouvez tout d’abord supprimer la dépendance, puis ajouter le masque de données dynamiques et recréer la dépendance. Par exemple, si la dépendance est liée à un index qui dépend de cette colonne, vous pouvez supprimer l’index, ajouter le masque, puis recréer l’index dépendant.
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Note de sécurité : Ignorer le masquage à l’aide de techniques d’inférence ou de force brute
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Remarque relative à la sécurité : ignorer le masquage à l’aide de techniques d’inférence ou de force brute
 
 Le masquage des données dynamiques est conçu pour simplifier le développement d’applications en limitant l’exposition des données dans un ensemble de requêtes prédéfinies utilisées par l’application. Bien que le masquage dynamique des données puisse également être utile pour empêcher l’exposition accidentelle des données sensibles lorsque vous accédez directement à une base de données de production, il est important de noter que les utilisateurs non privilégiés bénéficiant d’autorisations de requête ad hoc peuvent appliquer des techniques pour accéder aux données réelles. S’il est nécessaire d’octroyer l’accès ad hoc, l’audit doit servir à surveiller toutes les activités de base de données et à limiter ce risque.
  
@@ -105,7 +105,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  Id | Créer une vue d’abonnement| Salaire |   
+>    |  Id | Name| Salaire |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  

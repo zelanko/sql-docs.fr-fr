@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906833"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -37,7 +37,7 @@ STRING_SPLIT nécessite que le niveau de compatibilité soit au moins 130. Quand
 
 Pour changer le niveau de compatibilité d’une base de données, consultez [Afficher ou changer le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 
@@ -47,7 +47,7 @@ STRING_SPLIT ( string , separator )
 
 ## <a name="arguments"></a>Arguments
 
- *chaîne*  
+ *string*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (par exemple, **nvarchar**, **varchar**, **nchar** ou **char**).  
   
  *separator*  
@@ -73,7 +73,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 À titre d’exemple, l’instruction SELECT précédente a retourné la table de résultats suivante :  
   
-|valeur|  
+|value|  
 | :-- |  
 |Lorem|  
 |ipsum|  
@@ -84,7 +84,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-split-comma-separated-value-string"></a>A. Diviser une chaîne de valeurs séparées par des virgules
+### <a name="a-split-comma-separated-value-string"></a>R. Diviser une chaîne de valeurs séparées par des virgules
 
 Analysez une liste de valeurs séparées par des virgules et retournez tous les jetons non vides :  
 
@@ -102,7 +102,7 @@ STRING_SPLIT retourne une chaîne vide si aucun élément ne figure entre les s�
 
 La table de produits a une colonne avec une liste de balises séparées par des virgules, illustrée dans l’exemple suivant :  
   
-|ProductId|Créer une vue d’abonnement|Balises|  
+|ProductId|Name|Balises|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,10 +118,10 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Créer une vue d’abonnement|valeur|  
+|ProductId|Name|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|Route|  
 |1|Full-Finger Gloves|touring|  
 |1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  

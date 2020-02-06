@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: e6576d383011a47eb963774f2834a854dec4416e
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212324"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance pour Azure Data Studio (préversion)
@@ -27,7 +27,7 @@ Grâce à des vues faciles à comprendre, SandDance vous aide à trouver des inf
 SandDance utilise des visualisations d’unité, qui appliquent un mappage un-à-un entre les lignes de votre base de données et les marques sur l’écran.
 Les transitions fluides animées entre les vues vous aident à maintenir le contexte lorsque vous interagissez avec vos données.
 
-## <a name="usage"></a>Utilisation
+## <a name="usage"></a>Usage
 
 ### <a name="view-csv-or-tsv-files"></a>Afficher les fichiers .csv ou .tsv
 Cela comprend les fichiers locaux ou les fichiers sur HDFS dans votre cluster Big Data SQL Server 2019.
@@ -52,5 +52,5 @@ Consulter les [problèmes connus](https://microsoft.github.io/SandDance/#known-i
 
 Version initiale d’azdata-sanddance
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 Pour en savoir plus, [visitez le référentiel GitHub.](https://github.com/Microsoft/SandDance)

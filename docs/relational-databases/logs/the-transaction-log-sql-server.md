@@ -15,10 +15,10 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 93012fddda7b778be414f31a50c0f81fe42674f4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75493587"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
@@ -133,7 +133,7 @@ La*journalisation minimale* implique de ne journaliser que les informations obli
   
  Les opérations suivantes, qui sont entièrement journalisées en mode de récupération complète, font l'objet d'une journalisation minimale en modes simple et de récupération utilisant les journaux de transactions :  
   
--   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Opérations d’importation en bloc ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)et [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Pour plus d'informations sur les conditions dans lesquelles la journalisation d'une importation en bloc dans une table est minimale, consultez [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Quand la réplication transactionnelle est activée, les opérations `BULK INSERT` sont entièrement journalisées, même dans le mode de récupération utilisant les journaux de transactions.  
   

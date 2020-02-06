@@ -1,10 +1,9 @@
 ---
-title: Utiliser des jetons dans les étapes d’un travail | Microsoft Docs
-ms.custom: ''
+title: Utiliser des jetons dans les étapes d'un travail
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 13ee039c9f3a70b5468d3d7b726b1600e8f80339
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260888"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257881"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "68260888"
 ## <a name="understanding-using-tokens"></a>Utilisation de jetons  
   
 > [!IMPORTANT]  
-> Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(** _propriété_ **)** . Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
+> Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**et **WMI(** _propriété_ **)** . Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
 >   
 > Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
-Le remplacement de jetons dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est simple et efficace : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent : Le remplacement du jeton est simple et efficace, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
   
 Par exemple, vous pouvez utiliser l'instruction suivante pour imprimer le nom de la base de données dans une étape de travail :  
   
@@ -61,7 +62,7 @@ Les tableaux suivants répertorient et décrivent les jetons et les macros pris 
   
 ### <a name="sql-server-agent-tokens"></a>Jetons de SQL Server Agent  
   
-|Jeton|Description|  
+|par jeton|Description|  
 |---------|---------------|  
 |**(A-DBN)**|Nom de la base de données. Si le travail est exécuté par une alerte, la valeur du nom de la base de données remplace automatiquement ce jeton dans l'étape de travail.|  
 |**(A-SVR)**|Nom du serveur. Si le travail est exécuté par une alerte, la valeur du nom du serveur remplace automatiquement ce jeton dans l'étape de travail.|  
@@ -71,7 +72,7 @@ Les tableaux suivants répertorient et décrivent les jetons et les macros pris 
 |**(JOBNAME)**|Nom du travail. Ce jeton est disponible uniquement sur SQL Server 2016 et ultérieur.|  
 |**(STEPNAME)**|Nom de l'étape. Ce jeton est disponible uniquement sur SQL Server 2016 et ultérieur.|  
 |**(DATE)**|Date actuelle (au format AAAAMMJJ).|  
-|**(INST)**|Nom de l’instance. Pour une instance par défaut, ce jeton a le nom de l’instance par défaut : MSSQLSERVER.|  
+|**(INST)**|Nom de l’instance. Pour une instance par défaut, ce jeton aura le nom de l'instance par défaut : MSSQLSERVER.|  
 |**(JOBID)**|ID de travail.|  
 |**(MACH)**|Nom de l’ordinateur.|  
 |**(MSSA)**|Nom du service SQLServerAgent principal.|  
@@ -105,7 +106,7 @@ La table suivante décrit comment le remplacement des jetons est contrôlé par 
   
 ## <a name="token-syntax-update-examples"></a>Exemples de mise à jour de syntaxe de jeton  
   
-### <a name="a-using-tokens-in-non-nested-strings"></a>A. Utilisation de jetons dans des chaînes non imbriquées  
+### <a name="a-using-tokens-in-non-nested-strings"></a>R. Utilisation de jetons dans des chaînes non imbriquées  
 L'exemple suivant explique comment mettre à jour un script non imbriqué simple avec la macro d'échappement appropriée. Avant d'exécuter le script de mise à jour, le script d'étape de travail suivant utilise un jeton d'étape de travail pour imprimer le nom de base de données correct :  
   
 `PRINT N'Current database name is $(A-DBN)' ;`  
@@ -130,7 +131,7 @@ PRINT N'Print ' + @msgString ;</pre>
   
 Notez également dans cet exemple que la fonction QUOTENAME définit le guillemet.  
   
-### <a name="c-using-tokens-with-the-escapenone-macro"></a>C. Utilisation de jetons avec la macro ESCAPE_NONE  
+### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. Utilisation de jetons avec la macro ESCAPE_NONE  
 L'exemple suivant s'inscrit dans un script chargé d'extraire le `job_id` dans la table `sysjobs` et utilise le jeton `JOBID` pour remplir la variable `@JobID` déclarée plus tôt dans le script en tant que type de données binaire. Notez que, du fait qu'aucun délimiteur n'est requis pour les types de données binaires, la macro `ESCAPE_NONE` est utilisée dans le jeton `JOBID` . Vous n'avez pas besoin de mettre ce travail à jour après avoir exécuté le script de mise à niveau.  
   
 <pre>SELECT * FROM msdb.dbo.sysjobs  

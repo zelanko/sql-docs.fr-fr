@@ -11,10 +11,10 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62cbd5141dfb6254415657dc3ef03d1402b0f3b4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281370"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
@@ -44,7 +44,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
  [ @delete_batch_size = ] *delete_batch_size*  
  Nombre de clés et certificats à supprimer. La valeur par défaut est 1000.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) et 1 (échec).  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -69,7 +69,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="remarks"></a>Notes  
  SQL Server 2012 Service Pack 2 a ajouté la propriété SERVER_OPERATION_ENCRYPTION_LEVEL à la table **internal.catalog_properties**. Cette propriété a deux valeurs possibles :  
   
--   **PER_EXECUTION (1)**  : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Il s'agit de la valeur par défaut. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
+-   **PER_EXECUTION (1)**  : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Il s’agit de la valeur par défaut. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
   
 -   **PER_PROJECT (2)**  : le certificat et la clé symétrique utilisés pour protéger les paramètres sensibles sont créés pour chaque projet. Vous obtenez de meilleures performances qu’avec le niveau PER_EXECUTION, car la clé et le certificat sont générés une fois par projet et non à chaque exécution.  
   
@@ -87,7 +87,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      Vous pouvez spécifier l’étendue ou le niveau (exécution ou projet) et le nombre de clés à supprimer. La taille de lot par défaut pour la suppression est 1000. Quand vous définissez le niveau sur 2, les clés et les certificats ne sont supprimés que si les projets associés ont été supprimés.  
   
- Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance lorsque SSISDB sert de magasin de déploiement dans SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance quand vous utilisez SSISDB comme magasin de déploiement dans SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant appelle la procédure stockée cleanup_server_execution_keys.  

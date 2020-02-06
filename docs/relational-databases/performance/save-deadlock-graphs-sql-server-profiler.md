@@ -14,10 +14,10 @@ ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c27ed8ea6fbd2e4b89d27cb7772f533150cf0e5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099373"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Enregistrer des événements Deadlock Graph (SQL Server Profiler)
@@ -37,7 +37,7 @@ ms.locfileid: "68099373"
   
 3. Dans la liste **Utiliser le modèle**, sélectionnez un modèle de trace sur lequel baser le suivi. Si vous ne souhaitez pas utiliser de modèle, sélectionnez **Vide**.  
   
-4. Procédez de l'une des manières suivantes :  
+4. Effectuez l’une des actions suivantes :  
   
     -   Pour capturer la trace dans un fichier, cochez la case **Enregistrer dans le fichier**. Spécifiez une valeur dans **Définir la taille de fichier maximale**.  
   

@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109451"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68109451"
   
  Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Notez que la plage de données datetime est comprise entre 1753-01-01 et 9999-12-31, tandis que la plage de données date est comprise entre 0001-01-01 et 9999-12-31.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,7 +60,7 @@ ISDATE ( expression )
  Chaîne de caractères ou [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui peut être convertie en une chaîne de caractères. L'expression doit comporter moins de 4 000 caractères. Les types de données de date et d'heure, sauf datetime et smalldatetime, ne sont pas autorisés comme argument pour ISDATE.  
   
 ## <a name="return-type"></a>Type de retour  
- **Int**  
+ **int**  
   
 ## <a name="remarks"></a>Notes  
  ISDATE est déterministe uniquement si elle est utilisée avec la fonction [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), lorsque le paramètre de style CONVERT est spécifié et que le style est différent de 0, 100, 9 et 109.  
@@ -82,7 +82,7 @@ ISDATE ( expression )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. Utilisation d'ISDATE pour tester une expression datetime valide.  
+### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>R. Utilisation d'ISDATE pour tester une expression datetime valide.  
  L’exemple suivant montre comment utiliser `ISDATE` pour tester si une chaîne de caractères est une valeur **datetime** valide.  
   
 ```  

@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296429"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037048"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Fonctions - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retourne les statistiques de performance pour une exécution en cours sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -42,7 +39,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>Notes  
  Le tableau suivant répertorie les valeurs de nom de compteur retournées par la fonction dm_execution_performance_counter.  
   
-|Nom du compteur|Description|  
+|Nom de compteur|Description|  
 |------------------|-----------------|  
 |Octets BLOB lus|Nombre d'octets des données d'objet BLOB (Binary Large Object) que le moteur de flux de données lit à partir de toutes les sources.|  
 |Octets BLOB écrits|Nombre d'octets des données BLOB que le moteur de flux de données écrit sur toutes les destinations.|  
@@ -57,7 +54,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Lignes lues|Nombre total de lignes lues par l'exécution.|  
 |Lignes écrites|Nombre total de lignes écrites par l'exécution.|  
   
-## <a name="return"></a>Return  
+## <a name="return"></a>Renvoie  
  La fonction dm_execution_performance_counters retourne une table comportant les colonnes suivantes, pour une exécution en cours. Les informations retournées concernent tous les packages contenus dans l'exécution. Si aucune exécution n'est en cours, une table vide est retournée.  
   
 |Nom de la colonne|Type de colonne|Description|Notes|  

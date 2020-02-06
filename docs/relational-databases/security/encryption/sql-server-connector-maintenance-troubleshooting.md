@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557929"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "75557929"
   
  Dans le cas du chiffrement transparent des données, voici comment procéder :  
   
--   **Dans PowerShell :** Créez une clé asymétrique (avec un nom différent de celui de votre clé asymétrique TDE) dans le coffre de clés.  
+-   **Dans PowerShell** : Créez une clé asymétrique (avec un nom différent de celui de votre clé asymétrique TDE) dans le coffre de clés.  
   
     ```powershell  
     Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -153,7 +153,7 @@ Voici un récapitulatif des étapes :
 * Accorder des autorisations au principal du service SQL Server pour utiliser ce nouveau coffre.  
 * Modifier les informations d’identification SQL Server utilisées par le moteur de base de données afin qu’elles reflètent le nom du nouveau coffre (le cas échéant).  
   
-Les sauvegardes des clés peuvent être restaurées dans les régions Azure, tant qu’elles restent dans la même région géographique ou le même cloud national : États-Unis, Canada, Japon, Australie, Inde, Asie-Pacifique, Europe, Brésil, Chine, Gouvernement des États-Unis ou Allemagne.  
+Les sauvegardes des clés peuvent être restaurées entre les régions Azure, tant qu’elles restent dans la même région géographique ou le même cloud national : États-Unis, Canada, Japon, Australie, Inde, Asie et Pacifique du sud, Europe, Brésil, Chine, Administration américaine ou Allemagne.  
   
   
 ##  <a name="AppendixB"></a> B. Forum Aux Questions (FAQ)  

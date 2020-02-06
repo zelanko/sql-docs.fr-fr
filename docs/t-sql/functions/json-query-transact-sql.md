@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109373"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109373"
   
  Pour extraire une valeur scalaire à partir d’une chaîne JSON à la place d’un objet ou d’un tableau, consultez [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). Pour obtenir des informations sur les différences entre **JSON_VALUE** et **JSON_QUERY**, consultez [Comparer JSON_VALUE et JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +51,7 @@ JSON_QUERY ( expression [ , path ] )
  *path*  
  Chemin JSON qui spécifie l’objet ou le tableau à extraire.
 
-Dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et dans [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], vous pouvez fournir une variable comme valeur de *path*.
+Dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], vous pouvez fournir une variable comme valeur de *path*.
 
 Le chemin JSON peut spécifier le mode lax ou strict pour l’analyse. Si vous ne spécifiez pas le mode d’analyse, le mode lax est utilisé par défaut. Pour plus d’informations, consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
 
@@ -92,17 +92,17 @@ Si le format de *path* n’est pas valide, **JSON_QUERY** renvoie une erreur.
   
  Le tableau suivant compare le comportement de **JSON_QUERY** en mode lax et en mode strict. Pour plus d’informations sur la spécification du mode de chemin facultatif (lax ou strict), consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Chemin d'accès|Valeur renvoyée en mode lax|Valeur renvoyée en mode strict|En savoir plus|  
+|Path|Valeur renvoyée en mode lax|Valeur renvoyée en mode strict|En savoir plus|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|Renvoie l’intégralité du texte JSON.|Renvoie l’intégralité du texte JSON.|N/a|  
+|$|Renvoie l’intégralité du texte JSON.|Renvoie l’intégralité du texte JSON.|n/a|  
 |$.info.type|NULL|Error|Ni un objet, ni un tableau.<br /><br /> Utilisez **JSON_VALUE** à la place.|  
 |$.info.address.town|NULL|Error|Ni un objet, ni un tableau.<br /><br /> Utilisez **JSON_VALUE** à la place.|  
-|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N/a|  
-|$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|N/a|  
+|$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|n/a|  
+|$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|n/a|  
 |$.info.type[0]|NULL|Error|Pas un tableau.|  
 |$.info.none|NULL|Error|La propriété n’existe pas.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Utilisation de JSON_QUERY avec FOR JSON
+### <a name="using-json_query-with-for-json"></a>Utilisation de JSON_QUERY avec FOR JSON
 
 **JSON_QUERY** renvoie un fragment JSON valide. Par conséquent, **FOR JSON** n’échappe pas les caractères spéciaux dans la valeur renvoyée **JSON_QUERY**.
 

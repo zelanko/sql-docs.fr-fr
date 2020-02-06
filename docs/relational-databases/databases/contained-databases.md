@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137330"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
@@ -65,7 +65,7 @@ ms.locfileid: "68137330"
   
 -   **Utilisateur de base de données autonome avec mot de passe**  
   
-     Les utilisateurs de base de données autonome avec mots de passe sont authentifiés par la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+     Les utilisateurs de base de données autonome avec mots de passe sont authentifiés par la base de données. Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 -   **Principaux Windows**  
   
@@ -143,10 +143,10 @@ ms.locfileid: "68137330"
 ##  <a name="Identifying"></a> Identification de base de données à relation contenant-contenu  
  Il existe deux outils qui permettent d'identifier l'état de la relation contenant-contenu de la base de données. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) est une vue qui montre toutes les entités potentiellement sans relation contenant-contenu dans la base de données. L'événement database_uncontained_usage se produit lorsqu'une entité sans relation contenant-contenu réelle est identifiée au moment de l'exécution.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  Cette vue affiche les entités de la base de données susceptibles d'être sans relation contenant-contenu, telles que celles qui dépassent la limite de base de données. Cela inclut les entités d'utilisateur qui peuvent utiliser des objets à l'extérieur du modèle de base de données. Cependant, comme la relation contenant-contenu de certaines entités (par exemple, celles utilisant SQL dynamique) ne peut être déterminée qu'au moment de l'exécution, la vue peut afficher des entités qui ne sont pas réellement sans relation contenant-contenu. Pour plus d’informations, consultez [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage, événement  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage, événement  
  Ce XEvent se produit chaque fois qu'une entité sans relation contenant-contenu est identifiée lors de l'exécution. Cela inclut des entités provenant du code client. Ce XEvent ne se produit que pour les entités sans relation contenant-contenu réelles. Toutefois, l'événement ne se produit qu'au moment de l'exécution. Par conséquent, toutes les entités d'utilisateur sans relation contenant-contenu que vous n'avez pas exécutées ne seront pas identifiées par ce XEvent  
   
 ## <a name="see-also"></a>Voir aussi  

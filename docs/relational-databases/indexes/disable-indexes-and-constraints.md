@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107144"
 ---
 # <a name="disable-indexes-and-constraints"></a>Désactiver les index et contraintes
@@ -130,7 +130,7 @@ ms.locfileid: "68107144"
  Affiche le nom de la table ou de la vue sur laquelle l'index a été créé.  
   
  **Type d'index**  
- Affiche le type de l’index : **Cluster**, **Non-cluster**, **Spatial** ou **XML**.  
+ Affiche le type d’index : **Cluster**, **Non-cluster**, **Spatial**ou **XML**.  
   
  **État**  
  Affiche l'état de l'opération de désactivation. Les valeurs possibles après l'exécution sont les suivantes :  
@@ -143,11 +143,11 @@ ms.locfileid: "68107144"
   
      La désactivation d'index a débuté mais elle n'est pas terminée.  
   
--   **Réussi**  
+-   **Success**  
   
      L'opération de désactivation est achevée.  
   
--   **Erreur**  
+-   **Error**  
   
      Une erreur est survenue pendant la désactivation d'index et celle-ci n'a pas pu être accomplie.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68107144"
   
 #### <a name="to-disable-an-index"></a>Pour désactiver un index  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "68107144"
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>Pour désactiver tous les index d'une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
