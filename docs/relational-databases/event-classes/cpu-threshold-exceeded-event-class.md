@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d74d1907b0f96275658c716a7a08061f0eec8995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999566"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe d'événements CPU Threshold Exceeded
@@ -30,12 +30,12 @@ ms.locfileid: "67999566"
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|Unité centrale|**Int**|Utilisation de l'UC en millisecondes.|18|Oui|  
-|EventClass|**Int**|214|27|Non|  
-|EventSubClass|**Int**|Violation de la limite de l'UC.|21|Oui|  
-|GroupID|**Int**|ID de groupe où la violation s'est produite.|66|Oui|  
-|OwnerID|**Int**|SPID du processus qui a provoqué la violation.|58|Oui|  
-|SPID|**Int**|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : Il peut être différent du SPID de l’utilisateur réel si un thread système valide l’utilisation de l’UC comme une tâche en arrière-plan.|12|Oui|  
+|UC|**int**|Utilisation de l'UC en millisecondes.|18|Oui|  
+|EventClass|**int**|214|27|Non|  
+|EventSubClass|**int**|Violation de la limite de l'UC.|21|Oui|  
+|GroupID|**int**|ID de groupe où la violation s'est produite.|66|Oui|  
+|OwnerID|**int**|SPID du processus qui a provoqué la violation.|58|Oui|  
+|SPID|**int**|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : il peut être différent du SPID de l’utilisateur réel si un thread système valide l’utilisation de l’UC comme une tâche en arrière-plan.|12|Oui|  
 |StartTime|**datetime**|Heure de déclenchement de cet événement.|14|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

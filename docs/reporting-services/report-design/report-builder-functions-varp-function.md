@@ -9,10 +9,10 @@ ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2712a66e020324ab529fe0dc1759957fbc53f4e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576738"
 ---
 # <a name="report-builder-functions---varp-function"></a>Fonctions du Générateur de rapports - VarP
@@ -32,10 +32,10 @@ VarP(expression, scope, recursive)
  *expression*  
  (**Entier** ou **Flottant**) Expression sur laquelle effectuer l’agrégation.  
   
- *portée*  
+ *scope*  
  (**Chaîne**) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
- *récursifs*  
+ *recursive*  
  (**Type énuméré**) Facultatif. **Simple** (par défaut) ou **RdlRecursive**. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  

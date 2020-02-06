@@ -15,10 +15,10 @@ ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 968ab3afbdb5d184364758797180102d65293eb7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288527"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Parenthèses) (expression SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "71288527"
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- Toute expression valide.  
+ Peut être toute expression valide.  
   
 ## <a name="result-types"></a>Types des résultats  
  Le type de données *expression*. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

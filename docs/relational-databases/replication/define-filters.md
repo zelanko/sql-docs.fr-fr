@@ -15,10 +15,10 @@ ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1837e3b57548ec0d4324a408f8f43201ccc3ca6b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768172"
 ---
 # <a name="define-filters"></a>Définir les filtres
@@ -29,10 +29,10 @@ ms.locfileid: "68768172"
  **Opérateur**  
  Sélectionnez un opérateur pour le filtre, ex. : **Inférieur ou Égal à**.
   
- **Value**  
+ **Valeur**  
  Entrez une valeur pour le filtre. La plupart des opérateurs nécessitent uniquement la saisie d'une valeur dans la première colonne **Valeur** , mais les opérateurs **Entre** et **Non compris entre** nécessitent une valeur dans les deux colonnes **Valeur** .  
   
- **Désactiver**  
+ **Clear**  
  Cliquez sur ce bouton pour effacer tous les filtres précédemment définis.  
   
 ## <a name="see-also"></a>Voir aussi  

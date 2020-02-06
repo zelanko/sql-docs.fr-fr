@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294648"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
@@ -35,7 +35,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
   
 ### <a name="to-create-a-matrix"></a>Pour créer une matrice  
   
-1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) depuis votre ordinateur, depuis le portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou depuis le mode intégré SharePoint.  
+1.  [Démarrez le Générateur de rapports](../reporting-services/report-builder/start-report-builder.md) à partir de votre ordinateur, du portail web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ou du mode intégré SharePoint.  
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
@@ -146,7 +146,7 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
 ![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="FormatData"></a>3. Mettre en forme les données  
-Par défaut, les données de synthèse du champ Sales affichent un nombre général et le champ SalesDate affiche des informations de date et d'heure. Dans cette section, vous mettez en forme le champ Sales de façon à afficher le nombre sous forme de devise et le champ SalesDate afin qu’il n’affiche que la date. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé comme exemples de valeurs.  
+Par défaut, les données de synthèse du champ Sales affichent un nombre général et le champ SalesDate affiche des informations de date et d'heure. Dans cette section, vous mettez en forme le champ Sales de façon à afficher le nombre sous forme de devise et le champ SalesDate afin qu’il n’affiche que la date. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  
   
 ### <a name="to-format-fields"></a>Pour mettre en forme les champs  
   
@@ -156,7 +156,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 3.  Sous l’onglet **Accueil** > **Nombre** > **Devise**. Les cellules changent pour afficher le format de devise.  
   
-    Si vos paramètres régionaux sont Anglais (États-Unis), le texte de l’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -324,7 +324,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 4.  Cliquez sur **Enregistrer**.  
   
-## <a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
+## <a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
 Un rapport avec des matrices peut s'étendre horizontalement et verticalement lorsqu'il s'exécute. En faisant pivoter les zones de texte verticalement, ou de 270 degrés, vous pouvez gagner de l'espace horizontal. Le rapport rendu sera alors plus étroit, et s'il est exporté dans un format tel que Microsoft Word, il rentrera plus facilement sur une page imprimée.  
   
 Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
@@ -352,12 +352,12 @@ Une zone de texte peut également afficher du texte horizontal dans le sens vert
   
 Le nom du secteur est écrit verticalement, de bas en haut. La hauteur du groupe de lignes Territory varie en fonction de la longueur du nom du secteur.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Ainsi s'achève le didacticiel de création d'un rapport de matrice. Pour plus d’informations sur les matrices, consultez : 
 -    [Tables, matrices et listes](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Créer une matrice](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
--    [Zones de région de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
--    [Cellules, lignes et colonnes de région de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+-    [Zones de régions de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
+-    [Cellules, lignes et colonnes de régions de données de tableau matriciel](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  

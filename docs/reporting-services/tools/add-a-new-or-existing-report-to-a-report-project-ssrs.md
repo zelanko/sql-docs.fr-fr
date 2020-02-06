@@ -11,10 +11,10 @@ ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576802"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Ajouter un nouveau rapport ou un rapport existant à un projet de rapport (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65576802"
   
 1.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le dossier Rapports, puis sélectionnez **Ajouter un nouveau rapport**. La boîte de dialogue **Assistant Rapport** s’ouvre.  
   
-     Les étapes de l’Assistant vous guident dans le processus de création d’une source de données, de création d’un dataset avec une requête, de définition de groupes, de spécification d’une mise en page et de création du rapport. Les étapes sont les suivantes :  
+     Les étapes de l’Assistant vous guident dans le processus de création d’une source de données, de création d’un dataset avec une requête, de définition de groupes, de spécification d’une mise en page et de création du rapport. Procédez comme suit :  
   
     -   **Sélectionnez une source de données.** La première étape de création d'un rapport consiste à définir une source de données. L'Assistant Rapport fournit la liste de toutes les sources de données partagées du projet de rapport et offre la possibilité de créer une nouvelle source de données.  
   

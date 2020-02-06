@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041799"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
-Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
+Dans ce tutoriel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Les indicateurs de performance clés sont des valeurs mesurables qui revêtent une importance significative pour l’entreprise. Dans ce scénario, le récapitulatif des ventes par sous-catégories de produits est l'indicateur de performance clé. L’état actuel de l’indicateur de performance clé est indiqué avec des couleurs, des jauges et des indicateurs.
   
@@ -128,7 +128,7 @@ L’Assistant Tableau ou matrice propose une conception initiale pour l’affich
   
 8.  Vérifiez que **Bloqué, sous-total ci-dessous** est sélectionné.  
   
-9. Désactivez l’option **Développer/Réduire les groupes**.  
+9. Décochez l’option **Développer/Réduire les groupes**.  
   
     Dans ce didacticiel, le rapport que vous créez n'utilise pas la fonctionnalité d'exploration vers le bas qui permet à un utilisateur de développer une hiérarchie de groupe parente afin d'afficher les lignes de groupes enfants et les lignes de détails.  
   
@@ -335,8 +335,8 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 2.  Cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Next Steps  
-Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d'informations, consultez :
+## <a name="next-steps"></a>Étapes suivantes  
+Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à votre rapport. Pour plus d'informations, consultez les pages suivantes :
 *  [Jauges](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicateurs](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
