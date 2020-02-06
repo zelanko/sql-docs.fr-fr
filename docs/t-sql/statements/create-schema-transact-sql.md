@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117299"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117299"
 
   Crée un schéma dans la base de données active. La transaction CREATE SCHEMA peut également créer des tables et des vues dans le nouveau schéma et définir des autorisations GRANT, DENY ou REVOKE sur ces objets.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Ce comportement est nécessaire pour permettre aux utilisateurs basés sur des groupes Windows de créer et de posséder des objets. Il peut cependant entraîner la création involontaire de schémas et d'utilisateurs. Pour éviter la création implicite d'utilisateurs et de schémas, dans la mesure du possible vous devez créer de manière explicite des principaux de base de données et assigner un schéma par défaut. Vous pouvez également déclarer de manière explicite un schéma existant lors de la création d'objets dans une base de données, à l'aide de noms d'objets en deux ou trois parties.  
 
 > [!NOTE]
->  La création implicite d’un utilisateur Azure Active Directory n’est pas possible sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Étant donné que la création d’un utilisateur Azure AD à partir du fournisseur externe doit vérifier l’état des utilisateurs dans l’annuaire AAD, la création de l’utilisateur échoue avec l’erreur 2760 : **Le nom de schéma spécifié « \<user_name@domain> » n’existe pas ou vous n’avez pas l’autorisation de l’utiliser.** Puis avec l’erreur 2759 : **Échec de CREATE SCHEMA en raison d’erreurs antérieures.** Pour contourner ces erreurs, créez d’abord l’utilisateur Azure AD à partir du fournisseur externe, puis réexécutez l’instruction de création de l’objet.
+>  La création implicite d’un utilisateur Azure Active Directory n’est pas possible sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Étant donné que la création d’un utilisateur Azure AD à partir du fournisseur externe doit vérifier l’état des utilisateurs dans l’annuaire AAD, la création de l’utilisateur échoue avec l’erreur 2760 : **Le nom de schéma spécifié « \<user_name@domain> » n’existe pas ou vous n’avez pas l’autorisation de l’utiliser.** Puis avec l’erreur 2759 : **Échec de CREATE SCHEMA en raison d’erreurs antérieures.** Pour contourner ces erreurs, créez d’abord l’utilisateur Azure AD à partir du fournisseur externe, puis réexécutez l’instruction de création de l’objet.
  
   
 ## <a name="deprecation-notice"></a>Note relative à la suppression de fonctionnalités  
@@ -141,7 +141,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Création d’un schéma et octroi d’autorisations  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>R. Création d’un schéma et octroi d’autorisations  
  L'exemple suivant crée le schéma `Sprockets` détenu par `Annik` qui contient la table `NineProngs`. L'instruction accorde `SELECT` à `Mandar` et refuse `SELECT` à `Prasanna`. Remarquez que `Sprockets` et `NineProngs` sont créés dans une même instruction.  
   
 ```  

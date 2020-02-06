@@ -17,10 +17,10 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299068"
 ---
 # <a name="adding-tasks-programmatically"></a>Ajout de tâches par programme
@@ -321,7 +321,7 @@ End Module
   
  Utiliser la classe <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> dans le code, au lieu d'effectuer un cast vers la classe spécifique à une tâche présente les avantages suivants :  
   
--   Le fournisseur <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> ne requiert pas de référence à l’assembly dans le code.  
+-   Le fournisseur <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> ne requiert pas de référence à l’assembly dans le code.  
   
 -   Vous pouvez coder des routines génériques qui fonctionnent avec toutes les tâches, car vous n'avez pas besoin de connaître le nom de la tâche au moment de la compilation. Ces routines génériques incluent des méthodes dans lesquelles vous pouvez passer le nom de la tâche et dont le code fonctionne avec toutes les tâches. C'est une méthode pratique pour écrire un code de test.  
   

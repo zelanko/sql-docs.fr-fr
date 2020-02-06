@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228433"
 ---
 # <a name="common-errors-with-database-mail"></a>Erreurs courantes avec la messagerie de base de données 
@@ -25,7 +25,7 @@ ms.locfileid: "70228433"
 
 Cet article décrit certaines erreurs courantes rencontrées avec la messagerie de base de données, et leurs solutions.
 
-## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>La procédure stockée « sp_send_dbmail » est introuvable
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>la procédure stockée « sp_send_dbmail » est introuvable
 La procédure stockée [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) est installée dans la base de données msdb. Vous devez exécuter **sp_send_dbmail** à partir de la base de données msdb ou spécifier un nom en trois parties pour la procédure stockée.
 
 Exemple :
@@ -33,7 +33,7 @@ Exemple :
 EXEC msdb.dbo.sp_send_dbmail ...
 ```
 
-- ou -
+Ou :
 
 ```sql
 USE msdb;
@@ -43,16 +43,16 @@ EXEC dbo.sp_send_dbmail ...
 
 Utilisez l’[Assistant Configuration de Database Mail](configure-database-mail.md) pour activer et configurer la messagerie de base de données.
 
-## <a name="profile-not-valid"></a>Profil incorrect
-Ce message peut s’afficher pour deux raisons. Le profil spécifié n’existe pas ou l’utilisateur qui exécute [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md) n’a pas l’autorisation d’accéder au profil.
+## <a name="profile-not-valid"></a>profil incorrect
+Ce message peut s'afficher pour deux raisons. Le profil spécifié n’existe pas ou l’utilisateur qui exécute [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md) n’a pas l’autorisation d’accéder au profil.
 
 Pour vérifier les autorisations pour un profil, exécutez la procédure stockée [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) avec le nom du profil. Utilisez la procédure stockée [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) ou l’[Assistant Configuration de Database Mail](configure-database-mail.md) pour accorder l’autorisation à un groupe ou un utilisateur de msdb d’accéder à un profil.
 
-## <a name="permission-denied-on-sp_send_dbmail"></a>Autorisation refusée sur la procédure sp_send_dbmail
+## <a name="permission-denied-on-sp_send_dbmail"></a>autorisation refusée sur la procédure sp_send_dbmail
 
 Cette rubrique décrit le dépannage suite à un message d’erreur indiquant que l’utilisateur qui essaie d’envoyer des messages à l’aide de Database Mail n’est pas autorisé à exécuter la procédure sp_send_dbmail.
 
-Le texte du message d’erreur est le suivant :
+Le texte du message d'erreur est le suivant :
 
 ```
 EXECUTE permission denied on object 'sp_send_dbmail', 
@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-Database Mail s’appuie sur un certain nombre de procédures stockées internes. Pour réduire la surface d’exposition, ces procédures stockées sont désactivées lors d’une nouvelle installation de SQL Server. Pour activer ces procédures stockées, utilisez l’[option Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure**, comme dans l’exemple suivant :
+La messagerie de base de données est basée sur un certain nombre de procédures stockées internes. Pour réduire la surface d’exposition, ces procédures stockées sont désactivées lors d’une nouvelle installation de SQL Server. Pour activer ces procédures stockées, utilisez l’[option Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure**, comme dans l’exemple suivant :
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  
@@ -109,7 +109,7 @@ Pour démarrer Database Mail dans une base de données hôte de messagerie, exé
 EXECUTE dbo.sysmail_start_sp;
 ```
 
-Service Broker examine la durée de vie de la boîte de dialogue pour les messages quand elle est activée ; par conséquent, les messages ayant figuré dans la file d’attente de transmission Service Broker pour une durée supérieure à la durée de vie de la boîte de dialogue configurée échouent immédiatement. Database Mail met à jour l’état des messages qui ont échoué dans [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) et les vues associées. Vous devez déterminer si vous voulez renvoyer les e-mails. Pour plus d’informations sur la configuration de la durée de vie de la boîte de dialogue utilisée par Database Mail, consultez [sysmail_configure_sp (Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md).
+Service Broker examine la durée de vie de la boîte de dialogue pour les messages quand elle est activée ; par conséquent, les messages ayant figuré dans la file d’attente de transmission Service Broker pour une durée supérieure à la durée de vie de la boîte de dialogue configurée échouent immédiatement. Database Mail met à jour l’état des messages qui ont échoué dans [sysmail_allitems](../system-catalog-views/sysmail-allitems-transact-sql.md) et les vues associées. Vous devez déterminer si vous voulez envoyer de nouveau les messages électroniques. Pour plus d’informations sur la configuration de la durée de vie de la boîte de dialogue utilisée par Database Mail, consultez [sysmail_configure_sp (Transact-SQL)](../system-stored-procedures/sysmail-configure-sp-transact-sql.md).
 
 
 

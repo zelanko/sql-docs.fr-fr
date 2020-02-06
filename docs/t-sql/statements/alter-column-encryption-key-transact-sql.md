@@ -21,10 +21,10 @@ ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594391"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73594391"
 
   Modifie une clé de chiffrement de colonne dans une base de données, en ajoutant ou en supprimant une valeur chiffrée. Une clé de chiffrement de colonne peut avoir jusqu’à deux valeurs, ce qui permet de permuter la clé principale de colonne correspondante. Une clé de chiffrement de colonne est utilisée lors du chiffrement des colonnes avec [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Avant d’ajouter une valeur de clé de chiffrement de colonne, vous devez définir la clé principale de colonne qui a été utilisée pour chiffrer la valeur à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de l’instruction [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -80,7 +80,7 @@ Pour afficher des informations sur les clés de chiffrement de colonne, utilisez
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>A. Ajout d’une valeur de clé de chiffrement de colonne  
+### <a name="a-adding-a-column-encryption-key-value"></a>R. Ajout d’une valeur de clé de chiffrement de colonne  
  L’exemple suivant modifie une clé de chiffrement de colonne nommée `MyCEK`.  
   
 ```sql  
@@ -117,6 +117,6 @@ GO
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Gérer les clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Gérer des clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

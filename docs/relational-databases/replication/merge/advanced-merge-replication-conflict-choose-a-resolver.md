@@ -15,10 +15,10 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033442"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflit de réplication de fusion avancée - Choisir un programme de résolution
@@ -43,7 +43,7 @@ ms.locfileid: "68033442"
 |Les données de résultat d'un conflit doivent être différentes des données de conflit originales.|Utilisez un résolveur d'articles qui calcule les nouvelles valeurs.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détection et résolution des conflits dans les enregistrements logiques](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Détection et résolution des conflits de réplication de fusion avancée](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Republier des données](../../../relational-databases/replication/republish-data.md)  
   

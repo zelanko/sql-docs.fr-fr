@@ -20,10 +20,10 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314602"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314602"
 
 Cette fonction chiffre les données avec une clé asymétrique.  
   
- ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,13 +46,13 @@ ID d’une clé asymétrique dans la base de données. *asym_key_ID* a le type d
 *cleartext*  
 Chaîne de données que `ENCRYPTBYASYMKEY` chiffre avec la clé asymétrique. *cleartext* peut avoir le type de données
  
-+ **binaire**
++ **binary**
 + **char**
 + **nchar**
 + **nvarchar**
 + **varbinary**
   
-ou Gestionnaire de configuration
+or
   
 + **varchar**
  
@@ -61,13 +61,13 @@ ou Gestionnaire de configuration
 **\@plaintext**  
 Variable contenant une valeur que `ENCRYPTBYASYMKEY` chiffre avec la clé asymétrique. **\@plaintext** peut avoir un type de données
   
-+ **binaire**
++ **binary**
 + **char**
 + **nchar**
 + **nvarchar**
 + **varbinary**
   
-ou Gestionnaire de configuration
+or
   
 + **varchar**
  

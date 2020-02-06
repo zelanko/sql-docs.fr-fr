@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577408"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Fonctions du Générateur de rapports - LookupSet
@@ -30,18 +30,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Paramètres  
  *source_expression*  
- (**Variant**) Expression évaluée dans l’étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple, `=Fields!ID.Value`.  
+ (**Variant**) Expression évaluée dans l’étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple : `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!CustomerID.Value`.  
+ (**Variant**) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!PhoneNumber.Value`.  
+ (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple : `=Fields!PhoneNumber.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « ContactInformation ».  
   
-## <a name="return"></a>Return  
+## <a name="return"></a>Renvoie  
  Retourne une valeur **VariantArray**, ou **Nothing** si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Pour récupérer une valeur unique dans un dataset avec les paires nom-valeur d’un nom spécifique, lorsqu’il existe une relation un-à-un, utilisez la [Fonction Lookup &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Pour appeler **Lookup** pour un ensemble de valeurs, utilisez la [Fonction Multilookup &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Les restrictions suivantes s'appliquent :  
+ Les restrictions suivantes s’appliquent :  
   
 -   **LookupSet** est évalué après que toutes les expressions de filtre ont été appliquées.  
   
@@ -97,7 +97,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>Exemple  
  Étant donné que **LookupSet** retourne une collection d'objets, vous ne pouvez pas afficher directement l'expression de résultat dans une zone de texte. Vous pouvez concaténer la valeur de chaque objet dans la collection en tant que chaîne.  
   
- Utilisez la fonction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Join** pour créer une chaîne délimitée à partir d’un jeu d’objets. Utilisez une virgule comme séparateur pour combiner les objets en une ligne unique. Dans certains convertisseurs, vous pouvez utiliser un saut de ligne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) comme séparateur pour répertorier chaque valeur sur une nouvelle ligne.  
+ Utilisez la fonction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]**Join** pour créer une chaîne délimitée à partir d’un jeu d’objets. Utilisez une virgule comme séparateur pour combiner les objets en une ligne unique. Dans certains convertisseurs, vous pouvez utiliser un saut de ligne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) comme séparateur pour répertorier chaque valeur sur une nouvelle ligne.  
   
  L’expression suivante, quand elle est utilisée comme propriété Value d’une zone de texte, utilise **Join** pour créer une liste.  
   
