@@ -22,10 +22,10 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843757"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843757"
 
   Construit un message à partir d’un message existant dans sys.messages ou à partir d’une chaîne fournie. La fonctionnalité de FORMATMESSAGE ressemble à celle de l'instruction RAISERROR. Cependant, RAISERROR imprime immédiatement le message, tandis que FORMATMESSAGE retourne le message mis en forme pour un traitement ultérieur.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,7 +65,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-example-with-a-message-number"></a>A. Exemple avec un numéro de message  
+### <a name="a-example-with-a-message-number"></a>R. Exemple avec un numéro de message  
  L’exemple suivant utilise un message de réplication `20009` stocké dans sys.messages sous la forme « L’article '%s' n’a pas pu être ajouté à la publication '%s' ». FORMATMESSAGE substitue les valeurs `First Variable` et `Second Variable` aux espaces réservés du paramètre. La chaîne finale résultante,« L’article 'First Variable' n’a pas pu être ajouté à la publication 'Second Variable'. », est stockée dans la variable locale `@var1`.  
   
 ```  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041230"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72041230"
 
 Retourne une valeur numérique, arrondie à la longueur ou à la précision indiquée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,9 +55,9 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 |Résultat de l'expression|Type de retour|  
 |-----------------------|-----------------|  
-|**tinyint**|**Int**|  
-|**smallint**|**Int**|  
-|**Int**|**Int**|  
+|**tinyint**|**int**|  
+|**smallint**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
 |Catégorie **decimal** et **numeric** (p, s)|**decimal(p, s)**|  
 |Catégorie **money** et **smallmoney**|**money**|  
@@ -81,7 +81,7 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-round-and-estimates"></a>A. Utilisation de ROUND et des estimations  
+### <a name="a-using-round-and-estimates"></a>R. Utilisation de ROUND et des estimations  
  Cet exemple contient deux expressions qui montrent qu'avec `ROUND`, le dernier chiffre est toujours une estimation.  
   
 ```  

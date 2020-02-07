@@ -37,10 +37,10 @@ ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982442"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
@@ -54,7 +54,7 @@ Les instructions de la console de base de données sont regroupées selon les ca
 |---|---|
 |Maintenance|Les tâches de maintenance sur une base de données, un index ou un groupe de fichiers.|  
 |Divers|Les tâches diverses, telles que l'activation des indicateurs de trace ou la suppression d'une DLL de la mémoire.|  
-|Information|Les tâches qui recueillent et affichent différents types d'informations.|  
+|Informationnel|Les tâches qui recueillent et affichent différents types d'informations.|  
 |Validation|Valide une base de données, une table, un index, un catalogue, un groupe de fichiers ou l'allocation de pages de base de données|  
   
 Les commandes DBCC prennent des paramètres d'entrée et renvoient des valeurs. Tous les paramètres des commandes DBCC acceptent les littéraux de type Unicode et DBCS.

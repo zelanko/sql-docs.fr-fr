@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd94844a068ee9c91a4976ac2aec5cbd3d432c56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927396"
 ---
 # <a name="-addition-transact-sql"></a>+ (Addition) (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67927396"
 
   Additionne deux nombres. Cet opérateur arithmétique d'addition peut aussi ajouter un nombre de jours à une date.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ expression + expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. Utilisation de l'opérateur d'addition pour calculer le nombre total d'heures d'absence du travail de chaque employé.  
+### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>R. Utilisation de l'opérateur d'addition pour calculer le nombre total d'heures d'absence du travail de chaque employé.  
  L’exemple calcule le nombre total d’heures d’absence au travail de chaque employé en additionnant le nombre d’heures de congés et celui des arrêts maladie.  
   
 ```  

@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982668"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "73982668"
   
 -   pour fournir une interface à compatibilité descendante pour émuler une table dont le schéma a été modifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -353,7 +353,7 @@ FROM Tn;
 
 Les exemples suivants utilisent la base de données AdventureWorks 2012 ou AdventureWorksDW.  
 
-### <a name="a-using-a-simple-create-view"></a>A. Utilisation d'une instruction CREATE VIEW simple  
+### <a name="a-using-a-simple-create-view"></a>R. Utilisation d'une instruction CREATE VIEW simple  
  L'exemple suivant crée une vue par le biais d'une instruction `SELECT` simple. Une vue simple est utile lorsque vous interrogez régulièrement une combinaison de colonnes. Les données de cette vue sont tirées des tables `HumanResources.Employee` et `Person.Person` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Ces données fournissent les noms et les informations relatives à la date d'embauche des employés de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. La vue doit pouvoir être créée par la personne chargée de suivre les dates anniversaires d'embauche mais sans pour autant l'autoriser à accéder à toutes les données de ces tables.  
   
 ```  

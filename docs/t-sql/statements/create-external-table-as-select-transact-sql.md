@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073142"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68073142"
 
   Crée une table externe, puis exporte en parallèle les résultats d’une instruction SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] vers Hadoop ou Azure Storage Blob.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -84,7 +84,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  REJECT_TYPE = **value** | percentage  
  Précise si l’option REJECT_VALUE est spécifiée comme une valeur littérale ou un pourcentage.  
   
- valeur  
+ value  
  REJECT_VALUE est une valeur littérale, et non un pourcentage.  La base de données cesse d’importer des lignes à partir du fichier de données externe lorsque le nombre de lignes ayant échoué dépasse la valeur de *reject_value*.  
   
  Par exemple, si REJECT_VALUE = 5 et REJECT_TYPE = value, la base de données cesse d’importer des lignes après l’échec d’importation de 5 lignes.  
@@ -117,7 +117,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  WITH *common_table_expression*  
  Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SELECT \<select_criteria> Remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* correspond au corps de l’instruction SELECT qui détermine les données à copier vers la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria> Remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* correspond au corps de l’instruction SELECT qui détermine les données qui sont copiées dans la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Pour exécuter cette commande, les **utilisateurs de la base de données** ont besoin des autorisations ou appartenances suivantes :  
@@ -191,7 +191,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 ##  <a name="Examples"></a> Exemples  
   
-### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. Créer une table Hadoop à l’aide de CREATE EXTERNAL TABLE AS SELECT (CETAS)  
+### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>R. Créer une table Hadoop à l’aide de CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  L’exemple suivant crée une nouvelle table externe nommée `hdfsCustomer`, à l’aide des définitions de colonne et des données de la table source `dimCustomer`.  
   
  La définition de table est stockée dans la base de données, et les résultats de l’instruction SELECT sont exportés vers le fichier « /pdwdata/customer.tbl » dans la source de données externe Hadoop *customer_ds*. Le fichier est mis en forme selon le format de fichier externe *customer_ff*.  

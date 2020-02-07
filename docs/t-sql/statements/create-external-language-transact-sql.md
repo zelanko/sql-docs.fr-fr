@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73536246"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -102,7 +102,7 @@ Cet argument permet de donner un ensemble de paramètres au runtime de langage e
 
 **external_lang_env_variables**
 
-Cet argument permet de donner un ensemble de variables d’environnement au runtime de langage externe avant le démarrage du processus externe. Un exemple de variable d’environnement est le répertoire de base du runtime lui-même. Par exemple : JRE_HOME.
+Cet argument permet de donner un ensemble de variables d’environnement au runtime de langage externe avant le démarrage du processus externe. Un exemple de variable d’environnement est le répertoire de base du runtime lui-même. Par exemple :  JRE_HOME.
 
 **platform**
 
@@ -135,7 +135,7 @@ TO database_principal_name;
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-create-an-external-language-in-a-database"></a>A. Créer un langage externe dans une base de données  
+### <a name="a-create-an-external-language-in-a-database"></a>R. Créer un langage externe dans une base de données  
 
 L’exemple suivant ajoute un langage externe appelé Java à une base de données sur SQL Server sur Windows.
 
