@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293931"
 ---
 # <a name="send-mail-task"></a>tache Envoyer un message
@@ -92,7 +92,7 @@ ms.locfileid: "71293931"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche Envoyer un message** pour définir le nom de la tâche d'envoi d'un message et décrire la tâche.  
   
 ### <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Fournissez un nom unique pour la tâche d'envoi de message. Ce nom sert d'étiquette à l'icône de la tâche.  
   
  **Remarque** Les noms de tâches doivent être uniques dans un package.  
@@ -115,7 +115,7 @@ ms.locfileid: "71293931"
  **From**  
  Indique l'adresse électronique de l'expéditeur.  
   
- **Pour**  
+ **To**  
  Fournit les adresses de messagerie des destinataires séparées par un point-virgule.  
   
  **Cc**  

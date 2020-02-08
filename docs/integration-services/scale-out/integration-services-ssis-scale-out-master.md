@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082122"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
@@ -31,7 +31,7 @@ Le service Scale Out Master est un service Windows responsable de la communicati
 
 ## <a name="scale-out-views-and-stored-procedures-in-ssisdb"></a>Procédures stockées et vues Scale Out dans SSISDB
 
-### <a name="views"></a>Vues
+### <a name="views"></a>Les vues
 
 - [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
 - [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)
@@ -59,7 +59,7 @@ Vous configurez le service Scale Out Master à l’aide du fichier `<drive>:\Pro
 |SqlServerName|Nom du serveur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] qui contient le catalogue SSISDB. Par exemple, nom_serveur\\nom_instance.|Nom du serveur SQL Server installé avec Scale Out Master.|
 |CleanupCompletedJobsIntervalInMs|Intervalle de nettoyage des tâches d’exécution terminées, en millisecondes.|43200000|
 |DealWithExpiredTasksIntervalInMs|Intervalle de traitement des tâches d’exécution ayant expiré, en millisecondes.|300000|
-|MasterHeartbeatIntervalInMs|Intervalle de pulsation de Scale Out Master, en millisecondes. Cette propriété spécifie l’intervalle auquel Scale Out Master met à jour son état de connexion dans le catalogue SSISDB.|30 000|
+|MasterHeartbeatIntervalInMs|Intervalle de pulsation de Scale Out Master, en millisecondes. Cette propriété spécifie l’intervalle auquel Scale Out Master met à jour son état de connexion dans le catalogue SSISDB.|30000|
 |SqlConnectionTimeoutInSecs|Délai en secondes de la connexion SQL à SSISDB.|15|
 ||||    
 

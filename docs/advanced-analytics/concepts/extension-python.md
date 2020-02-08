@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727678"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extension du langage Python dans SQL Server
@@ -38,7 +38,7 @@ Les packages Python ajoutés par Microsoft pour les charges de travail parallèl
 | Bibliothèque | Description |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Prend en charge les objets de source de données ainsi que l’exploration, la manipulation, la transformation et la visualisation des données. Prend en charge la création de contextes de calcul distants ainsi qu’un certain nombre de modèles de Machine Learning scalables, comme **rxLinMod**. Pour plus d’informations, consultez [Module revoscalepy avec SQL Server](../python/ref-py-revoscalepy.md).  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contient des algorithmes de Machine Learning qui ont été optimisés pour la vitesse et la précision ainsi que des transformations en ligne pour une utilisation avec du texte et des images. Pour plus d’informations, consultez [Module microsoftml avec SQL Server](../python/ref-py-microsoftml.md). |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contient des algorithmes de Machine Learning qui ont été optimisés pour la vitesse et la précision ainsi que des transformations en ligne pour permettre l’utilisation de texte et d’images. Pour plus d’informations, consultez [Module microsoftml avec SQL Server](../python/ref-py-microsoftml.md). |
 
 Les modules microsoftml et revoscalepy sont étroitement couplés ; les sources de données utilisées dans microsoftml sont définies en tant qu’objets revoscalepy. Les limitations du contexte de calcul dans revoscalepy sont transférées à microsoftml. À savoir, toutes les fonctionnalités sont disponibles pour les opérations locales, mais le basculement vers un contexte de calcul distant nécessite RxInSqlServer.
 

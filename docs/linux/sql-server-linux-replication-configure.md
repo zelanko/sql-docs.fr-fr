@@ -13,10 +13,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952497"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurer la réplication SQL Server sur Linux
@@ -81,13 +81,13 @@ Pour configurer le distributeur :
 
 Pour créer une publication et des articles :
 
-1. Dans l'Explorateur d'objets, cliquez sur **Réplication** > **Publications locales**> **Nouvelle publication...**.
+1. Dans l'Explorateur d'objets, cliquez sur **Réplication** > **Publications locales**> **Nouvelle publication...** .
 
 1. Suivez les instructions de l’**Assistant Nouvelle publication** pour configurer le type de réplication et les articles qui appartiennent à la publication.
 
 ### <a name="configure-the-subscription"></a>Configurer l'abonnement
 
-Pour configurer l'abonnement dans l'Explorateur d'objets, cliquez sur **Réplication** > **Abonnements locaux**> **Nouveaux abonnements...**.
+Pour configurer l'abonnement dans l'Explorateur d'objets, cliquez sur **Réplication** > **Abonnements locaux**> **Nouveaux abonnements...** .
 
 ### <a name="monitor-replication-jobs"></a>Surveiller les travaux de réplication
 

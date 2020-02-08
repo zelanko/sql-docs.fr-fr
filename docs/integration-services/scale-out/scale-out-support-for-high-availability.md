@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028750"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
@@ -114,6 +114,6 @@ Maintenant, vous pouvez ajouter des Scale Out Workers avec [Integration Services
 Pour mettre à niveau Scale Out dans un environnement à haute disponibilité, suivez les [étapes de mise à niveau d’Always On pour le catalogue SSIS](../catalog/ssis-catalog.md#Upgrade), mettez à niveau Scale Out Master et Scale Out Worker sur chaque ordinateur, puis recréez le rôle du cluster de basculement Windows Server à l’étape 7 ci-dessus avec la nouvelle version du service Scale Out Master.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations, consultez les articles suivants :
+Pour plus d’informations, consultez les articles suivants :
 -   [SSIS (SQL Server Integration Services) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [SSIS (SQL Server Integration Services) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

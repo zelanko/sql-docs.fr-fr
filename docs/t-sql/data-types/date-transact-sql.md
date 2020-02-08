@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113713"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
@@ -39,7 +39,7 @@ Définit une date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |Propriété|Valeur|  
 |--------------|-----------|  
 |Syntaxe|**date**|  
-|Utilisation|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Usage|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|AAAA-MM-JJ<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage|0001-01-01 à 9999-12-31 (1582-10-15 à 9999-12-31 pour Informatica)<br /><br /> Du 1er janvier de l’an 1 (de notre ère) au 31 décembre 9999 (du 15 octobre 1582 au 31 décembre 9999 pour Informatica)|  
 |Plages d'éléments|AAAA comprend quatre chiffres, entre 0001 et 9999, qui représentent une année. Pour Informatica, AAAA se limite à la plage 1582 à 9999.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l'année spécifiée.<br /><br /> JJ correspond à deux chiffres compris entre 01 et 31, selon le mois, qui représentent un jour du mois spécifié.|  
@@ -206,7 +206,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Type de données|Sortie|  
+|Type de données|Output|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

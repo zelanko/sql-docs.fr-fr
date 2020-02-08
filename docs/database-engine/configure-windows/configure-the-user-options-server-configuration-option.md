@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012166"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurer l'option de configuration de serveur user options
@@ -62,10 +62,10 @@ ms.locfileid: "68012166"
     |128|ARITHIGNORE|Renvoie NULL lorsqu'un dépassement de capacité ou une division par zéro se produit durant une requête.|  
     |256|QUOTED_IDENTIFIER|Établit la distinction entre les guillemets simples et doubles lors de l'évaluation d'une expression.|  
     |512|NOCOUNT|Supprime le message qui indique, à la fin de chaque instruction, le nombre de lignes affectées par l'instruction.|  
-    |1024|ANSI_NULL_DFLT_ON|Modifie le comportement de la session de façon à utiliser la compatibilité ANSI pour la possibilité de valeur NULL. Les nouvelles colonnes définies sans possibilité de valeur NULL explicite sont définies comme autorisant les valeurs NULL.|  
-    |2048|ANSI_NULL_DFLT_OFF|Modifie le comportement de la session afin de ne pas utiliser la possibilité de valeur NULL compatible ANSI. Les nouvelles colonnes définies sans possibilité de valeur NULL explicite n'autorisent pas les valeurs NULL.|  
+    |1 024|ANSI_NULL_DFLT_ON|Modifie le comportement de la session de façon à utiliser la compatibilité ANSI pour la possibilité de valeur NULL. Les nouvelles colonnes définies sans possibilité de valeur NULL explicite sont définies comme autorisant les valeurs NULL.|  
+    |2 048|ANSI_NULL_DFLT_OFF|Modifie le comportement de la session afin de ne pas utiliser la possibilité de valeur NULL compatible ANSI. Les nouvelles colonnes définies sans possibilité de valeur NULL explicite n'autorisent pas les valeurs NULL.|  
     |4096|CONCAT_NULL_YIELDS_NULL|Renvoie NULL lors de la concaténation d'une valeur NULL avec une chaîne.|  
-    |8192|NUMERIC_ROUNDABORT|Génère une erreur lors d'une perte de précision dans une expression.|  
+    |8 192|NUMERIC_ROUNDABORT|Génère une erreur lors d'une perte de précision dans une expression.|  
     |16384|XACT_ABORT|Annule une transaction si une instruction Transact-SQL déclenche une erreur d’exécution.|  
   
 -   Dans l’option **user options**, les positions binaires sont identiques à celles figurant dans @@OPTIONS. Chaque connexion a sa propre fonction @@OPTIONS, qui représente l’environnement de configuration. Quand un utilisateur se connecte à une instance de \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il reçoit un environnement par défaut qui attribue la valeur actuelle de l’option **user options** à la fonction @@OPTIONS. L’exécution d’instructions SET pour l’option **user options** affecte la valeur correspondante dans la fonction @@OPTIONS de la session. Toutes les connexions créées après la modification de ce paramètre reçoivent la nouvelle valeur.  

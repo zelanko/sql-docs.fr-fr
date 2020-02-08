@@ -20,10 +20,10 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113479"
 ---
 # <a name="plan-guides"></a>Repères de plan
@@ -56,7 +56,7 @@ BEGIN
 END;  
 ```  
   
- Supposons que cette procédure stockée a été compilée et optimisée pour `@Country_region = N'AU'` (Australie). Toutefois, comme il y a relativement peu de commandes client qui proviennent d'Australie, les performances diminuent lorsque la requête s'exécute à l'aide de valeurs de paramètre de pays contenant plus de commandes client. Dans la mesure où les États-Unis constituent le pays qui arrive en première position en termes de commandes remportées, un plan de requête généré pour `@Country_region = N'US'` obtiendrait de meilleures performances pour toutes les valeurs possibles du paramètre `@Country_region` .  
+ Supposons que cette procédure stockée a été compilée et optimisée pour `@Country_region = N'AU'` (Australie). Toutefois, comme il y a relativement peu de commandes client qui proviennent d'Australie, les performances diminuent lorsque la requête s'exécute à l'aide de valeurs de paramètre de pays contenant plus de commandes client. La plupart des commandes provenant des États-Unis, un plan de requête généré pour `@Country_region = N'US'` obtiendrait de meilleures performances pour toutes les valeurs possibles du paramètre `@Country_region`.  
   
  Vous pouvez résoudre ce problème en modifiant la procédure stockée pour ajouter l'indicateur de requête `OPTIMIZE FOR` à la requête. Toutefois, étant donné que la procédure stockée se trouve dans une application déployée, vous ne pouvez pas modifier directement le code de cette dernière. Vous pouvez en revanche créer le repère de plan suivant dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -166,7 +166,7 @@ where SalesOrderID =  @so_id',
 |Explique comment inclure un plan de requête fixe dans un repère de plan.|[Appliquer un plan de requête fixe à un repère de plan](../../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |Explique comment spécifier des indicateurs de requête dans un repère de plan.|[Attacher des indicateurs de requête à un repère de plan](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
 |Explique comment afficher les propriétés d'un repère de plan.|[Afficher les propriétés du repère de plan](../../relational-databases/performance/view-plan-guide-properties.md)|  
-|Explique comment utiliser SQL Server Profiler pour créer et tester des repères de plan.|[Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
+|Explique comment utiliser SQL Server Profiler pour créer et tester des repères de plan.|[Utiliser SQL Server Profiler pour créer et tester des repères de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Explique comment valider des repères de plan.|[Valider des repères de plan après la mise à niveau](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

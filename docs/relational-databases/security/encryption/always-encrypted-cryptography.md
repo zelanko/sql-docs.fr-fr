@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594403"
 ---
 # <a name="always-encrypted-cryptography"></a>Chiffrement Always Encrypted
@@ -31,7 +31,7 @@ ms.locfileid: "73594403"
   
  Une clé de chiffrement de colonne (CEK) est une clé de chiffrement de contenu (par exemple, une clé utilisée pour protéger des données) protégée par une clé CMK.  
   
- Tous les fournisseurs du magasin CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] chiffrent les clés CEK à l’aide de la méthode RSA-OAEP (RSA avec Optimal Asymmetric Encryption Padding). Le fournisseur du magasin de clés qui prend en charge l’API de chiffrement Microsoft : La prochaine génération (CNG) dans .NET Framework ([classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) utilise les paramètres par défaut spécifiés par RFC 8017 dans la Section A.2.1. Ces paramètres par défaut utilisent une fonction de hachage SHA-1 et une fonction de génération de masque MGF1 avec SHA-1. Tous les autres fournisseurs du magasin de clés utilisent SHA-256. 
+ Tous les fournisseurs du magasin CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] chiffrent les clés CEK à l’aide de la méthode RSA-OAEP (RSA avec Optimal Asymmetric Encryption Padding). Le fournisseur du magasin de clés qui prend en charge l’API de chiffrement Microsoft : La prochaine génération (CNG) dans .NET Framework ([classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) utilise les paramètres par défaut spécifiés par RFC 8017 dans la Section A.2.1. Ces paramètres par défaut utilisent une fonction de hachage de SHA-1 et une fonction de génération de masque de MGF1 avec SHA-1. Tous les autres fournisseurs du magasin de clés utilisent SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algorithme de chiffrement des données  
  Always Encrypted utilise l’algorithme **AEAD_AES_256_CBC_HMAC_SHA_256** pour chiffrer les données de la base de données.  
@@ -85,21 +85,21 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>Étape 3 : Calcul de la valeur MAC  
+### <a name="step-3-computing-mac"></a>Étape 3 : Calcul de la valeur MAC  
  Par la suite, la valeur MAC est calculée à l'aide de l'algorithme suivant :  
   
 ```  
 MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)  
 ```  
   
- Où :  
+ Où :  
   
 ```  
 versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Étape 4 : Concatenation  
+### <a name="step-4-concatenation"></a>Étape 4 : Concaténation  
  Enfin, la valeur chiffrée est générée en concaténant simplement l'octet de version de l’algorithme, la valeur MAC, le vecteur d'initialisation et le texte chiffré AES_256_CBC :  
   
 ```  
@@ -140,38 +140,38 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |Type de données|Longueur du texte chiffré [octets]|  
 |---------------|---------------------------------|  
 |**bigint**|65|  
-|**binaire**|Variable. Utilisez la formule ci-dessus.|  
+|**binary**|Varie. Utilisez la formule ci-dessus.|  
 |**bit**|65|  
-|**char**|Variable. Utilisez la formule ci-dessus.|  
+|**char**|Varie. Utilisez la formule ci-dessus.|  
 |**date**|65|  
 |**datetime**|65|  
 |**datetime2**|65|  
 |**datetimeoffset**|65|  
 |**decimal**|81|  
 |**float**|65|  
-|**geography**|N/A (non pris en charge)|  
+|**Geography**|N/A (non pris en charge)|  
 |**geometry**|N/A (non pris en charge)|  
 |**hierarchyid**|N/A (non pris en charge)|  
 |**image**|N/A (non pris en charge)|  
-|**Int**|65|  
+|**int**|65|  
 |**money**|65|  
-|**nchar**|Variable. Utilisez la formule ci-dessus.|  
+|**nchar**|Varie. Utilisez la formule ci-dessus.|  
 |**ntext**|N/A (non pris en charge)|  
 |**numeric**|81|  
-|**nvarchar**|Variable. Utilisez la formule ci-dessus.|  
+|**nvarchar**|Varie. Utilisez la formule ci-dessus.|  
 |**real**|65|  
 |**smalldatetime**|65|  
 |**smallint**|65|  
 |**smallmoney**|65|  
 |**sql_variant**|N/A (non pris en charge)|  
 |**sysname**|N/A (non pris en charge)|  
-|**texte**|N/A (non pris en charge)|  
+|**text**|N/A (non pris en charge)|  
 |**time**|65|  
 |**timestamp**<br /><br /> (**rowversion**)|N/A (non pris en charge)|  
 |**tinyint**|65|  
 |**uniqueidentifier**|81|  
-|**varbinary**|Variable. Utilisez la formule ci-dessus.|  
-|**varchar**|Variable. Utilisez la formule ci-dessus.|  
+|**varbinary**|Varie. Utilisez la formule ci-dessus.|  
+|**varchar**|Varie. Utilisez la formule ci-dessus.|  
 |**xml**|N/A (non pris en charge)|  
   
 ## <a name="net-reference"></a>Référence .NET  
@@ -179,6 +179,6 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
   
 ## <a name="see-also"></a>Voir aussi  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- - [Développer des applications à l’aide d’Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Développer des applications avec Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

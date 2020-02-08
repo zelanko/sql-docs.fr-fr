@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658789"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Tutoriel : Rechercher une chaîne à l’aide d’expressions régulières (regex) dans Java
@@ -269,7 +269,7 @@ L’arborescence entière doit avoir les autorisations, du parent racine au dern
 
 1. Cliquez avec le bouton droit sur le dossier (par exemple, `C:\myJavaCode`) et choisissez **Propriétés** > **Sécurité**.
 2. Cliquez sur **Modifier**.
-3. Cliquez sur **Ajouter**.
+3. Cliquez sur **Add**.
 4. Dans **Sélectionner les utilisateurs, les ordinateurs, les comptes de service ou les groupes** :
    1. Cliquez sur **Types d’objets** et veillez à sélectionner *Principes de sécurité intégrés* et *Groupes*.
    2. Cliquez sur **Emplacements** pour sélectionner le nom de l’ordinateur local en haut de la liste.
@@ -325,6 +325,6 @@ Après l’exécution de l’appel, vous devez obtenir un jeu de résultats avec
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-+ [Guide pratique pour appeler du code Java dans SQL Server](../how-to/call-java-from-sql.md)
++ [Guide pratique pour appeler Java dans SQL Server](../how-to/call-java-from-sql.md)
 + [Extensions Java dans SQL Server](../language-extensions-overview.md)
 + [Types de données Java et SQL Server](../how-to/java-to-sql-data-types.md)

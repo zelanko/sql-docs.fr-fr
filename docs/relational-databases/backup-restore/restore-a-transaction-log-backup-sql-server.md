@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111178"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "68111178"
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68111178"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68111178"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Pour restaurer une sauvegarde de journal des transactions  
   
-1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
@@ -100,8 +100,8 @@ ms.locfileid: "68111178"
   
     |En-tête|Valeur|  
     |------------|-----------|  
-    |**Restore**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
-    |**Name**|Nom du jeu de sauvegardes.|  
+    |**Restauration**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
+    |**Nom**|Nom du jeu de sauvegardes.|  
     |**Composant**|Composant de sauvegarde : **Base de données**, **Fichier** ou \<vide> (pour des journaux de transactions).|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Date de début**|Date et heure de début de la sauvegarde, d'après les paramètres régionaux du client.|  
@@ -110,13 +110,13 @@ ms.locfileid: "68111178"
     |**Dernier NSE**|Numéro séquentiel dans le journal correspondant à la dernière transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.|  
     |**NSE du point de contrôle**|Numéro séquentiel dans le journal correspondant au point de contrôle le plus récent au moment où la sauvegarde a été créée.|  
     |**Tous les NSE**|Numéro séquentiel dans le journal correspondant à la sauvegarde complète la plus récente de la base de données.|  
-    |**Server**|Nom de l'instance du moteur de base de données qui a effectué l'opération de sauvegarde.|  
-    |**Nom d'utilisateur**|Nom de l'utilisateur qui a effectué la restauration.|  
+    |**Serveur**|Nom de l'instance du moteur de base de données qui a effectué l'opération de sauvegarde.|  
+    |**Nom d’utilisateur**|Nom de l'utilisateur qui a effectué la restauration.|  
     |**Taille**|Taille du jeu de sauvegarde en octets.|  
     |**Position**|Position du jeu de sauvegarde dans le volume|  
     |**Expiration**|Date et heure d'expiration du jeu de sauvegardes.|  
   
-7.  Sélectionnez l'une des options suivantes :  
+7.  Sélectionnez l’un des suivants :  
   
     -   **Limite dans le temps**  
   
@@ -138,7 +138,7 @@ ms.locfileid: "68111178"
         |**Description**|Description de la transaction marquée spécifiée par l'utilisateur lorsque la transaction a été validée (le cas échéant).|  
         |**LSN**|Numéro séquentiel dans le journal de la transaction marquée.|  
         |**Sauvegarde de la base de données**|Nom de la base de données où la transaction marquée a été validée.|  
-        |**Nom d'utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
+        |**Nom d’utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
   
 8.  Pour afficher ou sélectionner les options avancées, cliquez sur **Options** dans le volet **Sélectionner une page** .  
   
@@ -206,13 +206,13 @@ ms.locfileid: "68111178"
   
     -   la clause NORECOVERY.  
   
-     La syntaxe de base pour cette instruction est la suivante :  
+     La syntaxe de base pour cette instruction est la suivante :  
   
      RESTORE LOG *nom_base_de_données* FROM <unité_de_sauvegarde> WITH NORECOVERY.  
   
      Où *nom_base_de_données* représente le nom de la base de données et <unité_de_sauvegarde> correspond au nom de l’unité qui contient la sauvegarde du journal en cours de restauration.  
   
-2.  Répétez l'étape 1 pour chaque sauvegarde du journal des transactions à appliquer.  
+2.  Répétez l'étape 1 pour chaque sauvegarde du journal des transactions à appliquer.  
   
 3.  Après avoir restauré la dernière sauvegarde de votre séquence de restauration, utilisez l'une des instructions ci-dessous :  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68111178"
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Application d'une sauvegarde unique du journal des transactions  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>R. Application d'une sauvegarde unique du journal des transactions  
  Dans cet exemple, nous commençons par restaurer la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l'aide d'une sauvegarde complète de base de données qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_1`. Nous appliquons ensuite la première sauvegarde du journal des transactions qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_log`. Enfin, nous récupérons la base de données.  
   
 ```sql  

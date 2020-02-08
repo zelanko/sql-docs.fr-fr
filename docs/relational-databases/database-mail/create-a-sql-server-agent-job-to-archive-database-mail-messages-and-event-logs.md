@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094494"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
@@ -98,7 +98,7 @@ ms.locfileid: "74094494"
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d’ensemble](#Process_Overview)  
+ [Vue d'ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Pour créer une étape permettant d'archiver les pièces jointes de la messagerie de base de données  
   
@@ -125,7 +125,7 @@ ms.locfileid: "74094494"
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d’ensemble](#Process_Overview)  
+ [Vue d'ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Pour créer une étape permettant d'archiver le journal de la messagerie de base de données  
   
@@ -152,7 +152,7 @@ ms.locfileid: "74094494"
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d’ensemble](#Process_Overview)  
+ [Vue d'ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Pour créer une étape permettant de supprimer les lignes archivées du journal de la messagerie de base de données  
   
@@ -174,7 +174,7 @@ ms.locfileid: "74094494"
   
 6.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d’ensemble](#Process_Overview)  
+ [Vue d'ensemble](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Pour créer une étape permettant de supprimer les éléments archivés du journal des événements de la messagerie de base de données  
   
@@ -194,7 +194,7 @@ ms.locfileid: "74094494"
   
 5.  Cliquez sur **OK** pour enregistrer l'étape.  
   
- [Vue d’ensemble](#Process_Overview)  
+ [Vue d'ensemble](#Process_Overview)  
   
 ## <a name="to-schedule-the-job-to-run-periodically"></a>Pour planifier une exécution périodique du travail  
   
@@ -214,6 +214,6 @@ ms.locfileid: "74094494"
   
 8.  Cliquez sur **OK** pour enregistrer le travail.  
   
- [Vue d’ensemble](#Process_Overview)  
+ [Vue d'ensemble](#Process_Overview)  
   
   

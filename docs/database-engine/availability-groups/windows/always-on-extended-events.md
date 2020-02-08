@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991564"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurer les événements étendus pour les groupes de disponibilité Always On
@@ -81,15 +81,15 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Créer une vue d’abonnement|availability_replica_state_change|  
-|Catégorie|always on|  
-|Channel|Opérationnels|  
+|Name|availability_replica_state_change|  
+|Category|always on|  
+|Channel|En fonctionnement|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Créer une vue d’abonnement|Type_name|Description|  
+|Name|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -97,7 +97,7 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
 |previous_state|availability_replica_state|Rôle du réplica avant le changement.<br /><br /> **Valeurs possibles :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|Rôle du réplica après le changement.<br /><br /> **Valeurs possibles :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -112,20 +112,20 @@ GO
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Créer une vue d’abonnement|availability_group_lease_expired|  
-|Catégorie|always on|  
-|Channel|Opérationnels|  
+|Name|availability_group_lease_expired|  
+|Category|always on|  
+|Channel|En fonctionnement|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Créer une vue d’abonnement|Type_name|Description|  
+|Name|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -140,15 +140,15 @@ GO
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Catégorie|always on|  
+|Category|always on|  
 |Channel|Analytiques|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Créer une vue d’abonnement|Type_name|Description|  
+|Name|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|Si la valeur est FALSE, le basculement automatique est invalidé sur ce réplica de disponibilité.<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|Si la valeur est FALSE, le basculement automatique est invalidé sur ce réplica de disponibilité.<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -177,11 +177,11 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (plusieurs numéros d’erreur) : pour les problèmes de connexion ou de transport  
  Chaque événement filtré indique qu’un problème de connectivité s’est produit dans le transport ou le point de terminaison de mise en miroir de bases de données dont dépend ce groupe de disponibilité.  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Créer une vue d’abonnement|error_reported<br /><br /> numéros à filtrer : 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
-|Catégorie|erreurs|  
-|Channel|Administratifs|  
+|Name|error_reported<br /><br /> numéros à filtrer : 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
+|Category|erreurs|  
+|Channel|Admin|  
   
 #### <a name="error-numbers-to-filter"></a>Numéros d’erreur à filtrer  
   
@@ -204,7 +204,7 @@ GO
 |28091|Le démarrage du point de terminaison pour %S_MSG sans authentification n’est pas pris en charge.|  
 |33309|Impossible de démarrer le point de terminaison de cluster, car la configuration du point de terminaison %S_MSG par défaut n’a pas encore été chargée.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -240,17 +240,17 @@ GO
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Créer une vue d’abonnement|data_movement_suspend_resume|  
-|Catégorie|Always on|  
-|Channel|Opérationnels|  
+|Name|data_movement_suspend_resume|  
+|Category|Toujours active|  
+|Channel|En fonctionnement|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
 ||||  
 |-|-|-|  
-|Créer une vue d’abonnement|Type_name|Description|  
+|Name|Type_name|Description|  
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité (le cas échéant).|  
 |availability_replica_id|guid|ID du réplica de disponibilité.|  
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|Source de l’action de suspension ou de reprise.|  
 |suspend_reason|unicode_string|Raison de la suspension capturée dans le gestionnaire de réplicas de base de données.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -283,15 +283,15 @@ GO
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Créer une vue d’abonnement|alwayson_ddl_execution|  
-|Catégorie|always on|  
+|Name|alwayson_ddl_execution|  
+|Category|always on|  
 |Channel|Analytiques|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Créer une vue d’abonnement|Type_name|Description|  
+|Name|Type_name|Description|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
@@ -299,7 +299,7 @@ GO
 |ddl_phase|ddl_opcode|Indique la phase de l’opération DDL : BEGIN, COMMIT ou ROLLBACK.|  
 |.|unicode_string|Texte de l’instruction exécutée.|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -316,19 +316,19 @@ GO
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Créer une vue d’abonnement|availability_replica_manager_state_change|  
-|Catégorie|always on|  
-|Channel|Opérationnels|  
+|Name|availability_replica_manager_state_change|  
+|Category|always on|  
+|Channel|En fonctionnement|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
   
-|Créer une vue d’abonnement|Type_name|Description|  
+|Name|Type_name|Description|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|État actuel du gestionnaire de réplicas de disponibilité.<br /><br /> En ligne<br /><br /> Hors connexion<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -347,13 +347,13 @@ GO
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
-|Créer une vue d’abonnement|error_reported<br /><br /> Numéro d’erreur 1480 : La base de données REPLICATION_TYPE_MSG « DATABASE_NAME » change les rôles de « OLD_ROLE » en « NEW_ROLE » en raison de REASON_MSG|  
-|Catégorie|erreurs|  
-|Channel|Administratifs|  
+|Name|error_reported<br /><br /> Numéro d’erreur 1480 : La base de données REPLICATION_TYPE_MSG « DATABASE_NAME » change les rôles de « OLD_ROLE » en « NEW_ROLE » en raison de REASON_MSG|  
+|Category|erreurs|  
+|Channel|Admin|  
   
-#### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
+#### <a name="alwayson_health-session-definition"></a>Définition de la session alwayson_health  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   

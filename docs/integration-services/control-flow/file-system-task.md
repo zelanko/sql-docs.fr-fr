@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294128"
 ---
 # <a name="file-system-task"></a>Tâches du système de fichiers
@@ -47,7 +47,7 @@ ms.locfileid: "71294128"
 |Déplacer le répertoire|Déplace un dossier d'un emplacement à l'autre.|  
 |Déplacer le fichier|Déplace un fichier d'un emplacement à l'autre.|  
 |Renommer le fichier|Renomme un fichier à un emplacement spécifié.|  
-|Définir les attributs|Définit les attributs des fichiers et des dossiers. Les attributs sont Archive, Caché, Normal, Lecture seule et Système. L'option Normal indique l'absence d'attributs et ne peut pas être combinée avec les autres attributs. Vous pouvez combiner tous les autres attributs.|  
+|Définir des attributs|Définit les attributs des fichiers et des dossiers. Les attributs sont Archive, Caché, Normal, Lecture seule et Système. L'option Normal indique l'absence d'attributs et ne peut pas être combinée avec les autres attributs. Vous pouvez combiner tous les autres attributs.|  
   
  La tâche de système de fichiers s'exécute sur un seul fichier ou répertoire. Cette tâche ne prend donc pas en charge l'utilisation de caractères génériques pour effectuer la même opération sur plusieurs fichiers. Pour que la tâche de système de fichiers répète une même opération sur plusieurs fichiers ou répertoires, mettez la tâche de système de fichiers dans un conteneur de boucles Foreach, comme décrit dans les étapes suivantes :  
   
@@ -107,7 +107,7 @@ ms.locfileid: "71294128"
  **OverwriteDestination**  
  Indiquez si l'opération peut remplacer les fichiers dans le répertoire de destination.  
   
- **Name**  
+ **Nom**  
  Fournissez un nom unique pour la tâche de système de fichiers. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -116,17 +116,17 @@ ms.locfileid: "71294128"
  **Description**  
  Tapez la description de la tâche de système de fichiers.  
   
- **Opération**  
+ **opération**  
  Sélectionnez l'opération de système de fichiers à exécuter. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Copier le répertoire**|Copier un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
-|**Copier le fichier**|Copier un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
-|**Créer un répertoire**|Créer un répertoire. Cette valeur affiche les options dynamiques d'un répertoire source et de destination.|  
+|**Copier un fichier**|Copier un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
+|**Créer un répertoire**|Créer un répertoire Cette valeur affiche les options dynamiques d'un répertoire source et de destination.|  
 |**Supprimer le répertoire**|Supprimer un répertoire. Cette valeur affiche les options dynamiques d'une source.|  
 |**Supprimer le contenu du répertoire**|Supprimer le contenu d'un répertoire. Cette valeur affiche les options dynamiques d'une source.|  
-|**Supprimer le fichier**|Supprimer un fichier. Cette valeur affiche les options dynamiques d'une source.|  
+|**Supprimer un fichier**|Supprimer un fichier. Cette valeur affiche les options dynamiques d'une source.|  
 |**Déplacer le répertoire**|Déplacer un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
 |**Déplacer le fichier**|Déplacer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination. Lorsque vous déplacez un fichier, n'incluez pas de nom de fichier dans le chemin d'accès au répertoire que vous fournissez comme destination.|  
 |**Renommer le fichier**|Renommer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination. Lorsque vous renommez un fichier, incluez le nouveau nom de fichier dans le chemin d'accès au répertoire que vous fournissez comme destination.|  
@@ -152,7 +152,7 @@ ms.locfileid: "71294128"
  **DestinationConnection**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>Options dynamiques IsSourcePathVariable  
   
@@ -174,7 +174,7 @@ ms.locfileid: "71294128"
  **Hidden**  
  Indique si le fichier ou le répertoire est visible.  
   
- **En lecture seule**  
+ **Lecture seule**  
  Indique si le fichier est en lecture seule.  
   
  **Archive**  

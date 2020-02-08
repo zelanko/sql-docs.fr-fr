@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74096120"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>Notes de publication de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit les limitations et les problèmes connus pour [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Pour des informations connexes, consultez :
+Cet article décrit les limitations et les problèmes connus pour [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Pour plus d’informations, consultez :
 
 > [Nouveautés de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
@@ -45,7 +45,7 @@ Le numéro de build RTM pour SQL Server 2019 est `15.0.2000.5`.
   1. SQL Server Management Studio (SSMS) version 18.0, 18.1, 18.2 ou 18.3 est installé sur le serveur.
   1. Une tentative d’installation de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] est effectuée à partir d’un support amovible. Par exemple, le support d’installation est un DVD.
 
-- **Solution de contournement**:
+- **Solution de contournement** :
   1. Désinstallez toute version de SSMS antérieure à SSMS 18.3.1.
   1. Installez une version plus récente de SSMS (18.3.1 ou une version ultérieure). Pour obtenir la dernière version, consultez [Télécharger SSMS](../ssms/download-sql-server-management-studio-ssms.md).
   1. Installez [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normalement.
@@ -72,7 +72,7 @@ Le numéro de build RTM pour SQL Server 2019 est `15.0.2000.5`.
 
    `The view 'Index' or its master was not found or no view engine supports the searched locations.`
 
-- **Solution de contournement**: Ouvrez le portail MDS et accédez à la ressource manuellement.
+- **Solution de contournement** : Ouvrez le portail MDS et accédez à la ressource manuellement.
 
 - **S’applique à** : [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
 

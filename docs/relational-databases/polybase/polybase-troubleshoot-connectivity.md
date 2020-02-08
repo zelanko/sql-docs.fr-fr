@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909152"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
@@ -104,7 +104,7 @@ Comme l’outil s’exécute indépendamment de [!INCLUDE[ssNoVersion](../../inc
 | --- | --- |
 | *Name Node Address* | Adresse IP ou nom de domaine complet du nœud de nom. Fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE.|
 | *Name Node Port* | Port du nœud de nom. Fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE. Par exemple, 8020. |
-| *Service Principal* | Principal du service d’administration pour votre centre KDC. Correspond à l’argument « IDENTITY » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`.|
+| *Principal du service* | Principal du service d’administration pour votre centre KDC. Correspond à l’argument « IDENTITY » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`.|
 | *Service Password* | Au lieu de taper votre mot de passe sur la console, stockez-le dans un fichier et indiquez le chemin du fichier ici. Le contenu du fichier doit correspondre à ce que vous utilisez comme argument « SECRET » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`. |
 | *Remote HDFS file path (facultatif)* | Chemin d’un fichier existant auquel accéder. S’il n’est pas spécifié, la racine « / » est utilisée. |
 
@@ -194,10 +194,10 @@ Si vous atteignez ce stade, cela confirme que : (i) les trois acteurs sont en m
  [2017-04-25 21:34:35,098] INFO 2237[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1587) - Successfully accessed the external file system. 
 ```
 
-## <a name="common-errors"></a>Erreurs fréquentes
+## <a name="common-errors"></a>Erreurs courantes
 Si l’outil a été exécuté et que les propriétés de fichier du chemin cible n’ont *pas* été imprimées (point de contrôle 4), une exception doit avoir été levée à mi-chemin. Examinez-la et étudiez le contexte de l’endroit dans le flux des quatre étapes où elle s’est produite. Envisagez les problèmes courants suivants qui se sont peut-être produits, dans l’ordre :
 
-| Exception et messages | Cause | 
+| Exception et messages | Cause : | 
 | --- | --- |
 | org.apache.hadoop.security.AccessControlException<br>L’authentification SIMPLE n’est pas activée. Available:[TOKEN, KERBEROS] | La propriété hadoop.security.authentication du fichier core-site.xml n’a pas la valeur « KERBEROS ».|
 |javax.security.auth.login.LoginException<br>Client introuvable dans la base de données Kerberos (6) - CLIENT_NOT_FOUND |    Le principal du service d’administration fourni n’existe pas dans le domaine spécifié dans core-site.xml.|
@@ -221,7 +221,7 @@ Les journaux du centre KDC sont disponibles dans **/var/log/krb5kdc.log**, par d
  May 09 09:48:29 MY-KDC.local krb5kdc[2547](info): **TGS_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin_user@CONTOSO.COM for **nn/hadoop-hdp25-00.local@CONTOSO.COM** 
 ```
 
-### <a name="active-directory"></a>Active Directory 
+### <a name="active-directory"></a>Active Directory 
 Dans Active Directory, les noms de principal du service peuvent être affichés en accédant au Panneau de configuration > Utilisateurs et ordinateurs Active Directory > *MonDomaine* > *MonUnitéOrganisation*. Si Kerberos est correctement configuré sur le cluster Hadoop, il existe un nom de principal du service pour chacun des services disponibles (par exemple : `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
 
 ### <a name="general-debugging-tips"></a>Conseils généraux relatifs au débogage
@@ -229,7 +229,7 @@ Il est utile d’avoir une certaine expérience de Java pour examiner les journa
 
 Si vous rencontrez toujours des problèmes d’accès à Kerberos, suivez les étapes ci-dessous pour effectuer un débogage :
 
-1. Vérifiez que vous pouvez accéder aux données HDFS Kerberos en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez effectuer l'une des opérations suivantes : 
+1. Vérifiez que vous pouvez accéder aux données HDFS Kerberos en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez : 
 
     - Écrire votre propre programme Java, ou
     - Utiliser la classe `HdfsBridge` du dossier d’installation de PolyBase. Par exemple :

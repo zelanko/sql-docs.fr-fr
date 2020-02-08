@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896151"
 ---
 # <a name="troubleshoot-scale-out"></a>Résoudre les problèmes de Scale Out
@@ -82,7 +82,7 @@ Vérifiez les messages d’erreur dans le journal du service Scale Out Worker so
 ### <a name="symptoms"></a>Symptômes
 *""System.ServiceModel.Security.SecurityNegotiationException: Impossible d’établir une relation d’approbation pour le canal sécurisé SSL/TLS avec l’autorité '[NomMachine]:[Port]'. »*
 
-*"System.Net.WebException: La connexion sous-jacente a été fermée : Impossible d’établir une relation d’approbation pour le canal sécurisé SSL/TLS. »*
+*"System.Net.WebException: Le serveur a clos la connexion sous-jacente : Impossible d’établir une relation d’approbation pour le canal sécurisé SSL/TLS. »*
 
 *"System.Security.Authentication.AuthenticationException: Le certificat distant n’est pas valide selon la procédure de validation. »*
 
@@ -134,7 +134,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    Nom de valeur : **SendTrustedIssuerList** 
+    Nom de la valeur : **SendTrustedIssuerList** 
 
     Type de valeur : **REG_DWORD** 
 
@@ -144,7 +144,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-    Nom de valeur : **ClientAuthTrustMode** 
+    Nom de la valeur : **ClientAuthTrustMode** 
 
     Type de valeur : **REG_DWORD** 
 

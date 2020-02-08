@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658827"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Présentation des extensions de langage SQL Server
@@ -54,13 +54,13 @@ Les développeurs écrivent généralement du code sur leur propre ordinateur po
 
 + **Utilisez la procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** pour exécuter votre code Java sur SQL Server.
 
-### <a name="step-3-write-your-first-code"></a>Étape 3 : Écrire du code
+### <a name="step-3-write-your-first-code"></a>Étape 3 : Écrire du code
 
 Exécutez du code Java à partir d’un script T-SQL :
 
 + [Tutoriel : Expressions régulières avec Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
-## <a name="limitations"></a>Limitations
+## <a name="limitations"></a>Limites
 
 + Le nombre de valeurs dans les mémoires tampons d’entrée et de sortie ne peut pas dépasser `MAX_INT (2^31-1)`, car il s’agit du nombre maximal d’éléments pouvant être alloués dans un tableau dans Java.
 

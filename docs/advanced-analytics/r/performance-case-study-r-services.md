@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727409"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et ressources
@@ -92,7 +92,7 @@ Cette section compare les résultats avant et après pour chacun des tests.
 
 Le premier test comparait l’utilisation de la compression et d’une table en colonnes pour réduire la taille des données.
 
-| Nom de la table            | Lignes     | Réservé   | data       | index_size | Inutilisé  | % gagné (réservé) |
+| Nom de la table            | Lignes     | Réservé   | Données       | index_size | Inutilisé  | % gagné (réservé) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 Ko | 2 972 160 Ko | 6 128 Ko    | 528 Ko  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 Ko  | 623 744 Ko  | 1 352 Ko    | 688 Ko  | 79 %                 |
@@ -154,7 +154,7 @@ Option de gestion de l’alimentation **Équilibré** :
 | IntCol    | 1      | 3,89 secondes |              |
 |           | 2      | 4,15 secondes |              |
 |           | 3      | 3,77 secondes |              |
-|           | 4      | 5 secondes    |              |
+|           | 4      | 5 secondes    |              |
 |           | 5      | 3,92 secondes |              |
 |           | 6      | 3,8 secondes  |              |
 |           |        |              | 3,91         |
@@ -216,7 +216,7 @@ Ce test a évalué les avantages en matière de performances de l’utilisation 
 
 | Nom de la table         | Nom du test | Temps moyen |
 |--------------------|-----------|--------------|
-| *airlineWithIndex* | RowStore  | 4,67         |
+| *airlineWithIndex* | RowStore  | 4.67         |
 | *airlineColumnar*  | ColStore  | 4,555        |
 
 **Conclusions**
@@ -238,7 +238,7 @@ Dans la table, les facteurs *DayOfWeek* sont stockés sous forme de chaîne.
 | CubeArgEffect | `cube = F`     | 1        | 91,0725      | 9,959204                        |
 |               |                | 4        | 44,09        | 9,959204                        |
 |               | `cube = T`     | 1        | 21,1125      | 9,959204                        |
-|               |                | 4        | 8,08         | 9,959204                        |
+|               |                | 4        | 8.08         | 9,959204                        |
 
 **Conclusions**
 
@@ -268,8 +268,8 @@ Les résultats de tests indiquent le temps d’enregistrement du modèle, et le 
 
 | Nom de la table | Nom du test | Temps moyen d’apprentissage du modèle | Temps pour enregistrer/charger le modèle|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21,59| 2,08|
-| airline    | LoadModelAndPredict | | 2,09 (inclut le temps de prédiction) |
+| ligne aérienne    | SaveModel| 21,59| 2.08|
+| ligne aérienne    | LoadModelAndPredict | | 2,09 (inclut le temps de prédiction) |
 
 **Conclusions**
 
@@ -371,7 +371,7 @@ Vous trouverez ci-dessous des liens vers des informations, des outils et des scr
 
 + La [Démonstration : Optimisation des performances de l’OLTP en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
-+ [Compression de données](../../relational-databases/data-compression/data-compression.md)
++ [Compression des données](../../relational-databases/data-compression/data-compression.md)
 
 + [Activer la compression sur une table ou un index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
@@ -379,7 +379,7 @@ Vous trouverez ci-dessous des liens vers des informations, des outils et des scr
 
 ### <a name="learn-about-managing-sql-server"></a>En savoir plus sur la gestion SQL Server
 
-+ [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)
++ [Surveillance et réglage des performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
 + [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)
 

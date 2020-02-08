@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948249"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67948249"
 
 Limite les lignes retournées dans un jeu de résultats de la requête à un nombre spécifié de lignes ou à un pourcentage de lignes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Lorsque vous utilisez TOP avec la clause ORDER BY, les résultats sont limités aux *N* premières lignes ordonnées. Sinon, TOP retourne les *N* premières lignes dans un ordre non défini. Utilisez cette clause pour spécifier le nombre de lignes retournées par une instruction SELECT. Vous pouvez également utiliser TOP pour spécifier les lignes affectées par une instruction INSERT, UPDATE, MERGE ou DELETE.  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
  
@@ -137,7 +137,7 @@ GO
   
 En utilisant TOP et ORDER BY dans une opération de sous-sélection, vous êtes sûr que les résultats de la clause ORDER BY sont appliqués à la clause TOP et non au tri du résultat de l’opération UNION.  
   
- Voici l'ensemble des résultats.  
+ Voici le jeu de résultats obtenu.  
   
  ```
  Model         Color      Price  
@@ -155,7 +155,7 @@ Vous ne pouvez pas combiner TOP avec OFFSET et FETCH dans la même expression de
   
 ## <a name="examples"></a>Exemples  
   
-|Catégorie|Éléments syntaxiques proposés|  
+|Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
 |[Syntaxe de base](#BasicSyntax)|TOP • PERCENT|  
 |[Y compris les valeurs de lien](#tie)|WITH TIES|  
@@ -164,7 +164,7 @@ Vous ne pouvez pas combiner TOP avec OFFSET et FETCH dans la même expression de
 ###  <a name="BasicSyntax"></a> Syntaxe de base  
 Les exemples fournis dans cette section présentent les fonctionnalités de base de la clause ORDER BY en utilisant la syntaxe minimale requise.  
   
-#### <a name="a-using-top-with-a-constant-value"></a>A. Utilisation de TOP avec une valeur constante  
+#### <a name="a-using-top-with-a-constant-value"></a>R. Utilisation de TOP avec une valeur constante  
 Les exemples suivants utilisent une valeur constante pour spécifier le nombre d'employés retournés dans le jeu de résultats de la requête. Dans le premier exemple, les 10 premières lignes non définies sont retournées si aucune clause ORDER BY n’est utilisée. Dans le deuxième exemple, une clause ORDER BY est utilisée pour retourner les 10 premiers employés embauchés récemment.  
   
 ```sql  
@@ -208,7 +208,7 @@ GO
   
 ###  <a name="tie"></a> Y compris les valeurs de lien  
   
-#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Utilisation de WITH TIES pour inclure des lignes qui correspondent aux valeurs dans la dernière ligne  
+#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>R. Utilisation de WITH TIES pour inclure des lignes qui correspondent aux valeurs dans la dernière ligne  
 L’exemple suivant fournit les `10` % des employés ayant le salaire le plus élevé et les retourne dans l’ordre décroissant de leur salaire. En spécifiant `WITH TIES`, vous incluez également dans le jeu de résultats les employés dont le salaire est égal au salaire le plus faible retourné (dernière ligne), même s’il dépasse `10` % des employés.  
   
 ```sql  
@@ -227,7 +227,7 @@ GO
   
 ###  <a name="DML"></a> Limitation des lignes affectées par DELETE, INSERT ou UPDATE  
   
-#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilisation de TOP pour limiter le nombre de lignes supprimées  
+#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>R. Utilisation de TOP pour limiter le nombre de lignes supprimées  
 Quand vous utilisez une clause TOP (*n*) avec DELETE, l’opération de suppression est appliquée à une sélection non définie de *n* lignes. Autrement dit, l’instruction DELETE choisit un nombre (*n*) de lignes qui répondent aux critères définis dans la clause WHERE. L’exemple suivant supprime `20` lignes de la table `PurchaseOrderDetail`, dont la date d’échéance est antérieure au 1er juillet 2002.  
   
 ```sql  
@@ -325,7 +325,7 @@ SELECT TOP (31) FirstName, LastName
 FROM DimEmployee ORDER BY LastName;  
 ```  
   
-Résultat : 31 lignes sont retournées.  
+Résultat : 31 lignes sont retournées.  
   
 Utilisation de TOP en spécifiant WITH TIES.  
   
@@ -334,7 +334,7 @@ SELECT TOP (31) WITH TIES FirstName, LastName
 FROM DimEmployee ORDER BY LastName;  
 ```  
   
-Résultat : 33 lignes sont retournées, car 3 employés du nom de Brown sont regroupés à la ligne 31.  
+Résultat : 33 lignes sont retournées, car 3 employés du nom de Brown sont regroupés à la ligne 31.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

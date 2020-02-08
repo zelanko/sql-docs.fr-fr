@@ -22,18 +22,18 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894886"
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
+# <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Les variables sont déclarées au sein d'un lot ou d'une procédure avec l'instruction DECLARE, et l'instruction SET ou SELECT leur affecte des valeurs. Les variables curseur peuvent être déclarées avec cette instruction, puis utilisées avec d'autres instructions liées aux curseurs. Après la déclaration, toutes les variables sont initialisées avec la valeur NULL., à moins qu'une valeur ne soit fournie dans le cadre de la déclaration.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -193,7 +193,7 @@ Définit le type de données **table**. La déclaration de table inclut des déf
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-declare"></a>A. Utilisation de DECLARE  
+### <a name="a-using-declare"></a>R. Utilisation de DECLARE  
  L'exemple suivant utilise une variable locale nommée `@find` pour extraire les informations de contact de tous les noms commençant par `Man`.  
   
 ```  

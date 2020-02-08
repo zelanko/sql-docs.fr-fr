@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3035fbe469fa70ed6419388107c479e28b2a656b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982487"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982487"
 
   Retourne des informations concernant les objets étendus aux schémas dans la base de données actuelle. Pour obtenir la liste de ces objets, consultez [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). OBJECTPROPERTYEX ne peut pas être utilisé pour des objets qui ne sont pas étendus aux schémas, tels que les déclencheurs DDL (Data Definition Language) et les notifications d'événements.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -173,7 +173,7 @@ OBJECTPROPERTYEX ( id , property )
  Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que OBJECTPROPERTYEX, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="remarks"></a>Notes  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] considère que *object_id* se situe dans le contexte de la base de données active. Une requête référençant un *object_id* dans une autre base de données retourne NULL ou des résultats incorrects. Par exemple, dans la requête qui suit, le contexte de base de données actuel est la base de données MASTER. [!INCLUDE[ssDE](../../includes/ssde-md.md)] va tenter de renvoyer la valeur de propriété de l’*object_id* spécifié dans cette base de données et non pas dans la base de données spécifiée dans la requête. La requête retourne des résultats incorrects car la vue `vEmployee` ne se trouve pas dans la base de données MASTER.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] considère que *object_id* se situe dans le contexte de la base de données active. Une requête référençant un *object_id* dans une autre base de données retourne NULL ou des résultats incorrects. Par exemple, dans la requête qui suit, le contexte de la base de données active est la base de données MASTER. [!INCLUDE[ssDE](../../includes/ssde-md.md)] va tenter de renvoyer la valeur de propriété de l’*object_id* spécifié dans cette base de données et non pas dans la base de données spécifiée dans la requête. La requête retourne des résultats incorrects car la vue `vEmployee` ne se trouve pas dans la base de données MASTER.  
   
 ```  
 USE master;  
@@ -190,7 +190,7 @@ GO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-finding-the-base-type-of-an-object"></a>A. Recherche du type de base d'un objet  
+### <a name="a-finding-the-base-type-of-an-object"></a>R. Recherche du type de base d'un objet  
  L'exemple qui suit crée un SYNONYM `MyEmployeeTable` pour la table `Employee` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], puis renvoie le type de base du SYNONYM.  
   
 ```  

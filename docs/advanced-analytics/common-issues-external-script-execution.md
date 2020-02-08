@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727709"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problèmes courants liés au service Launchpad et à l’exécution de scripts externes dans SQL Server
@@ -131,9 +131,9 @@ Si vous avez installé et activé Machine Learning, mais que vous recevez cette 
 
 4. Le redémarrage du service corrige généralement le problème, ce qui permet aux scripts de machine learning de s’exécuter. Si le redémarrage ne résout pas le problème, notez le chemin et les arguments de la propriété **Chemin binaire**, puis effectuez les étapes suivantes :
 
-    A. Examinez le fichier .config du lanceur et vérifiez que le répertoire de travail est valide.
+    a. Examinez le fichier .config du lanceur et vérifiez que le répertoire de travail est valide.
 
-    B. Vérifiez que le groupe Windows utilisé par Launchpad peut se connecter à l’instance SQL Server.
+    b. Vérifiez que le groupe Windows utilisé par Launchpad peut se connecter à l’instance SQL Server.
 
     c. Si vous modifiez les propriétés du service, redémarrez le service Launchpad.
 

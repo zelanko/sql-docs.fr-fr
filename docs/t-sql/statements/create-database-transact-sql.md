@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: afca0210d61e23af7578e6805c5052c00c72f88a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952396"
 ---
 # <a name="create-database"></a>CREATE DATABASE
@@ -337,7 +337,7 @@ NAME *logical_file_name* spécifie le nom logique du fichier. NAME est requis lo
 
 *logical_file_name* Spécifie le nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Logical_file_name* doit être unique dans la base de données et doit respecter les règles relatives aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Le nom peut être une constante de type caractère ou Unicode, un identificateur régulier ou un identificateur délimité.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** } : spécifie un nom de fichier du système d’exploitation (physique).
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** } : spécifie un nom de fichier du système d’exploitation (physique).
 
 **'** *os_file_name* **'**  : correspond au chemin d’accès et nom de fichier utilisé par le système d’exploitation lorsque vous créez le fichier. Le fichier doit résider sur l'un des périphériques suivants : le serveur local sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, un réseau de zone de stockage [réseau SAN] ou un réseau basé sur iSCSI. Le chemin d'accès spécifié doit exister avant l'exécution de l'instruction CREATE DATABASE. Pour plus d'informations, consultez le paragraphe « Groupes de fichiers et fichiers de base de données » dans la section Notes.
 
@@ -407,7 +407,7 @@ DEFAULT spécifie le groupe de fichiers nommé qui est le groupe de fichiers par
 
 *database_snapshot_name* correspond au nom de l’instantané de la nouvelle base de données. Les noms des instantanés de bases de données doivent être uniques au sein d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et respecter les règles applicables aux identificateurs. *database_snapshot_name* peut avoir un maximum de 128 caractères.
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ] pour créer un instantané de base de données, spécifie une liste de fichiers dans la base de données source. Pour que l'instantané fonctionne, tous les fichiers de données doivent être spécifiés individuellement. Cependant, les fichiers journaux ne sont pas autorisés pour les instantanés de base de données. Les groupes de fichiers FILESTREAM ne sont pas pris en charge par les instantanés de base de données. Si un fichier de données FILESTREAM est inclus dans une clause CREATE DATABASE ON, l'instruction échoue et une erreur est levée.
+ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ] pour créer un instantané de base de données, spécifie une liste de fichiers dans la base de données source. Pour que l'instantané fonctionne, tous les fichiers de données doivent être spécifiés individuellement. Cependant, les fichiers journaux ne sont pas autorisés pour les instantanés de base de données. Les groupes de fichiers FILESTREAM ne sont pas pris en charge par les instantanés de base de données. Si un fichier de données FILESTREAM est inclus dans une clause CREATE DATABASE ON, l'instruction échoue et une erreur est levée.
 
 Pour obtenir des descriptions de NAME et FILENAME et leurs valeurs, consultez les descriptions des valeurs \<filespec> équivalentes.
 
@@ -418,7 +418,7 @@ AS SNAPSHOT OF *source_database_name* spécifie que la base de données créée 
 
 Pour plus d'informations, consultez [Instantanés de base de données](#database-snapshots) dans la section Notes.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La [base de données master](../../relational-databases/databases/master-database.md) doit être sauvegardée chaque fois qu’une base de données utilisateur est créée, modifiée ou supprimée.
 
@@ -831,7 +831,7 @@ TO FILEGROUP [FS];
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
 - [Attacher et détacher une base de données](../../relational-databases/databases/database-detach-and-attach-sql-server.md)
@@ -1088,7 +1088,7 @@ Pour la copie d'une base de données sur le même serveur ou sur un serveur [!IN
 
 Nom de la base de données copiée.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les bases de données dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ont plusieurs paramètres par défaut définis lors de la création de la base de données. Pour plus d’informations sur ces paramètres par défaut, consultez la liste de valeurs dans [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
@@ -1246,7 +1246,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 Pour plus d’informations sur les noms de classements Windows et SQL, consultez [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les bases de données dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ont plusieurs paramètres par défaut définis lors de la création de la base de données. Pour plus d’informations sur ces paramètres par défaut, consultez la liste de valeurs dans [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
@@ -1388,7 +1388,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [ALTER DATABASE- Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
 - [CREATE TABLE- Azure Synapse Analytics](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)
@@ -1527,7 +1527,7 @@ CREATE DATABASE mytest
     LOG_SIZE = 10 GB);
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [ALTER DATABASE - Système de plateforme d’analyse](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)

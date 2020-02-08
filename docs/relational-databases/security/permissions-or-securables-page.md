@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076619"
 ---
 # <a name="permissions-or-securables-page"></a>Page Autorisations ou Éléments sécurisables
@@ -36,7 +36,7 @@ ms.locfileid: "68076619"
 ## <a name="upper-grid"></a>Grille supérieure  
  La grille supérieure contient un ou plusieurs éléments pour lesquels des autorisations peuvent être définies. Cette boîte de dialogue contient le bouton **Rechercher** , qui permet de sélectionner des objets ou des principaux à ajouter à la grille supérieure. Le nom de la grille peut afficher **Éléments sécurisables** ou un ou plusieurs types d'éléments sécurisables ou de principaux. Les colonnes affichées dans la grille supérieure varient selon le principal ou l'élément sécurisable.  
   
- **Name**  
+ **Nom**  
  Nom de chaque principal ou élément sécurisable ajouté à la grille.  
   
  **Type**  
@@ -45,7 +45,7 @@ ms.locfileid: "68076619"
 ## <a name="explicit-tab"></a>Onglet Autorisations explicites  
  L'onglet **Autorisations explicites** énumère les autorisations possibles pour les éléments sécurisables sélectionnés dans la grille supérieure. Pour configurer les autorisations, cochez ou décochez les cases **Accorder** (ou **Autoriser**), **Avec autorisation**et **Refuser** . Toutes les options ne sont pas disponibles pour toutes les autorisations explicites.  
   
- **Autorisations**  
+ **autorisations**  
  Nom de l'autorisation.  
   
  **Fournisseur d'autorisations**  
@@ -57,7 +57,7 @@ ms.locfileid: "68076619"
  **Avec autorisation**  
  Reflète l'état de l'option WITH GRANT pour l'autorisation indiquée dans la liste. Cette zone est en lecture seule. Pour appliquer cette autorisation, utilisez l'instruction [GRANT](../../t-sql/statements/grant-transact-sql.md) .  
   
- **Refuser**  
+ **Deny**  
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
  **Autorisations au niveau des colonnes**  
@@ -66,7 +66,7 @@ ms.locfileid: "68076619"
 ## <a name="effective-tab"></a>Onglet Autorisations effectives  
  Les autorisations qu'un principal a mises en rapport avec un élément sécurisable peuvent provenir des autorisations définies pour plusieurs principaux différents. Par exemple, une connexion peut recevoir des autorisations individuellement, et également comme membre d'un groupe. L'onglet **Autorisations effectives** affiche le résultat de la combinaison d'autorisations explicites et des autorisations provenant d'appartenances de groupe ou de rôle. Les autorisations Octroyer sont agrégées. Une autorisation Refuser remplace toutes les autorisations Octroyer.  
   
- **Autorisations**  
+ **autorisations**  
  Nom de l'autorisation.  
   
  **Colonne**  
@@ -74,6 +74,6 @@ ms.locfileid: "68076619"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982423"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -60,7 +60,7 @@ Cela signifie que l'exécution des commandes DBCC CHECKALLOC, DBCC CHECKTABLE ou
 >     
 > Étant donné que options de réparation de DBCC ne sont pas disponibles pour les tables mémoire optimisées, vous devez sauvegarder les bases de données régulièrement et tester les sauvegardes. Si des problèmes d'intégrité des données se produisent dans une table mémoire optimisée, vous devez restaurer à partir de la dernière sauvegarde connue et fiable.    
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Syntaxe    
     
@@ -213,7 +213,7 @@ DBCC CHECKDB effectue par défaut une vérification parallèle des objets. Le de
 ## <a name="understanding-dbcc-error-messages"></a>Présentation des messages d'erreur de DBCC    
 Une fois la commande DBCC CHECKDB exécutée, un message est consigné dans le journal d'erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la commande DBCC est correctement exécutée, le message indique que l'exécution a réussi, ainsi que la durée d'exécution de la commande. Si la commande DBCC est interrompue avant la fin de la vérification en raison d'une erreur, le message indique que la commande n'a pas abouti, précise une valeur d'état ainsi que la durée d'exécution de la commande. Le tableau suivant répertorie et décrit les valeurs d'état pouvant être incluses dans le message.
     
-|État|Description|    
+|State|Description|    
 |-----------|-----------------|    
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a arrêté la commande DBCC.|    
 |1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|    
@@ -369,7 +369,7 @@ Nécessite l’appartenance au rôle serveur fixe sysadmin ou au rôle de base d
     
 ## <a name="examples"></a>Exemples    
     
-### <a name="a-checking-both-the-current-and-another-database"></a>A. Vérification de la base de données active et d'une autre base de données    
+### <a name="a-checking-both-the-current-and-another-database"></a>R. Vérification de la base de données active et d'une autre base de données    
 L'exemple suivant exécute `DBCC CHECKDB` pour la base de données actuelle et pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
     
 ```sql    

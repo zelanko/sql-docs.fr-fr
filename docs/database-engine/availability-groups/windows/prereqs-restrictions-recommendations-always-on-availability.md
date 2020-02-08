@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258083"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831934"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258083"
     -   Si un thread donné est inactif pendant un certain temps, il est remis à disposition dans le pool de threads [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à usage général. Normalement, un thread inactif est libéré après environ 15 secondes d'inactivité. Toutefois, selon la dernière activité, un thread inactif peut être conservé plus longtemps.  
 
     -   Une instance de SQL Server utilise jusqu’à 100 threads de restauration par progression parallèle pour les réplicas secondaires. Chaque base de données utilise jusqu’à la moitié du nombre total de cœurs de processeur, mais pas plus de 16 threads par base de données. Si le nombre total de threads requis pour une seule instance est supérieur à 100, SQL Server utilise un thread redo unique pour chaque base de données restante. Les threads de restauration par progression en série sont libérés après environ 15 secondes d'inactivité. 
-    
-    > [!NOTE]
-    > Les bases de données sont choisies pour avoir un seul thread en fonction de leur ID de base de données dans l’ordre croissant. Par conséquent, l’ordre de création des bases de données doit être pris en compte pour les instances SQL Server qui hébergent plus de bases de données de groupes de disponibilité que de threads de travail disponibles. Par exemple, sur un système avec au moins 32 cœurs de processeur, les six premières bases de données (classées par ID de base de données) dans un ou des groupes de disponibilité utilisent le mode de restauration par progression parallèle, et toutes les bases de données suivantes utilisent le mode de restauration par progression unique.
-  
+     
 -   En outre, les groupes de disponibilité utilisent des threads non partagés, comme suit :  
   
     -   Chaque réplica principal utilise 1 thread de capture du journal pour chaque base de données principale. En outre, il utilise un thread d'envoi du journal pour chaque base de données secondaire. Les threads d'envoi du journal sont libérés après environ 15 secondes d'inactivité.    
   
     -   Une sauvegarde sur un réplica secondaire contient un thread sur le réplica principal pour la durée de l'opération de sauvegarde.  
   
- Pour plus d’informations, consultez [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (blog des ingénieurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CSS).  
+ Pour plus d’informations, consultez [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (blog des ingénieurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CSS).  
   
 ###  <a name="PermissionsSI"></a> Autorisations (instance de serveur)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258083"
   
 ###  <a name="RelatedContentSI"></a> Contenu connexe (instance serveur)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> Recommandations relatives à la connectivité réseau  
  Nous vous recommandons vivement d'utiliser les mêmes liaisons réseau pour les communications entre les nœuds de cluster WSFC et les communications entre les réplicas de disponibilité.  L'utilisation de liaisons réseau distinctes peut provoquer des comportements inattendus en cas d'échec de certaines liaisons (et ce, même de façon intermittente).  
@@ -386,7 +383,7 @@ ms.locfileid: "75258083"
   
 -   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

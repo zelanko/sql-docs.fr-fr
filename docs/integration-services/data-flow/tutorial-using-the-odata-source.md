@@ -11,10 +11,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297766"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutoriel : Utiliser la source OData
@@ -28,7 +28,7 @@ ms.locfileid: "71297766"
   
 1.  Lancez **SQL Server Data Tools** ou [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-2.  Cliquez sur **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet**.  
+2.  Cliquez sur **Fichier**, pointez le curseur de la souris sur **Nouveau**, puis cliquez sur **Projet**.  
   
 3.  Dans la boîte de dialogue **Nouveau projet** , développez **Installé**, puis **Modèles**, **Business Intelligence**, et cliquez sur **Integration Services**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71297766"
   
 10. Dans la liste déroulante **Collection**, sélectionnez **Employés**.  
   
-11. Entrez toutes les options ou filtres de requête OData supplémentaires pour **Options de requête**. Par exemple, `$orderby=CompanyName&$top=100`. Pour les besoins de ce didacticiel, entrez `$top=5`.  
+11. Entrez toutes les options ou filtres de requête OData supplémentaires pour **Options de requête**. Par exemple : `$orderby=CompanyName&$top=100`. Pour les besoins de ce didacticiel, entrez `$top=5`.  
   
 12. Cliquez sur **Aperçu** pour afficher un aperçu des données.  
   

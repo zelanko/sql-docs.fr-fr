@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723798"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutoriel : Développement SQL pour les scientifiques des données R
@@ -31,7 +31,7 @@ La procédure pas à pas étant conçue pour présenter [!INCLUDE[rsql_productna
 
 + [SQL Server Machine Learning Services avec l’intégration R ](../install/sql-machine-learning-services-windows-install.md#verify-installation) ou [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-+ [Autorisations de base de données](../security/user-permission.md) et connexion d’un utilisateur de base de données SQL Server
++ [Autorisations de base de données](../security/user-permission.md) et une connexion d’utilisateur de base de données SQL Server
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
@@ -41,7 +41,7 @@ La procédure pas à pas étant conçue pour présenter [!INCLUDE[rsql_productna
 
 Nous vous recommandons d’effectuer cette procédure pas à pas sur une station de travail cliente. Vous devez être en mesure de vous connecter, sur le même réseau, à un ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec SQL Server et le langage R activé. Pour obtenir des instructions sur la configuration de la station de travail, consultez [Configurer un client de science des données pour le développement R sur SQL Server](../r/set-up-a-data-science-client.md).
 
-Vous pouvez également exécuter la procédure pas à pas sur un ordinateur qui possède à la fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un environnement de développement R, mais nous ne recommandons pas cette configuration pour un environnement de production. Si vous devez placer le client et le serveur sur le même ordinateur, veillez à installer un deuxième ensemble de bibliothèques Microsoft R pour envoyer un script R depuis un client « distant ». N’utilisez pas les bibliothèques R qui sont installées dans les fichiers de programme de l’instance SQL Server. Plus précisément, si vous utilisez un ordinateur, vous avez besoin de la bibliothèque RevoScaleR dans ces deux emplacements pour prendre en charge les opérations du client et du serveur.
+Vous pouvez également exécuter la procédure pas à pas sur un ordinateur qui possède à la fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un environnement de développement R, mais nous ne recommandons pas cette configuration pour un environnement de production. Si vous devez placer le client et le serveur sur le même ordinateur, veillez à installer un deuxième ensemble de bibliothèques Microsoft R pour envoyer un script R depuis un client « distant ». N’utilisez pas les bibliothèques R qui sont installées dans les fichiers programme de l’instance SQL Server. Plus précisément, si vous utilisez un ordinateur, vous avez besoin de la bibliothèque RevoScaleR dans ces deux emplacements pour prendre en charge les opérations du client et du serveur.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR

@@ -11,17 +11,17 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155779"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, stockage HTTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L’objet de performance **SQLServer:HTTP Storage** est constitué de compteurs de performances qui surveillent le compte de stockage Microsoft Azure. La fonctionnalité [Fichiers de données SQL Server de Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) permet d’enregistrer les fichiers de base de données dans les objets blob du Stockage Azure. Cet objet de performance traite chaque compte de stockage Azure en tant que lecteur différent.  
   
-|Nom du compteur|Description|  
+|Nom de compteur|Description|  
 |------------------|-----------------|  
 |**Durée octets/lecture**|Nombre moyen d'octets transférés du stockage HTTP par lecture.|  
 |**Durée octets/transfert**|Nombre moyen d'octets transférés du stockage HTTP pendant des opérations de lecture ou d'écriture.|  

@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095706"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
@@ -55,7 +55,7 @@ ms.locfileid: "74095706"
 -   **Pour configurer Database Mail, utilisez :**  [Assistant Configuration de Database Mail](#DBWizard), [Utilisation de modèles](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Pour activer la messagerie de base de données sur ce serveur, utilisez l’option **Messagerie de base de données XPs** . Pour plus d’informations, consultez la rubrique de référence [Messagerie de base de données XPs (option de configuration de serveur)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
+ Utilisez **l’option** pour activer la messagerie de base de données sur ce serveur. Pour plus d’informations, consultez la rubrique de référence [Messagerie de base de données XPs (option de configuration de serveur)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  L'activation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker dans une base de données requiert un verrou de base de données. Si Service Broker a été désactivé dans **msdb**, pour activer la messagerie de base de données, arrêtez d'abord l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin que Service Broker puisse obtenir le verrou nécessaire.  
@@ -142,7 +142,7 @@ ms.locfileid: "74095706"
  Tapez le nom du nouveau compte.  
   
  **Description**  
- Tapez une description du compte. Cette description est facultative.  
+ Tapez une description du compte. La description est facultative.  
   
  **Adresse de messagerie**  
  Tapez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut envoyer des e-mails à partir de l’adresse SqlAgent@Adventure-Works.com.  
@@ -192,7 +192,7 @@ ms.locfileid: "74095706"
  Supprime le compte sélectionné. Vous devez supprimer ce compte des profils associés ou supprimer ces profils avant de supprimer le compte sélectionné.  
   
  **Description**  
- Permet d'afficher ou de modifier la description du compte. Cette description est facultative.  
+ Permet d'afficher ou de modifier la description du compte. La description est facultative.  
   
  **Adresse de messagerie**  
  Affichez ou modifiez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service Microsoft SQL Server Agent peut envoyer des e-mails à partir de l’adresse **SqlAgent\@Adventure-Works.com**.  
@@ -218,7 +218,7 @@ ms.locfileid: "74095706"
  **Authentification de base**  
  Spécifiez le nom d'utilisateur et le mot de passe demandés par le serveur SMTP.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Affichez ou modifiez le nom d'utilisateur que la messagerie de base de données utilise pour se connecter au serveur SMTP. Ce nom est obligatoire si le serveur SMTP nécessite une authentification de base.  
   
  **Mot de passe**  
@@ -241,7 +241,7 @@ ms.locfileid: "74095706"
  Tapez le nom du nouveau profil. Le profil est créé avec ce nom. N'utilisez pas le nom d'un profil existant.  
   
  **Description**  
- Tapez une description du profil. Cette description est facultative.  
+ Tapez une description du profil. La description est facultative.  
   
  **Comptes SMTP**  
  Choisissez un ou plusieurs comptes pour le profil. La priorité définit l'ordre d'utilisation des comptes par la messagerie de base de données. Si aucun compte n'est répertorié, vous devez cliquer sur **Ajouter** pour poursuivre et ajouter un nouveau compte SMTP.  
@@ -249,7 +249,7 @@ ms.locfileid: "74095706"
  **Ajouter**  
  Ajoutez un compte au profil.  
   
- **Supprimer**  
+ **Remove**  
  Supprimez le compte sélectionné de la liste.  
   
  **Monter**  
@@ -272,7 +272,7 @@ ms.locfileid: "74095706"
  Supprimez le profil sélectionné. Vous serez invité à sélectionner **Oui** pour supprimer le profil sélectionné et pour annuler les messages non envoyés, ou pour sélectionner **Non** afin de supprimer le profil sélectionné uniquement en l'absence de tout message non envoyé  
   
  **Description**  
- Affichez ou modifiez la description du profil sélectionné. Cette description est facultative.  
+ Affichez ou modifiez la description du profil sélectionné. La description est facultative.  
   
  **Comptes SMTP**  
  Choisissez un ou plusieurs comptes pour le profil. La priorité de basculement définit l'ordre dans lequel la messagerie de base de données utilise le compte en cas de basculement.  
@@ -280,7 +280,7 @@ ms.locfileid: "74095706"
  **Ajouter**  
  Ajoutez un compte au profil.  
   
- **Supprimer**  
+ **Remove**  
  Supprimez le compte sélectionné de la liste.  
   
  **Monter**  
@@ -362,10 +362,10 @@ ms.locfileid: "74095706"
   
  Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb** . S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Pour sélectionner le nom d’un utilisateur ou d’un rôle dans la base de données **msdb** .  
   
- **Accès**  
+ **y accéder**  
  Pour choisir si l'utilisateur ou le rôle a accès au profil spécifié.  
   
  **Nom de profil**  
@@ -398,7 +398,7 @@ ms.locfileid: "74095706"
  Durée minimale (en secondes) pendant laquelle le processus de messagerie externe reste actif. Le processus demeure actif aussi longtemps qu'il reste des messages dans la file d'attente de la messagerie de base de données. Ce paramètre spécifie le délai pendant lequel le processus demeure actif s'il n'y a pas de messages à traiter.  
   
  **Niveau de journalisation**  
- Spécifiez quels messages sont enregistrés dans le journal de la messagerie de base de données. Les valeurs possibles sont :  
+ Spécifiez quels messages sont enregistrés dans le journal de la messagerie de base de données. Les valeurs possibles sont les suivantes :  
   
 -   Normal : ne journalise que les erreurs  
   
@@ -424,10 +424,10 @@ ms.locfileid: "74095706"
  **Profil de messagerie de base de données**  
  Sélectionnez un profil de messagerie de base de données dans la liste. Ce champ est obligatoire. Si aucun profil ne s'affiche, soit il n'en existe pas, soit vous n'avez pas d'autorisation sur ces profils. Utilisez l' **Assistant Configuration de la messagerie de base de données** pour créer et configurer des profils. Si aucun profil n'est répertorié, utilisez l'Assistant Configuration de la messagerie de base de données pour créer un profil pour votre propre usage.  
   
- **Pour**  
+ **To**  
  Adresse électronique des destinataires des messages. Au moins un destinataire est requis.  
   
- **Objet**  
+ **Subject**  
  Ligne d'objet du message électronique de test. Changez l'objet par défaut pour mieux identifier votre message à des fins de dépannage.  
   
  **Corps**  
@@ -438,7 +438,7 @@ ms.locfileid: "74095706"
  **Message envoyé**  
  **mailitem_id** du message électronique de test.  
   
- **Dépanner**  
+ **Résolution des problèmes**  
  Cliquez sur cette option pour ouvrir la rubrique de la documentation en ligne [Dépannage de la messagerie de base de données](https://msdn.microsoft.com/library/ms188663.aspx).  
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  

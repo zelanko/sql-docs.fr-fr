@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658847"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Installer les extensions de langage SQL Server sur Windows
@@ -31,7 +31,7 @@ Découvrez comment installer le composant Extensions de langage sur SQL Server e
 
 + Le programme d’installation de SQL Server 2019 est nécessaire si vous souhaitez installer la prise en charge des extensions de langage.
 
-+ Une instance de moteur de base de données est nécessaire. Vous ne pouvez pas installer uniquement les fonctionnalités des extensions de langage, même si vous pouvez les ajouter de façon incrémentielle à une instance existante.
++ Une instance du moteur de base de données est nécessaire. Vous ne pouvez pas installer uniquement les fonctionnalités des extensions de langage, même si vous pouvez les ajouter de façon incrémentielle à une instance existante.
 
 + Pour assurer la continuité de l’activité, les extensions de langage prennent en charge les [groupes de disponibilité Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Vous devez installer les extensions de langage et configurer des packages sur chaque nœud.
 
@@ -42,7 +42,7 @@ Découvrez comment installer le composant Extensions de langage sur SQL Server e
 + Les extensions de langage et [Machine Learning Services](../../advanced-analytics/index.yml) sont installés par défaut sur Clusters Big Data SQL Server. Si vous utilisez Clusters Big Data, vous n’avez pas besoin de suivre les étapes décrites dans cet article. Pour plus d’informations, consultez [Utiliser Machine Learning Services (Python et R) sur Clusters Big Data](../../big-data-cluster/machine-learning-services.md).
 
 > [!IMPORTANT]
-> Une fois l’installation terminée, veillez à suivre les étapes post-configuration décrites dans cet article. Vous devez notamment autoriser SQL Server à utiliser du code externe et ajouter les comptes nécessaires pour que SQL Server exécute du code Java en votre nom. Les modifications de configuration nécessitent généralement un redémarrage de l’instance ou du service Launchpad.
+> Une fois l’installation terminée, veillez à suivre les étapes consécutives à la configuration décrites dans cet article. Vous devez notamment autoriser SQL Server à utiliser du code externe et ajouter les comptes nécessaires pour que SQL Server exécute du code Java en votre nom. Les modifications de configuration nécessitent généralement un redémarrage de l’instance ou du service Launchpad.
 
 <a name="java-jre-jdk"></a>
 
@@ -185,7 +185,7 @@ Une fois l’installation terminée, redémarrez le moteur de base de données a
 
 Le redémarrage du service entraîne également le redémarrage automatique du service SQL Server Launchpad associé.
 
-Pour redémarrer le service, vous pouvez cliquer avec le bouton droit sur la commande **Redémarrer** pour l’instance dans SSMS, utiliser le panneau **Services** dans le Panneau de configuration ou utiliser [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+Pour redémarrer le service, vous pouvez cliquer avec le bouton droit sur la commande **Redémarrer** pour l’instance dans SSMS, utiliser le panneau **Services** dans le Panneau de configuration ou utiliser le [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md).
 
 <a name="register_external_language"></a>
 
@@ -237,11 +237,11 @@ Au niveau de l’instance, ces configurations supplémentaires peuvent inclure 
 
 Vous aurez peut-être besoin d’effectuer les mises à jour de configuration suivantes sur la base de données :
 
-* [Accorder des autorisations utilisateur sur SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Accorder des autorisations utilisateur pour SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
 * [Accorder aux utilisateurs l’autorisation d’exécuter un langage spécifique](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]
-> La nécessité d’une configuration supplémentaire dépend de votre schéma de sécurité, de l’emplacement d’installation de SQL Server et de la façon dont les utilisateurs sont supposés se connecter à la base de données et exécuter des scripts externes.
+> Plusieurs éléments déterminent si une configuration supplémentaire est nécessaire : votre schéma de sécurité, l’emplacement d’installation de SQL Server et la façon dont les utilisateurs sont supposés se connecter à la base de données et exécuter des scripts externes.
 
 ## <a name="suggested-optimizations"></a>Optimisations suggérées
 
@@ -249,7 +249,7 @@ Maintenant que tout fonctionne, vous souhaitez peut-être optimiser le serveur p
 
 ### <a name="optimize-the-server-for-language-extensions"></a>Optimiser le serveur pour les extensions de langage
 
-Les paramètres par défaut pour la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont destinés à optimiser l’équilibre du serveur pour un éventail de services pris en charge par le moteur de base de données, ce qui peut inclure les processus ETL (extraction, transformation et chargement), la création de rapports, l’audit et les applications qui utilisent des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela explique pourquoi, dans les paramètres par défaut, les ressources sont parfois restreintes ou limitées pour les extensions de langage, en particulier dans les opérations utilisant beaucoup de mémoire.
+Les paramètres par défaut pour la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont destinés à optimiser l’équilibre du serveur pour un éventail de services pris en charge par le moteur de base de données, ce qui peut inclure les processus d’extraction, transformation et chargement (ETL, extract, transform, load), la création de rapports, l’audit et les applications qui utilisent les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela explique pourquoi, dans les paramètres par défaut, les ressources sont parfois restreintes ou limitées pour les extensions de langage, en particulier dans les opérations utilisant beaucoup de mémoire.
 
 Pour vous assurer que les travaux d’extensions de langage sont classés par ordre de priorité et correctement ressourcées, nous vous recommandons d’utiliser la fonctionnalité Resource Governor de SQL Server pour configurer un pool de ressources externes. Vous pouvez aussi modifier la quantité de mémoire allouée au moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou augmenter le nombre de comptes s’exécutant sous le service [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)].
 

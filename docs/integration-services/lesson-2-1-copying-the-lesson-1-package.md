@@ -11,10 +11,10 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e73ea716252368e15dcba56242e803d6c1bf93d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283726"
 ---
 # <a name="lesson-2-1-copy-the-lesson-1-package"></a>Leçon 2-1 : Copier le package de la leçon 1
@@ -29,7 +29,7 @@ Dans cette tâche, vous créez une copie du package **Lesson 1.dtsx**. Si vous 
 
 Utilisez cette procédure si vous copiez la leçon 1 effectuée.  Pour copier l’exemple de leçon 1, consultez la section suivante.
   
-1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools n’est pas déjà ouvert, sélectionnez **Démarrer** > **Tous les programmes** > **Microsoft SQL Server 2017**, puis sélectionnez **SQL Server Data Tools**.  
+1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools n’est pas déjà ouvert, sélectionnez **Démarrer** > **Tous les programmes** > **Microsoft SQL Server 2017**, puis **SQL Server Data Tools**.  
   
 2.  Dans le menu **Fichier**, sélectionnez **Ouvrir** > **Projet/Solution**, sélectionnez le dossier **SSIS Tutorial**, sélectionnez **Ouvrir**, puis double-cliquez sur **SSIS Tutorial.sln**.  
   

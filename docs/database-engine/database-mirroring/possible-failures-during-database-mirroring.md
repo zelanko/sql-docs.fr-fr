@@ -19,10 +19,10 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874280"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Défaillances possibles pendant la mise en miroir d’une base de données
@@ -80,7 +80,7 @@ ms.locfileid: "70874280"
   
 -   des erreurs réseau, par exemple, un dépassement de délai de la liaison TCP, des paquets supprimés ou endommagés, des paquets dans le désordre ;  
   
--   un système d’exploitation, un serveur ou une base de données qui ne répond pas ,  
+-   un système d’exploitation, un serveur ou une base de données qui ne répond pas ;  
   
 -   un serveur Windows en cours de dépassement d'un délai d'expiration ;  
   
@@ -109,7 +109,7 @@ ms.locfileid: "70874280"
  Quel que soit le type d'erreur, une instance de serveur qui détecte une erreur réagit comme il le doit en fonction du rôle de l'instance, du mode d'opération de la session et de l'état des autres connexions de la session. Pour plus d’informations sur les conséquences de la perte d’un partenaire, consultez [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Estimer l’interruption de service durant un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
+ [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Modes de fonctionnement de la mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

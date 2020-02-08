@@ -9,10 +9,10 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574826"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
@@ -26,7 +26,7 @@ Découvrez comment ajouter des actions de lien hypertexte à des zones de texte,
  
  *  Vous pouvez **ajouter un signet à un emplacement spécifique** dans le même rapport. 
   
-Essayez d’ajouter des liens hypertexte avec des exemples de données dans le [didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Essayez d’ajouter des liens hypertexte avec des exemples de données dans [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Les liens qui sont associés à des champs de dataset peuvent être vulnérables à des opérations de falsification à des fins malveillantes. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  
@@ -73,9 +73,9 @@ Vous pouvez définir un lien vers des signets menant à un emplacement du rappor
   
 4.  Dans **Sélectionner une URL**, entrez ou sélectionnez une URL ou une expression qui prend la valeur d’une URL, ou cliquez sur la flèche déroulante et cliquez sur le nom d’un champ qui contient une URL. 
 
-    Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, `https://<servername>/images/image1.jpg`. 
+    Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple : `https://<servername>/images/image1.jpg`. 
     
-    Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète. Par exemple, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète. Par exemple : `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

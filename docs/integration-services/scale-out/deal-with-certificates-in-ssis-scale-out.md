@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896961"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gérer les certificats dans SQL Server Integration Services Scale Out
@@ -88,9 +88,9 @@ Mettez à jour le fichier de configuration du service Scale Out Master, `\<drive
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Reconnecter les Scale Out Workers au Scale Out Master
 Pour chaque Scale Out Worker, supprimez le Worker et rajoutez-le avec [Scale Out Manager](integration-services-ssis-scale-out-manager.md) ou effectuez les opérations suivantes :
 
-A.  Installez le certificat SSL client dans le magasin racine de l’ordinateur local sur le nœud Worker.
+a.  Installez le certificat SSL client dans le magasin racine de l’ordinateur local sur le nœud Worker.
 
-B.  Mettez à jour le fichier de configuration du service Scale Out Worker.
+b.  Mettez à jour le fichier de configuration du service Scale Out Worker.
 
 Mettez à jour le fichier de configuration du service Scale Out Worker, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, sur le nœud Worker. Mettez à jour **MasterHttpsCertThumbprint** vers l’empreinte du nouveau certificat SSL.
 
@@ -142,6 +142,6 @@ Mettez à jour le fichier de configuration du service Scale Out Worker, `\<drive
 #### <a name="6-restart-the-scale-out-worker-service"></a>6. Redémarrer le service Scale Out Worker
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations, consultez les articles suivants :
+Pour plus d’informations, consultez les articles suivants :
 -   [SSIS (SQL Server Integration Services) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [SSIS (SQL Server Integration Services) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

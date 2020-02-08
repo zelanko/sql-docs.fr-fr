@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel Python : Créer un modèle de cluster'
+title: 'Tutoriel Python : Créer un modèle de cluster'
 description: Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez créer un modèle K-moyennes pour effectuer le clustering dans Python avec SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727106"
 ---
 # <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutoriel : Créer un modèle dans Python pour classer les clients par catégorie avec SQL Server Machine Learning Services
@@ -24,7 +24,7 @@ ms.locfileid: "73727106"
 
 Dans la troisième partie de cette série de tutoriels qui en compte quatre, vous allez créer un modèle K-moyennes dans Python pour effectuer le clustering. Dans la prochaine partie de cette série, vous déploierez ce modèle dans une base de données SQL avec SQL Server Machine Learning Services.
 
-Dans cet article, vous allez apprendre à :
+Dans cet article, vous allez apprendre à :
 
 > [!div class="checklist"]
 > * Définir le nombre de clusters pour un algorithme K-moyennes
@@ -35,7 +35,7 @@ Dans la [première partie](python-clustering-model.md), vous avez installé les 
 
 Dans la [deuxième partie](python-clustering-model-prepare-data.md), vous avez préparé les données d’une base de données SQL pour effectuer le clustering.
 
-Dans la [quatrième partie](python-clustering-model-deploy.md), vous créerez une procédure stockée dans une base de données SQL capable d’effectuer le clustering dans Python à partir de nouvelles données.
+Dans la [quatrième partie](python-clustering-model-deploy.md), vous allez créer une procédure stockée dans une base de données SQL capable d’effectuer un clustering en Python sur la base des nouvelles données.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -151,7 +151,7 @@ Si vous ne poursuivez pas ce tutoriel, supprimez la base de données tpcxbb_1gb 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans la troisième partie de cette série de tutoriels, vous avez effectué les étapes suivantes :
+Dans la troisième partie de cette série de tutoriels, vous avez effectué les étapes suivantes :
 
 * Définir le nombre de clusters pour un algorithme K-moyennes
 * Effectuer le clustering

@@ -11,10 +11,10 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c4c895e71da13d7de38bf5dfc64f27829206d25
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283114"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>Leçon 6-1 : Copier le package de la leçon 5
@@ -63,5 +63,5 @@ Utilisez cette procédure si vous copiez le package final de la leçon 5.  Pour
 5.  Copiez et collez le package de la leçon 5 en effectuant les étapes 3 à 8 décrites dans la section précédente.
 
 ## <a name="go-to-next-task"></a>Passer à la tâche suivante
-[Étape 2 : Convertir le projet en modèle de déploiement de projet](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+[Étape 2 : Convertir un projet en modèle de déploiement de projet](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   

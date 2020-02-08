@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6bee04f4a794a503b89b73d4ef4a6a1cef897b4b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595594"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées avec SSMS
@@ -30,7 +30,7 @@ Pour utiliser SSMS afin d’exécuter des requêtes sur des colonnes chiffrées 
 - Vous avez besoin de SSMS version 18.3 ou ultérieure.
 - Veillez à exécuter les requêtes dans une fenêtre de requête utilisant une enclave sécurisée à partir d’une connexion pour laquelle Always Encrypted et les calculs d’enclave sont activés. Pour obtenir des instructions détaillées, consultez [Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) et [Activation et désactivation d’Always Encrypted pour une connexion de base de données ](always-encrypted-query-columns-ssms.md#en-dis).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 - [Développer des applications en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-client-development.md)
 
 ## <a name="see-also"></a>Voir aussi  

@@ -15,17 +15,17 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903916"
 ---
 # <a name="resource-governor-classifier-function"></a>Fonction classifieur du gouverneur de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Le processus de classification de Resource Governor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur.  
   
-## <a name="classification"></a>classification.  
+## <a name="classification"></a>classification ;  
  Resource Governor prend en charge la classification des sessions entrantes. La classification est basée sur un jeu de critères écrits par l'utilisateur et contenus dans une fonction. Les résultats de la logique de la fonction permettent à Resource Governor de classer des sessions en groupes de charges de travail existants.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "72903916"
   
 2.  exécution des déclencheurs LOGON ;  
   
-3.  classification.  
+3.  classification ;  
 
  Lorsque la classification commence, Resource Governor exécute la fonction classifieur et utilise la valeur retournée par la fonction pour envoyer des demandes au groupe de charges de travail approprié.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72903916"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l'utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
+|Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l’utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   

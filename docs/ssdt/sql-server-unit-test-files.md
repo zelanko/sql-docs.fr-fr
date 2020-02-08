@@ -1,28 +1,29 @@
 ---
-title: Fichiers de tests unitaires SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Fichiers de tests unitaires SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3dcefdc7b229f0d36f3c14349cc4af73c9f8eb2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 45c43cbf392e795eb0f5aee6876ad9e649b09788
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110663"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256333"
 ---
 # <a name="sql-server-unit-test-files"></a>Fichiers de tests unitaires SQL Server
+
 Comme les tests unitaires de code managé, les tests unitaires SQL Server résident dans des projets de test. Affichez les éléments qui composent un test unitaire SQL Server dans la hiérarchie d'un projet de test de l'**Explorateur de solutions**.  
   
 Un test unitaire SQL Server est constitué de plusieurs éléments contenus dans plusieurs fichiers. Le tableau suivant décrit les fichiers qui interagissent pour constituer un test unitaire SQL Server.  
   
-|**Fichier**|**Description**|  
+|**File**|**Description**|  
 |------------|-------------------|  
 |.cs ou .vb|Ce fichier de code source contient une classe décorée avec l'attribut [TestClass]. Cette classe contient une seule méthode de test pour les tests unitaires SQL Server à relation contenant-contenu. Ces méthodes sont décorées avec l'attribut [TestMethod].<br /><br />Chaque méthode de test contient le code approprié pour utiliser le script de test Transact\-SQL. Ce code est généré lorsque les méthodes de test sont créées, et vous pouvez le modifier.<br /><br />**REMARQUE :** si vous double-cliquez sur ce fichier dans l’**Explorateur de solutions**, la classe de test s’ouvre dans le Concepteur de test unitaire SQL Server. Pour ouvrir le fichier .cs ou .vb et afficher son code source, dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le fichier, puis cliquez sur **Afficher le code**.|  
 |.resx|Ce fichier de ressources contient des scripts Transact\-SQL pour tous les tests figurant dans le fichier .cs ou .vb associé. Ce groupe de scripts inclut le script de prétest, le script de test et le script post-test. Le fichier de ressources contient le XML, que vous pouvez modifier. Le fichier de ressources est compilé dans l'assembly de test.<br /><br />Vous devez coder les scripts Transact\-SQL à l'aide du **Concepteur de test unitaire SQL Server**. Pour plus d’informations sur les scripts qui sont utilisés dans les tests unitaires SQL Server, consultez [Scripts dans les Tests unitaires SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md).|  

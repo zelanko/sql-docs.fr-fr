@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165683"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
@@ -89,7 +89,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
         -  Définissez le niveau de compatibilité de base de données cible auquel doit être la base de données utilisateur une fois le workflow de l’Assistant Paramétrage de requêtes terminé.
         Une fois terminé, cliquez sur **Suivant**.
     
-       ![Fenêtre de configuration de nouvelle session de mise à niveau de base de données](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![Fenêtre de configuration de nouvelle session de mise à niveau de base de données](../../relational-databases/performance/media/qta-new-session-setup.png "Fenêtre de configuration de nouvelle mise à niveau de base de données")  
   
     2.  Dans la fenêtre **Paramètres**, deux colonnes indiquent l’état **Actuel** du Magasin des requêtes dans la base de données ciblée ainsi que les paramètres **Recommandés**. 
         -  Les paramètres recommandés sont sélectionnés par défaut, mais la case d’option présente sur la colonne Actuel permet d’accepter les paramètres actuels et également d’affiner la configuration actuelle du Magasin des requêtes. 
@@ -153,7 +153,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 
         La page suivante confirme que le niveau de compatibilité de base de données a été correctement mis à niveau.
 
-        ![Étape 2 de l’Assistant Paramétrage de requêtes : Sous-étape 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![Étape 2 de l’Assistant Paramétrage de requêtes : Sous-étape 2](../../relational-databases/performance/media/qta-step2-substep2.png "Étape 2 de l’Assistant Paramétrage de requêtes : Sous-étape 2")
 
     3.  La **Collecte des données observées** invite l’utilisateur à réexécuter le cycle de la charge de travail représentative, afin que le Magasin des requêtes puisse collecter une base de référence comparative qui servira à rechercher des pistes d’optimisation. Pendant l’exécution de la charge de travail, utilisez le bouton **Actualiser** pour continuer à mettre à jour la liste des requêtes régressées, si certaines ont été détectées. Modifier la valeur de **Requêtes à afficher** pour limiter le nombre de requêtes affichées. L’ordre de la liste est affecté par la **Métrique** (durée ou temps processeur) et l’**Agrégation** (Moyenne est la valeur par défaut). Sélectionnez également le nombre de **Requêtes à afficher**. Une fois cette charge de travail terminée, cochez la case **Exécution terminée de la charge de travail** et cliquez sur **Suivant**.
 

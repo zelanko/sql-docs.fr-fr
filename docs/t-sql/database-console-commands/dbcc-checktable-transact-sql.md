@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982328"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982328"
 
 Vérifie l'intégrité de toute les pages et structures qui composent la table ou la vue indexée.
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Syntaxe    
     
@@ -180,7 +180,7 @@ La vérification parallèle peut être désactivée à l'aide de l'indicateur de
 ## <a name="understanding-dbcc-error-messages"></a>Présentation des messages d'erreur de DBCC    
 Une fois la commande DBCC CHECKTABLE exécutée, un message est consigné dans le journal d'erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la commande DBCC est correctement exécutée, le message indique que l'exécution a réussi, ainsi que la durée d'exécution de la commande. Si la commande DBCC est interrompue avant la fin de la vérification en raison d’une erreur, le message indique que la commande n’a pas abouti et précise une valeur d’état ainsi que la durée d’exécution de la commande. Le tableau suivant répertorie et décrit les valeurs d'état pouvant être incluses dans le message.
     
-|État|Description|    
+|State|Description|    
 |-----------|-----------------|    
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|    
 |1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|    
@@ -221,7 +221,7 @@ L’utilisateur doit être propriétaire de la table ou être membre du rôle se
     
 ## <a name="examples"></a>Exemples    
     
-### <a name="a-checking-a-specific-table"></a>A. Vérification d'une table spécifique    
+### <a name="a-checking-a-specific-table"></a>R. Vérification d'une table spécifique    
 L’exemple suivant vérifie l’intégrité des pages de données de la table `HumanResources.Employee` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
     
 ```sql    

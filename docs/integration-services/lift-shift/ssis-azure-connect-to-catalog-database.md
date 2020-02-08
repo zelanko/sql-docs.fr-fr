@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037168"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Se connecter au catalogue SSIS (SSISDB) dans Azure
@@ -46,15 +46,15 @@ Avant de commencer, veillez à disposer de la version 17.2 ou ultérieure de SQ
 ## <a name="connect-with-ssms"></a>Se connecter à SSMS
 1. Ouvrez SQL Server Management Studio.
 
-2. **Connectez-vous au serveur**. Dans la boîte de dialogue **Se connecter au serveur**, entrez les informations suivantes :
+2. **Connectez-vous au serveur**. Dans la fenêtre **Se connecter au serveur**, entrez les valeurs suivantes :
 
    | Paramètre       | Valeur suggérée | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Nom complet du serveur | Le nom doit être au format suivant : **mysqldbserver.database.windows.net**. |
-   | **Authentification** | Authentification SQL Server | |
-   | **Connexion** | Compte Administrateur du serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
-   | **Mot de passe** | Mot de passe du compte Administrateur de votre serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
+   | **Authentification** | l’authentification SQL Server | |
+   | **Connexion** | Compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié lorsque vous avez créé le serveur. |
+   | **Mot de passe** | Mot de passe de votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié lorsque vous avez créé le serveur. |
 
     ![Se connecter au serveur avec SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 
@@ -65,7 +65,7 @@ Avant de commencer, veillez à disposer de la version 17.2 ou ultérieure de SQ
 
     ![Sélectionner la base de données SSISDB pour la connexion](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
 
-4. Sélectionnez ensuite **Se connecter**.
+4. Sélectionnez **Connecter**.
 
 5. Dans l’Explorateur d’objets, développez **Catalogues Integration Services**, puis développez **SSISDB** pour afficher les objets de la base de données de catalogues SSIS.
 

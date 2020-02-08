@@ -13,10 +13,10 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298838"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Créer et modifier un service de capture de données modifiées Oracle
@@ -34,7 +34,7 @@ ms.locfileid: "71298838"
   
  Entrez les informations suivantes dans la boîte de dialogue Nouveau service Windows de capture de données modifiées Oracle ou dans la boîte de dialogue de propriétés du service de capture de données modifiées.  
   
-**Nom du service**  
+**Nom du service** :  
  Entrez le nom du nouveau service Windows de capture de données modifiées Oracle. Vous ne devez pas utiliser des noms longs, si possible. Les caractères / et \ ne peuvent pas être utilisés dans le nom du service.  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ ms.locfileid: "71298838"
   
      Sur Windows Vista ou Windows Server 2008, le compte de service par défaut est le compte NETWORK SERVICE.  
   
-     Sur Windows 7, Windows Server 2008 R2 et versions ultérieures, le compte de service par défaut est NT Service\\<nom_service>.  
+     Sur Windows 7, Windows Server 2008 R2 et versions ultérieures, le compte de service par défaut est NT Service\\<nom-service>.  
   
      Ces comptes vous permettent de travailler sans utiliser de mots de passe, car aucun mot de passe n'est nécessaire pour ces comptes. En outre, ces comptes fournissent uniquement les autorisations nécessaires requises pour exécuter le service de capture de données modifiées Oracle.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71298838"
  **Nom du serveur** : sélectionnez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à laquelle vous connecter (par exemple, **\\\\<computer_name>\\<instance_name>** ). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
  **Authentification**  
- Sélectionnez l'une des options suivantes :  
+ Sélectionnez l’un des suivants :  
   
 -   **Authentification Windows** : si vous sélectionnez cette option, le service CDC Oracle se connecte à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à l'aide de l'identité du compte de service. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un autre ordinateur, l'authentification Windows doit être utilisée avec les comptes de domaine.  
   
@@ -92,6 +92,6 @@ ms.locfileid: "71298838"
  Le même mot de passe principal doit également être utilisé lorsque d'autres instances du même service sont configurées sur d'autres nœuds sur un cluster dans une configuration haute disponibilité. Si vous perdez ou modifiez le mot de passe principal, tous les mots de passe d'exploration de données de journaux stockés dans des bases de données d'instance Oracle CDC doivent être entrés de nouveau via la console du concepteur CDC.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédure : créer et modifier un service de capture de données modifiées](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
+ [Guide pratique pour créer et modifier un service CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

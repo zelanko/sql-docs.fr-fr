@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401570"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la conservation des données d’historique dans les tables temporelles versionnées par le système
@@ -172,7 +172,7 @@ Une tâche de configuration du partitionnement permet de créer la configuration
 
 Le schéma suivant illustre la configuration initiale du partitionnement visant à conserver six mois de données.
 
-![Partitionnement](../../relational-databases/tables/media/partitioning.png "|::ref5::|")
+![Partitionnement](../../relational-databases/tables/media/partitioning.png "Partitionnement")
 
 > **REMARQUE :** Consultez la section Considérations relatives aux performances du partitionnement de table ci-après pour en savoir plus sur les conséquences d’une utilisation de RANGE LEFT plutôt que RANGE RIGHT sur les performances lors de la configuration du partitionnement.
 
@@ -314,7 +314,7 @@ Il est important d’effectuer les opérations MERGE et SPLIT RANGE pour éviter
 
 Pour commencer, expliquons visuellement la signification des options RANGE LEFT et RANGE RIGHT :
 
-![Partitionnement3](../../relational-databases/tables/media/partitioning3.png "|::ref7::|")
+![Partitionnement3](../../relational-databases/tables/media/partitioning3.png "Partitionnement3")
 
 Quand vous définissez une fonction de partition avec RANGE LEFT, les valeurs spécifiées correspondent aux limites supérieures des partitions. Quand vous utilisez RANGE RIGHT, les valeurs spécifiées correspondent aux limites inférieures des partitions. Quand vous utilisez l’opération MERGE RANGE pour supprimer une limite de la définition de la fonction de partition, l’implémentation sous-jacente supprime aussi la partition qui contient la limite. Si cette partition n’est pas vide, les données sont déplacées dans la partition qui résulte de l’opération MERGE RANGE.
 

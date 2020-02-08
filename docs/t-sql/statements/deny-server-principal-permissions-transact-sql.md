@@ -22,10 +22,10 @@ ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984494"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY – refus d'autorisations du principal de serveur (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984494"
   Permet de refuser des autorisations accordées sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -115,8 +115,8 @@ DENY permission [ ,...n ] }
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Refus d'une autorisation IMPERSONATE sur une connexion  
- Dans l’exemple ci-dessous, l’autorisation `IMPERSONATE` sur le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` est refusée à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé à partir de l’utilisateur Windows `AdvWorks\YoonM`.  
+### <a name="a-denying-impersonate-permission-on-a-login"></a>R. Refus d'une autorisation IMPERSONATE sur une connexion  
+ Dans l’exemple ci-dessous, l’autorisation `IMPERSONATE` sur le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` est refusée à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé à partir de l’utilisateur Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Refus d’une autorisation VIEW DEFINITION avec l’option CASCADE  
- Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'option `CASCADE` indique que l'autorisation `VIEW DEFINITION` sur `EricKurjan` sera également refusée aux principaux auxquels `RMeyyappan` a accordé cette autorisation.  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. L'option `CASCADE` indique que l'autorisation `VIEW DEFINITION` sur `EricKurjan` sera également refusée aux principaux auxquels `RMeyyappan` a accordé cette autorisation.  
   
 ```  
 USE master;  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413564"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688207"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
 
@@ -55,8 +55,8 @@ ms.locfileid: "66413564"
   
 |Propriétés des éléments de rapport|Description|  
 |-------------------------------|-----------------|  
-|Report Title (titre du rapport)|Titre|  
-|Report.Author|Author|  
+|Report Title (titre du rapport)|Intitulé|  
+|Report.Author|Auteur|  
 |Report.Description|Commentaires|  
   
 ##  <a name="ReportHeadersFooters"></a> En-têtes et pieds de page  
@@ -72,9 +72,9 @@ ms.locfileid: "66413564"
   
  Cela se produit parce que le convertisseur Word analyse le rapport et recherche les champs pertinents à la pagination tels que **PageNumber** et **TotalPages** et ne gère que des références simples, sans appels à une fonction. Dans ce cas, l'expression appelle la fonction **ToString** . Les deux expressions suivantes sont équivalentes et permettent d’obtenir le résultat escompté quand vous prévisualisez le rapport dans le Générateur de rapports ou le Concepteur de rapports, ou restituez le rapport publié dans un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou une bibliothèque SharePoint. Toutefois, le convertisseur Word analyse uniquement la seconde expression et restitue les numéros de page corrects.  
   
--   **Expression complexe :**  l'expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expression complexe :**  L’expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expression avec séquence de texte :** Texte **Montant moyen des ventes**, et expression,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, et texte, **Numéro de page**, et expression `=Globals!PageNumber`  
+-   **Expression avec séquences de texte :** Texte, **Montant moyen des ventes** et expression, `=Avg(Fields!YTDPurchase.Value, "Sales)`, et texte, **Numéro de Page** et expression `=Globals!PageNumber`  
   
  Pour éviter ce problème, utilisez plusieurs séquences de texte plutôt qu'une expression complexe lorsque vous utilisez des expressions dans les pieds de page et les en-têtes. Les deux expressions suivantes sont équivalentes. La première est une expression complexe, la seconde utilise des séquences de texte. Le convertisseur Word analyse uniquement la seconde expression avec succès.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413564"
 > [!IMPORTANT]  
 >  L’extension de rendu [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) est déconseillée. Pour plus d’informations, consultez [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l’installation préalable du Module de compatibilité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office pour les formats de fichiers Word, Excel et PowerPoint. Pour plus d'informations, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
+ Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l’installation préalable du Module de compatibilité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office pour les formats de fichiers Word, Excel et PowerPoint. Pour plus d'informations, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
   
  La version précédente de l'extension de rendu Word, compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, est renommée Word 2003. Seule l'extension de rendu Word est disponible par défaut. Vous devez mettre à jour les fichiers de configuration Reporting Services pour rendre l'extension de rendu Word 2003 disponible. Le type de contenu des fichiers générés par le convertisseur Word 2003 est **application/vnd.ms-word** et l’extension des noms de fichiers est .doc.  
   

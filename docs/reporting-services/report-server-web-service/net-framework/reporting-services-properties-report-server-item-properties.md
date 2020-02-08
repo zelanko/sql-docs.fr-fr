@@ -14,10 +14,10 @@ ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128825"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriétés de Reporting Services - Propriétés d’élément du serveur de rapports
@@ -34,11 +34,11 @@ ms.locfileid: "63128825"
 |**CreationDate**|Date et heure auxquelles l'élément a été ajouté à la base de données du serveur de rapports.|  
 |**Description**|Description de l'élément.|  
 |**Hidden**|Valeur qui indique si l'élément est visible et accessible aux utilisateurs.|  
-|**ID**|ID d'un élément dans la base de données du serveur de rapports.|  
+|**Identifiant**|ID d'un élément dans la base de données du serveur de rapports.|  
 |**ModifiedBy**|Nom du dernier utilisateur ayant modifié l'élément dans la base de données du serveur de rapports.|  
 |**ModifiedDate**|Date et heure auxquelles le dernier utilisateur a modifié l'élément.|  
-|**Name**|Nom d'un élément dans la base de données du serveur de rapports.|  
-|**Chemin d'accès**|Nom de chemin d'accès complet de l'élément. Le chemin d'accès à un élément quelconque dans la base de données du serveur de rapports peut comprendre 260 caractères au maximum.|  
+|**Nom**|Nom d'un élément dans la base de données du serveur de rapports.|  
+|**Chemin d’accès**|Nom de chemin d'accès complet de l'élément. Le chemin d'accès à un élément quelconque dans la base de données du serveur de rapports peut comprendre 260 caractères au maximum.|  
 |**Taille**|Taille, en octets, d'un élément dans la base de données du serveur de rapports.|  
 |**Type**|Type d'un élément dans la base de données du serveur de rapports.|  
 |**VirtualPath**|Chemin d'accès virtuel à un élément dans la base de données du serveur de rapports. La valeur de la propriété <xref:ReportService2010.CatalogItem.VirtualPath%2A> est le chemin d'accès sous lequel un utilisateur s'attend à voir l'élément. Par exemple, le chemin d'accès virtuel d'un rapport nommé report1 se trouvant dans le dossier My Reports personnel de l'utilisateur est /My Reports. Le chemin d'accès réel de l'élément est /Users/nom_utilisateur/My Reports.|  

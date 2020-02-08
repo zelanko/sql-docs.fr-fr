@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165780"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>Prise en main des tables temporelles avec versions gérées par le système
@@ -26,7 +26,7 @@ En fonction de votre scénario, vous pouvez créer des tables temporelles de con
 
 Outre des DML et des interrogations à un rythme régulier, la fonctionnalité temporelle offre un moyen simple et pratique d’obtenir des informations relatives à l’historique des données par le biais de la syntaxe étendue Transact-SQL. Une table d’historique est affectée à chaque table avec contrôle de version du système, mais elle est complètement transparente pour les utilisateurs, sauf s’ils souhaitent optimiser les performances de la charge de travail ou l’encombrement de stockage en créant des index supplémentaires ou en choisissant d’autres options de stockage.
 
-Le schéma suivant illustre le flux de travail type relatif aux tables temporelles avec version gérée par le système : ![Bien démarrer avec la table temporelle](../../relational-databases/tables/media/getting-started-with-temporal.png "|::ref1::|")
+Le schéma suivant illustre le flux de travail type relatif aux tables temporelles avec version gérée par le système : ![Bien démarrer avec la table temporelle](../../relational-databases/tables/media/getting-started-with-temporal.png "Bien démarrer avec la table temporelle")
 
 Cette rubrique est constituée des 5 sous-rubriques suivantes :
 

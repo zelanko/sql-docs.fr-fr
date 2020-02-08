@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20cf6e1c3c98a99898a7b302980d76cef327be5d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228491"
 ---
 # <a name="set-statements-transact-sql"></a>Instructions SET (Transact-SQL)
@@ -39,7 +39,7 @@ Le langage de programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] fournit 
   
 Pour plus d’informations sur la définition de variables locales à l’aide de l’instruction SET, consultez [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
-|Catégorie|Instructions|  
+|Category|Instructions|  
 |--------------|----------------|  
 |Instructions de date et heure|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)<br /><br /> [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|  
 |Instructions de verrouillage|[SET DEADLOCK_PRIORITY](../../t-sql/statements/set-deadlock-priority-transact-sql.md)<br /><br /> [SET LOCK_TIMEOUT](../../t-sql/statements/set-lock-timeout-transact-sql.md)|  
@@ -92,4 +92,4 @@ Pour plus d’informations sur la définition de variables locales à l’aide d
   Si l’une de ces options n’a pas la valeur requise, les actions INSERT, UPDATE, DELETE, DBCC CHECKDB et DBCC CHECKTABLE sur les vues indexées ou les tables comportant des index sur des colonnes calculées échouent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déclenche une erreur et affiche la liste des options dont les valeurs sont incorrectes. Par ailleurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les instructions SELECT sur ces tables ou ces vues indexées comme si les index sur les colonnes calculées ou sur les vues n’existaient pas. 
 
 - Lorsque RESULT_SET_CACHING est ACTIF, il active la fonctionnalité de mise en cache de résultats pour la session cliente actuelle.   Result_set_caching ne peut pas être activée pour une session si elle est désactivée au niveau de la base de données.    Lorsque RESULT_SET_CACHING est INACTIF, la fonctionnalité de mise en cache de résultats est désactivée pour la session cliente actuelle. La modification de ce paramètre nécessite l'appartenance au rôle public.
-S'applique à : Azure SQL Data Warehouse Gen2
+S’applique à : Azure SQL Data Warehouse Gen2

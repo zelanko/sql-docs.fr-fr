@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 882ce47467a38ab4a891f632c9598070e13494e3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727540"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Convertir le code R pour l’exécuter dans les instances SQL Server (dans la base de données)
@@ -31,7 +31,7 @@ Toutefois, votre code peut nécessiter des modifications substantielles si l’u
 + Votre solution d’origine comprend plusieurs étapes qui peuvent être plus efficaces dans un environnement de production si elles sont exécutées indépendamment, par exemple la préparation des données ou l’ingénierie des fonctionnalités, ainsi que la formation du modèle, le scoring ou la création de rapports.
 + Vous souhaitez améliorer les performances d’optimisation en modifiant les bibliothèques, grâce à une exécution parallèle ou en déléguant une partie du traitement à SQL Server. 
 
-## <a name="step-1-plan-requirements-and-resources"></a>Étape 1. Planifiez les spécifications et les ressources
+## <a name="step-1-plan-requirements-and-resources"></a>Étape 1. Planifiez les spécifications et les ressources
 
 **Packages**
 
@@ -65,7 +65,7 @@ Toutefois, votre code peut nécessiter des modifications substantielles si l’u
 
     Pour plus d’informations, consultez [Types de données et bibliothèques R](../r/r-libraries-and-data-types.md).
 
-## <a name="step-2-convert-or-repackage-code"></a>Étape 2. Convertir ou reconditionner du code
+## <a name="step-2-convert-or-repackage-code"></a>Étape 2. Convertir ou reconditionner du code
 
 L’étendue de la modification de votre code varie selon que vous envisagez de soumettre le code R à partir d’un client distant pour qu’il s’exécute dans le contexte de calcul SQL Server, ou de déployer le code dans le cadre d’une procédure stockée, ce qui peut améliorer les performances et la sécurité des données. L’inclusion de votre code dans un wrapper dans une procédure stockée impose des exigences supplémentaires. 
 
@@ -123,7 +123,7 @@ L’étendue de la modification de votre code varie selon que vous envisagez de 
 
     Pour plus d’informations, consultez [Conseils et astuces d’optimisation de SQL Server pour Analytics Services](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
-### <a name="step-3-prepare-for-deployment"></a>Étape 3. Préparer le déploiement
+### <a name="step-3-prepare-for-deployment"></a>Étape 3. Préparer le déploiement
 
 + Prévenez l’administrateur afin que vous puissiez installer et tester les packages avant le déploiement de votre code. 
 

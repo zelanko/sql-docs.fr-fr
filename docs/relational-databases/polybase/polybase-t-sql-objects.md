@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710523"
 ---
 # <a name="polybase-transact-sql-reference"></a>Informations de référence sur Transact-SQL PolyBase
@@ -44,7 +44,7 @@ Configurez PolyBase. Consultez [PolyBase configuration](../../relational-databas
   
 ## <a name="create-external-tables-for-hadoop"></a>Créer des tables externes pour Hadoop
 
-S'applique à : SQL Server (à compter de 2016), Parallel Data Warehouse
+S’applique à : SQL Server (à compter de 2016), Parallel Data Warehouse
 
 **1. Créer des informations d’identification incluses dans l’étendue de la base de données**
 
@@ -120,7 +120,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Créer des tables externes pour le stockage d’objets blob Azure  
-S'applique à : SQL Server (à compter de 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
+S’applique à : SQL Server (à compter de 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
 
 **1. Créer des informations d’identification incluses dans l’étendue de la base de données**  
 
@@ -195,7 +195,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Créer des tables externes pour Azure Data Lake Store
-S'applique à : Azure SQL Data Warehouse.
+S’applique à : Azure SQL Data Warehouse.
 
 Pour plus d’informations, consultez [Charger avec Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 
@@ -554,4 +554,4 @@ Pour découvrir des exemples de requêtes, consultez [Requêtes PolyBase](../../
   
 ## <a name="see-also"></a>Voir aussi  
 [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
-[Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)
+[guide PolyBase](../../relational-databases/polybase/polybase-guide.md)

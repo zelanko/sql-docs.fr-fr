@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5acb6181d1878d7d657c8115f78e293427a037f0
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952447"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
@@ -131,7 +131,7 @@ CURRENT **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]
 
 Indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
-MODIFY NAME **=**_new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*.
+MODIFY NAME **=** _new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*.
 
 COLLATE *collation_name* Spécifie le classement de la base de données. *collation_name* peut être un nom de classement Windows ou SQL. S'il n'est pas spécifié, le classement par défaut de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera appliqué à la base de données.
 
@@ -142,14 +142,14 @@ Lors de la création de bases de données autrement qu'avec le classement par d�
 
 Pour plus d’informations sur les noms de classements Windows et SQL, voir [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=** 
 **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.
 
 Pour plus d’informations, voir [Options d’ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) et [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).
 
 **\<file_and_filegroup_options>::=** pour plus d’informations, consultez l’article [Options de fichiers et de groupes de fichiers ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
@@ -251,7 +251,7 @@ COLLATE French_CI_AI ;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -374,7 +374,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ACTUEL indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
-MODIFY NAME **=**_new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*. L’exemple suivant remplace le nom de la base de données `db1` par `db2` :
+MODIFY NAME **=** _new_database_name_ Renomme la base de données avec le nom spécifié sous la forme *new_database_name*. L’exemple suivant remplace le nom de la base de données `db1` par `db2` :
 
 ```sql
 ALTER DATABASE db1
@@ -583,7 +583,7 @@ Pendant un basculement forcé :
 > [!IMPORTANT]
 > L’utilisateur qui exécute la commande `FORCE_FAILOVER_ALLOW_DATA_LOSS` doit appartenir au rôle `dbmanager` pour le serveur principal et le serveur secondaire.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
@@ -756,7 +756,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 ACTUEL indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
@@ -925,7 +925,7 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
 - [Liste des articles de référence Azure Synapse Analytics](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
@@ -1138,7 +1138,7 @@ ALTER DATABASE
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE DATABASE - Analytics Platform System](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)

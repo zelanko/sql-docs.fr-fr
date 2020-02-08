@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 643de4d56692687b7c88b88c712fb1cc478eb0a1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0a31afef0924e4eda2b2eb9fbe5d27f7f4ab9f51
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727382"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200403"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ Faites pointer votre IDE vers les bibliothèques R locales : base R, RevoScaleR,
 
 Lorsque vous utilisez [RStudio](https://www.rstudio.com/), vous pouvez configurer l’environnement pour utiliser les bibliothèques R et les exécutables qui correspondent à celles d’une instance de SQL Server distante.
 
-1. Vérifiez la version des packages R installés sur SQL Server. Pour plus d’informations, consultez [Récupérer les informations du package R](../package-management/r-package-information.md).
+1. Vérifiez la version des packages R installés sur SQL Server. Pour plus d’informations, consultez la section [Obtenir des informations sur le package R](../package-management/r-package-information.md).
 
 1. Installez Microsoft R Client ou l’une des options de serveur autonome pour ajouter RevoScaleR et d’autres packages R, y compris la distribution R de base utilisée par votre instance de SQL Server. Choisissez une version au même niveau ou d’un niveau inférieur (les packages sont à compatibilité descendante) qui fournit les mêmes versions de package que celles qui se trouvent sur le serveur. Pour plus d’informations sur la version, consultez la carte des versions dans l’article suivant : [Mise à niveau des éléments R et Python](../install/upgrade-r-and-python.md).
 
@@ -218,7 +218,7 @@ Lorsque vous rouvrez RStudio, l’exécutable R de R Client (ou serveur autonome
 
 Si vous ne disposez pas déjà d’un IDE dédié à R, nous vous recommandons **Outils R pour Visual Studio**.
 
-+ [Télécharger Outils R pour Visual Studio (RTVS)](https://visualstudio.microsoft.com/vs/features/rtvs/)
++ [Télécharger Outils R pour Visual Studio (RTVS)](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
 + [Instructions d’installation](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS est disponible dans plusieurs versions de Visual Studio.
 + [Prise en main d’Outils R pour Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
 

@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093601"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objet Databases
@@ -43,7 +43,7 @@ ms.locfileid: "68093601"
 |**Durée de validation du groupe/sec**|Temps d’attente du groupe (microsecondes) par seconde|
 |**Octets de journal vidés/s**|Nombre total d'octets de journal vidés.|  
 |**Taux d'accès au cache du journal**|Pourcentage de lectures du cache du journal satisfaites à partir du cache du journal.|  
-|**Base du taux d’accès au cache de journal**|À usage interne uniquement| 
+|**Base du taux d’accès au cache de journal**|À usage interne uniquement.| 
 |**Lectures du cache du journal/s**|Lectures réalisées par seconde à partir du cache du gestionnaire du journal.|  
 |**Taille des fichiers journaux (Ko)**|Taille cumulée (en kilo-octets) de tous les fichiers du journal des transactions dans la base de données.|  
 |**Taille de fichier(s) journal(aux) utilisée (Ko)**|La taille utilisée cumulée de tous les fichiers journaux de la base de données.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68093601"
 |**Envois au pool du journal – Mémoire insuffisante/seconde**|Taux d’échecs d’envoi de blocs du journal dus à une mémoire insuffisante.|
 |**Envois au pool du journal – Pas de mémoire tampon libre/seconde**|Taux d’échecs d’envoi de blocs du journal dus à l’indisponibilité de mémoires tampon libres.|
 |**Demande de pool du journal derrière troncation/s**|Absences dans le cache du pool du journal liées à une demande de bloc derrière un LSN de troncation.|
-|**Journaliser la base des requêtes du pool**|À usage interne uniquement| 
+|**Journaliser la base des requêtes du pool**|À usage interne uniquement.| 
 |**Journaliser le fichier journal virtuel des anciennes requêtes/s du pool**|Journaliser les requêtes du pool qui n’étaient pas dans le dernier fichier journal virtuel du journal.|  
 |**Journaliser les requêtes/s du pool**|Nombre de requêtes de bloc du journal traitées par le pool du journal.|  
 |**Taille du journal actif total du pool du journal**|Journal actif total actuel stocké dans le gestionnaire de mémoire tampon du cache partagé, en octets.|
@@ -72,12 +72,12 @@ ms.locfileid: "68093601"
 |**Troncatures de journal**|Nombre de fois où le journal des transactions a été tronqué (en mode de récupération simple).|  
 |**Pourcentage utilisé du journal**|Pourcentage de l'espace en cours d'utilisation dans le journal.|  
 |**Transactions de réplication en attente**|Nombre de transactions dans le journal des transactions de la base de données de publication, marquées pour la réplication, mais non encore remises à la base de données de distribution.|  
-|**Répl. Trans. Fréquence**|Nombre de transactions extraites par seconde du journal des transactions de la base de données de publication et remises à la base de données de distribution.|  
+|**Transactions Trans. Fréquence**|Nombre de transactions extraites par seconde du journal des transactions de la base de données de publication et remises à la base de données de distribution.|  
 |**Mouvement de réduction de données en octets/s**|Volume de données déplacées par seconde par les opérations Autoshrink, ou par les instructions DBCC SHRINKDATABASE ou DBCC SHRINKFILE.|  
 |**Transactions suivies/s**|Nombre de transactions validées enregistrées dans la table de validation pour la base de données.|  
 |**Transactions/s**|Nombre de transactions démarrées pour la base de données par seconde.<br /><br /> **Transactions/s** ne tient pas compte des transactions XTP uniquement (transactions commencées par une procédure stockée compilée en mode natif).|  
 |**Transactions d'écriture/s**|Nombre des transactions qui ont écrit dans la base de données et qui ont été validées au cours de la dernière seconde.|  
-|**Base de latence DLC du contrôleur XTP**|À usage interne uniquement| 
+|**Base de latence DLC du contrôleur XTP**|À usage interne uniquement.| 
 |**Latence DLC du contrôleur XTP/extraction**|Latence moyenne en microsecondes par seconde entre l’entrée des blocs de journal dans le consommateur de journal direct (DLC) et leur récupération par le contrôleur XTP.|
 |**Latence maximale DLC du contrôleur XTP**|Latence en microsecondes la plus élevée enregistrée pour une extraction du consommateur de journal direct par le contrôleur XTP.|
 |**Traitement du journal par le contrôleur XTP/s**|Quantité d’octets de journal traités par le thread du contrôleur XTP par seconde.|

@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595794"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910232"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ Pour activer (désactiver) Always Encrypted :
 1. Si vous utilisez SSMS 17 ou antérieur :
     1. Sélectionnez l’onglet **Propriétés supplémentaires**.
     1. Pour activer Always Encrypted, tapez `Column Encryption Setting = Enabled`. Pour désactiver Always Encrypted, spécifiez `Column Encryption Setting = Disabled` ou supprimez la valeur de **Paramètre de chiffrement de colonne** dans l’onglet **Propriétés supplémentaires** (sa valeur est **Désactivé**).   
- 1. Cliquez sur **Se connecter**.
+ 1. Cliquez sur **Connecter**.
 
 > [!TIP]
 > Pour activer/désactiver Always Encrypted pour une fenêtre de l’éditeur de requête existante :   
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 Et voici quelques exemples de variables que SQL Server Management Studio ne tentera pas de paramétrer :
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,7 +214,7 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > Sans paramétrage, la requête entière, y compris les conversions de type, est traitée à l’intérieur de SQL Server/Azure SQL Database. Avec un paramétrage activé, certaines conversions de type sont effectuées par .NET Framework au sein de SQL Server Management Studio. En raison des différences entre le système .NET Framework et le système SQL Server (par exemple, précision différente de certains types, comme float), une requête exécutée avec paramétrage activé peut produire des résultats différents de ceux d’une requête exécutée sans paramétrage activé. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 - [Développer des applications avec Always Encrypted](always-encrypted-client-development.md)
 
 

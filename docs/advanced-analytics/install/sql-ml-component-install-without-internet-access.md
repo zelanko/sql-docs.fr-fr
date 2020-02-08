@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
-ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74064127"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer les composants de machine learning SQL Server R et Python sur un ordinateur sans accès à Internet
@@ -41,7 +41,7 @@ Pour installer SQL Server Machine Learning Services (R et Python) sur un serveur
 
 Sur un ordinateur disposant d’une connexion Internet, téléchargez les fichiers CAB fournissant les fonctionnalités R et Python pour la version initiale et le support d’installation pour SQL Server 2019.
 
-Version  |Télécharger le lien  |
+Libérer  |Télécharger le lien  |
 ---------|---------------|
 Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
 Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
@@ -73,7 +73,7 @@ Pour installer SQL Server Machine Learning Services (R et Python) sur un serveur
 
 Sur un ordinateur disposant d’une connexion Internet, téléchargez les fichiers CAB fournissant les fonctionnalités R et Python pour la version initiale et le support d’installation pour SQL Server 2017. 
 
-Version  |Télécharger le lien  |
+Libérer  |Télécharger le lien  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -100,7 +100,7 @@ Sur un ordinateur disposant d’une connexion Internet, téléchargez les fichie
 
 ### <a name="1---download-2016-cabs"></a>1 - Télécharger les fichiers CAB 2016
 
-Version  | Microsoft R Open | Microsoft R Server |
+Libérer  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 

@@ -18,10 +18,10 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014703"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Surveiller des groupes de disponibilité (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68014703"
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) (fonction)  
  Retourne des informations de propriété de serveur indiquant si [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activé et, si tel est le cas, s'il a démarré sur l'instance de serveur.  
   
- **Noms de colonne :** IsHadrEnabled, HadrManagerStatus  
+ **Noms des colonnes :** IsHadrEnabled, HadrManagerStatus  
   
 ##  <a name="WSFC"></a> Surveillance des groupes de disponibilité sur le cluster WSFC  
  Pour surveiller le cluster WSFC (clustering de basculement Windows Server) qui héberge une instance de serveur locale activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], utilisez les vues suivantes :  
@@ -82,7 +82,7 @@ ms.locfileid: "68014703"
   
  Pour plus d’informations sur les clusters WSFC et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) et [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
-##  <a name="AvGroups"></a> Surveillance des groupes de disponibilité  
+##  <a name="AvGroups"></a> Monitoring Availability Groups  
  Pour surveiller les groupes de disponibilité pour lesquels l'instance de serveur héberge un réplica de disponibilité, utilisez les vues suivantes :  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
@@ -264,7 +264,7 @@ ms.locfileid: "68014703"
   
 -   [SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
+-   [SQL Server, objet Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Gestion basée sur des stratégies pour les groupes de disponibilité Always On**  
   
@@ -275,6 +275,6 @@ ms.locfileid: "68014703"
 ## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Surveillance des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
+ [Outils pour superviser les groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

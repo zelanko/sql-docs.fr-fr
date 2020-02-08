@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981956"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -46,7 +46,7 @@ Exécute une chaîne de commande ou de caractères dans un lot [!INCLUDE[tsql](.
 > [!IMPORTANT]  
 >  Avant d'appeler EXECUTE avec une chaîne de caractères, validez cette dernière. N'exécutez jamais une commande construite par une entrée utilisateur qui n'a pas été validée.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -391,7 +391,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. Utilisation de l'instruction EXECUTE pour passer un seul paramètre  
+### <a name="a-using-execute-to-pass-a-single-parameter"></a>R. Utilisation de l'instruction EXECUTE pour passer un seul paramètre  
  La procédure stockée `uspGetEmployeeManagers` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] attend un seul paramètre (`@EmployeeID`). Dans les exemples suivants, la procédure stockée `uspGetEmployeeManagers` est exécutée avec `Employee ID 6` comme valeur de paramètre.  
   
 ```  

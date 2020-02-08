@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536185"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319049"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Configurations matérielle et logicielle requises pour l’installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,14 +126,17 @@ Pour plus d’informations sur l’installation de SQL Server en mode Server Cor
 Le tableau suivant indique les éditions de SQL Server 2019 qui sont compatibles avec les différentes versions de Windows :  
   
 
-| Édition de SQL Server :               | Enterprise | Développeur | Standard | Web | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
+| Édition de SQL Server :               | Entreprise | Développeur | standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2019 Standard      |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2019 Essentials    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2016 Datacenter    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2016 Standard      |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2016 Essentials    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
+| Windows 10 Entreprise             |    Non      |    Oui    |    Oui   | Non  |   Oui   |
+| Windows 10 Professionnel           |    Non      |    Oui    |    Oui   | Non  |   Oui   |
+| Windows 10 Famille                   |    Non      |    Oui    |    Oui   | Non  |   Oui   |
 | &nbsp; | &nbsp; |
 
 

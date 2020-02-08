@@ -1,23 +1,24 @@
 ---
-title: 'Procédure pas à pas : création et exécution d’un test unitaire SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: création et exécution d’un test unitaire SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141205"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242695"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d’un test unitaire SQL Server
+
 Dans cette procédure pas à pas, vous créez un test unitaire SQL Server qui vérifie le comportement de plusieurs procédures stockées. Vous créez des tests unitaires SQL Server pour identifier les erreurs de code qui peuvent provoquer un comportement d'application incorrect. Vous pouvez exécuter des tests unitaires SQL Server et des tests d'application dans le cadre d'une suite automatisée de tests.  
   
 Au cours de cette procédure pas à pas, vous effectuez les tâches suivantes :  
@@ -215,7 +216,7 @@ Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous c
     GO  
     ```  
   
-5.  Enregistrez le fichier. Notez l'emplacement, car vous devez utiliser ce script dans la procédure suivante.  
+5.  Enregistrez le fichier . Notez l'emplacement, car vous devez utiliser ce script dans la procédure suivante.  
   
 6.  Dans le menu **Fichier** , cliquez sur **Fermer la solution**.  
   
@@ -227,7 +228,7 @@ Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous c
   
 1.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**.  
   
-    La boîte de dialogue **Nouveau projet** s'affiche.  
+    La boîte de dialogue **Nouveau projet** apparaît.  
   
 2.  Sous **Modèles installés**, sélectionnez le nœud **SQL Server**, puis sélectionnez **Projet de base de données SQL Server**.  
   
@@ -720,8 +721,8 @@ Les tests supposent que la base de données démarre dans un état propre. Vous 
   
     |Test|Résultat attendu|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|Succès|  
-    |Sales_uspShowOrderDetailsTest|Succès|  
+    |Sales_uspPlaceNewOrderTest|Réussite|  
+    |Sales_uspShowOrderDetailsTest|Réussite|  
     |Sales_uspFillOrderTest|Échec avec l’erreur suivante : « Échec de la condition ScalarValueCondition (scalarValueCondition2) : jeu de résultats 1 ligne 1 colonne 1 : les valeurs ne correspondent pas, réelles '-100' attendues '100'. » Cette erreur se produit, car la définition de la procédure stockée contient une erreur mineure.|  
   
     Ensuite, vous allez corriger l'erreur et réexécuter le test.  
@@ -981,7 +982,7 @@ Pour créer et vérifier un test négatif, vous devez effectuer les tâches suiv
   
     Le test réussit, ce qui signifie que la procédure a échoué comme prévu.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 Dans un projet standard, vous définissez des tests unitaires supplémentaires pour vérifier que tous les objets de base de données critiques fonctionnent correctement. Lorsque l'ensemble des tests est terminé, vous devez vérifier ces tests dans le contrôle de version pour les partager avec l'équipe.  
   
 Après avoir généré une ligne de base, créez et modifiez les objets de base de données, puis créez des tests associés pour vérifier si une modification va interrompre le comportement attendu.  

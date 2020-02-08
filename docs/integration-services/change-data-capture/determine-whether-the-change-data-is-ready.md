@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294771"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Déterminer si les données modifiées sont prêtes
@@ -90,7 +90,7 @@ ms.locfileid: "71294771"
   
  Dans la table suivante, la première colonne montre les valeurs retournées de la tâche d'exécution SQL par l'exemple de requête Transact-SQL. La deuxième colonne montre comment les autres composants répondent à ces valeurs.  
   
-|Valeur retournée|Signification|Réponse|  
+|Valeur de retour|Signification|response|  
 |------------------|-------------|--------------|  
 |0|Indique que les données modifiées ne sont pas prêtes.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées postérieur au point de fin de l'intervalle sélectionné.|L'exécution se poursuit avec le composant qui implémente un délai. Le contrôle retourne ensuite au conteneur de boucles For qui continue à vérifier la tâche d'exécution SQL tant que la valeur retournée est 0.|  
 |1|Peut indiquer que les données modifiées n'ont pas été capturées pour l'intervalle complet ou qu'elles ont été supprimées. Cela est traité comme une condition d'erreur.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées antérieur au point de départ de l'intervalle sélectionné.|L'exécution se poursuit avec le composant facultatif qui enregistre l'erreur.|  
@@ -179,9 +179,9 @@ ms.locfileid: "71294771"
   
     4.  Sélectionnez **Opérateur logique AND. Toutes les contraintes doivent avoir la valeur True**, si ce n’est déjà fait.  
   
-4.  Dans **l’Éditeur de tâche de script**, dans la page **Script**, pour **ReadOnlyVariables**, sélectionnez la variable de type entier **User::DelaySeconds** dans la liste.  
+4.  Dans **l’Éditeur de tâche de script**, dans la page **Script** , pour **ReadOnlyVariables**, sélectionnez la variable de type entier **User::DelaySeconds** dans la liste.  
   
-5.  Dans **Éditeur de tâche de script**, dans la page **Script** , cliquez sur **Modifier le script** pour ouvrir l’environnement de développement de script.  
+5.  Dans **l’Éditeur de tâche de script**, dans la page **Script** , cliquez sur **Modifier le script** pour ouvrir l’environnement de développement de script.  
   
 6.  Dans la procédure Main, entrez l'une des lignes de code suivantes :  
   
@@ -205,7 +205,7 @@ ms.locfileid: "71294771"
   
 7.  Laissez la ligne de code par défaut qui retourne **DtsExecResult.Success** suite à l’exécution du script.  
   
-8.  Fermez l’environnement de développement de script et **Éditeur de tâche de script**.  
+8.  Fermez l’environnement de développement de script et **l’Éditeur de tâche de script**.  
   
 #### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>Pour implémenter un délai en utilisant une tâche d'exécution SQL  
   
@@ -333,9 +333,9 @@ ms.locfileid: "71294771"
   
     ```  
   
-8.  Fermez l’environnement de développement de script et **Éditeur de tâche de script**.  
+8.  Fermez l’environnement de développement de script et **l’Éditeur de tâche de script**.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
  Après avoir déterminé que les données modifiées sont prêtes, l'étape suivante consiste à préparer la recherche des données modifiées.  
   
  **Rubrique suivante :** [Préparer la recherche des données modifiées](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

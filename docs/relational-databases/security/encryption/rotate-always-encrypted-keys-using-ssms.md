@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595704"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Effectuer une rotation des clés Always Encrypted avec SQL Server Management Studio
@@ -54,7 +54,7 @@ SQL Server Management Studio obtient les métadonnées des clés de chiffrement 
 > [!NOTE]
 > Vérifiez qu’aucune des clés de chiffrement de colonne, chiffrées avec l’ancienne clé principale de colonne, n’est chiffrée avec toute autre clé principale de colonne. En d’autres termes, chaque clé de chiffrement de colonne affectée par la permutation doit avoir précisément une valeur chiffrée dans la base de données. Si une clé de chiffrement de colonne concernée a plusieurs valeurs chiffrées, vous devez supprimer les valeurs superflues avant de passer à la permutation (consultez *l’étape 4* sur la suppression d’une valeur chiffrée d’une clé de chiffrement de colonne).
 
-### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>Étape 3 : Configurer vos applications avec la nouvelle clé principale de colonne
+### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>Étape 3 : Configurer vos applications avec la nouvelle clé principale de colonne
 
 Dans cette étape, vous devez vérifier que toutes vos applications clientes qui interrogent des colonnes de base de données protégées par la clé principale de colonne en rotation (c’est-à-dire les colonnes de base de données chiffrées avec une clé de chiffrement de colonne elle-même chiffrée avec la clé principale de colonne en rotation) peuvent accéder à la nouvelle clé principale de colonne. Cette étape dépend du type de magasin de clés dans lequel est stockée votre nouvelle clé principale de colonne. Par exemple :
 
@@ -68,7 +68,7 @@ Pour plus d’informations, consultez [Créer et stocker des clés principales d
 > [!NOTE]
 > À ce stade de la permutation, l’ancienne clé principale de colonne et la nouvelle clé principale de colonne sont valides et peuvent être utilisées pour accéder aux données.
 
-### <a name="step-4-clean-up-column-encryption-key-values-encrypted-with-the-old-column-master-key"></a>Étape 4 : Nettoyer les valeurs des clés de chiffrement de colonne chiffrées avec l’ancienne clé principale de colonne
+### <a name="step-4-clean-up-column-encryption-key-values-encrypted-with-the-old-column-master-key"></a>Étape 4 : Nettoyer les valeurs des clés de chiffrement de colonne chiffrées avec l’ancienne clé principale de colonne
 
 Après avoir configuré toutes vos applications pour utiliser la nouvelle clé principale de colonne, supprimez de la base de données les valeurs des clés de chiffrement de colonne chiffrées avec *l’ancienne* clé principale de colonne. La suppression des anciennes valeurs garantit que vous êtes prêt pour la rotation suivante (rappelez-vous que chaque clé de chiffrement de colonne, protégée par une clé principale de colonne à permuter, doit avoir précisément une valeur chiffrée).
 
@@ -84,7 +84,7 @@ Une autre raison de nettoyer l’ancienne valeur avant l’archivage ou la suppr
 
 SQL Server Management Studio émet des instructions [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) pour supprimer les valeurs chiffrées des clés de chiffrement de colonne chiffrées avec l’ancienne clé principale de colonne.
 
-### <a name="step-5-delete-metadata-for-your-old-column-master-key"></a>Étape 5 : Supprimer les métadonnées pour votre ancienne clé principale de colonne
+### <a name="step-5-delete-metadata-for-your-old-column-master-key"></a>Étape 5 : Supprimer les métadonnées pour votre ancienne clé principale de colonne
 
 Si vous choisissez de supprimer la définition de l’ancienne clé principale de colonne de la base de données, procédez comme suit.
 
@@ -141,7 +141,7 @@ Vous devez également être en mesure d’accéder aux clés principales de colo
 
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne pour Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 - [Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Développer des applications avec Always Encrypted](always-encrypted-client-development.md)
 

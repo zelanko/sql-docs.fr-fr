@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727754"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
@@ -37,7 +37,7 @@ Pour plus d’informations générales sur les DMV, consultez [Vues de gestion d
 > [!TIP]
 > Vous pouvez également utiliser les rapports personnalisés pour surveiller SQL Server Machine Learning Services. Pour plus d’informations, consultez [Surveiller le Machine Learning à l’aide de rapports personnalisés dans Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-## <a name="dynamic-management-views"></a>Vues de gestion dynamique
+## <a name="dynamic-management-views"></a>Vues de gestion dynamique (DMV)
 
 Les vues de gestion dynamique suivantes peuvent être utilisées lors de l’analyse des charges de travail de Machine Learning dans SQL Server. Pour interroger les vues de gestion dynamique, vous devez disposer de l’autorisation `VIEW SERVER STATE` sur l’instance.
 
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 La requête retourne les colonnes suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
 | IsMLServicesInstalled | Renvoie la valeur 1 si SQL Server Machine Learning Services est installé pour l’instance. Dans le cas contraire, renvoie la valeur 0. |
 | ExternalScriptsEnabled | Renvoie la valeur 1 si les scripts externes sont activés pour l’instance. Dans le cas contraire, renvoie la valeur 0. |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 La requête retourne les colonnes suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
 | session_id | Identifie la session associée à chaque connexion principale active. |
 | blocking_session_id | ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées). |
@@ -119,10 +119,10 @@ La requête retourne les colonnes suivantes :
 | last_wait_type | Si la demande a été bloquée précédemment, cette colonne indique le type de la dernière attente. |
 | total_elapsed_time | Temps total écoulé en millisecondes depuis l'arrivée de la demande. |
 | cpu_time | Quantité de temps UC (en millisecondes) utilisée par la demande. |
-| reads | Nombre de lectures effectuées par la demande. |
+| lectures | Nombre de lectures effectuées par la demande. |
 | logical_reads | Nombre de lectures logiques effectuées par la demande. |
-| writes | Nombre d'écritures effectuées par la demande. |
-| langue | Mot clé qui représente un langage de script pris en charge. |
+| écritures | Nombre d'écritures effectuées par la demande. |
+| langage | Mot clé qui représente un langage de script pris en charge. |
 | degree_of_parallelism | Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés. |
 | external_user_name | Le compte de travail Windows sous lequel le script a été exécuté. |
 
@@ -143,9 +143,9 @@ ORDER BY language, counter_name;
 
 La requête retourne les colonnes suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
-| langue | Nom du langage enregistré de script externe. |
+| langage | Nom du langage enregistré de script externe. |
 | counter_name | Nom de la fonction enregistrée de script externe. |
 | counter_value | Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée. |
 
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 La requête retourne les colonnes suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
 | physical_memory_kb | Quantité totale de mémoire physique sur l’ordinateur. |
 | committed_kb | Mémoire validée, en kilo-octets (Ko), dans le gestionnaire de mémoire. Elle ne comprend pas la mémoire réservée dans le gestionnaire de mémoire. |
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La requête retourne les colonnes suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
-| NAME | Nom du pool de ressources externes ou SQL Server. |
+| name | Nom du pool de ressources externes ou SQL Server. |
 | max_memory_percent | Mémoire maximale que SQL Server ou le pool de ressources externes peut utiliser. |
 
 ## <a name="resource-pools"></a>Pools de ressources
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La requête retourne les colonnes suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
 | pool_name | Nom du pool de ressources. Les pools de ressources SQL Server sont préfixés avec `SQL Server` et les pools de ressources externes avec `External Pool`.
 | total_cpu_usage_hours | L’utilisation cumulative de l’UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées. |
@@ -276,10 +276,10 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Les colonnes renvoyées sont les suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
 | Package | Nom du package installé. |
-| Options de version | Version du package. |
+| Version | Version du package. |
 | Dépend | Répertorie le ou les packages dont dépend le package installé. |
 | Licence | Licence du package installé. |
 | LibPath | Répertoire dans lequel se trouve le package. |
@@ -302,11 +302,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Les colonnes renvoyées sont les suivantes :
 
-| colonne | Description |
+| Colonne | Description |
 |--------|-------------|
 | Package | Nom du package installé. |
-| Options de version | Version du package. |
-| Emplacement | Répertoire dans lequel se trouve le package. |
+| Version | Version du package. |
+| Location | Répertoire dans lequel se trouve le package. |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299010"
 ---
 # <a name="configure-dialog-box"></a>Boîte de dialogue Configurer
@@ -60,10 +60,10 @@ ms.locfileid: "71299010"
  **Conteneur**  
  Indique l'objet qui contient le paramètre.  
   
- **Name**  
+ **Nom**  
  Indique le nom du paramètre.  
   
- **Value**  
+ **Valeur**  
  Indique la valeur du paramètre. Cliquez sur le bouton de sélection pour modifier la valeur dans la boîte de dialogue **Définir la valeur du paramètre** .  
   
  Vous trouverez ci-dessous la liste des options de l'onglet **Gestionnaires de connexions** . Utilisez cet onglet pour modifier les valeurs des propriétés du Gestionnaire de connexions. Les paramètres sont automatiquement générés sur le serveur SSIS pour les propriétés.  
@@ -71,13 +71,13 @@ ms.locfileid: "71299010"
  **Conteneur**  
  Indique l'objet qui contient le gestionnaire de connexions.  
   
- **Name**  
+ **Nom**  
  Indique le nom du gestionnaire de connexions.  
   
  **Nom de la propriété**  
  Indique le nom de la propriété du gestionnaire de connexions.  
   
- **Value**  
+ **Valeur**  
  Indique la valeur affectée à la propriété du gestionnaire de connexions. Cliquez sur le bouton de sélection pour modifier la valeur dans la boîte de dialogue **Définir la valeur du paramètre** . Vous pouvez entrer une valeur littérale, mapper une variable d'environnement qui contient la valeur à utiliser, ou utiliser la valeur par défaut du package.  
   
 ##  <a name="references"></a> Définir les options de la page Références  
@@ -85,7 +85,7 @@ ms.locfileid: "71299010"
   
  Un environnement spécifie les valeurs d’exécution des packages contenus dans les projets que vous avez déployés sur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- **Environnement**  
+ **Environment**  
  Indique l'environnement.  
   
  **Dossier d'environnement**  
@@ -99,7 +99,7 @@ ms.locfileid: "71299010"
   
  Vous pouvez sélectionner un environnement contenu dans n'importe quel dossier de projet sous le nœud **SSISDB** .  
   
- **Supprimer**  
+ **Remove**  
  Cliquez sur un environnement répertorié dans la zone **Références** , puis sur **Supprimer**.  
   
   

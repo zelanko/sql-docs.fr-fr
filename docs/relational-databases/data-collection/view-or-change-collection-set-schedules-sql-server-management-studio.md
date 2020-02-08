@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055328"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "74055328"
   
 2.  Cliquez avec le bouton droit sur un jeu d’éléments de collecte qui utilise le mode avec mise en cache, tel que **Statistiques sur les requêtes**, puis sélectionnez **Propriétés** pour ouvrir la boîte de dialogue [Propriétés du jeu d’éléments de collecte de données](#CollectionSet) .  
   
-3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour cela, procédez comme suit :  
+3.  Vous pouvez modifier la fréquence de collecte sur la page **Général** . Pour ce faire, procédez comme suit :  
   
     1.  Dans le volet d’informations, double-cliquez sur le nombre qui s’affiche pour la colonne **Fréquence de collecte (s)** de la table **Éléments de collecte** .  
   
@@ -104,7 +104,7 @@ ms.locfileid: "74055328"
   
  Utilisez cette page pour configurer le mode de collecte et de téléchargement des données, des planifications, ainsi que des périodes de rétention des données dans l'entrepôt de données de gestion. Cette page fournit également des informations sur les jeux d'éléments de collecte, tels que les types de collecteurs et les fréquences de collecte, et les paramètres d'entrée utilisés pour un jeu d'éléments de collecte.  
   
- **Name**  
+ **Nom**  
  Affiche le nom du jeu d'éléments de collecte auquel cette page fait référence.  
   
  **Collecte et téléchargement de données**  
@@ -118,7 +118,7 @@ ms.locfileid: "74055328"
  **Éléments de collecte**  
  Affiche les éléments de collecte dans le jeu d'éléments de collecte. Les informations suivantes sont fournies pour chaque élément de collecte :  
   
--   **Name**  
+-   **Nom**  
   
 -   **Type de collecteur**  
   
@@ -145,7 +145,7 @@ ms.locfileid: "74055328"
 > [!NOTE]  
 >  Cet onglet est activé uniquement si l’option **Mises en cache** est configurée pour **Collecte et téléchargement de données**.  
   
- **Server**  
+ **Serveur**  
  Affiche le nom du serveur qui héberge l'entrepôt de données de gestion. Pour plus d’informations, consultez [Configurer l’entrepôt de données de gestion &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md).  
   
  **Entrepôt de données de gestion**  

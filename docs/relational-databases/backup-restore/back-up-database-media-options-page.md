@@ -14,10 +14,10 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155558"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
@@ -50,7 +50,7 @@ ms.locfileid: "70155558"
   
 **Sauvegarder sur le support de sauvegarde existant** : Sauvegarde la base de données sur le support de sauvegarde existant. L'activation de cette case d'option active trois options.  
   
- Choisissez l'une des options suivantes :  
+ Choisissez l’une des options suivantes :  
   
  - **Ajouter au jeu de sauvegarde existant** : Ajoute le jeu de sauvegarde au support de sauvegarde existant, tout en préservant les sauvegardes antérieures.  
   

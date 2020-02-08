@@ -26,10 +26,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127117"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
@@ -117,7 +117,7 @@ Permet à un utilisateur de se connecter par le biais d’un compte d’utilisat
 -    **Utiliser l’authentification SQL Server**  
 Permet à un utilisateur de se connecter en fournissant un nom d’utilisateur et un mot de passe d’authentification SQL Server.
 
-     -    **User name**  
+     -    **Nom d'utilisateur**  
 Utilisé pour entrer le nom d’utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi de vous connecter via l’ **authentification SQL Server**.
 
      -    **Mot de passe**  
@@ -137,7 +137,7 @@ Permet à un utilisateur de se connecter par le biais d’un compte d’utilisat
 -    **Utiliser l’authentification SQL Server**  
 Permet à un utilisateur de se connecter en fournissant un nom d’utilisateur et un mot de passe d’authentification SQL Server.
 
-     -    **User name**  
+     -    **Nom d'utilisateur**  
 Utilisé pour entrer le nom d’utilisateur avec lequel se connecter. Cette option est disponible uniquement si vous avez choisi de vous connecter via l’ **authentification SQL Server**.
 
      -    **Mot de passe**  
@@ -165,7 +165,7 @@ Sélectionnez les bases de données à déplacer ou copier depuis le serveur sou
 -    **Déplacer**  
 Déplace la base de données vers le serveur de destination.
 
--    **Copier**  
+-    **Copy**  
 Copie la base de données sur le serveur de destination.
 
 -    **Source**  
@@ -198,7 +198,7 @@ Taille du fichier de la base de données de destination en mégaoctets.
 Dossier sur le serveur de destination servant à héberger le fichier de la base de données de destination. Modifiez-le selon vos besoins.
 
      -    **État**  
-État
+Statut
 
 -    **Si la base de données de destination existe déjà :**  
      Déterminer l’action à entreprendre si la base de données de destination déjà existe.
@@ -269,14 +269,14 @@ Spécifiez à quel moment vous voulez que l’opération de déplacement ou de c
 
 > **IMPORTANT** Un compte proxy Integration Services doit être utilisé sous la méthode de **détachement et d’attachement** .  
 
--    **Exécuter immédiatement**  
+-    **Run immediately**  
      Le package SSIS s’exécute une fois l’Assistant terminé.
   
 -    **Planification**  
      Le package SSIS s’exécute selon une planification. 
   
      -    **Modifier la planification**   
-Ouvrez la boîte de dialogue **Nouvelle planification du travail** .  Configurez selon vos besoins.  Lorsque vous avez terminé, cliquez sur **OK** .
+Ouvrez la boîte de dialogue **Nouvelle planification du travail** .  Configurez selon vos besoins.  Cliquez sur **OK** lorsque vous avez terminé.
 
 
 -    **Compte proxy Integration Services** Sélectionnez un compte proxy disponible dans la liste déroulante.  Pour planifier le transfert, l’utilisateur doit avoir à sa disposition au moins un compte proxy disposant des autorisations nécessaires pour accéder au **sous-système d’exécution du package SSIS**.
@@ -292,7 +292,7 @@ Affiche un résumé des options sélectionnées.  Cliquez sur **Précédent** po
 -    **État**  
  Indique si l’action a réussi ou échoué dans sa globalité.
 
--    **Boîte de**  
+-    **Message**  
 Affiche les messages retournés par chaque étape.
 
 ##  <a name="Examples"></a> Exemples
@@ -385,9 +385,9 @@ Dans cet exemple, la base de données `Sales` est copiée et créée en tant que
 
   
 ##  <a name="FollowUp"></a> Suivi : après la mise à niveau d’une base de données  
- Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau est définie sur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l’option de mise à niveau est **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Après avoir utilisé l'Assistant Copie de base de données pour mettre à niveau une base de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau a la valeur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne sont pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que quand l’option de mise à niveau est **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
- Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
  
  ## <a name="Post"></a> Considérations liées à l’après-copie/déplacement
  Pensez à effectuer les étapes suivantes après une **copie** ou un **déplacement**:
@@ -399,7 +399,7 @@ Dans cet exemple, la base de données `Sales` est copiée et créée en tant que
   
 ## <a name="more-information"></a>Informations complémentaires 
  [Mettre à niveau une base de données avec la méthode de détachement et d’attachement &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)   
- [Créer un proxy SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
+ [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   
   
 

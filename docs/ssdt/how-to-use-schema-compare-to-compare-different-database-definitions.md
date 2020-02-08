@@ -1,11 +1,7 @@
 ---
-title: 'Procédure : utiliser Comparer les schémas pour comparer différentes définitions de base de données | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Utiliser Comparer les schémas pour comparer différentes définitions de base de données
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097512"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226849"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procédure : Utiliser Comparer les schémas pour comparer différentes définitions de base de données
+
 SQL Server Data Tools (SSDT) inclut un utilitaire de comparaison de schémas que vous pouvez utiliser pour comparer deux définitions de base de données.  La source et la cible de la comparaison peuvent être n'importe quelle combinaison des éléments suivants : base de données connectée, projet de base de données SQL Server, instantané ou fichier .dacpac.  Les résultats de la comparaison s'affichent en tant qu'ensemble d'actions qui doivent être effectuées sur la cible de façon à ce qu'elle soit identique à la source.  Une fois la comparaison effectuée, vous pouvez mettre à jour la cible directement (s'il s'agit d'un projet ou d'une base de données) ou générer un script de mise à jour qui a le même effet.  
   
 Les différences entre la source et la cible s'affichent dans une grille qui permet de les examiner facilement.  Vous pouvez extraire et passer en revue chaque différence dans la grille de résultats ou sous la forme d'un script.  Vous pouvez ensuite exclure des différences spécifiques de manière sélective.  
@@ -107,7 +108,7 @@ Pour mettre à jour le schéma de la cible, vous avez deux possibilités. Vous p
   
     Vous pouvez aussi connecter l'Éditeur Transact\-SQL à un serveur approprié et exécuter le script directement. Avant d'exécuter cette procédure, vous devez disposer des autorisations nécessaires pour créer ou mettre à jour la base de données. Si vous disposez des autorisations nécessaires pour mettre à jour la base de données, cliquez sur le bouton **Exécuter la requête** dans la barre d'outils du volet d'édition pour exécuter le script.  
   
-3.  Cliquez sur le bouton **Connecter**. Cette action établit la connexion au serveur actuel ou vous invite à entrer ou sélectionner un serveur dans la boîte de dialogue Se connecter au serveur.  Notez que le nom de la base de données est défini dans le script en tant que variable de commande.  
+3.  Cliquez sur le bouton **Connect** . Cette action établit la connexion au serveur actuel ou vous invite à entrer ou sélectionner un serveur dans la boîte de dialogue Se connecter au serveur.  Notez que le nom de la base de données est défini dans le script en tant que variable de commande.  
   
 4.  Inspectez le script et, si nécessaire, apportez des modifications aux variables de commande qui définissent le nom de la base de données cible, le préfixe associé et les chemins d'accès de fichier.  
   

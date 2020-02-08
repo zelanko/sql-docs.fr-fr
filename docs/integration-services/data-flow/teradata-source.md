@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245086"
 ---
 # <a name="connect-to-the-teradata-source"></a>Connexion à la source Teradata
@@ -48,7 +48,7 @@ Les propriétés personnalisées de la source Teradata sont répertoriées dans 
 |BufferMode|Boolean|La valeur par défaut est *True*. La valeur doit être *True* si la fonctionnalité PutBuffer est utilisée. Cette propriété apparaît dans le volet **Éditeur avancé**.|
 |DataEncryption|Boolean|La valeur par défaut est *False*. Un chiffrement de sécurité complet est utilisé si la valeur est *True*.|
 |DefaultCodePage|Integer|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|DetailedTracingLevel|Integer (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> *Off* : Aucune journalisation avancée. <br> *Général* : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> *CLI* : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> *Méthode de notification *: Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> *Bibliothèque commune * : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> *Tout* : Tout le traçage des activités précédentes est consigné. <br> Le fichier journal du traçage avancé est défini dans la propriété `DetailedTracingFile`. <br> La propriété `DetailedTracingFile` doit être définie si l'option n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|DetailedTracingLevel|Integer (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> *Off* : Aucune journalisation avancée. <br> *Général* : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> *CLI* : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> *Méthode de notification* : Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> *Bibliothèque commune*  : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> *Tout* : Tout le traçage des activités précédentes est consigné. <br> Le fichier journal du traçage avancé est défini dans la propriété `DetailedTracingFile`. <br> La propriété `DetailedTracingFile` doit être définie si l'option n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
 |DetailedTracingFile|String|Chemin du fichier journal généré automatiquement lorsque *DetailedTracingLevel* n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
 |DiscardLargeRow|Boolean|La valeur par défaut est *False*. Ignorer les grandes lignes (supérieures à 64 ko) si la valeur est *true*.|
 |ExtendedStringColumnsAllocation|Boolean|*Maximal Transfer Character Allocation Factor* est utilisé si la valeur est *True*. <br> Cette valeur doit être définie sur *True* si la propriété `Export Width Table ID` de la base de données Teradata est définie sur *Maximal Defaults*. <br> La valeur par défaut est *False*.|

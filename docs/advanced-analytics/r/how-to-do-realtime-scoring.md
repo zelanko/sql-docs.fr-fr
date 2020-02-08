@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727436"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Générer des prévisions et des prédictions à l’aide de modèles Machine Learning dans SQL Server
@@ -97,7 +97,7 @@ La sérialisation d’un modèle dans un format binaire est utile, mais elle n�
 
 ## <a name="scoring-in-related-products"></a>Scoring dans les produits associés
 
-Si vous utilisez le [serveur autonome](r-server-standalone.md) ou un serveur [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), les procédures stockées et les fonctions T-SQL ne sont pas les seules options dont vous disposez pour générer des prédictions rapidement. Le serveur autonome et Machine Learning Server prennent tous les deux en charge le concept d’un *service Web* pour le déploiement de code. Vous pouvez regrouper un modèle R ou Python pré-entraîné en tant que service web qui sera appelé au moment de l’exécution pour évaluer de nouvelles entrées de données. Pour plus d’informations, consultez ces articles :
+Si vous utilisez le [serveur autonome](r-server-standalone.md) ou un serveur [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), les procédures stockées et les fonctions T-SQL ne sont pas les seules options dont vous disposez pour générer des prédictions rapidement. Le serveur autonome et Machine Learning Server prennent tous les deux en charge le concept d’un *service Web* pour le déploiement de code. Vous pouvez regrouper un modèle R ou Python pré-entraîné en tant que service web qui sera appelé au moment de l’exécution pour évaluer de nouvelles entrées de données. Pour plus d’informations, voir les articles suivants :
 
 + [What are web services in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services) (Qu’est-ce qu’un service web dans Machine Learning Server ?)
 + [What is operationalization?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) (Qu’est-ce que l’opérationnalisation ?)

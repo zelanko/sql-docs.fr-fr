@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70122957"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "70122957"
 
 Cette fonction retourne une chaîne qui résulte de la concaténation ou de la jointure de deux valeurs de chaîne ou plus, de bout en bout. (Pour ajouter une valeur de séparation durant la concaténation, consultez [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,8 +53,8 @@ Le type de retour dépend du type des arguments. Ce tableau illustre le mappage 
   
 |Type d'entrée|Type de sortie et longueur|  
 |---|---|
-|1. N’importe quel argument de<br><br />un type système SQL-CLR<br><br />un type défini par l’utilisateur SQL-CLR<br><br />ou Gestionnaire de configuration<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. Sinon, n’importe quel argument de type<br><br />**varbinary(max)**<br><br />ou Gestionnaire de configuration<br><br />**varchar(max)**|**varchar(max)** , à moins qu’un des paramètres soit de type **nvarchar** d’une longueur quelconque. Dans ce cas, `CONCAT` retourne un résultat de type **nvarchar(max)** .|  
+|1. N’importe quel argument de<br><br />un type système SQL-CLR<br><br />un type défini par l’utilisateur SQL-CLR<br><br />or<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2. Sinon, n’importe quel argument de type<br><br />**varbinary(max)**<br><br />or<br><br />**varchar(max)**|**varchar(max)** , à moins qu’un des paramètres soit de type **nvarchar** d’une longueur quelconque. Dans ce cas, `CONCAT` retourne un résultat de type **nvarchar(max)** .|  
 |3. Sinon, n’importe quel argument de type **nvarchar** d’un maximum de 4 000 caractères.<br><br />(**nvarchar**(<= 4000))|**nvarchar**(<= 4000)|  
 |4. Dans tous les autres cas|**varchar**(<= 8 000) (un **varchar** d’au plus 8 000 caractères), à moins qu’un des paramètres soit un nvarchar d’une longueur quelconque. Dans ce cas, `CONCAT` retourne un résultat de type **nvarchar(max)** .|  
   
@@ -66,7 +66,7 @@ La fonction CONCAT peut être exécutée à distance sur un serveur lié dont la
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-concat"></a>A. Utilisation de CONCAT  
+### <a name="a-using-concat"></a>R. Utilisation de CONCAT  
   
 ```sql
 SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;  

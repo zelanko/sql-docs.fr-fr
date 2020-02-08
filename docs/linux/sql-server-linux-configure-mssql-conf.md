@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783402"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l'outil mssql-conf
@@ -54,7 +54,7 @@ ms.locfileid: "72783402"
 
 |||
 |---|---|
-| [Agent](#agent) | Activer l’agent SQL Server |
+| [Agent](#agent) | Activer SQL Server Agent |
 | [Classement](#collation) | Définir un nouveau classement pour SQL Server sur Linux. |
 | [Feedback des clients](#customerfeedback) | Choisir si SQL Server envoie ou non un feedback à Microsoft. |
 | [Profil de messagerie de base de données](#dbmail) | Définir le profil de messagerie de base de données par défaut pour SQL Server sur Linux. |
@@ -507,7 +507,7 @@ En plus de définir ces valeurs, vous devez également configurer le routage et 
 
 Il existe plusieurs autres paramètres pour mssql-conf que vous pouvez utiliser pour surveiller et dépanner MSDTC. Le tableau suivant décrit brièvement ces paramètres. Pour plus d'informations sur leur utilisation, consultez l'article de support Windows, [How to enable diagnostic tracing for MS DTC (Comment activer le suivi de diagnostic pour MS DTC)](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| paramètre mssql-conf | Description |
+| paramaètre mssql-conf | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurer les appels sécurisés RPC pour les transactions distribuées |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Configurer les appels de sécurité RPC pour les transactions distribuées |

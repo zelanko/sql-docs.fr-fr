@@ -13,10 +13,10 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294621"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Préparer la recherche des données modifiées
@@ -199,7 +199,7 @@ ms.locfileid: "71294621"
   
 -   Sous l’onglet **Flux de contrôle** , ajoutez une tâche de flux et connectez la tâche ayant concaténé la chaîne de requête.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
  Une fois que vous avez préparé la chaîne de requête et configuré la tâche de flux de données, l'étape suivante consiste à créer la fonction table qui récupèrera les données modifiées de la base de données.  
   
  **Rubrique suivante :** [Créer la fonction de récupération des données modifiées](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

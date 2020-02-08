@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096064"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Valider, interroger et modifier les données JSON avec des fonctions intégrées (SQL Server)
@@ -103,7 +103,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 Les résultats de cette requête sont présentés dans le tableau suivant :
 
-| Nom | Ville | Comté |
+| Name | City | County |
 | --- | --- | --- |
 | AndersenFamily | NY | Manhattan |
 
@@ -143,7 +143,7 @@ FROM Families f
 
 Les résultats de cette requête sont présentés dans le tableau suivant :
 
-| Nom | Ville | givenName | grade |
+| Name | City | givenName | grade |
 | --- | --- | --- | --- |
 | AndersenFamily | NY | Jesse | 1 |
 | AndersenFamily | NY | Lisa | 8 |
@@ -194,7 +194,7 @@ Considérons l’exemple de texte JSON suivant :
   
 Dans cet exemple de texte JSON, les membres de données « a » et « c » sont des valeurs de chaîne, tandis que le membre de données « b » est un tableau. **JSON_VALUE** et **JSON_QUERY** retournent les résultats suivants :  
   
-|Chemin d'accès|**JSON_VALUE** retourne|**JSON_QUERY** retourne|  
+|Path|**JSON_VALUE** retourne|**JSON_QUERY** retourne|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL ou erreur|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL ou erreur|  

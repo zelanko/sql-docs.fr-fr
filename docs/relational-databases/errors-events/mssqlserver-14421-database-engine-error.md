@@ -12,13 +12,13 @@ ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 495150983eefbd40515bbd35985d31f9ae3f3769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033531"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
@@ -26,8 +26,8 @@ ms.locfileid: "68033531"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14421|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14421|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum14421|  
 |Texte du message|La base de données secondaire d'envoi des journaux %s.%s a dépassé le seuil de restauration de %d minutes et n'est pas synchronisée. Aucune restauration n'a été effectuée depuis %d minutes. La latence de la restauration est de %d minutes. Vérifiez les informations du journal de l'agent et du moniteur de copie des journaux de transaction.|  

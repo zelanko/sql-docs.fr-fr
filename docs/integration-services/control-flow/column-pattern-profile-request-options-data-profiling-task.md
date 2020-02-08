@@ -13,10 +13,10 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294246"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
@@ -29,7 +29,7 @@ ms.locfileid: "71294246"
 > [!NOTE]  
 >  Les options décrites dans cette rubrique apparaissent sur la page **Demandes de profil** de l' **Éditeur de tâche de profilage de données**. Pour plus d’informations sur cette page de l’éditeur, consultez [Éditeur de tâche de profilage de données &#40;page Demandes de profil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
- Pour plus d’informations sur l’utilisation de la tâche de profilage des données, consultez [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Pour plus d’informations sur l’utilisation de la Visionneuse du profil des données pour analyser le résultat de la tâche de profilage de données, consultez [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md).  
+ Pour plus d’informations sur l’utilisation de la tâche de profilage des données, consultez [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Pour plus d’informations sur l’utilisation de la visionneuse du profil des données pour analyser le résultat de la tâche de profilage des données, consultez [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>Fonctionnement de l'utilisation des séparateurs et des symboles  
  Avant de calculer les modèles d’une **Demande de profil de modèle de colonne**, la tâche de profilage des données marque les données sous forme de jetons. Autrement dit, elle sépare les valeurs de chaîne en unités plus petites appelées « jetons ». Pour séparer les chaînes en jetons, la tâche se base sur les séparateurs et les symboles que vous spécifiez pour les propriétés **Séparateurs** et **Symboles** :  
@@ -47,21 +47,21 @@ ms.locfileid: "71294246"
   
  Par exemple, vous pouvez regrouper les valeurs « East », « West », « North » et « South » susceptibles d'apparaître dans des adresses postales en utilisant la balise unique « Direction ». Un exemple de cette table des balises est proposé ci-dessous.  
   
-|Balise|Terme|  
+|Tag|Terme|  
 |---------|----------|  
 |Sens|Est|  
-|Sens|Ouest|  
+|Sens|West|  
 |Sens|Nord|  
 |Sens|Sud|  
   
  Vous pouvez éventuellement utiliser une autre balise pour regrouper les différents mots qui expriment la notion de « rue » (Street) dans les adresses postales :  
   
-|Balise|Terme|  
+|Tag|Terme|  
 |---------|----------|  
-|Street|Street|  
-|Street|Avenue|  
-|Street|Place|  
-|Street|Way|  
+|Rue|Rue|  
+|Rue|Avenue|  
+|Rue|Emplacement|  
+|Rue|Moyen|  
   
  D'après cette combinaison de balises, le modèle obtenu pour une adresse postale peut se présenter de la manière suivante :  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71294246"
   
 -   **Données**, qui incluent les options **TableOrView** et **Column**  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "71294246"
   
  Pour plus d'informations, consultez la section « Options TableorView » dans cette rubrique.  
   
- **Column**  
+ **Colonne**  
  Sélectionnez la colonne existante à profiler. Sélectionnez **(\*)** pour profiler toutes les colonnes.  
   
  Pour plus d'informations, consultez la section « Options de colonne » dans cette rubrique.  

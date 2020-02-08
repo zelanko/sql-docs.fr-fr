@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412815"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
@@ -73,7 +73,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Le plan d'exécution estimé tel qu'affiché par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est le suivant :  
   
- ![Plan de requête pour joindre des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "|::ref1::|")  
+ ![Plan de requête pour joindre des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "Plan de requête pour joindre des tables sur disque.")  
 Plan de requête pour joindre des tables sur disque.  
   
  À propos de ce plan de requête :  
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Le plan estimé pour cette requête est le suivant :  
   
- ![Plan de requête d'une jointure hachée des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "|::ref2::|")  
+ ![Plan de requête d'une jointure hachée des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Plan de requête d'une jointure hachée des tables sur disque.")  
 Plan de requête d'une jointure hachée des tables sur disque.  
   
  Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. L’opérateur physique **Correspondances de hash** est désormais utilisé pour la **Jointure interne**. L’index cluster sur Order n’étant pas trié sur CustomerID, une **Jointure de fusion** nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l’opérateur **Correspondances de hash** (75 %) comparé au coût de l’opérateur **Jointure de fusion** dans l’exemple précédent (46 %). L’optimiseur aurait pu utiliser l’opérateur **Correspondances de hash** également dans l’exemple précédent, mais il a considéré que l’opérateur **Jointure de fusion** fournirait de meilleures performances.  
@@ -100,7 +100,7 @@ Plan de requête d'une jointure hachée des tables sur disque.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Traitement des requêtes pour les tables sur disque  
  Le diagramme suivant représente le flux de traitement des requêtes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les requêtes ad hoc :  
   
- ![Pipeline de traitement des requêtes SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "|::ref3::|")  
+ ![Pipeline de traitement des requêtes SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Pipeline de traitement des requêtes SQL Server")  
 Pipeline de traitement des requêtes SQL Server  
   
  Dans ce scénario :  
@@ -220,7 +220,7 @@ Procédures stockées compilées en mode natif.
   
  L'appel d'une procédure stockée compilée en mode natif se traduit par l'appel à une fonction dans la DLL.  
   
- ![Exécution de procédures stockées compilées en mode natif.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "|::ref7::|")  
+ ![Exécution de procédures stockées compilées en mode natif.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Exécution de procédures stockées compilées en mode natif.")  
 Exécution de procédures stockées compilées en mode natif.  
   
  L'appel d'une procédure stockée compilée en mode natif se présente comme suit :  
@@ -294,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Après la suppression de toutes les lignes, à part une dans la table Customer :  
   
- ![Statistiques et jointures de colonne.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "|::ref8::|")  
+ ![Statistiques et jointures de colonne.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Statistiques et jointures de colonne.")  
   
  À propos de ce plan de requête :  
   

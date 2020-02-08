@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981703"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - Clause OVER (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73981703"
   
 -   [Fonction NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -188,7 +188,7 @@ Si ROWS/RANGE est spécifié et que \<window frame preceding> est utilisé pour 
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>R. Utilisation de la clause OVER avec la fonction ROW_NUMBER  
  L'exemple suivant montre comment utiliser la clause OVER avec la fonction ROW_NUMBER pour afficher un numéro de ligne pour chaque ligne dans une partition. La clause ORDER BY spécifiée dans la clause OVER trie les lignes dans chaque partition par la colonne `SalesYTD`. La clause ORDER BY dans l'instruction SELECT détermine l'ordre dans lequel la totalité du jeu de résultats de la requête est retournée.  
   
 ```sql  

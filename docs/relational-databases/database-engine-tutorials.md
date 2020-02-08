@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155499"
 ---
 # <a name="database-engine-tutorials"></a>Didacticiels sur le moteur de base de données
@@ -46,7 +46,7 @@ Ce didacticiel explore en se fondant sur un scénario les concepts de sécurité
 [Tutoriel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Il vous apprend comment créer des stratégies qui appliquent des normes d'administration de site.  
   
-[Tutoriel : Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Tutoriel : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 Ce tutoriel montre comment effectuer une sauvegarde et une restauration SQL Server dans le service de stockage d’objets blob Azure.  
   
 [Tutoriel : Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

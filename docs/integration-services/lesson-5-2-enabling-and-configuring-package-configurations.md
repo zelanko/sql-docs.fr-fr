@@ -11,10 +11,10 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7706c124160f1f08f39279956d7685085859badd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283139"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Leçon 5-2 : Activer et définir les configurations du package
@@ -106,7 +106,7 @@ Au cours de cette tâche, vous convertissez le projet en modèle de déploiement
     </Configuration>
     ```
   
-## <a name="create-and-populate-a-new-sample-data-folder"></a>Créer et remplir un dossier New Sample Data  
+## <a name="create-and-populate-a-new-sample-data-folder"></a>Créer et remplir un nouveau dossier d’exemples de données  
   
 1.  Dans l’Explorateur Windows, à la racine de votre lecteur (par exemple, **C:\\** ), créez un dossier appelé **New Sample Data**.  
   

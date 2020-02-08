@@ -11,10 +11,10 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a412235a3eaeb18f32e820460b82ab238c7c0e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296119"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Leçon 1-2 : Ajouter et configurer un gestionnaire de connexions de fichiers plats
@@ -83,10 +83,10 @@ Par défaut, ces quatre colonnes ont initialement le type de données chaîne [D
   
     |Colonne de fichier plat|Type suggéré|Colonne de destination|Type de destination|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
     Le type de données suggéré pour la colonne **CurrencyID** n’est pas compatible avec le type de données du champ de la table de destination. Étant donné que le type de données de `DimCurrency.CurrencyAlternateKey` est nchar(3), le type de la colonne **CurrencyID**, chaîne [DT_STR], doit être remplacé par chaîne Unicode [DT_WSTR]. De plus, le champ `DimDate.FullDateAlternateKey` étant défini avec le type de données date, le type pour **CurrencyDate** doit être changé de [DT_Date] en date de base de données [DT_DBDATE].  
   

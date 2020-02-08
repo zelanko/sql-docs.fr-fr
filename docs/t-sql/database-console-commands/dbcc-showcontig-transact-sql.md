@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039063"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -40,7 +40,7 @@ Affiche les informations de fragmentation pour les données et les index de la t
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  Index dont les informations de fragmentation doivent être vérifiées. Si aucune option n'est spécifiée, l'instruction traite l'index de base de la table ou de la vue indiquée. Pour obtenir l’ID de l’index, utilisez l’affichage catalogue [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
- par  
+ WITH  
  Spécifie les options relatives au type d'informations renvoyées par l'instruction DBCC.  
   
  FAST  
@@ -116,7 +116,7 @@ Lorsque TABLERESULTS est spécifié, DBCC SHOWCONTIG renvoie les colonnes suivan
 |**ObjectId**|ID du nom d'objet.|  
 |**IndexName**|Nom de l'index traité. A la valeur NULL pour un segment.|  
 |**IndexId**|Identificateur de l'index. A la valeur 0 pour un segment.|  
-|**Level**|Niveau de l'index. Le niveau 0 correspond au niveau feuille ou données de l'index.<br /><br /> Un segment a le niveau 0.|  
+|**Niveau**|Niveau de l'index. Le niveau 0 correspond au niveau feuille ou données de l'index.<br /><br /> Un segment a le niveau 0.|  
 |**Pages**|Nombre de pages constituant ce niveau d'index ou segment entier.|  
 |**Lignes**|Nombre d'enregistrements de données ou d'index situés à ce niveau de l'index. Pour un segment, cette valeur représente le nombre d'enregistrements de données dans le segment entier.<br /><br /> Pour un segment de mémoire, le nombre d'enregistrements retournés par cette fonction peut ne pas correspondre au nombre des lignes retournées en exécutant une requête SELECT COUNT(*) sur le segment. Cela est dû au fait qu'une ligne peut contenir plusieurs enregistrements. Par exemple, lors de certaines mises à jour, une ligne de segment unique peut comporter un enregistrement de transfert et un enregistrement transféré suite à l'opération de mise à jour. Par ailleurs, la plupart des lignes LOB de grande taille sont fractionnées en plusieurs enregistrements dans le stockage LOB_DATA.|  
 |**MinimumRecordSize**|Taille minimum des enregistrements dans ce niveau d'index ou le segment entier.|  
@@ -188,7 +188,7 @@ Le niveau de fragmentation d'un index peut être déterminé des manières suiva
 L’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin**, du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin**.
   
 ## <a name="examples"></a>Exemples  
-### <a name="a-displaying-fragmentation-information-for-a-table"></a>A. Affichage des informations de fragmentation d'une table  
+### <a name="a-displaying-fragmentation-information-for-a-table"></a>R. Affichage des informations de fragmentation d'une table  
 L'exemple suivant affiche les informations de fragmentation de la table `Employee`.
   
 ```sql  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilisation de OBJECT_ID pour obtenir l'ID de table et sys.indexes pour obtenir l'ID d'index  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilisation de OBJECT_ID pour obtenir l'ID de table et sys.indexes pour obtenir l'ID d'index  
 L’exemple suivant utilise `OBJECT_ID` et l’affichage catalogue `sys.indexes` pour obtenir l’ID de table et l’ID d’index de l’index `AK_Product_Name` de la table `Production.Product` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

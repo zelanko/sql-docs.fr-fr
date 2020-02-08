@@ -11,10 +11,10 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127249"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter à et interroger PostgreSQL à l’aide de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -46,19 +46,19 @@ Pour effectuer ce guide de démarrage rapide, vous avez besoin de [!INCLUDE[name
    | Paramètre       | Valeur d'exemple | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nom du serveur** | localhost | Nom complet du serveur |
-   | **User name** | postgres | Nom d’utilisateur avec lequel vous souhaitez vous connecter. |
-   | **Mot de passe (connexion SQL)** | *password* | Mot de passe du compte avec lequel vous vous connectez. |
-   | **Mot de passe** | *Vérifier* | Cochez cette case si vous ne souhaitez pas entrer le mot de passe chaque fois que vous vous connectez. |
-   | **Nom de la base de données** | \<Default\> | Renseignez ce champ si vous souhaitez que la connexion spécifie une base de données. |
-   | **Groupe de serveurs** | \<Default\> | Cette option vous permet d’attribuer cette connexion à un groupe de serveurs spécifique que vous créez. | 
+   | **Nom d'utilisateur** | postgres | Nom d’utilisateur avec lequel vous souhaitez vous connecter. |
+   | **Mot de passe (connexion SQL)** | *mot de passe* | Mot de passe du compte avec lequel vous vous connectez. |
+   | **Mot de passe** | *Vérification* | Cochez cette case si vous ne souhaitez pas entrer le mot de passe chaque fois que vous vous connectez. |
+   | **Nom de la base de données** | \<Par défaut\> | Renseignez ce champ si vous souhaitez que la connexion spécifie une base de données. |
+   | **Groupe de serveurs** | \<Par défaut\> | Cette option vous permet d’attribuer cette connexion à un groupe de serveurs spécifique que vous créez. | 
    | **Nom (facultatif)** | *laisser vide* | Cette option vous permet de spécifier un nom convivial pour votre serveur. | 
 
-5. Sélectionnez **Se connecter**. 
+5. Sélectionnez **Connecter**. 
 
 Une fois la connexion établie, votre serveur s'ouvre dans la barre latérale **SERVEURS**.
 
 
-## <a name="create-a-database"></a>création d'une base de données ;
+## <a name="create-a-database"></a>Création d'une base de données
 
 La procédure suivante crée une base de données nommée **tutorialdb** :
 
@@ -131,6 +131,6 @@ Collez l’extrait suivant dans la fenêtre de requête, puis cliquez sur **Exé
 
    ![Afficher les résultats](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Étapes suivantes
 
 En savoir plus sur les [scénarios disponibles pour Postgres dans Azure Data Studio.](postgres-extension.md) 

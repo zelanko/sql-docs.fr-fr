@@ -13,10 +13,10 @@ ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500453"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Boîte de dialogue Propriétés du dataset, Requête (Générateur de rapports)
@@ -24,7 +24,7 @@ ms.locfileid: "66500453"
 Sélectionnez **Requête** dans la boîte de dialogue **Propriétés du dataset** afin de choisir un dataset partagé dans un serveur de rapports ou de créer un dataset incorporé. Dans le cas d'un dataset incorporé, vous devez choisir une source de données et générer une requête.  
   
 ## <a name="options"></a>Options  
- **Name**  
+ **Nom**  
  Tapez le nom du dataset. Ce nom doit être différent de celui des régions ou des groupes de données du rapport.  
   
  **Utiliser un dataset partagé**  
@@ -58,7 +58,7 @@ Cette option apparaît lorsque vous sélectionnez **Table**. Entrez le nom de la
 Cette option apparaît lorsque vous choisissez l'option de type de commande Procédure stockée. Tapez ou choisissez le nom de la procédure stockée que vous souhaitez utiliser. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.   
   
  **Délai dépassé (en secondes)**  
- Tapez la valeur en secondes du délai d'expiration de la requête. La valeur par défaut est 30 secondes. La valeur de **Délai dépassé** doit être vide ou supérieure à zéro. Si elle ne contient aucune valeur, la requête n'est soumise à aucun délai d'expiration.  
+ Tapez la valeur en secondes du délai d'expiration de la requête. La valeur par défaut est 30 secondes. La valeur de **Délai dépassé** doit être vide ou supérieure à zéro. Si elle ne contient aucune valeur, la requête n'est soumise à aucun délai d'expiration.  
   
  **Actualiser les champs**  
  Exécutez la commande de requête pour mettre à jour la liste de champs dans la page **Boîte de dialogue Propriétés du dataset, Champs**.  

@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031526"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68031526"
   
  L’implémentation **AT TIME ZONE** utilise un mécanisme Windows pour convertir les valeurs **datetime** sur plusieurs fuseaux horaires.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-types"></a>Types de retour  
  Retourne le type de données de **datetimeoffset**.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur **datetimeoffset** dans le fuseau horaire cible.  
   
 ## <a name="remarks"></a>Notes  
@@ -121,7 +121,7 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Ajouter un décalage de fuseau horaire cible à la valeur datetime sans informations sur le décalage  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>R. Ajouter un décalage de fuseau horaire cible à la valeur datetime sans informations sur le décalage  
  Utilisez **AT TIME ZONE** pour ajouter un décalage basé sur les règles de fuseau horaire quand vous savez que les valeurs **datetime** initiales sont fournies dans le même fuseau horaire :  
   
 ```sql

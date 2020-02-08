@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901959"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67901959"
 
   Indique une condition de recherche pour un graphique. L’indicateur MATCH peut être utilisé uniquement avec des tables d’arêtes et de nœuds d’un graphique, avec la clause WHERE dans l’instruction SELECT. 
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -141,7 +141,7 @@ Une arête peut pointer dans les deux directions, mais elle doit avoir une direc
 Les opérateurs OR et NOT ne sont pas pris en charge dans le modèle MATCH. Vous pouvez combiner MATCH avec d’autres expressions en ajoutant l’opérateur AND dans la clause WHERE. En revanche, il n’est pas possible de combiner MATCH avec d’autres expressions à l’aide des opérateurs OR et NOT. 
 
 ## <a name="examples"></a>Exemples  
-### <a name="a--find-a-friend"></a>A.  Rechercher un ami 
+### <a name="a--find-a-friend"></a>R.  Rechercher un ami 
  L’exemple suivant crée une table de nœuds Person et une table d’arêtes friends, insère des données, puis utilise MATCH pour rechercher des amis d’Alice, une personne figurant dans le graphique.
 
  ```

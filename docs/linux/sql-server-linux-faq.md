@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72929906"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Forum aux questions pour SQL Server sur Linux
@@ -28,7 +28,7 @@ Les sections suivantes fournissent des questions et des réponses courantes sur 
 
 1. **SQL Server sur Linux fonctionnera-t-il sur d’autres plateformes** ?
 
-   SQL Server est testé et pris en charge sur Linux pour les distributions précédemment listées. D’autres distributions Linux sont étroitement liées et pourraient être en mesure d’exécuter SQL Server (par exemple, CentOS est étroitement lié à Red Hat Enterprise Server). Toutefois, si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, consultez la section **Stratégie de support** de la [Stratégie de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre les implications de la prise en charge. Notez également que certaines distributions Linux gérées par la communauté ne disposent pas d’un moyen formel de recevoir un support si le système d’exploitation sous-jacent est le problème.
+   SQL Server est testé et pris en charge sur Linux pour les distributions précédemment répertoriées. D’autres distributions Linux sont étroitement liées et pourraient être en mesure d’exécuter SQL Server (par exemple, CentOS est étroitement lié à Red Hat Enterprise Server). Toutefois, si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, consultez la section **Stratégie de support** de la [Stratégie de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre les implications de la prise en charge. Notez également que certaines distributions Linux gérées par la communauté ne disposent pas d’un moyen formel de recevoir un support si le système d’exploitation sous-jacent est le problème.
 
 1. **Est-ce que SQL Server sur Linux est le même que sur Windows ?**
 
@@ -46,7 +46,7 @@ Les sections suivantes fournissent des questions et des réponses courantes sur 
 
 1. **Comment fonctionne la gestion des licences sur Linux ?**
 
-   SQL Server est concédé sous licence de la même façon pour Windows et Linux. En fait, vous obtenez une licence SQL Server, puis vous pouvez choisir d’utiliser cette licence sur la plateforme de votre choix. Pour plus d'informations, consultez [Procédure : installer SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+   SQL Server est concédé sous licence de la même façon pour Windows et Linux. En fait, vous obtenez une licence SQL Server, puis vous pouvez choisir d’utiliser cette licence sur la plateforme de votre choix. Pour plus d'informations, consultez [Comment installer SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
 1. **Quelle édition de SQL Server dois-je choisir lorsque j’ai déjà acheté une licence ?**
 
@@ -120,7 +120,7 @@ Les sections suivantes fournissent des questions et des réponses courantes sur 
    Vous pouvez utiliser les [vues de gestion dynamique (DMV) système](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) pour collecter divers types d’informations sur SQL Server, y compris des informations sur les processus Linux. Vous pouvez utiliser le [Magasin des requêtes](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) pour améliorer les performances des requêtes. D’autres outils, tels que le [Tableau de bord de performances intégré](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), fonctionnent à distance dans SQL Server Management Studio (SSMS) à partir de Windows.
 
    > [!TIP]
-   > Une façon d’améliorer les performances est de configurer correctement votre système d’exploitation Linux et l’instance SQL Server. Pour plus d'informations, consultez [Bonnes pratiques relatives aux performances et instructions de configuration pour SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
+   > Une façon d’améliorer les performances est de configurer correctement votre système d’exploitation Linux et l’instance SQL Server. Pour plus d'informations, consultez [Meilleures pratiques relatives aux performances et lignes directrices de configuration pour SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Administration
 

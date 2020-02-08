@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278311"
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
@@ -33,7 +33,7 @@ ms.locfileid: "72278311"
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Configuration requise  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Créez un ou plusieurs comptes de messagerie de base de données pour le profil. Pour plus d’informations sur la création de comptes de messagerie de base de données, consultez [Créer un compte de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
 ###  <a name="Security"></a> Sécurité  
@@ -107,7 +107,7 @@ ms.locfileid: "72278311"
   
      *\@account_name* = '*nom du compte*'  
   
-     *\@sequence_number* = '*numéro de séquence du compte dans le profil.* »  
+     *\@sequence_number* = '*numéro de séquence du compte dans le profil.* '  
   
      où *\@profile_name* est le nom du profil, *\@account_name* est le nom du compte à ajouter au profil, et *\@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
   
@@ -175,7 +175,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *\@account_name* = '*nom du compte*'  
   
-     *\@sequence_number* = '*numéro de séquence du compte dans le profil.* »  
+     *\@sequence_number* = '*numéro de séquence du compte dans le profil.* '  
   
      où *\@profile_name* est le nom du profil, *\@account_name* est le nom du compte à ajouter au profil, et *\@sequence_number* détermine l’ordre dans lequel les comptes sont utilisés dans le profil.  
   

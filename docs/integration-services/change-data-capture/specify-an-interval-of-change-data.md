@@ -13,10 +13,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cb5949943cb03095328bc43599fbfef2fa74da2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294573"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
@@ -27,7 +27,7 @@ ms.locfileid: "71294573"
   Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un charge incrémentielle de données modifiées, la première tâche consiste à calculer les points de terminaison de l’intervalle de modification. Ces points de terminaison sont des valeurs **datetime** qui seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  
   
 > [!NOTE]  
->  Pour obtenir une description du processus global de la conception du flux de contrôle, consultez [Capture de données modifiées &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
+>  Pour obtenir une description du processus d’ensemble de la conception du flux de contrôle, consultez [Capture de données modifiées &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
 ## <a name="set-up-package-variables-for-the-endpoints"></a>Configurer des variables de package pour les points de terminaison  
  Avant de configurer la tâche d'exécution SQL pour calculer les points de terminaison, vous devez définir les variables de package qui stockeront les points de terminaison.  
@@ -106,7 +106,7 @@ ms.locfileid: "71294573"
     > [!NOTE]  
     >  Quand vous utilisez une expression pour définir la valeur d’une variable [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , l’expression est évaluée chaque fois que la valeur de la variable fait l’objet d’un accès.  
   
-## <a name="next-step"></a>Étape suivante  
+## <a name="next-step"></a>étape suivante  
  Une fois que vous avez calculé le point de départ et le point de fin pour une plage de modifications, l'étape suivante consiste à déterminer si les données modifiées sont prêtes.  
   
  **Rubrique suivante :** [Déterminer si les données modifiées sont prêtes](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
@@ -114,7 +114,7 @@ ms.locfileid: "71294573"
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Tache d'exécution de requêtes SQL](../../integration-services/control-flow/execute-sql-task.md)   
+ [Exécution de requêtes SQL, tâche](../../integration-services/control-flow/execute-sql-task.md)   
  [Tâche de script](../../integration-services/control-flow/script-task.md)  
   
   

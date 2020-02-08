@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165342"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
@@ -64,7 +64,7 @@ Le fournisseur OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!
 ## <a name="linked-server-details"></a>Détails des serveurs liés  
  L'illustration suivante montre les aspects fondamentaux d'une configuration de serveurs liés.  
   
- ![Niveau client, niveau serveur et niveau serveur de base de données](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![Niveau client, niveau serveur et niveau serveur de base de données](../../relational-databases/linked-servers/media/lsvr.gif "Niveau client, niveau serveur et niveau serveur de base de données")  
   
 Généralement, les serveurs liés sont utilisés pour le traitement des requêtes distribuées. Lorsqu'une application cliente exécute une requête distribuée via un serveur lié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyse la commande et envoie des demandes à OLE°DB. La requête d'ensemble de lignes peut se présenter sous la forme d'une exécution de requête vers le fournisseur, ou par l'ouverture d'une table de base à partir du fournisseur.  
 

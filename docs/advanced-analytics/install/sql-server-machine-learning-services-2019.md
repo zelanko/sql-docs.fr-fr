@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69531038"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>SQL Server 2019 sur Windows : Modifications de l’isolation dans Machine Learning Services
@@ -50,7 +50,7 @@ Par défaut, SQL Server désactive les connexions sortantes en créant des règl
 Dans le cadre de la migration vers les éléments AppContainers, il existe de nouvelles règles de pare-feu basées sur les SID AppContainer : une pour chacun des 20 éléments AppContainers créés par le programme d’installation SQL Server. Les conventions d’affectation de noms pour le nom de la règle de pare-feu sont **Bloquer l’accès réseau pour AppContainer-00 dans l’instance SQL Server MSSQLSERVER**, où 00 est le numéro de l’élément AppContainer (00-20 par défaut) et MSSQLSERVER est le nom de l’instance SQL Server. 
 
 > [!Note]
-> Si des appels réseau sont requis, vous pouvez désactiver les règles de trafic sortant dans le pare-feu Windows.
+> Si des appels réseau sont nécessaires, vous pouvez désactiver les règles de trafic sortant dans le pare-feu Windows.
 
 ## <a name="program-file-permissions"></a>Autorisations d’accès aux fichiers de programme
 

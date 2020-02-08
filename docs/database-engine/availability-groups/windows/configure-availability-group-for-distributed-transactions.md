@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713272"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurer les transactions distribuées pour un groupe de disponibilité Always On
@@ -118,7 +118,7 @@ Dans une application, une transaction distribuée est gérée de manière compar
    
    Si le gestionnaire de transactions reçoit des messages de préparation réussie de tous les gestionnaires de ressources, il envoie une commande de validation à chacun d'entre eux. Les gestionnaires de ressources peuvent alors effectuer la validation. Si tous les gestionnaires de ressources signalent le succès de la validation, le gestionnaire de transactions envoie alors une notification de succès à l'application. Si l'un des gestionnaires de ressources indique un échec de la préparation, le gestionnaire de transactions envoie une commande de restauration à chaque gestionnaire de ressources et notifie l'échec de la validation à l'application.
 
-### <a name="detailed-steps"></a>Étapes détaillées
+### <a name="detailed-steps"></a>Procédure détaillée
 
 La liste suivante explique comment l’application travaille avec DTC pour effectuer des transactions distribuées.
 
@@ -195,7 +195,7 @@ Après avoir validé ou annulé la transaction, vous pouvez utiliser `ALTER DATA
 
 Pour plus d’informations sur la résolution des transactions incertaines, consultez [Résoudre les transactions manuellement](https://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
 
 [Transactions distribuées](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

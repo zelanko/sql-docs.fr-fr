@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909511"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
@@ -28,7 +28,7 @@ ms.locfileid: "72909511"
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Configuration requise](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72909511"
   
  Avant de rétablir une base de données, tenez compte des limitations suivantes :  
   
--   Le rétablissement n'est pas destiné à la récupération des supports. L'instantané de base de données est une copie incomplète des fichiers de base de données, donc si la base de données ou l'instantané de base de données est endommagé, le rétablissement à partir d'un instantané sera probablement impossible. En outre, même lorsque le rétablissement est possible, il est peu probable qu'il permette de corriger le problème en cas de corruption. Par conséquent, effectuer des sauvegardes régulières et tester votre plan de restauration sont essentiels pour la protection d'une base de données. Pour plus d’informations, consultez [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Le rétablissement n'est pas destiné à la récupération des supports. L'instantané de base de données est une copie incomplète des fichiers de base de données, donc si la base de données ou l'instantané de base de données est endommagé, le rétablissement à partir d'un instantané sera probablement impossible. En outre, même lorsque le rétablissement est possible, il est peu probable qu'il permette de corriger le problème en cas de corruption. Par conséquent, effectuer des sauvegardes régulières et tester votre plan de restauration sont essentiels pour la protection d'une base de données. Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Si vous devez restaurer la base de données source jusqu'à la date et l'heure où vous avez créé un instantané de base de données, utilisez le mode de récupération complète et implémentez une stratégie de sauvegarde qui vous permette une telle opération.  
@@ -88,7 +88,7 @@ ms.locfileid: "72909511"
  **Pour rétablir une base de données dans l'état d'un instantané de base de données**  
   
 > [!NOTE]  
->  Pour obtenir un exemple de cette procédure, consultez [Exemples (Transact-SQL)](#TsqlExample), plus loin dans cette section.  
+>  Pour obtenir un exemple de cette procédure, consultez [Exemples (Transact-SQL)](#TsqlExample)plus loin dans cette section.  
   
 1.  Identifiez l'instantané de base de données auquel vous souhaitez restaurer la base de données. Vous pouvez afficher les instantanés sur une base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (consultez [Afficher un instantané de base de données &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)). En outre, vous pouvez identifier la base de données source d’un affichage à partir de la colonne **source_database_id** de l’affichage catalogue [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
@@ -121,7 +121,7 @@ ms.locfileid: "72909511"
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cette section présente les exemples suivants de rétablissement d'une base de données à un état antérieur par le biais d'un instantané de base de données :  
   
--   A. [Rétablissement d'un instantané sur la base de données AdventureWorks](#Reverting_AW)  
+-   R. [Rétablissement d'un instantané sur la base de données AdventureWorks](#Reverting_AW)  
   
 -   B. [Rétablissement d'un instantané sur la base de données Sales (Ventes)](#Reverting_Sales)  
   

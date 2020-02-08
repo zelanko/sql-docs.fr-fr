@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706997"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installer SQL Server 2016 R Services
@@ -153,7 +153,7 @@ Effectuez les étapes suivantes pour vérifier que tous les composants utilisés
 
     La valeur **run_value** doit maintenant être définie sur 1.
 
-2. Ouvrez le panneau **Services** ou le Gestionnaire de configuration SQL Server et vérifiez que le **service SQL Server Launchpad** est en cours d’exécution. Vous devez disposer d’un service pour chaque instance du moteur de base de données sur laquelle R ou Python est installé. Pour plus d’informations sur le service, consultez [Framework d’extensibilité](../concepts/extensibility-framework.md).
+2. Ouvrez le panneau **Services** ou le Gestionnaire de configuration SQL Server, puis vérifiez que le service **SQL Server Launchpad** est en cours d’exécution. Vous devez disposer d’un service pour chaque instance du moteur de base de données sur laquelle R ou Python est installé. Pour plus d’informations sur le service, consultez [Framework d’extensibilité](../concepts/extensibility-framework.md).
 
 7. Si le service Launchpad est en cours d’exécution, vous devez être en mesure d’exécuter des scripts R simples pour vérifier que les runtimes de script externes peuvent communiquer avec SQL Server. 
 

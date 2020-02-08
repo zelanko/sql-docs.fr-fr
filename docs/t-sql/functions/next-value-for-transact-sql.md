@@ -23,10 +23,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670538"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68670538"
   
  Pour une description complète de la création et de l’utilisation de séquences, consultez [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md). Utilisez [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) pour réserver une plage de numéros séquentiels.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -184,7 +184,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="a-using-a-sequence-in-a-select-statement"></a>A. Utilisation d'une séquence dans une instruction SELECT  
+### <a name="a-using-a-sequence-in-a-select-statement"></a>R. Utilisation d'une séquence dans une instruction SELECT  
  L'exemple suivant crée une séquence nommée `CountBy1` qui augmente de 1 chaque fois qu'elle est utilisée.  
   
 ```  

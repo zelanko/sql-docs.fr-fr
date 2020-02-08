@@ -22,10 +22,10 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904351"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - Clause FOR (Transact-SQL)
@@ -40,7 +40,7 @@ La clause FOR vous permet de spécifier l’une des options suivantes pour les r
   
 -   Mettre les résultats de la requête au format JSON en spécifiant **FOR JSON**.  
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -216,7 +216,7 @@ _Supprimer les sauts de ligne indésirables :_ vous pouvez utiliser SSMS (SQL S
  Spécifie que les colonnes sont retournées sous la forme de sous-éléments. Sinon, elles sont mappées avec des attributs XML. Cette option est prise en charge dans les modes RAW, AUTO et PATH uniquement. Pour plus d’informations, consultez [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Spécifie qu’un élément ayant un attribut **xsi:nil** défini à **True** doit être créé pour les valeurs de colonne NULL. Cette option peut uniquement être spécifiée avec la directive ELEMENTS. Pour plus d'informations, consultez :
+ Spécifie qu’un élément ayant un attribut **xsi:nil** défini à **True** doit être créé pour les valeurs de colonne NULL. Cette option peut uniquement être spécifiée avec la directive ELEMENTS. Pour plus d'informations, consultez les pages suivantes :
 
 - [Générer des éléments pour des valeurs NULL avec le paramètre XSINIL](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).
 - [Clause FOR XML sur l’instruction SELECT](../../relational-databases/xml/for-xml-sql-server.md)

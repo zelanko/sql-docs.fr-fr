@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553246"
 ---
 # <a name="oracle-connection-manager"></a>Gestionnaire de connexions Oracle
@@ -78,9 +78,9 @@ Le gestionnaire de connexions Oracle propose les propriétés de gestionnaire de
 
 - **EnableDetailedTracing** : non utilisée.
 
-- **OracleHome** : spécifiez le nom d’Oracle Home 32 bits ou le dossier à utiliser par le connecteur. (Facultatif)
+- **OracleHome** : spécifiez le nom d’Oracle Home 32 bits ou le dossier à utiliser par le connecteur. (facultatif)
 
-- **OracleHome64** : spécifiez le nom d’Oracle Home 64 bits ou le dossier à utiliser par le connecteur lors de l’exécution en mode 64 bits. (Facultatif)
+- **OracleHome64** : spécifiez le nom d’Oracle Home 64 bits ou le dossier à utiliser par le connecteur lors de l’exécution en mode 64 bits. (facultatif)
 
 Les propriétés personnalisées ne sont pas listées dans l’éditeur du gestionnaire de connexions Oracle. Pour définir les propriétés **OracleHome** et **OracleHome64**
 

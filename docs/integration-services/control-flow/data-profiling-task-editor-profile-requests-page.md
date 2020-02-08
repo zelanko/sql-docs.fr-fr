@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294179"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Éditeur de tâche de profilage de données (page Demandes de profil)
@@ -86,7 +86,7 @@ ms.locfileid: "71294179"
  **Gestionnaire de connexions**  
  Affiche le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] qui se connecte à la base de données source.  
   
- **ID de demande**  
+ **ID de la demande**  
  Affiche un identificateur pour la demande. En règle générale, il n'est pas nécessaire de modifier la valeur générée automatiquement.  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>Colonnes communes aux cinq profils de colonne individuels  

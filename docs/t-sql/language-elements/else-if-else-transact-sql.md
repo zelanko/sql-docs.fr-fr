@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075311"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68075311"
 
   Impose les conditions d'exécution d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) qui suit *Boolean_expression* est exécutée si *Boolean_expression* a la valeur TRUE. Le mot clé facultatif ELSE est une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] alternative exécutée lorsque la valeur renvoyée par *Boolean_expression* est FALSE ou NULL.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,7 +55,7 @@ IF Boolean_expression
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-a-simple-boolean-expression"></a>A. Utilisation d'une expression booléenne simple  
+### <a name="a-using-a-simple-boolean-expression"></a>R. Utilisation d'une expression booléenne simple  
  L'exemple suivant comprend une expression booléenne simple (`1=1`) ayant la valeur true. Par conséquent, il imprime la première instruction.  
   
 ```  

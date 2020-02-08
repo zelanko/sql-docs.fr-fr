@@ -9,10 +9,10 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580761"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "65580761"
 |Zone de texte|Rendu sous la forme d'un attribut ou d'un élément à l'intérieur de son conteneur.|  
 |Rectangle|Rendu sous la forme d'un élément à l'intérieur de son conteneur.|  
 |Groupes de colonnes de matrices|Rendu sous la forme d'éléments à l'intérieur de groupes de lignes.|  
-|Carte|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les couches sont des éléments enfants de la carte et chaque couche comporte des éléments pour ses membres cartographiques et attributs de membre cartographique.|  
+|Mappage|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les couches sont des éléments enfants de la carte et chaque couche comporte des éléments pour ses membres cartographiques et attributs de membre cartographique.|  
 |Graphique|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les séries sont des éléments enfants du graphique, et les catégories sont des éléments enfants d'une série. Effectue le rendu de toutes les étiquettes de graphiques pour chaque valeur de graphique. Les étiquettes et les valeurs sont incluses en tant qu'attributs.|  
 |Barre de données|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur, comme un graphique. En règle générale, une barre de données n'inclut pas de hiérarchies ou d'étiquettes, seulement des valeurs.|  
 |Graphique sparkline|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur, comme un graphique. En règle générale, un graphique sparkline n'inclut pas de hiérarchies ou d'étiquettes, seulement des valeurs.|  
@@ -80,7 +80,7 @@ ms.locfileid: "65580761"
   
  Les valeurs des variables sont les suivantes :  
   
-|Créer une vue d’abonnement|Valeur|  
+|Name|Valeur|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  

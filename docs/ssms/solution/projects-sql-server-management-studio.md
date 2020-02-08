@@ -1,6 +1,6 @@
 ---
-title: Projets (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Projets (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c994120589a4fa31c5968743a38f89a8ad2d1dfc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b1a0df1686543cfe69a998149ede45ea2f845894
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259457"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251871"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projets (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Pour modifier les informations sur une connexion, utilisez la fenêtre Propriét
 |--------------------|---------|  
 |Explique comment créer un projet dans une solution.|[Créer un projet](../../ssms/solution/create-a-project.md)|  
 |Explique comment ajouter un projet existant à une solution.|[Ajouter un projet existant à une solution](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
-|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l'emplacement par défaut des projets](../../ssms/solution/change-the-default-location-for-projects.md)|  
+|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l’emplacement par défaut des projets](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Explique comment afficher les propriétés actuelles d'un projet.|[Afficher les propriétés d'un projet](../../ssms/solution/view-project-properties.md)|  
 |Explique comment ajouter de nouveaux éléments, tels que des connexions ou des fichiers de script, à un projet.|[Ajouter de nouveaux éléments à un projet](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Explique comment établir les informations de connexion d'une requête.|[Associer une requête à une connexion dans un projet](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73632953"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notes de publication de SQL Server 2012 Service Pack
@@ -23,7 +23,7 @@ Cette rubrique contient les notes de publication de synthèse des quatre Service
 
 Les Service Packs sont disponibles en ligne uniquement et non sur le support d’installation et peuvent être téléchargés comme suit :
 - [SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937)
-- [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
+- [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
 
@@ -105,11 +105,11 @@ Utilisez le tableau suivant pour déterminer le fichier à télécharger et inst
 |Une version 32 bits de n’importe quelle édition de SQL Server 2012|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe à partir d’ [ici](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Une version 32 bits de SQL Server 2012 RTM Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe à partir d’ [ici](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Une version 32 bits de seulement le client et les outils de gestion pour SQL Server 2012 (y compris SQL Server 2012 Management Studio)|Effectuer la mise à niveau du client et des outils de gestion vers la version 32 bits de SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe à partir d' [ici](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|Une version 32 bits de SQL Server 2012 Management Studio Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe à partir d’ [ici](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
+|Une version 32 bits de SQL Server 2012 Management Studio Express|Effectuer la mise à niveau vers la version 32 bits de SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe à partir d' [ici](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Une version 32 bits d'une édition quelconque de SQL Server 2012 **et** une version 32 bits du client et des outils de gestion (y compris SQL Server 2012 RTM Management Studio)|Effectuer la mise à niveau de tous les produits vers la version 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe à partir d’ [ici](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Une version 32 bits d'un ou de plusieurs outils du [Feature Pack Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=16978)|Effectuer la mise à niveau des outils vers la version 32 bits du Feature Pack Microsoft SQL Server 2012 SP1|Un ou plusieurs fichiers du [Feature Pack Microsoft SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
 |Pas d’installation 32 bits de SQL Server 2012|Installer SQL Server 2012 32 bits, y compris SP1 (nouvelle instance avec SP1 préinstallé)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **et** SQLServer2012SP1-FullSlipstream-x86-ENU.box à partir d' [ici](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Pas d’installation 32 bits de SQL Server 2012 Management Studio|Installer la version 32 bits de SQL Server 2012 Management Studio, y compris SP1|SQLManagementStudio_x86_ENU.exe à partir d’ [ici](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
+|Pas d’installation 32 bits de SQL Server 2012 Management Studio|Installer la version 32 bits de SQL Server 2012 Management Studio, y compris SP1|SQLManagementStudio_x86_ENU.exe à partir d' [ici](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Pas de version 32 bits de SQL Server 2012 RTM Express|Install la version 32 bits de SQL Server 2012 Express, y compris SP1|SQLEXPR32_x86_ENU.exe à partir d' [ici](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Une installation 32 bits de **SQL Server 2008** ou de **SQL Server 2008 R2**|**Mise à niveau sur place** vers la version 32 bits de SQL Server 2012, y compris SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **et** SQLServer2012SP1-FullSlipstream-x86-ENU.box à partir d' [ici](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |**Installations 64-bits :**|||  
@@ -128,14 +128,14 @@ Utilisez le tableau suivant pour déterminer le fichier à télécharger et inst
 Pour obtenir la liste complète des bogues et problèmes connus corrigés dans ce Service Pack, consultez cet [article de la Base de connaissances](https://support.microsoft.com/kb/2674319).   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>Échec de la réinstallation des instances de cluster de basculement SQL Server si vous utilisez la même adresse IP  
-**Problème :** si vous spécifiez une adresse IP incorrecte lors de l’installation d’une instance de cluster de basculement SQL Server, l’installation échoue. Après avoir désinstallé l'instance en échec, si vous tentez de réinstaller l'instance de cluster de basculement SQL Server avec le même nom d'instance et une adresse IP correcte, l'installation échoue. Cet échec est dû au groupe de ressources dupliqué conservé par l'installation précédente.  
+**Problème :** si vous spécifiez une adresse IP incorrecte lors de l’installation d’une instance de cluster de basculement SQL Server, l’installation échoue. Après avoir désinstallé l'instance en échec, si vous tentez de réinstaller l'instance de cluster de basculement SQL Server avec le même nom d'instance et une adresse IP correcte, l'installation échoue. Cet échec est dû au groupe de ressources dupliqué conservé par l'installation précédente.  
   
 **Solution de contournement :** pour résoudre ce problème, utilisez un autre nom d’instance durant la réinstallation, ou supprimez manuellement le groupe de ressources avant la réinstallation. Pour plus d'informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services et PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>L’outil de configuration PowerPivot ne crée pas la Galerie PowerPivot  
-**Problème :** l’outil de configuration PowerPivot configure un site d’équipe, et la Galerie PowerPivot n’est donc pas créée.  
+**Problème :** l’outil de configuration PowerPivot configure un site d’équipe, et la Galerie PowerPivot n’est donc pas créée.  
   
 **Solution de contournement :** créez une application (bibliothèque).  
   
@@ -146,14 +146,14 @@ Pour obtenir la liste complète des bogues et problèmes connus corrigés dans c
 3.  Cliquez sur **Galerie PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Pour utiliser PowerPivot pour Excel avec Excel 2013, vous devez utiliser le complément installé avec Excel  
-**Problème :** avec Office 2010, PowerPivot pour Excel est un complément autonome qui peut être téléchargé à partir de [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Sinon, vous pouvez également le télécharger depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Notez qu’il existe deux versions du complément PowerPivot disponibles en téléchargement : une qui est fournie avec SQL Server 2008 R2, et une autre qui est fournie avec SQL Server 2012. Toutefois, pour Office 2013, PowerPivot pour Excel est fourni avec Office et s'installe en même temps qu'Excel. Bien que les versions SQL Server 2008 R2 et SQL Server 2012 de PowerPivot pour Excel 2010 ne soient pas compatibles avec Excel 2013, vous pouvez toujours installer PowerPivot pour Excel 2010 sur votre ordinateur client si vous souhaitez exécuter Excel 2010 en parallèle d'Excel 2013. En d'autres termes, les deux versions d'Excel peuvent coexister, de même que les compléments PowerPivot correspondants.  
+**Problème :** avec Office 2010, PowerPivot pour Excel est un complément autonome qui peut être téléchargé à partir de [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Sinon, vous pouvez également le télécharger depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Notez qu’il existe deux versions du complément PowerPivot disponibles en téléchargement : une qui est fournie avec SQL Server 2008 R2, et une autre qui est fournie avec SQL Server 2012. Toutefois, pour Office 2013, PowerPivot pour Excel est fourni avec Office et s'installe en même temps qu'Excel. Bien que les versions SQL Server 2008 R2 et SQL Server 2012 de PowerPivot pour Excel 2010 ne soient pas compatibles avec Excel 2013, vous pouvez toujours installer PowerPivot pour Excel 2010 sur votre ordinateur client si vous souhaitez exécuter Excel 2010 en parallèle d'Excel 2013. En d'autres termes, les deux versions d'Excel peuvent coexister, de même que les compléments PowerPivot correspondants.  
   
 **Solution de contournement :** pour utiliser PowerPivot pour Excel 2013, vous devez activer le complément COM. Dans Excel 2013, sélectionnez **Fichier** | **Options** | **Compléments**. Dans la liste déroulante **Gérer** , sélectionnez **Compléments COM** , puis cliquez sur **OK**. Dans **Compléments COM**, sélectionnez **Microsoft Office PowerPivot pour Excel 2013** , puis cliquez sur **OK**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Installer et configurer SharePoint Server 2013 avant d’installer Reporting Services  
-**Problème :** effectuez les opérations suivantes **avant** d’installer SQL Server Reporting Services (SSRS).  
+**Problème :** effectuez les opérations suivantes **avant** d’installer SQL Server Reporting Services (SSRS).  
   
 1.  Exécutez l'Outil de préparation des produits SharePoint 2013.  
   
@@ -179,14 +179,14 @@ Les détails de l'erreur interne contiennent un message similaire au message sui
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>Les feuilles Power View dans un classeur PowerPivot sont supprimées après les actualisations des données planifiées  
 **Problème** : dans le complément PowerPivot pour SharePoint, l’utilisation de l’**actualisation planifiée des données** sur un classeur avec Power View a pour effet de supprimer les feuilles Power View.  
   
-**Solution de contournement**: pour utiliser l’**actualisation planifiée des données** avec des classeurs Power View, créez un classeur PowerPivot qui est simplement le modèle de données. Créez un classeur distinct avec les feuilles Excel et Power View qui se lie au classeur PowerPivot avec le modèle de données. Seul le classeur PowerPivot avec le modèle de données doit être planifiée pour l'actualisation des données.  
+**Solution de contournement** : pour utiliser l’**actualisation planifiée des données** avec des classeurs Power View, créez un classeur PowerPivot qui est simplement le modèle de données. Créez un classeur distinct avec les feuilles Excel et Power View qui se lie au classeur PowerPivot avec le modèle de données. Seul le classeur PowerPivot avec le modèle de données doit être planifiée pour l'actualisation des données.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponible dans l’édition incorrecte de SQL Server 2012  
-**Problème :** dans la version commerciale de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la fonctionnalité Data Quality Services (DQS) est disponible dans les éditions de SQL Server autres que les éditions Enterprise, Business Intelligence et Developer. Après avoir installé SQL Server 2012 SP1, DQS ne sera disponible que dans les éditions Enterprise, Business Intelligence et Developer.  
+**Problème :** dans la version commerciale de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la fonctionnalité Data Quality Services (DQS) est disponible dans les éditions de SQL Server autres que les éditions Enterprise, Business Intelligence et Developer. Après avoir installé SQL Server 2012 SP1, DQS ne sera disponible que dans les éditions Enterprise, Business Intelligence et Developer.  
   
-**Solution de contournement**: si vous utilisez DQS dans une édition non prise en charge, effectuez une mise à niveau vers une édition prise en charge ou supprimez la dépendance à cette fonctionnalité dans vos applications.  
+**Solution de contournement** : si vous utilisez DQS dans une édition non prise en charge, effectuez une mise à niveau vers une édition prise en charge ou supprimez la dépendance à cette fonctionnalité dans vos applications.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -196,7 +196,7 @@ La version SQL Server 2012 Express Service Pack 1 (SP1) inclut la version compl�
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service et concepteur pour Oracle d’Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>Mise à niveau de CDC Service et du concepteur  
-**Problème :** Si Change Data Capture Designer pour Oracle et Change Data Capture Service pour Oracle par Attunity sont installés sur votre ordinateur quand vous installez SQL Server 2012 SP1, ces composants ne sont pas mis à niveau lors de l’installation du SP1.  
+**Problème :** Si Change Data Capture Designer pour Oracle et Change Data Capture Service pour Oracle par Attunity sont installés sur votre ordinateur quand vous installez SQL Server 2012 SP1, ces composants ne sont pas mis à niveau lors de l’installation du SP1.  
   
 **Solution de contournement :** Pour mettre à niveau les composants CDC vers la version la plus récente :  
   
@@ -247,6 +247,6 @@ Cette version introduit plusieurs scénarios de compatibilité ascendante des pa
 - [Installer des mises à jour de maintenance de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [Comment identifier la version et l'édition de votre SQL Server](https://support.microsoft.com/help/321185) 
 - [Comment déterminer la version et l'édition de SQL Server](https://support.microsoft.com/kb/321185)  
-- [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -14,10 +14,10 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078028"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directive TYPE dans les requêtes FOR XML
@@ -51,7 +51,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Affectation des résultats de la requête FOR XML à une variable de type xml  
- Dans l’exemple suivant, un résultat FOR XML est affecté à une variable de type **xml**, `@x`. La requête récupère les informations de contact, telles que `BusinessEntityID`, `FirstName`, `LastName` et des numéros de téléphone supplémentaires, à partir de la colonne `AdditionalContactInfo` de `TYPE` **xml**. Sachant que la clause `FOR XML` spécifie la directive `TYPE`, le résultat XML est retourné en tant que type **xml** et affecté à une variable.  
+ Dans l’exemple suivant, un résultat FOR XML est affecté à une variable de type **xml** , `@x`. La requête récupère les informations de contact, telles que `BusinessEntityID`, `FirstName`, `LastName` et des numéros de téléphone supplémentaires, à partir de la colonne `AdditionalContactInfo` de `TYPE`**xml**. Sachant que la clause `FOR XML` spécifie la directive `TYPE` , le résultat XML est retourné en tant que type **xml** et affecté à une variable.  
   
 ```  
 USE AdventureWorks2012;  
@@ -74,7 +74,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>Interrogation des résultats d'une requête FOR XML  
  Les requêtes FOR XML renvoient des données XML. Par conséquent, vous pouvez appliquer des méthodes de type **xml** , telles que **query()** et **value()** , au résultat XML retourné par des requêtes FOR XML.  
   
- Dans la requête suivante, la méthode `query()` du type de données **xml** permet d’interroger le résultat de la requête `FOR XML`. Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+ Dans la requête suivante, la méthode `query()` du type de données **xml** permet d’interroger le résultat de la requête `FOR XML` . Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +88,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- La requête `SELECT ... FOR XML` interne retourne un résultat de type **xml** auquel la clause `SELECT` externe applique la méthode `query()` au type **xml**. Notez la directive `TYPE` spécifiée.  
+ La requête `SELECT ... FOR XML` interne retourne un résultat de type **xml** auquel la clause `SELECT` externe applique la méthode `query()` au type **xml** . Notez la directive `TYPE` spécifiée.  
   
  Voici le résultat obtenu :  
   
@@ -104,7 +104,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- Dans la requête suivante, la méthode `value()` du type de données **xml** permet de récupérer une valeur du résultat XML retourné par la requête `SELECT...FOR XML`. Pour plus d’informations, consultez [Méthode value&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ Dans la requête suivante, la méthode `value()` du type de données **xml** permet de récupérer une valeur du résultat XML retourné par la requête `SELECT...FOR XML` . Pour plus d’informations, consultez [Méthode value&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,7 +124,7 @@ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure
 SELECT @FirstPhoneFromAdditionalContactInfo;  
 ```  
   
- L'expression de chemin d'accès XQuery dans la méthode `value()` extrait le premier numéro de téléphone d'un contact client dont `BusinessEntityID` a pour valeur `1`.  
+ L'expression de chemin d'accès XQuery dans la méthode `value()` extrait le premier numéro de téléphone d'un contact client dont `BusinessEntityID` a pour valeur `1`.  
   
 > [!NOTE]  
 >  Si la directive TYPE n’est pas spécifiée, le résultat de la requête FOR XML est retourné en tant que type **nvarchar(max)** .  

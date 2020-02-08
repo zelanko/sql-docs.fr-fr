@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077445"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
@@ -30,7 +30,7 @@ Le tutoriel inclut les tâches suivantes :
 > * Créer la connexion [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] et les autorisations pour Pacemaker.
 > * Créer des ressources de groupe de disponibilité dans un cluster Pacemaker (type externe uniquement).
 
-## <a name="prerequisite"></a>Condition préalable
+## <a name="prerequisite"></a>Configuration requise
 - Déployez le cluster de haute disponibilité de Pacemaker comme décrit dans [Déployer un cluster Pacemaker pour SQL Server sur Linux](sql-server-linux-deploy-pacemaker-cluster.md).
 
 
@@ -332,7 +332,7 @@ Cette section montre comment créer un groupe de disponibilité avec un type de 
 
 5.  Dans la boîte de dialogue Spécifier les réplicas, cliquez sur **Ajouter un réplica**.
 
-6.  Dans la boîte de dialogue Se connecter au serveur, entrez le nom de l'instance Linux de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] qui sera le réplica secondaire ainsi que les informations d’identification pour se connecter. Cliquez sur **Se connecter**.
+6.  Dans la boîte de dialogue Se connecter au serveur, entrez le nom de l'instance Linux de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] qui sera le réplica secondaire ainsi que les informations d’identification pour se connecter. Cliquez sur **Connecter**.
 
 7.  Répétez les deux étapes précédentes pour l’instance qui contiendra un réplica de configuration uniquement ou un autre réplica secondaire.
 
@@ -354,9 +354,9 @@ Cette section montre comment créer un groupe de disponibilité avec un type de 
 
 11. Si un écouteur est créé pour des scénarios lisibles, SSMS 17.3 ou version ultérieure autorise la création du routage en lecture seule dans l’Assistant. Il peut également être ajouté ultérieurement via SSMS ou Transact-SQL. Pour activer le routage en lecture seule maintenant :
 
-    A.  Sélectionnez l’onglet Routage en lecture seule.
+    a.  Sélectionnez l’onglet Routage en lecture seule.
 
-    B.  Entrez les URL pour les réplicas en lecture seule. Ces URL sont similaires aux points de terminaison, sauf qu’elles utilisent le port de l’instance et non le point de terminaison.
+    b.  Entrez les URL pour les réplicas en lecture seule. Ces URL sont similaires aux points de terminaison, sauf qu’elles utilisent le port de l’instance et non le point de terminaison.
 
     c.  Sélectionnez chaque URL et, dans la partie inférieure, sélectionnez les réplicas lisibles. Pour sélectionner plusieurs réplicas, maintenez la touche MAJ enfoncée ou effectuer un cliquer-glisser.
 
@@ -512,7 +512,7 @@ Cet exemple illustre la création d’une configuration à deux réplicas à l�
     GO
     ```
     
-    Où
+    Where
     - *AGName* correspond au nom du groupe de disponibilité.
     - *DBName* est le nom de la base de données qui sera utilisée avec le groupe de disponibilité. Il peut également s’agir d’une liste de noms séparés par des virgules.
     - *PortOfEndpoint* est le numéro de port utilisé par le point de terminaison créé.

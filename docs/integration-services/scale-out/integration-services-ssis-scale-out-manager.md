@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082128"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
@@ -57,7 +57,7 @@ Après vous être connecté à SQL Server, si Scale Out n’est pas activé, vou
 ### <a name="view-scale-out-master-status"></a>Afficher l’état de Scale Out Master
 L’état de Scale Out Master apparaît dans la page **Tableau de bord**.
 
-![Portail - Tableau de bord](media/portal-dashboard-new.PNG)
+![Tableau de bord du portail](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Afficher l’état de Scale Out Worker
 L’état de Scale Out Worker apparaît dans la page **Gestionnaire de workers**. Vous pouvez sélectionner chaque Worker pour connaître son état.
@@ -103,6 +103,6 @@ Pour modifier la description d’un Scale Out Worker, sélectionnez-le, puis cli
 ![Portail - Enregistrer le Worker](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations, consultez les articles suivants :
+Pour plus d’informations, consultez les articles suivants :
 -   [SSIS (SQL Server Integration Services) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [SSIS (SQL Server Integration Services) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Étape 7 : Ajouter et configurer la destination OLE DB | Microsoft Docs'
+title: 'Étape 7 : Ajouter et configurer la destination OLE DB | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c4a51bfb9da9abe3e50c85896f32269e3fee5ff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296095"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Leçon 1-7 : Ajouter et configurer la destination OLE DB

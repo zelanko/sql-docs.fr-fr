@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710468"
 ---
 # <a name="type-mapping-with-polybase"></a>Mappage des types avec PolyBase
@@ -35,25 +35,25 @@ Pour les tables externes qui référencent des fichiers provenant de sources de 
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | Pour les nombres non signés.     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| INT           | Int32                     | INT            | IntWritable           |
-| BIGINT        | Int64                     | BIGINT         | LongWritable          |
-| bit           | Booléen                   | boolean        | BooleanWritable       |
-| FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | Unique                    | FLOAT          | FloatWritable         |
-| money         | Décimal                   | double         | DoubleWritable        |
-| SMALLMONEY    | Décimal                   | double         | DoubleWritable        |
-| NCHAR         | String<br /><br /> Char[] | chaîne         | Varchar               |
-| NVARCHAR      | String<br /><br /> Char[] | chaîne         | Varchar               |
-| char          | String<br /><br /> Char[] | chaîne         | Varchar               |
-| varchar       | String<br /><br /> Char[] | chaîne         | Varchar               |
+| int           | Int32                     | int            | IntWritable           |
+| bigint        | Int64                     | bigint         | LongWritable          |
+| bit           | Boolean                   | boolean        | BooleanWritable       |
+| float         | Double                    | double         | DoubleWritable        |
+| real          | Unique                    | float          | FloatWritable         |
+| money         | Decimal                   | double         | DoubleWritable        |
+| SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
+| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
+| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
+| char          | String<br /><br /> Char[] | string         | Varchar               |
+| varchar       | String<br /><br /> Char[] | string         | Varchar               |
 | binary        | Byte[]                    | binary         | BytesWritable         | S’applique à Hive 0.8 et versions ultérieures |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | S’applique à Hive 0.8 et versions ultérieures |
-| Date          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| time          | TimeSpan                  | TIMESTAMP      | TimestampWritable     |
-| Décimal       | Décimal                   | Décimal        | BigDecimalWritable    | S’applique à Hive 0.11 et versions ultérieures |
+| Date          | DateTime                  | timestamp      | TimestampWritable     |
+| smalldatetime | DateTime                  | timestamp      | TimestampWritable     |
+| datetime2     | DateTime                  | timestamp      | TimestampWritable     |
+| DATETIME      | DateTime                  | timestamp      | TimestampWritable     |
+| time          | TimeSpan                  | timestamp      | TimestampWritable     |
+| Décimal       | Decimal                   | Décimal        | BigDecimalWritable    | S’applique à Hive 0.11 et versions ultérieures |
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
@@ -62,11 +62,11 @@ Pour les tables externes qui référencent des fichiers provenant de sources de 
 
 | Type de données Oracle | Type SQL Server | 
 | -------------    | --------------- |
-|float             |float            |
-|NUMBER            |Décimal          |
+|Float             |Float            |
+|NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -93,16 +93,16 @@ Pour les tables externes qui référencent des fichiers provenant de sources de 
 
 | Type de données BSON     | Type SQL Server |
 | ------------------ | --------------- |
-| Double             | float           |
+| Double             | Float           |
 | String             | nvarchar        |
 | Données binaires        | nvarchar        |
 | ID de l'objet          | nvarchar        |
-| Booléen            | bit             |
+| Boolean            | bit             |
 | Date               | Datetime2       |
 | Entier de 32 bits     | Int             |
-| Horodateur          | nvarchar        |
+| Timestamp          | nvarchar        |
 | Entier de 64 bits     | BigInt          |
-|Decimal 128         | Décimal         | 
+|Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
 | Javascript         | nvarchar        |
 | Clé maximale            | nvarchar        |
@@ -123,9 +123,9 @@ MongoDB utilise les documents BSON pour stocker les enregistrements de données.
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
-|DECIMAL             |Décimal          |
-|FLOAT               |Décimal          |
-|BYTE                |Binaire           |
+|DECIMAL             |Decimal          |
+|FLOAT               |Decimal          |
+|BYTE                |Binary           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
@@ -136,9 +136,9 @@ MongoDB utilise les documents BSON pour stocker les enregistrements de données.
 |VARGRAPHIC          |nvarchar         |
 |DATE                |Date             |
 |timestamp           |Datetime2        |
-|TIME                |Time             |
-|TIME WITH TIME ZONE |Time             |
-|TIMESTAMP WITH TIME ZONE|Time         |
+|TEMPS                |Temps             |
+|TIME WITH TIME ZONE |Temps             |
+|TIMESTAMP WITH TIME ZONE|Temps         |
 
 ::: moniker-end
 

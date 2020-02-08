@@ -1,7 +1,7 @@
 ---
-title: Configurations matérielle et logicielle requises pour l’installation de SQL Server | Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 07/24/2019
+title: Configuration matérielle et logicielle requise
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 553c01ea02c83a57370e596d67ad077b43328d9b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 25f925b53f93a1d03282a7113ce6946679283c2b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056803"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75657021"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Configurations matérielle et logicielle requises pour l'installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,7 +88,7 @@ La configuration requise suivante s’applique à toutes les installations :
   
 |Composant|Condition requise|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 et versions ultérieures nécessitent le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 pour la prise en charge du moteur de base de données, de Master Data Services ou de la réplication. Le programme d’installation de SQL Server installe automatiquement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Vous pouvez également installer manuellement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à partir de [Microsoft .NET Framework 4.6 (programme d’installation Web) pour Windows](https://support.microsoft.com/kb/3045560).<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] nécessite .NET Framework 4.6.2. Disponible à partir du [Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> Pour obtenir davantage d’informations ainsi que des recommandations et des conseils sur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consultez le [Guide de déploiement du .NET Framework pour les développeurs](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]et [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] nécessitent une mise à niveau ( [KB2919355](https://support.microsoft.com/kb/2919355) ) avant l’installation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 et versions ultérieures nécessitent le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 pour la prise en charge du moteur de base de données, de Master Data Services ou de la réplication. Le programme d’installation de SQL Server installe automatiquement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Vous pouvez également installer manuellement [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à partir de [Microsoft .NET Framework 4.6 (programme d’installation Web) pour Windows](https://support.microsoft.com/kb/3045560).<br/><br/> Pour obtenir davantage d’informations ainsi que des recommandations et des conseils sur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consultez le [Guide de déploiement du .NET Framework pour les développeurs](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]et [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] nécessitent une mise à niveau ( [KB2919355](https://support.microsoft.com/kb/2919355) ) avant l’installation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Logiciel réseau|Les systèmes d'exploitation pris en charge pour [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] possèdent un logiciel réseau intégré. Les instances par défaut et les instances nommées d’une installation autonome prennent en charge les protocoles réseau suivants : protocoles de mémoire partagée, canaux nommés, TCP/IP et VIA.<br/><br/> **Remarque :** Le protocole VIA n’est pas pris en charge sur les clusters de basculement. Les clients ou les applications exécutés sur le même nœud du cluster de basculement en tant que l’instance SQL Server peuvent utiliser le protocole de mémoire partagée pour se connecter à SQL Server à l’aide de leur adresse de canal local. Toutefois, ce type de connexion n’est pas adaptée aux clusters et échoue après un basculement de l’instance. Il n’est donc pas recommandé et ne doit être utilisé que dans des scénarios très spécifiques.<br/><br/> **Important :** Le protocole VIA est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Pour plus d'informations sur les protocoles et les bibliothèques réseau, consultez [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Disque dur|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiert un minimum de 6 GO d'espace disque disponible.<br/><br/> L'espace disque nécessaire varie selon les composants [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que vous installez. Pour plus d’informations, consultez [Espace disque nécessaire](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) plus loin dans cet article. Pour plus d'informations sur les types de stockage pris en charge pour les fichiers de données, consultez [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Lecteur|Un lecteur de DVD, selon le cas, est requis pour l'installation à partir d'un disque.|  
@@ -122,19 +122,6 @@ La configuration requise suivante s’applique à toutes les installations :
 
 **Prise en charge de Server Core :**
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-
-L’installation de SQL Server 2019 en mode Server Core est prise en charge par les éditions suivantes de Windows Server :
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-   | &nbsp; | &nbsp; |
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 L’installation de SQL Server 2016 et 2017 en mode Server Core est prise en charge par les éditions suivantes de Windows Server :
 
@@ -145,7 +132,6 @@ L’installation de SQL Server 2016 et 2017 en mode Server Core est prise en ch
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
 | Windows Server 2012 Standard | Windows Server 2012 Datacenter |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 Pour plus d’informations sur l’installation de SQL Server en mode Server Core, consultez [Installer SQL Server sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
@@ -168,26 +154,10 @@ Pour plus d’informations sur l’installation de SQL Server en mode Server Cor
   
 ###  <a name="TOP_Principal"></a> Compatibilité de système d’exploitation   
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-Le tableau suivant indique les éditions de SQL Server 2019 qui sont compatibles avec les différentes versions de Windows :  
-  
-
-| Édition de SQL Server :               | Enterprise | Développeur | Standard | Web | Express |  
-| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
-| Windows Server 2019 Standard      |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
-| Windows Server 2019 Essentials    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
-| Windows Server 2016 Datacenter    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
-| Windows Server 2016 Standard      |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
-| Windows Server 2016 Essentials    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
-| &nbsp; | &nbsp; |
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 Le tableau suivant indique les éditions de SQL Server 2016 et 2017 qui sont compatibles avec les différentes versions de Windows :  
   
-| Édition de SQL Server :               | Enterprise | Développeur | Standard | Web | Express |  
+| Édition de SQL Server :               | Entreprise | Développeur | standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2019 Standard      |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
@@ -204,7 +174,7 @@ Le tableau suivant indique les éditions de SQL Server 2016 et 2017 qui sont co
 | Windows Server 2012 Essentials    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2012 Foundation    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows 10 IoT Entreprise         |    Non      |    Oui    |    Oui   | Non  |   Oui   |
-| Windows 10 Entreprise             |    Non      |    Oui    |    Oui   | Non  |   Oui   |
+| Windows 10 Entreprise             |    Non      |    Oui    |    Oui   | Non  |   Oui   |
 | Windows 10 Professionnel           |    Non      |    Oui    |    Oui   | Non  |   Oui   |
 | Windows 10 Famille                   |    Non      |    Oui    |    Oui   | Non  |   Oui   |
 | Windows 8.1 Entreprise            |    Non      |    Oui    |    Oui   | Non  |   Oui   |
@@ -218,7 +188,6 @@ Le tableau suivant indique les éditions de SQL Server 2016 et 2017 qui sont co
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   Complément[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint  
-::: moniker-end
 
 
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 561d1d32cef9102200bcc3b0730c96afed06d91a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727482"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploration de données et modélisation prédictive avec R dans SQL Server
@@ -21,7 +21,7 @@ ms.locfileid: "73727482"
 
 Cet article décrit les améliorations qu’il est possible d’apporter au processus de science des données grâce à l’intégration avec SQL Server.
 
-S'applique à : SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+S’applique à : SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
 ## <a name="the-data-science-process"></a>Le processus de science des données
 
@@ -70,7 +70,7 @@ Outre les bibliothèques R propriétaires incluses avec Microsoft Machine Learni
 
 Lors du développement de votre solution R, veillez à télécharger Microsoft R Client. Ce téléchargement gratuit comprend les bibliothèques nécessaires pour prendre en charge les contextes de calcul à distance et les algorithmes évolutifs :
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** distribution du runtime R et ensemble de packages, tels que la bibliothèque Intel Math Kernel Library, qui améliore les performances des opérations standard de R.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] :** distribution du runtime R et ensemble de packages, tels que la bibliothèque Intel Math Kernel Library, qui améliore les performances des opérations standard de R.  
   
 + **RevoScaleR :** package R qui permet de transférer (pushing) des calculs à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Il inclut également un ensemble de fonctions R courantes qui ont été repensées pour offrir de meilleures performances et une plus grande scalabilité. Le préfixe **rx** identifie ces fonctions améliorées. Il inclut aussi des fournisseurs de données améliorées pour diverses sources. Ces fonctions ont le préfixe **Rx**.
 

@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680960"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
@@ -113,9 +113,9 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
     -   Si vous avez créé le projet dans une version précédente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], après avoir ouvert le fichier projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convertissez le projet en modèle de déploiement de projet.  
   
         > [!NOTE]  
-        >  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées à l’issue de la conversion du projet. Pour créer une connexion à une source de données que les packages du projet peuvent partager, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+        >  Si le projet contient une ou plusieurs sources de données, les sources de données sont supprimées quand la conversion du projet est terminée. Pour créer une connexion à une source de données que les packages du projet peuvent partager, ajoutez un gestionnaire de connexions au niveau du projet. Pour plus d’informations, consultez [Ajouter, supprimer ou partager un gestionnaire de connexions dans un package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
-         Selon que vous exécutez **l’Assistant Conversion de projet Integration Services** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l’Assistant effectue différentes tâches de conversion.  
+         Selon que vous exécutez **l’Assistant Conversion de projet Integration Services** à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l’Assistant effectue différentes tâches de conversion.  
   
         -   Si vous exécutez l'Assistant à partir de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], les packages contenus dans le projet sont convertis de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 2005, 2008 ou 2008 R2 vers le format utilisé par la version en cours de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les fichiers du projet d'origine (.dtproj) et de package (.dtsx) sont mis à niveau.  
   
@@ -133,11 +133,11 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 ###  <a name="convert"></a> Pour convertir un projet en modèle de déploiement de projet  
   
-1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]puis, dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et cliquez sur **Convertir en modèle de déploiement de projet**.  
+1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], puis dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Convertir en modèle de déploiement de projet**.  
   
      -ou-  
   
-     Dans l’Explorateur d’objets de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur le nœud **Projets** et sélectionnez **Importer les packages**.  
+     Depuis l’Explorateur d’objets dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur le nœud **Projets** et sélectionnez **Importer les packages**.  
   
 2.  Terminez l'Assistant.
   
@@ -145,17 +145,17 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]puis, dans le menu **Projet** , sélectionnez **Déployer** pour lancer **l’Assistant Déploiement d’Integration Services**.  
   
-     ou Gestionnaire de configuration  
+     or  
   
      Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier du projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
   
-     ou Gestionnaire de configuration  
+     or  
   
      À l’invite de commandes, exécutez **isdeploymentwizard.exe** à partir de **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Sur les ordinateurs 64 bits, il existe également une version 32 bits de l’outil dans **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Dans la page **Sélectionner une source** , cliquez sur **Fichier de déploiement de projet** pour sélectionner le fichier de déploiement du projet.  
   
-     ou Gestionnaire de configuration  
+     or  
   
      Cliquez sur **Catalogue Integration Services** pour sélectionner un projet qui a déjà été déployé dans le catalogue SSISDB.  
   
@@ -296,7 +296,7 @@ Lancer l’Assistant en :
 
  - En tapant **« Assistant déploiement SQL Server »** dans Windows Search 
 
- ou Gestionnaire de configuration
+ or
 
  - En recherchant le fichier exécutable **ISDeploymentWizard.exe** sous le dossier d’installation de SQL Server, par exemple : « C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn ». 
  
@@ -306,7 +306,7 @@ Lancer l’Assistant en :
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Sélectionner une source
+#### <a name="select-source"></a>Sélectionner la source
 
  Pour déployer un fichier de déploiement de projet que vous avez créé, sélectionnez **Fichier de déploiement de projet** , puis entrez le chemin d’accès du fichier .ispac. Pour déployer un projet qui réside dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , sélectionnez **Catalogue Integration Services**, puis entrez le nom du serveur et le chemin d'accès au projet au sein du catalogue. Cliquez sur **Suivant** pour afficher la page **Sélectionner la destination** .  
   
@@ -324,7 +324,7 @@ Lancer l’Assistant en :
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Sélectionner une source
+#### <a name="select-source"></a>Sélectionner la source
 
  La page **Sélectionner une source** dans l’ **Assistant Déploiement d’Integration Services** affiche les paramètres spécifiques au modèle de déploiement de package si vous avez sélectionné l’option **Déploiement de package** comme **modèle de déploiement**.  
   
@@ -500,7 +500,7 @@ Lancer l’Assistant en :
   
 -   Créez un objet serveur lié. Pour plus d’informations, consultez [Créer des serveurs liés &#40;moteur de base de données SQL Server&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md).  
   
-     Dans la page **Options du serveur** de la boîte de dialogue **Propriétés du serveur lié**, attribuez à **RPC** et à **Sortie RPC** la valeur **True**. Par ailleurs, attribuez à **Activer la promotion des transactions distribuées pour RPC** la valeur **False**.  
+     Dans la page **Options du serveur** de la boîte de dialogue **Propriétés du serveur lié** , attribuez à **RPC** et à **Sortie RPC** la valeur **True**. Par ailleurs, attribuez à **Activer la promotion des transactions distribuées pour RPC** la valeur **False**.  
   
 -   Vérifiez les paramètres dynamiques du fournisseur que vous avez sélectionné pour le serveur lié : développez le nœud **Fournisseurs** sous **Serveurs liés** dans l’Explorateur d’objets, puis cliquez avec le bouton droit sur le fournisseur et cliquez sur **Propriétés**. Sélectionnez **Activer** en regard de **Paramètre dynamique**.  
   
@@ -571,20 +571,20 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  L’option suivante s’affiche dans la page quand vous sélectionnez **Système de fichiers** dans la liste déroulante **Source** . Sélectionnez cette option quand le package se trouve dans le système de fichiers.  
   
- **Dossier**  
+ **Folder**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
  Les options suivantes s’affichent dans la page quand vous sélectionnez **Magasin de packages SSIS** dans la liste déroulante **Source**. Pour plus d’informations sur le magasin de packages, consultez [Gestion de packages &#40;Service SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).  
   
- **Server**  
+ **Serveur**  
  Tapez le nom du serveur ou sélectionnez ce dernier.  
   
- **Dossier**  
+ **Folder**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
  Les options suivantes s’affichent dans la page quand vous sélectionnez **Microsoft SQL Server** dans la liste déroulante **Source** . Sélectionnez cette option quand le package se trouve dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Server**  
+ **Serveur**  
  Tapez le nom du serveur ou sélectionnez ce dernier.  
   
  **Utiliser l’authentification Windows**  
@@ -593,13 +593,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Utiliser l'authentification SQL Server**  
  Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifie la connexion en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Spécifiez un nom d'utilisateur lorsque vous utilisez l'authentification SQL Server.  
   
  **Mot de passe**  
  Tapez le mot de passe lorsque vous utilisez l'authentification SQL Server.  
   
- **Dossier**  
+ **Folder**  
  Tapez le chemin d’accès du package ou accédez au package en cliquant sur **Parcourir**.  
   
 ###  <a name="selectPackages"></a> Définir les options sur la page Sélectionner les package  
@@ -707,13 +707,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Sélectionnez l'étendue du paramètre, package ou projet.  
   
 ###  <a name="configureParameters"></a> Définir les options sur la page Configurer les paramètres  
- **Name**  
+ **Nom**  
  Indique le nom du paramètre.  
   
  **Portée**  
  Indique l'étendue du paramètre.  
   
- **Value**  
+ **Valeur**  
  Indique la valeur du paramètre.  
   
  Cliquez sur le bouton de sélection en regard du champ de valeur pour configurer les propriétés du paramètre.  

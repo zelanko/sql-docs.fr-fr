@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982793"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -74,7 +74,7 @@ Crée une fonction définie par l'utilisateur dans [!INCLUDE[ssNoVersion](../../
 > [!NOTE]  
 > Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consultez [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -293,7 +293,7 @@ RETURNS return_data_type
  Spécifiez un nom de paramètre en plaçant le signe @ comme premier caractère. Le nom de paramètre doit suivre les règles applicables aux identificateurs. Un paramètre étant local à une fonction, vous pouvez utiliser le même nom dans d'autres fonctions. Les paramètres ne peuvent que prendre la place de constantes ; ils ne peuvent pas être utilisés à la place de noms de tables, de colonnes ou d'autres objets de base de données.  
   
 > [!NOTE]  
-> ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)** , puis définie sur une valeur supérieure à trois caractères, les données sont tronquées à la taille définie, et l’instruction `INSERT` ou `UPDATE` réussit.  
+> ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)** et qu’une valeur de plus de trois caractères lui est attribuée, les données sont tronquées en fonction de la taille définie, et l’instruction `INSERT` ou `UPDATE` réussit.  
   
  [ *type_schema_name*. ] *parameter_data_type*  
  Type de données de paramètre et, éventuellement, schéma auquel il appartient. Dans le cas des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], tous les types de données, notamment les types CLR définis par l’utilisateur et les types de tables définis par l’utilisateur, sont autorisés à l’exception du type de données **timestamp**. Dans le cas des fonctions CLR, tous les types de données, notamment les types CLR définis par l’utilisateur, sont autorisés à l’exception des types de tables définis par l’utilisateur **text**, **ntext** et **image**, et des types de données **timestamp**. Les types non scalaires **cursor** et **table** ne peuvent pas être spécifiés comme type de données de paramètre dans les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CLR.  
@@ -333,7 +333,7 @@ Valeur par défaut pour le paramètre. Si une valeur *default* est définie, la 
   
  Dans les fonctions table en ligne, la valeur de retour TABLE est définie via une instruction SELECT unique. Aucune variable retournée n'est associée à une fonction en ligne.  
   
- <a name="mstvf"></a> Dans les fonctions table à instructions multiples, \@*return_variable* est une variable TABLE servant à stocker et à cumuler les lignes à retourner comme valeur de la fonction. \@ *return_variable* peut être spécifié uniquement pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], et pas pour les fonctions CLR.  
+ <a name="mstvf"></a> Dans les fonctions table à instructions multiples, \@*return_variable* est une variable TABLE servant à stocker et à cumuler les lignes à retourner comme valeur de la fonction. \@*return_variable* peut être spécifié uniquement pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], et pas pour les fonctions CLR.  
   
  *select_stmt*  
  Représente l’instruction SELECT unique qui définit la valeur de retour d’une fonction table en ligne.  
@@ -557,7 +557,7 @@ Si une fonction définie par l’utilisateur n’est pas créée avec la clause 
  Pour plus d’informations sur la façon de programmer des fonctions CLR, consultez [Fonctions CLR définies par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Les fonctions scalaires peuvent être appelées là où des expressions scalaires sont utilisées. C'est notamment le cas dans les colonnes calculées et les définitions de contraintes CHECK. Les fonctions scalaires peuvent également être exécutées avec l’instruction [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). Les fonctions scalaires doivent être appelées avec au moins le nom en deux parties de la fonction ( *<schema> <function>* ). Pour plus d’informations sur les noms en plusieurs parties, consultez [Conventions de la syntaxe Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Les fonctions table peuvent être appelées là où des expressions de table sont autorisées dans la clause `FROM` des instructions `SELECT`, `INSERT`, `UPDATE` ou `DELETE`. Pour plus d’informations, consultez [Exécuter des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Les fonctions scalaires peuvent être appelées là où des expressions scalaires sont utilisées. C'est notamment le cas dans les colonnes calculées et les définitions de contraintes CHECK. Les fonctions scalaires peuvent également être exécutées avec l’instruction [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). Les fonctions scalaires doivent être appelées avec au moins le nom en deux parties de la fonction ( *<schema><function>* ). Pour plus d’informations sur les noms en plusieurs parties, consultez [Conventions de la syntaxe Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Les fonctions table peuvent être appelées là où des expressions de table sont autorisées dans la clause `FROM` des instructions `SELECT`, `INSERT`, `UPDATE` ou `DELETE`. Pour plus d’informations, consultez [Exécuter des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## <a name="interoperability"></a>Interopérabilité  
  Les instructions suivantes sont valides dans une fonction :  
@@ -581,7 +581,7 @@ Pour plus d’informations, consultez [Créer des fonctions définies par l’ut
 ### <a name="computed-column-interoperability"></a>Interopérabilité des colonnes calculées  
  Les fonctions ont les propriétés suivantes. Les valeurs de ces propriétés déterminent si les fonctions sont utilisables dans des colonnes calculées pouvant être indexées ou rendues persistantes.  
   
-|Propriété|Description|Remarques|  
+|Propriété|Description|Notes|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|La fonction est déterministe ou non déterministe.|L'accès local aux données est autorisé dans les fonctions déterministes. Par exemple, une fonction est dite déterministe si elle retourne toujours le même résultat chaque fois qu'elle est appelée à l'aide d'un ensemble spécifique de valeurs d'entrée et que la base de données présente le même état.|  
 |**IsPrecise**|La fonction est précise ou imprécise.|Les fonctions imprécises contiennent des opérations telles que les opérations à virgule flottante.|  
@@ -670,7 +670,7 @@ La clause `ORDER` ne garantit pas des résultats ordonnés quand une requête SE
 > [!NOTE]
 > Pour plus d’exemples et des considérations relatives aux performances sur les fonctions définies par l’utilisateur, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
-### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Utilisation d'une fonction scalaire définie par l'utilisateur calculant la semaine ISO  
+### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>R. Utilisation d'une fonction scalaire définie par l'utilisateur calculant la semaine ISO  
  L'exemple suivant crée la fonction définie par l'utilisateur `ISOweek`. Cette fonction prend un argument date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, `SET DATEFIRST 1` doit être appelée avant la fonction.  
   
  L’exemple illustre également l’utilisation de la clause [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) pour indiquer le contexte de sécurité dans lequel une procédure stockée peut être exécutée. Dans l'exemple, l'option `CALLER` spécifie que la procédure sera exécutée dans le contexte de l'utilisateur qui l'appelle. Les autres options que vous pouvez spécifier sont `SELF`, `OWNER` et *user_name*.  

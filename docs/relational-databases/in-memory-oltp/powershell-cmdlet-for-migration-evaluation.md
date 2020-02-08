@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698303"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Applet de commande PowerShell pour l’évaluation de la migration
@@ -55,19 +55,19 @@ Certains aspects de la syntaxe doivent être soulignés. Si vous spécifiez le p
 - `-Schema`
 - `-Object`
 
-À l’inverse, si vous _ne spécifiez pas_ `-InputObject`, vous devez spécifier `-Server` et `-Database`. Si vous spécifiez `-Server`, vous pouvez limiter l’étendue en spécifiant `-Schema` ou `-Object` ou les deux.
+À l’inverse, si vous _ne spécifiez pas_`-InputObject`, vous devez spécifier `-Server` et `-Database`. Si vous spécifiez `-Server`, vous pouvez limiter l’étendue en spécifiant `-Schema` ou `-Object` ou les deux.
 
 | Nom du paramètre | Description |
 | :------------- | :---------- |
 | Base de données | Nom de la base de données SQL Server cible. Obligatoire quand `-Server` est obligatoire.<br/><br/> Facultatif dans SQLPS. |
 | FolderPath | Dossier sous lequel l’applet de commande doit stocker les rapports générés.<br/><br/> Obligatoire. |
 | InputObject | L’objet SMO que l’applet de commande doit cibler.<br/><br/> Obligatoire dans l’environnement Windows Powershell si `-Server` n’est pas fourni.<br/><br/> Facultatif dans SQLPS. |
-| MigrationType | Type de scénario de migration ciblé par l’applet de commande. Actuellement, la seule valeur correspond au système **'OLTP'** par défaut.<br/><br/> Facultatif. |
+| MigrationType | Type de scénario de migration ciblé par l’applet de commande. Actuellement, la seule valeur correspond au système **'OLTP'** par défaut.<br/><br/> facultatif. |
 | Object | Nom de l’objet à propos duquel créer un rapport. Il peut s’agir d’une table ou d’une procédure stockée. |
 | Mot de passe | Obligatoire quand `-Username` est requis. |
-| schéma | Nom du schéma qui possède l’objet à propos duquel créer un rapport.<br/><br/> Facultatif. |
+| schéma | Nom du schéma qui possède l’objet à propos duquel créer un rapport.<br/><br/> facultatif. |
 | Serveur | Nom de l’instance SQL Server cible. Obligatoire dans l’environnement Windows Powershell si `-InputObject` n’est pas fourni.<br/><br/> Facultatif dans SQLPS. |
-| Utilisateur | Obligatoire lors de la connexion par le biais de l’authentification SQL Server (et non l’authentification Windows). Sinon, omettez cette valeur. |
+| Nom d’utilisateur | Obligatoire lors de la connexion par le biais de l’authentification SQL Server (et non l’authentification Windows). Sinon, omettez cette valeur. |
 | &nbsp; | &nbsp; |
 
 ## <a name="prerequisites"></a>Conditions préalables requises

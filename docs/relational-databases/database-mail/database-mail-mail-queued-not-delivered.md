@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228411"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Database Mail : Message en file d’attente, non remis 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Cette rubrique explique comment remédier à la situation où des e-mails sont mis en attente avec succès, mais non remis.
+Cette rubrique explique comment remédier à la situation où les messages électroniques sont mis en attente avec succès, mais non remis.
 
 ## <a name="diagnose-the-problem"></a>Diagnostiquer le problème 
 
@@ -46,13 +46,13 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 Pour obtenir une explication détaillée des colonnes, consultez [sysmail_help_queue_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-queue-sp-transact-sql.md#result-set).
 
-Vérifiez l’activité dans la vue **sysmail_event_log**. Cette vue doit contenir une entrée établissant que le programme externe Database Mail a été démarré. S’il n’existe aucune entrée dans la vue **sysmail_event_log**, consultez le symptôme [Messages en file d’attente, aucune entrée](database-mail-common-errors.md#database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log) dans **sysmail_event_log**. S’il existe des erreurs dans la vue **sysmail_event_log**, résolvez l’erreur spécifique.
+Vérifiez l’activité dans la vue **sysmail_event_log**. Cette vue doit contenir une entrée établissant que le programme externe de messagerie de base de données a été démarré. S’il n’existe aucune entrée dans la vue **sysmail_event_log**, consultez le symptôme [Messages en file d’attente, aucune entrée](database-mail-common-errors.md#database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log) dans **sysmail_event_log**. S’il existe des erreurs dans la vue **sysmail_event_log**, résolvez l’erreur spécifique.
 
 S’il existe des entrées dans la vue **sysmail_event_log**, vérifiez l’état des messages dans la vue **sysmail_allitems**.
 
 ## <a name="message-status-unsent"></a>État de message = Non envoyé 
 
-Un état **non envoyé** indique que le [programme externe Database Mail](database-mail-external-program.md) n’a pas encore traité l’e-mail. Le programme externe Database Mail peut avoir pris du retard dans le traitement des messages ; la vitesse à laquelle le programme externe traite les messages dépend des conditions du réseau, du délai d’attente avant une nouvelle tentative, du volume des messages et de la capacité du serveur SMTP. Si le problème persiste, utilisez plusieurs profils pour distribuer les messages parmi plusieurs serveurs SMTP.
+Un état **non envoyé** indique que le [programme externe Database Mail](database-mail-external-program.md) n’a pas encore traité l’e-mail. Le programme externe de messagerie de base de données peut avoir pris du retard dans le traitement des messages ; la vitesse à laquelle le programme externe traite les messages dépend des conditions du réseau, du délai d'attente avant une nouvelle tentative, du volume des messages et de la capacité du serveur SMTP. Si le problème persiste, envisagez d'utiliser plusieurs profils pour distribuer les messages entre plusieurs serveurs SMTP.
 
 Vérifiez la date de modification la plus récente pour les messages remis. Si la dernière remise s’est produite il y a quelque temps, vérifiez dans la vue sysmail_event_log que le programme externe a bien été démarré par Service Broker. Si la dernière tentative n’a pas démarré le programme externe, vérifiez que le Programme externe Database Mail se trouve dans le répertoire correct et que le compte de service pour SQL Server dispose de l’autorisation d’exécuter l’exécutable.
 
@@ -61,15 +61,15 @@ Vérifiez la date de modification la plus récente pour les messages remis. Si l
 
 ## <a name="message-status-retrying"></a>État de message = Nouvel tentative
 
-Un état de nouvelle tentative indique que Database Mail a tenté de remettre le message au serveur SMTP, mais n’a pas pu. Ceci est généralement dû à une interruption du réseau, à une défaillance du serveur SMTP ou à une configuration incorrecte du compte Database Mail. Le message finira par parvenir à destination, ou il échouera et postera un message dans le journal d’événements.
+Un état reprise indique que la messagerie de base de données a tenté de remettre le message au serveur SMTP, mais n'a pas pu. Ceci est généralement dû à une interruption du réseau, à une défaillance du serveur SMTP ou à une configuration incorrecte du compte de messagerie de base de données. Le message finira par parvenir à destination, ou il échouera et postera un message dans le journal d'événements.
 
 ## <a name="message-status-sent"></a>État de message = Envoyé
 
-Un état **envoyé** indique que le programme externe Database Mail a remis l’e-mail au serveur SMTP. Si le message n’est pas arrivé à destination, le serveur SMTP a accepté le message de Database Mail, mais n’a pas pu le remettre au destinataire final. Vérifiez les journaux du serveur SMTP ou contactez l’administrateur du serveur SMTP. Vous pouvez aussi tester le serveur de messagerie SMTP au moyen d’un autre client tel qu’Outlook Express.
+Un état **envoyé** indique que le programme externe Database Mail a remis l’e-mail au serveur SMTP. Si le message n'est pas arrivé à destination, le serveur SMTP a accepté le message de la messagerie de base de données, mais n'a pas pu le remettre au destinataire final. Vérifiez les journaux du serveur SMTP ou contactez l'administrateur du serveur SMTP. Vous pouvez aussi tester le serveur de messagerie SMTP au moyen d'un autre client tel qu'Outlook Express.
 
 ## <a name="message-status-failed"></a>État de message = Échec
 
-Un état Échec indique que le programme externe Database Mail n’a pas pu remettre le message au serveur SMTP. Dans ce cas, la vue **sysmail_event_log** contient les informations détaillées du programme externe. Pour obtenir un exemple de requête joignant **sysmail_faileditems** et **sysmail_event_log** pour récupérer des messages d’erreur détaillés, consultez [Vérifier l’état des messages électroniques envoyés avec la messagerie de base de données](check-the-status-of-e-mail-messages-sent-with-database-mail.md). Les causes d’échec les plus courantes sont une adresse de destination incorrecte ou des problèmes de réseau qui empêchent le programme externe d’atteindre un ou plusieurs des comptes de basculement. Des problèmes sur le serveur SMTP peuvent également entraîner le rejet du courrier électronique. Avec l’Assistant Configuration de Database Mail, définissez le **Niveau de journalisation** sur **Commentaires** et envoyez un message de test pour rechercher le point d’échec.
+Un état Échec indique que le programme externe Database Mail n’a pas pu remettre le message au serveur SMTP. Dans ce cas, la vue **sysmail_event_log** contient les informations détaillées du programme externe. Pour obtenir un exemple de requête joignant **sysmail_faileditems** et **sysmail_event_log** pour récupérer des messages d’erreur détaillés, consultez [Vérifier l’état des messages électroniques envoyés avec la messagerie de base de données](check-the-status-of-e-mail-messages-sent-with-database-mail.md). Les causes d'échec les plus courantes sont une adresse de destination incorrecte ou des problèmes de réseau qui empêchent le programme externe d'atteindre un ou plusieurs des comptes de basculement. Des problèmes sur le serveur SMTP peuvent également entraîner le rejet du courrier électronique. Avec l’Assistant Configuration de Database Mail, définissez le **Niveau de journalisation** sur **Commentaires** et envoyez un message de test pour rechercher le point d’échec.
 
 
 

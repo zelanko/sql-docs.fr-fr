@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000454"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68000454"
 |Propriété|Valeur|  
 |--------------|-----------|  
 |Syntaxe|**time** [ (*échelle de fractions de seconde*) ]|  
-|Utilisation|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|Usage|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*échelle de fractions de seconde*|Spécifie le nombre de chiffres pour la partie fractionnaire des secondes.<br /><br /> Il peut s'agir d'un entier compris entre 0 et 7. Pour Informatica, il peut s’agir d’un entier compris entre 0 et 3.<br /><br /> L’échelle de fractions par défaut est 7 (100 ns).|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|hh:mm:ss[.nnnnnnn] pour Informatica)<br /><br /> Pour plus d’informations, consultez la section [Compatibilité descendante pour les clients de bas niveau](#BackwardCompatibilityforDownlevelClients).|  
 |Plage|00:00:00.0000000 à 23:59:59.9999999 (00:00:00.000 à 23:59:59.999 pour Informatica)|  
@@ -75,11 +75,11 @@ ms.locfileid: "68000454"
 |----------------|-----------------|  
 |hh:mm[:ss][:fractions de seconde][AM][PM]<br /><br /> hh:mm[:ss][.fractions de seconde][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|La valeur d'heure 0 représente l'heure après minuit (AM), que l'élément AM soit ou non spécifié. PM ne peut pas être spécifié quand l'heure est égale à 0.<br /><br /> Les valeurs d'heure comprises entre 01 et 11 représentent les heures avant midi si ni AM ni PM n'est spécifié. Elles représentent les heures avant midi si AM est spécifié et les heures après midi si PM est spécifié.<br /><br /> La valeur 12 pour les heures représente l'heure qui démarre à midi si ni AM ni PM n'est spécifié. Elle représente l'heure qui démarre à minuit si AM est spécifié et l'heure qui démarre à midi si PM est spécifié. Par exemple, 12:01 correspond à 1 minute après midi, comme 12:01 PM, alors que 12:01 AM équivaut à 1 minute après minuit. La spécification de 12:01 AM équivaut à 00:01 ou 00:01 AM.<br /><br /> Les heures situées entre 13 et 23 représentent les heures après midi si ni AM ni PM n'est spécifié. Les valeurs représentent également les heures après midi si PM est spécifié. Vous ne pouvez pas spécifier AM lorsque la valeur d'heure est comprise entre 13 et 23.<br /><br /> Une valeur d'heure de 24 n'est pas valide. Pour représenter minuit, utilisez 12:00 AM ou 00:00.<br /><br /> Les millisecondes peuvent être précédées du signe deux-points (:) ou d'un point (.). Si le signe deux-points est utilisé, il s'agit de millièmes de secondes. Si le point est utilisé, un chiffre unique représente un dixième de seconde, deux chiffres un centième et trois chiffres un millième. Par exemple, 12:30:20:1 indique 20 secondes et un millième après 12:30 ; 12:30:20.1 indique 20 secondes et un dixième après 12:30.|  
   
-|ISO 8601|Remarques|  
+|ISO 8601|Notes|  
 |--------------|-----------|  
 |hh:mm:ss<br /><br /> hh:mm[:ss][.fractions de seconde]|hh comprend deux chiffres, entre 0 et 23, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br /><br /> mm comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.|  
   
-|ODBC|Remarques|  
+|ODBC|Notes|  
 |----------|-----------|  
 |{t 'hh:mm:ss[.fractions de seconde]'}|Spécifique à l'API ODBC.|  
   
@@ -216,7 +216,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-comparing-date-and-time-data-types"></a>A. Comparaison de types de données de date et d'heure  
+### <a name="a-comparing-date-and-time-data-types"></a>R. Comparaison de types de données de date et d'heure  
  L’exemple suivant compare les résultats de la conversion d’une chaîne en chaque type de données **date** et **time**.  
   
 ```  
@@ -232,7 +232,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|Type de données|Sortie|  
+|Type de données|Output|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -259,7 +259,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. Insertion du littéral de chaîne d'heure dans les colonnes de chaque type de données de date et d'heure  
  Dans le tableau suivant, la première colonne affiche un littéral de chaîne d'heure à insérer dans une colonne de table de base de données du type de données de date et d'heure indiqué dans la deuxième colonne. La troisième colonne affiche la valeur qui sera stockée dans la colonne de table de base de données.  
   
-|Littéral de chaîne inséré|Type de données de la colonne|Valeur qui est stockée dans la colonne|Description|  
+|Littéral de chaîne inséré|Type de données de colonne|Valeur qui est stockée dans la colonne|Description|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Si la précision en fractions de seconde dépasse la valeur spécifiée pour la colonne, la chaîne sera tronquée sans erreur.|  
 |'2007-05-07'|**date**|NULL|Toute valeur d'heure provoquera l'échec de l'instruction INSERT.|  

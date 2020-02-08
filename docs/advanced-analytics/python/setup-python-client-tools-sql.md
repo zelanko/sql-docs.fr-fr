@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727532"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurer un client de science des données pour le développement Python sur SQL Server Machine Learning Services
@@ -283,7 +283,7 @@ Si vous utilisez un autre IDE, vous devez lier les bibliothèques de fonctions e
 
 Si vous travaillez avec [Python dans Visual Studio](https://code.visualstudio.com/docs/languages/python), utilisez les options de configuration suivantes pour créer un environnement Python qui comprend les packages Microsoft Python.
 
-| Paramètre de configuration | valeur |
+| Paramètre de configuration | value |
 |-----------------------|-------|
 | **Chemin de préfixe** | C:\Program Files\Microsoft\PyForMLS |
 | **Chemin de l’interpréteur** | C:\Program Files\Microsoft\PyForMLS\python.exe |

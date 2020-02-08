@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658801"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>Nouveautés des extensions de langage SQL Server
@@ -29,7 +29,7 @@ Cette version ajoute la prise en charge des extensions de langage dans SQL Serve
 - [Types de données Java](how-to/java-to-sql-data-types.md) pris en charge.
 - [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) pour l’inscription d’un langage externe (par exemple, Java) auprès de SQL Server.
 - [Kit SDK d’extensibilité Microsoft pour Java](how-to/extensibility-sdk-java-sql-server.md).
-- Sur Windows et Linux, le code Java est accessible dans une bibliothèque externe à l’aide de l’instruction [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md). En savoir plus : [Guide pratique pour appeler du code Java dans SQL Server](how-to/call-java-from-sql.md)
+- Sur Windows et Linux, le code Java est accessible dans une bibliothèque externe à l’aide de l’instruction [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md). En savoir plus : [Guide pratique pour appeler du code Java dans SQL Server](how-to/call-java-from-sql.md)
 - [Extension de langage Java](language-extensions-overview.md) sur Windows et Linux. Vous pouvez rendre le code Java compilé accessible à SQL Server en affectant des autorisations et en définissant le chemin. Les applications clientes ayant accès à SQL Server peuvent utiliser des données et exécuter votre code en appelant [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), la même procédure que celle utilisée pour l’intégration de R et de Python sur SQL Server Machine Learning Services.
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581341"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>fichier de configuration RSReportDesigner
@@ -61,7 +61,7 @@ ms.locfileid: "65581341"
 |**PolicyLevel**|Spécifie le fichier de configuration de la stratégie de sécurité. La valeur valide est Rspreviewpolicy.config. Pour plus d'informations, consultez [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |**CacheDataForPreview**|Si vous affectez la valeur **True**à ce paramètre, le Concepteur de rapports stocke les données dans un fichier cache sur l’ordinateur local. Les valeurs valides sont **True** (par défaut) et **False**. Pour plus d’informations, consultez [Aperçu des rapports](../../reporting-services/reports/previewing-reports.md).|  
 |**Render**|Énumère les extensions de rendu accessibles au Concepteur de rapports à des fins d'aperçu. L'ensemble des extensions de rendu utilisé pour l'aperçu doit être identique à celui installé avec le serveur de rapports.<br /><br /> **Nom** spécifie l’extension de rendu. Si vous appelez une extension de rendu à l'aide de code, utilisez cette valeur pour appeler une extension spécifique.<br /><br /> **Type** spécifie le nom de classe complet de la classe d’extension et le nom de la bibliothèque, séparés par une virgule.<br /><br /> **Visible** spécifie si le nom apparaît dans les interfaces utilisateur. Cette valeur peut être **True** (par défaut) ou **False**. Si la valeur est **True**, le nom apparaît dans les interfaces utilisateur.|  
-|**Data**|Énumère les extensions de traitement des données accessibles au Concepteur de rapports pour se connecter aux sources de données qui alimentent les rapports. L'ensemble d'extensions de traitement de données utilisé dans le Concepteur de rapports peut être identique à celui installé avec le serveur de rapports. Si vous ajoutez ou que vous supprimez des extensions personnalisées, consultez [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Nom** spécifie l’extension pour le traitement des données.<br /><br /> **Type** spécifie le nom de classe complet de la classe d’extension et le nom de la bibliothèque, séparés par une virgule.|  
+|**Données**|Énumère les extensions de traitement des données accessibles au Concepteur de rapports pour se connecter aux sources de données qui alimentent les rapports. L'ensemble d'extensions de traitement de données utilisé dans le Concepteur de rapports peut être identique à celui installé avec le serveur de rapports. Si vous ajoutez ou que vous supprimez des extensions personnalisées, consultez [Déploiement d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Nom** spécifie l’extension pour le traitement des données.<br /><br /> **Type** spécifie le nom de classe complet de la classe d’extension et le nom de la bibliothèque, séparés par une virgule.|  
 |**Designer**|Énumère les générateurs de requêtes accessibles au Concepteur de rapports. Les générateurs de requête fournissent une interface utilisateur pour générer des requêtes permettant d'extraire des données pour les rapports. Ils peuvent varier en fonction des extensions de traitement de données. Par défaut, Reporting Services fournit une interface utilisateur d'outil de données visuelle pour toutes les extensions de traitement de données qui sont incluses dans le produit. Toutefois, si vous développez ou utilisez des extensions de traitement de données tierces, d'autres interfaces de générateurs de requête peuvent être utilisées.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|Spécifie la durée d'attente pour le démarrage du service de traitement des aperçus avant l'affichage d'un message d'erreur. La valeur par défaut est 15 secondes.|  
   

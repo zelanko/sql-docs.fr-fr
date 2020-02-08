@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926948"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244405"
 ---
 # <a name="sql-server-help-and-feedback"></a>Aide et commentaires pour SQL Server
 
@@ -22,7 +22,7 @@ Cet article explique les différentes façons d’obtenir de l’aide pour votre
 
 ## <a name="contact-microsoft-support"></a>Contacter le support Microsoft
 
-Les clients disposant d’un plan de support peuvent [ouvrir un ticket](https://support.microsoft.com/en-us/hub/4343728/support-for-business) auprès du support Microsoft.  Pour plus d’informations, passez en revue les [options de support pour les entreprises](https://support.microsoft.com/en-us/help/4341255/support-for-business). 
+Les clients disposant d’un plan de support peuvent [ouvrir un ticket](https://support.microsoft.com/hub/4343728/support-for-business) auprès du support Microsoft.  Pour plus d’informations, passez en revue les [options de support pour les entreprises](https://support.microsoft.com/help/4341255/support-for-business). 
 
 Les clients sans plan de support peuvent demander de l’aide à la communauté ou signaler un bogue par le biais de UserVoice à l’adresse [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback).
 
@@ -63,7 +63,7 @@ Vous pouvez envoyer des suggestions d’amélioration et signaler des bogues pou
 - **Problèmes liés à Azure Data Studio** : [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
-###  <a name="sql-server-documentation"></a>Documentation de SQL Server
+###  <a name="sql-server-documentation"></a>documentation SQL Server
 
 La meilleure façon de contacter l’équipe en charge du contenu SQL Server est par le biais des Problèmes Git. Vous trouverez une option permettant de soumettre un problème Git en bas de la plupart de nos pages : 
 

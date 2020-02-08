@@ -9,10 +9,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713424"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Erreurs connues et résolutions avec Change Data Capture pour Oracle d’Attunity
@@ -20,7 +20,7 @@ ms.locfileid: "71713424"
 
 Cette rubrique liste les principaux problèmes et les résolutions connues lors de l’affichage d’une instance Change Data Capture (CDC) dans l’outil de configuration Oracle CDC Designer. Cet outil fait partie de Change Data Capture pour Oracle d’Attunity, qui est inclus à compter de SQL Server 2012. 
 
-## <a name="bug-fixes"></a>Correctifs de bogues
+## <a name="bug-fixes"></a>Résolution des bogues
 Avant de consacrer trop de temps à la résolution des problèmes, il est important d’utiliser les dernières versions de CDC pour Oracle d’Attunity pour éviter des problèmes connus tels que ceux-ci :
 
 ### <a name="sql-server-2017"></a>SQL Server 2017
@@ -38,7 +38,7 @@ La **version 5.0.0.93** contient les correctifs suivants :
 ### <a name="sql-server-2016"></a>SQL Server 2016
 
 La **version 4.0.107** contient les correctifs suivants :
-- Résolution de bogue : Oracle CDC Designer échoue avec l’erreur « Syntaxe incorrecte près du mot ’KEY’ » lors de l’ajout d’une table Oracle.
+- Résolutions de bogue : Oracle CDC Designer échoue avec l’erreur « Syntaxe incorrecte près du mot ’KEY’ » lors de l’ajout d’une table Oracle.
 - Amélioration : Prise en charge améliorée de RAC, qui comprend une meilleure gestion quand un nœud RAC est redémarré.
 - Résolutions de bogue : Le CDC ne fonctionne pas avec Oracle 10.2 en raison de la demande de NEXT_CHANGE# à partir de v$log.
 

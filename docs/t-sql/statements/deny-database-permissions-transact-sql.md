@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983227"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY – refus d'autorisations de base de données (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983227"
 
 Permet de refuser des autorisations sur une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,7 +66,7 @@ CASCADE indique que l’autorisation sera également refusée aux principaux aux
 
 AS \<database_principal> spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l’autorisation.
 
-*Database_user* spécifie un utilisateur de base de données.
+*Database_user* Spécifie un utilisateur de base de données.
 
 *Database_role* Spécifie un rôle de base de données.
 
@@ -83,7 +83,7 @@ Spécifie un rôle d'application.
 
 *Database_user_mapped_to_asymmetric_key* spécifie un utilisateur de base de données mappé à une clé asymétrique.
 
-*Database_user_with_no_login* spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.
+*Database_user_with_no_login* Spécifie un utilisateur de base de données sans principal au niveau du serveur correspondant.
 
 ## <a name="remarks"></a>Notes
 
@@ -91,7 +91,7 @@ Une base de données est un élément sécurisable contenu par le serveur qui es
 
 |Autorisation de base de données|Impliquée par une autorisation de base de données|Déduite d'une autorisation de serveur|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**S’applique à :** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>**S’applique à :** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -177,7 +177,7 @@ Si vous utilisez l'option AS, le principal spécifié doit être propriétaire d
 
 ## <a name="examples"></a>Exemples
 
-### <a name="a-denying-permission-to-create-certificates"></a>A. Refus d'une autorisation de créer des certificats
+### <a name="a-denying-permission-to-create-certificates"></a>R. Refus d'une autorisation de créer des certificats
 
 Dans l'exemple ci-dessous, l'autorisation `CREATE CERTIFICATE` sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est refusée à l'utilisateur `MelanieK`.
 
@@ -215,5 +215,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [Autorisations](../../relational-databases/security/permissions-database-engine.md)
+- [autorisations](../../relational-databases/security/permissions-database-engine.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)

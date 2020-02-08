@@ -15,10 +15,10 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278158"
 ---
 # <a name="exist-method-xml-data-type"></a>Méthode exist() (type de données xml)
@@ -43,10 +43,10 @@ exist (XQuery)
  XQuery  
  Expression XQuery, représentant un littéral de chaîne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!NOTE]  
->  La méthode **exist()** retourne 1 pour l’expression de requête Xml qui retourne un résultat non vide. Si vous spécifiez les fonctions **true()** ou **false()** au sein de la méthode **exist()**, la méthode **exist()** retourne 1, car les fonctions **true()** et **false()** retournent respectivement les valeurs booléennes True et False. De fait, elles retournent un résultat non vide. Par conséquent, la méthode **exist()** retourne 1 (True), comme l’illustre l’exemple suivant :  
+>  La méthode **exist()** retourne 1 pour l’expression de requête Xml qui retourne un résultat non vide. Si vous spécifiez les fonctions **true()** ou **false()** au sein de la méthode **exist()** , la méthode **exist()** retourne 1, car les fonctions **true()** et **false()** retournent respectivement les valeurs booléennes True et False. De fait, elles retournent un résultat non vide. Par conséquent, la méthode **exist()** retourne 1 (True), comme l’illustre l’exemple suivant :  
   
 ```  
 declare @x xml;  
@@ -55,10 +55,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants montrent comment spécifier la méthode **exist()**.  
+ Les exemples suivants montrent comment spécifier la méthode **exist()** .  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Exemple : Spécification de la méthode exist() par rapport à une variable de type xml  
- Dans l’exemple suivant, @x est une variable de type **xml** (xml non typé) et @f est une variable de type entier qui stocke la valeur renvoyée par la méthode **exist()**. La méthode **exist()** renvoie True (1) si la valeur de date stockée dans l’instance XML est `2002-01-01`.  
+ Dans l’exemple suivant, @x est une variable de type **xml** (xml non typé) et @f est une variable de type entier qui stocke la valeur renvoyée par la méthode **exist()** . La méthode **exist()** renvoie True (1) si la valeur de date stockée dans l’instance XML est `2002-01-01`.  
   
 ```  
 declare @x xml;  
@@ -74,7 +74,7 @@ select @f;
   
 -   La valeur de l'attribut **\@Somedate** est non typée. Lorsqu’elle est comparée, elle est implicitement castée en type indiqué à droite de la comparaison, en l’occurrence le type **xs:date**.  
   
--   Au lieu de **caster en tant que xs:date()**, vous pouvez utiliser la fonction constructeur **xs:date()**. Pour plus d’informations, consultez [Fonctions constructeurs &#40;requête Xml&#41;](../../xquery/constructor-functions-xquery.md).  
+-   Au lieu de **caster en tant que xs:date()** , vous pouvez utiliser la fonction constructeur **xs:date()** . Pour plus d’informations, consultez [Fonctions constructeurs &#40;requête Xml&#41;](../../xquery/constructor-functions-xquery.md).  
   
  L’exemple suivant est similaire au précédent, sauf qu'il possède un élément <`Somedate`>.  
   
@@ -152,7 +152,7 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   

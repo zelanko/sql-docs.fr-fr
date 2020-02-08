@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294192"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
@@ -120,7 +120,7 @@ ms.locfileid: "71294192"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Configuration de la tâche d'exécution de package par programmation  
- Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  
   
@@ -144,7 +144,7 @@ ms.locfileid: "71294192"
 2.  Cliquez avec le bouton droit sur la tâche dans le Concepteur SSIS, puis cliquez sur **Modifier**.  
   
 ###  <a name="general"></a> Définir les options sur la page Général  
- **Name**  
+ **Nom**  
  Fournissez un nom unique pour la tâche d'exécution de package. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ ms.locfileid: "71294192"
 #### <a name="referencetype-dynamic-options"></a>Options dynamiques de ReferenceType  
   
 ##### <a name="referencetype--external-reference"></a>ReferenceType = Référence externe  
- **Emplacement**  
+ **Lieu**  
  Sélectionnez l'emplacement du package enfant. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
 |Valeur|Description|  
@@ -177,7 +177,7 @@ ms.locfileid: "71294192"
 |**SQL Server**|Définissez l'emplacement d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Système de fichiers**|Permet de définir l'emplacement du système de fichiers.|  
   
- **Connexion**  
+ **Connection**  
  Sélectionnez le type d’emplacement de stockage du package enfant.  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "71294192"
 #### <a name="location-dynamic-options"></a>Options dynamiques pour la définition de l'emplacement  
   
 ##### <a name="location--sql-server"></a>Emplacement = SQL Server  
- **Connexion**  
+ **Connection**  
  Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "71294192"
  Permet d’entrer le nom du package enfant ou de cliquer sur le bouton représenté par des points de suspension (...) pour atteindre le package.  
   
 ##### <a name="location--file-system"></a>Emplacement = Système de fichiers  
- **Connexion**  
+ **Connection**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -221,7 +221,7 @@ ms.locfileid: "71294192"
  **Ajouter**  
  Cliquez pour mapper un paramètre ou une variable à un paramètre de package enfant.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer un mappage entre un paramètre ou une variable et un paramètre de package enfant.  
   
   

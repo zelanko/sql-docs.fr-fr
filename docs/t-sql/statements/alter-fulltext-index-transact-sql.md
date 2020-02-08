@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981815"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981815"
 
   Modifie les propriétés d’un index de recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -114,7 +114,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Utilisez la procédure stockée **sp_configure** pour accéder aux informations sur la langue de texte intégral par défaut de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quand il est spécifié sous forme de chaîne, *language_term* correspond à la valeur de la colonne **alias** dans la table système **syslanguages**. La chaîne doit être placée entre guillemets simples, comme dans '*language_term*'. Quand il est spécifié sous la forme d’un entier, *language_term* est le LCID réel qui identifie la langue. Quand il est spécifié sous la forme d’une valeur hexadécimale, *language_term* est 0x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale peut comporter un maximum de huit chiffres, zéros non significatifs inclus.  
+ Quand il est spécifié sous forme de chaîne, *language_term* correspond à la valeur de la colonne **alias** dans la table système **syslanguages**. La chaîne doit être placée entre guillemets simples, comme dans '*language_term*'. Quand il est spécifié sous la forme d’un entier, *language_term* est le LCID qui identifie la langue. Quand il est spécifié sous la forme d’une valeur hexadécimale, *language_term* est 0x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale peut comporter un maximum de huit chiffres, zéros non significatifs inclus.  
   
  Si la valeur est au format DBCS (jeu de caractères codés sur deux octets), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la convertit en Unicode.  
   
@@ -211,9 +211,9 @@ ALTER FULLTEXT INDEX ON table_name
 |Suivi des modifications|WITH NO POPULATION|Résultats|  
 |---------------------|------------------------|------------|  
 |Non activé|Non spécifié|Un remplissage complet est effectué sur l'index.|  
-|Non activé|Specified|Le remplissage de l'index n'a pas lieu tant qu'une instruction ALTER FULLTEXT INDEX...START POPULATION n'a pas été émise.|  
-|Activée.|Spécifié|Une erreur est levée et l'index n'est pas modifié.|  
-|Activé|Non spécifié|Un remplissage complet est effectué sur l'index.|  
+|Non activé|Spécifié|Le remplissage de l'index n'a pas lieu tant qu'une instruction ALTER FULLTEXT INDEX...START POPULATION n'a pas été émise.|  
+|activé|Spécifié|Une erreur est levée et l'index n'est pas modifié.|  
+|activé|Non spécifié|Un remplissage complet est effectué sur l'index.|  
   
  Pour plus d’informations sur l’alimentation d’index les index de recherche en texte intégral, consultez [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md).  
   
@@ -294,7 +294,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-setting-manual-change-tracking"></a>A. Définition du suivi des modifications manuel  
+### <a name="a-setting-manual-change-tracking"></a>R. Définition du suivi des modifications manuel  
  L'exemple ci-après définit le suivi des modifications manuel sur l'index de recherche en texte intégral sur la table `JobCandidate`.  
   
 ```  

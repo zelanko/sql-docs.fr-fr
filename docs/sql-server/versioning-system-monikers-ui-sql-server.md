@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049911"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Système de gestion de versions dans la documentation SQL
@@ -113,9 +113,9 @@ Le scénario rare suivant explique ce qui se passe si vous cliquez sur un lien v
 
 L’article suivant a été ajouté pour SQL Server 2017. Il décrit les fonctionnalités qui ont été ajoutées à SQL Server dans la version 2017. La plupart ou la totalité de ces nouvelles fonctionnalités font également partie de la version 2019. Voici les attributs de l’article.
 
-| Attribute | Valeur |
+| Attribut | Valeur |
 | :-------- | :---- |
-| Titre | Nouveautés de SQL Server 2017 |
+| Intitulé | Nouveautés de SQL Server 2017 |
 | Plage de monikers | `>= sql-server-2017 || = sqlallproducts-allversions` |
 | Adresse `https` | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
