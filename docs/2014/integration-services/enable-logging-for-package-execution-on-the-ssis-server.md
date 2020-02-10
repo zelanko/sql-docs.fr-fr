@@ -1,5 +1,5 @@
 ---
-title: Activer la journalisation pour l’exécution du Package sur le serveur SSIS | Microsoft Docs
+title: Activer la journalisation de l’exécution du package sur le serveur SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059370"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Activer la journalisation des exécutions de package sur le serveur SSIS
@@ -45,12 +45,12 @@ ms.locfileid: "66059370"
 |Niveau de journalisation|Description|  
 |-------------------|-----------------|  
 |None|La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
-|Simple|Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Valeur par défaut.|  
+|De base|Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s’agit de la valeur par défaut.|  
 |Performances|Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.<br /><br /> Le rapport **Performances de l'exécution** affiche le temps d'activité et le temps total écoulé des composants de flux de données du package. Ces informations sont disponibles si le niveau de journalisation de la dernière exécution du package a été défini sur **Performances** ou **Commentaires**. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).<br /><br /> La vue [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) affiche les heures de début et de fin des composants de flux de données, pour chaque phase d’exécution. Cette vue affiche ces informations pour ces composants uniquement lorsque le niveau de journalisation de l'exécution du package est défini sur **Performances** ou **Commentaires**.|  
-|Commentaires|Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> L'événement DiagnosticEx est un exemple d'événement de diagnostic. Chaque fois qu'une tâche d'exécution de package exécute un package enfant, enregistre cet événement. Le message d’événement qui se compose des valeurs de paramètre passées aux packages enfants<br /><br /> La valeur de la colonne de message pour DiagnosticEx est du texte XML. . Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Remarque : Les événements personnalisés sont notamment les événements consignés par les tâches [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> La vue [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) affiche une ligne chaque fois qu’un composant de flux de données envoie des données à un composant en aval, pour une exécution de package. Le niveau de journalisation doit avoir la valeur **Commentaires** pour capturer ces informations dans la vue.|  
+|Verbose|Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> L'événement DiagnosticEx est un exemple d'événement de diagnostic. Chaque fois qu'une tâche d'exécution de package exécute un package enfant, enregistre cet événement. Le message d’événement se compose des valeurs de paramètre passées aux packages enfants.<br /><br /> La valeur de la colonne de message pour DiagnosticEx est du texte XML. . Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Remarque : les événements personnalisés incluent les événements consignés [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] par les tâches. Pour plus d’informations, consultez [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> La vue [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) affiche une ligne chaque fois qu’un composant de flux de données envoie des données à un composant en aval, pour une exécution de package. Le niveau de journalisation doit avoir la valeur **Commentaires** pour capturer ces informations dans la vue.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;la journalisation SSIS&#41;](performance/integration-services-ssis-logging.md)   
  [Activer la journalisation des packages dans les outils de données SQL Server](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)  
   
   

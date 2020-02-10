@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de script (Page colonnes d’entrée) | Microsoft Docs
+title: Éditeur de transformation de script (page colonnes d’entrée) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056092"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Éditeur de transformation de script (page Colonnes d'entrée)
@@ -27,10 +27,10 @@ ms.locfileid: "66056092"
 > [!NOTE]  
 >  La page **Colonnes d’entrée** ne s’affiche pas pour les composants source qui ont des sorties, mais pas d’entrées.  
   
- Pour en savoir plus sur le composant de Script, consultez [du composant Script](data-flow/transformations/script-component.md) et [configuration du composant Script dans l’éditeur de composant Script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant Script, consultez [extension du flux de données avec le composant Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Pour en savoir plus sur le composant de script, consultez [Script Component](data-flow/transformations/script-component.md) et [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extension du flux de données avec le composant Script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Options  
- **Nom de l'entrée**  
+ **Nom d’entrée**  
  Sélectionnez le nom d'une entrée dans la liste.  
   
  **Colonnes d'entrée disponibles**  
@@ -42,15 +42,15 @@ ms.locfileid: "66056092"
  **Alias de sortie**  
  Permet de saisir un alias pour chaque colonne de sortie. Par défaut, il s'agit du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
   
- **Type d'utilisation**  
+ **Type d’utilisation**  
  Spécifiez si la transformation de script traite chaque colonne en `ReadOnly` ou en `ReadWrite`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Sélectionner le type de composant de script](../../2014/integration-services/select-script-component-type.md)   
- [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Éditeur de transformation de script &#40;page Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Éditeur de transformation de script &#40;page Gestionnaires de connexions&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Sélectionner un type de composant de script](../../2014/integration-services/select-script-component-type.md)   
+ [Éditeur de transformation de script &#40;page entrées et sorties&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Éditeur de transformation de script &#40;page de script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Éditeur de transformation de script &#40;page gestionnaires de connexions&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Exemples supplémentaires du composant Script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

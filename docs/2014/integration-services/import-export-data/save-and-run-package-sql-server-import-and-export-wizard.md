@@ -1,5 +1,5 @@
 ---
-title: Enregistrez et exécutez le Package (SQL Server Assistant Importation et exportation) | Microsoft Docs
+title: Enregistrer et exécuter le package (Assistant importation et exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894763"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Enregistrer et exécuter le package (Assistant Importation et Exportation SQL Server)
-  Utilisez le **enregistrer et exécuter le Package** boîte de dialogue pour exécuter le package immédiatement, enregistrez son exécution ultérieure, ou les deux.  
+  Utilisez la boîte de dialogue **enregistrer et exécuter le package** pour exécuter le package immédiatement, l’enregistrer pour l’exécuter ultérieurement, ou les deux.  
   
 > [!NOTE]  
->  Si vous arrêtez un package avant la fin de son exécution, le package n’est pas enregistré, même si vous avez sélectionné le **enregistrer** case à cocher.  
+>  Si vous arrêtez un package avant la fin de son exécution, le package n’est pas enregistré, même si vous avez activé la case à cocher **Enregistrer** .  
   
- Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La fonction de l'Assistant Importation et Exportation SQL Server est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -40,36 +40,36 @@ ms.locfileid: "62894763"
 >  Dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], l'option permettant d'enregistrer le package créé par l'Assistant n'est pas disponible.  
   
  **SQL Server**  
- Sélectionnez cette option pour enregistrer le package dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` base de données.  
+ Sélectionnez cette option pour enregistrer le package dans la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` base de données.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné le **enregistrer le Package SSIS** option.  
+>  Cette option est disponible uniquement si vous avez sélectionné l’option **enregistrer le package SSIS** .  
   
  **Système de fichiers**  
  Permet d'enregistrer le package en tant que fichier portant l'extension .dtsx.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné le **enregistrer le Package SSIS** option.  
+>  Cette option est disponible uniquement si vous avez sélectionné l’option **enregistrer le package SSIS** .  
   
  **Niveau de protection du package**  
  Sélectionnez un niveau de protection dans la liste.  
   
- Le niveau de protection détermine la méthode de protection (par mot de passe ou par clé utilisateur) et l'étendue de la protection du package. La protection peut inclure toutes les données ou uniquement les données sensibles. Pour comprendre les exigences et les options de sécurité de package, consultez [contrôle d’accès pour les données sensibles dans les Packages](../security/access-control-for-sensitive-data-in-packages.md) et [vue d’ensemble de la sécurité &#40;Integration Services&#41;](../security/security-overview-integration-services.md).  
+ Le niveau de protection détermine la méthode de protection (par mot de passe ou par clé utilisateur) et l'étendue de la protection du package. La protection peut inclure toutes les données ou uniquement les données sensibles. Pour comprendre les exigences et les options de sécurité des packages, consultez [Access Control pour obtenir des données sensibles dans packages](../security/access-control-for-sensitive-data-in-packages.md) et [vue d’ensemble de la sécurité &#40;Integration Services&#41;](../security/security-overview-integration-services.md).  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné le **enregistrer le Package SSIS** option.  
+>  Cette option est disponible uniquement si vous avez sélectionné l’option **enregistrer le package SSIS** .  
   
  **Mot de passe**  
  Tapez un mot de passe.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez défini le **le niveau de protection du Package** option **chiffrer les données sensibles avec un mot de passe** ou **chiffrer toutes les données avec le mot de passe**.  
+>  Cette option est disponible uniquement si vous avez défini l’option **niveau de protection du package** pour **chiffrer les données sensibles avec un mot de passe** ou **chiffrer toutes les données avec le mot de passe**.  
   
  **Retapez le mot de passe**  
  Entrez à nouveau le mot de passe.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez défini le **le niveau de protection du Package** option **chiffrer les données sensibles avec un mot de passe** ou **chiffrer toutes les données avec le mot de passe**.  
+>  Cette option est disponible uniquement si vous avez défini l’option **niveau de protection du package** pour **chiffrer les données sensibles avec un mot de passe** ou **chiffrer toutes les données avec le mot de passe**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de projets et de packages](../packages/run-integration-services-ssis-packages.md)   

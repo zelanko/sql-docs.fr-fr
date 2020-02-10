@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Nettoyage des données des fournisseurs à l’aide de la Base de connaissances fournisseurs | Microsoft Docs'
+title: 'Leçon 2 : nettoyage des données des fournisseurs à l’aide de la base de connaissances fournisseurs | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488471"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Leçon 2 : Nettoyage des données des fournisseurs avec la base de connaissances Fournisseurs
-  Dans cette leçon, vous nettoyez les données des fournisseurs dans un fichier Excel à l’aide de la **fournisseurs** vous avez créé dans la première leçon de base de connaissances. Nettoyage des données dans DQS comprend un **processus assisté par ordinateur** qui analyse la façon dont les données sont conformes à la base de connaissances dans une base de connaissances et un **processus interactif** qui vous permet de réviser et modifier résultats du processus assisté par ordinateur. La fonctionnalité de nettoyage des données identifie les données incorrectes dans votre source de données et les corrige, ou suggère des corrections. Elle normalise et enrichit également les données client en utilisant des valeurs de domaine, des valeurs menantes pour les synonymes, des règles de domaine, des relations à base de termes et des données de référence. Vous pouvez approuver ou refuser en mode interactif les modifications proposées par le processus assisté par ordinateur. Consultez [nettoyage des données](https://msdn.microsoft.com/library/gg524800.aspx) pour plus d’informations.  
+  Dans cette leçon, vous allez nettoyer les données des fournisseurs dans un fichier Excel à l’aide de la base de connaissances **fournisseurs** que vous avez créée dans la première leçon. Le nettoyage de données dans DQS comprend un **processus assisté par ordinateur** qui analyse la conformité des données aux connaissances dans une base de connaissances et un **processus interactif** qui vous permet d’examiner et de modifier les résultats du processus assisté par ordinateur. La fonctionnalité de nettoyage des données identifie les données incorrectes dans votre source de données et les corrige, ou suggère des corrections. Elle normalise et enrichit également les données client en utilisant des valeurs de domaine, des valeurs menantes pour les synonymes, des règles de domaine, des relations à base de termes et des données de référence. Vous pouvez approuver ou refuser en mode interactif les modifications proposées par le processus assisté par ordinateur. Pour plus d’informations, consultez [nettoyage des données](https://msdn.microsoft.com/library/gg524800.aspx) .  
   
  Le processus assisté par ordinateur utilise les valeurs de seuil suivantes, que vous pouvez configurer à l'aide de l'option Configuration dans la page principale du Client DQS.  
   
--   **Score minimal pour obtenir des suggestions :** Le score minimal ou un niveau de confiance qui est utilisé par DQS pour suggérer le remplacement d’une valeur.  
+-   **Score minimal pour les suggestions :** Score minimal ou niveau de confiance qui est utilisé par DQS pour suggérer le remplacement d’une valeur.  
   
--   **Score minimal pour les corrections automatiques :** Le score minimal ou un niveau de confiance qui est utilisé par DQS pour corriger automatiquement une valeur.  
+-   **Score minimal pour les corrections automatiques :** Score minimal ou niveau de confiance qui est utilisé par DQS pour corriger automatiquement une valeur.  
   
- Consultez [configurer les valeurs de seuil pour le nettoyage et correspondance](https://msdn.microsoft.com/library/hh510415.aspx) pour plus d’informations sur la façon de configurer ces paramètres.  
+ Pour plus d’informations sur la configuration de ces paramètres [, consultez Configurer les valeurs de seuil pour le nettoyage et la correspondance](https://msdn.microsoft.com/library/hh510415.aspx) .  
   
  Dans cette leçon, vous allez effectuer les tâches suivantes pour nettoyer les données d'entrée à l'aide de la base de connaissances Fournisseurs.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "65488471"
   
 5.  Exporter les résultats du nettoyage dans un fichier Excel.  
   
-6.  Importer les valeurs du projet de nettoyage dans des domaines pour enrichir les connaissances de la base de connaissances avec les nouvelles règles, les valeurs, les corrections etc....  
+6.  Importez les valeurs du projet de nettoyage dans des domaines pour augmenter la connaissance dans la base de connaissances avec de nouvelles règles, valeurs, corrections, etc.  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 1 : Création d’un projet de qualité des données](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 1 : Création d'un projet de qualité des données](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65805156"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
@@ -24,29 +24,29 @@ ms.locfileid: "65805156"
   
  La boîte de dialogue tente d'établir une connexion avec les deux instances de serveurs. Ces connexions sont établies de façon asynchrone. La boîte de dialogue affiche l'état de la connexion de chaque partenaire. Si le partenaire n'est pas connecté, vous pouvez cliquer sur **Se connecter**.  
   
- **Pour utiliser SQL Server Management Studio pour contrôler la mise en miroir de base de données**  
+ **Pour utiliser SQL Server Management Studio pour surveiller la mise en miroir de bases de données**  
   
 -   [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Options  
- *Instance de serveur et état de la connexion*  
- Nom d’une instance de serveur partenaire au format _SYSTÈME_ **\\** _NOM_INSTANCE_. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
+ *Instance de serveur et son état de connexion*  
+ Nom d’une instance de serveur partenaire au format _système_**\\**_instance_name_. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
   
  Ce champ indique également si le moniteur est actuellement connecté à cette instance de serveur. Les états de connexion possibles sont les suivants :  
   
--   **Non connecté à**  *nom_instance_serveur*  
+-   **Non connecté à**  *server_instance_name*  
   
--   **Tentative de connexion à**  *nom_instance_serveur*  
+-   **Tentative de connexion à**  *server_instance_name*  
   
--   **Connecté à**  *nom_instance_serveur*  
+-   **Connecté à**  *server_instance_name*  
   
     > [!NOTE]  
-    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin** , l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)** .  
+    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin** , l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)**.  
   
  Le nom de chaque instance de serveur partenaire est affiché dans un champ d' *instance de serveur et d'état de la connexion* distinct. Le premier champ affiche le serveur principal au démarrage du moniteur.  
   
- **Se connecter**/**Annuler**  
- Un bouton **Se connecter**/**Annuler** est associé à chaque champ d’ *instance de serveur et état de la connexion* . L'état de ce bouton dépend de l'état de la connexion :  
+ **Connexion**/**Annuler**  
+ /Un **bouton de connexion****Annuler** est associé à chaque *instance de serveur et à ses* champs d’état de connexion. L'état de ce bouton dépend de l'état de la connexion :  
   
 -   Si aucune connexion à l'instance de serveur n'est établie, l'intitulé du bouton est **Se connecter**. Cliquez sur le bouton pour vous connecter à l'instance de serveur.  
   
@@ -65,17 +65,17 @@ ms.locfileid: "65805156"
  **Avertissements**  
  Répertorie les avertissements pris en charge :  
   
-|Warning|Description|  
+|Avertissement|Description|  
 |-------------|-----------------|  
 |**Avertir si le journal non envoyé dépasse le seuil**|Ce seuil indique la taille en kilo-octets (Ko) du journal non envoyé dans la file d'attente d'envoi sur le principal.|  
 |**Avertir si le journal non restauré dépasse le seuil**|Ce seuil indique la taille (en Ko) de la file d'attente de restauration sur l'instance du serveur miroir.|  
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Ce seuil indique la durée exprimée en minutes des transactions qui n'ont pas encore été envoyées depuis la file d'attente d'envoi vers l'instance de serveur miroir. Cette valeur permet de mesurer la perte de données potentielle en termes de temps.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Ce seuil indique le délai en millisecondes par transaction (utile uniquement en mode haute sécurité). Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression.|  
   
- **Activé sur «**   *\<instance_serveur>*   **»**  
+ **Activé à «** * \<instance de serveur>* **»**  
  Une case à cocher vide indique que l'avertissement est actuellement désactivé sur l'instance de serveur. Pour activer l'avertissement, activez la case à cocher.  
   
- **Seuil sur «**   *\<instance_serveur>*   **»**  
+ **Seuil à «** * \<instance de serveur>* **»**  
  Lorsqu'un avertissement est activé, définissez le seuil dans la partie gauche de cette colonne. Un événement se produit si le seuil spécifié est atteint lors de la mise à jour de la table d'état. Si vous désactivez un seuil après avoir configuré une valeur, cette valeur reste dans le champ et sera utilisée lorsque vous activerez de nouveau l'avertissement.  
   
  Lorsqu'un avertissement n'est pas activé, ce champ est inactif.  

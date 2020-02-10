@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058870"
 ---
 # <a name="fast-parse"></a>Analyse rapide
   L'analyse rapide propose un ensemble de routines simples et rapides d'analyse des données. Ces routines ne tiennent pas compte des paramètres régionaux et prennent en charge uniquement un sous-ensemble de formats de date, d'heure et d'entier.  
   
-## <a name="requirements-and-limitations"></a>Limitations et exigences  
+## <a name="requirements-and-limitations"></a>Spécifications et limitations  
  En implémentant l'analyse rapide, un package perd sa capacité d'interpréter les données de type date, heure et nombre dans des formats régionaux et dans de nombreux formats de base et étendus ISO 9601 couramment utilisés, mais il améliore ses performances. Par exemple, l'analyse rapide prend uniquement en charge les formats de date les plus courants, tels que AAAAMMJJ et AAAA-MM-JJ, n'effectue aucune analyse des spécificités régionales, ne reconnaît pas les caractères spéciaux dans les devises et ne peut pas convertir les représentations hexadécimales ou scientifiques des entiers.  
   
  L'analyse rapide est disponible uniquement lorsque vous utilisez la source de fichier plat ou la transformation de conversion de données. L'amélioration des performances pouvant être significative, pensez à utiliser si possible l'analyse rapide dans ces composants de flux de données.  
@@ -36,6 +36,6 @@ ms.locfileid: "66058870"
  Pour plus d'informations sur les formats de données pris en charge par l'analyse rapide, consultez [Numeric Data Formats](../../2014/integration-services/numeric-data-formats.md) et [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définir l’analyse rapide](../../2014/integration-services/set-fast-parse.md)  
+ [Définir l'analyse rapide](../../2014/integration-services/set-fast-parse.md)  
   
   

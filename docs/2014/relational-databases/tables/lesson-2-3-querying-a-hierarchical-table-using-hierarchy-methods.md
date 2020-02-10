@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110044"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Interrogation d'une table hiérarchique à l'aide de méthodes hiérarchiques
@@ -40,7 +40,8 @@ ms.locfileid: "66110044"
   
      Le résultat répertorie Sariya et Wanida. Sariya est répertoriée car elle est la descendante au niveau 0. Wanida est la descendante au niveau 1.  
   
-2.  Vous pouvez également créer des requêtes sur ces informations à l’aide de la méthode [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) . `GetAncestor` prend un argument pour le niveau que vous tentez de retourner. Étant donné que Wanida est un niveau plus bas que Sariya, utilisez `GetAncestor(1)` comme indiqué dans le code suivant :  
+2.  Vous pouvez également créer des requêtes sur ces informations à l’aide de la méthode [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) . 
+  `GetAncestor` prend un argument pour le niveau que vous tentez de retourner. Étant donné que Wanida est un niveau plus bas que Sariya, utilisez `GetAncestor(1)` comme indiqué dans le code suivant :  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  

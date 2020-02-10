@@ -1,5 +1,5 @@
 ---
-title: Les attributs personnalisés pour les Routines CLR | Microsoft Docs
+title: Attributs personnalisés pour les routines CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873808"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>Attributs personnalisés pour les routines CLR
-  Les attributs répertoriés peuvent être appliqués au common language runtime (CLR) routines, types définis par l’utilisateur et les agrégats définis par l’utilisateur qui sont inscrits dans [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. Si l'attribut n'est pas appliqué, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise la valeur par défaut. Les attributs répertoriés sont définis dans l'espace de noms `Microsoft.SqlServer.Server`.  
+  Les attributs répertoriés peuvent être appliqués à des routines de common language runtime (CLR), des types définis par l’utilisateur et des agrégats définis par [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]l’utilisateur qui sont inscrits dans. Si l'attribut n'est pas appliqué, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise la valeur par défaut. Les attributs répertoriés sont définis dans l'espace de noms `Microsoft.SqlServer.Server`.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Attribut SqlUserDefinedAggregate  
  L'attribut `SqlUserDefinedAggregate` indique que la méthode doit être inscrite en tant qu'agrégat défini par l'utilisateur. Chaque agrégat défini par l'utilisateur doit être annoté avec cet attribut.  
@@ -55,7 +55,7 @@ ms.locfileid: "62873808"
 ## <a name="the-sqltrigger-attribute"></a>Attribut SqlTrigger  
  L'attribut `SqlTrigger` indique que la méthode doit être inscrite en tant que déclencheur.  
   
- Pour plus d’informations, consultez [SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022) et [SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898).  
+ Pour plus d’informations, consultez [SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022) et [il manque SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898).  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>SqlUserDefinedTypeAttribute  
  Vous pouvez appliquer SqlUserDefinedTypeAttribute à une définition de classe dans l'assembly. Cela oblige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à créer un type défini par l'utilisateur et lié à la définition de classe qui possède cet attribut personnalisé.  

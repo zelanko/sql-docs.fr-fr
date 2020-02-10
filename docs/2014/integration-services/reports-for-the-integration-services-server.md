@@ -1,5 +1,5 @@
 ---
-title: Rapports pour le serveur Integration Services | Microsoft Docs
+title: Rapports pour le serveur de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056441"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Rapports du serveur Integration Services
@@ -82,6 +82,6 @@ ms.locfileid: "66056441"
  [Afficher les rapports du serveur Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- [Surveillance des exécutions de packages et d’autres opérations](performance/monitor-running-packages-and-other-operations.md)  
+ [Analyse des exécutions de packages et d'autres opérations](performance/monitor-running-packages-and-other-operations.md)  
   
   

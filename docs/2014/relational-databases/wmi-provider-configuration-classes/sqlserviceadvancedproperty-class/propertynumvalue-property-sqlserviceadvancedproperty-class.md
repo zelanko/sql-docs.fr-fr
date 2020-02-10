@@ -1,5 +1,5 @@
 ---
-title: Propertynumvalue, propriété (classe SqlServiceAdvancedProperty) | Microsoft Docs
+title: Propriété PropertyNumValue (classe SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c7ac997caa099136c5b03bcb48bfcd5ecfd0b8f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911591"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Propriété PropertyNumValue (classe SqlServiceAdvancedProperty)
@@ -42,6 +42,6 @@ object
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage et arrêt des Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

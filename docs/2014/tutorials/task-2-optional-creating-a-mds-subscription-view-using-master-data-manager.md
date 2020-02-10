@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 (facultatif) : Création d’une vue d’abonnement MDS à l’aide de Master Data Manager | Microsoft Docs'
+title: 'Tâche 2 (facultatif) : création d’une vue d’abonnement MDS à l’aide du Data Manager maître | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e6cbed42d059714dde1c82dbb50edf8ccc1dd65b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484725"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tâche 2 (facultatif) : Création d’une vue d’abonnement MDS à l’aide de Master Data Manager
-  Dans cette tâche, vous créez une vue d’abonnement pour exposer le **fournisseur** entité dans le **fournisseurs** modèle pour d’autres applications. Vous n'allez pas utiliser cette vue dans cette version du didacticiel.  
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tâche 2 (Facultatif) : Création d'une vue d'abonnement MDS à l'aide de Master Data Manager
+  Dans cette tâche, vous allez créer une vue d’abonnement pour exposer l’entité **fournisseur** du modèle **fournisseurs** à d’autres applications. Vous n'allez pas utiliser cette vue dans cette version du didacticiel.  
   
-1.  Basculez vers la page principale de **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)) en cliquant sur **SQL Server 2012 Master Data Services** en haut.  
+1.  Basculez vers la page principale du **Data Manager maître** ([http://localhost/MDS](http://localhost/MDS)) en cliquant sur **SQL Server Master Data Services 2012** en haut.  
   
-2.  Cliquez sur **gestion de l’intégration**.  
+2.  Cliquez sur gestion de l' **intégration**.  
   
-3.  Cliquez sur **créer des vues** sur la barre de menus.  
+3.  Dans la barre de menus, cliquez sur **créer des vues** .  
   
-     ![Ajoutez un nouveau bouton de vue d’abonnement](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "ajouter un nouveau bouton de vue d’abonnement")  
+     ![Bouton Ajouter une nouvelle vue d'abonnement](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "Bouton Ajouter une nouvelle vue d'abonnement")  
   
-4.  Cliquez sur **+ (Plus)** icône sur la barre d’outils pour créer une vue d’abonnement.  
+4.  Cliquez sur l’icône **+ (plus)** dans la barre d’outils pour créer une vue d’abonnement.  
   
-5.  Dans le **créer une vue d’abonnement** volet, tapez **fournisseurs** pour **nom de la vue abonnement**.  
+5.  Dans le volet **créer une vue d’abonnement** , tapez **Suppliers** pour nom de la **vue d’abonnement**.  
   
-6.  Sélectionnez **fournisseurs** pour **modèle**.  
+6.  Sélectionnez **Suppliers** pour **Model**.  
   
-7.  Sélectionnez **VERSION_1** pour **Version**.  
+7.  Sélectionnez **Version_1** pour **version**.  
   
 8.  Sélectionnez **fournisseur** pour **entité**.  
   
-9. Sélectionnez **des membres feuille** pour **Format**.  
+9. Sélectionnez **les membres feuille** pour le **format**.  
   
-     ![Bouton de vue d’abonnement enregistrer](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "abonnement vue bouton Enregistrer")  
+     ![Bouton Enregistrer vue d'abonnement](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "Bouton Enregistrer vue d'abonnement")  
   
-10. Cliquez sur **enregistrer** sur la barre d’outils pour enregistrer la vue d’abonnement. Cette action crée une vue dans SQL Server nommée **fournisseurs**. Vous pouvez vérifier cela à l'aide de SQL Server Management Studio (SSMS).  
+10. Cliquez sur **Enregistrer** dans la barre d’outils pour enregistrer la vue d’abonnement. Cette action crée une vue dans SQL Server **fournisseurs**nommés. Vous pouvez vérifier cela à l'aide de SQL Server Management Studio (SSMS).  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 3 &#40;facultatif&#41;: Examiner les vues d’abonnement](task-3-optional-reviewing-the-subscription-views.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 3 &#40;&#41; facultative : examen des vues d’abonnement](task-3-optional-reviewing-the-subscription-views.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011878"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Fichiers de format non-XML (SQL Server)
@@ -45,20 +45,20 @@ ms.locfileid: "66011878"
      Vous pouvez créer un fichier de format non XML qui contient des attributs spécifiés de manière interactive pour chaque champ de données. Pour plus d’informations, consultez [Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
->  Les fichiers de format XML offrent différents avantages par rapport aux fichiers de format non XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+>  Les fichiers de format XML offrent différents avantages par rapport aux fichiers de format non XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ##  <a name="Structure"></a> Structure des fichiers de format non XML  
  Un fichier de format non XML est un fichier texte contenant une structure particulière. Il contient des informations sur le type de stockage du fichier, la longueur du préfixe et celle des champs, ainsi que le caractère de fin de champ de chaque colonne constituant la table.  
   
  L'exemple suivant présente les champs de fichier de format d'un fichier de format non XML.  
   
- ![Identifie les champs d’un fichier de format non-XML](../../database-engine/media/mydepart-fmt-ident-c.gif "Identifie les champs d’un fichier de format non-XML")  
+ ![Identifie les champs d'un fichier de format non XML](../../database-engine/media/mydepart-fmt-ident-c.gif "Identifie les champs d'un fichier de format non XML")  
   
  Les champs **Version** et **Nombre de colonnes** n'apparaissent qu'une seule fois. Leurs significations sont décrites dans le tableau suivant.  
   
 |Champ du fichier de format|Description|  
 |------------------------|-----------------|  
-|Version|Ce numéro de version n'est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Remarque : la version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
+|Version|Ce numéro de version n’est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Remarque : La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Nombre de colonnes|Nombre de champs dans le fichier de données. Il doit être identique pour toutes les lignes.|  
   
  Les autres champs de fichier de format décrivent les champs de données à importer ou exporter en bloc. Chaque champ de données nécessite une ligne séparée dans le fichier de format. Chaque ligne de fichier de format contient les valeurs des champs de fichier de format décrits dans le tableau suivant.  

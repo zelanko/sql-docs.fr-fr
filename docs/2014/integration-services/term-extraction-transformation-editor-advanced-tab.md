@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation d’Extraction de terme (onglet Avancé) | Microsoft Docs
+title: Éditeur de transformation d’extraction de terme (onglet Avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055270"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Éditeur de transformation d'extraction de terme (onglet Avancé)
@@ -27,7 +27,7 @@ ms.locfileid: "66055270"
  Pour en savoir plus sur la transformation d'extraction de terme, consultez [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Nom**  
+ **Propres**  
  Indique que la transformation extrait uniquement des noms individuels.  
   
  **Expression nominale**  
@@ -36,11 +36,11 @@ ms.locfileid: "66055270"
  **Nom et expression nominale**  
  Indique que la transformation extrait des noms et des expressions nominales.  
   
- **Fréquence**  
+ **Argument**  
  Indique que le score correspond à la fréquence du terme.  
   
  **TFIDF**  
- Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes et de la fréquence inverse de documents, défini comme suit : TFIDF d’un terme T = (fréquence de T) * journal((nombre de lignes en entrée) / (nombre de lignes comportant T))  
+ Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d’un terme T = (fréquence de T) * log((#lignes en entrée) / (#lignes ayant T))  
   
  **Seuil de fréquence**  
  Définissez le nombre d'occurrences d'un mot ou d'une expression avant son extraction. La valeur par défaut est 2.  
@@ -48,16 +48,16 @@ ms.locfileid: "66055270"
  **Longueur maximale du terme**  
  Définissez la longueur maximale d'une expression en nombre de mots. Cette option affecte uniquement les expressions nominales. La valeur par défaut est 12.  
   
- **Utiliser l'extraction de terme respectant la casse**  
- Indiquez si l'extraction doit respecter la casse. La valeur par défaut est `False`.  
+ **Utiliser l’extraction de terme respectant la casse**  
+ Indiquez si l'extraction doit respecter la casse. Par défaut, il s’agit de `False`.  
   
  **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation d’extraction de terme &#40;onglet Extraction de terme&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Éditeur de transformation d’extraction de terme &#40;onglet Exclusion&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Transformation de recherche de terme](data-flow/transformations/lookup-transformation.md)  
+ [Éditeur de transformation d’extraction de terme &#40;onglet extraction de terme&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Éditeur de transformation d’extraction de terme &#40;onglet exclusion&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [transformation de recherche de terme](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900301"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Étendre un dataset à l'aide de la transformation de jointure de fusion
@@ -61,9 +61,9 @@ ms.locfileid: "62900301"
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Merge Join Transformation](merge-join-transformation.md)   
+ [Transformation de jointure de fusion](merge-join-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [Chemins Integration Services](../integration-services-paths.md)   
  [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

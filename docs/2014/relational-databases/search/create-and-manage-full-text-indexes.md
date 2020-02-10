@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011547"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
@@ -31,7 +31,7 @@ ms.locfileid: "66011547"
   
  Le processus de création et de gestion d’un index de recherche en texte intégral est appelé *alimentation* (également appelé *analyse*). Il existe trois types d'alimentation de l'index de recherche en texte intégral : l'alimentation complète, l'alimentation basée sur le suivi des modifications et l'alimentation incrémentielle basée sur l'horodateur. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](populate-full-text-indexes.md).  
   
-##  <a name="tasks"></a> Tâches courantes  
+##  <a name="tasks"></a>Tâches courantes  
  **Pour créer un index de recherche en texte intégral**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -46,12 +46,12 @@ ms.locfileid: "66011547"
   
  [Dans cette rubrique](#top)  
   
-##  <a name="structure"></a> Structure d’Index de recherche en texte intégral  
+##  <a name="structure"></a>Structure de l’index de recherche en texte intégral  
  La compréhension de la structure d'un index de recherche en texte intégral vous permet de comprendre également le fonctionnement du Moteur d'indexation et de recherche en texte intégral. Cette rubrique utilise l'extrait suivant de la table **Document** dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] comme exemple de table. L'extrait suivant montre deux colonnes, la colonne **DocumentID** et la colonne **Title** , ainsi que trois lignes provenant de cette table.  
   
  Pour cet exemple, il faut partir de l’hypothèse qu’un index de recherche en texte intégral a été créé sur la colonne **Title** .  
   
-|DocumentID|Titre|  
+|DocumentID|Intitulé|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -63,14 +63,14 @@ ms.locfileid: "66011547"
   
  Remarquez également que le mot clé « and » a été supprimé de l'index de recherche en texte intégral. Cela s'explique du fait que « and » est un mot vide, et que la suppression de mots vides d'un index de recherche en texte intégral peut induire des économies substantielles en termes d'espace disque, d'où une amélioration des performances des requêtes. Pour plus d’informations sur les mots vides, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- **Fragment 1**  
+ **Fragment 1**  
   
 |Mot clé|ColId|DocId|Occurrence|  
 |-------------|-----------|-----------|----------------|  
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Maintenance|1|1|5|  
+|Maintenance |1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -86,29 +86,29 @@ ms.locfileid: "66011547"
   
  La colonne **ColId** contient une valeur qui correspond à une colonne particulière indexée en texte intégral.  
   
- Le `DocId` colonne contient des valeurs pour un entier sur huit octets qui est mappé à une valeur de clé de recherche en texte intégral particulière dans une table indexée en texte intégral. Ce mappage est nécessaire lorsque la clé de texte intégral n'est pas un type de données integer. Dans ce cas, les valeurs de clé des mappages entre la recherche en texte intégral et `DocId` les valeurs sont conservées dans une table séparée appelée la table de mappage DocId. Pour lancer une requête à propos de ces mappages, utilisez la procédure stockée système [sp_fulltext_keymapping](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Pour satisfaire à un critère de recherche, les valeurs DocId de la table précitée doivent être jointes avec la table de mappage DocId pour extraire des lignes de la table de base qui est interrogée. Lorsque la valeur de clé de texte intégral de la table de base est un type de données Integer, la valeur sert directement de DocId et aucun mappage n'est nécessaire. Par conséquent, l'utilisation de valeurs de clé de texte intégral Integer peut contribuer à optimiser des requêtes de texte intégral.  
+ La `DocId` colonne contient des valeurs pour un entier sur huit octets qui correspond à une valeur de clé de texte intégral particulière dans une table indexée de texte intégral. Ce mappage est nécessaire lorsque la clé de texte intégral n'est pas un type de données integer. Dans ce cas, les mappages entre les valeurs de clé de `DocId` texte intégral et les valeurs sont conservés dans une table distincte appelée table de mappage des ID de l’ensemble de clés. Pour lancer une requête à propos de ces mappages, utilisez la procédure stockée système [sp_fulltext_keymapping](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Pour satisfaire à un critère de recherche, les valeurs DocId de la table précitée doivent être jointes avec la table de mappage DocId pour extraire des lignes de la table de base qui est interrogée. Lorsque la valeur de clé de texte intégral de la table de base est un type de données Integer, la valeur sert directement de DocId et aucun mappage n'est nécessaire. Par conséquent, l'utilisation de valeurs de clé de texte intégral Integer peut contribuer à optimiser des requêtes de texte intégral.  
   
  La colonne **Occurrence** contient une valeur entière. Pour chaque valeur DocId, il existe une liste de valeurs d'occurrences qui correspondent aux décalages de mots relatifs du mot clé spécifique contenu dans DocId. Les valeurs d'occurrences servent à déterminer les correspondances d'expressions ou de proximité, par exemple lorsque des expressions ont des valeurs d'occurrences adjacentes numériquement. Elles servent également à calculer les scores de pertinence ; par exemple, le nombre d'occurrences d'un mot clé dans DocId peut être utilisé pour l'établissement d'un score.  
   
  [Dans cette rubrique](#top)  
   
-##  <a name="fragments"></a> Fragments d’Index de recherche en texte intégral  
+##  <a name="fragments"></a>Fragments d’index de recherche en texte intégral  
  L'index de recherche en texte intégral logique est habituellement fractionné entre plusieurs tables internes. Chaque table interne est appelé fragment d'index de recherche en texte intégral. Quelques-uns de ces fragments peuvent contenir des données plus récentes que d'autres. Par exemple, si un utilisateur met à jour la ligne suivante dont DocId est 3 et que la table effectue un suivi automatique des modifications, un nouveau fragment est créé.  
   
-|DocumentID|Titre|  
+|DocumentID|Intitulé|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
  Dans l'exemple suivant, qui illustre le Fragment 2, le fragment contient des données plus récentes à propos de DocId 3 par rapport à Fragment 1. Par conséquent, lorsque l'utilisateur émet des requêtes concernant « Rear Reflector », les données de Fragment 2 sont utilisées pour DocId 3. Chaque fragment est marqué avec un horodateur de création qui peut être interrogé à l’aide de la vue de catalogue [sys.fulltext_index_fragments](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql) .  
   
- **Fragment 2**  
+ **Fragment 2**  
   
 |Mot clé|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- Comme on peut le constater d'après Fragment 2, les requêtes de texte intégral doivent interroger chaque fragment en interne et ignorer les entrées plus anciennes. Par conséquent, trop de fragments d'index de recherche en texte intégral dans l'index de texte intégral peut conduire à une dégradation substantielle dans les performances des requêtes. Pour réduire le nombre de fragments, réorganisez le catalogue de texte intégral en utilisant l’option REORGANIZE de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Cette instruction effectue une *fusion principale*, c’est-à-dire une fusion de tous les fragments en un fragment unique plus grand, et supprime toutes les entrées obsolètes de l’index de recherche en texte intégral.  
+ Comme on peut le constater d'après Fragment 2, les requêtes de texte intégral doivent interroger chaque fragment en interne et ignorer les entrées plus anciennes. Par conséquent, trop de fragments d'index de recherche en texte intégral dans l'index de texte intégral peut conduire à une dégradation substantielle dans les performances des requêtes. Pour réduire le nombre de fragments, réorganisez le catalogue de texte intégral à l’aide de l’option REORGANIZE de l’instruction [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Cette instruction effectue une *fusion principale*, c’est-à-dire une fusion de tous les fragments en un fragment unique plus grand, et supprime toutes les entrées obsolètes de l’index de recherche en texte intégral.  
   
  Une fois réorganisé, l'index de l'exemple contient les lignes suivantes :  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66011547"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Maintenance|1|1|5|  
+|Maintenance |1|1|5|  
 |Front|1|2|1|  
 |Rear|1|3|1|  
 |Reflector|1|2|2|  

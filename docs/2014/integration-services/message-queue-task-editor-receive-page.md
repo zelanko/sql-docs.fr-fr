@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche MSMQ (Page recevoir) | Microsoft Docs
+title: Éditeur de tâche MSMQ (page recevoir) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057671"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Éditeur de tâche MSMQ (page Recevoir)
-  La page **Recevoir** de la boîte de dialogue **Éditeur de tâche MSMQ** permet de configurer une tâche MSMQ pour recevoir des messages MSMQ (Message Queuing) [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+  La page **Recevoir** de la boîte de dialogue **Éditeur de tâche MSMQ** permet de configurer une tâche MSMQ pour recevoir des messages MSMQ (Message Queuing) [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
  Pour en savoir plus sur cette tâche, consultez [Message Queue Task](control-flow/message-queue-task.md).  
   
 ## <a name="options"></a>Options  
  **RemoveFromMessageQueue**  
- Indiquez si vous voulez supprimer le message de la file d'attente après sa réception. Par défaut, cette valeur est définie `False`.  
+ Indiquez si vous voulez supprimer le message de la file d'attente après sa réception. Par défaut, cette valeur est définie sur `False`.  
   
  **ErrorIfMessageTimeOut**  
- Indiquez si la tâche échoue lorsque le message expire, en affichant un message d'erreur. La valeur par défaut est `False`.  
+ Indiquez si la tâche échoue lorsque le message expire, en affichant un message d'erreur. Par défaut, il s’agit de `False`.  
   
  **TimeoutAfter**  
  Si vous choisissez d'afficher un message d'erreur sur l'échec de la tâche, définissez le nombre de secondes qui précèdent le message d'expiration.  
@@ -39,10 +39,10 @@ ms.locfileid: "66057671"
  **MessageType**  
  Sélectionnez le type de message : Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Message de fichiers de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
-|**Message de type variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
+|**Message de fichier de données**|Le message est stocké dans un fichier. La sélection de cette valeur affiche l'option dynamique **DataFileMessage**.|  
+|**Message de variable**|Le message est stocké dans une variable. Cette valeur affiche l'option dynamique **VariableMessage**.|  
 |**Message de type chaîne**|Le message est stocké dans la tâche MSMQ. Cette valeur affiche l'option dynamique **StringMessage**.|  
 |**Message de type chaîne pour la variable**|Le message<br /><br /> Cette valeur affiche l'option dynamique **StringMessage**.|  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66057671"
  Tapez le chemin du fichier à utiliser ou cliquez sur le bouton avec des points de suspension **(...)** et recherchez le fichier.  
   
  **Remplacer**  
- Indiquez si vous voulez remplacer les données dans un fichier existant lors de l'enregistrement du contenu d'un message de fichiers de données. La valeur par défaut est `False`.  
+ Indiquez si vous voulez remplacer les données dans un fichier existant lors de l'enregistrement du contenu d'un message de fichiers de données. Par défaut, il s’agit de `False`.  
   
  **Filter**  
  Indiquez si vous voulez appliquer un filtre au message. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun filtre**|La tâche ne filtre pas les messages. Cette valeur affiche l’option dynamique **IdentifierReadOnly**.|  
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
@@ -79,13 +79,13 @@ ms.locfileid: "66057671"
  **Filter**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun filtre**|La tâche ne filtre pas les messages. Cette valeur affiche l’option dynamique **IdentifierReadOnly**.|  
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
   
  **Variable**  
- Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...** >, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -102,42 +102,42 @@ ms.locfileid: "66057671"
  **Rubriques connexes :** [Sélectionner un package](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Message de type chaîne  
- **Comparer**  
+ **Compar**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
-|**Concordance exacte**|Les messages doivent correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
+|**Correspondance exacte**|Les messages doivent correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
 |**Ignorer la casse**|Le message doit correspondre à la chaîne figurant dans l’option **CompareString** , mais la comparaison ne tient pas compte de la casse.|  
-|**Contenant**|Le message doit contenir la chaîne figurant dans l’option **CompareString** .|  
+|**Contiennent**|Le message doit contenir la chaîne figurant dans l’option **CompareString** .|  
   
  **CompareString**  
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
 ### <a name="messagetype--string-message-to-variable"></a>MessageType = Message de type chaîne pour la variable  
- **Comparer**  
+ **Compar**  
  Indiquez si vous voulez appliquer un filtre aux messages. Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Les messages ne sont pas comparés.|  
-|**Concordance exacte**|Le message doit correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
+|**Correspondance exacte**|Le message doit correspondre exactement à la chaîne figurant dans l’option **CompareString** .|  
 |**Ignorer la casse**|Le message doit correspondre à la chaîne figurant dans l’option **CompareString** , mais la comparaison ne tient pas compte de la casse.|  
-|**Contenant**|Le message doit contenir la chaîne figurant dans l’option **CompareString** .|  
+|**Contiennent**|Le message doit contenir la chaîne figurant dans l’option **CompareString** .|  
   
  **CompareString**  
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
  **Variable**  
- Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...** >, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche MSMQ &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche MSMQ &#40;page Envoyer&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Éditeur de tâche MSMQ &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche MSMQ &#40;page envoyer&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [Message Queue Task](control-flow/message-queue-task.md)  
   

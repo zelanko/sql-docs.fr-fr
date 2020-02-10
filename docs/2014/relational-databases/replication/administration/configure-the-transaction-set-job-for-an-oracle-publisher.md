@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48282f08df588f54b6f03a0b99c58a2f0cf039ac
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793540"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher-replication-transact-sql-programming"></a>Configurer le travail d'un jeu de transactions pour un serveur de publication Oracle (programmation Transact-SQL de la réplication)
@@ -29,27 +29,27 @@ ms.locfileid: "67793540"
   
 1.  Sur le serveur de publication Oracle, définissez le paramètre d'initialisation **job_queue_processes** avec une valeur suffisante pour autoriser l'exécution du travail Xactset. Pour plus d'informations sur ce paramètre, consultez la documentation de base de données du serveur de publication Oracle.  
   
-2.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour  **\@publisher**, une valeur de `xactsetbatching` pour  **\@propertyname**et la valeur `enabled` pour  **\@propertyvalue**.  
+2.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication ** \@** Oracle pour le serveur de `xactsetbatching` publication, la valeur pour ** \@PropertyName**et `enabled` la valeur pour ** \@PropertyValue**.  
   
-3.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour  **\@publisher**, une valeur de `xactsetjobinterval` pour  **\@propertyname**et l’intervalle du travail, en minutes, pour  **\@propertyvalue**.  
+3.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication ** \@** Oracle pour le serveur de `xactsetjobinterval` publication, la valeur pour ** \@PropertyName**et l’intervalle de travail, en minutes, pour ** \@PropertyValue**.  
   
-4.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour  **\@publisher**, une valeur de `xactsetjob` pour  **\@propertyname**et la valeur `enabled` pour  **\@propertyvalue**.  
+4.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication ** \@** Oracle pour le serveur de `xactsetjob` publication, la valeur pour ** \@PropertyName**et `enabled` la valeur pour ** \@PropertyValue**.  
   
 ### <a name="to-configure-the-transaction-set-job"></a>Pour configurer le travail du jeu de transactions  
   
-1.  (Facultatif) Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour  **\@publisher**. Les propriétés du travail **Xactset** sur le serveur de publication sont ainsi retournées.  
+1.  (Facultatif) Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour **\@publisher**. Les propriétés du travail **Xactset** sur le serveur de publication sont ainsi retournées.  
   
-2.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour  **\@publisher**, le nom de la propriété du travail Xactset définie pour  **\@propertyname**et une nouvelle valeur pour  **\@propertyvalue**.  
+2.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour **\@publisher**, le nom de la propriété du travail Xactset en cours de définition pour **\@propertyname** et une nouvelle valeur pour **\@propertyvalue**.  
   
-3.  (Facultatif) Répétez l'étape 2 pour chaque propriété de travail Xactset définie. Lorsque vous modifiez le `xactsetjobinterval` propriété, vous devez redémarrer le travail sur le serveur de publication Oracle pour le nouvel intervalle prenne effet.  
+3.  (Facultatif) Répétez l'étape 2 pour chaque propriété de travail Xactset définie. Lorsque vous modifiez `xactsetjobinterval` la propriété, vous devez redémarrer le travail sur le serveur de publication Oracle pour que le nouvel intervalle prenne effet.  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>Pour afficher les propriétés du travail du jeu de transactions  
   
-1.  Sur le serveur de distribution, exécutez [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql). Spécifiez le nom du serveur de publication Oracle pour  **\@publisher**.  
+1.  Sur le serveur de distribution, exécutez [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql). Spécifiez le nom du serveur de publication Oracle pour **\@publisher**.  
   
 ### <a name="to-disable-the-transaction-set-job"></a>Pour désactiver le travail du jeu de transactions  
   
-1.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication Oracle pour  **\@publisher**, une valeur de `xactsetjob` pour  **\@propertyname**et la valeur `disabled` pour  **\@propertyvalue**.  
+1.  Sur le serveur de distribution, exécutez [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Spécifiez le nom du serveur de publication ** \@** Oracle pour le serveur de `xactsetjob` publication, la valeur pour ** \@PropertyName**et `disabled` la valeur pour ** \@PropertyValue**.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant active le `Xactset` travail et définit un intervalle de trois minutes entre deux exécutions.  

@@ -1,5 +1,5 @@
 ---
-title: Notice légale pour Documentation | Microsoft Docs
+title: Mention légale pour la documentation | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837519"
 ---
 # <a name="legal-notice-for-documentation"></a>Notice légale pour documentation
-  Ce document est fourni « en l'état ». Les informations et les opinions exprimées dans ce document, y compris les adresses URL et les autres références à des sites Internet, peuvent faire l'objet de modifications sans préavis. Vous assumez les risques liés à leur utilisation.  
+  Ce document est fourni « en l'état ». Les informations et les points de vue exprimés dans ce document, y compris les URL et autres références à des sites web, peuvent être modifiés sans préavis. Vous assumez les risques liés à leur utilisation.  
   
- Certains exemples mentionnés dans ce document ne sont fournis qu'à titre indicatif et sont fictifs. Toute ressemblance ou similitude avec des éléments réels est purement fortuite et involontaire.  
+ Certains exemples sont fournis à titre indicatif uniquement et sont fictifs. Toute association ou lien est purement involontaire ou fortuit.  
   
- Ce document ne vous concède aucun droit de propriété intellectuelle portant sur les produits Microsoft. Vous pouvez copier et utiliser ce document à titre de référence pour un usage interne.  
+ Ce document ne vous accorde aucun droit légal à la propriété intellectuelle pour un produit Microsoft. Vous pouvez copier et utiliser ce document pour un usage interne, à titre de référence.  
   
  © 2013 Microsoft. Tous droits réservés.  
   

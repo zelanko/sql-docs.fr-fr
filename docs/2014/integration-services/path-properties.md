@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056661"
 ---
 # <a name="path-properties"></a>Propriétés du chemin d'accès
-  Les objets de flux de données dans le modèle d’objet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont des propriétés communes et des propriétés personnalisées au niveau du composant, des entrées et sorties, et des colonnes d’entrée et colonnes de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
+  Les objets de Data Flow dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le modèle objet ont des propriétés communes et des propriétés personnalisées au niveau du composant, des entrées et des sorties, ainsi que des colonnes d’entrée et de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
   
  Cette rubrique répertorie et décrit les propriétés personnalisées des chemins d'accès qui connectent des objets de flux de données.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66056661"
 ## <a name="see-also"></a>Voir aussi  
  [Chemins Integration Services](data-flow/integration-services-paths.md)   
  [Propriétés communes](../../2014/integration-services/common-properties.md)   
- [Propriétés personnalisées de transformation](data-flow/transformations/transformation-custom-properties.md)   
+ [Transformation, propriétés personnalisées](data-flow/transformations/transformation-custom-properties.md)   
  [Propriétés du flux de données pouvant être définies à l’aide d’expressions](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  
   
   

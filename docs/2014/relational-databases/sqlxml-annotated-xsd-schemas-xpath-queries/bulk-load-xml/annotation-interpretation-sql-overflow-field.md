@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-field (SQLXML 4.0) | Microsoft Docs
+title: 'SQL : overflow-field (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013468"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "66013468"
   
  En même temps qu'il stocke des données dans la colonne de dépassement, le chargement en masse XML stocke les balises d'ouverture et de fermeture de l'élément parent pour lequel `sql:overflow-field` est défini.  
   
- Par exemple, le schéma suivant décrit le  **\<clients >** et  **\<CustOrder >** éléments. Chacun de ces éléments identifie une colonne de dépassement :  
+ Par exemple, le schéma suivant décrit les ** \<éléments Customer>** et ** \<CustOrder>** . Chacun de ces éléments identifie une colonne de dépassement :  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +73,9 @@ ms.locfileid: "66013468"
 </xsd:schema>  
 ```  
   
- Dans le schéma, le  **\<client >** élément est mappé à la table Cust et  **\<ordre >** élément est mappé à la table CustOrder.  
+ Dans le schéma, l' ** \<élément Customer>** est mappé à la table Cust et l' ** \<élément Order>** est mappé à la table CustOrder.  
   
- Les deux le  **\<client >** et  **\<ordre >** éléments identifient une colonne de dépassement de capacité. Par conséquent, le chargement en masse XML enregistre tous les non consommées enfants éléments et attributs de la  **\<client >** élément dans la colonne de dépassement de capacité de la table Cust et tous les éléments enfants non consommées et attributs de la  **\<Ordre >** élément dans la colonne de dépassement de capacité de la table CustOrder.  
+ Les ** \<éléments Customer>** et ** \<Order>** identifient une colonne Overflow. Ainsi, le chargement en masse XML enregistre tous les éléments enfants et attributs non consommés de l' ** \<élément Customer>** dans la colonne Overflow de la table Cust, ainsi que tous les éléments enfants et attributs non consommés de l' ** \<élément Order>** dans la colonne Overflow de la table CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   

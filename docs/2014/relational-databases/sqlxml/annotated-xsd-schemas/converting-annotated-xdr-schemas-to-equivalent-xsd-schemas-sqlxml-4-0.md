@@ -1,5 +1,5 @@
 ---
-title: Conversion de schémas XSD équivalents (SQLXML 4.0), les schémas XDR annotés | Microsoft Docs
+title: Conversion de schémas XDR annotés en schémas XSD équivalents (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c09f9eff920c11f37f0fd173f6cd612aca6df6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014537"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Conversion de schémas XDR annotés en schémas XSD équivalents (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "66014537"
 cvtschema XDRFileName, [-y], [-w] [-?]  
 ```  
   
- Où :  
+ Où :  
   
  XDRFileName  
  Est le nom du fichier XDR qui doit être converti en XSD. L'outil lit le fichier XDR d'entrée et crée un fichier de sortie XSD dans le répertoire de travail actif. Si le fichier d'entrée a une extension .xdr ou .xml, le fichier XSD de sortie est créé avec le même nom mais avec une extension .xsd. Si l'extension du fichier d'entrée n'est ni .xdr ni .xml (ou si elle est manquante), le fichier de sortie est créé avec le même nom et l'extension .xsd est ajoutée au nom de fichier d'entrée. Par exemple, si le nom de fichier XDR d'entrée est SampleFile.abc, le fichier XSD résultant est enregistré en tant que SampleFile.abc.xsd.  
@@ -56,7 +56,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Retourne une liste des options que vous pouvez spécifier avec `cvtschema`, accompagnées d'une explication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mappage des Types de données XSD aux Types de données XPath &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)   
- [XSD Annotations &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [Mappage de types de données XSD à des types de données XPath &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)   
+ [Annotations XSD &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

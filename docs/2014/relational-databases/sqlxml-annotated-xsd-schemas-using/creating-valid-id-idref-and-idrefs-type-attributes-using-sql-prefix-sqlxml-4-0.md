@@ -1,5 +1,5 @@
 ---
-title: 'Création d’ID valide, IDREF et IDREFS à des attributs de Type à l’aide de SQL : Prefix (SQLXML 4.0) | Microsoft Docs'
+title: 'Création d’attributs de type ID, IDREF et IDREFS valides à l’aide de SQL : prefix (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013920"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Création d'attributs de type Valid ID, IDREF et IDREFS à l'aide de sql:prefix (SQLXML 4.0)
   Un attribut peut être spécifié comme étant un attribut de type ID. Les attributs spécifiés comme IDREF ou IDREFS peuvent être utilisés pour faire référence aux attributs de type ID, ce qui permet d'établir des liens entre des documents.  
   
- ID, IDREF et IDREFS correspondent aux relations de (clé étrangère/clé primaire) de clé primaire/clé étrangère dans la base de données, avec quelques différences. Dans un document XML, les valeurs des attributs de type ID doivent être distinctes. Si **CustomerID** et **OrderID** attributs sont spécifiés comme type ID dans un document XML, ces valeurs doivent être distinctes. Toutefois, dans une base de données, les colonnes CustomerID et OrderID peuvent avoir les mêmes valeurs. (Par exemple, CustomerID = 1 et OrderID = 1 sont valides dans la base de données.)  
+ ID, IDREF et IDREFS correspondent aux relations PK/FK (clé primaire/clé étrangère) dans la base de données, à quelques différences près. Dans un document XML, les valeurs des attributs de type ID doivent être distinctes. Si les attributs **CustomerID** et **OrderID** sont spécifiés en tant que type d’ID dans un document XML, ces valeurs doivent être distinctes. Toutefois, dans une base de données, les colonnes CustomerID et OrderID peuvent avoir les mêmes valeurs. (Par exemple, CustomerID = 1 et OrderID = 1 sont valides dans la base de données.)  
   
  Pour que les attributs ID, IDREF et IDREFS soient valides :  
   
@@ -49,12 +49,12 @@ ms.locfileid: "66013920"
  Notez que l'annotation `sql:prefix` ne peut pas être utilisée avec l'attribut fixe XSD.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>A. Spécification des types ID et IDREFS  
- Dans le schéma suivant, le  **\<client >** élément se compose de la  **\<ordre >** élément enfant. Le  **\<ordre >** élément possède également un élément enfant, le  **\<OrderDetail >** élément.  
+### <a name="a-specifying-id-and-idrefs-types"></a>R. Spécification des types ID et IDREFS  
+ Dans le schéma suivant, l' ** \<élément Customer>** se compose de l' ** \<ordre>** élément enfant. L' ** \<élément Order>** possède également un élément enfant, l' ** \<élément OrderDetail>** .  
   
- Le **OrderIDList** attribut de  **\<client >** est un attribut de type IDREFS qui fait référence à la **OrderID** attribut de la  **\< Commande >** élément.  
+ L’attribut **attribut OrderIDList** de ** \<Customer>** est un attribut de type IDREFS qui fait référence à l’attribut **OrderID** de l' ** \<élément Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -130,7 +130,7 @@ ms.locfileid: "66013920"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le résultat partiel :  
   

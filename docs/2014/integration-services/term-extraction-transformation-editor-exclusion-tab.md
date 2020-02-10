@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation d’Extraction de terme (onglet Exclusion) | Microsoft Docs
+title: Éditeur de transformation d’extraction de terme (onglet exclusion) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055228"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Éditeur de transformation d'extraction de terme (onglet Exclusion)
@@ -27,7 +27,7 @@ ms.locfileid: "66055228"
  Pour en savoir plus sur la transformation d'extraction de terme, consultez [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Utiliser les termes d'exclusion**  
+ **Utiliser les termes d’exclusion**  
  Indique si vous voulez exclure des termes au cours de l'extraction de termes en définissant une colonne qui contient les termes d'exclusion. Vous devez définir les propriétés sources suivantes si vous choisissez d'exclure des termes.  
   
  **Gestionnaire de connexions OLE DB**  
@@ -47,8 +47,8 @@ ms.locfileid: "66055228"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation d’extraction de terme &#40;onglet Extraction de terme&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Éditeur de transformation d’extraction de terme &#40;onglet extraction de terme&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Éditeur de transformation d’extraction de terme &#40;onglet Avancé&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Transformation de recherche de terme](data-flow/transformations/lookup-transformation.md)  
+ [transformation de recherche de terme](data-flow/transformations/lookup-transformation.md)  
   
   

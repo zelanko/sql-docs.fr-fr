@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de regroupement probable (onglet colonnes) | Microsoft Docs
+title: Éditeur de transformation de regroupement approximatif (onglet colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058354"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Éditeur de transformation de regroupement approximatif (onglet Colonnes)
@@ -42,7 +42,7 @@ ms.locfileid: "66058354"
  **Alias de sortie**  
  Entrez un nom descriptif pour la colonne de sortie correspondante. Par défaut, cette colonne porte le même nom que la colonne d'entrée.  
   
- **Grouper les alias de sortie**  
+ **Alias de sortie de groupe**  
  Entrez un nom descriptif pour la colonne qui va contenir la valeur canonique des doublons groupés. Par défaut, cette colonne de sortie porte le nom de la colonne d'entrée suivi de la mention « _clean ».  
   
  **Type de correspondance**  
@@ -57,11 +57,11 @@ ms.locfileid: "66058354"
  **Chiffres**  
  Spécifiez l'importance des premiers et derniers chiffres en comparant les données de la colonne. Par exemple, si les premiers chiffres sont significatifs, « 123 Main Street » ne sera pas groupé avec « 456 Main Street ».  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Aucun**|Les premiers et derniers chiffres ne sont pas significatifs.|  
-|**Premiers**|Seuls les premiers chiffres sont significatifs.|  
-|**Derniers**|Seuls les derniers chiffres sont significatifs.|  
+|**SP5**|Les premiers et derniers chiffres ne sont pas significatifs.|  
+|**Débouch**|Seuls les premiers chiffres sont significatifs.|  
+|**Fin**|Seuls les derniers chiffres sont significatifs.|  
 |**LeadingAndTrailing**|Les premiers et derniers chiffres sont significatifs.|  
   
  **Indicateurs de comparaison**  

@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 6bc07f8770e6cd7d1fb1e4b4e6e40ca8b1c5256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014200"
 ---
 # <a name="linestring"></a>LineString
@@ -25,7 +25,7 @@ ms.locfileid: "66014200"
 ## <a name="linestring-instances"></a>Instances LINESTRING  
  L'illustration suivante montre des exemples d'instances `LineString`.  
   
- ![Exemples d’instances LineString géométriques](../../database-engine/media/linestring.gif "Exemples d’instances LineString géométriques")  
+ ![Exemples d'instances LineString géométriques](../../database-engine/media/linestring.gif "Exemples d'instances LineString géométriques")  
   
  Comme indiqué par l'illustration :  
   
@@ -46,7 +46,8 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` montre qu'une instance `LineString` peut être acceptée, mais non valide.  
+ 
+  `@g3` montre qu'une instance `LineString` peut être acceptée, mais non valide.  
   
  L'instance `LineString` suivante n'est pas acceptée. Elle lèvera une `System.FormatException`.  
   

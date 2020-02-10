@@ -1,5 +1,5 @@
 ---
-title: Éditeur du Gestionnaire de connexions HTTP (Page serveur) | Microsoft Docs
+title: Éditeur du gestionnaire de connexions HTTP (page serveur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058244"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Éditeur du gestionnaire de connexions HTTP (page Serveur)
@@ -35,7 +35,7 @@ ms.locfileid: "66058244"
   
  Si vous projetez d'utiliser le bouton **Télécharger WSDL** de la page **Général** de l' **Éditeur de tâche de service Web** pour télécharger un fichier WSDL, tapez l'URL de ce fichier WSDL. Cette URL se termine par « ?wsdl ».  
   
- **Utiliser les informations d'identification**  
+ **Utiliser les informations d’identification**  
  Spécifiez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité de l'utilisateur pour l'authentification.  
   
  **Nom d'utilisateur**  
@@ -44,16 +44,16 @@ ms.locfileid: "66058244"
  **Mot de passe**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
- **Domaine**  
+ **Domain**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
- **Utiliser le certificat client**  
+ **Utiliser un certificat client**  
  Spécifiez si vous voulez que le gestionnaire de connexions HTTP utilise un certificat client pour l'authentification.  
   
  **Certificat**  
  Sélectionnez un certificat dans la liste via la boîte de dialogue **Sélectionner un certificat** . La zone de texte affiche le nom associé au certificat.  
   
- **Délai d'expiration (en secondes)**  
+ **Délai d’attente (en secondes)**  
  Spécifiez un délai d'expiration pour la connexion au serveur Web. La valeur par défaut de cette propriété est 30 secondes.  
   
  **Taille de segment (en Ko)**  
@@ -64,6 +64,6 @@ ms.locfileid: "66058244"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+ [Éditeur du gestionnaire de connexions HTTP &#40;page proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

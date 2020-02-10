@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4aa9dc994ddd11c6fad57473d20956d95e46ebeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484166"
 ---
 # <a name="manage-dqs-log-files"></a>Gérer les fichiers journaux DQS
@@ -26,7 +26,7 @@ ms.locfileid: "65484166"
   
  Vous pouvez utiliser [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] pour configurer le paramètre de gravité du journal pour les fonctionnalités et les modules [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . En outre, vous pouvez également configurer d'autres paramètres (avancés) pour les fichiers journaux DQS en modifiant manuellement les paramètres de configuration des journaux DQS dans la base de données DQS_MAIN et un fichier XML sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="DQSServer"></a> Fichier journal du serveur de qualité des données  
+##  <a name="DQSServer"></a>Fichier journal du serveur de qualité des données  
  Le fichier journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , DQServerLog.DQS_MAIN.log, inclut les enregistrements des activités exécutées sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Si vous avez installé l'instance par défaut de SQL Server, le fichier DQServerLog.DQS_MAIN.log est disponible sous C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log. Le fichier journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] contient les informations suivantes, chacune délimitée par une barre verticale (|) :  
   
 -   Date et heure  
@@ -46,7 +46,7 @@ ms.locfileid: "65484166"
   
 -   Classe et méthode  
   
--   `Message`  
+-   Message  
   
  Outre ces informations, le fichier journal affiche aussi des informations sur la version de l'application, le nom de l'ordinateur, le nom d'utilisateur et le système d'exploitation.  
   
@@ -58,12 +58,12 @@ ms.locfileid: "65484166"
   
  Le fichier DQServerLog.DQS_MAIN.log est un fichier de restauration et un nouveau fichier journal est créé une fois que le fichier journal existant dépasse la limite de la taille du fichier par progression spécifiée dans les paramètres de configuration du journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Pour plus d'informations, consultez [Configure Advanced Settings for DQS Log Files](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="DQSClient"></a> Fichier journal du client de qualité des données  
+##  <a name="DQSClient"></a>Fichier journal Data Quality Client  
  Le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , DQClientLog.log, inclut les enregistrements côté client. Le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est disponible à %APPDATA%\SSDQS\Log. Le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] contient un ensemble d'informations similaires à celles du fichier journal du serveur, mais pour le côté client.  
   
  Comme pour le fichier journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est aussi un fichier par progression et un nouveau fichier journal est créé une fois que le fichier journal existant dépasse la limite de la taille du fichier par progression spécifiée dans les paramètres de configuration du journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Pour plus d'informations, consultez [Configure Advanced Settings for DQS Log Files](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
-##  <a name="DQSCleansing"></a> Fichier journal du composant de nettoyage DQS  
+##  <a name="DQSCleansing"></a>Fichier journal du composant de nettoyage DQS  
  Le fichier journal [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] , DQSSSISLog.log, inclut les enregistrements des activités effectuées à l'aide de [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Le fichier journal du composant [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] est disponible à %APPDATA%\SSDQS\Log. Le fichier journal [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] contient un ensemble d'informations similaires à celles du fichier journal du serveur, mais pour le [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
 ##  <a name="RT"></a> Tâches associées  
@@ -74,6 +74,6 @@ ms.locfileid: "65484166"
 |Explique comment configurer manuellement les paramètres avancés des fichiers journaux DQS.|[Configurer les paramètres avancés pour les fichiers journaux DQS](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de DQS](../../2014/data-quality-services/dqs-administration.md)  
+ [administration de dqs](../../2014/data-quality-services/dqs-administration.md)  
   
   

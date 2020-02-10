@@ -29,10 +29,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871572"
 ---
 # <a name="file-states"></a>États des fichiers
@@ -43,19 +43,19 @@ ms.locfileid: "62871572"
 ## <a name="file-state-definitions"></a>Définitions de l'état d'un fichier  
  Le tableau suivant décrit les états d'un fichier.  
   
-|État|Définition|  
+|State|Définition|  
 |-----------|----------------|  
 |ONLINE|Le fichier est accessible pour toutes les opérations. Les fichiers du groupe de fichiers primaire sont toujours en ligne lorsque la base de données elle-même l'est. Si un fichier du groupe de fichiers primaire n'est pas en ligne, la base de données n'est pas en ligne et les états des fichiers secondaires ne sont pas définis.|  
-|OFFLINE|Le fichier n'est pas accessible et il se peut qu'il ne soit pas présent sur le disque. Les fichiers prennent l'état hors connexion du fait d'une action explicite de l'utilisateur et restent hors connexion tant qu'une autre action n'est pas exécutée.<br /><br /> **\*\* Attention \*\*** Un fichier ne doit être mis hors connexion que lorsqu’il est endommagé, mais qu’il peut être restauré. Un fichier mis hors connexion ne peut être remis en ligne qu'en étant restauré à partir d'une sauvegarde. Pour plus d’informations sur la restauration d’un fichier unique, consultez [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
+|OFFLINE|Le fichier n'est pas accessible et il se peut qu'il ne soit pas présent sur le disque. Les fichiers prennent l'état hors connexion du fait d'une action explicite de l'utilisateur et restent hors connexion tant qu'une autre action n'est pas exécutée.<br /><br /> ** \* Attention \* \* ** Un fichier doit être défini en mode hors connexion uniquement lorsque le fichier est endommagé, mais il peut être restauré. Un fichier mis hors connexion ne peut être remis en ligne qu'en étant restauré à partir d'une sauvegarde. Pour plus d’informations sur la restauration d’un fichier unique, consultez [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
 |RESTORING|Le fichier est en cours de restauration. Les fichiers passent à l'état « restauration » en raison d'une commande de restauration affectant l'ensemble du fichier, et non pas juste une page, et conservent cet état tant que la restauration n'est pas accomplie et le fichier récupéré.|  
-|RECOVERY PENDING|La récupération du fichier a été différée. Un fichier prend cet état automatiquement à la suite d'un processus de restauration fragmentaire au cours duquel le fichier n'est ni restauré ni récupéré. Une action supplémentaire est requise de la part de l'utilisateur pour résoudre l'erreur et permettre au processus de récupération de s'achever. Pour plus d’informations, consultez [Restaurations fragmentaires &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
+|RECOVERY PENDING|La récupération du fichier a été différée. Un fichier prend cet état automatiquement à la suite d'un processus de restauration fragmentaire au cours duquel le fichier n'est ni restauré ni récupéré. Une action supplémentaire est requise de la part de l'utilisateur pour résoudre l'erreur et permettre au processus de récupération de s'achever. Pour plus d’informations, consultez [restaurations fragmentaires &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
 |SUSPECT|La récupération du fichier a échoué au cours d'un processus de restauration en ligne. Si le fichier fait partie du groupe de fichiers primaire, la base de données est également marquée comme étant suspecte. Sans cela, seul le fichier est suspect et la base de données reste en ligne.<br /><br /> Le fichier garde l'état suspect tant qu'il n'est pas rendu de nouveau disponible à l'aide de l'une des méthodes suivantes :<br /><br /> Restauration et récupération<br /><br /> DBCC CHECKDB avec REPAIR_ALLOW_DATA_LOSS|  
 |DEFUNCT|Le fichier a été supprimé alors qu'il n'était pas en ligne. Tous les fichiers d'un groupe de fichiers prennent l'état « ancien » quand un groupe de fichiers hors connexion est supprimé.|  
   
 ## <a name="related-content"></a>Contenu associé  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
- [États d'une base de données](database-states.md)  
+ [États d’une base de données](database-states.md)  
   
  [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

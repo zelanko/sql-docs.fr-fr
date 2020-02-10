@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b0ea6e215b5192d1b9e84ed252708b188d5c5a59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483956"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurer des règles d'entreprise pour envoyer des notifications (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configurez des règles d'entreprise pour envoyer des notifications lorsque vous souhaitez informer les utilisateurs des modifications apportées aux valeurs d'attribut.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder aux zones fonctionnelles **Administration de système** et **Autorisations d'accès** . Si vous n'avez pas d'autorisation sur la zone fonctionnelle **Autorisations d'accès** , vous ne pouvez pas afficher la liste des utilisateurs et groupes auxquels envoyer des notifications.  
@@ -47,13 +47,13 @@ ms.locfileid: "65483956"
   
 4.  Dans la liste **Entité** , sélectionnez une entité.  
   
-5.  À partir de la **Type de membre** , sélectionnez un type de membre.  
+5.  Dans la liste **type de membre** , sélectionnez un type de membre.  
   
 6.  Dans la liste **Attribut** , sélectionnez un attribut ou conservez l’option par défaut **Tout**.  
   
-7.  Dans la grille, dans la ligne de la règle d’entreprise, double-cliquez sur le **Notification** champ.  
+7.  Dans la grille, dans la ligne de la règle d’entreprise, double-cliquez sur le champ de **notification** .  
   
-8.  Dans le sous-menu, cliquez sur un utilisateur ou un groupe pour envoyer la notification par e-mail.  
+8.  Dans le sous-menu, cliquez sur un utilisateur ou un groupe auquel envoyer la notification par courrier électronique.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
@@ -65,10 +65,10 @@ ms.locfileid: "65483956"
   
 -   Configurez le protocole de messagerie comme suit :  
   
-    -   [Configurer des notifications par e-mail &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+    -   [Configurer les notifications par courrier électronique &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Notifications &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
- [Configurer des notifications par e-mail &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+ [&#40;de notifications Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
+ [Configurer les notifications par courrier électronique &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
   

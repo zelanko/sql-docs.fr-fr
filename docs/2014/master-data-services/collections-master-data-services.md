@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483542"
 ---
 # <a name="collections-master-data-services"></a>Collections (services de données de référence)
@@ -33,7 +33,7 @@ ms.locfileid: "65483542"
  Lorsque vous créez une collection, vous apparaissez automatiquement comme propriétaire. Si vous êtes administrateur, vous pouvez créer d'autres attributs pour votre collection si nécessaire.  
   
 > [!NOTE]  
->  Avant de pouvoir créer une collection, l'entité doit être activée pour les hiérarchies explicites. Pour plus d’informations, consultez [activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+>  Avant de pouvoir créer une collection, l'entité doit être activée pour les hiérarchies explicites. Pour plus d’informations, consultez [activer une entité pour les hiérarchies explicites et les Collections &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="subscription-views-for-collections"></a>Vues d'abonnement pour les collections  
  Il existe deux types de vues d'abonnement qui affichent des collections. Le format **Attributs de collection** affiche la liste des collections et des attributs associés aux collections (comme la description ou le propriétaire). Le format **Collections** affiche tous les membres de toutes les collections, ainsi que chaque poids et ordre de tri des membres. Pour plus d’informations, consultez [exportation de données &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
@@ -44,8 +44,8 @@ ms.locfileid: "65483542"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Activer une entité pour les hiérarchies explicites et les collections.|[Activer une entité pour les hiérarchies et Collections explicites &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Créer une collection.|[Créer une collection &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Activer une entité pour les hiérarchies explicites et les collections.|[Activez une entité pour les hiérarchies explicites et les collections &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Créer une collection.|[Créer un regroupement &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |Ajouter des membres à une collection existante.|[Ajouter des membres à une collection &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  

@@ -1,5 +1,5 @@
 ---
-title: Affichage et arrêt des Packages en cours d’exécution sur l’intégration du serveur de Services | Microsoft Docs
+title: Affichage et arrêt des packages en cours d’exécution sur le serveur Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054600"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Affichage et arrêt des packages exécutés sur le serveur Integration Services
@@ -50,7 +50,7 @@ ms.locfileid: "66054600"
  Consultez l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> et ses classes.  
   
 ## <a name="viewing-the-history-of-packages-that-have-run"></a>Affichage de l'historique des packages qui ont été exécutés  
- Pour afficher l’historique des packages exécutés dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], utilisez le rapport **Toutes les exécutions**. Pour plus d’informations sur le rapport **Toutes les exécutions** et d’autres rapports standard, consultez [Rapports du serveur Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
+ Pour afficher l’historique des packages exécutés dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], utilisez le rapport **Toutes les exécutions** . Pour plus d’informations sur le rapport **Toutes les exécutions** et d’autres rapports standard, consultez [Rapports du serveur Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   
  Pour plus d'informations sur les autres méthodes que vous pouvez utiliser pour afficher l'historique des packages en cours d'exécution, consultez les rubriques suivantes.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "66054600"
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md)   
- [Dépannage des rapports pour l'exécution des packages](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Rapports de dépannage pour l’exécution des packages](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

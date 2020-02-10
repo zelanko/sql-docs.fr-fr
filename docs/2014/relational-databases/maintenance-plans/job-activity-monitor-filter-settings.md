@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856644"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Moniteur d'activité des travaux (Paramètres du filtre)
@@ -59,9 +59,9 @@ ms.locfileid: "62856644"
  Cette zone sans nom fournit une brève description des critères lors de leur sélection.  
   
  **Appliquer le filtre**  
- Pour appliquer le filtre, cliquez sur **appliquer le filtre** puis cliquez sur **OK**. Pour conserver les paramètres de filtre dans le **paramètres de filtre** boîte de dialogue zone, mais pas les appliquer, décochez la case **appliquer le filtre**, puis cliquez sur **OK**, pour afficher toutes les lignes.  
+ Pour appliquer le filtre, cliquez sur **appliquer le filtre** , puis sur **OK**. Pour conserver les paramètres de filtre dans la boîte de dialogue **paramètres de filtre** , sans les appliquer, désactivez l’option **appliquer le filtre**, puis cliquez sur **OK**pour afficher toutes les lignes.  
   
- **Désactiver**  
+ **Clear**  
  Rétablit les paramètres par défaut du filtre.  
   
 ## <a name="see-also"></a>Voir aussi  

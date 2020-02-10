@@ -1,5 +1,5 @@
 ---
-title: Éditeur du Gestionnaire de connexions SMO | Microsoft Docs
+title: Éditeur du gestionnaire de connexions SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055597"
 ---
 # <a name="smo-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SMO
@@ -33,7 +33,7 @@ ms.locfileid: "66055597"
  **Actualiser**  
  Actualisez la liste des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles qui peuvent être détectées sur le réseau.  
   
- **Utiliser l'authentification Windows**  
+ **Utiliser l’authentification Windows**  
  Utilisez l'authentification Windows pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sélectionnée.  
   
  **Utiliser l’authentification SQL Server**  

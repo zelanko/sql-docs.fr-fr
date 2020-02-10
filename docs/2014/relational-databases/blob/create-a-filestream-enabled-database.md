@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010317"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Créer une base de données compatible FILESTREAM
@@ -28,7 +28,7 @@ ms.locfileid: "66010317"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur **Nouvelle requête** pour afficher l'Éditeur de requête.  
   
-2.  Copie le [!INCLUDE[tsql](../../includes/tsql-md.md)] code crée une base de données compatible FILESTREAM appelée Archive.  
+2.  Copier le [!INCLUDE[tsql](../../includes/tsql-md.md)] code crée une base de données compatible FILESTREAM nommée archive.  
   
     > [!NOTE]  
     >  Pour ce script, le répertoire C:\Data doit exister.  

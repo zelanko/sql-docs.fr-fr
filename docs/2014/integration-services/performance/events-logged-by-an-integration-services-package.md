@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889833"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Événements journalisés par un package Integration Services
@@ -35,7 +35,7 @@ ms.locfileid: "62889833"
 > [!NOTE]  
 >  Le package enregistrera les messages du tableau ci-dessous même si vous n'avez pas activé l'enregistrement pour le package.  
   
-|ID d'événement|Nom symbolique|Text|Remarques|  
+|ID de l’événement|Nom symbolique|Texte|Notes|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Package «  » démarré.|L'exécution du package a commencé.|  
 |12289|DTS_MSG_PACKAGESUCCESS|Fin du package «  » réussie.|Le package s'est exécuté avec succès et ne s'exécute plus.|  
@@ -45,9 +45,9 @@ ms.locfileid: "62889833"
  Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré de façon à ne pas journaliser certains événements en rapport avec l'exécution de packages dans le journal des événements des applications. Ce paramètre limite le nombre d’entrées de journal des événements lorsque vous utilisez la fonctionnalité du collecteur de données de la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Les événements qui ne sont pas enregistrés incluent l'ID d'événement 12288, « le Package a démarré », et l'ID d'événement 12289, « le Package a fini avec succès ». Pour enregistrer ces événements dans le journal des événements des applications, ouvrez le Registre pour y apporter des modifications. Dans le Registre, recherchez le nœud HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS et modifiez la valeur DWORD du paramètre LogPackageExecutionToEventLog en remplaçant 0 par 1. Toutefois, dans une installation de mise à niveau, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour enregistrer ces deux événements. Pour désactiver l'enregistrement, modifiez la valeur du paramètre LogPackageExecutionToEventLog en remplaçant 1 par 0.  
   
 ## <a name="messages-associated-with-package-logging"></a>Messages associés à la journalisation des packages  
- Si vous avez activé l’enregistrement sur le package, le journal des événements des applications représente l’une des destinations prises en charge par les fonctionnalités d’enregistrement facultatives dans les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](integration-services-ssis-logging.md).  
+ Si vous avez activé l’enregistrement sur le package, le journal des événements des applications représente l’une des destinations prises en charge par les fonctionnalités d’enregistrement facultatives dans les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](integration-services-ssis-logging.md).  
   
- Lorsque vous avez activé l'enregistrement sur le package et que l'emplacement du journal correspond au journal des événements des applications, le package enregistre les entrées en rapport aux informations suivantes :  
+ Lorsque vous avez activé l'enregistrement sur le package et que l'emplacement du journal correspond au journal des événements des applications, le package enregistre les entrées en rapport aux informations suivantes :  
   
 -   Messages sur la phase dans laquelle le package se trouve au cours de son exécution.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62889833"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Messages sur les phases d'exécution du package  
   
-|ID d'événement|Nom symbolique|Text|Remarques|  
+|ID de l’événement|Nom symbolique|Texte|Notes|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Nom d'événement : %1%r Message : %9%r Opérateur : %2%r Nom de la source : %3%r ID de la source : %4%r ID d'exécution : %5%r Heure de début : %6%r Heure de fin : %7%r Code de données : %8|Lorsque vous configurez la journalisation du package dans le journal des événements des applications, différents messages utilisent ce format générique.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Nom d'événement : %1%r Message : %9%r Opérateur : %2%r Nom de la source : %3%r ID de la source : %4%r ID d'exécution : %5%r Heure de début : %6%r Heure de fin : %7%r Code de données : %8|Le package a démarré.|  
@@ -66,9 +66,9 @@ ms.locfileid: "62889833"
 |12557|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nom d'événement : %1%r Message : %9%r Opérateur : %2%r Nom de la source : %3%r ID de la source : %4%r ID d'exécution : %5%r Heure de début : %6%r Heure de fin : %7%r Code de données : %8|L'exécution du package est terminée.|  
   
 ### <a name="messages-about-events-that-occur"></a>Messages relatifs aux événements qui se produisent  
- Le tableau ci-dessous répertorie seulement certains des messages générés par des événements. Pour obtenir une liste plus complète des messages d’erreur, d’avertissement et d’informations utilisés par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md).  
+ Le tableau ci-dessous répertorie seulement certains des messages générés par des événements. Pour obtenir une liste plus complète des messages d’erreur, d’avertissement et d’informations utilisés par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services-error-and-message-reference.md).  
   
-|ID d'événement|Nom symbolique|Text|Remarques|  
+|ID de l’événement|Nom symbolique|Texte|Notes|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Nom d'événement : %1%r Message : %9%r Opérateur : %2%r Nom de la source : %3%r ID de la source : %4%r ID d'exécution : %5%r Heure de début : %6%r Heure de fin : %7%r Code de données : %8|La tâche a échoué.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Nom d'événement : %1%r Message : %9%r Opérateur : %2%r Nom de la source : %3%r ID de la source : %4%r ID d'exécution : %5%r Heure de début : %6%r Heure de fin : %7%r Code de données : %8|Ce message signale une erreur qui s'est produite.|  

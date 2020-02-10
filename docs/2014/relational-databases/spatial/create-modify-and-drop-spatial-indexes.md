@@ -17,27 +17,27 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014265"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
-  Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne de la `geometry` ou `geography` type de données (un *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
+  Un index spatial peut effectuer plus efficacement certaines opérations sur une colonne du type `geometry` de `geography` données ou (une *colonne spatiale*). Plusieurs index spatiaux peuvent être spécifiés sur une colonne spatiale. Cela peut s'avérer utile par exemple pour indexer différents paramètres de pavage dans une même colonne.  
   
  Il existe plusieurs restrictions applicables à la création d'index spatiaux. Pour plus d'informations, consultez [Restrictions sur les index spatiaux](#restrictions) dans cette rubrique.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la relation entre les index spatiaux et les partitions et groupes de fichiers, consultez la section « Remarques » dans [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
-##  <a name="creating"></a> Création, modification et suppression d'index spatiaux  
+##  <a name="creating"></a>Création, modification et suppression d’index spatiaux  
   
-###  <a name="create"></a> Pour créer un index spatial  
- **Pour créer un index spatial à l'aide de Transact-SQL**  
+###  <a name="create"></a>Pour créer un index spatial  
+ **Pour créer un index spatial à l’aide de Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **Pour créer un index spatial à l'aide de la boîte de dialogue Nouvel index dans Management Studio**  
+ **Pour créer un index spatial à l’aide de la boîte de dialogue nouvel index dans Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>Pour créer un index spatial dans Management Studio  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
@@ -54,7 +54,7 @@ ms.locfileid: "66014265"
   
 7.  Pour spécifier la colonne spatiale à indexer, cliquez sur **Ajouter**.  
   
-8.  Dans le **sélectionner des colonnes à partir de**  *\<nom_table >* boîte de dialogue, sélectionnez une colonne de type `geometry` ou `geography` en sélectionnant la case à cocher correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **sélectionnez les colonnes dans le nom de** * \<la table>* , `geometry` sélectionnez `geography` une colonne de type ou en activant la case à cocher correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
   
 9. Vérifiez votre sélection de colonne dans la grille **Colonnes clés d'index** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66014265"
   
 11. Dans la page **Spatial** , spécifiez les valeurs que vous souhaitez utiliser pour les propriétés spatiales de l'index.  
   
-     Lorsque vous créez un index sur une `geometry` colonne de type, vous devez spécifier le **( *`X-min`* , *`Y-min`* )** et **( *`X-max`* , *`Y-max`* )** coordonnées du rectangle englobant. Pour un index sur une `geography` colonne de type, les champs de la zone englobante deviennent en lecture seule après avoir spécifié le **grille géographique** schéma de pavage, car le pavage de grille géographique n’utilise pas un cadre englobant.  
+     Lorsque vous créez un index sur `geometry` une colonne de type, vous devez spécifier les coordonnées ***`X-min`*(,*`Y-min`*)** et ***`X-max`*(,*`Y-max`*)** de la zone englobante. Pour un index sur une `geography` colonne de type, les champs de cadre englobant sont en lecture seule après que vous avez spécifié le schéma de pavage de **grille géographique** , car le pavage de grille géographique n’utilise pas de cadre englobant.  
   
      Si vous le souhaitez, vous pouvez spécifier des valeurs autres que les valeurs par défaut pour le champ **Cellules par objet** et pour la densité de grille à tout niveau du schéma de pavage. La quantité par défaut de cellules par objet est 16 pour [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou 8 pour [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou les versions supérieures, et la densité de grille par défaut est **Moyenne** pour [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66014265"
 >  Pour créer un autre index spatial sur la même colonne spatiale ou sur une colonne spatiale différente, répétez les étapes précédentes.  
   
   
- **Pour créer un index spatial à l'aide du Concepteur de tables dans Management Studio**  
+ **Pour créer un index spatial à l’aide de Concepteur de tables dans Management Studio**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>Pour créer un index spatial dans le Concepteur de tables  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table pour laquelle vous souhaitez créer un index spatial, puis cliquez sur **Conception**.  
@@ -92,7 +92,7 @@ ms.locfileid: "66014265"
 5.  Sélectionnez le nouvel index dans la liste **Index spatial sélectionné** et, dans la grille située à droite, définissez les propriétés de l'index spatial. Pour plus d’informations sur les propriétés, consultez [Boîte de dialogue Index spatiaux &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
   
-###  <a name="alter"></a> Pour modifier un index spatial  
+###  <a name="alter"></a>Pour modifier un index spatial  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66014265"
 -   [Déplacer un index existant dans un autre groupe de fichiers](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> Pour supprimer un index spatial  
- **Pour supprimer un index spatial à l'aide de Transact-SQL**  
+###  <a name="drop"></a>Pour supprimer un index spatial  
+ **Pour supprimer un index spatial à l’aide de Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- **Pour supprimer un index à l'aide de Management Studio**  
+ **Pour supprimer un index à l’aide de Management Studio**  
  [Supprimer un index](../indexes/delete-an-index.md)  
   
- **Pour supprimer un index spatial à l'aide du Concepteur de tables dans Management Studio**  
+ **Pour supprimer un index spatial à l’aide de Concepteur de tables dans Management Studio**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>Pour supprimer un index spatial dans le Concepteur de tables  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la table contenant l’index spatial que vous souhaitez supprimer et cliquez sur **Conception**.  
@@ -127,7 +127,7 @@ ms.locfileid: "66014265"
 4.  Cliquez sur **Supprimer**.  
   
   
-##  <a name="restrictions"></a> Restrictions sur les index spatiaux  
+##  <a name="restrictions"></a>Restrictions sur les index spatiaux  
  Un index spatial peut être créé uniquement sur une colonne de type `geometry` ou `geography`.  
   
 ### <a name="table-and-view-restrictions"></a>Restrictions sur les tables et les vues  
@@ -153,6 +153,6 @@ ms.locfileid: "66014265"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d'ensemble des index spatiaux](spatial-indexes-overview.md)  
+ [Vue d’ensemble des index spatiaux](spatial-indexes-overview.md)  
   
   

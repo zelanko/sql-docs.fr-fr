@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54a04cc9d787ae4d6d4545bbc5d9661bbba213d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869380"
 ---
-# <a name="mssqlserver2020"></a>MSSQLSERVER_2020
+# <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2020|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2020|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
 |Texte du message|Les dépendances signalées pour l'entité "%.*ls" n'incluent pas de références aux colonnes. Cela est dû au fait que l'entité fait référence à un objet inexistant ou que l'une ou plusieurs instructions de l'entité comportent une erreur.  Avant de réexécuter la requête, assurez-vous que l'entité ne comporte aucune erreur et que tous les objets référencés par l'entité existent.|  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054118"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
@@ -37,12 +37,12 @@ ms.locfileid: "66054118"
   
 4.  Faites la somme des valeurs calculées.  
   
-## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>Étape 1. Calculer les variables à utiliser dans les étapes 2 et 3  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>Étape 1. Calculer les variables à utiliser dans les étapes 2 et 3  
  Vous pouvez utiliser la procédure suivante afin de calculer les variables utilisées pour estimer la quantité d'espace nécessaire au stockage des niveaux supérieurs de l'index.  
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
   
-     ***Num_Rows***  = nombre de lignes dans la table  
+     ***Num_Rows***  = nombre de lignes de la table  
   
 2.  Spécifiez le nombre de colonnes de longueur fixe et de longueur variable de la clé d'index et calculez l'espace nécessaire à leur stockage :  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66054118"
   
      ***Num_Variable_Key_Cols***  = nombre de colonnes clés de longueur variable  
   
-     ***Max_Var_Key_Size***  = taille maximale en octets des colonnes clés de longueur variable  
+     ***Max_Var_Key_Size***  = taille maximale en octets de toutes les colonnes clés de longueur variable  
   
 3.  Tenez compte du localisateur de ligne de données nécessaire si l'index n'est pas unique :  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66054118"
   
      Seule la partie entière de l'expression précédente doit être utilisée. Omettez le reste.  
   
-     En l’absence de colonnes clés pouvant être NULL, attribuez à ***Index_Null_Bitmap*** la valeur 0.  
+     En l’absence de toute colonne clé autorisant les valeurs Null, attribuez la valeur 0 à ***Index_Null_Bitmap*** .  
   
 5.  Calculez la taille des données de longueur variable :  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66054118"
   
      Comme les lignes d'index ne peuvent pas être fractionnées sur plusieurs pages de données, arrondissez le nombre de lignes d'index par page à la ligne entière inférieure. Le chiffre 2 de la formule concerne l'entrée de la ligne du tableau d'emplacement de la page.  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index au niveau feuille  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index au niveau feuille  
  Vous pouvez utiliser la procédure suivante pour estimer la quantité d'espace nécessaire au stockage du niveau feuille de l'index. Vous aurez besoin des valeurs conservées dans l'étape 1 pour effectuer cette étape-ci.  
   
 1.  Spécifiez le nombre de colonnes de longueur fixe et de longueur variable au niveau feuille et calculez l'espace nécessaire à leur stockage :  
@@ -181,7 +181,7 @@ ms.locfileid: "66054118"
   
 5.  Calculez la taille de la ligne d'index :  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (représentant la surcharge de l’en-tête de la ligne d’index) + 6 (représentant le pointeur de l’ID de la page enfant)  
+     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (pour la surcharge de l’en-tête de ligne d’une ligne d’index) + 6 (pour le pointeur de l’ID de la page enfant)  
   
 6.  Calculez le nombre de lignes d'index par page (8 096 octets libres par page) :  
   
@@ -205,24 +205,24 @@ ms.locfileid: "66054118"
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Étape 3. Calculer l'espace utilisé pour le stockage des informations d'index aux niveaux non-feuille  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Étape 3. Calculer l'espace utilisé pour le stockage des informations d'index aux niveaux non-feuille  
  Utilisez la procédure suivante pour estimer la quantité d'espace nécessaire au stockage des niveaux intermédiaires et racine de l'index. Vous aurez besoin des valeurs conservées aux étapes 2 et 3 pour effectuer cette étape-ci.  
   
 1.  Calculez le nombre de niveaux non-feuille contenus dans l'index :  
   
-     ***Les niveaux non-feuille*** = 1 + journal Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Niveaux non-feuille*** = 1 + Index_Rows_Per_Page de journal (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Arrondissez cette valeur au nombre entier supérieur le plus proche. Cette valeur n'inclut pas le niveau feuille de l'index non cluster.  
   
 2.  Calculez le nombre de pages non-feuille contenues dans l'index :  
   
-     ***Num_Index_Pages*** = ∑Level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>niveau</sup>) où 1 < = Level < = ***niveaux***  
+     ***Num_Index_Pages*** = ∑ level (***Num_Leaf_Pages/***<sup>niveau</sup>Index_Rows_Per_Page) où 1 <***= Level <=*** levels  
   
      Arrondissez chaque élément de la somme au nombre entier supérieur le plus proche. À titre d’exemple simple, imaginez un index où ***Num_Leaf_Pages*** = 1000 et ***Index_Rows_Per_Page*** = 25. Le premier niveau d'index au-dessus du niveau feuille stocke 1 000 lignes d'index, ce qui représente une ligne d'index par page feuille et 25 lignes d'index par page. Par conséquent, il faut 40 pages pour stocker ces 1 000 lignes d'index. Le niveau suivant de l'index doit stocker 40 lignes. Cela requiert donc 2 pages. Le niveau final de l'index doit stocker 2 lignes. Cela requiert donc 1 page. Il en résulte 43 pages d'index non-feuille. Lorsque ces nombres sont utilisés dans les formules précédentes, le résultat est le suivant :  
   
-     ***Non-leaf_Levels***  = 1 + log25 (1000 / 25) = 3  
+     ***Non leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, ce qui est le nombre de pages décrit dans l’exemple.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43, ce qui correspond au nombre de pages décrit dans l’exemple.  
   
 3.  Calculez la taille de l'index (8 192 octets par page) :  
   
@@ -260,8 +260,8 @@ ms.locfileid: "66054118"
  [Créez des index non-cluster](../indexes/create-nonclustered-indexes.md)   
  [Créer des index cluster](../indexes/create-clustered-indexes.md)   
  [Estimer la taille d'une table](estimate-the-size-of-a-table.md)   
- [Estimer la taille d'un index cluster](estimate-the-size-of-a-clustered-index.md)   
- [Estimer la taille d'un segment de mémoire](estimate-the-size-of-a-heap.md)   
+ [Estimer la taille d’un index cluster](estimate-the-size-of-a-clustered-index.md)   
+ [Estimer la taille d’un segment de mémoire](estimate-the-size-of-a-heap.md)   
  [Estimer la taille d'une base de données](estimate-the-size-of-a-database.md)  
   
   

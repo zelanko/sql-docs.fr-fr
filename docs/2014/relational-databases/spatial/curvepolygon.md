@@ -10,19 +10,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014248"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le `CurvePolygon` sous-type, téléchargez le livre blanc, [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Pour obtenir une description détaillée et des exemples des fonctionnalités spatiales [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]introduites `CurvePolygon` dans, y compris le sous-type, téléchargez le livre blanc [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
- Les critères suivants définissent les attributs d’un `CurvePolygon` instance :  
+ Les critères suivants définissent les `CurvePolygon` attributs d’une instance :  
   
 -   La limite de l'instance `CurvePolygon` est définie par l'anneau extérieur et tous les anneaux intérieurs.  
   
@@ -55,7 +55,8 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` est accepté bien que les points de début et de fin aient des valeurs Z différentes, car les valeurs Z sont ignorées. `@g5` est accepté même si l'instance de type `geography` n'est pas valide.  
+ `@g3` est accepté bien que les points de début et de fin aient des valeurs Z différentes, car les valeurs Z sont ignorées. 
+  `@g5` est accepté même si l'instance de type `geography` n'est pas valide.  
   
  Les exemples suivants lèvent une `System.FormatException`.  
   
@@ -122,7 +123,7 @@ SELECT @g.STIsValid();
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Instanciation d'une instance geometry avec un CurvePolygon Vide  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>R. Instanciation d'une instance geometry avec un CurvePolygon Vide  
  Cet exemple indique comment créer une instance `CurvePolygon` vide :  
   
 ```sql  

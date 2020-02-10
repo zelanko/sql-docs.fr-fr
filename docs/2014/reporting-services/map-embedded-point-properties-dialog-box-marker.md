@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés des points incorporés, marqueur carte | Microsoft Docs
+title: Boîte de dialogue Propriétés des points incorporés de la carte, marqueur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108330"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur
@@ -31,7 +31,7 @@ ms.locfileid: "66108330"
   
 ## <a name="options"></a>Options  
  **Type de marqueur**  
- Spécifiez le type de marqueur. La valeur par défaut est `Circle`.  
+ Spécifiez le type de marqueur. Par défaut, il s’agit de `Circle`.  
   
  **Taille de marqueur**  
  Spécifiez la taille de marqueur. La valeur par défaut est 10pt.  

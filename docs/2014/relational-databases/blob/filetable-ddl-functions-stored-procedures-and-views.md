@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010102"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues FileTable
@@ -28,9 +28,9 @@ ms.locfileid: "66010102"
   
 ##  <a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
   
-|Object|État|Informations supplémentaires|  
+|Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Modifié|[Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)<br /><br /> [Gérer des FileTables](manage-filetables.md)|  
+|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Modifié|[Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)<br /><br /> [Gérer des FileTables](manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)|Modifié|[Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Gérer des FileTables](manage-filetables.md)|  
 |[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)|Modifié|[Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)|Modifié|[Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)|  
@@ -38,21 +38,21 @@ ms.locfileid: "66010102"
   
 ##  <a name="func"></a> Fonctions  
   
-|Object|État|Informations supplémentaires|  
+|Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
-|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d'accès dans FileTables](work-with-directories-and-paths-in-filetables.md)|  
+|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)|  
-|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d'accès dans FileTables](work-with-directories-and-paths-in-filetables.md)|  
+|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)|  
   
 ##  <a name="sproc"></a> Procédures stockées  
   
-|Object|État|Informations supplémentaires|  
+|Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)|**Ajouté**|[Gérer des FileTables](manage-filetables.md)|  
   
 ##  <a name="cv"></a> Affichages catalogue  
   
-|Object|État|Informations supplémentaires|  
+|Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)|**Ajouté**|[Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)|  
 |[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**Ajouté**|[Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Gérer des FileTables](manage-filetables.md)|  
@@ -61,7 +61,7 @@ ms.locfileid: "66010102"
   
 ##  <a name="dmv"></a> Vues de gestion dynamique  
   
-|Object|État|Informations supplémentaires|  
+|Object|Statut|Informations complémentaires|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)|**Ajouté**|[Gérer des FileTables](manage-filetables.md)|  
   

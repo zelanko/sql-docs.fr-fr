@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 : Ajout de valeurs de domaine manuellement | Microsoft Docs'
+title: 'Tâche 2 : ajout manuel des valeurs de domaine | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488383"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Tâche 2 : Ajout de valeurs de domaine manuellement
-  Dans cette tâche, vous ajoutez une valeur pour le **pays** domaine manuellement. Consultez [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) rubrique pour plus d’informations sur les champs de cette page.  
+# <a name="task-2-adding-domain-values-manually"></a>Tâche 2 : Ajout de valeurs de domaine manuellement
+  Dans cette tâche, vous ajoutez une valeur pour le domaine **Country** manuellement. Pour plus d’informations sur les champs de cette page, consultez la rubrique [modifier les valeurs de domaine](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
-1.  Cliquez sur **pays** domaine dans le **liste des domaines**.  
+1.  Dans la **liste domaine**, cliquez sur domaine **Country** .  
   
-2.  Dans le volet droit, basculez vers le **les valeurs du domaine** onglet.  
+2.  Dans le volet droit, basculez vers l’onglet **valeurs du domaine** .  
   
-3.  Cliquez sur **ajouter une nouvelle valeur de domaine** la barre d’outils dans le volet droit.  
+3.  Cliquez sur le bouton **Ajouter une valeur de domaine** dans la barre d’outils du volet droit.  
   
-     ![Ajouter une valeur de domaine - bouton de barre d’outils](../../2014/tutorials/media/et-addingdomainvaluesmanually-01.jpg "ajouter une valeur de domaine - bouton de barre d’outils")  
+     ![Ajouter une valeur de domaine - Bouton de la barre d'outils](../../2014/tutorials/media/et-addingdomainvaluesmanually-01.jpg "Ajouter une valeur de domaine - Bouton de la barre d'outils")  
   
-4.  Type **United States** pour le **valeur** champ et appuyez sur **entrée**. Vous pouvez voir que, par défaut, le **Type** a la valeur **Correct** (coche verte). Le Type peut être défini sur **erreur** (croix rouge) ou **non valide** (triangle orange), et une valeur correcte peut être entrée dans le **corriger vers** champ.  
+4.  Tapez **États-Unis** pour le champ **valeur** et appuyez sur **entrée**. Vous pouvez constater que, par défaut, le **type** est défini sur **correct** (vérification verte). Le type peut être défini sur **erreur** (Croix Rouge) ou **non valide** (triangle orange), et une valeur correcte peut être entrée dans le champ **corriger vers** .  
   
      ![États-Unis comme valeur de domaine](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "États-Unis comme valeur de domaine")  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 3 : Importer des valeurs de domaine à partir d’un fichier Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 3 : Importer des valeurs de domaine d'un fichier Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

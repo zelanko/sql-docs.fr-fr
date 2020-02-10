@@ -1,5 +1,5 @@
 ---
-title: Exporter l’éditeur de Transformation de colonne (Page colonnes) | Microsoft Docs
+title: Éditeur de transformation d’exportation de colonne (page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059010"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Éditeur de transformation d'exportation de colonne (page Colonnes)
@@ -27,23 +27,23 @@ ms.locfileid: "66059010"
  Pour en savoir plus sur la transformation d'exportation de colonne, consultez [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Colonne d'extraction**  
+ **Extraire la colonne**  
  Permet de sélectionner à partir de la liste d'entrée des colonnes contenant des données texte ou image. Toutes les lignes doivent avoir des définitions pour les options **Colonne d'extraction** et **Colonne du chemin d'accès**.  
   
- **Colonne du chemin d'accès**  
+ **Colonne de chemin de fichier**  
  Permet de sélectionner à partir de la liste d'entrée des colonnes contenant les chemins d'accès aux fichiers ainsi que les noms de fichiers. Toutes les lignes doivent avoir des définitions pour les options **Colonne d'extraction** et **Colonne du chemin d'accès**.  
   
- **Autoriser l'ajout**  
- Permet de préciser si la transformation ajoute ou non des données à la fin des fichiers existants. La valeur par défaut est `false`.  
+ **Autoriser l’ajout**  
+ Permet de préciser si la transformation ajoute ou non des données à la fin des fichiers existants. Par défaut, il s’agit de `false`.  
   
  **Forcer la troncation**  
- Permet de préciser si la transformation supprime le contenu des fichiers existants avant d'écrire des données. La valeur par défaut est `false`.  
+ Permet de préciser si la transformation supprime le contenu des fichiers existants avant d'écrire des données. Par défaut, il s’agit de `false`.  
   
- **Écrire la marque d'ordre d'octet**  
+ **Écrire la nomenclature**  
  Indique s'il est nécessaire d'écrire une marque d'ordre d'octet (BOM, Byte-Order Mark) dans le fichier. Une BOM n'est inscrite que dans les cas où les données sont de type `DT_NTEXT` ou DT_WSTR et qu'elles ne sont pas ajoutées à la fin d'un fichier de données existant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation d’exportation de colonne &#40;page Sortie d’erreur&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Éditeur de transformation d’exportation de colonne &#40;page sortie d’erreur&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

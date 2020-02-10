@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 12 : Découverte des connaissances (découverte des connaissances) | Microsoft Docs'
+title: 'Tâche 12 : découverte des connaissances (découverte des connaissances) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,62 +11,62 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484684"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tâche 12 : Découverte des connaissances
-  Dans cette tâche, vous allez effectuer la **découverte des connaissances** activité sur **ID du fournisseur** et **Supplier Name** domaines. Dans ce scénario, le processus de découverte des connaissances importe principalement des valeurs pour ces deux domaines.  
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tâche 12 : Découverte des connaissances
+  Au cours de cette tâche, vous allez effectuer l’activité de **découverte des connaissances** sur les domaines **ID du fournisseur** et nom du **fournisseur** . Dans ce scénario, le processus de découverte des connaissances importe principalement des valeurs pour ces deux domaines.  
   
- Dans ce didacticiel, vous avez commencé à créer une base de connaissances de toutes pièces. Vous pouvez également créer une base de connaissances au moyen d'une activité de découverte des connaissances. Lorsque vous cliquez sur **créer une Base de connaissances** dans la page principale, le client DQS pointe vers une page avec **gestion des domaines** activité sélectionnée pour l’activité. Vous pouvez modifier le **activité** à **découverte des connaissances** et puis dans la page suivante vous pouvez créer des domaines dans le cadre du processus de découverte de connaissances. Consultez [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) pour plus d’informations.  
+ Dans ce didacticiel, vous avez commencé à créer une base de connaissances de toutes pièces. Vous pouvez également créer une base de connaissances au moyen d'une activité de découverte des connaissances. Lorsque vous cliquez sur **créer une base de connaissances** dans la page principale, le client DQS vous amène à une page avec l’activité de **gestion de domaine** sélectionnée pour l’activité. Vous pouvez modifier l' **activité** en **découverte des connaissances** , puis dans la page suivante, vous pouvez créer des domaines dans le cadre du processus de découverte des connaissances. Pour plus d’informations, consultez [effectuer une découverte des connaissances](https://msdn.microsoft.com/library/hh510398.aspx) .  
   
-1.  Dans la page principale du Client DQS, dans le **Base de connaissances récente** , cliquez sur **flèche droite** à côté du **fournisseurs** base de connaissances et cliquez sur **connaissances Découverte**. Vous pouvez également cliquer sur **ouvrir la Base de connaissances**, sélectionnez **fournisseurs** à partir de la **liste des bases de connaissances**, sélectionnez **la découverte des connaissances**en tant que **activité** et cliquez sur **suivant**.  
+1.  Dans la page principale du client DQS, dans la section **base de connaissances récente** , cliquez sur la **flèche droite** en regard de la base de connaissances **fournisseurs** , puis cliquez sur **découverte des connaissances**. Vous pouvez également cliquer sur **ouvrir la base de connaissances**, sélectionnez **fournisseurs** dans la **liste des bases de connaissances**, sélectionnez **découverte des connaissances** comme **activité** , puis cliquez sur **suivant**.  
   
-     ![Menu de découverte de connaissances principal Page](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "Menu de découverte de connaissances principal Page")  
+     ![Menu Découverte des connaissances dans la Page principal](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "Menu Découverte des connaissances dans la Page principal")  
   
-2.  Sélectionnez **un fichier Excel** pour **Source de données**.  
+2.  Sélectionnez **fichier Excel** pour **source de données**.  
   
-3.  Cliquez sur **Parcourir**, naviguez et sélectionnez **Suppliers.xls**, puis cliquez sur **Open**.  
+3.  Cliquez sur **Parcourir**, naviguez et sélectionnez **Suppliers. xls**, puis cliquez sur **ouvrir**.  
   
-4.  Sélectionnez **fournisseurs pour la découverte** pour **feuille de calcul**.  
+4.  Sélectionnez **fournisseurs pour la détection** de la **feuille de calcul**.  
   
-5.  Dans le **mappages** section, mappez **SupplierID** colonne à partir de la **Excel** de fichiers à la **ID du fournisseur** domaine et  **Nom du fournisseur** colonne à la **Supplier Name** domaine à l’aide de **listes déroulantes**. Le fichier Excel propose des exemples de données pour le **ID du fournisseur** et **Supplier Name** domaines. Dans le processus de découverte, vous pouvez sélectionner les domaines dont vous souhaitez connaître les valeurs. Vous pouvez créer des domaines dans cette page, puis mapper les colonnes sources à ces domaines. Il n'est pas rare de créer des domaines pendant l'activité de découverte des connaissances au lieu de créer des domaines pendant l'activité de gestion de domaine.  
+5.  Dans la section **mappages** , mappez la colonne **RéfFournisseur** du fichier **Excel** vers la colonne **ID du fournisseur** et nom du **fournisseur** au domaine **nom du fournisseur** à l’aide des **listes déroulantes**. Le fichier Excel contient des exemples de données pour les domaines **ID du fournisseur** et **nom du fournisseur** . Dans le processus de découverte, vous pouvez sélectionner les domaines dont vous souhaitez connaître les valeurs. Vous pouvez créer des domaines dans cette page, puis mapper les colonnes sources à ces domaines. Il n'est pas rare de créer des domaines pendant l'activité de découverte des connaissances au lieu de créer des domaines pendant l'activité de gestion de domaine.  
   
-     ![Page du processus de détection de mappage](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "Page du processus de détection de mappage")  
+     ![Page de mappage du processus de découverte](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "Page de mappage du processus de découverte")  
   
-6.  Cliquez sur **suivant** pour basculer vers le **Discover** page.  
+6.  Cliquez sur **suivant** pour basculer vers la page de **découverte** .  
   
-7.  Sur le **Discover** , cliquez sur **Démarrer** pour démarrer le processus de découverte. Découverte est exécutée sur les colonnes **SupplierID** et **Supplier Name** dans le **Suppliers.xls** fichier. Le **ID du fournisseur** et **Supplier Name** domaines doivent être remplis avec les connaissances acquises grâce à la découverte.  
+7.  Dans la page **découverte** , cliquez sur **Démarrer** pour démarrer le processus de découverte. La détection est effectuée sur les colonnes **RéfFournisseur** et **nom du fournisseur** dans le fichier **Suppliers. xls** . Les domaines **ID du fournisseur** et nom du **fournisseur** doivent être remplis avec les connaissances tirées de la découverte.  
   
-     ![Page de processus de découverte découverte](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "découvrir Page du processus de détection")  
+     ![Page de découverte du processus de découverte](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Page de découverte du processus de découverte")  
   
-8.  Une fois l’analyse terminée, passez en revue la **statistiques sources** dans le **onglet de Profiler** en bas de la page. Notez que 10 nouveaux enregistrements avec les 20 valeurs au total (**SupplierID** et **Supplier Name** valeurs à partir de la **feuille de calcul Excel**) ont été découvertes. Notez également combien de valeurs sont nouvelles, uniques, nouvelles et uniques, et valides. Dans la zone de liste située à droite, vous pouvez obtenir plus de détails sur chaque domaine impliqué dans le processus de découverte. Si vous pointez la souris sur la barre d'état de la colonne Exhaustivité, vous pouvez voir s'il existe des valeurs manquantes dans les colonnes de la source.  
+8.  Une fois l’analyse terminée, examinez les **statistiques sources** dans l' **onglet générateur de profils** au bas de la page. Notez que 10 nouveaux enregistrements avec 20 valeurs au total (**RéfFournisseur** et les valeurs de **nom de fournisseur** de la feuille de **calcul Excel**) ont été découverts. Notez également combien de valeurs sont nouvelles, uniques, nouvelles et uniques, et valides. Dans la zone de liste située à droite, vous pouvez obtenir plus de détails sur chaque domaine impliqué dans le processus de découverte. Si vous pointez la souris sur la barre d'état de la colonne Exhaustivité, vous pouvez voir s'il existe des valeurs manquantes dans les colonnes de la source.  
   
-     ![Résultats de découverte des connaissances](../../2014/tutorials/media/et-discoveringknowledge-04.jpg "des résultats de découverte de connaissances")  
+     ![Résultats de la Découverte des connaissances](../../2014/tutorials/media/et-discoveringknowledge-04.jpg "Résultats de la Découverte des connaissances")  
   
-9. Cliquez sur **suivant** pour basculer vers le **gérer les valeurs du domaine** page.  
+9. Cliquez sur **suivant** pour passer à la page **gérer les valeurs du domaine** .  
   
-10. Dans le **gérer les valeurs du domaine** , cliquez sur **Supplier Name** domaine à partir de la liste des domaines.  
+10. Dans la page **gérer les valeurs du domaine** , cliquez sur nom du **fournisseur** domaine dans la liste des domaines.  
   
-11. Dans le volet droit, cliquez sur **Lazy Country Storex** (Notez que « x » à la fin), puis sélectionnez **Lazy Country Store**. DQS suggère cette modification après avoir appliqué le vérificateur d'orthographe au domaine. Par défaut, le vérificateur d'orthographe est appliqué aux domaines que vous créez.  
+11. Dans le volet droit, cliquez avec le bouton droit sur **paresseux Country storex** (voir « x » à la fin), puis sélectionnez **paresseal Country Store**. DQS suggère cette modification après avoir appliqué le vérificateur d'orthographe au domaine. Par défaut, le vérificateur d'orthographe est appliqué aux domaines que vous créez.  
   
-     ![Corriger le nom de fournisseur - Lazy Country Store](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "corriger le nom du fournisseur - Lazy Country Store")  
+     ![Corriger le nom du fournisseur - Lazy Country Store](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "Corriger le nom du fournisseur - Lazy Country Store")  
   
-12. Dans la liste de valeurs de domaine, vérifiez que la valeur **Lazy Country Storex** est défini comme une erreur (rouge **X** marquer) avec **Lazy Country Store** en tant que la correction et également le **Lazy Country Store** est également ajouté en tant qu’une valeur valide.  
+12. Dans la liste des valeurs de domaine, vérifiez que la valeur **Lazy Country storex** est définie comme une erreur (Red **X** Mark) avec le **magasin de pays paresseux** comme correction et que le **magasin des pays paresseux** est également ajouté en tant que valeur valide.  
   
-     ![Domaine de valeur et de corriger à la valeur](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "domaine valeur et à corriger à la valeur")  
+     ![Valeur de domaine et corriger à la valeur](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "Valeur de domaine et corriger à la valeur")  
   
 13. Cliquez sur **Terminer**.  
   
-14. Sur **SQL Server Data Quality Services** boîte de dialogue, cliquez sur **publier**.  
+14. Dans **SQL Server Data Quality Services** boîte de dialogue, cliquez sur **publier**.  
   
-15. Cliquez sur **OK** sur la boîte de message de réussite.  
+15. Cliquez sur **OK** dans la boîte de message de réussite.  
   
      Vous avez terminé la première leçon du didacticiel.  
   
-## <a name="next-step"></a>Étape suivante  
- [Leçon 2 : Nettoyage des données des fournisseurs à l’aide de la Base de connaissances fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+## <a name="next-step"></a>étape suivante  
+ [Leçon 2 : Nettoyage des données des fournisseurs avec la base de connaissances Fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

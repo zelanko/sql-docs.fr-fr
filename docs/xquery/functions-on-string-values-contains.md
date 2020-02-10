@@ -1,5 +1,5 @@
 ---
-title: contient la fonction (XQuery) | Microsoft Docs
+title: Contains, fonction (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899031"
 ---
 # <a name="functions-on-string-values---contains"></a>Fonctions sur les valeurs de chaîne : contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une valeur de type xs : Boolean indiquant si la valeur de *$arg1* contient une valeur de chaîne spécifiée par *$arg2*.  
+  Retourne une valeur de type xs : Boolean indiquant si la valeur de *$arg 1* contient une valeur de chaîne spécifiée par *$arg 2*.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,31 +35,32 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *$arg1*  
+ *$arg 1*  
  Valeur de chaîne à tester.  
   
- *$arg2*  
+ *$arg 2*  
  Sous-chaîne à rechercher.  
   
 ## <a name="remarks"></a>Notes  
- Si la valeur de *$arg2* est une chaîne de longueur nulle, la fonction retourne **True**. Si la valeur de *$arg1* est une chaîne de longueur nulle et la valeur de *$arg2* n’est pas une chaîne de longueur nulle, la fonction retourne **False**.  
+ Si la valeur de *$arg 2* est une chaîne de longueur nulle, la fonction retourne la **valeur true**. Si la valeur de *$arg 1* est une chaîne de longueur nulle et que la valeur de *$arg 2* n’est pas une chaîne de longueur nulle, la fonction retourne **false**.  
   
- Si la valeur de *$arg1* ou *$arg2* est la séquence vide, l’argument est traité comme la chaîne de longueur nulle.  
+ Si la valeur de *$arg 1* ou *$arg 2* est la séquence vide, l’argument est traité comme une chaîne de longueur nulle.  
   
  La fonction contains() utilise le classement des points de code Unicode par défaut de XQuery pour la comparaison des chaînes.  
   
- La valeur de la sous-chaîne spécifiée pour *$arg2* doit être inférieure ou égale à 4 000 caractères. Si la valeur spécifiée est supérieure à 4 000 caractères, une condition d’erreur dynamique se produit et la fonction contains() retourne une séquence vide au lieu d’une valeur booléenne **True** ou **False**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne déclenche pas d'erreurs dynamiques sur les expressions XQuery.  
+ La valeur de sous-chaîne spécifiée pour *$arg 2* doit être inférieure ou égale à 4000 caractères. Si la valeur spécifiée est supérieure à 4000 caractères, une condition d’erreur dynamique se produit et la fonction Contains () retourne une séquence vide au lieu d’une valeur booléenne **true** ou **false**. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne déclenche pas d'erreurs dynamiques sur les expressions XQuery.  
   
- Pour obtenir des comparaisons sans respecter la casse, le [majuscules](../xquery/functions-on-string-values-upper-case.md) ou en minuscules fonctions peuvent être utilisées.  
+ Pour pouvoir effectuer des comparaisons sans respect de la casse, vous pouvez utiliser les fonctions [majuscules](../xquery/functions-on-string-values-upper-case.md) ou minuscules.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
- Le comportement de la paire de substitution dans des fonctions XQuery dépend du niveau de compatibilité de la base de données et, dans certains cas, de l'URI de l'espace de noms par défaut des fonctions. Pour plus d’informations, consultez la section « XQuery fonctions sont substitut prenant en charge » dans la rubrique [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consultez également [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) et [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Le comportement de la paire de substitution dans des fonctions XQuery dépend du niveau de compatibilité de la base de données et, dans certains cas, de l'URI de l'espace de noms par défaut des fonctions. Pour plus d’informations, consultez la section « les fonctions XQuery prennent en charge les substitutions » dans la rubrique [modifications avec rupture des fonctionnalités de moteur de base de données dans SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consultez également [niveau de compatibilité ALTER database &#40;&#41;Transact-SQL](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) et la [prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type xml dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples XQuery sur des instances XML stockées dans différentes colonnes de type XML dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>R. Utilisation de la fonction contains() XQuery pour rechercher une chaîne de caractères spécifique.  
- La requête suivante recherche des produits qui contiennent le mot Aerodynamic dans les descriptions résumées. La requête retourne l’ID de produit et le <`Summary`>, élément pour ces produits.  
+ La requête suivante recherche des produits qui contiennent le mot Aerodynamic dans les descriptions résumées. La requête retourne le ProductID et l’élément `Summary` <> pour ces produits.  
   
 ```  
 --The product model description document uses  

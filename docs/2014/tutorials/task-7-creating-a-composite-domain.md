@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 7 : Création d’un domaine Composite | Microsoft Docs'
+title: 'Tâche 7 : création d’un domaine composite | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488965"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d’un domaine composite
-  Dans cette tâche, vous créez un domaine composite, **Validation d’adresses**, qui comprend **ligne d’adresse**, **Ville**, **état**et  **Code postal** domaines. Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Consultez [gestion d’un domaine Composite](https://msdn.microsoft.com/library/hh510399.aspx) pour plus d’informations.  
+# <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d'une règle de domaine composite
+  Au cours de cette tâche, vous allez créer un domaine composite, **validation d’adresse**, qui comprend les domaines **adresse**, **ville**, **État**et **Code postal** . Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Pour plus d’informations, consultez [gestion d’un domaine composite](https://msdn.microsoft.com/library/hh510399.aspx) .  
   
-1.  Dans le volet gauche, cliquez sur **créer un domaine composite** dans la barre d’outils.  
+1.  Dans le volet gauche, cliquez sur le bouton **créer un domaine composite** dans la barre d’outils.  
   
-     ![Créer un bouton de barre d’outils du domaine Composite](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "créer un bouton de barre d’outils du domaine Composite")  
+     ![Bouton à la barre d'outils Créer un domaine composite](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "Bouton à la barre d'outils Créer un domaine composite")  
   
-2.  Entrez **Validation d’adresses** pour le **nom de domaine Composite**.  
+2.  Entrez la **validation d’adresse** pour le nom de **domaine composite**.  
   
-     ![Domaine Composite Validation d’adresses](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "domaine Composite Validation d’adresses")  
+     ![Domaine composite de validation d'adresses](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "Domaine composite de validation d'adresses")  
   
-3.  Dans la liste des domaines sélectionnez **ligne d’adresse**, **Ville**, **état**, et **Zip** et cliquez sur **flèche droite** pour les ajouter à la **domaines du domaine Composite** liste.  
+3.  Dans la liste domaine, sélectionnez **adresse**, **ville**, **État**et **Code postal** , puis cliquez sur la **flèche droite** pour les ajouter à la liste **domaines dans le domaine composite** .  
   
 4.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 8 : Création d’une règle de domaine Composite](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 8 : Création d'une règle de domaine composite](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
   
   

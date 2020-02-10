@@ -15,18 +15,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483431"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Créer un membre consolidé (Master Data Services)
   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], créez un membre consolidé lorsque vous souhaitez un nœud parent pour une hiérarchie explicite. Les membres consolidés peuvent avoir leurs propres attributs. Ils sont utilisés pour le regroupement. Comme indiqué dans l'exemple suivant, les membres consolidés peuvent être utilisés pour les groupes de comptes qui ont des comptes sous eux.  
   
- ![Membres consolidés de MDS](../../2014/master-data-services/media/mds-consolidated-members.png "MDS des membres consolidés")  
+ ![Membres consolidés MDS](../../2014/master-data-services/media/mds-consolidated-members.png "Membres consolidés MDS")  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
@@ -49,13 +49,13 @@ ms.locfileid: "65483431"
   
 7.  Dans le volet de droite, remplissez les champs.  
   
-8.  Facultatif. Dans la zone **Annotations** , tapez un commentaire pour expliquer l'ajout du membre. Tous les utilisateurs ayant accès au membre peuvent afficher l'annotation.  
+8.  facultatif. Dans la zone **Annotations** , tapez un commentaire pour expliquer l'ajout du membre. Tous les utilisateurs ayant accès au membre peuvent afficher l'annotation.  
   
 9. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
--   [Déplacer des membres dans une hiérarchie &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
+-   [Déplacer des membres au sein d’une hiérarchie &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une hiérarchie explicite &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

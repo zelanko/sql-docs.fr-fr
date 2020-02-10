@@ -1,5 +1,5 @@
 ---
-title: Spécification d’opérateurs relationnels dans des requêtes XPath (SQLXML 4.0) | Microsoft Docs
+title: Spécification d’opérateurs relationnels dans des requêtes XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012438"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs de relation dans les requêtes XPath (SQLXML 4.0)
-  Les exemples suivants montrent comment les opérateurs de relation sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants montrent comment les opérateurs de relation sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-specify-relational-operator"></a>A. Spécifier un opérateur relationnel  
- Cette requête XPath retourne les éléments enfants de la  **\<client >** élément où la **CustomerID** valeur d’attribut est « 1 » et où tout enfant  **\<ordre >** les éléments contiennent un  **\<OrderDetail >** enfant avec un **OrderQty** attribut avec une valeur supérieure à 3 :  
+### <a name="a-specify-relational-operator"></a>R. Spécifier un opérateur relationnel  
+ Cette requête XPath retourne les éléments enfants de l' ** \<élément Customer>** où la valeur de l’attribut **CustomerID** est « 1 » et où tout élément ** \<Order>** enfant contient un ** \<élément OrderDetail>** enfant avec un attribut **OrderQty** avec une valeur supérieure à 3 :  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Le prédicat spécifié dans les crochets filtre les  **\<client >** éléments. Uniquement les  **\<client >** éléments ayant au moins une  **\<OrderDetail >** petit-enfant avec une valeur d’attribut OrderQty supérieure à 3 sont retournés.  
+ Le prédicat spécifié dans les crochets filtre les éléments du ** \<>du client** . Seuls les éléments du ** \<client>** qui possèdent au moins un ** \<** élément à faible>de petit-enfant avec une valeur d’attribut OrderQty supérieure à 3 sont retournés.  
   
  L'axe `child` est la valeur par défaut. Par conséquent, la requête peut être spécifiée sous la forme :  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66012438"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (SpecifyRelationalA.xml) et enregistrez-le dans le même répertoire que SampleSchema1.xml.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66012438"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats de l'exécution du modèle :  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66012438"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Spécifier l'opérateur relationnel dans la requête XPath et utiliser une fonction booléenne pour comparer le résultat  
- Cette requête retourne tous les  **\<ordre >** éléments enfants du nœud de contexte qui ont un **SalesPersonID** attribut la valeur est inférieure à 270 :  
+ Cette requête retourne toutes les ** \<commandes>** éléments enfants du nœud de contexte qui ont une valeur d’attribut **SalesPersonID** inférieure à 270 :  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -92,11 +92,11 @@ ms.locfileid: "66012438"
 ```  
   
 > [!NOTE]  
->  Lorsque cette requête est spécifiée dans un modèle, le < caractère doit être encodée, car le < caractère a une signification spéciale dans un document XML. Dans un modèle, utilisez `<` pour spécifier le < caractère.  
+>  Lorsque cette requête est spécifiée dans un modèle, le caractère de < doit être encodé par entité, car le caractère < a une signification particulière dans un document XML. Dans un modèle, utilisez `<` pour spécifier le caractère <.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (SpecifyRelationalB.xml) et enregistrez-le dans le même répertoire que SampleSchema1.xml.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66012438"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel de l'exécution du modèle :  
   

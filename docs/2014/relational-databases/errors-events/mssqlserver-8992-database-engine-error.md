@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912543"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8992|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8992|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_CHECK_CATALOG|  
-|Texte du message|Cocher catalogue Msg au niveau du niveau état état d’erreur : MESSAGE.|  
+|Texte du message|Contrôle du message du catalogue ERROR, niveau LEVEL, état STATE : MESSAGE.|  
   
 ## <a name="explanation"></a>Explication  
  DBCC CHECKCATALOG ou DBCC CHECKDB a trouvé une incohérence dans les tables de métadonnées système pour l'objet spécifié. En d'autres termes, il y a une incohérence entre l'ID d'objet enregistré et l'objet spécifié dans le message d'erreur.  

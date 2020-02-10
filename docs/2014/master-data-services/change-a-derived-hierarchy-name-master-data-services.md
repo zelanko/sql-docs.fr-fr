@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5a8bec1ab4bd19fdf11310fb467035eab1ac34b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483611"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Modifier le nom d'une hiérarchie dérivée (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d’une hiérarchie dérivée.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -33,15 +33,15 @@ ms.locfileid: "65483611"
   
 1.  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cliquez sur **Administration de système**.  
   
-2.  Sur le **vue de modèle** page, dans la barre de menus, pointez sur **gérer** et cliquez sur **hiérarchies dérivées**.  
+2.  Dans la page **vue du modèle** , dans la barre de menus, pointez sur **gérer** , puis cliquez sur **hiérarchies dérivées**.  
   
 3.  Dans la page **Maintenance de la hiérarchie dérivée** , dans la liste **Modèle** , sélectionnez un modèle.  
   
 4.  Sélectionnez la ligne de la hiérarchie dérivée à renommer.  
   
-5.  Cliquez sur **sélectionné de modifier la hiérarchie dérivée**.  
+5.  Cliquez sur **modifier la hiérarchie dérivée sélectionnée**.  
   
-6.  Sur le **modifier la hiérarchie dérivée** , cliquez sur **modifier le nom de la hiérarchie dérivée**.  
+6.  Dans la page **modifier la hiérarchie dérivée** , cliquez sur modifier le nom de la **hiérarchie dérivée**.  
   
 7.  Dans la zone **Nom de hiérarchie dérivée** , tapez le nom mis à jour de la hiérarchie.  
   

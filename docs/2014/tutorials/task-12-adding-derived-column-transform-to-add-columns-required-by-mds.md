@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 12 : Ajout d’une transformation de colonne à ajouter les colonnes requises par MDS dérivée | Microsoft Docs'
+title: 'Tâche 12 : ajout d’une transformation de colonne dérivée pour ajouter des colonnes requises par MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,52 +11,52 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485242"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tâche 12 : Ajout d’une transformation de colonne dérivée pour ajouter les colonnes requises par MDS
-  Dans cette tâche, vous allez ajouter une transformation de colonne dérivée au flux de données. Vous ajoutez deux colonnes dérivées, **ImportType** et **BatchTag**, vers les enregistrements transmis à cette transformation. Vous devez ajouter ces colonnes avant de télécharger les données dans des tables intermédiaires dans MDS. Ces deux colonnes sont requises pour les tables intermédiaires dans MDS. Consultez [Tables intermédiaires des membres feuille](../master-data-services/leaf-member-staging-table-master-data-services.md) pour plus d’informations.  
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tâche 12 : Ajout d'une transformation de colonne dérivée pour ajouter les colonnes requises par MDS
+  Dans cette tâche, vous allez ajouter une transformation de colonne dérivée au flux de données. Vous ajoutez deux colonnes dérivées, **ImportType** et **BatchTag**, aux enregistrements passés à cette transformation. Vous devez ajouter ces colonnes avant de télécharger les données dans des tables intermédiaires dans MDS. Ces deux colonnes sont requises pour les tables intermédiaires dans MDS. Pour plus d’informations, consultez [tables de mise en lots des membres feuille](../master-data-services/leaf-member-staging-table-master-data-services.md) .  
   
-1.  Glisser-déplacer **transformation de colonne dérivée** à partir de **commune** section dans le **boîte à outils SSIS** à la **de flux de données** onglet.  
+1.  Glissez-déplacez la **transformation de colonne dérivée** de la section **commun** dans la **boîte à outils SSIS** vers l’onglet de **Workflow** .  
   
-2.  Avec le bouton droit **colonne dérivée** transformer dans le **de flux de données** onglet, puis cliquez sur **renommer**. Type **ajouter les colonnes requises par MDS** et appuyez sur **entrée**.  
+2.  Cliquez avec le bouton droit sur transformation de **colonne dérivée** sous l’onglet **Flow Data** , puis cliquez sur **Renommer**. Tapez **Add Columns required by MDS** et appuyez sur **entrée**.  
   
-3.  Se connecter **filtrer les doublons** à **ajouter les colonnes requises par MDS** à l’aide du connecteur bleu. Vous devez voir le **sélection entrée et sortie** boîte de dialogue.  
+3.  Connectez les **doublons de filtre** pour **Ajouter les colonnes requises par MDS** à l’aide du connecteur Blue. La boîte de dialogue **sélection de sortie d’entrée** doit s’afficher.  
   
-4.  Dans le **sélection entrée et sortie** boîte de dialogue, sélectionnez **enregistrements uniques**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **sélection de sortie d’entrée** , sélectionnez **enregistrements uniques**, puis cliquez sur **OK**.  
   
-     ![Entrée de boîte de dialogue de sélection de sortie](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "d’entrée de boîte de dialogue de sélection de sortie")  
+     ![Boîte de dialogue Sélection entrée et sortie](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "Boîte de dialogue Sélection entrée et sortie")  
   
-5.  Cliquez sur **SSIS** sur la barre de menus et cliquez sur **Variables**.  
+5.  Cliquez sur **SSIS** dans la barre de menus et cliquez sur **variables**.  
   
-6.  Dans le **Variables** fenêtre, cliquez sur **ajouter une Variable** dans la barre d’outils.  
+6.  Dans la fenêtre **variables** , cliquez sur le bouton **Ajouter une variable** de la barre d’outils.  
   
-     ![Fenêtre Variables SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "fenêtre Variables SSIS.")  
+     ![Fenêtre Variables SSIS.](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "Fenêtre Variables SSIS.")  
   
-7.  Type **ImportType** pour le **nom** et **2** pour le **valeur**. Vous spécifiez la valeur 2 étant donné que vous souhaitez ajouter de nouveaux membres à une entité dans MDS. Pour plus d’informations sur ce paramètre, consultez [Table intermédiaire des membres feuille](../master-data-services/leaf-member-staging-table-master-data-services.md).  
+7.  Tapez **ImportType** pour le **nom** et **2** pour la **valeur**. Vous spécifiez la valeur 2 étant donné que vous souhaitez ajouter de nouveaux membres à une entité dans MDS. Pour plus d’informations sur ce paramètre, consultez [table de mise en lots des membres feuille](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
-8.  Cliquez sur **ajouter une Variable** à nouveau bouton de barre d’outils.  
+8.  Cliquez à nouveau sur le bouton **Ajouter une variable** de la barre d’outils.  
   
-9. Type **BatchTag** pour le **nom**, sélectionnez **chaîne** pour le **type de données**, et **EIMBatch** pour le **Valeur**. **BatchTag** est simplement un nom unique pour le lot que vous soumettrez à MDS.  
+9. Tapez **BatchTag** pour le **nom**, sélectionnez **chaîne** comme **type de données**et **EIMBatch** pour la **valeur**. **BatchTag** est simplement un nom unique pour le lot que vous allez soumettre à MDS.  
   
-10. Dans le **de flux de données** onglet, double-cliquez sur **ajouter les colonnes requises par MDS**.  
+10. Sous l’onglet **Data Flow** , double-cliquez sur **Add Columns required by MDS**.  
   
-11. Dans le **éditeur de Transformation de colonne dérivée** boîte de dialogue le **zone de liste dans le volet inférieur**, type **ImportType** pour le **nom de colonne dérivée**.  
+11. Dans la boîte de dialogue **éditeur de transformation de colonne dérivée** , dans la **zone de liste dans le volet inférieur**, tapez **ImportType** pour le nom de la **colonne dérivée**.  
   
-12. Développez **Variables et paramètres** dans le volet supérieur gauche, glissez-déposez **User::ImportType** à la **Expression** colonne.  
+12. Développez **variables et paramètres** dans le volet supérieur gauche, glissez-déposez **User :: ImportType** dans la colonne **expression** .  
   
-     ![Dérivés d’éditeur de Transformation de colonne](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "dérivés d’éditeur de Transformation de colonne")  
+     ![Éditeur de transformation de colonne dérivée](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "Éditeur de transformation de colonne dérivée")  
   
-13. Type **BatchTag** dans la ligne suivante pour le **nom de colonne dérivée**.  
+13. Tapez **BatchTag** dans la ligne suivante pour le **nom de la colonne dérivée**.  
   
-14. Glisser-déplacer **User::BatchTag** de **Variables et paramètres** à la **Expression** colonne.  
+14. Faites glisser **User :: BatchTag** à partir de **variables et de paramètres** vers la colonne **expression** .  
   
-15. Cliquez sur **OK** pour fermer la **Transformation de colonne dérivée** boîte de dialogue.  
+15. Cliquez sur **OK** pour fermer la boîte de dialogue **transformation de colonne dérivée** .  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 13 : Ajout de Destination OLE DB pour écrire des données dans la Table intermédiaire MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 13 : Ajout d'une destination OLE DB pour écrire des données dans une table intermédiaire MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

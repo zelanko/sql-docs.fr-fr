@@ -1,5 +1,5 @@
 ---
-title: 'Demande de références URL à des données BLOB à l’aide de sql : encode (SQLXML 4.0) | Microsoft Docs'
+title: 'Demande de références URL à des données BLOB à l’aide de SQL : encode (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013729"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Demande de références URL à des données BLOB à l'aide de sql:encode (SQLXML 4.0)
@@ -31,20 +31,21 @@ ms.locfileid: "66013729"
   
  Si vous souhaitez retourner une référence aux données (un URI) qui pourra être utilisée ultérieurement pour récupérer les données BLOB dans un format binaire, spécifiez l'annotation `sql:encode`. Vous pouvez spécifier `sql:encode` sur un attribut ou un élément de type simple.  
   
- Spécifiez l'annotation `sql:encode` pour indiquer qu'une URL au champ doit être retournée au lieu de la valeur du champ. `sql:encode` dépend de la clé primaire pour générer une sélection singleton dans l'URL. La clé primaire peut être spécifiée à l’aide de la `sql:key-fields` annotation.  
+ Spécifiez l'annotation `sql:encode` pour indiquer qu'une URL au champ doit être retournée au lieu de la valeur du champ. 
+  `sql:encode` dépend de la clé primaire pour générer une sélection singleton dans l'URL. La clé primaire peut être spécifiée à l' `sql:key-fields` aide de l’annotation.  
   
  La valeur « url » ou « default » peut être attribuée à l'annotation `sql:encode`. Une valeur « default » retourne des données au format encodé en base 64.  
   
- L'annotation `sql:encode` ne peut pas être utilisée avec `sql:use-cdata` ou sur les types d'attributs ID, IDREF, IDREFS, NMTOKEN ou NMTOKENS. Il peut également pas servir avec XSD **fixe** attribut.  
+ L'annotation `sql:encode` ne peut pas être utilisée avec `sql:use-cdata` ou sur les types d'attributs ID, IDREF, IDREFS, NMTOKEN ou NMTOKENS. Elle ne peut pas non plus être utilisée avec l’attribut **fixed** XSD.  
   
 > [!NOTE]  
 >  Les colonnes de type BLOB ne peuvent pas être utilisées en tant que partie d'une clé ou d'une clé étrangère.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Spécification de sql:encode pour obtenir une référence URL à des données BLOB  
- Dans cet exemple, le schéma de mappage spécifie `sql:encode` sur le **LargePhoto** attribut à récupérer la référence URI à une photo de produit spécifique (au lieu de récupérer les données binaires au format encodé en Base 64).  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>R. Spécification de sql:encode pour obtenir une référence URL à des données BLOB  
+ Dans cet exemple, le schéma de mappage `sql:encode` spécifie sur l’attribut **LargePhoto** pour récupérer la référence URI à une photo de produit spécifique (au lieu de récupérer les données binaires dans un format encodé en base 64).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -82,9 +83,9 @@ ms.locfileid: "66013729"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

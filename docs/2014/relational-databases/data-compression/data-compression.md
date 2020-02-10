@@ -23,13 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873553"
 ---
 # <a name="data-compression"></a>Data Compression
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la compression de page et de ligne pour les tables et les index rowstore, et prend en charge la compression columnstore et d'archivage columnstore pour les tables et les index columnstore.  
   
  Pour les tables et les index rowstore, utilisez la fonctionnalité de compression de données afin de réduire la taille de la base de données. Outre les économies d'espace, la compression des données peut améliorer les performances des charges de travail nécessitant de nombreuses E/S, car les données sont stockées dans beaucoup moins de pages et les requêtes doivent lire moins pages sur le disque. Toutefois, des ressources processeur supplémentaires sont nécessaires sur le serveur de base de données pour compresser et décompresser les données, alors que les données sont échangées avec l'application. La compression des lignes et des pages peut être configurée pour les objets de base de données suivants :  
@@ -63,7 +64,7 @@ ms.locfileid: "62873553"
   
 -   La compression permet de stocker davantage de lignes dans une page, mais elle ne modifie pas la taille maximale des lignes d'une table ou d'un index.  
   
--   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui possède les colonnes c1`char(8000)` et c2`char(53)` ne peut pas être compressée en raison de la surcharge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
+-   Une table ne peut pas être activée pour la compression lorsque la taille de ligne maximale plus la charge mémoire de compression dépasse la taille de ligne maximale de 8 060 octets. Par exemple, une table qui contient les colonnes C1`char(8000)` et C2`char(53)` ne peut pas être compressée en raison de la surcharge de compression supplémentaire. Lorsque le format de stockage VarDecimal est utilisé, le contrôle de taille de ligne est effectué lorsque le format est activé. Pour la compression de ligne et de page, le contrôle de taille de ligne est effectué lorsque l'objet est compressé initialement, puis vérifié à mesure que chaque ligne est insérée ou modifiée. La compression met en vigueur les deux règles suivantes :  
   
     -   Une mise à jour d'un type de longueur fixe doit toujours réussir.  
   
@@ -102,15 +103,16 @@ ms.locfileid: "62873553"
 -   Les tables qui implémentait le format de stockage VarDecimal dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] conservent ce paramètre en cas de mise à niveau. Vous pouvez appliquer la compression de ligne à une table qui a le format de stockage VarDecimal. Toutefois, la compression de ligne étant un sur-ensemble du format de stockage VarDecimal, il n'y a aucune raison de conserver le format de stockage VarDecimal. Les valeurs décimales ne bénéficient d'aucune compression supplémentaire lorsque vous combinez le format de stockage VarDecimal avec la compression de ligne. Vous pouvez appliquer la compression de page à une table qui a le format de stockage VarDecimal ; toutefois, les colonnes au format de stockage VarDecimal ne bénéficieront probablement pas d'une compression supplémentaire.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge le format de stockage VarDecimal ; toutefois, la compression au niveau ligne accomplissant les mêmes objectifs, le format de stockage VarDecimal est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge le format de stockage VarDecimal ; toutefois, la compression au niveau ligne accomplissant les mêmes objectifs, le format de stockage VarDecimal est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>À l'aide de la compression Columnstore et de la compression d'archivage Columnstore  
   
 ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**S’applique à** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
-### <a name="basics"></a>Principes de base  
+### <a name="basics"></a>Concepts de base  
  Les tables et les index columnstore sont toujours enregistrés avec la compression columnstore. Limitez encore davantage la taille des données columnstore en configurant une compression supplémentaire appelée compression d'archivage.  Pour exécuter la compression d'archivage, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute l'algorithme de compression Microsoft XPRESS sur les données. Ajoutez ou supprimez la compression d'archivage en utilisant les types de compression de données suivants :  
   
 -   Utilisez la compression des données `COLUMNSTORE_ARCHIVE` pour compresser les données columnstore au moyen de la compression d'archivage.  
@@ -167,9 +169,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Métadonnées  
  Les vues système suivantes contiennent des informations sur la compression de données pour les index cluster :  
   
--   [Sys.indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - le `type` et `type_desc` colonnes incluent CLUSTERED COLUMNSTORE et NONCLUSTERED COLUMNSTORE.  
+-   [sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -les `type` colonnes `type_desc` et incluent les COLUMNSTORE en cluster et les COLUMNSTORE non cluster.  
   
--   [Sys.partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - le `data_compression` et `data_compression_desc` colonnes incluent COLUMNSTORE et COLUMNSTORE_ARCHIVE.  
+-   [sys. partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -les `data_compression` colonnes et `data_compression_desc` incluent COLUMNSTORE et COLUMNSTORE_ARCHIVE.  
   
  La procédure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) ne s’applique pas aux index columnstore.  
   
@@ -255,8 +257,8 @@ REBUILD PARTITION = ALL WITH (
  [Implémentation de la compression de ligne](row-compression-implementation.md)   
  [Implémentation de la compression de page](page-compression-implementation.md)   
  [Implémentation de la compression Unicode](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [CRÉER un schéma de PARTITION &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CRÉER une fonction de PARTITION &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

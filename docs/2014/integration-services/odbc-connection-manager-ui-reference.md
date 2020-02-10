@@ -1,5 +1,5 @@
 ---
-title: Référence de l’interface utilisateur du Gestionnaire de connexions ODBC | Microsoft Docs
+title: Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057274"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Référence de l'interface utilisateur du gestionnaire de connexions ODBC

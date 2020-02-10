@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836330"
 ---
 # <a name="package-properties-dialog-box"></a>Propriétés du package, boîte de dialogue
@@ -56,7 +56,7 @@ ms.locfileid: "62836330"
  **Identificateur**  
  Indique l'ID du package.  
   
- **Point d'entrée**  
+ **Point d’entrée**  
  La valeur `True` indique que le package est démarré directement. La valeur `False` indique que le package est démarré par un autre package via la tâche d'exécution du package. La valeur par défaut est `True`.  
   
  Vous définissez cette propriété dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour les packages parent et enfant en cliquant avec le bouton droit sur le package dans l’Explorateur de solutions et en sélectionnant **Package de point d’entrée**.  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877874"
 ---
 # <a name="variables-window"></a>Fenêtre Variables
@@ -49,7 +49,7 @@ ms.locfileid: "62877874"
  `Name`  
  Affichez le nom de la variable. Vous pouvez mettre à jour le nom des variables définies par l'utilisateur.  
   
- **Portée**  
+ **Étendue**  
  Affichez l'étendue de la variable. Une variable a l'étendue du package entier ou celle d'un conteneur ou d'une tâche. L'étendue de la variable doit être suffisante pour qu'elle soit visible pour tout autre composant ou tâche qui doit lire ou définir ses valeurs.  
   
  Vous pouvez modifier l'étendue en cliquant sur la variable puis en cliquant sur **Déplacer la variable** dans la fenêtre **Variables** .  
@@ -64,9 +64,9 @@ ms.locfileid: "62877874"
  Affichez la valeur de la variable. Vous pouvez mettre à jour la valeur des variables définies par l'utilisateur. Cette valeur peut être un littéral ou une expression. En outre, la valeur peut être une chaîne multiligne. Pour affecter une expression à la variable, cliquez sur le bouton d'ellipse qui est en regard de la colonne **Expression** dans la fenêtre **Variables** .  
   
  `Namespace`  
- Affichez le nom de l'espace de noms. Variables définies par l’utilisateur sont initialement créées dans le **utilisateur** espace de noms, mais vous pouvez modifier le nom de l’espace de noms dans le `Namespace` champ. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
+ Affichez le nom de l'espace de noms. Les variables définies par l’utilisateur sont initialement créées dans l’espace de noms **User** , mais vous pouvez modifier le `Namespace` nom de l’espace de noms dans le champ. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
   
- **Déclencher l'événement lorsque la valeur de la variable change**  
+ **Déclencher un événement de modification**  
  Indiquez si l'événement `OnVariableValueChanged` est déclenché lors de la modification d'une valeur. Vous pouvez mettre à jour la valeur des variables système définies par l'utilisateur. Par défaut, la fenêtre **Variables** ne répertorie pas cette colonne. Pour afficher cette colonne, cliquez sur **Options de la grille**.  
   
  **Description**  
@@ -81,6 +81,6 @@ ms.locfileid: "62877874"
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)   
  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Générer de fichiers de vidage pour l'exécution des packages](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Générer de fichiers de vidage pour l’exécution des packages](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

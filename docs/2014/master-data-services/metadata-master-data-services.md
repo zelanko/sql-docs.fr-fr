@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054038"
 ---
 # <a name="metadata-master-data-services"></a>Métadonnées (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les métadonnées définies par l'utilisateur sont des informations qui vous permettent de décrire les objets de modèle. Par exemple, vous pouvez effectuer le suivi des propriétaires d'un modèle ou d'une entité spécifique, ou des systèmes sources qui fournissent des données à une entité.  
   
- Métadonnées définies par l’utilisateur sont gérée par un modèle appelé **métadonnées**. Ce modèle est inclus automatiquement lorsque [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est installé, et il est similaire à tous les autres modèles MDS, mais vous ne pouvez pas créer des versions de.  
+ Les métadonnées définies par l’utilisateur sont gérées par un modèle appelé **métadonnées**. Ce modèle est inclus automatiquement lorsque [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est installé, et il est similaire à tous les autres modèles MDS, sauf que vous ne pouvez pas en créer.  
   
  Après avoir rempli le modèle Métadonnées avec les métadonnées définies par l'utilisateur, vous pouvez l'inclure dans des vues d'abonnement, de façon à ce qu'il puisse être consommé par les systèmes d'abonnement.  
   
 ## <a name="metadata-entities"></a>Entités de métadonnées  
- Le modèle Métadonnées inclut cinq entités, chacune représentant un type d'objet modèle de données de référence qui prend en charge les métadonnées définies par l'utilisateur. Par exemple, le **définition de métadonnées de modèle** entité contient des membres qui représentent des modèles, et le **définition de métadonnées d’attribut** entité comporte des membres qui représentent tous les attributs dans tous les modèles.  
+ Le modèle Métadonnées inclut cinq entités, chacune représentant un type d'objet modèle de données de référence qui prend en charge les métadonnées définies par l'utilisateur. Par exemple, l’entité de **définition des métadonnées du modèle** contient des membres qui représentent des modèles, et l’entité de **définition des métadonnées d’attribut** a des membres qui représentent tous les attributs de tous les modèles.  
   
- Pour définir les métadonnées d'un objet de modèle, vous devez remplir un de ces attributs de membre. Par exemple, dans le **définition de métadonnées d’entité** entité, vous pouvez remplir attribut de Description du membre Price avec le texte : **Le prix du produit vendu à un client**.  
+ Pour définir les métadonnées d'un objet de modèle, vous devez remplir un de ces attributs de membre. Par exemple, dans l’entité de **définition des métadonnées d’entité** , vous pouvez remplir l’attribut Description du membre Price avec le texte suivant : **prix du produit lorsqu’il est vendu à un client**.  
   
  Les membres du modèle Métadonnées sont mis à jour automatiquement à chaque ajout ou suppression d'objets de modèle qui prennent en charge des métadonnées définies par l'utilisateur.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66054038"
   
 -   Un attribut de forme libre nommé Last Review Date, qui vous permet d'effectuer le suivi de la date à laquelle un objet a été révisé par le propriétaire pour la dernière fois.  
   
--   Un attribut basé sur un domaine nommé Sources, ce qui vous permet de suivre et gérer les systèmes source qui interagissent avec le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] instance.  
+-   Un attribut basé sur un domaine nommé sources, que vous utilisez pour suivre et gérer les systèmes sources qui interagissent [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] avec l’instance.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

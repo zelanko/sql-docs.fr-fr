@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011767"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utiliser un fichier de format pour importer des données en bloc (SQL Server)
-  Cette rubrique illustre l'utilisation d'un fichier de format dans les importations en bloc. Le fichier de format met en relation les champs du fichier de données avec les colonnes de la table.  Vous pouvez opter pour un fichier de format XML ou non-XML pour importer des données en bloc quand vous utilisez une commande **bcp** ou une instruction BULK INSERT ou INSERT... SELECT * FROM OPENROWSET(BULK...)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique illustre l'utilisation d'un fichier de format dans les importations en bloc. Le fichier de format met en relation les champs du fichier de données avec les colonnes de la table.  Vous pouvez utiliser un fichier de format non-XML ou XML pour importer des données en bloc lors de l’utilisation d’une commande **BCP** ou d’une BULK INSERT ou d’une instruction INSERT... SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] commande.  
   
 > [!IMPORTANT]  
 >  Pour qu'un fichier de format fonctionne avec un fichier de données de caractères Unicode, tous les champs d'entrée doivent être des chaînes de texte Unicode (autrement dit, des chaînes Unicode de taille fixe ou terminées par un caractère).  
   
 > [!NOTE]  
->  Si vous n’êtes pas familiarisé avec les fichiers de format, consultez [les fichiers de Format Non-XML &#40;SQL Server&#41; ](xml-format-files-sql-server.md) et [fichiers de Format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+>  Si vous n’êtes pas familiarisé avec les fichiers de format, consultez [fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md) et les [fichiers de format XML &#40;SQL Server ](xml-format-files-sql-server.md)&#41;.  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>Options des fichiers de format pour les commandes d'importation en bloc  
  Le tableau ci-dessous récapitule l'option de fichier de format de chaque commande d'importation en bloc.  
@@ -36,15 +36,15 @@ ms.locfileid: "66011767"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*chemin_fichier_format*'|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*chemin_fichier_format*'|  
-|**bcp** ... **in**|**-f** *format_file*|  
+|**BCP** ... **dans**|**-f** *format_file*|  
   
  Pour plus d’informations, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes client ou dans la page de codes inhérente au classement) ; SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode) ; SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).  
+>  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes du client ou dans la page de codes inhérente au classement) ; SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode) ; SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).  
   
 ## <a name="examples"></a>Exemples  
- Les exemples de cette section illustrent l’utilisation des fichiers de format pour importer des données en bloc au moyen de la commande **bcp** et des instructions BULK INSERT et INSERT... SELECT * FROM OPENROWSET(BULK...). Avant de pouvoir exécuter un des exemples d'importation en bloc, vous devez créer un exemple de table, de fichier de données et de fichier de format.  
+ Les exemples de cette section illustrent l’utilisation de fichiers de format pour importer des données en bloc à l’aide de la commande **BCP** et du Bulk Insert, ainsi que des instructions INSERT... SELECT * FROM OPENROWSET (BULK...). Avant de pouvoir exécuter un des exemples d'importation en bloc, vous devez créer un exemple de table, de fichier de données et de fichier de format.  
   
 ### <a name="sample-table"></a>Exemple de table  
  Une table nommée **myTestFormatFiles** doit être créée dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sous le schéma **dbo** . Pour créer cette table, dans l'éditeur de requêtes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
@@ -62,7 +62,7 @@ GO
 ```  
   
 ### <a name="sample-data-file"></a>Fichier de données d'exemple  
- Les exemples utilisent un fichier de données d'exemple, `myTestFormatFiles-c.Dat`, qui contient les enregistrements suivants. Pour créer le fichier de données, à l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
+ Les exemples utilisent un fichier de données d'exemple, `myTestFormatFiles-c.Dat`, qui contient les enregistrements suivants. Pour créer le fichier de données, à l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
   
 ```  
 10,Field2,Field3,Field4  
@@ -125,7 +125,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -x -f myTestFormatFi
 ### <a name="using-bcp"></a>Utilisation de la commande bcp  
  L’exemple suivant a recours à la commande **bcp** pour importer des données en bloc à partir du fichier de données `myTestFormatFiles-c.Dat` dans la table `HumanResources.myTestFormatFiles` de l’exemple de base de données. Cet exemple utilise le fichier de format XML `MyTestFormatFiles.Xml`. Il supprime toutes les lignes existantes de la table avant d'importer le fichier de données.  
   
- À l'invite de commandes Windows, entrez :  
+ À l'invite de commandes Windows, entrez :  
   
 ```  
 bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\myTestFormatFiles.Xml -T  
@@ -137,7 +137,7 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 ### <a name="using-bulk-insert"></a>Utilisation de BULK INSERT  
  Dans l'exemple suivant, l'instruction BULK INSERT est utilisée pour importer des données en bloc à partir du fichier de données `myTestFormatFiles-c.Dat` dans la table `HumanResources.myTestFormatFiles` dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Cet exemple utilise le fichier de format non XML `MyTestFormatFiles.Fmt`. Il supprime toutes les lignes existantes de la table avant d'importer le fichier de données.  
   
- Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], exécutez :  
+ Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez :  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,7 +156,7 @@ GO
 >  Pour plus d’informations sur cette instruction, consultez [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ### <a name="using-the-openrowset-bulk-rowset-provider"></a>Utilisation du fournisseur d'ensembles de lignes en bloc OPENROWSET  
- Dans l'exemple suivant, la commande `INSERT ... SELECT * FROM OPENROWSET(BULK...)` est utilisée pour importer des données en bloc à partir du fichier de données `myTestFormatFiles-c.Dat` dans la table `HumanResources.myTestFormatFiles` dans l'exemple de base de données `AdventureWorks` . Cet exemple utilise le fichier de format XML `MyTestFormatFiles.Xml`. Il supprime toutes les lignes existantes de la table avant d'importer le fichier de données.  
+ Dans l'exemple suivant, la commande `INSERT ... SELECT * FROM OPENROWSET(BULK...)` est utilisée pour importer des données en bloc à partir du fichier de données `myTestFormatFiles-c.Dat` dans la table `HumanResources.myTestFormatFiles` dans l'exemple de base de données `AdventureWorks`. Cet exemple utilise le fichier de format XML `MyTestFormatFiles.Xml`. Il supprime toutes les lignes existantes de la table avant d'importer le fichier de données.  
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez :  
   
@@ -193,7 +193,7 @@ DROP TABLE myTestFormatFiles
  [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   

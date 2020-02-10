@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106598"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Ajouter, déplacer ou supprimer une table, une matrice ou une liste (Générateur de rapports et SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106598"
   
 1.  Sous l’onglet **Insérer** , cliquez sur **Tableau** ou **Matrice**, puis sur **Assistant Tableau** ou **Assistant Matrice**.  
   
-2.  Suivez les étapes de la **NewTable** ou **nouvelle matrice** Assistant.  
+2.  Suivez les étapes de l’Assistant **newTable** ou **nouvelle matrice** .  
   
 3.  Sous l’onglet **Accueil** , cliquez sur **Exécuter** pour visualiser le rapport rendu.  
   

@@ -1,5 +1,5 @@
 ---
-title: Objet SqlXmlAdapter (Classes managées de SQLXML) | Microsoft Docs
+title: Objet SqlXmlAdapter (classes managées SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b339e67b07ddb4168f9922c22e620eb2fa10d85e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014931"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>Objet SqlXmlAdapter (classes managées SQLXML)
-  Cet objet fournit des méthodes qui facilitent l'interaction avec le dataset dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
+  Cet objet fournit des méthodes qui facilitent l'interaction avec le dataset dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour obtenir un exemple fonctionnel, consultez [accès à la fonctionnalité SQLXML dans l’environnement .net](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
- L’objet SqlXmlAdapter prend en charge ces méthodes :  
+ L’objet SqlXmlAdapter prend en charge les méthodes suivantes :  
   
- void Fill (DataSet ds)  
+ void Fill (DataSet DS)  
  Remplit le dataset dans le .NET Framework avec les données XML extraites de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- mise à jour void (DataSet ds)  
+ annuler la mise à jour (DataSet DS)  
  Applique des mises à jour aux enregistrements dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir des données dans le dataset.  
   
- L’objet SqlXmlAdapter prend en charge ces constructeurs :  
+ L’objet SqlXmlAdapter prend en charge les constructeurs suivants :  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   
@@ -53,7 +53,7 @@ public SqlXmlAdapter(
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet SqlXmlCommand &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)   
- [Objet SqlXmlParameter &#40;Classes managées SQLXML&#41;](sqlxml-managed-classes-sqlxmlparameter-object.md)  
+ [Objet SqlXmlCommand &#40;les classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)   
+ [Objet SqlXmlParameter &#40;les classes managées SQLXML&#41;](sqlxml-managed-classes-sqlxmlparameter-object.md)  
   
   

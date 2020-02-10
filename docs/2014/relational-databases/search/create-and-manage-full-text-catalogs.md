@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011468"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
   Un catalogue de texte intégral est un objet virtuel qui n'appartient à aucun groupe de fichiers ; c'est un concept logique qui renvoie à un groupe d'index de recherche en texte intégral.  
   
-##  <a name="creating"></a> Création d’un catalogue de texte intégral  
+##  <a name="creating"></a>Création d’un catalogue de texte intégral  
   
 #### <a name="to-create-a-full-text-catalog"></a>Pour créer un catalogue de texte intégral  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66011468"
   
 3.  Sélectionnez **Nouveau catalogue de recherche en texte intégral**.  
   
-4.  Dans la boîte de dialogue **Nouveau catalogue de recherche en texte intégral**, précisez les informations relatives au catalogue que vous recréez. Pour plus d’informations, consultez [Recherche en texte intégral &#40;page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
+4.  Dans la boîte de dialogue **Nouveau catalogue de recherche en texte intégral** , précisez les informations relatives au catalogue que vous recréez. Pour plus d’informations, consultez [Recherche en texte intégral &#40;page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
     > [!NOTE]  
     >  Les ID de catalogues de texte intégral commencent à 00005 et sont incrémentés d'une unité à chaque fois qu'un catalogue est créé.  
@@ -42,7 +42,7 @@ ms.locfileid: "66011468"
   
   
   
-##  <a name="props"></a> Affichage des propriétés d’un catalogue de texte intégral  
+##  <a name="props"></a>Affichage des propriétés d’un catalogue de texte intégral  
  Vous pouvez faire appel à plusieurs fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], telles que FULLTEXTCATALOGPROPERTY, pour obtenir la valeur de diverses propriétés relatives à l'indexation de texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
   
  Le tableau suivant répertorie les propriétés liées aux catalogues de texte intégral.  
@@ -60,7 +60,7 @@ ms.locfileid: "66011468"
   
   
   
-##  <a name="rebuildone"></a> Reconstruction d’un catalogue de texte intégral  
+##  <a name="rebuildone"></a>Reconstruction d’un catalogue de texte intégral  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Pour reconstruire un catalogue de texte intégral  
   
@@ -70,13 +70,13 @@ ms.locfileid: "66011468"
   
 3.  Cliquez avec le bouton droit sur le nom du catalogue de texte intégral que vous souhaitez reconstruire, puis sélectionnez **Reconstruire**.  
   
-4.  En réponse à la question **Voulez-vous supprimer le catalogue de texte intégral et le reconstruire ?** , cliquez sur **OK**.  
+4.  En réponse à la question **Voulez-vous supprimer le catalogue de texte intégral et le reconstruire ?**, cliquez sur **OK**.  
   
 5.  Dans la boîte de dialogue **Reconstruire le catalogue de texte intégral** , cliquez sur **Fermer**.  
   
   
   
-##  <a name="rebuildall"></a> La reconstruction de tous les catalogues de texte intégral pour une base de données  
+##  <a name="rebuildall"></a>Reconstruction de tous les catalogues de texte intégral d’une base de données  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>Pour reconstruire les catalogues de texte intégral pour une base de données  
   
@@ -86,13 +86,13 @@ ms.locfileid: "66011468"
   
 3.  Sélectionnez **Tout reconstruire**.  
   
-4.  En réponse à la question **Voulez-vous supprimer tous les catalogues de texte intégral et les reconstruire ?** , cliquez sur **OK**.  
+4.  En réponse à la question **Voulez-vous supprimer tous les catalogues de texte intégral et les reconstruire ?**, cliquez sur **OK**.  
   
 5.  Dans la boîte de dialogue **Reconstruire tous les catalogues de texte intégral** , cliquez sur **Fermer**.  
   
   
   
-##  <a name="removing"></a> Suppression d’un catalogue de texte intégral à partir d’une base de données  
+##  <a name="removing"></a>Suppression d’un catalogue de texte intégral d’une base de données  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>Pour supprimer un catalogue de texte intégral d'une base de données  
   

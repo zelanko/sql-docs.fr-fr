@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833871"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers
@@ -33,7 +33,7 @@ ms.locfileid: "62833871"
  **Type d’utilisation**  
  Spécifiez le type de fichiers à utiliser avec le gestionnaire de connexions pour plusieurs fichiers.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Créer des fichiers**|Le gestionnaire de connexions va créer les fichiers.|  
 |**Fichiers existants**|Le gestionnaire de connexions va utiliser des fichiers existants.|  
@@ -49,7 +49,7 @@ ms.locfileid: "62833871"
  **Modifier**  
  Sélectionnez un fichier ou dossier, puis remplacez-le par un autre fichier ou dossier à l’aide de la boîte de dialogue **Sélectionner les fichiers** ou **Rechercher un dossier** .  
   
- **Supprimer**  
+ **Remove**  
  Sélectionnez un fichier ou dossier, puis supprimez-le de la liste à l’aide du bouton **Supprimer** .  
   
  **Boutons de direction**  

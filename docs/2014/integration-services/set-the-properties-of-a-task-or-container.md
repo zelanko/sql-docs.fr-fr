@@ -1,5 +1,5 @@
 ---
-title: Définir les propriétés d’une tâche ou un conteneur | Microsoft Docs
+title: Définir les propriétés d’une tâche ou d’un conteneur | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055671"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Définir les propriétés d'une tâche ou d'un conteneur
-  Vous pouvez définir la plupart des propriétés des tâches et des conteneurs à l’aide de la fenêtre **Propriétés**. Les seules exceptions sont les propriétés des collections de tâches et les propriétés trop complexes à définir dans la fenêtre **Propriétés** . Par exemple, vous ne pouvez pas configurer l’énumérateur utilisé par le conteneur de boucles Foreach dans la fenêtre **Propriétés** . Vous devez utiliser un éditeur de tâche ou de conteneur pour définir ces propriétés complexes. La plupart des éditeurs de tâche et de conteneur possèdent plusieurs nœuds contenant chacun des propriétés connexes. Le nom du nœud indique l'objet des propriétés contenues dans le nœud.  
+  Vous pouvez définir la plupart des propriétés des tâches et des conteneurs à l’aide de la fenêtre **Propriétés** . Les seules exceptions sont les propriétés des collections de tâches et les propriétés trop complexes à définir dans la fenêtre **Propriétés** . Par exemple, vous ne pouvez pas configurer l’énumérateur utilisé par le conteneur de boucles Foreach dans la fenêtre **Propriétés** . Vous devez utiliser un éditeur de tâche ou de conteneur pour définir ces propriétés complexes. La plupart des éditeurs de tâche et de conteneur possèdent plusieurs nœuds contenant chacun des propriétés connexes. Le nom du nœud indique l'objet des propriétés contenues dans le nœud.  
   
  Les procédures suivantes décrivent comment définir les propriétés d’une tâche ou d’un conteneur en utilisant les fenêtres **Propriétés** ou l’éditeur de tâche ou de conteneur correspondant.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66055671"
   
      Pour plus d’informations sur la configuration du conteneur de boucles For, consultez [Configurer un conteneur de boucles For](control-flow/for-loop-container.md).  
   
-     Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](control-flow/foreach-loop-container.md).  
+     Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [configurer un conteneur de boucles Foreach](control-flow/foreach-loop-container.md).  
   
     > [!NOTE]  
     >  Le conteneur de séquences ne possède pas d'éditeur personnalisé.  

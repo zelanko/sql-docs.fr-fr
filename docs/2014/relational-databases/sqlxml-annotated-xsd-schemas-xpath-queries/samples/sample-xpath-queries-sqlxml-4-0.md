@@ -1,5 +1,5 @@
 ---
-title: Exemples de requêtes XPath (SQLXML 4.0) | Microsoft Docs
+title: Exemples de requêtes XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71f6cc444bd5a5cee3f3e3399736c2f25e32b8dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010709"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Exemples de requêtes XPath (SQLXML 4.0)
@@ -30,31 +30,31 @@ ms.locfileid: "66010709"
 >  Les exemples de requêtes dans cette section sont groupés par type d'opération XPath effectuée par la requête.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
+ [Exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)  
  Utilisez ce fichier avec les exemples de requêtes XPath fournis dans cette section.  
   
- [Spécification d’Axes dans les requêtes XPath &#40;SQLXML 4.0&#41;](specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
+ [Spécification d’axes dans les requêtes XPath &#40;SQLXML 4,0&#41;](specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
  Illustre la façon dont les axes sont spécifiés dans les requêtes XPath.  
   
- [Spécification de prédicats à valeurs booléennes dans des requêtes XPath &#40;SQLXML 4.0&#41;](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
+ [Spécification de prédicats de valeurs booléennes dans des requêtes XPath &#40;SQLXML 4,0&#41;](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  Illustre la façon dont les prédicats à valeurs booléennes sont spécifiés dans les requêtes XPath.  
   
- [Spécification d’opérateurs relationnels dans des requêtes XPath &#40;SQLXML 4.0&#41;](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [La spécification d’opérateurs relationnels dans des requêtes XPath &#40;SQLXML 4,0&#41;](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  
  Illustre la façon dont les opérateurs de relation sont spécifiés dans les requêtes XPath.  
   
- [Spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4.0&#41;](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [La spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4,0&#41;](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)  
  Illustre la façon dont les opérateurs arithmétiques sont spécifiés dans les requêtes XPath.  
   
- [Spécification de fonctions de Conversion explicite dans les requêtes XPath &#40;SQLXML 4.0&#41;](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [Spécification de fonctions de conversion explicite dans les requêtes XPath &#40;SQLXML 4,0&#41;](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)  
  Illustre la façon dont les fonctions de conversion explicite sont spécifiées dans les requêtes XPath.  
   
- [Spécification d’opérateurs booléens dans les requêtes XPath &#40;SQLXML 4.0&#41;](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  
+ [La spécification d’opérateurs booléens dans les requêtes XPath &#40;SQLXML 4,0&#41;](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)  
  Illustre la façon dont les opérateurs booléens sont spécifiés dans les requêtes XPath.  
   
- [Spécification de fonctions booléennes dans des requêtes XPath &#40;SQLXML 4.0&#41;](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
+ [Spécification de fonctions booléennes dans des requêtes XPath &#40;SQLXML 4,0&#41;](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)  
  Illustre la façon dont les fonctions booléennes sont spécifiées dans les requêtes XPath.  
   
- [Spécification de Variables XPath dans les requêtes XPath &#40;SQLXML 4.0&#41;](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
+ [Spécification de variables XPath dans les requêtes XPath &#40;SQLXML 4,0&#41;](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)  
  Illustre comment les variables XPath sont spécifiées dans les requêtes XPath.  
   
   

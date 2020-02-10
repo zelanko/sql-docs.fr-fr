@@ -1,5 +1,5 @@
 ---
-title: Exemple de schéma XSD annoté pour les exemples de XPath (SQLXML 4.0) | Microsoft Docs
+title: Exemple de schéma XSD annoté pour les exemples XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0464b11906d08b22c100efa6d142b16fb8fa679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010730"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Exemple de schéma XSD annoté pour les exemples XPath (SQLXML 4.0)
-  Les exemples de requêtes XPath de cette section font référence à un schéma de mappage. Le schéma de mappage est un fichier de schéma XML (XSD) annoté. Pour plus d’informations sur les schémas de mappage, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
+  Les exemples de requêtes XPath de cette section font référence à un schéma de mappage. Le schéma de mappage est un fichier de schéma XML (XSD) annoté. Pour plus d’informations sur le mappage des schémas, consultez [Introduction aux schémas XSD Annotés &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
   
  Les éléments suivants sont nécessaires pour exécuter des requêtes XPath sur un schéma XSD annoté :  
   
 -   Créez un modèle contenant une requête XPath. Dans le modèle, vous spécifiez le schéma de mappage sur lequel la requête XPath doit être exécutée. Dans ce cas, le schéma de mappage doit être stocké dans le répertoire (ou l'un de ses sous-répertoires, auquel cas un chemin d'accès relatif est spécifié comme valeur de l'attribut `mapping-schema` dans le modèle) associé au fichier de modèle.  
   
--   Créez une application de test qui utilise des extensions SQLXML pour ADO pour exécuter des requêtes. Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+-   Créez une application de test qui utilise des extensions SQLXML pour ADO pour exécuter des requêtes. Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dans tous les exemples de cette section, les requêtes XPath sont spécifiées dans un modèle et le modèle est exécuté à l'aide d'ADO. Par conséquent, vous devez utiliser le fichier de schéma de mappage SampleSchema1.xml. Enregistrez ce fichier dans le répertoire où vos modèles sont stockés.  
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination Excel (Page Gestionnaire de connexions) | Microsoft Docs
+title: Éditeur de destination Excel (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059240"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Éditeur de destination Excel (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de destination Excel** pour spécifier des informations sur la source de données et afficher un aperçu des résultats. La destination Excel charge les données dans une feuille de calcul ou dans une plage (de cellules) nommée d'un classeur [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
 > [!NOTE]  
->  Le `CommandTimeout` propriété de la destination Excel n’est pas disponible dans le **éditeur de Destination Excel**, mais peut être définie à l’aide de la **éditeur avancé**. De plus, certaines options de chargement rapide sont uniquement disponibles dans l' **Éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section sur la destination Excel dans [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  La `CommandTimeout` propriété de la destination Excel n’est pas disponible dans l' **éditeur de destination Excel**, mais peut être définie à l’aide de l' **éditeur avancé**. De plus, certaines options de chargement rapide sont uniquement disponibles dans la **éditeur avancé**. Pour plus d'informations sur ces propriétés, consultez la section sur la destination Excel dans [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Pour en savoir plus sur la destination Excel, consultez [Excel Destination](data-flow/excel-destination.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66059240"
 |Option|Description|  
 |------------|-----------------|  
 |Table ou vue|Charge les données dans une feuille de calcul ou dans une plage nommée de la source de données Excel.|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la feuille de calcul ou de la plage dans une variable.<br /><br /> **Informations connexes** : [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la feuille de calcul ou de la plage dans une variable.<br /><br /> **Informations connexes**: [utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
 |Commande SQL|Charge les données dans la destination Excel à l'aide d'une requête SQL.|  
   
  **Nom de la feuille Excel**  
@@ -83,7 +83,7 @@ ms.locfileid: "66059240"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination Excel &#40;page Mappages&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Éditeur de destination Excel &#40;page Sortie d’erreur&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Éditeur de destination Excel &#40;page sortie d’erreur&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  
   
   

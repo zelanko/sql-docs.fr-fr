@@ -1,5 +1,5 @@
 ---
-title: Références techniques (Integration Services) | Microsoft Docs
+title: Référence technique (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055280"
 ---
 # <a name="technical-reference-integration-services"></a>Références techniques (Integration Services)
-  Trouvez la documentation de référence relative aux outils, aux langages et à la programmation de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+  Recherchez les outils, les langages et la documentation de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] référence [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]de programmation pour dans.  
   
- ![Icône de dossier petit fichier](media/filefolder-small.gif "icône dossier de petits fichiers") **et Concepteur de Service de Capture de données modifiées**  
+ ![Petite icône de dossier de fichiers](media/filefolder-small.gif "Petite icône de dossier de fichiers") **changement de service de capture de données et concepteur**  
  [Service CDC pour Oracle par Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  
   
  [Concepteur de capture de données modifiées pour Oracle par Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "66055280"
  ![Petite icône de dossier de fichiers](media/filefolder-small.gif "Petite icône de dossier de fichiers") **Erreurs et événements**  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
- ![Icône de dossier petit fichier](media/filefolder-small.gif "icône dossier de petits fichiers") **référence Transact-SQL**  
+ ![Petite icône de dossier de fichiers](media/filefolder-small.gif "Petite icône de dossier de fichiers") **référence Transact-SQL**  
  [Vues &#40;catalogue Integration Services&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
  [Procédures stockées &#40;catalogue Integration Services&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  

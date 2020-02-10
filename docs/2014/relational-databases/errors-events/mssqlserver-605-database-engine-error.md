@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8d49bcc6b25b9d66d8aba77c2300549c682a879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867705"
 ---
-# <a name="mssqlserver605"></a>MSSQLSERVER_605
+# <a name="mssqlserver_605"></a>MSSQLSERVER_605
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|605|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|605|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|WRONGPAGE|  
 |Texte du message|La tentative d'extraction de la page logique %S_PGID dans la base de données %d a échoué. Elle appartient à l'unité d'allocation %I64d et non à %I64d.|  
@@ -45,7 +45,7 @@ ms.locfileid: "62867705"
   
 -   Le système d'exploitation informe prématurément [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu'une opération d'E/S vient de se terminer. Le message d'erreur est affiché même si aucune altération des données n'a lieu.  
   
- Une requête est exécutée avec l'indicateur d'optimiseur NOLOCK ou le niveau d'isolement des transactions est défini avec la valeur READ UNCOMMITTED. Lorsqu'une requête utilisant NOLOCK ou READ UNCOMMITTED tente de lire des données qui ont été déplacées ou modifiées par un autre utilisateur, une erreur 605 se produit. Pour vérifier qu'il s'agit bien d'une erreur 605 temporaire, réexécutez la requête ultérieurement. Pour plus d’informations, consultez l’article [235880](https://support.microsoft.com/kb/235880/en-us): « Vous recevez un message d’erreur « Erreur 605 » lorsque vous exécutez une requête avec l’indicateur d’optimiseur NOLOCK ou que vous définissez le niveau d’isolation de transaction READ UNCOMMITTED dans SQL Server ».  
+ Une requête est exécutée avec l'indicateur d'optimiseur NOLOCK ou le niveau d'isolement des transactions est défini avec la valeur READ UNCOMMITTED. Lorsqu'une requête utilisant NOLOCK ou READ UNCOMMITTED tente de lire des données qui ont été déplacées ou modifiées par un autre utilisateur, une erreur 605 se produit. Pour vérifier qu'il s'agit bien d'une erreur 605 temporaire, réexécutez la requête ultérieurement. Pour plus d’informations, consultez l’article [235880](https://support.microsoft.com/kb/235880/en-us) de la Base de connaissances : « Vous recevez un message d’erreur « Erreur 605 » lorsque vous exécutez une requête avec l’indicateur d’optimiseur NOLOCK ou vous le niveau d’isolement de transaction définissez à READ UNCOMMITTED dans SQL Server ».  
   
  Généralement, si l'erreur se produit lors de l'accès aux données, mais que les opérations DBCC CHECKDB qui suivent s'exécutent sans erreur, l'erreur 605 était probablement temporaire.  
   

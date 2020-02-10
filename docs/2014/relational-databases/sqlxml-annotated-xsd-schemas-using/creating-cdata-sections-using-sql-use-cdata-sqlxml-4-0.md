@@ -1,5 +1,5 @@
 ---
-title: 'Création de Sections CDATA à l’aide de SQL : use-cdata (SQLXML 4.0) | Microsoft Docs'
+title: 'Création de sections CDATA à l’aide de SQL : use-cdata (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014012"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Création de sections CDATA à l'aide de sql:use-cdata (SQLXML 4.0)
   En XML, les sections CDATA sont utilisées pour l'échappement des blocs de texte qui contiennent des caractères qui seraient reconnus comme caractères de balisage dans un autre contexte.  
   
- Une base de données Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent parfois contenir les caractères qui sont traités comme des caractères de balisage par l’analyseur XML ; par exemple, les crochets pointus (\< et >), le symbole inférieur à ou égal à (< =) et l’esperluette (&) sont traités comme des caractères de balisage. Toutefois, vous pouvez encapsuler ce type de caractères spéciaux dans une section CDATA afin de les empêcher d'être traités comme des caractères de balisage. Le texte dans la section CDATA est traité par l'analyseur XML comme du texte brut.  
+ Une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans Microsoft peut parfois contenir des caractères qui sont traités comme des caractères de balisage par l’analyseur XML. par exemple, les crochets pointus (\< et >), le symbole inférieur ou égal à (<=) et le signe & (&) sont traités comme des caractères de balisage. Toutefois, vous pouvez encapsuler ce type de caractères spéciaux dans une section CDATA afin de les empêcher d'être traités comme des caractères de balisage. Le texte dans la section CDATA est traité par l'analyseur XML comme du texte brut.  
   
  L'annotation `sql:use-cdata` est utilisée pour spécifier que les données retournées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être encapsulées dans une section CDATA (autrement dit, elle indique si la valeur d'une colonne spécifiée par `sql:field` doit être placée dans une section CDATA). L'annotation `sql:use-cdata` peut être spécifiée uniquement sur des éléments qui mappent à une colonne de base de données.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "66014012"
  Cette annotation ne peut pas être utilisée avec `sql:url-encode`, ni sur les types d'attributs ID, IDREF, IDREFS, NMTOKEN et NMTOKENS.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Spécification de sql:use-cdata sur un élément  
- Dans le schéma suivant, `sql:use-cdata` est définie sur 1 (True) pour le  **\<AddressLine1 >** au sein de la  **\<adresse >** élément. En conséquence, les données sont retournées dans une section CDATA.  
+### <a name="a-specifying-sqluse-cdata-on-an-element"></a>R. Spécification de sql:use-cdata sur un élément  
+ Dans le schéma suivant, `sql:use-cdata` a la valeur 1 (true) pour le ** \<>AddressLine1** dans l' ** \<élément Address>** . En conséquence, les données sont retournées dans une section CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -82,7 +82,7 @@ ms.locfileid: "66014012"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel :  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011581"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurer et gérer des filtres pour la recherche
@@ -25,7 +25,7 @@ ms.locfileid: "66011581"
   
  Un filtre donné est spécifique à un type de document donné (.doc, .pdf, .xls, .xml, etc.). Ces filtres implémentent l'interface IFilter. Pour plus d’informations sur ces types de document, interrogez l’affichage catalogue [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- Des documents binaires peuvent être stockés dans une colonne `varbinary(max)` ou `image` unique. Pour chaque document, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] choisit le filtre correct en fonction de l'extension de fichier. Étant donné que l’extension de fichier n’est pas visible lorsque le fichier est stocké dans un `varbinary(max)` ou `image` colonne, l’extension de fichier (.doc, .xls, .pdf, etc.) doit être stockée dans une colonne distincte dans la table, appelée colonne de type. Cette colonne de type peut être composée de n'importe quel type de données de caractères ; par ailleurs, elle contient l'extension de fichier du document, par exemple « .doc » pour un document [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. Dans le **Document** table [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], le **Document** colonne est de type `varbinary(max)`et la colonne de type **FileExtension**, est de type `nvarchar(8)`.  
+ Des documents binaires peuvent être stockés dans une colonne `varbinary(max)` ou `image` unique. Pour chaque document, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] choisit le filtre correct en fonction de l'extension de fichier. Étant donné que l’extension de fichier n’est pas visible lorsque le fichier `varbinary(max)` est `image` stocké dans une colonne ou, l’extension de fichier (. doc,. xls,. pdf, etc.) doit être stockée dans une colonne distincte de la table, appelée colonne de type. Cette colonne de type peut être composée de n'importe quel type de données de caractères ; par ailleurs, elle contient l'extension de fichier du document, par exemple « .doc » pour un document [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. Dans la table **document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la **colonne document** est de type `varbinary(max)`et la colonne de type **FileExtension**est de type `nvarchar(8)`.  
   
 > [!NOTE]  
 >  Un filtre peut être en mesure de gérer des objets incorporés dans l'objet parent, selon son implémentation. Toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne configure pas de filtres pour suivre des liens vers d'autres objets.  
@@ -44,6 +44,6 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
- [Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
+ [Compatibilité de FILESTREAM avec d’autres fonctionnalités SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   
   

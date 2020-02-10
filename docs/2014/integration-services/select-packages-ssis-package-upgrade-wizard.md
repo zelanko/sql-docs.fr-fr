@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez les Packages (Assistant Mise à niveau packages SSIS) | Microsoft Docs
+title: Sélectionner les packages (Assistant Mise à niveau de packages SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056019"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Sélectionner les packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionnez les packages** pour sélectionner les packages à mettre à niveau. Cette page répertorie les packages qui sont stockés dans l'emplacement spécifié sur la page **Sélectionner l'emplacement source** de l'Assistant.  
   
- **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
+ **Pour exécuter l’Assistant Mise à niveau de packages SSIS**  
   
--   [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="options"></a>Options  
- **Nom de package existant**  
+ **Nom du package existant**  
  Sélectionnez un ou plusieurs packages à mettre à niveau.  
   
  **Nom du package de mise à niveau**  
@@ -43,7 +43,7 @@ ms.locfileid: "66056019"
  Appliquez le mot de passe spécifié pour déchiffrer les packages de mise à niveau sélectionnés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sélectionner l’emplacement Source &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
+ [Sélectionnez l’emplacement source &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Mettre à niveau des packages Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

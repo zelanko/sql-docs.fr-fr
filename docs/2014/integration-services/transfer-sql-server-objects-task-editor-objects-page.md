@@ -1,5 +1,5 @@
 ---
-title: Transférer des objets éditeur de tâche SQL (Page objets) | Microsoft Docs
+title: Éditeur de tâche de transfert d’objets SQL Server (page objets) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054865"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Éditeur de tâche de transfert d'objets SQL (page Objets)
@@ -28,14 +28,14 @@ ms.locfileid: "66054865"
 >  L’utilisateur qui crée la tâche de transfert d’objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit disposer des autorisations suffisantes sur les objets du serveur source pour les sélectionner pour la copie, ainsi que de l’autorisation d’accéder à la base de données du serveur de destination où les objets seront transférés.  
   
 ## <a name="static-options"></a>Options statiques  
- **SourceConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur source.  
+ **Abord SourceConnection**  
+ Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur source.  
   
  **SourceDatabase**  
  Sélectionnez une base de données sur le serveur source à partir duquel les objets seront copiés.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur de destination.  
   
  **DestinationDatabase**  
  Sélectionnez une base de données sur le serveur de destination dans lequel les objets seront copiés.  
@@ -52,10 +52,10 @@ ms.locfileid: "66054865"
  **ExistingData**  
  Spécifiez comment les données seront copiées sur le serveur de destination. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Remplacer**|Les données du serveur de destination seront remplacées.|  
-|**Append**|Les données copiées à partir du serveur source seront ajoutées aux données existantes sur le serveur de destination.|  
+|**Lieu**|Les données du serveur de destination seront remplacées.|  
+|**Ajouter**|Les données copiées à partir du serveur source seront ajoutées aux données existantes sur le serveur de destination.|  
   
 > [!NOTE]  
 >  L’option **ExistingData** est disponible uniquement quand **CopyData** a la valeur **True**.  
@@ -79,7 +79,7 @@ ms.locfileid: "66054865"
  Développez **ObjectsToCopy** pour spécifier les objets qui doivent être copiés de la base de données source dans la base de données de destination.  
   
 > [!NOTE]  
->  **ObjectsToCopy** est disponible uniquement quand **CopyAllObjects** a la valeur **False**.  
+>  **ObjectsToCopy** est disponible uniquement lorsque **CopyAllObjects** a la valeur **false**.  
   
  Les options de copie des types d’objets suivants sont prises en charge uniquement sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -211,9 +211,9 @@ ms.locfileid: "66054865"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert d’objets SQL Server &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de transfert d’objets SQL Server &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Page Expressions](expressions/expressions-page.md)   
- [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Formats de données pour l’importation en bloc ou l’exportation en bloc &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considérations sur la sécurité pour une installation SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

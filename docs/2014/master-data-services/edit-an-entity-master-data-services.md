@@ -1,5 +1,5 @@
 ---
-title: Modifier un nom d’entité (Master Data Services) | Microsoft Docs
+title: Modifier le nom d’une entité (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483883"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>Modifier le nom d'une entité (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65483883"
 > [!NOTE]  
 >  Les noms des tables de mise en lots associées ne seront pas mis à jour.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -44,7 +44,7 @@ ms.locfileid: "65483883"
   
 5.  Cliquez sur **Modifier l'entité sélectionnée**.  
   
-6.  Dans le **nom de l’entité** , tapez le nom mis à jour de l’entité.  
+6.  Dans la zone nom de l' **entité** , tapez le nom mis à jour de l’entité.  
   
 7.  Cliquez sur **enregistrer l’entité**.  
   

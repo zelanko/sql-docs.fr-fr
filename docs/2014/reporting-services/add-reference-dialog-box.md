@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue référence Ajouter | Microsoft Docs
+title: Ajouter une référence, boîte de dialogue | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110023"
 ---
 # <a name="add-reference-dialog-box"></a>Ajouter une référence, boîte de dialogue
@@ -34,11 +34,11 @@ ms.locfileid: "66110023"
 > [!NOTE]  
 >  Lorsque vous publiez un rapport qui inclut une référence à un assembly externe, l'assembly doit être installé sur le serveur de rapports avant que le rapport puisse être traité correctement.  
   
- **Récents**  
+ **Ultérieure**  
  Permet de sélectionner le nom d'un assembly récemment utilisé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d'assemblys personnalisés avec des rapports](custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Ajouter du code à un rapport &#40;SSRS&#41;](report-design/add-code-to-a-report-ssrs.md)  
+ [Utilisation d’assemblys personnalisés avec des rapports](custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Ajouter du code à un rapport &#40;&#41;SSRS](report-design/add-code-to-a-report-ssrs.md)  
   
   

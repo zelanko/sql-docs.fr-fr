@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4d994eb6d345ab98e6cd51a44c7c90a74bafd3a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874600"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Les tables d'historique de sauvegarde ou de restauration importantes donnent l'impression que la mise à niveau ne répond pas
@@ -52,7 +52,7 @@ ms.locfileid: "70874600"
 >  Vous pouvez mettre à niveau une base de données dont les tables d'historique de sauvegarde et de restauration possèdent plus de 10 000 lignes. Toutefois, la mise à niveau peut paraître bloquée pendant que les tables de grande taille sont modifiées. Plus les tables sont grandes, plus l'exécution du programme d'installation dure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau de Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller &#91;de mise à niveau de SQL Server 2014 nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Schema Caching (SQLXML 4.0) | Microsoft Docs
+title: Mise en cache de schéma (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ca536125be481766e41c3665dd313d483160ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013277"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Mise en cache des schémas (SQLXML 4.0)
-  Avec une installation côte à côte de XML pour Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 et SQLXML 3.0, vous pouvez contrôler explicitement le schéma de mise en cache dans toutes les versions à l’aide de clés de Registre suivantes :  
+  Avec une installation côte à côte de XML pour Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 et SQLXML 3.0, vous pouvez contrôler explicitement la mise en cache des schémas dans toutes les versions à l'aide des clés de Registre suivantes :  
   
  Web Release 1 :  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66013277"
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXMLX\SchemaCacheSize  
 ```  
   
- SQLXML 2.0:  
+ SQLXML 2,0 :  
   
 ```  
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML2\SchemaCacheSize  
@@ -45,21 +45,21 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- Pour plus d’informations sur l’installation de la côte à côte, consultez [What ' s New in SQLXML 4.0 SP1](../../sqlxml/what-s-new-in-sqlxml-4-0-sp1.md).  
+ Pour plus d’informations sur l’installation côte à côte, consultez [What’s New in SQLXML 4,0 SP1](../../sqlxml/what-s-new-in-sqlxml-4-0-sp1.md).  
   
  La mise en cache des schémas améliore considérablement les performances d'une requête XPath. Quand une requête XPath est exécutée sur un schéma de mappage, le schéma est stocké en mémoire et les structures de données nécessaires sont construites en mémoire. Si la mise en cache des schémas est définie, le schéma demeure en mémoire, en améliorant de cette façon les requêtes XPath suivantes.  
   
  Vous pouvez définir la taille du cache des schémas en ajoutant la clé précitée au Registre.  
   
- La taille du schéma est fonction de la mémoire disponible et du nombre de schémas que vous utilisez. La valeur par défaut **SchemaCacheSize** est 31. Si vous définissez **SchemaCacheSize** plus élevé, plus de mémoire est utilisée. Par conséquent, vous pouvez augmenter la taille du cache en cas d'accès lent au schéma ou diminuer la taille du cache si la mémoire est insuffisante.  
+ La taille du schéma est fonction de la mémoire disponible et du nombre de schémas que vous utilisez. La taille de **SchemaCacheSize** par défaut est 31. Si vous définissez **SchemaCacheSize** à un niveau supérieur, davantage de mémoire est utilisée. Par conséquent, vous pouvez augmenter la taille du cache en cas d'accès lent au schéma ou diminuer la taille du cache si la mémoire est insuffisante.  
   
- Pour des raisons de performances, il est recommandé de définir **SchemaCacheSize** supérieure au nombre de schémas de mappage que vous utilisez habituellement. Comme le nombre de schémas augmente, si **SchemaCacheSize** est inférieur au nombre de schémas que vous avez, les performances se dégradent.  
+ Pour des raisons de performances, il est recommandé de définir **SchemaCacheSize** à une valeur supérieure au nombre de schémas de mappage que vous utilisez généralement. À mesure que le nombre de schémas augmente, si **SchemaCacheSize** est inférieur au nombre de schémas dont vous disposez, les performances se dégradent.  
   
 > [!NOTE]  
 >  Pendant le développement, il est recommandé de ne pas mettre en cache les schémas, car les modifications apportées aux schémas ne sont pas répercutées dans le cache pendant deux minutes environ.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La mise en cache de modèle &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
- [XSL Caching &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [Mise en cache de modèle &#40;SQLXML 4,0&#41;](template-caching-sqlxml-4-0.md)   
+ [Mise en cache XSL &#40;SQLXML 4,0&#41;](xsl-caching-sqlxml-4-0.md)  
   
   

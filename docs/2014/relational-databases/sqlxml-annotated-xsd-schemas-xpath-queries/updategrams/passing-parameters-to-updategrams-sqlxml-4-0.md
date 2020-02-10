@@ -1,5 +1,5 @@
 ---
-title: Passage de paramètres aux codes (SQLXML 4.0) | Microsoft Docs
+title: Passage de paramètres à codes (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014733"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passage de paramètres aux codes de mise à jour (updategrams) (SQLXML 4.0)
-  Les codes de mise à jour sont des modèles ; par conséquent, vous pouvez leur passer des paramètres. Pour plus d’informations sur le passage de paramètres aux modèles, consultez [considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
+  Les codes de mise à jour sont des modèles ; par conséquent, vous pouvez leur passer des paramètres. Pour plus d’informations sur le passage de paramètres à des modèles, consultez Considérations sur la [sécurité mise à jour &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Les codes de mise à jour vous permettent de passer NULL comme valeur de paramètre. Pour passer la valeur de paramètre NULL, vous spécifiez l'attribut `nullvalue`. La valeur assignée à l'attribut `nullvalue` est ensuite fournie comme valeur de paramètre. Les codes de mise à jour traitent cette valeur comme NULL.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66014733"
 >  Dans `<sql:header>` et `<updg:header>`, vous devez spécifier `nullvalue` comme non qualifié, tandis que dans `<updg:sync>`, vous spécifiez `nullvalue` comme qualifié (par exemple, `updg:nullvalue`).  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples de travail utilisant les exemples suivants, vous devez respecter les exigences spécifiées dans [configuration requise pour exécuter les exemples de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l’aide des exemples suivants, vous devez respecter les exigences spécifiées dans la [Configuration requise pour l’exécution d’exemples SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Avant d'utiliser les exemples de code de mise à jour, notez les points suivants :  
   
--   Les exemples utilisent le mappage par défaut (en d'autres termes, aucun schéma de mappage n'est spécifié dans le code de mise à jour (updategram)). Pour plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans une mise à jour &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   Les exemples utilisent le mappage par défaut (en d'autres termes, aucun schéma de mappage n'est spécifié dans le code de mise à jour (updategram)). Pour obtenir plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans un mise à jour &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>A. Passage de paramètres à un code de mise à jour  
- Dans cet exemple, le code de mise à jour modifie le nom d'un employé dans la table HumanResources.Shift. Mise à jour est passé de deux paramètres : ShiftID, qui est utilisé pour identifier un travail d’équipe et de manière unique nom.  
+### <a name="a-passing-parameters-to-an-updategram"></a>R. Passage de paramètres à un code de mise à jour  
+ Dans cet exemple, le code de mise à jour modifie le nom d'un employé dans la table HumanResources.Shift. Deux paramètres sont passés au code de mise à jour : ShiftID, utilisé pour identifier un horaire de travail de manière unique, et Nom.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -62,7 +62,7 @@ ms.locfileid: "66014733"
   
 1.  Copiez le code de mise à jour ci-dessus dans le Bloc-notes et enregistrez-le sous le nom UpdategramWithParameters.xml.  
   
-2.  Préparez le script de test SQLXML 4.0 (Sqlxml4test.vbs) dans [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) pour exécuter le code de mise en ajoutant les lignes suivantes après le `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Préparez le script de test SQLXML 4,0 (Sqlxml4test. vbs) dans [à l’aide d’ADO pour exécuter des requêtes sqlxml 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) afin d’exécuter le mise à jour en `cmd.Properties("Output Stream").Value = outStream`ajoutant les lignes suivantes après :  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014733"
   
 1.  Copiez le code de mise à jour ci-dessus dans le Bloc-notes et enregistrez-le sous le nom UpdategramPassingNullvalues.xml.  
   
-2.  Préparez le script de test SQLXML 4.0 (Sqlxml4test.vbs) dans [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) pour exécuter le code de mise en ajoutant les lignes suivantes après le `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Préparez le script de test SQLXML 4,0 (Sqlxml4test. vbs) dans [à l’aide d’ADO pour exécuter des requêtes sqlxml 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) afin d’exécuter le mise à jour en `cmd.Properties("Output Stream").Value = outStream`ajoutant les lignes suivantes après :  
   
     ```  
     cmd.NamedParameters = True  
@@ -107,6 +107,6 @@ ms.locfileid: "66014733"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considérations sur la sécurité mise à jour &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

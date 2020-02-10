@@ -1,5 +1,5 @@
 ---
-title: 'SQL : limit-champ et SQL : limit-value (SQLXML 4.0) | Microsoft Docs'
+title: 'SQL : Limit-Field et SQL : Limit-Value (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013564"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field et sql:limit-value (SQLXML 4.0)
-  Le chargement en masse XML traite les annotations `sql:limit-field` et `sql:limit-value` selon leur définition. Pour plus d’informations, consultez [filtrage de valeurs à l’aide de SQL : limit-champ et SQL : limit-valeur &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  
+  Le chargement en masse XML traite les annotations `sql:limit-field` et `sql:limit-value` selon leur définition. Pour plus d’informations, consultez [filtrage des valeurs à l’aide de SQL : Limit-Field et SQL : limit-value &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  
   
  Prenons l'exemple d'une base de données contenant les tables suivantes :  
   

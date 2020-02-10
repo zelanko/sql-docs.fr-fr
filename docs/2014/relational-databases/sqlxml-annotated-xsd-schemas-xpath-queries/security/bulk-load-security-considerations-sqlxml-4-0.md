@@ -1,5 +1,5 @@
 ---
-title: En bloc charge des considérations de sécurité (SQLXML 4.0) | Microsoft Docs
+title: Considérations sur la sécurité du chargement en masse (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 559c54c263f685350badc5d7e0232d0d0354443a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010557"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considérations de sécurité relatives au chargement en masse (SQLXML 4.0)
@@ -54,6 +54,6 @@ ms.locfileid: "66010557"
 -   Si l'utilisateur définit un fichier journal des erreurs pour SQLXML, chaque fois que le chargement en masse est exécuté, le fichier est écrasé avec les données du dernier processus de chargement en masse.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chargement en masse des données XML &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Exécution du chargement en masse de données XML &#40;SQLXML 4,0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

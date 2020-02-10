@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913736"
 ---
-# <a name="mssqlserver7904"></a>MSSQLSERVER_7904
+# <a name="mssqlserver_7904"></a>MSSQLSERVER_7904
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7904|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7904|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_MISSING_FILE|  
-|Texte du message|Erreur de table, Le fichier filestream pour l’ID de colonne C_ID, ROWGUID RG_ID dans l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID est introuvable.|  
+|Texte du message|Erreur de table : le fichier Filestream correspondant à l'ID de colonne C_ID, ROWGUID RG_ID dans l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID est introuvable.|  
   
 ## <a name="explanation"></a>Explication  
  Une valeur de colonne d'une partition ne possède pas de fichier FILESTREAM correspondant dans le répertoire de colonne FILESTREAM correspondant.  

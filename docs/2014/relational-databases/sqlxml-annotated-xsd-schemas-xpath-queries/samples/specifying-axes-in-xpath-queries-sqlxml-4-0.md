@@ -1,5 +1,5 @@
 ---
-title: Spécification d’Axes dans les requêtes XPath (SQLXML 4.0) | Microsoft Docs
+title: Spécification d’axes dans les requêtes XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,27 +19,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010715"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Spécification d'axes dans les requêtes XPath (SQLXML 4.0)
   Les exemples suivants montrent comment spécifier des axes dans les requêtes XPath.  
   
- Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+ Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Récupérer les éléments enfants du nœud de contexte  
- La requête XPath suivante sélectionne tous les  **\<Contact >** éléments enfants du nœud de contexte :  
+### <a name="a-retrieve-child-elements-of-the-context-node"></a>R. Récupérer les éléments enfants du nœud de contexte  
+ La requête XPath suivante sélectionne tous les ** \<éléments de contact>** enfants du nœud de contexte :  
   
 ```  
 /child::Contact  
 ```  
   
- Dans la requête, `child` est l’axe et `Contact` est le test de nœud (TRUE si `Contact` est un  **\<élément >** nœud, car \<élément > est le type de nœud principal associé à la `child` axe).  
+ Dans la requête, `child` est l’axe et `Contact` est le test de nœud (true `Contact` si est un ** \<élément>** nœud, \<parce que l’élément> est le type de nœud `child` principal associé à l’axe).  
   
  L'axe `child` est la valeur par défaut. Par conséquent, la requête peut être écrite sous la forme :  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66010715"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle ci-dessous (XPathAxesSampleA.xml) et enregistrez-le dans le même répertoire que SampleSchema1.xml.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66010715"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel de l'exécution du modèle :  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010715"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Récupérer les petits-enfants du nœud de contexte  
- La requête XPath suivante sélectionne tous les  **\<ordre >** éléments enfants de la  **\<client >** éléments enfants du nœud de contexte :  
+ La requête XPath suivante sélectionne l’ensemble de la ** \<commande>** éléments enfants du ** \<client>** éléments enfants du nœud de contexte :  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœud ont la valeur TRUE si Customer et Order sont  **\<élément >** nœuds, car le  **\<élément >** nœud est le nœud principal pour le `child` axe). Pour chaque nœud correspondant  **\<client >** , les nœuds correspondant  **\<Orders >** sont ajoutés au résultat. Uniquement  **\<ordre >** est retourné dans le jeu de résultats.  
+ Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœuds ont la valeur true si Customer et Order sont des ** \<** nœuds>d’élément, car l' `child` ** \<élément>** nœud est le nœud principal de l’axe). Pour chaque nœud correspondant ** \<>client **, les nœuds correspondant ** \<aux>Orders** sont ajoutés au résultat. Seule ** \<la commande>** est retournée dans le jeu de résultats.  
   
  L'axe `child` est la valeur par défaut. Par conséquent, la requête peut être spécifiée sous la forme :  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66010715"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (XPathAxesSampleB.xml) et enregistrez-le dans le répertoire où :  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66010715"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel de l'exécution du modèle :  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010715"
 </ROOT>  
 ```  
   
- Si la requête XPath est spécifiée en tant que `Customer/Order/OrderDetail`, à partir de chaque nœud correspondant à  **\<client >** la requête accède à son  **\<ordre >** éléments. Et pour chaque nœud correspondant  **\<ordre >** , la requête ajoute les nœuds  **\<OrderDetail >** au résultat. Uniquement  **\<OrderDetail >** est retourné dans le jeu de résultats.  
+ Si la requête XPath est spécifiée en `Customer/Order/OrderDetail`tant que, à partir de chaque nœud correspondant ** \<au client>** la requête accède à son ** \<ordre>** éléments. Et pour chaque nœud correspondant ** \<à l’ordre>**, la requête ajoute les nœuds ** \<OrderDetail>** au résultat. Seuls ** \<les>OrderDetail** sont retournées dans le jeu de résultats.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Utiliser... pour spécifier l'axe parent  
- La requête suivante récupère tous les  **\<ordre >** éléments avec un parent  **\<client >** élément avec un **CustomerID** attribut valeur 1. La requête utilise le `child` axe dans le prédicat pour rechercher le parent de la  **\<ordre >** élément.  
+ La requête suivante récupère tous les éléments de ** \<commande>** avec un élément ** \<Customer>** parent dont l’attribut **CustomerID** a la valeur 1. La requête utilise l' `child` axe dans le prédicat pour rechercher le parent de l' ** \<élément Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,11 +181,11 @@ ms.locfileid: "66010715"
 ```  
   
 > [!NOTE]  
->  La requête XPath `/Order[../@CustomerID="1"]` retournera une erreur, car il n’y a aucun parent  **\<ordre >** . Bien qu’il peut y avoir des éléments dans le schéma de mappage qui contiennent  **\<ordre >** , l’expression XPath n’a pas commencé sur un d’eux ; par conséquent,  **\<ordre >** est considéré comme étant le type d’élément de niveau supérieur dans le document.  
+>  La requête `/Order[../@CustomerID="1"]` XPath retourne une erreur, car il n’existe aucun parent de ** \<commande>**. Bien qu’il puisse y avoir des éléments dans le schéma de mappage qui contiennent ** \<l’ordre>**, le XPath n’a pas commencé sur l’un d’eux ; par conséquent, ** \<Order>** est considéré comme le type d’élément de niveau supérieur dans le document.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (XPathAxesSampleC.xml) et enregistrez-le dans le répertoire où :  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66010715"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel de l'exécution du modèle :  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010715"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Spécifier l'axe attribute  
- La requête XPath suivante sélectionne tous les  **\<client >** les éléments enfants du nœud de contexte avec un **CustomerID** attribut la valeur 1 :  
+ La requête XPath suivante sélectionne tout le ** \<client>** éléments enfants du nœud de contexte avec une valeur d’attribut **CustomerID** de 1 :  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- Dans le prédicat `attribute::CustomerID`, `attribute` est l’axe et `CustomerID` est le test de nœud (si `CustomerID` est un attribut, le test de nœud est TRUE, car le  **\<attribut >** nœud est le nœud principal pour le `attribute` axe).  
+ Dans le `attribute::CustomerID`prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (si `CustomerID` est un attribut, le test de nœud a la valeur true, car l' ** \<attribut>** nœud est le nœud principal de l' `attribute` axe).  
   
  Il est possible de spécifier un raccourci vers l'axe `attribute` (@), et l'axe `child` étant l'axe par défaut, il peut être omis dans la requête :  
   
@@ -262,7 +262,7 @@ ms.locfileid: "66010715"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle ci-dessous (XPathAxesSampleD.xml) et enregistrez-le dans le même répertoire que SampleSchema1.xml.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "66010715"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel de l'exécution du modèle :  
   

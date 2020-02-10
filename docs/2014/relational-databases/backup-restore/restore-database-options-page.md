@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875634"
 ---
 # <a name="restore-database-options-page"></a>Restaurer la base de données (page Options)
@@ -92,13 +92,13 @@ ms.locfileid: "62875634"
  **Fichier de sauvegarde**  
  Spécifie un fichier de sauvegarde de la fin du journal. Vous pouvez rechercher le fichier de sauvegarde ou entrer son nom directement dans la zone de texte.  
   
-### <a name="server-connections"></a>Connexions au serveur  
+### <a name="server-connections"></a>Connexions serveur  
  Vous permet de fermer les connexions de base de données existantes.  
   
  **Fermer les connexions existantes**  
  Les opérations de restauration peuvent échouer s'il existe des connexions actives à la base de données. Activez l'option **Fermer les connexions existantes** pour garantir que toutes les connexions actives entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et la base de données sont fermées. Cette case à cocher définit la base de données en mode mono-utilisateur avant d'effectuer les opérations de restauration, et définit la base de données en mode multi-utilisateur une fois l'opération terminée.  
   
-### <a name="prompt"></a>Demander  
+### <a name="prompt"></a>Prompt  
  **Demander confirmation avant chaque restauration de sauvegarde**  
  Indique que, une fois chaque sauvegarde restaurée, la boîte de dialogue **Continuer la restauration** s’affichera pour vous inviter à confirmer la poursuite de la séquence de restauration. Cette boîte de dialogue affiche le nom du support de sauvegarde suivant (s'il est connu), ainsi que le nom et la description du jeu de sauvegarde suivant.  
   

@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011514"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral
   Pour éviter que l'index de recherche en texte intégral ne devienne encombré, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un mécanisme qui ignore les chaînes courantes qui ne sont d'aucune utilité pour la recherche. Ces chaînes ignorées sont appelées des *mots vides*. Pendant la création d'un index, le moteur de texte intégral omet les mots vides de l'index de recherche en texte intégral. Cela signifie que les requêtes de texte intégral ne rechercheront pas les mots vides.  
   
-##  <a name="understand"></a> Listes de mots vides et les mots vides de présentation  
+##  <a name="understand"></a>Comprendre mots vides et mots vides  
  Un mot vide peut être un mot ayant une signification dans une langue spécifique ou être un *jeton* qui n’a pas de signification linguistique. Par exemple, en français, les mots tels que « un », « et », « est » ou « le » sont écartés de l'index de recherche en texte intégral, car ils sont inutiles dans le cadre d'une recherche.  
   
  Bien qu'il ignore l'inclusion des mots vides, l'index de recherche en texte intégral prend en considération leur position. Prenons l'exemple de l'expression suivante : « Instructions are applicable to these Adventure Works Cycles models ». Le tableau suivant décrit la position des mots dans l'expression :  
@@ -49,10 +49,11 @@ ms.locfileid: "66011514"
  Les mots vides sont gérés dans des bases de données à l'aide d'objets appelés des listes de mots vides. Une *liste de mots vides* est une liste qui, associée à un index de recherche en texte intégral, s’applique aux requêtes de texte intégral sur cet index.  
   
   
-##  <a name="creating"></a> Création d’une liste de mots vides  
+##  <a name="creating"></a>Création d’une STOPLIST  
  Vous pouvez créer une liste de mots vides de l'une des façons suivantes :  
   
--   Utilisation de la liste de mots vides fournie par le système dans la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fourni avec une liste de mots vides système qui contient les mots vides les plus couramment utilisés pour chaque langue prise en charge, c'est-à-dire pour chaque langue associée aux analyseurs lexicaux fournis par défaut. La liste de mots vides système contient les mots vides courants pour toutes les langues prises en charge.  Vous pouvez copier la liste de mots vides système, et personnaliser cette liste en ajoutant et en supprimant des mots vides.  
+-   Utilisation de la liste de mots vides fournie par le système dans la base de données. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fourni avec une liste de mots vides système qui contient les mots vides les plus couramment utilisés pour chaque langue prise en charge, c'est-à-dire pour chaque langue associée aux analyseurs lexicaux fournis par défaut. La liste de mots vides système contient les mots vides courants pour toutes les langues prises en charge.  Vous pouvez copier la liste de mots vides système, et personnaliser cette liste en ajoutant et en supprimant des mots vides.  
   
      La liste de mots vides système est installée dans la base de données [Resource](../databases/resource-database.md) .  
   
@@ -95,7 +96,7 @@ ms.locfileid: "66011514"
 -   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a> À l’aide d’une liste de mots vides dans les requêtes de recherche en texte intégral  
+##  <a name="queries"></a>Utilisation d’une STOPLIST dans les requêtes de texte intégral  
  Pour utiliser une liste de mots vides dans des requêtes, vous devez l'associer à un index de recherche en texte intégral. Vous pouvez joindre une liste de mots vides à un index de recherche en texte intégral lorsque vous créez l'index, ou vous pouvez modifier ultérieurement l'index pour ajouter une liste de mots vides.  
   
  **Pour créer un index de recherche en texte intégral et lui associer une liste de mots vides**  
@@ -106,13 +107,13 @@ ms.locfileid: "66011514"
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
- **Pour supprimer un message d’erreur si les mots vides provoquent une opération booléenne sur une requête de recherche en texte intégral**  
+ **Pour supprimer un message d'erreur si des mots vides provoquent l'échec d'une opération booléenne sur une requête de texte intégral**  
   
--   [Transformer les mots parasites (option de configuration de serveur)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
+-   [transform noise words (option de configuration de serveur)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a> Affichage des listes de mots vides et les métadonnées de la liste de mots vides  
- **Pour afficher tous les mots vides d’une liste de mots vides**  
+##  <a name="viewing"></a>Affichage des métadonnées mots vides et STOPLIST  
+ **Pour afficher tous les mots vides d'une liste de mots vides**  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
@@ -122,13 +123,13 @@ ms.locfileid: "66011514"
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **Pour afficher le résultat de la création de jetons d’une combinaison d’analyseur lexical, de dictionnaire des synonymes et de liste de mots vides**  
+ **Pour consulter le résultat de la segmentation du texte en unités lexicales d'une combinaison d'analyseur lexical, de dictionnaire des synonymes et de liste de mots vides**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a> Modification des mots vides dans une liste de mots vides  
- **Pour ajouter ou supprimer des mots vides à partir d’une liste de mots vides**  
+##  <a name="change"></a>Modification du mots vides dans une STOPLIST  
+ **Pour ajouter ou supprimer des mots vides dans une liste de mots vides**  
   
 -   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
   
@@ -144,7 +145,7 @@ ms.locfileid: "66011514"
   
 5.  Dans la boîte de dialogue [Propriétés de la liste de mots vides de texte intégral](../../database-engine/full-text-stoplist-properties.md) :  
   
-    1.  Dans la zone de liste **Action**, sélectionnez l’une des actions suivantes : **Ajouter un mot vide**, **Supprimer le mot vide**, **Supprimer tous les mots vides** ou **Effacer la liste de mots vides**.  
+    1.  Dans la zone de liste **Action** , sélectionnez l’une des actions suivantes : **Ajouter un mot vide**, **Supprimer le mot vide**, **Supprimer tous les mots vides**ou **Effacer la liste de mots vides**.  
   
     2.  Si la zone de texte **Mot vide** est activée pour l’action sélectionnée, entrez un mot vide unique. Ce nouveau mot vide doit être unique ; autrement dit, il ne doit pas déjà figurer dans la liste de mots vides correspondant à la langue sélectionnée.  
   
@@ -153,7 +154,7 @@ ms.locfileid: "66011514"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
-##  <a name="upgrade"></a> La mise à niveau des mots parasites à partir de SQL Server 2005  
+##  <a name="upgrade"></a>Mise à niveau des mots parasites à partir de SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Les mots parasites ont été remplacés par les mots vides. Lorsqu'une base de données est mise à niveau à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les fichiers de mots parasites ne sont plus utilisés. Toutefois, les fichiers de mots parasites sont stockés dans le dossier FTDATA\ FTNoiseThesaurusBak, et vous pouvez les utiliser ultérieurement lors de la mise à jour ou de la génération des listes de mots vides correspondantes. Pour plus d’informations sur la mise à niveau de fichiers de mots parasites en listes de mots vides, consultez [Mise à niveau de la fonction de recherche en texte intégral](upgrade-full-text-search.md).  
   
   

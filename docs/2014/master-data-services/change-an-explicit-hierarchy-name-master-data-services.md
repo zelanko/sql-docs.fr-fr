@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e08f11f924cb74743c1317f4fa1548af62ddb5d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484028"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Modifier le nom d'une hiérarchie explicite (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'une hiérarchie explicite.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -41,11 +41,11 @@ ms.locfileid: "65484028"
   
 5.  Cliquez sur **Modifier l'entité sélectionnée**.  
   
-6.  Sur le **modifier l’entité** , cliquez sur la hiérarchie explicite à renommer.  
+6.  Dans la page **modifier l’entité** , cliquez sur la hiérarchie explicite à renommer.  
   
 7.  Cliquez sur **modifier la hiérarchie sélectionnée**.  
   
-8.  Dans le **nom de la hiérarchie explicite** zone, tapez le nom mis à jour de la hiérarchie.  
+8.  Dans la zone nom de la **hiérarchie explicite** , tapez le nom mis à jour de la hiérarchie.  
   
 9. Cliquez sur **enregistrer la hiérarchie**.  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011082"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
@@ -61,7 +61,7 @@ ms.locfileid: "66011082"
 ##  <a name="impact"></a> Impact de l'activation de la recherche de propriétés  
  Configurer un index de recherche en texte intégral pour prendre en charge la recherche sur une ou plusieurs propriétés augmente quelque peu la taille de l'index, en fonction du nombre de propriétés spécifiées dans votre liste de propriétés de recherche et du contenu de chaque propriété.  
   
- En testant des corpus standard de Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>et PowerPoint<sup>??</sup> documents, nous avons configuré une recherche en texte intégral index pour indexer des propriétés de recherche. L'indexation de ces propriétés a augmenté la taille de l'index de recherche en texte intégral d'environ 5 pour cent. Nous estimons que cette augmentation de taille approximative correspondra à la plupart des corpus de documents. Toutefois, l'augmentation de la taille dépend finalement du volume des données de propriété dans un corpus de documents donné, par rapport au volume total des données.  
+ Comment tester des corpus types de Microsoft Word<sup>??</sup>, Excel<sup>??</sup>et PowerPoint<sup>??</sup> documents, nous avons configuré un index de recherche en texte intégral pour indexer les propriétés de recherche typiques. L'indexation de ces propriétés a augmenté la taille de l'index de recherche en texte intégral d'environ 5 pour cent. Nous estimons que cette augmentation de taille approximative correspondra à la plupart des corpus de documents. Toutefois, l'augmentation de la taille dépend finalement du volume des données de propriété dans un corpus de documents donné, par rapport au volume total des données.  
   
   
   
@@ -86,7 +86,7 @@ ms.locfileid: "66011082"
   
 6.  Éventuellement, spécifiez une autre personne comme propriétaire de la liste de propriétés.  
   
-7.  Sélectionnez l'une des options suivantes :  
+7.  Sélectionnez l’une des options suivantes :  
   
     -   **Créer une liste de propriétés de recherche vide**  
   
@@ -207,7 +207,7 @@ GO
   
 5.  Cliquez avec le bouton droit sur la liste de propriétés, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Éditeur de liste de propriétés de recherche** , utilisez la grille des propriétés pour ajouter ou supprimer des propriétés de recherche :  
+6.  Dans la boîte de dialogue **Éditeur de liste de propriétés de recherche**, utilisez la grille des propriétés pour ajouter ou supprimer des propriétés de recherche :  
   
     1.  Pour supprimer une propriété de document, cliquez sur l’en-tête de ligne à gauche de la propriété, puis appuyez sur Suppr.  
   

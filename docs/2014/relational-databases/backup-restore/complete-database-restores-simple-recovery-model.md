@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877122"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération simple)
@@ -36,14 +36,14 @@ ms.locfileid: "62877122"
 > [!NOTE]  
 >  Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="Overview"></a> Vue d'ensemble de la restauration de la base de données en mode de récupération simple  
+##  <a name="Overview"></a>Vue d’ensemble de la restauration de base de données en mode de récupération simple  
  Une restauration de base de données complète en mode de récupération simple s'effectue à l'aide d'une ou de deux instructions [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , selon qu'il faille ou non restaurer une sauvegarde de base de données différentielle. Si vous utilisez uniquement une sauvegarde complète de base de données, restaurez simplement la sauvegarde la plus récente, tel qu'indiqué dans l'illustration suivante.  
   
- ![Restauration d’une sauvegarde complète de base de données uniquement](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restauration d’une sauvegarde complète de base de données uniquement")  
+ ![Restauration d'une sauvegarde complète de base de données uniquement](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restauration d'une sauvegarde complète de base de données uniquement")  
   
  Si vous utilisez également une sauvegarde de base de données différentielle, restaurez la sauvegarde complète de base de données la plus récente sans récupérer la base de données, puis restaurez la sauvegarde de base de données différentielle la plus récente et récupérez la base de données. L'illustration ci-dessous montre ce processus.  
   
- ![Restauration de sauvegardes complètes et différentielles d’une base de données](../../database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Restauration de sauvegardes complètes et différentielles d’une base de données")  
+ ![Restauration de sauvegardes complètes et différentielles d'une base de données](../../database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Restauration de sauvegardes complètes et différentielles d'une base de données")  
   
 > [!NOTE]  
 >  Si vous envisagez de restaurer une sauvegarde de base de données sur une instance de serveur différente, consultez [Copier des bases de données avec la sauvegarde et la restauration](../databases/copy-databases-with-backup-and-restore.md).  

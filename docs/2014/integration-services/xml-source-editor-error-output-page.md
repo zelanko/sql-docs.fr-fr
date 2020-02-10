@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source XML (Page sortie d’erreur) | Microsoft Docs
+title: Éditeur de source XML (page sortie d’erreur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054310"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Éditeur de source XML (page Sortie d'erreur)
@@ -33,10 +33,10 @@ ms.locfileid: "66054310"
  **Colonne**  
  Affichez les colonnes externes (sources) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source XML**.  
   
- **Erreur**  
+ **Error**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
@@ -53,7 +53,7 @@ ms.locfileid: "66054310"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de source XML &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Éditeur de source XML &#40;page Colonnes&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Extraire des données à l’aide de la source XML](data-flow/extract-data-by-using-the-xml-source.md)  
+ [Éditeur de source XML &#40;page colonnes&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Extraire des données à l'aide de la source XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

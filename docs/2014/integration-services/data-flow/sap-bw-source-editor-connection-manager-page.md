@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901100"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Éditeur de source SAP BW (page Gestionnaire de connexions)
@@ -61,7 +61,7 @@ ms.locfileid: "62901100"
 |**A - Attendre la notification**|Attendez la notification du système SAP Netweaver BW pour démarrer l'extraction des données. Dans ce cas, le système SAP Netweaver BW démarre le processus d'extraction.|  
 |**E - Extraire uniquement**|Récupérez les données associées à un ID de demande particulier. Dans ce cas, le système SAP Netweaver BW a déjà extrait les données dans une table interne et le package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se contente de lire les données.|  
   
- **Aperçu**  
+ **Préversion**  
  Ouvrez la boîte de dialogue **Aperçu** dans laquelle vous pouvez afficher un aperçu des résultats. Pour plus d’informations, consultez [Aperçu](preview.md).  
   
 > [!IMPORTANT]  
@@ -118,7 +118,7 @@ ms.locfileid: "62901100"
  Recherchez la destination RFC à l’aide de la boîte de dialogue **Rechercher la destination RFC** . Pour plus d'informations sur cette boîte de dialogue, consultez [Look Up RFC Destination](look-up-rfc-destination.md).  
   
 ### <a name="execution-mode--e---extract-only"></a>Mode d'exécution - E = Extraire uniquement  
- **ID de demande**  
+ **ID de la demande**  
  Entrez l'ID de demande qui est associé à l'extraction.  
   
 ## <a name="see-also"></a>Voir aussi  

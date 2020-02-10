@@ -1,5 +1,5 @@
 ---
-title: Format de Package SSIS | Microsoft Docs
+title: Format de package SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055352"
 ---
 # <a name="ssis-package-format"></a>Format de package SSIS
-  Dans la version actuelle de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], des modifications significatives ont été apportées au format de package (fichier .dtsx) pour faciliter la lecture du format et la comparaison des packages. Vous pouvez fusionner également plus fiable de packages qui ne contiennent pas les modifications en conflit ou stockés au format binaire.  
+  Dans la version actuelle de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], des modifications significatives ont été apportées au format de package (fichier .dtsx) pour faciliter la lecture du format et la comparaison des packages. Vous pouvez également fusionner de manière plus fiable les packages qui ne contiennent pas de modifications en conflit ou de modifications stockées au format binaire.  
   
- Pour afficher le format de fichier de package DTSX actuel, consultez [ \[MS-DTSX\]: Spécification de Format de fichier XML du Package Data Transformation Services](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Pour afficher le format de fichier de package dtsx actuel, consultez [ \[MS\]-dtsx : spécification de format de fichier XML du package DTS (Data Transformation Services](https://go.microsoft.com/fwlink/?LinkId=233251)).  
   
  La liste suivante présente les modifications apportées au format de fichier. Pour afficher des exemples de code liés à ces modifications, consultez [Modifications de format de package dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255)  
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination de fichier (Page Gestionnaire de connexions) plats | Microsoft Docs
+title: Éditeur de destination de fichier plat (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058695"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Éditeur de destination de fichier plat (page Gestionnaire de connexions)
@@ -40,11 +40,11 @@ ms.locfileid: "66058695"
  **Remplacer les données du fichier**  
  Précisez si le fichier existant doit être remplacé ou si les données doivent lui être ajoutées.  
   
- **En-tête**  
+ **Titre**  
  Tapez un bloc de texte à insérer dans le fichier avant l'écriture des données. Utilisez cette option pour inclure des informations supplémentaires, telles que des titres de colonne.  
   
- **Aperçu**  
- Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
+ **Préversion**  
+ Affichez un aperçu des résultats à partir de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

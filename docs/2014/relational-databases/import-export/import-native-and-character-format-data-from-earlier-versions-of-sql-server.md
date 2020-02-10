@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011916"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importer des données au format natif et caractère à partir de versions antérieures de SQL Server
@@ -47,40 +47,40 @@ ms.locfileid: "66011916"
 |XML|`ntext`|`ntext`|`ntext`|  
 |UDT<sup>1</sup>|`image`|`image`|`image`|  
   
- \* Ce type est prise en charge.  
+ \*Ce type est pris en charge en mode natif.  
   
  <sup>1</sup> UDT indique un type défini par l’utilisateur.  
   
 ## <a name="exporting-using--v-80"></a>Exportation à l’aide de -V 80  
- Lorsque vous exportez des données en bloc à l’aide de la **-V80** basculer, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML, et les données UDT en mode natif sont stockées avec un préfixe de 4 octets, comme `text`, `image`et `ntext`données, plutôt que par un préfixe de 8 octets, qui est la valeur par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
+ Lorsque vous exportez des données en bloc à l’aide `nvarchar(max)`du `varchar(max)`commutateur `varbinary(max)` **-V80** , les données,,, XML et UDT en mode natif sont stockées avec un préfixe `image`à 4 `ntext` octets, comme `text`les données, et, plutôt qu’avec un préfixe de 8 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] octets, qui est la valeur par défaut pour et les versions ultérieures.  
   
 ## <a name="copying-date-values"></a>Copie de valeurs de date  
- **bcp** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
+ **BCP** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
   
- Le **bcp** commande exporte des fichiers de données de format de caractère à l’aide du format par défaut ODBC pour `datetime` et `smalldatetime` valeurs. Par exemple, une colonne `datetime` contenant la date `12 Aug 1998` est copiée en bloc dans un fichier de données en tant que chaîne de caractères `1998-08-12 00:00:00.000`.  
+ La commande **BCP** exporte des fichiers de données au format caractère à l' `datetime` aide `smalldatetime` du format par défaut ODBC pour les valeurs et. Par exemple, une colonne `datetime` contenant la date `12 Aug 1998` est copiée en bloc dans un fichier de données en tant que chaîne de caractères `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  Lors de l’importation de données dans un `smalldatetime` champ à l’aide de **bcp**, vérifiez que la valeur des secondes est 00.000 ; sinon l’opération échouera. Le type de données `smalldatetime` ne conserve que les valeurs à la minute la plus proche. BULK INSERT et INSERT ... SELECT * FROM OPENROWSET(BULK...) n'échoueront pas dans ce cas, mais tronqueront la valeur des secondes.  
+>  Lorsque vous importez `smalldatetime` des données dans un champ à l’aide de **BCP**, vérifiez que la valeur des secondes est 00,000 ; dans le cas contraire, l’opération échoue. Le type de données `smalldatetime` ne conserve que les valeurs à la minute la plus proche. BULK INSERT et INSERT ... SELECT * FROM OPENROWSET(BULK...) n'échoueront pas dans ce cas, mais tronqueront la valeur des secondes.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour utiliser des formats de données pour l'importation ou l'exportation en bloc**  
+ **Pour utiliser des formats de données pour l’importation en bloc ou l’exportation en bloc**  
   
--   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
  
   
 ## <a name="see-also"></a>Voir aussi  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Compatibilité descendante du moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Moteur de base de données la compatibilité descendante](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

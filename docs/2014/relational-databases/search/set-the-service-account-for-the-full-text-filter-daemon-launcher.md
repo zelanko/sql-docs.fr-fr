@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010935"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Définir le compte du service du Lanceur de démon de filtre de texte intégral
@@ -26,20 +26,20 @@ ms.locfileid: "66010935"
  Le service du Lanceur de démon de filtre de texte intégral SQL est un service dépendant associé à une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le service du Lanceur de démon de filtre de texte intégral SQL propage les informations du compte de service à chaque processus hôte de démon de filtre.  
   
   
-##  <a name="setting"></a> Définition du compte de Service  
+##  <a name="setting"></a>Définition du compte de service  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>Pour définir le compte du service du Lanceur de démon de filtre de texte intégral SQL pour la recherche en texte intégral  
   
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Dans **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server Services**, avec le bouton droit **Lanceur de démon de filtre de recherche en texte intégral SQL ( *`instance name`* )** , puis cliquez sur **propriétés**.  
+2.  Dans **Gestionnaire de configuration SQL Server**, cliquez sur **services SQL Server**, cliquez avec le bouton droit sur ***`instance name`* lanceur de démon de filtre de texte intégral SQL ()**, puis cliquez sur **Propriétés**.  
   
 3.  Cliquez sur l’onglet **Ouvrir une session** de la boîte de dialogue, puis sélectionnez ou entrez le nom du compte sous lequel chaque processus créé par le service du Lanceur de démon de filtre de texte intégral SQL doit s’exécuter.  
   
 4.  Après avoir fermé la boîte de dialogue, cliquez sur **Redémarrer** pour redémarrer le service du Lanceur de démon de filtre de texte intégral SQL.  
   
   
-##  <a name="error"></a> Si le filtre de texte intégral SQL Service Lanceur de démon ne démarre pas  
+##  <a name="error"></a>Si le service de Lanceur de démon de filtre de texte intégral SQL ne démarre pas  
  L'échec du démarrage du service du Lanceur de démon de filtre de texte intégral SQL peut être dû à l'une ou plusieurs des causes suivantes :  
   
 -   Le mot de passe associé au compte du service du Lanceur de démon de filtre de texte intégral SQL a expiré.  
@@ -70,7 +70,7 @@ ms.locfileid: "66010935"
   
 -   Le groupe de services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas autorisé à démarrer le service du Lanceur de démon de filtre de texte intégral SQL.  
   
-     Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le groupe de services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se voit accorder une autorisation par défaut de gérer, d'interroger et de démarrer le service du Lanceur de démon de filtre de texte intégral SQL. Si les autorisations de groupe de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectées au compte de service du Lanceur de démon de filtre de texte intégral SQL ont été supprimées après l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le service du Lanceur de démon de filtre de texte intégral SQL ne démarre pas et la recherche en texte intégral est désactivée. Vérifiez que le groupe de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispose d’autorisations concernant le compte du service du Lanceur de démon de filtre de texte intégral SQL.  
+     Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le groupe de services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se voit accorder une autorisation par défaut de gérer, d'interroger et de démarrer le service du Lanceur de démon de filtre de texte intégral SQL. Si les autorisations de groupe de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectées au compte de service du Lanceur de démon de filtre de texte intégral SQL ont été supprimées après l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le service du Lanceur de démon de filtre de texte intégral SQL ne démarre pas et la recherche en texte intégral est désactivée. Vérifiez que le groupe de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispose d’autorisations concernant le compte du service du Lanceur de démon de filtre de texte intégral SQL.  
   
   
 ## <a name="see-also"></a>Voir aussi  

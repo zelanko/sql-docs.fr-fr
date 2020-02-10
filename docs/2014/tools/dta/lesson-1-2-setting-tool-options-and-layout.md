@@ -1,5 +1,5 @@
 ---
-title: Définition des Options de l’outil et disposition | Microsoft Docs
+title: Définition des options et de la disposition des outils | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110200"
 ---
 # <a name="setting-tool-options-and-layout"></a>Définition des options du menu Outils et de la disposition
@@ -32,7 +32,7 @@ ms.locfileid: "66110200"
   
     -   Développez la liste **Au démarrage** pour voir ce que l'Assistant Paramétrage du moteur de base de données affiche au démarrage. Par défaut, **Afficher une nouvelle session** est sélectionné.  
   
-    -   Cliquez sur **Modifier la police** pour voir les polices que vous pouvez choisir dans les listes des bases de données et des tables dans l'onglet **Général** . Les polices choisies pour cette option sont également utilisées dans les grilles de recommandations et les rapports de l'Assistant Paramétrage du moteur de base de données une fois le paramétrage effectué. Par défaut, l'Assistant Paramétrage du moteur de base de données utilise les polices système.  
+    -   Cliquez sur **modifier la police** pour voir les polices que vous pouvez choisir pour les listes de bases de données et de tables sous l’onglet **général** . Les polices que vous choisissez pour cette option sont également utilisées dans Assistant Paramétrage du moteur de base de données des grilles et des rapports de recommandation une fois que vous avez effectué le paramétrage. Par défaut, l'Assistant Paramétrage du moteur de base de données utilise les polices système.  
   
     -   Vous pouvez affecter à l'option **Nombre d'éléments dans les listes des derniers fichiers utilisés** une valeur comprise entre **1** et **10**. Cela permet de définir le nombre maximal d'éléments qui s'affichent dans les listes lorsque vous cliquez sur **Sessions récentes** ou sur **Fichiers récents** dans le menu **Fichier** . Par défaut, la valeur affectée à cette option est **4**.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66110200"
     -   Par défaut, l'option **Demander avant d'arrêter l'analyse de la session** est activée pour éviter d'arrêter accidentellement une session de paramétrage avant que l'Assistant Paramétrage du moteur de base de données n'ait terminé d'analyser une charge de travail.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de Service Web (Page entrée) | Microsoft Docs
+title: Éditeur de tâche de service Web (page entrée) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054518"
 ---
 # <a name="web-service-task-editor-input-page"></a>Éditeur de tâche de service Web (page Entrée)
@@ -27,7 +27,7 @@ ms.locfileid: "66054518"
  Pour en savoir plus sur cette tâche, consultez [Tâche de service web](control-flow/web-service-task.md).  
   
 ## <a name="options"></a>Options  
- **Service**  
+ **Services**  
  Sélectionnez un service Web dans la liste pour l'utiliser afin d'exécuter la méthode Web.  
   
  **Méthode**  
@@ -53,8 +53,8 @@ ms.locfileid: "66054518"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de service Web &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche de service Web &#40;page Sortie&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Éditeur de tâche de service Web &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de service Web &#40;page sortie&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

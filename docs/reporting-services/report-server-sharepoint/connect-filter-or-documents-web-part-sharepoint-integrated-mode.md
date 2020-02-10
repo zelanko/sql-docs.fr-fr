@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d833e0b42a6bfdaf9754525740f9bb58df794fdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580028"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Connecter un composant WebPart Filtre ou Documents à un composant WebPart Visionneuse de rapports Reporting Services
@@ -39,13 +39,13 @@ Si vous utilisez un produit SharePoint, vous pouvez créer un tableau de bord ou
   
 4.  Dans **Tous les composants WebPart**, dans la catégorie **Divers**, sélectionnez **Visionneuse de rapports SQL Server Reporting Services**.  
   
-5.  Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone.  
+5.  Cliquez sur **Add**. Le composant WebPart est ajouté en haut de la zone.  
   
 6.  Dans une autre zone de la même page ou du même tableau de bord de composant WebPart, cliquez sur **Ajouter un composant WebPart**.  
   
 7.  Dans **Tous les composants WebPart**, dans la section **Filtres**, sélectionnez un composant WebPart.  
   
-8.  Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone.  
+8.  Cliquez sur **Add**. Le composant WebPart est ajouté en haut de la zone.  
   
 9. Dans la zone qui contient le composant WebPart, cliquez sur le menu **modifier** du composant WebPart, pointez sur **Connexions**, puis sur **Envoyer les valeurs de filtre à** et sélectionnez **Visionneuse de rapports** - *nom du rapport*.  
   
@@ -61,7 +61,7 @@ Si vous utilisez un produit SharePoint, vous pouvez créer un tableau de bord ou
   
 4.  Dans **Tous les composants WebPart**, dans la section **Listes et bibliothèque**, sélectionnez **Documents**.  
   
-5.  Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone.  
+5.  Cliquez sur **Add**. Le composant WebPart est ajouté en haut de la zone.  
   
 6.  Cliquez au bas du volet d’outils sur **Appliquer** , puis sur **OK** pour fermer le volet.  
   
@@ -69,7 +69,7 @@ Si vous utilisez un produit SharePoint, vous pouvez créer un tableau de bord ou
   
 8.  Dans **Tous les composants WebPart**, dans la catégorie **Divers**, sélectionnez **Visionneuse de rapports SQL Server Reporting Services**.  
   
-9. Cliquez sur **Ajouter**. Le composant WebPart est ajouté en haut de la zone.  
+9. Cliquez sur **Add**. Le composant WebPart est ajouté en haut de la zone.  
   
 10. Dans la zone qui contient le composant WebPart, cliquez sur le menu **modifier** du composant WebPart, pointez sur **Connexions**, puis sur **Source des définitions de rapport**, puis sélectionnez **Documents**.  
   

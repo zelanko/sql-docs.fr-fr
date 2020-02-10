@@ -1,5 +1,5 @@
 ---
-title: Exécuter l’éditeur de tâche de processus (Page processus) | Microsoft Docs
+title: Éditeur de tâche d’exécution de processus (page traiter) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059028"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
@@ -37,18 +37,18 @@ ms.locfileid: "66059028"
  Fournissez les arguments de l'invite de commandes.  
   
  **WorkingDirectory**  
- Tapez le chemin du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)** , puis recherchez le dossier.  
+ Tapez le chemin du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)**, puis recherchez le dossier.  
   
  **StandardInputVariable**  
- Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \<**Nouvelle variable...** > pour en créer une :  
+ Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une :  
   
  **Rubriques connexes :**  [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
+ Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
  **StandardErrorVariable**  
- Sélectionnez une variable pour capturer la sortie d’erreur du processus ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
+ Sélectionnez une variable pour capturer la sortie d’erreur du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Indiquez si la tâche échoue quand le code de sortie du processus est différent de la valeur spécifiée dans **SuccessValue**.  
@@ -56,7 +56,7 @@ ms.locfileid: "66059028"
  **SuccessValue**  
  Spécifiez la valeur retournée par l'exécutable pour indiquer le succès de l'opération. Cette valeur est définie par défaut sur **0**.  
   
- **TimeOut**  
+ **Expiré**  
  Spécifiez la durée en secondes de l'exécution du processus. Une valeur **0** indique qu’aucun délai d’attente n’est utilisé et que l’exécution du processus dure tant que ce dernier n’est pas terminé ou tant qu’aucune erreur ne se produit.  
   
  **TerminateProcessAfterTimeOut**  

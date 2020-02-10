@@ -1,5 +1,5 @@
 ---
-title: Objet SqlDataRecord | Microsoft Docs
+title: SqlDataRecord, objet | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874684"
 ---
 # <a name="sqldatarecord-object"></a>Objet SqlDataRecord
@@ -25,7 +25,7 @@ ms.locfileid: "62874684"
   
  Les procédures stockées managées peuvent envoyer au client des jeux de résultats clients qui ne proviennent pas d'un `SqlDataReader`. La classe `SqlDataRecord`, avec les méthodes `SendResultsStart`, `SendResultsRow` et `SendResultsEnd` de l'objet `SqlPipe`, permet aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   
- Pour plus d’informations, consultez la `Microsoft.SqlServer.Server.SqlDataRecord` classe documentation de référence dans la documentation du SDK de .NET Framework.  
+ Pour plus d’informations, consultez `Microsoft.SqlServer.Server.SqlDataRecord` la documentation de référence sur les classes dans la documentation du kit de développement logiciel (SDK) .NET Framework.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant crée un nouvel enregistrement d'employé et le retourne à l'appelant.  

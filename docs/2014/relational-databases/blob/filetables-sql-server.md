@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010084"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "66010084"
  [Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)  
  Décrit la procédure de création d'un nouveau FileTable, ou de modification ou de suppression d'un FileTable existant.  
   
- [Charger des fichiers dans FileTables](load-files-into-filetables.md)  
+ [Charger des fichiers dans des FileTables](load-files-into-filetables.md)  
  Explique comment charger ou migrer des fichiers dans FileTables.  
   
  [Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)  
@@ -125,11 +125,11 @@ ms.locfileid: "66010084"
  Décrit les tâches d'administration courantes permettant de gérer des FileTables.  
   
   
-##  <a name="relcontent"></a> Contenu connexe  
+##  <a name="relcontent"></a> Contenu associé  
  [Schéma de FileTable](filetable-schema.md)  
  Décrit le schéma prédéfini et fixe d'un FileTable.  
   
- [Compatibilité de FileTable avec d'autres fonctionnalités SQL Server](filetable-compatibility-with-other-sql-server-features.md)  
+ [Compatibilité de FileTable avec d’autres fonctionnalités SQL Server](filetable-compatibility-with-other-sql-server-features.md)  
  Décrit le fonctionnement de FileTables avec d'autres fonctionnalités de SQL Server.  
   
  [DDL, fonctions, procédures stockées et vues FileTable](../views/views.md)  

@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055951"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Boîte de dialogue Sélectionner l'énumération SMO
-  Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spécifier l’objet SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à énumérer et pour sélectionner le type d’énumération.  
+  Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spécifier l’objet SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à énumérer et pour sélectionner le type d’énumération.  
   
 ## <a name="options"></a>Options  
  **Énumérer**  
@@ -37,7 +37,7 @@ ms.locfileid: "66055951"
  **Noms**  
  Utilisez le type d'énumération Noms.  
   
- **URN**  
+ **Urn**  
  Utilisez le type d'énumération URN.  
   
  **Emplacements**  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011170"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gérer et surveiller la recherche en texte intégral pour une instance de serveur
@@ -56,13 +56,13 @@ ms.locfileid: "66011170"
   
          Si aucun catalogue de texte intégral n'est disponible, les index de recherche en texte intégral associés sont reconstruits. Cette option est disponible uniquement pour les bases de données [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
-         **Reconstruire**  
+         **Recréation**  
          Les catalogues de texte intégral sont reconstruits à l'aide des analyseurs lexicaux nouveaux et améliorés. La reconstruction des index peut prendre du temps, et une quantité importante de ressources en termes d'UC et de mémoire peut être requise après la mise à niveau.  
   
          **Réinitialiser**  
          Les catalogues de texte intégral sont réinitialisés. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Les fichiers de catalogue de texte intégral sont supprimés, mais les métadonnées pour les catalogues de texte intégral et les index de recherche en texte intégral sont conservés. Après leur mise à niveau, tous les index de recherche en texte intégral ont le suivi des modifications désactivé et aucune analyse n'est démarrée automatiquement. Le catalogue reste vide tant que vous n'avez pas procédé manuellement à une alimentation complète, au terme de la mise à niveau.  
   
-         Pour plus d’informations sur le choix d’une option de mise à niveau de recherche en texte intégral, consultez [mise à niveau de recherche de texte intégral](upgrade-full-text-search.md).  
+         Pour plus d’informations sur le choix d’une option de mise à niveau de texte intégral, consultez [mise à niveau de la recherche en texte intégral](upgrade-full-text-search.md).  
   
         > [!NOTE]  
         >  Vous pouvez aussi définir l’option de mise à niveau du catalogue de texte intégral à l’aide de l’action [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** .  
@@ -78,34 +78,34 @@ ms.locfileid: "66011170"
 |`LoadOSResources`|Indique si les analyseurs lexicaux et les filtres du système d'exploitation sont inscrits et utilisés avec cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Indique si seuls les fichiers binaires signés sont chargés par le Moteur d’indexation et de recherche en texte intégral.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Surveillance de l'activité de recherche en texte intégral  
+##  <a name="monitor"></a>Surveillance de l’activité de recherche en texte intégral  
  Plusieurs vues et fonctions de gestion dynamique sont utiles pour la surveillance de l'activité de recherche en texte intégral sur une instance de serveur.  
   
- **Pour consulter des informations sur les catalogues de texte intégral avec une activité d'alimentation en cours**  
+ **Pour afficher des informations sur les catalogues de texte intégral avec une activité d’alimentation en cours**  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   
- **Pour consulter l'activité actuelle d'un processus hôte de démon de filtre**  
+ **Pour afficher l’activité actuelle d’un processus hôte de démon de filtre**  
   
 -   [sys.dm_fts_fdhosts &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-fdhosts-transact-sql)  
   
- **Pour consulter des informations sur les alimentations d'index en cours**  
+ **Pour afficher des informations sur les remplissages d’index en cours**  
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **Pour consulter les mémoires tampon d'un pool de mémoire qui sont utilisées dans le cadre d'une analyse ou d'une plage d'analyse**  
+ **Pour afficher les tampons de mémoire dans un pool de mémoire qui sont utilisés dans le cadre d’une analyse ou d’une plage d’analyse.**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **Pour consulter les pools de mémoire partagée disponibles pour le composant Rassembleur de texte intégral dans le cadre d'une analyse de texte intégral ou d'une plage d'analyse de texte intégral**  
+ **Pour afficher les pools de mémoire partagée disponibles pour le composant rassembleur de texte intégral pour une analyse de texte intégral ou une plage d’analyse de texte intégral**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   
- **Pour consulter des informations sur chaque lot d'indexation de texte intégral**  
+ **Pour afficher des informations sur chaque lot d’indexation de texte intégral**  
   
 -   [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql)  
   
- **Pour consulter des informations sur les plages spécifiques liées à une alimentation en cours**  
+ **Pour afficher des informations sur les plages spécifiques liées à une alimentation en cours**  
   
 -   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql)  
   

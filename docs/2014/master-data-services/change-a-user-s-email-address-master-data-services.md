@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483583"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Changer l’adresse e-mail d’un utilisateur (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier l’adresse e-mail à laquelle les notifications sont envoyées, ainsi que le format par défaut des e-mails de notification.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Utilisateurs et groupes** .  
@@ -46,6 +46,6 @@ ms.locfileid: "65483583"
 -   [Affecter des autorisations de zone fonctionnelle &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [&#40;de sécurité Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

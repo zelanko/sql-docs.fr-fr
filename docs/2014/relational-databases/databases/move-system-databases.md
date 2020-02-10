@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871536"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
@@ -45,26 +45,26 @@ ms.locfileid: "62871536"
   
  Les procédures ci-dessous s'appliquent au déplacement des fichiers de base de données au sein de la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour déplacer une base de données vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou vers un autre serveur, utilisez les opérations de [sauvegarde et restauration](../backup-restore/back-up-and-restore-of-sql-server-databases.md) ou de [détachement et attachement](move-a-database-using-detach-and-attach-transact-sql.md) .  
   
- Les procédures de cette rubrique requièrent le nom logique des fichiers de base de données. Pour obtenir ce nom, interrogez la colonne name dans l’affichage catalogue [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql).  
+ Les procédures de cette rubrique requièrent le nom logique des fichiers de base de données. Pour obtenir ce nom, interrogez la colonne name dans l’affichage catalogue [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  
   
 > [!IMPORTANT]  
 >  Si vous déplacez une base de données système et que vous recréez ultérieurement la base de données master, vous devez redéplacer la base de données système car l'opération de recréation installe toutes les bases de données système à leur emplacement par défaut.  
   
-##  <a name="Intro"></a> **Dans cette rubrique**  
+##  <a name="Intro"></a>**Dans cette rubrique**  
   
--   [Réadressage planifié et la procédure de Maintenance de disque planifiée](#Planned)  
+-   [Procédure de réadressage planifié et de maintenance de disque planifiée](#Planned)  
   
--   [Procédure de récupération après défaillance](#Failure)  
+-   [Procédure de récupération d’erreur](#Failure)  
   
--   [Déplacement de la base de données master](#master)  
+-   [Déplacement de la base de données Master](#master)  
   
--   [Déplacement de la base de données de ressources](#Resource)  
+-   [Déplacement de la base de données Resource](#Resource)  
   
--   [Suivi : Après le déplacement de toutes les bases de données système](#Follow)  
+-   [Suivi : après le déplacement de toutes les bases de données système](#Follow)  
   
 -   [Exemples](#Examples)  
   
-##  <a name="Planned"></a> Procédure de réadressage planifié et de maintenance de disque planifiée  
+##  <a name="Planned"></a>Procédure de réadressage planifié et de maintenance de disque planifiée  
  Pour déplacer des données ou un fichier journal d'une base de données système dans le cadre d'un réadressage planifié ou d'une opération de maintenance planifiée, suivez la procédure ci-dessous. Cette procédure s'applique à toutes les bases de données système à l'exception des bases de données master et Resource.  
   
 1.  Pour chaque fichier à déplacer, exécutez la commande suivante.  
@@ -101,7 +101,7 @@ ms.locfileid: "62871536"
   
 2.  Vérifiez le bon fonctionnement de la messagerie de base de données en envoyant un message électronique de test.  
   
-##  <a name="Failure"></a> Procédure de récupération après défaillance  
+##  <a name="Failure"></a>Procédure de récupération d’erreur  
  Si un fichier doit être déplacé dans un nouvel emplacement en raison d'une défaillance matérielle, suivez la procédure décrite ci-dessous. Cette procédure s'applique à toutes les bases de données système à l'exception des bases de données master et Resource.  
   
 > [!IMPORTANT]  
@@ -149,14 +149,14 @@ ms.locfileid: "62871536"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> Déplacement de la base de données master  
+##  <a name="master"></a>Déplacement de la base de données Master  
  Pour déplacer la base de données master, procédez comme suit.  
   
 1.  Dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur **Microsoft SQL Server**et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Dans le nœud **Services SQL Server** , cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, **SQL Server (MSSQLSERVER)** ), puis cliquez sur **Propriétés**.  
+2.  Dans le nœud **Services SQL Server** , cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, **SQL Server (MSSQLSERVER)**), puis cliquez sur **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server (***nom_instance***)** , cliquez sur l’onglet **Paramètres de démarrage**.  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server (***nom_instance***)** , cliquez sur l’onglet **Paramètres de démarrage** .  
   
 4.  Dans la zone **Paramètres existants**, sélectionnez le paramètre -d pour déplacer le fichier de données MASTER. Cliquez sur **Mettre à jour** pour enregistrer les modifications.  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871536"
     GO  
     ```  
   
-##  <a name="Resource"></a> Déplacement de la base de données Resources  
+##  <a name="Resource"></a>Déplacement de la base de données Resource  
  L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
   
-##  <a name="Follow"></a> Suivi : Après le déplacement de toutes les bases de données système  
+##  <a name="Follow"></a>Suivi : après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
   
 -   Modifiez le chemin d'accès du journal de l'Agent SQL Server. Si vous ne mettez pas à jour ce chemin d'accès, l'Agent SQL Server ne démarre pas.  
@@ -209,7 +209,7 @@ ms.locfileid: "62871536"
   
 2.  Cliquez avec le bouton droit sur **Journaux d’erreurs** , puis cliquez sur **Configurer**.  
   
-3.  Dans la boîte de dialogue **Configurer les journaux d'erreurs de l'Agent SQL Server** , spécifiez le nouvel emplacement du fichier SQLAGENT.OUT. L’emplacement par défaut est C:\Program Files\Microsoft SQL Server\MSSQL12. < nom_instance > \MSSQL\Log\\.  
+3.  Dans la boîte de dialogue **Configurer les journaux d'erreurs de l'Agent SQL Server** , spécifiez le nouvel emplacement du fichier SQLAGENT.OUT. L’emplacement par défaut est C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name>\\\mssql\log.  
   
 #### <a name="change-the-database-default-location"></a>Modifier l'emplacement par défaut de la base de données  
   
@@ -223,7 +223,7 @@ ms.locfileid: "62871536"
   
 ##  <a name="Examples"></a> Exemples  
   
-### <a name="a-moving-the-tempdb-database"></a>A. Déplacement de la base de données tempdb  
+### <a name="a-moving-the-tempdb-database"></a>R. Déplacement de la base de données tempdb  
  Dans l'exemple suivant, les fichiers de données et les fichiers journaux de la base de données `tempdb` sont déplacés vers un nouvel emplacement dans le cadre d'une opération planifiée.  
   
 > [!NOTE]  
@@ -266,12 +266,12 @@ ms.locfileid: "62871536"
 ## <a name="see-also"></a>Voir aussi  
  [Base de données Resource](resource-database.md)   
  [Base de données tempdb](tempdb-database.md)   
- [Base de données master](master-database.md)   
+ [Base de données Master](master-database.md)   
  [Base de données msdb](msdb-database.md)   
  [Base de données model](model-database.md)   
  [Déplacer des bases de données utilisateur](move-user-databases.md)   
- [Déplacer des fichiers de bases de données](move-database-files.md)   
- [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Déplacer des fichiers de base de données](move-database-files.md)   
+ [Démarrer, arrêter, suspendre, reprendre, redémarrer le service Moteur de base de données, SQL Server Agent ou SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Reconstruire des bases de données système](system-databases.md)  
   

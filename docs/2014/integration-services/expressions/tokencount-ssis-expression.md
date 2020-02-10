@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896696"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expression SSIS)
@@ -33,7 +33,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  *delimiter_string*  
  Chaîne qui contient les caractères de délimitation. Par exemple, « ; , » contient trois caractères de délimitation : le point-virgule, un espace vide et une virgule.  
   
-## <a name="result-types"></a>Types de résultats  
+## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
 ## <a name="remarks"></a>Notes  
@@ -50,7 +50,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Vous pouvez utiliser des variables et des colonnes en tant qu'arguments pour cette expression.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- Dans l’exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : "01", "12", "2011".  
+ Dans l’exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : « 01 », « 12 », « 2011 ».  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

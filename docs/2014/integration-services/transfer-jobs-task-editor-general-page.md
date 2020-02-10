@@ -1,5 +1,5 @@
 ---
-title: Transfert de l’éditeur de tâche de travaux (Page Général) | Microsoft Docs
+title: Éditeur de tâche de transfert de travaux (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055010"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Éditeur de tâche de transfert de travaux (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour donner un nom et une description à la tâche de transfert de travaux. Pour plus d'informations sur la tâche de transfert de travaux, consultez [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
   
 > [!NOTE]  
->  Seuls les membres du rôle serveur fixe **sysadmin** ou l'un des rôles de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le serveur de destination peuvent y créer des travaux. Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rôles de base de données fixe de l’Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+>  Seuls les membres du rôle serveur fixe **sysadmin** ou l'un des rôles de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le serveur de destination peuvent y créer des travaux. Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -40,7 +40,7 @@ ms.locfileid: "66055010"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert de travaux &#40;page Travaux&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [Éditeur de tâche de transfert de travaux &#40;page travaux&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

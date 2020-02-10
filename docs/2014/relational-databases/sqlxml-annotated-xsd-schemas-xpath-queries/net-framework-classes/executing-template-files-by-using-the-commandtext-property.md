@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012510"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandText
-  Cet exemple illustre comment les fichiers modèles comprenant des requêtes SQL ou XPath peuvent être spécifiées en utilisant le CommandTextproperty. Au lieu de spécifier la requête SQL ou XPath comme valeur de CommandText, vous pouvez spécifier un nom de fichier en tant que la valeur. Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType.TemplateFile.  
+  Cet exemple illustre la façon dont les fichiers de modèle qui se composent de requêtes SQL ou XPath peuvent être spécifiés à l’aide de CommandTextproperty. Au lieu de spécifier la requête SQL ou XPath comme valeur de CommandText, vous pouvez spécifier un nom de fichier comme valeur. Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType. TemplateFile.  
   
  L'exemple d'application exécute ce modèle :  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66012510"
 </ROOT>  
 ```  
   
- Il s’agit de l’exemple d’application c#. Pour tester l'application, enregistrez le modèle (TemplateFile.xml),  puis exécutez l'application.  
+ Il s’agit de l’exemple d’application C#. Pour tester l'application, enregistrez le modèle (TemplateFile.xml),  puis exécutez l'application.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  
@@ -79,7 +79,7 @@ class Test
   
 2.  Enregistrez le modèle XML (TemplateFile.xml) fourni dans cet exemple dans un dossier.  
   
-3.  Enregistrez le code c# (DocSample.cs) fourni dans cet exemple dans le même dossier dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
+3.  Enregistrez le code C# (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
   
 4.  Compilez le code. Pour compiler le code à l'invite de commandes, utilisez :  
   
@@ -91,7 +91,7 @@ class Test
   
 5.  À l'invite de commandes, exécutez DocSample.exe.  
   
- Si vous passez un paramètre à un modèle, le nom du paramètre doit commencer par le signe arobase (@) ; par exemple, p.Name= «@ContactID», où p est un objet SqlXmlParameter.  
+ Si vous transmettez un paramètre à un modèle, le nom du paramètre doit commencer par arobase (@); par exemple, p.Name = "@ContactID", où p est un objet SqlXmlParameter.  
   
  Voici le modèle mis à jour qui prend un paramètre.  
   

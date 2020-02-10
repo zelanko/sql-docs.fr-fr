@@ -1,5 +1,5 @@
 ---
-title: prise en charge du Type de données dans SQLXML 4.0 XML | Microsoft Docs
+title: Prise en charge des types de données XML dans SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012165"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Prise en charge du type de données xml dans SQLXML 4.0
-  À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge XML typées à l’aide de données le `xml` type de données. Cette rubrique fournit des informations sur la façon dont SQLXML 4.0 reconnaît les instances du type de données `xml` et implémente leur prise en charge.  
+  À partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , prend en charge les données `xml` typées XML à l’aide du type de données. Cette rubrique fournit des informations sur la façon dont SQLXML 4.0 reconnaît les instances du type de données `xml` et implémente leur prise en charge.  
   
 ## <a name="working-with-xml-data-types"></a>Utilisation des types de données xml  
  Pour mieux comprendre l'utilisation des tables SQL qui implémentent des colonnes de type de données `xml`, les exemples suivants sont fournis :  
   
 |Tâche|Exemple|Rubrique|  
 |----------|-------------|-----------|  
-|Comment mapper et inclure une colonne `xml` dans une vue XML|« Mappage d'un élément XML à une colonne de type de données XML »|[Mappage par défaut d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|Comment insérer des données dans une colonne `xml` avec des codes de mise à jour (updategrams)|« Insertion de données dans une colonne de type de données XML »|[Insertion de données à l’aide de codes XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|Chargement en masse de données XML dans une colonne `xml`|« Chargement en masse dans les colonnes de type de données xml »|[Exemples de chargement en masse XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|Comment mapper et inclure une colonne `xml` dans une vue XML|« Mappage d'un élément XML à une colonne de type de données XML »|[Mappage par défaut d’éléments et d’attributs XSD à des tables et des colonnes &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|Comment insérer des données dans une colonne `xml` avec des codes de mise à jour (updategrams)|« Insertion de données dans une colonne de type de données XML »|[Insertion de données à l’aide de XML codes &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|Chargement en masse de données XML dans une colonne `xml`|« Chargement en masse dans les colonnes de type de données xml »|[Exemples de chargement en masse XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>Instructions et limitations  
   
--   **\<XSD : n’importe quel >** ne peut pas être mappé à une colonne, y compris un `xml` type de données. La prise en charge de ce scénario en SQLXML est fournie via l'annotation `sql:overflow-field`. Une autre solution consiste à mapper un champ de type de données `xml` en tant qu'élément de `xsd:anyType`. Cette solution est illustrée dans l'exemple de mappage d'un élément XML à une colonne de type de données XML, référencé dans le tableau ci-dessus.  
+-   xsd : tout>ne peut pas être mappé à une colonne contenant `xml` un type de données. ** \<** La prise en charge de ce scénario en SQLXML est fournie via l'annotation `sql:overflow-field`. Une autre solution consiste à mapper un champ de type de données `xml` en tant qu'élément de `xsd:anyType`. Cette solution est illustrée dans l'exemple de mappage d'un élément XML à une colonne de type de données XML, référencé dans le tableau ci-dessus.  
   
 -   L'interrogation par une requête XPath du contenu de colonnes de type de données `xml` n'est pas prise en charge.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66012165"
   
 -   SQLXML 4,0 s'appuie sur la prise en charge limitée des DTD a fourni dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. permet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DTD interne dans les données de type de données d'`xml`, qui peuvent être utilisées pour fournir des valeurs par défaut et remplacer des références d'entité par leur contenu développé. SQLXML passe les données XML « en l'état » (y compris la DTD interne) au serveur. Vous pouvez convertir les DTD en documents XSD (XML Schema Documents) à l'aide d'outils tiers, puis charger les données avec des schémas XSD insérés dans la base de données.  
   
--   SQLXML 4.0 ne conserve pas les instructions de traitement de déclaration XML (par exemple), en fonction du comportement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. À la place, la déclaration XML est traitée comme une directive pour l'analyseur XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; en outre, ses attributs (version, encoding et standalone) sont perdus une fois que les données ont été converties vers le type de données `xml`. Les données XML sont stockées en interne au format UCS-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées ; elles sont autorisées dans la colonne `xml` et peuvent être prises en charge par SQLXML.  
+-   SQLXML 4,0 ne conserve pas les instructions de traitement de déclaration XML (par exemple,) en fonction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]du comportement de. À la place, la déclaration XML est traitée comme une directive pour l'analyseur XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; en outre, ses attributs (version, encoding et standalone) sont perdus une fois que les données ont été converties vers le type de données `xml`. Les données XML sont stockées en interne au format UCS-2. Toutes les autres instructions de traitement dans l'instance XML sont conservées ; elles sont autorisées dans la colonne `xml` et peuvent être prises en charge par SQLXML.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Données XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  

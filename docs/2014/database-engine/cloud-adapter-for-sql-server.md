@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176016"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptateur de cloud pour SQL Server
-  Le service adaptateur Cloud est créé dans le cadre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de l’approvisionnement sur une machine virtuelle Azure. Il génère un certificat SSL auto-signé dans le cadre de sa première exécution, puis s’exécute en tant que compte **Système local** . Il génère un fichier de configuration utilisé pour sa configuration. L'adaptateur de cloud crée également une règle de Pare-feu Windows pour autoriser les connexions TCP entrantes sur le port 11435 par défaut.  
+  Le service adaptateur cloud est créé dans le cadre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de l’approvisionnement sur une machine virtuelle Azure. Il génère un certificat SSL auto-signé dans le cadre de sa première exécution, puis s’exécute en tant que compte **Système local** . Il génère un fichier de configuration utilisé pour sa configuration. L’adaptateur de Cloud crée également une règle de pare-feu Windows pour autoriser les connexions TCP entrantes sur le port 11435 par défaut.  
   
  L'adaptateur de cloud est un service sans état et synchrone qui reçoit les messages de l'instance sur site de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque le service Adaptateur de cloud est arrêté, il arrête l'adaptateur de cloud d'accès à distance, dissocie le certificat SSL et désactive la règle de Pare-feu Windows.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "70176016"
   
 -   **Paramètres du fichier de configuration** -  
   
-    -   \<configuration>  
+    -   \<> de configuration  
   
-        -   \<appSettings>  
+        -   \<> appSettings  
   
-            -   \<add key="WebServicePort" value="" />  
+            -   \<Add Key = "WebServicePort" value = ""/>  
   
-            -   \<add key="WebServiceCertificate" value="GUID" />  
+            -   \<Add Key = "WebServiceCertificate" value = "GUID"/>  
   
-            -   \<add key="ExposeExceptionDetails" value="true" />  
+            -   \<Add Key = "ExposeExceptionDetails" value = "true"/>  
   
         -   \</appSettings>  
   
     -   \</configuration>  
   
--   **Détails du certificat** : le certificat a les valeurs suivantes:  
+-   **Détails du certificat** : le certificat a les valeurs suivantes :  
   
-    -   Subject-"CN = CloudAdapter\<vmname >, DC = SQL Server, DC = Microsoft"  
+    -   Subject-"CN = CloudAdapter\<vmname>, dc = SQL Server, DC = Microsoft"  
   
     -   Le certificat doit disposer uniquement de l'utilisation améliorée de la clé d'authentification serveur activée.  
   
@@ -71,10 +71,10 @@ ms.locfileid: "70176016"
   
  **Valeurs du fichier de configuration**:  
   
-|Paramètre|Valeurs|Par défaut|Commentaires|  
+|Paramètre|Valeurs|Default|Commentaires|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Si ce paramètre n'est pas spécifié, utilisez 11435.|  
-|WebServiceCertificate|Thumbprint|Empty|Si ce paramètre est vide, un nouveau certificat auto-signé est généré.|  
+|WebServiceCertificate|Thumbprint|Vide|Si ce paramètre est vide, un nouveau certificat auto-signé est généré.|  
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Dépannage de l'adaptateur de cloud  
@@ -84,9 +84,9 @@ ms.locfileid: "70176016"
   
 -   **Traçage, événements** -tous les événements sont écrits dans le journal des événements de l’application.  
   
--   **Contrôle, configuration** : utilisez le fichier de configuration situé dans:  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Contrôle, configuration** : utilisez le fichier de configuration situé dans : C:\Program Files\Microsoft SQL\\Server\120\Tools\CloudAdapter.  
   
-|Error|ID d'erreur|Cause|Résolution :|  
+|Error|ID d'erreur|Cause :|Solution|  
 |-----------|--------------|-----------|----------------|  
 |Une exception s'est produite lors de l'ajout du certificat dans le magasin de certificats. [Texte de l'exception].|45560|Autorisations dans le magasin de certificats de l'ordinateur|Vérifiez que le service Adaptateur de cloud dispose des autorisations nécessaires pour ajouter des certificats dans le magasin de certificats de l'ordinateur.|  
 |Une exception s'est produite lors de la configuration de la liaison SSL du port {numéro de port} et du certificat {Thumbprint}. {Exception}.|45561|Une autre application a déjà utilisé le port ou lié un certificat à celui-ci.|Supprimez les liaisons existantes ou modifiez le port de l'adaptateur de cloud dans le fichier de configuration.|  

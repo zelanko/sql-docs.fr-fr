@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e9e1ebbf8a6ba8186d30063bd377f95b8e286d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894743"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configuration de la tâche de script dans l'éditeur de tâche de script
@@ -36,12 +36,12 @@ ms.locfileid: "62894743"
  La page **Script** de l’**éditeur de tâche de script** affiche les propriétés personnalisées de la tâche de script.  
   
 ### <a name="scriptlanguage-property"></a>Propriété ScriptLanguage  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) prend en charge les langages de programmation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Après avoir créé un script dans la tâche de script, vous ne pouvez pas modifier la valeur de la propriété **ScriptLanguage**.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) prend en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] charge les [!INCLUDE[msCoName](../../../includes/msconame-md.md)] langages de programmation Visual Basic ou Visual C#. Après avoir créé un script dans la tâche de script, vous ne pouvez pas modifier la valeur de la propriété **ScriptLanguage**.  
   
  Pour définir le langage de script par défaut des composants Script et des tâches de script, utilisez la propriété **ScriptLanguage** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](../../general-page-of-integration-services-designers-options.md).  
   
 ### <a name="entrypoint-property"></a>Propriété EntryPoint  
- La propriété `EntryPoint` spécifie dans la classe `ScriptMain` du projet VSTA la méthode que le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise comme point d'entrée du code de tâche de script. Le `ScriptMain` classe est la classe par défaut générée par les modèles de script.  
+ La propriété `EntryPoint` spécifie dans la classe `ScriptMain` du projet VSTA la méthode que le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise comme point d'entrée du code de tâche de script. La `ScriptMain` classe est la classe par défaut générée par les modèles de script.  
   
  Si vous modifiez le nom de la méthode dans le projet VSTA, vous devez modifier la valeur de la propriété `EntryPoint`.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62894743"
 > [!NOTE]  
 >  Les noms de variable respectent la casse.  
   
- Pour sélectionner les variables, cliquez sur le bouton de sélection ( **...** ) situé en regard du champ de propriété. Pour plus d’informations, consultez [Sélectionner des variables, page](../../control-flow/select-variables-page.md).  
+ Pour sélectionner les variables, cliquez sur le bouton de sélection (**...**) situé en regard du champ de propriété. Pour plus d’informations, consultez [Sélectionner des variables, page](../../control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Bouton Modifier le script  
  Le bouton **Modifier le script** lance l’environnement de développement VSTA dans lequel vous écrivez votre script personnalisé. Pour plus d’informations, consultez [Codage et débogage de la tâche de script](coding-and-debugging-the-script-task.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "62894743"
 ## <a name="expressions-page-of-the-script-task-editor"></a>Page Expressions de l'éditeur de tâche de script  
  La page **Expressions** de l’**éditeur de tâche de script** vous permet d’utiliser des expressions pour fournir les valeurs des propriétés de la tâche de script répertoriées ci-dessus et de nombreuses autres propriétés de tâche. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md).  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les téléchargements, articles, exemples et vidéos les plus récents de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], ainsi que les solutions retenues par la communauté informatique, consultez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Codage et débogage de la tâche de script](coding-and-debugging-the-script-task.md)  

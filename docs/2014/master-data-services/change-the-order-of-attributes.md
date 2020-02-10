@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5bd144197379ed574ccd152fedf8089b311881be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483535"
 ---
 # <a name="change-the-order-of-attributes"></a>Changer l'ordre des attributs
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez changer l'ordre des attributs.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -39,7 +39,7 @@ ms.locfileid: "65483535"
   
 5.  Cliquez sur **Modifier l'entité sélectionnée**.  
   
-6.  Sur le **modifier l’entité** page **attributs de membre feuille**, ou **attributs de membre consolidé**, ou **attributs de Collection**, sélectionnez l’attribut que vous souhaitez modifier l’ordre des, puis cliquez sur la flèche vers le haut ou sur la flèche bas pour modifier son ordre.  
+6.  Dans la **page modifier l’entité** , dans attributs de **membre feuille**ou attributs de **membre consolidé**, ou **attributs de collection**, sélectionnez l’attribut dont vous souhaitez modifier l’ordre, puis cliquez sur la flèche vers le haut ou la flèche vers le bas pour modifier son ordre.  
   
 7.  Cliquez sur **enregistrer l’entité**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de Conversion de données | Microsoft Docs
+title: Éditeur de transformation de conversion de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060051"
 ---
 # <a name="data-conversion-transformation-editor"></a>Éditeur de transformation de conversion de données
   Utilisez la boîte de dialogue **Éditeur de transformation de conversion de données** pour sélectionner les colonnes à convertir, sélectionner le type de données de conversion des colonnes et définir les attributs de conversion.  
   
 > [!NOTE]  
->  Le `FastParse` propriété des colonnes de sortie de la transformation de Conversion de données n’est pas disponible dans le **éditeur de Transformation de Conversion de données**, mais peut être définie à l’aide de la **éditeur avancé**. Pour plus d'informations sur cette propriété, consultez la section Transformation de conversion de données dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  La `FastParse` propriété des colonnes de sortie de la transformation de conversion de données n’est pas disponible dans l **'éditeur de transformation de conversion de données**, mais elle peut être définie à l’aide de l' **éditeur avancé**. Pour plus d'informations sur cette propriété, consultez la section Transformation de conversion de données dans [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Pour en savoir plus sur la transformation de conversion de données, consultez [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66060051"
  **Page de codes**  
  Sélectionnez la page de codes appropriée pour les colonnes de type DT_STR.  
   
- **Configurer l'affichage des erreurs**  
+ **Configurer la sortie d’erreur**  
  Indiquez la façon dont les erreurs au niveau des lignes sont gérées via la boîte de dialogue [Configurer la sortie d’erreur](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Voir aussi  

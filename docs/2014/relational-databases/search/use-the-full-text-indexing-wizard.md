@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010897"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
@@ -43,13 +43,14 @@ ms.locfileid: "66010897"
      **Colonnes disponibles**  
      Pour inclure une colonne dans l'index, activez la case à cocher en regard du nom de la colonne. Les colonnes sur lesquelles ne doivent pas porter l'indexation de texte intégral sont grisées et leur case à cocher est désactivée.  
   
-     **Langage pour le séparateur de mots**  
-     Sélectionnez une langue dans la liste déroulante. Ce choix sera utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour identifier les analyseurs lexicaux appropriés pour l'index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des analyseurs lexicaux pour identifier les limites des mots dans les données indexées en texte intégral.  
+     **Langue pour l’analyseur lexical**  
+     Sélectionnez une langue dans la liste déroulante. Ce choix sera utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour identifier les analyseurs lexicaux appropriés pour l'index. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des analyseurs lexicaux pour identifier les limites des mots dans les données indexées en texte intégral.  
   
      **Colonne de type**  
      Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
   
-     Le **colonne de Type** est activé uniquement lorsque la colonne nommée dans le **colonnes disponibles** colonne est de type `varbinary(max)` ou `image`.  
+     La **colonne de type** est activée uniquement lorsque la colonne nommée dans la colonne **colonnes disponibles** est de `varbinary(max)` type `image`ou.  
   
      **Sémantique statistique**  
      Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -58,16 +59,16 @@ ms.locfileid: "66010897"
   
 2.  Sélectionnez les options de suivi des modifications.  
   
-     **Automatiquement**  
+     **Systématiquement**  
      Activez cette case d'option pour que l'index de texte intégral soit mis à jour automatiquement lorsque des modifications sont apportées aux données sous-jacentes.  
   
-     **Manuellement**  
+     **Saisissiez**  
      Activez cette case d'option si vous ne voulez pas que l'index de texte intégral soit mis à jour automatiquement lorsque des modifications sont apportées aux données sous-jacentes. Les modifications apportées aux données sous-jacentes sont conservées. Toutefois, pour appliquer les modifications à l'index de texte intégral, vous devez démarrer ou planifier ce processus manuellement.  
   
-     **Aucun suivi**  
+     **Ne pas suivre les modifications**  
      Activez cette case d'option si vous ne voulez pas que l'index de texte intégral soit mis à jour avec les modifications apportées aux données sous-jacentes.  
   
-     **Démarrer le remplissage complet lorsque l’index est créé.**  
+     **Démarrer le remplissage complet une fois l'index créé**  
      Activez cette case d'option pour déclencher un remplissage complet lorsque cet Assistant se détermine avec succès. Cela consiste à créer la structure d'index de texte intégral dans le catalogue et à la remplir avec les données indexées en texte intégral.  
   
 3.  Sélectionnez le catalogue, le groupe de fichiers de l'index et la liste de mots vides.  
@@ -88,29 +89,29 @@ ms.locfileid: "66010897"
      **Respect des accents**  
      Indiquez si le nouveau catalogue doit respecter les accents ou non. Si la base de données respecte les accents, l’option **Respect** est sélectionnée par défaut.  
   
-     **Sélectionner le groupe de fichiers d'index**  
+     **Sélectionner un groupe de fichiers d’index**  
      Spécifiez le groupe de fichiers sur lequel créer l'index de recherche en texte intégral.  
   
-     Sélectionnez l'une des valeurs suivantes :  
+     Sélectionnez l'une des valeurs suivantes :  
   
-    |Value|Description|  
+    |Valeur|Description|  
     |-----------|-----------------|  
-    |**\<default>**|Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|  
-    |**PRIMARY**|Sélectionnez cette option pour utiliser le groupe de fichiers primaire pour le nouvel index de recherche en texte intégral.|  
-    |*groupe de fichiers par défaut spécifié par l’utilisateur*|S'il existe une liste de mots vides par défaut définie par l'utilisateur, sélectionnez son nom dans la liste pour utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|  
+    |**\<>par défaut**|Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers primaire est utilisé.|  
+    |**ESSENTIELLES**|Sélectionnez cette option pour utiliser le groupe de fichiers primaire pour le nouvel index de recherche en texte intégral.|  
+    |*Groupe de fichiers par défaut spécifié par l’utilisateur*|S'il existe une liste de mots vides par défaut définie par l'utilisateur, sélectionnez son nom dans la liste pour utiliser ce groupe de fichiers pour le nouvel index de recherche en texte intégral.|  
   
-     **Sélectionner la liste de mots vides de texte intégral**  
+     **Sélectionner la sélection de texte intégral**  
      Spécifiez une liste de mots vides à utiliser pour l'index de recherche en texte intégral ou désactivez l'utilisation de listes de mots vides.  
   
      Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, les mots vides sont gérés dans les bases de données à l'aide d'objets appelés listes de mots vides. Une *liste de mots vides* est une liste qui, associée à un index de recherche en texte intégral, s’applique aux requêtes de texte intégral sur cet index. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
      Sélectionnez l'une des valeurs suivantes :  
   
-    |Value|Description|  
+    |Valeur|Description|  
     |-----------|-----------------|  
-    |**\<system>**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
-    |**\<off>**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
-    |*user-defined-stoplist-name*|La liste affiche le nom de chaque liste de mots vides définie par l'utilisateur, le cas échéant, qui a été créée sur la base de données. Sélectionnez une liste de mots vides définie par l'utilisateur à utiliser pour le nouvel index de recherche en texte intégral.|  
+    |**\<>système**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
+    |**\<désactivé>**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  
+    |*nom de la STOPLIST définie par l’utilisateur*|La liste affiche le nom de chaque liste de mots vides définie par l'utilisateur, le cas échéant, qui a été créée sur la base de données. Sélectionnez une liste de mots vides définie par l'utilisateur à utiliser pour le nouvel index de recherche en texte intégral.|  
   
 4.  Éventuellement, vous pouvez définir la planification de remplissage. Les opérations d'indexation commencent alors immédiatement, sauf si elles ont été planifiées pour plus tard. Les planifications sont créées immédiatement, même si elles ne seront pas exécutées avant l'heure planifiée.  
   
@@ -128,10 +129,10 @@ ms.locfileid: "66010897"
   
 5.  Affichage ou contrôle de la progression de l'Assistant Indexation de texte intégral.  
   
-     **Arrêter**  
+     **Stop**  
      Interrompt l'opération en cours et empêche l'Assistant d'exécuter les opérations de texte intégral suivantes au cours de cette session.  
   
-     **Rapport**  
+     **Report**  
      Lorsque toutes les opérations ont fini de s'exécuter, cliquez sur ce bouton pour accéder à un rapport sur les opérations effectuées. Vous pouvez afficher le rapport, l'imprimer dans un fichier, le copier dans le Presse-papiers ou l'envoyer par courrier électronique.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche lecteur de données WMI (Page Général) | Microsoft Docs
+title: Éditeur de tâche lecteur de données WMI (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054404"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Éditeur de tâche Lecteur de données WMI (page Général)
@@ -38,7 +38,7 @@ ms.locfileid: "66054404"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche Lecteur de données WMI &#40;page Options WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
+ [Éditeur de tâche lecteur de données WMI &#40;page Options WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [Tâche Observateur d'événement WMI](control-flow/wmi-event-watcher-task.md)  
   

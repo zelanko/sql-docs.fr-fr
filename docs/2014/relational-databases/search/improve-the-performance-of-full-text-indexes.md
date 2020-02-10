@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011262"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
   Les performances de l'indexation de texte intégral et des requêtes de texte intégral sont influencées par les ressources matérielles telles que la mémoire, la vitesse du disque et de l'UC ainsi que l'architecture de l'ordinateur.  
   
-##  <a name="causes"></a> Causes courantes des problèmes de performances  
+##  <a name="causes"></a>Causes courantes des problèmes de performances  
  La cause principale d'une baisse des performances de l'indexation de texte intégral est les limites liées aux ressources matérielles :  
   
 -   Si l’utilisation de l’UC par le processus hôte de démon de filtre (fdhost.exe) ou le processus (sqlservr.exe) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] approche des 100 pour cent, le processeur est le goulet d’étranglement.  
@@ -55,10 +55,10 @@ ms.locfileid: "66011262"
   
   
   
-##  <a name="tuning"></a> Réglage des performances des index de recherche en texte intégral  
+##  <a name="tuning"></a>Réglage des performances des index de recherche en texte intégral  
  Pour optimiser les performances de vos index de recherche en texte intégral, appliquez les bonnes pratiques suivantes :  
   
--   Pour utiliser tous les processeurs ou cœurs au maximum, définissez [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' pour le nombre de processeurs sur le système. Pour plus d’informations sur cette option de configuration, consultez [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Pour utiliser tous les processeurs ou cœurs au maximum, définissez [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)«`max full-text crawl ranges`» sur le nombre de processeurs sur le système. Pour plus d’informations sur cette option de configuration, consultez [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Vérifiez si la table de base a un index cluster. Utilisez un type de données entier pour la première colonne de l'index cluster. Évitez d'utiliser les GUID dans la première colonne de l'index cluster. Un remplissage multiplage sur un index cluster peut produire la vitesse de remplissage la plus élevée. Nous recommandons que la colonne servant de clé de texte intégral corresponde à un type de données Integer.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66011262"
   
   
   
-##  <a name="full"></a> Les performances des alimentations complètes de résolution des problèmes  
+##  <a name="full"></a>Résolution des problèmes de performances des populations complètes  
  Pour diagnostiquer les problèmes de performances, consultez les journaux d'analyse de texte intégral. Pour plus d’informations sur les journaux d’analyse, consultez [Alimenter des index de recherche en texte intégral](../indexes/indexes.md).  
   
  Il est recommandé de suivre l'ordre de dépannage suivant si les performances des alimentations complètes ne sont pas satisfaisantes.  
@@ -105,7 +105,7 @@ ms.locfileid: "66011262"
   
  La quantité de mémoire consommée (en octets) par l'hôte de démon de filtre peut être estimée approximativement à l'aide de la formule suivante :  
   
- *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
+ *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
   
  Les valeurs par défaut des variables contenues dans la formule précédente sont les suivantes :  
   
@@ -117,39 +117,39 @@ ms.locfileid: "66011262"
   
  Le tableau suivant présente des indications expliquant comment estimer les besoins en mémoire de fdhost.exe. Les formules figurant dans ce tableau utilisent les valeurs suivantes :  
   
--   *F*, qui est une évaluation de la mémoire requise par fdhost.exe (en Mo).  
+-   *F*, qui est une estimation de la mémoire requise par fdhost. exe (en Mo).  
   
 -   *T*, qui est la mémoire physique totale disponible sur le système (en Mo).  
   
--   *M*, qui est le meilleur `max server memory` paramètre.  
+-   *M*, qui est le paramètre `max server memory` optimal.  
   
 > [!IMPORTANT]  
->  Pour obtenir des informations essentielles sur les formules, consultez <sup>1</sup>, <sup>2</sup>, et <sup>3</sup>, ci-dessous.  
+>  Pour obtenir des informations essentielles sur les formules, voir <sup>1</sup>, <sup>2</sup>et <sup>3</sup>, ci-dessous.  
   
-|Plateforme|Estimation des besoins de mémoire de fdhost.exe en Mo -*F*<sup>1</sup>|Formule de calcul de mémoire maximum du serveur -*M*<sup>2</sup>|  
+|Plateforme|Estimation des besoins en mémoire de fdhost. exe en Mo-*F*<sup>1</sup>|Formule pour le calcul de Max Server Memory-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _nombre de plages d’analyse_ **&#42;** 50|_M_ **= minimum (** _T_ **,** 2000 **)- *`F`* -**  500|  
-|x64|_F_ **=** _nombre de plages d’analyse_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
+|x86|**=** _Nombre de plages d’analyse_ **&#42;** 50 __|_M_ **= minimum (** _T_ **,** 2000 **)-*`F`* ** 500|  
+|x64|_F_ **=** _nombre de plages d’analyse_ **&#42;** 10 **&#42;** 8|_M_ **=** __ T **-** __ F **-** 500|  
   
- <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme _T_ **-** sigma **(** _F_i **)** .  
+ <sup>1</sup> si plusieurs remplissages complets sont en cours, calculez les besoins en mémoire de fdhost. exe de chacun séparément, par exemple *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme _T_**-** sigma **(**_F_i **)**.  
   
- <sup>2</sup> 500 Mo est une estimation de la mémoire requise par d’autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
+ <sup>2</sup> 500 Mo sont une estimation de la mémoire requise par d’autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
   
- <sup>3</sup> . *ism_size* est censé pour être de 8 Mo pour x64 plateformes.  
+ <sup>3</sup> . *ism_size* est supposé être de 8 Mo pour les plateformes x64.  
   
- **Exemple : Estimation des besoins en mémoire de fdhost.exe**  
+ **Exemple : estimation des besoins en mémoire de fdhost.exe**  
   
  Cet exemple se rapporte à un ordinateur AMD64 avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe : *F*. Le nombre de plages d'analyse est `8`.  
   
  `F = 8*10*8=640`  
   
- Le calcul suivant obtient la valeur optimale de `max server memory` - *M*. *T*il mémoire physique totale disponible sur ce système en Mo -*T*-est `8192`.  
+ Le calcul suivant obtient la valeur optimale pour `max server memory` - *M*. ** Le total de la mémoire physique disponible sur ce système en Mo-*t*- `8192`est.  
   
  `M = 8192-640-500=7052`  
   
- **Exemple : Configuration mémoire maximum du serveur**  
+ **Exemple : configuration de la mémoire maximum du serveur**  
   
- Cet exemple utilise le [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) et [reconfigurer](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions pour définir `max server memory` sur la valeur calculée pour *M* dans l’exemple précédent , `7052`:  
+ Cet exemple utilise les instructions [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) et [reconfigure](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour `max server memory` définir sur la valeur calculée pour *M* dans l’exemple précédent `7052`, :  
   
 ```  
 USE master;  
@@ -160,7 +160,7 @@ RECONFIGURE;
 GO  
 ```  
   
- **Pour définir des option de configuration mémoire maximum du serveur**  
+ **Pour définir l'option de configuration max server memory**  
   
 -   [server memory (options de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
@@ -198,22 +198,22 @@ GO
   
   
   
-##  <a name="filters"></a> Résolution des problèmes de ralentissement des performances d’indexation due aux filtres  
+##  <a name="filters"></a>Résolution des problèmes de performances d’indexation lente en raison de filtres  
  Lors de l'alimentation d'un index de recherche en texte intégral, le Moteur d'indexation et de recherche en texte intégral utilise deux types de filtres : des filtres multithreads et des filtres monothreads. Certains documents, tels que les documents [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, sont filtrés à l'aide d'un filtre multithread. D'autres, tels que les documents PDF (Portable Document Format) d'Adobe Acrobat, sont filtrés à l'aide d'un filtre monothread.  
   
  Pour des raisons de sécurité, les filtres sont chargés par des processus hôtes de démon de filtre. Une instance de serveur utilise un processus multithread pour tous les filtres multithreads et un processus monothread pour tous les filtres monothreads. Lorsqu'un document qui utilise un filtre multithread contient un document incorporé qui utilise un filtre monothread, le Moteur d'indexation et de recherche en texte intégral lance un processus monothread pour le document incorporé. Par exemple, quand il rencontre un document Word qui contient un document PDF, le Moteur d’indexation et de recherche en texte intégral utilise le processus multithread pour le contenu Word et lance un processus monothread pour le contenu PDF. Toutefois, un filtre monothread peut ne pas fonctionner correctement dans cet environnement et peut déstabiliser le processus de filtrage. Dans certaines circonstances, lorsque ce type d'incorporation est courant, cette déstabilisation peut provoquer des blocages du processus de filtrage. Dans ce cas, le Moteur d'indexation et de recherche en texte intégral réachemine tout document ayant subi un échec (par exemple, un document Word avec du contenu PDF incorporé) vers le processus de filtrage monothread. Si le réacheminement a lieu fréquemment, il en résulte une détérioration des performances du processus d'indexation de texte intégral.  
   
- Pour contourner ce problème, marquez le filtre du document conteneur (Word dans le cas présent) en tant que filtre monothread. Vous pouvez modifier la valeur de Registre concernée pour marquer un filtre donné en tant que filtre monothread. Pour marquer un filtre en tant qu’un filtre monothread, vous devez définir le **ThreadingModel** valeur de Registre pour le filtre sur `Apartment Threaded`. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](https://go.microsoft.com/fwlink/?LinkId=209159).  
+ Pour contourner ce problème, marquez le filtre du document conteneur (Word dans le cas présent) en tant que filtre monothread. Vous pouvez modifier la valeur de Registre concernée pour marquer un filtre donné en tant que filtre monothread. Pour marquer un filtre comme filtre à thread unique, vous devez définir la valeur de Registre **ThreadingModel** pour le filtre sur `Apartment Threaded`. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
- [Alimenter des index de recherche en texte intégral](populate-full-text-indexes.md)   
+ [Max Full-Text Analysis Range (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
+ [Remplir les index de recherche en texte intégral](populate-full-text-indexes.md)   
  [Créer et gérer des index de recherche en texte intégral](create-and-manage-full-text-indexes.md)   
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
- [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
- [Résoudre l'indexation de recherche en texte intégral](troubleshoot-full-text-indexing.md)  
+ [sys. dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
+ [Résoudre l’indexation de texte intégral](troubleshoot-full-text-indexing.md)  
   
   

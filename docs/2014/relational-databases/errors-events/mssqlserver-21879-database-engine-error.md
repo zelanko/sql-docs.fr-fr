@@ -13,27 +13,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869176"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21879|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21879|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum21879|  
 |Texte du message|Impossible d'interroger le serveur redirigé '%s' pour le serveur de publication d'origine '%s' et la base de données du serveur de publication '%s' pour déterminer le nom du serveur distant ; erreur %d, message d'erreur '%s'.|  
   
 ## <a name="explanation"></a>Explication  
- `sp_validate_redirected_publisher` utilise un serveur lié temporaire créé pour se connecter au serveur de publication redirigé afin de découvrir le nom du serveur distant. L'erreur 21879 est retournée lorsque la requête de serveur lié échoue. L'appel pour demander le nom du serveur distant est généralement la première utilisation qui est faite du serveur lié temporaire, donc si des problèmes de connectivité existent, ils sont susceptibles d'apparaître d'abord lors de cet appel. Cet appel exécute simplement `@@servername` sur le serveur distant.  
+ 
+  `sp_validate_redirected_publisher` utilise un serveur lié temporaire créé pour se connecter au serveur de publication redirigé afin de découvrir le nom du serveur distant. L'erreur 21879 est retournée lorsque la requête de serveur lié échoue. L'appel pour demander le nom du serveur distant est généralement la première utilisation qui est faite du serveur lié temporaire, donc si des problèmes de connectivité existent, ils sont susceptibles d'apparaître d'abord lors de cet appel. Cet appel exécute simplement `@@servername` sur le serveur distant.  
   
  Le serveur lié utilisé pour interroger le serveur de publication redirigé utilise le mode, la connexion et le mot de passe de sécurité fournis lorsque `sp_adddistpublisher` a été appelé pour le serveur de publication d'origine.  
   
@@ -54,8 +55,8 @@ ms.locfileid: "62869176"
   
 -   Configurez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'authentification Kerberos. Consultez **Authentification Kerberos et SQL Server** dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Utilisez `sp_changedistpublisher` pour modifier le mode de sécurité associé à l’éditeur d’origine dans MSdistpublishers, ainsi que pour spécifier une connexion et un mot de passe à utiliser pour la connexion.  
+-   Utilisez `sp_changedistpublisher` pour modifier le mode de sécurité associé au serveur de publication d’origine dans MSdistpublishers, ainsi que pour spécifier une connexion et un mot de passe à utiliser pour la connexion.  
   
--   Spécifiez le paramètre de ligne de commande *BypassPublisherValidation* sur la ligne de commande de l’agent de fusion pour ignorer la validation lorsque `sp_get_redirected_publisher` est appelée sur le serveur de distribution.  
+-   Spécifiez le paramètre de ligne de commande *BypassPublisherValidation* sur la ligne de commande de l' `sp_get_redirected_publisher` agent de fusion pour ignorer la validation lorsque est appelé sur le serveur de distribution.  
   
   

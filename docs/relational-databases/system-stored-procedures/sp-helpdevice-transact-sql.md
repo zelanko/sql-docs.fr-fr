@@ -18,21 +18,21 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902990"
 ---
-# <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
+# <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Transmet des informations sur les unités de sauvegarde Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser le [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) à la place de vue de catalogue  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser à la place l’affichage catalogue [sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +42,9 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @devname = ] 'name'` Est le nom de l’unité de sauvegarde pour lequel les informations sont signalées. La valeur de *nom* est toujours **sysname**.  
+`[ @devname = ] 'name'`Nom de l’unité de sauvegarde pour laquelle les informations sont signalées. La valeur de *Name* est toujours de **type sysname**.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -54,14 +54,14 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**device_name**|**sysname**|Nom de périphérique logique.|  
 |**physical_name**|**nvarchar(260)**|Nom de fichier physique.|  
 |**description**|**nvarchar(255)**|Description du périphérique.|  
-|**status**|**int**|Un nombre qui correspond à la description d’état dans le **description** colonne.|  
-|**cntrltype**|**smallint**|Type de contrôleur du périphérique :<br /><br /> 2 = unité de disque<br /><br /> 5 = périphérique à bandes|  
-|**size**|**int**|Taille du périphérique (en pages de 2 Ko).|  
+|**statu**|**int**|Numéro qui correspond à la description de l’État dans la colonne **Description** .|  
+|**CntrlType**|**smallint**|Type de contrôleur du périphérique :<br /><br /> 2 = unité de disque<br /><br /> 5 = périphérique à bandes|  
+|**corps**|**int**|Taille du périphérique (en pages de 2 Ko).|  
   
 ## <a name="remarks"></a>Notes  
- Si *nom* est spécifié, **sp_helpdevice** affiche des informations sur l’unité de vidage spécifiée. Si *nom* n’est pas spécifié, **sp_helpdevice** affiche des informations sur toutes les unités de vidage dans le **sys.backup_devices** vue de catalogue.  
+ Si le *nom* est spécifié, **sp_helpdevice** affiche des informations sur l’unité de vidage spécifiée. Si le *nom* n’est pas spécifié, **sp_helpdevice** affiche des informations sur tous les périphériques de vidage dans l’affichage catalogue **sys. backup_devices** .  
   
- Unités de vidage sont ajoutées au système à l’aide de **sp_addumpdevice**.  
+ Les périphériques de vidage sont ajoutés au système à l’aide de **sp_addumpdevice**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -76,7 +76,7 @@ EXEC sp_helpdevice;
 ## <a name="see-also"></a>Voir aussi  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

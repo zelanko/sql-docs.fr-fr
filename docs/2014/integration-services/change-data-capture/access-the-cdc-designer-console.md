@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836081"
 ---
 # <a name="access-the-cdc-designer-console"></a>Accéder à la console du concepteur CDC
@@ -31,8 +31,8 @@ ms.locfileid: "62836081"
 ### <a name="server-name"></a>Nom du serveur  
  Tapez le nom du serveur où se trouve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="authentication"></a>Authentification  
- Sélectionnez l'une des options suivantes :  
+### <a name="authentication"></a>Authentication  
+ Sélectionnez l’un des suivants :  
   
 -   **Authentification Windows**  
   
@@ -53,12 +53,12 @@ ms.locfileid: "62836081"
  Sélectionnez **Chiffrer la connexion** pour utiliser une connexion chiffrée dans la communication entre Oracle CDC Service et l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.
 **Avancé** : Cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
   
- **Avancé**  
+ **Avancée**  
  Cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
   
  Pour plus d’informations sur la boîte de dialogue Propriétés avancées de connexion, consultez [Propriétés avancées de connexion](advanced-connection-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisations de connexion SQL Server requises pour le concepteur CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [Autorisations de connexion SQL Server nécessaires pour le concepteur CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

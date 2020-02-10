@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités dans SQL Server 2014 Integration Services déconseillées | Microsoft Docs
+title: Fonctionnalités de Integration Services dépréciées dans SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72efe8e7e5b7052d8c8b0fcde4940f04ee53cb3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059588"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>Fonctionnalités Integration Services déconseillées dans SQL Server 2014
-  Cette rubrique décrit déconseillées [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] les fonctionnalités qui sont toujours disponibles dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
+  Cette rubrique décrit les [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fonctionnalités déconseillées qui sont toujours disponibles dans la version actuelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
   
  Il n'existe aucune fonctionnalité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déconseillée dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   

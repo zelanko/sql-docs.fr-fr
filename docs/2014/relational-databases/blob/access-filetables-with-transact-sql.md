@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010430"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Accéder aux FileTables avec Transact-SQL
@@ -70,7 +70,7 @@ ms.locfileid: "66010430"
   
 ## <a name="see-also"></a>Voir aussi  
  [Charger des fichiers dans FileTables](load-files-into-filetables.md)   
- [Travailler avec des répertoires et des chemins d'accès dans FileTables](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec des API d’entrée-sortie de fichier](access-filetables-with-file-input-output-apis.md)   
  [DDL, fonctions, procédures stockées et vues FileTable](../views/views.md)  
   

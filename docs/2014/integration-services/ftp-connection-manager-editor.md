@@ -1,5 +1,5 @@
 ---
-title: Éditeur du Gestionnaire de connexions FTP | Microsoft Docs
+title: Éditeur du gestionnaire de connexions FTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058487"
 ---
 # <a name="ftp-connection-manager-editor"></a>Éditeur du gestionnaire de connexions FTP
@@ -42,13 +42,13 @@ ms.locfileid: "66058487"
  **Mot de passe**  
  Indiquez le mot de passe permettant d'accéder au serveur FTP.  
   
- **Délai d'expiration (en secondes)**  
- Spécifiez le nombre de secondes à patienter avant l'expiration de la tâche. Une valeur égale à **0** indique une durée illimitée. La valeur par défaut de cette propriété est **60**.  
+ **Délai d’attente (en secondes)**  
+ Spécifiez le nombre de secondes que prend la tâche avant l’expiration du délai d’attente. La valeur **0** indique une durée infinie. La valeur par défaut de cette propriété est **60**.  
   
  **Utiliser le mode passif**  
  Permet de spécifier si le serveur ou le client initie la connexion. Le serveur initie la connexion en mode actif, alors que le client l'initie en mode passif. La valeur par défaut de cette propriété est **mode actif**.  
   
- **Tentatives**  
+ **Nouvelles tentatives**  
  Spécifiez le nombre de fois que la tâche doit tenter d'établir une connexion. Une valeur égale à **0** indique un nombre illimité de tentatives.  
   
  **Taille de segment (en Ko)**  

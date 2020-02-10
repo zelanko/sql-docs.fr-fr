@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee88ba8a77602fd50412669f96e1e16ddcdd37c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870737"
 ---
-# <a name="mssqlserver102"></a>MSSQLSERVER_102
+# <a name="mssqlserver_102"></a>MSSQLSERVER_102
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|102|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|102|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|P_SYNTAXERR2|  
 |Texte du message|Syntaxe incorrecte près de '%.*ls'.|  

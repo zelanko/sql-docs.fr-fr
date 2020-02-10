@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62834641"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Présentation de la console du concepteur de capture de données modifiées
   Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity.  
   
 ## <a name="installation"></a>Installation  
- Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity. Pour installer la Console du concepteur CDC, exécutez manuellement **AttunityOracleCdcDesigner.msi** à partir du support d’installation de SQL Server.  Packages d’installation pour x86 et x64 se trouvent dans **.\Tools\AttunityCDCOracle\\**  sur le support d’installation de SQL Server.  
+ Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity. Pour installer la console CDC Designer, exécutez manuellement **AttunityOracleCdcDesigner. msi** à partir du support d’installation SQL Server.  Les packages d’installation pour x86 et x64 se trouvent dans **.\Tools\AttunityCDCOracle\\ ** sur le support d’installation de SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Environnements Windows pris en charge  
  La console du concepteur de capture de données modifiées s'exécute dans les environnements Windows suivants :  
@@ -30,20 +30,20 @@ ms.locfileid: "62834641"
   
 -   Windows 7 32 bits (x86) et 64 bits (x64)  
   
--   Windows Server 2008 R2  
+-   Windows Server 2008 R2  
   
 -   Windows Server 2008 32 bits (x86) et 64 bits (x64) avec Service Pack 2  
   
 ## <a name="database-prerequisites"></a>Composants requis pour la base de données  
  Pour utiliser le concepteur de capture de données modifiées pour Oracle par Attunity, vous utilisez une base de données Oracle. Le concepteur de capture de données modifiées pour Oracle par Attunity prend en charge les versions suivantes :  
   
- **Base de données Oracle**  
+ **Oracle Database**  
   
--   Oracle Database 10g version 2 : 10.2.0.1-10.2.0.5 (patchset depuis avril 2010)  
+-   Oracle Database 10g Version 2 : 10.2.0.1-10.2.0.5 (ensemble de correctifs à partir d'avril 2010)  
   
--   Oracle Database 11g version 1 : 11.1.0.6-11.1.0.7 (patchset à compter de septembre 2008)  
+-   Oracle Database 11g Version 1 : 11.1.0.6-11.1.0.7 (ensemble de correctifs à partir de septembre 2008)  
   
--   Oracle Database 11g Release 2 : 11.2.0.1-11.2.0.3 (patchset à partir de septembre 2011)  
+-   Oracle Database 11g Version 2 : 11.2.0.1-11.2.0.3 (ensemble de correctifs à partir de septembre 2011)  
   
  **Base de données SQL Server**  
   
@@ -52,11 +52,11 @@ ms.locfileid: "62834641"
 ## <a name="software-prerequisites"></a>Composants logiciels requis  
  Les logiciels suivants sont requis :  
   
--   Client de 10.x Oracle  
+-   Client Oracle 10. x  
   
 -   Client Oracle 11.x  
   
- **Remarque**: Vous devez utiliser la version 32 bits ou 64 bits de ce logiciel en fonction de la version de la console du Concepteur de capture de données modifiées Oracle installée.  
+ **Remarque**: vous devez utiliser la version 32 bits ou 64 bits de ce logiciel en fonction de la version de la console CDC designer Oracle installée.  
   
  La console du concepteur de capture de données modifiées Oracle utilise le fournisseur Oracle ODBC pour communiquer avec la base de données Oracle source.  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010354"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
@@ -63,7 +63,7 @@ ms.locfileid: "66010354"
 ##  <a name="supported"></a> Opérations du système de fichiers prises en charge  
  Les FileTables prennent en charge les API de système de fichiers associées aux opérations de système de fichiers suivantes :  
   
--   Gestion des répertoires  
+-   Gestion de répertoires  
   
 -   Gestion des fichiers  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66010354"
   
 ##  <a name="considerations"></a> Éléments supplémentaires à prendre en considération pour l'accès d'E/S de fichier aux FileTables  
   
-###  <a name="vnn"></a> Utilisation de noms de réseau virtuel (VNN) avec des groupes de disponibilité AlwaysOn  
+###  <a name="vnn"></a>Utilisation de noms de réseau virtuel (VNN) avec groupes de disponibilité AlwaysOn  
  Lorsque la base de données qui contient FILESTREAM ou des données FileTable appartient à un groupe de disponibilité AlwaysOn, tous les accès à FILESTREAM ou aux données FileTable via les API du système de fichiers doivent utiliser des VNN à la place des noms d'ordinateur. Pour plus d’informations, consultez [FILESTREAM et FileTable avec groupes de disponibilité Always On & &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial"></a> Mises à jour partielles  
@@ -102,7 +102,7 @@ ms.locfileid: "66010354"
   
 ##  <a name="funclist"></a> Fonctionnalités de système de fichiers prises en charge dans les FileTables  
   
-|Fonctionnalité|Pris en charge|Commentaires|  
+|Fonctionnalité|Prise en charge|Commentaires|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Oui|La prise en charge du niveau 2, du niveau 1, des oplocks Lot et Filtre est assurée.|  
 |**Attributs étendus**|Non||  
@@ -111,7 +111,7 @@ ms.locfileid: "66010354"
 |**Flux nommés**|Non||  
 |**Fichiers partiellement alloués**|Oui|Le caractère éparse ne peut être défini que sur les fichiers et affecte le stockage du flux de données. Dans la mesure où les données FILESTREAM sont stockées sur des volumes NTFS, la fonctionnalité FileTable prend en charge les fichiers partiellement alloués en envoyant les demandes au système de fichiers NTFS.|  
 |**Compression**|Oui||  
-|**Chiffrement**|Oui||  
+|**Encryptiion**|Oui||  
 |**TxF**|Non||  
 |**ID de fichier**|Non||  
 |**ID d'objet**|Non||  

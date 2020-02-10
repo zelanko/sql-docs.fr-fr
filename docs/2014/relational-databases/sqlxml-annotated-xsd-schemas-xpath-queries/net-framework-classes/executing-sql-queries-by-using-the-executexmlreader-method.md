@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012529"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Exécution de requêtes SQL à l'aide de la méthode ExecuteXMLReader
-  Au lieu d’utiliser la méthode ExecuteToStream, vous pouvez utiliser la méthode ExecuteXmlReader de l’objet SqlXmlCommand pour exécuter des commandes. Cette méthode retourne un objet XmlReader qui peut être utilisé pour un traitement ultérieur du résultat (qui, dans cet exemple, imprime les noms d’élément ou attribut et les valeurs).  
+  Au lieu d’utiliser la méthode ExecuteToStream, vous pouvez utiliser la méthode ExecuteXmlReader de l’objet SqlXmlCommand pour exécuter des commandes. Cette méthode retourne un objet XmlReader qui peut être utilisé pour le traitement supplémentaire du résultat (qui, dans cet exemple, imprime les noms d’éléments ou d’attributs et les valeurs).  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  

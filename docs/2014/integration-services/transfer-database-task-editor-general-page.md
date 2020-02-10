@@ -1,5 +1,5 @@
 ---
-title: Transfert de l’éditeur de tâche de base de données (Page Général) | Microsoft Docs
+title: Éditeur de tâche de transfert de bases de données (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055098"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Éditeur de tâche de transfert de bases de données (page Général)
@@ -37,7 +37,7 @@ ms.locfileid: "66055098"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert de bases de données &#40;page Bases de données&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
+ [Éditeur de tâche de transfert de bases de données &#40;page bases de données&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

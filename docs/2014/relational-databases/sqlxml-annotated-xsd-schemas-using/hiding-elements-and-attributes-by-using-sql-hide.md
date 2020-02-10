@@ -1,5 +1,5 @@
 ---
-title: 'Masquage d’éléments et attributs à l’aide de SQL : Hide | Microsoft Docs'
+title: 'Masquage d’éléments et d’attributs à l’aide de SQL : Hide | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013837"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Masquage d'éléments et d'attributs à l'aide de sql:hide
@@ -37,12 +37,12 @@ ms.locfileid: "66013837"
  L'annotation `sql:hide` prend une valeur booléenne (0=faux, 1=vrai). Les valeurs acceptables sont 0, 1, true et false.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Spécification de sql:hide sur un attribut  
- Le schéma XSD dans cet exemple se compose d’un  **\<Person.Contact >** élément avec **ContactID**, **FirstName**, et **LastName** attributs.  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Spécification de sql:hide sur un attribut  
+ Dans cet exemple, le schéma XSD se compose d’un ** \<élément person. contact>** avec les attributs **ContactID**, **FirstName**et **LastName** .  
   
- Le **\<Person.Contact >** élément est de type complexe et, par conséquent, est mappé à la table du même nom (mappage par défaut). Tous les attributs de  **\<Person.Contact >** élément sont de type simple et mapper aux colonnes portant le même nom dans la Person.Contacttable dans la base de données AdventureWorks. Dans le schéma, le `sql:hide` annotation est spécifiée sur le **ContactID** attribut. Lorsqu’une requête XPath est spécifiée contre ce schéma, le **ContactID** n’est pas retourné dans le document XML.  
+ L' ** \<élément person. contact>** est de type complexe et, par conséquent, est mappé à la table du même nom (mappage par défaut). Tous les attributs de ** \<l’élément person. contact>** sont de type simple et sont mappés à des colonnes portant le même nom dans Person. Contacttable dans la base de données AdventureWorks. Dans le schéma, l' `sql:hide` annotation est spécifiée sur l’attribut **ContactID** . Lorsqu’une requête XPath est spécifiée sur ce schéma, le **ContactID** n’est pas renvoyé dans le document XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -79,7 +79,7 @@ ms.locfileid: "66013837"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici l'ensemble de résultats obtenu :  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66013837"
 </ROOT>  
 ```  
   
- Lorsque `sql:hide` est spécifié sur un élément, celui-ci et ses attributs ou éléments enfants n'apparaissent pas dans le document XML généré. Voici un autre schéma XSD dans lequel `sql:hide` est spécifié sur le  **\<OD >** élément :  
+ Lorsque `sql:hide` est spécifié sur un élément, celui-ci et ses attributs ou éléments enfants n'apparaissent pas dans le document XML généré. Voici un autre schéma XSD dans lequel `sql:hide` est spécifié sur l' ** \<élément OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +144,7 @@ ms.locfileid: "66013837"
 </xsd:schema>  
 ```  
   
- Lorsqu’une requête XPath (par exemple `/Customers[@CID="1"]`) est spécifiée contre ce schéma, le document XML qui est généré n’inclut pas le  **\<OD >** élément et ses enfants, comme illustré dans ce résultat partiel :  
+ Lorsqu’une requête XPath (par exemple `/Customers[@CID="1"]`) est spécifiée par rapport à ce schéma, le document XML généré n’inclut pas l' ** \<élément OD>** et ses enfants, comme indiqué dans ce résultat partiel :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

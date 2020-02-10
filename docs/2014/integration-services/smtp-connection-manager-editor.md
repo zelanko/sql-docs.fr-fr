@@ -1,5 +1,5 @@
 ---
-title: Éditeur du Gestionnaire de connexions SMTP | Microsoft Docs
+title: Éditeur du gestionnaire de connexions SMTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055558"
 ---
 # <a name="smtp-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SMTP
@@ -36,16 +36,16 @@ ms.locfileid: "66055558"
  **Serveur SMTP**  
  Indiquez le nom du serveur SMTP.  
   
- **Utiliser l'authentification Windows**  
+ **Utiliser l’authentification Windows**  
  Sélectionnez cette option pour envoyer des messages au moyen d'un serveur SMTP utilisant l'authentification Windows pour authentifier l'accès au serveur.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions SMTP prend en charge uniquement l'authentification anonyme et l'authentification Windows. Il ne prend pas en charge l'authentification de base.  
   
 > [!NOTE]  
->  Lorsque vous utilisez Microsoft Exchange comme serveur SMTP, vous devrez peut-être définir **utiliser l’authentification Windows** à `True`. Les serveurs Exchange peuvent être configurés de manière à interdire les connexions SMTP non authentifiées.  
+>  Lorsque vous utilisez Microsoft Exchange comme serveur SMTP, vous devrez peut-être définir **utiliser l’authentification Windows** sur `True`. Les serveurs Exchange peuvent être configurés de manière à interdire les connexions SMTP non authentifiées.  
   
- **Activer SSL (Secure Sockets Layer)**  
+ **Activer les protocole SSL (SSL)**  
  Sélectionnez cette option pour chiffrer la communication au moyen de Secure Sockets Layer (SSL) lors de l'envoi de messages électroniques.  
   
 ## <a name="see-also"></a>Voir aussi  

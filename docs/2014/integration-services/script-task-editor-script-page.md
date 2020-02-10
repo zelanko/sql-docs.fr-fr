@@ -1,5 +1,5 @@
 ---
-title: Éditeur de tâche de script (Page Script) | Microsoft Docs
+title: Éditeur de tâche de script (page script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056186"
 ---
 # <a name="script-task-editor-script-page"></a>Éditeur de tâche de script (page Script)
@@ -27,7 +27,7 @@ ms.locfileid: "66056186"
 > [!NOTE]  
 >  Dans [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] et les versions ultérieures, tous les scripts sont précompilés. Dans les versions antérieures, vous définissez une propriété **PrecompileScriptIntoBinaryCode** pour spécifier que le script a été précompilé.  
   
- Pour en savoir plus sur la tâche de script, consultez [Script Task](control-flow/script-task.md) et [Configuration de la tâche de script dans l'éditeur de tâche de script](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Pour en savoir plus sur la programmation de la tâche de script, consultez [Extension du package à l’aide de la tâche de script](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Pour en savoir plus sur la tâche de script, consultez [Script Task](control-flow/script-task.md) et [Configuration de la tâche de script dans l'éditeur de tâche de script](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Pour en savoir plus sur la programmation de la tâche de script, consultez [Extension du package à l'aide de la tâche de script](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ## <a name="options"></a>Options  
  **ScriptLanguage**  
@@ -43,13 +43,13 @@ ms.locfileid: "66056186"
  Si vous modifiez le nom de la méthode dans le projet VSTA, vous devez modifier la valeur de la propriété **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection ( **...** ) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  
   
  **ReadWriteVariables**  
- Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection ( **...** ) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  
@@ -59,8 +59,8 @@ ms.locfileid: "66056186"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche de script &#40;page Général&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Page général](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de script &#40;page général&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [Exemples de tâche de script](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   

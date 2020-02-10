@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 873aaee7641c84ad3e204c860a61ea5bc138fae6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835751"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Aide sur le concepteur de capture de données modifiées pour Oracle par Attunity via la touche F1
@@ -28,11 +28,11 @@ ms.locfileid: "62835751"
   
 -   [Gérer un service CDC](manage-a-cdc-service.md)  
   
--   [Gérer une instance de capture de données modifiées](manage-a-cdc-instance.md)  
+-   [Gérer une instance CDC](manage-a-cdc-instance.md)  
   
 -   [Utiliser l’Assistant Nouvelle instance](use-the-new-instance-wizard.md) (ou accéder directement à l’une des tâches suivantes)  
   
-    -   [Créer la base de données de modification SQL Server](create-the-sql-server-change-database.md)  
+    -   [Créer la base de données de modifications SQL Server](create-the-sql-server-change-database.md)  
   
     -   [Se connecter à une base de données source Oracle](connect-to-an-oracle-source-database.md)  
   
@@ -46,13 +46,13 @@ ms.locfileid: "62835751"
   
     -   [Générer et exécuter le script de journalisation supplémentaire](generate-and-run-the-supplemental-logging-script.md)  
   
-    -   [Générer des tables miroir et des instances de capture de données modifiées](generate-mirror-tables-and-cdc-capture-instances.md)  
+    -   [Générer des tables miroir et des instances de capture CDC](generate-mirror-tables-and-cdc-capture-instances.md)  
   
     -   [Terminer](finish.md)  
   
 -   [Modifier les propriétés d’instance](edit-instance-properties.md)(ou accéder directement à l’une des tâches suivantes)  
   
-    -   [Modifier les propriétés d'une base de données Oracle](edit-the-oracle-database-properties.md)  
+    -   [Modifier les propriétés d’une base de données Oracle](edit-the-oracle-database-properties.md)  
   
     -   [Modifier des tables](edit-tables.md)  
   

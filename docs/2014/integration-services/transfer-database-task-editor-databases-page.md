@@ -1,5 +1,5 @@
 ---
-title: Transfert de l’éditeur de tâche de base de données (Page bases de données) | Microsoft Docs
+title: Éditeur de tâche de transfert de bases de données (page bases de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055109"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Éditeur de tâche de transfert de bases de données (page Bases de données)
   Utilisez la page **Bases de données** de la boîte de dialogue **Éditeur de tâche de transfert de bases de données** pour spécifier les propriétés des bases de données source et de destination concernées par la tâche de transfert de bases de données. La tâche de transfert de bases de données copie ou déplace une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cette tâche peut également servir à copier une base de données sur le même serveur. Pour plus d’informations sur cette tâche, consultez [Tâche de transfert de bases de données](control-flow/transfer-database-task.md).  
   
 ## <a name="options"></a>Options  
- **SourceConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur source.  
+ **Abord SourceConnection**  
+ Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur source.  
   
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions SMO dans la liste, ou cliquez sur **\<Nouvelle connexion...>** pour créer une connexion au serveur de destination.  
+ Sélectionnez un gestionnaire de connexions Smo dans la liste ou cliquez sur ** \<nouvelle connexion... >** pour créer une connexion au serveur de destination.  
   
  **DestinationDatabaseName**  
  Spécifiez le nom de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le serveur de destination.  
@@ -53,7 +53,7 @@ ms.locfileid: "66055109"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**True**|Remplace la base de données du serveur de destination.|  
 |**False**|Ne remplace pas la base de données du serveur de destination.|  
@@ -82,7 +82,7 @@ ms.locfileid: "66055109"
   
  Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**True**|Rattache la base de données source.|  
 |**False**|Ne rattache pas la base de données source.|  
@@ -90,7 +90,7 @@ ms.locfileid: "66055109"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de transfert de bases de données &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de transfert de bases de données &#40;page général&#41;](general-page-of-integration-services-designers-options.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [Gestionnaire de connexions SMO](connection-manager/smo-connection-manager.md)  
   

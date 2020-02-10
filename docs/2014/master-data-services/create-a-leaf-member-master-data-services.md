@@ -15,21 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483404"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Créer un membre feuille (Master Data Services)
-  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], créer un membre feuille lorsque vous souhaitez ajouter des données de référence à votre système et que vous n’utilisez pas de tables intermédiaires ou la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] pour importer des données.  
+  Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], créez un membre feuille lorsque vous souhaitez ajouter des données de référence à votre système et que vous n’utilisez pas de tables [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] de mise en lots ou de pour importer des données.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
   
--   Vous devez avoir un minimum de **mise à jour** autorisation sur l’objet de modèle de feuille de l’entité que vous ajoutez un membre.  
+-   Vous devez disposer au minimum de l’autorisation **mettre à jour** sur l’objet modèle feuille pour l’entité à laquelle vous ajoutez un membre.  
   
 ### <a name="to-create-a-leaf-member"></a>Pour créer un membre feuille  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65483404"
   
 6.  Dans le volet **Détails** , renseignez les champs.  
   
-7.  Facultatif. Dans la zone **Annotations** , tapez un commentaire pour expliquer l'ajout du membre. Tous les utilisateurs ayant accès au membre peuvent afficher l'annotation.  
+7.  facultatif. Dans la zone **Annotations** , tapez un commentaire pour expliquer l'ajout du membre. Tous les utilisateurs ayant accès au membre peuvent afficher l'annotation.  
   
 8.  Cliquez sur **OK**.  
   

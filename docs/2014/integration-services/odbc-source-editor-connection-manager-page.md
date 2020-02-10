@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source ODBC (Page Gestionnaire de connexions) | Microsoft Docs
+title: Éditeur de source ODBC (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057219"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Éditeur de source ODBC (page Gestionnaire de connexions)
@@ -36,7 +36,7 @@ ms.locfileid: "66057219"
 ### <a name="connection-manager"></a>Gestionnaire de connexions  
  Sélectionnez un gestionnaire de connexions ODBC existant dans la liste ou cliquez sur **Nouveau** pour créer une nouvelle connexion. La connexion peut concerner n'importe quelle base de données prise en charge par ODBC.  
   
-### <a name="new"></a>Nouvelle  
+### <a name="new"></a>Nouveau  
  Cliquez sur **Nouveau**. La boîte de dialogue **Configurer l'Éditeur du gestionnaire de connexions ODBC** s'ouvre et vous permet de créer un nouveau gestionnaire de connexions ODBC.  
   
 ### <a name="data-access-mode"></a>Mode d'accès aux données  
@@ -45,14 +45,14 @@ ms.locfileid: "66057219"
 |Option|Description|  
 |------------|-----------------|  
 |Nom de la table|Permet de récupérer les données d'une table ou d'une vue dans la source de données ODBC. Lorsque vous sélectionnez cette option, sélectionnez une valeur parmi les suivantes dans la liste :|  
-||**Nom de la table ou de la vue** : sélectionnez une table ou une vue disponible dans la liste ou tapez une expression régulière pour identifier la table.|  
+||**Nom de la table ou de la vue**: sélectionnez une table ou une vue disponible dans la liste ou tapez une expression régulière pour identifier la table.|  
 ||Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.|  
 |Commande SQL|Extrayez les données de la source de données ODBC à l'aide d'une requête SQL. Vous devez écrire la requête dans la syntaxe de la base de données source dans laquelle vous travaillez. Lorsque vous sélectionnez cette option, entrez une requête selon l'une des méthodes suivantes :|  
 ||Entrez le texte de la requête SQL dans le champ **Texte de la commande SQL** .|  
 ||Cliquez sur **Parcourir** pour charger la requête SQL à partir d'un fichier texte.|  
 ||Pour vérifier la syntaxe du texte de la requête, cliquez sur **Analyser** .|  
   
-### <a name="preview"></a>Preview  
+### <a name="preview"></a>PRÉVERSION  
  Cliquez sur **Aperçu** pour afficher les 200 premières lignes de données extraites de la table ou de la vue sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  

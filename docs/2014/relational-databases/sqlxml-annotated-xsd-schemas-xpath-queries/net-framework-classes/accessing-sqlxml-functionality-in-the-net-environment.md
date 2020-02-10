@@ -1,5 +1,5 @@
 ---
-title: Accès aux fonctionnalités SQLXML dans l’environnement .NET | Microsoft Docs
+title: Accès à la fonctionnalité SQLXML dans l’environnement .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012564"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Accès aux fonctionnalités SQLXML dans l'environnement .NET
   Cet exemple montre :  
   
--   Comment utiliser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Classes managées SQLXML (Microsoft.Data.SqlXml) pour accéder à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] environnement .NET Framework.  
+-   Comment utiliser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les classes managées SQLXML (Microsoft. Data. SQLXML) pour accéder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à Microsoft [!INCLUDE[msCoName](../../../includes/msconame-md.md)] dans l’environnement .NET Framework.  
   
 -   Comment les DiffGrams générés dans l'environnement .NET Framework peuvent appliquer les mises à jour des données aux tables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Dans cette application, une requête XPath est exécutée sur un schéma XSD. L’exécution de la requête XPath retourne un document XML qui se compose de données de contact (**FirstName**, **LastName**). L'application charge le document XML dans le dataset de l'environnement .NET Framework. Les données du dataset sont modifiées : le prénom du contact est changé en « Susan » pour le premier contact du dataset. Le DiffGram est généré à partir du dataset, puis la mise à jour spécifiée dans le DiffGram (modification du prénom de l'employé) est appliquée à la table Person.Contact.  
+ Dans cette application, une requête XPath est exécutée sur un schéma XSD. L’exécution de la requête XPath retourne un document XML constitué de données de contact (**FirstName**, **LastName**). L'application charge le document XML dans le dataset de l'environnement .NET Framework. Les données du dataset sont modifiées : le prénom du contact est changé en « Susan » pour le premier contact du dataset. Le DiffGram est généré à partir du dataset, puis la mise à jour spécifiée dans le DiffGram (modification du prénom de l'employé) est appliquée à la table Person.Contact.  
   
 > [!NOTE]  
 >  Dans le code, vous devez fournir le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la chaîne de connexion.  
@@ -70,7 +70,7 @@ class Test
 }  
 ```  
   
- **Pour tester l’exemple :**  
+ **Pour tester l'exemple :**  
   
  Pour tester cet exemple, le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework doit être installé sur votre ordinateur.  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483692"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Création automatique de code (Master Data Services)
@@ -31,9 +31,9 @@ ms.locfileid: "65483692"
  Lorsque vous entrez des valeurs d'attribut dans MDS, dans l'un des outils ou à l'aide du processus de site, vous pouvez laisser les valeurs d'attribut vides. Lorsque les règles d'entreprise sont appliquées, les valeurs seront incrémentées en fonction de la valeur existante la plus élevée. Par exemple, si votre règle est « Attribut par défaut avec une valeur générée qui commence à 1 et est incrémentée par 4 » et que la valeur courante la plus élevée pour l’attribut est 700, la valeur du membre suivant ajouté sera 704.  
   
 ## <a name="deleting-automatically-generated-values"></a>Suppression de valeurs générées automatiquement  
- Lorsqu'un administrateur active les valeurs générées automatiquement pour l'attribut Code, les utilisateurs peuvent supprimer par erreur un membre ayant une valeur Code qu'ils souhaitent réutiliser. Le message d’erreur « le code de membre est déjà utilisé par un membre qui a été supprimé » s’affichera. Il existe deux solutions possibles :  
+ Lorsqu'un administrateur active les valeurs générées automatiquement pour l'attribut Code, les utilisateurs peuvent supprimer par erreur un membre ayant une valeur Code qu'ils souhaitent réutiliser. Le message d’erreur « le code de membre est déjà utilisé par un membre qui a été supprimé » s’affiche. Il existe deux solutions possibles :  
   
--   Dans le **gestion des versions** zone fonctionnelle, un administrateur peut annuler la transaction s’est produite lorsque le membre a été supprimé. Toutefois, cela signifie que tous les attributs et l’appartenance aux hiérarchies et collections du membre précédent est restauré. Pour plus d’informations, consultez [inverser une Transaction &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
+-   Dans la zone fonctionnelle **gestion des versions** , un administrateur peut inverser la transaction qui s’est produite lors de la suppression du membre. Toutefois, cela signifie que tous les attributs et l’appartenance de l’ancien membre dans les hiérarchies et les collections sont restaurés. Pour plus d’informations, consultez [inverser une Transaction &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
 -   Un administrateur peut utiliser le processus de site pour supprimer définitivement le membre. Pour plus d’informations, consultez [désactiver ou supprimer des membres à l’aide du processus de site &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
@@ -41,14 +41,14 @@ ms.locfileid: "65483692"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Générez automatiquement les valeurs de l'attribut code.|[Générer automatiquement les valeurs de l’attribut Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|Générez automatiquement les valeurs des autres attributs.|[Générer automatiquement les valeurs des attributs autres que Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Générez automatiquement les valeurs de l'attribut code.|[Générer automatiquement les valeurs d’attribut de code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|Générez automatiquement les valeurs des autres attributs.|[Générez automatiquement des valeurs d’attribut autres que code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Vue d’ensemble de Master Data Services](master-data-services-overview-mds.md)  
+-   [Vue d'ensemble de Master Data Services](master-data-services-overview-mds.md)  
   
--   [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
 -   [Entités &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

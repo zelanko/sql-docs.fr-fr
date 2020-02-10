@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056687"
 ---
 # <a name="precedence-constraint-editor"></a>Éditeur de contrainte de précédence
@@ -26,10 +26,10 @@ ms.locfileid: "66056687"
   
 ## <a name="options"></a>Options  
  **Opération d’évaluation**  
- Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
+ Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations disponibles sont : **Contrainte**, **Expression**, **Expression et contrainte**et **Expression ou contrainte**.  
   
  **Valeur**  
- Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**.  
+ Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**.  
   
 > [!NOTE]  
 >  La ligne de contrainte de précédence est verte pour **Réussite**, mise en surbrillance pour **Échec**et bleue pour **À l’achèvement**.  
@@ -37,7 +37,7 @@ ms.locfileid: "66056687"
  **Expression**  
  Si vous utilisez les opérations **Expression**, **Expression et contrainte**ou **Expression ou contrainte**, tapez une expression ou lancez le Générateur d’expressions pour créer l’expression. L'expression doit prendre une valeur de type Boolean.  
   
- **Tester**  
+ **Test**  
  Validez l'expression.  
   
  **ET logique**  

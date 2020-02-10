@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination de traitement de dimension (Page Gestionnaire de connexions) | Microsoft Docs
+title: Éditeur de destination de traitement de dimension (page Gestionnaire de connexions) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059436"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Éditeur de destination de traitement de dimension (page Gestionnaire de connexions)
@@ -39,15 +39,15 @@ ms.locfileid: "66059436"
  **Méthode de traitement**  
  Sélectionnez la méthode de traitement à appliquer à la dimension sélectionnée dans la liste. La valeur par défaut de cette option est **Complète**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Ajouter (incrémentiel)**|Permet d'effectuer un traitement incrémentiel de la dimension.|  
 |**Complète**|Permet d'effectuer un traitement complet de la dimension.|  
-|**Update**|Permet d'effectuer un traitement de mise à jour de la dimension.|  
+|**Mise à jour**|Permet d'effectuer un traitement de mise à jour de la dimension.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de destination de traitement de dimension &#40;page Mappages&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [Éditeur de destination de traitement de dimension &#40;page Avancé&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Éditeur de destination de traitement de dimension &#40;page avancé&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

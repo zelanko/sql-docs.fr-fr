@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) paramètres | Microsoft Docs
+title: Paramètres Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892242"
 ---
 # <a name="integration-services-ssis-parameters"></a>Paramètres Integration Services (SSIS)
-  Les paramètres[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) vous permettent d'affecter des valeurs aux propriétés dans des packages au moment de l'exécution du package. Vous pouvez créer des *paramètres de projet* au niveau du projet et des *paramètres de package* au niveau du package. Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package.  
+  Les paramètres[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) vous permettent d'affecter des valeurs aux propriétés dans des packages au moment de l'exécution du package. Vous pouvez créer des *paramètres de projet* au niveau du projet et des paramètres de *package* au niveau du package. Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package.  
   
  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] vous créez, modifiez ou supprimez les paramètres d'un projet à l'aide de la fenêtre **Project.params** . Vous créez, modifiez et supprimez les paramètres d'un package à l'aide de l'onglet **Paramètres** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Vous associez un nouveau paramètre ou un paramètre existant à une propriété de tâche à l'aide de la boîte de dialogue **Paramétrer** . Pour plus d'informations sur l'utilisation de la fenêtre **Project.params** et l'onglet **Paramètres** , consultez [Create Parameters](create-parameters.md). Pour plus d'informations sur la boîte de dialogue **Paramétrer** , consultez [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62892242"
   
  Utilisez un paramètre unique pour affecter une valeur à plusieurs propriétés des packages. Il n'est possible d'affecter une valeur à une propriété de package unique qu'à partir d'un paramètre unique.  
   
-###  <a name="executions"></a> Exécutions et valeurs de paramètres  
+###  <a name="executions"></a>Exécutions et valeurs de paramètres  
  L' *exécution* est un objet qui représente une instance unique de l'exécution du package. Lorsque vous créez une exécution, vous spécifiez tous les détails nécessaires pour exécuter un package, tel que les valeurs de paramètres d'exécution. Vous pouvez également modifier les valeurs de paramètres pour les exécutions existantes.  
   
  Lorsque vous définissez de manière explicite une valeur de paramètre d'exécution, cette valeur s'applique uniquement à cette instance d'exécution particulière. La valeur d'exécution est utilisée à la place d'une valeur de serveur ou d'une valeur de conception. Si vous ne définissez pas de valeur d'exécution de manière explicite, et qu'une valeur de serveur a été spécifiée, la valeur de serveur est utilisée.  
@@ -68,28 +68,28 @@ ms.locfileid: "62892242"
 #### <a name="determining-execution-parameter-values"></a>Détermination des valeurs de paramètre d'exécution  
  La procédure stockée et les vues Transact-SQL suivantes peuvent être utilisées pour afficher et définir des valeurs de paramètre.  
   
- [catalog.execution_parameter_values &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database) (vue)  
+ [&#41;de la base de données Catalog. execution_parameter_values &#40;SSISDB ](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(affichage)  
  Affiche les valeurs de paramètre effectives qui seront utilisées par une exécution spécifique  
   
- [catalog.get_parameter_values &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (procédure stockée)  
+ [Catalog. get_parameter_values &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (procédure stockée)  
  Résout et affiche les valeurs effectives du package et de la référence environnementale spécifiés  
   
- [catalog.object_parameters &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (vue)  
+ [&#41;de la base de données Catalog. object_parameters &#40;SSISDB](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (affichage)  
  Affiche les paramètres et les propriétés de tous les packages et les projets dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , y compris les valeurs de conception par défaut et les valeurs de serveur par défaut.  
   
  [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  Définit la valeur d'un paramètre pour une instance d'exécution dans le catalogue [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Vous pouvez également utiliser la boîte de dialogue **Exécuter le package** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour modifiez la valeur de paramètre. Pour plus d'informations, consultez [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
+ Vous pouvez également utiliser la boîte de dialogue **Exécuter le package** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour modifiez la valeur de paramètre. Pour plus d’informations, consultez [boîte de dialogue Exécuter le package](../../2014/integration-services/execute-package-dialog-box.md).  
   
- Vous pouvez également utiliser l'option `/Parameter` dtexec pour modifier une valeur de paramètre. Pour plus d’informations, voir [dtexec Utility](packages/dtexec-utility.md).  
+ Vous pouvez également utiliser l'option `/Parameter` dtexec pour modifier une valeur de paramètre. Pour plus d’informations, consultez l' [utilitaire dtexec](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Validation des paramètres  
  Si les valeurs de paramètre ne peuvent pas être résolues, l'exécution du package correspondante échoue. Pour éviter les échecs, vous pouvez valider les projets et les packages à l'aide de la boîte de dialogue **Valider** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La validation vous permet de vérifier que tous les paramètres disposent des valeurs nécessaires ou qu'ils peuvent résoudre les valeurs requises avec des références environnementales spécifiques. La validation vérifie également d'autres problèmes courants liés aux packages.  
   
  Pour plus d'informations, consultez [Validate Dialog Box](catalog/validate-dialog-box.md).  
   
-### <a name="parameter-example"></a>Exemples de paramètre  
+### <a name="parameter-example"></a>Exemple de paramètres  
  Cet exemple illustre un paramètre nommé **pkgOptions** utilisé pour spécifier les options du package dans lequel il réside.  
   
  Au moment de la conception, lorsque le paramètre a été créé dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la valeur par défaut 1 a été affectée au paramètre. Cette valeur par défaut est appelée « valeur de conception par défaut ». Si le projet a été déployé dans le catalogue SSISDB et qu'aucune autre valeur n'a été affectée à ce paramètre, la propriété de package correspondant au paramètre **pkgOptions** se verrait affecter la valeur 1 pendant l'exécution du package. La valeur de conception par défaut est conservée avec le projet pendant tout son cycle de vie.  
@@ -102,6 +102,6 @@ ms.locfileid: "62892242"
  [Définir des valeurs de paramètres après le déploiement du projet](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), sur mattmasson.com.  
+ Entrée de blog, [Astuce rapide SSIS : Paramètres requis](https://go.microsoft.com/fwlink/?LinkId=239781), sur le site mattmasson.com.  
   
   

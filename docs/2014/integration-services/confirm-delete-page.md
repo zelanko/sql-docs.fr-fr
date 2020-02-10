@@ -1,5 +1,5 @@
 ---
-title: Page confirmer la suppression | Microsoft Docs
+title: Confirmer la suppression de la page | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd8d4122dca96d49fa3351375f545d32273646c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060483"
 ---
 # <a name="confirm-delete-page"></a>Page Confirmer la suppression.
@@ -32,7 +32,7 @@ ms.locfileid: "66060483"
  **Demander confirmation lors de la suppression des connexions.**  
  Afficher un message de confirmation lorsque vous supprimez des connexions.  
   
- **Demander confirmation lors de la suppression des variables.**  
+ **Demander confirmation lors de la suppression de variables.**  
  Afficher un message de confirmation lorsque vous supprimez des variables.  
   
   

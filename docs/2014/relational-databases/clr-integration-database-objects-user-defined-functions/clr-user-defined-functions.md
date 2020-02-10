@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874492"
 ---
 # <a name="clr-user-defined-functions"></a>Fonctions CLR définies par l'utilisateur
@@ -36,7 +36,7 @@ ms.locfileid: "62874492"
  [Fonctions table CLR](clr-table-valued-functions.md)  
  Explique comment implémenter et utiliser les fonctions table, ainsi que les différences entre les fonctions table [!INCLUDE[tsql](../../includes/tsql-md.md)] et les fonctions table du CLR.  
   
- [Agrégats CLR définis par l’utilisateur](clr-user-defined-aggregates.md)  
+ [Agrégats CLR définis par l'utilisateur](clr-user-defined-aggregates.md)  
  Décrit comment implémenter et utiliser les agrégats définis par l'utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  

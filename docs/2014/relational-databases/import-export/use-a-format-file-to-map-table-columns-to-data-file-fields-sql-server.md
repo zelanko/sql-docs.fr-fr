@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011743"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utiliser un fichier de format pour mapper les colonnes d'une table aux champs d'un fichier de données (SQL Server)
   Il se peut que les champs d'un fichier de données ne soient pas dans le même ordre que les colonnes correspondantes présentes dans la table. Cette rubrique présente les fichiers de format XML et non-XML ayant été modifiés de sorte à accepter un fichier de données dont les champs sont organisés dans un ordre différent de celui des colonnes de la table correspondante. Le fichier de format modifié permet de mapper les champs de données sur les colonnes correspondantes de la table.  
   
 > [!NOTE]  
->  Vous pouvez utiliser un fichier de format XML ou non XML pour procéder à l’importation en bloc d’un fichier de données dans la table à l’aide d’une commande **bcp**, d’une instruction BULK INSERT ou d’une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...). Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Un fichier de format non-XML ou un fichier de format XML peut être utilisé pour importer en bloc un fichier de données dans la table à l’aide d’une commande **BCP** , d’une instruction BULK INSERT ou d’une instruction INSERT... SELECT * FROM OPENROWSET (BULK...). Pour plus d’informations, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Exemples de table et de fichier de données  
  Les fichiers de format modifiés pris en exemple dans cette rubrique sont fondés sur la table et le fichier de données suivants.  
@@ -124,7 +124,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="example"></a>Exemple  
  L'exemple suivant utilise le fournisseur d'ensemble de lignes en bloc `OPENROWSET` pour procéder à l'importation du fichier de données `myTestOrder-c.txt` vers l'exemple de table `myTestOrder` à l'aide du fichier de format XML `myTestOrder.xml` . L'instruction `INSERT... SELECT` spécifie la liste de colonnes de la liste de sélection.  
   
- Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez le code suivant :  
+ Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
 ```  
 USE AdventureWorks2012;  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Utilisez un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

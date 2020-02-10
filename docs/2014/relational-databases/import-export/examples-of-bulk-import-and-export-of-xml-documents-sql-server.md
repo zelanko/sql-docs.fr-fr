@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011972"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
     
-##  <a name="top"></a> Vous pouvez en bloc à importer des documents XML dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données ou en bloc les exporter à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données. Cette rubrique fournit des exemples de chaque.  
+##  <a name="top"></a>Vous pouvez importer en bloc des documents XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une base de données ou les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exporter en bloc à partir d’une base de données. Cette rubrique fournit des exemples de chaque.  
   
  Pour importer des données en bloc à partir d'un fichier de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez utiliser les méthodes suivantes :  
   
@@ -39,22 +39,22 @@ ms.locfileid: "66011972"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Pour plus d’informations, consultez [importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) et [importer en bloc des données par l’utilisation de BULK INSERT ou OPENROWSET&#40;en bloc... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Pour plus d’informations, consultez [Importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) et [importer des données en bloc à l’aide de BULK INSERT ou d’OPENROWSET&#40;Bulk... ](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)&#41; &#40;SQL Server&#41;.  
   
 ## <a name="examples"></a>Exemples  
  Voici les exemples :  
   
--   A. [L’importation de données XML comme un flux d’octets binaires en bloc](#binary_byte_stream)  
+-   R. [Importation en bloc de données XML sous forme de flux d’octets binaires](#binary_byte_stream)  
   
--   B. [L’importation de données XML dans une ligne existante en bloc](#existing_row)  
+-   B. [Importation en bloc de données XML dans une ligne existante](#existing_row)  
   
--   C. [Importation des données XML à partir d’un fichier qui contient une DTD en bloc](#file_contains_dtd)  
+-   C. [Importation en bloc de données XML à partir d’un fichier contenant une DTD](#file_contains_dtd)  
   
--   D. [Spécification de la marque de fin de champ explicitement à l’aide d’un fichier de format](#field_terminator_in_format_file)  
+-   D. [Spécification explicite de la marque de fin de champ à l’aide d’un fichier de format](#field_terminator_in_format_file)  
   
--   E. [Exportation des données XML en bloc](#bulk_export_xml_data)  
+-   E. [Exportation en bloc de données XML](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a> A. Importation en bloc de données XML sous forme de flux d'octets binaires  
+###  <a name="binary_byte_stream"></a>Un. Importation en bloc de données XML sous forme de flux d'octets binaires  
  Si vous importez en bloc des données XML à partir d’un fichier contenant la déclaration d’encodage à appliquer, spécifiez l’option SINGLE_BLOB dans la clause OPENROWSET(BULK...). Cette option permet à l'analyseur XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'importer les données conformément au schéma d'encodage spécifié dans la déclaration XML.  
   
 #### <a name="sample-table"></a>Exemple de table  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   faire coïncider, ou corriger, les paramètres de classement avec un schéma d'encodage XML non-Unicode.  
   
- [&#91;Haut&#93;](#top)  
+ [&#91;&#93;supérieure](#top)  
   
-###  <a name="existing_row"></a> B. Importation en bloc de données XML dans une ligne existante  
+###  <a name="existing_row"></a>P. Importation en bloc de données XML dans une ligne existante  
  Cet exemple utilise le fournisseur d'ensemble de lignes en bloc `OPENROWSET` pour ajouter une instance XML à une ligne ou des lignes existantes dans la table d'exemple `T`.  
   
 > [!NOTE]  
@@ -134,9 +134,9 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;Haut&#93;](#top)  
+ [&#91;&#93;supérieure](#top)  
   
-###  <a name="file_contains_dtd"></a> C. Importation en bloc de données XML à partir d'un fichier contenant une DTD  
+###  <a name="file_contains_dtd"></a>Secteur. Importation en bloc de données XML à partir d'un fichier contenant une DTD  
   
 > [!IMPORTANT]  
 >  Il est recommandé de ne pas activer la prise en charge des définitions de type de document (DTD) si celle-ci n'est pas nécessaire à votre environnement XML. En effet, son activation augmente la zone de surface attaquable de votre serveur qui peut se retrouver exposé à une attaque de déni de service. Si vous devez activer la prise en charge DTD, vous pouvez réduire ce risque lié à la sécurité en traitant uniquement des documents XML approuvés.  
@@ -180,9 +180,9 @@ INSERT T1
   
  Une fois l'instruction `INSERT` exécutée, la DTD est supprimée du code XML, puis stockée dans la table `T1` .  
   
- [&#91;Haut&#93;](#top)  
+ [&#91;&#93;supérieure](#top)  
   
-###  <a name="field_terminator_in_format_file"></a> D. Spécification explicite de la marque de fin de champ à l'aide d'un fichier de format  
+###  <a name="field_terminator_in_format_file"></a>E. Spécification explicite de la marque de fin de champ à l'aide d'un fichier de format  
  L'exemple suivant montre l'importation en bloc du document XML suivant, `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Fichier de données d'exemple  
@@ -212,7 +212,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>Exemple de table  
- Durant une importation ou une exportation en bloc d’un document XML, vous devez utiliser une [marque de fin de champ](specify-field-and-row-terminators-sql-server.md) qu’il est impossible de trouver dans les documents ; par exemple, une série de quatre valeurs Null (`\0`) suivie de la lettre `z`: `\0\0\0\0z`.  
+ Lorsque vous importez ou exportez en bloc un document XML, vous devez utiliser une [marque de fin de champ](specify-field-and-row-terminators-sql-server.md) qui ne peut pas apparaître dans l’un des documents. par exemple, une série de quatre valeurs null (`\0`) suivie de la lettre `z`: `\0\0\0\0z`.  
   
  Cet exemple illustre l'utilisation de cette marque de fin de champ pour la table d'exemple `xTable` . Pour créer cette table d'exemple, utilisez les instructions `CREATE TABLE` suivantes :  
   
@@ -243,9 +243,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;Haut&#93;](#top)  
+ [&#91;&#93;supérieure](#top)  
   
-###  <a name="bulk_export_xml_data"></a> E. Exportation en bloc de données XML  
+###  <a name="bulk_export_xml_data"></a>Envoyer. Exportation en bloc de données XML  
  L'exemple suivant utilise la commande `bcp` pour exporter en bloc des données XML à partir de la table créée dans l'exemple précédent, à l'aide du même fichier de format XML. Dans la commande `bcp` suivante, `<server_name>` et `<instance_name>` représentent des espaces réservés qui doivent être remplacés par les valeurs appropriées :  
   
 ```  
@@ -253,13 +253,15 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'enregistre pas l'encodage XML lorsque les données XML sont conservées dans la base de données. Par conséquent, l'encodage original des champs XML n'est pas disponible lorsque les données XML sont exportées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l’encodage UTF-16 durant l’exportation de données XML.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'enregistre pas l'encodage XML lorsque les données XML sont conservées dans la base de données. Par conséquent, l'encodage original des champs XML n'est pas disponible lorsque les données XML sont exportées. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l’encodage UTF-16 durant l’exportation de données XML.  
   
- [&#91;Haut&#93;](#top)  
+ [&#91;&#93;supérieure](#top)  
   
 ## <a name="see-also"></a>Voir aussi  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Clause SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
+ [Clause SELECT &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-clause-transact-sql)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   

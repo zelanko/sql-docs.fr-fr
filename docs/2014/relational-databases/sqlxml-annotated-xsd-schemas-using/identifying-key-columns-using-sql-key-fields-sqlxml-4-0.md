@@ -1,5 +1,5 @@
 ---
-title: 'Identification des colonnes de clé à l’aide de SQL : key-fields (SQLXML 4.0) | Microsoft Docs'
+title: 'Identification des colonnes clés à l’aide de SQL : key-fields (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013822"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
@@ -36,19 +36,19 @@ ms.locfileid: "66013822"
   
  La valeur de `sql:key-fields` identifie le ou les colonnes qui identifient de manière unique les lignes dans la relation. Si plusieurs colonnes sont requises pour identifier une ligne de manière unique, les valeurs de colonnes sont délimitées par des espaces.  
   
- Vous devez utiliser le `sql:key-fields` annotation lorsqu’un élément contient un  **\<SQL : Relationship >** qui est défini entre l’élément et un élément enfant, mais ne fournit pas la clé primaire de la table qui est spécifiée dans l’élément parent.  
+ Vous devez utiliser l' `sql:key-fields` annotation lorsqu’un élément contient une ** \<>SQL : Relationship** qui est définie entre l’élément et un élément enfant, mais ne fournit pas la clé primaire de la table spécifiée dans l’élément parent.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Production de l’imbrication appropriée lorsque \<SQL : Relationship > ne fournit pas suffisamment d’informations  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Production de l’imbrication appropriée lorsque \<SQL : Relationship> ne fournit pas d’informations suffisantes  
  Cet exemple montre où `sql:key-fields` doit être spécifié.  
   
- Prenons le schéma suivant : Le schéma spécifie une hiérarchie entre les  **\<ordre >** et  **\<client >** éléments dans lesquels la  **\<ordre >** élément est le parent et le  **\<client >** élément est un enfant.  
+ Prenons le schéma suivant : Le schéma spécifie une hiérarchie entre les ** \<éléments Order>** et ** \<Customer>** dans lequel l' ** \<élément Order>** est le parent et l' ** \<élément Customer>** est un enfant.  
   
- Le  **\<SQL : Relationship >** balise est utilisée pour spécifier la relation parent-enfant. Elle identifie CustomerID dans la table Sales.SalesOrderHeader comme clé parente qui fait référence à la clé enfant CustomerID dans la table Sales.Customer. Les informations fournies dans  **\<SQL : Relationship >** n’est pas suffisant pour identifier de manière unique les lignes dans la table parente (Sales.SalesOrderHeader). Par conséquent, sans l'annotation `sql:key-fields`, la hiérarchie générée est inexacte.  
+ La balise ** \<SQL : Relationship>** est utilisée pour spécifier la relation parent-enfant. Elle identifie CustomerID dans la table Sales.SalesOrderHeader comme clé parente qui fait référence à la clé enfant CustomerID dans la table Sales.Customer. Les informations fournies dans ** \<SQL : Relationship>** ne sont pas suffisantes pour identifier de manière unique les lignes dans la table parente (Sales. SalesOrderHeader). Par conséquent, sans l'annotation `sql:key-fields`, la hiérarchie générée est inexacte.  
   
- Avec `sql:key-fields` spécifié sur  **\<ordre >** , l’annotation identifie de façon unique les lignes dans le parent (table Sales.SalesOrderHeader) et ses éléments enfants apparaissent sous son parent.  
+ Avec `sql:key-fields` l' ** \<>de commande **spécifié, l’annotation identifie de façon unique les lignes dans la table parente (Sales. SalesOrderHeader) et ses éléments enfants apparaissent sous son parent.  
   
  Voici le schéma :  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66013822"
   
 1.  Copiez le code de schéma ci-dessus et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields1.xml.  
   
-2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields1T.xml dans le même répertoire où vous avez enregistré KeyFields1.xml. La requête XPath dans le modèle retourne tous les  **\<ordre >** éléments avec un CustomerID inférieur à 3.  
+2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields1T.xml dans le même répertoire où vous avez enregistré KeyFields1.xml. La requête XPath dans le modèle retourne tous les ** \<éléments Order>** avec un CustomerID inférieur à 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -105,7 +105,7 @@ ms.locfileid: "66013822"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le jeu de résultats partiel :  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66013822"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Spécification de sql:key-fields afin de produire l'imbrication correcte dans le résultat  
- Dans le schéma suivant, il n’existe aucune hiérarchie spécifiée à l’aide de  **\<SQL : Relationship >** . Le schéma requiert encore la spécification de l'annotation `sql:key-fields` afin d'identifier de manière unique les employés dans la table HumanResources.Employee.  
+ Dans le schéma suivant, aucune hiérarchie n’est spécifiée à l’aide ** \<de SQL : Relationship>**. Le schéma requiert encore la spécification de l'annotation `sql:key-fields` afin d'identifier de manière unique les employés dans la table HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -152,7 +152,7 @@ ms.locfileid: "66013822"
   
 1.  Copiez le code de schéma ci-dessus et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields2.xml.  
   
-2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields2T.xml dans le même répertoire où vous avez enregistré KeyFields2.xml. La requête XPath dans le modèle retourne tous les  **\<HumanResources.Employee >** éléments :  
+2.  Copiez le modèle suivant et collez-le dans un fichier texte. Enregistrez le fichier en tant que KeyFields2T.xml dans le même répertoire où vous avez enregistré KeyFields2.xml. La requête XPath dans le modèle retourne tous les ** \<éléments HumanResources. Employee>** :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -170,9 +170,9 @@ ms.locfileid: "66013822"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109430"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Boîte de dialogue Propriétés du dataset, Champs (Générateur de rapports)
@@ -31,10 +31,10 @@ ms.locfileid: "66109430"
  **Supprimer**  
  Supprimez le champ sélectionné du dataset.  
   
- **Nom de champ**  
+ **Nom du champ**  
  Tapez le nom du champ. Ce champ doit être unique dans le dataset. Pour chaque champ existant dans le dataset, le nom est prérempli.  
   
- **Champ Source**  
+ **Champ source**  
  Entrez une valeur pour le champ.  
   
  Pour un champ calculé, la source du champ doit être le nom d'un champ existant récupéré par la requête de dataset ou une expression que vous créez. Par exemple, pour créer un champ qui représente 10 fois la valeur du champ de requête Sales, utilisez l'expression `=10 * Fields!Sales.Value`.  
@@ -47,11 +47,11 @@ ms.locfileid: "66109430"
 ## <a name="see-also"></a>Voir aussi  
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Boîte de dialogue Propriétés de DataSet, Options &#40;Générateur de rapports&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
- [Boîte de dialogue de propriétés de DataSet, filtres &#40;Générateur de rapports&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [Boîte de dialogue Propriétés de DataSet, paramètres &#40;Générateur de rapports&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [Boîte de dialogue Propriétés de DataSet, requête &#40;Générateur de rapports&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Boîte de dialogue Propriétés du DataSet, options &#40;Générateur de rapports&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ [Boîte de dialogue Propriétés du DataSet, filtres &#40;Générateur de rapports&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
+ [Boîte de dialogue Propriétés du DataSet, paramètres &#40;Générateur de rapports&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ [Boîte de dialogue Propriétés du DataSet, requête &#40;Générateur de rapports&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

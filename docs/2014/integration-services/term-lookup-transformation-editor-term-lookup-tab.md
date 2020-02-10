@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de recherche de terme (onglet recherche de terme) | Microsoft Docs
+title: Éditeur de transformation de recherche de terme (onglet recherche de terme) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2939d160773d60944a2e8a786e5495cea366edb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055131"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Éditeur de transformation de recherche de terme (onglet Recherche de terme)
@@ -33,7 +33,7 @@ ms.locfileid: "66055131"
  **Colonnes de référence disponibles**  
  Affiche les colonnes disponibles dans la table de référence. Choisissez la colonne qui contient la liste de termes correspondants.  
   
- **Colonne SQL directe**  
+ **Colonne directe**  
  Permet de sélectionner des colonnes dans la liste des colonnes d'entrée disponibles. Vos sélections se reflètent dans les sélections des cases à cocher de la table **Colonnes d'entrée disponibles** .  
   
  **Alias de colonne de sortie**  
@@ -44,7 +44,7 @@ ms.locfileid: "66055131"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation de recherche de terme &#40;onglet Table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [Éditeur de transformation de recherche de terme &#40;onglet de la table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [Éditeur de transformation de recherche de terme &#40;onglet Avancé&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Transformation d'extraction de terme](data-flow/transformations/term-extraction-transformation.md)  
   

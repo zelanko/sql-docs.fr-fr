@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011821"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l'aide de bcp (SQL Server)
@@ -41,16 +41,16 @@ ms.locfileid: "66011821"
   
     |type de stockage de fichier|Entrer sur la ligne de commande|  
     |-----------------------|-----------------------------|  
-    |`char` <sup>1</sup>|`c`[`har`]|  
+    |`char`<sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text` <sup>2</sup>|`T`[`ext`]|  
+    |`text`<sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image` <sup>2</sup>|`I`[`mage`]|  
-    |`datetime`|**d[ate]**|  
+    |`image`<sup>2</sup>|`I`[`mage`]|  
+    |`datetime`|**d [ATE]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
     |`date`|`de`|  
@@ -58,39 +58,39 @@ ms.locfileid: "66011821"
     |`datetimeoffset`|`do`|  
     |`decimal`|`n`|  
     |`numeric`|`n`|  
-    |`float`|**f[loat]**|  
+    |`float`|**f [Loat]**|  
     |`real`|`r`|  
-    |`Int`|**i[nt]**|  
+    |`Int`|**i [nt]**|  
     |`bigint`|`B[igint]`|  
-    |`smallint`|**s[mallint]**|  
-    |`tinyint`|**t[inyint]**|  
-    |`money`|**m[oney]**|  
+    |`smallint`|**s [mallint]**|  
+    |`tinyint`|**t [inyint]**|  
+    |`money`|**m [Oney]**|  
     |`smallmoney`|`M`|  
     |`bit`|`b[it]`|  
     |`uniqueidentifier`|`u`|  
     |`sql_variant`|`V[ariant]`|  
     |`timestamp`|`x`|  
-    |`UDT` (type de données défini par l'utilisateur)|`U`|  
+    |`UDT`(type de données défini par l’utilisateur)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> l’interaction de la longueur de champ, la longueur du préfixe et les terminateurs détermine la quantité d’espace de stockage est alloué dans un fichier de données pour des données qui sont exportés en tant que le `char` type de stockage de fichier.  
+     <sup>1</sup> l’interaction entre la longueur de champ, la longueur de préfixe et les terminateurs détermine la quantité d’espace de stockage alloué dans un fichier de données pour les données non `char` -caractères exportées en tant que type de stockage de fichier.  
   
-     <sup>2</sup> le `ntext`, `text`, et `image` types de données seront supprimées dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez `nvarchar(max)`, `varchar(max)`, et `varbinary(max)` à la place.  
+     <sup>2</sup> les `ntext`types `text`de données `image` , et seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez `nvarchar(max)`, `varchar(max)`et `varbinary(max)` à la place.  
   
 ## <a name="native-file-storage-types"></a>Types de stockage de fichier natifs  
  Chaque type de stockage de fichier natif est enregistré dans le fichier de format comme un type de données du fichier hôte correspondant.  
   
 |type de stockage de fichier|Type de données du fichier hôte|  
 |-----------------------|-------------------------|  
-|`char` <sup>1</sup>|SQLCHAR|  
+|`char`<sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text` <sup>2</sup>|SQLCHAR|  
-|`ntext` <sup>2</sup>|SQLNCHAR|  
+|`text`<sup>2</sup>|SQLCHAR|  
+|`ntext`<sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image` <sup>2</sup>|SQLBINARY|  
+|`image`<sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,16 +109,16 @@ ms.locfileid: "66011821"
 |`timestamp`|SQLBINARY|  
 |UDT (type de données défini par l'utilisateur)|SQLUDT|  
   
- <sup>1</sup> des fichiers de données qui sont stockés dans le caractère de format utilisent `char` comme type de stockage de fichier. Par conséquent, pour les fichiers de données de type caractère, SQLCHAR est le seul type de données qui apparaît dans un fichier de format.  
+ <sup>1</sup> les fichiers de données qui sont stockés au format `char` caractère utilisent comme type de stockage de fichier. Par conséquent, pour les fichiers de données de type caractère, SQLCHAR est le seul type de données qui apparaît dans un fichier de format.  
   
- <sup>2</sup> vous en masse Impossible importer des données dans `text`, `ntext`, et `image` colonnes qui ont des valeurs par défaut.  
+ <sup>2</sup> vous ne pouvez pas importer des `text`données `ntext`en bloc `image` dans des colonnes, et qui ont des valeurs par défaut.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Observations supplémentaires concernant les types de stockage de fichier  
  Lorsque vous exportez des données en bloc à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données :  
   
 -   Vous pouvez toujours spécifier `char` comme type de stockage de fichier.  
   
--   Si vous entrez un type de stockage de fichier qui représente une conversion implicite non valide, **bcp** échoue ; par exemple, bien que vous puissiez spécifier `int` pour `smallint` données, si vous spécifiez `smallint` pour `int` données, erreurs de dépassement se produisent.  
+-   Si vous entrez un type de stockage de fichier qui représente une conversion implicite non valide, **BCP** échoue. par exemple, bien que vous puissiez `int` spécifier `smallint` pour des données, si `smallint` vous `int` spécifiez pour des données, des erreurs de dépassement de capacité se produisent.  
   
 -   Lorsque des types de données autres que des caractères tels que `float`, `money`, `datetime` ou `int` sont stockés avec leurs types de base de données, les données sont écrites dans le fichier de données au format natif de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -128,8 +128,8 @@ ms.locfileid: "66011821"
 ## <a name="see-also"></a>Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Spécifier une longueur de préfixe dans des fichiers de données à l’aide de bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+ [Spécifiez la longueur du champ à l’aide de BCP &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Spécifiez une longueur de préfixe dans les fichiers de données à l’aide de &#40;BCP SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

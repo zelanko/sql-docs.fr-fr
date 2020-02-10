@@ -1,5 +1,5 @@
 ---
-title: La mise à niveau les Packages (Assistant Mise à niveau packages SSIS) | Microsoft Docs
+title: Mise à niveau des packages (Assistant Mise à niveau de packages SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054735"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Mise à niveau des packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Mise à niveau des packages** pour afficher la progression de la mise à niveau de packages et pour interrompre le processus de mise à niveau. L'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] met à niveau, un par un, les packages sélectionnés.  
   
- **Pour afficher les packages qui ont été enregistrés dans une base de données SQL Server ou dans le magasin de packages de mise à niveau**  
+ **Pour afficher les packages mis à niveau qui ont été enregistrés dans une base de données SQL Server ou dans le magasin de packages**  
   
 -   Dans l'Explorateur d'objets de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], connectez-vous à l'instance locale d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puis développez le nœud **Packages stockés** pour voir les packages mis à niveau.  
   
- **Pour afficher les packages mis à niveau qui ont été mis à niveau à partir de SQL Server Data Tools**  
+ **Pour afficher les packages mis à niveau à partir des outils de données SQL Server**  
   
 -   Dans l'Explorateur de solutions de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , puis développez le nœud **Packages SSIS** pour voir les packages mis à niveau.  
   
 ## <a name="options"></a>Options  
- **Volet Message**  
+ **Volet de message**  
  Affiche des messages de progression et des informations de résumé pendant le processus de mise à niveau.  
   
  **Action**  
@@ -43,10 +43,10 @@ ms.locfileid: "66054735"
  **Message**  
  Permet d'afficher les messages d'erreur générés par chaque action.  
   
- **Arrêter**  
+ **Stop**  
  Permet d'arrêter la mise à niveau de packages.  
   
- **Rapport**  
+ **Report**  
  Sélectionnez ce que vous voulez faire avec le rapport qui contient les résultats de la mise à niveau de packages :  
   
 -   Afficher le rapport en ligne.  

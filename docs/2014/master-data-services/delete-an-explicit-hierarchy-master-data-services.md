@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 048d0c4bc88f28274dc7efd686ad075242e926ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483092"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Supprimer une hiérarchie explicite (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483092"
 > [!WARNING]  
 >  Lorsque vous supprimez une hiérarchie explicite, tous les membres consolidés de la hiérarchie sont également supprimés. Si vous supprimez toutes les hiérarchies explicites d'une entité, toutes les collections de l'entité sont également supprimées et l'entité n'est plus activée pour les hiérarchies explicites et les collections.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -45,9 +45,9 @@ ms.locfileid: "65483092"
   
 5.  Cliquez sur **Modifier l'entité sélectionnée**.  
   
-6.  Sur le **modifier l’entité** page, dans le **hiérarchies explicites** volet, cliquez sur la hiérarchie explicite à supprimer.  
+6.  Dans la page **modifier l’entité** , dans le volet **hiérarchies explicites** , cliquez sur la hiérarchie explicite à supprimer.  
   
-7.  Cliquez sur **supprimer la hiérarchie sélectionnée**.  
+7.  Cliquez sur **Supprimer la hiérarchie sélectionnée**.  
   
 8.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

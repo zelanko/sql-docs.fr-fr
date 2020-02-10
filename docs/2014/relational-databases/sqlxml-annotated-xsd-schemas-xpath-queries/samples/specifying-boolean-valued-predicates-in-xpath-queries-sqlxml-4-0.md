@@ -1,5 +1,5 @@
 ---
-title: Spécification de prédicats à valeurs booléennes dans des requêtes XPath (SQLXML 4.0) | Microsoft Docs
+title: Spécification de prédicats de valeurs booléennes dans des requêtes XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012461"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Spécification de prédicats booléens dans les requêtes XPath (SQLXML 4.0)
-  Les exemples suivants montrent comment les prédicats booléens sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants montrent comment les prédicats booléens sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-specify-multiple-predicates"></a>A. Spécifier plusieurs prédicats  
+### <a name="a-specify-multiple-predicates"></a>R. Spécifier plusieurs prédicats  
  La requête XPath suivante utilise plusieurs prédicats pour rechercher les informations de commande d'un ID de commande et d'un ID de client donnés :  
   
 ```  
@@ -45,7 +45,7 @@ ms.locfileid: "66012461"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (BooleanValuedPredicatesA.xml) et enregistrez-le dans le même répertoire que SampleSchema1.xml.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66012461"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
      Voici le résultat :  
   
@@ -89,13 +89,13 @@ ms.locfileid: "66012461"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Spécifier les prédicats consécutifs et imbriqués  
- La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui ont les deux un **SalesPersonID** attribut avec la valeur 277 et un **TerritoryID**attribut avec une valeur de 3 :  
+ La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les éléments ** \<client>** enfants du nœud de contexte qui ont à la fois un attribut **SalesPersonID** avec la valeur 277 et un attribut **TerritoryID** avec une valeur de 3 :  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- La requête retourne les  **\<client >** les éléments qui satisfont les conditions spécifiées dans les prédicats.  
+ La requête retourne le ** \<client>** éléments qui répondent aux deux conditions spécifiées dans les prédicats.  
   
  Il est possible de spécifier un raccourci vers l'axe `attribute` (@), et comme l'axe `child` est la valeur par défaut, il peut être absent de la requête :  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66012461"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui incluent  **\<ordre >** éléments enfants avec au moins un  **\<Ordre >** élément qui possède un **SalesPersonID** attribut la valeur 2.  
+ La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les ** \<éléments enfants>client** du nœud de contexte qui incluent ** \<l’ordre>** éléments enfants avec au moins une ** \<commande>** élément ayant une valeur d’attribut **SalesPersonID** égale à 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -111,7 +111,7 @@ ms.locfileid: "66012461"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (nestedSuccessive.xml) et enregistrez-le dans le même répertoire que SampleSchema1.xml.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66012461"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Les éléments suivants sont un résultat partiel :  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66012461"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Spécifier un prédicat de niveau supérieur  
- La requête suivante renvoie le  **\<client >** nœuds d’élément enfant du nœud de contexte qui ont  **\<ordre >** éléments enfants. La requête teste le chemin d'accès de l'emplacement comme prédicat de niveau supérieur :  
+ La requête suivante retourne le ** \<client>** nœuds d’élément enfant du nœud de contexte qui ont ** \<l’ordre>** éléments enfants. La requête teste le chemin d'accès de l'emplacement comme prédicat de niveau supérieur :  
   
 ```  
 /child::Customer[child::Order]  
@@ -180,7 +180,7 @@ ms.locfileid: "66012461"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
-1.  Copie le [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
+1.  Copiez l' [exemple de code de schéma](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) et collez-le dans un fichier texte. Enregistrez ce fichier sous le nom SampleSchema1.xml.  
   
 2.  Créez le modèle suivant (TopLevelPredicate.xml) et enregistrez-le dans le même répertoire que SampleSchema1.xml.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "66012461"
   
 3.  Créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) pour exécuter le modèle.  
   
-     Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Pour plus d’informations, consultez [utilisation d’ADO pour exécuter des requêtes SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Voici le résultat partiel :  
   

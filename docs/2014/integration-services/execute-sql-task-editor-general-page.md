@@ -1,5 +1,5 @@
 ---
-title: Exécuter l’éditeur de tâche SQL (Page Général) | Microsoft Docs
+title: Éditeur de tâche d’exécution de SQL (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058988"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Éditeur de tâche d'exécution SQL (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'exécution SQL** pour configurer la tâche d'exécution SQL et indiquer l'instruction SQL que la tâche exécuter.  
   
- Pour en savoir plus sur cette tâche, consultez [Tâche d’exécution de requêtes SQL](control-flow/execute-sql-task.md), [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) et [Ensembles de résultats dans la tâche d’exécution SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Pour plus d’informations sur le langage Transact-SQL, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference).  
+ Pour en savoir plus sur cette tâche, consultez [Tâche d’exécution de requêtes SQL](control-flow/execute-sql-task.md), [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)et [Ensembles de résultats dans la tâche d’exécution SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Pour plus d’informations sur le langage Transact-SQL, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference).  
   
 ## <a name="static-options"></a>Options statiques  
  **Nom**  
@@ -33,13 +33,13 @@ ms.locfileid: "66058988"
  **Description**  
  Décrit la tâche d'exécution SQL. Pour réaliser des packages autodocumentés plus faciles à maintenir, fournissez une description de la tâche en rapport avec son objectif.  
   
- **TimeOut**  
- Spécifiez le nombre maximal de secondes d'exécution de la tâche au terme duquel le délai d'attente expire. La valeur 0 indique un délai infini. La valeur par défaut est 0.  
+ **Expiré**  
+ Spécifiez le nombre maximal de secondes d’exécution de la tâche avant l’expiration du délai d’attente. La valeur 0 indique une durée infinie. La valeur par défaut est 0.  
   
 > [!NOTE]  
 >  Les procédures stockées ne sont par concernées par le délai d'expiration si elles émulent la fonctionnalité de veille en laissant le temps nécessaire à l'établissement des connexions et à la réalisation des transactions qui est supérieur au nombre de secondes spécifié par l'option **TimeOut**. Cependant, les procédures stockées qui exécutent des requêtes sont toujours soumises à la limitation de temps spécifiée dans **TimeOut**.  
   
- **CodePage**  
+ **Courante**  
  Spécifiez la page de codes à utiliser pour la traduction des valeurs Unicode en variables. Il s'agit par défaut de la page de codes de l'ordinateur local.  
   
 > [!NOTE]  
@@ -48,27 +48,27 @@ ms.locfileid: "66058988"
  **TypeConversionMode**  
  Lorsque vous définissez cette propriété sur `Allowed`, la tâche d'exécution SQL tente de convertir le paramètre de sortie et les résultats de la requête dans le type de données de la variable à laquelle les résultats sont affectés. Cela s'applique au type de jeu de résultats **Ligne unique** .  
   
- **ResultSet**  
+ **Font**  
  Spécifiez le type de résultats attendu par l'instruction SQL en cours d'exécution. Choisissez parmi les options suivantes : **Ligne unique**, **Ensemble de résultats complet**, **XML**ou **Aucun**.  
   
  **ConnectionType**  
  Choisissez le type de gestionnaire de connexions à utiliser pour vous connecter à la source de données. Les types de connexions disponibles sont **OLE DB**, **ODBC**, **ADO**, **ADO.NET** et **SQLMOBILE**.  
   
- **Rubriques connexes :** [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Rubriques connexes :** [gestionnaire](connection-manager/ole-db-connection-manager.md)de connexions OLE DB, gestionnaire de connexions [ODBC](connection-manager/odbc-connection-manager.md), gestionnaire de [connexions ADO](connection-manager/ado-connection-manager.md), gestionnaire de connexions [ADO.net](connection-manager/ado-net-connection-manager.md), gestionnaire de [connexions de SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Connexion**  
- Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**Nouvelle connexion...**>.  
+ **Connection**  
+ Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \< **nouvelle connexion...**>.  
   
  **SQLSourceType**  
  Sélectionnez le type de source de l'instruction SQL qui exécute la tâche.  
   
  Selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise, vous devez utiliser des marqueurs de paramètres spécifiques dans les instructions SQL paramétrables.  
   
- **Rubriques connexes :** Section des commandes SQL paramétrables en cours d’exécution [tâche d’exécution SQL](control-flow/execute-sql-task.md)  
+ **Rubriques connexes :** Section exécution des commandes SQL paramétrées dans la [tâche d’exécution SQL](control-flow/execute-sql-task.md)  
   
  Cette propriété dispose des options répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Définissez la source d'une instruction Transact-SQL. Sélectionnez cette valeur pour afficher l'option dynamique **SQLStatement**.|  
 |**Connexion de fichiers**|Sélectionnez un fichier qui contient une instruction Transact-SQL. Configurez cette option pour afficher l'option dynamique **FileConnection**.|  
@@ -78,7 +78,8 @@ ms.locfileid: "66058988"
  Indique si l'instruction SQL spécifiée à exécuter est une procédure stockée. Cette propriété est en lecture/écriture uniquement si la tâche utilise le gestionnaire de connexions ADO. Sinon, elle est en lecture seule ; sa valeur est alors `false`.  
   
  **BypassPrepare**  
- Indiquez si l'instruction SQL est préparée.  `true` ignore la préparation ; `false` prépare l'instruction SQL avant de l'exécuter. Cette option est disponible uniquement avec les connexions OLE DB qui prennent en charge la préparation.  
+ Indiquez si l'instruction SQL est préparée.  
+  `true` ignore la préparation ; `false` prépare l'instruction SQL avant de l'exécuter. Cette option est disponible uniquement avec les connexions OLE DB qui prennent en charge la préparation.  
   
  **Rubriques connexes :**  [Exécution préparée](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
@@ -103,17 +104,17 @@ ms.locfileid: "66058988"
  **FileConnection**  
  Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...**> pour créer une variable.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Integration Services &#40;les variables de&#41; SSIS](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche SQL exécution &#40;Page mappage de paramètre&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
- [Éditeur de tâche SQL exécution &#40;Page ensemble de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+ [Éditeur de tâche d’exécution de SQL &#40;page mappage de paramètre&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [Éditeur de tâche d’exécution de SQL &#40;page ensemble de résultats&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
   

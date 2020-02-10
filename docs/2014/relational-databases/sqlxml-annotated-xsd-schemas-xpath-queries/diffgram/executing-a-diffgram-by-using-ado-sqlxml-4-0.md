@@ -1,5 +1,5 @@
 ---
-title: Exécution d’un DiffGram à l’aide d’ADO (SQLXML 4.0) | Microsoft Docs
+title: Exécution d’un DiffGram à l’aide d’ADO (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,28 +17,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac11a4f5f697e2b2cd0c27a56940a7183c6231da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012479"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Exécution d'un DiffGram à l'aide d'ADO (SQLXML 4.0)
-  Cette application [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilise ADO pour établir une connexion à une instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis exécute un DiffGram. Dans cette application, le DiffGram et le schéma XSD sont stockés dans un fichier. L'application charge le DiffGram à partir du fichier spécifié. Vous pouvez utiliser un des DiffGrams (et le schéma XSD associé) décrits dans [exemples de DiffGrams](diffgram-examples-sqlxml-4-0.md).  
+  Cette application [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utilise ADO pour établir une connexion à une instance de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puis exécute un DiffGram. Dans cette application, le DiffGram et le schéma XSD sont stockés dans un fichier. L'application charge le DiffGram à partir du fichier spécifié. Vous pouvez utiliser l’un des DiffGrams (et le schéma XSD associé) décrit dans [exemples DiffGram](diffgram-examples-sqlxml-4-0.md).  
   
  Voici le processus de l'exemple d'application :  
   
--   Le **conn** objet (**ADODB. Connexion**) établit une connexion à une instance en cours d’exécution de SQL Server sur un serveur spécifique.  
+-   Objet **conn** (**ADODB. Connexion**) établit une connexion à une instance en cours d’exécution de SQL Server sur un serveur spécifique.  
   
--   Le **cmd** objet (**ADODB.Command**) s’exécute sur la connexion établie.  
+-   L’objet **cmd** (**ADODB. Command**) s’exécute sur la connexion établie.  
   
 -   Le dialecte de la commande est défini sur DBGUID_MSSQLXML.  
   
 -   Le DiffGram est copié dans le flux de commandes (**strmIn**) à partir d’un fichier.  
   
--   Flux de sortie de la commande est défini sur le **StrmOut** objet (**ADODB. Stream**) pour recevoir les données renvoyées.  
+-   Le flux de sortie de la commande est défini sur l’objet **StrmOut** (**ADODB. Stream**) pour recevoir toutes les données retournées.  
   
--   Lorsque vous utilisez le fournisseur SQLOLEDB, par défaut, vous obtenez les fonctionnalités SQLXML de Microsoft fournies par Sqlxmlx.dll. Pour utiliser Sqlxml4.dll avec le fournisseur SQLOLEDB, le **SQLXML Version** propriété doit être définie sur **SQLXML.4.0** sur le fournisseur SQLOLEDB **connexion** objet.  
+-   Lorsque vous utilisez le fournisseur SQLOLEDB, par défaut, vous obtenez les fonctionnalités SQLXML de Microsoft fournies par Sqlxmlx.dll. Pour utiliser Sqlxml4. dll avec le fournisseur SQLOLEDB, la propriété de **version SQLXML** doit être définie sur **SQLXML. 4.0** sur l’objet de **connexion** du fournisseur SQLOLEDB.  
   
 -   La commande (DiffGram) est exécutée.  
   
@@ -84,7 +84,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>Pour tester le DiffGram  
   
-1.  Dans un dossier sur votre ordinateur, copiez l’un des DiffGrams et le schéma XSD correspondant à partir d’un des exemples de [exemples de DiffGrams](diffgram-examples-sqlxml-4-0.md).  
+1.  Dans un dossier sur votre ordinateur, copiez l’un des DiffGrams et le schéma XSD correspondant dans l’un des exemples des [exemples DiffGram](diffgram-examples-sqlxml-4-0.md).  
   
 2.  Ouvrez Visual Basic et créez un projet EXE standard.  
   

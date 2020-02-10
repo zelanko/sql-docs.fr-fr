@@ -1,5 +1,5 @@
 ---
-title: Développeur&#39;s Guide (Master Data Services) | Microsoft Docs
+title: Guide des&#39;pour les développeurs (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483035"
 ---
-# <a name="developer39s-guide-master-data-services"></a>Développeur&#39;s Guide (Master Data Services)
-  Recherchez des informations sur l'écriture du code pour personnaliser la façon dont vous et les utilisateurs interagissez avec [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Apprenez comment :  
+# <a name="developer39s-guide-master-data-services"></a>Guide des&#39;pour les développeurs (Master Data Services)
+  Recherchez des informations sur l'écriture du code pour personnaliser la façon dont vous et les utilisateurs interagissez avec [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Découvrez comment :  
   
 -   Ecrire un programme qui accède au service Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Le service Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] est un service Windows Communication Foundation (WCF) utilisé par les développeurs pour contrôler les fonctionnalités de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] via du code.  
   
@@ -35,18 +35,20 @@ ms.locfileid: "65483035"
  [Créer des classes proxy de service Web Master Data Manager](create-master-data-manager-web-service-proxy-classes.md)  
  Décrit comment activer la publication des métadonnées à partir du site Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et comment créer les classes proxy qui peuvent être utilisées pour accéder par programmation aux opérations du service Web.  
   
- [Opérations de service web par catégorie &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
+ [Opérations de service Web catégorisées &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
  Liste par catégorie des opérations de service Web de la classe <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Flux de travail personnalisés  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilise des règles d'entreprise pour créer des solutions de flux de travail de base. Vous pouvez automatiquement mettre à jour et valider les données et recevoir des notifications par courrier électronique en fonction des conditions que vous spécifiez. Les règles d'entreprise dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] sont prévues pour gérer les scénarios de flux de travail les plus courants. Si votre flux de travail nécessite le traitement d'événements plus complexes, tels que les approbations multicouche ou les arbres décisionnels complexes, vous pouvez configurer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour envoyer des données à un assembly personnalisé que vous créez. Pour gérer des flux de travail personnalisés, vous devez configurer et démarrer le service d'intégration de flux de travail SQL Server MDS sur l'ordinateur de l'application Web, et vous devez créer un assembly qui implémente l'interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
+ 
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilise des règles d'entreprise pour créer des solutions de flux de travail de base. Vous pouvez automatiquement mettre à jour et valider les données et recevoir des notifications par courrier électronique en fonction des conditions que vous spécifiez. Les règles d'entreprise dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] sont prévues pour gérer les scénarios de flux de travail les plus courants. Si votre flux de travail nécessite le traitement d'événements plus complexes, tels que les approbations multicouche ou les arbres décisionnels complexes, vous pouvez configurer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour envoyer des données à un assembly personnalisé que vous créez. Pour gérer des flux de travail personnalisés, vous devez configurer et démarrer le service d'intégration de flux de travail SQL Server MDS sur l'ordinateur de l'application Web, et vous devez créer un assembly qui implémente l'interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Contenu personnalisé de flux de travail  
- [Créer un flux de travail personnalisé &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
+ [Créer un &#40;de flux de travail personnalisé Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
  Instructions sur la création d'un assembly de gestionnaire de flux de travail, sur la configuration et le démarrage du service d'intégration de flux de travail MDS SQL Server et sur la création d'une règle d'entreprise dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] qui démarre un flux de travail personnalisé.  
   
 ## <a name="web-server-namespaces"></a>Espaces de noms de serveur Web  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installe un ensemble d'assemblys sur le serveur Web. Ces assemblys contiennent des espaces de noms qui peuvent être utilisés pour des scénarios avancés qui personnalisent le comportement du serveur Web. Le tableau suivant décrit ces espaces de noms.  
+ 
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installe un ensemble d'assemblys sur le serveur Web. Ces assemblys contiennent des espaces de noms qui peuvent être utilisés pour des scénarios avancés qui personnalisent le comportement du serveur Web. Le tableau suivant décrit ces espaces de noms.  
   
 |Espace de noms|Description|  
 |---------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de série chronologique | Microsoft Docs'
+title: 'Leçon 2 : ajout de modèles d’exploration de données à la structure d’exploration de données de série chronologique | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855718"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données de série chronologique
-  Dans cette leçon, vous allez ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données que vous venez de créer dans [leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données de série chronologique
+  Dans cette leçon, vous allez ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données que vous venez de créer dans la [leçon 1 : création d’un modèle](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)d’exploration de données de série chronologique et d’une structure d’exploration de données.  
   
 ## <a name="alter-mining-structure-statement"></a>Instruction ALTER MINING STRUCTURE  
- Pour ajouter un nouveau modèle d’exploration de données à une structure d’exploration de données existante, vous utilisez le [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
+ Afin d’ajouter un nouveau modèle d’exploration de données à une structure d’exploration de données existante, vous utilisez l’instruction [ALTER Mining structure &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) . Le code de l’instruction peut être divisé en plusieurs parties :  
   
 -   Identification de la structure d'exploration de données  
   
@@ -57,7 +57,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Pour plus d’informations sur l’appellation d’un objet dans DMX, consultez [identificateurs &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Pour plus d’informations sur l’attribution d’un nom à un objet dans DMX, consultez [identificateurs &#40;dmx&#41;](/sql/dmx/identifiers-dmx).  
   
  Les lignes suivantes du code définissent les colonnes de la structure d'exploration de données employées dans le modèle d'exploration de données :  
   
@@ -75,7 +75,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- Pour plus d’informations sur les paramètres d’algorithme que vous pouvez ajuster, consultez [Microsoft Time Series algorithme Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ Pour plus d’informations sur les paramètres d’algorithme que vous pouvez ajuster, consultez informations techniques de référence sur l' [algorithme MTS (Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)).  
   
  Vous pouvez spécifier l'utilisation d'une colonne du modèle d'exploration de données à des fins de prédiction en utilisant la syntaxe suivante :  
   
@@ -84,7 +84,7 @@ WITH DRILLTHROUGH
 ```  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
- Vous allez effectuer les tâches suivantes dans cette leçon :  
+ Dans cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   ajouter un nouveau modèle d'exploration de données de série chronologique à la structure ;  
   
@@ -95,7 +95,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>Pour ajouter un modèle d'exploration de données de série chronologique ARIMA  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête et une nouvelle requête vide.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir l’éditeur de requête et une nouvelle requête vide.  
   
 2.  Copiez l'exemple générique de l'instruction ALTER MINING STRUCTURE dans la requête vide.  
   
@@ -181,11 +181,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+8.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-9. Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Forecasting_ARIMA.dmx`.  
+9. Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Forecasting_ARIMA.dmx`.  
   
-10. Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+10. Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
 ## <a name="adding-an-artxp-time-series-model-to-the-structure"></a>Ajout d'un modèle de série chronologique ARTXP à la structure  
  L'algorithme ARTXP était l'algorithme de série chronologique par défaut dans SQL Server 2005 et il est optimisé pour des prédictions à court terme. Pour comparer des prédictions à l'aide des trois algorithmes de série chronologique, vous allez ajouter un autre modèle basé sur l'algorithme ARTXP.  
@@ -209,16 +209,16 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+2.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-3.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Forecasting_ARTXP.dmx`.  
+3.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Forecasting_ARTXP.dmx`.  
   
-4.  Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+4.  Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
  Dans la leçon suivante, vous allez traiter tous les modèles et la structure d'exploration de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Traitement de la série chronologique Structure et modèles](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Leçon 3 : Traitement de la structure et des modèles de série chronologique](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010154"
 ---
 # <a name="enable-and-configure-filestream"></a>Activer et configurer FILESTREAM
@@ -62,9 +62,9 @@ ms.locfileid: "66010154"
   
 
   
-##  <a name="best"></a> Bonnes pratiques  
+##  <a name="best"></a>Meilleures pratiques  
   
-###  <a name="config"></a> Configuration et maintenance physiques  
+###  <a name="config"></a>Configuration et maintenance physiques  
  Lorsque vous configurez des volumes de stockage FILESTREAM, prenez en compte les recommandations suivantes :  
   
 -   Désactivez les noms de fichiers courts sur les systèmes informatiques FILESTREAM. La création de noms de fichiers courts demande beaucoup plus de temps. Pour désactiver les noms de fichiers courts, servez-vous de l’utilitaire Windows **fsutil** .  
@@ -82,16 +82,16 @@ ms.locfileid: "66010154"
 ||||||  
 |-|-|-|-|-|  
 |Niveau RAID|Performances en écriture|Performances en lecture|Tolérance de panne|Notes|  
-|RAID 5|Normale|Normale|Excellent|Les performances sont meilleures qu'avec un seul disque ou une simple concaténation de disques, mais elles sont moins bonnes qu'avec le niveau RAID 0 ou le niveau RAID 5 utilisant l'agrégation par bandes.|  
+|RAID 5|Normal|Normal|Excellent|Les performances sont meilleures qu'avec un seul disque ou une simple concaténation de disques, mais elles sont moins bonnes qu'avec le niveau RAID 0 ou le niveau RAID 5 utilisant l'agrégation par bandes.|  
 |RAID 0|Excellent|Excellent|None||  
 |RAID 5 + agrégation par bandes|Excellent|Excellent|Excellent|Option la plus chère.|  
   
 
   
-###  <a name="database"></a> Conception d'une base de données physique  
+###  <a name="database"></a>Conception de base de données physique  
  Lorsque vous concevez une base de données FILESTREAM, prenez en compte les recommandations suivantes:  
   
--   Les colonnes FILESTREAM doivent être accompagnés par un correspondant `uniqueidentifier`colonne ROWGUID. Ces types de tables doivent également être accompagnés d'un index unique. En règle générale, cet index n'est pas un index cluster. Si la logique métier des bases de données requiert un index cluster, vous devez vous assurer que les valeurs stockées dans l'index ne sont pas aléatoires. Les valeurs aléatoires entraînent une réorganisation de l'index chaque fois qu'une ligne est ajoutée ou supprimée dans la table.  
+-   Les colonnes FILESTREAM doivent être accompagnées d' `uniqueidentifier`une colonne rowguid correspondante. Ces types de tables doivent également être accompagnés d'un index unique. En règle générale, cet index n'est pas un index cluster. Si la logique métier des bases de données requiert un index cluster, vous devez vous assurer que les valeurs stockées dans l'index ne sont pas aléatoires. Les valeurs aléatoires entraînent une réorganisation de l'index chaque fois qu'une ligne est ajoutée ou supprimée dans la table.  
   
 -   Pour des raisons de performances, les groupes de fichiers et conteneurs FILESTREAM doivent résider sur d'autres volumes que ceux du système d'exploitation, de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , du journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , de la base de données tempdb ou du fichier de pagination.  
   

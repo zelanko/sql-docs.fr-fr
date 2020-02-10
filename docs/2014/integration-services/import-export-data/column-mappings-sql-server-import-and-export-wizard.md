@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62893040"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mappage de colonnes (Assistant Importation et exportation SQL Server)
-  Utilisez le **mappages de colonnes** boîte de dialogue pour modifier les paramètres de transformation.  
+  Utilisez la boîte de dialogue **mappage de colonnes** pour modifier les paramètres de transformation.  
   
 > [!NOTE]  
->  Vous n'êtes pas obligé de copier toutes les colonnes d'une table lorsque vous sélectionnez l'option de copie de table. Sélectionnez  **\<ignorer >** dans le **Destination** colonne de cette boîte de dialogue pour les colonnes que vous souhaitez ignorer.  
+>  Vous n'êtes pas obligé de copier toutes les colonnes d'une table lorsque vous sélectionnez l'option de copie de table. Sélectionnez ** \<ignorer>** dans la colonne **destination** de cette boîte de dialogue pour les colonnes que vous souhaitez ignorer.  
   
- Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant, ainsi que sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La fonction de l'Assistant Importation et Exportation SQL Server est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -39,14 +39,14 @@ ms.locfileid: "62893040"
  **Créer la table/le fichier de destination**  
  Indiquez si la table de destination doit être créée si elle n'existe pas.  
   
- **Supprimer des lignes dans la table/le fichier de destination**  
+ **Supprimer les lignes dans la table/le fichier de destination**  
  Indiquez si les données d'une table existante doivent être effacées avant d'en charger de nouvelles.  
   
- **Ajouter des lignes à la table/au fichier de destination**  
+ **Ajouter des lignes à la table/le fichier de destination**  
  Indiquez si les nouvelles données doivent être ajoutées à la suite des données déjà présentes dans une table existante.  
   
  **Modifier SQL**  
- Utilisez l’instruction par défaut dans le **instruction SQL Create Table** boîte de dialogue zone ou modifiez-la en fonction de vos besoins. Si vous la modifiez, vous devez également effectuer les modifications associées au mappage de table.  
+ Utilisez l’instruction default dans la boîte de dialogue **instruction SQL de création de table** ou modifiez-la selon vos besoins. Si vous la modifiez, vous devez également effectuer les modifications associées au mappage de table.  
   
  **Supprimer et recréer la table de destination**  
  Choisissez cette option pour remplacer la table de destination. Cette option est disponible uniquement lorsque vous faites appel à l'Assistant pour créer la table de destination. La table de destination est uniquement supprimée et recréée si vous enregistrez le package créé par l'Assistant, puis exécutez de nouveau le package.  
@@ -63,7 +63,7 @@ ms.locfileid: "62893040"
  Affiche chaque colonne source pour laquelle vous voulez définir des paramètres de transformation.  
   
  **Destination**  
- Spécifiez si vous voulez ignorer une colonne pendant la copie. Vous pouvez copier uniquement un sous-ensemble de colonnes en sélectionnant  **\<ignorer >** dans cette colonne pour les colonnes que vous souhaitez ignorer. Avant de mapper les colonnes, vous devez ignorer toutes les colonnes qui ne seront pas mappées.  
+ Spécifiez si vous voulez ignorer une colonne pendant la copie. Vous ne pouvez copier qu’un sous-ensemble de colonnes en sélectionnant ** \<ignorer les>** dans cette colonne pour les colonnes que vous souhaitez ignorer. Avant de mapper les colonnes, vous devez ignorer toutes les colonnes qui ne seront pas mappées.  
   
  **Type**  
  Sélectionnez un type de données pour la colonne.  
