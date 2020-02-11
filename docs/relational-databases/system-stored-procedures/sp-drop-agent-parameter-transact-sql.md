@@ -16,18 +16,18 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016542"
 ---
-# <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
+# <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un ou tous les paramètres d’un profil dans le **MSagent_parameters** table. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution sur lequel l'agent est en cours d'exécution.  
+  Supprime un ou tous les paramètres d’un profil dans la table **MSagent_parameters** . Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution sur lequel l'agent est en cours d'exécution.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +38,18 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id` Est l’ID du profil pour lequel un paramètre doit être supprimé. *profile_id* est **int**, sans valeur par défaut.  
+`[ @profile_id = ] profile_id`ID du profil pour lequel un paramètre doit être supprimé. *profile_id* est de **type int**, sans valeur par défaut.  
   
-`[ @parameter_name = ] 'parameter_name'` Est le nom du paramètre à supprimer. *parameter_name* est **sysname**, avec une valeur par défaut **%** . Si **%** , tous les paramètres pour le profil spécifié sont supprimés.  
+`[ @parameter_name = ] 'parameter_name'`Nom du paramètre à supprimer. *parameter_name* est de **%** **type sysname**, avec la valeur par défaut. Si **%**, tous les paramètres du profil spécifié sont supprimés.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_drop_agent_parameter** est utilisée dans tous les types de réplication.  
+ **sp_drop_agent_parameter** est utilisé dans tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_drop_agent_parameter**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   

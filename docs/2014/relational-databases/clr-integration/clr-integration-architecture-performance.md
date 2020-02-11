@@ -1,5 +1,5 @@
 ---
-title: Performances d’intégration du CLR | Microsoft Docs
+title: Performances de l’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874496"
 ---
 # <a name="performance-of-clr-integration"></a>Performances de l'intégration du CLR
-  Cette rubrique aborde certains choix de conception qui améliorent les performances de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intégration avec le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
+  Cette rubrique décrit quelques-uns des choix de conception qui améliorent les [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] performances de l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] intégration avec le .NET Framework Common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Processus de compilation  
  Pendant la compilation d'expressions SQL, en cas de référence à une routine managée, un stub MSIL ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Intermediate Language) est généré. Ce stub inclut le code pour marshaler les paramètres de routine à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers le CLR, appeler la fonction et retourner le résultat. Ce code de type glue est basé sur le type de paramètre et sur la direction du paramètre (in, out ou reference).  
@@ -35,7 +35,7 @@ ms.locfileid: "62874496"
  Le processus de compilation génère une fonction pointeur qui peut être appelée au moment de l'exécution à partir du code natif. Dans le cas de fonctions scalaires définies par l'utilisateur, cet appel de fonction se produit ligne par ligne. Pour réduire le coût de la transition entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le CLR, les instructions qui contiennent un appel managé possèdent une étape de démarrage pour identifier le domaine d'application cible. Cette étape d'identification réduit le coût de la transition pour chaque ligne.  
   
 ## <a name="performance-considerations"></a>Considérations relatives aux performances  
- Les éléments suivants résument les considérations sur les performances spécifiques à l'intégration du CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous trouverez des informations plus détaillées dans «[à l’aide de l’intégration du CLR dans SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)» sur le site Web MSDN. Vous trouverez des informations générales relatives aux performances du code managé dans «[Improving .NET Application Performance et évolutivité](https://go.microsoft.com/fwlink/?LinkId=50333)» sur le site Web MSDN.  
+ Les éléments suivants résument les considérations sur les performances spécifiques à l'intégration du CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez «[utilisation de l’intégration du CLR dans SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)» sur le site Web MSDN. Vous trouverez des informations générales sur les performances du code managé dans la rubrique «[amélioration des performances et de l’évolutivité des applications .net](https://go.microsoft.com/fwlink/?LinkId=50333)» sur le site Web MSDN.  
   
 ### <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur  
  Les fonctions CLR tirent parti d'un chemin d'accès d'appel plus rapide que celui des fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)] définies par l'utilisateur. En outre, le code managé possède un avantage décisif en termes de performances par rapport à [!INCLUDE[tsql](../../../includes/tsql-md.md)] quant au code procédural, au calcul et à la manipulation de chaînes. Les fonctions CLR gourmandes en calculs et n'effectuant pas d'accès aux données sont mieux écrites en code managé. Toutefois, les fonctions [!INCLUDE[tsql](../../../includes/tsql-md.md)] exécutent l'accès aux données plus efficacement que l'intégration du CLR.  
@@ -46,15 +46,16 @@ ms.locfileid: "62874496"
 ### <a name="streaming-table-valued-functions"></a>Fonctions table en continu  
  Les applications doivent souvent retourner une table comme résultat de l'appel d'une fonction. Les exemples incluent la lecture de données tabulaires à partir d'un fichier dans le cadre d'une opération d'importation et la conversion de valeurs séparées par des virgules dans le cas d'une représentation relationnelle. En général, vous pouvez accomplir ces actions en matérialisant la table de résultats et en la remplissant avant qu'elle ne puisse être consommée par l'appelant. L'intégration du CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] introduit un nouveau mécanisme d'extensibilité appelé fonction table en continu. Les fonctions table en continu offrent de meilleures performances que les implémentations de procédure stockée étendue comparables.  
   
- Les fonctions table en continu sont des fonctions managées qui retournent une interface `IEnumerable`. `IEnumerable` possède des méthodes pour se déplacer à travers le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelée, l'interface `IEnumerable` retournée est directement connectée au plan de requête. Le plan de requête appelle les méthodes `IEnumerable` lorsqu'il doit extraire des lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
+ Les fonctions table en continu sont des fonctions managées qui retournent une interface `IEnumerable`. 
+  `IEnumerable` possède des méthodes pour se déplacer à travers le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelée, l'interface `IEnumerable` retournée est directement connectée au plan de requête. Le plan de requête appelle les méthodes `IEnumerable` lorsqu'il doit extraire des lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
   
-### <a name="arrays-vs-cursors"></a>Visual Studio de tableaux. Curseurs  
+### <a name="arrays-vs-cursors"></a>Différences entre les tableaux et les curseurs  
  Lorsque les curseurs [!INCLUDE[tsql](../../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
   
 ### <a name="string-data"></a>Données de type chaîne  
  Les données caractères [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], telles que `varchar`, peuvent être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, il est possible d'accéder aux données XML du serveur via une interface de diffusion retournée par `SqlXml.CreateReader()`.  
   
-### <a name="clr-vs-extended-stored-procedures"></a>Visual Studio CLR. Procédures stockées étendues  
+### <a name="clr-vs-extended-stored-procedures"></a>Différences entre le CLR et les procédures stockées étendues  
  Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les API System.Data.SqlServer prennent en charge les types de données tels que `xml`, `varchar(max)`, `nvarchar(max)` et `varbinary(max)`, introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], alors que les API ODS n'ont pas été étendues pour prendre en charge les nouveaux types de données.  
   
  Avec le code managé, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gère l'utilisation de ressources telles que la mémoire, les threads et la synchronisation. La raison en est que les API managées qui exposent ces ressources sont implémentées sur le gestionnaire de ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Inversement, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'a ni vue ou contrôle sur l'utilisation des ressources de la procédure stockée étendue. Par exemple, si une procédure stockée étendue consomme une quantité trop importante d'UC ou de ressources mémoire, il n'existe aucun moyen de le détecter ou de le contrôler avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Avec le code managé, toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut détecter qu'un thread donné n'a rien produit pendant une longue période de temps, puis forcer la tâche à être abandonnée afin qu'un autre travail puisse être planifié. Par conséquent, l'utilisation du code managé offre une meilleure évolutivité et une meilleure utilisation des ressources système.  
@@ -65,7 +66,8 @@ ms.locfileid: "62874496"
 >  Il est recommandé de ne pas développer de nouvelles procédures stockées étendues, parce que cette fonctionnalité a été déconseillée.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Sérialisation native pour les types définis par l'utilisateur  
- Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implémente un format de sérialisation pour les UDT appelé `Format.Native`. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
+ Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implémente un format de sérialisation pour les UDT appelé `Format.Native`. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
   
  La sérialisation native est l'implémentation par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La sérialisation définie par l'utilisateur appelle une méthode définie par le créateur du type pour effectuer la sérialisation. La sérialisation `Format.Native` doit être utilisée si possible pour de meilleures performances.  
   
@@ -78,6 +80,6 @@ ms.locfileid: "62874496"
  Pour que le garbage collection managé s'effectue et évolue correctement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], évitez une allocation importante et unique. Les allocations d'une taille supérieure à 88 Ko sont placées sur le tas des objets volumineux, ce qui provoque une exécution du garbage collection et une évolution bien moins performantes que nombre d'allocations plus réduites. Par exemple, si vous devez allouer un grand tableau multidimensionnel, il est préférable d'allouer un tableau en escalier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR définis par l’utilisateur](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Types CLR définis par l'utilisateur](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

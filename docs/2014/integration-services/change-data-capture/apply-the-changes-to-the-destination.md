@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771615"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Appliquer des modifications à la destination
   Dans le flux d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la troisième et dernière tâche consiste à appliquer les modifications à votre destination. Vous aurez besoin de trois composants : un pour appliquer les insertions, un pour appliquer les mises à jour et un pour appliquer les suppressions.  
   
 > [!NOTE]  
->  La deuxième tâche pour concevoir le flux de données d'un package qui effectue un chargement incrémentiel des données modifiées consiste à séparer les insertions, les mises à jour et les suppressions. Pour plus d’informations sur ce composant, consultez [Traiter les insertions, les mises à jour et les suppressions](process-inserts-updates-and-deletes.md). Pour obtenir une description du processus global de création d’un package qui effectue un chargement incrémentiel des données modifiées, consultez [Capture de données modifiées &#40;SSIS&#41;](change-data-capture-ssis.md).  
+>  La deuxième tâche pour concevoir le flux de données d'un package qui effectue un chargement incrémentiel des données modifiées consiste à séparer les insertions, les mises à jour et les suppressions. Pour plus d’informations sur ce composant, consultez [Traiter les insertions, les mises à jour et les suppressions](process-inserts-updates-and-deletes.md). Pour obtenir une description du processus global de création d’un package qui effectue un chargement incrémentiel des données modifiées, consultez [Capture des données modifiées &#40;SSIS&#41;](change-data-capture-ssis.md).  
   
 ## <a name="applying-inserts"></a>Application d'insertions  
  Pour appliquer des insertions, vous utilisez une destination OLE DB car les nouvelles lignes ne requièrent pas de traitement spécial.  

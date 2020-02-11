@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891331"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes textuel
@@ -30,7 +30,7 @@ ms.locfileid: "68891331"
   
 -   **Requête** Affiche le texte de la requête, le nom de la table ou le nom de la procédure stockée.  
   
--   **Résultats** Affiche les résultats de l'exécution de la requête au moment de la conception.  
+-   **Résultat** Affiche les résultats de l’exécution de la requête au moment de la conception.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Barre d'outils du Concepteur de requêtes textuel  
  Le Concepteur de requêtes textuel fournit une barre d'outils unique pour tous les types de commandes. Le tableau suivant répertorie chaque bouton de la barre d'outils et décrit sa fonction.  
@@ -51,11 +51,11 @@ ms.locfileid: "68891331"
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Interroger|Affiche le texte de la requête [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
-|Résultat|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
+|Requête|Affiche le texte de la requête [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
+|Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
 #### <a name="example"></a>Exemple  
- La requête suivante retourne la liste des noms depuis la table `Contact` de la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+ La requête suivante retourne la liste des noms depuis la table [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de la base de données `Contact`.  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -73,7 +73,7 @@ EXEC uspGetEmployeeManagers 1;
  Quand vous sélectionnez le **Type de commande StoredProcedure**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Entrez le nom de la procédure stockée dans le volet Requête, puis cliquez sur **Exécuter** dans la barre d'outils. La boîte de dialogue Définir les paramètres de la requête s'affiche. Entrez les valeurs des paramètres de la procédure stockée. Pour chaque paramètre de procédure stockée, un paramètre de rapport est créé.  
   
 #### <a name="example"></a>Exemple  
- La requête suivante appelle la procédure stockée `uspGetEmployeeManagers` de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Vous devez entrer une valeur pour le paramètre du numéro d'identification de l'employé lorsque vous exécutez la requête.  
+ La requête suivante appelle la procédure stockée [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de `uspGetEmployeeManagers`. Vous devez entrer une valeur pour le paramètre du numéro d'identification de l'employé lorsque vous exécutez la requête.  
   
 ```  
 uspGetEmployeeManagers;  
@@ -90,12 +90,12 @@ uspGetEmployeeManagers;
  Lorsque vous entrez le nom de la table Sales. Customer, cela revient à créer [!INCLUDE[tsql](../includes/tsql-md.md)] l' `SELECT * FROM Sales.Customer;`instruction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de conception de requête dans &#40;concepteur de rapports SQL Server Data Tools SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Outils de conception de requête dans Concepteur de rapports SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Type de connexion SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Type de connexion OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Type &#40;de connexion ODBC SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Type de connexion ODBC &#40;&#41;SSRS](report-data/odbc-connection-type-ssrs.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Fichier de configuration RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
+ [fichier de configuration RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
   
   

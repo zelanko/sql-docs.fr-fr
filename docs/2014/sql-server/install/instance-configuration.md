@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190972"
 ---
 # <a name="instance-configuration"></a>Configuration de l'instance
@@ -29,12 +29,14 @@ ms.locfileid: "68190972"
   
  Une instance est soit l'instance par défaut, soit une instance nommée. MSSQLSERVER est le nom de l'instance par défaut. Il n'est pas nécessaire qu'un client spécifie le nom de l'instance pour établir une connexion. Une instance nommée est déterminée par l'utilisateur au cours de l'installation. Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comme instance nommée sans installer d'abord l'instance par défaut. Une seule installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indépendamment de la version, peut être à un instant donné l'instance par défaut.  
   
- **Alerte !** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep vous permet de spécifier le nom de l’instance quand vous finalisez une instance préparée dans la page **Configuration de l’instance**. Vous pouvez choisir de configurer l'instance préparée que vous finalisez comme instance par défaut s'il n'existe aucune instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur.  
+ **Notification!** 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep vous permet de spécifier le nom de l’instance quand vous finalisez une instance préparée dans la page **Configuration de l’instance**. Vous pouvez choisir de configurer l'instance préparée que vous finalisez comme instance par défaut s'il n'existe aucune instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur.  
   
 ## <a name="multiple-instances"></a>Instances multiples  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un seul serveur ou processeur, mais une seule instance peut être l'instance par défaut. Toutes les autres instances doivent être des instances nommées. Un ordinateur peut exécuter simultanément plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque instance s'exécute indépendamment des autres.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un seul serveur ou processeur, mais une seule instance peut être l'instance par défaut. Toutes les autres instances doivent être des instances nommées. Un ordinateur peut exécuter simultanément plusieurs instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque instance s'exécute indépendamment des autres.  
   
- Pour plus d'informations, consultez [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Pour plus d’informations, consultez [spécifications de capacité maximale pour SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Options  
  Instances de cluster de basculement uniquement : Spécifiez le nom réseau du cluster de basculement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce nom identifie l'instance de cluster de basculement sur le réseau.  
@@ -57,11 +59,12 @@ ms.locfileid: "68190972"
   
 -   Les noms d'instance ne peuvent pas commencer ni se terminer par un trait de soulignement (_).  
   
--   Les noms d'instance ne peuvent pas contenir le terme « Default » ou autres mots clés réservés. Si un mot clé réservé est utilisé dans le nom d'une instance, une erreur d'installation se produit. Pour plus d’informations, consultez [Mots clés réservés &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
+-   Les noms d'instance ne peuvent pas contenir le terme « Default » ou autres mots clés réservés. Si un mot clé réservé est utilisé dans le nom d'une instance, une erreur d'installation se produit. Pour plus d’informations, consultez [Mots clés réservés &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
   
 -   Si vous spécifiez MSSQLServer comme nom d'instance, une instance par défaut est créée.  
   
--   [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] est toujours installé comme une instance nommée de « PowerPivot ». Vous ne pouvez pas spécifier de nom d'instance différent pour ce rôle de fonctionnalité.  
+-   
+  [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] est toujours installé comme une instance nommée de « PowerPivot ». Vous ne pouvez pas spécifier de nom d'instance différent pour ce rôle de fonctionnalité.  
   
 -   Les noms d'instance sont limités à 16 caractères.  
   
@@ -71,12 +74,12 @@ ms.locfileid: "68190972"
   
 -   Les espaces incorporés ou autres caractères spéciaux ne sont pas autorisés dans les noms d'instance. La barre oblique inverse (\\), la virgule (,), le deux-points (:), le point-virgule (;), le guillemet simple ('), l’esperluette (&) et l’arobase (@) ne sont pas autorisés non plus.  
   
--   **Uniquement des caractères qui sont valides dans la page de codes Windows actuelle peuvent être utilisés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noms d’instance. Si un caractère Unicode non pris en charge est utilisé, une erreur se produit.**  
+-   **Seuls les caractères qui sont valides dans la page de codes Windows actuelle peuvent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] être utilisés dans les noms d’instance. Si un caractère Unicode non pris en charge est utilisé, une erreur d’installation se produit.**  
   
  **Instances et fonctionnalités détectées**  
  Consultez la liste des instances et des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installés sur l'ordinateur sur lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution.  
   
- **ID d’instance** : Par défaut, le nom de l’instance est utilisé comme ID d’instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, spécifiez-le dans le champ **ID d’instance** .  
+ **ID d’instance** : par défaut, le nom de l’instance est utilisé comme ID d’instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, spécifiez-le dans le champ **ID d’instance** .  
   
 > [!IMPORTANT]  
 >  Avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, l'ID d'instance affiché dans cette page correspond à l'ID d'instance spécifié pendant l'étape de préparation d'image du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep. Vous ne serez pas en mesure de spécifier un ID d'instance différent pendant l'étape de finalisation d'image.  
@@ -84,7 +87,7 @@ ms.locfileid: "68190972"
 > [!NOTE]  
 >  Les ID d'instance qui commencent par un trait de soulignement (_) ou qui contiennent le signe dièse (#) ou le symbole dollar ($) ne sont pas pris en charge.  
   
- Pour plus d’informations sur les répertoires, les emplacements de fichiers et l’affectation de noms aux ID d’instance, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
+ Pour plus d’informations sur les répertoires, les emplacements de fichiers et les noms d’ID d’instance, consultez [emplacements des fichiers pour les instances par défaut et nommées de SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
   
  Tous les composants d'une instance donnée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont gérés comme une unité. Tous les Service Packs et mises à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'appliqueront à chaque composant d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -96,10 +99,11 @@ ms.locfileid: "68190972"
   
 -   **Mêmes paramètres de langue**  
   
--   **Même état cluster**  
+-   **Même État cluster**  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est pas sensible aux clusters.  
+    >  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est pas sensible aux clusters.  
   
 -   **Même système d’exploitation**  
   

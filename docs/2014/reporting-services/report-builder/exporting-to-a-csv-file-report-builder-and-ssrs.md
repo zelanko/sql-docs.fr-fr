@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107927"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "66107927"
   
 -   Éléments de rapport personnalisés  
   
--   Ligne  
+-   Lignes  
   
 -   Image  
   
@@ -69,15 +69,15 @@ ms.locfileid: "66107927"
 |----------|------------------------|  
 |Zone de texte|Effectue le rendu du contenu de la zone de texte. En mode par défaut, les éléments sont mis en forme en fonction des propriétés de mise en forme de l'élément. En mode conforme, la mise en forme peut être modifiée par les paramètres d'informations de périphérique. Pour plus d'informations sur les modes de rendu CSV, voir ci-dessous.|  
 |Table de charge de travail|Effectue le rendu en développant la table et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne. Les rapports d'extraction ne sont pas pris en charge.|  
-|Matrice|Effectue le rendu en développant la matrice et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne.|  
-|Liste|Effectue le rendu d'un enregistrement pour chaque instance ou ligne de détails dans la liste.|  
+|Matrix|Effectue le rendu en développant la matrice et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne.|  
+|List|Effectue le rendu d'un enregistrement pour chaque instance ou ligne de détails dans la liste.|  
 |Sous-rapport|L'élément parent est répété pour chaque instance du contenu.|  
 |Graphique|Effectue le rendu en créant une ligne pour chaque valeur de graphique et étiquette de membre. Les étiquettes de séries et de catégories dans les hiérarchies sont aplaties et incluses dans la ligne pour une valeur de graphique.|  
 |Barre de données|Effectue le rendu comme un graphique. En règle générale, une barre de données n'inclut pas de hiérarchies ou d'étiquettes.|  
 |Graphique sparkline|Effectue le rendu comme un graphique. En règle générale, un graphique sparkline n'inclut pas de hiérarchies ou d'étiquettes.|  
 |Jauge|Effectue le rendu en tant qu'enregistrement unique avec les valeurs maximale et minimale de l'échelle linéaire, les valeurs de début et de fin de la plage et la valeur du pointeur.|  
 |Indicateur|Effectue le rendu en tant qu'enregistrement unique avec le nom de l'état actif, les états disponibles et la valeur de données.|  
-|Carte|Restitue une ligne avec les étiquettes et valeurs de chaque membre cartographique d'une couche.<br /><br /> Si la carte comporte plusieurs couches, les valeurs dans les lignes varient selon que les couches utilisent des régions de données cartographiques identiques ou différentes. Si plusieurs couches utilisent la même région de données, les lignes contiennent des données de toutes les couches.|  
+|Mappage|Restitue une ligne avec les étiquettes et valeurs de chaque membre cartographique d'une couche.<br /><br /> Si la carte comporte plusieurs couches, les valeurs dans les lignes varient selon que les couches utilisent des régions de données cartographiques identiques ou différentes. Si plusieurs couches utilisent la même région de données, les lignes contiennent des données de toutes les couches.|  
   
 ### <a name="hierarchical-and-grouped-data"></a>Données hiérarchiques et groupées  
  Les données hiérarchiques et groupées doivent être aplaties pour être représentées au format CSV.  
@@ -92,7 +92,7 @@ ms.locfileid: "66107927"
   
 -   Les régions de données d'homologue sont des régions de données ou des groupes dynamiques qui partagent une région de données commune ou un ancêtre dynamique commun. Les données d'homologue sont identifiées par une création de branche au niveau de l'arborescence aplatie.  
   
- Pour plus d'informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  
   

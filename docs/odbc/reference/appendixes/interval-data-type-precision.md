@@ -1,5 +1,5 @@
 ---
-title: Précision du Type de données d’intervalle | Microsoft Docs
+title: Précision du type de données Interval | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947600"
 ---
 # <a name="interval-data-type-precision"></a>Précision des types de données d’intervalle
-Précision pour un type de données d’intervalle inclut l’intervalle de début de précision, la précision de l’intervalle et la précision en.  
+La précision d’un type de données Interval comprend la précision d’intervalle, la précision de l’intervalle et la précision en secondes.  
   
- Le champ début d’un intervalle est une valeur numérique signée. Le nombre maximal de chiffres pour le champ de début est déterminé par un nombre appelé *précision, interval* qui fait partie de la déclaration de type de données. Par exemple, la déclaration : INTERVALLE HOUR(5) MINUTE a une précision de début d’intervalle de 5 ; le champ d’heure peut prendre les valeurs à partir de-99999 et 99 999. La précision interval est contenue dans le champ SQL_DESC_DATETIME_INTERVAL_PRECISION de l’enregistrement de descripteur.  
+ Le champ de début d’un intervalle est un nombre signé. Le nombre maximal de chiffres pour le champ de début est déterminé par une quantité appelée *précision de début d’intervalle,* qui fait partie de la déclaration de type de données. Par exemple, la déclaration : intervalle heure (5) à MINUTE a une précision d’intervalle de 5 ; le champ heure peut prendre des valeurs comprises entre-99999 et 99999. La précision de début de l’intervalle est contenue dans le champ SQL_DESC_DATETIME_INTERVAL_PRECISION de l’enregistrement du descripteur.  
   
- La liste des champs de type de données d’intervalle est constitué d’est appelée *précision de l’intervalle*. Il n’est pas une valeur numérique, comme l’implique le terme « précision ». Par exemple, la précision de l’intervalle du type INTERVAL DAY TO SECOND agit de la liste jour, heure, MINUTE, seconde. Il n’existe aucun champ de descripteur qui contient cette valeur ; la précision de l’intervalle peut toujours être déterminée par le type de données d’intervalle.  
+ La liste des champs dont le type de données interval est composé est appelée précision de l' *intervalle*. Il ne s’agit pas d’une valeur numérique, comme le terme « précision » peut impliquer. Par exemple, la précision de l’intervalle de type jour à seconde est le jour de la liste, l’heure, la MINUTE, la seconde. Il n’existe aucun champ de descripteur qui contient cette valeur ; la précision de l’intervalle peut toujours être déterminée par le type de données Interval.  
   
- N’importe quel type de données d’intervalle qui a un deuxième champ a un *précision à la seconde*. Il s’agit du nombre de chiffres décimaux autorisés dans la partie fractionnaire de la valeur des secondes. Voici différente de celles d’autres types de données, où la précision indique le nombre de chiffres avant la virgule décimale. La précision en secondes d’un type de données d’intervalle est le nombre de chiffres après la virgule décimale. Par exemple, si la précision des secondes est définie sur 6, le nombre 123456 dans le champ de fraction serait interprété comme.123456 et le nombre 1230 seraient interprétées en tant que.001230. Pour les autres types de données, il est appelé mise à l’échelle. Précision de secondes d’intervalle est contenue dans le champ SQL_DESC_PRECISION du descripteur. Si la précision du composant fractions de secondes de la valeur d’intervalle SQL est supérieure à ce que peuvent être conservée dans la structure d’intervalle C, il est définies par le pilote si la valeur de fraction de seconde dans l’intervalle SQL est arrondie ou tronquée lorsque converti en C structure d’intervalle.  
+ Tout type de données Interval ayant un deuxième champ a une *précision de secondes*. Il s’agit du nombre de chiffres décimaux autorisés dans la partie fractionnaire de la valeur des secondes. Cela est différent pour les autres types de données, où la précision indique le nombre de chiffres avant la virgule décimale. La précision en secondes d’un type de données interval est le nombre de chiffres après la virgule décimale. Par exemple, si la précision en secondes est définie sur 6, le nombre 123456 dans le champ fraction est interprété comme. 123456 et le nombre 1230 est interprété comme. 001230. Pour les autres types de données, il s’agit de l’échelle. La précision de l’intervalle en secondes est contenue dans le champ SQL_DESC_PRECISION du descripteur. Si la précision du composant fractions de seconde de la valeur de l’intervalle SQL est supérieure à celle qui peut être conservée dans la structure de l’intervalle C, elle est définie par le pilote, que la valeur fractions de seconde de l’intervalle SQL soit arrondie ou tronquée lorsqu’elle est convertie en C structure d’intervalle.  
   
- Lorsque le champ SQL_DESC_CONCISE_TYPE est défini pour un type de données d’intervalle, le champ SQL_DESC_TYPE a la valeur SQL_INTERVAL et la valeur SQL_DESC_DATETIME_INTERVAL_CODE est définie sur le code pour le type de données d’intervalle. Le champ SQL_DESC_DATETIME_INTERVAL_PRECISION est automatiquement défini à la précision de début intervalle par défaut de 2, et le SQL_DESC_PRECISION champ est automatiquement défini sur la précision de secondes d’intervalle par défaut de 6. Si une de ces valeurs n’est pas approprié, l’application doit définir explicitement le champ de descripteur via un appel à **SQLSetDescField**.
+ Lorsque le champ SQL_DESC_CONCISE_TYPE est défini sur un type de données Interval, le champ SQL_DESC_TYPE a la valeur SQL_INTERVAL et le SQL_DESC_DATETIME_INTERVAL_CODE est défini sur le code pour le type de données Interval. Le champ SQL_DESC_DATETIME_INTERVAL_PRECISION est automatiquement défini sur la précision d’intervalle par défaut de 2 et le champ SQL_DESC_PRECISION est automatiquement défini sur la précision par défaut de l’intervalle en secondes de 6. Si l’une de ces valeurs n’est pas appropriée, l’application doit définir explicitement le champ descripteur via un appel à **SQLSetDescField**.

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400365"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Envoyer des commentaires de télémétrie à Microsoft pour Analytics Platform System
@@ -42,7 +42,7 @@ Pour fournir la protection maximale de la confidentialité, APS est fourni sans 
     > [!NOTE]  
     > Pour importer, vous devez utiliser deux points dans la commande.  
   
-    **Tels**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ La désactivation de la télémétrie entraînera l’arrêt de toutes les opér
     > [!NOTE]  
     > Pour importer, vous devez utiliser deux points dans la commande.  
   
-    **Tels**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ La désactivation de la télémétrie entraînera l’arrêt de toutes les opér
   
 4.  Appelle la `Disable-RemoteMonitoring` commande sans paramètres. Cette commande arrête d’envoyer des commentaires. (Cela n’affecte pas l’analyse locale.) Toutefois, la commande ne désactive pas le redirecteur DNS et/ou ne désactive aucune connectivité Internet. Cette opération doit être effectuée manuellement après la désactivation réussie des commentaires.  
   
-    **Tels**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -111,7 +111,7 @@ Si vous voyez des erreurs ou des informations qui vous conduisent à croire que 
 Il n’y a aucun effet sur `Disable-RemoteMonitoring` l’exécution de la commande plusieurs fois.  
   
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 - [Surveiller l’appliance à l’aide de la console d’administration &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [Surveiller l’appliance à l’aide des vues système &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [Surveiller l’appliance à l’aide de System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

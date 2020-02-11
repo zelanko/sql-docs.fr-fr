@@ -1,5 +1,5 @@
 ---
-title: Installer Reporting Services et Internet Informations Services côte à côte (SSRS en Mode natif) | Microsoft Docs
+title: Installer Reporting Services et Internet Information Services côte à côte (SSRS en mode natif) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67285055"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installation côte à côte de Reporting Services et d'Internet Information Services (SSRS en mode natif)
@@ -24,7 +24,7 @@ ms.locfileid: "67285055"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif|  
   
 |Version des services IIS (Internet Information Services)|Problèmes|Description|  
 |-----------------|------------|-----------------|  
@@ -41,15 +41,15 @@ ms.locfileid: "67285055"
   
  Les exemples suivants illustrent une plage de réservations d'URL, de la plus explicite à la moins explicite :  
   
-|Exemple|Demande|  
+|Exemple|Requête|  
 |-------------|-------------|  
-|http :\//123.234.345.456:80/reports|Reçoit toutes les requêtes sont envoyées à http :\//123.234.345.456/reports ou http://\<nom_ordinateur > /Reports si un service de nom de domaine peut résoudre l’adresse IP vers ce nom d’hôte.|  
+|http :\//123.234.345.456:80/reports|Reçoit toutes les requêtes envoyées à http :\//123.234.345.456/reports ou http://\<ComputerName>/reports si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
 |http://+:80/reports|Reçoit toutes les requêtes envoyées à une adresse IP ou un nom d'hôte valide pour cet ordinateur, tant que l'URL contient le nom de répertoire virtuel « reports ».|  
-|http :\//123.234.345.456:80|Reçoit les requêtes qui spécifie le protocole http :\//123.234.345.456 ou http://\<nom_ordinateur > Si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
+|http :\//123.234.345.456:80|Reçoit une demande qui spécifie http\/:/123.234.345.456 ou\<http://ComputerName> si un service de nom de domaine peut convertir l’adresse IP en ce nom d’hôte.|  
 |http://+:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour tous les points de terminaison d'application mappés à **Assigné**.|  
 |http://*:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour les points de terminaison d'application mappés à **Non assigné**.|  
   
- Une indication d’un conflit de port est que vous verrez le message d’erreur suivant : 'System.IO.FileLoadException: Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020).'  
+ Le message d'erreur suivant indique un conflit de ports : « System.IO.FileLoadException : Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020). »  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Réservations d'URL pour IIS 6.0, 7.0, 8.0, 8.5 avec [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Grâce aux règles de priorité décrites dans la section précédente, vous pouvez comprendre comment les réservations d'URL définies pour Reporting Services et les services IIS (Internet Information Services) favorisent l'interopérabilité. Reporting Services reçoit des requêtes qui spécifient explicitement les noms de répertoires virtuels de ses applications ; les services IIS (Internet Information Services) reçoivent toutes les requêtes restantes, lesquelles peuvent être adressées ensuite aux applications qui s'exécutent dans le cadre du modèle de processus IIS.  
@@ -57,7 +57,7 @@ ms.locfileid: "67285055"
 |Application|Réservation d'URL|Description|Réception de requête|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Serveur de rapports|http://+:80/ReportServer|Caractère générique fort sur le port 80, avec le répertoire virtuel du serveur de rapports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel du serveur de rapports. Le service web Report Server reçoit toutes les requêtes vers http://\<nom_ordinateur>/reportserver.|  
-|Gestionnaire de rapports|http://+:80/Reports|Caractère générique fort sur le port 80, avec le répertoire virtuel Reports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel reports. Le Gestionnaire de rapports reçoit toutes les requêtes vers http://\<nom_ordinateur > / reports.|  
+|Gestionnaire de rapports|http://+:80/Reports|Caractère générique fort sur le port 80, avec le répertoire virtuel Reports.|Reçoit toutes les requêtes sur le port 80 qui spécifient le répertoire virtuel reports. Gestionnaire de rapports reçoit toutes les demandes adressées à http://\<ComputerName>/Reports.|  
 |IIS|http://*:80/|Caractère générique faible sur le port 80.|Reçoit toutes les requêtes restantes sur le port 80, qui ne sont pas reçues par une autre application.|  
   
 ## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Déploiements côte à côte de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et de SQL Server 2005 Reporting Services sur IIS 6.0, 7.0, 8.0, 8.5  
@@ -65,15 +65,15 @@ ms.locfileid: "67285055"
   
 -   Site Web IIS assigné au port 80 et répertoire virtuel nommé « Reports ».  
   
--   Un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance de serveur de rapports installé dans la configuration par défaut, où la réservation d’URL spécifie également le port 80 et l’application Gestionnaire de rapports utilise également « Reports » pour le nom de répertoire virtuel.  
+-   Instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de serveur de rapports installée dans la configuration par défaut, où la réservation d’URL spécifie également le port 80 et l’application Gestionnaire de rapports utilise également « Reports » pour le nom de répertoire virtuel.  
   
- Avec cette configuration, une demande est envoyée à http://\<nom_ordinateur > : 80/reports sera reçue par le Gestionnaire de rapports. L'application accessible via le répertoire virtuel Reports dans IIS ne reçoit plus de requêtes une fois que l'instance du serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installée.  
+ À partir de cette configuration, une demande envoyée à http://\<ComputerName>:80/reports sera reçue par gestionnaire de rapports. L'application accessible via le répertoire virtuel Reports dans IIS ne reçoit plus de requêtes une fois que l'instance du serveur de rapports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installée.  
   
  Si vous exécutez des déploiements côte à côte de versions plus anciennes et plus récentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous risquez de rencontrer le problème de routage qui vient d'être décrit. En effet, toutes les versions de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisent « ReportServer » et « Reports » comme noms de répertoires virtuels pour le serveur de rapports et les applications du Gestionnaire de rapports, ce qui augmente le risque d'avoir des répertoires virtuels « reports » et « reportserver » dans IIS.  
   
  Pour vous assurer que toutes les applications reçoivent des requêtes, suivez ces instructions :  
   
--   Pour les installations Reporting Services, choisissez des noms de répertoires virtuels qui ne sont pas déjà utilisés par un site Web IIS sur le même port que Reporting Services. En cas de conflit, installez Reporting Services en mode « fichiers uniquement » (via le programme d'installation, mais ne configurez pas l'option serveur dans l'Assistant Installation) afin de pouvoir configurer les répertoires virtuels, une fois l'installation terminée. Indique que votre configuration est en conflit est que le message d’erreur s’affiche : System.IO.FileLoadException: Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020).  
+-   Pour les installations Reporting Services, choisissez des noms de répertoires virtuels qui ne sont pas déjà utilisés par un site Web IIS sur le même port que Reporting Services. En cas de conflit, installez Reporting Services en mode « fichiers uniquement » (via le programme d'installation, mais ne configurez pas l'option serveur dans l'Assistant Installation) afin de pouvoir configurer les répertoires virtuels, une fois l'installation terminée. Le message d'erreur suivant indique un conflit au niveau de votre configuration : « System.IO.FileLoadException : Le processus ne peut pas accéder au fichier, car il est utilisé par un autre processus. (Exception de HRESULT : 0x80070020). »  
   
 -   Pour les installations que vous configurez manuellement, adoptez les conventions d'affectation des noms par défaut dans les URL de configuration. Si vous installez [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en tant qu'instance nommée, incluez le nom de l'instance lors de la création d'un répertoire virtuel.  
   

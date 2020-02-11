@@ -15,26 +15,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808397"
 ---
-# <a name="connection-properties-dialog-box"></a>Propriétés de connexion, boîte de dialogue
+# <a name="connection-properties-dialog-box"></a>Propriétés de connexion (boîte de dialogue)
   Cette boîte de dialogue vous permet d'afficher les propriétés de la connexion en cours. Cette boîte de dialogue est disponible lorsque vous cliquez sur **Afficher les propriétés de connexion** dans les différentes boîtes de dialogue de l'Explorateur d'objets. Les propriétés affichées dans cette page sont en lecture seule.  
   
  Pour modifier des propriétés telles que **Base de données**, connectez-vous à la base de données de votre choix à l'aide de l'Explorateur d'objets, avant d'ouvrir la boîte de dialogue **Propriétés de connexion** .  
   
  Notez que le délai d'attente de requête pour SQL Azure est de 30 minutes.  
   
-## <a name="authentication"></a>Authentification  
- Permet d'afficher les propriétés d'authentification pour la connexion en cours. Les propriétés d'authentification correspondent au nom d'accès et à la méthode d'authentification utilisés une fois la connexion établie. Pour modifier les propriétés d'authentification, déconnectez-vous de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis connectez de nouveau l'Explorateur d'objets au serveur, à l'aide des options de connexion de votre choix.  
+## <a name="authentication"></a>Authentication  
+ Permet d'afficher les propriétés d'authentification pour la connexion en cours. Les propriétés d'authentification correspondent au nom d'accès et à la méthode d'authentification utilisés une fois la connexion établie. Pour modifier les propriétés d’authentification, déconnectez [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-vous, puis reconnectez l’Explorateur d’objets au serveur, à l’aide des options de connexion souhaitées.  
   
  **Méthode d’authentification**  
  Méthode d'authentification utilisée pour la connexion en cours.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Nom de l'utilisateur de connexion utilisé pour l'authentification de la connexion.  
   
 ## <a name="connection-category"></a>Catégorie de connexion  
@@ -55,7 +55,7 @@ ms.locfileid: "62808397"
  **Délai de connexion**  
  Durée en secondes à attendre lors de la connexion à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avant l'expiration du délai et le renvoi à l'utilisateur d'une erreur de type Échec de connexion. Pour modifier cela, connectez-vous de nouveau à l'aide des propriétés de connexion souhaitées.  
   
- **Délai d'exécution**  
+ **Délai d’exécution**  
  Durée en secondes à attendre avant que l'exécution d'une tâche se termine sur le serveur. Pour modifier cela, connectez-vous de nouveau à l'aide des propriétés de connexion souhaitées.  
   
  **Chiffré**  
@@ -70,10 +70,10 @@ ms.locfileid: "62808397"
  **Version du produit**  
  Version du produit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nom de serveur**  
+ **Nom du serveur**  
  Nom de l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Nom d'instance**  
+ **Nom de l’instance**  
  Nom de l'instance du serveur. L'instance par défaut est vide.  
   
  **Langage**  
@@ -85,23 +85,23 @@ ms.locfileid: "62808397"
 ## <a name="server-environment-category"></a>Catégorie d'environnement de serveur  
  Permet d'afficher les propriétés d'environnement de serveur de la connexion en cours en rapport avec le matériel et le système d'exploitation de serveur. Les propriétés ne peuvent pas être configurées par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Nom d’ordinateur**  
+ **Nom de l’ordinateur**  
  Nom de l'ordinateur serveur qui exécute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Plateforme**  
  Nom du système d'exploitation, nom du fabricant et famille d'UC du serveur.  
   
- **Système d'exploitation**  
+ **Système d’exploitation**  
  Version de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows installée sur le serveur.  
   
  **Processeurs**  
  Nombre de processeurs sur le serveur.  
   
- **Operating System Memory**  
+ **Mémoire du système d’exploitation**  
  Quantité globale de mémoire physique sur le serveur, en mégaoctets.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés dans SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Se connecter au serveur &#40;page Connexion&#41; — Moteur de base de données](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Connexion au serveur &#40;page de connexion&#41; Moteur de base de données](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

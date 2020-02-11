@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071816"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Création de procédures stockées compilées en mode natif
-  Les procédures stockées compilées en mode natif n'implémentent pas la surface d'exposition totale de programmabilité et de requête [!INCLUDE[tsql](../../includes/tsql-md.md)] . Certaines constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne peuvent pas être utilisées dans des procédures stockées compilées en mode natif. Pour plus d’informations, consultez [constructions prises en charge dans Natively Compiled Stored Procedures](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
+  Les procédures stockées compilées en mode natif n'implémentent pas la surface d'exposition totale de programmabilité et de requête [!INCLUDE[tsql](../../includes/tsql-md.md)] . Certaines constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne peuvent pas être utilisées dans des procédures stockées compilées en mode natif. Pour plus d’informations, consultez [constructions prises en charge dans les procédures stockées compilées en mode natif](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  À l'inverse, plusieurs fonctionnalités [!INCLUDE[tsql](../../includes/tsql-md.md)] ne sont prises en charge que pour les procédures stockées compilées en mode natif :  
   
@@ -55,17 +55,18 @@ go
   
 |Option|Description|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Les procédures stockées compilées en mode natif doivent être liés au schéma des objets référencés. Cela signifie que la table référencée par la procédure ne peut pas être supprimée. Tables référencées dans la procédure doivent inclure leur nom de schéma et les caractères génériques (\*) ne sont pas autorisés dans les requêtes. `SCHEMABINDING` est uniquement prise en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|`EXECUTE AS`|Les procédures stockées compilées en mode natif ne prennent pas en charge `EXECUTE AS CALLER`, qui est le contexte d'exécution par défaut. Par conséquent, vous devez spécifier le contexte d'exécution. Les options `EXECUTE AS OWNER`, `EXECUTE AS` *utilisateur*, et `EXECUTE AS SELF` sont pris en charge.|  
-|`BEGIN ATOMIC`|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> `TRANSACTION ISOLATION LEVEL` . Consultez [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) pour les niveaux d’isolation pris en charge.<br /><br /> `LANGUAGE` . Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
+|`SCHEMABINDING`|Les procédures stockées compilées en mode natif doivent être liées au schéma des objets auxquels elle fait référence. Cela signifie que la table référencée par la procédure ne peut pas être supprimée. Les tables référencées dans la procédure doivent inclure leur nom de schéma, et les\*caractères génériques () ne sont pas autorisés dans les requêtes. 
+  `SCHEMABINDING` est uniquement prise en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`EXECUTE AS`|Les procédures stockées compilées en mode natif ne prennent pas en charge `EXECUTE AS CALLER`, qui est le contexte d'exécution par défaut. Par conséquent, vous devez spécifier le contexte d'exécution. Les options `EXECUTE AS OWNER`, `EXECUTE AS` *User*et `EXECUTE AS SELF` sont prises en charge.|  
+|`BEGIN ATOMIC`|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> `TRANSACTION ISOLATION LEVEL`. Consultez [niveaux](../../database-engine/transaction-isolation-levels.md) d’isolement des transactions pour les niveaux d’isolement pris en charge.<br /><br /> `LANGUAGE`. Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
   
- En ce qui concerne `EXECUTE AS` et les connexions Windows, une erreur peut se produire en raison de l'emprunt d'identité effectué via `EXECUTE AS`. Si un compte d'utilisateur utilise l'authentification Windows, il doit y avoir une confiance totale entre le compte de service utilisé pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le domaine de la connexion Windows. S’il n’est pas une confiance totale, le message d’erreur suivant est retourné lors de la création d’un compilées en mode natif de la procédure stockée : Message 15404, Impossible d’obtenir des informations sur Windows NT utilisateur ou le groupe « username », code d’erreur 0 x 5.  
+ En ce qui concerne `EXECUTE AS` et les connexions Windows, une erreur peut se produire en raison de l'emprunt d'identité effectué via `EXECUTE AS`. Si un compte d'utilisateur utilise l'authentification Windows, il doit y avoir une confiance totale entre le compte de service utilisé pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le domaine de la connexion Windows. S’il n’existe pas de confiance totale, le message d’erreur suivant est retourné lors de la création d’une procédure stockée compilée en mode natif : MSG 15404, impossible d’obtenir des informations sur l’utilisateur ou le groupe Windows NT’nom_utilisateur', code d’erreur 0X5.  
   
- Pour résoudre cette erreur, utilisez une des opérations suivantes :  
+ Pour résoudre cette erreur, utilisez l’une des options suivantes :  
   
 -   Utilisez un compte du même domaine que l'utilisateur Windows pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est à l’aide d’un compte d’ordinateur comme Service réseau ou système Local, l’ordinateur doit être approuvé par le domaine contenant l’utilisateur Windows.  
+-   Si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise un compte d’ordinateur tel que service réseau ou système local, l’ordinateur doit être approuvé par le domaine contenant l’utilisateur Windows.  
   
 -   Utilisez l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -84,7 +85,7 @@ go
   
 5.  Réappliquez les autorisations du script à la procédure stockée.  
   
- L’inconvénient de cette procédure est que l’application sera hors connexion à partir du début de l’étape 3 à l’issue de l’étape 5. Cette opération peut prendre quelques secondes et le client qui utilise l'application peut recevoir des messages d'erreur.  
+ L’inconvénient de cette procédure est que l’application est hors connexion dès le début de l’étape 3 jusqu’à la fin de l’étape 5. Cette opération peut prendre quelques secondes et le client qui utilise l'application peut recevoir des messages d'erreur.  
   
  Une autre méthode pour modifier (efficacement) une procédure stockée compilée en mode natif consiste à créer, dans un premier temps, une nouvelle version de la procédure stockée. La procédure stockée compilée en mode natif possède un numéro de version associé. Nous allons nommer l'ancienne version SP_Vold et la nouvelle SP_Vnew.  
   

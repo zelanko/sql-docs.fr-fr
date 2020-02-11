@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188289"
 ---
 # <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
@@ -74,7 +74,7 @@ ms.locfileid: "68188289"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter un rapport personnalisé à Management Studio](add-a-custom-report-to-management-studio.md)   
- [Annuler la suppression avertissements d’exécution de rapports personnalisés](unsuppress-run-custom-report-warnings.md)   
+ [Annuler la suppression des avertissements d’exécution de rapports personnalisés](unsuppress-run-custom-report-warnings.md)   
  [Utiliser des rapports personnalisés avec les propriétés de nœud de l’Explorateur d’objets](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

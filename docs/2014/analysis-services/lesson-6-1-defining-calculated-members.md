@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493883"
 ---
 # <a name="defining-calculated-members"></a>Définition des membres calculés
@@ -32,7 +32,7 @@ ms.locfileid: "69493883"
   
      L'image suivante montre l'onglet **Calculs** du Concepteur de cube.  
   
-     ![Onglet calculs du concepteur de cube](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Onglet calculs du concepteur de cube")  
+     ![Onglet Calculs du Concepteur de cube](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Onglet Calculs du Concepteur de cube")  
   
 2.  Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Nouveau membre calculé**.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "69493883"
   
 5.  Faites glisser **Internet Sales-Sales Amount** depuis l’onglet **Métadonnées** du volet **Outils de calcul** jusqu’à la zone **Expression** dans le volet **Expressions de calcul** .  
   
-6.  Dans la zone **expression** , tapez un signe plus (`+`) après **[Measures]. [ Ventes sur Internet-chiffre d’affaires]** .  
+6.  Dans la zone **Expression** , tapez un signe plus (`+`) après **[Measures].[Internet Sales-Sales Amount]**.  
   
 7.  Sous l’onglet **Métadonnées** dans le volet **Outils de calcul** , développez **Reseller Sales**, puis faites glisser **Reseller Sales-Sales Amount** dans la zone **Expression** du volet **Expressions de calcul** après le signe plus (+).  
   
-8.  Dans la liste **Chaîne de format** , sélectionnez **Devise**.  
+8.  Dans la liste **chaîne de format** , sélectionnez **devise.**  
   
 9. Dans la liste **Comportement non vide** , cochez les cases pour **Internet Sales-Sales Amount** et **Reseller Sales-Sales Amount**, puis cliquez sur **OK**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69493883"
   
      L'image suivante montre le volet **Expressions de calcul** rempli à l'aide des paramètres que vous avez spécifiés dans les étapes précédentes.  
   
-     ![Volet des expressions de calcul remplies](../../2014/tutorials/media/l6-calculatedmembers-03.gif "Volet des expressions de calcul remplies")  
+     ![Volet des expressions de calcul rempli](../../2014/tutorials/media/l6-calculatedmembers-03.gif "Volet des expressions de calcul rempli")  
   
 10. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode Script**, puis examinez le script de calcul dans le volet **Expressions de calcul** .  
   
@@ -153,7 +153,7 @@ ms.locfileid: "69493883"
   
 16. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode Script** et examinez les trois calculs que vous avez ajoutés au script de calcul.  
   
-17. Ajoutez une nouvelle ligne au script de calcul immédiatement avant le `[Internet GPM]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne:  
+17. Ajoutez une nouvelle ligne au script de calcul immédiatement avant le `[Internet GPM]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne :  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -167,7 +167,7 @@ ms.locfileid: "69493883"
   
 1.  Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode formulaire**.  
   
-2.  Dans le volet **organisateur de script** , `[Total GPM]`sélectionnez, puis cliquez sur **nouveau membre calculé** dans la barre d’outils de l’onglet **calculs** .  
+2.  Dans le **volet organisateur de script** , `[Total GPM]`sélectionnez, puis cliquez sur **nouveau membre calculé** dans la barre d’outils de l’onglet **calculs** .  
   
      Le fait de cliquer sur le membre calculé final dans le volet **Organisateur de script** avant de cliquer sur **Nouveau membre calculé** garantit que le nouveau membre calculé sera entré à la fin du script. Les scripts s'exécutent dans l'ordre où ils apparaissent dans le volet **Organisateur de script** .  
   
@@ -236,7 +236,7 @@ ms.locfileid: "69493883"
   
 17. Dans la barre d'outils de l'onglet **Calculs** , cliquez sur **Mode Script**et examinez les trois calculs que vous avez ajoutés au script de calcul.  
   
-18. Ajoutez une nouvelle ligne au script de calcul immédiatement avant le `[Internet Sales Ratio to All Products]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne:  
+18. Ajoutez une nouvelle ligne au script de calcul immédiatement avant le `[Internet Sales Ratio to All Products]` calcul, puis ajoutez le texte suivant au script sur sa propre ligne :  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -272,7 +272,7 @@ ms.locfileid: "69493883"
   
      Observez que la marge brute pour les ventes de revendeurs est nettement plus faible que pour les ventes par Internet, comme l'illustre l'image suivante.  
   
-     ![Volet données avec les ventes](../../2014/tutorials/media/l6-calculatedmembers-7b.gif " des revendeurs Volet données avec les ventes") des revendeurs  
+     ![Volet de données affichant les ventes du revendeur](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Volet de données affichant les ventes du revendeur")  
   
 9. Ajoutez les mesures **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**et **Reseller Sales Ratio to All Products** à la zone Valeurs.  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211496"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planification d’une installation de SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "68211496"
   
  Indépendamment de la méthode d'installation, vous êtes invité à confirmer l'acceptation des termes de la licence de logiciel en tant que personne physique ou pour le compte d'une entité, sauf si votre utilisation du logiciel est régie par un accord distinct, tel qu'un accord de concession de licence en volume de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou un accord tiers avec un éditeur de logiciels ou un fabricant OEM.  
   
- Les termes du contrat de licence sont affichés afin que vous puissiez les consulter et les accepter dans l'interface utilisateur du programme d'installation. Les installations sans assistance (à l'aide du paramètre /Q ou /QS) doivent inclure le paramètre /IAcceptSQLServerLicenseTerms. Vous pouvez passer en revue les termes du contrat de licence séparément à la page [Termes du contrat de licence logiciel Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
+ Les termes du contrat de licence sont affichés afin que vous puissiez les consulter et les accepter dans l'interface utilisateur du programme d'installation. Les installations sans assistance (à l'aide du paramètre /Q ou /QS) doivent inclure le paramètre /IAcceptSQLServerLicenseTerms. Vous pouvez consulter les termes du contrat de licence séparément sur la page [Termes du contrat de licence logiciel Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  Selon la façon dont vous avez reçu le logiciel (par exemple, via le programme de licence en volume [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), votre utilisation du logiciel peut être soumise à des termes et conditions supplémentaires.  
@@ -39,7 +39,7 @@ ms.locfileid: "68211496"
  [Nouveautés liées à l'installation de SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  Cette rubrique décrit les détails des fonctionnalités nouvelles ou améliorées de l'installation de cette version de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
  Cette rubrique répertorie les configurations matérielle et logicielle minimales requises pour installer et exécuter une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Considérations sur la sécurité pour une installation SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "68211496"
  [Installer les fonctionnalités BI de SQL Server 2014](install-sql-server-business-intelligence-features.md)  
  Cette section de la documentation d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explique comment installer les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui font partie de la plateforme Microsoft BI.  
   
- [Mise à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Mettre à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
  La section fournit une vue d'ensemble des instances de mise à niveau des versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] précédentes vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Désinstaller SQL Server 2014](uninstall-sql-server.md)  
@@ -74,10 +74,10 @@ ms.locfileid: "68211496"
  Cette section de la documentation d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] décrit comment installer et configurer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installation de SQL Server 2014 de démarrage rapide](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
+ [Installation de démarrage rapide de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [Installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Solutions haute disponibilité &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
- [Avant l'installation du clustering de basculement](../failover-clusters/install/before-installing-failover-clustering.md)   
- [Mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Solutions de haute disponibilité &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
+ [Avant l’installation du clustering de basculement](../failover-clusters/install/before-installing-failover-clustering.md)   
+ [Effectuez une mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

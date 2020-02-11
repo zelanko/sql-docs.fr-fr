@@ -16,18 +16,18 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d90cd0ba957da820ce5a937ae687e39ca0302025
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769059"
 ---
-# <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
+# <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Filtre les données publiées en fonction d'un article de table. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @filter_name = ] 'filter_name'`Nom de la procédure stockée de filtre à créer à partir du *filter_name*. *filter_name* est de type **nvarchar (386)** , avec NULL comme valeur par défaut. Vous devez spécifier un nom unique pour le filtre d'article.  
+`[ @filter_name = ] 'filter_name'`Nom de la procédure stockée de filtre à créer à partir de la *filter_name*. *filter_name* est de type **nvarchar (386)**, avec NULL comme valeur par défaut. Vous devez spécifier un nom unique pour le filtre d'article.  
   
 `[ @filter_clause = ] 'filter_clause'`Clause de restriction (WHERE) qui définit un filtre horizontal. Quand vous entrez la clause de restriction, omettez le mot clé WHERE. *filter_clause* est de type **ntext**, avec NULL comme valeur par défaut.  
   
@@ -63,12 +63,12 @@ sp_articlefilter [ @publication = ] 'publication'
   
  **1** indique que les modifications apportées à l’article entraînent la réinitialisation des abonnements existants et autorise la réinitialisation de l’abonnement.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'`Spécifie un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de publication non-. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un serveur de publication.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -76,9 +76,9 @@ sp_articlefilter [ @publication = ] 'publication'
   
  L’exécution de **sp_articlefilter** pour un article avec des abonnements existants exige que ces abonnements soient réinitialisés.  
   
- **sp_articlefilter** crée le filtre, insère l’ID de la procédure stockée de filtre dans la colonne **filtre** de la table [Transact-&#41; SQL &#40;sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) , puis insère le texte de la clause de restriction dans le **filtre. colonne _clause** .  
+ **sp_articlefilter** crée le filtre, insère l’ID de la procédure stockée de filtre dans la colonne **filtre** de la table [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) , puis insère le texte de la clause de restriction dans la colonne **filter_clause** .  
   
- Pour créer un article avec un filtre horizontal, exécutez [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sans paramètre de *filtre* . Exécutez **sp_articlefilter**, en fournissant tous les paramètres, y compris *filter_clause*, puis exécutez [ &#40;sp_articleview&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), en fournissant tous les paramètres, y compris la même *filter_clause*. Si le filtre existe déjà et si le **type** dans **sysarticles** est **1** (article basé sur le journal), le filtre précédent est supprimé et un nouveau filtre est créé.  
+ Pour créer un article avec un filtre horizontal, exécutez [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sans paramètre de *filtre* . Exécutez **sp_articlefilter**, en fournissant tous les paramètres, y compris *filter_clause*, puis exécutez [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), en fournissant tous les paramètres, y compris les *filter_clause*identiques. Si le filtre existe déjà et si le **type** dans **sysarticles** est **1** (article basé sur le journal), le filtre précédent est supprimé et un nouveau filtre est créé.  
   
  Si *filter_name* et *filter_clause* ne sont pas fournis, le filtre précédent est supprimé et l’ID de filtre est défini sur **0**.  
   

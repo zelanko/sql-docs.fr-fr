@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0000e0c7a5933003544de22b60a8adc4d9c59c82
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684444"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Conditions d'implémentation des éléments de rapports personnalisés
@@ -50,6 +50,6 @@ ms.locfileid: "74684444"
  [Création d’un composant d’exécution d’élément de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)   
  [Création d’un composant au moment de la conception d’éléments de rapport personnalisés](creating-a-custom-report-item-design-time-component.md)   
  [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)   
- [Bibliothèques de classes d’éléments de rapports personnalisés](custom-report-item-class-libraries.md)  
+ [Bibliothèques de classes d'éléments de rapports personnalisés](custom-report-item-class-libraries.md)  
   
   

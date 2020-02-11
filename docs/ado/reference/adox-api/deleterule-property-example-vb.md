@@ -1,5 +1,5 @@
 ---
-title: DeleteRule, propriété-Exemple (VB) | Microsoft Docs
+title: DeleteRule, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966403"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule, exemple de propriété (VB)
-Cet exemple montre la [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propriété d’un [clé](../../../ado/reference/adox-api/key-object-adox.md) objet. Le code ajoute une nouvelle [Table](../../../ado/reference/adox-api/table-object-adox.md) , puis définit une nouvelle clé primaire, en définissant **DeleteRule** à **propriété DeleteRule**.  
+Cet exemple illustre la propriété [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) d’un objet [Key](../../../ado/reference/adox-api/key-object-adox.md) . Le code ajoute une nouvelle [table](../../../ado/reference/adox-api/table-object-adox.md) , puis définit une nouvelle clé primaire, en affectant à **DeleteRule** la valeur **adRICascade**.  
   
 ```  
 ' BeginDeleteRuleVB  

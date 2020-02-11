@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046764"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed (classe d'événements)
@@ -31,9 +31,9 @@ ms.locfileid: "63046764"
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |BinaryData|`image`|Valeur binaire dépendante de la classe d'événements capturés dans la trace.|2|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
-|Unité centrale|`int`|Temps processeur utilisé par l'événement. En microsecondes à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En millisecondes dans les versions antérieures.|18|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
+|UC|`int`|Temps processeur utilisé par l'événement. En microsecondes à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En millisecondes dans les versions antérieures.|18|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|`bigint`|Temps pris par l'événement. En microsecondes à partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En millisecondes dans les versions antérieures.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'appel de procédure distante.|15|Oui|  
 |Error|`int`|Numéro d'erreur d'un événement donné.<br /><br /> 0=OK<br /><br /> 1=Erreur<br /><br /> 2=Abandon<br /><br /> 3=Ignoré|31|Oui|  
@@ -47,7 +47,7 @@ ms.locfileid: "63046764"
 |NTDomainName|`nvarchar`|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|`nvarchar`|Nom d'utilisateur Windows.|6|Oui|  
 |ObjectName|`nvarchar`|Nom de l'objet référencé.|34|Oui|  
-|Reads|`bigint`|Nombre de lectures de page émises par l'appel de procédure distante.|16|Oui|  
+|Lectures|`bigint`|Nombre de lectures de page émises par l'appel de procédure distante.|16|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
 |RowCounts|`bigint`|Nombre de lignes dans le traitement RPC.|48|Oui|  
 |ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26||  
@@ -56,7 +56,7 @@ ms.locfileid: "63046764"
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |TextData|`ntext`|Texte de l’appel de procédure distante|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
-|Writes|`bigint`|Nombre d'écritures de page émises par l'appel de procédure distante.|17|Oui|  
+|Écritures|`bigint`|Nombre d'écritures de page émises par l'appel de procédure distante.|17|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

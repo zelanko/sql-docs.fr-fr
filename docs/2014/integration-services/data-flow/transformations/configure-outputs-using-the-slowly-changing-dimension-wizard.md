@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770608"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
@@ -48,11 +48,11 @@ ms.locfileid: "62770608"
   
 4.  Sélectionnez le type de modification pour chaque colonne.  
   
-    -   **Modification d'attribut** remplace les valeurs existantes dans les enregistrements.  
+    -   La modification de l' **attribut** remplace les valeurs existantes dans les enregistrements.  
   
-    -   **Attribut d'historique** crée des enregistrements au lieu de mettre à jour des enregistrements existants.  
+    -   L' **attribut d’historique** crée des enregistrements au lieu de mettre à jour des enregistrements existants.  
   
-    -   **Attribut fixe** indique que la valeur de colonne ne doit pas changer.  
+    -   **Attribut fixe** indique que la valeur de colonne ne doit pas être modifiée.  
   
 5.  Définissez les options d'attributs fixes et variables.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62770608"
   
      Le schéma suivant illustre un exemple de flux de données qui prend en charge les modifications d'attributs fixes, d'attributs variables et d'attributs d'historique, les membres inférés et les modifications d'enregistrements correspondants.  
   
-     ![Flux de données de l’Assistant Dimension à variation lente](../../media/dimensionwizard.gif "Flux de données de l’Assistant Dimension à variation lente")  
+     ![Flux de données de l'Assistant Dimension à variation lente](../../media/dimensionwizard.gif "Flux de données de l'Assistant Dimension à variation lente")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Mise à jour de sorties de dimensions à variation lente  
  Le moyen le plus simple de mettre à jour la configuration des sorties de transformations de dimensions à variation lente consiste à réexécuter l'Assistant Dimension à variation lente et à modifier les propriétés à partir des pages de l'Assistant. Vous pouvez également mettre à jour la transformation de dimension à variation lente par le biais de la boîte de dialogue **Éditeur avancé** ou par programmation.  

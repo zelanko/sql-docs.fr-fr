@@ -1,5 +1,5 @@
 ---
-title: 'SQL à C : Date | Microsoft Docs'
+title: 'SQL en C : date | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056879"
 ---
-# <a name="sql-to-c-date"></a>SQL à C : Date
-L’identificateur pour le type de données de date ODBC SQL est :  
+# <a name="sql-to-c-date"></a>SQL en C : date
+L’identificateur pour la date type de données SQL ODBC est le suivant :  
   
  SQL_TYPE_DATE  
   
- Le tableau suivant présente le ODBC C types de données à laquelle la date de données SQL peut-être être convertie. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ Le tableau suivant répertorie les types de données ODBC C dans lesquels les données SQL peuvent être converties. Pour obtenir une explication des colonnes et des termes du tableau, consultez [conversion de données SQL en types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
-|Identificateur de type C|Tester|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|Identificateur de type C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > longueur d’octet de caractère<br /><br /> 11 < = *BufferLength* < = longueur d’octet de caractère<br /><br /> *BufferLength* < 11|Données<br /><br /> Données tronquées<br /><br /> Indéfini|10<br /><br /> Longueur des données en octets<br /><br /> Indéfini|N/A<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > longueur des caractères<br /><br /> 11 < = *BufferLength* < = longueur de caractère<br /><br /> *BufferLength* < 11|Données<br /><br /> Données tronquées<br /><br /> Indéfini|10<br /><br /> Longueur des données en caractères<br /><br /> Indéfini|N/A<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Longueur d’octet de données < = *BufferLength*<br /><br /> Longueur d’octet de données > *BufferLength*|Données<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Indéfini|N/A<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Aucun [a]|Données|6[c]|N/A|  
-|SQL_C_TYPE_TIMESTAMP|Aucun [a]|Données [b]|16[c]|N/A|  
+|SQL_C_CHAR|*BufferLength* > la longueur en octets du caractère<br /><br /> 11 <= *BufferLength* <= longueur d’octet de caractère<br /><br /> *BufferLength* < 11|Données<br /><br /> Données tronquées<br /><br /> Non défini(e)|10<br /><br /> Longueur des données en octets<br /><br /> Non défini(e)|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > longueur de caractère<br /><br /> 11 <= *BufferLength* <= longueur de caractère<br /><br /> *BufferLength* < 11|Données<br /><br /> Données tronquées<br /><br /> Non défini(e)|10<br /><br /> Longueur des données en caractères<br /><br /> Non défini(e)|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Longueur en octets des données <= *BufferLength*<br /><br /> Longueur en octets des données > *BufferLength*|Données<br /><br /> Non défini(e)|Longueur des données en octets<br /><br /> Non défini(e)|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Aucun [a]|Données|6 [c]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|Aucun [a]|Données [b]|16 [c]|n/a|  
   
- [a] la valeur de *BufferLength* est ignorée pour cette conversion. Le pilote part du principe que la taille de **TargetValuePtr* est la taille du type de données C.  
+ [a] la valeur de *BufferLength* est ignorée pour cette conversion. Le pilote suppose que la taille de **TargetValuePtr* est la taille du type de données C.  
   
- [b] les champs d’heure de la structure d’horodatage sont définies à zéro.  
+ [b] les champs d’heure de la structure d’horodatage sont définis sur zéro.  
   
- [c] Il s’agit de la taille du type de données C correspondant.  
+ [c] il s’agit de la taille du type de données C correspondant.  
   
- Lors de la date de données SQL est converti en données caractères C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj*« format. Ce format n’est pas affecté par le paramètre de pays Windows®.
+ Lorsque les données SQL de date sont converties en données de type C, la chaîne résultante est au format «*yyyy*-*mm*-*JJ*». Ce format n’est pas affecté par le paramètre pays® Windows.

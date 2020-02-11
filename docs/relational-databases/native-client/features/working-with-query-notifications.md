@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 286236ec52f1ebb9e1d5639404a48fa91b24aee2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761337"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
@@ -47,7 +47,7 @@ ms.locfileid: "73761337"
   
  Les notifications sont envoyées une seule fois. Pour une notification continue des modifications de données, un nouvel abonnement doit être créé en exécutant à nouveau la requête une fois chaque notification traitée.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applications clientes natives reçoivent généralement des notifications à l’aide de la commande [!INCLUDE[tsql](../../../includes/tsql-md.md)] [Receive](../../../t-sql/statements/receive-transact-sql.md) pour lire les notifications de la file d’attente associée au service spécifié dans les options de notification.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]En général, les applications clientes natives [!INCLUDE[tsql](../../../includes/tsql-md.md)] reçoivent des notifications à l’aide de la commande [Receive](../../../t-sql/statements/receive-transact-sql.md) pour lire les notifications de la file d’attente associée au service spécifié dans les options de notification.  
   
 > [!NOTE]  
 >  Les noms de tables doivent être qualifiés dans des requêtes pour lesquelles une notification est requise, par exemple `dbo.myTable`. Les noms de tables doivent être qualifiés avec des noms en deux parties. L'abonnement n'est pas valide si des noms en trois ou quatre parties sont utilisés.  
@@ -67,19 +67,19 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  Le service doit utiliser le contrat prédéfini `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`, comme indiqué plus haut.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
- Le fournisseur d’OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la notification du consommateur sur la modification de l’ensemble de lignes. Le consommateur reçoit la notification à chaque phase de la modification de l'ensemble de lignes et à chaque tentative de modification.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend en charge la notification du consommateur sur la modification de l’ensemble de lignes. Le consommateur reçoit la notification à chaque phase de la modification de l'ensemble de lignes et à chaque tentative de modification.  
   
 > [!NOTE]  
->  La transmission d’une requête notifications au serveur avec **ICommand :: Execute** est la seule méthode valide pour s’abonner aux notifications de requête avec le fournisseur de OLE DB Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+>  Le passage d’une requête notifications au serveur avec **ICommand :: Execute** est la seule méthode valide pour s’abonner [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux notifications de requête avec le fournisseur OLE DB Native Client.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
- Afin de prendre en charge les notifications de requêtes par le biais de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
+ Afin de prendre en charge les notifications de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requêtes par le biais de OLE DB, Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Name|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l'utilisateur et n'a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Options de notification de requêtes. Celles-ci sont spécifiées dans une chaîne avec la syntaxe *nom*=*valeur*. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente.<br /><br /> La valeur par défaut est une chaîne vide.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Options de notification de requêtes. Celles-ci sont spécifiées dans une chaîne avec la syntaxe de*valeur* de *nom*=. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente.<br /><br /> La valeur par défaut est une chaîne vide.|  
   
  L'abonnement aux notifications est toujours validé, que l'instruction ait été exécutée dans une transaction utilisateur ou en mode de validation automatique, ou que la transaction dans laquelle l'instruction s'est exécutée ait été validée ou restaurée. La notification du serveur est déclenchée lorsque l'une des conditions de notification non valides suivantes se produit : modification des données sous-jacentes ou du schéma ou expiration du délai d'attente imparti (selon l'opération qui se produit en premier). Les inscriptions de notification sont supprimées dès qu'elles sont déclenchées. Par conséquent, lorsque l'application reçoit des notifications, l'application doit encore s'abonner au cas où elle souhaiterait obtenir d'autres mises à jour.  
   
@@ -107,7 +107,7 @@ RECEIVE * FROM MyQueue
  Pour plus d’informations sur le jeu de propriétés DBPROPSET_SQLSERVERROWSET, consultez [Propriétés et comportements](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)de l’ensemble de lignes.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Pilote ODBC SQL Server Native Client  
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les notifications de requêtes par le biais de l’ajout de trois nouveaux attributs aux fonctions [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) et [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge les notifications de requêtes par le biais de l’ajout de trois nouveaux attributs aux fonctions [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) et [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -123,7 +123,7 @@ RECEIVE * FROM MyQueue
 ## <a name="special-cases-and-restrictions"></a>Cas particuliers et restrictions  
  Les types de données suivants ne sont pas pris en charge pour les notifications :  
   
--   **texte**  
+-   **text**  
   
 -   **ntext**  
   

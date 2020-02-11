@@ -1,5 +1,5 @@
 ---
-title: Variables de Table optimisé en mémoire | Microsoft Docs
+title: Variables de table optimisées en mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774410"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de table mémoire optimisée
@@ -36,7 +36,7 @@ ms.locfileid: "62774410"
   
 -   Les variables de table peuvent être utilisées pour simuler des curseurs dans les procédures stockées compilées en mode natif, ce qui peut vous aider à contourner les limitations concernant la surface d'exposition dans ces procédures.  
   
- Comme les tables mémoire optimisées, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] génère une DLL pour chaque type de table mémoire optimisée. (Compilation est appelée lorsque le type de table mémoire optimisée est créé et ne pas lorsque vous permet de créer des variables de table mémoire optimisée). Cette DLL contient les fonctions pour accéder aux index et récupérer des données des variables de table. Lorsqu'une variable de table mémoire optimisée est déclarée en fonction du type de table, une instance de la table et des structures d'index correspondant au type de table est créée dans la session utilisateur. La variable de table peut ensuite être utilisée de la même manière que les variables de table sur disque. Vous pouvez insérer, mettre à jour, et supprimer des lignes dans la variable de table, et utiliser des variables dans les requêtes [!INCLUDE[tsql](../includes/tsql-md.md)] . Vous pouvez également passer les variables dans les procédures stockées compilées en mode natif et interprétées, comme paramètres de table (TVP).  
+ Comme les tables mémoire optimisées, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] génère une DLL pour chaque type de table mémoire optimisée. (La compilation est appelée lorsque le type de table mémoire optimisée est créé et non lorsqu’il est utilisé pour créer des variables de table mémoire optimisée.) Cette DLL comprend les fonctions permettant d’accéder aux index et de récupérer des données à partir des variables de table. Lorsqu'une variable de table mémoire optimisée est déclarée en fonction du type de table, une instance de la table et des structures d'index correspondant au type de table est créée dans la session utilisateur. La variable de table peut ensuite être utilisée de la même manière que les variables de table sur disque. Vous pouvez insérer, mettre à jour, et supprimer des lignes dans la variable de table, et utiliser des variables dans les requêtes [!INCLUDE[tsql](../includes/tsql-md.md)] . Vous pouvez également passer les variables dans les procédures stockées compilées en mode natif et interprétées, comme paramètres de table (TVP).  
   
  L'exemple suivant illustre un type de table mémoire optimisée tiré de l'exemple basé sur AdventureWorks de l'OLTP en mémoire ([Exemple d'OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
@@ -60,11 +60,12 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  L'exemple montre que la syntaxe des types de tables mémoire optimisées est similaire aux types de tables sur disque, avec les exceptions suivantes :  
   
--   `MEMORY_OPTIMIZED=ON` indique que le type est une table mémoire optimisée.  
+-   
+  `MEMORY_OPTIMIZED=ON` indique que le type est une table mémoire optimisée.  
   
 -   Le type doit avoir au moins un index. Comme pour les tables mémoire optimisées, vous pouvez utiliser des index de hachage et non cluster.  
   
-     Pour un index de hachage, le nombre de compartiments doit être égal à une à deux fois le nombre de clés d'index uniques attendu. Pour plus d’informations, consultez [déterminer le nombre de compartiments Correct pour les index de hachage](../relational-databases/indexes/indexes.md).  
+     Pour un index de hachage, le nombre de compartiments doit être égal à une à deux fois le nombre de clés d'index uniques attendu. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
 -   Les restrictions de type de données et de contrainte sur les tables mémoire optimisées s'appliquent également aux types de table mémoire optimisée. Par exemple, dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] , les contraintes par défaut sont prises en charge, mais les contraintes de validation ne le sont pas.  
   
@@ -187,6 +188,6 @@ GO
  La mémoire est prise en compte dans le cadre d'un seul consommateur de mémoire PGPOOL de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge d’OLTP en mémoire par Transact-SQL](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+ [Prise en charge de Transact-SQL pour OLTP en mémoire](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

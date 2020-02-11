@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829472"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Options Demande de profil d'inclusion de valeur (tâche de profilage des données)
@@ -55,13 +55,13 @@ ms.locfileid: "62829472"
   
 -   **Données**, qui incluent les options **SubsetTableOrView**, **SupersetTableOrView**et **InclusionColumns**  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
 ### <a name="data-options"></a>Options de données  
  **ConnectionManager**  
- Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour se connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
+ Sélectionnez le gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existant qui utilise le fournisseur de données .NET pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) pour établir la connexion à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient la table ou la vue à profiler.  
   
  **SubsetTableOrView**  
  Sélectionnez la table ou la vue existante à profiler.  
@@ -102,15 +102,15 @@ ms.locfileid: "62829472"
 > [!NOTE]  
 >  Quand vous utilisez le caractère générique **(\*)** pour **ColumnName**, **CompareOptions** est en lecture seule et est définie avec le paramètre **Default**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
+|**Par défaut**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
 |**DictionarySort**|Trie et compare des données d'après les règles de tri et de comparaison telles que définies dans les dictionnaires de la langue ou de l'alphabet associé.|  
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -125,7 +125,7 @@ ms.locfileid: "62829472"
  **InclusionThresholdSetting**  
  Sélectionnez le paramètre de seuil pour améliorer la sortie du profil. La valeur par défaut de cette propriété est **Specified**. Pour plus d'informations, consultez la section « Fonctionnement des paramètres de seuil », plus haut dans cette rubrique.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance de la clé est signalée, quelle que soit sa valeur.|  
 |**Specified**|Utilisez le seuil spécifié dans **InclusionStrengthThreshold**. La puissance d'inclusion est précisée uniquement si elle est supérieure au seuil.|  
@@ -139,7 +139,7 @@ ms.locfileid: "62829472"
  **SupersetColumnsKeyThresholdSetting**  
  Spécifiez le seuil de sur-ensemble. La valeur par défaut de cette propriété est **Specified**. Pour plus d'informations, consultez la section « Fonctionnement des paramètres de seuil », plus haut dans cette rubrique.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance d'inclusion est signalée, quelle que soit la puissance de clé de la colonne du sur-ensemble.|  
 |**Specified**|Utilisez le seuil spécifié dans **SupersetColumnsKeyThreshold**. La puissance d'inclusion est signalée uniquement si la puissance de clé de la colonne du sur-ensemble est supérieure au seuil.|  

@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f6c93002a5182375725703d159565782d978268
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73769722"
 ---
 # <a name="retrieving-error-information"></a>Extraction des informations sur les erreurs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Cet exemple obtient des informations à partir des différentes interfaces d’erreur exposées par le fournisseur de OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Cet exemple obtient des informations à partir des différentes interfaces d’erreur exposées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le fournisseur de OLE DB Native Client.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  

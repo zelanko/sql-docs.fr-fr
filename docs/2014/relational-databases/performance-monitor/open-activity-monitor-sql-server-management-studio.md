@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032003"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Ouvrir le Moniteur d'activité (SQL Server Management Studio)
@@ -31,11 +31,11 @@ ms.locfileid: "63032003"
   
      [Sécurité](#Security)  
   
--   **Pour ouvrir le moniteur d’activité à l’aide de :**  
+-   **Pour ouvrir le Moniteur d'activité à l'aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Pour définir l’intervalle d’actualisation avec :**  [SQL Server Management Studio](#Refresh)  
+-   **Pour définir l’intervalle d’actualisation à l’aide de :**  [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Le Moniteur d'activité exécute des requêtes sur l'instance analysée afin d'obtenir des informations pour ses volets d'informations. Si l'intervalle d'actualisation est défini sur une valeur inférieure à 10 secondes, le temps nécessaire à l'exécution de ces requêtes peut affecter les performances du serveur.  
@@ -71,7 +71,7 @@ ms.locfileid: "63032003"
   
 4.  Pour activer les modifications, fermez et rouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a> Pour définir l’intervalle d’actualisation de moniteur activité  
+###  <a name="Refresh"></a>Pour définir l’intervalle d’actualisation du moniteur d’activité  
   
 -   Ouvrez le Moniteur d'activité.  
   

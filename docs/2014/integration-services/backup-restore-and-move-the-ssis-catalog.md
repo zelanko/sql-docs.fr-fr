@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670507"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Sauvegarder, restaurer et déplacer le catalogue SSIS
+  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] comprend la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
   
  Le catalogue **SSISDB** stocke les packages que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations sur le catalogue, consultez [Catalogue SSIS](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a> Pour sauvegarder la base de données SSIS  
+##  <a name="backup"></a>Pour sauvegarder la base de données SSIS  
   
 1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et connectez-vous à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -38,17 +39,17 @@ ms.locfileid: "68670507"
   
     ```  
   
-3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, voir [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en procédant comme suit. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
     1.  Dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], développez le nœud **Sécurité**, puis le nœud **Connexions**.  
   
-    2.  Cliquez avec le bouton droit sur **##MS_SSISServerCleanupJobLogin##** , puis cliquez sur **Générer un script de la connexion en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
+    2.  Cliquez avec le bouton droit sur **##MS_SSISServerCleanupJobLogin##**, puis cliquez sur **Générer un script de la connexion en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
   
 5.  Si vous devez restaurer la base de données SSISDB sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où le catalogue SSISDB n’a jamais été créé, générez le script CREATE PROCEDURE pour sp_ssis_startup en effectuant les opérations suivantes. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  Dans l’Explorateur d’objets, développez le nœud **bases de données** , puis développez le nœud >  **bases de données système de**la**programmabilité** > **principale** > **procédures stockées** .  
+    1.  Dans l’Explorateur d’objets, développez le nœud **bases de données** , puis développez le nœud **bases de données système de** > la**programmabilité** > **principale** > **procédures stockées** .  
   
     2.  Cliquez avec le bouton droit sur **dbo.sp_ssis_startup**, puis cliquez sur **Générer un script de la procédure stockée en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68670507"
   
     1.  Dans l’Explorateur d’objets, développez le nœud **SQL Server Agent** , puis le nœud **Travaux** .  
   
-    2.  Cliquez avec le bouton droit sur le travail de maintenance de serveur SSIS, puis cliquez sur **Générer un script du travail en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
+    2.  Cliquez avec le bouton droit sur travail de maintenance du serveur SSIS, puis cliquez sur créer un **travail** > **de** > script dans une**nouvelle fenêtre**de l’éditeur de requête.  
   
 ### <a name="to-restore-the-ssis-database"></a>Pour restaurer la base de données SSIS  
   
@@ -79,7 +80,8 @@ ms.locfileid: "68670507"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Les procédures stockées CLR exigent l’octroi d’autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l’API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Les procédures stockées CLR exigent l’octroi d’autorisations UNSAFE à la connexion, car cette dernière nécessite un accès supplémentaire aux ressources restreintes, par exemple l’API Win32 de Microsoft. Pour plus d’informations sur l’autorisation de code UNSAFE, consultez [Création d’un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -93,7 +95,7 @@ ms.locfileid: "68670507"
   
     -   [Restaurer la base de données &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [Restaurer la base de données &#40;page Fichiers&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Page restaurer la base de données &#40;fichiers&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
     -   [Restaurer la base de données &#40;page Options&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   
@@ -127,7 +129,7 @@ ms.locfileid: "68670507"
         > [!NOTE]  
         >  Le message d’avertissement suivant s’affiche dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] si la clé principale de base de données n’a pas encore été chiffrée par la clé principale du service. Ignorez le message d'avertissement.  
         >   
-        >  **Impossible de déchiffrer la clé principale active. Cette erreur a été ignorée, car l’option FORCE a été spécifiée.**  
+        >  **Impossible de déchiffrer la clé principale active. L’erreur a été ignorée parce que l’option FORCE a été spécifiée.**  
         >   
         >  L'argument FORCE spécifie que le processus de restauration doit continuer même si la clé principale de base de données actuelle n'est pas ouverte. Pour le catalogue SSISDB, comme la clé principale de base de données n'a pas été ouverte sur l'instance où vous restaurez la base de données, vous voyez s'afficher ce message.  
   

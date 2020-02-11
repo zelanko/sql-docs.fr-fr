@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050951"
 ---
-# <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted, classe d'événements
+# <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted (classe d'événements)
   La classe d'événements SP:StmtCompleted indique qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une procédure stockée est terminée.  
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>Colonnes de la classe d'événements SP:StmtCompleted  
@@ -30,9 +30,9 @@ ms.locfileid: "63050951"
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|Unité centrale|`int`|Temps processeur (en millisecondes) utilisé par l'événement.|18|Oui|  
+|UC|`int`|Temps processeur (en millisecondes) utilisé par l'événement.|18|Oui|  
 |DatabaseID|`int`|ID de la base de données dans laquelle la procédure stockée est en cours d'exécution. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
 |Duration|`bigint`|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting.|15|Oui|  
 |EventClass|`int`|Type d’événement = 45.|27|Non|  
@@ -52,7 +52,7 @@ ms.locfileid: "63050951"
 |ObjectName|`nvarchar`|Nom de l'objet référencé.|34|Oui|  
 |ObjectType|`int`|Valeur représentant le type de l'objet qui intervient dans l'événement. Cette valeur correspond à la colonne type de l'affichage catalogue sys.objects. Pour connaître les valeurs, consultez [Colonne d’événements de trace ObjectType](objecttype-trace-event-column.md).|28|Oui|  
 |Offset|`int`|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
-|Reads|`bigint`|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement.|16|Oui|  
+|Lectures|`bigint`|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement.|16|Oui|  
 |RequestID|`int`|ID de la demande contenant l'instruction.|49|Oui|  
 |RowCounts|`bigint`|Nombre de lignes affectées par un événement.|48|Oui|  
 |ServerName|`nvarchar`|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
@@ -62,7 +62,7 @@ ms.locfileid: "63050951"
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |TextData|`ntext`|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
-|Writes|`bigint`|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|17|Oui|  
+|Écritures|`bigint`|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|17|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

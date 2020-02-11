@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278218"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Renommer les accès correspondant aux noms de rôles serveur fixes
@@ -31,9 +31,9 @@ ms.locfileid: "72278218"
 ## <a name="description"></a>Description  
  Les noms de rôle serveur fixe suivants sont réservés et ne peuvent pas être utilisés comme noms de compte de connexion défini par l'utilisateur.  
   
--   **sysadmin**  
+-   **administrateur système**  
   
--   **serveradmin**  
+-   **ServerAdmin**  
   
 -   **setupadmin**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72278218"
   
 -   **processadmin**  
   
--   **dbcreator**  
+-   **rôles**  
   
 -   **diskadmin**  
   
@@ -60,10 +60,10 @@ ms.locfileid: "72278218"
   
 2.  Supprimez les connexions.  
   
-3.  Utilisez la procédure système **sp_addlogin** pour créer des connexions. Spécifiez le SID retourné à l’étape 1 dans le paramètre **\@sid** pour chaque connexion correspondante.  
+3.  Utilisez la procédure système **sp_addlogin** pour créer des connexions. Spécifiez le SID retourné à l’étape 1 ** \@** dans le paramètre sid pour chaque connexion correspondante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau de Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller &#91;de mise à niveau de SQL Server 2014 nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

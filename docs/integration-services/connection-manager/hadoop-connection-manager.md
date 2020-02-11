@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096129"
 ---
 # <a name="hadoop-connection-manager"></a>Gestionnaire de connexions Hadoop
@@ -60,13 +60,13 @@ ms.locfileid: "74096129"
   
     5.  Si vous sélectionnez l’authentification **Kerberos** , entrez le **Mot de passe** et le **Domaine**de l’utilisateur.  
   
-5.  Sélectionnez **Tester la connexion**. (Le test ne porte que sur la connexion que vous avez activée.)  
+5.  Sélectionnez **Test Connection** (Tester la connexion). (Le test ne porte que sur la connexion que vous avez activée.)  
   
-6.  Sélectionnez **OK** pour fermer la boîte de dialogue.  
+6.  puis cliquez sur **OK** pour fermer la boîte de dialogue.  
 
 ## <a name="connect-with-kerberos-authentication"></a>Se connecter avec l’authentification Kerberos
 Il existe deux options permettant de configurer l’environnement local pour pouvoir utiliser l’authentification Kerberos avec le Gestionnaire de connexions Hadoop. Vous pouvez choisir l’option qui correspond le mieux à votre situation.
--   Option n°1 : [Joindre l’ordinateur SSIS au domaine Kerberos](#kerberos-join-realm)
+-   Option 1 : [Joindre l’ordinateur SSIS au domaine Kerberos](#kerberos-join-realm)
 -   Option n°2 : [Activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos](#kerberos-mutual-trust)
 
 ### <a name="kerberos-join-realm"></a>Option 1 : Joindre l’ordinateur SSIS au domaine Kerberos
@@ -90,7 +90,7 @@ Sur l’ordinateur SSIS :
 
     Après avoir exécuté ces commandes, redémarrez l’ordinateur.
 
-2.  Vérifiez la configuration avec la commande **Ksetup**. Le résultat doit ressembler à l’exemple suivant :
+2.  Vérifiez la configuration avec la commande **Ksetup**. La sortie doit se présenter comme suit :
 
     ```
     C:> Ksetup
@@ -103,7 +103,7 @@ Sur l’ordinateur SSIS :
 
 #### <a name="requirements"></a>Conditions requises :
 -   L’ordinateur servant de passerelle doit se joindre à un domaine Windows.
--   Vous devez avoir l’autorisation de mettre à jour les paramètres du contrôleur de domaine.
+-   Vous avez besoin d’autorisations pour mettre à jour les paramètres du contrôleur de domaine.
 
 #### <a name="how-to-configure"></a>Pour effectuer la configuration :
 
@@ -152,7 +152,7 @@ Sur le serveur du centre de distribution de clés Kerberos :
 
     Après la configuration, redémarrez le service du centre de distribution de clés Kerberos.
 
-2.  Préparez un principal nommé **krbtgt/REALM.COM\@AD.COM** sur le serveur KDC. Exécutez la commande suivante :
+2.  Préparez un principal nommé **krbtgt/REALM.COM\@AD.COM** sur le serveur KDC. Utilisez la commande suivante :
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -160,7 +160,7 @@ Sur le serveur du centre de distribution de clés Kerberos :
 
 Sur le contrôleur de domaine :
 
-1.  Exécutez la commande **Ksetup** suivante pour ajouter une entrée de domaine :
+1.  Exécutez les commandes **Ksetup** suivantes pour ajouter une entrée de domaine :
 
     ```
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
@@ -193,13 +193,13 @@ Sur le contrôleur de domaine :
 
     3. Recherchez le compte pour lequel vous voulez créer des mappages, cliquez avec le bouton droit pour afficher **Mappages des noms**, puis sélectionnez l’onglet **Noms Kerberos**.
 
-    4. Ajoutez un principal à partir du domaine.
+    4. Ajoutez un principal provenant du domaine.
 
         ![Capture d’écran de la boîte de dialogue Mappage des identités de sécurité](media/hadoop-connection-manager/map-security-identity.png)
 
 Sur l’ordinateur servant de passerelle :
 
-Exécutez la commande **Ksetup** suivante pour ajouter une entrée de domaine.
+Exécutez les commandes **Ksetup** suivantes pour ajouter une entrée de domaine.
 
     ```
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
@@ -208,7 +208,7 @@ Exécutez la commande **Ksetup** suivante pour ajouter une entrée de domaine.
 
 ## <a name="see-also"></a>Voir aussi  
  [Tâche Hive Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Tâche Pig Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
+ [Hadoop Pig, tâche](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Tâche du système de fichiers Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   

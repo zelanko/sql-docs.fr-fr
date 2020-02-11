@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db74bd7de8fcf3cdba6787fda18c510237d63372
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941082"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Définir la méthode de propagation des modifications de données des articles transactionnels
@@ -95,7 +95,7 @@ ms.locfileid: "68941082"
     > [!NOTE]  
     >  Lors de la spécification de la valeur **SQL** pour un des paramètres ci-dessus, les commandes de ce type seront répliquées sur l'Abonné sous la forme de la commande [!INCLUDE[tsql](../../../includes/tsql-md.md)] appropriée.  
   
-     Pour plus d'informations, voir [Définir un article](define-an-article.md).  
+     Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>Pour créer un article qui ne propage pas les modifications de données  
   
@@ -110,17 +110,17 @@ ms.locfileid: "68941082"
     > [!NOTE]  
     >  Lors de la spécification de la valeur **NONE** pour un des paramètres ci-dessus, les commandes de ce type ne seront pas répliquées sur l'Abonné.  
   
-     Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+     Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>Pour créer un article avec des procédures stockées personnalisées modifiées par utilisateur  
   
 1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour **\@publication**, le nom de l’article pour **\@article**, l’objet de base de données qui est publié pour **\@source_object**, une valeur pour le masque de bits **\@schema_option** qui contient la valeur **0x02** (permet la génération automatique de procédures stockées personnalisées) et au moins un des paramètres suivants :  
   
-    -   ins_cmd: spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où **_article_name_** est la valeur spécifiée pour  **\@article**.  **\@**  
+    -   ins_cmd : spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où **_article_name_** est la valeur spécifiée pour ** \@article**. ** \@**  
   
-    -   \@**ticle_nameouXCALLsp_Msdel_article_name,oùarticle_nameestlavaleurspécifiéepour_*\@** article * *.  
+    -   **__** \@ <strong>** </strong> ** \@del_cmd** : spécifiez la valeur Call sp_Msdel_ article_name ou <strong>XCALL sp_Msdel_*article_name*</strong>, où article_name est la valeur spécifiée pour _ * article * *.  
   
-    -   upd_cmd: spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_MSupd__article_name *</strong>ou <strong>MCALL sp_Msupd_* article_name *</strong>, où  **\@** _**article_name**_ est la valeur spécifiée pour  **\@l’article**.  
+    -   ** \@** _****_ ** \@upd_cmd** -spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_MSupd__article_name*</strong>ou <strong>MCALL sp_Msupd_* article_name *</strong>, où article_name est la valeur spécifiée pour article.  
   
     > [!NOTE]  
     >  Pour chacun des paramètres de commande ci-dessus, vous pouvez spécifier votre propre nom pour les procédures stockées que la réplication génère.  
@@ -128,7 +128,7 @@ ms.locfileid: "68941082"
     > [!NOTE]  
     >  Pour plus d’informations sur la syntaxe CALL, SCALL, XCALL et MCALL, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+     Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
 2.  Une fois l'instantané généré, accédez au dossier d'instantanés de la publication à laquelle cet article appartient, puis recherchez le fichier **.sch** dont le nom est identique à celui de l'article. Ouvrez ce fichier à l'aide de Notepad.exe, recherchez la commande CREATE PROCEDURE pour les procédures stockées INSERT, UPDATE ou DELETE, puis modifiez la définition de la procédure pour fournir une logique personnalisée de propagation des modifications de données. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -136,11 +136,11 @@ ms.locfileid: "68941082"
   
 1.  Exécutez [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication à laquelle l’article appartient pour **\@publication**, le nom de l’article pour **\@article**, l’objet de base de données qui est publié pour **\@source_object**, une valeur pour le masque de bits **\@schema_option** qui contient la valeur **0x02** (permet la génération automatique de procédures stockées personnalisées) et au moins un des paramètres suivants :  
   
-    -   ins_cmd: spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où _**article_name**_ est la valeur spécifiée pour  **\@article**.  **\@**  
+    -   ins_cmd : spécifiez la valeur <strong>Call sp_Msins_*article_name*</strong>, où _**article_name**_ est la valeur spécifiée pour ** \@article**. ** \@**  
   
-    -   **\@**  **del_cmd:spécifiezlavaleurCallsp_Msdel_article_nameouXCALLsp_Msdel_article_name,oùarticle_nameestlavaleur\@** spécifiée pour article.  
+    -   ** \@** _****_ <strong>** </strong> ** \@del_cmd** : spécifiez la valeur Call sp_Msdel_ article_name ou <strong>XCALL sp_Msdel_*article_name*</strong>, où article_name est la valeur spécifiée pour article.  
   
-    -   upd_cmd: spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong> , <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_Msupd_ *article_name*</strong>, MCALL sp_Msupd_ article_name **\@** , où _**article_name**_ est la valeur spécifiée pour **\@l’article**.  
+    -   ** \@** _****_ ** \@upd_cmd** : spécifiez la valeur <strong>scalal sp_Msupd_*article_name*</strong>, <strong>Call sp_Msupd_*article_name*</strong>, <strong>XCALL sp_Msupd_*article_name*</strong>, <strong>MCALL sp_Msupd_*article_name*</strong>, où article_name est la valeur spécifiée pour article.  
   
     > [!NOTE]  
     >  Pour chacun des paramètres de commande ci-dessus, vous pouvez spécifier votre propre nom pour les procédures stockées que la réplication génère.  
@@ -148,7 +148,7 @@ ms.locfileid: "68941082"
     > [!NOTE]  
     >  Pour plus d’informations sur la syntaxe CALL, SCALL, XCALL et MCALL, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-     Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+     Pour plus d’informations, consultez [définir un Article](define-an-article.md).  
   
 2.  Dans la base de données de publication du serveur de publication, utilisez l'instruction [ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql) pour modifier [sp_scriptpublicationcustomprocs](/sql/relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql) afin qu'il retourne un script [CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql) pour les procédures stockées personnalisées INSERT, UPDATE et DELETE. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   

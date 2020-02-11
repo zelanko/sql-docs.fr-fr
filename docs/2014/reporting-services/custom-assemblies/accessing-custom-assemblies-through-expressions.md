@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792803"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accès aux assemblys personnalisés par le biais d'expressions
@@ -43,7 +43,7 @@ ms.locfileid: "67792803"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Appel de membres d'instance à partir d'un fichier de définition de rapport  
  Si votre assembly personnalisé contient des membres d'instance auxquels vous devez accéder dans une définition de rapport, vous devez ajouter un nom d'instance pour votre classe au rapport. Vous pouvez ajouter un nom d’instance pour une classe à l’aide de l’onglet **Code** de la boîte de dialogue **Propriétés de rapport**. Pour plus d’informations sur l’ajout d’instances de classes à un rapport, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Pour appeler un membre statique, vous devez le référencer comme une expression qui prend la forme = Code *. InstanceName.Method*.  
+ Pour appeler un membre statique, vous devez le référencer en tant qu’expression qui prend la forme = code *. InstanceName. Method*.  
   
 #### <a name="to-call-instance-members"></a>Pour appeler des membres d'instance  
   

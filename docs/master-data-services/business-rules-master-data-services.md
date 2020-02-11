@@ -14,10 +14,10 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728689"
 ---
 # <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
@@ -69,7 +69,7 @@ ms.locfileid: "73728689"
 -   Une règle d'entreprise ne peut pas contenir plus d'une action **démarrer le flux de travail** .  
   
 ## <a name="system-settings"></a>Paramètres système  
- Il existe deux paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les règles d'entreprise. Vous pouvez ajuster ces paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système. Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
+ Il existe deux paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les règles d'entreprise. Vous pouvez ajuster ces paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -77,24 +77,24 @@ ms.locfileid: "73728689"
 |----------------------|-----------|  
 |Créer et publier une règle d'entreprise.|[Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |Ajouter plusieurs conditions à une règle d'entreprise.|[Ajouter plusieurs conditions à une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
-|Créer une règle d'entreprise pour exiger que des valeurs soient affectées aux attributs.|[Requérir des valeurs d’attribut &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
-|Créer une règle d'entreprise pour entreprendre une action en fonction des modifications apportées aux valeurs d'attribut.|[Initier des actions en fonction de modifications de valeurs d’attribut &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une condition|[Extension de règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une action|[Extension de règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Modifier le nom d'une règle d'entreprise existante.|[Renommer une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|Configurer [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour envoyer des notifications lorsque les règles d'entreprise sont appliquées.|[Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|Créer une règle d'entreprise pour exiger que des valeurs soient affectées aux attributs.|[Exiger des valeurs d’attribut &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
+|Créer une règle d'entreprise pour entreprendre une action en fonction des modifications apportées aux valeurs d'attribut.|[Initier des actions en fonction des modifications de valeur d’attribut &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une condition|[&#40;d’extension de règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Créer une règle d’entreprise pour traiter un script défini par l’utilisateur comme une action|[&#40;d’extension de règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Modifier le nom d'une règle d'entreprise existante.|[Modifier le nom d’une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
+|Configurer [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour envoyer des notifications lorsque les règles d'entreprise sont appliquées.|[Configurez des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |Appliquer des règles d'entreprise à des membres spécifiques.|[Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Exclure une règle d'entreprise de façon à ne pas l'utiliser.|[Exclure une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |Supprimer une règle d'entreprise existante.|[Supprimer une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [&#40;de validation Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Suivi des modifications &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [Change Tracking &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

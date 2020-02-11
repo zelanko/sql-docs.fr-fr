@@ -16,18 +16,18 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96a32ea04fc53f1a0bf3a842a5e68cde5586ac29
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770882"
 ---
-# <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
+# <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Renvoie les commandes pour les transactions signalées pour la réplication dans un format lisible. **sp_replshowcmds** ne peut être exécutée que lorsque les connexions clientes (y compris la connexion active) ne lisent pas les transactions répliquées à partir du journal. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,15 +44,15 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**binary(10)**|Numéro de séquence de la commande.|  
+|**xact_seqno**|**binaire (10)**|Numéro de séquence de la commande.|  
 |**originator_id**|**int**|ID de l’expéditeur de la commande, toujours **0**.|  
-|**publisher_database_id**|**Int**|ID de la base de données du serveur de publication, toujours **0**.|  
-|**article_id**|**Int**|ID de l’article.|  
-|**type**|**int**|Type de commande.|  
+|**publisher_database_id**|**int**|ID de la base de données du serveur de publication, toujours **0**.|  
+|**article_id**|**int**|ID de l’article.|  
+|**entrer**|**int**|Type de commande.|  
 |**commande**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]commande.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_replshowcmds** est utilisée dans la réplication transactionnelle.  
+ **sp_replshowcmds** est utilisé dans la réplication transactionnelle.  
   
  À l’aide de **sp_replshowcmds**, vous pouvez afficher les transactions qui ne sont pas actuellement distribuées (les transactions restantes dans le journal des transactions qui n’ont pas été envoyées au serveur de distribution).  
   

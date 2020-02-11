@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198994"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Détection de conflit dans la réplication d'égal à égal
@@ -86,7 +86,7 @@ ms.locfileid: "68198994"
   
 -   Essayez de synchroniser de nouveau le nœud en permettant à l'Agent de distribution de continuer à appliquer les modifications :  
   
-    1.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez 'p2p_continue_onconflict' pour le @property paramètre et `true` pour le @value paramètre.  
+    1.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez « p2p_continue_onconflict » pour @property le paramètre `true` et pour @value le paramètre.  
   
     2.  Redémarrez l'Agent de distribution.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68198994"
         > [!NOTE]  
         >  Si les données ne sont pas cohérentes après cette étape, vous devez mettre à jour manuellement les lignes sur le nœud qui a la priorité la plus élevée, puis propager les modifications à partir de ce nœud. S'il n'y a plus de modifications en conflit dans la topologie, tous les nœuds bénéficieront d'un état cohérent.  
   
-    5.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez 'p2p_continue_onconflict' pour le @property paramètre et `false` pour le @value paramètre.  
+    5.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): spécifiez « p2p_continue_onconflict » pour @property le paramètre `false` et pour @value le paramètre.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  

@@ -19,14 +19,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 570c0574357d9315f0e6b153f3eeabac79ec673b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63055659"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
-  ODBC est la définition standard d'une interface de programmation d'applications (API) utilisée pour accéder aux données des bases de données relationnelles ou à accès séquentiel indexé (Indexed Sequential Access Method). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge ODBC, via le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, comme l'une des API natives pour écrire des applications C et C++ qui communiquent avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  ODBC est la définition standard d'une interface de programmation d'applications (API) utilisée pour accéder aux données des bases de données relationnelles ou à accès séquentiel indexé (Indexed Sequential Access Method). 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge ODBC, via le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, comme l'une des API natives pour écrire des applications C et C++ qui communiquent avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Les programmes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] écrits à l'aide du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client communiquent avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] via les appels de fonctions C. Les versions propres à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des fonctions ODBC sont implémentées dans le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Le pilote passe les instructions SQL à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et retourne les résultats des instructions à l'application.  
   
@@ -34,50 +35,50 @@ ms.locfileid: "63055659"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Noms des sources de données et systèmes d’exploitation 64 bits](data-source-names-and-64-bit-operating-systems.md)  
+-   [Noms des sources de données et systèmes d'exploitation 64 bits](data-source-names-and-64-bit-operating-systems.md)  
   
--   [Création d’une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
+-   [Création d'une application de pilote ODBC SQL Server Native Client](creating-a-driver-application.md)  
   
 -   [Communication avec SQL Server &#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [L’exécution de requêtes &#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
+-   [Exécution de requêtes &#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
   
 -   [Traitement des résultats &#40;ODBC&#41;](../../native-client-odbc-results/processing-results-odbc.md)  
   
--   [L’utilisation de curseurs &#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [Utilisation de curseurs &#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [Exécution de Transactions &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
+-   [Exécution de transactions &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
 -   [Gestion des erreurs et des messages](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
--   [Exécution de procédures stockées](../../native-client-odbc-stored-procedures/running-stored-procedures.md)  
+-   [Exécution des procédures stockées](../../native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
 -   [Utilisation des fonctions de catalogue](using-catalog-functions.md)  
   
 -   [Exécution d’opérations de copie en bloc &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
--   [Gestion des colonnes texte et image](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
+-   [Gestion des colonnes text et image](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
--   [Profilage des données de performances du pilote ODBC](profiling-odbc-driver-performance.md)  
+-   [Profilage des performances du pilote ODBC](profiling-odbc-driver-performance.md)  
   
 -   [Paramètres table &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Améliorations date / heure &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Améliorations de la date et de l’heure &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
 -   [Types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
   
--   [Prise en charge FILESTREAM &#40;ODBC&#41;](filestream-support-odbc.md)  
+-   [Prise en charge de FILESTREAM &#40;ODBC&#41;](filestream-support-odbc.md)  
   
--   [Noms de principal du service &#40;SPN&#41; dans les connexions clientes &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Prise en charge des colonnes éparses &#40;ODBC&#41;](sparse-columns-support-odbc.md)  
+-   [Les colonnes éparses prennent en charge &#40;ODBC&#41;](sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41; référence](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+-   [Référence de&#41; ODBC SQL Server Native Client &#40;](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
--   [Rubriques de procédures liées à ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
+-   [Rubriques de procédures ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation de SQL Server Native Client](../sql-server-native-client-programming.md)   
+ [Programmation SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Installation de SQL Server Native Client](../applications/installing-sql-server-native-client.md)  
   
   

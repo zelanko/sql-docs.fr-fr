@@ -1,5 +1,5 @@
 ---
-title: Configuration de Distributed Replay Controller | Microsoft Docs
+title: Configuration du contrôleur de Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d55d2d759857e07bd655add1b00bccbd2eb4ce2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095523"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Configuration de Distributed Replay Controller
@@ -23,13 +23,13 @@ ms.locfileid: "66095523"
  Les utilisateurs qui disposent d'autorisations administratives ont un accès illimité au service Distributed Replay Controller.  
   
 ## <a name="options"></a>Options  
- **Ajouter l’utilisateur actuel**  
+ **Ajouter l'utilisateur actuel**  
  Cliquez sur ce bouton pour ajouter les utilisateurs auxquels vous voulez accorder des autorisations d'accès au service Distributed Replay Controller.  
   
  **Ajouter**  
  Cliquez sur ce bouton pour ajouter des autorisations d'accès au service Distributed Replay Controller.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez sur ce bouton pour supprimer des autorisations d'accès du service Distributed Replay Controller.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: La gestion des sauvegardes (OracleToSQL) | Microsoft Docs
+title: Gestion des sauvegardes (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,85 +14,85 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262969"
 ---
 # <a name="managing-backups-oracletosql"></a>Gestion des sauvegardes (OracleToSQL)
-Gestion des sauvegardes Oracle vous permet de sauvegarde et restauration de données de table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer du contenu de sauvegarde.  
+La gestion des sauvegardes Oracle vous permet de sauvegarder et de restaurer des données de table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer le contenu de la sauvegarde.  
   
 ## <a name="oracle-backup-management"></a>Gestion des sauvegardes Oracle  
   
-### <a name="backup"></a>Sauvegarde  
-Pour ouvrir la boîte de dialogue sauvegarde, dans le testeur menu, pointez sur gestion des sauvegardes Oracle, puis cliquez sur sauvegarde... Dans la boîte de dialogue de sauvegarde, vous trouverez l’arborescence de métadonnées d’Oracle affichant toutes les tables du schéma Oracle chargé. Sélectionnez une ou plusieurs tables pour effectuer une sauvegarde.  
+### <a name="backup"></a>Backup  
+Pour ouvrir la boîte de dialogue sauvegarde, dans le menu testeur, pointez sur gestion des sauvegardes Oracle, puis cliquez sur sauvegarder.... Dans la boîte de dialogue de sauvegarde, vous trouverez l’arborescence de métadonnées Oracle qui affiche toutes les tables du schéma Oracle chargé. Sélectionnez une ou plusieurs tables pour effectuer une sauvegarde.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
   
--   Cliquez sur le **vérifier l’état** bouton pour vérifier l’état de sauvegarde de la table.  
+-   Cliquez sur le bouton **vérifier l’État** pour vérifier l’état de sauvegarde de la table.  
   
--   Cliquez sur le **sauvegarde** bouton pour sauvegarder la table de données.  
+-   Cliquez sur le bouton **sauvegarder** pour sauvegarder les données de la table.  
   
--   Cliquez sur le **Annuler** bouton pour fermer la boîte de dialogue.  
+-   Cliquez sur le bouton **Annuler** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
-Pour ouvrir la boîte de dialogue de restauration, dans le menu de testeur, pointez sur la gestion de la sauvegarde Oracle, puis cliquez sur restauration... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez une ou plusieurs tables pour restaurer ses données.  
-  
-Les boutons suivants sont disponibles dans la boîte de dialogue :  
-  
--   Cliquez sur le **vérifier l’état** bouton pour vérifier l’état de sauvegarde de la table.  
-  
--   Cliquez sur le **restaurer** bouton pour restaurer les données de sauvegarde dans la table.  
-  
--   Cliquez sur le **Annuler** bouton pour fermer la boîte de dialogue.  
-  
-### <a name="managing-backup-contents"></a>La gestion de contenus de sauvegarde  
-Pour ouvrir la gestion de contenu de sauvegarde, dans le menu de testeur, pointez sur la gestion de la sauvegarde Oracle, puis cliquez sur contenu de sauvegarde... Vous y trouverez une arborescence contenant les tables dans la sauvegarde.  
+### <a name="restore"></a>Restaurer  
+Pour ouvrir la boîte de dialogue Restaurer, dans le menu tester, pointez sur gestion des sauvegardes Oracle, puis cliquez sur restaurer.... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez une ou plusieurs tables pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
   
--   Cliquez sur le **vérifier l’état** bouton pour vérifier l’état de sauvegarde de la table.  
+-   Cliquez sur le bouton **vérifier l’État** pour vérifier l’état de sauvegarde de la table.  
   
--   Cliquez sur le **supprimer** bouton pour supprimer la table à partir de la sauvegarde.  
+-   Cliquez sur le bouton **restaurer** pour restaurer les données de sauvegarde dans la table.  
   
--   Cliquez sur le **fermer** bouton pour fermer la boîte de dialogue.  
+-   Cliquez sur le bouton **Annuler** pour fermer la boîte de dialogue.  
   
-## <a name="sql-server-backup-management"></a>Gestion des sauvegardes SQL Server  
-Gestion des sauvegardes SQL Server vous permet de sauvegarde et restauration de données de table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer du contenu de sauvegarde.  
-  
-### <a name="backup"></a>Sauvegarde  
-Pour ouvrir la boîte de dialogue sauvegarde, dans le testeur menu, pointez sur gestion des sauvegardes SQL Server, puis cliquez sur sauvegarde... Dans la boîte de dialogue de sauvegarde, vous trouverez l’arborescence de métadonnées du serveur SQL affichant toutes les tables des bases de données SQL Server chargés. Sélectionnez une ou plusieurs tables pour effectuer une sauvegarde.  
+### <a name="managing-backup-contents"></a>Gestion du contenu de la sauvegarde  
+Pour ouvrir gestion du contenu de la sauvegarde, dans le menu testeur, pointez sur gestion des sauvegardes Oracle, puis cliquez sur contenu de la sauvegarde.... Vous y trouverez une arborescence contenant les tables de la sauvegarde.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
   
--   Cliquez sur le **vérifier l’état** bouton pour vérifier l’état de sauvegarde de la table.  
+-   Cliquez sur le bouton **vérifier l’État** pour vérifier l’état de sauvegarde de la table.  
   
--   Cliquez sur le **sauvegarde** bouton pour sauvegarder les données de la table.  
+-   Cliquez sur le bouton **supprimer** pour supprimer la table de la sauvegarde.  
   
--   Cliquez sur le **Annuler** bouton pour fermer la boîte de dialogue.  
+-   Cliquez sur le bouton **Fermer** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
-Pour ouvrir la boîte de dialogue de restauration, dans le menu de testeur pointez sur gestion de sauvegarde SQL Server, la restauration, cliquez sur... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez un ou plusieurs table pour restaurer ses données.  
+## <a name="sql-server-backup-management"></a>Gestion de la sauvegarde SQL Server  
+SQL Server la gestion des sauvegardes vous permet de sauvegarder et de restaurer des données de table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer le contenu de la sauvegarde.  
   
-Les boutons suivants sont disponibles dans la boîte de dialogue :  
-  
--   Cliquez sur le **vérifier l’état** bouton pour vérifier l’état de sauvegarde de la table.  
-  
--   Cliquez sur le **restaurer** bouton pour restaurer les données de sauvegarde dans la table.  
-  
--   Cliquez sur le **Annuler** bouton pour fermer la boîte de dialogue.  
-  
-### <a name="managing-backup-contents"></a>La gestion de contenus de sauvegarde  
-Pour ouvrir la gestion de contenu de sauvegarde, dans le menu de testeur, pointez sur la gestion de sauvegarde de SQL Server, puis cliquez sur contenu de sauvegarde... Vous y trouverez une arborescence contenant les tables dans la sauvegarde.  
+### <a name="backup"></a>Backup  
+Pour ouvrir la boîte de dialogue sauvegarde, dans le menu tester, pointez sur SQL Server gestion de la sauvegarde, puis cliquez sur sauvegarder.... Dans la boîte de dialogue de sauvegarde, vous trouverez la SQL Server arborescence de métadonnées qui affiche toutes les tables des bases de données SQL Server chargées. Sélectionnez une ou plusieurs tables pour effectuer une sauvegarde.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
   
--   Cliquez sur le **vérifier l’état** bouton pour vérifier l’état de sauvegarde de la table.  
+-   Cliquez sur le bouton **vérifier l’État** pour vérifier l’état de sauvegarde de la table.  
   
--   Cliquez sur le **supprimer** bouton pour supprimer la table à partir de la sauvegarde.  
+-   Cliquez sur le bouton **sauvegarder** pour sauvegarder les données de la table.  
   
--   Cliquez sur le **fermer** bouton pour fermer la boîte de dialogue.  
+-   Cliquez sur le bouton **Annuler** pour fermer la boîte de dialogue.  
+  
+### <a name="restore"></a>Restaurer  
+Pour ouvrir la boîte de dialogue Restaurer, dans le menu tester, pointez sur SQL Server gestion des sauvegardes, cliquez sur restaurer.... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez une ou plusieurs tables pour restaurer ses données.  
+  
+Les boutons suivants sont disponibles dans la boîte de dialogue :  
+  
+-   Cliquez sur le bouton **vérifier l’État** pour vérifier l’état de sauvegarde de la table.  
+  
+-   Cliquez sur le bouton **restaurer** pour restaurer les données de sauvegarde dans la table.  
+  
+-   Cliquez sur le bouton **Annuler** pour fermer la boîte de dialogue.  
+  
+### <a name="managing-backup-contents"></a>Gestion du contenu de la sauvegarde  
+Pour ouvrir la gestion du contenu de la sauvegarde, dans le menu tester, pointez sur SQL Server gestion de la sauvegarde, puis cliquez sur sauvegarder le contenu.... Vous y trouverez une arborescence contenant les tables de la sauvegarde.  
+  
+Les boutons suivants sont disponibles dans la boîte de dialogue :  
+  
+-   Cliquez sur le bouton **vérifier l’État** pour vérifier l’état de sauvegarde de la table.  
+  
+-   Cliquez sur le bouton **supprimer** pour supprimer la table de la sauvegarde.  
+  
+-   Cliquez sur le bouton **Fermer** pour fermer la boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Test des objets de base de données migrés &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72586738"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifier la référence SKU Azure SQL Database/Managed Instance appropriée pour votre base de données locale
@@ -102,7 +102,7 @@ En outre, sélectionnez l’un des arguments suivants :
     - **/AzureAuthenticationTenantId**: locataire d’authentification.
     - **/AzureAuthenticationClientId**: ID client de l’application AAD utilisée pour l’authentification.
     - L’une des options d’authentification suivantes :
-      - Interactif
+      - Interactive
         - **AzureAuthenticationInteractiveAuthentication**: affectez la valeur true à une fenêtre indépendante d’authentification.
       - Basé sur le certificat
         - **AzureAuthenticationCertificateStoreLocation**: défini sur l’emplacement du magasin de certificats (par exemple, « CurrentUser »).
@@ -115,7 +115,7 @@ En outre, sélectionnez l’un des arguments suivants :
 
 Enfin, il existe un argument facultatif que vous pouvez utiliser pour spécifier les bases de données pour lesquelles vous souhaitez obtenir des recommandations : 
 
-- **/SkuRecommendationDatabasesToRecommend**: liste des bases de données pour lesquelles formuler des recommandations. Les noms de la base de données respectent la casse et doivent (1) se trouver dans le fichier Input. csv, (2) chaque fois qu’ils sont placés entre guillemets doubles, et (3) chacun étant séparé par un seul espace entre les noms (par exemple,/SkuRecommendationDatabasesToRecommend = "dataBase1" "Database2" "Database3") . Si vous omettez ce paramètre, assurez-vous que des recommandations sont fournies pour toutes les bases de données utilisateur identifiées dans le fichier Input. csv.  
+- **/SkuRecommendationDatabasesToRecommend**: liste des bases de données pour lesquelles formuler des recommandations. Les noms de la base de données respectent la casse et doivent (1) se trouver dans le fichier Input. csv, (2) chaque fois qu’ils sont placés entre guillemets doubles, et (3) chacun étant séparé par un seul espace entre les noms (par exemple,/SkuRecommendationDatabasesToRecommend = "dataBase1" "Database2" "Database3"). Si vous omettez ce paramètre, assurez-vous que des recommandations sont fournies pour toutes les bases de données utilisateur identifiées dans le fichier Input. csv.  
 
 Voici quelques exemples d’appels :
 
@@ -184,7 +184,7 @@ Une description de chaque colonne dans le fichier de sortie est illustrée ci-de
 - **ExclusionReasons** : cette valeur est vide si un niveau est recommandé. Pour chaque niveau qui n’est pas recommandé, nous fournissons les raisons pour lesquelles il n’a pas été choisi.
 - **AppliedRules** : notation abrégée des règles qui ont été appliquées.
 
-Le niveau final recommandé (par exemple, **MetricType**) et la valeur ( **MetricValue**)-trouvé où la colonne **IsTierRecommended** est vraie-reflètent la référence SKU minimale requise pour que vos requêtes s’exécutent dans Azure avec un taux de réussite similaire à celui de votre bases de données locales. Pour Managed instance, DMA prend actuellement en charge les recommandations pour les références (SKU) 8vcore à 40vcore les plus couramment utilisées. Par exemple, si la référence SKU minimale recommandée est S4 pour le niveau standard, le fait de choisir S3 ou une version antérieure entraîne l’expiration ou l’échec de l’exécution des requêtes.
+Le niveau final recommandé (par exemple, **MetricType**) et la valeur ( **MetricValue**)-trouvé où la colonne **IsTierRecommended** est vraie-reflètent la référence SKU minimale requise pour que vos requêtes s’exécutent dans Azure avec un taux de réussite similaire à celui de vos bases de données locales. Pour Managed instance, DMA prend actuellement en charge les recommandations pour les références (SKU) 8vcore à 40vcore les plus couramment utilisées. Par exemple, si la référence SKU minimale recommandée est S4 pour le niveau standard, le fait de choisir S3 ou une version antérieure entraîne l’expiration ou l’échec de l’exécution des requêtes.
 
 Le fichier HTML contient ces informations dans un format graphique. Il fournit un moyen convivial d’afficher la recommandation finale et d’approvisionner la partie suivante du processus. Pour plus d’informations sur la sortie HTML, reportez-vous à la section suivante.
 
@@ -206,7 +206,7 @@ Pour entrer les informations de configuration et apporter des modifications aux 
     - **Region** : région dans laquelle approvisionner les bases de données. Assurez-vous que votre abonnement prend en charge la région sélectionnée.
     - **Nom du serveur** : serveur Azure SQL Database sur lequel vous souhaitez déployer les bases de données. Si vous entrez un nom de serveur qui n’existe pas, il sera créé.
     - **Nom d’utilisateur** de l’administrateur : nom d’utilisateur de l’administrateur du serveur.
-    - **Mot de passe d’administrateur** : mot de passe d’administrateur du serveur. Le mot de passe doit comporter au moins huit caractères et ne pas dépasser 128 caractères. Votre mot de passe doit contenir des caractères appartenant à trois des catégories suivantes : lettres majuscules, lettres minuscules, chiffres (0-9) et caractères non alphanumériques ( !, $, #,%, etc.). Le mot de passe ne peut pas contenir la totalité ou une partie (3 + lettres consécutives) du nom d’utilisateur.
+    - **Mot de passe d’administrateur** : mot de passe d’administrateur du serveur. Le mot de passe doit comporter au moins huit caractères et ne pas dépasser 128 caractères. Votre mot de passe doit contenir des caractères appartenant à trois des catégories suivantes : lettres majuscules, lettres minuscules, chiffres (0 à 9) et caractères non alphanumériques (!, $, #, %, etc.). Le mot de passe ne peut pas contenir la totalité ou une partie (3 + lettres consécutives) du nom d’utilisateur.
 
 2. Passez en revue les recommandations pour chaque base de données et modifiez le niveau tarifaire, le niveau de calcul et la taille maximale des données en fonction des besoins. Veillez à désélectionner les bases de données que vous ne souhaitez pas configurer actuellement.
 
@@ -224,7 +224,7 @@ Pour entrer les informations de configuration et apporter des modifications aux 
     - **Region** : région dans laquelle approvisionner les bases de données. Assurez-vous que votre abonnement prend en charge la région sélectionnée.
     - **Nom** de l’instance : instance du Managed instance Azure SQL vers lequel vous souhaitez migrer les bases de données. Le nom de l’instance ne peut contenir que des lettres minuscules, des chiffres et des « - », mais il ne peut pas commencer ou se terminer par « - » ou comporter plus de 63 caractères.
     - **Nom d’utilisateur de l’administrateur d’instance** : nom d’utilisateur de l’administrateur de l’instance. Assurez-vous que votre nom de connexion est conforme aux exigences suivantes : il s’agit d’un identificateur SQL et non d’un nom système standard (comme admin, administrateur, sa, root, dbmanager, loginmanager, etc.) ou d’un utilisateur ou d’un rôle de base de données intégré (par exemple, dbo, Guest, public, etc.). Assurez-vous que votre nom ne contient pas d’espaces, de caractères Unicode ou de caractères non alphabétiques, et qu’il ne commence pas par des chiffres ou des symboles. 
-    - **Mot de passe de l’administrateur d’instance** : mot de passe d’administrateur de l’instance. Votre mot de passe doit comporter au moins 16 caractères et ne pas dépasser 128 caractères. Votre mot de passe doit contenir des caractères appartenant à trois des catégories suivantes : lettres majuscules, lettres minuscules, chiffres (0-9) et caractères non alphanumériques ( !, $, #,%, etc.). Le mot de passe ne peut pas contenir la totalité ou une partie (3 + lettres consécutives) du nom d’utilisateur.
+    - **Mot de passe de l’administrateur d’instance** : mot de passe d’administrateur de l’instance. Votre mot de passe doit comporter au moins 16 caractères et ne pas dépasser 128 caractères. Votre mot de passe doit contenir des caractères appartenant à trois des catégories suivantes : lettres majuscules, lettres minuscules, chiffres (0 à 9) et caractères non alphanumériques (!, $, #, %, etc.). Le mot de passe ne peut pas contenir la totalité ou une partie (3 + lettres consécutives) du nom d’utilisateur.
     - **Nom** du réseau virtuel : nom du réseau virtuel sous lequel l’instance gérée doit être approvisionnée. Entrez un nom de réseau virtuel existant.
     - **Nom du sous-** réseau : nom du sous-réseau sous lequel l’instance gérée doit être approvisionnée. Entrez un nom de sous-réseau existant.
 

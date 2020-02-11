@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875672"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62875672"
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
+     [Composants requis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62875672"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62875672"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Pour restaurer une sauvegarde de journal des transactions  
   
-1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "62875672"
   
      Le tableau suivant répertorie les en-têtes de colonnes de la grille et décrit leur valeur.  
   
-    |Header|Value|  
+    |En-tête|Valeur|  
     |------------|-----------|  
-    |**Restore**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
+    |**Restauration**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegardes.|  
-    |**Composant**|Composant sauvegardé : **Base de données**, **fichier**, ou \<vide > (pour les journaux des transactions).|  
+    |**Composant**|Composant de sauvegarde : **Base de données**, **Fichier** ou \<vide> (pour des journaux de transactions).|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Date de début**|Date et heure de début de la sauvegarde, d'après les paramètres régionaux du client.|  
     |**Date de fin**|Date et heure de fin de la sauvegarde, d'après les paramètres régionaux du client.|  
@@ -108,13 +108,13 @@ ms.locfileid: "62875672"
     |**Dernier NSE**|Numéro séquentiel dans le journal correspondant à la dernière transaction dans le jeu de sauvegarde. Vide pour les sauvegardes de fichiers.|  
     |**NSE du point de contrôle**|Numéro séquentiel dans le journal correspondant au point de contrôle le plus récent au moment où la sauvegarde a été créée.|  
     |**Tous les NSE**|Numéro séquentiel dans le journal correspondant à la sauvegarde complète la plus récente de la base de données.|  
-    |**Server**|Nom de l'instance du moteur de base de données qui a effectué l'opération de sauvegarde.|  
-    |**Nom d'utilisateur**|Nom de l'utilisateur qui a effectué la restauration.|  
+    |**Serveur**|Nom de l'instance du moteur de base de données qui a effectué l'opération de sauvegarde.|  
+    |**Nom d’utilisateur**|Nom de l'utilisateur qui a effectué la restauration.|  
     |**Taille**|Taille du jeu de sauvegarde en octets.|  
     |**Position**|Position du jeu de sauvegarde dans le volume|  
     |**Expiration**|Date et heure d'expiration du jeu de sauvegardes.|  
   
-7.  Sélectionnez l'une des options suivantes :  
+7.  Sélectionnez l’un des suivants :  
   
     -   **Limite dans le temps**  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62875672"
   
          Le tableau suivant répertorie les en-têtes de colonnes de la grille et décrit leur valeur.  
   
-        |Header|Value|  
+        |En-tête|Valeur|  
         |------------|-----------|  
         |\<vide>|Affiche une case à cocher pour la sélection de la marque.|  
         |**Marque de transaction**|Nom de la transaction marquée spécifiée par l'utilisateur lors de la validation de la transaction.|  
@@ -136,7 +136,7 @@ ms.locfileid: "62875672"
         |**Description**|Description de la transaction marquée spécifiée par l'utilisateur lorsque la transaction a été validée (le cas échéant).|  
         |**LSN**|Numéro séquentiel dans le journal de la transaction marquée.|  
         |**Sauvegarde de la base de données**|Nom de la base de données où la transaction marquée a été validée.|  
-        |**Nom d'utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
+        |**Nom d’utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
   
 8.  Pour afficher ou sélectionner les options avancées, cliquez sur **Options** dans le volet **Sélectionner une page** .  
   
@@ -146,9 +146,9 @@ ms.locfileid: "62875672"
   
          Conserve les paramètres de réplication lors de la restauration d'une base de données publiée sur un serveur autre que celui sur lequel la base de données a été créée.  
   
-         Cette option est disponible uniquement avec le **laisser la base de données opérationnelle en restaurant les transactions non validées...**  option (décrite plus loin), qui est équivalente à la restauration d’une sauvegarde avec la `RECOVERY` option.  
+         Cette option est disponible uniquement avec l’option **conserver la base de données opérationnelle en annulant les transactions non validées...** (décrite plus loin), ce qui équivaut à restaurer une sauvegarde `RECOVERY` avec l’option.  
   
-         Activation de cette option équivaut à utiliser le `KEEP_REPLICATION` option dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
+         L’activation de cette option revient à utiliser `KEEP_REPLICATION` l’option dans [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` une instruction.  
   
     -   **Demander confirmation avant chaque restauration de sauvegarde**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875672"
   
          Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator**ou **sysadmin**.  
   
-         Activation de cette option revient à utiliser le `RESTRICTED_USER` option dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
+         L’activation de cette option revient à utiliser `RESTRICTED_USER` l’option dans [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` une instruction.  
   
 10. Pour les options **État de récupération** , spécifiez l'état de la base de données après la restauration.  
   
     -   **Laisser la base de données opérationnelle en restaurant les transactions non validées. Les journaux des transactions supplémentaires ne peuvent pas être restaurés. (RESTORE WITH RECOVERY)**  
   
-         Récupère la base de données. Cette option est équivalente à la `RECOVERY` option dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
+         Récupère la base de données. Cette option est équivalente à `RECOVERY` l’option dans [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` une instruction.  
   
          Choisissez cette option uniquement si vous ne voulez restaurer aucun fichier journal.  
   
     -   **Laisser la base de données non opérationnelle, et ne pas restaurer les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. (RESTORE WITH NORECOVERY)**  
   
-         Laisse la base de données non récupérée dans l'état `RESTORING`. Cette option est équivalente à l’utilisation de la `NORECOVERY` option dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
+         Laisse la base de données non récupérée dans l'état `RESTORING`. Cette option équivaut à utiliser l' `NORECOVERY` option dans une [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
   
          Lorsque vous la choisissez, l'option **Conserver les paramètres de réplication** n'est pas disponible.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62875672"
   
     -   **Laisser la base de données en lecture seule. Annulez les transactions non validées, mais enregistrez les actions d'annulation dans un fichier d'annulation afin de rendre réversibles les effets de la récupération. (RESTORE WITH STANDBY)**  
   
-         Laisse la base de données dans un état de secours. Cette option est équivalente à l’utilisation de la `STANDBY` option dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
+         Laisse la base de données dans un état de secours. Cette option équivaut à utiliser l' `STANDBY` option dans une [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instruction.  
   
          Cette option nécessite de définir un fichier d'annulation.  
   
@@ -204,13 +204,13 @@ ms.locfileid: "62875672"
   
     -   la clause NORECOVERY.  
   
-     La syntaxe de base pour cette instruction est la suivante :  
+     La syntaxe de base pour cette instruction est la suivante :  
   
      RESTORE LOG *nom_base_de_données* FROM <unité_de_sauvegarde> WITH NORECOVERY.  
   
      Où *nom_base_de_données* représente le nom de la base de données et <unité_de_sauvegarde> correspond au nom de l’unité qui contient la sauvegarde du journal en cours de restauration.  
   
-2.  Répétez l'étape 1 pour chaque sauvegarde du journal des transactions à appliquer.  
+2.  Répétez l'étape 1 pour chaque sauvegarde du journal des transactions à appliquer.  
   
 3.  Après avoir restauré la dernière sauvegarde de votre séquence de restauration, utilisez l'une des instructions ci-dessous :  
   
@@ -241,7 +241,7 @@ ms.locfileid: "62875672"
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Application d'une sauvegarde unique du journal des transactions  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>R. Application d'une sauvegarde unique du journal des transactions  
  Dans cet exemple, nous commençons par restaurer la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à l'aide d'une sauvegarde complète de base de données qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_1`. Nous appliquons ensuite la première sauvegarde du journal des transactions qui réside sur une unité de sauvegarde nommée `AdventureWorks2012_log`. Enfin, nous récupérons la base de données.  
   
 ```sql  

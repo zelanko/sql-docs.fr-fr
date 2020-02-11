@@ -17,19 +17,19 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794681"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valeurs retournées par SQLGetInfo pour dBASE
 Le tableau suivant répertorie les #defines en langage C pour l’argument *fInfoType* et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être récupérées en transmettant le #defines de langage C indiqué à **SQLGetInfo** dans l’argument *fInfoType* . Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *Guide de référence du programmeur ODBC*.  
   
 > [!NOTE]  
->  Où **SQLGetInfo** retourne un masque de bits 32 bits, une barre verticale&#124;() représente une opération or au niveau du bit.  
+>  Où **SQLGetInfo** retourne un masque de bits 32 bits, une barre verticale (&#124;) représente une opération or au niveau du bit.  
   
-|InfoType|Valeur renvoyée|  
+|TypeInfo|Valeur renvoyée|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -82,10 +82,10 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_DATA_SOURCE_NAME|Le nom de source de fichier ODBC. ini ou «» si le mot clé DRIVER est utilisé dans ODBC. ini|  
-|SQL_DATA_SOURCE_READ_ONLY|«N» (dépend de la source de données.)|  
+|SQL_DATA_SOURCE_READ_ONLY|« N » (dépend de la source de données.)|  
 |SQL_DATABASE_NAME|Répertoire de base de données actuel|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|DBASE|  
+|SQL_DBMS_NAME|DBase|  
 |SQL_DBMS_VER|Valeurs multiples|  
 |SQL_DDL_INDEX|Valeurs multiples|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -94,9 +94,9 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_DRIVER_HENV|Géré par le gestionnaire de pilotes.|  
 |SQL_DRIVER_HLIB|Géré par le gestionnaire de pilotes.|  
 |SQL_DRIVER_HSTMT|Géré par le gestionnaire de pilotes.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|« OdbcJt32. dll »|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|«4,00.*nnnn*» (*nnnn* spécifie la date de génération)|  
+|SQL_DRIVER_VER|« 4,00.*nnnn*» (*nnnn* spécifie la date de génération)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -131,7 +131,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_MAX_ROW_SIZE|4000|  
 |SQL_MAX_ROW_SIZE_INCLUDES_LONG|"N"|  
 |SQL_MAX_SCHEMA_NAME_LEN|0|  
-|SQL_MAX_STATEMENT_LEN|65000|  
+|SQL_MAX_STATEMENT_LEN|65 000|  
 |SQL_MAX_TABLE_NAME_LEN|12|  
 |SQL_MAX_TABLES_IN_SELECT|16|  
 |SQL_MAX_USER_NAME_LEN|0|  
@@ -141,7 +141,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Valeurs multiples|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|CONFORMITÉ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|À partir du gestionnaire de pilotes|  
 |SQL_OJ_CAPABILITIES|Valeurs multiples|  
@@ -155,12 +155,12 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
+|SQL_SERVER_NAME|DBase|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,. ! '\_-+=\\ \[] &#124;»|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|TABLEAU|  
+|SQL_TABLE_TERM|Tableau|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Valeurs multiples|  

@@ -1,5 +1,5 @@
 ---
-title: Diagnostic de descripteur, d’informations, de Types spécifiques au pilote - Data, | Microsoft Docs
+title: Types spécifiques aux pilotes-données, descripteur, informations, diagnostic | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,35 +15,35 @@ ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa17a5552855916798c78e0e7d371b58e58a401e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046917"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Types de données spécifique du pilote, types de descripteurs, types d’informations, types de diagnostics et attributs
-Pilotes peuvent allouer des valeurs spécifiques au pilote pour les éléments suivants :  
+Les pilotes peuvent allouer des valeurs spécifiques au pilote pour les éléments suivants :  
   
--   **Indicateurs de Type de données SQL** ils sont utilisés dans *ParameterType* dans **SQLBindParameter** et dans *DataType* dans **SQLGetTypeInfo** et retournée par **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, et **SQLSpecialColumns**.  
+-   **Indicateurs de type de données SQL** Celles-ci sont utilisées dans *ParameterType* dans **SQLBindParameter** et dans *DataType* dans **SQLGetTypeInfo** et retournées par **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **SQLProcedureColumns**et **SQLSpecialColumns**.  
   
--   **Champs de descripteur** ils sont utilisés dans *FieldIdentifier* dans **SQLColAttribute**, **SQLGetDescField**, et **SQLSetDescField**.  
+-   **Champs de descripteur** Celles-ci sont utilisées dans *FieldIdentifier* dans **SQLColAttribute**, **SQLGetDescField**et **SQLSetDescField**.  
   
--   **Champs de diagnostic** ils sont utilisés dans *DiagIdentifier* dans **SQLGetDiagField** et **SQLGetDiagRec**.  
+-   **Champs de diagnostic** Celles-ci sont utilisées dans *DiagIdentifier* dans **SQLGetDiagField** et **SQLGetDiagRec**.  
   
--   **Types d’informations** ils sont utilisés dans *InfoType* dans **SQLGetInfo**.  
+-   **Types d’informations** Celles-ci sont utilisées dans l' *infotype* dans **SQLGetInfo**.  
   
--   **Connexion et les attributs d’instruction** ils sont utilisés dans *attribut* dans **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, et **SQLSetStmtAttr**.  
+-   **Attributs de connexion et d’instruction** Celles-ci sont utilisées dans l' *attribut* dans **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr**et **SQLSetStmtAttr**.  
   
- Pour chacun de ces éléments, il existe deux ensembles de valeurs : valeurs réservées pour une utilisation par ODBC et réservée pour une utilisation par les pilotes. Avant d’implémenter les valeurs spécifiques au pilote, un writer de pilote doit demander une valeur pour chaque type spécifique au pilote, le champ ou l’attribut à partir d’Open Group. Pour le développement de nouveau pilote, utilisez la plage décrite dans le tableau ci-dessous. Le Gestionnaire de pilote de ODBC 3.8 pas génère une erreur si une valeur inconnue est utilisée qui n’est pas dans la plage décrite ci-dessous. Toutefois, les versions ultérieures du Gestionnaire de pilotes peuvent générer une erreur si les valeurs inconnues sont reçus qui ne sont pas dans la plage.  
+ Pour chacun de ces éléments, il existe deux ensembles de valeurs : les valeurs réservées pour une utilisation par ODBC et les valeurs réservées pour une utilisation par les pilotes. Avant d’implémenter des valeurs spécifiques au pilote, un enregistreur de pilotes doit demander une valeur pour chaque type, champ ou attribut spécifique au pilote à partir d’un groupe ouvert. Pour le développement de nouveaux pilotes, utilisez la plage décrite dans le tableau ci-dessous. Le gestionnaire de pilotes ODBC 3,8 ne génère pas d’erreur si l’utilisation d’une valeur inconnue n’est pas comprise dans la plage décrite ci-dessous. Toutefois, les versions ultérieures du gestionnaire de pilotes peuvent générer une erreur si les valeurs inconnues qui ne sont pas comprises dans la plage sont reçues.  
   
- Lorsqu’une de ces valeurs est passé à une fonction ODBC, le pilote doit vérifier si la valeur est valide. Pilotes retournent SQLSTATE HYC00 (fonctionnalité facultative non implémentée) pour les valeurs spécifiques au pilote qui s’appliquent à d’autres pilotes.  
+ Quand l’une de ces valeurs est transmise à une fonction ODBC, le pilote doit vérifier si la valeur est valide. Les pilotes retournent SQLSTATE HYC00 (fonctionnalité facultative non implémentée) pour les valeurs spécifiques au pilote qui s’appliquent à d’autres pilotes.  
   
- À compter d’ODBC 3.8, enregistreurs de pilote peuvent allouer des attributs spécifiques au pilote dans une plage réservée.  
+ À compter de ODBC 3,8, les rédacteurs de pilotes peuvent allouer des attributs spécifiques au pilote au sein d’une plage réservée.  
   
 > [!NOTE]  
->  Le Gestionnaire de pilote de ODBC 3.8 valide ni n’applique ces plages pour la compatibilité descendante. Une future version du Gestionnaire de pilotes peut appliquer les, toutefois.  
+>  Le gestionnaire de pilotes ODBC 3,8 ne valide pas et n’applique pas ces plages pour la compatibilité descendante. Toutefois, une version future du gestionnaire de pilotes peut les appliquer.  
   
-|Type d'attribut|Type de données ODBC|Plage spécifiques au pilote de base|Limite de plage de spécifiques au pilote|Constante ODBC pour la plage de valeur spécifique au pilote de base|  
+|Type d'attribut|Type de données ODBC|Base de plage spécifique au pilote|Limite de plage spécifique au pilote|Constante ODBC pour la base de plage de valeurs spécifique au pilote|  
 |--------------------|--------------------|---------------------------------|----------------------------------|---------------------------------------------------------|  
 |Indicateurs de type de données SQL|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_SQL_TYPE_BASE|  
 |Champs de descripteur|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_DESCRIPTOR_BASE|  
@@ -53,9 +53,9 @@ Pilotes peuvent allouer des valeurs spécifiques au pilote pour les éléments s
 |Attributs d’instruction|SQLINTEGER|0x00004000|0x00007FFF|SQL_DRIVER_STATEMENT_ATTR_BASE|  
   
 > [!NOTE]  
->  Types de données spécifique au pilote, champs de descripteur, champs de diagnostic, types d’informations, les attributs d’instruction et les attributs de connexion doivent être décrits dans la documentation du pilote. Lorsqu’une de ces valeurs est passé à une fonction ODBC, le pilote doit vérifier si la valeur est valide. Pilotes retournent SQLSTATE HYC00 (fonctionnalité facultative non implémentée) pour les valeurs spécifiques au pilote qui s’appliquent à d’autres pilotes.  
+>  Les types de données spécifiques au pilote, les champs de descripteur, les champs de diagnostic, les types d’informations, les attributs d’instruction et les attributs de connexion doivent être décrits dans la documentation du pilote. Quand l’une de ces valeurs est transmise à une fonction ODBC, le pilote doit vérifier si la valeur est valide. Les pilotes retournent SQLSTATE HYC00 (fonctionnalité facultative non implémentée) pour les valeurs spécifiques au pilote qui s’appliquent à d’autres pilotes.  
   
- Les valeurs de base sont définis pour faciliter le développement de pilotes. Par exemple, les attributs de diagnostic spécifique de pilote peuvent être définis dans le format suivant :  
+ Les valeurs de base sont définies pour faciliter le développement des pilotes. Par exemple, les attributs de diagnostic spécifiques au pilote peuvent être définis dans le format suivant :  
   
 ```  
 SQL_DRIVER_DIAGNOSTIC_BASE+0, SQL_DRIVER_DIAGNOSTIC_BASE +1  

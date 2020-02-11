@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844396"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Géo-réplication Active-sp_wait_for_database_copy_sync
@@ -31,7 +31,7 @@ ms.locfileid: "73844396"
   
 ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**S’applique à**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +41,13 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [@target_server =] 'server_name'  
+ [ @target_server = ] 'server_name'  
  Nom du serveur SQL Database qui héberge la base de données secondaire active. server_name est de type sysname, sans valeur par défaut.  
   
- [@target_database =] 'database_name'  
+ [ @target_database = ] 'database_name'  
  Nom de la base de données secondaire active. database_name est de type sysname, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  Retourne 0 en cas de réussite ou un numéro d'erreur en cas d'échec.  
   
  Les conditions d'erreur les plus probables sont les suivantes :  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. dm_continuous_copy_status &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Fonctions &#40;et vues de gestion dynamique de la géo-réplication Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [sys. dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Fonctions et vues de gestion dynamique de la géo-réplication &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211728"
 ---
 # <a name="ddl-event-groups"></a>groupes d'événements DDL
@@ -27,7 +27,7 @@ ms.locfileid: "68211728"
 > [!NOTE]  
 >  Certaines procédures stockées système qui exécutent des opérations de type DDL peuvent également exécuter des déclencheurs DDL ou déclencher des notifications d'événements. Testez vos déclencheurs et notifications d'événements DDL afin de déterminer leur réponse aux procédures stockées système qui sont exécutées. Par exemple, l’instruction CREATE TYPE et la procédure stockée **sp_addtype** activent toutes les deux un déclencheur ou une notification d’événements DDL créés sur un événement CREATE_TYPE.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Événements  
  Les événements répertoriés sous DDL_DATABASE_LEVEL_EVENTS sont exécutés au niveau du serveur (instance) ou de la base de données. Les événements répertoriés sous DDL_SERVER_LEVEL_EVENTS sont exécutés uniquement au niveau du serveur.  
   
 ||||  

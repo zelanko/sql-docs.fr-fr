@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399931"
 ---
-# <a name="transparent-data-encryption"></a>Chiffrement transparent des données
-Vous pouvez prendre plusieurs précautions pour sécuriser la base de données telles que la conception d’un système sécurisé, le chiffrement de ressources confidentielles et la création d'un pare-feu autour des serveurs de base de données. Toutefois, pour un scénario dans lequel le support physique (tel que des lecteurs ou des bandes de sauvegarde) est volé, une partie malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés qui sont utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
+# <a name="transparent-data-encryption"></a>chiffrement transparent des données
+Vous pouvez prendre plusieurs précautions pour sécuriser la base de données telles que la conception d’un système sécurisé, le chiffrement de ressources confidentielles et la création d'un pare-feu autour des serveurs de base de données. Toutefois, pour un scénario dans lequel le support physique (tel que des lecteurs ou des bandes de sauvegarde) est volé, une partie malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
   
-Le *chiffrement transparent des données* (TDE) effectue un chiffrement et un déchiffrement en temps réel des données et des fichiers journaux des transactions et des fichiers journaux PDW spéciaux. Le chiffrement utilise une clé de chiffrement de base de données stockée dans l’enregistrement de démarrage de base de données à des fins de disponibilité lors de la récupération. Le DEK est une clé symétrique sécurisée à l’aide d’un certificat stocké dans la base de données Master de la SQL Server PDW. TDE protège les données au repos, ce qui signifie les données et les fichiers journaux. Cette fonctionnalité permet de se conformer aux nombreuses lois, réglementations et directives établies dans de nombreux secteurs. Cette fonctionnalité permet aux développeurs de logiciels de chiffrer des données à l’aide d’algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
+Le *chiffrement transparent des données* (TDE) effectue un chiffrement et un déchiffrement en temps réel des données et des fichiers journaux des transactions et des fichiers journaux PDW spéciaux. Le chiffrement utilise une clé de chiffrement de base de données stockée dans l’enregistrement de démarrage de base de données à des fins de disponibilité lors de la récupération. Le DEK est une clé symétrique sécurisée à l’aide d’un certificat stocké dans la base de données Master de la SQL Server PDW. Le chiffrement transparent des données protège les données « au repos », autrement dit les fichiers de données et les fichiers journaux. Il permet de se conformer à de nombreuses lois, règles et instructions établies dans différents secteurs professionnels. Cette fonctionnalité permet aux développeurs de logiciels de chiffrer des données à l’aide d’algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
   
 > [!IMPORTANT]  
 > TDE ne fournit pas de chiffrement pour les données circulant entre le client et le PDW. Pour plus d’informations sur le chiffrement des données entre le client et le SQL Server PDW, consultez [approvisionner un certificat](provision-certificate.md).  
@@ -120,7 +120,7 @@ Le tableau suivant fournit des liens et des explications pour les commandes et l
   
 |Commande ou fonction|Objectif|  
 |-----------------------|-----------|  
-|[CRÉER UNE CLÉ DE CHIFFREMENT DE BASE DE DONNÉES](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crée une clé permettant de chiffrer une base de données.|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crée une clé permettant de chiffrer une base de données.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Modifie la clé qui permet de chiffrer une base de données.|  
 |[SUPPRIMER LA CLÉ DE CHIFFREMENT DE BASE DE DONNÉES](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Supprime la clé qui était utilisée pour chiffrer une base de données.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Présente l'option **ALTER DATABASE** qui est utilisée pour activer le chiffrement transparent des données.|  
@@ -130,9 +130,9 @@ Le tableau suivant indique les affichages catalogue et les vues de gestion dynam
   
 |Affichage catalogue ou vue de gestion dynamique|Objectif|  
 |-------------------------------------------|-----------|  
-|[sys. databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Affichage catalogue qui affiche des informations sur la base de données.|  
-|[sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Affichage catalogue qui indique les certificats inclus dans une base de données.|  
-|[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Vue de gestion dynamique qui fournit des informations pour chaque nœud, sur les clés de chiffrement utilisées dans une base de données et sur l’état du chiffrement d’une base de données.|  
+|[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Affichage catalogue qui affiche des informations sur la base de données.|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Affichage catalogue qui indique les certificats inclus dans une base de données.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Vue de gestion dynamique qui fournit des informations pour chaque nœud, sur les clés de chiffrement utilisées dans une base de données et sur l’état du chiffrement d’une base de données.|  
   
 ## <a name="permissions"></a>Autorisations  
 Chaque fonctionnalité et commande TDE requiert des autorisations individuelles, décrites dans les tableaux précédents.  
@@ -267,7 +267,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ## <a name="performance-impact"></a>Impact sur les performances  
 L’impact sur les performances de TDE varie selon le type de données dont vous disposez, la manière dont il est stocké et le type d’activité de charge de travail sur le SQL Server PDW. En cas de protection par TDE, les e/s de lecture et de déchiffrement des données, ou le chiffrement, puis l’écriture des données, sont une activité gourmande en ressources processeur et ont un impact plus important lorsque d’autres activités gourmandes en ressources processeur se produisent en même temps. Étant donné que TDE `tempdb`chiffre, TDE peut affecter les performances des bases de données qui ne sont pas chiffrées. Pour obtenir une idée précise des performances, vous devez tester l’ensemble du système à l’aide de vos données et de votre activité de requête.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
 Les liens suivants contiennent des informations générales sur la façon dont SQL Server gère le chiffrement. Ces articles peuvent vous aider à comprendre le chiffrement SQL Server, mais ces articles n’ont pas d’informations spécifiques à SQL Server PDW et ils discutent des fonctionnalités qui ne sont pas présentes dans SQL Server PDW.  
   
 -   [Chiffrement SQL Server](../relational-databases/security/encryption/sql-server-encryption.md)  
@@ -279,12 +279,12 @@ Les liens suivants contiennent des informations générales sur la façon dont S
   
 ## <a name="see-also"></a>Voir aussi  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CRÉER UNE CLÉ PRINCIPALE](../t-sql/statements/create-master-key-transact-sql.md)  
-[CRÉER UNE CLÉ DE CHIFFREMENT DE BASE DE DONNÉES](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[CERTIFICAT DE SAUVEGARDE](../t-sql/statements/backup-certificate-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

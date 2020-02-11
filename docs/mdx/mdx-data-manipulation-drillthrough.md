@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891205"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulation de données MDX - DRILLTHROUGH
@@ -51,7 +51,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  Par défaut, le nombre maximal de lignes qui sont retournées est de 10 000 lignes. Cela signifie que si vous ne spécifiez pas **MaxRows** , vous obtiendrez 10 000 lignes ou moins. Si cette valeur est trop faible pour votre scénario, vous pouvez définir **MaxRows** sur un nombre plus élevé, tel `MAXROWS 20000`que. Si elle est trop faible, vous pouvez augmenter la valeur par défaut en modifiant la propriété du serveur **OLAP\Query\DefaultDrillthroughMaxRows** . Pour plus d’informations sur la modification de cette propriété, consultez [Propriétés du serveur dans Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
- Sauf indication contraire, les colonnes retournées incluent tous les attributs de granularité de toutes les dimensions (autres que les dimensions de type plusieurs à plusieurs) associées au groupe de mesures. Les dimensions du cube sont précédées du signe $ afin de distinguer les dimensions et les groupes de mesures. La clause Return est utilisée pour spécifier les colonnes retournées par la requête d’extraction. Les fonctions suivantes peuvent être appliquées à un seul attribut ou mesure par la clause Return.  
+ Sauf indication contraire, les colonnes retournées incluent tous les attributs de granularité de toutes les dimensions (autres que les dimensions de type plusieurs à plusieurs) associées au groupe de mesures. Les dimensions du cube sont précédées du signe $ afin de distinguer les dimensions et les groupes de mesures. La clause **Return** est utilisée pour spécifier les colonnes retournées par la requête d’extraction. Les fonctions suivantes peuvent être appliquées à un seul attribut ou mesure par la clause **Return** .  
   
  Name(attribute_name)  
  Retourne le nom du membre d'attribut spécifié.  
@@ -97,6 +97,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions &#40;MDX de manipulation de données MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Instructions de manipulation de données MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

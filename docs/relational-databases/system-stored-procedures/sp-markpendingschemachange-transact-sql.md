@@ -16,10 +16,10 @@ ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 56ed176d8b4b29e1ed4caafabd0893b7a33b1293
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962394"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
@@ -40,13 +40,13 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` est le nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @schemaversion = ] schemaversion` identifie une modification de schéma en attente. *SchemaVersion* est de **type int**, avec **0**comme valeur par défaut. Utilisez [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) pour répertorier les modifications de schéma en attente pour la publication.  
+`[ @schemaversion = ] schemaversion`Identifie une modification de schéma en attente. *SchemaVersion* est de **type int**, avec **0**comme valeur par défaut. Utilisez [sp_enumeratependingschemachanges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) pour répertorier les modifications de schéma en attente pour la publication.  
   
-`[ @status = ] 'status'` indique si une modification de schéma en attente sera ignorée. l' *État* est **nvarchar (10)** et sa valeur par défaut est **actif**. Si la valeur de l' *État* est **ignorée**, la modification de schéma sélectionnée n’est pas répliquée.  
+`[ @status = ] 'status'`Indique si une modification de schéma en attente sera ignorée. l' *État* est **nvarchar (10)** et sa valeur par défaut est **actif**. Si la valeur de l' *État* est **ignorée**, la modification de schéma sélectionnée n’est pas répliquée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  

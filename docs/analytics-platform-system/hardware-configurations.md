@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401131"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configurations matérielles-système d’analyse-plateforme
 Le matériel d’Analytics Platform System (APS) est conçu avec des unités évolutives afin que vous achetiez la quantité appropriée de traitement et de stockage en fonction des besoins de votre entreprise. L’Appliance met à l’échelle le stockage pour SQL Server Parallel Data Wareouse (PDW) de quelques téraoctets à plus de 6 pétaoctets de données.  
   
-## <a name="contents"></a>Contenu  
+## <a name="contents"></a>Contents  
   
 -   [Configurations à un seul rack](#section1)  
   

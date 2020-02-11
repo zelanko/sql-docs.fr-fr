@@ -1,5 +1,5 @@
 ---
-title: Propriétés du catalogue de texte intégral (Page Général) | Microsoft Docs
+title: Propriétés du catalogue de texte intégral (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779662"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriétés du catalogue de texte intégral (page Général)
@@ -27,12 +27,12 @@ ms.locfileid: "62779662"
   
 ## <a name="options"></a>Options  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>Propriétés  
  **Catalogue par défaut**  
  Indique si le catalogue est le catalogue par défaut de la base de données.  
   
  **État du remplissage**  
- Indique l'état du catalogue. Les valeurs possibles sont :  
+ Indique l'état du catalogue. Les valeurs possibles sont :  
   
 -   **Idle**  
   
@@ -42,17 +42,17 @@ ms.locfileid: "62779662"
   
 -   **Throttled**  
   
--   **La récupération**  
+-   **Récupération**  
   
--   **Arrêter**  
+-   **Correct**  
   
 -   **Remplissage incrémentiel en cours**  
   
--   **Création de l’index**  
+-   **Construction des index**  
   
--   **Le disque est en pause l’intégral**  
+-   **Le disque est en pause plein**  
   
--   **Change tracking**  
+-   **Suivi des modifications**  
   
  **Nombre d’éléments**  
  Affiche le nombre d'éléments de texte intégral contenus dans le catalogue.  
@@ -64,13 +64,13 @@ ms.locfileid: "62779662"
  Nom du catalogue de texte intégral.  
   
  **Respecter les accents**  
- Permet d'afficher ou de modifier si le catalogue respecte ou non les signes diacritiques, par exemple le tilde ( **~** ), l'accent aigu (**´**) ou le tréma (**¨**). Les valeurs valides sont :  
+ Affichez ou modifiez si le catalogue est sensible aux marques diacritiques, telles qu’un tilde (**~**), un accent aigu (**́**) ou un tréma (**̈**). Les valeurs autorisées sont :  
   
 -   **Non**  
   
 -   **Oui**  
   
--   Pour plus d’informations sur les marques diacritiques, consultez [diacritiques](https://www.merriam-webster.com/dictionary/diacritic) dans le dictionnaire Merriam-Webster.  
+-   Pour plus d’informations sur les signes diacritiques, consultez [diacritiques](https://www.merriam-webster.com/dictionary/diacritic) dans le dictionnaire Merriam-Webster.  
   
  **Date du dernier remplissage**  
  Affiche la date du dernier remplissage du catalogue.  
@@ -87,7 +87,7 @@ ms.locfileid: "62779662"
 |-|-|  
 |**Aucun**|N'exécute aucune opération de type **Optimiser le catalogue**, **Reconstruire le catalogue**ou **Remplir à nouveau le catalogue** .|  
 |**Optimiser le catalogue**|Optimise l'utilisation de l'espace du catalogue et améliore les performances des requêtes. Cette option améliore également la précision du classement de la pertinence des résultats de la recherche.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
-|**La reconstruction du catalogue**|Supprime et reconstruit le catalogue de texte intégral. Cette opération doit être exécutée si une propriété fondamentale du catalogue a été modifiée (par exemple, le respect des accents).<br /><br /> Pour que la reconstruction réussisse, le groupe de fichiers dans lequel réside le catalogue de texte intégral doit être en ligne ou accessible en lecture et en écriture. Après la reconstruction, l'index de texte intégral sera rempli à nouveau.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
+|**Reconstruire le catalogue**|Supprime et reconstruit le catalogue de texte intégral. Cette opération doit être exécutée si une propriété fondamentale du catalogue a été modifiée (par exemple, le respect des accents).<br /><br /> Pour que la reconstruction réussisse, le groupe de fichiers dans lequel réside le catalogue de texte intégral doit être en ligne ou accessible en lecture et en écriture. Après la reconstruction, l'index de texte intégral sera rempli à nouveau.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Remplir à nouveau le catalogue**|Met à jour le catalogue avec les modifications récemment apportées aux données. Cette option ne requiert aucun temps mort du catalogue.|  
   
 ## <a name="see-also"></a>Voir aussi  

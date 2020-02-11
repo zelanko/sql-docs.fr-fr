@@ -1,5 +1,5 @@
 ---
-title: Fournisseur WMI pour les Concepts de gestion de Configuration | Microsoft Docs
+title: Fournisseur WMI pour les concepts de gestion de configuration | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211621"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>Fournisseur WMI pour les concepts de gestion de configuration
-  Le fournisseur WMI est une couche publiée utilisée avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le composant logiciel enfichable Gestionnaire de Configuration pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) et le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnés.  
+  Le fournisseur WMI est une couche publiée qui est utilisée avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composant logiciel enfichable Configuration Manager [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour la console MMC (Management Console [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) et le Configuration Manager. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnés.  
   
  Le fournisseur WMI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se compose d'une DLL et d'un fichier MOF, compilés automatiquement par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68211621"
  Cette section traite plus en détail de l'accès au fournisseur WMI de la gestion de la configuration à partir de scripts.  
   
 ## <a name="using-the-smo-managedcomputer-object"></a>Utilisation de l'objet SMO ManagedComputer  
- L'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> est un objet SMO managé qui fournit l'accès au fournisseur WMI de la gestion de la configuration. En utilisant un programme SMO, l'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> peut être utilisé pour afficher et modifier les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les paramètres réseau et les paramètres d'alias. Pour plus d’informations, consultez [la gestion des Services et des paramètres de réseau en utilisant le fournisseur WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> est un objet SMO managé qui fournit l'accès au fournisseur WMI de la gestion de la configuration. En utilisant un programme SMO, l'objet <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> peut être utilisé pour afficher et modifier les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les paramètres réseau et les paramètres d'alias. Pour plus d’informations, consultez [gestion des services et des paramètres réseau à l’aide du fournisseur WMI](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
   
 ## <a name="using-the-microsoft-management-console-or-sql-server-configuration-manager"></a>Utilisation de la console MMC (Microsoft Management Console) ou du Gestionnaire de configuration SQL Server  
  La console MMC fournit une interface pour gérer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par opposition à un langage de script ou à un programme de code managé. Le composant logiciel enfichable MMC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management peut être utilisé pour arrêter ou démarrer les services, et pour modifier les comptes de service.  
@@ -55,8 +55,8 @@ ms.locfileid: "68211621"
  Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aussi de gérer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les protocoles client et serveur, et les alias serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation du fournisseur WMI pour gestion de la Configuration](understanding-the-wmi-provider-for-configuration-management.md)   
- [Utilisation du fournisseur WMI pour gestion de la Configuration](working-with-the-wmi-provider-for-configuration-management.md)   
+ [Comprendre le fournisseur WMI pour la gestion de la configuration](understanding-the-wmi-provider-for-configuration-management.md)   
+ [Utilisation du fournisseur WMI pour la gestion de la configuration](working-with-the-wmi-provider-for-configuration-management.md)   
  [Utilisation des langages WQL et de script avec le fournisseur WMI pour la gestion de configuration](using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   
   

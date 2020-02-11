@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206737"
 ---
 # <a name="binding-parameters"></a>Liaison de paramètres
-  Chaque marqueur de paramètre dans une instruction SQL doit être associé, ou lié, à une variable dans l'application avant que l'instruction puisse être exécutée. Cela est effectué en appelant le [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) (fonction). **SQLBindParameter** décrit la variable de programme (adresse, type de données C et ainsi de suite) au pilote. Cette fonction identifie également le marqueur de paramètre en indiquant sa valeur ordinale puis décrit les caractéristiques de l'objet SQL qu'il représente (type de données SQL, précision, etc.).  
+  Chaque marqueur de paramètre dans une instruction SQL doit être associé, ou lié, à une variable dans l'application avant que l'instruction puisse être exécutée. Pour ce faire, appelez la fonction [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) . **SQLBindParameter** décrit la variable de programme (adresse, type de données C, etc.) au pilote. Cette fonction identifie également le marqueur de paramètre en indiquant sa valeur ordinale puis décrit les caractéristiques de l'objet SQL qu'il représente (type de données SQL, précision, etc.).  
   
  Les marqueurs de paramètre peuvent être liés ou liés une nouvelle fois à tout moment avant l'exécution d'une instruction. Une liaison de paramètre reste en vigueur jusqu'à ce que l'un des événements suivants se produise :  
   
--   Un appel à [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) avec la *Option* paramètre défini sur SQL_RESET_PARAMS libère tous les paramètres liés au descripteur d’instruction.  
+-   Un appel à [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) avec le paramètre *Option* défini sur SQL_RESET_PARAMS libère tous les paramètres liés au descripteur d’instruction.  
   
 -   Un appel à **SQLBindParameter** avec *ParameterNumber* défini sur l’ordinal d’un marqueur de paramètre lié libère automatiquement la liaison précédente.  
   
@@ -40,25 +40,26 @@ ms.locfileid: "68206737"
   
 -   Une liaison selon les colonnes est effectuée lorsque chaque paramètre individuel est lié à son propre tableau de variables.  
   
-     La liaison est spécifiée en appelant [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) avec *attribut* ayant pour valeur SQL_ATTR_PARAM_BIND_TYPE et *ValuePtr* ayant pour valeur SQL_PARAM_BIND_BY_COLUMN.  
+     La liaison selon les colonnes est spécifiée en appelant [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) avec l' *attribut* défini sur SQL_ATTR_PARAM_BIND_TYPE et *ValuePtr* défini sur SQL_PARAM_BIND_BY_COLUMN.  
   
 -   Une liaison selon les lignes est effectuée lorsque tous les paramètres dans l'instruction SQL sont liés en tant qu'unité à un tableau de structures qui contiennent les variables individuelles pour les paramètres.  
   
-     La liaison est spécifiée en appelant **SQLSetStmtAttr** avec *attribut* ayant pour valeur SQL_ATTR_PARAM_BIND_TYPE et *ValuePtr* défini avec la taille de l’exploitation de la structure du variables de programme.  
+     La liaison selon les lignes est spécifiée en appelant **SQLSetStmtAttr** avec l' *attribut* défini sur SQL_ATTR_PARAM_BIND_TYPE et *ValuePtr* défini sur la taille de la structure contenant les variables de programme.  
   
- Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client envoie des caractères ou des paramètres de chaîne binaire au serveur, il remplit les valeurs à la longueur spécifiée dans **SQLBindParameter** *ColumnSize* paramètre. Si une application ODBC 2.x spécifie 0 pour *ColumnSize*, le pilote complète la valeur du paramètre de la précision du type de données. La précision est 8000 lors d'une connexion à des serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 lors d'une connexion à des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* est exprimée en octets pour les colonnes de type variant.  
+ Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client envoie des paramètres de chaîne de caractères ou binaires au serveur, il remplit les valeurs à la longueur spécifiée dans le paramètre **SQLBindParameter** *Columns* . Si une application ODBC 2. x spécifie 0 pour *Column*, le pilote remplit la valeur de paramètre avec la précision du type de données. La précision est 8000 lors d'une connexion à des serveurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 lors d'une connexion à des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La *colonne Columns* est en octets pour les colonnes de type Variant.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la définition de noms pour les paramètres de procédure stockée. ODBC 3.5 a également introduit la prise en charge des paramètres nommés utilisés lors de l'appel de procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette prise en charge peut être utilisée pour :  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la définition de noms pour les paramètres de procédure stockée. ODBC 3.5 a également introduit la prise en charge des paramètres nommés utilisés lors de l'appel de procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette prise en charge peut être utilisée pour :  
   
 -   appeler une procédure stockée et fournir des valeurs pour un sous-ensemble des paramètres définis pour la procédure stockée ;  
   
 -   spécifier les paramètres dans un ordre différent dans l'application de l'ordre spécifié quand la procédure stockée a été créée.  
   
- Paramètres nommés sont uniquement pris en charge à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` instruction ou la séquence d’échappement ODBC CALL pour exécuter une procédure stockée.  
+ Les paramètres nommés sont pris en charge uniquement [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` lors de l’utilisation de l’instruction ou de la séquence d’échappement ODBC Call pour exécuter une procédure stockée.  
   
- Si `SQL_DESC_NAME` est défini pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir `SQL_DESC_NAME`.  Si des littéraux sont utilisés dans les appels de procédure stockée, où les paramètres ont `SQL_DESC_NAME` ensemble, les littéraux doivent utiliser le format *' nom*=*valeur*», où *nom* est le nom de paramètre de procédure stockée (par exemple, @p1). Pour plus d’informations, consultez [Binding Parameters by Name (Named Parameters)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si `SQL_DESC_NAME` est défini pour un paramètre de procédure stockée, tous les paramètres de procédure stockée dans la requête doivent également définir `SQL_DESC_NAME`.  Si des littéraux sont utilisés dans les appels de procédure stockée `SQL_DESC_NAME` , où les paramètres ont défini, les littéraux doivent utiliser le format *'Name*=*value*', où *Name* est le nom du paramètre @p1de procédure stockée (par exemple,). Pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation de paramètres d’instruction](using-statement-parameters.md)  
+ [Utilisation de paramètres d'instruction](using-statement-parameters.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105231"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Fonction LookupSet (Générateur de rapports et SSRS)
@@ -32,18 +32,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Paramètres  
  *source_expression*  
- (`Variant`) Expression évaluée dans l'étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple, `=Fields!ID.Value`.  
+ (`Variant`) Expression évaluée dans l'étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple : `=Fields!ID.Value`.  
   
  *destination_expression*  
- (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple, `=Fields!CustomerID.Value`.  
+ (`Variant`) Expression évaluée pour chaque ligne d'un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (`Variant`) Une expression qui est évaluée pour la ligne dans le jeu de données où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!PhoneNumber.Value`.  
+ (`Variant`) Expression évaluée pour la ligne du DataSet où *source_expression* = *destination_expression*et qui spécifie la valeur à récupérer. Par exemple : `=Fields!PhoneNumber.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « ContactInformation ».  
   
-## <a name="return"></a>Return  
+## <a name="return"></a>Renvoie  
  Retourne une valeur `VariantArray`, ou `Nothing` si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
@@ -59,11 +59,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Retourne le jeu de valeurs d'expressions de résultat.  
   
- Pour récupérer une valeur unique dans un dataset avec les paires nom-valeur d’un nom spécifique, lorsqu’il existe une relation un-à-un, utilisez la [Fonction Lookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md). Pour appeler `Lookup` pour un ensemble de valeurs, utilisez [fonction Multilookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-multilookup-function.md).  
+ Pour récupérer une valeur unique dans un dataset avec les paires nom-valeur d’un nom spécifique, lorsqu’il existe une relation un-à-un, utilisez la [Fonction Lookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-lookup-function.md). Pour appeler `Lookup` pour un ensemble de valeurs, utilisez la [fonction multilookup &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-multilookup-function.md).  
   
- Les restrictions suivantes s'appliquent :  
+ Les restrictions suivantes s’appliquent :  
   
--   `LookupSet` est évaluée une fois que toutes les expressions de filtre sont appliquées.  
+-   `LookupSet`est évalué après que toutes les expressions de filtre ont été appliquées.  
   
 -   Un seul niveau de recherche est pris en charge. Une expression source, destination ou de résultat ne peut pas inclure de référence à une fonction de recherche.  
   
@@ -71,7 +71,8 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Les expressions source, de destination et de résultat ne peuvent pas inclure de références à des variables de groupe ou de rapport.  
   
--   `LookupSet` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
+-   
+  `LookupSet` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
   
     -   des chaînes de connexion dynamiques pour une source de données ;  
   
@@ -99,9 +100,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>Exemple  
  Étant donné que `LookupSet` retourne une collection d'objets, vous ne pouvez pas afficher directement l'expression de résultat dans une zone de texte. Vous pouvez concaténer la valeur de chaque objet dans la collection en tant que chaîne.  
   
- Utilisez la fonction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Join` pour créer une chaîne délimitée à partir d'un jeu d'objets. Utilisez une virgule comme séparateur pour combiner les objets en une ligne unique. Dans certains convertisseurs, vous pouvez utiliser un saut de ligne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) comme séparateur pour répertorier chaque valeur sur une nouvelle ligne.  
+ Utilisez la fonction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`Join` pour créer une chaîne délimitée à partir d'un jeu d'objets. Utilisez une virgule comme séparateur pour combiner les objets en une ligne unique. Dans certains convertisseurs, vous pouvez utiliser un saut de ligne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) comme séparateur pour répertorier chaque valeur sur une nouvelle ligne.  
   
- L’expression suivante, lorsqu’elle est utilisée en tant que la valeur de propriété pour une zone de texte, utilise `Join` pour créer une liste.  
+ L’expression suivante, lorsqu’elle est utilisée comme propriété de valeur d’une zone de texte, `Join` utilise pour créer une liste.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  

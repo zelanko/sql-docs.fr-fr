@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530940"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Outils et approches de traitement (Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "69530940"
  Le traitement est une opération hautement configurable, contrôlée par un ensemble d'options de traitement qui déterminent si un traitement complet ou incrémentiel se produit au niveau de l'objet. Pour plus d’informations sur les options de traitement et sur le traitement des objets, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) et [Traitement des objets Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  Cette rubrique décrit les outils et approches pour traiter des modèles multidimensionnels. Pour plus d’informations sur le traitement des modèles tabulaires, consultez [traiter la base de données, table ou partition](../tabular-models/process-database-table-or-partition-analysis-services.md) et [traiter les données &#40;sous forme tabulaire&#41;](../process-data-ssas-tabular.md).  
+>  Cette rubrique décrit les outils et approches pour traiter des modèles multidimensionnels. Pour plus d’informations sur le traitement des modèles tabulaires, consultez [traiter une base de données, une table ou une partition](../tabular-models/process-database-table-or-partition-analysis-services.md) et [traiter des données &#40;SSAS tabulaire&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Objets de traitement dans SQL Server Management Studio  
   
@@ -92,13 +92,14 @@ ms.locfileid: "69530940"
   
 6.  Une fois le traitement terminé, cliquez sur **Fermer**.  
   
-##  <a name="bkmk_impactanalysis"></a> Exécuter une analyse d'impact pour identifier les dépendances entre les objets et l'étendue des opérations  
+##  <a name="bkmk_impactanalysis"></a>Exécuter une analyse d’impact pour identifier les dépendances des objets et l’étendue des opérations  
   
 1.  Avant de traiter un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez analyser l’impact du traitement sur les objets associés en cliquant sur **Analyse d’impact** dans l’une des boîtes de dialogue **Traiter les objets** .  
   
 2.  Cliquez avec le bouton droit sur une dimension, un cube, un groupe de mesures ou une partition pour ouvrir une boîte de dialogue **Traiter les objets** .  
   
-3.  Cliquez sur **Analyse d’impact**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] analyse le modèle et génère un rapport sur les conditions requises pour les objets liés à celui qui est sélectionné en vue du traitement.  
+3.  Cliquez sur **Analyse d’impact**. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] analyse le modèle et génère un rapport sur les conditions requises pour les objets liés à celui qui est sélectionné en vue du traitement.  
   
 ### <a name="processing-objects-using-xmla"></a>Traitement d'objets à l'aide de XMLA  
   
@@ -122,13 +123,13 @@ ms.locfileid: "69530940"
   
 1.  À partir de cette version de SQL Server, vous pouvez utiliser les applets de commande Analysis Services PowerShell pour traiter les objets. Les applets de commande suivants peuvent être exécutées de façon interactive ou dans un script :  
   
-    -   [Invoke-ProcessCube, applet de commande](/powershell/module/sqlserver/invoke-processcube)  
+    -   [Applet de commande Invoke-ProcessCube](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension, applet de commande](/powershell/module/sqlserver/invoke-processdimension)  
+    -   [Applet de commande Invoke-ProcessDimension](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition, applet de commande](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Applet de commande Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Applet de commande Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), qui peut être utilisée pour exécuter un script XMLA, MDX ou DMX qui inclut les commandes de traitement.  
+    -   [Applet de commande Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), qui peut être utilisée pour exécuter un script XMLA, MDX ou DMX qui comprend des commandes de traitement.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Surveillance du traitement des objets à l'aide de SQL Server Profiler  
   
@@ -138,13 +139,13 @@ ms.locfileid: "69530940"
   
 3.  Choisissez l'un des événements suivants :  
   
-    -   **Début de la commande** et **Fin de la commande** pour afficher le démarrage et l’arrêt du traitement  
+    -   **Début** de la commande et fin de la **commande** à afficher au démarrage et à l’arrêt du traitement  
   
     -   **Erreur** pour capturer les erreurs  
   
-    -   **Début du rapport de progression**, **Rapport de progression actuel**et **Fin du rapport de progression** pour créer un rapport sur l’état de processus et afficher les requêtes SQL utilisées pour récupérer les données  
+    -   **Début**du rapport de progression, rapport de **progression en cours**et **rapport de progression fin** pour signaler l’état du processus et afficher les requêtes SQL utilisées pour récupérer les données  
   
-    -   **Exécuter script MDX Début** et **Exécuter script MDX Fin** pour afficher les calculs de cube  
+    -   **Exécuter le script MDX démarrer** et **exécuter le script MDX fin** pour afficher les calculs de cube  
   
     -   Éventuellement, ajoutez des événements de verrou si vous analysez des problèmes de performances liés au traitement.  
   
@@ -157,6 +158,6 @@ ms.locfileid: "69530940"
 3.  Modifiez la tâche pour spécifier une connexion à la base de données, les objets à traiter et l'option de traitement. Pour plus d'informations sur la manière d'implémenter cette tâche, consultez [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement d’objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)  
+ [Traitement des objets de modèles multidimensionnels](processing-a-multidimensional-model-analysis-services.md)  
   
   

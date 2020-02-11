@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772245"
 ---
 # <a name="add-copy-of-existing-package"></a>Ajouter une copie des packages existants
@@ -28,10 +28,10 @@ ms.locfileid: "62772245"
  **Emplacement du package**  
  Sélectionnez le type d'emplacement de stockage à partir duquel copier le package.  
   
- **Server**  
+ **Serveur**  
  En cas de copie à partir de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou du magasin de packages SSIS, tapez le nom d'un serveur ou sélectionnez-en un dans la liste.  
   
- **Type d'authentification**  
+ **Type d’authentification**  
  En cas de copie à partir de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez un type d'authentification.  
   
  **Nom d'utilisateur**  
@@ -45,8 +45,8 @@ ms.locfileid: "62772245"
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrer une copie du package](../../2014/integration-services/save-copy-of-package.md)   
- [Référence de l'interface utilisateur de la boîte de dialogue Importer un package](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Référence de l'interface utilisateur de la boîte de dialogue Exporter un package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Référence de l’interface utilisateur de la boîte de dialogue Importer un package](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
+ [Référence de l’interface utilisateur de la boîte de dialogue Exporter le package](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Enregistrer des packages](save-packages.md)   
  [Importer et exporter des packages &#40;service SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   

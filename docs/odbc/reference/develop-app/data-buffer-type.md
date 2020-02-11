@@ -1,5 +1,5 @@
 ---
-title: Type du tampon de données | Microsoft Docs
+title: Type de tampon de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067415"
 ---
 # <a name="data-buffer-type"></a>Type de tampon de données
-Le type de données C d’une mémoire tampon est spécifié par l’application. Avec une seule variable, cela se produit lorsque l’application alloue la variable. Avec mémoire générique - autrement dit, mémoire vers laquelle pointe un pointeur de type void - cela se produit lorsque l’application effectue un cast de la mémoire à un type particulier. Le pilote détecte ce type de deux manières :  
+Le type de données C d’une mémoire tampon est spécifié par l’application. Avec une seule variable, cela se produit lorsque l’application alloue la variable. Avec la mémoire générique, c’est-à-dire la mémoire vers laquelle pointe un pointeur de type void. cela se produit lorsque l’application convertit la mémoire en un type particulier. Le pilote Découvre ce type de deux manières :  
   
--   **Argument de type de mémoire tampon de données.** Mémoires tampons utilisées pour transférer des valeurs de paramètre et les données du jeu de résultats, telles que la mémoire tampon liée avec *TargetValuePtr* dans **SQLBindCol**, ont généralement un argument de type associé, tel que le  *TargetType* argument dans **SQLBindCol**. Dans cet argument, l’application transmet l’identificateur de type C qui correspond au type de la mémoire tampon. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, la valeur SQL_C_TYPE_DATE indique au pilote qui la *Date* mémoire tampon est un SQL_DATE_STRUCT :  
+-   **Argument de type de tampon de données.** Les mémoires tampons utilisées pour transférer des valeurs de paramètres et des données de jeu de résultats, telles que la mémoire tampon liée à *TargetValuePtr* dans **SQLBindCol**, ont généralement un argument de type associé, tel que l’argument *TargetType* dans **SQLBindCol**. Dans cet argument, l’application passe l’identificateur de type C qui correspond au type de la mémoire tampon. Par exemple, dans l’appel suivant à **SQLBindCol**, la valeur SQL_C_TYPE_DATE indique au pilote que la mémoire tampon de *DATE* est un SQL_DATE_STRUCT :  
   
     ```  
     SQL_DATE_STRUCT Date;  
@@ -33,9 +33,9 @@ Le type de données C d’une mémoire tampon est spécifié par l’application
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     Pour plus d’informations sur les identificateurs de type, consultez la [des Types de données dans ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md) section, plus loin dans cette section.  
+     Pour plus d’informations sur les identificateurs de type, consultez la section [types de données dans ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md) , plus loin dans cette section.  
   
--   **Type prédéfini.** Mémoires tampons utilisées pour envoyer et récupérer des options ou des attributs, tels que la mémoire tampon vers laquelle pointe le *InfoValuePtr* argument dans **SQLGetInfo**, avoir un type fixe qui dépend de l’option spécifiée. Le pilote part du principe que le tampon de données est de ce type ; Il est responsable de l’application pour allouer une mémoire tampon de ce type. Par exemple, dans l’exemple suivant appel à **SQLGetInfo**, le pilote part du principe que la mémoire tampon est un entier 32 bits, car c’est ce que l’option SQL_STRING_FUNCTIONS nécessite :  
+-   **Type prédéfini.** Les mémoires tampons utilisées pour envoyer et récupérer des options ou des attributs, tels que la mémoire tampon pointée par l’argument *InfoValuePtr* dans **SQLGetInfo**, ont un type fixe qui dépend de l’option spécifiée. Le pilote part du principe que la mémoire tampon de données est de ce type ; Il incombe à l’application d’allouer une mémoire tampon de ce type. Par exemple, dans l’appel suivant à **SQLGetInfo**, le pilote suppose que la mémoire tampon est un entier 32 bits, car c’est ce que nécessite l’option SQL_STRING_FUNCTIONS :  
   
     ```  
     SQLUINTEGER StringFuncs;  

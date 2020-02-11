@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637837"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installer la version autonome du Générateur de rapports (Générateur de rapports)
-  Vous pouvez installer Générateur de rapports à partir du [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack dans le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) ou à un emplacement tel que le dossier public dans lequel le ReportBuilder3_x86. msi, le package Windows Installer pour générateur de rapports, a été téléchargé.  
+  Vous pouvez installer Générateur de rapports à partir [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] du Feature Pack dans le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) ou à un emplacement tel que le dossier public dans lequel le ReportBuilder3_x86. msi, le package Windows Installer pour générateur de rapports, a été téléchargé.  
   
  Vous pouvez également effectuer une installation du Générateur de rapports à partir de la ligne de commande et spécifier des arguments afin de personnaliser l'installation. Outre les paramètres MSI standard intrinsèques, vous pouvez utiliser les paramètres personnalisés fournis par le Générateur de rapports : RBINSTALLDIR et REPORTSERVERURL. RBINSTALLDIR spécifie le dossier d'installation racine pour le Générateur de rapports. REPORTSERVERURL spécifie le serveur de rapports par défaut utilisé par le Générateur de rapports pour enregistrer des rapports.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73637837"
     -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut de générateur de rapports et le mettre à jour.  
   
         > [!NOTE]  
-        >  Le dossier d’installation par défaut de Générateur de rapports est \<lecteur > Program Files\Microsoft SQL Server.  
+        >  Le dossier d’installation par défaut de \<générateur de rapports est lecteur>Program Files\Microsoft SQL Server.  
   
     -   Cliquez sur **coût du disque** pour connaître la quantité d’espace disque consommée par générateur de rapports.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73637837"
     -   Cliquez sur **Parcourir** pour afficher l’emplacement par défaut de générateur de rapports et le mettre à jour.  
   
         > [!NOTE]  
-        >  Le dossier d’installation par défaut de Générateur de rapports est \<lecteur > Program Files\Microsoft SQL Server.  
+        >  Le dossier d’installation par défaut de \<générateur de rapports est lecteur>Program Files\Microsoft SQL Server.  
   
     -   Cliquez sur **coût du disque** pour connaître la quantité d’espace disque consommée par générateur de rapports.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "73637837"
   
 5.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
-6.  Dans la zone de texte ouvrir, tapez `cmd.`  
+6.  Dans la zone de texte Ouvrir, tapez .`cmd.`  
   
 7.  Dans la fenêtre d'invite de commandes, naviguez jusqu'au dossier où vous avez enregistré ReportBuilder3_x86.msi.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "73637837"
 9. Pour exécuter la commande, appuyez sur Entrée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer, désinstaller et générateur de rapports la prise en charge](../install-uninstall-and-report-builder-support.md)   
- [Désinstallez la version autonome de Générateur de rapports &#40;générateur de rapports&#41;](install-report-builder.md)  
+ [Installer, désinstaller et Générateur de rapports la prise en charge](../install-uninstall-and-report-builder-support.md)   
+ [Désinstallez la version autonome de Générateur de rapports &#40;Générateur de rapports&#41;](install-report-builder.md)  
   
   

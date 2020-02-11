@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257339"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Spécification de relations à l'aide de sql:relationship (SQLXML 4.0)
@@ -52,7 +52,7 @@ ms.locfileid: "75257339"
   
  Pour fournir les noms de table et les informations de jointure nécessaires, les attributs suivants sont spécifiés dans l’annotation **SQL : Relationship** . Ces attributs sont valides uniquement avec l' ** \<élément SQL : Relationship>** :  
   
- **Nomme**  
+ **Nom**  
  Spécifie le nom unique de la relation.  
   
  **Parent**  

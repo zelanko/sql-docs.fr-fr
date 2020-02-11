@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401082"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importer le pack d’administration SCOM-Analytics Platform System
 Procédez comme suit pour importer les packs d’administration System Center Operations Manager (SCOM) pour Analytics Platform System (APS). Les packs d’administration sont requis pour analyser les Data Warehouse parallèles à partir de SCOM. 
   
 ## <a name="BeforeBegin"></a>Avant de commencer  
-**Conditions préalables**  
+**Prérequis**  
   
 System Center Operations Manager 2007 R2 doit être installé et en cours d’exécution.  
   
@@ -74,7 +74,7 @@ Les packs d’administration doivent être installés. Consultez [installer les 
   
 5.  Cliquez sur **Fermer**.  
   
-    ![Click Close](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
+    ![Cliquez sur Fermer](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>étape suivante  
 Maintenant que vous avez importé les packs d’administration, passez à l’étape suivante : [configurer SCOM pour surveiller Analytics Platform system &#40;Analytics Platform system&#41;](configure-scom-to-monitor-analytics-platform-system.md).  

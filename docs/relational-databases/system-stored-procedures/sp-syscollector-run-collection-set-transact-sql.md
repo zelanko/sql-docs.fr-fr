@@ -19,10 +19,10 @@ ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304995"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "72304995"
   
  sp_syscollector_run_collection_set permet à un utilisateur de prendre des instantanés de données à la demande.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,17 +46,17 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @collection_set_id = ] collection_set_id` est l’identificateur local unique pour le jeu d’Collections. *collection_set_id* est de **type int** et doit avoir une valeur si *Name* est null.  
+`[ @collection_set_id = ] collection_set_id`Identificateur local unique pour le jeu d’Collections. *collection_set_id* est de **type int** et doit avoir une valeur si *Name* est null.  
   
-`[ @name = ] 'name'` est le nom du jeu d’entités de collecte. *Name* est de **type sysname** et doit avoir une valeur si *collection_set_id* a la valeur null.  
+`[ @name = ] 'name'`Nom du jeu d’entités de collecte. *Name* est de **type sysname** et doit avoir une valeur si *collection_set_id* a la valeur null.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  *Collection_set_id* ou le *nom* doit avoir une valeur, les deux ne peuvent pas être null.  
   
- Cette procédure démarrera les tâches de collecte et de téléchargement pour le jeu d’entités de collecte spécifié et démarrera immédiatement le travail de l’agent de collecte si son **\@collection_mode** défini sur non mis en cache (1). Pour plus d’informations, [consultez &#40;SP_SYSCOLLECTOR_CREATE_COLLECTION_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Cette procédure démarre les travaux de collecte et de téléchargement pour le jeu d’entités de collecte spécifié, et démarre immédiatement le travail de l’agent de collecte si son ** \@collection_mode** défini sur non mis en cache (1). Pour plus d’informations, consultez [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set peut également être utilisé pour exécuter un jeu d'éléments de collection sans planification.  
   

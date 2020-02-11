@@ -16,10 +16,10 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251246"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72251246"
 
   Détermine si un déclencheur ou une procédure stockée définis par l'utilisateur sont appelés dans le contexte d'un déclencheur de réplication utilisé pour les abonnements avec mise à jour immédiate. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données d’abonnement de l’abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +39,23 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@tabid =** ] «*n »*  
+ [**@tabid =** ] «*n »*  
  ID d'objet de la table dans laquelle les déclencheurs de mise à jour immédiate sont recherchés. *est de* **type int** , sans valeur par défaut.  
   
- [ **@trigger_op =** ] sortie «*trigger_output_parameters*»  
+ [**@trigger_op =** ] sortie «*trigger_output_parameters*»  
  Spécifie si le paramètre de sortie doit renvoyer le type du déclencheur à partir duquel il est appelé. *trigger_output_parameters* est de **type char (10)** et peut prendre l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Ceux**|Déclencheur INSERT.|  
-|**Hebdomadaire**|Déclencheur UPDATE.|  
+|**Upd**|Déclencheur UPDATE.|  
 |**Suppr**|Déclencheur DELETE.|  
 |NULL (par défaut)||  
   
-`[ @fonpublisher = ] fonpublisher` spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est de **bits**, avec 0 comme valeur par défaut. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
+`[ @fonpublisher = ] fonpublisher`Spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est de **bits**, avec 0 comme valeur par défaut. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’il est appelé dans le contexte d’un déclencheur de mise à jour immédiate et est le type de déclencheur retourné dans *\@trigger_op*.  
+## <a name="return-code-values"></a>Codet de retour  
+ 0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’il est appelé dans le contexte d’un déclencheur de mise à jour immédiate et est le type de déclencheur retourné dans * \@trigger_op*.  
   
 ## <a name="remarks"></a>Notes  
  **sp_check_for_sync_trigger** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
@@ -86,7 +86,7 @@ RETURN
 ```  
   
 ## <a name="permissions"></a>Autorisations  
- la procédure stockée **sp_check_for_sync_trigger** peut être exécutée par n’importe quel utilisateur disposant d’autorisations SELECT dans la vue système [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
+ **sp_check_for_sync_trigger** procédure stockée peut être exécutée par n’importe quel utilisateur disposant d’autorisations SELECT dans la vue système [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  

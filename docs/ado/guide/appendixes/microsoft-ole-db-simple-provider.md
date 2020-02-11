@@ -1,5 +1,5 @@
 ---
-title: Fournisseur Simple Microsoft OLE DB | Microsoft Docs
+title: Fournisseur Microsoft OLE DB simple | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,44 +15,44 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926605"
 ---
-# <a name="microsoft-ole-db-simple-provider-overview"></a>Vue d’ensemble de la Simple fournisseur Microsoft OLE DB
-Le Microsoft OLE DB Simple fournisseur (OSP) permet à ADO d’accéder aux données pour laquelle un fournisseur a été écrite à l’aide de la [Kit de ressources OLE DB Simple fournisseur (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Les fournisseurs de simples sont destinées à accéder aux sources de données qui nécessitent la prise en charge OLE DB uniquement fondamentaux, tels que des tableaux en mémoire ou des documents XML.
+# <a name="microsoft-ole-db-simple-provider-overview"></a>Présentation de Microsoft OLE DB simple Provider
+Le fournisseur Microsoft OLE DB simple (OSP) permet à ADO d’accéder à toutes les données pour lesquelles un fournisseur a été écrit à l’aide de [OLE DB boîte à outils OSP (simple Provider)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Les fournisseurs simples sont destinés à accéder aux sources de données qui nécessitent uniquement une prise en charge fondamentale de la OLE DB, telles que les tableaux en mémoire ou les documents XML.
 
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion
- Pour vous connecter à la base de données Simple DLL du fournisseur OLE, définissez la *fournisseur* l’argument de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété :
+ Pour vous connecter au OLE DB DLL de fournisseur simple, affectez à l’argument *Provider* la valeur de la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) :
 
 ```vb
 MSDAOSP
 ```
 
- Cette valeur peut également être définie ou lire à l’aide de la [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété.
+ Cette valeur peut également être définie ou lue à l’aide de la propriété [Provider](../../../ado/reference/ado-api/provider-property-ado.md) .
 
- Vous pouvez vous connecter à des fournisseurs simples qui ont été inscrits en tant que les fournisseurs OLE DB complètes en utilisant le nom de fournisseur inscrit, déterminé par le writer de fournisseur.
+ Vous pouvez vous connecter à des fournisseurs simples qui ont été enregistrés en tant que fournisseurs OLE DB complets en utilisant le nom du fournisseur inscrit, déterminé par le writer du fournisseur.
 
 ## <a name="typical-connection-string"></a>Chaîne de connexion classique
- Une chaîne de connexion classique pour ce fournisseur est :
+ Une chaîne de connexion classique pour ce fournisseur est la suivante :
 
 ```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
- La chaîne se compose de ces mots clés :
+ La chaîne se compose des mots clés suivants :
 
 |Mot clé|Description|
 |-------------|-----------------|
-|**Fournisseur**|Spécifie le fournisseur OLE DB pour SQL Server.|
-|**Source de données**|Spécifie le nom d’un serveur.|
+|**Fournisseur**|Spécifie le fournisseur de OLE DB pour SQL Server.|
+|**Source de données**|Spécifie le nom d'un serveur.|
 
-## <a name="xml-document-example"></a>Exemple de Document XML
- Le OLE DB Simple fournisseur (OSP) dans MDAC 2.7 ou version ultérieure et Windows Data Access Components (Windows DAC) a été amélioré pour prendre en charge l’ouverture d’ADO hiérarchique **Recordsets** sur des fichiers XML arbitraires. Ces fichiers XML peuvent contenir le schéma de persistance XML ADO, mais il n’est pas obligatoire. Cela a été implémentée en connectant l’OSP à la **MSXML2.DLL**; par conséquent **MSXML2.DLL** ou ultérieure est requise.
+## <a name="xml-document-example"></a>Exemple de document XML
+ Le OLE DB fournisseur simple (OSP) dans MDAC 2,7 ou version ultérieure et Windows DAC (Windows Data Access Components) a été amélioré pour prendre en charge l’ouverture de **jeux d’enregistrements** ADO hiérarchiques sur des fichiers XML arbitraires. Ces fichiers XML peuvent contenir le schéma de persistance ADO XML, mais ce n’est pas obligatoire. Cela a été implémenté en connectant l’OSP à la **dll msxml2.** par conséquent, **msxml2. dll** ou version ultérieure est requis.
 
- Le **portfolio.xml** fichier utilisé dans l’exemple suivant contient l’arborescence suivante :
+ Le fichier **portfolio. xml** utilisé dans l’exemple suivant contient l’arborescence suivante :
 
 ```console
 Portfolio
@@ -65,9 +65,9 @@ Portfolio
          WebSite
 ```
 
- L’objet DSO XML utilise une méthode heuristique pour convertir les nœuds dans une arborescence XML chapitres dans une liste hiérarchique **Recordset**.
+ Le DSO XML utilise des heuristiques intégrées pour convertir les nœuds d’une arborescence XML en chapitres dans un **jeu d’enregistrements**hiérarchique.
 
- À l’aide de ces heuristiques intégrés, l’arborescence XML est convertie en un deux niveaux hiérarchique **Recordset** sous la forme suivante :
+ À l’aide de ces heuristiques intégrées, l’arborescence XML est convertie en un **jeu d’enregistrements** hiérarchique à deux niveaux sous la forme suivante :
 
 ```console
 Parent Recordset
@@ -76,28 +76,28 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- Notez que les balises de portefeuille et les informations ne sont pas représentés dans la liste hiérarchique **Recordset**. Pour une explication de la façon dont l’objet DSO XML convertit arborescences XML hiérarchique **Recordsets**, consultez les règles suivantes. La colonne $Text est abordée dans la section suivante.
+ Notez que les balises de portefeuille et d’informations ne sont pas représentées dans le **jeu d’enregistrements**hiérarchique. Pour obtenir une explication de la façon dont l’objet DSO XML convertit les arborescences XML en **jeux d’enregistrements**hiérarchiques, consultez les règles suivantes. La colonne $Text est présentée dans la section suivante.
 
-## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Règles d’affectation d’éléments et attributs XML pour les colonnes et lignes
- L’objet DSO XML suit une procédure pour l’affectation d’éléments et attributs aux colonnes et lignes dans les applications lié aux données. XML est modelée comme une arborescence avec une balise qui contient toute la hiérarchie. Par exemple, une description XML d’un livre peut contenir des balises de chapitre, les balises de figure et balises de section. Niveau le plus élevé serait la balise de livre, qui contient la figure, la section et le chapitre de sous-éléments. Lorsque l’objet DSO XML mappe des éléments XML en lignes et colonnes, les sous-éléments, pas l’élément de niveau supérieur, sont convertis.
+## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Règles d’affectation d’éléments et d’attributs XML à des colonnes et des lignes
+ Le DSO XML suit une procédure pour assigner des éléments et des attributs à des colonnes et des lignes dans des applications liées aux données. XML est modélisé sous la forme d’une arborescence avec une balise qui contient l’ensemble de la hiérarchie. Par exemple, une description XML d’un livre peut contenir des balises de chapitre, des balises de figure et des balises de section. Au niveau le plus élevé, la balise Book contient les sous-éléments Chapter, figures et section. Lorsque le DSO XML mappe des éléments XML à des lignes et des colonnes, les sous-éléments, et non l’élément de niveau supérieur, sont convertis.
 
- L’objet DSO XML utilise cette procédure pour la conversion des sous-éléments :
+ Le DSO XML utilise cette procédure pour convertir les sous-éléments :
 
--   Chaque sous-élément et l’attribut correspondant à une colonne dans certains **Recordset** dans la hiérarchie.
+-   Chaque sous-élément et attribut correspond à une colonne dans un **jeu d’enregistrements** de la hiérarchie.
 
--   Le nom de la colonne est la même que le nom de l’attribut, ou le sous-élément, sauf si l’élément parent possède un attribut et un sous-élément portant le même nom, auquel cas un « ! » est ajouté au nom de colonne du sous-élément.
+-   Le nom de la colonne est le même que le nom du sous-élément ou de l’attribut, sauf si l’élément parent a un attribut et un sous-élément portant le même nom, auquel cas un «  ! » est ajouté au nom de colonne du sous-élément.
 
--   Chaque colonne est soit un *simple* colonne qui contient des valeurs scalaires (généralement des chaînes) ou un **Recordset** colonne qui contient les enfants **Recordsets**.
+-   Chaque colonne est soit une colonne *simple* qui contient des valeurs scalaires (généralement des chaînes), soit une colonne du **jeu d’enregistrements** qui contient des **recordsets**enfants.
 
--   Colonnes qui correspondent aux attributs sont toujours simples.
+-   Les colonnes correspondant aux attributs sont toujours simples.
 
--   Colonnes qui correspondent à des sous-éléments sont **Recordset** colonnes si le sous-élément a ses propres sous-éléments ou attributs (ou les deux), soit les parents du sous-élément a plusieurs instances du sous-élément en tant qu’enfant. Sinon, la colonne est simple.
+-   Les colonnes correspondant à des sous-éléments sont des colonnes de **jeu d’enregistrements** si le sous-élément a ses propres sous-éléments ou attributs (ou les deux), ou si le parent du sous-élément a plusieurs instances du sous-élément en tant qu’enfant. Dans le cas contraire, la colonne est simple.
 
--   Lorsqu’il existe plusieurs instances d’un sous-élément (sous des parents différents), sa colonne est un **Recordset** colonne si *n’importe quel* des instances implique un **Recordset** colonne ; son Il suffit de colonne uniquement si *tous les* instances impliquent une colonne simple.
+-   Lorsqu’il existe plusieurs instances d’un sous-élément (sous différents parents), sa colonne est une colonne du **jeu d’enregistrements** si l' *une* des instances implique une colonne du **jeu d’enregistrements** ; sa colonne n’est simple que si *toutes les* instances impliquent une colonne simple.
 
--   Tous les **Recordsets** ont une colonne supplémentaire nommée $Text.
+-   Tous les **jeux d’enregistrements** ont une colonne supplémentaire nommée $Text.
 
- Le code qui est nécessaire pour construire un **Recordset** se présente comme suit :
+ Le code nécessaire pour construire un **jeu d’enregistrements** est le suivant :
 
 ```vb
 Dim adoConn as ADODB.Connection
@@ -111,7 +111,7 @@ adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
->  Le chemin d’accès du fichier de données peut être spécifié à l’aide de quatre différentes conventions d’affectation de noms.
+>  Le chemin d’accès du fichier de données peut être spécifié à l’aide de quatre conventions d’attribution de noms différentes.
 
 ```vb
 'HTTP://
@@ -124,24 +124,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- Dès que le **Recordset** a été ouvert, ADO habituel **Recordset** les commandes de navigation peuvent être utilisées.
+ Dès que l’ensemble **d’enregistrements** a été ouvert, les commandes de navigation ADO **Recordset** habituelles peuvent être utilisées.
 
- **Jeux d’enregistrements** généré par l’OSP ont quelques limitations :
+ Les **jeux d’enregistrements** générés par l’OSP présentent quelques limitations :
 
 -   Les curseurs clients (**adUseClient**) ne sont pas pris en charge.
 
--   Hiérarchique **Recordsets** créés au fil du arbitraire XML ne peut pas être persistante à l’aide de **Recordset.Save**.
+-   Les **jeux d’enregistrements** hiérarchiques créés sur du code XML arbitraire ne peuvent pas être rendus persistants à l’aide de **Recordset. Save**.
 
--   **Jeux d’enregistrements** créé avec l’OSP sont en lecture seule.
+-   Les **jeux d’enregistrements** créés avec OSP sont en lecture seule.
 
--   Le XMLDSO ajoute une colonne supplémentaire de données ($Text) à chaque **Recordset** dans la hiérarchie.
+-   XMLDSO ajoute une colonne de données supplémentaire ($Text) à chaque **jeu d’enregistrements** dans la hiérarchie.
 
- Pour plus d’informations sur le fournisseur OLE DB Simple, consultez [création d’un fournisseur Simple](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ Pour plus d’informations sur le OLE DB fournisseur simple, consultez [création d’un fournisseur simple](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
 
 ## <a name="code-example"></a>Exemple de code
- Le code Visual Basic suivant illustre l’ouverture d’un fichier XML arbitraire, en créant une liste hiérarchique **Recordset**et l’écriture de chaque enregistrement de chacun d’eux de manière récursive **Recordset** à la fenêtre de débogage.
+ Le code Visual Basic suivant illustre l’ouverture d’un fichier XML arbitraire, la construction d’un **jeu d’enregistrements**hiérarchique et l’écriture récursive de chaque enregistrement de chaque **Recordset** dans la fenêtre de débogage.
 
- Voici un fichier XML simple qui contient les cotations boursières. Le code suivant utilise ce fichier pour construire un deux niveaux hiérarchique **Recordset**.
+ Voici un simple fichier XML qui contient les cotations boursières. Le code suivant utilise ce fichier pour construire un **jeu d’enregistrements**hiérarchique à deux niveaux.
 
 ```xml
 <portfolio>
@@ -184,7 +184,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- Voici les deux procédures sub de Visual Basic. La première crée le **Recordset** et le transmet à la *WalkHier* sub, procédure, présente de quelle manière récursive vers le bas de la hiérarchie, chaque écriture **champ** dans chaque enregistrement de chaque **Recordset** à la fenêtre de débogage.
+ Vous trouverez ci-dessous deux Visual Basic procédures Sub. La première crée le **Recordset** et le passe à la procédure Sub *WalkHier* , qui parcourt de manière récursive la hiérarchie, en écrivant chaque **champ** dans chaque enregistrement de chaque **Recordset** dans la fenêtre de débogage.
 
 ```vb
 Private Sub BrowseHierRecordset()

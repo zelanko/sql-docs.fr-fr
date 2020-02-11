@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble de la Documentation d’installation SQL Server | Microsoft Docs
+title: Présentation de la documentation de l’installation de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093561"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Vue d'ensemble de la documentation d'installation de SQL Server
@@ -38,14 +38,14 @@ ms.locfileid: "66093561"
   
      Décrit les options d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui font partie de la plateforme BI de Microsoft, notamment [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que plusieurs applications clientes servant à créer ou utiliser des données analytiques.  
   
--   [Mise à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+-   [Mettre à niveau vers SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
      Décrit les options de mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Si vous installez un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , examinez les éléments suivants :  
   
--   [Les Instances de Cluster de basculement AlwaysOn (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   [Instances de cluster de basculement AlwaysOn (SQL Server)](../failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
--   [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md).  
+-   [Avant l’installation du clustering de basculement](../failover-clusters/install/before-installing-failover-clustering.md).  
   
   

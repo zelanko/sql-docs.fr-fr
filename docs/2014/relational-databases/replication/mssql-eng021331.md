@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 63becb9b07114b6e0ae0589664ae80d82f8babb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023384"
 ---
-# <a name="mssqleng021331"></a>MSSQL_ENG021331
+# <a name="mssql_eng021331"></a>MSSQL_ENG021331
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21331|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21331|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|Impossible de copier le fichier de script utilisateur vers le distributeur.(%1!)|  
@@ -39,7 +39,7 @@ ms.locfileid: "63023384"
  Vérifiez que le chemin d'accès correct a été spécifié pour le dossier d'instantané et que le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le serveur de publication a des autorisations suffisantes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier l’emplacement d’instantanés par défaut](snapshot-options.md#snapshot-folder-locations)   
+ [Spécifier l’emplacement par défaut des instantanés](snapshot-options.md#snapshot-folder-locations)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
  [Initialiser un abonnement transactionnel sans instantané](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

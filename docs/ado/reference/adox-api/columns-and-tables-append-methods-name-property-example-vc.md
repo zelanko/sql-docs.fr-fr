@@ -1,5 +1,5 @@
 ---
-title: Tables et colonnes ajouter des méthodes, nommez l’exemple de propriété (VC ++) | Microsoft Docs
+title: Columns et tables Append, méthodes, Name, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6f6a51569d83e1ac0c8e6be6d756b70ac85ece51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d0807dc58b9e51b593a3ac9ea1375c47b585fce
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966858"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910513"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Append, méthode des collections Columns et Tables, Name (exemple de propriété) (VC++)
 Le code suivant montre comment créer une nouvelle table.  
@@ -74,7 +74,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  
