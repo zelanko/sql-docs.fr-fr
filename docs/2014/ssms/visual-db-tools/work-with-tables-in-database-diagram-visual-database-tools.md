@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065480"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Utiliser des tables dans les diagrammes de base de données (Visual Database Tools)
@@ -35,15 +35,15 @@ ms.locfileid: "63065480"
   
  [Enregistrer des tables sélectionnées dans un schéma &#40;Visual Database Tools&#41;](save-selected-tables-on-a-diagram-visual-database-tools.md)  
   
- [Copier des tables d’un schéma de base de données vers un autre &#40;Visual Database Tools&#41;](copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md)  
+ [Copier des tables d’un diagramme de base de données vers un autre &#40;Visual Database Tools&#41;](copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md)  
   
- [Supprimer des tables de schémas de base de données &#40;Visual Database Tools&#41;](remove-tables-from-database-diagrams-visual-database-tools.md)  
+ [Supprimer des tables de diagrammes de base de données &#40;Visual Database Tools&#41;](remove-tables-from-database-diagrams-visual-database-tools.md)  
   
  [Mapper des relations plusieurs-à-plusieurs &#40;Visual Database Tools&#41;](map-many-to-many-relationships-visual-database-tools.md)  
   
  [Établir des relations réflexives &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Boîte de dialogue Ajouter une table &#40;Concepteur de bases de données&#41; &#40;Visual Database Tools&#41;](add-table-dialog-box-database-designer-visual-database-tools.md)  
   
 ## <a name="related-sections"></a>Sections connexes  

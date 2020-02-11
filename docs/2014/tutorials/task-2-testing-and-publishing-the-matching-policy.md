@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 : Test et publication de la stratégie de correspondance | Microsoft Docs'
+title: 'Tâche 2 : test et publication de la stratégie de correspondance | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,45 +11,45 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484730"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
-  Dans cette tâche, vous testez et publiez le **supprimer les fournisseurs en double** stratégie de correspondance.  
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
+  Au cours de cette tâche, vous allez tester et publier la stratégie de suppression de la correspondance **Supprimer les fournisseurs en double** .  
   
-1.  Dans le **résultats de correspondance** , cliquez sur **Démarrer** pour tester la stratégie dans son ensemble. Dans ce cas, vous disposez d'une seule règle dans la stratégie, par conséquent, les résultats du test de la règle et du test de la stratégie devraient être identiques.  
+1.  Dans la page **résultats de correspondance** , cliquez sur **Démarrer** pour tester l’ensemble de la stratégie. Dans ce cas, vous disposez d'une seule règle dans la stratégie, par conséquent, les résultats du test de la règle et du test de la stratégie devraient être identiques.  
   
-2.  Examinez tous les enregistrements correspondants et leur score de correspondance dans la zone de liste. Un enregistrement qui a un **vert** icône associé est un doublon de l’enregistrement pivot qui le précède. Voici deux exemples :  
+2.  Examinez tous les enregistrements correspondants et leur score de correspondance dans la zone de liste. Un enregistrement associé à une icône **verte** est un doublon de l’enregistrement pivot qui le précède. Voici quelques exemples :  
   
-    1.  L’enregistrement avec **ID d’enregistrement : 1000005** est une correspondance de l’enregistrement avec **Id d’enregistrement : 1000004** avec **Score : 100 %** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** , **Supplier Name**, et **les colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
+    1.  L’enregistrement avec l' **ID d’enregistrement : 1000005** correspond à l’enregistrement avec l' **ID d’enregistrement : 1000004** avec le **score : 100%** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)**, **nom du fournisseur**et **colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
   
-    2.  L’enregistrement **1000023** est une correspondance de l’enregistrement **1000022** avec le score de correspondance : 93 % car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** et **Supplier Name** colonnes, mais des valeurs différentes pour le **ContactEmailAddress** colonne.  
+    2.  L’enregistrement **1000023** est une correspondance de l’enregistrement **1000022** avec le score de correspondance : 93%, car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** et les colonnes de **nom de fournisseur** , mais des valeurs différentes pour la colonne **ContactEmailAddress** .  
   
-    3.  Faites défiler vers le bas de la liste pour afficher les deux enregistrements avec les ID : **1000051** et **1000052**. Enregistrement **1000052** est considéré comme une correspondance avec un score **91 %** , car les deux enregistrements ont les mêmes valeurs pour le **SupplierID** et  **ContactEmailAddress** colonnes, mais des valeurs différentes pour le **Supplier Name** colonne.  
+    3.  Faites défiler la liste vers le bas pour voir deux enregistrements avec les ID d’enregistrements : **1000051** et **1000052**. L’enregistrement **1000052** est considéré comme une correspondance avec le score de correspondance **91%** , car les deux enregistrements ont les mêmes valeurs pour les colonnes **RéfFournisseur** et **ContactEmailAddress** , mais des valeurs différentes pour la colonne **nom du fournisseur** .  
   
-     ![Définition de stratégie - résultats de la stratégie](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "définition de stratégie - résultats de la stratégie")  
+     ![Définition de la stratégie - Résultats de la stratégie](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "Définition de la stratégie - Résultats de la stratégie")  
   
-3.  Avec le bouton droit sur n’importe quel enregistrement avec correspondance (avec une icône verte) et cliquez sur **afficher les détails** pour plus d’informations sur la correspondance telles que la contribution de chaque score de champ au score de correspondance global.  
+3.  Cliquez avec le bouton droit sur un enregistrement correspondant (avec une icône verte), puis cliquez sur **afficher les détails** pour afficher plus de détails sur la correspondance telle que la contribution de chaque champ score au score de correspondance global.  
   
-     ![Score de correspondance de la boîte de dialogue Détails](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-02.jpg "Score de correspondance de la boîte de dialogue Détails")  
+     ![Boîte de dialogue Détails du score de correspondance](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-02.jpg "Boîte de dialogue Détails du score de correspondance")  
   
-4.  Cliquez sur **fermer** pour fermer la **détails du Score de correspondance** boîte de dialogue.  
+4.  Cliquez sur **Fermer** pour fermer la boîte de dialogue **Détails du score de correspondance** .  
   
-5.  Cliquez sur **résultats de correspondance** onglet en bas de la page. Cet onglet fournit des informations telles que le nombre d'enregistrements avec correspondance, le nombre d'enregistrements sans correspondance, le nombre de clusters avec des enregistrements correspondants, la taille moyenne des clusters, la taille minimale, et la taille maximale des clusters. Consultez [créer une stratégie de correspondance](https://msdn.microsoft.com/library/hh270290.aspx) pour plus d’informations. Vous ne pouvez pas exporter les résultats de cette activité. Vous vous contentez ici de définir une stratégie de correspondance en utilisant l'échantillon de données pour tester les règles et la stratégie.  
+5.  Cliquez sur l’onglet **résultats de correspondance** au bas de la page. Cet onglet fournit des informations telles que le nombre d'enregistrements avec correspondance, le nombre d'enregistrements sans correspondance, le nombre de clusters avec des enregistrements correspondants, la taille moyenne des clusters, la taille minimale, et la taille maximale des clusters. Pour plus d’informations, consultez [créer une stratégie de correspondance](https://msdn.microsoft.com/library/hh270290.aspx) . Vous ne pouvez pas exporter les résultats de cette activité. Vous vous contentez ici de définir une stratégie de correspondance en utilisant l'échantillon de données pour tester les règles et la stratégie.  
   
-     ![Onglet des résultats de correspondance](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "onglet des résultats de correspondance")  
+     ![Onglet Résultats de correspondance](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "Onglet Résultats de correspondance")  
   
 6.  Cliquez sur **Terminer** pour terminer la création de la stratégie de correspondance.  
   
     > [!NOTE]  
     >  Vous avez simplement défini la stratégie de correspondance, par conséquent vous ne pouvez pas exporter les résultats dans un fichier de sortie. Fondamentalement vous avez utilisé un fichier d'entrée échantillon, vous avez créé des règles, et vous avez testé les règles et la stratégie sur les exemples de données dans le but de définir la stratégie.  
   
-7.  Dans la boîte de dialogue SQL Server Data Quality Services, cliquez sur **publier** et cliquez sur **OK** sur la boîte de message. À présent, vous avez défini la stratégie de correspondance est publiée dans le **fournisseurs** Base de connaissances. Vous pouvez utiliser la base de connaissances pour exécuter le processus de correspondance dans un fichier d'entrée afin d'identifier et supprimer les doublons.  
+7.  Dans la boîte de dialogue SQL Server Data Quality Services, cliquez sur **publier** , puis sur **OK** dans la boîte de message. À présent, la stratégie de correspondance que vous avez définie est publiée dans la base de connaissances **fournisseurs** . Vous pouvez utiliser la base de connaissances pour exécuter le processus de correspondance dans un fichier d'entrée afin d'identifier et supprimer les doublons.  
   
-## <a name="next-step"></a>Étape suivante  
- [Tâche 3 : Création et exécution d’un projet de qualité des données pour la correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+## <a name="next-step"></a>étape suivante  
+ [Tâche 3 : Création et exécution d'un projet de qualité des données pour la mise en correspondance](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

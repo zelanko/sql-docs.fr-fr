@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d7631df4a1e4c6ec37effbc06b6a141b0d41ebc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249297"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Options de validation d'abonnement (Abonnements de fusion)
-  Utilisez la boîte de dialogue **Options de validation d'abonnement** pour indiquer si la validation doit utiliser un nombre de lignes uniquement ou un nombre de lignes et une somme de contrôle binaire.  
+  Utilisez la boîte de dialogue **options de validation d’abonnement** pour spécifier si la validation doit utiliser uniquement un nombre de lignes ou un nombre de lignes et une somme de contrôle binaire.  
   
 ## <a name="options"></a>Options  
  **Vérifier uniquement le nombre de lignes**  

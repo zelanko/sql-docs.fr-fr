@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211377"
 ---
 # <a name="job-activity-monitor"></a>Moniteur d'activité des travaux
@@ -39,19 +39,19 @@ ms.locfileid: "68211377"
  **Dernière exécution**  
  Date et heure de la dernière exécution du travail via la date et l'heure locales du serveur.  
   
- **Ensuite exécutez** <sup>1</sup>  
+ **Prochaine exécution** <sup>1</sup>  
  Date et heure de la prochaine planification du travail via la date et l'heure locales du serveur.  
   
  **Catégorie**  
  La catégorie de travaux attribuée au travail.  
   
  **Exécutable**  
- **Oui** si le travail peut être exécuté ; **Non** si le travail ne peut pas être exécuté. Un travail ne peut pas être exécuté s'il ne comporte aucune étape ou s'il n'est associé à aucun serveur cible.  
+ **Oui** si le travail peut être exécuté ; **Non** si le travail ne peut pas être exécuté. Un travail ne peut pas être exécuté s'il ne comporte aucune étape ou s'il n'est associé à aucun serveur cible.  
   
  **Planifié**  
- **Oui** s’il existe une planification du travail pour ce travail ; **Non** s’il n’y a pas de planification pour ce travail.  
+ **Oui** si le travail est assigné à une planification du travail ; **Non** si le travail n’a pas de planification.  
   
- <sup>1</sup>seuls les membres de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fixe sysadmin de rôle de serveur et le serveur groupe d’administrateurs permettre consulter les valeurs dans cette colonne. Les membres du rôle SQLAgentOperatorRole ne peuvent pas consulter les valeurs de cette colonne.  
+ <sup>1</sup> Seuls les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] membres du rôle serveur fixe sysadmin et du groupe administrateurs du serveur peuvent voir les valeurs dans cette colonne. Les membres du rôle SQLAgentOperatorRole ne peuvent pas consulter les valeurs de cette colonne.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Pour ouvrir le Moniteur d'activité du travail  
   

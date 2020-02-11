@@ -1,5 +1,5 @@
 ---
-title: Sys.sysoledbusers (Transact-SQL) | Microsoft Docs
+title: sys. sysoledbusers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076533"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -32,21 +32,21 @@ ms.locfileid: "68076533"
 
     
 > [!IMPORTANT]  
->  Cette table système [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] est incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que vue seulement pour des raisons de compatibilité descendante. Nous vous recommandons d’utiliser [affichages catalogue](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) à la place.  
+>  Cette table système [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] est incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que vue seulement pour des raisons de compatibilité descendante. Nous vous recommandons d’utiliser à la place des [affichages catalogue](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) .  
   
- Contient une ligne pour chaque mappage d'utilisateur et de mot de passe pour le serveur lié spécifié. **sysoledbusers** est stocké dans le **master** base de données.  
+ Contient une ligne pour chaque mappage d'utilisateur et de mot de passe pour le serveur lié spécifié. **sysoledbusers** est stocké dans la base de données **Master** .  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|Numéro d'identification de sécurité (SID) du serveur.|  
-|**rmtloginame**|**nvarchar(** 128 **)**|Nom de la connexion à distance qui **loginsid** mappée par lié **rmtservid**.|  
-|**rmtpassword**|**nvarchar(** 128 **)**|Renvoie NULL.|  
-|**loginsid**|**varbinary(** 85 **)**|SID de la connexion locale à mapper.|  
-|**status**|**smallint**|Si la valeur est 1, le mappage doit utiliser les informations d'identification de l'utilisateur.|  
-|**changedate**|**datetime**|Date de la dernière modification des informations de mappage.|  
+|**rmtloginame**|**nvarchar (** 128 **)**|Nom de la connexion distante avec laquelle **LoginSid** mappe pour **rmtservid**lié.|  
+|**rmtpassword**|**nvarchar (** 128 **)**|Renvoie NULL.|  
+|**LoginSid**|**varbinary (** 85 **)**|SID de la connexion locale à mapper.|  
+|**statu**|**smallint**|Si la valeur est 1, le mappage doit utiliser les informations d'identification de l'utilisateur.|  
+|**ChangeDate**|**DATETIME**|Date de la dernière modification des informations de mappage.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

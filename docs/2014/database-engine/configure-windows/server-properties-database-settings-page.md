@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809531"
 ---
 # <a name="server-properties-database-settings-page"></a>Propriétés du serveur (page Paramètres de base de données)
@@ -59,7 +59,7 @@ ms.locfileid: "62809531"
  **Intervalle de récupération (minutes)**  
  Définit le nombre maximal de minutes par base de données pour la récupération des bases de données. La valeur par défaut est égale à 0, ce qui correspond à une configuration automatique par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour les bases de données actives, cela représente concrètement une durée de récupération inférieure à une minute et un point de contrôle chaque minute environ. Pour plus d'informations, consultez [Configure the recovery interval Server Configuration Option](configure-the-recovery-interval-server-configuration-option.md).  
   
- **Data**  
+ **Données**  
  Spécifie l'emplacement par défaut des fichiers de données. Cliquez sur le bouton Parcourir pour accéder à un nouvel emplacement par défaut. N'entre pas en vigueur tant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas redémarré.  
   
  **Journal**  

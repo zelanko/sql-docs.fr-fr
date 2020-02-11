@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891868"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
@@ -30,12 +30,12 @@ ms.locfileid: "68891868"
   
 |Type RDL|Types CLR|  
 |--------------|---------------|  
-|String|Par défaut : String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Par défaut : Boolean|  
-|Entier|Par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Par défaut : DateTime<br /><br /> DateTimeOffset|  
-|Float|Par défaut : Double<br /><br /> Single, Decimal|  
-|Binary|Par défaut : Byte[]|  
+|String|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Valeur par défaut : Boolean|  
+|Integer|Valeur par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Valeur par défaut : DateTime<br /><br /> DateTimeOffset|  
+|Float|Valeur par défaut : Double<br /><br /> Single, Decimal|  
+|Binary|Valeur par défaut : Byte[]|  
 |Variant|Une des valeurs ci-dessus à l'exception de Byte[]|  
 |VariantArray|Tableau de type Variant|  
 |Sérialisable|Variant ou types marqués avec Serializable ou qui implémentent ISerializable.|  
@@ -65,10 +65,10 @@ ms.locfileid: "68891868"
   
 -   Créez un champ calculé à partir d'un champ de dataset du rapport existant en écrivant une expression qui convertit toutes les données d'une colonne d'ensemble de résultats en une nouvelle colonne utilisant un type de données différent. Par exemple, l'expression suivante convertit la valeur du champ Année de nombre entier en chaîne : `=CStr(Fields!Year.Value)`. Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une requête MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme pendant le traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requête MDX comprend une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme lors du traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Présentation des types de données des paramètres  
- Les paramètres de rapport doivent avoir l’un des cinq types de données : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
+ Les cinq types de données possibles pour les paramètres de rapport sont les suivants : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
   
 > [!NOTE]  
 >  Les paramètres de rapport utilisant le type de données DateTime ne prennent pas en charge les millisecondes. Même s'il est possible de créer un paramètre basé sur des valeurs incluant des millisecondes, vous ne pouvez pas sélectionner de valeur dans une liste déroulante de valeurs disponibles qui comprend des valeurs Date ou Time utilisant des millisecondes.  
@@ -108,7 +108,7 @@ ms.locfileid: "68891868"
   
  Vous pouvez utiliser l'une des méthodes suivantes pour convertir ces données en une ou plusieurs valeurs CLR :  
   
--   Dans une zone de texte, utilisez une expression pour extraire certaines parties de la chaîne. Exemple :  
+-   Dans une zone de texte, utilisez une expression pour extraire certaines parties de la chaîne. Par exemple :  
   
     -   L'expression suivante extrait uniquement la partie Heure du décalage par rapport au fuseau horaire UTC et la convertit en minutes : `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -116,9 +116,9 @@ ms.locfileid: "68891868"
   
     -   L'expression suivante convertit la chaîne en une valeur de date et heure : `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Si la chaîne `MyDateTime.Value` utilise un décalage UTC, la fonction `DateTime.Parse` ajuste tout d'abord le décalage UTC (7 A.M. - [`+08:00`] de manière à afficher l'heure UTC 11 P.M. la nuit précédente). La fonction `DateTime.Parse` applique ensuite le décalage UTC du serveur de rapports local et, si nécessaire, ajuste à nouveau l'heure pour tenir compte de l'heure d'été. Par exemple, à Redmond, dans l'état de Washington, le décalage horaire local ajusté pour tenir compte de l'heure d'été est `[-07:00]`, ou 7 heures avant 11 PM. Le résultat est la valeur `DateTime` suivante: `2007-07-06 04:07:07 PM` (6 juillet 2007 à 4:07 P.M).  
+         Si la chaîne `MyDateTime.Value` utilise un décalage UTC, la fonction `DateTime.Parse` ajuste tout d'abord le décalage UTC (7 A.M. - [`+08:00`] de manière à afficher l'heure UTC 11 P.M. la nuit précédente). La fonction `DateTime.Parse` applique ensuite le décalage UTC du serveur de rapports local et, si nécessaire, ajuste à nouveau l'heure pour tenir compte de l'heure d'été. Par exemple, à Redmond, dans l'état de Washington, le décalage horaire local ajusté pour tenir compte de l'heure d'été est `[-07:00]`, ou 7 heures avant 11 PM. Le résultat correspond à la valeur `DateTime` suivante : `2007-07-06 04:07:07 PM` (6 juillet 2007 à 4:07 P.M).  
   
- Pour plus d’informations sur la conversion `DateTime` de chaînes en types de données, consultez [analyse des chaînes de date et d’heure](https://go.microsoft.com/fwlink/?LinkId=89703), [mise en forme de la date et de l’heure pour une culture spécifique](https://go.microsoft.com/fwlink/?LinkId=89704)et [choix entre DateTime, DateTimeOffset et TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) sur HTTP://msdn.Microsoft.com/library/default.asp.  
+ Pour plus d’informations sur la conversion `DateTime` de chaînes en types de données, consultez [analyse des chaînes de date et d’heure](https://go.microsoft.com/fwlink/?LinkId=89703), [mise en forme de la date et de l’heure pour une culture spécifique](https://go.microsoft.com/fwlink/?LinkId=89704)et [choix entre DateTime, DateTimeOffset et TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) sur MSDN.  
   
 -   Ajoutez un nouveau champ calculé au dataset du rapport qui utilise une expression pour extraire certaines parties de la chaîne. Pour plus d’informations, consultez [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   

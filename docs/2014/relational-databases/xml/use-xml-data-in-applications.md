@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232431"
 ---
 # <a name="use-xml-data-in-applications"></a>Utiliser des données XML dans les applications
@@ -90,7 +90,8 @@ Set objConn = Nothing
   
  Cet exemple montre comment définir la propriété de compatibilité du type de données. Par défaut, elle a la valeur 0 lorsque vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Si vous avez affecté la valeur 80 à cette propriété, le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client fait apparaître les colonnes de type `xml` et définies par l'utilisateur comme des types de données [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Il s'agit respectivement de BTYPE_WSTR et de DBTYPE_BYTES.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client doit également être installé sur l'ordinateur client et la chaîne de connexion doit le désigner comme fournisseur de données avec «`Provider=SQLNCLI11;...`».  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client doit également être installé sur l'ordinateur client et la chaîne de connexion doit le désigner comme fournisseur de données avec «`Provider=SQLNCLI11;...`».  
   
 #### <a name="to-test-this-example"></a>Pour tester cet exemple  
   
@@ -145,14 +146,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Gestion de XML à partir d'une colonne de type XML à l'aide d'ADO.NET  
- Pour gérer XML à partir d’un `xml` colonne de type de données à l’aide d’ADO.NET et la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] vous pouvez utiliser le comportement standard de la `SqlCommand` classe. Par exemple, une colonne de type de données `xml` et ses valeurs peuvent être récupérées comme toute colonne SQL à l'aide de `SqlDataReader`.Toutefois, si vous souhaitez utiliser le contenu d'une colonne de type de données `xml` sous la forme XML, vous devez d'abord assigner un type `XmlReader` au contenu.  
+ Pour gérer du code XML `xml` à partir d’une colonne de type de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] données à l’aide de ADO.net et du `SqlCommand` , vous pouvez utiliser le comportement standard de la classe. Par exemple, une colonne de type de données `xml` et ses valeurs peuvent être récupérées comme toute colonne SQL à l'aide de `SqlDataReader`.Toutefois, si vous souhaitez utiliser le contenu d'une colonne de type de données `xml` sous la forme XML, vous devez d'abord assigner un type `XmlReader` au contenu.  
   
- Pour plus d'informations et d'exemples de code, consultez la rubrique relative aux valeurs de colonne XML dans un lecteur de données dans la documentation du Kit de développement logiciel de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Pour plus d’informations et pour obtenir un exemple de code, consultez « valeurs de colonne XML dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] un lecteur de données » dans la documentation du kit de développement logiciel (SDK).  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Gestion d'une colonne de type XML dans les paramètres à l'aide d'ADO.NET  
  Pour gérer un type de données XML passé en tant que paramètre dans ADO.NET et le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez fournir la valeur sous la forme d'une instance du type de données `SqlXml`. Aucune gestion spéciale n'est requise, car les colonnes de type de données `xml` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent accepter les valeurs de paramètre de la même façon que d'autres colonnes et types de données, tels que `string` ou `integer`.  
   
- Pour plus d'informations et d'exemples de code, consultez la rubrique relative aux valeurs XML en tant que paramètres de commande dans la documentation du Kit de développement logiciel de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Pour plus d’informations et pour obtenir un exemple de code, consultez « valeurs XML en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] tant que paramètres de commande » dans la documentation du kit de développement logiciel.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Données XML &#40;SQL Server&#41;](xml-data-sql-server.md)  

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 741420467a50aff6cdd0486c91dbf69224b160e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761626"
 ---
-# <a name="mssqlserver50000"></a>MSSQLSERVER_50000
+# <a name="mssqlserver_50000"></a>MSSQLSERVER_50000
     
 ## <a name="details"></a>Détails  
   
@@ -27,8 +27,8 @@ ms.locfileid: "62761626"
 |-|-|  
 |Nom du produit|SQL Server|  
 |Version du produit|11.0|  
-|ID d'événement|50000|  
-|Source de l'événement|SETUP|  
+|ID de l’événement|50000|  
+|Source de l’événement|SETUP|  
 |Composant|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
 |Nom symbolique||  
 |Texte du message|Erreur réseau lors de la tentative de lecture du fichier : '%. * ls'.|  
