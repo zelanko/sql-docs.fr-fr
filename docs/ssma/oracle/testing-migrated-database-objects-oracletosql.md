@@ -1,5 +1,5 @@
 ---
-title: Test des objets de base de données (OracleToSQL) migrés | Microsoft Docs
+title: Test des objets de base de données migrés (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,57 +11,57 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266481"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Test des objets de base de données migrés (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant de migration pour Oracle testeur (SSMA testeur) teste automatiquement la conversion des objets de base de données et la migration des données effectuées par SSMA. Une fois que toutes les étapes de migration de SSMA sont terminées, utilisez SSMA testeur pour vérifier que les objets convertis fonctionnent de manière identique et que toutes les données a été correctement transféré.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Assistant Migration pour le testeur Oracle (testeur SSMA) teste automatiquement la conversion de l’objet de base de données et la migration des données effectuée par SSMA. Une fois toutes les étapes de migration de SSMA terminées, utilisez le testeur SSMA pour vérifier que les objets convertis fonctionnent de la même façon et que toutes les données ont été correctement transférées.  
   
-Vous pouvez tester les types d’objet suivants avec SSMA testeur :  
+Vous pouvez tester les types d’objets suivants avec SSMA tester :  
   
 -   Tables  
   
 -   Procédures stockées, y compris les procédures empaquetées.  
   
--   Fonctions utilisateur, y compris les fonctions empaquetées.  
+-   Fonctions définies par l’utilisateur, y compris les fonctions empaquetées.  
   
 -   Vues.  
   
 -   Instructions autonomes.  
   
-SSMA testeur exécute les objets sélectionnés pour le test sur Oracle et leurs équivalents dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après cela, il compare les résultats selon les critères suivants :  
+SSMA tester exécute les objets sélectionnés à des fins de test sur Oracle et leurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]équivalents dans. Après cela, il compare les résultats en fonction des critères suivants :  
   
--   Sont les modifications dans les données de la table identiques ?  
+-   Les modifications apportées aux données de la table sont-elles identiques ?  
   
--   Les valeurs des paramètres de sortie pour les procédures et fonctions sont identiques ?  
+-   Les valeurs des paramètres de sortie des procédures et des fonctions sont-elles identiques ?  
   
--   Les fonctions retournent les mêmes résultats ?  
+-   Les fonctions retournent-elles les mêmes résultats ?  
   
--   Sont que les jeux de résultats identique ?  
+-   Les jeux de résultats sont-ils identiques ?  
   
 > [!NOTE]  
-> Attention ! N’utilisez jamais de SSMA testeur sur les systèmes de production. Pendant l’exécution du testeur le schéma source et les données sont modifiées. Pendant ce temps, la restauration complète de l’état d’origine est parfois impossible pour certains types de code testé.  
+> Prise! N’utilisez jamais le testeur SSMA sur les systèmes de production. Au cours de l’exécution du testeur, le schéma source et les données sont modifiés. Pendant ce temps, la restauration complète de l’état d’origine peut être impossible pour certains types de code testé.  
   
-## <a name="prerequisites"></a>Prérequis  
-Si vous souhaitez utiliser le testeur de SSMA, installez le Pack d’Extension SSMA Oracle avec le **installer la base de données testeur** option activée.  
+## <a name="prerequisites"></a>Conditions préalables requises  
+Si vous souhaitez utiliser SSMA tester, installez SSMA Oracle extension Pack avec l’option **installer la base de données du testeur** activée.  
   
-Pour permettre de comparer les données de table qui en résulte, définissez le **colonne ROWID générer** option **Oui** avant le démarrage de la conversion de schéma. SSMA ajoutera une colonne ROWID à toutes les tables pendant l’exécution de la **convertir le schéma** commande.  
+Pour permettre la comparaison des données de la table résultante, définissez l’option **générer la colonne ROWID** sur **Oui** avant le début de la conversion du schéma. SSMA ajoute une colonne ROWID à toutes les tables lors de l’exécution de la commande **Convert Schema** .  
   
 En outre, vérifiez les éléments suivants :  
   
--   Outils clients Oracle sont installés sur l’ordinateur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  
+-   Les outils clients Oracle sont installés sur l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel s’exécute.  
   
--   Intégration du Common Language Runtime (CLR) a été activée sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données.  
+-   L’intégration du Common Language Runtime (CLR) a été activée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le moteur de base de données.  
   
-Notez que la version actuelle du testeur de SSMA ne prend pas en charge l’exécution en parallèle par différents utilisateurs sur le même serveur source ou cible.  
+Notez que la version actuelle de SSMA tester ne prend pas en charge l’exécution parallèle de différents utilisateurs sur le même serveur source ou cible.  
   
-## <a name="getting-started"></a>Prise en main  
-[Création de cas de Test &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
+## <a name="getting-started"></a>Mise en route  
+[Création de cas de test &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Installation des composants SSMA sur SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
-[Paramètres du projet &#40;Conversion&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
+[Paramètres du projet &#40;conversion&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   

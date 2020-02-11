@@ -14,19 +14,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d294bb2d07d87216fb40fb93267518970fdf4c9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479747"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Supprimer une règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une règle d'entreprise lorsque vous n'en avez plus besoin.  
   
 > [!NOTE]  
->  Vous pouvez empêcher la validation des données par rapport à une règle d'entreprise en l'excluant, plutôt qu'en la supprimant. Pour plus d’informations, consultez [Exclude a Business Rule &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md).  
+>  Vous pouvez empêcher la validation des données par rapport à une règle d'entreprise en l'excluant, plutôt qu'en la supprimant. Pour plus d’informations, consultez [Exclure une règle d’entreprise &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -49,9 +49,9 @@ ms.locfileid: "65479747"
   
 7.  Dans la grille, cliquez sur la ligne pour la règle d'entreprise à supprimer.  
   
-8.  Cliquez sur **règle d’entreprise sélectionnée Delete**.  
+8.  Cliquez sur **Supprimer la règle d’entreprise sélectionnée**.  
   
-9. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur dans le **état** colonne est **suppression en attente**.  
+9. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur dans la colonne **État** est **suppression en attente**.  
   
 10. Cliquez sur **Publier les règles d’entreprise**.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "65479747"
 ## <a name="see-also"></a>Voir aussi  
  [Exclure une règle d’entreprise &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Règles d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [&#40;des règles d’entreprise Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

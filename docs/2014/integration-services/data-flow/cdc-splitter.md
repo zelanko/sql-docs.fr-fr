@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828229"
 ---
 # <a name="cdc-splitter"></a>Séparateur de capture de données modifiées
   Le séparateur de capture de données modifiées fractionne un flux de lignes de modification d'un flux de données de source CDC en flux de données distincts pour les opérations d'insertion, de mise à jour et de suppression. Le flux de données est fractionné en fonction de la colonne requise `__$operation` et de ses valeurs standard dans les tables de modification de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-|Valeur de l'opération|Sortie|Description|  
+|Valeur de l'opération|Output|Description|  
 |------------------------|------------|-----------------|  
 |1|DELETE|Ligne supprimée|  
-|2|Insert|Ligne insérée (non disponible en cas d’utilisation du mode de capture de données modifiées **Net avec fusion** )|  
+|2|Insérer|Ligne insérée (non disponible en cas d’utilisation du mode de capture de données modifiées **Net avec fusion** )|  
 |3|Update|Ligne avant la mise à jour (disponible uniquement en cas d’utilisation du mode de capture de données modifiées **Tout avec les anciennes valeurs** )|  
 |4|Update|Ligne après la mise à jour (suit avant la mise à jour)|  
 |5|Update|Ligne de fusion (disponible uniquement en cas d’utilisation du mode de capture de données modifiées **Net avec fusion** )|  
@@ -40,11 +40,11 @@ ms.locfileid: "62828229"
   
  La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d'erreur** : défini sur 1.  
+-   **Code d'erreur**: la valeur est 1.  
   
--   **Colonne d’erreur** : colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
--   **Colonnes de ligne d’erreur** : colonnes d'entrée de la ligne à l'origine de l'erreur.  
+-   **Colonnes de ligne d'erreur**: colonnes d'entrée de la ligne à l'origine de l'erreur.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configuration du séparateur de capture de données modifiées  
  Le séparateur de capture de données modifiées ne comporte aucune propriété configurable.  

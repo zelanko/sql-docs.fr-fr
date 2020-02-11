@@ -20,14 +20,14 @@ ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 134f5fe05f89d6c8662a68f9f782f460c4b5f0aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917114"
 ---
 # <a name="row-property-ado"></a>Row, propriété (ADO)
-Obtient ou définit un OLE DB **ligne** objet à partir d’ou sur un [ADORecordConstruction, Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) objet. Lorsque vous utilisez **put Row** pour définir un **ligne** de l’objet, une ligne est transformée en ADO **enregistrement** objet.  
+Obtient ou définit un objet OLE DB **ligne** à partir de ou sur un objet d' [interface ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) . Lorsque vous utilisez **put_Row** pour définir un objet **Row** , une ligne est transformée en objet **Record** ADO.  
   
 ## <a name="readwritesyntax"></a>Read/write.Syntax  
   
@@ -38,13 +38,13 @@ HRESULT put_Row([in] IUnknown* pRow);
   
 ## <a name="parameters"></a>Paramètres  
  *ppRow*  
- Pointeur vers un OLE DB **ligne** objet.  
+ Pointeur vers un objet OLE DB **Row** .  
   
  *PRow*  
- OLE DB **ligne** objet.  
+ Objet OLE DB **Row** .  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Cette méthode de propriété renvoie les valeurs HRESULT standard, notamment S_OK et E_FAIL.  
+ Cette méthode de propriété retourne les valeurs HRESULT standard, y compris S_OK et E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
  [ADORecordConstruction, interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

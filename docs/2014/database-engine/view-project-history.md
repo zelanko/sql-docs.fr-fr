@@ -1,5 +1,5 @@
 ---
-title: Afficher l’historique de projet | Microsoft Docs
+title: Afficher l’historique du projet | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773495"
 ---
 # <a name="view-project-history"></a>Afficher l'historique d'un projet
@@ -32,11 +32,11 @@ ms.locfileid: "62773495"
   
 ### <a name="to-view-the-history-of-a-vss-project"></a>Pour afficher l'historique d'un projet VSS  
   
-1.  Dans l'Explorateur de solutions, sélectionnez le projet.  
+1.  Dans l’Explorateur de solutions, sélectionnez le projet.  
   
-2.  Sur le **fichier** menu, pointez sur **contrôle de code Source** et cliquez sur **afficher l’historique**.  
+2.  Dans le menu **fichier** , pointez sur **contrôle de code source** , puis cliquez sur **afficher l’historique**.  
   
-3.  Dans le **historique de** \<projet > boîte de dialogue zone, effectuez l’une des actions suivantes :  
+3.  Dans la boîte **de dialogue historique du** \<projet>, effectuez l’une des actions suivantes :  
   
     -   Afficher la copie d'un fichier sélectionné dans le système de contrôle de code source  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62773495"
     -   Envoyer le rapport de l'historique vers une imprimante, un fichier ou le Presse-Papiers  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir et récupérer des informations de Version](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Afficher l’état de fichier](../../2014/database-engine/view-file-status.md)   
- [Récupérer des fichiers](../../2014/database-engine/retrieve-files.md)   
+ [Définir et récupérer les informations de version](../../2014/database-engine/set-and-retrieve-version-information.md)   
+ [Afficher l’état du fichier](../../2014/database-engine/view-file-status.md)   
+ [Récupérer les fichiers](../../2014/database-engine/retrieve-files.md)   
  [Comparer des fichiers](../../2014/database-engine/compare-files.md)  
   
   

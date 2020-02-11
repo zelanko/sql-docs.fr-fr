@@ -20,20 +20,20 @@ ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965001"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule, propriété (ADOX)
-Indique l’action effectuée lorsqu’un réplica principal [clé](../../../ado/reference/adox-api/key-object-adox.md) est mis à jour.  
+Indique l’action effectuée lors de la mise à jour d’une [clé](../../../ado/reference/adox-api/key-object-adox.md) primaire.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit et renvoie un **Long** valeur peut s’agir de la [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constantes. La valeur par défaut est **adRINone**.  
+ Définit et retourne une valeur de **type long** qui peut être l’une des constantes [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . La valeur par défaut est **adRINone**.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété est en lecture seule sur [clé](../../../ado/reference/adox-api/key-object-adox.md) objets déjà ajoutés à la collection.  
+ Cette propriété est en lecture seule sur les objets [clés](../../../ado/reference/adox-api/key-object-adox.md) déjà ajoutés à la collection.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Key, objet (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

@@ -16,14 +16,14 @@ ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966246"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions et SetPermissions, exemples de méthodes (VB)
-Cet exemple montre la [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes. Le code suivant donne un accès complet de la table Orders à l’utilisateur administrateur.  
+Cet exemple illustre les méthodes [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . Le code suivant donne un accès complet à la table Orders à l’utilisateur admin.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -98,5 +98,5 @@ End Sub
  [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetPermissions, méthode (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [SetPermissions, méthode (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [Objet utilisateur (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+ [User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

@@ -18,13 +18,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035598"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>Option SORT_IN_TEMPDB pour les index
+# <a name="sort_in_tempdb-option-for-indexes"></a>Option SORT_IN_TEMPDB pour les index
   Quand vous créez ou reconstruisez un index, vous pouvez, en affectant la valeur ON à l’option SORT_IN_TEMPDB, demander au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’utiliser la base de données **tempdb** pour stocker les résultats de tri intermédiaires qui sont utilisés pour générer l’index. Bien que cette option augmente la quantité d’espace disque temporaire utilisé pour la création d’un index, elle peut réduire le temps nécessaire à la création ou à la reconstruction d’un index lorsque la base de données **tempdb** ne se trouve pas sur le même ensemble de disques que la base de données utilisateur. Pour plus d’informations sur **tempdb**, consultez [Configurer l’option de configuration Création d’index en mémoire](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   
 ## <a name="phases-of-index-building"></a>Phases de la construction d'un index  
@@ -36,7 +36,7 @@ ms.locfileid: "63035598"
   
 -   Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fusionne les tris des lignes du niveau feuille de l'index en un flux unique trié. Le composant de fusion et tri du [!INCLUDE[ssDE](../../includes/ssde-md.md)] commence par la première page de chaque tri, recherche la clé la plus faible dans toutes les pages et passe cette ligne feuille au composant de création d'index. La clé la plus faible suivante est ensuite traitée, puis la suivante et ainsi de suite. Lorsque la dernière ligne feuille de l'index est extraite d'une page d'exécution triée, le processus passe à la page suivante à partir de cette exécution triée. Lorsque toutes les pages d'une extension à exécution triée ont été traitées, l'extension est libérée. Lorsque chaque ligne feuille de l'index est passée au composant de création d'index, elle est placée dans une page feuille de l'index dans le tampon. Chaque page feuille est écrite au moment de son remplissage. Lors de l'écriture des pages de niveau feuille, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] construit également les niveaux supérieurs de l'index. Chaque page d'index de niveau supérieur est écrite lorsqu'elle est remplie.  
   
-## <a name="sortintempdb-option"></a>option SORT_IN_TEMPDB  
+## <a name="sort_in_tempdb-option"></a>option SORT_IN_TEMPDB  
  Lorsque l'option SORT_IN_TEMPDB est désactivée, ce qui constitue l'option par défaut, les tris sont stockés dans le groupe de fichiers de destination. Pendant la première phase de création de l'index, les lectures des pages de la table de base et les écritures des exécutions triées déplacent les têtes de lecture-écriture du disque d'une zone du disque à l'autre. Les têtes se trouvent dans la zone de la page de données lors de l'analyse des pages de données. Elles passent dans une zone d'espace libre lorsque les tampons de tri se remplissent et que le tri en cours doit être écrit sur le disque, puis reviennent sur la zone de la page de données lorsque l'analyse des pages de la table reprend. Le mouvement de la tête de lecture-écriture est plus important dans la deuxième phase. À ce stade, le processus de tri alterne généralement les lectures de chaque zone d'exécution triée. Les exécutions triées et les nouvelles pages d'index sont construites dans le groupe de fichiers de destination. Ainsi, lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] répartit les lectures entre les différents tris, il doit en même temps accéder périodiquement aux extensions d'index pour écrire les nouvelles pages d'index à mesure qu'elles sont remplies.  
   
  Si l’option SORT_IN_TEMPDB est activée et que **tempdb** ne se trouve pas dans le même ensemble de disques que le groupe de fichiers de destination, les lectures des pages de données pendant la première phase ne sont pas effectuées sur le même disque que les écritures dans la zone de travail de tri dans **tempdb**. Cela signifie que les lectures des clés de données se poursuivent davantage en série sur le disque, tout comme les écritures sur le disque **tempdb** et les écritures qui construisent l’index final. Même si d'autres utilisateurs utilisent la base de données et accèdent à des adresses de disque séparées, le modèle global de lecture et d'écriture est plus efficace lorsque SORT_IN_TEMPDB est spécifié que lorsqu'il ne l'est pas.  
@@ -81,6 +81,6 @@ ms.locfileid: "63035598"
   
  [Configurer l’option de configuration Création d’index en mémoire.](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Espace disque nécessaire pour les opérations DDL d'index](disk-space-requirements-for-index-ddl-operations.md)  
+ [Espace disque nécessaire pour les opérations DDL d’index](disk-space-requirements-for-index-ddl-operations.md)  
   
   

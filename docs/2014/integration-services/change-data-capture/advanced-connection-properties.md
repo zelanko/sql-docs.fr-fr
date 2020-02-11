@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771515"
 ---
 # <a name="advanced-connection-properties"></a>Propriétés avancées de connexion
@@ -33,6 +33,6 @@ ms.locfileid: "62771515"
   
 ## <a name="see-also"></a>Voir aussi  
  [Accéder à la console du concepteur CDC](access-the-cdc-designer-console.md)   
- [Connexion SQL Server pour la création d'une instance](sql-server-connection-for-instance-creation.md)  
+ [Connexion SQL Server pour la création d’une instance](sql-server-connection-for-instance-creation.md)  
   
   

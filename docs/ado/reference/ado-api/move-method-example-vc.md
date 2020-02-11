@@ -1,5 +1,5 @@
 ---
-title: Move, exemple de méthode (VC ++) | Microsoft Docs
+title: Move, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932097"
 ---
 # <a name="move-method-example-vc"></a>Move, exemple de méthode (VC++)
-Cet exemple utilise le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode pour positionner le pointeur d’enregistrement basée sur l’entrée d’utilisateur.  
+Cet exemple utilise la méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) pour positionner le pointeur d’enregistrement en fonction de l’entrée utilisateur.  
   
 ## <a name="example"></a>Exemple  
   
@@ -241,7 +241,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>Résultat de l'exemple  
+## <a name="sample-output"></a>Sortie exemple  
   
 ```  
 Record 1 of 23  

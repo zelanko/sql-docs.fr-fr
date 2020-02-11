@@ -1,5 +1,5 @@
 ---
-title: Présentation des curseurs et des verrous | Microsoft Docs
+title: Fonctionnement des curseurs et des verrous | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +14,18 @@ ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923794"
 ---
 # <a name="understanding-cursors-and-locks"></a>Présentation des curseurs et des verrous
-Il est important de comprendre le fonctionnement des curseurs pour vous pouvez de sélectionner le type de curseur meilleures et plus efficace pour les exigences d’accès aux données d’une application. Une configuration de curseur moins optimal peut rendre les opérations d’accès aux données lentes et laborieux.  
+Il est important de comprendre comment les curseurs fonctionnent pour vous permettre de sélectionner le type de curseur le plus efficace et le plus efficace pour les besoins d’accès aux données d’une application. Une configuration de curseur peu optimale peut rendre les opérations d’accès aux données très lentes.  
   
- De nombreuses fonctionnalités de l’ADO.NET **Recordset** objet sont déterminés par le type et l’emplacement du curseur, ainsi que le type de verrou.  
+ De nombreuses fonctionnalités de l’objet **Recordset** ADO sont déterminées par le type et l’emplacement du curseur, ainsi que par le type de verrou.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Qu’est qu’un curseur ?](../../../ado/guide/data/what-is-a-cursor.md)  
   

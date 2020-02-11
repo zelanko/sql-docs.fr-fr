@@ -1,5 +1,5 @@
 ---
-title: SQL :variable() (fonction) (XQuery) | Microsoft Docs
+title: 'Fonction SQL : variable () (XQuery) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56a8c53a22fefec7fbda4c2ac7476ae46d664199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946008"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Fonctions d’extension XQuery : sql:variable()
@@ -35,26 +35,26 @@ sql:variable("variableName") as xdt:anyAtomicType?
 ```  
   
 ## <a name="remarks"></a>Notes  
- Comme décrit dans la rubrique [liaison de données relationnelles à l’intérieur de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), vous pouvez utiliser cette fonction lorsque vous utilisez [méthodes du type de données XML](../t-sql/xml/xml-data-type-methods.md) pour exposer une valeur relationnelle dans XQuery.  
+ Comme décrit dans la rubrique [liaison de données relationnelles dans des données XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), vous pouvez utiliser cette fonction lorsque vous utilisez des [méthodes de type de données XML](../t-sql/xml/xml-data-type-methods.md) pour exposer une valeur relationnelle dans XQuery.  
   
- Par exemple, le [méthode query()](../t-sql/xml/query-method-xml-data-type.md) est utilisé pour spécifier une requête sur une instance XML qui est stockée dans un **xml** variable ou une colonne de type de données. En outre, vous pouvez parfois souhaiter que la requête utilise des valeurs d'une variable ou d'un paramètre [!INCLUDE[tsql](../includes/tsql-md.md)] afin de rassembler des données relationnelles et XML. Pour ce faire, vous utilisez le **SQL : variable** (fonction).  
+ Par exemple, la [méthode Query ()](../t-sql/xml/query-method-xml-data-type.md) est utilisée pour spécifier une requête sur une instance XML stockée dans une variable ou une colonne de type de données **XML** . En outre, vous pouvez parfois souhaiter que la requête utilise des valeurs d'une variable ou d'un paramètre [!INCLUDE[tsql](../includes/tsql-md.md)] afin de rassembler des données relationnelles et XML. Pour ce faire, vous utilisez la fonction **SQL : variable** .  
   
- La valeur SQL sera mappée à une valeur XQuery correspondante et son type sera un type de base XQuery équivalent au type SQL correspondant.  
+ La valeur SQL est mappée à une valeur XQuery correspondante et son type est un type de base XQuery équivalent au type SQL correspondant.  
   
- Vous pouvez uniquement faire référence à un **xml** instruction d’insertion de l’instance dans le contexte de l’expression source d’un XML-DML ; sinon, vous ne peut pas faire référence à des valeurs qui sont de type **xml** ou un common language runtime (CLR) type défini par l’utilisateur.  
+ Vous ne pouvez faire référence qu’à une instance **XML** dans le contexte de l’expression source d’une instruction INSERT XML-DML. Sinon, vous ne pouvez pas faire référence à des valeurs de type **XML** ou à un type défini par l’utilisateur Common Language Runtime (CLR).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>R. Utilisation de la fonction sql:variable() pour insérer une valeur variable Transact-SQL dans XML  
  L'exemple suivant construit une instance XML composée des éléments suivants :  
   
--   une valeur (`ProductID`) issue d'une colonne non-XML. Le [fonction SQL :Column()](../xquery/xquery-extension-functions-sql-column.md) est utilisé pour lier cette valeur dans le code XML.  
+-   une valeur (`ProductID`) issue d'une colonne non-XML. La [fonction SQL : Column ()](../xquery/xquery-extension-functions-sql-column.md) permet de lier cette valeur dans le code XML.  
   
 -   une valeur (`ListPrice`) issue d'une colonne non-XML d'une autre table. Là encore, `sql:column()` permet de lier cette valeur au document XML ;  
   
 -   une valeur (`DiscountPrice`) issue d'une variable [!INCLUDE[tsql](../includes/tsql-md.md)]. La méthode `sql:variable()` permet de lier cette valeur au document XML ;  
   
--   Une valeur (`ProductModelName`) à partir d’un **xml** colonne de type, pour rendre la requête plus intéressante.  
+-   Valeur (`ProductModelName`) à partir d’une colonne de type **XML** , pour rendre la requête plus intéressante.  
   
  Voici la requête :  
   
@@ -84,7 +84,7 @@ WHERE ProductID=771
   
 -   Le `namespace` mot clé est utilisé pour définir un préfixe d’espace de noms dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Cette opération est réalisée car la valeur d'attribut `ProductModelName` est extraite de la colonne de type `CatalogDescription xml`, à laquelle un schéma est associé.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 <Product ProductID="771" ProductModelID="19"   
@@ -93,7 +93,7 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions d’Extension XQuery SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server les fonctions d’extension XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Données XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Créer des instances de données XML](../relational-databases/xml/create-instances-of-xml-data.md)   

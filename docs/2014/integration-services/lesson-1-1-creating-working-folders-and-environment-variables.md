@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Création des variables d’environnement et des dossiers de travail | Microsoft Docs'
+title: 'Étape 1 : Création des variables d’environnement et des dossiers de travail | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767651"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>Étape 1 : Création des variables d’environnement et des dossiers de travail
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>Étape 1 : création des variables d'environnement et des dossiers de travail
   Dans cette tâche, vous allez créer le dossier de travail (C:\DeploymentTutorial) et les nouvelles variables d'environnement système (`DataTransfer` et `LoadXMLData`) que vous utiliserez dans les tâches de didacticiel ultérieures.  
   
  Le dossier de travail se trouve à la racine du lecteur C. Vous pouvez utiliser un lecteur ou un emplacement différent si vous le souhaitez. Cependant, vous devez prendre note de cet emplacement et vous en servir lorsque le didacticiel vous renvoie à l'emplacement du dossier de travail DeploymentTutorial.  
@@ -36,7 +36,7 @@ ms.locfileid: "62767651"
   
 3.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Dossier**.  
   
-4.  Renommez le nouveau dossier `DeploymentTutorial`.  
+4.  Renommez le nouveau `DeploymentTutorial`dossier.  
   
 ### <a name="to-create-local-environment-variables"></a>Pour créer des variables d'environnement locales  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62767651"
   
 4.  Dans la boîte de dialogue **Variables d’environnement** , dans le cadre **Variables système** , cliquez sur **Nouveau**.  
   
-5.  Dans le **nouvelle Variable système** boîte de dialogue, tapez `DataTransfer` dans le **nom de la Variable** zone, et `C:\DeploymentTutorial\datatransferconfig.dtsconfig` dans le **valeur de la Variable** boîte.  
+5.  Dans la boîte de dialogue **nouvelle variable système** , `DataTransfer` tapez dans la zone **nom** de la `C:\DeploymentTutorial\datatransferconfig.dtsconfig` variable, puis dans la zone valeur de la **variable** .  
   
 6.  Cliquez sur **OK**.  
   
-7.  Cliquez sur **New** là encore et le type `LoadXMLData` dans le **nom de la Variable** zone, et `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` dans le **valeur de la Variable** boîte.  
+7.  Cliquez à nouveau sur **nouveau** , `LoadXMLData` puis tapez dans la zone nom de `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` la **variable** et dans la zone valeur de la **variable** .  
   
 8.  Cliquez sur **OK** pour quitter la boîte de dialogue **Variables d’environnement** .  
   
@@ -70,11 +70,11 @@ ms.locfileid: "62767651"
   
 4.  Dans la boîte de dialogue **Variables d’environnement** , dans le cadre **Variables système** , cliquez sur **Nouveau**.  
   
-5.  Dans le **nouvelle variable système** boîte de dialogue, tapez `DataTransfer` dans le **nom de la Variable** zone, et `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` dans le **valeur de la Variable** boîte.  
+5.  Dans la boîte de dialogue **nouvelles variables système** , `DataTransfer` tapez dans la zone **nom** de la `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` variable et dans la zone valeur de la **variable** .  
   
 6.  Cliquez sur **OK**.  
   
-7.  Cliquez sur **New** là encore et le type `LoadXMLData` dans le **nom de la Variable** zone, et `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` dans le **valeur de la Variable** boîte.  
+7.  Cliquez à nouveau sur **nouveau** , `LoadXMLData` puis tapez dans la zone nom de `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` la **variable** et dans la zone valeur de la **variable** .  
   
 8.  Cliquez sur **OK** pour quitter la boîte de dialogue **Variables d’environnement** .  
   
@@ -83,8 +83,8 @@ ms.locfileid: "62767651"
 10. Redémarrez l'ordinateur si nécessaire.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Création du projet de déploiement](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+ [Étape 2 : Création du projet de déploiement](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Index des propriétés dynamiques ADO | Microsoft Docs
+title: Index de propriétés dynamiques ADO | Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
 ms.custom: ''
@@ -12,89 +12,89 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921080"
 ---
 # <a name="ado-dynamic-property-index"></a>Index des propriétés dynamiques ADO
-Fournisseurs de données, les fournisseurs de services et les composants de service peuvent ajouter des propriétés dynamiques pour la **propriétés** collections de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets. Un fournisseur donné peut également insérer des propriétés supplémentaires lorsque ces objets sont ouverts. Certaines de ces propriétés sont répertoriées dans le [propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) section. D’autres sont répertoriées sous les fournisseurs spécifiques dans le [annexe a : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md) section.  
+Les fournisseurs de données, les fournisseurs de services et les composants de service peuvent ajouter des propriétés dynamiques aux collections de **Propriétés** de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et des objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) inouverts. Un fournisseur donné peut également insérer des propriétés supplémentaires quand ces objets sont ouverts. Certaines de ces propriétés sont répertoriées dans la section [propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) . D’autres sont répertoriés sous les fournisseurs spécifiques dans la section [annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md) .  
   
- Les tableaux suivants sont cross-indexes des noms ADO et OLE DB pour chaque propriété dynamique du fournisseur OLE DB standard. Vos fournisseurs peuvent ajouter d’autres propriétés non répertoriées ici. Pour obtenir des informations spécifiques sur les propriétés dynamiques spécifiques au fournisseur, consultez la documentation du fournisseur.  
+ Les tableaux suivants sont des index croisés des noms ADO et OLE DB pour chaque propriété dynamique du fournisseur OLE DB standard. Vos fournisseurs peuvent ajouter d’autres propriétés que celles répertoriées ici. Pour obtenir des informations spécifiques sur les propriétés dynamiques spécifiques au fournisseur, consultez la documentation de votre fournisseur.  
   
- Référence du programmeur OLE DB fait référence à un nom de la propriété ADO par le terme « Description ». Pour plus d’informations sur ces propriétés standards, rechercher ou parcourir l’index dans le [de la documentation OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)pour la propriété OLE DB par son nom.  
+ Le Guide de référence du programmeur OLE DB fait référence à un nom de propriété ADO par le terme « Description ». Pour plus d’informations sur ces propriétés standard, recherchez ou parcourez l’index dans la [documentation OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)pour la propriété OLE DB par son nom.  
   
-## <a name="connection-dynamic-properties"></a>Propriétés dynamiques de connexion  
+## <a name="connection-dynamic-properties"></a>Propriétés dynamiques de la connexion  
   
 |Nom de la propriété ADO|Nom de la propriété OLE DB|  
 |-----------------------|--------------------------|  
 |Sessions actives|DBPROP_ACTIVESESSIONS|  
-|Annulation gérable en asynchrone|DBPROP_ASYNCTXNABORT|  
-|Validation gérable en asynchrone|DBPROP_ASYNCTNXCOMMIT|  
-|AutoCommit Isolation Levels|DBPROP_SESS_AUTOCOMMITISOLEVELS|  
+|Abandon Asynchable|DBPROP_ASYNCTXNABORT|  
+|Validation Asynchable|DBPROP_ASYNCTNXCOMMIT|  
+|Niveaux d’isolement de validation automatique|DBPROP_SESS_AUTOCOMMITISOLEVELS|  
 |Emplacement du catalogue|DBPROP_CATALOGLOCATION|  
-|Terme de catalogue|DBPROP_CATALOGTERM|  
+|Terme du catalogue|DBPROP_CATALOGTERM|  
 |Définition de colonne|DBPROP_COLUMNDEFINITION|  
 |Connect Timeout|DBPROP_INIT_TIMEOUT|  
 |Catalogue actuel|DBPROP_CURRENTCATALOG|  
 |source de données|DBPROP_INIT_DATASOURCE|  
 |Data Source Name|DBPROP_DATASOURCENAME|  
-|Objet de Source de données modèle de thread|DBPROP_DSOTHREADMODEL|  
+|Modèle de thread de l’objet de source de données|DBPROP_DSOTHREADMODEL|  
 |Nom SGBD|DBPROP_DBMSNAME|  
-|Version SGBD|DBPROP_DBMSVER|  
+|Version de SGBD|DBPROP_DBMSVER|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
-|Regrouper par prise en charge|DBPROP_GROUPBY|  
-|Prise en charge de Table hétérogène|DBPROP_HETEROGENEOUSTABLES|  
-|Identificateur de la casse|DBPROP_IDENTIFIERCASE|  
+|Prise en charge de GROUP BY|DBPROP_GROUPBY|  
+|Prise en charge des tables hétérogènes|DBPROP_HETEROGENEOUSTABLES|  
+|Respect de la casse des identificateurs|DBPROP_IDENTIFIERCASE|  
 |Catalogue initial|DBPROP_INIT_CATALOG|  
 |Niveaux d’isolation|DBPROP_SUPPORTEDTXNISOLEVELS|  
-|Conservation d’isolement|DBPROP_SUPPORTEDTXNISORETAIN|  
+|Rétention de l’isolation|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Identificateur de paramètres régionaux|DBPROP_INIT_LCID|  
 |Location|DBPROP_INIT_LOCATION|  
-|Taille d’Index maximale|DBPROP_MAXINDEXSIZE|  
-|Taille maximale de ligne|DBPROP_MAXROWSIZE|  
-|Taille de ligne maximale inclut des objets BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
-|Nombre maximal de Tables dans, sélectionnez|DBPROP_MAXTABLESINSELECT|  
+|Taille maximale de l’index|DBPROP_MAXINDEXSIZE|  
+|Taille de ligne maximale|DBPROP_MAXROWSIZE|  
+|La taille de ligne maximale comprend l’objet BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
+|Nombre maximal de tables dans SELECT|DBPROP_MAXTABLESINSELECT|  
 |Mode|DBPROP_INIT_MODE|  
-|Plusieurs jeux de paramètres|DBPROP_MULTIPLEPARAMSETS|  
+|Jeux de paramètres multiples|DBPROP_MULTIPLEPARAMSETS|  
 |Résultats multiples|DBPROP_MULTIPLERESULTS|  
-|Plusieurs objets de stockage|DBPROP_MULTIPLESTORAGEOBJECTS|  
-|Mise à jour de plusieurs Table|DBPROP_MULTITABLEUPDATE|  
+|Objets de stockage multiples|DBPROP_MULTIPLESTORAGEOBJECTS|  
+|Mise à jour de plusieurs tables|DBPROP_MULTITABLEUPDATE|  
 |Ordre de classement NULL|DBPROP_NULLCOLLATION|  
-|Comportement de concaténation des valeurs NULL|DBPROP_CONCATNULLBEHAVIOR|  
+|Comportement de concaténation NULL|DBPROP_CONCATNULLBEHAVIOR|  
 |Services OLE DB|DBPROP_INIT_OLEDBSERVICES|  
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|  
+|Version de OLE DB|DBPROP_PROVIDEROLEDBVER|  
 |Prise en charge des objets OLE|DBPROP_OLEOBJECTS|  
-|Ouvrez la prise en charge de l’ensemble de lignes|DBPROP_OPENROWSETSUPPORT|  
-|Colonnes ORDER BY dans la liste de sélection|DBPROP_ORDERBYCOLUMNSINSELECT|  
-|Disponibilité du paramètre de sortie|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
-|Passer par les accesseurs Ref|DBPROP_BYREFACCESSORS|  
+|Prise en charge des ensembles de lignes ouverts|DBPROP_OPENROWSETSUPPORT|  
+|CLASSER par colonnes dans la liste de sélection|DBPROP_ORDERBYCOLUMNSINSELECT|  
+|Disponibilité des paramètres de sortie|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
+|Passer par les accesseurs de référence|DBPROP_BYREFACCESSORS|  
 |Mot de passe|DBPROP_AUTH_PASSWORD|  
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
-|Type d’identificateur persistant|DBPROP_PERSISTENTIDTYPE|  
-|Préparation d’annulation|DBPROP_PREPAREABORTBEHAVIOR|  
-|Préparation de validation|DBPROP_PREPARECOMMITBEHAVIOR|  
+|Type d’ID persistant|DBPROP_PERSISTENTIDTYPE|  
+|Comportement de préparation d’abandon|DBPROP_PREPAREABORTBEHAVIOR|  
+|Préparer le comportement de validation|DBPROP_PREPARECOMMITBEHAVIOR|  
 |Terme de procédure|DBPROP_PROCEDURETERM|  
-|Demander|DBPROP_INIT_PROMPT|  
+|Prompt|DBPROP_INIT_PROMPT|  
 |Nom convivial du fournisseur|DBPROP_PROVIDERFRIENDLYNAME|  
-|Provider Name|DBPROP_PROVIDERFILENAME|  
+|Nom du fournisseur|DBPROP_PROVIDERFILENAME|  
 |Version du fournisseur|DBPROP_PROVIDERVER|  
 |Source de données en lecture seule|DBPROP_DATASOURCEREADONLY|  
-|Conversions d’ensemble de lignes de commande|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
+|Conversions d’ensemble de lignes sur la commande|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |Terme de schéma|DBPROP_SCHEMATERM|  
-|Utilisation de schéma|DBPROP_SCHEMAUSAGE|  
+|Utilisation du schéma|DBPROP_SCHEMAUSAGE|  
 |Prise en charge SQL|DBPROP_SQLSUPPORT|  
 |Stockage structuré|DBPROP_STRUCTUREDSTORAGE|  
-|Prise en charge de sous-requête|DBPROP_SUBQUERIES|  
+|Prise en charge des sous-requêtes|DBPROP_SUBQUERIES|  
 |Terme de table|DBPROP_TABLETERM|  
-|Transaction DDL|DBPROP_SUPPORTEDTXNDDL|  
+|DDL de la transaction|DBPROP_SUPPORTEDTXNDDL|  
 |ID d'utilisateur|DBPROP_AUTH_USERID|  
 |User Name|DBPROP_USERNAME|  
 |Handle de fenêtre|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset  
- Notez que le **propriétés dynamiques** de la **Recordset** objet accédez hors de portée (deviennent indisponible) lorsque le **Recordset** est fermé.  
+ Notez que les **propriétés dynamiques** de l’objet **Recordset** sont hors de portée (deviennent indisponibles) lorsque le **Recordset** est fermé.  
   
 |Nom de la propriété ADO|Nom de la propriété OLE DB|  
 |-----------------------|--------------------------|  
@@ -102,7 +102,7 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |IChapteredRowset||  
 |IColumnsInfo|DBPROP_ICOLUMNSINFO|  
 |IColumnsRowset|DBPROP_ICOLUMNSROWSET|  
-|IConnectionPointContainer|DBPROP_ICONNECTIONPOINTCONTAINER|  
+|Interfaces|DBPROP_ICONNECTIONPOINTCONTAINER|  
 |IConvertType||  
 |ILockBytes|DBPROP_ILOCKBYTES|  
 |IRowset|DBPROP_IROWSET|  
@@ -125,78 +125,78 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |IStream|DBPROP_ISTREAM|  
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |Ordre d’accès|DBPROP_ACCESSORDER|  
-|Ensemble de lignes en mode Append-Only|DBPROP_APPENDONLY|  
+|Ensemble de lignes Append uniquement|DBPROP_APPENDONLY|  
 |Traitement de l’ensemble de lignes asynchrone|DBPROP_ROWSET_ASYNCH|  
 |Recalcul automatique|DBPROP_ADC_AUTORECALC|  
 |Taille de l’extraction en arrière-plan|DBPROP_ASYNCHFETCHSIZE|  
 |Priorité de thread en arrière-plan|DBPROP_ASYNCHTHREADPRIORITY|  
-|Taille de lot|DBPROP_ADC_BATCHSIZE|  
+|Taille du lot|DBPROP_ADC_BATCHSIZE|  
 |Blocage des objets de stockage|DBPROP_BLOCKINGSTORAGEOBJECTS|  
 |Type de signet|DBPROP_BOOKMARKTYPE|  
-|Signet|DBPROP_IROWSETLOCATE|  
-|Signets ordonnés|DBPROP_ORDEREDBOOKMARKS|  
+|Avec signet|DBPROP_IROWSETLOCATE|  
+|Signets triés|DBPROP_ORDEREDBOOKMARKS|  
 |Mettre en cache les lignes enfants|DBPROP_ADC_CACHECHILDROWS|  
-|Mettre en cache des colonnes différées|DBPROP_CACHEDEFERRED|  
+|Mettre en cache les colonnes différées|DBPROP_CACHEDEFERRED|  
 |Modifier les lignes insérées|DBPROP_CHANGEINSERTEDROWS|  
 |Privilèges de colonne|DBPROP_COLUMNRESTRICT|  
-|Notification de jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|  
+|Notification du jeu de colonnes|DBPROP_NOTIFYCOLUMNSET|  
 |Colonne accessible en écriture|DBPROP_MAYWRITECOLUMN|  
-|Délai de commande|DBPROP_COMMANDTIMEOUT|  
+|Délai d’attente de la commande|DBPROP_COMMANDTIMEOUT|  
 |Version du moteur de curseur|DBPROP_ADC_CEVER|  
 |Différer la colonne|DBPROP_DEFERRED|  
-|Mises à jour des objets de stockage délai|DBPROP_DELAYSTORAGEOBJECTS|  
-|Récupérer vers l’arrière|DBPROP_CANFETCHBACKWARDS|  
+|Retarder les mises à jour des objets de stockage|DBPROP_DELAYSTORAGEOBJECTS|  
+|Extraire vers l’arrière|DBPROP_CANFETCHBACKWARDS|  
 |Opérations de filtre|DBPROP_FILTERCOMPAREOPS|  
-|Les opérations de recherche|DBPROP_FINDCOMPAREOPS|  
+|Opérations de recherche|DBPROP_FINDCOMPAREOPS|  
 |Colonnes masquées (nombre)|DBPROP_HIDDENCOLUMNS|  
-|Contenant des lignes|DBPROP_CANHOLDROWS|  
+|Conserver les lignes|DBPROP_CANHOLDROWS|  
 |Lignes immobiles|DBPROP_IMMOBILEROWS|  
-|Taille de l’extraction initiale|DBPROP_ASYNCHPREFETCHSIZE|  
-|Signets de littéral|DBPROP_LITERALBOOKMARKS|  
+|Taille initiale de l’extraction|DBPROP_ASYNCHPREFETCHSIZE|  
+|Signets littéraux|DBPROP_LITERALBOOKMARKS|  
 |Identité de ligne littérale|DBPROP_LITERALIDENTITY|  
-|Mettre à jour d’état de modification|DBPROP_ADC_MAINTAINCHANGESTATUS|  
-|Nombre maximal de lignes ouvert|DBPROP_MAXOPENROWS|  
+|Conserver l’état de modification|DBPROP_ADC_MAINTAINCHANGESTATUS|  
+|Nombre maximal de lignes ouvertes|DBPROP_MAXOPENROWS|  
 |Nombre maximal de lignes en attente|DBPROP_MAXPENDINGROWS|  
-|Nombre maximal de lignes|DBPROP_MAXROWS|  
+|Lignes au maximum|DBPROP_MAXROWS|  
 |Utilisation de la mémoire|DBPROP_MEMORYUSAGE|  
-|Granularité de notification|DBPROP_NOTIFICATIONGRANULARITY|  
+|Granularité des notifications|DBPROP_NOTIFICATIONGRANULARITY|  
 |Phases de notification|DBPROP_NOTIFICATIONPHASES|  
 |Objets traités|DBPROP_TRANSACTEDOBJECT|  
-|D’autres modifications visibles|DBPROP_OTHERUPDATEDELETE|  
-|Autres Inserts Visible|DBPROP_OTHERINSERT|  
+|Modifications visibles par d’autres utilisateurs|DBPROP_OTHERUPDATEDELETE|  
+|Autres insertions visibles|DBPROP_OTHERINSERT|  
 |Propres modifications visibles|DBPROP_OWNUPDATEDELETE|  
-|Propres insertions visibles|DBPROP_OWNINSERT|  
-|Conserver sur Abandon|DBPROP_ABORTPRESERVE|  
+|Insertions visibles|DBPROP_OWNINSERT|  
+|Conserver lors de l’abandon|DBPROP_ABORTPRESERVE|  
 |Conserver lors de la validation|DBPROP_COMMITPRESERVE|  
 |Private1||  
 |Redémarrage rapide|DBPROP_QUICKRESTART|  
 |Événements réentrants|DBPROP_REENTRANTEVENTS|  
 |Supprimer les lignes supprimées|DBPROP_REMOVEDELETED|  
-|Signaler les modifications de plusieurs|DBPROP_REPORTMULTIPLECHANGES|  
-|Modifier la forme nom|DBPROP_ADC_RESHAPENAME|  
-|Resync, commande|DBPROP_ADC_CUSTOMRESYNCH|  
+|Signaler plusieurs modifications|DBPROP_REPORTMULTIPLECHANGES|  
+|Reformer le nom|DBPROP_ADC_RESHAPENAME|  
+|Commande Resync|DBPROP_ADC_CUSTOMRESYNCH|  
 |Retourner les insertions en attente|DBPROP_RETURNPENDINGINSERTS|  
 |Notification de suppression de ligne|DBPROP_NOTIFYROWDELETE|  
-|Notification de modification de première ligne|DBPROP_NOTIFYROWFIRSTCHANGE|  
+|Notification de modification de la première ligne|DBPROP_NOTIFYROWFIRSTCHANGE|  
 |Notification d’insertion de ligne|DBPROP_NOTIFYROWINSERT|  
 |Privilèges de ligne|DBPROP_ROWRESTRICT|  
 |Notification de resynchronisation de ligne|DBPROP_NOTIFYROWRESYNCH|  
 |Modèle de thread de ligne|DBPROP_ROWTHREADMODEL|  
-|Notification de modification de ligne annulation|DBPROP_NOTIFYROWUNDOCHANGE|  
-|Notification de suppression de ligne annulation|DBPROP_NOTIFYROWUNDODELETE|  
-|Notification d’annulation insertion ligne|DBPROP_NOTIFYROWUNDOINSERT|  
+|Notification de modification de ligne annuler|DBPROP_NOTIFYROWUNDOCHANGE|  
+|Notification de suppression de ligne annuler|DBPROP_NOTIFYROWUNDODELETE|  
+|Notification d’insertion de ligne annuler|DBPROP_NOTIFYROWUNDOINSERT|  
 |Notification de mise à jour de ligne|DBPROP_NOTIFYROWUPDATE|  
-|Notification de modification de Position extraction de l’ensemble de lignes|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|  
-|Notification de mise en production de l’ensemble de lignes|DBPROP_NOTIFYROWSETRELEASE|  
-|Faites défiler vers l’arrière|DBPROP_CANSCROLLBACKWARDS|  
+|Notification de modification de position d’extraction d’ensemble de lignes|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|  
+|Notification de libération de l’ensemble de lignes|DBPROP_NOTIFYROWSETRELEASE|  
+|Défilement vers l’arrière|DBPROP_CANSCROLLBACKWARDS|  
 |Curseur côté serveur|DBPROP_SERVERCURSOR|  
 |Ignorer les signets supprimés|DBPROP_BOOKMARKSKIPPED|  
-|Forte identité de ligne|DBPROP_STRONGIDENTITY|  
+|Identité de ligne forte|DBPROP_STRONGIDENTITY|  
 |Catalogue unique|DBPROP_ADC_UNIQUECATALOG|  
 |Lignes uniques|DBPROP_UNIQUEROWS|  
 |Schéma unique|DBPROP_ADC_UNIQUESCHEMA|  
 |table unique|DBPROP_ADC_UNIQUETABLE|  
-|Mettre à jour|DBPROP_UPDATABILITY|  
-|Critères de mise à jour|DBPROP_ADC_UPDATECRITERIA|  
-|Resynchronisation de la mise à jour|DBPROP_ADC_UPDATERESYNC|  
+|Mise à jour|DBPROP_UPDATABILITY|  
+|Mettre à jour les critères|DBPROP_ADC_UPDATECRITERIA|  
+|Mettre à jour la resynchronisation|DBPROP_ADC_UPDATERESYNC|  
 |Utiliser des signets|DBPROP_BOOKMARKS|

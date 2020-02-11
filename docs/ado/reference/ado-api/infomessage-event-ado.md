@@ -17,14 +17,14 @@ ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932331"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage, événement (ADO)
-Le **InfoMessage** événement est appelé chaque fois qu’un avertissement se produit pendant une **ConnectionEvent** opération.  
+L’événement **InfoMessage** est appelé chaque fois qu’un avertissement se produit pendant une opération **ConnectionEvent** .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,17 +35,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Paramètres  
  *pError*  
- Un [erreur](../../../ado/reference/ado-api/error-object.md) objet. Ce paramètre contient les erreurs qui sont retournées. Si plusieurs erreurs sont retournées, énumérez les **erreurs** collection pour les rechercher.  
+ Objet d' [erreur](../../../ado/reference/ado-api/error-object.md) . Ce paramètre contient toutes les erreurs retournées. Si plusieurs erreurs sont retournées, énumérez la collection **Errors** pour les Rechercher.  
   
- *adStatus*  
- Un [il ne](../../../ado/reference/ado-api/eventstatusenum.md) valeur d’état. Si un avertissement se produit, *ne* a la valeur **adStatusOK** et *pError* contient l’avertissement.  
+ *Statu*  
+ Valeur d’état [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Si un avertissement se produit, *adStatus* est défini sur **adStatusOK** et *perror* contient l’avertissement.  
   
- Avant le retour de cet événement, définissez ce paramètre sur **adStatusUnwantedEvent** pour éviter toute notification.  
+ Avant le retour de cet événement, définissez ce paramètre sur **adStatusUnwantedEvent** pour empêcher les notifications suivantes.  
   
  *pConnection*  
- Un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. La connexion pour laquelle l’avertissement se produit. Par exemple, des avertissements peuvent se produire lorsque vous ouvrez un **connexion** objet ou l’exécution un [commande](../../../ado/reference/ado-api/command-object-ado.md) sur un **connexion**.  
+ Objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) . Connexion pour laquelle l’avertissement s’est produit. Par exemple, des avertissements peuvent se produire lors de l’ouverture d’un objet de **connexion** ou de l’exécution d’une [commande](../../../ado/reference/ado-api/command-object-ado.md) sur une **connexion**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de modèle d’événements ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Résumé du Gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Exemple de modèle d’événements ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Résumé du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

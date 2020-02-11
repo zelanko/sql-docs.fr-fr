@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809348"
 ---
 # <a name="server-properties-connections-page"></a>Propriétés du serveur (page Connexions)
@@ -71,7 +71,7 @@ ms.locfileid: "62809348"
  Affiche les valeurs en cours d'exécution pour les options de ce volet. Ces valeurs sont en lecture seule.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options &#40;interroger l’exécution : SQL Server : Page avancé&#41;](../options-query-execution-sql-server-advanced-page.md)   
+ [Options &#40;l’exécution de la requête : SQL Server : page avancé&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

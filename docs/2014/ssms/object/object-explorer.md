@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bd8009f3270c35f34c4cac87247263caac35854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999826"
 ---
 # <a name="object-explorer"></a>Explorateur d’objets
@@ -43,9 +43,9 @@ ms.locfileid: "62999826"
   
 |Description|Rubrique|  
 |-----------------|-----------|  
-|Décrit comment ouvrir l'Explorateur d'objets et configurer les options qui définissent le comportement de l'explorateur.|[Ouvrir et configurer l'Explorateur d'objets](open-and-configure-object-explorer.md)|  
-|Décrit comment connecter l'Explorateur d'objets à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Se connecter à une instance de l'Explorateur d'objets](connect-to-an-instance-from-object-explorer.md)|  
-|Explique comment gérer des objets représentés en tant que nœuds dans la hiérarchie de l'Explorateur d'objets.|[Gérer les objets à l'aide de l'Explorateur d'objets](manage-objects-by-using-object-explorer.md)|  
+|Décrit comment ouvrir l'Explorateur d'objets et configurer les options qui définissent le comportement de l'explorateur.|[Ouvrir et configurer l’Explorateur d’objets](open-and-configure-object-explorer.md)|  
+|Décrit comment connecter l'Explorateur d'objets à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Se connecter à une instance à partir de l’Explorateur d’objets](connect-to-an-instance-from-object-explorer.md)|  
+|Explique comment gérer des objets représentés en tant que nœuds dans la hiérarchie de l'Explorateur d'objets.|[Gérer les objets à l’aide de l’Explorateur d’objets](manage-objects-by-using-object-explorer.md)|  
 |Décrit le volet Détails de l'Explorateur d'objets, une vue tabulaire de tous les objets se trouvant dans le serveur avec une interface utilisateur pour les gérer.|[Détails de l’Explorateur d’objets, volet](object-explorer-details-pane.md)|  
 |Décrit les méthodes pour exécuter des rapports personnalisés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Rapports personnalisés dans Management Studio](custom-reports-in-management-studio.md)|  
   

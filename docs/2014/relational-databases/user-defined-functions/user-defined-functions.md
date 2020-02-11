@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211699"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
@@ -29,7 +29,7 @@ ms.locfileid: "68211699"
   
  [Types de fonctions](#FunctionTypes)  
   
- [Instructions](#Guidelines)  
+ [Consignes](#Guidelines)  
   
  [Instructions valides dans une fonction](#ValidStatements)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68211699"
   
  [Tâches associées](#Tasks)  
   
-##  <a name="Benefits"></a> Avantages des fonctions définies par l’utilisateur  
+##  <a name="Benefits"></a>Avantages des fonctions définies par l’utilisateur  
  Les avantages de l'utilisation des fonctions définies par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont les suivants :  
   
 -   Elles permettent d'utiliser la programmation modulaire.  
@@ -59,11 +59,11 @@ ms.locfileid: "68211699"
 > [!NOTE]  
 >  Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] définies par l'utilisateur figurant dans les requêtes peuvent être exécutées uniquement sur un thread (plan d'exécution en série).  
   
-##  <a name="FunctionTypes"></a> Types de fonctions  
+##  <a name="FunctionTypes"></a>Types de fonctions  
  Fonction scalaire  
  Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Une fonction scalaire incluse ne contient pas de corps ; la valeur scalaire est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples, défini dans un bloc BEGIN...END, contient une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n'importe quel type de données à l'exception de `text`, `ntext`, `image`, `cursor` et `timestamp`.  
   
- Fonctions table  
+ Fonction table  
  Les fonctions table définies par l'utilisateur retournent un type de données `table`. Une fonction table incluse ne contient pas de corps ; la table est le jeu de résultats d'une instruction SELECT unique.  
   
  Fonctions système  
@@ -79,7 +79,7 @@ ms.locfileid: "68211699"
   
  Le nombre d'exécutions effectives d'une fonction spécifiée dans une requête peut varier d'un plan d'exécution de l'optimiseur à l'autre. C'est par exemple le cas d'une fonction invoquée par une sous-requête dans une clause WHERE. Le nombre d'exécutions de la sous-requête et de sa fonction peut varier en fonction du chemin d'accès choisi par l'optimiseur.  
   
-##  <a name="ValidStatements"></a> Instructions valides dans une fonction  
+##  <a name="ValidStatements"></a>Instructions valides dans une fonction  
  Les types d'instructions valides dans une fonction sont les suivants :  
   
 -   les instructions DECLARE permettant de définir des curseurs et des variables de données locaux de la fonction ;  
@@ -120,7 +120,7 @@ ms.locfileid: "68211699"
   
  Pour obtenir la liste des fonctions système intégrées déterministes et non déterministes, consultez [Fonctions déterministes et non déterministes](../user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-##  <a name="SchemaBound"></a> Fonctions liées au schéma  
+##  <a name="SchemaBound"></a>Fonctions liées au schéma  
  L'instruction CREATE FUNCTION prend en charge une clause SCHEMABINDING qui lie la fonction au schéma de tout objet auquel elle fait référence, tel qu'une table, une vue ou une fonction définie par l'utilisateur. Toute tentative de modification (ALTER) ou de suppression (DROP) d'un objet référencé par une fonction liée au schéma est vouée à l'échec.  
   
  Les conditions suivantes doivent être respectées pour que la clause SCHEMABINDING puisse être spécifiée dans CREATE FUNCTION :  
@@ -133,7 +133,7 @@ ms.locfileid: "68211699"
   
  Vous pouvez utiliser l'instruction ALTER FUNCTION pour supprimer la liaison au schéma. Cette instruction doit redéfinir la fonction sans spécifier WITH SCHEMABINDING.  
   
-##  <a name="Parameters"></a> Spécification des paramètres  
+##  <a name="Parameters"></a>Spécification des paramètres  
  Une fonction définie par l'utilisateur accepte ou n'accepte pas de paramètres d'entrée et retourne une valeur scalaire ou une table. Une fonction peut comprendre jusqu'à 1 024 paramètres d'entrée. Lorsqu'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin d'obtenir la valeur par défaut. Ce comportement est différent de celui des paramètres avec valeurs par défaut des procédures stockées définies par l'utilisateur pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut. Les fonctions définies par l'utilisateur ne prennent pas en charge les paramètres de sortie.  
   
 ##  <a name="Tasks"></a> Tâches associées  

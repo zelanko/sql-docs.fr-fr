@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831744"
 ---
 # <a name="file-system-task"></a>Tâches du système de fichiers
@@ -42,7 +42,7 @@ ms.locfileid: "62831744"
 |Déplacer le répertoire|Déplace un dossier d'un emplacement à l'autre.|  
 |Déplacer le fichier|Déplace un fichier d'un emplacement à l'autre.|  
 |Renommer le fichier|Renomme un fichier à un emplacement spécifié.|  
-|Définir les attributs|Définit les attributs des fichiers et des dossiers. Les attributs sont Archive, Caché, Normal, Lecture seule et Système. L'option Normal indique l'absence d'attributs et ne peut pas être combinée avec les autres attributs. Vous pouvez combiner tous les autres attributs.|  
+|Définir des attributs|Définit les attributs des fichiers et des dossiers. Les attributs sont Archive, Caché, Normal, Lecture seule et Système. L'option Normal indique l'absence d'attributs et ne peut pas être combinée avec les autres attributs. Vous pouvez combiner tous les autres attributs.|  
   
  La tâche de système de fichiers s'exécute sur un seul fichier ou répertoire. Cette tâche ne prend donc pas en charge l'utilisation de caractères génériques pour effectuer la même opération sur plusieurs fichiers. Pour que la tâche de système de fichiers répète une même opération sur plusieurs fichiers ou répertoires, mettez la tâche de système de fichiers dans un conteneur de boucles Foreach, comme décrit dans les étapes suivantes :  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62831744"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez les rubriques suivantes :  
   
--   [Éditeur de tâche de système de fichiers &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de système de fichiers &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -75,7 +75,8 @@ ms.locfileid: "62831744"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une tâche qui télécharge et charge les fichiers de données et gère les répertoires sur les serveurs. Pour plus d’informations, consultez [Tâche FTP](ftp-task.md).  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend une tâche qui télécharge et charge les fichiers de données et gère les répertoires sur les serveurs. Pour plus d’informations, consultez [Tâche FTP](ftp-task.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](integration-services-tasks.md)   

@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985776"
 ---
 # <a name="reporting-services-extensions"></a>Extensions Reporting Services
-  L'architecture modulaire de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est conçue à des fins d'extensibilité. Une API de code managé est disponible afin de vous permettre de développer, installer et gérer facilement des extensions consommées par de nombreux composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez créer des assemblys privés ou partagés à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puis ajouter de nouvelles fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour répondre aux besoins en constante évolution de votre entreprise.  
+  L'architecture modulaire de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est conçue à des fins d'extensibilité. Une API de code managé est disponible afin de vous permettre de développer, installer et gérer facilement des extensions consommées par de nombreux composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez créer des assemblys privés ou partagés à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] l’aide de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] l’et ajouter de nouvelles fonctionnalités pour répondre à vos besoins en constante évolution de l’entreprise.  
   
  L'architecture d'extensibilité unique de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permet aux développeurs d'étendre des fonctionnalités spécifiques du produit et de ses composants. Il existe actuellement une prise en charge générale pour étendre les fonctions de traitement de données de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'API de traitement de données comprend des constructions et des conventions du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] couramment utilisées, qui permettent aux développeurs d'ajouter des fonctions de traitement de données supplémentaires à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Ces extensions pour le traitement des données ajoutent des fonctionnalités au serveur de rapports et au Concepteur de rapports, ce qui se traduit par une intégration transparente des données personnalisées aux rapports.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "62985776"
  [Considérations sur la sécurité pour les extensions](security-considerations-for-extensions.md)  
  Décrit les problèmes de sécurité relatifs au développement et au déploiement d'extensions [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Mise en œuvre d’une extension pour le traitement des données](data-processing/implementing-a-data-processing-extension.md)  
+ [Implémentation d'une extension pour le traitement des données](data-processing/implementing-a-data-processing-extension.md)  
  Décrit les spécifications et les étapes relatives à l'implémentation d'une extension pour le traitement des données pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Mise en œuvre d'une extension de remise](delivery-extension/implementing-a-delivery-extension.md)  
+ [Implémentation d'une extension de remise](delivery-extension/implementing-a-delivery-extension.md)  
  Décrit les spécifications et les étapes relatives à l'implémentation d'une extension de remise pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Mise en œuvre d'une extension de rendu](rendering-extension/implementing-a-rendering-extension.md)  
+ [Implémentation d'une extension de rendu](rendering-extension/implementing-a-rendering-extension.md)  
  Contient une introduction au développement d'extensions de rendu.  
   
  [Implémentation d'une extension de sécurité](security-extension/implementing-a-security-extension.md)  

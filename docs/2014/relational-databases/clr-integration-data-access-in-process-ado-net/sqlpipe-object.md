@@ -1,5 +1,5 @@
 ---
-title: Objet SqlPipe | Microsoft Docs
+title: SqlPipe, objet | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920053"
 ---
 # <a name="sqlpipe-object"></a>Objet SqlPipe
@@ -29,7 +29,7 @@ ms.locfileid: "62920053"
  Pour les objets de base de données du CLR (Common Language Runtime) qui s'exécutent dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez envoyer les résultats au canal connecté à l'aide des méthodes `Send` de l'objet `SqlPipe`. Accédez à la propriété `Pipe` de l'objet `SqlContext` pour obtenir l'objet `SqlPipe`. La classe `SqlPipe` est similaire sur le plan conceptuel à la classe `Response` présente dans ASP.NET. Pour plus d'informations, consultez la documentation de référence sur la classe SqlPipe dans le kit de développement logiciel (SDK) du .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Retour de résultats sous forme de tableau et de messages  
- La classe `SqlPipe` possède une méthode `Send` avec trois surcharges. Celles-ci sont les suivantes :  
+ La classe `SqlPipe` possède une méthode `Send` avec trois surcharges. Il s'agit de :  
   
 -   `void Send(string message)`  
   
@@ -48,10 +48,12 @@ ms.locfileid: "62920053"
 ## <a name="returning-custom-result-sets"></a>Retour de jeux de résultats personnalisés  
  Les procédures stockées managées peuvent envoyer des jeux de résultats qui ne proviennent pas d'un `SqlDataReader`. La méthode `SendResultsStart`, ainsi que `SendResultsRow` et `SendResultsEnd`, permettent aux procédures stockées d'envoyer des jeux de résultats personnalisés au client.  
   
- `SendResultsStart` accepte un `SqlDataRecord` en tant qu'entrée. Elle  marque le début d'un jeu de résultats et utilise les métadonnées d'enregistrement pour construire les métadonnées qui décrivent le jeu de résultats. Elle n'envoie pas la valeur de l'enregistrement avec `SendResultsStart`. Toutes les lignes suivantes, envoyées à l'aide de `SendResultsRow`, doivent correspondre à cette définition des métadonnées.  
+ 
+  `SendResultsStart` accepte un `SqlDataRecord` en tant qu'entrée. Elle  marque le début d'un jeu de résultats et utilise les métadonnées d'enregistrement pour construire les métadonnées qui décrivent le jeu de résultats. Elle n'envoie pas la valeur de l'enregistrement avec `SendResultsStart`. Toutes les lignes suivantes, envoyées à l'aide de `SendResultsRow`, doivent correspondre à cette définition des métadonnées.  
   
 > [!NOTE]  
->  Après l'appel de la méthode `SendResultsStart`, seules `SendResultsRow` et `SendResultsEnd` peuvent être appelées. L'appel de toute autre méthode dans la même instance de `SqlPipe` entraîne `InvalidOperationException`. `SendResultsEnd` rétablit `SqlPipe` à son état initial, dans lequel d'autres méthodes peuvent être appelées.  
+>  Après l'appel de la méthode `SendResultsStart`, seules `SendResultsRow` et `SendResultsEnd` peuvent être appelées. L'appel de toute autre méthode dans la même instance de `SqlPipe` entraîne `InvalidOperationException`. 
+  `SendResultsEnd` rétablit `SqlPipe` à son état initial, dans lequel d'autres méthodes peuvent être appelées.  
   
 ### <a name="example"></a>Exemple  
  La procédure stockée `uspGetProductLine` retourne les nom, numéro de produit, couleur et tarif de tous les produits dans une ligne de produit spécifiée. Cette procédure stockée accepte des correspondances exactes pour *prodLine*.  
@@ -139,7 +141,7 @@ EXEC uspGetProductLineVB 'T';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet SqlDataRecord](sqldatarecord-object.md)   
+ [SqlDataRecord, objet](sqldatarecord-object.md)   
  [Procédures stockées CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Extensions spécifiques in-process de SQL Server à ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   

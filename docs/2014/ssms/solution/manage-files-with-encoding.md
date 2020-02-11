@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823796"
 ---
 # <a name="manage-files-with-encoding"></a>Gérer des fichiers avec encodage
@@ -42,7 +42,7 @@ ms.locfileid: "62823796"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Pour enregistrer un fichier avec un encodage ou un type de fin de ligne différent  
   
-1.  Sur le **fichier** menu, cliquez sur **enregistrer \<filename > comme**.  
+1.  Dans le menu **fichier** , cliquez sur **Enregistrer \<le nom de fichier> sous**.  
   
 2.  Dans la boîte de dialogue **Enregistrer le fichier sous** , développez le bouton **Enregistrer** , puis cliquez sur **Enregistrer avec l’encodage**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62823796"
 -   Les fichiers UTF8 ne fonctionnent pas de façon fiable avec Visual SourceSafe, car les modifications doivent être apportées pendant l'archivage, l'extraction, le contrôle des différences et la fusion, ce qui provoque des problèmes pour les éditeurs de fichier UTF8.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichiers gérant les Solutions et projets](files-that-manage-solutions-and-projects.md)   
+ [Fichiers qui gèrent des solutions et des projets](files-that-manage-solutions-and-projects.md)   
  [Associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

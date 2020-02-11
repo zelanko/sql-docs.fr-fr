@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830560"
 ---
 # <a name="script-task"></a>Tâche de script
-  La tâche de script fournit du code permettant d’exécuter des fonctions qui ne sont pas disponibles dans les tâches et transformations intégrées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tâche de script peut également combiner des fonctions dans un même script au lieu d'utiliser plusieurs tâches et transformations. Utilisez la tâche de script pour le travail devant être effectué une fois dans un package (ou une fois par objet énuméré), et non une fois par ligne de données.  
+  La tâche de script fournit du code permettant d’exécuter des fonctions qui ne sont pas disponibles dans les tâches et transformations intégrées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tâche de script peut également combiner des fonctions dans un même script au lieu d'utiliser plusieurs tâches et transformations. Utilisez la tâche de script pour le travail devant être effectué une fois dans un package (ou une fois par objet énuméré), et non une fois par ligne de données.  
   
  Vous pouvez utiliser la tâche de script aux fins suivantes :  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62830560"
  Si vous choisissez la tâche de script pour votre package, vous devez développer le script utilisé par la tâche et configurer cette dernière.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>Écriture et exécution du script utilisé par la tâche  
- La tâche de script utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) en tant qu’environnement d’écriture des scripts et que moteur d’exécution de ces derniers.  
+ La tâche de script utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement d’écriture des scripts et moteur d’exécution de ces derniers.  
   
  VSTA fournit l’ensemble des fonctionnalités standard de l’environnement [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , telles que l’éditeur [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] à code de couleur, IntelliSense et **l’Explorateur d’objets**. VSTA utilise également le même débogueur que les autres outils de développement [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Les points d'arrêt dans le script fonctionnent de façon transparente avec ceux des tâches et des conteneurs [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . VSTA prend en charge les langages de programmation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62830560"
  Vous pouvez définir ces propriétés via le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programme.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configuration de la tâche de script dans le concepteur  
- Le tableau suivant décrit l'événement `ScriptTaskLogEntry` pouvant être consigné pour la tâche de script. Le `ScriptTaskLogEntry` événement est sélectionné pour la journalisation le **détails** onglet de la **configurer les journaux SSIS** boîte de dialogue. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
+ Le tableau suivant décrit l'événement `ScriptTaskLogEntry` pouvant être consigné pour la tâche de script. L' `ScriptTaskLogEntry` événement est sélectionné pour la journalisation sous l’onglet **Détails** de la boîte de dialogue **configurer les journaux SSIS** . Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -89,6 +89,6 @@ ms.locfileid: "62830560"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Procédure d’envoi d’e-mail avec notification de remise en C#) sur shareourideas.com  
+-   Article technique [Procédure d'envoi de courrier électronique avec notification de remise en C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Procédure d’envoi d’e-mail avec notification de remise en C#) sur shareourideas.com  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Accès du Service Report Server Web à l’aide de Visual Basic ou Visual c# (didacticiel SSRS) | Microsoft Docs
+title: Accès au service Web Report Server à l’aide de Visual Basic ou Visual C# (didacticiel SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,19 +17,19 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62824501"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Accès au service Web Report Server avec Visual Basic ou Visual C# (didacticiel SSRS)
-  Ce didacticiel vous montre comment accéder à partir d’une application créée avec le service Web Report Server [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
+  Le didacticiel suivant vous montre comment accéder au service Web Report Server à partir d’une application créée [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] avec [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]ou.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Au cours de l'étude de ce didacticiel, vous allez effectuer les opérations suivantes :  
   
--   Créer une application cliente utilisant la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] modèle de projet Application Console.  
+-   Créez une application cliente à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] l’aide du modèle de projet application console.  
   
 -   Ajouter une référence Web pour le service Web Report Server.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "62824501"
   
 -   Exécuter l'application console en mode débogage.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour exécuter ce didacticiel, vous devez disposer des éléments suivants :  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] ou un texte similaire [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-outil de développement compatible.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] ou un outil [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]de développement compatible avec similaire.  
   
 -   Des autorisations suffisantes pour accéder au service Web Report Server de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur sur lequel se trouve le serveur de rapports.  
   
@@ -51,15 +51,15 @@ ms.locfileid: "62824501"
 > [!NOTE]  
 >  Les exemples ne sont pas installés automatiquement, mais peuvent l'être à tout moment. Pour plus d’informations sur les exemples, consultez [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Durée estimée pour effectuer le tutoriel :** 60 minutes  
+ **Durée estimée pour suivre le didacticiel :** 60 minutes  
   
 ## <a name="tasks"></a>Tâches  
- [Leçon 1 : Création du projet de Client de Service Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Leçon 1 : création du projet client du service Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Leçon 2 : Ajout d’une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Leçon 2 : ajout d'une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Leçon 3 : L’accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Leçon 3 : accès au service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [Leçon 4 : Exécution de l’Application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [Leçon 4 : exécution de l’application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

@@ -18,22 +18,22 @@ ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67463561"
 ---
-# <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
+# <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Supprime une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un utilisateur ou un groupe Windows d'un rôle serveur fixe.
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) à la place.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER Server Role](../../t-sql/statements/alter-server-role-transact-sql.md) .
 
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,13 +43,13 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>Arguments
 
-**[ @loginame = ]** '_login_'  
-Nom d'une connexion à supprimer du rôle serveur fixe. *connexion* est **sysname**, sans valeur par défaut. *connexion* doit exister.  
+**[ @loginame = ]** «_connexion_»  
+Nom d'une connexion à supprimer du rôle serveur fixe. *login* est de **type sysname**, sans valeur par défaut. la *connexion* doit exister.  
 
-**[ @rolename = ]** '_role_'  
-Nom d'un rôle serveur. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit être une des valeurs suivantes :  
+**[ @rolename = ]** «_role_»  
+Nom d'un rôle serveur. *role* est de **type sysname**, avec NULL comme valeur par défaut. le *rôle* doit avoir l’une des valeurs suivantes :  
 
--   sysadmin  
+-   administrateur système  
   
 -   securityadmin  
   
@@ -65,18 +65,18 @@ Nom d'un rôle serveur. *rôle* est **sysname**, avec NULL comme valeur par déf
   
 -   bulkadmin 
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Sp_dropsrvrolemember uniquement peut être utilisé pour supprimer une connexion d’un rôle serveur fixe. Utilisez sp_droprolemember pour supprimer un membre d’un rôle de base de données.  
+ Seul sp_dropsrvrolemember peut être utilisé pour supprimer une connexion d'un rôle serveur fixe. Utilisez sp_droprolemember pour supprimer un membre d'un rôle de base de données.  
   
- Impossible de supprimer la connexion sa à partir de n’importe quel rôle de serveur fixe.  
+ Impossible de supprimer la connexion sa d'un rôle serveur fixe.  
   
- sp_dropsrvrolemember ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
+ La procédure sp_dropsrvrolemember ne peut pas être exécutée dans une transaction définie par l'utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au rôle serveur fixé, ou les deux autorisations ALTER ANY LOGIN sur le serveur et à partir de laquelle le membre est en cours de suppression du rôle sysadmin.  
+ Il faut appartenir au rôle serveur fixe sysadmin, ou bien disposer de l'autorisation ALTER ANY LOGIN et dans le même temps appartenir au rôle duquel le membre est supprimé.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime la connexion `JackO` du rôle serveur fixe `sysadmin`.  

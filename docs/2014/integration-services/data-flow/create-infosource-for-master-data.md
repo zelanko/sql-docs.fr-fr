@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827960"
 ---
 # <a name="create-infosource-for-master-data"></a>Créer un InfoSource pour les données maîtres
@@ -51,7 +51,7 @@ ms.locfileid: "62827960"
   
  Après avoir créé un InfoObject, le composant remplit la zone de texte **Nom de l’InfoObject** avec le nom du nouvel InfoObject.  
   
- **Description courte**  
+ **Brève description**  
  Entrez une brève description pour le nouvel InfoSource.  
   
  **Description longue**  

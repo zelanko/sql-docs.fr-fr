@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478625"
 ---
 # <a name="users-and-groups-master-data-services"></a>Utilisateurs et groupes (Master Data Services)
@@ -42,7 +42,7 @@ ms.locfileid: "65478625"
  N'affectez pas d'autorisations supplémentaires à un utilisateur individuel et n'incluez pas un utilisateur dans plusieurs groupes qui ont accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. De plus, n'utilisez pas d'autorisations des membres de la hiérarchie à moins que vous ne souhaitiez qu'un groupe ait un accès limité à des membres spécifiques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un utilisateur &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
+ [Ajouter un &#40;d’utilisateur Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [Ajouter un groupe &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [Supprimer des utilisateurs ou des groupes &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
  [Tester les autorisations d’un utilisateur &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  

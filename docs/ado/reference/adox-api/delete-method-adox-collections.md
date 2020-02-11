@@ -1,5 +1,5 @@
 ---
-title: DELETE, méthode (Collections ADOX) | Microsoft Docs
+title: Delete, méthode (collections ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -31,10 +31,10 @@ ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966433"
 ---
 # <a name="delete-method-adox-collections"></a>Delete, méthode (collections ADOX)
@@ -49,12 +49,12 @@ Collection.Delete Name
   
 #### <a name="parameters"></a>Paramètres  
  *Nom*  
- Un **Variant** qui spécifie le nom ou la position ordinale (index) de l’objet à supprimer.  
+ **Variant** qui spécifie le nom ou la position ordinale (index) de l’objet à supprimer.  
   
 ## <a name="remarks"></a>Notes  
  Une erreur se produit si le *nom* n’existe pas dans la collection.  
   
- Pour [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) et [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collections, une erreur se produit si le fournisseur ne prend pas en charge la suppression des tables ou des utilisateurs, respectivement. Pour [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) et [vues](../../../ado/reference/adox-api/views-collection-adox.md) collections, **supprimer** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  
+ Pour les collections de [tables](../../../ado/reference/adox-api/tables-collection-adox.md) et d' [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) , une erreur se produit si le fournisseur ne prend pas en charge la suppression de tables ou d’utilisateurs, respectivement. Pour les collections de [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) et de [vues](../../../ado/reference/adox-api/views-collection-adox.md) , la **suppression** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  
   
 ## <a name="applies-to"></a>S'applique à  
   
@@ -65,5 +65,5 @@ Collection.Delete Name
 |[Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures Delete, exemple de méthode (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Procedures, exemple de méthode Delete (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views, exemple de méthode Delete (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

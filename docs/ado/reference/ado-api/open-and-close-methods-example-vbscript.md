@@ -1,5 +1,5 @@
 ---
-title: Ouvrir et fermer les exemples de méthodes (VBScript) | Microsoft Docs
+title: Open et Close, exemple de méthodes (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931918"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open et Close, exemple de méthodes (VBScript)
-Cet exemple utilise le [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [fermer](../../../ado/reference/ado-api/close-method-ado.md) méthodes sur les deux [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) les objets qui ont été ouverts.  
+Cet exemple utilise les méthodes [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [Close](../../../ado/reference/ado-api/close-method-ado.md) sur les objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [Connection](../../../ado/reference/ado-api/connection-object-ado.md) qui ont été ouverts.  
   
- Utilisez l’exemple suivant dans une Page ASP (Active Server). Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **OpenVBS.asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur.  
+ Utilisez l’exemple suivant dans une page de Active Server (ASP). Utilisez **Find** pour localiser le fichier adovbs. Inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **OpenVBS. asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur.  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -163,7 +163,7 @@ BODY {
   
 ## <a name="see-also"></a>Voir aussi  
  [Close, méthode (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open, méthode (objet Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Open, méthode (connexion ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

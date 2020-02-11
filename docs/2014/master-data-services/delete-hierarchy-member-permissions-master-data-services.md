@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 853bc9ce4b2f0432f74e3876f9a6234042fe5b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479512"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Supprimer des autorisations de membre de hiérarchie (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez les autorisations d'objet de modèle pour supprimer toutes les affectations effectuées.  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  
@@ -45,9 +45,9 @@ ms.locfileid: "65479512"
   
 6.  Dans la liste **Version** , sélectionnez une version.  
   
-7.  Dans le **résumé des autorisations de hiérarchie membre** volet, sélectionnez la ligne de l’autorisation que vous souhaitez supprimer.  
+7.  Dans le volet **Résumé des autorisations des membres** de la hiérarchie, sélectionnez la ligne de l’autorisation que vous souhaitez supprimer.  
   
-8.  Cliquez sur **supprimer l’autorisation sélectionnée**.  
+8.  Cliquez sur **Supprimer l’autorisation sélectionnée**.  
   
     > [!NOTE]  
     >  Vous ne pouvez pas supprimer une autorisation d'un utilisateur si elle est héritée d'un groupe. Vous devez supprimer l'autorisation du groupe à la place.  

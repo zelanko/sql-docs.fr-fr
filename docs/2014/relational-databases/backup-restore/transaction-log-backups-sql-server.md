@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920686"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Sauvegardes du journal des transactions (SQL Server)
@@ -27,20 +27,20 @@ ms.locfileid: "62920686"
   
  Vous devez au moins avoir créé une sauvegarde complète pour pouvoir créer des sauvegardes de journaux. Après cela, le journal des transactions peut être sauvegardé à tout moment, à moins qu'il ne soit déjà en cours de sauvegarde. Nous vous recommandons d'effectuer des sauvegardes de journaux fréquemment, à la fois pour réduire les risques de perte de travail et pour tronquer le journal des transactions. En règle générale, un administrateur de base de données crée une sauvegarde complète de base de données de temps en temps, par exemple chaque semaine et, éventuellement, crée une série de sauvegardes de base de données différentielles à un intervalle plus court, par exemple tous les jours. Indépendamment des sauvegardes de base de données, l'administrateur de base de données sauvegarde le journal des transactions à intervalles fréquents, par exemple toutes les 10 minutes. Pour un type donné de sauvegarde, l'intervalle optimal varie en fonction de divers facteurs tels que l'importance des données, la taille de la base de données et la charge de travail du serveur.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
--   [Fonctionne d’une séquence de sauvegardes de journaux](#LogBackupSequence)  
+-   [Fonctionnement d’une séquence de sauvegardes de journaux](#LogBackupSequence)  
   
 -   [Recommandations](#Recommendations)  
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu connexe](#RelatedContent)  
+-   [Contenu associé](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> Fonctionne d’une séquence de sauvegardes de journaux  
+##  <a name="LogBackupSequence"></a>Fonctionnement d’une séquence de sauvegardes de journaux  
  La séquence de sauvegarde des journaux des transactions ( *séquence de journaux* ) ne dépend pas des sauvegardes de données. Supposons, par exemple, que la séquence des événements est la suivante.  
   
-|Time|Événement|  
+|Temps|Événement|  
 |----------|-----------|  
 |8h00|Sauvegarde de la base de données.|  
 |Midi|Sauvegarde du journal des transactions.|  

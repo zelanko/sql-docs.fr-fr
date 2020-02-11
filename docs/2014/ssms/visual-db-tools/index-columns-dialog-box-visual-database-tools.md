@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015791"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Boîte de dialogue Colonnes d'index (Visual Database Tools)
@@ -24,7 +24,7 @@ ms.locfileid: "63015791"
   
 ## <a name="options"></a>Options  
  **Nom de la colonne**  
- Choisissez les colonnes qui participent à cet index. Sélectionnez  **\<None >** pour supprimer cette colonne à partir de l’index...  
+ Choisissez les colonnes qui participent à cet index. Sélectionnez ** \<aucun>** pour supprimer cette colonne de l’index.  
   
  **Ordre de tri**  
  Sélectionnez un ordre de tri pour la colonne spécifiée. Les options disponibles sont **Croissant** ou **Décroissant**.  
@@ -32,6 +32,6 @@ ms.locfileid: "63015791"
 ## <a name="see-also"></a>Voir aussi  
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
- [Index et des clés de boîte de dialogue &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Index et clés, boîte de dialogue &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

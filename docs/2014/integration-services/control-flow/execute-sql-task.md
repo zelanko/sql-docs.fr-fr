@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831767"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
@@ -54,9 +54,9 @@ ms.locfileid: "62831767"
 ## <a name="creating-sql-statements"></a>Création d'instructions SQL  
  La source des instructions SQL utilisée par cette tâche peut être une propriété de tâche contenant une instruction, une connexion à un fichier contenant une ou plusieurs instructions ou le nom d'une variable contenant une instruction. Les instructions SQL doivent être écrites dans le langage du système de gestion de bases de données (SGBD) source. Pour plus d’informations, consultez [Requêtes Integration Services &#40;SSIS&#41;](../integration-services-ssis-queries.md).  
   
- Si les instructions SQL sont stockées dans un fichier, la tâche utilise un gestionnaire de connexions de fichiers pour se connecter au fichier. Pour plus d’informations, consultez [File Connection Manager](../connection-manager/file-connection-manager.md).  
+ Si les instructions SQL sont stockées dans un fichier, la tâche utilise un gestionnaire de connexions de fichiers pour se connecter au fichier. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](../connection-manager/file-connection-manager.md).  
   
- Dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)], vous pouvez utiliser la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour taper des instructions SQL ou utiliser le **Générateur de requêtes**, une interface graphique utilisateur permettant de créer des requêtes SQL. Pour plus d’informations, consultez [Éditeur de tâche d’exécution de requêtes SQL &#40;page Général&#41;](../execute-sql-task-editor-general-page.md) et [Générateur de requêtes](../query-builder.md).  
+ Dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous pouvez utiliser la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour taper des instructions SQL ou utiliser le **Générateur de requêtes**, une interface graphique utilisateur permettant de créer des requêtes SQL. Pour plus d’informations, consultez [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) et [Générateur de requêtes](../query-builder.md).  
   
 > [!NOTE]  
 >  Les instructions SQL valides écrites en dehors de la tâche d'exécution SQL peuvent ne pas être analysées correctement par celle-ci.  
@@ -102,7 +102,7 @@ ms.locfileid: "62831767"
 -   Lorsque vous utilisez les gestionnaires de connexions ODBC et ADO.NET, la tâche n'ignore pas les jeux de résultats qui se produisent après le premier jeu de résultats. Avec ces gestionnaires de connexions, la tâche échoue avec une erreur quand un jeu de résultats autre que le premier jeu de résultats contient une erreur.  
   
 ### <a name="custom-log-entries"></a>Entrées de journal personnalisées  
- Le tableau suivant décrit les entrées de journal personnalisées pour la tâche d'exécution SQL. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
+ Le tableau suivant décrit les entrées de journal personnalisées pour la tâche d'exécution SQL. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md).  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -127,11 +127,11 @@ ms.locfileid: "62831767"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche SQL exécution &#40;Page Général&#41;](../execute-sql-task-editor-general-page.md)  
+-   [Éditeur de tâche d’exécution de SQL &#40;&#41;page général](../execute-sql-task-editor-general-page.md)  
   
--   [Éditeur de tâche SQL exécution &#40;Page mappage de paramètre&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [Éditeur de tâche d’exécution de SQL &#40;page mappage de paramètre&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [Éditeur de tâche SQL exécution &#40;Page ensemble de résultats&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [Éditeur de tâche d’exécution de SQL &#40;page ensemble de résultats&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -140,19 +140,19 @@ ms.locfileid: "62831767"
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="configuring-the-execute-sql-task-programmatically"></a>Configuration de la tâche d'exécution SQL par programmation  
- Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
+ Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur la rubrique suivante :  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask>  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
 -   [Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Paramètres et codes de retour dans la tâche d’exécution SQL](execute-sql-task.md)  
+-   [Paramètres et codes de retour dans la tâche d'exécution SQL](execute-sql-task.md)  
   
 -   [Ensembles de résultats dans la tâche d’exécution SQL](../result-sets-in-the-execute-sql-task.md)  
   

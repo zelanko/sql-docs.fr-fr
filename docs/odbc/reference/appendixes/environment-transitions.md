@@ -15,38 +15,38 @@ ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b1de2f2147357f9e2ed4f71657b9298c4a13684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910432"
 ---
 # <a name="environment-transitions"></a>Transitions d’environnement
-Environnements de ODBC ont trois états suivants.  
+Les environnements ODBC présentent les trois États suivants.  
   
-|État|Description|  
+|State|Description|  
 |-----------|-----------------|  
 |E0|Environnement non alloué|  
-|E1|Environnement alloué, non alloué de connexion|  
-|E2|Allouée d’environnement, allouée de connexion|  
+|E1|Environnement alloué, connexion non allouée|  
+|E2|Environnement alloué, connexion allouée|  
   
- Les tableaux suivants indiquent comment chaque fonction ODBC affecte l’état de l’environnement.  
+ Les tableaux suivants montrent comment chaque fonction ODBC affecte l’état de l’environnement.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|E1[1]|--[4]|--[4]|  
-|(IH) [2]|E2[5]<br />(HY010)[6]|--[4]|  
-|(IH)[3]|(IH)|--[4]|  
+|E1 [1]|--[4]|--[4]|  
+|IH 2|E2 [5]<br />HY010 6,3|--[4]|  
+|IH 1,3|IH|--[4]|  
   
- [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
+ [1] cette ligne montre les transitions lorsque *comme HandleType* a été SQL_HANDLE_ENV.  
   
- [2] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_DBC.  
+ [2] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_DBC.  
   
- [3] cette ligne affiche les transitions quand *HandleType* était SQL_HANDLE_STMT ou SQL_HANDLE_DESC.  
+ [3] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_STMT ou SQL_HANDLE_DESC.  
   
- [4] appel **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce descripteur. Cela peut être une erreur de programmation d’application.  
+ [4] l’appel de **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce handle. Il peut s’agir d’une erreur de programmation d’application.  
   
  [5] l’attribut d’environnement SQL_ATTR_ODBC_VERSION avait été défini sur l’environnement.  
   
@@ -54,80 +54,80 @@ Environnements de ODBC ont trois états suivants.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources et SQLDrivers  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010)[2]|--[1]<br />(HY010)[2]|  
+|IH|--[1]<br />HY010 2|--[1]<br />HY010 2|  
   
- [1] l’attribut d’environnement SQL_ATTR_ODBC_VERSION avait été défini sur l’environnement.  
+ [1] l’attribut d’environnement SQL_ATTR_ODBC_VERSION a été défini sur l’environnement.  
   
  [2] l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’a pas été défini sur l’environnement.  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|(IH)[1]|--[3]<br />(HY010)[4]|--[3]<br />(HY010)[4]|  
-|(IH) [2]|(IH)|--|  
+|IH 1,0|--[3]<br />HY010 4|--[3]<br />HY010 4|  
+|IH 2|IH|--|  
   
- [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
+ [1] cette ligne montre les transitions lorsque *comme HandleType* a été SQL_HANDLE_ENV.  
   
- [2] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_DBC.  
+ [2] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_DBC.  
   
- [3] l’attribut d’environnement SQL_ATTR_ODBC_VERSION avait été défini sur l’environnement.  
+ [3] l’attribut d’environnement SQL_ATTR_ODBC_VERSION a été défini sur l’environnement.  
   
  [4] l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’a pas été défini sur l’environnement.  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|(IH)[1]|E0|(HY010)|  
-|(IH) [2]|(IH)|--[4]<br />E1[5]|  
-|(IH)[3]|(IH)|--|  
+|IH 1,0|E0|HY010|  
+|IH 2|IH|--[4]<br />E1 [5]|  
+|IH 1,3|IH|--|  
   
- [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
+ [1] cette ligne montre les transitions lorsque *comme HandleType* a été SQL_HANDLE_ENV.  
   
- [2] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_DBC.  
+ [2] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_DBC.  
   
- [3] cette ligne affiche les transitions quand *HandleType* était SQL_HANDLE_STMT ou SQL_HANDLE_DESC.  
+ [3] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_STMT ou SQL_HANDLE_DESC.  
   
- [4] se sont produites autres handles de connexion alloué.  
+ [4] des descripteurs de connexion ont été alloués.  
   
- [5] le handle de connexion spécifié dans *gérer* a été le handle de connexion alloué uniquement.  
+ [5] le descripteur de connexion spécifié dans *handle* était le seul handle de connexion alloué.  
   
-## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagRec et SQLGetDiagField  
+## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField et SQLGetDiagRec  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|(IH)[1]|--|--|  
-|(IH) [2]|(IH)|--|  
+|IH 1,0|--|--|  
+|IH 2|IH|--|  
   
- [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
+ [1] cette ligne montre les transitions lorsque *comme HandleType* a été SQL_HANDLE_ENV.  
   
- [2] cette ligne affiche les transitions quand *HandleType* était SQL_HANDLE_DBC, SQL_HANDLE_STMT ou SQL_HANDLE_DESC.  
+ [2] cette ligne affiche les transitions lorsque *comme HandleType* a été SQL_HANDLE_DBC, SQL_HANDLE_STMT ou SQL_HANDLE_DESC.  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010)[2]|--|  
+|IH|--[1]<br />HY010 2|--|  
   
- [1] l’attribut d’environnement SQL_ATTR_ODBC_VERSION avait été défini sur l’environnement.  
+ [1] l’attribut d’environnement SQL_ATTR_ODBC_VERSION a été défini sur l’environnement.  
   
  [2] l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’a pas été défini sur l’environnement.  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010)[2]|(HY011)|  
+|IH|--[1]<br />HY010 2|HY011|  
   
- [1] l’attribut d’environnement SQL_ATTR_ODBC_VERSION avait été défini sur l’environnement.  
+ [1] l’attribut d’environnement SQL_ATTR_ODBC_VERSION a été défini sur l’environnement.  
   
- [2] le *attribut* argument n’a pas été SQL_ATTR_ODBC_VERSION et l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’avait pas été définie sur l’environnement.  
+ [2] l’argument d' *attribut* n’a pas été SQL_ATTR_ODBC_VERSION, et l’attribut d’environnement SQL_ATTR_ODBC_VERSION n’a pas été défini sur l’environnement.  
   
 ## <a name="all-other-odbc-functions"></a>Toutes les autres fonctions ODBC  
   
-|E0<br /><br /> Non alloué|E1<br /><br /> allouée|E2<br /><br /> Connexion|  
+|E0<br /><br /> Non alloué|E1<br /><br /> Affectation|E2<br /><br /> Connexion|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|(IH)|--|
+|IH|IH|--|

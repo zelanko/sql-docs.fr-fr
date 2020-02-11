@@ -1,5 +1,5 @@
 ---
-title: Définissez les bases de données défini par le classement de l’utilisateur correspondent à ceux du serveur principal et de bases de données model | Microsoft Docs
+title: Définir le classement des bases de données définies par l’utilisateur pour qu’elles correspondent à celles des bases de données master et Model | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773309"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model
@@ -29,7 +29,7 @@ ms.locfileid: "62773309"
   
 -   Exportez les données de la base de données utilisateur et importez-les dans de nouvelles tables ayant le même classement que les bases de données MASTER et model.  
   
--   Reconstruisez les bases de données système pour utiliser un classement qui correspond à celui de la base de données utilisateur. Pour plus d’informations sur la façon de reconstruire les bases de données système, consultez [reconstruire bases de données système](../relational-databases/databases/system-databases.md).  
+-   Reconstruisez les bases de données système pour utiliser un classement qui correspond à celui de la base de données utilisateur. Pour plus d’informations sur la régénération des bases de données système, consultez [reconstruire des bases de données système](../relational-databases/databases/system-databases.md).  
   
 -   Modifiez toute procédure stockée qui joint des tables utilisateur à des tables de la base de données tempdb pour créer les tables dans tempdb en utilisant le classement de la base de données utilisateur. Pour ce faire, ajoutez la clause `COLLATE database_default` aux définitions de colonnes de la table temporaire, comme indiqué dans l'exemple suivant :  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62773309"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Article 325335 de la Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Article 325335 de la base de connaissances Microsoft](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Procédure : Installer SQL Server 2008 à partir de l’invite de commandes](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Procédure : installer SQL Server 2008 à partir de l'invite de commandes](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contrôler et appliquer les meilleures pratiques à l'aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Contrôler et appliquer les bonnes pratiques à l’aide de la gestion basée sur des stratégies](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

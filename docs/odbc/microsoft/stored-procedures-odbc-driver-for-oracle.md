@@ -1,5 +1,5 @@
 ---
-title: (Pilote ODBC pour Oracle) de procédures stockées | Microsoft Docs
+title: Procédures stockées (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948815"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>Procédures stockées (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
->  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
+>  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Utilisez plutôt le pilote ODBC fourni par Oracle.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section comprend les rubriques suivantes :  
   
 -   [Limitations des paramètres des procédures stockées](../../odbc/microsoft/stored-procedure-parameter-limitations.md)  
   

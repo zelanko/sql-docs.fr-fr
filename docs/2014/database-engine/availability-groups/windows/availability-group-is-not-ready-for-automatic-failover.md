@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791863"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Le groupe de disponibilité n'est pas prêt pour le basculement automatique
@@ -29,7 +29,7 @@ ms.locfileid: "62791863"
 |-|-|  
 |**Nom de la stratégie**|Disponibilité du groupe de disponibilité pour le basculement automatique|  
 |**Problème**|Le groupe de disponibilité n'est pas prêt pour le basculement automatique.|  
-|**Catégorie**|**Critique**|  
+|**Catégorie**|**Critical**|  
 |**Facette**|Groupe de disponibilité|  
   
 ## <a name="description"></a>Description  
@@ -51,7 +51,7 @@ ms.locfileid: "62791863"
 -   Utilisez la stratégie pour vérifier que les données sont dans un état de synchronisation et que la cible de basculement automatique est à l'état SYNCHRONIZED, puis pour résoudre le problème qui affecte le réplica de disponibilité.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

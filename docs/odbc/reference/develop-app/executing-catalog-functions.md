@@ -1,5 +1,5 @@
 ---
-title: L’exécution des fonctions de catalogue | Microsoft Docs
+title: Exécution des fonctions de catalogue | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: c59cbda3-e214-4399-9edc-cfac86b378d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab6eba9c4a3df3e16e35d8a93dc95209a093fb80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901277"
 ---
 # <a name="executing-catalog-functions"></a>Exécution de fonctions de catalogue
-Comme une fonction de catalogue crée un jeu de résultats, il est équivalent à l’exécution de n’importe quelle instruction SQL de génération de jeu de résultat. En fait, les fonctions de catalogue sont souvent implémentées en exécutant les instructions SQL prédéfinies ou en appelant des procédures prédéfinies qui sont livrés avec le pilote ou le SGBD. Presque tout ce qui s’applique aux instructions SQL qui créent des jeux de résultats s’applique également aux fonctions de catalogue. Par exemple, l’attribut d’instruction SQL_ATTR_MAX_ROWS limite le nombre de lignes retournées par la fonction de catalogue, tout comme il limite le nombre de lignes retournées par une **sélectionnez** instruction.  
+Étant donné qu’une fonction de catalogue crée un jeu de résultats, elle revient à exécuter toute instruction SQL de génération de jeu de résultats. En fait, les fonctions de catalogue sont souvent implémentées en exécutant des instructions SQL prédéfinies ou en appelant des procédures prédéfinies fournies avec le pilote ou le SGBD. Presque tout ce qui s’applique aux instructions SQL qui créent des jeux de résultats s’applique également aux fonctions de catalogue. Par exemple, l’attribut d’instruction SQL_ATTR_MAX_ROWS limite le nombre de lignes retournées par la fonction Catalog, tout comme il limite le nombre de lignes retournées par une instruction **Select** .  
   
  Pour exécuter une fonction de catalogue, une application appelle simplement la fonction.  
   

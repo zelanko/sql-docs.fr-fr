@@ -16,19 +16,19 @@ ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965180"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
-Spécifie l’ordre de tri pour une colonne indexée.  
+Spécifie la séquence de tri pour une colonne indexée.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|1|Valeur par défaut. L’ordre de tri pour la colonne est croissant.|  
-|**adSortDescending**|2|L’ordre de tri pour la colonne est décroissant.|  
+|**adSortAscending**|1|valeur par défaut. La séquence de tri de la colonne est l’ordre croissant.|  
+|**adSortDescending**|2|La séquence de tri de la colonne est décroissante.|  
   
 ## <a name="applies-to"></a>S'applique à  
  [SortOrder, propriété (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

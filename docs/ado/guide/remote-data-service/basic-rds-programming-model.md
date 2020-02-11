@@ -13,41 +13,41 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922957"
 ---
 # <a name="basic-rds-programming-model"></a>Modèle de programmation RDS de base
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- RDS est destiné aux applications qui existent dans l’environnement suivant : Une application cliente spécifie un programme qui s’exécute sur un serveur et les paramètres requis pour retourner les informations souhaitées. Le programme appelé sur le serveur accède à la source de données spécifié, récupère les informations, éventuellement traite les données, puis retourne les informations obtenues pour votre application cliente dans un formulaire qu’il peut facilement utiliser. Services Bureau à distance fournit les moyens d’effectuer la séquence d’actions suivante :  
+ RDS traite les applications qui existent dans l’environnement suivant : une application cliente spécifie un programme qui s’exécute sur un serveur et les paramètres requis pour retourner les informations souhaitées. Le programme appelé sur le serveur obtient l’accès à la source de données spécifiée, récupère les informations, traite éventuellement les données, puis retourne les informations obtenues à votre application cliente dans un format utilisable facilement. RDS vous offre la possibilité d’effectuer la séquence d’actions suivante :  
   
--   Spécifiez le programme à appeler sur le serveur et obtenir un moyen pour y faire référence à partir du client. (Cette référence est parfois appelé un *proxy*. Il représente le programme de serveur distant. L’application cliente « appelle » le proxy comme s’il s’agissait d’un programme local, mais elle appelle en fait le programme de serveur distant.)  
+-   Spécifiez le programme à appeler sur le serveur et obtenez une méthode pour y faire référence à partir du client. (Cette référence est parfois appelée *proxy*. Il représente le programme serveur distant. L’application cliente « appellera » le proxy comme s’il s’agissait d’un programme local, mais il appelle en fait le programme serveur distant.)  
   
--   Appeler le programme serveur. Passer des paramètres pour le programme de serveur qui identifient la source de données et de la commande à émettre. (Le programme de serveur utilise en fait ADO pour accéder à la source de données. ADO établit une connexion avec l’un des paramètres donnés et lui envoie ensuite la commande spécifiée dans l’autre paramètre.)  
+-   Appelez le programme serveur. Transmettez des paramètres au programme serveur qui identifient la source de données et la commande à émettre. (Le programme serveur utilise en fait ADO pour accéder à la source de données. ADO établit une connexion avec l’un des paramètres donnés, puis émet la commande spécifiée dans l’autre paramètre.)  
   
--   Le programme serveur obtient un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet à partir de la source de données. Si vous le souhaitez, le **Recordset** objet est traité sur le serveur.  
+-   Le programme serveur obtient un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à partir de la source de données. Le cas échéant, l’objet **Recordset** est traité sur le serveur.  
   
--   Le programme serveur retourne le dernier **Recordset** objet à l’application cliente.  
+-   Le programme serveur retourne l’objet **Recordset** final à l’application cliente.  
   
--   Sur le client, le **Recordset** objet est placé dans un formulaire qui peut être facilement utilisé par des contrôles visuels.  
+-   Sur le client, l’objet **Recordset** est placé dans un formulaire qui peut être facilement utilisé par les contrôles visuels.  
   
--   Toute modification apportée à la **Recordset** objet sont envoyés au programme du serveur, ce qui les utilise pour mettre à jour la source de données.  
+-   Toutes les modifications apportées à l’objet **Recordset** sont renvoyées au programme serveur, qui les utilise pour mettre à jour la source de données.  
   
- Ce modèle de programmation contient certaines fonctionnalités pratiques. Si vous n’avez pas besoin d’un programme de serveur complexe pour accéder à la source de données, et si vous fournissez la connexion requises et les paramètres de commande, les services Bureau à distance sera automatiquement récupérer les données spécifiées avec un simple, programme de serveur par défaut.  
+ Ce modèle de programmation contient certaines fonctionnalités pratiques. Si vous n’avez pas besoin d’un programme serveur complexe pour accéder à la source de données, et si vous fournissez les paramètres de connexion et de commande requis, RDS récupère automatiquement les données spécifiées avec un programme serveur par défaut simple.  
   
- Si vous avez besoin d’un traitement plus complexe, vous pouvez spécifier votre propre programme serveur personnalisé. Par exemple, car un programme de serveur personnalisé a le potentiel de ADO à sa disposition, il peut se connecter à plusieurs sources de données, combiner leurs données dans des opérations complexes, puis retourner un résultat simple et traité à l’application cliente.  
+ Si vous avez besoin d’un traitement plus complexe, vous pouvez spécifier votre propre programme serveur personnalisé. Par exemple, étant donné qu’un programme serveur personnalisé a la pleine puissance d’ADO, il peut se connecter à plusieurs sources de données différentes, combiner leurs données de manière complexe, puis renvoyer un résultat simple et traité à l’application cliente.  
   
- Enfin, si vos besoins sont quelque part entre les deux, ADO prend désormais en charge personnaliser le comportement du programme de serveur par défaut.  
+ Enfin, si vos besoins se situent entre les deux, ADO prend désormais en charge la personnalisation du comportement du programme serveur par défaut.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèle de programmation RDS en détail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [Scénario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Utilisation et sécurité de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

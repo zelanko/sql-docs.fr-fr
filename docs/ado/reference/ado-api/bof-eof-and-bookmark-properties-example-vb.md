@@ -17,14 +17,14 @@ ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920439"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF et Bookmark, exemple de propriétés (VB)
-Cet exemple utilise le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriétés pour afficher un message si un utilisateur tente de dépasser le premier ou dernier enregistrement d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il utilise le [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété pour permettre à l’utilisateur de marquer un enregistrement dans un **Recordset** et y revenir plus tard.  
+Cet exemple utilise les propriétés [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) pour afficher un message si un utilisateur tente de se déplacer après le premier ou le dernier enregistrement d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md). Elle utilise la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) pour permettre à l’utilisateur d’indicateur un enregistrement dans un **jeu d’enregistrements** et de revenir ultérieurement.  
   
 ```  
 'BeginBOFVB  
@@ -129,7 +129,7 @@ End Sub
 'EndBOFVB  
 ```  
   
- Cet exemple utilise le **signet** et [filtre](../../../ado/reference/ado-api/filter-property.md) propriétés pour créer une vue limitée de la **Recordset**. Seuls les enregistrements référencés par le tableau de signets sont accessibles.  
+ Cet exemple utilise les propriétés de **signet** et de [filtre](../../../ado/reference/ado-api/filter-property.md) pour créer une vue limitée du **Recordset**. Seuls les enregistrements référencés par le tableau de signets sont accessibles.  
   
 ```  
 Attribute VB_Name = "BOF"  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211675"
 ---
 # <a name="modify-data-through-a-view"></a>Modifier les données par l'intermédiaire d'une vue
@@ -32,7 +32,7 @@ ms.locfileid: "68211675"
   
      [Sécurité](#Security)  
   
--   **Pour modifier des données de table via une vue, à l’aide de :**  
+-   **Pour modifier les données de table par le biais d'une vue, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68211675"
   
 #### <a name="to-update-table-data-through-a-view"></a>Pour mettre à jour les données de table par le biais d'une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68211675"
   
 #### <a name="to-insert-table-data-through-a-view"></a>Pour insérer des données de table par le biais d'une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

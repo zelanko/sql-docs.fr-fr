@@ -1,5 +1,5 @@
 ---
-title: Section de schéma | Microsoft Docs
+title: Section schéma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924293"
 ---
 # <a name="schema-section"></a>Section de schéma
-La section de schéma est requise. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées concernant chaque colonne pour préserver la sémantique des valeurs de données autant que possible pour la mise à jour. Toutefois, pour charger le code XML, ADO requiert uniquement les noms des colonnes et l’ensemble de lignes auquel elles appartiennent. Voici un exemple de schéma minimal :  
+La section du schéma est obligatoire. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées sur chaque colonne pour conserver la sémantique des valeurs de données le plus possible pour la mise à jour. Toutefois, pour charger dans le XML, ADO requiert uniquement les noms des colonnes et l’ensemble de lignes auquel ils appartiennent. Voici un exemple de schéma minimal :  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
@@ -40,10 +40,10 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
 </xml>  
 ```  
   
- Dans l’exemple précédent, ADO traite les données sous forme de chaînes de longueur variable, car aucune information de type n’est incluse dans le schéma.  
+ Dans l’exemple précédent, ADO traite les données comme des chaînes de longueur variable, car aucune information de type n’est incluse dans le schéma.  
   
 ## <a name="creating-aliases-for-column-names"></a>Création d’alias pour les noms de colonnes  
- L’attribut rs : name vous permet de créer un alias pour un nom de colonne afin qu’un nom convivial peut apparaître dans les informations de colonne exposées par l’ensemble de lignes et un nom plus court peut être utilisé dans la section de données. Par exemple, le schéma précédent peut être modifié pour les mapper n° messager s1, CompanyName et s2, Phone et s3 comme suit :  
+ L’attribut RS : Name vous permet de créer un alias pour un nom de colonne afin qu’un nom convivial puisse apparaître dans les informations de colonne exposées par l’ensemble de lignes et un nom plus petit peut être utilisé dans la section de données. Par exemple, le schéma précédent peut être modifié pour mapper ShipperID à S1, CompanyName à S2 et téléphone à S3 comme suit :  
   
 ```  
 <s:Schema id="RowsetSchema">   
@@ -62,19 +62,19 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
 </s:Schema>  
 ```  
   
- Puis, dans la section de données, la ligne utilise l’attribut de nom (non rs : name) pour faire référence à cette colonne :  
+ Ensuite, dans la section des données, la ligne utilise l’attribut Name (et non RS : Name) pour faire référence à cette colonne :  
   
 ```  
 "<row s1="1" s2="Speedy Express" s3="(503) 555-9831"/>  
 ```  
   
- Création d’alias pour les noms de colonnes est nécessaire chaque fois qu’un nom de colonne n’est pas un attribut valide ou le nom de balise dans XML. Par exemple, « LastName » doit avoir un alias car les noms avec des espaces incorporés sont des attributs non valides. La ligne suivante ne sera pas correctement traitée par l’analyseur XML, vous devez donc créer un alias à un autre nom qui n’a pas un espace incorporé.  
+ La création d’alias pour les noms de colonnes est requise chaque fois qu’un nom de colonne n’est pas un attribut ou un nom de balise valide en XML. Par exemple, « LastName » doit avoir un alias, car les noms avec des espaces incorporés sont des attributs non valides. La ligne suivante n’est pas correctement gérée par l’analyseur XML. vous devez donc créer un alias pour un autre nom qui ne dispose pas d’un espace incorporé.  
   
 ```  
 <row last name="Jones"/>  
 ```  
   
- La valeur utilisée pour l’attribut name doit être utilisée régulièrement chaque fois que la colonne est référencée dans le schéma et les données des sections du document XML. L’exemple suivant illustre l’utilisation cohérente de s1 :  
+ La valeur que vous utilisez pour l’attribut name doit être utilisée de façon cohérente à chaque endroit où la colonne est référencée dans les sections Schema and Data (schéma et données) du document XML. L’exemple suivant illustre l’utilisation cohérente de S1 :  
   
 ```  
 <s:Schema id="RowsetSchema">  
@@ -95,10 +95,10 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
 </rs:data>  
 ```  
   
- De même, car il n’est aucun alias ne défini pour `CompanyName` dans l’exemple précédent, `CompanyName` doit être utilisé de manière cohérente dans tout le document.  
+ De même, étant donné qu’aucun alias n’est `CompanyName` défini pour dans l’exemple `CompanyName` précédent, doit être utilisé de manière cohérente dans tout le document.  
   
 ## <a name="data-types"></a>Types de données  
- Vous pouvez appliquer un type de données à une colonne avec l’attribut dt : type. Pour le guide de référence pour les types XML autorisés, consultez la section Types de données de la [spécification W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Vous pouvez spécifier un type de données de deux manières : spécifiez l’attribut dt : type directement sur la définition de colonne ou utiliser la construction s : DataType comme élément imbriqué de la définition de colonne. Par exemple,  
+ Vous pouvez appliquer un type de données à une colonne avec l’attribut dt : type. Pour obtenir le guide définitif sur les types XML autorisés, consultez la section types de données de la [spécification W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Vous pouvez spécifier un type de données de deux façons : spécifiez l’attribut dt : type directement sur la définition de colonne elle-même ou utilisez la construction s :DataType comme élément imbriqué de la définition de colonne. Par exemple,  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -106,17 +106,17 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
 </s:AttributeType>  
 ```  
   
- est équivalent à  
+ équivaut à :  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  
 ```  
   
- Si vous omettez l’attribut dt : type entièrement à partir de la définition de la ligne, par défaut, le type de colonne sera une chaîne de longueur variable.  
+ Si vous omettez l’attribut dt : type entièrement à partir de la définition de ligne, par défaut, le type de la colonne sera une chaîne de longueur variable.  
   
- Si vous disposez des informations de type plus que simplement le nom du type (par exemple, dt : maxLength), il est plus lisible à utiliser l’élément enfant s : DataType. Il s’agit simplement d’une convention, et n’est pas obligatoire.  
+ Si vous avez plus d’informations de type que le simple nom de type (par exemple, DT : maxLength), il est plus lisible d’utiliser l’élément enfant s :DataType. Il s’agit simplement d’une convention, mais pas d’une exigence.  
   
- Les exemples suivants montrent davantage comment inclure des informations de type dans votre schéma.  
+ Les exemples suivants montrent comment inclure des informations de type dans votre schéma.  
   
 ```  
 <!-- 1. String with no max length -->  
@@ -138,10 +138,10 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
- Il existe une utilisation subtile de l’attribut rs : fixedlength dans le deuxième exemple. Une colonne avec l’attribut rs : fixedlength la valeur true signifie que les données doivent avoir la longueur définie dans le schéma. Dans ce cas, une valeur valide pour title_id est « 123456 », en l’état « 123 ». Toutefois, « 123 » ne serait pas valide parce que sa longueur est 3, 6 pas. Consultez Guide du programmeur OLE DB pour obtenir une plus de la propriété fixedlength.  
+ Le deuxième exemple présente une utilisation subtile de l’attribut RS : multiple. Une colonne avec l’attribut RS : multiple ayant la valeur true signifie que les données doivent avoir la longueur définie dans le schéma. Dans ce cas, une valeur valide pour title_id est « 123456 », car « 123 ». Toutefois, « 123 » n’est pas valide, car sa longueur est égale à 3, et non pas à 6. Pour une description plus complète de la propriété multiple, consultez le Guide du programmeur OLE DB.  
   
 ## <a name="handling-nulls"></a>Gestion des valeurs null  
- Valeurs NULL sont gérées par l’attribut rs : maybenull. Si cet attribut est défini true, le contenu de la colonne peut contenir une valeur null. En outre, si la colonne est introuvable dans une ligne de données, l’utilisateur lit les données dans l’ensemble de lignes ::GetData() un état null. Prendre en compte les définitions de colonne suivantes à partir de la table expéditeurs.  
+ Les valeurs NULL sont gérées par l’attribut RS : MAYBENULL. Si cet attribut a la valeur true, le contenu de la colonne peut contenir une valeur null. En outre, si la colonne est introuvable dans une ligne de données, l’utilisateur qui lit les données à partir de l’ensemble de lignes obtiendra un État null à partir de IRowset :: GetData (). Considérez les définitions de colonnes suivantes de la table Shippers.  
   
 ```  
 <s:AttributeType name="ShipperID">  
@@ -152,27 +152,27 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
 </s:AttributeType>  
 ```  
   
- Permet la définition `CompanyName` pour avoir la valeur null, mais `ShipperID` ne peut pas contenir une valeur null. Si la section de données contenue la ligne suivante, le fournisseur de persistance définirait l’état des données pour le `CompanyName` colonne à la constante d’état OLE DB DBSTATUS_S_ISNULL :  
+ La définition autorise `CompanyName` la valeur null, mais `ShipperID` elle ne peut pas contenir de valeur null. Si la section de données contient la ligne suivante, le fournisseur de persistance définit l’état des données de la `CompanyName` colonne sur la constante d’état OLE DB DBSTATUS_S_ISNULL :  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- Si la ligne a été complètement vide, comme suit, le fournisseur de persistance retourne l’état OLE DB DBSTATUS_E_UNAVAILABLE pour `ShipperID` et DBSTATUS_S_ISNULL pour CompanyName.  
+ Si la ligne est entièrement vide, comme suit, le fournisseur de persistance retourne un État OLE DB DBSTATUS_E_UNAVAILABLE pour `ShipperID` et DBSTATUS_S_ISNULL pour CompanyName.  
   
 ```  
 <z:row/>   
 ```  
   
- Notez qu’une chaîne de longueur nulle n’est pas identique à la valeur null.  
+ Notez qu’une chaîne de longueur nulle n’est pas la même que la valeur null.  
   
 ```  
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- Pour la ligne précédente, le fournisseur de persistance retournera un état OLE DB DBSTATUS_S_OK pour les deux colonnes. Le `CompanyName` dans ce cas est simplement « » (une chaîne de longueur nulle).  
+ Pour la ligne précédente, le fournisseur de persistance retourne un état de OLE DB de DBSTATUS_S_OK pour les deux colonnes. `CompanyName` Dans ce cas, il s’agit simplement de «» (une chaîne de longueur nulle).  
   
- Pour plus d’informations sur OLE DB construit disponibles pour une utilisation dans le schéma d’un document XML pour OLE DB, consultez la définition de « urn : schemas-microsoft-rowset » et le Guide du programmeur OLE DB.  
+ Pour plus d’informations sur les constructions de OLE DB disponibles pour une utilisation dans le schéma d’un document XML pour OLE DB, consultez la définition de « urn : schemas-microsoft-com : rowset » et le Guide du programmeur OLE DB.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

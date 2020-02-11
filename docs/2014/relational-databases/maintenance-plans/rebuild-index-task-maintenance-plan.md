@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806985"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tâche Reconstruire l'index (Plan de maintenance)
@@ -28,7 +28,7 @@ ms.locfileid: "62806985"
  La **Tâche Reconstruire l'index** utilise l'instruction ALTER INDEX.  
   
 ## <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
  **Nouveau**  
@@ -56,26 +56,26 @@ ms.locfileid: "62806985"
     > [!NOTE]  
     >  Les plans de maintenance sont exécutés uniquement sur des bases de données définies au niveau de compatibilité 80 ou plus. Les bases de données définies au niveau de compatibilité 70 ou moins ne sont pas affichées.  
   
- **Objet**  
+ **Object**  
  Limite la grille de **Sélection** à l’affichage des tables et/ou des vues.  
   
  **Sélection**  
  Spécifie les tables ou les index faisant l'objet de cette tâche. Non disponible quand **Tables et vues** est sélectionné dans la zone Objet.  
   
- **Réorganiser les pages avec la quantité d’espace libre par défaut**  
+ **Réorganiser les pages avec la quantité d'espace disponible par défaut**  
  Permet de supprimer les index sur les tables de la base de données et de les recréer avec le facteur de remplissage spécifié lors de la création des index.  
   
- **Modifier l’espace disponible par pourcentage de page de**  
+ **Modifier l’espace libre par pourcentage de page à**  
  Provoque la suppression des index des tables de la base de données et leur recréation avec un nouveau facteur de remplissage calculé automatiquement, la quantité d'espace libre spécifiée étant réservée dans les pages d'index. Plus le pourcentage est élevé, plus il y a d'espace libre réservé dans les pages d'index et plus l'index croît. Les valeurs valides sont comprises entre 0 et 100.  
   
  **Trier les résultats dans tempdb**  
- Utilisez la `SORT_IN_TEMPDB`option qui détermine où les résultats de tri intermédiaires générés pendant la création d’index, sont temporairement stockés. Si aucune opération de tri n’est requise ou si le tri peut être effectué dans la mémoire, l’option `SORT_IN_TEMPDB`est ignorée.  
+ Utilisez l' `SORT_IN_TEMPDB`option, qui détermine l’emplacement de stockage temporaire des résultats de tri intermédiaires générés pendant la création de l’index. Si aucune opération de tri n’est requise ou si le tri peut être effectué dans la mémoire, l’option `SORT_IN_TEMPDB`est ignorée.  
   
- **Conserver l’index en ligne lors de la réindexation**  
+ **Conserver l'index en ligne lors de la réindexation**  
  Utilisez l'option `ONLINE` qui permet aux utilisateurs d'accéder à la table sous-jacente ou aux données d'index cluster, ainsi qu'à tous les index non-cluster associés au cours des opérations d'index.  
   
 > [!NOTE]  
->  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  **Vue T-SQL**  
  Affiche les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutées sur le serveur pour cette tâche, selon les options sélectionnées.  
@@ -84,7 +84,7 @@ ms.locfileid: "62806985"
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
 ## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
- **Nom de la connexion**  
+ **Nom de connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
  **Sélectionnez ou entrez un nom de serveur.**  

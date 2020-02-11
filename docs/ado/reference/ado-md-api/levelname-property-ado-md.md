@@ -1,5 +1,5 @@
 ---
-title: LevelName, propriété (ADO MD) | Microsoft Docs
+title: Propriété LevelName (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,24 +17,24 @@ ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949588"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName, propriété (ADO MD)
 Indique le nom du niveau d’un [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Retourne un **chaîne** et est en lecture seule.  
+ Retourne une **chaîne** et est en lecture seule.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **LevelName** propriété pour récupérer le nom du niveau auquel appartient un membre. Cela correspond à la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) propriété d’un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet.  
+ Utilisez la propriété **LevelName** pour récupérer le nom du niveau auquel appartient un membre. Cela correspond à la propriété [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) d’un objet [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>S'applique à  
  [Member, objet (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Niveau objet (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
+ [Objet Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Name, propriété (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

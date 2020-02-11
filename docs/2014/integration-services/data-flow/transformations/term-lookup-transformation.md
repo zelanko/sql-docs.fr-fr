@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770315"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
@@ -56,11 +56,11 @@ ms.locfileid: "62770315"
   
  Quand un élément de recherche contient des termes débordant du cadre de référence, autrement dit si un sous-terme est trouvé dans plusieurs enregistrements de référence, la transformation de recherche de terme ne retourne qu’un seul résultat de recherche. L'exemple suivant illustre le résultat trouvé lorsqu'un élément de recherche présente un sous-terme de chevauchement. Dans cet exemple, le sous-terme est *Windows*, que l’on retrouve dans deux termes de référence. Toutefois, la transformation ne retourne pas deux résultats, mais un seul terme de référence uniquement, *Windows*. Le second terme de référence, *Windows 7 Professionnel*, n’est pas retourné.  
   
-|Élément|Value|  
+|Élément|Valeur|  
 |----------|-----------|  
 |Terme entré|Windows 7 Professionnel|  
 |Termes de référence|Windows, Windows 7 Professionnel|  
-|Sortie|Windows|  
+|Output|Windows|  
   
  La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants : %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " et '.  
   
@@ -78,7 +78,8 @@ ms.locfileid: "62770315"
   
  Les colonnes de sortie de la transformation, dont la propriété InputColumnType a la valeur 0 ou 2, sont accompagnées de la propriété CustomLineageID, qui contient l’identificateur de lignage affecté à la colonne par un composant amont du flux de données.  
   
- La transformation de recherche de terme ajoute deux colonnes à la sortie de la transformation, dont les noms par défaut sont `Term` et `Frequency`. `Term` contient un terme issu de la table de recherche et `Frequency` contient le nombre d'occurrences du terme de la table de référence dans le jeu de données d'entrée. Ces colonnes n’incluent pas la propriété CustomLineageID.  
+ La transformation de recherche de terme ajoute deux colonnes à la sortie de la transformation, dont les noms par défaut sont `Term` et `Frequency`. 
+  `Term` contient un terme issu de la table de recherche et `Frequency` contient le nombre d'occurrences du terme de la table de référence dans le jeu de données d'entrée. Ces colonnes n’incluent pas la propriété CustomLineageID.  
   
  La table de recherche doit être une table d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou Access. Si la sortie de la transformation d'extraction de terme est enregistrée dans une table, cette table peut être utilisée comme table de référence (sachant que les autres tables peuvent également être utilisées). Pour pouvoir utiliser la transformation de recherche de terme sur le texte de fichiers plats, de classeurs Excel ou d’autres sources, vous devez les importer dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou Access.  
   
@@ -94,7 +95,7 @@ ms.locfileid: "62770315"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de recherche de terme**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de transformation de recherche de terme &#40;onglet Table de référence&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Éditeur de transformation de recherche de terme &#40;onglet de la table de référence&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Éditeur de transformation de recherche de terme &#40;onglet Recherche de terme&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
@@ -106,6 +107,6 @@ ms.locfileid: "62770315"
   
 -   [Propriétés personnalisées des transformations](transformation-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
   

@@ -16,18 +16,18 @@ ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928623"
 ---
 # <a name="actionenum"></a>ActionEnum
-Spécifie le type d’action à effectuer lorsque [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) est appelée.  
+Spécifie le type d’action à effectuer lorsque l’opération [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) est appelée.  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adAccessDeny**|3|Le groupe ou l’utilisateur sera refusé les autorisations spécifiées.|  
+|**adAccessDeny**|3|Les autorisations spécifiées sont refusées au groupe ou à l’utilisateur.|  
 |**adAccessGrant**|1|Le groupe ou l’utilisateur aura au moins les autorisations demandées.|  
-|**adAccessRevoke**|4|Les droits d’accès explicites du groupe ou utilisateur seront révoquées.|  
+|**adAccessRevoke**|4|Tous les droits d’accès explicites du groupe ou de l’utilisateur seront révoqués.|  
 |**adAccessSet**|2|Le groupe ou l’utilisateur aura exactement les autorisations demandées.|

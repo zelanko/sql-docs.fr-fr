@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833107"
 ---
 # <a name="odata-connection-manager"></a>Gestionnaire de connexions OData
@@ -27,7 +27,7 @@ ms.locfileid: "62833107"
   
 -   Cliquez avec le bouton droit sur le dossier **Gestionnaires de connexions** dans l' **Explorateur de solutions** et cliquez sur **Nouveau gestionnaire de connexions**. Sélectionnez **ODATA** pour **Type du gestionnaire de connexions**.  
   
--   Avec le bouton droit dans le **gestionnaires de connexions** volet en bas du Concepteur de packages, puis sélectionnez **nouvelle connexion...** . Sélectionnez **ODATA** pour **Type du gestionnaire de connexions**.  
+-   Cliquez avec le bouton droit dans le volet **gestionnaires de connexions** au bas du concepteur de packages, puis sélectionnez **nouvelle connexion...**. Sélectionnez **ODATA** pour le **type de gestionnaire de connexions**.  
   
 ## <a name="connection-manager-authentication"></a>Authentification du gestionnaire de connexions  
  Le Gestionnaire de connexions OData prend en charge deux modes d'authentification.  
