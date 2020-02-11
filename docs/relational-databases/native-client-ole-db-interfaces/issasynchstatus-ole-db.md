@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69af6abcf8a49cb25882394d95a2e0c330bab8c6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789304"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **ISSAsynchStatus** expose la prise en charge des opérations asynchrones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il s'agit d'une interface facultative qui hérite de l'interface OLE DB de base **IDBAsynchStatus**. Outre les méthodes **Abort** et **GetStatus** héritées de **IDBAsynchStatus**, **ISSAsynchStatus** fournit une nouvelle méthode qui permet d'attendre qu'une opération asynchrone se termine ou qu'un délai d'expiration soit dépassé.  
+  **ISSAsynchStatus** expose la prise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en charge des opérations asynchrones. Il s'agit d'une interface facultative qui hérite de l'interface OLE DB de base **IDBAsynchStatus**. Outre les méthodes **Abort** et **GetStatus** héritées de **IDBAsynchStatus**, **ISSAsynchStatus** fournit une nouvelle méthode qui permet d'attendre qu'une opération asynchrone se termine ou qu'un délai d'expiration soit dépassé.  
   
 |Méthode|Description|  
 |------------|-----------------|  
@@ -39,14 +39,14 @@ ms.locfileid: "73789304"
   
  Les méthodes suivantes prennent en charge l'utilisation d'une exécution asynchrone dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   **ICommand::Execute**  
+-   **ICommand :: Execute**  
   
--   **IOpenRowset::OpenRowset**  
+-   **IOpenRowset :: OpenRowset**  
   
--   **IMultipleResults::GetResult**  
+-   **IMultipleResults :: GetResult**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interfaces &#40;OLE DB&#41; ](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
- [Exécution d’opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
+ [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [Exécution d'opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 36141c426bb0d8906e5b2d2d7bb4d21aadace6f2
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095917"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Création, modification et suppression de schémas
@@ -25,7 +25,7 @@ ms.locfileid: "74095917"
   L'objet <xref:Microsoft.SqlServer.Management.Smo.Schema> représente le contexte de propriété pour un objet de base de données. La propriété <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database> représente une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet&#35; Smo Visual C dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un projet Visual C&#35; Smo dans Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Création, modification et suppression d'un schéma en Visual Basic  
  Cet exemple de code montre comment créer un schéma et l'attribuer à un objet de base de données. Le programme accorde ensuite l'autorisation à un utilisateur, puis crée une table dans le schéma.  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc7744d57ce2bdbad4f0000252999582a8dc37c2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785528"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
@@ -39,10 +39,10 @@ ms.locfileid: "73785528"
   
  Pour plus d’informations, consultez [métadonnées de paramètre table pour les instructions préparées](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- Pour plus d’informations sur les paramètres table, consultez [ &#40;&#41;ODBC Table-valued Parameters](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>Prise en charge par SQLSetStmtAttr des colonnes éparses  
- SQLSetStmtAttr peut être utilisé pour définir SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez la section SQL_SOPT_SS_NAME_SCOPE, plus loin dans cette rubrique. Pour plus d’informations sur les colonnes éparses, consultez [colonnes éparses prennent en charge &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ SQLSetStmtAttr peut être utilisé pour définir SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez la section SQL_SOPT_SS_NAME_SCOPE, plus loin dans cette rubrique. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="statement-attributes"></a>Attributs d'instruction  
  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend aussi en charge les attributs d'instruction spécifiques au pilote suivants.  
@@ -52,7 +52,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Par défaut Désactive les curseurs avant uniquement et en lecture seule et l’auto-extraction, active **SQLGetData** sur les curseurs avant uniquement et en lecture seule. Lorsque SQL_SOPT_SS_CURSOR_OPTIONS a la valeur SQL_CO_OFF, le type de curseur ne change pas. Autrement dit, le curseur avant uniquement rapide demeure un curseur avant uniquement rapide. Pour modifier le type de curseur, l’application doit maintenant définir un type de curseur différent à l’aide de **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|valeur par défaut. Désactive les curseurs avant uniquement et en lecture seule et l’auto-extraction, active **SQLGetData** sur les curseurs avant uniquement et en lecture seule. Lorsque SQL_SOPT_SS_CURSOR_OPTIONS a la valeur SQL_CO_OFF, le type de curseur ne change pas. Autrement dit, le curseur avant uniquement rapide demeure un curseur avant uniquement rapide. Pour modifier le type de curseur, l’application doit maintenant définir un type de curseur différent à l’aide de **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Active les curseurs avant uniquement et en lecture seule, désactive **SQLGetData** sur les curseurs avant uniquement et en lecture seule.|  
 |SQL_CO_AF|Active l'option d'auto-extraction sur tout type de curseur. Lorsque cette option est définie pour un descripteur d’instruction, **SQLExecute** ou **SQLExecDirect** génère une **SQLFetchScroll** implicite (SQL_FIRST). Le curseur est ouvert et le premier lot de lignes est retourné en un seul aller-retour au serveur.|  
 |SQL_CO_FFO_AF|Active les curseurs avant uniquement rapides avec l'option d'auto-extraction. La situation est la même que si SQL_CO_AF et SQL_CO_FFO étaient spécifiés.|  
@@ -66,7 +66,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Par défaut Après l’appel de la [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu’à ce que **SQLExecute** soit appelé ou que l’opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) soit exécutée.|  
+|SQL_DP_ON|valeur par défaut. Après l’appel de la [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu’à ce que **SQLExecute** soit appelé ou que l’opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) soit exécutée.|  
 |SQL_DP_OFF|L’instruction est préparée dès que **SQLPrepare** est exécuté.|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -76,7 +76,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_RE_OFF|Par défaut Le pilote ne convertit pas les valeurs date, heure et devise monétaire en données de chaînes de caractères à l'aide des paramètres régionaux du client.|  
+|SQL_RE_OFF|valeur par défaut. Le pilote ne convertit pas les valeurs date, heure et devise monétaire en données de chaînes de caractères à l'aide des paramètres régionaux du client.|  
 |SQL_RE_ON|Le pilote utilise les paramètres régionaux du client lors de la conversion des données date, heure et devise monétaire en données de chaînes de caractères.|  
   
  Les paramètres de conversion régionaux s'appliquent aux types de données monétaire, numérique, date et heure. Le paramètre de conversion est applicable uniquement aux conversions sortantes lorsque des valeurs monétaire, numérique, de date ou d'heure sont converties en chaînes de caractères.  
@@ -92,14 +92,14 @@ ms.locfileid: "73785528"
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Désactive la journalisation des opérations effectuées sur des données de **texte** et d' **image** .|  
-|SQL_TL_ON|Par défaut Active la journalisation des opérations effectuées sur les données de **texte** et d' **image** .|  
+|SQL_TL_ON|valeur par défaut. Active la journalisation des opérations effectuées sur les données de **texte** et d' **image** .|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  L'attribut SQL_SOPT_SS_HIDDEN_COLUMNS expose dans le jeu de résultats les colonnes masquées dans une instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE. Le pilote n'expose pas ces colonnes par défaut. La valeur de *ValuePtr* est de type SQLLEN.  
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_HC_OFF|Par défaut Les colonnes FOR BROWSE sont masquées dans le jeu de résultats.|  
+|SQL_HC_OFF|valeur par défaut. Les colonnes FOR BROWSE sont masquées dans le jeu de résultats.|  
 |SQL_HC_ON|Expose les colonnes FOR BROWSE.|  
   
 ### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
@@ -112,7 +112,7 @@ ms.locfileid: "73785528"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Par exemple:  
+ Par exemple :  
   
  `service=mySSBService;local database=mydb`  
   
@@ -133,7 +133,7 @@ ms.locfileid: "73785528"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Par défaut<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns ne retourne que les colonnes qui ne sont pas membres du **column_set**épars.|  
+|SQL_SS_NAME_SCOPE_TABLE|valeur par défaut.<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns ne retourne que les colonnes qui ne sont pas membres du **column_set**épars.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indique que l'application requiert les métadonnées pour un type de table, plutôt qu'une table réelle (les fonctions de catalogue doivent retourner les métadonnées pour les types de table). L’application passe ensuite la TYPE_NAME du paramètre table comme paramètre *TableName* .|  
 |SQL_SS_NAME_SCOPE_EXTENDED|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne toutes les colonnes, indépendamment de l’appartenance **column_set** .|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui sont membres du **column_set**épars.|  
@@ -148,7 +148,7 @@ ms.locfileid: "73785528"
  Si une fonction de catalogue autre que SQLTables, SQLColumns ou SQLPrimaryKeys est appelée lorsque SQL_SOPT_SS_NAME_SCOPE a une valeur autre que SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR est retourné. Un enregistrement de diagnostic est généré avec SQLSTATE HY010 et le message « Erreur de séquence de fonction (SQL_SOPT_SS_NAME_SCOPE n'est pas défini avec la valeur SQL_SS_NAME_SCOPE_TABLE) ».  
   
 ## <a name="see-also"></a>Voir aussi  
-   de la [fonction SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)  
- [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [SQLGetStmtAttr fonction)](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729299"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modifier une entité (Master Data Services)
@@ -46,7 +46,7 @@ ms.locfileid: "73729299"
   
 6.  Dans le champ **Nom des tables intermédiaires** , tapez un nom mis à jour pour la table de mise en lots.  
   
-7.  Pour le champ **Type du journal des transactions**, choisissez le type mis à jour du journal des transactions dans la liste déroulante.  
+7.  Pour le champ **Type du journal des transactions** , choisissez le type mis à jour du journal des transactions dans la liste déroulante.  
   
      Pour plus d’informations, consultez [Modifier le type du journal des transactions de l’entité &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md).  
   
@@ -56,9 +56,9 @@ ms.locfileid: "73729299"
   
 9. Cochez la case **Autoriser la compression des données** . La compression de ligne est activée par défaut.  
   
-     Pour plus d'informations, consultez [Data Compression](../relational-databases/data-compression/data-compression.md)  
+     Pour plus d’informations, consultez [compression des données](../relational-databases/data-compression/data-compression.md) .  
   
-## <a name="status"></a>État  
+## <a name="status"></a>Statut  
  La colonne d’état de la grille affiche l’état de l’opération sur l’entité. Lorsque vous cliquez sur **Enregistrer l’entité**, l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.  
   
  ![Icône de mise à jour de l’État](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État")  

@@ -1,5 +1,5 @@
 ---
-title: Prise en charge SQL Server Native Client pour la haute disponibilité, récupération d’urgence | Microsoft Docs
+title: Prise en charge SQL Server Native Client pour la haute disponibilité et la récupération d’urgence | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206645"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client
-  Cette rubrique décrit la prise en charge de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (ajouté dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [écouteurs de groupe de disponibilité, connectivité Client et basculement d’Application &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [secondaires actifs : Réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  Cette rubrique décrit la prise en charge de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (ajouté dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Vous pouvez spécifier l’écouteur d’un groupe de disponibilité donné dans la chaîne de connexion. Si une application [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est connectée à une base de données dans un groupe de disponibilité qui bascule, la connexion d'origine est rompue et l'application doit ouvrir une nouvelle connexion pour reprendre le travail après le basculement.  
   
@@ -28,9 +28,10 @@ ms.locfileid: "68206645"
 >  L'augmentation du délai de connexion et l'implémentation de la logique de tentative de connexion augmente la probabilité qu'une application se connecte à un groupe de disponibilité. En raison du risque d'échec de connexion en cas de basculement d'un groupe de disponibilité, il est également nécessaire d'implémenter la logique de déclenchement de nouvelles tentatives de connexion, afin de multiplier les tentatives jusqu'à ce qu'une connexion soit établie.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connexion à MultiSubnetFailover  
- Spécifiez toujours `MultiSubnetFailover=Yes` lors de la connexion à un écouteur du groupe de disponibilité SQL Server 2012 ou à une instance de cluster de basculement SQL Server 2012. `MultiSubnetFailover` permet un basculement plus rapide pour tous les groupes de disponibilité et l'instance de cluster de basculement dans SQL Server 2012, et réduit considérablement le temps de basculement pour les topologies AlwaysOn uniques et de sous-réseaux multiples. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d'un basculement de sous-réseau, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retente de façon intensive d'établir la connexion TCP.  
+ Spécifiez toujours `MultiSubnetFailover=Yes` lors de la connexion à un écouteur du groupe de disponibilité SQL Server 2012 ou à une instance de cluster de basculement SQL Server 2012. 
+  `MultiSubnetFailover` permet un basculement plus rapide pour tous les groupes de disponibilité et l'instance de cluster de basculement dans SQL Server 2012, et réduit considérablement le temps de basculement pour les topologies AlwaysOn uniques et de sous-réseaux multiples. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d'un basculement de sous-réseau, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retente de façon intensive d'établir la connexion TCP.  
   
- La propriété de connexion `MultiSubnetFailover` indique que l'application est déployée sur un groupe de disponibilité ou une instance de cluster de basculement et que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tente de se connecter à la base de données sur l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] principale en essayant toutes les adresses IP du groupe de disponibilité. Lorsque `MultiSubnetFailover=Yes` est spécifié pour une connexion, le client tente de tentatives de connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. Cela permet une reconnexion plus rapide après le basculement d'un groupe de disponibilité AlwaysOn ou d'une instance de cluster de basculement AlwaysOn et s'applique aux groupes de disponibilité et aux instances de cluster de basculement uniques et à plusieurs sous-réseaux.  
+ La propriété de connexion `MultiSubnetFailover` indique que l'application est déployée sur un groupe de disponibilité ou une instance de cluster de basculement et que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tente de se connecter à la base de données sur l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] principale en essayant toutes les adresses IP du groupe de disponibilité. Lorsque `MultiSubnetFailover=Yes` est spécifié pour une connexion, le client réessaye les tentatives de connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. Cela permet une reconnexion plus rapide après le basculement d'un groupe de disponibilité AlwaysOn ou d'une instance de cluster de basculement AlwaysOn et s'applique aux groupes de disponibilité et aux instances de cluster de basculement uniques et à plusieurs sous-réseaux.  
   
  Pour plus d’informations sur les mots clés de chaîne de connexion, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68206645"
   
 -   La connexion à une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurée avec plus de 64 adresses IP provoque un échec de connexion.  
   
--   Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’authentification, l’authentification Kerberos ou l’authentification Windows.  
+-   Le comportement d'une application qui utilise la propriété de connexion `MultiSubnetFailover` n'est pas affecté selon le type d'authentification : authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], authentification Kerberos ou authentification Windows.  
   
 -   Vous pouvez augmenter la valeur de `loginTimeout` pour tenir compte du temps de basculement et réduire les nouvelles tentatives de connexion d'application.  
   
@@ -63,14 +64,14 @@ ms.locfileid: "68206645"
   
  Si vous mettez à niveau une application [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client qui utilise actuellement la mise en miroir de bases de données vers un scénario de sous-réseaux multiples, vous devez supprimer la propriété de connexion `Failover_Partner` et la remplacer par `MultiSubnetFailover` avec la valeur `Yes` et remplacer le nom du serveur dans la chaîne de connexion par un écouteur du groupe de disponibilité. Si une chaîne de connexion utilise `Failover_Partner` et `MultiSubnetFailover=Yes`, le pilote génère une erreur. Toutefois, si une chaîne de connexion utilise `Failover_Partner` et `MultiSubnetFailover=No` (ou `ApplicationIntent=ReadWrite`), l'application utilise la mise en miroir de bases de données.  
   
- Le pilote retournera une erreur si la mise en miroir de base de données est utilisée sur la base de données primaire dans le groupe de disponibilité et si `MultiSubnetFailover=Yes` est utilisé dans la chaîne de connexion qui se connecte à une base de données principale au lieu d’un écouteur de groupe de disponibilité.  
+ Le pilote renvoie une erreur si la mise en miroir de bases de données est utilisée sur la base de données primaire dans `MultiSubnetFailover=Yes` le groupe de disponibilité, et si est utilisé dans la chaîne de connexion qui se connecte à une base de données primaire plutôt qu’à un écouteur de groupe de disponibilité.  
   
 ## <a name="specifying-application-intent"></a>Spécification de l'intention d'application  
  Lorsque `ApplicationIntent=ReadOnly`, le client demande une charge de travail en lecture lors de la connexion à une base de données prenant en charge AlwaysOn. Le serveur applique l'intention au moment de la connexion et pendant une instruction de base de données USE mais uniquement sur une base de données prenant en charge AlwaysOn.  
   
  Le mot clé `ApplicationIntent` ne fonctionne pas avec les bases de données en lecture seule existantes.  
   
- Une base de données peut autoriser ou interdire les charges de travail en lecture sur la base de données AlwaysOn ciblée. (Cette opération est effectuée avec la `ALLOW_CONNECTIONS` clause de le `PRIMARY_ROLE` et `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions.)  
+ Une base de données peut autoriser ou interdire les charges de travail en lecture sur la base de données AlwaysOn ciblée. (Cette opération s’effectue à `ALLOW_CONNECTIONS` l’aide de `PRIMARY_ROLE` la `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] clause des instructions et.)  
   
  Le mot clé `ApplicationIntent` est utilisé pour activer le routage en lecture seule.  
   
@@ -111,8 +112,10 @@ ms.locfileid: "68206645"
 |Fonction|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|La liste de serveurs retournée par `SQLBrowseConnect` n'inclut pas de VNN. Vous verrez seulement une liste de serveurs sans indication si ces derniers sont des serveurs autonomes, ou un serveur principal ou secondaire dans un cluster de Clustering de basculement Windows Server (WSFC) qui contient deux instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si la connexion à un serveur se solde par un échec, c'est peut-être parce que le paramètre `ApplicationIntent` n'est pas compatible avec la configuration de ce serveur.<br /><br /> Étant donné que `SQLBrowseConnect` ne reconnaît pas de serveurs dans un cluster Clustering de basculement Windows Server (WSFC) qui contient deux d'instances ou plus de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], `SQLBrowseConnect` ignore le mot clé de chaîne de connexion `MultiSubnetFailover`.|  
-|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` prend en charge `ApplicationIntent` et `MultiSubnetFailover` via des propriétés de connexion ou un nom de source de données (DSN).|  
-|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|`SQLDriverConnect` prend en charge `ApplicationIntent` et `MultiSubnetFailover` via des mots clés de chaîne de connexion, des propriétés de connexion ou un nom de source de données (DSN).|  
+|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|
+  `SQLConnect` prend en charge `ApplicationIntent` et `MultiSubnetFailover` via des propriétés de connexion ou un nom de source de données (DSN).|  
+|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|
+  `SQLDriverConnect` prend en charge `ApplicationIntent` et `MultiSubnetFailover` via des mots clés de chaîne de connexion, des propriétés de connexion ou un nom de source de données (DSN).|  
   
 ## <a name="ole-db"></a>OLE DB  
  OLE DB dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne prend pas en charge le mot clé `MultiSubnetFailover`.  
@@ -134,13 +137,16 @@ ms.locfileid: "68206645"
  Une application OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client peut utiliser l'une de ces méthodes pour spécifier l'intention de l'application :  
   
  `IDBInitialize::Initialize`  
- `IDBInitialize::Initialize` utilise le jeu de propriétés configuré précédemment pour initialiser la source de données et créer l'objet source de données. Spécifiez l'intention de l'application en tant que propriété de fournisseur ou dans le cadre de la chaîne de propriétés étendues.  
+ 
+  `IDBInitialize::Initialize` utilise le jeu de propriétés configuré précédemment pour initialiser la source de données et créer l'objet source de données. Spécifiez l'intention de l'application en tant que propriété de fournisseur ou dans le cadre de la chaîne de propriétés étendues.  
   
  `IDataInitialize::GetDataSource`  
- `IDataInitialize::GetDataSource` accepte une chaîne de connexion d'entrée qui peut contenir le mot clé `Application Intent`.  
+ 
+  `IDataInitialize::GetDataSource` accepte une chaîne de connexion d'entrée qui peut contenir le mot clé `Application Intent`.  
   
  `IDBProperties::GetProperties`  
- `IDBProperties::GetProperties` récupère la valeur de la propriété définie actuellement sur la source de données.  Vous pouvez récupérer la valeur `Application Intent` via les propriétés DBPROP_INIT_PROVIDERSTRING et SSPROP_INIT_APPLICATIONINTENT.  
+ 
+  `IDBProperties::GetProperties` récupère la valeur de la propriété définie actuellement sur la source de données.  Vous pouvez récupérer la valeur `Application Intent` via les propriétés DBPROP_INIT_PROVIDERSTRING et SSPROP_INIT_APPLICATIONINTENT.  
   
  `IDBProperties::SetProperties`  
  Pour définir la valeur de propriété `ApplicationIntent`, appelez `IDBProperties::SetProperties` qui passe la propriété `SSPROP_INIT_APPLICATIONINTENT` avec la valeur « `ReadWrite` » ou « `ReadOnly` » ou `DBPROP_INIT_PROVIDERSTRING` avec la valeur qui contient « `ApplicationIntent=ReadOnly` » ou « `ApplicationIntent=ReadWrite` ».  

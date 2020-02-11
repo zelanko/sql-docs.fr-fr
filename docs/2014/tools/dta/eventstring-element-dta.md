@@ -1,5 +1,5 @@
 ---
-title: EventString, élément (DTA) | Microsoft Docs
+title: Élément EventString (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211118"
 ---
 # <a name="eventstring-element-dta"></a>EventString, élément (Assistant Paramétrage de base de données)
@@ -37,7 +37,7 @@ ms.locfileid: "68211118"
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |`Weight`|facultatif. Spécifie le facteur de pondération de la requête (facteur d'importance) pour l'événement spécifié. Utilisez un type de données `float` pour spécifier la pondération. Par exemple, `Weight`="100.01". La valeur minimale que vous pouvez spécifier pour `Weight` est « 0 ».|  
   
@@ -45,16 +45,16 @@ ms.locfileid: "68211118"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`string`, longueur est illimitée.|  
-|**Valeur par défaut**|Aucune.|  
+|**Type de données et longueur**|`string`, la longueur est illimitée.|  
+|**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un élément enfant `EventString`, `File` ou `Database` pour le parent `Workload`, mais un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de travail avec l'élément `EventString`, vous ne pouvez pas spécifier une charge de travail avec l'élément `File` dans le même fichier d'entrée XML.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Workload, élément &#40;Assistant Paramétrage de base de données&#41;](workload-element-dta.md)|  
-|**Éléments enfants**|Aucune.|  
+|**Élément parent**|[Élément de charge de travail &#40;&#41;DTA](workload-element-dta.md)|  
+|**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez [Exemple de fichier d’entrée XML avec une charge de travail Inline &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de requêtes de données d’exploration de données (onglet de modèle d’exploration de données) | Microsoft Docs
+title: Éditeur de transformation de requête d’exploration de données (onglet modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059767"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Éditeur de transformation de requête d'exploration de données (onglet Modèle d'exploration de données)
@@ -27,20 +27,20 @@ ms.locfileid: "66059767"
  Pour en savoir plus sur la transformation de requête d'exploration de données, consultez [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md).  
   
 ## <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Sélectionnez une connexion Analysis Services en utilisant la zone de liste, ou créez une connexion en utilisant le bouton **Nouvelle** comme indiqué ci-dessous.  
   
  **Nouveau**  
  Créez une connexion à l’aide de la boîte de dialogue **Ajout d’un gestionnaire de connexions Analysis Services** .  
   
- **Structure d'exploration de données**  
+ **Structure d’exploration de données**  
  Sélectionnez dans la liste des structures de modèles d'exploration de données.  
   
- **Modèles d'exploration de données**  
+ **Modèles d’exploration de données**  
  Affiche la liste des modèles d’exploration de données associés à la structure d’exploration de données sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de transformation de requête d’exploration de données &#40;onglet Requête&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Éditeur de transformation de requête d’exploration de données &#40;onglet requête&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   
