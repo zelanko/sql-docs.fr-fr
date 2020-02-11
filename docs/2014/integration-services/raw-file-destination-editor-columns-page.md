@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Destination de fichier brut (Page colonnes) | Microsoft Docs
+title: Éditeur de destination de fichier brut (page colonnes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056577"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Éditeur de destination de fichier brut (page Colonnes)
@@ -37,7 +37,7 @@ ms.locfileid: "66056577"
 2.  Cliquez avec le bouton droit sur le composant, puis cliquez sur **Modifier**.  
   
 ##  <a name="connection"></a> Définir les options de l'onglet Gestionnaires de connexions  
- **Mode d'accès**  
+ **Mode d’accès**  
  Sélectionnez la façon dont le nom de fichier est spécifié. Sélectionnez **Nom de fichier** pour entrer directement le nom de fichier et le chemin d'accès, ou bien **Nom de fichier à partir d'une variable** pour spécifier une variable qui contient le nom de fichier.  
   
  **Nom de fichier** ou **Nom de la variable**  
