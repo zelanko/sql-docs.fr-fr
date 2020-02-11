@@ -19,20 +19,20 @@ ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060385"
 ---
-# <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
+# <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur un jeu d'éléments de collecte, y compris la planification, le mode de collecte et son état.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|collection_set_id|**Int**|Identificateur local pour le jeu d'éléments de collection. N'accepte pas la valeur NULL.|  
+|collection_set_id|**int**|Identificateur local pour le jeu d'éléments de collection. N'accepte pas la valeur NULL.|  
 |collection_set_uid|**uniqueidentifier**|Identificateur global unique du jeu d'éléments de collecte. N'accepte pas la valeur NULL.|  
 |name|**nvarchar(4000)**|Nom du jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |target|**nvarchar(max)**|Identifie la cible pour le jeu d'éléments de collecte. Autorise la valeur NULL.|  

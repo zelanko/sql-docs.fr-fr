@@ -1,5 +1,5 @@
 ---
-title: Fichiers et numéros de Version | Microsoft Docs
+title: Fichiers et numéros de version | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753411"
 ---
 # <a name="files-and-version-numbers"></a>Fichiers et numéros de version
-  Toutes requises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants de Management Objects (SMO) sont installés dans le cadre d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client ou serveur. SMO est implémenté dans plusieurs assemblys managés. Vous pouvez développer des applications SMO sur un client ou sur un serveur.  
+  Tous les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants Smo (Management Objects) requis sont installés dans le cadre d' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une instance de client ou serveur. SMO est implémenté dans plusieurs assemblys managés. Vous pouvez développer des applications SMO sur un client ou sur un serveur.  
   
 |Répertoire|Fichier|Description|  
 |---------------|----------|-----------------|  

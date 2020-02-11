@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938571"
 ---
-# <a name="mssqleng020575"></a>MSSQL_ENG020575
+# <a name="mssql_eng020575"></a>MSSQL_ENG020575
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|20575|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|20575|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
 |Texte du message|L'Abonné '%s' avec un abonnement à l'article '%s' de la publication '%s' a passé la validation de données.|  
