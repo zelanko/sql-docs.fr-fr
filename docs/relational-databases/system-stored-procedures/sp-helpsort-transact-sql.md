@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997355"
 ---
-# <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
+# <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Affiche l'ordre de tri et le jeu de caractères pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,14 +39,14 @@ ms.locfileid: "67997355"
 sp_helpsort  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Renvoie le classement par défaut du serveur.  
   
 ## <a name="remarks"></a>Notes  
- Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé avec un classement spécifié pour être compatible avec une installation antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** renvoie des résultats vides. Lorsque ce comportement survient, vous pouvez déterminer le classement en créant une requête sur l'objet SERVERPROPERTY, telle que : `SELECT SERVERPROPERTY ('Collation');`.  
+ Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée avec un classement spécifié comme compatible avec une installation antérieure de, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_helpsort** retourne des résultats vides. Lorsque ce comportement survient, vous pouvez déterminer le classement en créant une requête sur l'objet SERVERPROPERTY, telle que : `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -68,9 +68,9 @@ sp_helpsort;
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
+ [sys. fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
   

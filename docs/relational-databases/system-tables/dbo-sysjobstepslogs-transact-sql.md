@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobstepslogs (Transact-SQL) | Microsoft Docs
+title: dbo. sysjobstepslogs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,24 +20,24 @@ ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fec1b43f3e129a752e79024f3800d6f4fb3fb60a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984927"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient le journal des étapes de travail pour toutes les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent configurées pour écrire la sortie des étapes dans une table. Cette table est stockée dans le **msdb** base de données.  
+  Contient le journal des étapes de travail pour toutes les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent configurées pour écrire la sortie des étapes dans une table. Cette table est stockée dans la base de données **msdb** .  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**log_id**|**Int**|ID du journal d'étapes de travail.|  
-|**log**|**nvarchar(max)**|Contenu du journal d'étapes de travail.|  
-|**date_created**|**datetime**|Date et heure de création du journal d'étapes de travail.|  
-|**date_modified**|**datetime**|Date et heure de la dernière modification du journal d'étapes de travail.|  
-|**log_size**|**Int**|Taille, en octets, du journal d'étapes de travail.|  
+|**log_id**|**int**|ID du journal d'étapes de travail.|  
+|**Sign**|**nvarchar(max)**|Contenu du journal d'étapes de travail.|  
+|**date_created**|**DATETIME**|Date et heure de création du journal d'étapes de travail.|  
+|**date_modified**|**DATETIME**|Date et heure de la dernière modification du journal d'étapes de travail.|  
+|**log_size**|**int**|Taille, en octets, du journal d'étapes de travail.|  
 |**step_uid**|**uniqueidentifier**|Identificateur unique de l'étape de travail.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Colonnes de texte et d’image Détachées des colonnes Text et Image | Microsoft Docs
+title: Colonnes de texte et d’image liées et non liées | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,19 +21,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf8ac0cf868394d9aa8063220939feee69ac2f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626582"
 ---
-# <a name="bound-vs-unbound-text-and-image-columns"></a>Colonnes de texte et d’image liées et non liées
-  Lors de l’utilisation de curseurs côté serveur, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client est optimisé pour ne pas transmettre les données pour indépendant **texte**, **ntext**, ou **image** colonnes au niveau de la temps **SQLFetch** est effectuée. Le **texte**, **ntext**, ou **image** données ne sont pas réellement récupérées à partir du serveur jusqu'à ce que les problèmes des applications [SQLGetData](../native-client-odbc-api/sqlgetdata.md) pour le colonne.  
+# <a name="bound-vs-unbound-text-and-image-columns"></a>Colonnes de texte et d'image liées et non liées
+  Lors de l’utilisation de curseurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] côté serveur, le pilote ODBC Native Client est optimisé pour ne pas transmettre les données des colonnes de **texte**, **ntext**ou **image** non liées au moment où **SQLFetch** est exécutée. Les données **Text**, **ntext**ou **image** ne sont pas réellement récupérées à partir du serveur tant que l’application n’émet pas [SQLGetData](../native-client-odbc-api/sqlgetdata.md) pour la colonne.  
   
- De nombreuses applications peuvent être écrites afin qu’aucun **texte**, **ntext**, ou **image** données s’affiche pendant un utilisateur est simplement le défilement haut et le bas dans un curseur. Lorsqu’un utilisateur sélectionne une ligne pour obtenir plus de détails, l’application peut ensuite appeler **SQLGetData** pour récupérer le **texte**, **ntext**, ou **image** données. Cela évite de transmettre le **texte**, **ntext**, ou **image** données pour toutes les lignes de l’utilisateur sans sélectionner et peut par conséquent d’empêchent la transmission de très grande taille quantités de données.  
+ De nombreuses applications peuvent être écrites de sorte qu’aucune donnée **Text**, **ntext**ou **image** ne soit affichée alors qu’un utilisateur fait simplement défiler la liste vers le haut et vers le haut dans un curseur. Lorsqu’un utilisateur sélectionne une ligne pour obtenir plus de détails, l’application peut ensuite appeler **SQLGetData** pour extraire les données **Text**, **ntext**ou **image** . Cela empêchera la transmission des données **Text**, **ntext**ou **image** pour les lignes que l’utilisateur ne sélectionne pas et peut donc empêcher la transmission de très grandes quantités de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La gestion des colonnes Text et Image](managing-text-and-image-columns.md)   
+ [Gestion des colonnes texte et image](managing-text-and-image-columns.md)   
  [Comportements des curseurs](../native-client-odbc-cursors/cursor-behaviors.md)  
   
   

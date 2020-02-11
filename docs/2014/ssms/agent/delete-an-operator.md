@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524385"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  Cette rubrique décrit la suppression d'un opérateur de façon à ce qu'il ne reçoive plus de notification d'alerte de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique explique comment supprimer un opérateur afin qu’il ne reçoive [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plus de notifications [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] d’alerte [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de [!INCLUDE[tsql](../../includes/tsql-md.md)]l’agent dans à l’aide de ou de.  
   
  **Dans cette rubrique**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62524385"
   
      [Sécurité](#Security)  
   
--   **Pour supprimer un opérateur, utilisez :**  
+-   **Pour supprimer un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62524385"
   
 #### <a name="to-delete-an-operator"></a>Pour supprimer un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

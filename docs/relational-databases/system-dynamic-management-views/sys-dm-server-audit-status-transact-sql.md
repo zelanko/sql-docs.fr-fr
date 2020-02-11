@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs
+title: sys. dm_server_audit_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -19,25 +19,25 @@ ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313691"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID de l'audit. Correspond au champ **audit_id** dans l’affichage catalogue **sys. audits** .|  
-|**nom**|**sysname**|Nom de l’audit. Identique au champ **nom** de l’affichage catalogue **sys. server_audits** .|  
-|**status**|**smallint**|État numérique de l'audit du serveur :<br /><br /> 0 = non démarré<br /><br /> 1 =<br />        Démarré<br /><br /> 2 =<br />      Échec du Runtime<br /><br /> 3 = échec de la création de la cible<br /><br /> 4 = arrêt en cours|  
+|**nomme**|**sysname**|Nom de l’audit. Identique au champ **nom** de l’affichage catalogue **sys. server_audits** .|  
+|**statu**|**smallint**|État numérique de l'audit du serveur :<br /><br /> 0 = non démarré<br /><br /> 1 =<br />        Démarré<br /><br /> 2 =<br />      Échec du Runtime<br /><br /> 3 = échec de la création de la cible<br /><br /> 4 = arrêt en cours|  
 |**status_desc**|**nvarchar (256)**|Chaîne qui indique l'état de l'audit du serveur :<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Horodateur (en temps UTC) de la dernière modification d'état de l'audit.|  
-|**event_session_address**|**varbinary(8)**|Adresse de la session d'événements étendus associée à l'audit. En rapport avec l’affichage catalogue **sys. dm_xe_sessions. Address** .|  
+|**event_session_address**|**varbinary (8)**|Adresse de la session d'événements étendus associée à l'audit. En rapport avec l’affichage catalogue **sys. dm_xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar (256)**|Chemin d'accès complet et nom de fichier de la cible de fichier d'audit utilisée actuellement. Rempli uniquement pour les fichiers d'audit.|  
 |**audit_file_size**|**bigint**|Taille approximative du fichier d'audit, en octets. Rempli uniquement pour les fichiers d'audit.|  
   
@@ -64,9 +64,9 @@ ms.locfileid: "72313691"
  [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_server_audit_status](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
- [Créer un audit du serveur et une spécification d'audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [Créer un audit du serveur et une spécification d’audit du serveur](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

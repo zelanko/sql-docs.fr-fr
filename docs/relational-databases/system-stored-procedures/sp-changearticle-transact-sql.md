@@ -16,18 +16,18 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771399"
 ---
-# <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
+# <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifie les propriétés d'un article dans une publication transactionnelle ou d'instantané. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,9 +47,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'`Nom de l’article dont la propriété doit être modifiée. *article* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @property = ] 'property'`Est une propriété d’article à modifier. la *propriété* est **de type nvarchar (100)** .  
+`[ @property = ] 'property'`Est une propriété d’article à modifier. la *propriété* est **de type nvarchar (100)**.  
   
-`[ @value = ] 'value'`Nouvelle valeur de la propriété de l’article. la *valeur* est **de type nvarchar (255)** .  
+`[ @value = ] 'value'`Nouvelle valeur de la propriété de l’article. la *valeur* est **de type nvarchar (255)**.  
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
@@ -61,18 +61,18 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||Fourni pour la compatibilité ascendante. Utilisez **dest_table**.|  
 |**dest_table**||Nouvelle table de destination.|  
 |**destination_owner**||Nom du propriétaire de l’objet de destination.|  
-|**filter**||Nouvelle procédure stockée à utiliser pour filtrer la table (filtrage horizontal). La valeur par défaut est NULL. Ne peut pas être modifié pour les publications dans la réplication d'égal à égal.|  
-|**fire_triggers_on_snapshot**|**true**|Les déclencheurs de l'utilisateur répliqués sont exécutés lorsque l'instantané initial est appliqué.<br /><br /> Remarque : Pour que les déclencheurs soient répliqués, la valeur de masque de masque de *schema_option* doit inclure la valeur **0x100**.|  
-||**false**|Les déclencheurs de l'utilisateur répliqués ne sont pas exécutés lorsque l'instantané initial est appliqué.|  
+|**filtres**||Nouvelle procédure stockée à utiliser pour filtrer la table (filtrage horizontal). La valeur par défaut est NULL. Ne peut pas être modifié pour les publications dans la réplication d'égal à égal.|  
+|**fire_triggers_on_snapshot**|**:**|Les déclencheurs de l'utilisateur répliqués sont exécutés lorsque l'instantané initial est appliqué.<br /><br /> Remarque : pour que les déclencheurs soient répliqués, la valeur de masque de réplication de *schema_option* doit inclure la valeur **0x100**.|  
+||**fausses**|Les déclencheurs de l'utilisateur répliqués ne sont pas exécutés lorsque l'instantané initial est appliqué.|  
 |**identity_range**||Contrôle la taille des plages d'identité affectées à l'abonné. Non pris en charge pour la réplication d'égal à égal.|  
 |**ins_cmd**||Instruction INSERT à exécuter ; à défaut, elle sera élaborée à partir du journal.|  
 |**pre_creation_cmd**||Définit une commande de précréation pouvant supprimer, effacer ou tronquer la table de destination avant l'application de la synchronisation.|  
 ||**None**|N'utilise pas de commande.|  
-||**drop**|Supprime la table de destination.|  
-||**delete**|Détruit la table de destination.|  
-||**truncate**|Tronque la table de destination.|  
+||**Déplacez**|Supprime la table de destination.|  
+||**supprimer**|Détruit la table de destination.|  
+||**tronquer**|Tronque la table de destination.|  
 |**pub_identity_range**||Contrôle la taille des plages d'identité affectées à l'abonné. Non pris en charge pour la réplication d'égal à égal.|  
-|**schema_option**||Spécifie le bitmap de l'option de génération de schéma pour l'article considéré. *schema_option* est **binaire (8)** . Pour plus d’informations, consultez la section Notes, plus loin dans cette rubrique.|  
+|**schema_option**||Spécifie le bitmap de l'option de génération de schéma pour l'article considéré. *schema_option* est **de type binaire (8)**. Pour plus d’informations, consultez la section Notes, plus loin dans cette rubrique.|  
 ||**0x00**|Désactive les scripts de l'Agent d'instantané.|  
 ||**0x01**|Génère la création d'objets (CREATE TABLE, CREATE PROCEDURE, etc.).|  
 ||**0x02**|Génère les procédures stockées qui propagent les modifications pour l'article, si elles sont définies.|  
@@ -89,7 +89,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|Réplique le classement au niveau des colonnes.|  
 ||**0x2000**|Réplique les propriétés étendues associées à l'objet source de l'article publié.|  
 ||**0x4000**|Réplique les clés uniques, si celles-ci sont définies, sur un article de table.|  
-||**0x8000**|Réplique la clé primaire et les clés uniques sur un article de table sous forme de contraintes, à l'aide d'instructions ALTER TABLE.<br /><br /> Remarque : Cette option est dépréciée. Utilisez à la place **0x80** et **0x4000** .|  
+||**0x8000**|Réplique la clé primaire et les clés uniques sur un article de table sous forme de contraintes, à l'aide d'instructions ALTER TABLE.<br /><br /> Remarque : cette option est dépréciée. Utilisez à la place **0x80** et **0x4000** .|  
 ||**0x10000**|Réplique les contraintes CHECK en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
 ||**0x20000**|Réplique les contraintes FOREIGN KEY en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
 ||**0x40000**|Réplique les groupes de fichiers associés à une table ou un index partitionné.|  
@@ -103,41 +103,41 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Réplique les index sur les colonnes **XML** .|  
 ||**0x8000000**|Crée tout schéma non encore présent chez l'abonné.|  
 ||**0x10000000**|Convertit les colonnes **XML** en **ntext** sur l’abonné.|  
-||**0x20000000**|Convertit les types de données d’objet volumineux (**nvarchar (max)** , **varchar (max)** et **varbinary (max)** ) introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] en types de données pris [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]en charge sur.|  
+||**0x20000000**|Convertit les types de données d’objet volumineux (**nvarchar (max)**, **varchar (max)** et **varbinary (max)**) introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] en types de données pris [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]en charge sur.|  
 ||**0x40000000**|Réplique les autorisations.|  
-||**to**|Tente de supprimer les dépendances envers tous les objets qui ne font pas partie de la publication.|  
+||**0x80000000**|Tente de supprimer les dépendances envers tous les objets qui ne font pas partie de la publication.|  
 ||**0x100000000**|Utilisez cette option pour répliquer l’attribut FILESTREAM s’il est spécifié sur des colonnes **varbinary (max)** . Ne spécifiez pas cette option si vous répliquez des tables sur des Abonnés [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] colonnes FILESTREAM sur des abonnés n’est pas prise en charge, quelle que soit la façon dont cette option de schéma est définie.<br /><br /> Consultez l’option associée **0x800000000**.|  
 ||**0x200000000**|Convertit les types de données de date et d’heure (**Date**, **Time**, **DateTimeOffset**et **datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduits dans en types de données pris en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans les versions antérieures de.|  
-||**0x400000000**|Réplique l'option de compression pour les données et les index. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).|  
+||**0x400000000**|Réplique l'option de compression pour les données et les index. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Définissez cette option pour stocker les données FILESTREAM dans leur propre groupe de fichiers sur l'Abonné. Si cette option n'est pas définie, les données FILESTREAM sont stockées dans le groupe de fichiers par défaut. La réplication ne crée pas de groupes de fichiers ; par conséquent, si vous définissez cette option, vous devez créer le groupe de fichiers avant d'appliquer l'instantané à l'Abonné. Pour plus d’informations sur la création d’objets avant l’application de l’instantané, consultez [exécuter des scripts avant et après l’application de l’instantané](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Consultez l’option associée **0x100000000**.|  
 ||**0x1000000000**|Convertit les types définis par l’utilisateur (UDT) common language runtime (CLR) supérieurs à 8000 octets en **varbinary (max)** afin que les colonnes de type UDT puissent être répliquées sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]les abonnés qui exécutent.|  
-||**0x2000000000**|Convertit le type de données **hierarchyid** en **varbinary (max)** afin que les colonnes de type **hierarchyid** puissent être répliquées sur les [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]abonnés qui exécutent. Pour plus d’informations sur l’utilisation des colonnes **hierarchyid** dans les tables répliquées, consultez [hierarchyid &#40;Transact&#41;-SQL](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x2000000000**|Convertit le type de données **hierarchyid** en **varbinary (max)** afin que les colonnes de type **hierarchyid** puissent être répliquées sur les [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]abonnés qui exécutent. Pour plus d’informations sur l’utilisation des colonnes **hierarchyid** dans les tables répliquées, consultez [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Réplique tous les index filtrés sur la table. Pour plus d’informations sur les index filtrés, consultez [créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md).|  
 ||**0x8000000000**|Convertit les types de données **Geography** et **Geometry** en **varbinary (max)** afin que les colonnes de ces types puissent être répliquées sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]les abonnés qui exécutent.|  
 ||**0x10000000000**|Réplique les index sur les colonnes de type **Geography** et **Geometry**.|  
 ||**0x20000000000**|Réplique l'attribut SPARSE pour les colonnes. Pour plus d’informations sur cet attribut, consultez [utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Activez l’écriture de scripts par l’agent d’instantané pour créer une table optimisée en mémoire sur l’abonné.|  
 ||**0x80000000000**|Convertit l’index cluster en index non-cluster pour les articles à mémoire optimisée.|  
-|**status**||Spécifie le nouvel état de la propriété.|  
-||**partitions horizontales Dts**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-||**inclure les noms de colonnes**|Les noms de colonnes sont inclus dans l'instruction INSERT répliquée.|  
-||**aucun nom de colonne**|Les noms de colonnes ne sont pas inclus dans l'instruction INSERT répliquée.|  
-||**aucune partition horizontale Dts**|La partition horizontale pour l'article n'est pas définie par un abonnement transformable.|  
+|**statu**||Spécifie le nouvel état de la propriété.|  
+||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+||**include column names**|Les noms de colonnes sont inclus dans l'instruction INSERT répliquée.|  
+||**no column names**|Les noms de colonnes ne sont pas inclus dans l'instruction INSERT répliquée.|  
+||**no dts horizontal partitions**|La partition horizontale pour l'article n'est pas définie par un abonnement transformable.|  
 ||**None**|Efface toutes les options d’état de la table [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) et marque l’article comme étant inactif.|  
-||**parameters**|Les modifications sont propagées vers l'abonné à l'aide de commandes paramétrables. Il s'agit du paramètre par défaut pour un nouvel article.|  
+||**paramètres**|Les modifications sont propagées vers l'abonné à l'aide de commandes paramétrables. Il s'agit du paramètre par défaut pour un nouvel article.|  
 ||**littéraux de chaîne**|Les modifications sont propagées vers l'abonné à l'aide de valeurs littérales de chaîne.|  
 |**sync_object**||Nom de la table ou de la vue utilisée pour produire un fichier de sortie de synchronisation. La valeur par défaut est NULL. Non pris en charge pour les serveurs de publication Oracle.|  
-|**tablespace**||Identifie l'espace de table utilisé par la table de journalisation pour un article publié à partir d'une base de données Oracle. Pour plus d’informations, consultez [Gérer des espaces disque logiques Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**threshold**||Valeur de pourcentage qui contrôle le moment où l'Agent de distribution affecte une nouvelle plage d'identité. Non pris en charge pour la réplication d'égal à égal.|  
-|**type**||Non pris en charge pour les serveurs de publication Oracle.|  
+|**espace disque logique**||Identifie l'espace de table utilisé par la table de journalisation pour un article publié à partir d'une base de données Oracle. Pour plus d’informations, consultez [Gérer des espaces disque logiques Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
+|**durée**||Valeur de pourcentage qui contrôle le moment où l'Agent de distribution affecte une nouvelle plage d'identité. Non pris en charge pour la réplication d'égal à égal.|  
+|**entrer**||Non pris en charge pour les serveurs de publication Oracle.|  
 ||**logbased**|Article basé sur le journal.|  
-||**logbased manualboth**|Article reposant sur un journal, avec filtre manuel et vue manuelle. Cette option nécessite que les propriétés *sync_object* et *Filter* soient également définies. Non pris en charge pour les serveurs de publication Oracle.|  
-||**logbased manualfilter**|Article reposant sur un journal, avec filtre manuel. Cette option nécessite que les propriétés *sync_object* et *Filter* soient également définies. Non pris en charge pour les serveurs de publication Oracle.|  
-||**logbased manualview**|Article reposant sur un journal, avec vue manuelle. Cette option requiert que la propriété *sync_object* soit également définie. Non pris en charge pour les serveurs de publication Oracle.|  
+||**logbased manualboth**|Article reposant sur un journal, avec filtre manuel et vue manuelle. Cette option nécessite que les propriétés de *filtre* et de *sync_object* soient également définies. Non pris en charge pour les serveurs de publication Oracle.|  
+||**logbased manualfilter**|Article reposant sur un journal, avec filtre manuel. Cette option nécessite que les propriétés de *filtre* et de *sync_object* soient également définies. Non pris en charge pour les serveurs de publication Oracle.|  
+||**logbased manualview**|Article reposant sur un journal, avec vue manuelle. Cette option nécessite que la propriété *sync_object* soit également définie. Non pris en charge pour les serveurs de publication Oracle.|  
 ||**viewlogbased indexés**|Article de vue indexée reposant sur un journal. Non pris en charge pour les serveurs de publication Oracle. Pour ce type d'article, il n'est pas nécessaire de publier la table de base séparément.|  
-||**index viewlogbased manualboth**|Article de vue indexée reposant sur un journal avec filtre manuel et vue manuelle. Cette option nécessite que les propriétés *sync_object* et *Filter* soient également définies. Pour ce type d'article, il n'est pas nécessaire de publier la table de base séparément. Non pris en charge pour les serveurs de publication Oracle.|  
-||**index viewlogbased manualfilter**|Article de vue indexée reposant sur un journal avec filtre manuel. Cette option requiert que les propriétés *sync_object* et *Filter* soient également définies. Pour ce type d'article, il n'est pas nécessaire de publier la table de base séparément. Non pris en charge pour les serveurs de publication Oracle.|  
-||**index viewlogbased manualview**|Article de vue indexée reposant sur un journal avec vue manuelle. Cette option requiert que la propriété *sync_object* soit également définie. Pour ce type d'article, il n'est pas nécessaire de publier la table de base séparément. Non pris en charge pour les serveurs de publication Oracle.|  
+||**index viewlogbased manualboth**|Article de vue indexée reposant sur un journal avec filtre manuel et vue manuelle. Cette option nécessite que les propriétés de *filtre* et de *sync_object* soient également définies. Pour ce type d'article, il n'est pas nécessaire de publier la table de base séparément. Non pris en charge pour les serveurs de publication Oracle.|  
+||**index viewlogbased manualfilter**|Article de vue indexée reposant sur un journal avec filtre manuel. Cette option requiert l' *sync_object* et les propriétés de *filtre* sont également définies. Pour ce type d'article, il n'est pas nécessaire de publier la table de base séparément. Non pris en charge pour les serveurs de publication Oracle.|  
+||**index viewlogbased manualview**|Article de vue indexée reposant sur un journal avec vue manuelle. Cette option nécessite que la propriété *sync_object* soit également définie. Pour ce type d'article, il n'est pas nécessaire de publier la table de base séparément. Non pris en charge pour les serveurs de publication Oracle.|  
 |**upd_cmd**||Instruction UPDATE à exécuter ; à défaut, elle sera élaborée à partir du journal.|  
 |NULL|NULL|Renvoie une liste de propriétés d'articles modifiables.|  
   
@@ -162,7 +162,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé lors de la modification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des propriétés d’un article sur un serveur de publication.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -194,11 +194,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **filter**  
+-   **filtres**  
   
 -   **ins_cmd**  
   
--   **status**  
+-   **statu**  
   
 -   **upd_cmd**  
   
@@ -208,7 +208,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 >  Lors de la modification de la valeur de *schema_option*, le système n’effectue pas de mise à jour au niveau du bit. Cela signifie que lorsque vous définissez *schema_option* à l’aide de **sp_changearticle**, les paramètres de bit existants peuvent être désactivés. Pour conserver les paramètres existants, vous devez effectuer [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) entre la valeur que vous définissez et la valeur actuelle de *schema_option*, qui peut être déterminée en exécutant [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Options de schéma valides  
- Le tableau suivant décrit les valeurs autorisées de *schema_option* en fonction du type de réplication (indiqué dans la partie supérieure) et du type d’article (affiché dans la première colonne).  
+ Le tableau suivant décrit les valeurs autorisées de *schema_option* en fonction du type de réplication (indiqué dans la partie supérieure) et du type d’article (indiqué dans la première colonne).  
   
 |Type de l'article|Type de réplication||  
 |------------------|----------------------|------|  
@@ -216,19 +216,19 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**logbased**|Toutes les options|Toutes les options, sauf **0x02**|  
 |**logbased manualfilter**|Toutes les options|Toutes les options, sauf **0x02**|  
 |**logbased manualview**|Toutes les options|Toutes les options, sauf **0x02**|  
-|**vue indexée logbased**|Toutes les options|Toutes les options, sauf **0x02**|  
-|**vue indexée logbased manualfilter**|Toutes les options|Toutes les options, sauf **0x02**|  
-|**vue indexée logbased manualview**|Toutes les options|Toutes les options, sauf **0x02**|  
-|**indexed view zone manualboth**|Toutes les options|Toutes les options, sauf **0x02**|  
+|**indexed view logbased**|Toutes les options|Toutes les options, sauf **0x02**|  
+|**indexed view logbased manualfilter **|Toutes les options|Toutes les options, sauf **0x02**|  
+|**indexed view logbased manualview**|Toutes les options|Toutes les options, sauf **0x02**|  
+|**indexed view logbase manualboth**|Toutes les options|Toutes les options, sauf **0x02**|  
 |**proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|  
-|**ProCable proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|  
-|**schéma de procédure uniquement**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|  
-|**afficher le schéma uniquement**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**,, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**,, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|  
-|**schéma Func uniquement**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|  
-|**schéma de vue indexée uniquement**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**,, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**,, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|  
+|**serializable proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|  
+|**proc schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|  
+|**view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, ****, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, ****, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|  
+|**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**et **0x80000000**|  
+|**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, ****, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, ****, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**et **0x80000000**|  
   
 > [!NOTE]
->  Pour les publications de mise à jour en attente, la valeur *schema_option* de **0x80** doit être activée. Les valeurs *schema_option* prises en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les publications non-sont les suivantes: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** et **0x4000**.  
+>  Pour les publications de mise à jour en attente, la valeur *schema_option* de **0x80** doit être activée. Les valeurs de *schema_option* prises en charge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les publications non sont : **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** et **0x4000**.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

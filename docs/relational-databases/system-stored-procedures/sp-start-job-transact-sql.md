@@ -18,18 +18,18 @@ ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032829"
 ---
-# <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
+# <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ordonne à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent d'exécuter immédiatement un travail.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,26 +45,26 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'` Le nom du travail à démarrer. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'`Nom du travail à démarrer. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @job_id = ] job_id` Le numéro d’identification du travail à démarrer. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id`Numéro d’identification du travail à démarrer. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` Le serveur cible sur laquelle démarrer la tâche. *nom_serveur* est **nvarchar (128)** , avec NULL comme valeur par défaut. *nom_serveur* doit être un des serveurs cibles sur lesquels le travail est actuellement ciblé.  
+`[ @server_name = ] 'server_name'`Serveur cible sur lequel le travail doit être démarré. *SERVER_NAME* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. *SERVER_NAME* doit être l’un des serveurs cibles auxquels le travail est actuellement ciblé.  
   
-`[ @step_name = ] 'step_name'` Le nom de l’étape à partir duquel commencer l’exécution du travail. S'applique uniquement aux travaux locaux. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut  
+`[ @step_name = ] 'step_name'`Nom de l’étape à laquelle commencer l’exécution du travail. S'applique uniquement aux travaux locaux. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- Cette procédure stockée se trouve dans le **msdb** base de données.  
+ Cette procédure stockée se trouve dans la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -75,9 +75,9 @@ sp_start_job
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de **SQLAgentUserRole** et **SQLAgentReaderRole** peuvent lancer uniquement les travaux dont ils sont propriétaires. Membres de **SQLAgentOperatorRole** peut démarrer tous les travaux locaux, y compris ceux qui sont détenus par d’autres utilisateurs. Membres de **sysadmin** peuvent lancer tous les travaux locaux et multiserveurs.  
+ Les membres de **SQLAgentUserRole** et **SQLAgentReaderRole** peuvent uniquement démarrer des travaux dont ils sont propriétaires. Les membres de **SQLAgentOperatorRole** peuvent démarrer tous les travaux locaux, y compris ceux qui appartiennent à d’autres utilisateurs. Les membres de **sysadmin** peuvent démarrer tous les travaux locaux et multiserveurs.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant démarre un travail appelé `Weekly Sales Data Backup`.  

@@ -18,13 +18,13 @@ ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997582"
 ---
-# <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
+# <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur les connexions distantes d'un serveur distant spécifique ou de tous les serveurs distants, définis sur le serveur local.  
@@ -32,7 +32,7 @@ ms.locfileid: "67997582"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilisez des serveurs liés et des procédures stockées de serveur lié à la place.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +43,13 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @remoteserver **=** ] **'***remoteserver***'**  
- Nom du serveur distant sur lequel les informations relatives à la connexion distante sont retournées. *RemoteServer* est **sysname**, avec NULL comme valeur par défaut. Si *remoteserver* est ne pas spécifié, les informations sur tous les serveurs distants définis sur le serveur local sont retournées.  
+ [ @remoteserver **=** ] **'***serveur_distant***'**  
+ Nom du serveur distant sur lequel les informations relatives à la connexion distante sont retournées. *serveur_distant* est de **type sysname**, avec NULL comme valeur par défaut. Si *serveur_distant* n’est pas spécifié, des informations sur tous les serveurs distants définis sur le serveur local sont renvoyées.  
   
- [ @remotename **=** ] **'***nom_distant***'**  
- Connexion distante spécifique du serveur distant. *nom_distant* est **sysname**, avec NULL comme valeur par défaut. Si *nom_distant* n’est pas spécifié, les informations sur tous les utilisateurs distants définis pour *remoteserver* est retourné.  
+ [ @remotename **=** ] **'***remote_name***'**  
+ Connexion distante spécifique du serveur distant. *remote_name* est de **type sysname**, avec NULL comme valeur par défaut. Si *remote_name* n’est pas spécifié, des informations sur tous les utilisateurs distants définis pour *serveur_distant* sont retournées.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -62,10 +62,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |options|**sysname**|Trusted = La connexion distante n'a pas à fournir de mot de passe lors de la connexion au serveur local à partir du serveur distant.<br /><br /> Untrusted (ou vide) = La connexion distante doit fournir un mot de passe lors de la connexion au serveur local à partir du serveur distant.|  
   
 ## <a name="remarks"></a>Notes  
- Faites appel à sp_helpserver pour afficher les noms des serveurs distants définis sur le serveur local.  
+ Utilisez sp_helpserver pour afficher la liste des noms des serveurs distants définis sur le serveur local.  
   
 ## <a name="permissions"></a>Autorisations  
- Sans les autorisations sont vérifiées.  
+ Aucune autorisation n’est vérifiée.  
   
 ## <a name="examples"></a>Exemples  
   

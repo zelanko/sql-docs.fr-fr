@@ -1,5 +1,5 @@
 ---
-title: Sysopentapes (Transact-SQL) | Microsoft Docs
+title: sysopentapes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,29 +19,29 @@ ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 813592ffa5b67a4926dff611c2ba0e0faf36d273
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029797"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque unité de bande actuellement ouverte. Cette vue est stockée dans le **master** base de données.  
+  Contient une ligne pour chaque unité de bande actuellement ouverte. Cette vue est stockée dans la base de données **Master** .  
   
 > [!IMPORTANT]  
->  Cette table système est incluse en tant que vue pour la compatibilité descendante. Au lieu de cela, utilisez le [sys.dm_io_backup_tapes &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) vue de gestion dynamique.  
+>  Cette table système est incluse en tant que vue pour la compatibilité descendante. Utilisez plutôt la vue de gestion dynamique [sys. dm_io_backup_tapes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) .  
   
 > [!NOTE]  
->  Vous ne pouvez pas supprimer le **sysopentapes** vue.  
+>  Vous ne pouvez pas supprimer la vue **sysopentapes** .  
 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**openTape**|**nvarchar(64)**|Nom de fichier physique de l'unité de bande ouverte. Pour plus d’informations sur l’ouverture et la libération des périphériques à bandes, consultez [sauvegarde &#40;Transact-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md) et [restaurer &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
+|**openTape**|**nvarchar (64)**|Nom de fichier physique de l'unité de bande ouverte. Pour plus d’informations sur l’ouverture et la libération de périphériques à bandes, consultez [BACKUP &#40;Transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md) et [Restore &#40;transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
   
 ## <a name="permissions"></a>Autorisations  
- L’utilisateur a besoin de l’autorisation VIEW SERVER STATE sur le serveur.  
+ L’utilisateur doit disposer de l’autorisation VIEW SERVER STATE sur le serveur.  
   
   

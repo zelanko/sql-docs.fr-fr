@@ -17,25 +17,25 @@ ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbee5187a7318e0953ea61d92f7478d83e5afaff
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70009348"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Entrées de Registre pour les composants ODBC
 > [!NOTE]  
 >  À compter de Windows XP et de Windows Server 2003, ODBC est inclus dans le système d’exploitation Windows. Vous devez uniquement installer explicitement ODBC sur les versions antérieures de Windows.  
   
- La DLL du programme d’installation gère les informations du Registre relatives à chaque composant ODBC installé. Sur les ordinateurs exécutant Microsoft Windows NT et Microsoft Windows 95/98, ces informations sont stockées dans des sous-clés sous la clé suivante dans le registre:  
+ La DLL du programme d’installation gère les informations du Registre relatives à chaque composant ODBC installé. Sur les ordinateurs exécutant Microsoft Windows NT et Microsoft Windows 95/98, ces informations sont stockées dans des sous-clés sous la clé suivante dans le registre :  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- Comme Odbcinst. ini est une sous-clé de l’arborescence HKEY_LOCAL_MACHINE, les informations sur les composants ODBC sont disponibles pour tous les utilisateurs de l’ordinateur.  
+ Comme Odbcinst. ini est une sous-clé de l’arborescence HKEY_LOCAL_MACHINE, les informations sur les composants ODBC sont accessibles à tous les utilisateurs de l’ordinateur.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Sous-clé des composants principaux ODBC](../../../odbc/reference/install/odbc-core-subkey.md)  
   

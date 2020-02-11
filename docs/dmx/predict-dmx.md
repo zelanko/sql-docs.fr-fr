@@ -1,5 +1,5 @@
 ---
-title: Prédire (DMX) | Microsoft Docs
+title: Prédiction (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb939c45d298117fa81b05d6188aa3a4c5cd7c4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008157"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Le **Predict** fonction retourne une valeur prédite, ou un ensemble de valeurs, pour une colonne spécifiée.  
+  La fonction **Predict** retourne une valeur prédite, ou un ensemble de valeurs, pour une colonne spécifiée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,11 +32,11 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
  Référence de colonne scalaire ou référence de colonne de table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<référence de colonne scalaire >  
+ \<> de référence de colonne scalaire  
   
- ou Gestionnaire de configuration  
+ or  
   
- \<référence de colonne de table >  
+ \<> de référence de colonne de table  
   
  Le type de retour dépend du type de colonne auquel cette fonction est appliquée.  
   
@@ -49,25 +49,25 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  Pour les modèles de série chronologique, la fonction Predict ne prend pas en charge INCLUDE_STATISTICS.  
   
- Le paramètre INCLUDE_NODE_ID retourne la colonne $NODEID dans le résultat. NODE_ID est le nœud de contenu sur lequel la prédiction est exécutée pour un cas particulier. Ce paramètre est facultatif lors de l’utilisation de Predict sur les colonnes de table.  
+ Le paramètre INCLUDE_NODE_ID retourne la colonne $NODEID dans le résultat. NODE_ID est le nœud de contenu sur lequel la prédiction est exécutée pour un cas particulier. Ce paramètre est facultatif lors de l’utilisation de Predict sur des colonnes de table.  
   
- Le *n* paramètre s’applique aux colonnes de table. Il définit le nombre de lignes retournées en fonction du type de prédiction. Si la colonne sous-jacente est la séquence, il appelle le **PredictSequence** (fonction). Si la colonne sous-jacente est de série chronologique, il appelle le **PredictTimeSeries** (fonction). Pour les types de prédictions associatives, il appelle le **PredictAssociation** (fonction).  
+ Le paramètre *n* s’applique aux colonnes de table. Il définit le nombre de lignes retournées en fonction du type de prédiction. Si la colonne sous-jacente est Sequence, elle appelle la fonction **PredictSequence** . Si la colonne sous-jacente est une série chronologique, elle appelle la fonction **PredictTimeSeries** . Pour les types associatifs de prédiction, elle appelle la fonction **PredictAssociation** .  
   
- Le **Predict** fonction prend en charge le polymorphisme.  
+ La fonction **Predict** prend en charge le polymorphisme.  
   
  Les formes abrégées des autres solutions suivantes sont fréquemment utilisées :  
   
--   [Gender] est une alternative pour **Predict**([Gender], EXCLUDE_NULL).  
+-   [Sexe] est une alternative à la **prédiction**([sexe], EXCLUDE_NULL).  
   
--   [Products Purchases] est une alternative pour **Predict**([Products Purchases], EXCLUDE_NULL, EXCLUSIVE).  
+-   [Products Purchases] est une alternative à **Predict**([Products Purchases], EXCLUDE_NULL, exclusive).  
   
     > [!NOTE]  
-    >  Le type de retour de cette fonction est lui-même considéré comme une référence de colonne. Cela signifie que le **Predict** fonction peut être utilisée en tant qu’argument dans d’autres fonctions qui acceptent une référence de colonne en tant qu’argument (à l’exception de la **Predict** fonction elle-même).  
+    >  Le type de retour de cette fonction est lui-même considéré comme une référence de colonne. Cela signifie que la fonction **Predict** peut être utilisée comme argument dans d’autres fonctions qui prennent une référence de colonne comme argument (à l’exception de la fonction **Predict** elle-même).  
   
- En passant INCLUDE_STATISTICS à une prédiction sur une colonne de table-valued ajoute les colonnes **$Probability** et **$Support** à la table résultante. Ces colonnes décrivent la probabilité de l'existence de l'enregistrement de table imbriquée associée.  
+ Le passage d’INCLUDE_STATISTICS à une prédiction sur une colonne à valeur de table ajoute les colonnes **$Probability** et **$support** à la table résultante. Ces colonnes décrivent la probabilité de l'existence de l'enregistrement de table imbriquée associée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise la fonction Predict pour retourner les quatre produits dans la base de données Adventure Works qui sont susceptibles d’être vendus ensemble. Étant donné que la fonction est la prédiction par rapport aux règles association modèle d’exploration de données, il utilise automatiquement le **PredictAssociation** fonctionne comme décrit précédemment.  
+ L’exemple suivant utilise la fonction Predict pour retourner les quatre produits de la base de données Adventure Works qui sont le plus susceptibles d’être vendus ensemble. Étant donné que la fonction est prédite par rapport à un modèle d’exploration de données de règles d’association, elle utilise automatiquement la fonction **PredictAssociation** comme décrit précédemment.  
   
 ```  
 SELECT  
@@ -87,8 +87,8 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

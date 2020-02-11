@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee74778b48476328b21c7bdfe4d4e5dd895d8204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027658"
 ---
-# <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
+# <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Ignore le plan d’exécution créé par la procédure stockée sp_prepare. sp_unprepare est appelée en spécifiant ID = 15 dans un paquet data stream (TDS).  
+  Ignore le plan d’exécution créé par la procédure stockée sp_prepare. sp_unprepare est appelée en spécifiant ID = 15 dans un paquet tabular data stream (TDS).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,8 +39,8 @@ sp_unprepare handle
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *handle*  
- Est le *gérer* valeur retournée par sp_prepare.  
+ *traitée*  
+ Valeur de *handle* retournée par sp_prepare.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant prépare, exécute et annule la préparation d'une instruction simple.  

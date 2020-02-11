@@ -1,5 +1,5 @@
 ---
-title: Sqlwritedsntoini, fonction | Microsoft Docs
+title: SQLWriteDSNToIni fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039512"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni, fonction
 **Conformité**  
- Version introduite : ODBC 1.0  
+ Version introduite : ODBC 1,0  
   
  **Résumé**  
- **SQLWriteDSNToIni** ajoute une source de données pour les informations système.  
+ **SQLWriteDSNToIni** ajoute une source de données aux informations système.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,31 +44,31 @@ BOOL SQLWriteDSNToIni(
   
 ## <a name="arguments"></a>Arguments  
  *lpszDSN*  
- [Entrée] Nom de la source de données à ajouter.  
+ Entrée Nom de la source de données à ajouter.  
   
  *lpszDriver*  
- [Entrée] Description du pilote (généralement le nom du SGBD associé) présentée aux utilisateurs au lieu du nom de pilote physique.  
+ Entrée Description du pilote (généralement le nom du SGBD associé) présentée aux utilisateurs au lieu du nom du pilote physique.  
   
-## <a name="returns"></a>Valeur renvoyée  
- La fonction retourne la valeur TRUE si elle réussit, FALSE en cas d’échec.  
+## <a name="returns"></a>Retours  
+ La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLWriteDSNToIni** retourne FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournés par **SQLInstallerError** et explique chacune dans le contexte de cette fonction.  
+ Quand **SQLWriteDSNToIni** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erreur du programme d’installation générale|Une erreur s’est produite pour lequel aucune erreur d’installation spécifique s’est produite.|  
-|ODBC_ERROR_INVALID_DSN|Source de données non valide|Le *lpszDSN* argument contenue une chaîne qui n’était pas valide pour une source de données.|  
-|ODBC_ERROR_INVALID_NAME|Nom de pilote ou de convertisseur non valide|Le *lpszDriver* argument n’est pas valide.|  
-|ODBC_ERROR_REQUEST_FAILED|Échoué de la demande|Le programme d’installation a échoué créer une source de données dans le Registre.|  
-|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu effectuer la fonction en raison d’un manque de mémoire.|  
+|ODBC_ERROR_GENERAL_ERR|Erreur générale du programme d’installation|Une erreur s’est produite pour laquelle aucune erreur d’installation spécifique n’a été rencontrée.|  
+|ODBC_ERROR_INVALID_DSN|DSN non valide|L’argument *lpszDSN* contient une chaîne non valide pour un DSN.|  
+|ODBC_ERROR_INVALID_NAME|Nom de pilote ou de convertisseur non valide|L’argument *lpszDriver* n’était pas valide.|  
+|ODBC_ERROR_REQUEST_FAILED|Échec de la requête|Le programme d’installation n’a pas pu créer un DSN dans le registre.|  
+|ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu exécuter la fonction en raison d’un manque de mémoire.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLWriteDSNToIni** ajoute la source de données à la section [ODBC Data Sources] des informations système. Il crée une section de la spécification de la source de données, puis ajoute un mot clé unique (**pilote**) par le nom de la DLL en tant que sa valeur du pilote. Si la section de spécification de source de données existe déjà, **SQLWriteDSNToIni** supprime l’ancienne section avant de créer une nouvelle.  
+ **SQLWriteDSNToIni** ajoute la source de données à la section [sources de données ODBC] des informations système. Il crée ensuite une section de spécification pour la source de données et ajoute un mot clé unique (**pilote**) avec le nom de la dll du pilote comme valeur. Si la section de spécification de la source de données existe déjà, **SQLWriteDSNToIni** supprime l’ancienne section avant d’en créer une nouvelle.  
   
- L’appelant de cette fonction doit ajouter des valeurs et les mots clés spécifiques au pilote à la section de spécification de source de données des informations système.  
+ L’appelant de cette fonction doit ajouter des mots clés et des valeurs spécifiques au pilote à la section Spécification de la source de données des informations système.  
   
- Si le nom de la source de données est par défaut, **SQLWriteDSNToIni** crée également la section de spécification de pilote par défaut dans les informations système.  
+ Si le nom de la source de données est par défaut, **SQLWriteDSNToIni** crée également la section Spécification du pilote par défaut dans les informations système.  
   
  Cette fonction doit être appelée uniquement à partir d’une DLL d’installation.  
   
@@ -76,6 +76,6 @@ BOOL SQLWriteDSNToIni(
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Ajout, modification ou suppression d’une source de données|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(dans la DLL d’installation)|  
+|Ajout, modification ou suppression d’une source de données|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(dans la dll d’installation)|  
 |Ajout, modification ou suppression d’une source de données|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|Suppression d’un nom de source de données à partir des informations système|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
+|Suppression d’un nom de source de données des informations système|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

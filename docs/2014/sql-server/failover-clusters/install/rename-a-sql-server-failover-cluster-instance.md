@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126003"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
@@ -29,7 +29,8 @@ ms.locfileid: "63126003"
   
  Avant de commencer le processus d'attribution d'un nouveau nom, examinez les éléments ci-dessous.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne prend pas en charge le renommage des serveurs impliqués dans la réplication, sauf en cas d’utilisation de la copie des journaux de transaction avec la réplication. Le serveur secondaire dans l'envoi de journaux peut être renommé si le serveur principal est perdu de manière permanente. Pour plus d’informations, consultez [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne prend pas en charge le renommage des serveurs impliqués dans la réplication, sauf en cas d’utilisation de la copie des journaux de transaction avec la réplication. Le serveur secondaire dans l'envoi de journaux peut être renommé si le serveur principal est perdu de manière permanente. Pour plus d’informations, consultez [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Lorsqu'un serveur configuré pour utiliser la mise en miroir de base de données doit être renommé, vous devez au préalable désactiver la mise en miroir de la base de données, puis la réactiver avec le nouveau nom du serveur virtuel. Les métadonnées pour la mise en miroir de la base de données ne seront pas mises à jour automatiquement de façon à refléter le nouveau nom du serveur virtuel.  
   
@@ -63,19 +64,19 @@ ms.locfileid: "63126003"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Éléments supplémentaires à prendre en considération après une opération Renommer  
  Après avoir renommé le nom réseau d'un cluster de basculement, nous devons vérifier et suivre les instructions suivantes pour que tous les scénarios dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent et [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]soient opérationnels.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Après avoir modifié le nom réseau d’un [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instance à l’aide d’outil administrateur de Cluster Windows, la mise à niveau future du cluster de basculement ou opération de désinstallation peut échouer. Pour résoudre cette mise à jour du problème la **ClusterName** entrée de Registre suivant les instructions fournies dans la section Résolution de [cela](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Une fois que vous avez modifié le nom [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] réseau d’une instance de cluster de basculement à l’aide de l’outil Administrateur de cluster Windows, l’opération de mise à niveau ou de désinstallation ultérieure peut échouer. Pour résoudre ce problème, mettez à jour l’entrée de Registre **ClusterName** en suivant les instructions de lahttps://go.microsoft.com/fwlink/?LinkId=244002)section résolution de [ce](https://go.microsoft.com/fwlink/?LinkId=244002) (.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service de l’agent :** Vérifier et effectuer les actions supplémentaires suivantes pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service :  
+ **Service de l’agent : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Vérifiez et effectuez les actions supplémentaires ci- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dessous pour le service agent :  
   
 -   Corrigez les paramètres de registre si l'Agent SQL est configuré pour le transfert d'événements. Pour plus d’informations, consultez [Désigner un serveur de transfert d’événements &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
--   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d’informations, consultez les rubriques suivantes :  
+-   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d'informations, voir les rubriques suivantes :  
   
     -   [Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Créer un environnement multi-serveur](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d’informations, consultez les rubriques suivantes :  
+-   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d'informations, voir les rubriques suivantes :  
   
     -   [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   

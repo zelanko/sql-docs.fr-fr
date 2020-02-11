@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038983"
 ---
 # <a name="context-functions---position-xquery"></a>Fonctions relatives au contexte : position (XQuery)
@@ -35,13 +35,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>Notes  
- Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **:position()** peut uniquement être utilisé dans le contexte d’un prédicat dépendant du contexte. Plus précisément, elle ne peut être utilisée qu'entre crochets ([ ]).Toute comparaison à cette fonction ne réduit pas la cardinalité lors de l'inférence de type statique.  
+ Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **FN : position ()** ne peut être utilisé que dans le contexte d’un prédicat dépendant du contexte. Plus précisément, elle ne peut être utilisée qu'entre crochets ([ ]).Toute comparaison à cette fonction ne réduit pas la cardinalité lors de l'inférence de type statique.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées **** dans différentes colonnes de type [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML dans la base de données.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>R. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
- La requête suivante récupère les deux premiers composants, les deux premiers éléments enfants de la <`Features`> élément, à partir de la description du catalogue de produits. S’il existe davantage de fonctionnalités, il ajoute un <`there-is-more/`> élément au résultat.  
+ La requête suivante récupère les deux premières fonctionnalités, les deux premiers éléments enfants de l’élément <`Features`>, à partir de la description du catalogue du modèle de produit. S’il y a plus de fonctionnalités, il ajoute `there-is-more/` un <élément> au résultat.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -67,13 +67,13 @@ WHERE CatalogDescription is not null
   
  Notez les points suivants dans la requête précédente :  
   
--   Le **espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms qui est utilisé dans le corps de requête.  
+-   Le mot clé **namespace** dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms qui est utilisé dans le corps de la requête.  
   
--   Le corps de la requête construit du code XML qui a un \<produit > élément avec **ProductModelID** et **ProductModelName** des attributs et possède des fonctionnalités de produit retournées en tant qu’éléments enfants.  
+-   Le corps de la requête construit le code XML \<qui a un élément Product> avec les attributs **ProductModelID** et **ProductModelName** , et les fonctionnalités du produit sont retournées en tant qu’éléments enfants.  
   
--   Le **position()** fonction est utilisée dans le prédicat pour déterminer la position de la \<fonctionnalités > élément enfant dans le contexte. Si l'élément correspond à la première ou à la deuxième caractéristique, il est renvoyé dans les résultats.  
+-   La fonction **position ()** est utilisée dans le prédicat pour déterminer la position des \<fonctionnalités> élément enfant en contexte. Si l'élément correspond à la première ou à la deuxième caractéristique, il est renvoyé dans les résultats.  
   
--   L’instruction IF ajoute un \<là-is-more / > élément au résultat s’il existe plus de deux fonctionnalités dans le catalogue de produits.  
+-   L’instruction IF ajoute un \<élément de plus en plus/> au résultat s’il existe plus de deux fonctionnalités dans le catalogue de produits.  
   
 -   Puisque les modèles de produits n'ont pas tous leur description de catalogue stockée dans la table, la clause WHERE permet de passer outre les lignes où CatalogDescriptions correspond à NULL.  
   

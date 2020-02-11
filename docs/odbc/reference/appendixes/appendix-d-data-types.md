@@ -1,5 +1,5 @@
 ---
-title: 'Annexe D : Types de données | Microsoft Docs'
+title: 'Annexe D : types de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996221"
 ---
-# <a name="appendix-d-data-types"></a>Annexe D : Types de données
-ODBC définit deux ensembles de types de données : Types de données SQL et les types de données C. Types de données SQL indiquent le type de données des données stockées au niveau de la source de données. Types de données C indiquent le type de données des données stockées dans les mémoires tampons d’application.  
+# <a name="appendix-d-data-types"></a>Annexe D : Types de données
+ODBC définit deux ensembles de types de données : les types de données SQL et les types de données C. Les types de données SQL indiquent le type de données des données stockées dans la source de données. Les types de données C indiquent le type de données des données stockées dans des mémoires tampons d’application.  
   
- Types de données SQL sont définies par chaque SGBD conformément à la norme SQL-92. Pour chaque type de données SQL spécifiée dans la norme SQL-92, ODBC définit un identificateur de type, qui est un **#define** valeur qui est passée en tant qu’argument dans les fonctions ODBC ou retournée dans les métadonnées d’un jeu de résultats. Le SQL-92 uniquement les types de données non pris en charge par ODBC sont bits (le type ODBC SQL_BIT possède des caractéristiques différentes), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE et NATIONAL_CHARACTER. Pilotes sont chargés de mapper des types de données SQL de données spécifiques à la source pour les identificateurs de type de données SQL ODBC et les identificateurs de type de données spécifiques au pilote SQL. Le type de données SQL est spécifié dans le champ SQL_DESC_CONCISE_TYPE d’un descripteur d’implémentation.  
+ Les types de données SQL sont définis par chaque SGBD conformément à la norme SQL-92. Pour chaque type de données SQL spécifié dans la norme SQL-92, ODBC définit un identificateur de type, qui est une **#define** valeur transmise en tant qu’argument dans les fonctions ODBC ou renvoyée dans les métadonnées d’un jeu de résultats. Les seuls types de données SQL-92 non pris en charge par ODBC sont BIT (le type de SQL_BIT ODBC a des caractéristiques différentes), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE et NATIONAL_CHARACTER. Les pilotes sont chargés de mapper des types de données SQL spécifiques à la source de données à des identificateurs de type de données SQL ODBC et à des identificateurs de type de données SQL spécifiques au pilote. Le type de données SQL est spécifié dans le champ SQL_DESC_CONCISE_TYPE d’un descripteur d’implémentation.  
   
- ODBC définit les types de données C et leurs identificateurs de type ODBC correspondants. Une application spécifie le type de données C de la mémoire tampon qui recevra les données de jeu de résultats en passant l’identificateur de type C approprié dans le *TargetType* argument dans un appel à **SQLBindCol** ou  **SQLGetData**. Elle spécifie le type C de la mémoire tampon contenant un paramètre d’instruction en transmettant l’identificateur de type C approprié dans le *ValueType* argument dans un appel à **SQLBindParameter**. Le type de données C est spécifié dans le champ SQL_DESC_CONCISE_TYPE d’un descripteur d’application.  
+ ODBC définit les types de données C et leurs identificateurs de type ODBC correspondants. Une application spécifie le type de données C de la mémoire tampon qui recevra les données du jeu de résultats en passant l’identificateur de type C approprié dans l’argument *TargetType* dans un appel à **SQLBindCol** ou **SQLGetData**. Elle spécifie le type C de la mémoire tampon contenant un paramètre d’instruction en passant l’identificateur de type C approprié dans l’argument *ValueType* dans un appel à **SQLBindParameter**. Le type de données C est spécifié dans le champ SQL_DESC_CONCISE_TYPE d’un descripteur d’application.  
   
 > [!NOTE]  
->  Il n’existe aucun type de données C spécifiques au pilote.  
+>  Il n’existe aucun type de données C propre au pilote.  
   
- Chaque type de données SQL correspond à un type de données ODBC C. Avant de renvoyer des données à partir de la source de données, le pilote le convertit en type de données C spécifié. Avant d’envoyer des données à la source de données, le pilote convertit le type de données C spécifié.  
+ Chaque type de données SQL correspond à un type de données C ODBC. Avant de renvoyer des données à partir de la source de données, le pilote le convertit en type de données C spécifié. Avant d’envoyer des données à la source de données, le pilote le convertit à partir du type de données C spécifié.  
   
  Cette annexe contient les rubriques suivantes.  
   
@@ -58,4 +58,4 @@ ODBC définit deux ensembles de types de données : Types de données SQL et le
   
 -   [Conversion de données de C en types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
- Pour obtenir une explication des types de données ODBC, consultez [des Types de données dans ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.
+ Pour obtenir une explication des types de données ODBC, consultez [types de données dans ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Pour plus d’informations sur les types de données SQL spécifiques au pilote, consultez la documentation du pilote.

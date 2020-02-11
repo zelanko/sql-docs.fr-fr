@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017059"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
@@ -32,10 +32,10 @@ Ascendants(Member_Expression)
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Le **Ascendants** fonction retourne tous les ancêtres d’un membre à partir du membre lui-même jusqu’en haut de la hiérarchie du membre ; plus précisément, il effectue un balayage post-ordre de la hiérarchie du membre spécifié, puis retourne que tous les membres ascendants associés au membre, y compris lui-même, dans un jeu. Il s’agit Contrairement à la [ancêtre](../mdx/ancestor-mdx.md) (fonction), qui retourne un membre ascendant spécifique, ou ancêtre, à un niveau spécifique.  
+ La fonction **ascenders** retourne tous les ancêtres d’un membre du membre lui-même jusqu’au sommet de la hiérarchie du membre ; plus spécifiquement, il effectue une traversée postérieure de l’ordre de la hiérarchie pour le membre spécifié, puis retourne tous les membres ascendants associés au membre, y compris lui-même, dans un ensemble. Cela diffère de la fonction [Ancestor](../mdx/ancestor-mdx.md) , qui retourne un membre ascendants spécifique, ou ancêtre, à un niveau spécifique.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne le nombre de commandes des revendeurs le `[Sales Territory].[Northwest]` membre et tous les ascendants de ce membre dans le **Adventure Works** cube. Le **Ascendants** fonction construit le jeu qui inclut le `[Sales Territory].[Northwest]` membre et ses ascendants pour l’axe des lignes.  
+ L’exemple suivant retourne le nombre de commandes du revendeur pour le `[Sales Territory].[Northwest]` membre et tous les ascendants de ce membre à partir du cube **Adventure Works** . La fonction **ascenders** construit le jeu qui comprend le `[Sales Territory].[Northwest]` membre et ses ascendants pour l’axe Rows.  
   
 ```  
 SELECT  
@@ -51,6 +51,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

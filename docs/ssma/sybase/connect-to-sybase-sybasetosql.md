@@ -10,68 +10,68 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083391"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Se connecter à Sybase (SybaseToSQL)
-Utilisez le **se connecter à Sybase** boîte de dialogue se connecter à l’instance de Sybase Adaptive Server Enterprise (ASE) que vous souhaitez migrer.  
+Utilisez la boîte de dialogue **se connecter à Sybase** pour vous connecter à l’instance de Sybase Adaptive Server Enterprise (ASE) que vous souhaitez migrer.  
   
-Pour accéder à cette boîte de dialogue, dans le **fichier** menu, sélectionnez **se connecter à Sybase**. Si vous êtes déjà connecté, la commande est **reconnexion à Sybase**.  
+Pour accéder à cette boîte de dialogue, dans le menu **fichier** , sélectionnez **se connecter à Sybase**. Si vous vous êtes connecté précédemment, la commande se **reconnecte à Sybase**.  
   
 ## <a name="options"></a>Options  
 **Fournisseur**  
-Sélectionnez un du fournisseur installé sur l’ordinateur pour la connexion au serveur Sybase.  
+Sélectionnez l’un des fournisseurs installés sur l’ordinateur pour la connexion au serveur Sybase.  
   
 **Mode**  
-Sélectionnez un mode de connexion standard ou avancé. En mode standard, vous entrez ou sélectionnez des valeurs pour le nom du serveur, le port, le nom d’utilisateur et le mot de passe. En mode avancé, vous fournissez une chaîne de connexion.  
+Sélectionnez le mode de connexion standard ou avancé. En mode standard, vous entrez ou sélectionnez des valeurs pour le nom du serveur, le port, le nom d’utilisateur et le mot de passe. En mode avancé, vous fournissez une chaîne de connexion.  
   
 **Nom du serveur**  
-Entrez ou sélectionnez le nom ou l’adresse IP du serveur adaptative. Le nom du serveur par défaut est le même que le nom de l’ordinateur. Il s’agit d’une option de mode standard.  
+Entrez ou sélectionnez le nom ou l’adresse IP du serveur adaptatif. Le nom du serveur par défaut est le même que le nom de l’ordinateur. Il s’agit d’une option de mode standard.  
   
 **Port du serveur**  
-Si vous utilisez un port non défini par défaut pour les connexions à l’ASE, entrez le numéro de port. Le numéro de port par défaut est 5000. Il s’agit d’une option de mode standard.  
+Si vous utilisez un port autre que celui par défaut pour les connexions à l’ASE, entrez le numéro de port. Le numéro de port par défaut est 5000. Il s’agit d’une option de mode standard.  
   
 **Nom d'utilisateur**  
-Entrez le nom d’utilisateur qui est utilisé pour se connecter à l’ASE. Il s’agit d’une option de mode standard.  
+Entrez le nom d’utilisateur utilisé pour se connecter à l’ASE. Il s’agit d’une option de mode standard.  
   
 **Mot de passe**  
-Entrez le mot de passe correspondant au nom d'utilisateur indiqué. Il s’agit d’une option de mode standard.  
+Entrez le mot de passe correspondant au nom d’utilisateur. Il s’agit d’une option de mode standard.  
   
 **Chaîne de connexion**  
-Entrez la chaîne de connexion complète pour la connexion à ASE.  
+Entrez la chaîne de connexion complète pour la connexion à l’ASE.  
   
-Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les noms des paramètres varient en fonction du fournisseur utilisé.  
+Les chaînes de connexion se composent de paires nom de paramètre/valeur. Les noms des paramètres varient en fonction du fournisseur utilisé.  
   
-**Paramètres de connexion de différents fournisseurs sont les suivantes :**  
+**Les paramètres de connexion de différents fournisseurs sont les suivants :**  
   
-1.  Paramètres de connexion de **fournisseur OLE DB**  
+1.  Paramètres de connexion pour le **fournisseur de OLE DB**  
   
-    |Paramètre|Paramètre de Sybase 12,5|Paramètre de Sybase 15|  
+    |Paramètre|Paramètre Sybase 12,5|Paramètre Sybase 15|  
     |-----------|-------------------------|-----------------------|  
     |Nom du serveur|Nom du serveur|Serveur|  
-    |Port|Adresse de Port du serveur|Port|  
-    |Nom d’utilisateur|ID d'utilisateur|ID d'utilisateur|  
+    |Port|Adresse du port du serveur|Port|  
+    |Nom d'utilisateur|ID d'utilisateur|ID d'utilisateur|  
     |Mot de passe|Mot de passe|Mot de passe|  
     |Fournisseur|Fournisseur|Fournisseur|  
   
-    Pour Sybase ASE 12,5, un exemple de chaîne de connexion est la suivante :  
+    Pour Sybase ASE 12,5, un exemple de chaîne de connexion est le suivant :  
   
     `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`  
   
-    Pour Sybase ASE 15, un exemple de chaîne de connexion est la suivante :  
+    Pour Sybase ASE 15, un exemple de chaîne de connexion est le suivant :  
   
     `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=ASEOLEDB;Port=5000;`  
   
-2.  Paramètres de connexion de **fournisseur ODBC**  
+2.  Paramètres de connexion pour le **fournisseur ODBC**  
   
-    |Paramètre|Paramètre de Sybase 12,5/15|  
+    |Paramètre|Paramètre Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nom du pilote|Pilote|  
+    |Nom du pilote|pilote|  
     |Nom du serveur|Serveur|  
-    |User Name|UID|  
+    |User Name|Codé|  
     |Mot de passe|Pwd|  
     |Numéro de port|Port|  
   
@@ -79,16 +79,16 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
   
     `driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
   
-3.  Paramètres de connexion de **fournisseur ADO.NET**  
+3.  Paramètres de connexion pour le **fournisseur ADO.net**  
   
-    |Paramètre|Paramètre de Sybase 12,5/15|  
+    |Paramètre|Paramètre Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nom du serveur|Serveur|  
-    |User Name|UID|  
+    |User Name|Codé|  
     |Mot de passe|Pwd|  
     |Numéro de port|Port|  
   
-    Un exemple de la chaîne de connexion pour le fournisseur ADO.NET est comme suit :  
+    Voici un exemple de chaîne de connexion pour le fournisseur ADO.NET :  
   
     `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   

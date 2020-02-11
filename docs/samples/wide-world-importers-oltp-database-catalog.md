@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811533"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de bases de données WideWorldImporters
@@ -28,20 +28,20 @@ WideWorldImporters utilise des schémas à des fins différentes, telles que le 
 
 Ces schémas contiennent les données. Un certain nombre de tables sont nécessaires à tous les autres schémas et sont situés dans le schéma d’application.
 
-|Schéma|Description|
+|schéma|Description|
 |-----------------------------|---------------------|
 |Application|Utilisateurs, contacts et paramètres au niveau de l’application. Contient également des tables de référence avec des données utilisées par plusieurs schémas|
-|Purchasing|Achat d’articles sur les achats et informations sur les fournisseurs.|  
-|Sales|Stockez les ventes d’articles pour les clients de détail et les détails sur les clients et les vendeurs. |  
+|Achat|Achat d’articles sur les achats et informations sur les fournisseurs.|  
+|Ventes|Stockez les ventes d’articles pour les clients de détail et les détails sur les clients et les vendeurs. |  
 |Warehouse|Stock et transactions d’inventaire.|  
 
 ### <a name="secure-access-schemas"></a>Schémas d’accès sécurisé
 
 Ces schémas sont utilisés pour les applications externes qui ne sont pas autorisées à accéder directement aux tables de données. Elles contiennent des vues et des procédures stockées utilisées par des applications externes.
 
-|Schéma|Description|
+|schéma|Description|
 |-----------------------------|---------------------|
-|Site Web|Tout accès à la base de données à partir du site Web de l’entreprise s’effectue par le biais de ce schéma.|
+|Website|Tout accès à la base de données à partir du site Web de l’entreprise s’effectue par le biais de ce schéma.|
 |Rapports|Tout accès à la base de données à partir de Reporting Services rapports s’effectue par le biais de ce schéma.|
 |PowerBI|Tout accès à la base de données à partir des tableaux de bord Power BI via la passerelle d’entreprise se fait par le biais de ce schéma.|
 
@@ -51,7 +51,7 @@ Notez que les schémas rapports et PowerBI ne sont pas utilisés dans la version
 
 Schémas à usage spécial
 
-|Schéma|Description|
+|schéma|Description|
 |-----------------------------|---------------------|
 |Intégration|Objets et procédures requis pour l’intégration de l’entrepôt de données (par exemple, la migration des données vers la base de données WideWorldImportersDW).|
 |Séquences|Contient les séquences utilisées par toutes les tables de l’application.|
@@ -64,13 +64,13 @@ Toutes les tables de la base de données se trouvent dans les schémas de donné
 
 Détails des paramètres et des personnes (utilisateurs et contacts), ainsi que des tables de référence communes (communes à plusieurs autres schémas).
 
-|Table|Description|
+|Table de charge de travail|Description|
 |-----------------------------|---------------------|
 |SystemParameters|Contient des paramètres configurables à l’ensemble du système.|
-|Employés|Contient des noms d’utilisateur, des informations de contact, pour tous ceux qui utilisent l’application, et pour les personnes que les importateurs grand public traitent au sein des organisations clientes. Cela comprend le personnel, les clients, les fournisseurs et tout autre contact. Pour les personnes qui ont reçu l’autorisation d’utiliser le système ou le site Web, les informations incluent les informations de connexion.|
+|People|Contient des noms d’utilisateur, des informations de contact, pour tous ceux qui utilisent l’application, et pour les personnes que les importateurs grand public traitent au sein des organisations clientes. Cela comprend le personnel, les clients, les fournisseurs et tout autre contact. Pour les personnes qui ont reçu l’autorisation d’utiliser le système ou le site Web, les informations incluent les informations de connexion.|
 |Villes|Il existe de nombreuses adresses stockées dans le système, pour les personnes, les adresses de livraison de l’organisation cliente, les adresses des fournisseurs, etc. Chaque fois qu’une adresse est stockée, il y a une référence à une ville dans ce tableau. Il y a également un emplacement spatial pour chaque ville.|
 |StateProvinces|Les villes font partie des États ou des provinces. Ce tableau contient les détails de ceux-ci, y compris les données spatiales qui décrivent les limites de chaque État ou province.|
-|Provenance|Les États ou provinces font partie des pays. Ce tableau contient les détails de ceux-ci, y compris les données spatiales qui décrivent les limites de chaque pays.|
+|Pays|Les États ou provinces font partie des pays. Ce tableau contient les détails de ceux-ci, y compris les données spatiales qui décrivent les limites de chaque pays.|
 |DeliveryMethods|Choix pour la diffusion d’articles boursiers (par exemple, camion/Van, poste, collecte, Courier, etc.)|
 |PaymentMethods|Choix pour effectuer des paiements (par exemple, espèces, chèque, TEF, etc.)|
 |TransactionTypes|Types de transactions de clients, fournisseurs ou actions (par exemple, facture, note de crédit, etc.)|
@@ -79,7 +79,7 @@ Détails des paramètres et des personnes (utilisateurs et contacts), ainsi que 
 
 Détails des fournisseurs et des achats d’articles en stock.
 
-|Table|Description|
+|Table de charge de travail|Description|
 |-----------------------------|---------------------|
 |Suppliers|Table entité principale pour les fournisseurs (organisations)|
 |SupplierCategories|Catégories pour les fournisseurs (par exemple, Novelties, jouets, vêtements, emballage, etc.)|
@@ -92,14 +92,14 @@ Détails des fournisseurs et des achats d’articles en stock.
 
 Détails des clients, des commerciaux et des ventes d’articles en stock.
 
-|Table|Description|
+|Table de charge de travail|Description|
 |-----------------------------|---------------------|
-|Customers|Tables d’entité principales pour les clients (organisations ou personnes)|
+|Clients|Tables d’entité principales pour les clients (organisations ou personnes)|
 |CustomerCategories|Catégories pour les clients (IE, magasins, supermarchés, etc.)|
 |BuyingGroups|Les organisations clientes peuvent faire partie des groupes qui exercent une plus grande puissance d’achat|
 |CustomerTransactions|Toutes les transactions financières liées aux clients (factures, paiements)|
 |SpecialDeals|Tarification spéciale. Cela peut inclure des prix fixes, une remise en dollars ou un pourcentage de remise.|
-|Orders|Détails des commandes client|
+|Commandes|Détails des commandes client|
 |OrderLines|Lignes de détails des commandes client|
 |Factures|Détails des factures client|
 |InvoiceLines|Lignes de détails des factures client|
@@ -108,7 +108,7 @@ Détails des clients, des commerciaux et des ventes d’articles en stock.
 
 Détails des actions, de leurs exploitations et de leurs transactions.
 
-|Table|Description|
+|Table de charge de travail|Description|
 |-----------------------------|---------------------|
 |StockItems|Table entité principale pour les articles boursiers|
 |StockItemHoldings|Colonnes non temporelles pour les éléments boursiers. Il s’agit de colonnes fréquemment mises à jour.|
@@ -121,7 +121,7 @@ Détails des actions, de leurs exploitations et de leurs transactions.
 |ColdRoomTemperatures|Températures enregistrées régulièrement des refroidisseurs de la chambre froide|
 
 
-## <a name="design-considerations"></a>Considérations relatives à la conception
+## <a name="design-considerations"></a>Remarques relatives à la conception
 
 La conception de base de données est subjective et il n’existe pas de méthode correcte ou incorrecte pour concevoir une base de données. Les schémas et les tables de cette base de données montrent des idées de conception de votre propre base de données.
 
@@ -131,15 +131,15 @@ WideWorldImporters utilise un petit nombre de schémas afin qu’il soit facile 
 
 Dans la mesure du possible, la base de données regroupe les tables qui sont fréquemment interrogées ensemble dans le même schéma pour réduire la complexité de la jointure.
 
-Le schéma de base de données a été généré par du code en fonction d’une série de tables de métadonnées dans une autre base de données WWI_Preparation. Cela donne à WideWorldImporters un très haut niveau de cohérence de la conception, de cohérence des noms et d’exhaustivité. Pour plus d’informations sur la façon dont le schéma a été généré, consultez le code source: [larges-World-Importers/WWI-Database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
+Le schéma de base de données a été généré par du code en fonction d’une série de tables de métadonnées dans une autre base de données WWI_Preparation. Cela donne à WideWorldImporters un très haut niveau de cohérence de la conception, de cohérence des noms et d’exhaustivité. Pour plus d’informations sur la façon dont le schéma a été généré, consultez le code source : [larges-World-Importers/WWI-Database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
-### <a name="table-design"></a>Conception de table
+### <a name="table-design"></a>Conception de tables
 
 - Toutes les tables ont des clés primaires à colonne unique pour la simplicité des jointures.
 - Tous les schémas, les tables, les colonnes, les index et les contraintes de validation possèdent une propriété étendue description qui peut être utilisée pour identifier le rôle de l’objet ou de la colonne. Les tables optimisées en mémoire sont une exception à cela puisqu’elles ne prennent pas actuellement en charge les propriétés étendues.
 - Toutes les clés étrangères sont indexées automatiquement, sauf s’il existe un autre index non-cluster qui a le même composant de gauche.
 - La numérotation automatique dans les tables est basée sur les séquences. Ces séquences sont plus faciles à utiliser entre les serveurs liés et les environnements similaires que les colonnes d’identité. Les tables optimisées en mémoire utilisent des colonnes d’identité, car elles ne prennent pas en charge dans SQL Server 2016.
-- Une seule séquence (TransactionID) est utilisée pour ces tables: CustomerTransactions, SupplierTransactions et StockItemTransactions. Cela montre comment un ensemble de tables peut avoir une seule séquence.
+- Une seule séquence (TransactionID) est utilisée pour les tables suivantes : CustomerTransactions, SupplierTransactions et StockItemTransactions. Cela montre comment un ensemble de tables peut avoir une seule séquence.
 - Certaines colonnes ont des valeurs par défaut appropriées.
 
 ### <a name="security-schemas"></a>Schémas de sécurité
@@ -163,7 +163,7 @@ Il s’agit des procédures utilisées par une application cliente, par exemple 
 |Procédure|Objectif|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Permet à une personne ( `Application.People`de) d’accéder au site Web.|
-|Connaissant|Modifie le mot de passe d’un utilisateur (pour les utilisateurs qui n’utilisent pas de mécanismes d’authentification externe).|
+|ChangePassword|Modifie le mot de passe d’un utilisateur (pour les utilisateurs qui n’utilisent pas de mécanismes d’authentification externe).|
 |InsertCustomerOrders|Permet d’insérer une ou plusieurs commandes client (y compris les lignes de commande).|
 |InvoiceCustomerOrders|Prend une liste de commandes à facturer et traite les factures.|
 |RecordColdRoomTemperatures|Prend une liste de données de capteur, en tant que paramètre table (TVP), et applique les données à `Warehouse.ColdRoomTemperatures` la table temporelle.|
@@ -198,13 +198,13 @@ Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés 
 |Procédure|Objectif|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Ajoute un membre à un rôle si le membre n’est pas déjà dans le rôle|
-|Configuration_ApplyAuditing|Ajoute l’audit. L’audit du serveur est appliqué pour les bases de données Standard Edition; un audit de base de données supplémentaire est ajouté pour l’édition entreprise.|
+|Configuration_ApplyAuditing|Ajoute l’audit. L’audit du serveur est appliqué pour les bases de données Standard Edition ; un audit de base de données supplémentaire est ajouté pour l’édition entreprise.|
 |Configuration_ApplyColumnstoreIndexing|Applique l’indexation ColumnStore à `Sales.OrderLines` et `Sales.InvoiceLines` et réindexe de manière appropriée.|
-|Configuration_ApplyFullTextIndexing|Applique les index de texte `Application.People`intégral `Sales.Customers`à `Purchasing.Suppliers`,, `Warehouse.StockItems`et. Remplace `Website.SearchForPeople`, `Website.SearchForSuppliers`, ,`Website.SearchForCustomers` ,`Website.SearchForStockItemsByTags`par des procédures de remplacement qui utilisent l’indexation de texte intégral. `Website.SearchForStockItems`|
+|Configuration_ApplyFullTextIndexing|Applique les index de texte `Application.People`intégral `Sales.Customers`à `Purchasing.Suppliers`,, `Warehouse.StockItems`et. Remplace `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` par des procédures de remplacement qui utilisent l’indexation de texte intégral.|
 |Configuration_ApplyPartitioning|Applique le partitionnement de `Sales.CustomerTransactions` table `Purchasing.SupplierTransactions`à et, puis réorganise les index en fonction.|
 |Configuration_ApplyRowLevelSecurity|Applique la sécurité au niveau des lignes pour filtrer les clients par rôle lié à un secteur de vente.|
 |Configuration_ConfigureForEnterpriseEdition|Applique l’indexation ColumnStore, le texte intégral, la mémoire, Polybase et le partitionnement.|
-|Configuration_EnableInMemory|Ajoute un groupe de fichiers mémoire optimisé (si vous ne travaillez pas dans Azure `Warehouse.ColdRoomTemperatures`) `Warehouse.VehicleTemperatures` , remplace, avec les équivalents en mémoire et migre les données, recrée `Website.OrderIDList`les `Website.OrderList`types `Website.OrderLineList`de `Website.SensorDataList` tables,,, avec équivalents optimisés en mémoire, supprime et recrée les procédures `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`et `Website.RecordColdRoomTemperatures` qui utilise ces types de tables.|
+|Configuration_EnableInMemory|Ajoute un groupe de fichiers mémoire optimisé (si vous ne travaillez pas dans Azure `Warehouse.ColdRoomTemperatures`) `Warehouse.VehicleTemperatures` , remplace, avec les équivalents en mémoire et migre les données, recrée `Website.OrderIDList`les `Website.OrderList`types `Website.OrderLineList`de `Website.SensorDataList` tables,,, avec des équivalents mémoire optimisés, supprime et recrée `Website.InvoiceCustomerOrders`les `Website.InsertCustomerOrders`procédures, `Website.RecordColdRoomTemperatures` et qui utilise ces types de tables.|
 |Configuration_RemoveAuditing|Supprime la configuration d’audit.|
 |Configuration_RemoveRowLevelSecurity|Supprime la configuration de la sécurité au niveau des lignes (nécessaire pour les modifications apportées aux tables associées).|
 |CreateRoleIfNonExistant|Crée un rôle de base de données s’il n’existe pas déjà.|

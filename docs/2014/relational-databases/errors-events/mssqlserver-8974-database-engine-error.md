@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762173"
 ---
-# <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+# <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|8974|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|8974|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, unité d’allocation ID A_ID (type TYPE). Le nœud de données hors ligne page P_ID1, emplacement S_ID1, ID de texte TEXT_ID est référencé par la page P_ID2, emplacement S_ID2 et par la page P_ID3, emplacement P_ID3.|  
+|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE). Le nœud de données hors ligne page P_ID1, emplacement S_ID1, ID de texte TEXT_ID est référencé par la page P_ID2, emplacement S_ID2 et par la page P_ID3, emplacement P_ID3.|  
   
 ## <a name="explanation"></a>Explication  
  Un nœud de données hors ligne a deux enregistrements de données ou d'index qui le répertorient en tant que nœud enfant. Un nœud ne peut avoir qu'un nœud parent.  

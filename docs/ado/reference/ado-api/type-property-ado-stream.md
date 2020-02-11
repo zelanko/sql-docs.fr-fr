@@ -1,5 +1,5 @@
 ---
-title: Type de propriété (ADO Stream) | Microsoft Docs
+title: Type, propriété (ADO Stream) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,22 +18,22 @@ ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938237"
 ---
 # <a name="type-property-ado-stream"></a>Type, propriété (objet Stream ADO)
-Indique le type de données contenues dans le [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binaire ou texte).  
+Indique le type de données contenues dans le [flux](../../../ado/reference/ado-api/stream-object-ado.md) (binaire ou texte).  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) valeur qui spécifie le type de données contenues dans le **Stream** objet. La valeur par défaut est **adTypeText**. Toutefois, si les données binaires sont initialement écrits dans un nouveau, vide **Stream**, le **Type** sera modifiée en **adTypeBinary**.  
+ Définit ou retourne une valeur [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) qui spécifie le type de données contenu dans l’objet de **flux** . La valeur par défaut est **adTypeText**. Toutefois, si des données binaires sont écrites initialement dans un nouveau **flux**vide, le **type** sera remplacé par **adTypeBinary**.  
   
 ## <a name="remarks"></a>Notes  
- Le **Type** propriété est en lecture/écriture uniquement lorsque la position actuelle est au début de la **Stream** ([Position](../../../ado/reference/ado-api/position-property-ado.md) est 0) et en lecture seule à n’importe quel autre position.  
+ La propriété de **type** est en lecture/écriture uniquement lorsque la position actuelle est au début du **flux** ([position](../../../ado/reference/ado-api/position-property-ado.md) est 0) et en lecture seule à n’importe quelle autre position.  
   
- Le**Type** propriété détermine quelles méthodes doivent être utilisés pour lire et écrire le **Stream**. Pour le texte **flux**, utilisez [ReadText](../../../ado/reference/ado-api/readtext-method.md) et [WriteText](../../../ado/reference/ado-api/writetext-method.md). Pour le fichier binaire **flux**, utilisez [en lecture](../../../ado/reference/ado-api/read-method.md) et [écrire](../../../ado/reference/ado-api/write-method.md).  
+ La propriété de**type** détermine les méthodes qui doivent être utilisées pour lire et écrire dans le **flux**. Pour les **flux**de texte, utilisez [READTEXT](../../../ado/reference/ado-api/readtext-method.md) et [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md). Pour les **flux**binaires, utilisez [Read](../../../ado/reference/ado-api/read-method.md) et [Write](../../../ado/reference/ado-api/write-method.md).  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

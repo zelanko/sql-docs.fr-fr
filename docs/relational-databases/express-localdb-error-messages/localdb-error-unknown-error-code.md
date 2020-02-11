@@ -10,13 +10,13 @@ ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd2a159b67670a2bbffa28bae7e2cc449b8ba6e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68011001"
 ---
-# <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
+# <a name="localdb_error_unknown_error_code"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Détails  
@@ -24,8 +24,8 @@ ms.locfileid: "68011001"
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|272|  
-|Source de l'événement|Runtime de base de données locale SQL Server 12.0|  
+|ID de l’événement|272|  
+|Source de l’événement|Runtime de base de données locale SQL Server 12.0|  
 |Composant|API d'exécution de la base de données locale|  
 |Texte du message|Erreur de réception du message d'erreur localisé. Le code d'erreur spécifié est inconnu.|  
   

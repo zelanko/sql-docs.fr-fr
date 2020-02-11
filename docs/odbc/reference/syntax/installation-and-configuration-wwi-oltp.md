@@ -1,5 +1,5 @@
 ---
-title: Sqlsetdriverconnectinfo, fonction | Microsoft Docs
+title: SQLSetDriverConnectInfo fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54e37940062427008e9b90f6cda4cec825a721ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915291"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 3,81 ODBC : ODBC  
+ Version introduite : ODBC 3,81 conforme aux normes : ODBC  
   
  **Résumé**  
- **SQLSetDriverConnectInfo** sert à définir la chaîne de connexion dans le jeton d’informations de connexion pour l’application **SQLDriverConnect** appeler.  
+ **SQLSetDriverConnectInfo** est utilisé pour définir la chaîne de connexion dans le jeton d’informations de connexion pour l’appel **SQLDriverConnect** d’une application.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,30 +38,30 @@ SQLRETURN SQLSetDriverConnectInfo(
   
 ## <a name="arguments"></a>Arguments  
  *TokenHandle*  
- [Entrée] Handle de jeton.  
+ Entrée Handle de jeton.  
   
  *InConnectionString*  
- [Entrée] Une chaîne de connexion complète (consultez la syntaxe dans « Commentaires » dans [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)), une chaîne de connexion partielle ou une chaîne vide.  
+ Entrée Une chaîne de connexion complète (consultez la syntaxe dans « Comments » dans [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)), une chaîne de connexion partielle ou une chaîne vide.  
   
  *StringLength1*  
- [Entrée] Longueur de **InConnectionString*, en caractères, si la chaîne est Unicode ou octets si la chaîne ANSI ou DBCS.  
+ Entrée Longueur de **InConnectionString*, en caractères si la chaîne est Unicode, ou octets si la chaîne est ANSI ou DBCS.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Identique à [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) liés à toute erreur de validation d’entrée, à ceci près que le Gestionnaire de pilotes utilisera un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN et un **gérer** de *hDbcInfoToken*.  
+ Identique à [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) lié à une erreur de validation d’entrée, à ceci près que le gestionnaire de pilotes utilisera un **comme HandleType** de SQL_HANDLE_DBC_INFO_TOKEN et un **handle** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Notes  
- Chaque fois qu’un pilote retourne SQL_ERROR ou SQL_INVALID_HANDLE, le Gestionnaire de pilotes retourne l’erreur à l’application (dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) ou [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Chaque fois qu’un pilote retourne SQL_ERROR ou SQL_INVALID_HANDLE, le gestionnaire de pilotes renvoie l’erreur à l’application (dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) ou [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Chaque fois qu’un pilote retourne SQL_SUCCESS_WITH_INFO, le Gestionnaire de pilotes obtiendront les informations de diagnostic à partir de *hDbcInfoToken*et retourne SQL_SUCCESS_WITH_INFO, à l’application dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)et [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Chaque fois qu’un pilote retourne SQL_SUCCESS_WITH_INFO, le gestionnaire de pilotes obtient les informations de diagnostic à partir de *hDbcInfoToken*et renvoie SQL_SUCCESS_WITH_INFO à l’application dans [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) et [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Applications ne doivent pas appeler cette fonction directement. Un pilote ODBC qui prend en charge le regroupement de connexions prenant en charge les pilotes doive implémenter cette fonction.  
+ Les applications ne doivent pas appeler cette fonction directement. Un pilote ODBC qui prend en charge le regroupement de connexions prenant en charge les pilotes doit implémenter cette fonction.  
   
- Inclure sqlspi.h pour le développement de pilote ODBC.  
+ Incluez sqlspi. h pour le développement du pilote ODBC.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Le regroupement de connexions prenant en charge de pilote](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Regroupement de connexions prenant en charge les pilotes](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

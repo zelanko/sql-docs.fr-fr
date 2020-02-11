@@ -1,5 +1,5 @@
 ---
-title: En-tête d’Extensions Visual C++ | Microsoft Docs
+title: Visual C++ en-tête d’extensions | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926385"
 ---
 # <a name="visual-c-extensions-header"></a>En-tête d’extensions Visual C++
-L’en-tête suivant, **icrsint.h décrit**, décrit en détail l’interface qui permet aux clients de récupérer les champs à partir d’un **Recordset** dans des variables définies dans une classe dérivée de **CADORecordBinding**. Vous devez spécifier une macro de liaison ADO pour chaque champ que vous voulez accéder.  
+L’en-tête suivant, **icrsint. h**, détaille l’interface qui permet aux clients de récupérer des champs d’un **Recordset** dans des variables définies dans une classe dérivée de **CADORecordBinding**. Vous devez spécifier une macro de liaison ADO pour chaque champ auquel vous souhaitez accéder.  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -208,5 +208,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple d’Extensions Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Exemple d’extensions Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Utilisation des extensions Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)

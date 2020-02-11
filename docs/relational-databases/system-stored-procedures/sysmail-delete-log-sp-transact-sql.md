@@ -18,18 +18,18 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a4cfa0178b04a53c3d5ea8419d063d636507a39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019927"
 ---
-# <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
+# <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime des événements du journal de la messagerie de base de données. Supprime tous les événements du journal ou uniquement les événements correspondant à des critères de date ou de type spécifiés.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +41,20 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @logged_before = ] 'logged_before'` Supprime les entrées antérieures à la date et l’heure spécifiée par le *logged_before* argument. *logged_before* est **datetime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
+`[ @logged_before = ] 'logged_before'`Supprime les entrées jusqu’à la date et l’heure spécifiées par l’argument *logged_before* . *logged_before* est de **type DateTime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
   
-`[ @event_type = ] 'event_type'` Supprime les entrées du type spécifié en tant que journal le *event_type*. *event_type* est **varchar(15)** sans valeur par défaut. Les entrées valides sont **réussite**, **avertissement**, **erreur**, et **d’information**. La valeur NULL correspond à tous les types d'événements.  
+`[ @event_type = ] 'event_type'`Supprime les entrées de journal du type spécifié en tant que *event_type*. *event_type* est de type **varchar (15)** et n’a pas de valeur par défaut. Les entrées valides sont **réussite**, **Avertissement**, **erreur**et **information**. La valeur NULL correspond à tous les types d'événements.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **sysmail_delete_log_sp** procédure stockée pour supprimer définitivement des entrées de journal de la messagerie de base de données. Un argument facultatif vous permet de supprimer uniquement les enregistrements les plus anciens en fournissant une date et une heure. Les événements antérieurs à cet argument sont alors supprimés. Un argument facultatif vous permet de supprimer uniquement les événements d’un certain type, spécifié en tant que le **event_type** argument.  
+ Utilisez la procédure stockée **sysmail_delete_log_sp** pour supprimer définitivement des entrées du journal des Database mail. Un argument facultatif vous permet de supprimer uniquement les enregistrements les plus anciens en fournissant une date et une heure. Les événements antérieurs à cet argument sont alors supprimés. Un argument facultatif vous permet de supprimer uniquement les événements d’un certain type, spécifiés comme argument **event_type** .  
   
- La suppression d'entrées dans le journal de la messagerie de base de données n'entraîne pas la suppression d'entrées de messages électroniques dans les tables de la messagerie de base de données. Utilisez [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) à supprimer du courrier électronique à partir de tables de la messagerie de base de données.  
+ La suppression d'entrées dans le journal de la messagerie de base de données n'entraîne pas la suppression d'entrées de messages électroniques dans les tables de la messagerie de base de données. Utilisez [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) pour supprimer le courrier électronique des tables Database mail.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe peut accéder à cette procédure.  
+ Seuls les membres du rôle serveur fixe **sysadmin** peuvent accéder à cette procédure.  
   
 ## <a name="examples"></a>Exemples  
   

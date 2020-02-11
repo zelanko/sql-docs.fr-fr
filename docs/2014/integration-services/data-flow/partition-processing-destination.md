@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890560"
 ---
 # <a name="partition-processing-destination"></a>Destination de traitement de partition
-  La destination de traitement de partition charge et traite une partition [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur les partitions, consultez [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
+  La destination de traitement de partition charge et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite une partition. Pour plus d’informations sur les partitions, consultez [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
- La destination de traitement de partition regroupe les fonctionnalités suivantes :  
+ La destination de traitement de partition regroupe les fonctionnalités suivantes :  
   
 -   options permettant de choisir entre un traitement incrémentiel, un traitement complet ou un traitement de mise à jour ;  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68890560"
   
 -   [Éditeur de destination de traitement de partition &#40;page Mappages&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Éditeur de destination de traitement de partition &#40;page Avancé&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Éditeur de destination de traitement de partition &#40;page avancé&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   

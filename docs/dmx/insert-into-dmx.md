@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892726"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de [ &#40;données&#41;](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining)et des structures d’exploration de données, consultez conditions requises pour le traitement et exploration de données.  
+  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de données et des structures d’exploration de données, consultez [exigences et considérations relatives au traitement &#40;&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
  Si une structure d'exploration de données est spécifiée, l'instruction traite la structure et tous ses modèles d'exploration de données associés. Si un modèle d'exploration de données est spécifié, l'instruction traite uniquement le modèle.  
   
@@ -34,7 +34,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificateur du modèle  
   
- *structure*  
+ *arborescence*  
  Identificateur de la structure  
   
  *colonnes de modèle mappées*  
@@ -46,9 +46,9 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Notes  
  Si vous ne spécifiez pas de **modèle** d’exploration de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] données ou de structure d’exploration de **données**, recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
- En utilisant la deuxième forme de syntaxe, insérer dans *\<l’objet >* . COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
+ En utilisant la deuxième forme de syntaxe, insérer dans*\<l’objet>*. COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
   
- Si vous utilisez **insert into** avec un modèle d’exploration de données ou une structure d’exploration de \<données et que vous laissez les \<colonnes de modèle mappées > et les arguments de > de requête de données source, l’instruction se comporte comme **ProcessDefault**, en utilisant des liaisons qui existe déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [options et paramètres &#40;de&#41;traitement Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). L’exemple suivant illustre la syntaxe:  
+ Si vous utilisez **insert into** avec un modèle d’exploration de données ou une structure d’exploration de \<données et que vous laissez les \<colonnes de modèle mappées> et les arguments de> de requête de données source, l’instruction se comporte comme **ProcessDefault**, en utilisant des liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [options et paramètres de traitement &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). L’exemple suivant illustre la syntaxe :  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -58,16 +58,16 @@ INSERT INTO [MINING MODEL] <model>
   
  Le tableau ci-dessous donne une description du résultat de différentes formes de l'instruction, en fonction de l'état des objets.  
   
-|.|État des objets|Résultat|  
+|.|État des objets|Résultats|  
 |---------------|----------------------|------------|  
-|Insérer dans le modèle de modèle *\<d’exploration de données >*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
+|Insérer dans le modèle de modèle*\<d’exploration de données>*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
 ||La structure d'exploration de données n'est pas traitée.|Le modèle et la structure d'exploration de données sont traités.|  
 ||La structure d'exploration de données contient des modèles d'exploration de données supplémentaires.|Échec du traitement. Vous devez retraiter la structure et les modèles d'exploration de données associés.|  
-|Insérer dans la structure de structure *\<d’exploration de données >*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
-|Insérer dans le *\<modèle* de modèle d’exploration de données > qui contient une requête source<br /><br /> ou Gestionnaire de configuration<br /><br /> Insérer dans une structure d’exploration de données *\<>* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez effacer les objets avant d’effectuer cette opération à l’aide de l’instruction [Delete &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|Insérer dans la structure de structure*\<d’exploration de données>*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
+|Insérer dans le*\<modèle* de modèle d’exploration de données>qui contient une requête source<br /><br /> or<br /><br /> Insérer dans une structure d’exploration de données*\<>* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez effacer les objets avant d’effectuer cette opération en utilisant [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Mapped Model Columns  
- En utilisant les \<colonnes du modèle mappé > élément, vous pouvez mapper les colonnes de la source de données aux colonnes de votre modèle d’exploration de données. Les \<colonnes du modèle mappé > élément se présente sous la forme suivante:  
+ En utilisant les \<colonnes du modèle mappé> élément, vous pouvez mapper les colonnes de la source de données aux colonnes de votre modèle d’exploration de données. Les \<colonnes du modèle mappé> élément se présente sous la forme suivante :  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  La syntaxe de SKIP requiert que vous insériez SKIP à la position de la colonne individuelle dans l'ensemble de lignes d'entrée qui n'a aucune colonne de structure d'exploration de données correspondante. Par exemple, dans l'exemple de table imbriquée ci-dessous, OrderNumber doit être sélectionné dans la clause APPEND afin de pouvoir être utilisé dans la clause RELATE pour spécifier la jointure ; toutefois, vous ne souhaitez pas insérer les données OrderNumber dans la table imbriquée dans la structure d'exploration de données. Par conséquent, l'exemple utilise le mot clé SKIP au lieu de OrderNumber dans l'argument INSERT INTO.  
   
 ## <a name="source-data-query"></a>Source Data Query  
- L' \<élément de > de requête de données source peut inclure les types de sources de données suivants:  
+ L' \<élément de> de requête de données source peut inclure les types de sources de données suivants :  
   
 -   **OPENQUERY**  
   
@@ -90,7 +90,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   Toute requête [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retournant un ensemble de lignes  
   
- Pour plus d’informations sur les types de sources de données, consultez [ &#60;&#62;requête de données sources](../dmx/source-data-query.md).  
+ Pour plus d’informations sur les types de sources de données, consultez [&#60;&#62;de requête de données source ](../dmx/source-data-query.md).  
   
 ## <a name="basic-example"></a>Exemple de base  
  L’exemple suivant utilise **OPENQUERY** pour effectuer l’apprentissage d’un modèle Naive Bayes basé sur les données de [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] publipostage ciblées dans la base de données.  
@@ -103,7 +103,7 @@ FROM [vTargetMail]')
 ```  
   
 ## <a name="nested-table-example"></a>Exemple de table imbriquée  
- L’exemple suivant utilise **Shape** pour effectuer l’apprentissage d’un modèle d’exploration de données Association qui contient une table imbriquée. Notez que la première ligne contient **Skip** au lieu de OrderNumber, ce qui est requis dans l’instruction **SHAPE_APPEND** mais n’est pas utilisé dans le modèle d’exploration de données.  
+ L’exemple suivant utilise **Shape** pour effectuer l’apprentissage d’un modèle d’exploration de données Association qui contient une table imbriquée. Notez que la première ligne contient **Skip** au lieu de OrderNumber, ce qui est requis dans l’instruction **SHAPE_APPEND** , mais n’est pas utilisé dans le modèle d’exploration de données.  
   
 ```  
 INSERT INTO MyAssociationModel  
@@ -120,8 +120,8 @@ AS [Models]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de définition &#40;de&#41; données DMX dans Data Mining Extensions](../dmx/dmx-statements-data-definition.md)   
- [Instructions de manipulation &#40;de&#41; données DMX des extensions d’exploration de données](../dmx/dmx-statements-data-manipulation.md)   
- [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

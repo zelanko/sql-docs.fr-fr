@@ -20,17 +20,17 @@ ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8dfa779a664d398a6fb619bf17bf67bb52ab1bb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005713"
 ---
-# <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API de procédure stockée étendue)
+# <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilisez plutôt l’intégration du CLR.  
   
  Retourne la longueur de données maximale d'un paramètre d'appel de procédure stockée distante. Cette fonction a été remplacée par la fonction **srv_paraminfo**.  
   
@@ -54,26 +54,26 @@ n
  *n*  
  Indique le numéro du paramètre. Le premier paramètre est 1.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Longueur maximale, en octets, des données du paramètre. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
   
- Cette fonction retourne les valeurs suivantes, si le paramètre est l’un des types de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants.  
+ Cette fonction retourne les valeurs suivantes, si le paramètre est l’un des types [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données suivants.  
   
 |Nouveaux types de données|Longueur de données d'entrée|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL :** 1<br /><br /> **ZERO :** 1<br /><br /> **>=255:** Néant<br /><br /> **<255 :** Néant|  
-|**BIGVARCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**BIGCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**BIGBINARY**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**BIGVARBINARY**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**NCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**NVARCHAR**|**NULL :** 255<br /><br /> **ZERO :** 255<br /><br /> **>=255:** 255<br /><br /> **<255 :** 255|  
-|**NTEXT**|**NULL :** -1<br /><br /> **ZERO :** -1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
+|**BITN**|**Null :** 1<br /><br /> **Zéro :** 1<br /><br /> **>= 255 :** NON APPLICABLE<br /><br /> **<255 :** NON APPLICABLE|  
+|**BIGVARCHAR**|**Null :** 255<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**BIGCHAR**|**Null :** 255<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**BIGBINARY**|**Null :** 255<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**BIGVARBINARY**|**Null :** 255<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**NCHAR**|**Null :** 255<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**NVARCHAR**|**Null :** 255<br /><br /> **Zéro :** 255<br /><br /> **>= 255 :** 255<br /><br /> **<255 :** 255|  
+|**Text**|**Null :** -1<br /><br /> **Zéro :** -1<br /><br /> **>= 255 :** -1<br /><br /> 255 :-1 ** \<**|  
   
 ## <a name="remarks"></a>Notes  
  Chaque paramètre de procédure stockée distante possède une longueur de données réelle et une longueur de données maximale. Pour les types de données de longueur fixe standard qui n'autorisent pas les valeurs NULL, les longueurs réelle et maximale sont les mêmes. Pour les types de données de longueur variable, les longueurs peuvent varier. Par exemple, un paramètre déclaré en tant que **varchar(30)** peut posséder des données longues de 10 octets seulement. La longueur réelle du paramètre est 10 et sa longueur maximale est 30. La fonction **srv_parammaxlen** obtient la longueur de données maximale d’une procédure stockée distante. Pour obtenir la longueur réelle d’un paramètre, utilisez **srv_paramlen**.  
   
- Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Le gestionnaire SRV_RPC est tout de même appelé, mais il apparaît comme s’il n’y avait aucun paramètre et **srv_rpcparams** retourne 0.  
+ Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante est effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Le gestionnaire de SRV_RPC est toujours appelé, mais il apparaît comme s’il n’y avait aucun paramètre, et **srv_rpcparams** retourne 0.  
   
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  

@@ -1,5 +1,5 @@
 ---
-title: À propos des propriétés OLE DB | Microsoft Docs
+title: À propos des propriétés de OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638071"
 ---
 # <a name="about-ole-db-properties"></a>À propos des propriétés OLE DB
@@ -27,7 +27,7 @@ ms.locfileid: "62638071"
   
  Chaque propriété a une valeur, un type, une description et un attribut de lecture/écriture et, pour les propriétés d'ensemble de lignes, un indicateur signalant s'il peut être appliqué sur la base de chaque colonne.  
   
- Une propriété est identifiée par un GUID et un entier représentant l'ID de propriété. Un jeu de propriétés est un jeu de toutes les propriétés qui partagent le même GUID. Outre la propriété OLE DB prédéfinie définit, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif implémente une propriété spécifique au fournisseur définit les propriétés et dans les. Chaque propriété appartient à un ou plusieurs groupes de propriétés. Un groupe de propriétés est le groupe de toutes les propriétés qui s'appliquent à un objet particulier. Parmi les groupes de propriétés, on peut citer le groupe de propriétés d'initialisation, le groupe de propriétés de source de données, le groupe de propriétés de session, le groupe de propriétés d'ensemble de lignes, le groupe de propriétés de table et le groupe des propriétés de colonnes. Il y a des propriétés dans chacun de ces groupes de propriétés.  
+ Une propriété est identifiée par un GUID et un entier représentant l'ID de propriété. Un jeu de propriétés est un jeu de toutes les propriétés qui partagent le même GUID. Outre les jeux de propriétés OLE DB prédéfinis, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client implémente des jeux de propriétés et des propriétés spécifiques au fournisseur. Chaque propriété appartient à un ou plusieurs groupes de propriétés. Un groupe de propriétés est le groupe de toutes les propriétés qui s'appliquent à un objet particulier. Parmi les groupes de propriétés, on peut citer le groupe de propriétés d'initialisation, le groupe de propriétés de source de données, le groupe de propriétés de session, le groupe de propriétés d'ensemble de lignes, le groupe de propriétés de table et le groupe des propriétés de colonnes. Il y a des propriétés dans chacun de ces groupes de propriétés.  
   
  La définition de valeurs de propriétés implique les opérations suivantes  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62638071"
 7.  Appel d'une méthode pour définir des propriétés et passer le nombre et le tableau de structures DBPROPSET.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’une Application de fournisseur SQL Server Native Client OLE DB](creating-a-sql-server-native-client-ole-db-provider-application.md)   
+ [Création d’une application SQL Server Native Client OLE DB Provider](creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Propriétés (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

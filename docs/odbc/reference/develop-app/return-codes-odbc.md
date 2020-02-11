@@ -1,5 +1,5 @@
 ---
-title: ODBC de Codes de retour | Microsoft Docs
+title: Codes de retour ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5f780f9abc47a367a1825d51b12159292ace5da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020423"
 ---
 # <a name="return-codes-odbc"></a>Codes de retour dans ODBC
-Chaque fonction ODBC retourne un code, connu sous le nom son *code de retour,* qui indique la réussite ou l’échec de la fonction globale. La logique du programme repose en général sur des codes de retour.  
+Chaque fonction dans ODBC retourne un code, connu sous le nom de « *Code de retour »,* qui indique le succès ou l’échec global de la fonction. La logique du programme repose en général sur des codes de retour.  
   
- Par exemple, ce qui suit code appelle **SQLFetch** pour récupérer les lignes dans un jeu de résultats. Il vérifie le code de retour de la fonction pour déterminer si la fin du jeu de résultats a été atteinte (SQL_NO_DATA), si les informations d’avertissement a été retournées (SQL_SUCCESS_WITH_INFO), ou si une erreur s’est produite (SQL_ERROR).  
+ Par exemple, le code suivant appelle **SQLFetch** pour récupérer les lignes dans un jeu de résultats. Il vérifie le code de retour de la fonction pour déterminer si la fin du jeu de résultats a été atteinte (SQL_NO_DATA), si des informations d’avertissement ont été retournées (SQL_SUCCESS_WITH_INFO) ou si une erreur s’est produite (SQL_ERROR).  
   
 ```  
 SQLRETURN   rc;  
@@ -46,10 +46,10 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
 |Code de retour|Description|  
 |-----------------|-----------------|  
-|SQL_SUCCESS|Fonction s’est terminée correctement. L’application appelle **SQLGetDiagField** pour récupérer des informations supplémentaires à partir de l’enregistrement d’en-tête.|  
-|SQL_SUCCESS_WITH_INFO|Fonction s’est terminée avec succès, éventuellement avec une erreur non fatale (avertissement). L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires.|  
-|SQL_ERROR|Échec de la fonction. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Le contenu de tous les arguments à la fonction de sortie n’est pas défini.|  
-|SQL_INVALID_HANDLE|Fonction a échoué en raison d’un handle d’environnement, connexion, instruction ou descripteur non valide. Cela indique une erreur de programmation. Aucune information supplémentaire n’est disponible à partir de **SQLGetDiagRec** ou **SQLGetDiagField**. Ce code est renvoyé uniquement lorsque le handle est un pointeur null ou le type est incorrect, par exemple lorsqu’un descripteur d’instruction est passé pour un argument qui nécessite un handle de connexion.|  
-|SQL_NO_DATA|Plus aucune donnée n’était disponible. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Un ou plusieurs enregistrements d’état définies par le pilote dans la classe 02xxx peuvent être renvoyés. **Remarque :**  Dans ODBC 2. *x*, cela retourne le code s’appelait SQL_NO_DATA_FOUND.|  
-|SQL_NEED_DATA|Plus de données est nécessaire, par exemple lorsque les données de paramètre sont envoyées au moment de l’exécution ou les informations de connexion supplémentaires sont nécessaires. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|  
-|SQL_STILL_EXECUTING|Une fonction qui a été démarrée en mode asynchrone est en cours d’exécution. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|
+|SQL_SUCCESS|La fonction s’est terminée avec succès. L’application appelle **SQLGetDiagField** pour récupérer des informations supplémentaires à partir de l’enregistrement d’en-tête.|  
+|SQL_SUCCESS_WITH_INFO|La fonction s’est terminée avec succès, éventuellement avec une erreur récupérable (avertissement). L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires.|  
+|SQL_ERROR|Échec de la fonction. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Le contenu de tous les arguments de sortie de la fonction n’est pas défini.|  
+|SQL_INVALID_HANDLE|Échec de la fonction en raison d’un handle d’environnement, de connexion, d’instruction ou de descripteur non valide. Cela indique une erreur de programmation. Aucune information supplémentaire n’est disponible à partir de **SQLGetDiagRec** ou de **SQLGetDiagField**. Ce code est retourné uniquement lorsque le handle est un pointeur null ou qu’il s’agit d’un type incorrect, par exemple lorsqu’un descripteur d’instruction est passé pour un argument qui requiert un handle de connexion.|  
+|SQL_NO_DATA|Aucune donnée supplémentaire n’était disponible. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Un ou plusieurs enregistrements d’État définis par le pilote dans la classe 02xxx peuvent être retournés. **Remarque :**  Dans ODBC 2. *x*, ce code de retour a été nommé SQL_NO_DATA_FOUND.|  
+|SQL_NEED_DATA|Davantage de données sont nécessaires, par exemple lorsque des données de paramètre sont envoyées au moment de l’exécution ou lorsque des informations de connexion supplémentaires sont requises. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|  
+|SQL_STILL_EXECUTING|Une fonction qui a été démarrée de manière asynchrone est toujours en cours d’exécution. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|

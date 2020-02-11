@@ -1,5 +1,5 @@
 ---
-title: À l’aide de SQLBindCol | Microsoft Docs
+title: Utilisation de SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022162"
 ---
 # <a name="using-sqlbindcol"></a>Utilisation de SQLBindCol
-L’application lie les colonnes en appelant **SQLBindCol**. Cette fonction est liée à une colonne à la fois. Avec elle, l’application spécifie les éléments suivants :  
+L’application lie les colonnes en appelant **SQLBindCol**. Cette fonction lie une colonne à la fois. Avec celle-ci, l’application spécifie les éléments suivants :  
   
--   Numéro de la colonne. 0 est la colonne de signet ; Cette colonne n’est pas incluse dans certains jeux de résultats. Toutes les autres colonnes sont numérotées à partir du numéro 1. C’est une erreur pour lier une colonne élevé qu’il existe de colonnes du jeu de résultats ; Cette erreur ne peut pas être détectée jusqu'à ce que le jeu de résultats a été créé, qui est retournée par **SQLFetch**, et non **SQLBindCol**.  
+-   Numéro de la colonne. La colonne 0 est la colonne de signet ; Cette colonne n’est pas incluse dans certains jeux de résultats. Toutes les autres colonnes sont numérotées en commençant par le numéro 1. La liaison d’une colonne avec un numéro supérieur à celui des colonnes dans le jeu de résultats est une erreur ; Cette erreur ne peut pas être détectée tant que le jeu de résultats n’a pas été créé. par conséquent, elle est retournée par **SQLFetch**, et non par **SQLBindCol**.  
   
--   Le C type, l’adresse et octets longueur des données de la variable liée à la colonne. C’est une erreur pour spécifier un type de données C vers lequel le type de données SQL de la colonne ne peut pas être converti ; Cette erreur peut ne pas être détectée jusqu'à ce que le jeu de résultats a été créé, qui est retournée par **SQLFetch**, et non **SQLBindCol**. Pour une liste des conversions prises en charge, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) dans l’annexe d : Types de données. Pour plus d’informations sur la longueur d’octet, consultez [longueur de mémoire tampon de données](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   Le type de données C, l’adresse et la longueur en octets de la variable liée à la colonne. La spécification d’un type de données C pour lequel le type de données SQL de la colonne ne peut pas être converti est une erreur. Cette erreur peut ne pas être détectée tant que le jeu de résultats n’a pas été créé. par conséquent, elle est retournée par **SQLFetch**, et non par **SQLBindCol**. Pour obtenir la liste des conversions prises en charge, consultez [conversion de données de SQL en types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) dans l’annexe D : types de données. Pour plus d’informations sur la longueur en octets, consultez [Data buffer length](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
--   L’adresse d’une mémoire tampon de longueur / d’indicateur. La mémoire tampon de longueur / d’indicateur est facultative. Il est utilisé pour retourner la longueur d’octet du fichier binaire ou caractère ou retour SQL_NULL_DATA si les données sont NULL. Pour plus d’informations, consultez [à l’aide des valeurs de longueur / d’indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Adresse d’une mémoire tampon de longueur/d’indicateur. Le tampon de longueur/d’indicateur est facultatif. Elle est utilisée pour retourner la longueur en octets des données binaires ou de type caractère, ou retourner SQL_NULL_DATA si les données sont NULL. Pour plus d’informations, consultez [utilisation des valeurs de longueur/indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Lorsque **SQLBindCol** est appelée, le pilote associe ces informations avec l’instruction. Lorsque chaque ligne de données est atteinte, il utilise les informations pour placer les données pour chaque colonne dans les variables d’application liée.  
+ Lorsque **SQLBindCol** est appelé, le pilote associe ces informations à l’instruction. Quand chaque ligne de données est extraite, elle utilise les informations pour placer les données de chaque colonne dans les variables d’application liées.  
   
- Par exemple, le code suivant lie les variables aux colonnes vendeur et CustID. Dans les données pour les colonnes seront renvoyées *vendeur* et *CustID*. Étant donné que *vendeur* est une mémoire tampon de caractères, l’application spécifie sa longueur en octets (11) afin que le pilote peut déterminer s’il faut tronquer les données. La longueur d’octet de retourné du titre, ou si sa valeur est NULL, seront retournées dans *SalesPersonLenOrInd*.  
+ Par exemple, le code suivant lie des variables aux colonnes SalesPerson et CustID. Les données des colonnes sont retournées dans *SalesPerson* et *CustID*. Étant donné que *SalesPerson* est une mémoire tampon de caractères, l’application spécifie sa longueur d’octet (11) afin que le pilote puisse déterminer s’il faut tronquer les données. La longueur d’octet du titre retourné, ou si elle est NULL, est retournée dans *SalesPersonLenOrInd*.  
   
- Étant donné que *CustID* est une variable de type entier et a résolu longueur, il est inutile de spécifier sa longueur en octets ; le pilote suppose qu’il est **sizeof (** SQLUINTEGER **)** . La longueur d’octet du client retourné ID des données, ou si sa valeur est NULL, seront retournées dans *CustIDInd*. Notez que l’application est intéressée uniquement si le salaire est NULL, car la longueur d’octet est toujours **sizeof (** SQLUINTEGER **)** .  
+ Comme *CustID* est une variable de type entier et a une longueur fixe, il n’est pas nécessaire de spécifier sa longueur d’octet ; le pilote suppose qu’il s’agit **de sizeof (** SQLUINTEGER **)**. La longueur d’octet des données de l’ID client retournées, ou si elle est NULL, est retournée dans *CustIDInd*. Notez que l’application est intéressée uniquement par le fait que le salaire est NULL, car la longueur de l’octet est toujours **sizeof (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -70,7 +70,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- Le code suivant exécute un **sélectionnez** instruction entré par l’utilisateur et imprime chaque ligne de données dans le jeu de résultats. Étant donné que l’application ne peut pas prédire la forme du résultat jeu créé par le **sélectionnez** instruction, il ne peut pas lier des variables codées en dur au jeu comme dans l’exemple précédent de résultats. Au lieu de cela, l’application alloue une mémoire tampon qui contient les données et une mémoire tampon de longueur / d’indicateur pour chaque colonne de cette ligne. Pour chaque colonne, il calcule l’offset au début de la mémoire pour la colonne et ajuste ce décalage, afin que les tampons de données et de longueur / d’indicateur pour la colonne Démarrer sur les limites d’alignement. Il lie ensuite la mémoire en commençant à l’offset de la colonne. Du point de vue du pilote, l’adresse de cette mémoire est identique à l’adresse d’une variable liée dans l’exemple précédent. Pour plus d’informations sur l’alignement, consultez [alignement](../../../odbc/reference/develop-app/alignment.md).  
+ Le code suivant exécute une instruction **Select** entrée par l’utilisateur et imprime chaque ligne de données dans le jeu de résultats. Étant donné que l’application ne peut pas prédire la forme du jeu de résultats créé par l’instruction **Select** , elle ne peut pas lier des variables codées en dur au jeu de résultats comme dans l’exemple précédent. Au lieu de cela, l’application alloue une mémoire tampon qui contient les données et une mémoire tampon de longueur/indicateur pour chaque colonne de cette ligne. Pour chaque colonne, elle calcule le décalage au début de la mémoire pour la colonne et ajuste ce décalage afin que les tampons de données et de longueur/indicateur pour la colonne commencent sur les limites d’alignement. Il lie ensuite la mémoire en commençant au décalage de la colonne. Du point de vue du pilote, l’adresse de cette mémoire ne peut pas être différenciée de l’adresse d’une variable liée dans l’exemple précédent. Pour plus d’informations sur l’alignement, consultez [alignement](../../../odbc/reference/develop-app/alignment.md).  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

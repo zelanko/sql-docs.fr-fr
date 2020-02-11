@@ -1,5 +1,5 @@
 ---
-title: Instruction CREATE SESSION CUBE (MDX) | Microsoft Docs
+title: Instruction CREATe SESSION CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038360"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Définition de données MDX - CREATE SESSION CUBE
@@ -101,13 +101,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Nom de la dimension dans le cube de session.  
   
- À partir de \<dim à partir de la clause >  
+ À \<partir de la clause dim from>  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
  NOT_RELATED_TO_FACTS  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
- \<type de niveau >  
+ \<type de niveau>  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
 ## <a name="remarks"></a>Notes  
@@ -124,7 +124,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 -   Éliminer des dimensions existant dans le cube source.  
   
--   Ajouter ou éliminer des hiérarchies dans une dimension.  
+-   Ajoutez ou supprimez des hiérarchies d’une dimension.  
   
 -   Éliminer des groupes de mesures ou des mesures spécifiques.  
   
@@ -199,7 +199,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instruction CREATE GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+ [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instruction CREATe GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

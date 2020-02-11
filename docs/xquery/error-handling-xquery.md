@@ -18,10 +18,10 @@ ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038963"
 ---
 # <a name="error-handling-xquery"></a>Gestion des erreurs (XQuery)
@@ -37,15 +37,15 @@ ms.locfileid: "68038963"
  Une conversion explicite en type correct permet aux utilisateurs d'éviter les erreurs statiques même si les erreurs de conversion à l'exécution sont transformées en séquences vides.  
   
 ## <a name="static-errors"></a>Erreurs statiques  
- Les erreurs statiques sont renvoyées à l'aide du mécanisme d'erreur [!INCLUDE[tsql](../includes/tsql-md.md)]. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les erreurs de type XQuery sont renvoyées statiquement. Pour plus d’informations, consultez [XQuery et le typage statique](../xquery/xquery-and-static-typing.md).  
+ Les erreurs statiques sont renvoyées à l'aide du mécanisme d'erreur [!INCLUDE[tsql](../includes/tsql-md.md)]. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les erreurs de type XQuery sont renvoyées statiquement. Pour plus d’informations, consultez [XQuery et typage statique](../xquery/xquery-and-static-typing.md).  
   
 ## <a name="dynamic-errors"></a>Erreurs dynamiques  
- Dans XQuery, la plupart des erreurs dynamiques sont mappées à une séquence vide (« () »). Il existe toutefois deux exceptions : Conditions de dépassement dans les fonctions d’agrégation XQuery et les erreurs de validation XML-DML. La plupart des erreurs dynamiques sont mappées à une séquence vide. Sinon, l'exécution de requêtes qui tire parti des index XML peut déclencher des erreurs inattendues. Par conséquent, pour permettre une exécution efficace sans générer d'erreurs inattendues, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mappe les erreurs dynamiques à ().  
+ Dans XQuery, la plupart des erreurs dynamiques sont mappées à une séquence vide (« () »). Il existe toutefois deux exceptions : les conditions de dépassement dans les fonctions d'agrégation XQuery et les erreurs de validation XML-DML. La plupart des erreurs dynamiques sont mappées à une séquence vide. Sinon, l'exécution de requêtes qui tire parti des index XML peut déclencher des erreurs inattendues. Par conséquent, pour permettre une exécution efficace sans générer d'erreurs inattendues, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] mappe les erreurs dynamiques à ().  
   
  Si l'erreur dynamique devait se produire dans un prédicat, il est courant que son non-déclenchement épargne la sémantique car () est mappé à False. Toutefois, dans certains cas, le renvoi de () au lieu d'une erreur dynamique peut générer des résultats inattendus. Les exemples suivants illustrent ce point.  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>Exemple : À l’aide de la fonction avg() avec une chaîne  
- Dans l’exemple suivant, le [fonction avg](../xquery/aggregate-functions-avg.md) est appelé pour calculer la moyenne des trois valeurs. L'une de ces valeurs est une chaîne. L'instance XML étant, dans ce cas, non typée, toutes les données qu'elle contient sont de type atomique non typé. Le **avg()** fonction convertit tout d’abord ces valeurs à **xs : double** avant de calculer la moyenne. Toutefois, la valeur, `"Hello"`, ne peut pas être casté en **xs : double** et génère une erreur dynamique. Dans ce cas, au lieu de renvoyer une erreur dynamique, la conversion de `"Hello"` à **xs : double** génère une séquence vide. Le **avg()** fonction ignore cette valeur, calcule la moyenne des deux autres valeurs et renvoie 150.  
+### <a name="example-using-the-avg-function-with-a-string"></a>Exemple : utilisation de la fonction avg() avec une chaîne  
+ Dans l’exemple suivant, la [fonction AVG](../xquery/aggregate-functions-avg.md) est appelée pour calculer la moyenne des trois valeurs. L'une de ces valeurs est une chaîne. L'instance XML étant, dans ce cas, non typée, toutes les données qu'elle contient sont de type atomique non typé. La fonction **AVG ()** convertit d’abord ces valeurs en **XS : double** avant le calcul de la moyenne. Toutefois, la valeur, `"Hello"`, ne peut pas être convertie en **XS : double** et crée une erreur dynamique. Dans ce cas, au lieu de renvoyer une erreur dynamique, la conversion `"Hello"` de en **XS : double** provoque une séquence vide. La fonction **AVG ()** ignore cette valeur, calcule la moyenne des deux autres valeurs et retourne 150.  
   
 ```  
 DECLARE @x xml  
@@ -57,10 +57,10 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>Exemple : À l’aide de not (fonction)  
- Lorsque vous utilisez le [ne fonctionne pas](../xquery/functions-on-boolean-values-not-function.md) dans un prédicat, par exemple, `/SomeNode[not(Expression)]`, et l’expression provoque une erreur dynamique, une séquence vide est retournée au lieu d’une erreur. Application **not()** à la séquence vide renvoie True, au lieu d’une erreur.  
+### <a name="example-using-the-not-function"></a>Exemple: utilisation de la fonction not  
+ Lorsque vous utilisez la [fonction not](../xquery/functions-on-boolean-values-not-function.md) dans un prédicat, par exemple, `/SomeNode[not(Expression)]`, et que l’expression provoque une erreur dynamique, une séquence vide est retournée à la place d’une erreur. L’application de **not ()** à la séquence vide retourne la valeur true, au lieu d’une erreur.  
   
-### <a name="example-casting-a-string"></a>Exemple : Conversion d’une chaîne  
+### <a name="example-casting-a-string"></a>Exemple: conversion d'une chaîne  
  Dans l'exemple suivant, la chaîne littérale « NaN » est convertie au format xs:string, puis au format xs:double. Le résultat est un ensemble de lignes vide. Le fait que la chaîne « NaN » ne puisse pas être correctement convertie au format xs:double n'est détecté qu'à l'exécution car elle est d'abord convertie au format xs:string.  
   
 ```  
@@ -80,7 +80,7 @@ GO
 ```  
   
 #### <a name="implementation-limitations"></a>Limites de mise en œuvre  
- Le **fn:error()** fonction n’est pas prise en charge.  
+ La fonction **FN : Error ()** n’est pas prise en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   

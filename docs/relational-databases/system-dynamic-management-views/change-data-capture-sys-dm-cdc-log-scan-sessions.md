@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
+title: sys. dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017994"
 ---
-# <a name="change-data-capture---sysdmcdclogscansessions"></a>Capture de données modifiées - sys.dm_cdc_log_scan_sessions
+# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Capture de données modifiées-sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque session d'analyse du journal dans la base de données actuelle. La dernière ligne retournée représente la session active. Vous pouvez utiliser cette vue pour retourner des informations d'état sur la session d'analyse du journal actuelle, ou des informations de synthèse sur toutes les sessions depuis le dernier démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,32 +34,32 @@ ms.locfileid: "68017994"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID de la session.<br /><br /> 0 = les données retournées dans cette ligne sont un agrégat de toutes les sessions depuis le dernier démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**start_time**|**datetime**|Heure de début de la session.<br /><br /> Lorsque **session_id** = 0, heure de début de la collecte de données agrégées.|  
-|**end_time**|**datetime**|Heure à laquelle la session est terminée.<br /><br /> NULL = la session est active.<br /><br /> Lorsque **session_id** = 0, heure de la dernière session s’est terminée.|  
-|**duration**|**bigint**|Durée (en secondes) de la session.<br /><br /> 0 = la session ne contient pas de transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, la somme de la durée (en secondes) de toutes les sessions avec les transactions de capture de données modifiées.|  
-|**scan_phase**|**nvarchar(200)**|Phase actuelle de la session. Voici les valeurs possibles et leurs descriptions :<br /><br /> 1 : Lecture de la configuration<br />2 : Première analyse, création de table de hachage<br />3 : Deuxième analyse<br />4 : Deuxième analyse<br />5 : Deuxième analyse<br />6 : Contrôle de version de schéma<br />7 : Dernière analyse<br />8 : Terminé<br /><br /> Lorsque **session_id** = 0, cette valeur est toujours « Agrégation ».|  
-|**error_count**|**Int**|Nombre d'erreurs rencontrées.<br /><br /> Lorsque **session_id** = 0, le nombre total d’erreurs dans toutes les sessions.|  
-|**start_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal de démarrage pour la session.<br /><br /> Lorsque **session_id** = 0, le LSN de départ pour la dernière session.|  
-|**current_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal actuel qui est analysé.<br /><br /> Lorsque **session_id** = 0, le numéro LSN actuel est 0.|  
-|**end_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal de fin pour la session.<br /><br /> NULL = la session est active.<br /><br /> Lorsque **session_id** = 0, le LSN de fin pour la dernière session.|  
-|**tran_count**|**bigint**|Nombre de transactions de capture des données modifiées traitées. Ce compteur est rempli en phase 2.<br /><br /> Lorsque **session_id** = 0, le nombre de transactions traitées dans toutes les sessions.|  
-|**last_commit_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal du dernier enregistrement du journal de validation traité.<br /><br /> Lorsque **session_id** = 0, la dernière validation enregistrement du journal LSN pour toute session.|  
-|**last_commit_time**|**datetime**|Heure de traitement du dernier enregistrement du journal de validation.<br /><br /> Lorsque **session_id** = 0, heure de la validation du dernier enregistrement du journal pour n’importe quelle session.|  
+|**start_time**|**DATETIME**|Heure de début de la session.<br /><br /> Lorsque **session_id** = 0, le temps de collecte des données agrégées a commencé.|  
+|**end_time**|**DATETIME**|Heure à laquelle la session s’est terminée.<br /><br /> NULL = la session est active.<br /><br /> Lorsque **session_id** = 0, heure de fin de la dernière session.|  
+|**Macauley**|**bigint**|Durée (en secondes) de la session.<br /><br /> 0 = la session ne contient pas de transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, somme de la durée (en secondes) de toutes les sessions avec des transactions de capture de données modifiées.|  
+|**scan_phase**|**nvarchar(200)**|Phase actuelle de la session. Voici les valeurs possibles et leurs descriptions :<br /><br /> 1 : lecture de la configuration<br />2 : première analyse, création de la table de hachage<br />3 : deuxième analyse<br />4 : deuxième analyse<br />5 : deuxième analyse<br />6 : contrôle de version de schéma<br />7 : dernière analyse<br />8 : terminé<br /><br /> Quand **session_id** = 0, cette valeur est toujours « Aggregate ».|  
+|**error_count**|**int**|Nombre d'erreurs rencontrées.<br /><br /> Lorsque **session_id** = 0, nombre total d’erreurs dans toutes les sessions.|  
+|**start_lsn**|**nvarchar (23)**|Numéro séquentiel dans le journal de démarrage pour la session.<br /><br /> Lorsque **session_id** = 0, numéro LSN de départ pour la dernière session.|  
+|**current_lsn**|**nvarchar (23)**|Numéro séquentiel dans le journal actuel qui est analysé.<br /><br /> Lorsque **session_id** = 0, le LSN actuel est 0.|  
+|**end_lsn**|**nvarchar (23)**|Numéro séquentiel dans le journal de fin pour la session.<br /><br /> NULL = la session est active.<br /><br /> Lorsque **session_id** = 0, LSN de fin de la dernière session.|  
+|**tran_count**|**bigint**|Nombre de transactions de capture des données modifiées traitées. Ce compteur est rempli au cours de la phase 2.<br /><br /> Lorsque **session_id** = 0, nombre de transactions traitées dans toutes les sessions.|  
+|**last_commit_lsn**|**nvarchar (23)**|Numéro séquentiel dans le journal du dernier enregistrement du journal de validation traité.<br /><br /> Lorsque **session_id** = 0, le numéro LSN du dernier enregistrement du journal de validation pour toute session.|  
+|**last_commit_time**|**DATETIME**|Heure de traitement du dernier enregistrement du journal de validation.<br /><br /> Lorsque **session_id** = 0, heure du dernier enregistrement du journal de validation pour toute session.|  
 |**log_record_count**|**bigint**|Nombre d'enregistrements du journal analysés.<br /><br /> Lorsque **session_id** = 0, nombre d’enregistrements analysés pour toutes les sessions.|  
-|**schema_change_count**|**Int**|Nombre d'opérations de langage de définition de données (DDL) détectées. Ce compteur est rempli lors de la phase 6.<br /><br /> Lorsque **session_id** = 0, le nombre d’opérations DDL traitées dans toutes les sessions.|  
+|**schema_change_count**|**int**|Nombre d'opérations de langage de définition de données (DDL) détectées. Ce compteur est rempli lors de la phase 6.<br /><br /> Lorsque **session_id** = 0, nombre d’opérations DDL traitées dans toutes les sessions.|  
 |**command_count**|**bigint**|Nombre de commandes traitées.<br /><br /> Lorsque **session_id** = 0, le nombre de commandes traitées dans toutes les sessions.|  
-|**first_begin_cdc_lsn**|**nvarchar(23)**|Premier numéro séquentiel dans le journal qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, le premier numéro séquentiel qui contenait des transactions de capture de données modifiées.|  
-|**last_commit_cdc_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal du dernier enregistrement du journal de validation qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, le dernier enregistrement du journal LSN de validation pour toute session qui contenait transactions de capture de données modifiées|  
-|**last_commit_cdc_time**|**datetime**|Heure de traitement du dernier enregistrement du journal de validation qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, heure du dernier journal de validation enregistrer pour toute session qui contenait transactions de capture de données modifiées.|  
-|**latence**|**int**|La différence, en secondes, entre **end_time** et **last_commit_cdc_time** dans la session. Ce compteur est rempli à la fin de la phase 7.<br /><br /> Lorsque **session_id** = 0, la dernière valeur de latence différente de zéro enregistrée par une session.|  
+|**first_begin_cdc_lsn**|**nvarchar (23)**|Premier numéro séquentiel dans le journal qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, le premier LSN qui contenait des transactions de capture de données modifiées.|  
+|**last_commit_cdc_lsn**|**nvarchar (23)**|Numéro séquentiel dans le journal du dernier enregistrement du journal de validation qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, numéro LSN du dernier enregistrement du journal de validation pour toute session qui contenait des transactions de capture de données modifiées|  
+|**last_commit_cdc_time**|**DATETIME**|Heure de traitement du dernier enregistrement du journal de validation qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, heure du dernier enregistrement du journal de validation pour toute session qui contenait des transactions de capture de données modifiées.|  
+|**latence**|**int**|Différence, en secondes, entre **end_time** et **last_commit_cdc_time** dans la session. Ce compteur est rempli à la fin de la phase 7.<br /><br /> Lorsque **session_id** = 0, il s’agit de la dernière valeur de latence différente de zéro enregistrée par une session.|  
 |**empty_scan_count**|**int**|Nombre de sessions consécutives qui ne contenaient aucune transaction de capture des données modifiées.|  
-|**failed_sessions_count**|**Int**|Nombre de sessions qui ont échoué.|  
+|**failed_sessions_count**|**int**|Nombre de sessions qui ont échoué.|  
   
 ## <a name="remarks"></a>Notes  
  Les valeurs dans cette vue de gestion dynamique sont réinitialisées à chaque démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation VIEW DATABASE STATE pour interroger le **sys.dm_cdc_log_scan_sessions** vue de gestion dynamique. Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Nécessite l’autorisation VIEW DATABASE STATE pour interroger la vue de gestion dynamique **sys. dm_cdc_log_scan_sessions** . Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne des informations pour la session la plus active.  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys. dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

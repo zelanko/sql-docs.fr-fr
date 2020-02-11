@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71708213"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importer et exporter des données en bloc à l'aide de l'utilitaire bcp (SQL Server)
@@ -56,27 +56,29 @@ Cette rubrique est une présentation générale de l'utilisation de l' [utilitai
   
 -   [Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Conserver les valeurs d’identité lors de l’importation en bloc de données &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Spécifiez les indicateurs de fin de champ et de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 -   [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format natif pour importer ou exporter des données &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Utilisez le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
 ## <a name="see-also"></a>Voir aussi
 
-[Insérer &#40;&#41;](/sql/t-sql/statements/insert-transact-sql)l'[utilitaire bcp](../../tools/bcp-utility.md)Transact-SQL 
-[clause &#40;Select&#41;Transact-SQL](/sql/t-sql/queries/select-clause-transact-sql)
-    
-[Préparer l’importation en bloc &#40;de&#41;données SQL Server](prepare-to-bulk-import-data-sql-server.md)
-[Bulk Insert &#40;Transact&#41;-SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
-[importation et exportation en &#40;bloc&#41;de données SQL Server](bulk-import-and-export-of-data-sql-server.md)1[OpenRowset &#40; Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[crée un fichier &#40;de format&#41; SQL Server](create-a-format-file-sql-server.md)
+[Insérer &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ [clause SELECT &#40;utilitaire Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ [BCP](../../tools/bcp-utility.md)   
+[Préparer l’importation en bloc de données &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+ [Bulk Insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ [importation et l’exportation de données ](bulk-import-and-export-of-data-sql-server.md) 
+en bloc &#40;SQL Server&#41;[OpenRowset &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [créer un fichier de format](create-a-format-file-sql-server.md) &#40;SQL Server&#41;

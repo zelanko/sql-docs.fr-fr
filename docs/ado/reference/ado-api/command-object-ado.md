@@ -16,68 +16,68 @@ ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919797"
 ---
 # <a name="command-object-ado"></a>Command, objet (ADO)
-Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.  
+Définit une commande spécifique que vous avez l’intention d’exécuter sur une source de données.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez un **commande** objet pour interroger une base de données et retourner des enregistrements dans une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, pour exécuter une opération en bloc ou pour manipuler la structure d’une base de données. Selon les fonctionnalités du fournisseur, certaines **commande** collections, méthodes ou propriétés peuvent générer une erreur lorsqu’elles sont référencées.  
+ Utilisez un objet de **commande** pour interroger une base de données et retourner des enregistrements dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , pour exécuter une opération en bloc ou pour manipuler la structure d’une base de données. Selon la fonctionnalité du fournisseur, certaines collections de **commandes** , méthodes ou propriétés peuvent générer une erreur lorsqu’elles sont référencées.  
   
- Avec les collections, les méthodes et les propriétés d’un **commande** de l’objet, vous pouvez procédez comme suit :  
+ Avec les collections, les méthodes et les propriétés d’un objet **Command** , vous pouvez effectuer les opérations suivantes :  
   
--   Définir le texte exécutable de la commande (par exemple, une instruction SQL) avec la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété. Vous pouvez également pour la commande ou requête structures autres que de simples chaînes (par exemple, les requêtes de modèle XML) définissent la commande avec le [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété.  
+-   Définissez le texte exécutable de la commande (par exemple, une instruction SQL) avec la propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) . Pour les structures de commande ou de requête autres que les chaînes simples (par exemple, les requêtes de modèle XML), vous pouvez également définir la commande avec la propriété [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) .  
   
--   Si vous le souhaitez, indiquer le dialecte de commande utilisé dans le **CommandText** ou **CommandStream** avec la [dialecte](../../../ado/reference/ado-api/dialect-property.md) propriété.  
+-   Éventuellement, indiquez le dialecte de commande utilisé dans **CommandText** ou **CommandStream** avec la propriété [Dialect](../../../ado/reference/ado-api/dialect-property.md) .  
   
--   Définir des requêtes paramétrables ou les arguments de procédure stockée avec [paramètre](../../../ado/reference/ado-api/parameter-object.md) objets et le [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  
+-   Définir des requêtes paramétrables ou des arguments de procédure stockée avec des objets de [paramètre](../../../ado/reference/ado-api/parameter-object.md) et la collection de [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
   
--   Indiquer si les noms de paramètre doivent être transmis au fournisseur avec le [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) propriété.  
+-   Indiquez si les noms de paramètres doivent être passés au fournisseur avec la propriété [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) .  
   
--   Exécuter une commande et retourner un **Recordset** objet si nécessaire avec le [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) (méthode).  
+-   Exécutez une commande et renvoyez un objet **Recordset** , le cas échéant, avec la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) .  
   
--   Spécifiez le type de commande avec le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété avant l’exécution pour optimiser les performances.  
+-   Spécifiez le type de commande avec la propriété [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) avant l’exécution pour optimiser les performances.  
   
--   Vérifier si le fournisseur enregistre une version préparée (ou compilée) de la commande avant l’exécution avec le [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) propriété.  
+-   Contrôler si le fournisseur enregistre une version préparée (ou compilée) de la commande avant l’exécution avec la propriété [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) .  
   
--   Définir le nombre de secondes d’attente d’un fournisseur d’une commande à exécuter avec le [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) propriété.  
+-   Définit le nombre de secondes pendant lesquelles un fournisseur attendra qu’une commande s’exécute avec la propriété [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) .  
   
--   Associer une connexion ouverte avec un **commande** objet en définissant son [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété.  
+-   Associez une connexion ouverte à un objet de **commande** en définissant sa propriété [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) .  
   
--   Définir le [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété pour identifier le **commande** objet en tant que méthode sur associé [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
+-   Définissez la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) pour identifier l’objet **Command** comme une méthode sur l’objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) associé.  
   
--   Passer un **commande** de l’objet à la [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriété d’un **Recordset** pour obtenir des données.  
+-   Transmettez un objet **Command** à la propriété [source](../../../ado/reference/ado-api/source-property-ado-recordset.md) d’un **Recordset** pour obtenir des données.  
   
--   Accéder aux attributs spécifiques au fournisseur avec le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Accédez aux attributs spécifiques au fournisseur avec la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
 > [!NOTE]
->  Pour exécuter une requête sans utiliser un **commande** d’objet, passez une chaîne de requête à la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) méthode d’un **connexion** objet ou à la [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)méthode d’un **Recordset** objet. Toutefois, un **commande** objet est requis lorsque vous souhaitez conserver le texte de commande et exécuter de nouveau ou utiliser des paramètres de requête.  
+>  Pour exécuter une requête sans utiliser d’objet **Command** , transmettez une chaîne de requête à la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) d’un objet **Connection** ou à la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) d’un objet **Recordset** . Toutefois, un objet **Command** est requis lorsque vous souhaitez conserver le texte de la commande et le réexécuter, ou utiliser des paramètres de requête.  
   
- Pour créer un **commande** objet indépendamment défini précédemment **connexion** de l’objet, définissez son **ActiveConnection** en une chaîne de connexion valide. ADO crée toujours un **connexion** objet, mais elle n’affecte pas cet objet à une variable objet. Toutefois, si vous associez plusieurs **commande** objets avec la même connexion, vous devez explicitement créer et ouvrir un **connexion** objet ; ce affecte le **connexion** objet à une variable objet. Vous assurer que le **connexion** objet a été ouverte avec succès avant de l’affecter à la **ActiveConnection** propriété de la **commande** de l’objet, car l’affectation d’un fermé **connexion** objet provoque une erreur. Si vous ne définissez pas la **ActiveConnection** propriété de la **commande** de l’objet à cette variable objet, ADO crée un nouveau **connexion** pour chaque objet  **Commande** de l’objet, même si vous utilisez la même chaîne de connexion.  
+ Pour créer un objet **Command** indépendamment d’un objet **Connection** défini précédemment, définissez sa propriété **ActiveConnection** sur une chaîne de connexion valide. ADO crée toujours un objet de **connexion** , mais il n’affecte pas cet objet à une variable objet. Toutefois, si vous associez plusieurs objets de **commande** à la même connexion, vous devez créer et ouvrir explicitement un objet de **connexion** ; Cela affecte l’objet de **connexion** à une variable objet. Assurez-vous que l’objet de **connexion** a été ouvert correctement avant de l’affecter à la propriété **ActiveConnection** de l’objet **Command** , car l’attribution d’un objet **Connection** fermé provoque une erreur. Si vous ne définissez pas la propriété **ActiveConnection** de l’objet **Command** sur cette variable objet, ADO crée un objet **Connection** pour chaque objet **Command** , même si vous utilisez la même chaîne de connexion.  
   
- Pour exécuter un **commande**, appelez-le son [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété sur associé **connexion** objet. Le **commande** doit avoir son **ActiveConnection** propriété définie sur le **connexion** objet. Si le **commande** possède des paramètres, passez ses valeurs en tant qu’arguments à la méthode.  
+ Pour exécuter une **commande**, appelez-la par sa propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) sur l’objet **Connection** associé. La valeur de la propriété **ActiveConnection** de la **commande** doit être définie sur l’objet de **connexion** . Si la **commande** a des paramètres, transmettez leurs valeurs comme arguments à la méthode.  
   
- Si deux ou plusieurs **commande** les objets sont exécutés sur la même connexion et soit **commande** objet est une procédure stockée avec des paramètres de sortie, une erreur se produit. Pour exécuter chaque **commande** de l’objet, utiliser des connexions distinctes ou déconnectez tous les autres **commande** objets à partir de la connexion.  
+ Si deux objets de **commande** ou plus sont exécutés sur la même connexion et que l’un des objets de **commande** est une procédure stockée avec des paramètres de sortie, une erreur se produit. Pour exécuter chaque objet de **commande** , utilisez des connexions distinctes ou déconnectez tous les autres objets de **commande** de la connexion.  
   
- Le **paramètres** collection est le membre par défaut de la **commande** objet. Par conséquent, les deux instructions suivantes sont équivalentes.  
+ La collection **Parameters** est le membre par défaut de l’objet **Command** . Par conséquent, les deux instructions de code suivantes sont équivalentes.  
   
 ```  
 objCmd.Parameters.Item(0)  
 objCmd(0)  
 ```  
   
--   Le **commande** objet n’est pas sécurisé pour le script.  
+-   L’objet **Command** n’est pas sûr pour l’écriture de scripts.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
--   [Propriétés de l’objet commande, méthodes et événements](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Command](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

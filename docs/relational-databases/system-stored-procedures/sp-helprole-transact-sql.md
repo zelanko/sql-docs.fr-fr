@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997493"
 ---
-# <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
+# <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie les informations concernant les rôles de la base de données active.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +40,9 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'` Est le nom d’un rôle dans la base de données actuelle. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit exister dans la base de données actuelle. Si *rôle* est ne pas spécifié, les informations sur tous les rôles de base de données active sont renvoyées.  
+`[ @rolename = ] 'role'`Nom d’un rôle dans la base de données active. *role* est de **type sysname**, avec NULL comme valeur par défaut. le *rôle* doit exister dans la base de données actuelle. Si le *rôle* n’est pas spécifié, les informations sur tous les rôles de la base de données actuelle sont retournées.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -50,8 +50,8 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|Nom du rôle dans la base de données en cours.|  
-|**RoleId**|**smallint**|ID de **RoleName**.|  
-|**IsAppRole**|**int**|0 = **RoleName** n’est pas un rôle d’application.<br /><br /> 1 = **RoleName** est un rôle d’application.|  
+|**RoleId**|**smallint**|ID de **roleName**.|  
+|**IsAppRole**|**int**|0 = **roleName** n’est pas un rôle d’application.<br /><br /> 1 = **roleName** est un rôle d’application.|  
   
 ## <a name="remarks"></a>Notes  
  Pour afficher les autorisations associées au rôle, utilisez **sp_helprotect**. Pour afficher les membres d’un rôle de base de données, utilisez **sp_helprolemember**.  
@@ -68,7 +68,7 @@ EXEC sp_helprole
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md)   
+ [Rôles au niveau du serveur](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md)   
  [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

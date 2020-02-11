@@ -17,14 +17,14 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918848"
 ---
 # <a name="execute-method-ado-command"></a>Execute, méthode (commande ADO)
-Exécute la requête, une instruction SQL ou une procédure stockée spécifiée dans le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété de la [objet de commande](../../../ado/reference/ado-api/command-object-ado.md).  
+Exécute la requête, l’instruction SQL ou la procédure stockée spécifiée dans la propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) de l' [objet Command](../../../ado/reference/ado-api/command-object-ado.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,49 +34,49 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) référence d’objet, d’un flux, ou **rien**.  
+ Retourne une référence [d’objet Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , un flux, ou **rien**.  
   
 #### <a name="parameters"></a>Paramètres  
  *RecordsAffected*  
- facultatif. Un **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée de l’opération. Le *RecordsAffected* paramètre s’applique uniquement pour les requêtes d’action ou des procédures stockées. *RecordsAffected* ne retourne pas le nombre d’enregistrements retournés par une procédure stockée ou une requête qui retourne des résultats. Pour obtenir ces informations, utilisez le [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété. Le **Execute** méthode ne retournera pas les informations correctes lorsqu’il est utilisé avec **adAsyncExecute**, simplement parce que lorsqu’une commande est exécutée de façon asynchrone, le nombre d’enregistrements concernés peut encore être inconnue au moment de que la méthode est retournée.  
+ facultatif. Variable de **type long** à laquelle le fournisseur retourne le nombre d’enregistrements affectés par l’opération. Le paramètre *RecordsAffected* s’applique uniquement aux requêtes d’action ou aux procédures stockées. *RecordsAffected* ne retourne pas le nombre d’enregistrements renvoyés par une requête ou une procédure stockée qui retourne un résultat. Pour obtenir ces informations, utilisez la propriété [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . La méthode **Execute** ne retourne pas les informations correctes lorsqu’elle est utilisée avec **adAsyncExecute**, simplement parce que lorsqu’une commande est exécutée de manière asynchrone, le nombre d’enregistrements affectés n’est peut-être pas encore connu au moment du retour de la méthode.  
   
  *Paramètres*  
- facultatif. Un **Variant** tableau de valeurs de paramètre utilisées conjointement avec la chaîne d’entrée ou le flux spécifié dans **CommandText** ou **CommandStream**. (Les paramètres de sortie ne retournent pas de valeurs correctes quand il est passé dans cet argument.)  
+ facultatif. Tableau **Variant** de valeurs de paramètre utilisées conjointement avec la chaîne d’entrée ou le flux spécifié dans **CommandText** ou **CommandStream**. (Les paramètres de sortie ne retournent pas les valeurs correctes lorsqu’ils sont passés dans cet argument.)  
   
  *Options*  
- facultatif. Un **Long** valeur qui indique la manière dont le fournisseur doit évaluer le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriété de la [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Peut être une valeur de masque de bits à l’aide de [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) et/ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs. Par exemple, vous pouvez utiliser **adCmdText** et **adExecuteStream** en combinaison, si vous souhaitez demander à ADO d’évaluer la valeur de la **CommandText** propriété sous forme de texte, et Indique que la commande doit ignorer et ne retourne pas tous les enregistrements qui peuvent être générés lorsque le texte de commande s’exécute.  
+ facultatif. Valeur de **type long** qui indique comment le fournisseur doit évaluer le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou la propriété [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) de l’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) . Peut être une valeur de masque de masque créée à l’aide de valeurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) et/ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) . Par exemple, vous pouvez utiliser **adCmdText** et **adExecuteNoRecords** en combinaison si vous souhaitez qu’ADO évalue la valeur de la propriété **CommandText** en tant que texte, et indique que la commande doit ignorer et ne pas retourner les enregistrements qui peuvent être générés lors de l’exécution du texte de la commande.  
   
 > [!NOTE]
->  Utilisez le **ExecuteOptionEnum** valeur **adExecuteStream** pour améliorer les performances en réduisant le traitement interne. Si **adExecuteStream** a été spécifié, les options **adAsyncFetch** et **adAsynchFetchNonBlocking** sont ignorés. N’utilisez pas le **CommandTypeEnum** les valeurs de **adCmdFile** ou **adCmdTableDirect** avec **Execute**. Ces valeurs peuvent uniquement être utilisées en tant qu’options avec les [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [Requery](../../../ado/reference/ado-api/requery-method.md) méthodes d’un **Recordset**.  
+>  Utilisez la **** valeur ExecuteOptionEnum **adExecuteNoRecords** pour améliorer les performances en minimisant le traitement interne. Si **adExecuteStream** a été spécifié, les options **adAsyncFetch** et **adAsynchFetchNonBlocking** sont ignorées. N’utilisez pas les valeurs **CommandTypeEnum** de **adCmdFile** ou **adCmdTableDirect** avec l' **instruction EXECUTE**. Ces valeurs ne peuvent être utilisées qu’en tant qu’options avec les méthodes d' [ouverture](../../../ado/reference/ado-api/open-method-ado-recordset.md) et de [rerequête](../../../ado/reference/ado-api/requery-method.md) d’un **Recordset**.  
   
 ## <a name="remarks"></a>Notes  
- À l’aide de la **Execute** méthode sur un **commande** objet exécute la requête spécifiée dans le **CommandText** propriété ou **CommandStream** propriété de l’objet.  
+ L’utilisation de la méthode **Execute** sur un objet **Command** exécute la requête spécifiée dans la propriété **CommandText** ou **CommandStream** de l’objet.  
   
- Résultats sont retournés dans un **Recordset** (par défaut) ou en tant que flux d’informations binaires. Pour obtenir un flux binaire, spécifiez **adExecuteStream** dans *Options*, puis fournir un flux de données en définissant **Command.Properties (« sortie Stream »)** . ADO **Stream** objet peut être spécifié pour recevoir les résultats, ou un autre objet de flux tels que l’objet de réponse de IIS peut être spécifié. Si aucun flux n’a été spécifié avant d’appeler **Execute** avec **adExecuteStream**, une erreur se produit. La position du flux de données lors du retour de **Execute** est fournisseur spécifique.  
+ Les résultats sont retournés dans un **jeu d’enregistrements** (par défaut) ou sous la forme d’un flux d’informations binaires. Pour obtenir un flux binaire, spécifiez **adExecuteStream** dans *options*, puis fournissez un flux en définissant **Command. Properties (« flux de sortie »)**. Un objet de **flux** ADO peut être spécifié pour recevoir les résultats, ou un autre objet de flux, tel que l’objet de réponse IIS, peut être spécifié. Si aucun flux n’a été spécifié avant d’appeler **Execute** avec **adExecuteStream**, une erreur se produit. La position du flux au retour de l' **instruction EXECUTE** est spécifique au fournisseur.  
   
- Si la commande ne vise pas à retourner des résultats (par exemple, une requête SQL UPDATE) le fournisseur retourne **rien** aussi longtemps que l’option **adExecuteStream** est spécifié ; sinon exécutez retourne un fermé **Recordset**. Certains langages d’application vous permettent d’ignorer cette valeur de retour si aucun **Recordset** est souhaitée.  
+ Si la commande n’est pas destinée à retourner des résultats (par exemple, une requête de mise à jour SQL), le fournisseur ne retourne **rien** tant que l’option **adExecuteNoRecords** est spécifiée. Sinon, la méthode Execute retourne un **jeu d’enregistrements**fermé. Certains langages d’application vous permettent d’ignorer cette valeur de retour si aucun **Recordset** n’est souhaité.  
   
- **Exécutez** génère une erreur si l’utilisateur spécifie une valeur pour **CommandStream** lorsque le **CommandType** est **valeur adCmdStoredProc**,  **adCmdTable**, ou **adCmdTableDirect**.  
+ L' **instruction EXECUTE** génère une erreur si l’utilisateur spécifie une valeur pour **CommandStream** lorsque **CommandType** est **adCmdStoredProc**, **adCmdTable**ou **adCmdTableDirect**.  
   
- Si la requête possède des paramètres, les valeurs en cours pour le **commande** les paramètres de l’objet sont utilisées, sauf si vous remplacez par les valeurs de paramètre passées avec le **Execute** appeler. Vous pouvez remplacer un sous-ensemble des paramètres en omettant les nouvelles valeurs pour certains des paramètres lors de l’appel le **Execute** (méthode). L’ordre dans lequel vous spécifiez les paramètres est le même ordre que celui dans lequel la méthode les passe. Par exemple, si les paramètres de quatre (ou plus) et que vous souhaitez passer de nouvelles valeurs uniquement pour les première et quatrième paramètres, vous transmettriez `Array(var1,,,var4)` en tant que le *paramètres* argument.  
-  
-> [!NOTE]
->  Paramètres de sortie ne retournent pas de valeurs correctes quand il est passé dans le *paramètres* argument.  
-  
- Un [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) événement est émis lorsque cette opération se termine.  
+ Si la requête possède des paramètres, les valeurs actuelles des paramètres de l’objet de **commande** sont utilisées, sauf si vous les remplacez par des valeurs de paramètre passées avec l’appel d' **exécution** . Vous pouvez substituer un sous-ensemble des paramètres en omettant les nouvelles valeurs de certains des paramètres lors de l’appel de la méthode **Execute** . L’ordre dans lequel vous spécifiez les paramètres correspond à l’ordre dans lequel la méthode les passe. Par exemple, si vous avez quatre (ou plus) paramètres et que vous souhaitez passer de nouvelles valeurs uniquement pour le premier et le quatrième paramètres, vous `Array(var1,,,var4)` devez passer comme argument de *paramètres* .  
   
 > [!NOTE]
->  Lors de l’émission de commandes contenant l’URL, ceux qui utilisent le modèle http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Les paramètres de sortie ne retournent pas les valeurs correctes quand elles sont passées dans l’argument *Parameters* .  
+  
+ Un événement [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) est émis lorsque cette opération se termine.  
+  
+> [!NOTE]
+>  Lorsque vous émettez des commandes contenant des URL, celles qui utilisent le schéma http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>S'applique à  
  [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Execute, Requery et Clear, exemple de méthodes (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [Execute, Requery et Clear, exemple de méthodes (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [Execute, Requery et Clear, exemple de méthodes (VC ++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+ [Execute, Requery et Clear, exemples de méthodes (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [Execute, Requery et Clear, exemple de méthode (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [Execute, Requery et Clear, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [CommandStream, propriété (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [CommandText, propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
- [Execute, méthode (objet Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute, méthode (connexion ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [ExecuteComplete, événement (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)

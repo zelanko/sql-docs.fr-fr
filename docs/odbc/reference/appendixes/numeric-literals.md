@@ -16,18 +16,18 @@ ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3409376b5fd2f71ecff8d510d17ce3771e63fa73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990688"
 ---
 # <a name="numeric-literals"></a>Littéraux numériques
-Littéraux numériques sont utilisés lorsque les valeurs de données numériques sont stockées dans les chaînes de caractères. Pour la conversion de données SQL numériques en une chaîne SQL_C_CHAR ou de conversion de données numériques de C sur une chaîne SQL_CHAR ou SQL_VARCHAR, la syntaxe littérale numérique permet de spécifier ce qui est stocké dans la cible. Pour une conversion de numérique stocké sous forme de chaîne de données numérique SQL SQL_C_CHAR ou numérique stocké sous forme de chaîne à des données numériques C SQL_CHAR, cette syntaxe est utilisée pour valider ce qui est stocké dans la source.  
+Les littéraux numériques sont utilisés lorsque les valeurs de données numériques sont stockées dans des chaînes de caractères. Pour la conversion de données SQL numériques en une chaîne SQL_C_CHAR, ou la conversion de données numériques C en une chaîne SQL_CHAR ou SQL_VARCHAR, une syntaxe de littéral numérique est utilisée pour spécifier les éléments stockés dans la cible. Pour la conversion d’un type numérique stocké en tant que chaîne de SQL_C_CHAR en données SQL numériques, ou d’un type numérique stocké en tant que chaîne SQL_CHAR en données numériques, cette syntaxe est utilisée pour valider ce qui est stocké dans la source.  
   
- Littéraux numériques doivent être conformes à la syntaxe définie dans la section [syntaxe littérale numérique](../../../odbc/reference/appendixes/numeric-literal-syntax.md) dans l’annexe c : Grammaire SQL.  
+ Les littéraux numériques doivent être conformes à la syntaxe définie dans la section [syntaxe de littéral numérique](../../../odbc/reference/appendixes/numeric-literal-syntax.md) de l’annexe C : grammaire SQL.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Règles pour les conversions](../../../odbc/reference/appendixes/rules-for-conversions.md)  
   

@@ -17,20 +17,20 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022151"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Utilisation de SQLGetDiagRec et de SQLGetDiagField
-Applications appellent **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer les informations de diagnostic. Ces fonctions acceptent un handle d’environnement, connexion, instruction ou descripteur et renvoient des diagnostics à partir de la fonction de ce descripteur de la dernière utilisation. Les tests de diagnostic enregistrées sur un handle spécifique sont ignorés quand une nouvelle fonction est appelée à l’aide de ce descripteur. Si la fonction a retourné plusieurs enregistrements de diagnostic, l’application appelle ces fonctions plusieurs fois ; le nombre total d’enregistrements d’état est récupéré en appelant **SQLGetDiagField** pour l’enregistrement d’en-tête (enregistrement 0) avec l’option SQL_DIAG_NUMBER.  
+Les applications appellent **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer les informations de diagnostic. Ces fonctions acceptent un handle d’environnement, de connexion, d’instruction ou de descripteur et retournent des diagnostics à partir de la fonction qui a utilisé ce handle pour la dernière fois. Les diagnostics enregistrés sur un handle particulier sont ignorés lorsqu’une nouvelle fonction est appelée à l’aide de ce handle. Si la fonction a retourné plusieurs enregistrements de diagnostic, l’application appelle ces fonctions plusieurs fois. le nombre total d’enregistrements d’État est récupéré en appelant **SQLGetDiagField** pour l’enregistrement d’en-tête (enregistrement 0) avec l’option SQL_DIAG_NUMBER.  
   
- Applications extraire les champs de diagnostics individuels en appelant **SQLGetDiagField** et en spécifiant le champ à extraire. Certains champs de diagnostic n’ont pas de toute signification pour certains types de handles. Pour obtenir la liste des champs de diagnostic et leurs significations, consultez le [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) description de fonction.  
+ Les applications récupèrent les champs de diagnostics individuels en appelant **SQLGetDiagField** et en spécifiant le champ à récupérer. Certains champs de diagnostic n’ont aucune signification pour certains types de handles. Pour obtenir la liste des champs de diagnostic et leurs significations, consultez la description de la fonction [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) .  
   
- Applications de récupérer le SQLSTATE, le code d’erreur natif et le message de diagnostic dans un seul appel en appelant **SQLGetDiagRec**; **SQLGetDiagRec** ne peut pas être utilisé pour récupérer des informations à partir de l’enregistrement d’en-tête.  
+ Les applications récupèrent le code d’erreur SQLSTATE, le code d’erreur natif et le message de diagnostic dans un appel unique en appelant **SQLGetDiagRec**. **SQLGetDiagRec** ne peut pas être utilisé pour récupérer des informations à partir de l’enregistrement d’en-tête.  
   
- Par exemple, le code suivant demande à l’utilisateur d’une instruction SQL et l’exécute. Si des informations de diagnostic a été retournées, elle appelle **SQLGetDiagField** pour obtenir le nombre d’enregistrements d’état et **SQLGetDiagRec** pour obtenir le SQLSTATE, le code d’erreur natif et le message de diagnostic à partir de celles enregistrements.  
+ Par exemple, le code suivant demande à l’utilisateur une instruction SQL et l’exécute. Si des informations de diagnostic ont été retournées, il appelle **SQLGetDiagField** pour connaître le nombre d’enregistrements d’État et de **SQLGetDiagRec** pour recevoir le code d’erreur SQLSTATE, le code d’erreur natif et le message de diagnostic à partir de ces enregistrements.  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

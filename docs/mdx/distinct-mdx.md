@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999901"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
@@ -29,10 +29,10 @@ Distinct(Set_Expression)
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Si le **Distinct** fonction trouve des tuples dupliqués dans le jeu spécifié, la fonction conserve uniquement la première instance du tuple dupliqué tout en conservant l’ordre du jeu.  
+ Si la fonction **distinct** trouve des tuples dupliqués dans le jeu spécifié, la fonction conserve uniquement la première instance du tuple dupliqué tout en laissant l’ordre de l’ensemble intact.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple de requête suivant illustre comment utiliser la fonction Distinct avec un jeu nommé, et comment l'utiliser avec la fonction Count pour rechercher le nombre de tuples distincts dans un jeu :  
@@ -60,6 +60,6 @@ Distinct(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

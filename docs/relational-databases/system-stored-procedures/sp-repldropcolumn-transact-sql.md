@@ -16,21 +16,21 @@ ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a6b398a4dd7e93521b38708d3a7e37ae09e70a15
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771469"
 ---
-# <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
+# <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Supprime une colonne d'un article de table existant publié. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]
->  Cette procédure stockée est déconseillée ; elle est essentiellement prise en charge pour des raisons de compatibilité descendante. Elle doit être utilisée uniquement avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] les serveurs [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] publication et les abonnés de republication. Cette procédure ne doit pas être utilisée sur des colonnes avec des types de données qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieur.  
+>  Cette procédure stockée est déconseillée ; elle est essentiellement prise en charge pour des raisons de compatibilité descendante. Elle doit être utilisée uniquement avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] les serveurs [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] de publication et les abonnés de republication. Cette procédure ne doit pas être utilisée sur des colonnes avec des types de données qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,37 +44,37 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @source_object =] '*source_object*'  
- Nom de l'article de table contenant la nouvelle colonne à supprimer. *source_object* est de type nvarchar (258) et n’a pas de valeur par défaut.  
+ [ @source_object = ] '*source_object*'  
+ Nom de l'article de table contenant la nouvelle colonne à supprimer. *source_object* est de type nvarchar (258), sans valeur par défaut.  
   
- [ @column =] '*colonne*'  
+ [ @column = ] '*colonne*'  
  Nom de la colonne dans la table à supprimer. *Column* est de type sysname, sans valeur par défaut.  
   
- [ @from_agent =] *from_agent*  
+ [ @from_agent = ] *from_agent*  
  Indique si la procédure stockée est exécutée par un agent de réplication. *from_agent* est de type int, avec 0 comme valeur par défaut, où la valeur 1 est utilisée lorsque cette procédure stockée est exécutée par un agent de réplication, et dans tous les autres cas, la valeur par défaut 0 doit être utilisée.  
   
- [ @schema_change_script =] '*schema_change_script*'  
- Spécifie le nom et le chemin d'accès d'un script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour modifier les procédures stockées personnalisées générées par le système. *schema_change_script* est de type nvarchar (4000), avec NULL comme valeur par défaut. La réplication permet aux procédures stockées personnalisées définies par l'utilisateur de remplacer une ou plusieurs procédures par défaut utilisées dans la réplication transactionnelle. *schema_change_script* est exécuté après une modification de schéma dans un article de table répliqué à l’aide de sp_repldropcolumn, et peut être utilisé pour effectuer l’une des opérations suivantes:  
+ [ @schema_change_script = ] '*schema_change_script*'  
+ Spécifie le nom et le chemin d'accès d'un script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour modifier les procédures stockées personnalisées générées par le système. *schema_change_script* est de type nvarchar (4000), avec NULL comme valeur par défaut. La réplication permet aux procédures stockées personnalisées définies par l'utilisateur de remplacer une ou plusieurs procédures par défaut utilisées dans la réplication transactionnelle. *schema_change_script* est exécutée après la modification d’un schéma d’un article de table répliqué à l’aide de sp_repldropcolumn, et peut être utilisé pour effectuer l’une des opérations suivantes :  
   
--   Si des procédures stockées personnalisées sont automatiquement régénérées, *schema_change_script* peut être utilisé pour supprimer ces procédures stockées personnalisées et les remplacer par des procédures stockées personnalisées définies par l’utilisateur qui prennent en charge le nouveau schéma.  
+-   Si des procédures stockées personnalisées sont automatiquement régénérées, *schema_change_script* pouvez les utiliser pour supprimer ces procédures stockées personnalisées et les remplacer par des procédures stockées personnalisées définies par l’utilisateur qui prennent en charge le nouveau schéma.  
   
--   Si les procédures stockées personnalisées ne sont pas automatiquement régénérées, *schema_change_script*peut être utilisé pour régénérer ces procédures stockées ou pour créer des procédures stockées personnalisées définies par l’utilisateur.  
+-   Si les procédures stockées personnalisées ne sont pas régénérées automatiquement, *schema_change_script*pouvez les utiliser pour régénérer ces procédures stockées ou pour créer des procédures stockées personnalisées définies par l’utilisateur.  
   
- [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
  Active ou désactive la possibilité d'invalider un instantané. *force_invalidate_snapshot* est un bit, avec 1 comme valeur par défaut.  
   
  1 spécifie que les modifications de l'article peuvent invalider l'instantané et dans ce cas, la valeur 1 autorise la réalisation du nouvel instantané.  
   
  0 spécifie que les modifications de l'article n'invalident pas l'instantané.  
   
- [ @force_reinit_subscription =] *force_reinit_subscription*  
+ [ @force_reinit_subscription = ] *force_reinit_subscription*  
  Active ou désactive la possibilité de réinitialiser l'abonnement. *force_reinit_subscription* est un bit avec 0 comme valeur par défaut.  
   
  0 spécifie que les modifications de l'article ne provoquent pas la réinitialisation de l'abonnement.  
   
  1 spécifie que les modifications de l'article peuvent provoquer la réinitialisation de l'abonnement et dans ce cas, la valeur 1 autorise cette réinitialisation.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="permissions"></a>Autorisations  

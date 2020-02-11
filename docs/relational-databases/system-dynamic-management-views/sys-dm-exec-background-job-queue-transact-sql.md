@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09e760bac8e31ba9c78b9809a12f8d595b7ebd05
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263932"
 ---
-# <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
+# <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne une ligne pour chaque travail du processeur de requêtes qui est planifié pour s'exécuter de façon asynchrone (en arrière-plan).  
   
-> **REMARQUE** À appeler à partir **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** ou **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , utilisez le nom **sys.dm_pdw_nodes_exec_background_job_queue**.  
+> **Remarque !** Pour appeler cette valeur **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** à **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** partir de ou, utilisez le nom **sys. dm_pdw_nodes_exec_background_job_queue**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**time_queued**|**datetime**|Moment auquel le travail a été ajouté à la file d'attente.|  
+|**time_queued**|**DATETIME**|Moment auquel le travail a été ajouté à la file d'attente.|  
 |**job_id**|**int**|Identificateur du travail.|  
-|**database_id**|**Int**|Base de données sur laquelle le travail doit s'exécuter.|  
-|**object_id1**|**Int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
+|**database_id**|**int**|Base de données sur laquelle le travail doit s'exécuter.|  
+|**object_id1**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
 |**object_id2**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
 |**object_id3**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
 |**object_id4**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
@@ -48,21 +48,21 @@ ms.locfileid: "68263932"
 |**retry_count**|**smallint**|Nombre de fois où le travail a été récupéré et réinséré dans la file d'attente pour cause de manque de ressources ou pour d'autres raisons.|  
 |**in_progress**|**smallint**|Indique si l'exécution du travail a commencé.<br /><br /> 1 = Démarré<br /><br /> 0 = en attente|  
 |**session_id**|**smallint**|Identificateur de la session.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="remarks"></a>Notes  
- Seules les informations pour les travaux de mise à jour des statistiques asynchrone apparaissent dans cette vue. Pour plus d’informations sur la mise à jour asynchrone des statistiques, consultez [statistiques](../../relational-databases/statistics/statistics.md).  
+ Seules les informations pour les travaux de mise à jour des statistiques asynchrone apparaissent dans cette vue. Pour plus d’informations sur les statistiques des mises à jour asynchrones, consultez [Statistics](../../relational-databases/statistics/statistics.md).  
   
- Les valeurs de **object_id1** via **object_id4** varient selon le type de la demande de travail. Le tableau suivant récapitule la signification de ces colonnes pour différents types de travaux.  
+ Les valeurs de **object_id1** par **object_id4** dépendent du type de la demande de travail. Le tableau suivant récapitule la signification de ces colonnes pour différents types de travaux.  
   
 |Type de demande|object_id1|object_id2|object_id3|object_id4|  
 |------------------|-----------------|-----------------|-----------------|-----------------|  
-|Statistiques de mises à jour asynchrones|Identificateur de table ou de vue|Identificateur de statistiques|Non utilisée|Non utilisée|  
+|Statistiques de mises à jour asynchrones|Identificateur de table ou de vue|Identificateur de statistiques|Non utilisé|Non utilisé|  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne le nombre de travaux asynchrones actifs dans la file d'attente en arrière plan pour chaque base de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

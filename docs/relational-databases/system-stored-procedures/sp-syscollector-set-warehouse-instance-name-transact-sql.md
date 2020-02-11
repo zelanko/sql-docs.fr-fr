@@ -19,18 +19,18 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010588"
 ---
-# <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
+# <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Spécifie le nom de l'instance pour la chaîne de connexion utilisée pour la connexion à l'entrepôt de données de gestion.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,18 +40,18 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @instance_name =] '*nom_instance*'  
- Est le nom d’instance. *nom_instance* est **sysname** et valeurs par défaut à l’instance locale si elle est NULL.  
+ [ @instance_name = ] '*instance_name*'  
+ Est le nom de l’instance. *instance_name* est de **type sysname** et sa valeur par défaut est l’instance locale si la valeur est null.  
   
-> **Remarque :** _nom_instance_ doit être le nom d’instance complet, qui se compose du nom de l’ordinateur et le nom d’instance sous la forme *computerName* \\ *instanceName*.  
+> **Remarque :**  _instance_name_ doit être le nom complet de l’instance, qui se compose du nom de l’ordinateur et du nom de l’instance, sous la forme *ComputerName*\\*nom_instance*.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Vous devez désactiver le collecteur de données avant de modifier cette configuration. Cette procédure échoue si le collecteur de données est activé.  
   
- Pour afficher le nom de l’instance actuelle, interrogez la [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) vue système.  
+ Pour afficher le nom de l’instance actuelle, interrogez la vue système [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) .  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  

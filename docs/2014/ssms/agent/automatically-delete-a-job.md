@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472989"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
-  Cette rubrique explique comment configurer l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] afin de supprimer automatiquement des travaux lorsqu'ils réussissent, échouent ou s'achèvent, à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de SQL Server Management Objects.  
+  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour supprimer automatiquement des travaux lorsqu’ils réussissent, échouent ou se [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] terminent à l’aide de ou SQL Server Management Objects.  
   
  Les réponses à un travail garantissent que les administrateurs de base de données ont connaissance de l'achèvement des travaux et de leur fréquence d'exécution. Les réponses classiques à un travail peuvent être :  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62472989"
   
      [Sécurité](#Security)  
   
--   **Pour spécifier des réponses à un travail, utilisez :**  
+-   **Pour spécifier des réponses à un travail, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62472989"
   
 #### <a name="to-automatically-delete-a-job"></a>Pour supprimer automatiquement un travail  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **Agent SQL Server**, développez **Travaux**, cliquez avec le bouton droit sur le travail que vous souhaitez modifier, puis cliquez sur **Propriétés**.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "62472989"
   
     -   Cliquez sur **Lorsque le travail est terminé** pour supprimer le travail quel que soit son état d'achèvement.  
   
-##  <a name="SMO"></a> À l’aide de SQL Server Management Objects  
+##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour supprimer automatiquement un travail**  
   
- Utilisez la propriété `DeleteLevel` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la propriété `DeleteLevel` de la classe `Job` à l'aide d'un langage de programmation tel que Visual Basic, Visual C# ou PowerShell. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

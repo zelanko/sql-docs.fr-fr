@@ -14,25 +14,25 @@ ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab8b94835fb9a6103436026a669c86f2401d57b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036427"
 ---
 # <a name="connection-handles"></a>Handles de connexion
-Un *connexion* se compose d’un pilote et une source de données. Un handle de connexion identifie chaque connexion. Le handle de connexion définit non seulement le pilote à utiliser, mais la source de données à utiliser avec ce pilote. Dans un segment de code qui implémente ODBC (le Gestionnaire de pilotes ou un pilote), le handle de connexion identifie une structure qui contient les informations de connexion, comme suit :  
+Une *connexion* se compose d’un pilote et d’une source de données. Un descripteur de connexion identifie chaque connexion. Le descripteur de connexion définit non seulement le pilote à utiliser mais la source de données à utiliser avec ce pilote. Dans un segment de code qui implémente ODBC (gestionnaire de pilotes ou pilote), le handle de connexion identifie une structure qui contient des informations de connexion, telles que les suivantes :  
   
--   L’état de la connexion  
+-   État de la connexion  
   
--   Les diagnostics de niveau de la connexion actuelles  
+-   Diagnostics actuels au niveau de la connexion  
   
--   Les handles d’instructions et descripteurs actuellement alloués sur la connexion  
+-   Handles d’instructions et descripteurs actuellement alloués sur la connexion  
   
--   Les paramètres actuels de chaque attribut de connexion  
+-   Paramètres actuels de chaque attribut de connexion  
   
- ODBC n’empêche pas plusieurs connexions simultanées, si le pilote prend en charge les. Par conséquent, dans un environnement ODBC particulier, plusieurs handles de connexion peuvent pointer vers une variété de pilotes et les sources de données sur le même pilote et une variété de sources de données, ou même à plusieurs connexions à la même pilote et de la source de données. Certains pilotes de limitent le nombre de connexions actives, qu'elles prennent en charge ; option le SQL_MAX_DRIVER_CONNECTIONS **SQLGetInfo** Spécifie le nombre de connexions actif un pilote spécifique prend en charge.  
+ ODBC n’empêche pas plusieurs connexions simultanées, si le pilote les prend en charge. Par conséquent, dans un environnement ODBC particulier, plusieurs descripteurs de connexion peuvent pointer vers une variété de pilotes et de sources de données, vers le même pilote et une variété de sources de données, ou même pour plusieurs connexions au même pilote et à la même source de données. Certains pilotes limitent le nombre de connexions actives qu’ils prennent en charge ; l’option SQL_MAX_DRIVER_CONNECTIONS dans **SQLGetInfo** spécifie le nombre de connexions actives prises en charge par un pilote particulier.  
   
- Handles de connexion sont principalement utilisées lors de la connexion à la source de données (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**), la déconnexion à partir des données source (**SQLDisconnect**), obtention d’informations sur la source de données et de pilote (**SQLGetInfo**), récupération des diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**) et l’exécution de transactions (**SQLEndTran**). Ils sont également utilisés lors de la définition et l’obtention des attributs de connexion (**SQLSetConnectAttr** et **SQLGetConnectAttr**) et lors de l’obtention du format natif d’une instruction SQL (**SQLNativeSql** ).  
+ Les handles de connexion sont principalement utilisés lors de la connexion à la source de données (**SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**), à la déconnexion de la source de données (**SQLDisconnect**), à l’obtention d’informations sur le pilote et la source de données (**SQLGetInfo**), à la récupération des diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**) et à l’exécution des transactions (**SQLEndTran**). Elles sont également utilisées lors de la définition et de l’obtention des attributs de connexion (**SQLSetConnectAttr** et **SQLGetConnectAttr**) et lors de l’obtention du format natif d’une instruction SQL (**SQLNativeSql**).  
   
- Handles de connexion sont allouées avec **SQLAllocHandle** et libéré avec **SQLFreeHandle**.
+ Les handles de connexion sont alloués avec **SQLAllocHandle** et libérés avec **SQLFreeHandle**.

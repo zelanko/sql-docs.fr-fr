@@ -1,5 +1,5 @@
 ---
-title: Assistant de bases de données (sélectionner des fichiers) de la recherche (AccessToSQL) | Microsoft Docs
+title: Assistant Rechercher des bases de données (sélectionner des fichiers) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,25 +12,25 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006546"
 ---
-# <a name="find-databases-wizard-select-files-accesstosql"></a>Assistant de bases de données (sélectionner des fichiers) de la recherche (AccessToSQL)
-La page Sélectionner les fichiers de l’Assistant trouver les bases de données répertorie les fichiers qui ont été trouvés lors de la recherche. Pour sélectionner un fichier à ajouter à SSMA, sélectionnez la ligne qui contient le nom de fichier. Lorsque vous avez fini de sélectionner des fichiers, cliquez sur **suivant** pour afficher la page vérifier la sélection.  
+# <a name="find-databases-wizard-select-files-accesstosql"></a>Assistant Rechercher des bases de données (sélectionner des fichiers) (AccessToSQL)
+La page Sélectionner des fichiers de l’Assistant Rechercher des bases de données répertorie les fichiers qui ont été trouvés lors de la recherche. Pour sélectionner un fichier à ajouter à SSMA, sélectionnez la ligne qui contient le nom de fichier. Lorsque vous avez terminé de sélectionner des fichiers, cliquez sur **suivant** pour afficher la page vérifier la sélection.  
   
-Pour ouvrir le réseau d’analyse pour l’Assistant de fichiers, sur le **fichier** menu, cliquez sur **trouver les bases de données**.  
+Pour ouvrir l’Assistant analyser le réseau pour les fichiers, dans le menu **fichier** , cliquez sur **Rechercher des bases de données**.  
   
-Pour sélectionner un fichier à ajouter à SSMA, sélectionnez la case à cocher en regard du nom de fichier. Lorsque vous avez fini de sélectionner des fichiers, cliquez sur **suivant** pour afficher la page de fin.  
+Pour sélectionner un fichier à ajouter à SSMA, activez la case à cocher en regard du nom de fichier. Lorsque vous avez terminé de sélectionner des fichiers, cliquez sur **suivant** pour afficher la page dernière étape.  
   
 ## <a name="options"></a>Options  
 **Sélectionner tout**  
-Sélectionnez cette case à cocher pour sélectionner toutes les bases de données dans la liste.  
+Activez cette case à cocher pour sélectionner toutes les bases de données de la liste.  
   
 **Désélectionner tout**  
-Sélectionnez cette case à cocher pour désélectionner toutes les bases de données dans la liste.  
+Activez cette case à cocher pour désélectionner toutes les bases de données de la liste.  
   
 **Nom de fichier**  
 Affiche le nom du fichier de base de données Access à ajouter à SSMA.  
@@ -42,14 +42,14 @@ Affiche le propriétaire du fichier.
 Affiche le chemin d’accès du fichier de base de données Access.  
   
 **Taille**  
-La taille de la base de données, en octets.  
+Taille de la base de données, en octets.  
   
 **Créé le**  
-Date et heure de que création de la base de données.  
+Date et heure de création de la base de données.  
   
-**Modifié le**  
-Date et heure de que dernière mise à jour de la base de données.  
+**Date de modification**  
+Date et heure de la dernière mise à jour de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Reference(Access) d’Interface utilisateur](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Référence de l’interface utilisateur (accès)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

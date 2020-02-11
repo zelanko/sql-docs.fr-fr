@@ -19,21 +19,21 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030904"
 ---
-# <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
+# <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +43,13 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Arguments  
- [ @rolename=] '*rôle*'  
- Nom du rôle de base de données dans la base de données actuelle. *rôle* est un **sysname**, sans valeur par défaut.  
+ [ @rolename= ] «*role*»  
+ Nom du rôle de base de données dans la base de données actuelle. *role* est de **type sysname**et n’a pas de valeur par défaut.  
   
- [ @membername=] '*auxquels celui-ci a*'  
- Compte de sécurité ajouté au rôle. *celui-ci* est un **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, d’un rôle de base de données, d’une connexion de Windows ou d’un groupe de Windows.  
+ [ @membername= ] '*security_account*'  
+ Compte de sécurité ajouté au rôle. *security_account* est de **type sysname**, sans valeur par défaut. *security_account* peut être un utilisateur de base de données, un rôle de base de données, une connexion Windows ou un groupe Windows.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -57,7 +57,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  Un rôle ne peut pas s'inclure lui-même en tant que membre. Des définitions « circulaires » de ce type ne sont pas valides, même si l'appartenance est seulement déduite indirectement par une ou plusieurs appartenances intermédiaires.  
   
- sp_addrolemember ne peut pas ajouter un rôle de base de données fixe, le rôle serveur fixe ou le dbo à un rôle.
+ sp_addrolemember ne pouvez pas ajouter un rôle de base de données fixe, un rôle serveur fixe ou un rôle dbo à un rôle.
   
  Utilisez uniquement sp_addrolemember pour ajouter un membre à un rôle de base de données. Pour ajouter un membre à un rôle de serveur, utilisez [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
@@ -68,14 +68,14 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 -   Appartenance au rôle qui détient le rôle.  
   
--   **ALTER ANY ROLE** autorisation ou **ALTER** autorisation sur le rôle.  
+-   **Modifiez une** autorisation de rôle ou une autorisation **ALTER** sur le rôle.  
   
  L'ajout de membres à des rôles de base de données fixe nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-adding-a-windows-login"></a>R. Ajout d'une connexion Windows  
- L’exemple suivant ajoute la connexion Windows `Contoso\Mary5` à la `AdventureWorks2012` base de données en tant qu’utilisateur `Mary5`. L'utilisateur `Mary5` est ensuite ajouté au rôle `Production`.  
+ L’exemple suivant ajoute la connexion `Contoso\Mary5` Windows à la `AdventureWorks2012` base de données `Mary5`en tant qu’utilisateur. L'utilisateur `Mary5` est ensuite ajouté au rôle `Production`.  
   
 > [!NOTE]  
 >  Comme `Contoso\Mary5` est connu comme l'utilisateur de base de données `Mary5` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], le nom d'utilisateur `Mary5` doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Contoso\Mary5` n'existe. Effectuez un test en utilisant une connexion à partir de votre domaine.  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Ajout d'une connexion Windows  
- L’exemple suivant ajoute la connexion `LoginMary` à la `AdventureWorks2008R2` base de données en tant qu’utilisateur `UserMary`. L'utilisateur `UserMary` est ensuite ajouté au rôle `Production`.  
+ L’exemple suivant ajoute la connexion `LoginMary` à la `AdventureWorks2008R2` base de données `UserMary`en tant qu’utilisateur. L'utilisateur `UserMary` est ensuite ajouté au rôle `Production`.  
   
 > [!NOTE]  
->  Étant donné que la connexion `LoginMary` est connu comme l’utilisateur de base de données `UserMary` dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de base de données, le nom d’utilisateur `UserMary` doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Mary5` n'existe. Connexions et les utilisateurs ont généralement le même nom. Cet exemple utilise des noms différents pour différencier les actions qui affectent la connexion et l’utilisateur.  
+>  Étant donné que `LoginMary` la connexion est connue en tant `UserMary` qu’utilisateur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de base de données dans `UserMary` la base de données, le nom d’utilisateur doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Mary5` n'existe. Les connexions et les utilisateurs ont généralement le même nom. Cet exemple utilise des noms différents pour différencier les actions qui affectent la connexion et l’utilisateur.  
   
 ```  
 -- Uses AdventureWorks  

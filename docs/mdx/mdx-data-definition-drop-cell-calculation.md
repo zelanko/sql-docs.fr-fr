@@ -1,5 +1,5 @@
 ---
-title: Instruction DROP CELL CALCULATION (MDX) | Microsoft Docs
+title: Instruction DROP CELL CALCULation (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bccdd6efcf17af9d485e155b6653bab52bbcbd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038217"
 ---
 # <a name="mdx-data-definition---drop-cell-calculation"></a>Définition de données MDX - DROP CELL CALCULATION
@@ -35,7 +35,7 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  Chaîne d'expression valide qui précise le nom d'un calcul de cellule à supprimer.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction CREATE CELL CALCULATION &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
- [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instruction CREATe CELL CALCULation &#40;&#41;MDX](../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -18,22 +18,22 @@ ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001034"
 ---
-# <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
+# <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime un rôle d'application de la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [Drop application Role](../../t-sql/statements/drop-application-role-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +42,13 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'` Est le rôle d’application à supprimer. *rôle* est un **sysname**, sans valeur par défaut. *rôle* doit exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'`Rôle d’application à supprimer. *role* est de **type sysname**et n’a pas de valeur par défaut. le *rôle* doit exister dans la base de données actuelle.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_dropapprole** peut uniquement être utilisé pour supprimer des rôles d’application. Si un rôle est propriétaire d'éléments sécurisables, vous ne pouvez pas le supprimer. Avant de supprimer un rôle d'application propriétaire d'éléments sécurisables, vous devez transférer la propriété de ces éléments sécurisables ou les supprimer.  
+ **sp_dropapprole** ne peut être utilisé que pour supprimer des rôles d’application. Si un rôle est propriétaire d'éléments sécurisables, vous ne pouvez pas le supprimer. Avant de supprimer un rôle d'application propriétaire d'éléments sécurisables, vous devez transférer la propriété de ces éléments sécurisables ou les supprimer.  
   
  **sp_dropapprole** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   

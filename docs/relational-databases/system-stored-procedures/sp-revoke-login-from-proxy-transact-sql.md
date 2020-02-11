@@ -18,18 +18,18 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019942"
 ---
-# <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
+# <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime l'accès à un proxy pour un principal de sécurité.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,14 +42,14 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, un rôle serveur ou **msdb** rôle de base de données pour supprimer l’accès pour. *nom* est **nvarchar (256)** sans valeur par défaut.  
+`[ @name = ] 'name'`Nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, du rôle de serveur ou du rôle de base de données **msdb** pour lequel supprimer l’accès. *Name* est de type **nvarchar (256)** et n’a pas de valeur par défaut.  
   
-`[ @proxy_id = ] id` L’id du proxy à supprimer l’accès pour. Soit *id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés. Le *id* est **int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id`ID du proxy pour lequel supprimer l’accès. L' *ID* ou le *proxy_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés. L' *ID* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @proxy_name = ] 'proxy_name'` Le nom du proxy à supprimer l’accès pour. Soit *id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'`Nom du proxy pour lequel supprimer l’accès. L' *ID* ou le *proxy_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Les travaux appartenant à la connexion qui fait référence à ce proxy ne pourront pas s'exécuter.  
@@ -71,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server Agent des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   

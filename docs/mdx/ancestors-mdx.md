@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017099"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Cette fonction retourne le jeu de tous les ancêtres d'un membre spécifié à un niveau ou une distance spécifiée du membre. Avec [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le jeu retourné consiste toujours en un seul membre - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne prend pas en charge plusieurs parents pour un seul membre.  
+  Cette fonction retourne le jeu de tous les ancêtres d'un membre spécifié à un niveau ou une distance spécifiée du membre. Avec [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le jeu retourné se compose toujours d’un seul membre. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] il ne prend pas en charge plusieurs parents pour un seul membre.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,24 +38,24 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
- *distance*  
+ *Distance*  
  Expression numérique valide qui spécifie la distance depuis le membre spécifié.  
   
 ## <a name="remarks"></a>Notes  
- Avec le **ancêtres** (fonction), vous fournissez la fonction avec une expression de membre MDX, puis soit une expression MDX d’un niveau qui est un ancêtre de ce membre ou une expression numérique qui représente le nombre de niveaux au-dessus de ce membre. Avec ces informations, le **ancêtres** fonction retourne le jeu de membres (qui sera un jeu composé d’un membre) à ce niveau.  
+ Avec la fonction **ancêtres** , vous fournissez la fonction avec une expression de membre MDX, puis vous fournissez soit une expression MDX d’un niveau qui est un ancêtre de ce membre, soit une expression numérique qui représente le nombre de niveaux au-dessus de ce membre. Avec ces informations, la fonction **ancêtres** retourne le jeu de membres (qui sera un jeu composé d’un membre) à ce niveau.  
   
 > [!NOTE]  
->  Pour retourner un membre ancêtre, plutôt que d’un jeu d’ancêtres, utilisez le [ancêtre](../mdx/ancestor-mdx.md) (fonction).  
+>  Pour retourner un membre ancêtre, plutôt qu’un jeu d’ancêtres, utilisez la fonction [Ancestor](../mdx/ancestor-mdx.md) .  
   
- Si une expression de niveau est spécifiée, le **ancêtres** fonction retourne le jeu de tous les ancêtres du membre spécifié au niveau spécifié. Si un membre spécifié n'apparaît pas dans la même hiérarchie en tant que niveau spécifié, la fonction retourne une erreur.  
+ Si une expression de niveau est spécifiée, la fonction **ancêtres** retourne le jeu de tous les ancêtres du membre spécifié au niveau spécifié. Si un membre spécifié n'apparaît pas dans la même hiérarchie en tant que niveau spécifié, la fonction retourne une erreur.  
   
- Si une distance est spécifiée, le **ancêtres** fonction retourne le jeu de tous les membres qui sont le nombre d’étapes spécifiés plus haut dans la hiérarchie précisée par l’expression de membre. Un membre peut être spécifié en tant que membre d’une hiérarchie d’attribut, une hiérarchie définie par l’utilisateur, ou, dans certains cas, une hiérarchie parent-enfant. Un nombre 1 retourne le jeu des membres au niveau parent ; un nombre 2 retourne le jeu des membres situés au niveau grand-parent (si ce niveau existe). Un nombre 0 retourne le jeu comprenant uniquement le membre lui-même.  
+ Si une distance est spécifiée, la fonction **ancêtres** retourne le jeu de tous les membres qui sont le nombre d’étapes spécifiées dans la hiérarchie spécifiée par l’expression de membre. Un membre peut être spécifié en tant que membre d’une hiérarchie d’attribut, d’une hiérarchie définie par l’utilisateur ou, dans certains cas, d’une hiérarchie parent-enfant. Un nombre 1 retourne le jeu des membres au niveau parent ; un nombre 2 retourne le jeu des membres situés au niveau grand-parent (si ce niveau existe). Un nombre 0 retourne le jeu comprenant uniquement le membre lui-même.  
   
 > [!NOTE]  
->  Utilisez cette forme de la **ancêtres** (fonction) pour les cas dans lequel le niveau du parent est inconnu et ne peut pas être nommé.  
+>  Utilisez cette forme de la fonction **ancêtres** pour les cas où le niveau du parent est inconnu ou ne peut pas être nommé.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise le **ancêtres** fonction pour retourner la mesure Internet Sales Amount pour un membre, son parent et son grand-parent. Cet exemple se base sur des expressions de niveau pour spécifier les niveaux à retourner. Les niveaux se trouvent dans la même hiérarchie que le membre spécifié dans l'expression de membre.  
+ L’exemple suivant utilise la fonction **ancêtres** pour retourner la mesure du montant des ventes sur Internet pour un membre, son parent et son grand-parent. Cet exemple se base sur des expressions de niveau pour spécifier les niveaux à retourner. Les niveaux se trouvent dans la même hiérarchie que le membre spécifié dans l'expression de membre.  
   
 ```  
 SELECT {  
@@ -67,7 +67,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant utilise le **ancêtres** fonction pour retourner la mesure Internet Sales Amount pour un membre, son parent et son grand-parent. Cet exemple se base sur des expressions numériques pour spécifier les niveaux retournés. Les niveaux se trouvent dans la même hiérarchie que le membre spécifié dans l'expression de membre.  
+ L’exemple suivant utilise la fonction **ancêtres** pour retourner la mesure du montant des ventes sur Internet pour un membre, son parent et son grand-parent. Cet exemple se base sur des expressions numériques pour spécifier les niveaux retournés. Les niveaux se trouvent dans la même hiérarchie que le membre spécifié dans l'expression de membre.  
   
 ```  
 SELECT {  
@@ -85,7 +85,7 @@ SELECT {
 FROM  [Adventure Works]  
 ```  
   
- L’exemple suivant utilise le **ancêtres** fonction pour retourner la mesure Internet Sales Amount pour le parent d’un membre d’une hiérarchie d’attribut. Cet exemple se base sur une expression numérique pour spécifier le niveau retourné. Du fait que le membre dans l'expression de membre correspond à un membre issu d'une hiérarchie d'attribut, son parent est le niveau [All].  
+ L’exemple suivant utilise la fonction **ancêtres** pour retourner la mesure Internet Sales Amount pour le parent d’un membre d’une hiérarchie d’attribut. Cet exemple se base sur une expression numérique pour spécifier le niveau retourné. Du fait que le membre dans l'expression de membre correspond à un membre issu d'une hiérarchie d'attribut, son parent est le niveau [All].  
   
 ```  
 SELECT {  
@@ -98,6 +98,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026841"
 ---
-# <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Ces statistiques sont utiles pour comprendre et ajuster le nombre de compartiments. Elles peuvent également être utilisées pour détecter les cas où la clé d'index possède un grand nombre de doublons.  
@@ -41,13 +41,13 @@ ms.locfileid: "68026841"
 Les chaînes de type Long peuvent affecter les performances des opérations DML sur des lignes, notamment SELECT et INSERT. Les chaînes de type Short avec un nombre de compartiments vides élevé sont une indication de bucket_count trop élevé. Cela altère les performances des analyses d'index.  
   
 > [!WARNING]
-> **Sys.dm_db_xtp_hash_index_stats** analyse la table entière. Par conséquent, si il existe de grandes tables dans votre base de données, **sys.dm_db_xtp_hash_index_stats** peut prendre un certain temps exécution.  
+> **sys. dm_db_xtp_hash_index_stats** analyse la totalité de la table. Ainsi, s’il existe de grandes tables dans votre base de données, **sys. dm_db_xtp_hash_index_stats** peut prendre beaucoup de temps.  
   
-Pour plus d’informations, consultez [index de hachage pour les Tables optimisées en mémoire](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Pour plus d’informations, consultez [index de hachage pour les tables optimisées en mémoire](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
-|object_id|**Int**|ID d'objet d'une table parent.|  
+|object_id|**int**|ID d'objet d'une table parent.|  
 |xtp_object_id|**bigint**|ID de la table optimisée en mémoire.|  
 |index_id|**int**|ID d'index.|  
 |total_bucket_count|**bigint**|Nombre total de compartiments de hachage dans l'index.|  
@@ -63,7 +63,7 @@ Pour plus d’informations, consultez [index de hachage pour les Tables optimis�
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>R. Résolution de problèmes liés au nombre de compartiments d’index de hachage
 
-La requête suivante peut être utilisée pour résoudre les problèmes le nombre de compartiments des index de hachage d’une table existante. La requête retourne des statistiques sur le pourcentage de compartiments vides et la longueur de chaîne pour tous les index de hachage sur les tables utilisateur.
+La requête suivante peut être utilisée pour résoudre les problèmes liés au nombre de compartiments d’index de hachage d’une table existante. La requête retourne des statistiques sur le pourcentage de compartiments vides et la longueur de chaîne pour tous les index de hachage sur les tables utilisateur.
 
 ```sql
   SELECT  
@@ -87,11 +87,11 @@ La requête suivante peut être utilisée pour résoudre les problèmes le nombr
   ORDER BY [table], [index];  
 ``` 
 
-Pour plus d’informations sur la façon d’interpréter les résultats de cette requête, consultez [résolution des problèmes des index de hachage pour les Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Pour plus d’informations sur la façon d’interpréter les résultats de cette requête, consultez [résolution des problèmes liés aux index de hachage pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Statistiques d’index de hachage pour les tables internes
 
-Certaines fonctionnalités utilisent des tables internes qui tirent parti des index de hachage, par exemple les index columnstore sur des tables optimisées en mémoire. La requête suivante retourne des statistiques pour les index de hachage sur les tables internes qui sont liées aux tables de l’utilisateur.
+Certaines fonctionnalités utilisent des tables internes qui tirent parti des index de hachage, par exemple les index ColumnStore sur les tables optimisées en mémoire. La requête suivante retourne des statistiques pour les index de hachage sur les tables internes qui sont liées aux tables utilisateur.
 
 ```sql
   SELECT  
@@ -112,9 +112,9 @@ Certaines fonctionnalités utilisent des tables internes qui tirent parti des in
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Notez que la valeur de BUCKET_COUNT d’index sur les tables internes ne peut pas être modifié, par conséquent, la sortie de cette requête doit être considérée comme une information uniquement. Aucune action n’est requise.  
+Notez que la BUCKET_COUNT de l’index sur les tables internes ne peut pas être modifiée. par conséquent, la sortie de cette requête doit être considérée comme informatif uniquement. Aucune action n’est requise.  
 
-Cette requête n’est pas censée retourner toutes les lignes, sauf si vous utilisez une fonctionnalité qui tire parti des index de hachage sur les tables internes. Le tableau suivant mémoire optimisé contient un index columnstore. Après avoir créé cette table, vous verrez des index de hachage sur les tables internes.
+Cette requête ne doit retourner aucune ligne, sauf si vous utilisez une fonctionnalité qui exploite les index de hachage sur les tables internes. La table mémoire optimisée suivante contient un index ColumnStore. Après avoir créé cette table, vous verrez des index de hachage sur les tables internes.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -125,6 +125,6 @@ Cette requête n’est pas censée retourner toutes les lignes, sauf si vous uti
 ```
 
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

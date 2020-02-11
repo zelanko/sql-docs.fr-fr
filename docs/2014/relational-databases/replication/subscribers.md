@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629386"
 ---
 # <a name="subscribers"></a>Abonnés
-  Définissez les abonnés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doivent recevoir un abonnement à la publication sélectionnée.  
+  Spécifiez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le ou les[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés non-qui vont recevoir un abonnement à la publication sélectionnée.  
   
 ## <a name="options"></a>Options  
  **Abonnés**  
- Activez la case à cocher dans la grille pour activer la source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondante sous la forme d'un abonné à la publication sélectionnée dans la page **Publication** . Si l'Abonné ne figure pas dans la liste, cliquez sur **Ajouter un abonné** ou **Ajouter un abonné SQL Server**.  
+ Activez la case à cocher dans la grille pour activer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la source correspondante[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou non, en tant qu’abonné, à la publication choisie sur la page **publication** . Si l'Abonné ne figure pas dans la liste, cliquez sur **Ajouter un abonné** ou **Ajouter un abonné SQL Server**.  
   
- **Base de données d'abonnement**  
+ **Base de données d’abonnement**  
  Les informations affichées et les actions disponibles dépendent du type d'abonné sélectionné dans la colonne **Abonnés** :  
   
 -   Pour les abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sélectionnez une base de données d'abonnement dans la liste **Base de données d'abonnement** ou créez une base de données en sélectionnant la commande **Nouvelle base de données** dans la même liste.  
@@ -48,11 +48,11 @@ ms.locfileid: "62629386"
   
 -   L'abonnement est un abonnement par envoi de données (push).  
   
--   Le serveur de la publication sélectionnée est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure.  
+-   L’éditeur de la publication sélectionnée est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure.  
   
- Cliquez sur **Ajouter un abonné** pour afficher un menu contenant deux options : **Ajouter un abonné SQL Server** et **Ajouter un abonné non-SQL Server**. Cliquez sur **Ajouter un Abonné non-SQL Server** pour ajouter un abonné Oracle ou IBM DB2.  
+ Cliquez sur **Ajouter un abonné** pour afficher un menu contenant deux options : **Ajouter un Abonné SQL Server** et **Ajouter un Abonné non-SQL Server**. Cliquez sur **Ajouter un Abonné non-SQL Server** pour ajouter un abonné Oracle ou IBM DB2.  
   
- **Ajouter un abonné SQL Server**  
+ **Ajouter SQL Server abonné**  
  Ajoute un serveur à la liste des serveurs pouvant être activés comme abonnés. Ce bouton s'affiche lorsqu'au moins une des conditions suivantes est vraie :  
   
 -   La publication que vous avez sélectionnée est une publication de fusion, un instantané ou une publication transactionnelle qui prend en charge la mise à jour des abonnements.  
@@ -68,7 +68,7 @@ ms.locfileid: "62629386"
     -   La publication autorise les abonnements anonymes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [S'abonner à des publications](subscribe-to-publications.md)  
