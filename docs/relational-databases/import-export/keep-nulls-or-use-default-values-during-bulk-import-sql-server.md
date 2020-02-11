@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055958"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou les valeurs par défaut lors de l’importation en bloc (SQL Server)
@@ -37,16 +37,16 @@ Par défaut, quand des données sont importées dans une table, la commande [bcp
 
 |Contour|
 |---|
-|[Conservation des valeurs Null](#keep_nulls)<br />[Utilisation des valeurs par défaut avec l’instruction INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Exemples de conditions de test](#etc)<br />&emsp;&#9679;&emsp;[Exemple de table](#sample_table)<br />&emsp;&#9679;&emsp;[Exemple de fichier de données](#sample_data_file)<br />&emsp;&#9679;&emsp;[Exemple de fichier de format non XML](#nonxml_format_file)<br />[Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc](#import_data)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et conservation des valeurs Null sans fichier de format](#bcp_null)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et conservation des valeurs Null avec un fichier de format non XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et utilisation des valeurs par défaut sans fichier de format](#bcp_default)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et utilisation des valeurs par défaut avec un fichier de format non XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et conservation des valeurs Null sans fichier de format](#bulk_null)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et conservation des valeurs Null avec un fichier de format non XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et utilisation des valeurs par défaut sans fichier de format](#bulk_default)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et utilisation des valeurs par défaut avec un fichier de format non XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et conservation des valeurs Null avec un fichier de format non XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et utilisation des valeurs par défaut avec un fichier de format non XML](#openrowset__default_fmt)
+|[Conservation des valeurs Null](#keep_nulls)<br />[Utilisation des valeurs par défaut avec l’instruction INSERT ... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Exemples de conditions de test](#etc)<br />&emsp;&#9679;&emsp;[Exemple de table](#sample_table)<br />&emsp;&#9679;&emsp;[Exemple de fichier de données](#sample_data_file)<br />&emsp;&#9679;&emsp;[Exemple de fichier de format non XML](#nonxml_format_file)<br />[Conserver les valeurs NULL ou utiliser les valeurs par défaut lors de l’importation en bloc](#import_data)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et conservation des valeurs Null sans fichier de format](#bcp_null)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et conservation des valeurs Null avec un fichier de format non XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et utilisation des valeurs par défaut sans fichier de format](#bcp_default)<br />&emsp;&#9679;&emsp;[Utilisation de la commande bcp et utilisation des valeurs par défaut avec un fichier de format non XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et conservation des valeurs Null sans fichier de format](#bulk_null)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et conservation des valeurs Null avec un fichier de format non XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et utilisation des valeurs par défaut sans fichier de format](#bulk_default)<br />&emsp;&#9679;&emsp;[Utilisation de BULK INSERT et utilisation des valeurs par défaut avec un fichier de format non XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et conservation des valeurs Null avec un fichier de format non XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Utilisation d’OPENROWSET(BULK...) et utilisation des valeurs par défaut avec un fichier de format non XML](#openrowset__default_fmt)
 
 ## Conservation des valeurs Null<a name="keep_nulls"></a>  
 Les qualificateurs suivants spécifient qu'un champ vide du fichier de données conserve sa valeur NULL lors de l'importation en bloc, au lieu d'hériter d'une valeur par défaut (s'il y en a une) pour les colonnes de table.  Pour [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), par défaut, les colonnes qui ne sont pas spécifiées dans l’opération de chargement en bloc sont définies avec la valeur Null.
   
-|Command|Qualificateur|Type de qualificateur|  
+|Commande|Qualificateur|Type de qualificateur|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Commutateur|  
 |BULK INSERT|KEEPNULLS\*|Argument|  
-|INSERT ... SELECT * FROM OPENROWSET(BULK...)|Néant|Néant|  
+|INSERT ... SELECT * FROM OPENROWSET(BULK...)|N/A|N/A|  
   
 \* Dans le cas de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), si des valeurs par défaut ne sont pas disponibles, la colonne de table doit être définie de manière à autoriser les valeurs Null. 
   
@@ -79,7 +79,7 @@ CREATE TABLE dbo.myNulls (
    );
 ```
 
-### **Exemple de fichier de données**<a name="sample_data_file"></a>
+### **Fichier de données d’exemple**<a name="sample_data_file"></a>
 À l’aide du Bloc-notes, créez un fichier vide `D:\BCP\myNulls.bcp` et insérez les données ci-dessous.  Notez qu’il n’existe aucune valeur dans le troisième enregistrement, quatrième colonne.
 
 ```
@@ -118,7 +118,7 @@ Invoke-Item $bcpFile;
 ```
   
 ### **Exemple de fichier de format non XML**<a name="nonxml_format_file"></a>
-SQL Server prend en charge deux types de fichier de format : format XML et format non XML.  Le format non XML est le format d’origine pris en charge dans les versions précédentes de SQL Server.  Veuillez consulter [Fichiers de format non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise l’ [utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non xml `myNulls.fmt`basé sur le schéma de `myNulls`.  Pour utiliser une commande [bcp](../../tools/bcp-utility.md) pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin de fichier de données.  L’option format nécessite également l’option **-f** .  Pour cet exemple, le qualificateur **c** est utilisé pour spécifier les données de caractère, **t** est utilisé pour spécifier une virgule comme [délimiteur de champ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), et **T** est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
+SQL Server prend en charge deux types de fichier de format : format XML et format non XML.  Le format non XML est le format d’origine pris en charge dans les versions précédentes de SQL Server.  Veuillez consulter [Fichiers de format non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise [l’utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non xml `myNulls.fmt`basé sur le schéma de `myNulls`.  Pour utiliser une commande [bcp](../../tools/bcp-utility.md) pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin de fichier de données.  L’option format nécessite également l’option **-f** .  Pour cet exemple, le qualificateur **c** est utilisé pour spécifier les données de caractère, **t** est utilisé pour spécifier une virgule comme [délimiteur de champ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), et **T** est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
 
 ```cmd
 bcp TestDatabase.dbo.myNulls format nul -c -f D:\BCP\myNulls.fmt -t, -T

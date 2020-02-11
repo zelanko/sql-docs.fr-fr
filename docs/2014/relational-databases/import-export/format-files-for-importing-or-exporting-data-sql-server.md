@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011953"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Fichiers de format pour l'importation ou l'exportation de données (SQL Server)
   Lorsque vous importez en bloc des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou exportez en bloc des données depuis une table, utilisez un *fichier de format* pour stocker toutes les informations de format nécessaires à l'exportation ou l'importation en bloc des données. Cela inclut les informations de format pour chaque champ dans un fichier de données relatif à cette table.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : les fichiers de formats XML et de format non-XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge deux types de fichiers de format : XML et non XML. Les fichiers de format XML et non-XML contiennent la description de chacun des champs d'un fichier de données, et les fichiers de format XML contiennent également des descriptions des colonnes de table correspondantes. En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
  
   
@@ -35,12 +35,12 @@ ms.locfileid: "66011953"
 -   Vous permet d'importer les données en bloc sans avoir à ajouter ou supprimer des données inutiles ou à réorganiser les données du fichier de données. Les fichiers de format sont particulièrement utiles lorsqu'il existe des différences entre les champs du fichier de données et les colonnes dans la table.  
   
 ##  <a name="ExamplesOfFFs"></a> Exemples de fichiers de format  
- Les exemples suivants illustrent la structure d'un fichier de format XML et non XML. Ces fichiers de format correspondent à la table `HumanResources.myTeam` dans l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cette table contient quatre colonnes : `EmployeeID`, `Name`, `Title` et `ModifiedDate`.  
+ Les exemples suivants illustrent la structure d'un fichier de format XML et non XML. Ces fichiers de format correspondent à la table `HumanResources.myTeam` dans l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cette table contient quatre colonnes : `EmployeeID`, `Name`, `Title`et `ModifiedDate`.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur cette table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
   
-### <a name="a-using-a-non-xml-format-file"></a>A. Utilisation d'un fichier de format non-XML  
+### <a name="a-using-a-non-xml-format-file"></a>R. Utilisation d'un fichier de format non-XML  
  Le fichier de format non XML suivant utilise le format de données natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la table `HumanResources.myTeam` . Ce fichier de format a été créé à l'aide de la commande `bcp` suivante.  
   
 ```  

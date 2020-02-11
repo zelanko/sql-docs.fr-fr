@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055971"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d’identité lors de l’importation de données en bloc (SQL Server)
@@ -35,7 +35,7 @@ Si les fichiers de données ne contiennent pas de valeurs pour la colonne d'iden
 ## Conserver les valeurs d’identité <a name="keep_identity"></a>  
 Pour empêcher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'assigner des valeurs d'identité lors de l'importation en bloc de lignes de données dans une table, utilisez le qualificateur de commande de conservation d'identité approprié.  Lorsque vous spécifiez un qualificateur de conservation d'identité, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les valeurs d'identité du fichier de données.  Ces qualificateurs sont les suivants :
 
-|Command|Qualificateur de conservation d'identité|Type de qualificateur|  
+|Commande|Qualificateur de conservation d'identité|Type de qualificateur|  
 |-------------|------------------------------|--------------------|  
 |bcp|-E|Commutateur|  
 |BULK INSERT|KEEPIDENTITY|Argument|  
@@ -64,7 +64,7 @@ CREATE TABLE dbo.myIdentity (
    );
 ```
  
-### **Exemple de fichier de données**<a name="sample_data_file"></a>
+### **Fichier de données d’exemple**<a name="sample_data_file"></a>
 À l’aide du Bloc-notes, créez un fichier vide `D:\BCP\myIdentity.bcp` et insérez les données ci-dessous.  
 ```
 3,Anthony,Grosse,1980-02-23
@@ -324,7 +324,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

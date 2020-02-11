@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs
+title: sys. sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 14c45f5ba725ef8d9cc498b1049c5a71c80a6d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909227"
 ---
-# <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
+# <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Active la collection de statistiques pour les procédures stockées compilées en mode natif de l'instance.  
   
- Pour activer la collecte de statistiques au niveau de la requête pour les procédures stockées compilées en mode natif, consultez [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
+ Pour activer la collecte de statistiques au niveau de la requête pour les procédures stockées compilées en mode natif, consultez [sys. sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,12 +38,12 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @new_collection_value = *valeur*  
+ @new_collection_value= *valeur*  
  Détermine si la collection de statistiques au niveau de la procédure est activée (1) ou désactivée (0).  
   
- @new_collection_value a la valeur zéro lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la base de données démarre.  
+ @new_collection_valuea la valeur zéro lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la base de données démarre.  
   
- @old_collection_value = *valeur*  
+ @old_collection_value= *valeur*  
  Retourne l'état actuel.  
   
 ## <a name="return-code"></a>Code de retour  
@@ -53,7 +53,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  Nécessite l'appartenance au rôle sysadmin fixe.  
   
 ## <a name="code-samples"></a>Exemples de code  
- Pour définir @new_collection_value et rechercher la valeur de @new_collection_value:  
+ Pour définir @new_collection_value et interroger la valeur de@new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056363"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utiliser un fichier de format pour importer des données en bloc (SQL Server)
@@ -36,9 +36,9 @@ Cette rubrique illustre l'utilisation d'un fichier de format dans les importatio
   * SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes du client ou dans la page de codes impliquée par le classement)
   * SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode)
   * SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).
-* Azure SQL Database et Azure SQL Data Warehouse prennent uniquement en charge [bcp](../../tools/bcp-utility.md).  Pour plus d’informations, consultez :
+* Azure SQL Database et Azure SQL Data Warehouse prennent uniquement en charge [bcp](../../tools/bcp-utility.md).  Si vous souhaitez en savoir plus, veuillez consulter :
   * [Chargement de données dans Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [Charger des données SQL Server dans Azure SQL Data Warehouse (fichiers plats)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
+  * [Charger des données à partir de SQL Server dans Azure SQL Data Warehouse (fichiers plats)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [Migration de vos données](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
 ## Exemples de conditions de test<a name="etc"></a>  
