@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755055"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
@@ -32,9 +32,9 @@ ms.locfileid: "62755055"
 ##  <a name="Syntax"></a> Syntaxe d'une adresse réseau de serveur  
  La syntaxe d'une adresse réseau de serveur est de la forme :  
   
- TCP<strong>://</strong> *\<adresse-système>* <strong>:<strong> *\<port>* 
+ <strong>TCP<strong>://</strong>*\<>d’adresse système *:<strong>*\<port>* 
   
- où  
+ where  
   
 -   *\<adresse_système>* est une chaîne qui identifie sans ambiguïté le système informatique de destination. En règle générale, l'adresse de serveur est un nom système (si les systèmes sont dans le même domaine), un nom de domaine complet ou une adresse IP :  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62755055"
   
      Dans l'adresse réseau d'une instance de serveur, seul le numéro de port associé à son point de terminaison de mise en miroir permet de différencier cette instance des autres instances sur l'ordinateur. L'illustration suivante présente les adresses réseau de deux instances de serveurs sur un même ordinateur. L'instance par défaut utilise le port `7022` et l'instance nommée utilise le port `7033`. Les adresses réseau de serveur de ces deux instances de serveur sont, respectivement : `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` et `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Notez que l'adresse ne contient pas le nom de l'instance du serveur.  
   
-     ![Adresses réseau du serveur d’une instance par défaut](../media/dbm-2-instances-ports-1-system.gif "Adresses réseau du serveur d’une instance par défaut")  
+     ![Adresses réseau de serveur d’une instance par défaut](../media/dbm-2-instances-ports-1-system.gif "Adresses réseau de serveur d’une instance par défaut")  
   
      Pour identifier le port actuellement associé au point de terminaison de mise en miroir de bases de données d'une instance de serveur, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62755055"
   
 ### <a name="examples"></a>Exemples  
   
-#### <a name="a-using-a-system-name"></a>A. Utilisation d'un nom système  
+#### <a name="a-using-a-system-name"></a>R. Utilisation d'un nom système  
  L'adresse réseau de serveur suivante spécifie un nom système, `SYSTEM46`, et un port, `7022`.  
   
 ```  
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  Pour former le nom de domaine complet, concaténez les valeurs de *<host_name>* et *<Primary_Dns_Suffix>* de la manière suivante :  
   
- _&lt;nom_hôte&gt;_ **.** _<Suffixe_DNS_principal>_  
+ _<host_name>_ **.** _<Suffixe_DNS_principal>_  
   
  Par exemple, la configuration IP  
   

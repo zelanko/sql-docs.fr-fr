@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755180"
 ---
 # <a name="sql-server-monitor-overview"></a>Vue d'ensemble du moniteur SQL Server
@@ -44,13 +44,13 @@ ms.locfileid: "62755180"
   
  Les options de menu suivantes appartiennent au moniteur SQL Server.  
   
- **Fichier**  
+ **File**  
  Ce menu comprend la commande **Quitter** .  
   
  **Action**  
  Comprend le menu contextuel du nœud sélectionné dans l'arborescence de navigation.  
   
- **Atteindre**  
+ **Go**  
  Comprend une liste des composants de surveillance :  
   
 -   Mise en miroir de bases de données  

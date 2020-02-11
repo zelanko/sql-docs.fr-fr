@@ -1,5 +1,5 @@
 ---
-title: Créer le jeu de test (Assistant exploration de données) | Microsoft Docs
+title: Créer un jeu de test (Assistant Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086789"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Créer un jeu de test (Assistant Exploration de données)
@@ -26,15 +26,15 @@ ms.locfileid: "66086789"
   
  Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère une valeur de départ numérique utilisée pour démarrer le partitionnement. Cette valeur de départ est basée sur le nom de la structure d'exploration de données. Si vous souhaitez veiller à ce que la partition reste la même, même si le nom de la structure d'exploration de données est modifié, vous pouvez spécifier une valeur pour la valeur de départ, en définissant la propriété HoldoutSeed de la structure d'exploration de données. Si vous modifiez la valeur de départ d'exclusion, vous devez retraiter la structure.  
   
- Si vous souhaitez ultérieurement modifier la quantité de données d’apprentissage ou de test, vous pouvez modifier le `HoldoutMaxCases` et `HoldoutMaxPercent` propriétés sur la structure d’exploration de données à l’aide de la **propriétés** fenêtre. Toutefois, après avoir apporté cette modification, vous devez retraiter la structure d'exploration de données et tous les modèles d'exploration de données associés. Les limitations suivantes s'appliquent également :  
+ Si vous souhaitez ultérieurement modifier la quantité de données de test ou d’apprentissage, vous pouvez modifier `HoldoutMaxCases` les `HoldoutMaxPercent` propriétés et sur la structure d’exploration de données à l’aide de la fenêtre **Propriétés** . Toutefois, après avoir apporté cette modification, vous devez retraiter la structure d'exploration de données et tous les modèles d'exploration de données associés. Les limitations suivantes s'appliquent également :  
   
--   Le partitionnement d'une structure d'exploration de données est pris en charge uniquement lorsque la structure d'exploration de données est stockée dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne prennent pas en charge la mise en cache des informations de partition pour les structures d’exploration de données.  
+-   Le partitionnement d'une structure d'exploration de données est pris en charge uniquement lorsque la structure d'exploration de données est stockée dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Les versions antérieures [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de ne prennent pas en charge la mise en cache des informations de partition pour les structures d’exploration de données.  
   
 -   Vous ne pouvez pas partitionner une structure d'exploration de données si elle contient une colonne Temps clé, ce qui est obligatoire pour les modèles d'exploration de données de séries chronologiques.  
   
 -   Vous ne pouvez pas partitionner des données si vous essayez de prédire une valeur qui est stockée dans une table imbriquée.  
   
- **Pour plus d’informations :** [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md), [didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Pour plus d’informations :** [test et validation &#40;&#41;d’exploration de données ](data-mining/testing-and-validation-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md), didacticiel sur l' [exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Options  
  **Pourcentage des données de test**  
@@ -48,9 +48,9 @@ ms.locfileid: "66086789"
  La valeur par défaut est NULL. Ce signifie qu'il n'existe aucune limite.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Suggérer des colonnes associées &#40;Assistant exploration de données&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Spécifier les Types de tables &#40;Assistant exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
- [Spécifier le contenu et le Type de données de la colonne &#40;Assistant exploration de données&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Aide (F1) de l’Assistant Exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Suggérer des colonnes associées &#40;l’Assistant Exploration de données&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Spécifier les types de tables &#40;l’Assistant Exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
+ [Spécifiez le contenu et le type de données de la colonne &#40;l’Assistant Exploration de données&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

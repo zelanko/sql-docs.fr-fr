@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085879"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modifier les propriétés d'un modèle d'exploration de données
@@ -25,9 +25,9 @@ ms.locfileid: "66085879"
   
  Les propriétés de modèle suivantes ont des éditeurs avancés que vous pouvez utiliser pour créer des expressions ou pour configurer les propriétés de modèle complexes. Les propriétés suivantes fournissent :  
   
--   `Filter` Propriété : Ouvre le [Boîte de dialogue Filtre de jeu de données ou Filtre de modèle](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter`propriété : ouvre la [boîte de dialogue filtre de jeu de données ou filtre de modèle](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` Propriété : Ouvre le [boîte dialogue Paramètres d’algorithme &#40;affichage des modèles d’exploration de&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters`propriété : ouvre la [boîte de dialogue Paramètres d’algorithme &#40;vue modèles d’exploration de données&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Pour plus d’informations sur la définition des propriétés dans un modèle d’exploration, consultez [Colonnes de modèle d’exploration de données](mining-model-columns.md).  
   
@@ -46,11 +46,11 @@ ms.locfileid: "66085879"
 2.  Dans la fenêtre **Propriétés** à droite de l’écran, mettez en surbrillance la valeur qui correspond à la propriété à modifier, puis entrez la nouvelle valeur.  
   
     > [!NOTE]  
-    >  Si l’utilisation des colonnes est définie sur `Ignore`, le **propriétés** fenêtre pour la colonne est vide.  
+    >  Si l’utilisation de la colonne est `Ignore`définie sur, la fenêtre **Propriétés** de la colonne est vide.  
   
      La nouvelle valeur est appliquée lorsque vous sélectionnez un élément différent dans le concepteur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures des modèles d’exploration de données](mining-model-tasks-and-how-tos.md)  
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)  
   
   

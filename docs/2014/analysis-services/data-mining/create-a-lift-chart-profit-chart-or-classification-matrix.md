@@ -1,5 +1,5 @@
 ---
-title: Créer un graphique de courbes d’élévation, un graphique des bénéfices ou une matrice de Classification | Microsoft Docs
+title: Créer un graphique de courbes d’élévation, un graphique des bénéfices ou une matrice de classification | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085408"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Créer un graphique de courbes d'élévation, un graphique des bénéfices ou une matrice de classification
@@ -69,26 +69,26 @@ ms.locfileid: "66085408"
   
     -   Sélectionnez l'option **Utiliser des scénarios de test de structure d'exploration de données**, pour utiliser le jeu complet de scénarios de test définis dans le jeu de données d'exclusion des structures d'exploration de données.  
   
-    -   Sélectionnez l’option **Spécifier un autre jeu de données**si vous souhaitez utiliser des données externes.  Le jeu de données doit être disponible comme vue de source de données.   Cliquez sur le bouton de navigation ( **...** ) pour choisir les tables de données à utiliser pour le graphique de précision. Pour plus d’informations, consultez [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Sélectionnez l’option **Spécifier un autre jeu de données**si vous souhaitez utiliser des données externes.  Le jeu de données doit être disponible comme vue de source de données.   Cliquez sur le bouton Parcourir (**...**) pour choisir les tables de données à utiliser pour le graphique d’exactitude. Pour plus d’informations, consultez [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          Si vous utilisez un jeu de données externes, vous pouvez éventuellement filtrer le jeu de données d'entrée. Pour plus d’informations, consultez [Appliquer des filtres aux données de test du modèle](apply-filters-to-model-testing-data.md).  
   
 > [!NOTE]  
->  Vous ne pouvez pas créer de filtre sur les scénarios de test de modèle ou sur les scénarios de test de structure d'exploration de données sous l'onglet **Sélection d'entrée** . Pour créer un filtre sur le modèle d'exploration de données, modifiez la propriété Filtrer du modèle. Pour plus d’informations, consultez [Appliquer un filtre à un modèle d’exploration de données](apply-a-filter-to-a-mining-model.md).  
+>  Vous ne pouvez pas créer de filtre sur les cas de test de modèle ou les cas de test de la structure d’exploration de données sous l’onglet **sélection d’entrée** . Pour créer un filtre sur le modèle d’exploration de données, modifiez la propriété Filter du modèle. Pour plus d’informations, consultez [Appliquer un filtre à un modèle d’exploration de données](apply-a-filter-to-a-mining-model.md).  
   
 ### <a name="configure-chart-settings-and-generate-the-chart"></a>Configurer les paramètres du graphique et générer le graphique  
   
 1.  Sous l'onglet **Graphique d'analyse de précision de l'exploration de données** , cliquez sur l'onglet correspondant au graphique à créer.  
   
-2.  Pour un **graphique de courbes d'élévation**, cliquez sur l'onglet **Graphique de courbes d'élévation** . Le graphique est automatiquement généré en fonction du modèle, des attributs prédictibles et des données d'entrée que vous venez de sélectionner.  
+2.  Pour un **graphique de courbes d’élévation**, cliquez sur l’onglet **graphique de courbes d’élévation** . Le graphique est automatiquement généré en fonction du modèle, des attributs prévisibles et des données d’entrée que vous venez de sélectionner.  
   
-3.  Pour une **matrice de classification**, cliquez sur l'onglet **Matrice de classification** . Aucun autre paramètres n'est nécessaire ; le graphique est automatiquement généré en fonction des données d'entrée et du modèle que vous avez sélectionnés.  
+3.  Pour une **matrice de classification**, cliquez sur l’onglet **matrice de classification** . Aucun autre paramètre n’est nécessaire. le graphique est automatiquement généré en fonction des données d’entrée et du modèle que vous avez sélectionnés.  
   
-4.  Pour un **graphique des bénéfices**, cliquez d'abord sur l'onglet **Graphique de courbes d'élévation** . Ensuite, dans la liste déroulante **Type de graphique** , sélectionnez **Graphique des bénéfices**.  
+4.  Pour un **graphique des bénéfices**, cliquez d’abord sur l’onglet **graphique de courbes d’élévation** . Ensuite, dans la liste déroulante **type de graphique** , sélectionnez **graphique des bénéfices**.  
   
      Entrez les paramètres suivants dans la boîte de dialogue **Paramètres du graphique des bénéfices** .  
   
-     **Remplissage**  
+     **Habitants**  
      Nombre de cas du jeu de données que vous voulez utiliser lors de la création du graphique de courbes d'élévation.  
   
      Le modèle choisit toujours les cas par ordre décroissant de probabilité ; en d'autres termes, si vous évaluez des clients potentiels et que vous choisissez un nombre qui représente uniquement la moitié des enregistrements de votre base de données de clients, le modèle mesurera la précision sur le sous-ensemble des cas les mieux adaptés à votre modèle.  
@@ -111,7 +111,7 @@ ms.locfileid: "66085408"
      Revenu associé à chaque vente réussie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)   
- [Matrice de classification &#40;Analysis Services - Exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Graphique de courbes d’élévation &#40;Analysis Services d’exploration de données&#41;](lift-chart-analysis-services-data-mining.md)   
+ [Matrice de classification &#40;Analysis Services d’exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

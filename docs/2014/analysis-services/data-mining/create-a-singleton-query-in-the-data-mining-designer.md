@@ -1,5 +1,5 @@
 ---
-title: Créer une requête Singleton dans le Concepteur d’exploration de données | Microsoft Docs
+title: Créer une requête singleton dans le concepteur d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085306"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>créer une requête singleton dans le Concepteur d'exploration de données
@@ -57,9 +57,9 @@ AS [t]
   
 4.  Dans la table **Entrée de requête singleton** , sélectionnez les valeurs dans la colonne **Valeur** pour décrire le cas pour lequel vous voulez créer une prévision.  
   
-     Par exemple, sélectionnez **2** pour **Number Children At Home**, puis tapez `45` pour **âge**.  
+     Par exemple, sélectionnez **2** pour **nombre d’enfants à la résidence**, puis `45` tapez pour **Age**.  
   
-5.  Faites glisser une colonne prédictible de la table **Modèle d’exploration** vers la colonne **Source** au bas de l’onglet. Vous pouvez éventuellement taper un alias pour la colonne.  
+5.  Faites glisser une colonne prévisible de la table **modèle d’exploration de données** vers la colonne **source** au bas de l’onglet. Si vous le souhaitez, vous pouvez taper un alias pour la colonne.  
   
      Par exemple, faites glisser **Bike Buyer** vers la colonne **Source** .  
   
@@ -80,6 +80,6 @@ AS [t]
      Un nouvel écran s'affiche avec le résultat de la requête. Pour examiner l’instruction DMX que vous venez de créer, cliquez sur **SQL**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes de prédiction &#40;Exploration de données&#41;](prediction-queries-data-mining.md)  
+ [Requêtes de prédiction &#40;&#41;d’exploration de données](prediction-queries-data-mining.md)  
   
   

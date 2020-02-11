@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c04d010a690d99d90ea3a18ae7f70d33ed39f24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915496"
 ---
-# <a name="mssqlserver17083"></a>MSSQLSERVER_17083
+# <a name="mssqlserver_17083"></a>MSSQLSERVER_17083
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|ID d'événement|17083|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|17083|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|P3_HEKATON_NOT_ATOMIC|  
 |Texte du message|Le corps d'une procédure stockée compilée en mode natif doit être un bloc ATOMIC.|  
@@ -36,7 +36,7 @@ ms.locfileid: "62915496"
  Le corps d'une procédure stockée compilée en mode natif n'avait pas un bloc ATOMIC.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Une procédure stockée compilée en mode natif doit contenir un bloc ATOMIC. Exemple :  
+ Une procédure stockée compilée en mode natif doit contenir un bloc ATOMIC. Par exemple :  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

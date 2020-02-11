@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Ajout de Redirection de flux d’erreurs | Microsoft Docs'
+title: "Étape 3 : Ajout de redirection de flux d'erreurs | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891401"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Étape 3 : Ajout de redirection de flux d’erreurs
+# <a name="step-3-adding-error-flow-redirection"></a>Étape 3 : Ajout de redirection de flux d'erreurs
   Comme nous l'avons démontré au cours de la tâche précédente, la transformation Lookup Currency Key ne peut pas générer de correspondance lorsqu'elle tente de traiter le fichier plat exemple endommagé qui a généré une erreur. Du fait que la transformation utilise les paramètres par défaut pour l'affichage en sortie des erreurs, toute erreur qui survient entraîne un échec de la transformation. Si la transformation échoue, le reste du package échoue également.  
   
  Pour éviter tout échec de la transformation, vous pouvez configurer le composant afin qu'il réachemine la ligne qui a échoué vers un autre chemin de traitement à l'aide de la sortie d'erreur. L'utilisation d'un chemin de traitement des erreurs distinct vous permet d'accomplir un certain nombre de choses. Par exemple, vous pouvez essayer de nettoyer les données puis de retraiter la ligne qui a échoué. Ou vous pouvez enregistrer la ligne qui a échoué avec d'autres informations d'erreur, pour la vérifier et la retraiter ultérieurement.  
   
  Au cours de cette tâche, vous allez configurer la transformation Lookup Currency Key afin qu'elle réachemine toutes les lignes échouant lors de la sortie d'erreur. Dans la branche d'erreur du flux de données, ces lignes sont enregistrées dans un fichier.  
   
- Par défaut, les deux colonnes supplémentaires d'une sortie d'erreur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , **ErrorCode** et **ErrorColumn**, contiennent uniquement des codes numériques identifiant un numéro d'erreur et l'ID de la colonne dans laquelle l'erreur est survenue. L'usage de ces valeurs numériques peut être limité sans la description d'erreur correspondante.  
+ Par défaut, les deux colonnes supplémentaires d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] une sortie d’erreur, **ErrorCode** et **ErrorColumn**, contiennent uniquement des codes numériques qui représentent un numéro d’erreur et l’ID de la colonne dans laquelle l’erreur s’est produite. L'usage de ces valeurs numériques peut être limité sans la description d'erreur correspondante.  
   
  Pour améliorer l'utilité de la sortie d'erreur, vous allez utiliser un composant Script pour accéder à l'API [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et obtenir une description de l'erreur avant que le package n'enregistre les lignes ayant échoué dans le fichier.  
   
 ### <a name="to-configure-an-error-output"></a>Pour configurer un affichage des erreurs  
   
-1.  Dans la **Boîte à outils SSIS**, développez **Commun**, puis faites glisser **Composant Script** dans l'aire de conception de l'onglet **Flux de données** . Placez le composant **Script** à droite de la transformation **Lookup Currency Key** .  
+1.  Dans la **boîte à outils SSIS**, développez **commun**, puis faites glisser **composant script** sur l’aire de conception de l’onglet de **Workflow** . Placez le **script** à droite de la transformation **Lookup Currency Key** .  
   
 2.  Dans la boîte de dialogue **Sélectionner le type de composant de script** , cliquez sur **Transformation**, puis sur **OK**.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62891401"
   
 8.  Dans la page **Entrées et sorties** , développez **Sortie 0**, cliquez sur **Colonnes de sortie**, puis sur **Ajouter une colonne**.  
   
-9. Dans le `Name` propriété, tapez **ErrorDescription** et définir le `DataType` propriété **chaîne Unicode [DT_WSTR]** .  
+9. Dans la `Name` propriété, tapez **ErrorDescription** et affectez `DataType` à la propriété la valeur **chaîne Unicode [DT_WSTR]**.  
   
-10. Sur le **Script** page, vérifiez que le `LocaleID` propriété est définie sur **English (United States.**  
+10. Dans la page **script** , vérifiez que la `LocaleID` propriété est définie sur **anglais (États-Unis.**  
   
 11. Cliquez sur **Modifier le script** pour ouvrir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). Dans la méthode `Input0_ProcessInputRow`, tapez ou collez le code suivant.  
   
@@ -96,6 +96,6 @@ ms.locfileid: "62891401"
 13. Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de transformation de script** .  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Étape 4 : Ajout d’une Destination de fichier plat] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Étape 4 : ajout d’une destination de fichier plat] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

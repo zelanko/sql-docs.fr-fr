@@ -1,5 +1,5 @@
 ---
-title: Activer ou désactiver la boîte de dialogue de l’écriture différée (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue Activer/désactiver l’écriture différée (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081284"
 ---
-# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Activer ou désactiver la boîte de dialogue de l’écriture différée (Analysis Services - données multidimensionnelles)
+# <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Activer/désactiver l’écriture différée (Analysis Services-données multidimensionnelles)
   La boîte de dialogue **Activer/Désactiver l’écriture différée** permet d’activer ou de désactiver l’écriture différée pour un groupe de mesures dans un cube. L'activation de l'écriture différée dans un groupe de mesures définit une partition d'écriture différée et crée une table d'écriture différée pour le groupe de mesures. La désactivation de l'écriture différée dans un groupe de mesures supprime la partition d'écriture différée, mais ne supprime pas la table d'écriture différée pour éviter les pertes de données imprévues. Pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** :  
   
 -   Cliquez sur **Paramètres d’écriture différée** dans le volet **Groupes de mesures** de l’onglet **Partitions** du Concepteur de cube.  

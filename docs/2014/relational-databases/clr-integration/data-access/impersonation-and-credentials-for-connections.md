@@ -1,5 +1,5 @@
 ---
-title: L’emprunt d’identité et les informations d’identification pour les connexions | Microsoft Docs
+title: Emprunt d’identité et informations d’identification pour les connexions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874024"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Emprunt d'identité et informations d'identification pour les connexions
@@ -33,11 +33,11 @@ ms.locfileid: "62874024"
   
  Dans certains cas, vous pouvez emprunter l'identité de l'appelant à l'aide de la propriété `SqlContext.WindowsIdentity` plutôt que de fonctionner en tant que compte de service. L'instance de `WindowsIdentity`, qui représente l'identité du client qui a appelé le code appelant, est uniquement disponible lorsque le client utilise l'authentification Windows. Après avoir obtenu l'instance de `WindowsIdentity`, vous pouvez appeler `Impersonate` pour modifier le jeton de sécurité du thread, puis ouvrir des connexions ADO.NET pour le compte du client.  
   
- Après avoir appelé SQLContext.WindowsIdentity.Impersonate, vous ne pouvez pas accéder aux données locales et vous ne pouvez pas accéder aux données système. Pour accéder aux données à nouveau, vous devez appeler WindowsImpersonationContext.Undo.  
+ Une fois que vous avez appelé SQLContext. WindowsIdentity. Impersonate, vous ne pouvez pas accéder aux données locales et vous ne pouvez pas accéder aux données système. Pour accéder à nouveau aux données, vous devez appeler WindowsImpersonationContext. Undo.  
   
  L'exemple suivant montre comment emprunter l'identité de l'appelant à l'aide de la propriété `SqlContext.WindowsIdentity`.  
   
- Visual C#  
+ Visual C#   
   
 ```  
 WindowsIdentity clientId = null;  
@@ -71,9 +71,9 @@ catch
 ```  
   
 > [!NOTE]  
->  Pour plus d’informations sur les changements de comportement dans l’emprunt d’identité, consultez [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Pour plus d’informations sur les changements de comportement dans l’emprunt d’identité, consultez [modifications critiques apportées aux fonctionnalités de moteur de base de données dans SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Par ailleurs, si vous avez obtenu l'instance de l'identité [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, vous ne pouvez pas, par défaut, propager cette instance à un autre ordinateur, cette opération étant restreinte par défaut par l'infrastructure de sécurité Windows. Il existe cependant un mécanisme, appelé « délégation », qui permet la propagation d'identités Windows sur plusieurs ordinateurs approuvés. Plus d’informations sur la délégation dans l’article TechNet, «[Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=50419)».  
+ Par ailleurs, si vous avez obtenu l'instance de l'identité [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, vous ne pouvez pas, par défaut, propager cette instance à un autre ordinateur, cette opération étant restreinte par défaut par l'infrastructure de sécurité Windows. Il existe cependant un mécanisme, appelé « délégation », qui permet la propagation d'identités Windows sur plusieurs ordinateurs approuvés. Pour plus d’informations sur la délégation, consultez l’article TechNet «[transition de protocole Kerberos et délégation avec restriction](https://go.microsoft.com/fwlink/?LinkId=50419)».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Objet SqlContext](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

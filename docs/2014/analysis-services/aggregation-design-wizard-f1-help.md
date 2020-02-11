@@ -1,5 +1,5 @@
 ---
-title: Aide de F1 l’Assistant conception d’agrégation | Microsoft Docs
+title: Aide (F1) de l’Assistant conception d’agrégation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062749"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Aide (F1) de l'Assistant Conception d'agrégation
-  Les agrégations améliorent les performances en permettant à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d’extraire des totaux précalculés du stockage des cubes au lieu de recalculer les données à partir d’une source de données sous-jacente pour chaque requête.  
+  Les agrégations améliorent les performances [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en permettant à d’extraire des totaux précalculés directement à partir du stockage du cube au lieu de recalculer les données à partir d’une source de données sous-jacente pour chaque requête.  
   
  Vous pouvez utiliser l'Assistant Conception d'agrégation pour concevoir ces agrégations. Cet Assistant vous guide dans les étapes suivantes :  
   
@@ -36,20 +36,20 @@ ms.locfileid: "66062749"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Sélectionner les Partitions à modifier &#40;Assistant conception d’agrégation&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
+-   [Sélectionnez les partitions à modifier &#40;Assistant conception d’agrégation&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
   
--   [Passez en revue l’utilisation d’agrégation &#40;Assistant conception d’agrégation&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
+-   [Examiner l’utilisation de l’agrégation &#40;l’Assistant conception d’agrégation&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
   
--   [Spécifiez le nombre d’objets &#40;Assistant conception d’agrégation&#41;](specify-object-counts-aggregation-design-wizard.md)  
+-   [Spécifier le nombre d’objets &#40;Assistant conception d’agrégation&#41;](specify-object-counts-aggregation-design-wizard.md)  
   
--   [Définir les Options d’agrégation &#40;Assistant conception d’agrégation&#41;](set-aggregation-options-aggregation-design-wizard.md)  
+-   [Définir les options d’agrégation &#40;l’Assistant conception d’agrégation&#41;](set-aggregation-options-aggregation-design-wizard.md)  
   
--   [Fin de l’Assistant &#40;Assistant conception d’agrégation&#41;](completing-the-wizard-aggregation-design-wizard.md)  
+-   [Fin de l’Assistant &#40;de l’Assistant conception d’agrégation&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Agrégations et conceptions d’agrégation](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Aide F1 de l’Assistant Optimisation de l’utilisation](usage-based-optimization-wizard-f1-help.md)   
- [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant Optimisation de l’utilisation](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)  
   
   

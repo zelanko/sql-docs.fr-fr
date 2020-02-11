@@ -1,5 +1,5 @@
 ---
-title: Structures d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
+title: Structures d’exploration de données (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,24 +22,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083379"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Structures d'exploration de données (Analysis Services – exploration de données)
   La structure d'exploration de données définit les données à partir desquelles les modèles d'exploration de données sont construits : elle spécifie la vue de source de données, le nombre et le type de colonnes, ainsi qu'une partition facultative en jeux d'apprentissage et en jeux de test. Une structure d'exploration de données individuelle peut prendre en charge plusieurs modèles d'exploration de données qui partagent le même domaine. Le diagramme suivant illustre la relation de la structure d'exploration de données par rapport à la source de données et à ses modèles d'exploration de données constitutifs.  
   
- ![Traitement des données : source à structure à modèle](../media/dmcon-modelarch.gif "traitement des données : source à structure à modèle")  
+ ![Traitement des données : source à structure à modèle](../media/dmcon-modelarch.gif "Traitement des données : source à structure à modèle")  
   
  La structure d'exploration de données dans le diagramme repose sur une source de données qui contient plusieurs tables ou vues, jointes dans le champ CustomerID. Une table contient des informations sur les clients, telles que la région géographique, l’âge, le revenu et le genre, alors que la table imbriquée connexe contient plusieurs lignes d'informations supplémentaires sur chaque client, telles que les produits achetés par le client. Le diagramme montre que plusieurs modèles peuvent être construits sur une même structure d'exploration de données, et que ces modèles peuvent utiliser des colonnes différentes de la structure.  
   
  **Modèle 1** Utilise CustomerID, Income, Age, Region, et filtre les données sur Region.  
   
- **Modèle 2** Utilise CustomerID, Income, Age, Region, et filtre les données sur Age.  
+ **Modèle 2** Utilise CustomerID, Income, Age, Region et filtre les données sur Age.  
   
- **Modèle 3** Utilise CustomerID, Age, Gender et la table imbriquée, sans filtre.  
+ **Modèle 3** Utilise CustomerID, Age, sexe et la table imbriquée, sans filtre.  
   
  Comme les modèles utilisent des colonnes différentes pour l'entrée et comme deux des modèles limitent également les données utilisées dans le modèle en appliquant un filtre, les modèles peuvent avoir des résultats très différents bien qu'ils soient basés sur les mêmes données. Notez que la colonne CustomerID est requise dans tous les modèles parce que c'est la seule colonne disponible qui peut être utilisée comme clé de cas.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083379"
   
 -   Traitez la structure.  
   
- Ces étapes sont décrites de manière plus détaillée dans les sections suivantes.  
+ Ces étapes sont décrites de façon plus détaillée dans les sections suivantes.  
   
 ### <a name="data-sources-for-mining-structures"></a>Sources de données des structures d'exploration de données  
  Lorsque vous définissez une structure d'exploration de données, vous utilisez des colonnes qui sont disponibles dans une vue de source de données existante. Une vue de source de données est un objet partagé qui vous permet de combiner plusieurs sources de données et de les utiliser comme source unique. Les sources de données d'origine ne sont pas visibles par les applications clientes, et vous pouvez utiliser les propriétés de la vue de source de données pour modifier les types de données, créer des agrégations ou définir des alias de colonne.  
@@ -107,21 +107,21 @@ ms.locfileid: "66083379"
 ## <a name="using-data-mining-models-with-mining-structures"></a>Utilisation des modèles d'exploration de données avec les structures d'exploration de données  
  Un modèle d'exploration de données applique un algorithme de modèle d'exploration de données aux données qui sont représentées par une structure d'exploration de données. Un modèle d'exploration de données est un objet appartenant à une certaine structure d'exploration de données, et il hérite de toutes les valeurs des propriétés définies par la structure d'exploration de données. Le modèle peut utiliser toutes les colonnes que contient la structure d'exploration de données ou un sous-ensemble de ces colonnes. Vous pouvez ajouter plusieurs copies d'une colonne de structure à une structure. Vous pouvez également ajouter plusieurs copies d’une colonne de structure à un modèle, puis assigner des noms différents, ou *alias*, à chaque colonne de structure dans le modèle. Pour plus d’informations sur l’affectation d’alias aux colonnes de structure, consultez [Créer un alias pour une colonne du modèle](create-an-alias-for-a-model-column.md) et [Propriétés du modèle d’exploration de données](mining-model-properties.md).  
   
- Pour plus d’informations sur l’architecture des modèles d’exploration de données, consultez [Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
+ Pour plus d’informations sur l’architecture des modèles d’exploration de données, consultez [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Utilisez les liens fournis ici pour en savoir plus sur la manière de définir, gérer et utiliser les structures d'exploration de données.  
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Utiliser des structures d'exploration de données relationnelles|[créer une structure d'exploration de données relationnelle](create-a-new-relational-mining-structure.md)<br /><br /> [Ajouter une table imbriquée à une structure d’exploration de données](add-a-nested-table-to-a-mining-structure.md)|  
-|Utiliser des structures d'exploration de données basées sur des cubes OLAP|[Créer une structure d’exploration de données OLAP](create-a-new-olap-mining-structure.md)<br /><br /> [Filtrer le cube source d’une structure d’exploration de données](../filter-the-source-cube-for-a-mining-structure.md)|  
-|Utiliser des colonnes dans une structure d'exploration de données|[Ajouter des colonnes à une structure d’exploration de données](add-columns-to-a-mining-structure.md)<br /><br /> [Supprimer des colonnes d'une structure d'exploration de données](remove-columns-from-a-mining-structure.md)|  
+|Utiliser des structures d'exploration de données relationnelles|[créer une structure d'exploration de données relationnelle](create-a-new-relational-mining-structure.md)<br /><br /> [ajouter une table imbriquée à une structure d'exploration de données](add-a-nested-table-to-a-mining-structure.md)|  
+|Utiliser des structures d'exploration de données basées sur des cubes OLAP|[Créer une structure d’exploration de données OLAP](create-a-new-olap-mining-structure.md)<br /><br /> [Filtrer le cube source d'une structure d'exploration de données](../filter-the-source-cube-for-a-mining-structure.md)|  
+|Utiliser des colonnes dans une structure d'exploration de données|[ajouter des colonnes à une structure d'exploration de données](add-columns-to-a-mining-structure.md)<br /><br /> [Supprimer des colonnes d'une structure d'exploration de données](remove-columns-from-a-mining-structure.md)|  
 |Modifier ou interroger les propriétés et les données de structure d'exploration de données|[Modifier les propriétés d'une structure d'exploration de données](change-the-properties-of-a-mining-structure.md)|  
-|Utiliser des sources de données sous-jacentes et mettre à jour des données sources|[Modifier la vue de source de données utilisée pour une structure d’exploration de données](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [traiter une structure d'exploration de données](process-a-mining-structure.md)|  
+|Utiliser des sources de données sous-jacentes et mettre à jour des données sources|[Modifier la vue de source de données utilisée pour une structure d'exploration de données](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [traiter une structure d'exploration de données](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de bases de données &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
+ [Objets de base de données &#40;Analysis Services-données multidimensionnelles&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
   

@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896321"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Développement d'une interface utilisateur pour un composant de flux de données
@@ -35,7 +35,7 @@ ms.locfileid: "62896321"
  Si vous ne fournissez pas d'interface utilisateur personnalisée pour votre composant, les utilisateurs peuvent encore configurer le composant et ses propriétés personnalisées à l'aide de l'éditeur avancé. Vous pouvez vous assurer que l'éditeur avancé permet aux utilisateurs de modifier convenablement des valeurs de propriété personnalisées à l'aide des propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> le cas échéant. Pour plus d’informations, consultez « Création de propriétés personnalisées » dans [Méthodes de conception d’un composant de flux de données](design-time-methods-of-a-data-flow-component.md).  
   
 ## <a name="setting-the-uitypename-property"></a>Définition de la propriété UITypeName  
- Pour fournir une interface utilisateur personnalisée, le développeur doit attribuer à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> le nom d'une classe qui implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Lorsque cette propriété est définie par le composant, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] charge et appelle l’interface utilisateur personnalisée lorsque le composant est modifié dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ Pour fournir une interface utilisateur personnalisée, le développeur doit attribuer à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> le nom d'une classe qui implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Quand cette propriété est définie par le composant, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] charge et appelle l’interface utilisateur personnalisée lorsque le composant est modifié dans [!INCLUDE[ssIS](../../../includes/ssis-md.md)] le concepteur.  
   
  La propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> est une chaîne délimitée par des virgules qui identifie le nom qualifié complet du type. La liste suivante affiche, dans l'ordre, les éléments qui identifient le type :  
   
@@ -281,9 +281,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un composant de flux de données personnalisé](creating-a-custom-data-flow-component.md)  
+ [Création d'un composant de flux de données personnalisé](creating-a-custom-data-flow-component.md)  
   
   

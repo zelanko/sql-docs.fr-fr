@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd3b78fd168541dc431d248b4a15960e8d1cddee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091815"
 ---
 # <a name="sql-server-servicing-installation"></a>Installation de maintenance de SQL Server
-  Cette section explique comment appliquer une mise à jour à n'importe quel composant [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installé avec une mise à jour de maintenance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+  Cette section explique comment appliquer une mise à jour à n'importe quel composant [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installé avec une mise à jour de maintenance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
   

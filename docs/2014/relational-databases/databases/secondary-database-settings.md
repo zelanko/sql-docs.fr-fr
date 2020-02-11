@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871210"
 ---
 # <a name="secondary-database-settings"></a>Paramètres de base de données secondaire
@@ -31,7 +31,7 @@ ms.locfileid: "62871210"
  **Base de données secondaire**  
  Affiche le nom de la base de données secondaire pour la configuration de la copie des journaux de transaction. Si vous ajoutez une nouvelle base de données secondaire à une configuration de la copie des journaux de transaction, vous pouvez en choisir une dans la liste ou taper son nom dans la zone de texte. Si vous entrez le nom, vous devez sélectionner une option dans l'onglet **Initialisation** afin de restaurer une sauvegarde complète de la base de données primaire dans la base de données secondaire. La nouvelle base de données est créée dans le cadre de l'opération de restauration.  
   
- **Se connecter**  
+ **Connexion**  
  Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée comme serveur secondaire dans la configuration de la copie des journaux de transaction. Le compte utilisé pour se connecter doit être membre du rôle serveur fixe sysadmin sur l'instance de serveur secondaire.  
   
  **Onglet Initialiser**  

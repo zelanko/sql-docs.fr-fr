@@ -1,5 +1,5 @@
 ---
-title: Base de données (tabulaire) | Microsoft Docs
+title: Représentation de la base de données (tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757809"
 ---
 # <a name="database-representationtabular"></a>Représentation de la base de données (tabulaire)
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>Base de données dans AMO  
  Lorsque vous utilisez AMO pour gérer un objet de base de données, commencez par un objet <xref:Microsoft.AnalysisServices.Server>. Puis, recherchez votre base de données dans la collection de bases de données, ou créez une nouvelle base de données et ajoutez-la à la collection.  
   
- L’extrait de code suivant montre les étapes pour vous connecter à un serveur et créer une base de données vide, après avoir vérifié la base de données n’existe pas :  
+ L’extrait de code suivant montre les étapes permettant de se connecter à un serveur et de créer une base de données vide, après avoir vérifié que la base de données n’existe pas :  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Pour savoir comment utiliser AMO pour créer et manipuler des représentations de base de données, consultez le code source dans l’exemple AMO 2012 tabulaire ; plus précisément, archivez le fichier source suivant : Database.cs. Le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
+ Pour savoir comment utiliser AMO pour créer et manipuler des représentations de base de données, consultez le code source de l'exemple AMO 2012 tabulaire ; plus précisément, archivez le fichier source suivant : Database.cs. Le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   

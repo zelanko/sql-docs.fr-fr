@@ -1,5 +1,5 @@
 ---
-title: Regrouper des membres d’attribut (discrétisation) | Microsoft Docs
+title: Regrouper les membres d’attribut (discrétisation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077267"
 ---
 # <a name="group-attribute-members-discretization"></a>Regrouper des membres d'un attribut (discrétisation)
-  Un groupe de membres est une collection de membres de dimension contigus générée par le système. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
+  Un groupe de membres est une collection de membres de dimension contigus générée par le système. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus appelé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
   
  La propriété `DiscretizationMethod` sur un attribut détermine la façon dont les membres sont regroupés.  
   
-|Paramètre `DiscretizationMethod`|Description|  
+|`DiscretizationMethod`Défini|Description|  
 |--------------------------------------|-----------------|  
 |`None`|Affiche les membres.|  
 |`Automatic`|Sélectionne la méthode qui représente le mieux les données : soit la méthode `EqualAreas`, soit la méthode `Clusters`.|  
@@ -87,7 +87,7 @@ ms.locfileid: "66077267"
 >  Pour inclure un point-virgule (;) comme caractère littéral dans le modèle de nom, faites-le précéder du signe de pourcentage (%).  
   
 ### <a name="example"></a>Exemple  
- L’expression de chaîne suivante peut être utilisée pour classer l’attribut Yearly Income de la dimension Customer de l’exemple de base de données [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , où cet attribut fait appel au regroupement de membres :  
+ L’expression de chaîne suivante peut être utilisée pour classer l’attribut Yearly Income de la dimension Customer de l’exemple de base de données [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , où cet attribut fait appel au regroupement de membres :  
   
  "Less than %{Next Bucket Min};Between %{First bucket member} and %{Last bucket member};Greater than %{Previous Bucket Max}"  
   

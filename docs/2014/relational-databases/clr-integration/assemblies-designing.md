@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874930"
 ---
 # <a name="designing-assemblies"></a>Conception d'assemblys
@@ -25,7 +25,7 @@ ms.locfileid: "62874930"
   
 -   Empaqueter des assemblys  
   
--   Gestion de la sécurité de l’assembly  
+-   Gestion de la sécurité des assemblys  
   
 -   Restrictions sur les assemblys  
   
@@ -34,19 +34,19 @@ ms.locfileid: "62874930"
   
  Lorsque vous empaquetez du code en assembly, vous devez prendre en considération les points suivants :  
   
--   Les types et index CLR définis par l'utilisateur qui dépendent de fonctions CLR définies par l'utilisateur peuvent amener des données persistantes à figurer dans la base de données qui repose sur l'assembly. La modification du code d'un assembly est souvent plus complexe lorsque la base de données contient des données persistantes dépendant de l'assembly. Par conséquent, il est généralement préférable de séparer le code sur lequel reposent les dépendances des données persistantes (par exemple des types et des index définis par l'utilisateur utilisant des fonctions définies par l'utilisateur) du code dépourvu de ces dépendances de données persistantes. Pour plus d’informations, consultez [assemblys implémentant](assemblies-implementing.md) et [ALTER ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
+-   Les types et index CLR définis par l'utilisateur qui dépendent de fonctions CLR définies par l'utilisateur peuvent amener des données persistantes à figurer dans la base de données qui repose sur l'assembly. La modification du code d'un assembly est souvent plus complexe lorsque la base de données contient des données persistantes dépendant de l'assembly. Par conséquent, il est généralement préférable de séparer le code sur lequel reposent les dépendances des données persistantes (par exemple des types et des index définis par l'utilisateur utilisant des fonctions définies par l'utilisateur) du code dépourvu de ces dépendances de données persistantes. Pour plus d’informations, consultez [implémentation d’assemblys](assemblies-implementing.md) et [ALTER assembly &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
   
 -   Si une portion de code managé requiert une autorisation plus élevée, il est préférable de la placer dans un assembly distinct du code qui ne requiert pas une telle autorisation.  
   
 ## <a name="managing-assembly-security"></a>Gestion de la sécurité des assemblys  
- Vous pouvez contrôler la quantité d’un assembly peut accéder aux ressources protégées par la sécurité d’accès du Code .NET lorsqu’il s’exécute du code managé. Pour cela, en spécifiant une des trois jeux d’autorisations lorsque vous créez ou modifiez un assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
+ Vous pouvez contrôler la façon dont un assembly peut accéder aux ressources protégées par la sécurité d’accès du code .NET lorsqu’il exécute du code managé. Pour ce faire, vous spécifiez l'un des trois jeux d'autorisations lorsque vous créez ou modifiez un assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE est le jeu d'autorisations par défaut et il s'agit du plus restrictif. Le code exécuté par un assembly avec des autorisations SAFE ne peut pas accéder aux ressources système externes telles que les fichiers, le réseau, les variables d'environnement ou le Registre. Le code SAFE peut accéder aux données des bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] locales ou réaliser des calculs et une logique métier qui ne nécessitent pas l'accès aux ressources situées hors de ces bases de données.  
   
  La plupart des assemblys réalisent des calculs et des tâches de gestion de données sans devoir accéder aux ressources situées hors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par conséquent, il est recommandé d'utiliser SAFE comme jeu d'autorisations des assemblys.  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS permet aux assemblys d'accéder à certaines ressources système externes telles que les fichiers, les réseaux, les services Web, les variables d'environnement et le Registre. Seules les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bénéficiant d'autorisations EXTERNAL ACCESS peuvent créer des assemblys EXTERNAL_ACCESS.  
   
  Les assemblys SAFE et EXTERNAL_ACCESS ne peuvent contenir que du code de type sécurisé. Cela signifie que ces assemblys peuvent uniquement accéder à des classes par le biais de points d'entrée correctement définis et valides pour la définition de type. Par conséquent, ils ne peuvent pas accéder arbitrairement à des zones de mémoire tampon non détenues par le code. En outre, ils ne peuvent pas réaliser des opérations susceptibles de nuire à la robustesse du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -54,10 +54,11 @@ ms.locfileid: "62874930"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE accorde aux assemblys un accès non restreint aux ressources, à la fois à l'intérieur et à l'extérieur de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le code exécuté depuis un assembly UNSAFE peut appeler du code non managé.  
   
- En outre, la spécification de UNSAFE permet au code de l'assembly de réaliser des opérations considérées comme étant de type non sécurisé par le vérificateur CLR. Ces opérations sont susceptibles d'accéder de manière incontrôlée aux zones de tampon mémoire de l'espace réservé aux processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les assemblys UNSAFE peuvent également corrompre le système de sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de CLR (Common Language Runtime). Les autorisations UNSAFE ne doivent être accordées par des administrateurs ou des développeurs expérimentés qu'aux assemblys hautement approuvés. Seuls les membres de la **sysadmin** rôle serveur fixe peut créer des assemblys UNSAFE.  
+ En outre, la spécification de UNSAFE permet au code de l'assembly de réaliser des opérations considérées comme étant de type non sécurisé par le vérificateur CLR. Ces opérations sont susceptibles d'accéder de manière incontrôlée aux zones de tampon mémoire de l'espace réservé aux processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les assemblys UNSAFE peuvent également corrompre le système de sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou de CLR (Common Language Runtime). Les autorisations UNSAFE ne doivent être accordées par des administrateurs ou des développeurs expérimentés qu'aux assemblys hautement approuvés. Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer des assemblys non sécurisés.  
   
 ## <a name="restrictions-on-assemblies"></a>Restrictions associées aux assemblys  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impose certaines restrictions au code managé des assemblys afin que ceux-ci puissent s'exécuter de manière fiable et évolutive. Cela signifie que certaines opérations pouvant compromettre la robustesse du serveur ne sont pas autorisées dans les assemblys SAFE et EXTERNAL_ACCESS.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impose certaines restrictions au code managé des assemblys afin que ceux-ci puissent s'exécuter de manière fiable et évolutive. Cela signifie que certaines opérations pouvant compromettre la robustesse du serveur ne sont pas autorisées dans les assemblys SAFE et EXTERNAL_ACCESS.  
   
 ### <a name="disallowed-custom-attributes"></a>Attributs personnalisés interdits  
  Les assemblys ne peuvent pas être annotés avec les attributs personnalisés suivants :  
@@ -83,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>API .NET Framework interdites  
- N’importe quel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API est annotée avec un des **HostProtectionAttributes** ne peut pas être appelée à partir des assemblys SAFE et EXTERNAL_ACCESS.  
+ Toute [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API annotée avec l’un des **attributs HostProtectionAttributes** interdits ne peut pas être appelée à partir d’assemblys SAFE et EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -117,7 +118,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assemblys &#40;moteur de base de données&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Sécurité de l’intégration du CLR](security/clr-integration-security.md)  
+ [Assemblys &#40;Moteur de base de données&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Sécurité de l'intégration du CLR](security/clr-integration-security.md)  
   
   

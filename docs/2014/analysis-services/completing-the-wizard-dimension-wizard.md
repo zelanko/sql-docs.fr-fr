@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087595"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Fin de l'Assistant (Assistant Dimension)
@@ -28,7 +28,7 @@ ms.locfileid: "66087595"
   
 -   au besoin, générer le schéma nécessaire à la prise en charge de la dimension.  
   
- **Pour ouvrir l’Assistant Dimension**  
+ **Pour ouvrir l'Assistant Dimension**  
   
 -   Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le dossier **Dimensions** pour un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur **Nouvelle dimension**.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66087595"
  **Nom**  
  Tapez le nom de la nouvelle dimension.  
   
- **Aperçu**  
+ **Préversion**  
  Affiche les attributs et les hiérarchies de la dimension à créer.  
   
  **Créer le schéma maintenant**  
@@ -46,8 +46,8 @@ ms.locfileid: "66087595"
 >  Cette option apparaît uniquement si vous avez sélectionné **Générer une table de temps dans la source de données** ou **Générer une table non temporelle dans la source de données** sur la page **Sélectionner la méthode de création**. Pour plus d’informations, consultez [Sélectionner la méthode de création &#40;Assistant Dimension&#41;](select-creation-method-dimension-wizard.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

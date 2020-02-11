@@ -1,5 +1,5 @@
 ---
-title: Formules de Validation croisée | Microsoft Docs
+title: Formules de validation croisée | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085148"
 ---
 # <a name="cross-validation-formulas"></a>Formules de validation croisée
@@ -35,17 +35,17 @@ ms.locfileid: "66085148"
 |**Vrai négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Le cas ne contient pas la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
 |**Faux positif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle est égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas contient la valeur cible.|  
 |**Faux négatif**|Attribut discret, valeur spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> La valeur réelle n'est pas égale à la valeur cible.<br /><br /> Le modèle a prédit que le cas ne contient pas la valeur cible.|  
-|**Succès/échec**|Attribut discret, cible non spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Succès si l'état prédit avec la probabilité la plus élevée est identique à l'état d'entrée et la probabilité est supérieure à la valeur de **Seuil d'état**.<br /><br /> Sinon, Échec.|  
-|**Finesse**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|La vraisemblance logarithmique moyenne pour toutes les lignes avec des valeurs pour l’attribut cible, où la vraisemblance logarithmique de chaque cas est calculée par Log(ActualProbability/MarginalProbability). Pour calculer la moyenne, la somme des valeurs de la vraisemblance du journal est divisée par le nombre de lignes dans le dataset d'entrée, à l'exclusion des lignes avec les valeurs manquantes pour l'attribut cible.<br /><br /> La courbe d'élévation peut être une valeur négative ou positive. Une valeur positive signifie un modèle efficace qui devance l'estimation aléatoire.|  
+|**Réussite/échec**|Attribut discret, cible non spécifiée|Nombre de cas qui remplissent ces conditions :<br /><br /> Succès si l'état prédit avec la probabilité la plus élevée est identique à l'état d'entrée et la probabilité est supérieure à la valeur de **Seuil d'état**.<br /><br /> Sinon, Échec.|  
+|**Lâche**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|La vraisemblance logarithmique moyenne pour toutes les lignes avec des valeurs pour l’attribut cible, où la vraisemblance logarithmique de chaque cas est calculée par Log(ActualProbability/MarginalProbability). Pour calculer la moyenne, la somme des valeurs de la vraisemblance du journal est divisée par le nombre de lignes dans le dataset d'entrée, à l'exclusion des lignes avec les valeurs manquantes pour l'attribut cible.<br /><br /> La courbe d'élévation peut être une valeur négative ou positive. Une valeur positive signifie un modèle efficace qui devance l'estimation aléatoire.|  
 |**Score du journal**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|Journal des valeurs de probabilité réelle pour chaque cas, additionnées, puis divisées par le nombre de lignes dans le jeu de données d'entrée, en excluant les lignes avec des valeurs manquantes pour l'attribut cible.<br /><br /> Étant donné que la probabilité est représentée comme une fraction décimale, les scores du journal sont toujours un nombre négatif. Un score plus proche de 0 représente un meilleur score.|  
 |**Probabilité de cas**|Cluster|Somme des scores de vraisemblance de cluster pour tous les cas de la partition, divisée par le nombre de cas dans la partition, en excluant les lignes avec des valeurs manquantes pour l'attribut cible.|  
-|**Erreur d'absolue moyenne**|Attribut continu|Somme de l'erreur absolue pour tous les cas de la partition, divisée par le nombre de cas dans la partition.|  
+|**Erreur d’absolue moyenne**|Attribut continu|Somme de l'erreur absolue pour tous les cas de la partition, divisée par le nombre de cas dans la partition.|  
 |**Erreur du carré moyen racine**|Attribut continu|Racine carrée de l'erreur-type pour la partition.|  
-|**Erreur-type**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les lignes avec des valeurs manquantes pour l'attribut cible.|  
-|**Erreur-type**|Attribut discret, cible non spécifiée|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les cas avec des valeurs manquantes pour l'attribut cible.|  
+|**Erreur du carré moyen racine**|Attribut discret. La valeur cible peut être spécifiée, mais elle n'est pas requise.|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les lignes avec des valeurs manquantes pour l'attribut cible.|  
+|**Erreur du carré moyen racine**|Attribut discret, cible non spécifiée|Racine carrée de la moyenne des carrés du complément du score de probabilité, divisée par le nombre de cas dans la partition, en excluant les cas avec des valeurs manquantes pour l'attribut cible.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)   
- [Validation croisée &#40;Analysis Services – Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)  
+ [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)   
+ [Validation croisée &#40;Analysis Services d’exploration de données&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

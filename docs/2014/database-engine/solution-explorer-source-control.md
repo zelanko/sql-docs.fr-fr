@@ -1,5 +1,5 @@
 ---
-title: Contrôle de code Source de l’Explorateur de solutions | Microsoft Docs
+title: Contrôle de code source Explorateur de solutions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,21 +19,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843104"
 ---
 # <a name="solution-explorer-source-control"></a>Contrôle de code source de l'Explorateur de solutions
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] L’Explorateur de solutions peut être intégré dans un système de contrôle de source distinct. Après intégration d'une solution ou d'un projet à un système de contrôle de code source, vous pouvez contrôler l'accès aux fichiers et les versions pour les scripts et les requêtes de vos projets.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Explorateur de solutions peut être intégré à un système de contrôle de code source distinct. Après intégration d'une solution ou d'un projet à un système de contrôle de code source, vous pouvez contrôler l'accès aux fichiers et les versions pour les scripts et les requêtes de vos projets.  
   
 ## <a name="solution-and-project-source-control"></a>Contrôle de code source de solution et de projet  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- Le contrôle de code source fait référence à un système dans lequel un logiciel serveur central stocke et effectue le suivi des versions de fichiers et contrôle l'accès aux fichiers. Un système de contrôle de code source comprend généralement un fournisseur de contrôle de code source et deux (voire plus) clients de contrôle de code source. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peut être intégré à un service de contrôle de code source. Cela signifie que vous pouvez utiliser cet outil comme client pour votre fournisseur de contrôle de code source. Sans quitter votre environnement, vous êtes ainsi en mesure de gérer en toute facilité vos projets individuels et collaboratifs. Le fournisseur de contrôle du code source n'est pas inclus dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ Le contrôle de code source fait référence à un système dans lequel un logiciel serveur central stocke et effectue le suivi des versions de fichiers et contrôle l'accès aux fichiers. Un système de contrôle de code source comprend généralement un fournisseur de contrôle de code source et deux (voire plus) clients de contrôle de code source. 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peut être intégré à un service de contrôle de code source. Cela signifie que vous pouvez utiliser cet outil comme client pour votre fournisseur de contrôle de code source. Sans quitter votre environnement, vous êtes ainsi en mesure de gérer en toute facilité vos projets individuels et collaboratifs. Le fournisseur de contrôle du code source n'est pas inclus dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### <a name="to-select-a-source-control-provider"></a>Pour sélectionner un fournisseur de contrôle du code source  
   
@@ -41,9 +42,9 @@ ms.locfileid: "62843104"
   
 2.  Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], dans le menu **Outils** , cliquez sur **Options**.  
   
-3.  Dans le **Options** boîte de dialogue, développez **contrôle de code Source**, puis cliquez sur le **sélection du plug-in** page.  
+3.  Dans la boîte de dialogue **options** , développez **contrôle de code source**, puis cliquez sur la page **sélection du plug-** in.  
   
-4.  Dans le **plug-in de contrôle de code source en cours** , sélectionnez le plug-in de contrôle de code source.  
+4.  Dans la zone plug-in de **contrôle de code source actuel** , sélectionnez le plug-in de contrôle de code source.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

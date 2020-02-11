@@ -1,5 +1,5 @@
 ---
-title: Modifier la vue de Source de données utilisée pour une Structure d’exploration de données | Microsoft Docs
+title: Modifier la vue de source de données utilisée pour une structure d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084515"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Modifier la vue de source de données utilisée pour une structure d'exploration de données
@@ -31,6 +31,6 @@ ms.locfileid: "66084515"
      Le Concepteur de vue de source de données s’ouvre dans un nouvel onglet de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures relatives aux structures d’exploration de données](mining-structure-tasks-and-how-tos.md)  
+ [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
   
   

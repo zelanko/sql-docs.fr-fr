@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892269"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
-  Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
+  Les variables stockent des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] valeurs qu’un package et ses conteneurs, tâches et gestionnaires d’événements peuvent utiliser au moment de l’exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
   
  Vous pouvez utiliser des variables dans des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour les opérations suivantes :  
   
@@ -43,7 +43,8 @@ ms.locfileid: "62892269"
 -   Création d'expressions qui incluent des valeurs de variables. Par exemple, la transformation de colonnes dérivées peut remplir une colonne avec le résultat obtenu suite à la multiplication d'une valeur de variable par une valeur de colonne.  
   
 ## <a name="system-and-user-defined-variables"></a>Variables système et variables définies par l'utilisateur  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge deux types de variables : les variables définies par l’utilisateur et les variables système. Les variables définies par l'utilisateur sont définies par les développeurs de packages, tandis que les variables système sont définies par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vous pouvez créer autant de variables définies par l'utilisateur qu'un package l'exige, mais vous ne pouvez pas créer de variables système supplémentaires.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge deux types de variables : les variables définies par l’utilisateur et les variables système. Les variables définies par l'utilisateur sont définies par les développeurs de packages, tandis que les variables système sont définies par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vous pouvez créer autant de variables définies par l'utilisateur qu'un package l'exige, mais vous ne pouvez pas créer de variables système supplémentaires.  
   
  Toutes les variables (système et définies par l’utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d’exécution SQL utilise pour mapper des variables à des paramètres dans des instructions SQL. Pour plus d’informations, consultez [Tâche d’exécution de requêtes SQL](control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
@@ -86,24 +87,24 @@ ms.locfileid: "62892269"
  Spécifie la description de la variable.  
   
  EvaluateAsExpression  
- Lorsque la propriété est définie `True`, l’expression fournie est utilisée pour définir la valeur de la variable.  
+ Quand la propriété a la valeur `True`, l’expression fournie est utilisée pour définir la valeur de la variable.  
   
  Expression  
  Spécifie l'expression affectée à la variable.  
   
- Nom  
+ Name  
  Spécifie le nom de la variable.  
   
  Espace de noms  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit deux espaces de noms, **User** et **System**. Par défaut, les variables personnalisées se trouvent dans l’espace de noms **User** et les variables système se trouvent dans l’espace de noms **System** . Vous pouvez créer des espaces de noms supplémentaires pour les variables définies par l’utilisateur et changer le nom de l’espace de noms **User**, mais vous ne pouvez pas modifier le nom de l’espace de noms **System**, ajouter des variables à l’espace de noms **System**, ni affecter des variables système à un autre espace de noms.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fournit deux espaces de noms, **utilisateur** et **système**. Par défaut, les variables personnalisées se trouvent dans l’espace de noms **User** et les variables système se trouvent dans l’espace de noms **System** . Vous pouvez créer des espaces de noms supplémentaires pour les variables définies par l’utilisateur et changer le nom de l’espace de noms **User** , mais vous ne pouvez pas modifier le nom de l’espace de noms **System** , ajouter des variables à l’espace de noms **System** , ni affecter des variables système à un autre espace de noms.  
   
  RaiseChangedEvent  
  Lorsque la propriété est définie sur `True`, l'événement `OnVariableValueChanged` est déclenché lorsque la valeur de la variable change.  
   
- En lecture seule  
+ Lecture seule  
  Lorsque la propriété est définie sur `False`, la variable est en lecture-écriture.  
   
- `Scope`  
+ Étendue  
  > [!NOTE]  
 >  Vous pouvez modifier ce paramètre de propriété uniquement en cliquant sur **Déplacer la variable** dans la fenêtre **Variables** .  
   
@@ -114,19 +115,19 @@ ms.locfileid: "62892269"
  IncludeInDebugDump  
  Indiquez si la valeur variable est incluse dans les fichiers de vidage de débogage.  
   
- Pour les variables système et les variables définies par l’utilisateur, la valeur par défaut pour le **InclueInDebugDump** option est `true`.  
+ Pour les variables définies par l’utilisateur et les variables système, la valeur **** par défaut de `true`l’option InclueInDebugDump est.  
   
- Toutefois, pour les variables définies par l’utilisateur, le système réinitialise le **IncludeInDebugDump** option `false` lorsque les conditions suivantes sont remplies :  
+ Toutefois, pour les variables définies par l’utilisateur, le système réinitialise **** l’option IncludeInDebugDump `false` à quand les conditions suivantes sont remplies :  
   
--   Si le **EvaluateAsExpression** a la valeur de propriété de variable `true`, le système réinitialise le **IncludeInDebugDump** option `false`.  
+-   Si la propriété de la variable **EvaluateAsExpression** est `true`définie sur, le système réinitialise **** l’option IncludeInDebugDump `false`sur.  
   
-     Pour inclure le texte de l’expression en tant que valeur de la variable dans les fichiers de vidage du débogage, définissez le **IncludeInDebugDump** option `true`.  
+     Pour inclure le texte de l’expression comme valeur de variable dans les fichiers de vidage du débogage **** , définissez l' `true`option IncludeInDebugDump sur.  
   
--   Si le type de données de variable est changé en une chaîne, le système réinitialise le **IncludeInDebugDump** option `false`.  
+-   Si le type de données variable est remplacé par une chaîne, le système réinitialise l’option **IncludeInDebugDump** sur `false`.  
   
- Lorsque le système réinitialise le **IncludeInDebugDump** option `false`, cela peut remplacer la valeur sélectionnée par l’utilisateur.  
+ Lorsque le système réinitialise l’option **IncludeInDebugDump** sur `false`, cela peut remplacer la valeur sélectionnée par l’utilisateur.  
   
- Value  
+ Valeur  
  La valeur d'une variable définie par l'utilisateur peut être un littéral ou une expression. Une variable inclut des options permettant de définir la valeur de la variable et le type de données de la valeur. Les deux propriétés doivent être compatibles : par exemple, l'utilisation d'une valeur de chaîne avec un type de données Integer n'est pas valide.  
   
  Si la variable est configurée de façon à correspondre à une expression, vous devez fournir une expression. Au moment de l'exécution, l'expression est évaluée et le résultat de l'évaluation est affecté comme valeur de la variable. Par exemple, si une variable utilise l'expression `DATEPART("month", GETDATE())` , la valeur de la variable est l'équivalent numérique du mois de la date actuelle. L'expression doit être une expression valide qui utilise la syntaxe de grammaire d'expression [!INCLUDE[ssIS](../includes/ssis-md.md)] . Lorsqu'une expression est utilisée avec des variables, elle peut utiliser des littéraux et les opérateurs et fonctions fournis par la grammaire d'expression, mais elle ne peut pas faire référence aux colonnes d'un flux de données du package. La longueur maximale d'une expression est limitée à 4 000 caractères. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
@@ -145,7 +146,7 @@ ms.locfileid: "62892269"
  Pour en savoir plus sur les propriétés des variables et sur la définition par programme de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Ajouter, supprimer, modifier l’étendue d’une variable définie par l’utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [Ajouter, supprimer, modifier l'étendue de la variable définie par l'utilisateur dans un package](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
  [Définir les propriétés d’une variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   

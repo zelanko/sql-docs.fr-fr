@@ -1,5 +1,5 @@
 ---
-title: Fin de l’Assistant (Assistant génération de schéma) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Fin de l’Assistant (Assistant génération de schéma) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087740"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>Fin de l'Assistant (Assistant Génération de schéma) (Analysis Services - Données multidimensionnelles)
@@ -27,7 +27,7 @@ ms.locfileid: "66087740"
  Affiche les options que vous définissez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 d’Assistant génération de schéma &#40;Analysis Services - données multidimensionnelles&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant génération de schéma &#40;Analysis Services-données multidimensionnelles&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)  
   
   

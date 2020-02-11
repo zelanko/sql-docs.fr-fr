@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source CDC (Page sortie d’erreur) | Microsoft Docs
+title: Éditeur de source CDC (page sortie d’erreur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061039"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Éditeur de source CDC (page Sortie d'erreur)
@@ -25,7 +25,7 @@ ms.locfileid: "66061039"
  Pour en savoir plus sur la source CDC, consultez [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Liste des tâches  
- **Pour ouvrir l'Éditeur de source CDC (page Sortie d'erreur)**  
+ **Pour ouvrir l’éditeur de source CDC, page sortie d’erreur**  
   
 1.  Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], ouvrez le package [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] qui possède la source CDC.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66061039"
  **Colonne**  
  Affichez les colonnes externes (sources) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source CDC** .  
   
- **Erreur**  
+ **Error**  
  Sélectionnez la façon dont la source CDC doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
  **Troncation**  

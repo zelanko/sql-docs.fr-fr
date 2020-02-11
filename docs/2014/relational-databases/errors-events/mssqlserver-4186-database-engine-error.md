@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867843"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|4186|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|4186|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
 |Texte du message|La colonne '%ls.%.*ls' ne peut pas être référencée dans la clause OUTPUT parce que la définition de colonne contient une sous-requête ou référence une fonction qui offre un accès aux données utilisateur ou système. Une fonction est censée par défaut offrir un accès aux données si elle n'est pas liée au schéma. Pensez à supprimer la sous-requête ou la fonction de la définition de colonne ou à supprimer la colonne de la clause OUTPUT.|  

@@ -1,5 +1,5 @@
 ---
-title: Développeur&#39;s Guide (Integration Services) | Microsoft Docs
+title: Guide des&#39;pour les développeurs (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892396"
 ---
-# <a name="developer39s-guide-integration-services"></a>Développeur&#39;s Guide (Integration Services)
+# <a name="developer39s-guide-integration-services"></a>Guide des&#39;pour les développeurs (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un modèle objet entièrement réécrit, auquel ont été ajoutées de nombreuses fonctionnalités, afin d'offrir un outil convivial, souple et puissant pour étendre et programmer des packages. Les développeurs peuvent étendre et programmer pratiquement tous les aspects des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  En tant que développeur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous disposez de deux méthodes de programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fondamentales :  
@@ -72,7 +72,7 @@ ms.locfileid: "62892396"
  [Exécution et gestion de packages par programmation](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Décrit comment énumérer, exécuter et gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] par programme.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  [Guide de référence des erreurs et des messages propres à Integration Services](integration-services-error-and-message-reference.md)  
  Répertorie les codes d'erreur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prédéfinis, avec leur nom symbolique et leur description.  
   

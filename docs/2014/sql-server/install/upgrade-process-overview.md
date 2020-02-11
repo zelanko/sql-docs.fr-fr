@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091519"
 ---
 # <a name="upgrade-process-overview"></a>Vue d'ensemble du processus de mise à niveau
@@ -28,7 +28,7 @@ ms.locfileid: "66091519"
 ## <a name="upgrade-process"></a>Processus de mise à niveau  
  Les serveurs qui exécutent [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] peuvent être mis à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alors que certains composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mis à niveau sur place, d'autres doivent être migrés et d'autres encore ont été remplacés par de nouveaux composants. Par exemple, depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) remplace les services DTS (Data Transformation Services) et DTS n'est plus pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Lorsque vous formulez votre plan de mise à niveau, vous devez peut-être planifier la mise à jour de vos packages DTS actuels en packages [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
- Le Conseiller de mise à niveau vous permet d'évaluer les installations, les composants et les fichiers connexes actuels de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour identifier les problèmes connus qui pourront éventuellement se manifester pendant ou après la mise à niveau ou la migration vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quelques-unes de ces problèmes connus bloquent la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mise à niveau. Dans le rapport du Conseiller de mise à niveau, ces problèmes sont identifiés comme des blocages de la mise à niveau. Si vous n'avez pas traité les blocages de mise à niveau avant d'exécuter le programme d'installation, le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se ferme et vous recommande d'exécuter le Conseiller de mise à niveau pour identifier les problèmes spécifiques qui bloquent la mise à niveau.  
+ Le Conseiller de mise à niveau vous permet d'évaluer les installations, les composants et les fichiers connexes actuels de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour identifier les problèmes connus qui pourront éventuellement se manifester pendant ou après la mise à niveau ou la migration vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quelques-uns de ces problèmes connus bloquent la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mise à niveau. Dans le rapport du Conseiller de mise à niveau, ces problèmes sont identifiés comme des blocages de la mise à niveau. Si vous n'avez pas traité les blocages de mise à niveau avant d'exécuter le programme d'installation, le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se ferme et vous recommande d'exécuter le Conseiller de mise à niveau pour identifier les problèmes spécifiques qui bloquent la mise à niveau.  
   
  Avant d'effectuer la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], nous vous recommandons de sauvegarder vos données et paramètres système et de prendre les mesures stratégiques répertoriées dans les instructions opérationnelles définies pour votre organisation. Exécutez les opérations suivantes pour réaliser la mise à niveau :  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66091519"
   
 2.  Sauvegardez les données et les paramètres système.  
   
-3.  Exécutez le Conseiller de mise à niveau.  
+3.  Exécutez le Conseiller de mise à niveau  
   
      Le Conseiller de mise à niveau ne modifie pas vos données ni vos paramètres sur votre ordinateur.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66091519"
 9. Résolvez tous les problèmes postérieurs à la mise à niveau et à la migration.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécutez le Conseiller de mise à niveau &#40;Interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
- [À l’aide de rapports](../../../2014/sql-server/install/using-reports.md)   
+ [Exécution du conseiller de mise à niveau &#40;de l’interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+ [Utilisation des rapports](../../../2014/sql-server/install/using-reports.md)   
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

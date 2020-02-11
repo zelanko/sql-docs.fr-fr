@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : L’accès au Service Web | Microsoft Docs'
+title: 'Leçon 3 : accès au service Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653782"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Leçon 3 : Accès au service web
+# <a name="lesson-3-accessing-the-web-service"></a>Leçon 3 : accès au service Web
   Après avoir ajouté une référence au service Web Report Server à votre projet, l'étape suivante consiste à créer une instance de la classe proxy du service Web. Vous pouvez alors accéder aux méthodes de ce service Web en les appelant dans la classe proxy. Lorsque votre application appelle ces méthodes, le code de la classe proxy générée par [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gère les communications entre votre application et le service Web.  
   
  Vous allez tout d'abord créer une instance de la classe proxy du service Web <xref:ReportService2010.ReportingService2010>. Vous allez ensuite appeler la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> du service Web en utilisant la classe proxy. Vous utiliserez cet appel pour extraire le nom et la description de l'un des exemples de rapports appelé Company Sales.  
   
 > [!NOTE]  
->  Lors de l'accès à un service Web s'exécutant sous [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, vous devez ajouter "$SQLExpress" au chemin d'accès "ReportServer". Exemple :  
+>  Lors de l'accès à un service Web s'exécutant sous [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, vous devez ajouter "$SQLExpress" au chemin d'accès "ReportServer". Par exemple :  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62653782"
   
 4.  Enregistrez la solution.  
   
- L'exemple de code de cette procédure pas à pas utilise la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> du service Web pour récupérer les propriétés de l'exemple de rapport intitulé Company Sales 2012. Le <xref:ReportService2010.ReportingService2010.GetProperties%2A> méthode accepte deux arguments : le nom du rapport pour lequel vous souhaitez récupérer les informations de propriété et un tableau de **Property []** objets qui contient les noms des propriétés dont vous souhaitez récupérer les valeurs. Cette méthode renvoie également un tableau d'objets **Property[]** qui contient les noms et les valeurs des propriétés spécifiées dans l'argument des propriétés.  
+ L'exemple de code de cette procédure pas à pas utilise la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> du service Web pour récupérer les propriétés de l'exemple de rapport intitulé Company Sales 2012. La <xref:ReportService2010.ReportingService2010.GetProperties%2A> méthode accepte deux arguments : le nom du rapport pour lequel vous souhaitez récupérer les informations de propriété et un tableau d’objets **Property []** qui contient les noms des propriétés dont vous souhaitez récupérer les valeurs. Cette méthode renvoie également un tableau d'objets **Property[]** qui contient les noms et les valeurs des propriétés spécifiées dans l'argument des propriétés.  
   
 > [!NOTE]  
 >  Si vous fournissez un tableau **Property[]** vide pour l'argument des propriétés, toutes les propriétés disponibles sont renvoyées.  
@@ -123,7 +123,7 @@ ms.locfileid: "62653782"
  Pour plus d'informations sur la création et l'utilisation d'une classe proxy pour le service Web Report Server, consultez [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Leçon 4 : Exécution de l’Application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
- [Le Service Report Server Web à l’aide de Visual Basic ou Visual C# de l’accès à&#35; &#40;didacticiel SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Leçon 4 : exécution de l’application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [Accès au service Web Report Server à l’aide de Visual Basic ou du didacticiel Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

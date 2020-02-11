@@ -1,5 +1,5 @@
 ---
-title: Propriétés du compte proxy et le nouveau compte Proxy (Page Général) | Microsoft Docs
+title: Propriétés du compte proxy et nouveau compte proxy (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650200"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Propriétés du compte proxy et Nouveau compte proxy (page Général)
-  Cette page vous permet d'afficher et de modifier les propriétés d'un compte proxy de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Utilisez cette page pour afficher ou modifier les propriétés d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte proxy de l’agent.  
   
 ## <a name="options"></a>Options  
  **Nom du proxy**  
  Tapez le nom du proxy.  
   
- **Nom relatif aux informations d'identification**  
+ **Nom des informations d’identification**  
  Tapez le nom des informations d'identification du proxy.  
   
 > [!NOTE]  
->  Le nom des informations d'identification spécifié doit correspondre à des informations d'identification existantes. Pour plus d’informations sur la création des informations d’identification, consultez [créer une information d’identification](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  Le nom des informations d'identification spécifié doit correspondre à des informations d'identification existantes. Pour plus d’informations sur la création d’informations d’identification, consultez [créer des informations d’identification](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
  **...**  
  Affiche la boîte de dialogue **Sélectionner les informations d'identification** .  
@@ -45,6 +45,6 @@ ms.locfileid: "62650200"
  Sélectionnez le proxy auquel réaffecter les étapes du travail. Cette liste est activée lorsque vous révoquez l'accès à un sous-système auquel le proxy avait accès auparavant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un proxy de SQL Server Agent](create-a-sql-server-agent-proxy.md)  
+ [Create a SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)  
   
   

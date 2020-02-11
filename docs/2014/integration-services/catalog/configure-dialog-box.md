@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836108"
 ---
 # <a name="configure-dialog-box"></a>Boîte de dialogue Configurer
@@ -59,7 +59,7 @@ ms.locfileid: "62836108"
  **Nom**  
  Indique le nom du paramètre.  
   
- **Value**  
+ **Valeur**  
  Indique la valeur du paramètre. Cliquez sur le bouton de sélection pour modifier la valeur dans la boîte de dialogue **Définir la valeur du paramètre** .  
   
  Vous trouverez ci-dessous la liste des options de l'onglet **Gestionnaires de connexions** . Utilisez cet onglet pour modifier les valeurs des propriétés du Gestionnaire de connexions. Les paramètres sont automatiquement générés sur le serveur SSIS pour les propriétés.  
@@ -81,7 +81,7 @@ ms.locfileid: "62836108"
   
  Un environnement spécifie les valeurs d’exécution des packages contenus dans les projets que vous avez déployés sur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- **Environnement**  
+ **Environment**  
  Indique l'environnement.  
   
  **Dossier d'environnement**  
@@ -95,7 +95,7 @@ ms.locfileid: "62836108"
   
  Vous pouvez sélectionner un environnement contenu dans n'importe quel dossier de projet sous le nœud **SSISDB** .  
   
- **Supprimer**  
+ **Remove**  
  Cliquez sur un environnement répertorié dans la zone **Références** , puis sur **Supprimer**.  
   
   

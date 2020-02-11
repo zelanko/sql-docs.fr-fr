@@ -1,5 +1,5 @@
 ---
-title: Résoudre les problèmes de performances courants avec des index de hachage mémoire optimisés | Microsoft Docs
+title: Résolution des problèmes de performances courants avec les index de hachage mémoire optimisés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842534"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Résoudre les problèmes de performance courants avec les index de hachage mémoire optimisés
   Cette rubrique traite du dépannage et des solutions de contournement des problèmes couramment rencontrés avec les index de hachage.  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>La recherche nécessite un sous-ensemble de colonnes clés d'index de hachage  
- **Problème :** Index de hachage requièrent des valeurs pour toutes les colonnes clés d’index afin de calculer la valeur de hachage et rechercher les lignes correspondantes dans la table de hachage. Par conséquent, si une requête contient des prédicats d'égalité pour un seul sous-ensemble de clés d'index dans la clause WHERE, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peut pas utiliser la recherche d'index pour trouver les lignes correspondant aux prédicats dans la clause WHERE.  
+ **Problème :** Les index de hachage requièrent des valeurs pour toutes les colonnes de clés d’index afin de calculer la valeur de hachage et de rechercher les lignes correspondantes dans la table de hachage. Par conséquent, si une requête contient des prédicats d'égalité pour un seul sous-ensemble de clés d'index dans la clause WHERE, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peut pas utiliser la recherche d'index pour trouver les lignes correspondant aux prédicats dans la clause WHERE.  
   
  Par opposition, les index triés comme les index non cluster sur disque et les index non cluster mémoire optimisés, prennent en charge la recherche d'index sur un sous-ensemble de colonnes clés d'index, tant qu'il s'agit des premières colonnes de l'index.  
   
- **Symptôme :** Cela entraîne une dégradation des performances, en tant que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit exécuter des analyses de tables complètes plutôt que d’une recherche d’index, ce qui est généralement une opération plus rapide.  
+ **Symptôme :** Cela entraîne une dégradation des performances, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] car elle doit exécuter des analyses de tables complètes plutôt qu’une recherche d’index, ce qui est généralement plus rapide.  
   
- **Comment résoudre les problèmes :** Outre la dégradation des performances, l’inspection des plans de requête indiquera une analyse au lieu d’une recherche d’index. Si la requête est relativement simple, l'inspection du texte de la requête et de la définition d'index montrera également si la recherche nécessite un sous-ensemble de colonnes clés d'index.  
+ **Comment résoudre les problèmes :** Outre la dégradation des performances, l’inspection des plans de requête présente une analyse au lieu d’une recherche d’index. Si la requête est relativement simple, l'inspection du texte de la requête et de la définition d'index montrera également si la recherche nécessite un sous-ensemble de colonnes clés d'index.  
   
  Prenons l'exemple de la table et de la requête suivantes :  
   
@@ -48,7 +48,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  La table a un index de hachage sur les deux colonnes (o_id, od_id), tandis que la requête a un prédicat d'égalité sur (o_id). Étant donné que la requête possède des prédicats d'égalité uniquement sur un sous-ensemble de colonnes clés d'index, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne peut pas effectuer d'opération de recherche d'index à l'aide de PK_od ; à la place, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit revenir à une analyse complète d'index.  
   
- **Solutions de contournement :** Il existe plusieurs solutions de contournement possibles. Exemple :  
+ **Solutions de contournement :** Il existe plusieurs solutions possibles. Par exemple :  
   
 -   Recréez l'index en tant que type non cluster au lieu d'un hachage non cluster. L'index mémoire optimisé non cluster est trié, et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut effectuer une recherche d'index sur les colonnes clés d'index. La définition de clé primaire de l'exemple serait `constraint PK_od primary key nonclustered`.  
   
@@ -70,7 +70,7 @@ WITH (MEMORY_OPTIMIZED = ON)
      ) WITH (MEMORY_OPTIMIZED=ON)  
     ```  
   
- Notez qu'un index de hachage mémoire optimisé ne fonctionne pas de façon optimale s'il existe de nombreuses lignes dupliquées pour une valeur de clé d'index donnée : dans l'exemple, si le nombre de valeurs uniques pour la colonne o_id est beaucoup plus petit que le nombre de lignes dans la table, il n'est pas conseillé d'ajouter un index sur (o_id) ; à la place, changer le type de l'index PK_od en le modifiant d'index de hachage en index non cluster est la meilleure solution. Pour plus d’informations, consultez [déterminer le nombre de compartiments Correct pour les index de hachage](../relational-databases/indexes/indexes.md).  
+ Notez qu'un index de hachage mémoire optimisé ne fonctionne pas de façon optimale s'il existe de nombreuses lignes dupliquées pour une valeur de clé d'index donnée : dans l'exemple, si le nombre de valeurs uniques pour la colonne o_id est beaucoup plus petit que le nombre de lignes dans la table, il n'est pas conseillé d'ajouter un index sur (o_id) ; à la place, changer le type de l'index PK_od en le modifiant d'index de hachage en index non cluster est la meilleure solution. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Index sur des tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

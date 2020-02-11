@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ddb4df0089b488d3a15c76a76abef8be154848
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870522"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10536|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10536|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_TOO_MANY_STMTS|  
-|Texte du message|Impossible de créer le repère de plan ' %. \*%.*ls, car le lot ou module correspondant spécifié `@plan_handle` contient plus de 1000 instructions éligibles. Créez un repère de plan pour chaque instruction du lot ou module en indiquant une valeur `statement_start_offset` pour chacune.|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls', car le lot ou module correspondant au `@plan_handle` spécifié contient plus de 1000 instructions éligibles. Créez un repère de plan pour chaque instruction du lot ou module en indiquant une valeur `statement_start_offset` pour chacune.|  
   
 ## <a name="explanation"></a>Explication  
  Le lot ou module correspondant au `@plan_handle` spécifié contient plus de 1 000 instructions éligibles.  

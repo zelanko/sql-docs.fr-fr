@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876133"
 ---
 # <a name="full-file-backups-sql-server"></a>Sauvegardes de fichiers complètes (SQL Server)
@@ -38,17 +38,17 @@ ms.locfileid: "62876133"
 > [!NOTE]  
 >  Les sauvegardes complètes de fichiers sont généralement appelées *sauvegardes de fichiers*, sauf quand elles sont comparées explicitement à des *sauvegardes différentielles de fichiers*.  
   
- **Dans cette rubrique :**  
+ **Dans cette rubrique :**  
   
 -   [Avantages des sauvegardes de fichiers](#Benefits)  
   
 -   [Inconvénients des sauvegardes de fichiers](#Disadvantages)  
   
--   [Vue d'ensemble des sauvegardes de fichiers](#Overview)  
+-   [Vue d’ensemble des sauvegardes de fichiers](#Overview)  
   
 -   [Tâches associées](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Avantages des sauvegardes de fichiers  
+##  <a name="Benefits"></a>Avantages des sauvegardes de fichiers  
  Les sauvegardes de fichiers présentent les avantages suivants par rapport aux sauvegardes de base de données :  
   
 -   L'utilisation de sauvegardes de fichiers peut augmenter la vitesse de récupération, car elle vous permet de restaurer uniquement les fichiers endommagés sans restaurer le reste de la base de données.  
@@ -57,13 +57,13 @@ ms.locfileid: "62876133"
   
 -   Les sauvegardes de fichiers permettent une grande flexibilité dans la planification et la gestion des supports par rapport aux sauvegardes de bases de données complètes, lesquelles peuvent devenir impossibles à gérer si les bases de données sont particulièrement volumineuses. Cette flexibilité accrue des sauvegardes de fichiers ou de groupes de fichiers est également utile pour les bases de données volumineuses contenant des données avec différentes caractéristiques de mise à jour.  
   
-##  <a name="Disadvantages"></a> Inconvénients des sauvegardes de fichiers  
+##  <a name="Disadvantages"></a>Inconvénients des sauvegardes de fichiers  
   
 -   Le principal inconvénient des sauvegardes de fichiers par rapport aux sauvegardes de bases de données complètes est la complexité administrative supplémentaire. Les tâches de gestion et de suivi d'un jeu complet de sauvegardes prennent beaucoup de temps et peuvent dépasser l'espace nécessaire pour les sauvegardes de bases de données complètes.  
   
 -   Une défaillance du support peut rendre une base de données complète irrécupérable s'il n'existe aucune sauvegarde du fichier endommagé. Vous devez donc gérer un jeu complet de sauvegardes de fichiers et, en modes de restauration complète et de récupération utilisant les journaux de transactions, une ou plusieurs sauvegardes de journaux qui couvrent au minimum l'intervalle entre la première sauvegarde de fichiers complète et la dernière.  
   
-##  <a name="Overview"></a> Vue d'ensemble des sauvegardes de fichiers  
+##  <a name="Overview"></a>Vue d’ensemble des sauvegardes de fichiers  
  Une sauvegarde complète de fichiers sauvegarde toutes les données d'un ou de plusieurs fichiers ou groupes de fichiers. Par défaut, les sauvegardes de fichiers contiennent suffisamment d'enregistrements de journaux pour restaurer par progression le fichier jusqu'à la fin de l'opération de sauvegarde.  
   
  La sauvegarde d'un fichier ou d'un groupe de fichiers en lecture seule est identique pour chaque mode de récupération. En mode de restauration complète, un jeu complet de sauvegardes complètes de fichiers associé à un nombre suffisant de sauvegardes de journaux pour couvrir toutes les sauvegardes de fichiers est équivalent à une sauvegarde complète de la base de données.  
@@ -74,7 +74,7 @@ ms.locfileid: "62876133"
 >  Les fichiers individuels peuvent être restaurés à partir d'une sauvegarde de base de données. Toutefois, la localisation et la restauration d'un fichier à partir d'une sauvegarde de base de données prennent plus de temps qu'à partir d'une sauvegarde de fichiers.  
   
 ### <a name="file-backups-and-the-simple-recovery-model"></a>Sauvegardes de fichiers et le mode de récupération simple  
- En mode de récupération simple, vous devez sauvegarder conjointement tous les fichiers en lecture-écriture. Vous pouvez ainsi garantir que la base de données peut être restaurée dans un état cohérent dans le temps. Plutôt que de spécifier individuellement chaque fichier ou groupe de fichier en lecture-écriture, utilisez l'option READ_WRITE_FILEGROUPS. Cette option sauvegarde tous les groupes de fichiers en lecture-écriture dans la base de données. Une sauvegarde qui est créée en spécifiant READ_WRITE_FILEGROUPS est appelée une « sauvegarde partielle ». Pour plus d’informations, consultez [Sauvegardes partielles &#40;SQL Server&#41;](partial-backups-sql-server.md).  
+ En mode de récupération simple, vous devez sauvegarder conjointement tous les fichiers en lecture-écriture. Vous pouvez ainsi garantir que la base de données peut être restaurée dans un état cohérent dans le temps. Plutôt que de spécifier individuellement chaque fichier ou groupe de fichier en lecture-écriture, utilisez l'option READ_WRITE_FILEGROUPS. Cette option sauvegarde tous les groupes de fichiers en lecture-écriture dans la base de données. Une sauvegarde qui est créée en spécifiant READ_WRITE_FILEGROUPS est appelée une « sauvegarde partielle ». Pour plus d’informations, consultez [Sauvegardes partielles &#40;SQL Server&#41;](partial-backups-sql-server.md).  
   
 ### <a name="file-backups-and-the-full-recovery-model"></a>Sauvegardes de fichiers et mode de récupération complète  
  En mode de récupération complète, vous devez sauvegarder le journal des transactions, sans tenir compte du reste de votre stratégie de sauvegarde. Un jeu complet de sauvegardes complètes de fichiers associé à un nombre suffisant de sauvegardes de journaux pour couvrir toutes les sauvegardes de fichiers à partir de la première sauvegarde de fichiers, est équivalent à une sauvegarde complète de la base de données.  
@@ -87,7 +87,7 @@ ms.locfileid: "62876133"
 >  En mode de restauration complète, vous devez restaurer par progression le journal des transactions lors de la restauration d'une sauvegarde de fichiers en lecture-écriture pour que le fichier soit cohérent avec le reste de la base de données. Pour éviter de restaurer par progression de nombreuses sauvegardes du journal des transactions, envisagez l'utilisation de sauvegardes différentielles de fichiers. Pour plus d’informations, consultez [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour créer une sauvegarde d'un fichier ou d'un groupe de fichiers**  
+ **Pour créer une sauvegarde de fichier ou de groupe de fichiers**  
   
 -   [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62876133"
 ## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Restaurations de fichiers &#40;mode de récupération simple&#41;](file-restores-simple-recovery-model.md)   
  [Restaurations de fichiers &#40;mode de récupération complète&#41;](file-restores-full-recovery-model.md)   

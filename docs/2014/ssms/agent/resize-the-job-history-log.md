@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650885"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-  Cette rubrique explique comment définir des limites de taille pour les journaux d'historique des travaux de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Cette rubrique explique comment définir des limites de taille [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les journaux d’historique [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] des travaux [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de l’agent dans à l’aide de.  
   
 -   **Avant de commencer :**  
   
      [Sécurité](#Security)  
   
--   **Pour définir des limites de taille pour les journaux d'historique des travaux, utilisez :**  
+-   **Pour définir des limites de taille pour les journaux d’historique des travaux, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62650885"
   
 #### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>Pour redimensionner le journal d'historique des travaux en fonction de sa taille brute  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent**, puis cliquez sur **Propriétés**.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "62650885"
   
 3.  Sélectionnez la page **Historique** , puis cliquez sur **Supprimer automatiquement l'historique de l'agent**.  
   
-4.  Sélectionnez le nombre approprié de **Jour(s)** , **Semaine(s)** ou **Mois(s)** .  
+4.  Sélectionnez le nombre approprié de **Jour(s)**, **Semaine(s)** ou **Mois(s)**.  
   
   

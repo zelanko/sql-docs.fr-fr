@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835565"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Procédure : afficher les propriétés d'une instance de capture de données modifiées
@@ -39,7 +39,7 @@ ms.locfileid: "62835565"
      **Tables**  
      Cet onglet affiche des informations sur les tables incluses dans la capture de données modifiées. Il répertorie également les colonnes qui sont capturées. Pour plus d'informations sur ce qui est affiché dans cet onglet, consultez [Edit Tables](edit-tables.md).  
   
-     **Avancé**  
+     **Avancée**  
      Cet onglet contient une liste de propriétés avancées que vous définissez dans l'éditeur de propriétés. Pour plus d'informations sur ce qui est affiché dans cet onglet, consultez [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   
   

@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a646d152abaa3c352bf5ca1c576760e1715c3578
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080211"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Connexion à partir d'applications clientes (Analysis Services)
   Si vous débutez avec Analysis Services, utilisez les informations de cette rubrique pour vous connecter à une instance existante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide d'applications et d'outils courants. Cette rubrique explique également comment se connecter sous différentes identités d'utilisateur à des fins de test.  
   
--   [Établir une connexion à l'aide de SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
+-   [Se connecter avec SSMS (SQL Server Management Studio)](#bkmk_SSMS)  
   
--   [Établir une connexion à l'aide d'Excel](#bkmk_excel)  
+-   [Se connecter à l’aide d’Excel](#bkmk_excel)  
   
--   [Établir une connexion à l'aide de SQL Server Data Tools](#bkmk_SSDT)  
+-   [Se connecter avec SQL Server Data Tools](#bkmk_SSDT)  
   
 -   [Tester les connexions](#bkmk_tshoot)  
   
@@ -34,9 +34,9 @@ ms.locfileid: "66080211"
   
 -   [Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorisation de l’accès aux objets et opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_SSMS"></a> Établir une connexion à l'aide de SQL Server Management Studio (SSMS)  
+##  <a name="bkmk_SSMS"></a>Se connecter avec SQL Server Management Studio (SSMS)  
  Connectez-vous à Analysis Services dans SSMS afin de gérer des instances de serveur et des bases de données de manière interactive. Vous pouvez également exécuter des requêtes MDX ou XMLA afin d'effectuer des tâches administratives ou de récupérer des données. Contrairement à d'autres outils et applications qui chargent les bases de données uniquement lorsqu'une requête est envoyée, SSMS charge toutes les bases de données lorsque vous vous connectez au serveur, en supposant que vous avez l'autorisation d'afficher la base de données. Cela signifie que si vous avez de nombreuses bases de données tabulaires sur le serveur, elles sont toutes chargées dans la mémoire système lorsque vous vous connectez à l'aide de SSMS.  
   
  Vous pouvez tester les autorisations en exécutant SSMS sous une identité d'utilisateur spécifique, puis vous connecter à Analysis Services sous le nom de cet utilisateur.  
@@ -55,7 +55,7 @@ ms.locfileid: "66080211"
   
 3.  L'authentification est toujours l'authentification Windows, et l'identité d'utilisateur est toujours l'utilisateur Windows qui se connecte au moyen de Management Studio.  
   
-     Pour que la connexion réussisse, vous devez disposer de l'autorisation d'accès au serveur ou à une base de données située sur le serveur. La plupart des tâches à effectuer dans Management Studio nécessitent des autorisations d'administrateur. Vérifiez que le compte auquel vous vous connectez est membre du rôle d'administrateur de serveur. Pour plus d’informations, consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+     Pour que la connexion réussisse, vous devez disposer de l'autorisation d'accès au serveur ou à une base de données située sur le serveur. La plupart des tâches à effectuer dans Management Studio nécessitent des autorisations d'administrateur. Vérifiez que le compte auquel vous vous connectez est membre du rôle d'administrateur de serveur. Pour plus d’informations, consultez [accorder des autorisations d’administrateur de serveur &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 4.  Cliquez sur **Propriétés de connexion** pour spécifier une base de données, définir des valeurs de délai d'attente ou des options de chiffrement. Parmi les informations de connexion facultatives, citons les propriétés de connexion qui sont utilisées uniquement pour la connexion actuelle.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66080211"
     Provider=MSOLAP; Data Source=SERVERNAME; Initial Catalog=AdventureWorks2012; Roles=READER  
     ```  
   
-##  <a name="bkmk_excel"></a> Établir une connexion à l'aide d'Excel  
+##  <a name="bkmk_excel"></a>Se connecter à l’aide d’Excel  
  Microsoft Excel est souvent utilisé lors de l'analyse de données commerciales. Dans le cadre d'une installation d'Excel, Office installe le fournisseur OLE DB Analysis Services (MSOLAP DLL), ADOMD.NET et d'autres fournisseurs de données afin de vous permettre d'utiliser plus facilement les données se trouvant sur vos serveurs réseau. Si vous utilisez une version plus récente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec une version antérieure d'Excel, vous devrez probablement installer de nouveaux fournisseurs de données sur chaque poste de travail qui se connecte à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Fournisseurs de données utilisés pour les connexions Analysis Services](data-providers-used-for-analysis-services-connections.md) .  
   
  Quand vous configurez une connexion à un cube Analysis Services ou à une base de données model tabulaire, Excel enregistre les informations de connexion dans le fichier .odc en vue d'une utilisation ultérieure. La connexion est établie dans le contexte de sécurité de l'utilisateur Windows actuel. Pour que la connexion réussisse, ce compte d'utilisateur doit disposer d'autorisations en lecture sur la base de données.  
@@ -88,7 +88,7 @@ ms.locfileid: "66080211"
   
  Pour plus d'informations, consultez [Se connecter ou importer des données à partir de SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
-##  <a name="bkmk_SSDT"></a> Établir une connexion à l'aide de SQL Server Data Tools  
+##  <a name="bkmk_SSDT"></a>Se connecter avec SQL Server Data Tools  
  SQL Server Data Tools est utilisé pour créer des solutions de décisionnel, notamment des modèles Analysis Services, des rapports Reporting Services et des packages SSIS. Pour générer des rapports ou des packages, vous devrez peut-être spécifier une connexion à Analysis Services.  
   
  Les liens suivants expliquent comment se connecter à Analysis Services à partir d'un projet Report Server ou d'un projet Integration Services :  
@@ -100,7 +100,7 @@ ms.locfileid: "66080211"
 > [!NOTE]  
 >  Lorsque vous utilisez SQL Server Data Tools pour travailler avec un projet Analysis Services existant, n'oubliez pas que vous pouvez travailler en mode hors connexion à l'aide d'un projet local ou contrôlé par version, ou vous connecter en mode en ligne pour mettre à jour des objets Analysis Services lorsque la base de données s'exécute. Pour plus d'informations, consultez [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md). En général, les connexions à partir de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sont en mode projet, dans lequel les modifications sont déployées sur la base de données uniquement lorsque vous déployez explicitement le projet.  
   
-##  <a name="bkmk_tshoot"></a> Tester les connexions  
+##  <a name="bkmk_tshoot"></a>Tester les connexions  
  Vous pouvez utiliser SQL Server Profiler pour surveiller les connexions à Analysis Services. Les événements Audit Login et Audit Logout fournissent la preuve d'une connexion. La colonne d'identité indique le contexte de sécurité dans lequel est établie la connexion.  
   
 1.  Démarrez **SQL Server Profiler** sur l'instance d'Analysis Services, puis démarrez une nouvelle trace.  
@@ -113,7 +113,7 @@ ms.locfileid: "66080211"
   
 -   Interrogez le serveur à partir d'un ordinateur distant pour vérifier qu'il accepte les connexions distantes.  
   
--   **Les règles de pare-feu sur le serveur permettent les connexions entrantes des clients dans le même domaine**  
+-   **Les règles de pare-feu sur le serveur autorisent les connexions entrantes des clients dans le même domaine**  
   
      À l'exception de PowerPivot pour SharePoint, toutes les connexions à un serveur distant requièrent que vous ayez configuré le pare-feu pour autoriser l'accès au port qu'Analysis Services écoute. Si vous obtenez des erreurs de connexion, vérifiez que le port est accessible et que des autorisations utilisateur sont accordées aux bases de données appropriées.  
   
@@ -125,12 +125,12 @@ ms.locfileid: "66080211"
   
  Autres ressources qui peuvent vous aider à résoudre les problèmes de connexion :  
   
- [Résolution des problèmes courants de connectivité dans les scénarios de connectivité de SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx). Ce document date de quelques années, mais les informations et les méthodologies décrites sont toujours d'actualité.  
+ [Résolution des problèmes courants de connectivité dans les scénarios de connectivité SQL Server 2005 Analysis Services](https://technet.microsoft.com/library/cc917670.aspx). Ce document date de quelques années, mais les informations et les méthodologies décrites sont toujours d'actualité.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Se connecter à Analysis Services](connect-to-analysis-services.md)   
- [Méthodologies d'authentification prises en charge par Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
- [Emprunt d’identité &#40;SSAS tabulaire&#41;](../tabular-models/impersonation-ssas-tabular.md)   
- [Créer une source de données &#40;SSAS Multidimensionnel&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Méthodologies d’authentification prises en charge par Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
+ [Emprunt d’identité &#40;&#41;tabulaire SSAS](../tabular-models/impersonation-ssas-tabular.md)   
+ [Créer une source de données &#40;SSAS multidimensionnel&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

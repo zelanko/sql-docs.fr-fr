@@ -1,5 +1,5 @@
 ---
-title: Création d’un modèle Sequence Clustering associé (didacticiel d’exploration de données intermédiaire) | Microsoft Docs
+title: Création d’un modèle Sequence Clustering associé (Didacticiel intermédiaire sur l’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855875"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Création d'un modèle Sequence Clustering associé (Didacticiel sur l'exploration de données intermédiaire)
@@ -26,11 +26,11 @@ ms.locfileid: "62855875"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>Pour faire une copie du modèle Sequence Clustering  
   
-1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans le Concepteur d’exploration de données, cliquez sur le **des modèles d’exploration de données** onglet.  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans le concepteur d’exploration de données, cliquez sur l’onglet **modèles d’exploration** de données.  
   
-2.  Cliquez sur le modèle que vous souhaitez copier, puis sélectionnez **nouveau modèle d’exploration de données**.  
+2.  Cliquez avec le bouton droit sur le modèle que vous souhaitez copier, puis sélectionnez **nouveau modèle d’exploration de données**.  
   
-3.  Dans le **nouveau modèle d’exploration de données** boîte de dialogue, tapez un nom de modèle, sélectionnez Microsoft `Sequence Clustering`.  
+3.  Dans la boîte de dialogue **nouveau modèle d’exploration de données** , tapez un nom de `Sequence Clustering`modèle, puis sélectionnez Microsoft.  
   
      Pour ce didacticiel, tapez le nom `Sequence Clustering`.  
   
@@ -38,36 +38,36 @@ ms.locfileid: "62855875"
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>Pour supprimer des colonnes du modèle d'exploration de données  
   
-1.  Dans le **Mining Model** onglet, dans la colonne pour le nouveau modèle nommé Sequence Clustering, cliquez sur la ligne pour le **Income Group** d’attribut, puis sélectionnez **ignorer**.  
+1.  Dans l’onglet **modèle d’exploration de données** , dans la colonne du nouveau modèle nommé Sequence Clustering, cliquez sur la ligne correspondant à l’attribut **revenu Group** , puis sélectionnez **Ignorer**.  
   
-2.  Répétez cette étape pour l’attribut **région**.  
+2.  Répétez cette étape pour la **région**d’attribut.  
   
-3.  Cliquez sur le signe plus en regard du nom de table, **v Assoc Seq Line Items**, pour développer la table et afficher les colonnes de la table imbriquée.  
+3.  Cliquez sur le signe plus (+) en regard du nom de la table, **v Assoc SEQ Line Items**, pour développer la table et afficher les colonnes de la table imbriquée.  
   
      Le nouveau modèle doit comporter uniquement les colonnes suivantes :  
   
-     **Commande NumberKey**  
+     **NumberKey de commande**  
   
      **Clé de numéro de ligne**  
   
-     **Modèle prédire**  
+     **Prédiction de modèle**  
   
 ### <a name="to-process-the-new-sequence-clustering-model"></a>Pour traiter le nouveau modèle Sequence Clustering  
   
-1.  Dans le **Mining Model** onglet, cliquez sur le nouveau modèle nommé `Sequence Clustering`, puis sélectionnez **modèle de processus**.  
+1.  Sous l’onglet **modèle d’exploration de données** , cliquez avec le bouton `Sequence Clustering`droit sur le nouveau modèle nommé, puis sélectionnez **traiter le modèle**.  
   
      Étant donné que le nouveau modèle d'exploration de données simplifié est basé sur une structure qui a déjà été traitée, vous n'avez pas besoin de retraiter la structure. Vous pouvez traiter simplement le nouveau modèle d'exploration de données.  
   
-2.  Cliquez sur **Oui** pour déployer le projet d’exploration de données mises à jour sur le serveur.  
+2.  Cliquez sur **Oui** pour déployer le projet d’exploration de données mis à jour sur le serveur.  
   
-3.  Dans le **traiter le modèle d’exploration de données** boîte de dialogue, cliquez sur **exécuter**.  
+3.  Dans la boîte de dialogue **traiter le modèle d’exploration de données** , cliquez sur **exécuter**.  
   
-4.  Cliquez sur **fermer** pour fermer la **progression du traitement** boîte de dialogue, puis cliquez sur **fermer** à nouveau dans le **traiter le modèle d’exploration de données** boîte de dialogue.  
+4.  Cliquez sur **Fermer** pour fermer la boîte de dialogue **État d’avancement du traitement** , puis cliquez de nouveau sur **Fermer** dans la boîte de dialogue traiter le modèle d' **exploration de données** .  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création de prédictions sur un modèle Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
+ [Création de prédictions sur un modèle Sequence Clustering &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations relatives au traitement &#40;l’exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

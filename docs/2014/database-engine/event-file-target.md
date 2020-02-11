@@ -1,5 +1,5 @@
 ---
-title: Cible de fichier | Microsoft Docs
+title: Cible du fichier d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064863"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -31,9 +31,9 @@ ms.locfileid: "66064863"
 |filename|Toute chaîne incluant jusqu'à 260 caractères. Cette valeur est requise.|Emplacement et nom du fichier.<br /><br /> Vous pouvez utiliser toute extension de nom de fichier.|  
 |max_file_size|Tout entier de 64 bits. Cette valeur est facultative.|Taille maximale du fichier, en mégaoctets (Mo). Si l'option max_file_size n'est pas spécifiée, la taille du fichier augmente jusqu'à ce que le disque soit saturé. La taille de fichier par défaut est 1 Go.<br /><br /> max_file_size doit être supérieure à la taille actuelle des tampons de session. Si ce n'est pas le cas, la cible de fichier ne pourra pas s'initialiser, et indiquera que max_file_size n'est pas valide. Pour afficher la taille actuelle des mémoires tampons, interrogez la colonne buffer_size dans la vue de gestion dynamique [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) .<br /><br /> Si la taille de fichier par défaut est plus petite que la taille de la mémoire tampon de session, nous vous recommandons d’affecter à max_file_size la valeur spécifiée dans la colonne max_memory dans l’affichage catalogue [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .<br /><br /> Lorsque max_file_size a une taille plus grande que la taille des tampons de session, cette valeur peut être arrondie au multiple le plus proche de la taille de la mémoire tampon de session. Cela peut créer un fichier cible qui est plus petit que la valeur spécifiée de max_file_size. Par exemple, si la taille de la mémoire tampon est de 100 Mo et que max_file_size a la valeur 150 Mo, la taille de fichier résultante est arrondie à 100 Mo parce qu'une deuxième mémoire tampon ne tiendrait pas dans l'espace de 50 Mo restant.<br /><br /> Si la taille de fichier par défaut est plus petite que la taille de la mémoire tampon de session, nous vous recommandons d’affecter à max_file_size la valeur figurant dans la colonne max_memory dans l’affichage catalogue [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .|  
 |max_rollover_files|Tout entier de 32 bits. Cette valeur est facultative.|Nombre maximal de fichiers à conserver dans le système de fichiers. La valeur par défaut est 5.|  
-|increment|Tout entier de 32 bits. Cette valeur est facultative.|Croissance incrémentielle, en mégaoctets (Mo), pour le fichier. Si cette option n'est pas spécifiée, la valeur par défaut pour l'incrément est égale à deux fois la taille de la mémoire tampon de session.|  
+|incrément|Tout entier de 32 bits. Cette valeur est facultative.|Croissance incrémentielle, en mégaoctets (Mo), pour le fichier. Si cette option n'est pas spécifiée, la valeur par défaut pour l'incrément est égale à deux fois la taille de la mémoire tampon de session.|  
   
- La première fois qu’une cible de fichier d’événements est créée, le nom de fichier que vous spécifiez reçoit le suffixe _0\_ et une valeur d’entier long. La valeur entière est calculée en tant que le nombre de millisecondes écoulées entre le 1er janvier 1601 et la date et l’heure du fichier est créé. Les fichiers de substitution suivants utilisent également ce format. En examinant la valeur de l'entier long, vous pouvez déterminer le fichier le plus actuel. L'exemple suivant illustre comment les fichiers sont nommés dans un scénario où vous spécifiez l'option de nom de fichier comme C:\OutputFiles\MyOutput.xel :  
+ La première fois qu’une cible de fichier d’événements est créée, le nom de fichier que vous spécifiez reçoit le suffixe _0\_ et une valeur d’entier long. La valeur entière est calculée comme le nombre de millisecondes entre le 1er janvier 1601 et la date et l’heure de création du fichier. Les fichiers de substitution suivants utilisent également ce format. En examinant la valeur de l'entier long, vous pouvez déterminer le fichier le plus actuel. L'exemple suivant illustre comment les fichiers sont nommés dans un scénario où vous spécifiez l'option de nom de fichier comme C:\OutputFiles\MyOutput.xel :  
   
 -   premier fichier créé - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   
@@ -59,7 +59,7 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
   
 ## <a name="see-also"></a>Voir aussi  
  [Cibles des Événements étendus SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
+ [sys. fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   

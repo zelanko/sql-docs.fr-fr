@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083956"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algorithme MLR (Microsoft Logistic Regression)
@@ -46,11 +46,11 @@ ms.locfileid: "66083956"
   
  Les spécifications liées à un modèle de régression logistique sont les suivantes :  
   
- **Colonne à index unique** : chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
+ **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
   
- **Colonnes d'entrée** Chaque modèle doit posséder au moins une colonne d'entrée qui contient les valeurs utilisées comme facteurs dans l’analyse. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
+ **Colonnes d’entrée** Chaque modèle doit contenir au moins une colonne d’entrée qui contient les valeurs utilisées comme facteurs dans l’analyse. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
   
- **Au moins une colonne prédictible** Le modèle doit contenir au moins une colonne prédictible de tout type de données, y compris les données numériques continues. Les valeurs de la colonne prédictible peuvent également être traitées en tant qu'entrées du modèle, ou vous pouvez spécifier qu'elle soit utilisée uniquement à des fins de prédiction. Les tables imbriquées ne sont pas prévues pour les colonnes prédictibles, mais elles peuvent être utilisées comme entrées.  
+ **Au moins une colonne prévisible** Le modèle doit contenir au moins une colonne prévisible de tout type de données, y compris des données numériques continues. Les valeurs de la colonne prédictible peuvent également être traitées en tant qu'entrées du modèle, ou vous pouvez spécifier qu'elle soit utilisée uniquement à des fins de prédiction. Les tables imbriquées ne sont pas prévues pour les colonnes prédictibles, mais elles peuvent être utilisées comme entrées.  
   
  Pour de plus amples informations sur les types de contenu et les types de données pris en charge pour les modèles de régression logistique, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66083956"
   
  Lorsque vous affichez le modèle avec la Visionneuse de l'algorithme MNN (Microsoft Neural Network), Analysis Services présente les facteurs qui contribuent à un résultat donné, classés par ordre d’importance. Vous pouvez choisir un attribut et les valeurs à comparer. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
- Si vous voulez en savoir plus, vous pouvez parcourir les détails du modèle dans la Visionneuse de l'arborescence de contenu générique Microsoft. Le contenu d’un modèle de régression logistique inclut un nœud marginal qui affiche toutes les entrées utilisées pour le modèle, ainsi que les sous-réseaux pour les attributs prédictibles. Pour plus d’informations, consultez [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
+ Si vous voulez en savoir plus, vous pouvez parcourir les détails du modèle dans la Visionneuse de l'arborescence de contenu générique Microsoft. Le contenu d’un modèle de régression logistique inclut un nœud marginal qui affiche toutes les entrées utilisées pour le modèle, ainsi que les sous-réseaux pour les attributs prédictibles. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md).  
   
 ## <a name="creating-predictions"></a>Création de prédictions  
  Après avoir formé le modèle, vous pouvez créer des requêtes sur son contenu pour obtenir les coefficients de régression et d'autres détails, ou vous pouvez utiliser ce modèle pour élaborer des prédictions.  
@@ -79,8 +79,8 @@ ms.locfileid: "66083956"
 -   Ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Référence technique de l’algorithme de régression logistique Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle de régression logistique](logistic-regression-model-query-examples.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Modifier la boîte de dialogue Propriétés Table (SSAS) | Microsoft Docs
+title: Boîte de dialogue Modifier les propriétés de la table (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081438"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Modifier les propriétés de la table, boîte de dialogue (SSAS)
@@ -32,7 +32,7 @@ ms.locfileid: "66081438"
 > [!NOTE]  
 >  Vous ne pouvez pas en modifier le nom à cet endroit. Toutefois, vous pouvez modifier le nom de la table en cliquant avec le bouton droit sur l'onglet de table en bas du générateur de modèles.  
   
- **Nom de la connexion**  
+ **Nom de connexion**  
  Affiche le nom de la connexion qui est actuellement en cours d'utilisation.  
   
  **Nom de la source**  
@@ -43,13 +43,13 @@ ms.locfileid: "66081438"
 > [!NOTE]  
 >  Lorsque vous modifiez la source de données d'une table, vous remplacez essentiellement le contenu de la table actuelle par le contenu de la nouvelle table source.  
   
- **Noms de colonnes**  
+ **Origine des noms de colonnes**  
  |||  
 |-|-|  
 |**Source**|Sélectionnez cette option pour remplacer les noms de colonnes actuels par les noms de colonnes de la table source sélectionnée.|  
-|**Modèle**|Sélectionnez cette option pour utiliser les noms de colonne actuels tels qu'ils existent dans le modèle.|  
+|**Modélisation**|Sélectionnez cette option pour utiliser les noms de colonne actuels tels qu'ils existent dans le modèle.|  
   
- **Actualiser l’aperçu**  
+ **Actualiser l'aperçu**  
  Cliquez pour examiner les colonnes de données dans la table source actuellement sélectionnée.  
   
  **Basculer vers**  
@@ -58,13 +58,13 @@ ms.locfileid: "66081438"
 |**Aperçu de la table**|Sélectionnez cette option pour afficher un aperçu de la table sélectionnée et un nombre limité de lignes de données.|  
 |**Éditeur de requête**|Sélectionnez cette option pour examiner la requête sur la source de données sélectionnée. Cette option n'est pas disponible pour toutes les sources de données.|  
   
- **Case à cocher dans l’en-tête de colonne**  
+ **Case à cocher dans l'en-tête de colonne**  
  Activez la case à cocher pour inclure la colonne lors de l'importation des données. Désactivez la case à cocher pour supprimer la colonne lors de l'importation de données.  
   
- **Bouton de flèche vers le bas dans l’en-tête de colonne**  
+ **Bouton Flèche vers le bas dans l'en-tête de colonne**  
  Filtrez les données dans la colonne.  
   
- **Filtres de lignes clair**  
+ **Effacer les filtres de lignes**  
  Cliquez pour supprimer tous les filtres qui ont été appliqués.  
   
  **OK**  
@@ -77,7 +77,7 @@ ms.locfileid: "66081438"
 > [!NOTE]  
 >  Vous ne pouvez pas modifier le nom ici ; toutefois, vous pouvez modifier le nom de la table en cliquant avec le bouton droit sur l'onglet de table en bas du concepteur.  
   
- **Nom de la connexion**  
+ **Nom de connexion**  
  Affiche le nom de la connexion qui est actuellement en cours d'utilisation.  
   
  **Basculer vers**  
@@ -99,6 +99,6 @@ ms.locfileid: "66081438"
  Cliquez pour appliquer toutes les modifications que vous avez apportées, notamment le remplacement des colonnes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS Tabulaire&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tables et colonnes &#40;SSAS tabulaire&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Concepteur (Analysis Services - données multidimensionnelles) de cube | Microsoft Docs
+title: Concepteur de cube (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086604"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Concepteur de cube (Analysis Services - Données multidimensionnelles)
@@ -28,7 +28,7 @@ ms.locfileid: "66086604"
   
  Le **Concepteur de cube** se compose des onglets suivants :  
   
-## <a name="tabs"></a>Tabulations  
+## <a name="tabs"></a>Onglets  
   
 |Onglet|Définition|  
 |---------|----------------|  
@@ -38,13 +38,13 @@ ms.locfileid: "66086604"
 |**Indicateurs de performance clés**|Dans cet onglet, vous pouvez créer et modifier des indicateurs de performance clés (KPI) inclus dans le cube. Pour plus d’informations sur cet onglet, consultez [Indicateurs de performance clés &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Actions**|Cet onglet permet de créer et de modifier des actions incluses dans le cube, telles que les actions d'extraction et les actions du rapport. Pour plus d’informations sur cet onglet, consultez [Actions &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](actions-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Partitions**|Celui-ci permet de créer et de modifier des partitions incluses dans le cube, comme les paramètres de mise en cache proactive concernant les groupes de mesures et les partitions. Pour plus d’informations sur cet onglet, consultez [Partitions &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Perspectives**|Cet onglet vous permet de créer et modifier les perspectives incluses dans le cube. Pour plus d’informations sur cet onglet, consultez [Perspectives &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Traductions**|Cet onglet sert à créer et à modifier les traductions incluses dans le cube relatives aux groupes de mesures, aux mesures, aux dimensions du cube, aux perspectives, aux indicateurs de performance clés (KPI), aux actions, aux jeux nommés et aux membres calculés. Pour plus d’informations sur cet onglet, consultez [Traductions &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](translations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Navigateur**|Ce dernier onglet vous permet de parcourir les données et les métadonnées faisant partie du cube. Pour plus d’informations sur cet onglet, consultez [Navigateur &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md).|  
+|**perspectives**|Cet onglet vous permet de créer et modifier les perspectives incluses dans le cube. Pour plus d’informations sur cet onglet, consultez [Perspectives &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Translations**|Cet onglet sert à créer et à modifier les traductions incluses dans le cube relatives aux groupes de mesures, aux mesures, aux dimensions du cube, aux perspectives, aux indicateurs de performance clés (KPI), aux actions, aux jeux nommés et aux membres calculés. Pour plus d’informations sur cet onglet, consultez [Traductions &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](translations-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Browser**|Ce dernier onglet vous permet de parcourir les données et les métadonnées faisant partie du cube. Pour plus d’informations sur cet onglet, consultez [Navigateur &#40;Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Objets de cube &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Organisateur d’indicateur de performance clé (onglet des indicateurs de performance clés, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Organisateur d’indicateur de performance clé (onglet indicateurs de performance clés, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079401"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur d'indicateur de performance clé (KPI) (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66079401"
 >  Ce volet ne s'affiche pas en mode Formulaire.  
   
 ## <a name="options"></a>Options  
- **Liste**  
+ **List**  
  Affiche le nom de l'indicateur de performance clé.  
   
  Sélectionnez un indicateur pour afficher **l’Éditeur de formulaire d’indicateur de performance clé** en mode Formulaire.  
@@ -36,17 +36,17 @@ ms.locfileid: "66079401"
   
 |Option|Définition|  
 |------------|----------------|  
-|**Indicateur de performance clé**|Permet d’afficher **l’Éditeur de formulaire d’indicateur de performance clé** pour créer un indicateur. Pour plus d’informations sur **l’Éditeur de formulaire d’indicateur de performance clé**, consultez [l’Éditeur de formulaire d’indicateur de performance clé &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Monter**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le haut dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)** .<br /><br /> Remarque : Cette option est désactivée si l’indicateur sélectionné ne peut pas être déplacé.|  
-|**Descendre**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le bas dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)** .<br /><br /> Remarque : Cette option est désactivée si l’indicateur sélectionné ne peut pas être déplacé.|  
+|**Nouvel indicateur de performance clé (KPI)**|Permet d’afficher **l’Éditeur de formulaire d’indicateur de performance clé** pour créer un indicateur. Pour plus d’informations sur **l’Éditeur de formulaire d’indicateur de performance clé**, consultez [l’Éditeur de formulaire d’indicateur de performance clé &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Monter**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le haut dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)**.<br /><br /> Remarque : cette option est inactive si l’indicateur de performance clé sélectionné ne peut pas être déplacé plus loin.|  
+|**Descendre**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le bas dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)**.<br /><br /> Remarque : cette option est inactive si l’indicateur de performance clé sélectionné ne peut pas être déplacé plus loin.|  
 |**Supprimer**|Permet de supprimer l'indicateur sélectionné.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Indicateurs de performance clés &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Outils de calcul &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de formulaire d’indicateur de performance clé &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Navigateur d’indicateur de performance clé &#40;onglet des indicateurs de performance clés, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Indicateurs de performance clés &#40;&#41; &#40;concepteur de cube Analysis Services-données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Outils de calcul &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire d’indicateur de performance clé &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorateur d’indicateurs de performance clés &#40;onglet indicateurs de performance clés, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

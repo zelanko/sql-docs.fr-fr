@@ -13,22 +13,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62893594"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Choisir une source de données (Assistant Importation et Exportation SQL Server)
-  Utilisez le **choisir une Source de données** page pour spécifier la source de données que vous souhaitez copier.  
+  Utilisez la page **choisir une source de données** pour spécifier la source des données que vous souhaitez copier.  
   
- Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter l’Assistant avec succès, consultez [exécuter le SQL Server Assistant Importation et exportation](start-the-sql-server-import-and-export-wizard.md).  
+ Pour en savoir plus sur cet Assistant, consultez [Assistant Importation et Exportation SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Pour en savoir plus sur les options de démarrage de l’Assistant et sur les autorisations requises pour exécuter correctement l’Assistant, consultez [exécuter l’Assistant importation et exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La fonction de l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier des données d'une source vers une destination. L'Assistant peut également créer une base de données de destination et des tables de destination à votre intention. Toutefois, si vous devez copier plusieurs tables ou bases de données, ou autres types d'objets de bases de données, vous devez plutôt utiliser l'Assistant Copie de base de données. Pour plus d'informations, consultez [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Options  
  **Source de données**  
- Permet de choisir le fournisseur de données qui correspond au format de stockage de la source. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, le fournisseur de données .NET Framework pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
+ Permet de choisir le fournisseur de données qui correspond au format de stockage de la source. Plusieurs fournisseurs peuvent être disponibles pour votre source de données. Par exemple, avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliser Native Client, le .NET Framework fournisseur de données pour SQL Server ou le fournisseur Microsoft OLE DB pour SQL Server.  
   
  Le nombre d'options de la propriété **Source de données** varie en fonction des fournisseurs installés sur l'ordinateur. Les tableaux suivants répertorient les options de destinations fréquemment utilisées. Pour les autres fournisseurs, consultez la documentation du fournisseur.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62893594"
  **Nom du serveur**  
  Tapez le nom du serveur qui contient les données ou choisissez un serveur dans la liste.  
   
- **Utiliser l'authentification Windows**  
+ **Utiliser l’authentification Windows**  
  Spécifiez si le package doit utiliser l'authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour la connexion à la base de données. L'authentification Windows est recommandée pour renforcer la sécurité.  
   
  **Utiliser l’authentification SQL Server**  
@@ -80,10 +80,10 @@ ms.locfileid: "62893594"
 ### <a name="data-source--microsoft-excel"></a>Source de données = Microsoft Excel  
   
 > [!NOTE]  
->  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12.0 Access Database Engine fournisseur OLE DB**, cliquez sur **propriétés**, puis, dans le **tous les** onglet de la **Propriétés des liaisons de données** boîte de dialogue, entrez `Excel 12.0` comme valeur pour **propriétés étendues**.  
+>  Sélectionnez **Microsoft Excel** uniquement si vous souhaitez vous connecter à une source de données qui utilise Excel 2003 ou une version antérieure. Pour vous connecter à une source de données qui utilise Excel 2007, sélectionnez **Microsoft Office 12,0 accès Moteur de base de données OLE DB fournisseur**, cliquez sur **Propriétés**, puis sous l’onglet **tous** de la boîte de dialogue Propriétés des `Excel 12.0` liaisons de **données** , entrez comme valeur pour les **propriétés étendues**.  
   
  **Chemin de fichier Excel**  
- Spécifiez le chemin d'accès et le nom de la feuille de calcul à partir de laquelle les données doivent être importées. Par exemple, **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. Ou cliquez sur **Parcourir**.  
+ Spécifiez le chemin d'accès et le nom de la feuille de calcul à partir de laquelle les données doivent être importées. Par exemple, **C:\mydata.xls, \\\Sales\Database\Northwind.xls**. Ou cliquez sur **Parcourir**.  
   
  **Parcourir**  
  Permet de rechercher la feuille de calcul à l’aide de la boîte de dialogue **Ouvrir**.  
@@ -97,7 +97,7 @@ ms.locfileid: "62893594"
 ### <a name="data-source--microsoft-access"></a>Source de données = Microsoft Access  
   
 > [!NOTE]  
->  Sélectionnez **Microsoft Access** uniquement si vous souhaitez vous connecter à une base de données qui utilise Access 2003 ou une version antérieure. Pour vous connecter à une base de données qui utilise Access 2007, sélectionnez **Microsoft Office 12.0 Access Database Engine fournisseur OLE DB** à la place.  
+>  Sélectionnez **Microsoft Access** uniquement si vous souhaitez vous connecter à une base de données qui utilise Access 2003 ou une version antérieure. Pour vous connecter à une base de données qui utilise Access 2007, sélectionnez **Microsoft Office 12,0 accès Moteur de base de données OLE DB fournisseur à** la place.  
   
  **Nom de fichier**  
  Spécifiez le chemin d'accès et le nom du fichier de base de données à partir duquel les données doivent être importées. Par exemple, **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**. Ou cliquez sur **Parcourir**.  
@@ -111,18 +111,18 @@ ms.locfileid: "62893594"
  **Mot de passe**  
  Fournissez le mot de passe utilisateur pour la connexion à la base de données lorsqu'un fichier d'informations d'un groupe de travail est associé à la base de données. Cependant, si la base de données est protégée par un seul mot de passe pour tous les utilisateurs, vous devez fournir cette valeur dans la boîte de dialogue **Propriétés des liaisons de données** accessible en cliquant sur **Avancé**.  
   
- **Avancé**  
- Vous pouvez souhaiter spécifier des options avancées, telles que le mot de passe de base de données ou un fichier d’informations de groupe de travail non définis par défaut, à l’aide de la **propriétés des liaisons de données** boîte de dialogue. Pour plus d’informations sur les propriétés du fournisseur OLE DB, effectuez une recherche dans la section accès aux données de la [MSDN library](https://go.microsoft.com/fwlink/?linkid=62553).  
+ **Avancée**  
+ Vous pouvez spécifier des options avancées, telles que le mot de passe de la base de données ou un fichier d’informations de groupe de travail autre que celui par défaut, à l’aide de la boîte de dialogue **Propriétés des liaisons de données** . Pour plus d’informations sur les propriétés du fournisseur OLE DB, recherchez dans la section accès aux données de [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Source de données = Source de fichier plat  
  Consultez les rubriques suivantes pour obtenir des informations sur les options d'une source de données dans un fichier plat.  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page colonnes&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page avancé&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page d’aperçu&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

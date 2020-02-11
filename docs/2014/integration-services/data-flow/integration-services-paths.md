@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901792"
 ---
 # <a name="integration-services-paths"></a>Chemins d'accès d'Integration Services
@@ -41,17 +41,17 @@ ms.locfileid: "62901792"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur du chemin d’accès au flux de données**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur du chemin d’accès de flux de données &#40;Page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur du chemin d’accès au Data Flow &#40;&#41;de page général](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur du chemin d’accès de flux de données &#40;Page métadonnées&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Éditeur du chemin d’accès de données &#40;page de métadonnées&#41;](../data-flow-path-editor-metadata-page.md)  
   
--   [Éditeur du chemin d’accès de flux de données &#40;Page visionneuses de données&#41;](../data-flow-path-editor-data-viewers-page.md)  
+-   [Éditeur du chemin d’accès au workflow &#40;page des visionneuses de données&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
  Pour plus d’informations sur les propriétés que vous pouvez définir par programmation, consultez [Propriétés du chemin d’accès](../path-properties.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Afficher les métadonnées d’un chemin dans l’Éditeur du chemin d’accès au flux de données](../view-path-metadata-in-the-data-flow-path-editor.md)  
+-   [Afficher les métadonnées d'un chemin d'accès dans l'Éditeur du chemin d'accès au flux de données](../view-path-metadata-in-the-data-flow-path-editor.md)  
   
 -   [Connecter des composants dans un flux de données](connect-components-in-a-data-flow.md)  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894813"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
@@ -49,7 +49,7 @@ ms.locfileid: "62894813"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>Page Colonnes d'entrée de l'Éditeur de transformation de script  
  La page **Colonnes d’entrée** de l’**Éditeur de transformation de script** s’affiche pour les transformations et les destinations, mais pas pour les sources. Cette page vous permet de sélectionner les colonnes d'entrée disponibles à mettre à la disposition de votre script personnalisé et spécifier les accès en lecture seule ou en lecture/écriture à ces colonnes.  
   
- Dans le projet de code qui doit être généré en fonction de ces métadonnées, l'élément de projet BufferWrapper contient une classe pour chaque entrée, et cette classe contient des propriétés d'accesseur typées pour chaque colonne d'entrée sélectionnée. Par exemple, si vous sélectionnez un nombre entier **CustomerID** colonne et une chaîne **CustomerName** colonne à partir d’une entrée nommée `CustomerInput`, l’élément de projet BufferWrapper contient une `CustomerInput` classe qui dérive de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>et le `CustomerInput` classe expose une propriété entière nommée **CustomerID** et une propriété de chaîne nommée **CustomerName**. Cette convention permet d'écrire du code avec la vérification de type tel que ci-dessous :  
+ Dans le projet de code qui doit être généré en fonction de ces métadonnées, l'élément de projet BufferWrapper contient une classe pour chaque entrée, et cette classe contient des propriétés d'accesseur typées pour chaque colonne d'entrée sélectionnée. Par exemple, si vous sélectionnez une colonne **CustomerID** entière et une colonne **CustomerName** de type chaîne dans une `CustomerInput`entrée nommée, l’élément de projet BufferWrapper `CustomerInput` contient une classe qui dérive <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>de, `CustomerInput` et la classe expose une propriété de type entier nommée **CustomerID** et une propriété de type chaîne nommée **CustomerName**. Cette convention permet d'écrire du code avec la vérification de type tel que ci-dessous :  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -67,7 +67,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   Lorsqu'il est utilisé en tant que destination, le composant Script prend en charge une entrée et ne possède pas de sortie.  
   
- Dans le projet de code qui doit être généré en fonction de ces métadonnées, l'élément de projet BufferWrapper contient une classe pour chaque entrée et chaque sortie. Par exemple, si vous créez une sortie nommée `CustomerOutput`, l’élément de projet BufferWrapper contient une `CustomerOutput` classe qui dérive de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>et le `CustomerOutput` classe contiendra des propriétés d’accesseur typées pour chaque colonne de sortie créée.  
+ Dans le projet de code qui doit être généré en fonction de ces métadonnées, l'élément de projet BufferWrapper contient une classe pour chaque entrée et chaque sortie. Par exemple, si vous créez une sortie nommée `CustomerOutput`, l’élément de projet BufferWrapper contient une `CustomerOutput` classe qui dérive de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>, et la `CustomerOutput` classe contient des propriétés d’accesseur typées pour chaque colonne de sortie créée.  
   
  La page **Entrée et sorties** vous permet de configurer uniquement des colonnes de sortie. Vous pouvez sélectionner des colonnes d’entrée pour les transformations et les destinations dans la page **Colonnes d’entrée**. Les propriétés d'accesseur typées créées dans l'élément de projet BufferWrapper sont en écriture seule pour les colonnes de sortie. Les propriétés d’accesseur des colonnes d’entrée peuvent être en lecture seule ou en lecture/écriture selon le type d’utilisation sélectionné pour chaque colonne dans la page **Colonnes d’entrée**.  
   
@@ -82,11 +82,11 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  La propriété `SynchronousInputID` a une valeur non nulle uniquement dans les transformations à sorties synchrones. Si la valeur de cette propriété est zéro, cela signifie que la sortie est asynchrone. Pour une sortie synchrone, où les lignes sont transférées aux sorties sélectionnées sans que de nouvelles lignes ne soient ajoutées, cette propriété doit contenir l'`ID` de l'entrée du composant.  
   
 > [!NOTE]  
->  Lorsque le **éditeur de Transformation de Script** crée la première sortie, l’éditeur attribue le `SynchronousInputID` propriété de la sortie vers le `ID` de l’entrée du composant. Toutefois, lorsque l'éditeur crée les sorties suivantes, il attribue la valeur zéro aux propriétés `SynchronousInputID` de ces sorties.  
+>  Lorsque l' **éditeur de transformation de script** crée la première sortie, l’éditeur `SynchronousInputID` définit la propriété de la sortie `ID` sur le de l’entrée du composant. Toutefois, lorsque l'éditeur crée les sorties suivantes, il attribue la valeur zéro aux propriétés `SynchronousInputID` de ces sorties.  
 >   
->  Si vous créez un composant à sorties synchrones, chaque sortie doit avoir son `SynchronousInputID` propriété définie sur la `ID` de l’entrée du composant. Par conséquent, la valeur zéro de la propriété `SynchronousInputID` de chaque sortie créée par l'éditeur après la première sortie doit être remplacée par l'`ID` de l'entrée du composant.  
+>  Si vous créez un composant avec des sorties synchrones, la `SynchronousInputID` propriété de chaque sortie doit être définie `ID` sur l’de l’entrée du composant. Par conséquent, la valeur zéro de la propriété `SynchronousInputID` de chaque sortie créée par l'éditeur après la première sortie doit être remplacée par l'`ID` de l'entrée du composant.  
 >   
->  Si vous créez un composant à sorties asynchrones, la propriété `SynchronousInputID` de chaque sortie doit avoir la valeur zéro. Par conséquent, la première sortie doit avoir son `SynchronousInputID` valeur a été remplacée par la `ID` de l’entrée du composant à zéro.  
+>  Si vous créez un composant à sorties asynchrones, la propriété `SynchronousInputID` de chaque sortie doit avoir la valeur zéro. Par conséquent, la `SynchronousInputID` valeur de la première sortie doit être modifiée `ID` de la valeur de l’entrée du composant à zéro.  
   
  Pour obtenir un exemple de direction de lignes vers l’une des deux sorties synchrones dans le composant Script, consultez [Création d’une transformation synchrone à l’aide du composant Script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).  
   
@@ -126,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Pour plus d’informations, consultez [Connexion aux sources de données dans le composant Script](connecting-to-data-sources-in-the-script-component.md).  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Codage et débogage du composant Script](coding-and-debugging-the-script-component.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc77762698b04143802ad38c05385d4b18555e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079147"
 ---
 # <a name="granting-process-database-permissions"></a>Attribution de l'autorisation de traiter la base de données
@@ -30,7 +30,7 @@ ms.locfileid: "66079147"
   
 2.  Activez la case à cocher **Traiter la base de données** .  
   
-3.  Dans la fenêtre Propriétés, modifiez le **nom** propriété pour ce nouveau rôle en `Process Database Objects Role`.  
+3.  Dans la Fenêtre Propriétés, remplacez la propriété **nom** de ce nouveau rôle par `Process Database Objects Role`.  
   
      ![Concepteur de rôle](../../2014/tutorials/media/l10-security-1.png "Concepteur de rôle")  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66079147"
   
      Notez que les membres de ce rôle sont autorisés à traiter cette base de données, mais n'ont pas l'autorisation d'accéder aux données du cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ni d'accès Cube/Extraction local, comme le montre l'image suivante.  
   
-     ![Onglet cubes du Concepteur de rôle](../../2014/tutorials/media/l10-security-2.png "onglet Cubes du Concepteur de rôle")  
+     ![Onglet Cubes du Concepteur de rôle](../../2014/tutorials/media/l10-security-2.png "Onglet Cubes du Concepteur de rôle")  
   
 7.  Cliquez sur l'onglet **Dimensions** du Concepteur de rôles.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66079147"
      Au terme de cette procédure, vous avez défini et déployé le rôle de sécurité Process Database Objects. Après le déploiement d'un cube vers l'environnement de production, les administrateurs du cube déployé peuvent ajouter des utilisateurs à ce rôle, ce qui leur permet de déléguer des responsabilités de traitement à des utilisateurs spécifiques.  
   
 > [!NOTE]  
->  Un projet complet pour la leçon 10 est disponible en téléchargeant et en installant les exemples mis à jour. Pour plus d’informations, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](install-sample-data-and-projects.md).  
+>  Un projet complet pour la leçon 10 est disponible en téléchargeant et en installant les exemples mis à jour. Pour plus d’informations, consultez [installer des exemples de données et de projets pour le Analysis Services didacticiel sur la modélisation multidimensionnelle](install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles et autorisations &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  

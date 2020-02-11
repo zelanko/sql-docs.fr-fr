@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6db88a8bb5e44090e5201220fee36a432b69767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869874"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14421|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14421|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum14421|  
 |Texte du message|La base de données secondaire d'envoi des journaux %s.%s a dépassé le seuil de restauration de %d minutes et n'est pas synchronisée. Aucune restauration n'a été effectuée depuis %d minutes. La latence de la restauration est de %d minutes. Vérifiez les informations du journal de l'agent et du moniteur de copie des journaux de transaction.|  

@@ -13,29 +13,31 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 832ee3caa23a034f1c228d01ff8ec2ceda32de06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915121"
 ---
-# <a name="mssqlserver21871"></a>MSSQLSERVER_21871
+# <a name="mssqlserver_21871"></a>MSSQLSERVER_21871
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21871|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21871|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum21871|  
 |Texte du message|Le serveur de publication %s de la base de données %s n'a pas été redirigé.|  
   
 ## <a name="explanation"></a>Explication  
- `sp_validate_replica_hosts_as_publishers` vérifie la table MSredirected_publishers dans la base de données de distribution pour une entrée pour le serveur de publication identifié et de la base de données du serveur de publication.  `sp_validate_replica_hosts_as_publishers` retourne l'erreur 21871 lorsqu'aucune entrée n'est trouvée.  
+ `sp_validate_replica_hosts_as_publishers` vérifie la table MSredirected_publishers dans la base de données de distribution pour les entrées du serveur de publication et de la base de données du serveur de publication identifiées.  
+  `sp_validate_replica_hosts_as_publishers` retourne l'erreur 21871 lorsqu'aucune entrée n'est trouvée.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- `sp_validate_replica_hosts_as_publishers` est uniquement applicable aux serveurs de publication redirigés. Si la base de données du serveur de publication est membre d'un groupe de disponibilité, utilisez la procédure stockée `sp_redirect_publisher` pour associer le serveur de publication et la base de données du serveur de publication au nom d'écouteur du groupe de disponibilité.  
+ 
+  `sp_validate_replica_hosts_as_publishers` est uniquement applicable aux serveurs de publication redirigés. Si la base de données du serveur de publication est membre d'un groupe de disponibilité, utilisez la procédure stockée `sp_redirect_publisher` pour associer le serveur de publication et la base de données du serveur de publication au nom d'écouteur du groupe de disponibilité.  
   
   

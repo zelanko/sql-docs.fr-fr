@@ -1,5 +1,5 @@
 ---
-title: Ce que&#39;s inclus dans les données des compléments d’exploration de données pour Office | Microsoft Docs
+title: '&#39;éléments inclus dans les compléments d’exploration de données pour Office | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -13,40 +13,40 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065328"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Ce que&#39;s inclus dans les données des compléments d’exploration de données pour Office
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>&#39;éléments inclus dans les compléments d’exploration de données pour Office
   Lorsque vous installez les Compléments d'exploration de données pour Office 2013, et sélectionnez toutes les options d'installation, les barres d'outils et les modèles suivants sont ajoutés :  
   
--   [Outils d’analyse de table pour Excel](table-analysis-tools-for-excel.md)  
+-   [Outils d'analyse de table pour Excel](table-analysis-tools-for-excel.md)  
   
      Tâches simples mais puissantes qui utilisent des données dans des tables Excel. Aucune personnalisation n'est requise ; les algorithmes détectent les paramètres appropriés et génèrent tous les graphiques et rapports nécessaires pour comprendre le modèle.  
   
      Si vous débutez avec l'exploration de données, commencez ici.  
   
--   [Client d’exploration de données pour Excel &#40;compléments d’exploration de données SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+-   [Client d’exploration de données pour Excel &#40;SQL Server des compléments d’exploration de données&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     Ce complément fournit des outils pour chaque tâche d’exploration de données que vous devrez peut-être-allant du nettoyage et d’échantillonnage des données, à la création de modèles, le test de précision du modèle et à la validation croisée. Vous pouvez également gérer et documenter les modèles et créer des requêtes DMX à partir des modèles.  
+     Ce complément fournit des outils pour quasiment toutes les tâches d’exploration de données dont vous pouvez avoir besoin : du nettoyage et de l’échantillonnage de vos données, à l’exécution de modèles, au test de la précision du modèle et à l’exécution de la validation croisée. Vous pouvez également gérer et documenter les modèles et créer des requêtes DMX à partir des modèles.  
   
      Les utilisateurs avancés de l'exploration de données apprécieront l'accès à tous les outils disponibles dans l'exploration de données SQL Server, notamment l'importation et l'exportation de modèle, les requêtes de prédiction et les requêtes de contenu.  
   
--   [Formes d’exploration de données pour Visio](data-mining-shapes-for-visio.md)  
+-   [Formes d'exploration de données pour Visio](data-mining-shapes-for-visio.md)  
   
      Faites glisser ces formes dans une page Visio pour créer des diagrammes liés à vos modèles d'exploration de données, mais pouvant être personnalisés à l'aide de Visio pour créer des présentations plus attrayantes et plus interactives.  
   
--   [Utilitaire de Configuration du serveur &#40;les données des compléments d’exploration de données pour Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [Utilitaire de configuration de serveur &#40;des compléments d’exploration de données pour Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     Une connexion à un serveur d'exploration de données est requise pour générer des modèles. Si vous avez besoin d’aide, cliquez simplement sur **aide** et suivez les instructions sur chaque page de l’Assistant de configuration. Résolvez les problèmes vous-même, ou l'Assistant vous fournira des informations que vous pourrez envoyer à votre administrateur système pour l'installation.  
+     Une connexion à un serveur d'exploration de données est requise pour générer des modèles. Si vous avez besoin d’aide pour la configuration, cliquez simplement sur **aide** et suivez les instructions sur chaque page de l’Assistant Configuration. Résolvez les problèmes vous-même, ou l'Assistant vous fournira des informations que vous pourrez envoyer à votre administrateur système pour l'installation.  
   
--   [Choix des données et à l’aide de l’exemple de données](choosing-data-for-data-mining.md)  
+-   [Choix des données et utilisation des exemples de données](choosing-data-for-data-mining.md)  
   
      Pour l'analyse de données, il est essentiel de connaître quelles données utiliser et comment les préparer. Cette rubrique permet d'obtenir des conseils sur la façon de préparer vos données pour créer le meilleur modèle possible.  
   
-     Si vous débutez avec l’exploration de données et que vous souhaitez faire des essais avec les outils, nous vous recommandons d’utiliser le classeur d’exemples de données qui sont installés avec les compléments. En examinant ces données, vous pouvez également voir des exemples montrant comment préparer les données pour les modèles de série chronologique ou des modèles d’association.  
+     Si vous débutez dans l’exploration de données et que vous souhaitez simplement expérimenter les outils, nous vous recommandons d’utiliser le classeur d’exemples de données qui est installé avec les compléments. En examinant ces données, vous pouvez également voir des exemples de préparation des données pour les modèles de série chronologique ou les modèles d’association.  
   
      **Exemples de données**  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66065328"
   
      L'emplacement par défaut de l'exemple de classeur dépend de la version installée :  
   
-    -   \<lecteur > : \Program Files\Microsoft des compléments d’exploration de données SQL Server 2014  
+    -   \<lecteur> : \Program Files\Microsoft SQL Server 2014 DM Add-ins  
   
-    -   \<lecteur > : \Program Files (x86) \Microsoft des compléments d’exploration de données SQL Server 2014  
+    -   \<lecteur> : \Program Files (x86) \Microsoft SQL Server 2014 DM Add-ins  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en route avec l’exploration de données &#40;les données des compléments d’exploration de données pour Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+ [Prise en main avec l’exploration de données &#40;des compléments d’exploration de données pour Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

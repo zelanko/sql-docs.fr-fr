@@ -17,16 +17,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892478"
 ---
 # <a name="integration-services-ssis-projects"></a>Projets Integration Services (SSIS)
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour le développement de packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Lorsque vous déployez des packages sur une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou le Magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , utilisez le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour gérer les packages. Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n'est disponible que dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur le service, consultez [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md). Pour plus d’informations sur le déploiement de package, consultez [déploiement de Package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ Lorsque vous déployez des packages [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur une base [!INCLUDE[ssIS](../includes/ssis-md.md)] de données ou le magasin de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages, vous utilisez le service pour gérer les packages. Le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n'est disponible que dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur le service, consultez [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md). Pour plus d’informations sur le déploiement de packages, consultez [déploiement de packages &#40;&#41;SSIS ](packages/legacy-package-deployment-ssis.md).  
   
  Lorsque vous déployez des projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vous utilisez des procédures stockées et des vues Transact-SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour gérer les projets. Pour plus d'informations sur le déploiement de projets, consultez [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md). Pour plus d’informations sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consultez [Serveur Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -48,7 +49,7 @@ ms.locfileid: "62892478"
   
 |Dossier|Description|  
 |------------|-----------------|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] .|Contient les packages. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41;, packages](../../2014/integration-services/integration-services-ssis-packages.md).|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)]Paquet|Contient les packages. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41;, packages](../../2014/integration-services/integration-services-ssis-packages.md).|  
 |Divers|Contient d'autres fichiers que les fichiers de package.|  
   
 ### <a name="files-in-integration-services-projects"></a>Fichiers des projets Integration Services  
@@ -71,7 +72,8 @@ ms.locfileid: "62892478"
   
 -   Le fichier *.suo contient des informations sur vos préférences concernant l'utilisation de la solution.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crée automatiquement une solution lorsque vous créez un projet, mais vous pouvez aussi créer une solution vierge et lui ajouter ultérieurement des projets.  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crée automatiquement une solution lorsque vous créez un projet, mais vous pouvez aussi créer une solution vierge et lui ajouter ultérieurement des projets.  
   
 > [!NOTE]  
 >  Par défaut, lorsque vous créez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la solution n'est pas affichée dans le volet **Explorateur de projets** . Pour modifier ce comportement par défaut, dans le menu **Outils** , cliquez sur **Options**. Dans la boîte de dialogue **Options** , développez **Projets et solutions**, puis cliquez sur **Général**. Dans la page **Général** , sélectionnez **Toujours afficher la solution**.  
@@ -86,6 +88,6 @@ ms.locfileid: "62892478"
  [Copier des éléments de projet](../../2014/integration-services/copy-project-items.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- [Développement d’un projet Integration Services](../../2014/integration-services/development-of-an-integration-services-project.md)  
+ [Développement d'un projet Integration Services](../../2014/integration-services/development-of-an-integration-services-project.md)  
   
   

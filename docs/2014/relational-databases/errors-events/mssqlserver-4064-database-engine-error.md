@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69332b6d2830c53d5a3f9956443d123fd52485b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868025"
 ---
-# <a name="mssqlserver4064"></a>MSSQLSERVER_4064
+# <a name="mssqlserver_4064"></a>MSSQLSERVER_4064
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|4064|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|4064|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DB_UFAIL_FATAL|  
-|Texte du message|Impossible d'ouvrir la base de données par défaut de l'utilisateur. Échec de la connexion.|  
+|Texte du message|La base de données utilisateur par défaut ne peut pas être ouverte. Échec de la connexion.|  
   
 ## <a name="explanation"></a>Explication  
  La connexion SQL Server n'a pas pu se connecter en raison d'un problème avec sa base de données par défaut. Soit la base de données n'est pas valide, soit la connexion ne dispose pas de l'autorisation CONNECT sur la base de données.  

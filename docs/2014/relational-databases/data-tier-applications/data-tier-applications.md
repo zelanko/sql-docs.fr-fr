@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873100"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
@@ -58,7 +58,7 @@ ms.locfileid: "62873100"
 ## <a name="dac-tools"></a>Outils DAC  
  Un DACPAC peut être utilisé de façon transparente avec plusieurs outils fournis avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ces outils répondent aux conditions des différents utilisateurs recourant à un DACPAC comme unité d'interopérabilité.  
   
--   Développeur d'applications  
+-   Développeur d’applications  
   
     -   Un développeur de base de données peut utiliser un projet de base de données d'outils de données SQL Server pour concevoir une base de données. Une génération réussie de ce projet entraîne la création d'un DACPAC contenu dans un fichier .dacpac.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62873100"
 ## <a name="backup-package-bacpac"></a>Package de sauvegarde (.bacpac)  
  Un BACPAC est un artefact qui encapsule le schéma de la base de données, ainsi que les données stockées dans la base de données. Le BACPAC est un fichier Windows avec une extension .bacpac. Tout comme le DACPAC, le format de fichier BACPAC est ouvert ; le contenu de schéma du BACPAC est identique à celui du DACPAC. Les données sont stockées au format JSON.  
   
- Les DACPAC et BACPAC sont similaires, mais ils conviennent à des scénarios différents. Le but d'un DACPAC est de capturer et de déployer le schéma, y compris de mettre à niveau une base de données existante. L’utilisation principale d’un DACPAC consiste à déployer un schéma étroitement défini pour le développement, test, puis les environnements de production et l’inverse : capture du schéma de production et l’appliquer aux environnements de développement et de test.  
+ Les DACPAC et BACPAC sont similaires, mais ils conviennent à des scénarios différents. Le but d'un DACPAC est de capturer et de déployer le schéma, y compris de mettre à niveau une base de données existante. Le principal cas d’utilisation d’un DACPAC consiste à déployer un schéma étroitement défini dans des environnements de développement, de test, puis de production, et inversement : capture du schéma de production et application de ce dernier aux environnements de test et de développement.  
   
  Un BACPAC, en revanche, consiste principalement à capturer le schéma et les données. Un BACPAC est l'équivalent logique d'une sauvegarde de base de données et il ne peut pas être utilisé pour mettre à niveau des bases de données existantes. L'utilisation principale d'un BACPAC consiste à déplacer une base de données d'un serveur vers un autre, ou d'un serveur local vers le nuage, et à archiver une base de données existante dans un format ouvert.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62873100"
   
 -   **IMPORT** : l’utilisateur peut importer le schéma et les données dans une nouvelle base de données du serveur hôte.  
   
- Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : Server Management Studio, le portail de gestion pour SQL Azure et l’API DACFx.  
+ Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : Server Management Studio, le portail de gestion de SQL Azure et l'API DACFx.  
   
 ## <a name="permissions"></a>Autorisations  
  Vous devez être membre du rôle `dbmanager` ou disposer d'autorisations `CREATE DATABASE` pour pouvoir créer une base de données, notamment en déployant un package DAC. Vous devez être membre du rôle `dbmanager` ou disposer d'autorisations `DROP DATABASE` pour pouvoir supprimer une base de données.  
@@ -119,11 +119,11 @@ ms.locfileid: "62873100"
 |----------------------|-----------|  
 |Explique comment utiliser un fichier de package DAC pour créer une nouvelle instance de la DAC.|[Déployer une application de la couche Données](deploy-a-data-tier-application.md)|  
 |Explique comment utiliser un nouveau fichier de package DAC pour mettre à niveau une instance vers une nouvelle version de la DAC.|[Mettre à niveau une application de la couche Données](upgrade-a-data-tier-application.md)|  
-|Explique comment supprimer une instance DAC. Vous pouvez également choisir de détacher ou de supprimer la base de données associée, ou de laisser la base de données intacte.|[Supprimer une application de couche Données](delete-a-data-tier-application.md)|  
+|Explique comment supprimer une instance DAC. Vous pouvez également choisir de détacher ou de supprimer la base de données associée, ou de laisser la base de données intacte.|[Supprimer une application de la couche Données](delete-a-data-tier-application.md)|  
 |Explique comment afficher l'état des DAC actuellement déployées à l'aide de l'utilitaire SQL Server.|[Analyser les applications de la couche Données](data-tier-applications.md)|  
 |Explique comment créer un fichier .bacpac contenant une archive des données et des métadonnées dans une DAC.|[Exporter une application de la couche Données](export-a-data-tier-application.md)|  
 |Explique comment utiliser un fichier d'archive DAC (.bacpac) pour effectuer une restauration logique d'une DAC ou pour migrer la DAC vers une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](import-a-bacpac-file-to-create-a-new-user-database.md)|  
-|Indique comment importer un fichier BACPAC pour créer une nouvelle base de données utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraire une DAC d’une base de données](extract-a-dac-from-a-database.md)|  
+|Indique comment importer un fichier BACPAC pour créer une nouvelle base de données utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraire une DAC d'une base de données](extract-a-dac-from-a-database.md)|  
 |Explique comment promouvoir une base de données existante en tant qu'instance DAC. Une définition de DAC est créée et stockée dans les bases de données système.|[Inscrire une base de données en tant que DAC](register-a-database-as-a-dac.md)|  
 |Explique comment vérifier le contenu d'un package DAC et les actions associées à la mise à niveau d'une DAC avant d'utiliser le package dans un système de production.|[Valider un package DAC](validate-a-dac-package.md)|  
 |Explique comment placer le contenu d'un package DAC dans un dossier où un administrateur de base de données peut vérifier ce que fait la DAC avant de la déployer dans un serveur de production.|[Décompresser un package DAC](unpack-a-dac-package.md)|  

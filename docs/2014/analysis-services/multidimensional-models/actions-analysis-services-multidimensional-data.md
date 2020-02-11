@@ -1,5 +1,5 @@
 ---
-title: Actions (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Actions (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077590"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Actions (Analysis Services - Données multidimensionnelles)
@@ -40,9 +40,10 @@ ms.locfileid: "66077590"
   
  La condition est une expression MDX `Boolean` évaluée à l'événement d'action. Si la condition prend la valeur `true`, alors l'action est exécutée. Sinon, l'action n'est pas exécutée.  
   
- Le type est la nature de l'action à exécuter. <xref:Microsoft.AnalysisServices.Action> est une classe abstraite. Par conséquent, pour l’utiliser, vous devez utiliser l’une des classes dérivées. Deux types d'actions sont prédéfinis : extraction et rapport. Ces messages ont des classes dérivées correspondantes : <xref:Microsoft.AnalysisServices.DrillThroughAction> et <xref:Microsoft.AnalysisServices.ReportAction>. D’autres actions sont couvertes dans la classe <xref:Microsoft.AnalysisServices.StandardAction> .  
+ Le type est la nature de l'action à exécuter. 
+  <xref:Microsoft.AnalysisServices.Action> est une classe abstraite. Par conséquent, pour l’utiliser, vous devez utiliser l’une des classes dérivées. Deux types d'actions sont prédéfinis : extraction et rapport. Ces messages ont des classes dérivées correspondantes : <xref:Microsoft.AnalysisServices.DrillThroughAction> et <xref:Microsoft.AnalysisServices.ReportAction>. D’autres actions sont couvertes dans la classe <xref:Microsoft.AnalysisServices.StandardAction> .  
   
- Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une action est une instruction MDX stockée qui peut être présentée à des applications clientes et employée par ces applications. En d'autres termes, une action est une commande de client qui est définie et stockée sur le serveur. Une action contient également des informations qui spécifient comment l'application cliente doit afficher et traiter l'instruction MDX et à quel moment. L'opération spécifiée par l'action peut démarrer une application en utilisant les informations de l'action comme paramètre ou elle peut extraire les informations en fonction des critères fournis par l'action.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une action est une instruction MDX stockée qui peut être présentée à des applications clientes et utilisées par celles-ci. En d'autres termes, une action est une commande de client qui est définie et stockée sur le serveur. Une action contient également des informations qui spécifient comment l'application cliente doit afficher et traiter l'instruction MDX et à quel moment. L'opération spécifiée par l'action peut démarrer une application en utilisant les informations de l'action comme paramètre ou elle peut extraire les informations en fonction des critères fournis par l'action.  
   
  Les actions permettent aux utilisateurs professionnels d'agir dès la parution des résultats de leurs analyses. En enregistrant et en réutilisant les actions, les utilisateurs finaux peuvent aller au-delà de l'analyse traditionnelle, qui se termine généralement par la présentation des données, et lancer des solutions aux problèmes et aux carences découverts, ce qui permet d'étendre l'application de décisionnel au-delà du cube. Dépassant le stade de l'outil complexe de présentation des données, les applications clientes peuvent, grâce aux actions, devenir des éléments à part entière du système opérationnel de l'entreprise. Au lieu de se concentrer sur la transmission des données en entrée à des applications opérationnelles, les utilisateurs finaux peuvent « boucler la boucle » dans le processus décisionnel. Cette capacité à transformer des données analytiques en décisions est cruciale pour le succès de l'application de décisionnel.  
   

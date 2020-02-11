@@ -1,5 +1,5 @@
 ---
-title: Affichage de modèles (Data Mining Add-ins for Office) | Microsoft Docs
+title: Affichage des modèles (compléments d’exploration de données pour Office) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065531"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Affichage des modèles (Compléments d'exploration de données pour Office)
@@ -27,17 +27,17 @@ ms.locfileid: "66065531"
   
 -   Utilisez les graphiques dans Excel qui sont générés par chaque Assistant.  
   
-     [Exploration des modèles dans Excel &#40;compléments d’exploration de données SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+     [Exploration des modèles dans Excel &#40;SQL Server les compléments d’exploration de données&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
 -   Utilisez les formes d'exploration de données Visio pour créer une présentation interactive.  
   
-     [Affichage de modèles d’exploration de données dans Visio &#40;compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+     [Affichage des modèles d’exploration de données dans Visio &#40;les compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
--   Utilisez le **Document modèle** Assistant pour générer un résumé des métadonnées du modèle et le contenu du modèle.  
+-   Utilisez l’Assistant **modèle de document** pour générer un résumé des métadonnées du modèle et du contenu du modèle.  
   
-     [Les modèles d’exploration de données de documentation &#40;les données des compléments d’exploration de données pour Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
+     [Documentation des modèles d’exploration de données &#40;les compléments d’exploration de données pour Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requête &#40;compléments d’exploration de données SQL Server&#41;](query-sql-server-data-mining-add-ins.md)  
+ [&#40;de requêtes SQL Server des compléments d’exploration de données&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

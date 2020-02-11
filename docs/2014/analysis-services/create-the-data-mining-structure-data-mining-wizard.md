@@ -1,5 +1,5 @@
 ---
-title: Créer la Structure d’exploration de données (Assistant exploration de données) | Microsoft Docs
+title: Créer la structure d’exploration de données (Assistant Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086762"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Créer la structure d'exploration de données (Assistant Exploration de données)
@@ -24,27 +24,27 @@ ms.locfileid: "66086762"
   
  Si vous choisissez de créer un modèle d'exploration de données, vous devez également spécifier l'algorithme d'exploration de données à utiliser. Si vous créez uniquement la structure pour le moment, vous pouvez ajouter un modèle d'exploration de données à la structure ultérieurement.  
   
- **Pour plus d’informations :** [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [assistant exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
- **Créer la structure d’exploration de données avec un modèle d’exploration de données**  
+ **Créer une structure d'exploration de données avec un modèle d'exploration de données**  
  Sélectionnez cette option pour créer une structure d'exploration de données, puis pour créer un modèle associé.  
   
- **Quelle technique d’exploration de données que vous souhaitez utiliser ?**  
+ **Quelle technique d’exploration de données souhaitez-vous utiliser ?**  
  Sélectionnez l'algorithme d'exploration de données à utiliser avec ce modèle.  
   
 > [!NOTE]  
 >  La liste d'algorithmes est remplie à partir de l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur laquelle vous créez la structure d'exploration de données. Si le serveur n'est pas accessible, seuls les algorithmes par défaut sont disponibles  
   
- **Créer la structure d’exploration de données sans modèle**  
+ **Créer une structure d'exploration de données sans modèle**  
  Sélectionnez cette option pour créer uniquement une structure d'exploration de données.  
   
  **Description**  
  Affiche la description de l'algorithme sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Sélectionnez la vue de Source de données &#40;Assistant exploration de données&#41;](select-data-source-view-data-mining-wizard.md)   
- [Sélectionnez la méthode de définition &#40;Assistant exploration de données&#41;](select-the-definition-method-data-mining-wizard.md)  
+ [Aide (F1) de l’Assistant Exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Sélectionnez vue de source de données &#40;Assistant Exploration de données&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Sélectionnez la méthode de définition &#40;l’Assistant Exploration de données&#41;](select-the-definition-method-data-mining-wizard.md)  
   
   

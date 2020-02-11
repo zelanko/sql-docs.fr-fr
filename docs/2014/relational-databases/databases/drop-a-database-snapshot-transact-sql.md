@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871915"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>supprimer un instantané de base de données (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62871915"
   
 1.  Identifiez l'instantané à supprimer. Vous pouvez afficher les instantanés d'une base de données dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Afficher un instantané de base de données &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
   
-2.  Exécutez l’instruction [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) en définissant le nom de l’instantané de base de données à supprimer. La syntaxe de base est la suivante :  
+2.  Exécutez l’instruction [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) en définissant le nom de l’instantané de base de données à supprimer. La syntaxe est la suivante :  
   
      DROP DATABASE *nom_instantané_base_de_données* [ **,** ...*n* ]  
   

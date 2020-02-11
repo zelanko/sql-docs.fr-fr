@@ -1,5 +1,5 @@
 ---
-title: Fichier d’élément (DTA) | Microsoft Docs
+title: File, élément (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5279500939d0499c8ef7bd247b92e052b522970b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735942"
 ---
 # <a name="file-element-dta"></a>File, élément (Assistant Paramétrage de base de données)
@@ -39,7 +39,7 @@ ms.locfileid: "62735942"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Utilisez le type de données `string` pour spécifier le chemin d'accès au répertoire de votre fichier de charge de travail. Exemple :<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Limite de longueur appliquée par le serveur.|  
+|**Type de données et longueur**|Utilisez le type de données `string` pour spécifier le chemin d'accès au répertoire de votre fichier de charge de travail. Par exemple :<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Limite de longueur appliquée par le serveur.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un élément enfant **EventString**, **File**ou **Database** pour le parent **Workload** , mais un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de travail avec l’élément **File** , vous ne pouvez pas spécifier une charge de travail avec l’élément **Database** dans le même fichier d’entrée XML.|  
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077164"
 ---
 # <a name="set-usage-property"></a>Définir une propriété d'utilisation
   Vous pouvez définir l’utilisation d’un attribut en utilisant la vue **Structure de dimension** dans le Concepteur de dimensions, accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Lorsque vous définissez l'utilisation d'un attribut, vos modifications ne prennent pas effet avant que vous traitiez la dimension. Pour plus d’informations, consultez [traitement d’un objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  
+ Lorsque vous définissez l'utilisation d'un attribut, vos modifications ne prennent pas effet avant que vous traitiez la dimension. Pour plus d’informations, consultez traitement de l' [objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-set-usage-for-an-attribute"></a>Pour définir l'utilisation d'un attribut  
   
@@ -33,14 +33,14 @@ ms.locfileid: "66077164"
   
 2.  Dans **Attributs**, cliquez avec le bouton droit sur l’attribut dont vous voulez définir l’utilisation, pointez sur **Définir l’utilisation d’attribut**, puis cliquez sur l’une des options suivantes :  
   
-    -   **Regular**  
+    -   **Réguliers**  
   
     -   **Clé**  
   
     -   **Parent**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d'attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Ajouter un attribut à une dimension](attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   

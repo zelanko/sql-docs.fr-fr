@@ -1,5 +1,5 @@
 ---
-title: Types de données SQL Server dans le .NET Framework | Microsoft Docs
+title: SQL Server des types de données dans le .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874537"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Types de données SQL Server dans le .NET Framework
@@ -31,13 +31,13 @@ ms.locfileid: "62874537"
   
  Le tableau ci-dessous répertorie les rubriques de cette section.  
   
- [Possibilité de valeur Null et comparaisons logiques de trois valeurs](nullability-and-three-value-logic-comparisons.md)  
+ [Possibilité de valeur Null et comparaisons logiques de trois valeurs](nullability-and-three-value-logic-comparisons.md)  
  Explique comment les valeurs NULL sont traitées avec les types de données d'intégration CLR (Common Language Runtime).  
   
- [Classement et types de données de l’intégration du CLR](collation-and-clr-integration-data-types.md)  
+ [Classement et types de données de l'intégration du CLR](collation-and-clr-integration-data-types.md)  
  Décrit comment les classements sont traités avec l'intégration du CLR.  
   
- [Gestion des objets volumineux &#40;LOB&#41; paramètres dans le CLR](handling-large-object-lob-parameters-in-the-clr.md)  
+ [Gestion des paramètres de&#41; Large Object &#40;LOB dans le CLR](handling-large-object-lob-parameters-in-the-clr.md)  
  Décrit comment transmettre des types LOB entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR.  
   
  [Mappage des données de paramètres CLR](mapping-clr-parameter-data.md)  

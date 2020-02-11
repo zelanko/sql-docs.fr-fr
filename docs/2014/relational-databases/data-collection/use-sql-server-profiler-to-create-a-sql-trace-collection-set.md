@@ -1,5 +1,5 @@
 ---
-title: Utiliser SQL Server Profiler pour créer un jeu de Collection de Trace SQL (SQL Server Management Studio) | Microsoft Docs
+title: Utiliser SQL Server Profiler pour créer un jeu d’collections trace SQL (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873319"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL (SQL Server Management Studio)
-  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
+  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  
   
 1.  Créer et exporter une trace [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62873319"
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur **Annuler**.  
   
-3.  Pour ce scénario, veillez à ce que les valeurs de durée soient configurées pour s'afficher en millisecondes (la valeur par défaut). Pour cela, procédez comme suit :  
+3.  Pour ce scénario, veillez à ce que les valeurs de durée soient configurées pour s'afficher en millisecondes (la valeur par défaut). Pour ce faire, procédez comme suit :  
   
     1.  Dans le menu **Outils** , cliquez sur **Options**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62873319"
   
 5.  Dans la boîte de dialogue **Se connecter au serveur** , sélectionnez le serveur auquel vous souhaitez vous connecter, puis cliquez sur **Se connecter**.  
   
-     La boîte de dialogue **Propriétés de la trace** apparaît.  
+     La boîte de dialogue **Propriétés de la trace** s'affiche.  
   
 6.  Sous l'onglet **Général** , effectuez les paramétrages suivants :  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873319"
   
     1.  Dans la liste de filtres, cliquez sur **Durée**.  
   
-    2.  Dans la fenêtre de l’opérateur booléen, développez le **supérieur ou égal** nœud, tapez `80` comme la valeur, puis cliquez sur **OK**.  
+    2.  Dans la fenêtre opérateur booléen, développez le nœud **supérieur ou égal** à, `80` tapez comme valeur, puis cliquez sur **OK**.  
   
 9. Cliquez sur **Exécuter** pour démarrer la trace.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "62873319"
   
 4.  Cliquez sur **Exécuter** pour exécuter la requête et créer le jeu d'éléments de collecte.  
   
-5.  Dans l'Explorateur d'objets, vérifiez que le jeu d'éléments de collecte a été créé. Pour cela, procédez comme suit :  
+5.  Dans l'Explorateur d'objets, vérifiez que le jeu d'éléments de collecte a été créé. Pour ce faire, procédez comme suit :  
   
     1.  Cliquez avec le bouton droit sur **Gestion**, puis cliquez sur **Actualiser**.  
   
     2.  Développez **Gestion**, puis **Collecte de données**.  
   
-     Le `SPROC_CollectionSet` collection apparaît au même niveau que le **jeux d’éléments de données de système** nœud. Par défaut, le jeu d'éléments de collecte est désactivé.  
+     Le `SPROC_CollectionSet` jeu d’collections apparaît au même niveau que le nœud Jeux d’élément de **collecte de données système** . Par défaut, le jeu d'éléments de collecte est désactivé.  
   
 6.  Utilisez l'Explorateur d'objets pour modifier les propriétés de SPROC_CollectionSet, tel que le mode de collecte et la planification de téléchargement. Procédez de la même manière que pour les jeux d'éléments de collecte de données système fournis avec le collecteur de données.  
   

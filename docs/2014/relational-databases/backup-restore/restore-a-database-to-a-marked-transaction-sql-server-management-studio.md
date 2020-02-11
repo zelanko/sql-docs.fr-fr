@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875602"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurer une base de données jusqu'à une transaction marquée (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62875602"
   
 ### <a name="to-restore-a-marked-transaction"></a>Pour restaurer une transaction marquée  
   
-1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
+1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62875602"
   
      Le tableau suivant répertorie les en-têtes de colonnes de la grille et décrit leur valeur.  
   
-    |Header|Value|  
+    |En-tête|Valeur|  
     |------------|-----------|  
     |\<vide>|Affiche une case à cocher pour la sélection de la marque.|  
     |**Marque de transaction**|Nom de la transaction marquée spécifiée par l'utilisateur lors de la validation de la transaction.|  
@@ -53,7 +53,7 @@ ms.locfileid: "62875602"
     |**Description**|Description de la transaction marquée spécifiée par l'utilisateur lorsque la transaction a été validée (le cas échéant).|  
     |**LSN**|Numéro séquentiel dans le journal de la transaction marquée.|  
     |**Sauvegarde de la base de données**|Nom de la base de données où la transaction marquée a été validée.|  
-    |**Nom d'utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
+    |**Nom d’utilisateur**|Nom de l'utilisateur de la base de données où la transaction marquée a été validée.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   

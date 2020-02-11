@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078902"
 ---
 # <a name="modifying-measures"></a>Modification des mesures
@@ -28,7 +28,7 @@ ms.locfileid: "66078902"
   
      Il est plus facile de modifier les propriétés de plusieurs éléments à la fois dans le cube lorsque la fenêtre des propriétés reste ouverte.  
   
-3.  Dans la fenêtre Propriétés, cliquez sur la liste **FormatString** , puis tapez **#,#** .  
+3.  Dans la fenêtre Propriétés, cliquez sur la liste **FormatString** , puis tapez **#,#**.  
   
 4.  Dans la barre d'outils de l'onglet **Structure de cube** , cliquez sur l'icône **Afficher la grille de mesures** à gauche.  
   
@@ -36,19 +36,19 @@ ms.locfileid: "66078902"
   
 5.  Sélectionnez l'une des mesures suivantes. Vous pouvez sélectionner plusieurs mesures en cliquant sur chacune d'elles tout en maintenant enfoncée la touche CTRL :  
   
-    -   **Unit Price**  
+    -   **Prix unitaire**  
   
-    -   **Extended Amount**  
+    -   **Montant total**  
   
-    -   **Discount Amount**  
+    -   **Montant de la remise**  
   
-    -   **Product Standard Cost**  
+    -   **Coût standard du produit**  
   
-    -   **Total Product Cost**  
+    -   **Coût total du produit**  
   
-    -   **Sales Amount**  
+    -   **Montant des ventes**  
   
-    -   **Tax Amt**  
+    -   **Montant des taxes**  
   
     -   **Freight**  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66078902"
   
 7.  Dans la zone de liste déroulante en haut de la fenêtre des propriétés (sous la barre de titre), sélectionnez la mesure **Unit Price Discount Pct**, puis sélectionnez **Percent** dans la liste **FormatString** .  
   
-8.  Dans la fenêtre Propriétés, modifiez le **nom** propriété pour le **Unit Price Discount Pct** mesure `Unit Price Discount Percentage`.  
+8.  Dans la Fenêtre Propriétés, remplacez la valeur de la propriété **Name** de la mesure **Unit Price discount PCT** par `Unit Price Discount Percentage`.  
   
-9. Dans le **mesures** volet, cliquez sur **Tax Amt** et modifiez le nom de cette mesure en `Tax Amount`.  
+9. Dans le volet **mesures** , cliquez sur **Tax AMT** et remplacez le nom de cette mesure `Tax Amount`par.  
   
 10. Dans la fenêtre des propriétés, cliquez sur l'icône **Masquer automatiquement** pour masquer la fenêtre des propriétés, puis cliquez sur **Afficher l'arborescence de mesures** dans la barre d'outils de l'onglet **Structure de cube** .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66078902"
  [Modification de la dimension Customer](lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des Dimensions de base de données](multidimensional-models/define-database-dimensions.md)   
+ [Définir des dimensions de base de données](multidimensional-models/define-database-dimensions.md)   
  [Configurer des propriétés de mesure](multidimensional-models/configure-measure-properties.md)  
   
   

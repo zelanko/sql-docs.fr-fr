@@ -1,5 +1,5 @@
 ---
-title: Progression du Conseiller de mise à niveau | Microsoft Docs
+title: Progression du conseiller de mise à niveau | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091561"
 ---
 # <a name="upgrade-advisor-progress"></a>Progression du Conseiller de mise à niveau
-  L'analyse du Conseiller de mise à niveau commence par une analyse de chaque composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionné exécutée par un analyseur dédié. Analyse des composants, la progression est signalée dans le **progression** boîte de dialogue.  
+  L'analyse du Conseiller de mise à niveau commence par une analyse de chaque composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionné exécutée par un analyseur dédié. À mesure que les composants sont analysés, la progression est signalée dans la boîte de dialogue de **progression** .  
   
 ## <a name="options"></a>Options  
  **Action**  
@@ -40,16 +40,16 @@ ms.locfileid: "66091561"
 > [!NOTE]  
 >  Si l'analyse dure trop longtemps, vous pouvez l'arrêter, quitter l'Assistant Analyse du Conseiller de mise à niveau, puis réexécuter l'Assistant. Pour réduire le temps d'analyse, limitez le nombre de composants à analyser.  
   
- À la fin de l'analyse, le rapport est écrit dans un fichier. Vous pouvez afficher le rapport en cliquant sur **lancer le rapport** pour lancer la visionneuse de rapports à partir de cette page. Si vous souhaitez afficher le rapport ultérieurement, vous pouvez ouvrir le **visionneuse de rapports de conseiller de mise à niveau** à partir de la page de démarrage du Conseiller de mise à niveau.  
+ À la fin de l'analyse, le rapport est écrit dans un fichier. Vous pouvez afficher le rapport en cliquant sur **lancer le rapport** pour lancer la visionneuse de rapports à partir de cette page. Si vous souhaitez afficher le rapport ultérieurement, vous pouvez ouvrir la **visionneuse de rapports du conseiller de mise à niveau** à partir de la page de démarrage du conseiller de mise à niveau.  
   
 > [!NOTE]  
 >  Les rapports précédents sont enregistrés chaque fois que vous analysez un serveur. Les rapports sont enregistrés en utilisant le timestamp pour le nom de fichier. La visionneuse de rapports affiche les cinq derniers rapports enregistrés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédure : Lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Procédure : Exécutez l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
- [Composants de SQL Server](../../../2014/sql-server/install/sql-server-components.md)   
- [Référence de l’Interface utilisateur Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
+ [Procédure : lancer le conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Procédure : exécuter l’Assistant analyse du conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Composants SQL Server](../../../2014/sql-server/install/sql-server-components.md)   
+ [Référence de l’interface utilisateur du conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

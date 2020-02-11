@@ -1,5 +1,5 @@
 ---
-title: Mettez en surbrillance les Exceptions (outils d’analyse de Table pour Excel) | Microsoft Docs
+title: Mettre en surbrillance les exceptions (outils d’analyse de table pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,36 +14,36 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080754"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Mettre en surbrillance les exceptions (Outils d'analyse de table pour Excel)
-  ![Mettez en surbrillance le bouton d’Exceptions dans le ruban](media/tat-highlightex.gif "bouton mettre en surbrillance les Exceptions dans le ruban")  
+  ![Bouton Mettre en surbrillance les exceptions sur le ruban](media/tat-highlightex.gif "Bouton Mettre en surbrillance les exceptions sur le ruban")  
   
- Parfois vos données peuvent contenir des valeurs particulières. Par exemple, pour le critère d'âge d'un propriétaire de bien immobilier, la valeur 5 ans peut être indiquée. Ces valeurs, souvent appelés *valeurs hors norme*, peuvent être erronés en raison d’une erreur d’entrée de données, ou elles peuvent révéler des tendances inhabituelles. Dans les deux cas, les exceptions peuvent avoir une incidence sur la qualité de votre analyse. Le **mettre en surbrillance les Exceptions** outil vous aide à trouver ces valeurs et examinez-les pour d’autres actions.  
+ Parfois vos données peuvent contenir des valeurs particulières. Par exemple, pour le critère d'âge d'un propriétaire de bien immobilier, la valeur 5 ans peut être indiquée. Ces valeurs, *souvent appelées*valeurs hors norme, peuvent être erronées en raison d’une erreur d’entrée de données, ou peuvent indiquer des tendances inhabituelles. Dans les deux cas, les exceptions peuvent avoir une incidence sur la qualité de votre analyse. L’outil **mettre en surbrillance les exceptions** vous aide à trouver ces valeurs et à les examiner pour une action supplémentaire.  
   
- Le **mettre en surbrillance les Exceptions** outil peut fonctionner avec la plage complète des données dans une table de données Excel, ou vous pouvez sélectionner uniquement certaines colonnes. Vous pouvez également définir un seuil qui contrôle la variabilité des données pour trouver un nombre d'exceptions plus ou moins important.  
+ L’outil **mettre en surbrillance les exceptions** peut fonctionner avec l’intégralité de la plage de données dans une table de données Excel, ou vous ne pouvez sélectionner que quelques colonnes. Vous pouvez également définir un seuil qui contrôle la variabilité des données pour trouver un nombre d'exceptions plus ou moins important.  
   
- Une fois que l'outil a terminé son analyse, il crée une nouvelle feuille de calcul qui contient un rapport de synthèse indiquant le nombre d'observations aberrantes décelées dans chacune des colonnes analysées. L'outil met également en surbrillance les exceptions dans la table de données d'origine. Du fait que l'outil analyse des séquences globales, il peut signaler que la plupart des valeurs d'une ligne sont normales et mettre en surbrillance une seule cellule dans cette ligne. Dans l’exemple précédent ci-dessus, seule la **âge** colonne peut être mis en surbrillance.  
+ Une fois que l'outil a terminé son analyse, il crée une nouvelle feuille de calcul qui contient un rapport de synthèse indiquant le nombre d'observations aberrantes décelées dans chacune des colonnes analysées. L'outil met également en surbrillance les exceptions dans la table de données d'origine. Du fait que l'outil analyse des séquences globales, il peut signaler que la plupart des valeurs d'une ligne sont normales et mettre en surbrillance une seule cellule dans cette ligne. Dans l’exemple propriétaire ci-dessus, seule la colonne **Age** peut être mise en surbrillance.  
   
- Vous pouvez également modifier le **seuil des exceptions** valeur dans le **rapport Résumé**. Cette valeur indique la probabilité qu'une cellule particulière contienne une valeur anormale. Par conséquent, si vous définissez la valeur, un nombre inférieur de valeurs sera mis en surbrillance en tant que valeurs hors norme. Inversement, lorsque vous diminuez la valeur, les cellules mises en surbrillance sont alors plus nombreuses.  
+ Vous pouvez également modifier la valeur du **seuil d’exception** dans le **rapport de synthèse**. Cette valeur indique la probabilité qu'une cellule particulière contienne une valeur anormale. Par conséquent, si vous définissez la valeur, un nombre inférieur de valeurs sera mis en surbrillance en tant que valeurs hors norme. Inversement, lorsque vous diminuez la valeur, les cellules mises en surbrillance sont alors plus nombreuses.  
   
 ## <a name="using-the-highlight-exceptions-tool"></a>Utilisation de l'outil Mettre en surbrillance les exceptions  
   
-1.  Ouvrez un tableau Excel et cliquez sur **mettre en surbrillance les Exceptions**.  
+1.  Ouvrez un tableau Excel, puis cliquez sur **mettre en surbrillance les exceptions**.  
   
 2.  Spécifiez les colonnes à analyser.  
   
 3.  Cliquez sur **Exécuter**.  
   
-4.  Ouvrez la feuille de calcul intitulée \<nom_table > valeurs hors norme pour afficher un récapitulatif des observations aberrantes qui ont été trouvés.  
+4.  Ouvrez la feuille de calcul \<intitulée nom de la table> valeurs hors norme pour afficher un résumé des valeurs hors norme qui ont été trouvées.  
   
-5.  Pour modifier le nombre de mises en surbrillance, cliquez sur le haut et flèches de direction dans le **seuil des exceptions** ligne de la **mettre en surbrillance le rapport Exceptions**.  
+5.  Pour modifier le nombre de mises en surbrillance, cliquez sur les flèches vers le haut et vers le bas dans la ligne **seuil d’exception** du **rapport mettre en surbrillance les exceptions**.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Vous pouvez inclure des colonnes qui ne contiennent pas des valeurs incorrectes si ces valeurs contiennent des informations pouvant être utiles pour la prédiction d'autres lignes. Cependant, vous devez désélectionner les colonnes susceptibles de contenir des valeurs manquantes ou nulles.  
   
  Dans la mesure où toutes les colonnes sélectionnées sont utilisées pour créer une séquence générale, vous devez éviter d'utiliser les colonnes d'entrée contenant des informations médiocres, telles que les suivantes :  
@@ -69,18 +69,18 @@ ms.locfileid: "66080754"
   
  La valeur initiale pour le seuil d'exception est toujours de 75, ce qui signifie que l'algorithme a calculé qu'il y a 75 % de chance que les données en surbrillance soient fausses. L'outil définit automatiquement ce seuil pour l'analyse initiale, mais vous pouvez modifier la valeur dans le rapport.  
   
- Le **mettre en surbrillance les Exceptions** outil met en évidence les cellules de la table de données d’origine qui sont suspectes. Une couleur sombre signifie que la ligne doit faire l'objet d'une attention particulière. Une couleur claire indique que la valeur d'une cellule spécifique a été identifiée comme étant suspecte. Si vous modifiez le seuil pour les exceptions, les valeurs en surbrillance changeront également.  
+ L’outil **mettre en surbrillance les exceptions** met en surbrillance les cellules de la table de données d’origine suspectes. Une couleur sombre signifie que la ligne doit faire l'objet d'une attention particulière. Une couleur claire indique que la valeur d'une cellule spécifique a été identifiée comme étant suspecte. Si vous modifiez le seuil pour les exceptions, les valeurs en surbrillance changeront également.  
   
  Le diagramme de synthèse indique le nombre de cellules contenant des valeurs supérieures au seuil des exceptions dans chaque colonne.  
   
 ## <a name="related-tools"></a>Outils connexes  
- Lorsque vous nettoyez ou vérifiez des données en prévision de l'exploration de données, vous pouvez également tester les fonctionnalités d'exploration de données du Client d'exploration de données pour Excel. Ce complément fournit des outils avancés qui vous permettront de déceler les observations aberrantes, de réétiqueter les données ou d'afficher la distribution des données. Pour plus d’informations sur les outils d’exploration de données dans le Client d’exploration de données pour Excel, consultez [exploration et nettoyage des données](exploring-and-cleaning-data.md).  
+ Lorsque vous nettoyez ou vérifiez des données en prévision de l'exploration de données, vous pouvez également tester les fonctionnalités d'exploration de données du Client d'exploration de données pour Excel. Ce complément fournit des outils avancés qui vous permettront de déceler les observations aberrantes, de réétiqueter les données ou d'afficher la distribution des données. Pour plus d’informations sur les outils d’exploration de données dans le client d’exploration de données pour Excel, consultez [exploration et nettoyage des données](exploring-and-cleaning-data.md).  
   
- Le **mettre en surbrillance les Exceptions** outil utilise le [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de Clustering. Un modèle de clustering détecte les groupes de lignes qui partagent des caractéristiques communes. Le Client d’exploration de données pour Excel fournit un **Parcourir** fenêtre qui utilise des graphiques et des profils de caractéristiques pour vous permettre d’Explorer des modèles d’exploration de données créés par le clustering. Pour plus d’informations sur la façon de parcourir le modèle de clustering créé par le **mettre en surbrillance les Exceptions** , consultez [parcourir les modèles (Client d’exploration de données pour Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
+ L’outil **mettre en surbrillance les exceptions** utilise l’algorithme de [!INCLUDE[msCoName](../includes/msconame-md.md)] clustering. Un modèle de clustering détecte les groupes de lignes qui partagent des caractéristiques communes. Le client d’exploration de données pour Excel fournit une fenêtre **Parcourir** qui utilise des graphiques et des profils caractéristiques pour vous permettre d’explorer les modèles d’exploration de données créés par le clustering. Pour plus d’informations sur la façon de parcourir le modèle de clustering créé par l’outil **mettre en surbrillance les exceptions** , consultez [Parcourir les modèles (client d’exploration de données pour Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
   
  Pour plus d'informations sur l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering, consultez la rubrique « Algorithme de gestion de clusters Microsoft » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d’analyse de table pour Excel](table-analysis-tools-for-excel.md)  
+ [Outils d'analyse de table pour Excel](table-analysis-tools-for-excel.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Options (Éditeur de texte : Onglet Éditeur et Page barre d’état) | Microsoft Docs'
+title: 'Options (éditeur de texte : onglet Éditeur et page barre d’État) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089243"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Options (Éditeur de texte : onglet Éditeur et page Barre d’état)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Options (Éditeur de texte/onglet Éditeur et page Barre d’état)
   L' **onglet Éditeur et la page Barre d'état** vous permettent de personnaliser les informations affichées par les éditeurs de requête [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Vous pouvez spécifier le niveau d'informations affiché dans l'onglet et la barre d'état de la fenêtre Éditeur de requête, et indiquer si la barre d'état doit apparaître en haut ou en bas de la fenêtre de l'éditeur.  
   
 ## <a name="option-settings-by-editor"></a>Paramètres d'option par éditeur  
@@ -31,22 +31,22 @@ ms.locfileid: "66089243"
 ## <a name="status-bar-content"></a>Contenu de la barre d'état  
  Indique les informations qui apparaissent dans la barre d'état de l'éditeur de requête.  
   
- **Affichage de l’heure d’exécution**  
+ **Afficher la durée d'exécution**  
  Inclut l'heure d'exécution du script. Les paramètres sont les suivants :  
   
  **Aucun**  
  La barre d'état n'affiche pas d'informations horaires.  
   
- **End**  
+ **Fin**  
  La barre d'état affiche l'heure réelle du jour pendant l'exécution du script. À l'achèvement du script, l'affichage indique l'heure du jour à laquelle le script s'est terminé.  
   
- **Écoulé**  
+ **Temps écoulé**  
  La barre d'état affiche la durée d'exécution du script. Lorsque le script s'achève, l'affichage indique la durée nécessaire pour exécuter le script.  
   
  **Inclure le nom de la base de données**  
  Inclut le nom de la base de données actuelle pour la connexion. Lorsque l'éditeur de requête s'affiche pour la première fois, il s'agit de la base de données par défaut pour le compte de connexion. Le contexte de base de données peut être modifié ultérieurement en utilisant l'instruction USE Transact-SQL.  
   
- **Inclure le nom de connexion**  
+ **Inclut le nom de la connexion**  
  Inclut le nom de la connexion.  
   
  **Inclure le nombre de lignes**  
@@ -58,19 +58,19 @@ ms.locfileid: "66089243"
 ## <a name="status-bar-layout-and-colors"></a>Couleurs et disposition de la barre d'état  
  Spécifie les couleurs des éléments de la barre d'état de l'éditeur de requête.  
   
- **Connexions de groupe**  
+ **Grouper les connexions**  
  Définit la couleur de la barre d'état lorsque l'éditeur de requête a plusieurs connexions.  
   
- **Connexions de serveur unique**  
+ **Connexions à un seul serveur**  
  Définit la couleur de la barre d'état lorsque l'éditeur de requête a une seule connexion.  
   
- **Emplacement de barre d’état**  
+ **Emplacement de la barre d'état**  
  Spécifie l'emplacement de la barre d'état. Les paramètres sont les suivants :  
   
- **Top**  
+ **Retour au début**  
  La barre d'état apparaît en haut de la fenêtre de l'éditeur de requête.  
   
- **Bottom**  
+ **Bas**  
  La barre d'état apparaît au bas de la fenêtre de l'éditeur de requête.  
   
 ## <a name="tab-text"></a>Texte de l'onglet  
@@ -79,20 +79,20 @@ ms.locfileid: "66089243"
  **Inclure le nom de la base de données**  
  Inclut le nom de la base de données actuelle pour la connexion. Lorsque l'éditeur de requête s'affiche pour la première fois, il s'agit de la base de données par défaut pour le compte de connexion. Le contexte de base de données peut être modifié ultérieurement en utilisant l'instruction USE Transact-SQL.  
   
- **Inclure le nom de fichier**  
+ **Inclure le nom du fichier**  
  Inclut le nom du fichier où est stocké le script.  
   
- **Inclure le nom du dossier**  
+ **Inclure le dossier**  
  Inclut le chemin d'accès du dossier où est stocké le fichier script.  
   
- **Inclure le nom de connexion**  
+ **Inclut le nom de la connexion**  
  Inclut le nom de la connexion.  
   
  **Inclure le nom du serveur**  
  Inclut le nom du serveur. Pour les connexions locales, il s'agit du nom de l'instance. Pour les connexions distantes, il s'agit du nom de l'ordinateur distant et du nom de l'instance.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options &#40;environnement : Page polices et couleurs&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [Options &#40;environnement : pages de polices et de couleurs&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Codage en couleurs dans les éditeurs de requête](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

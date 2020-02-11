@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843555"
 ---
 # <a name="share-files"></a>Partager des fichiers
@@ -34,11 +34,11 @@ ms.locfileid: "62843555"
   
 1.  Dans l'Explorateur de solutions, sélectionnez le dossier ou le projet dans lequel vous souhaitez placer les fichiers partagés.  
   
-2.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **partage**.  
+2.  Dans le menu **fichier** , pointez sur **contrôle de code source**, puis cliquez sur **partager**.  
   
-3.  Dans le **partager avec** boîte de dialogue Parcourir la liste de répertoires pour l’élément que vous souhaitez partager, puis cliquez sur cet élément.  
+3.  Dans la boîte de dialogue **partager avec** , recherchez dans la liste des répertoires l’élément que vous souhaitez partager, puis cliquez sur cet élément.  
   
-4.  Cliquez sur **partage**.  
+4.  Cliquez sur **Partager**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du contrôle de code source](../../2014/database-engine/source-control-basics.md)  

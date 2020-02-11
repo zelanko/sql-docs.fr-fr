@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba6f533f2f975a69d0b78d6458a01f64a10595f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870069"
 ---
-# <a name="mssqlserver14265"></a>MSSQLSERVER_14265
+# <a name="mssqlserver_14265"></a>MSSQLSERVER_14265
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|14265|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|14265|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum14265|  
 |Texte du message|Arrêt inattendu du service MSSQLServer. Vérifiez le journal des erreurs de SQL Server ainsi que les journaux d'événements Système et Application Windows pour déterminer les causes possibles.|  

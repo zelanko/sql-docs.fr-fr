@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c59f74a3e0584ec70eea4832936d7dc08cc74087
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868958"
 ---
-# <a name="mssqlserver21898"></a>MSSQLSERVER_21898
+# <a name="mssqlserver_21898"></a>MSSQLSERVER_21898
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|21898|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|21898|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLErrorNum21898|  
 |Texte du message|Le serveur de publication '%s' utilise la base de données de distribution '%s' et non '%s', requise pour héberger la base de données de publication '%s'. Exécutez `sp_changedistpublisher` sur le serveur de distribution '%s' pour modifier la base de données de distribution utilisée par le serveur de publication sur '%s'.|  
   
 ## <a name="explanation"></a>Explication  
- `sp_validate_redirected_publisher` interroge msdb.dbo.MSdistpublishers sur le serveur de distribution local pour vérifier que la base de données de distribution utilisée par le nouveau serveur de publication est identique à la base de données de distribution utilisée par le serveur de publication d’origine. Cette erreur est retournée lorsque ces bases de données diffèrent, faisant du serveur de publication un hôte incorrect pour la base de données du serveur de publication.  
+ `sp_validate_redirected_publisher` interroge msdb.dbo.MSdistpublishers sur le serveur de distribution local pour vérifier que la base de données de distribution utilisée par le nouveau serveur de publication est la même que la base de données de distribution utilisée par le serveur de publication d'origine. Cette erreur est retournée lorsque ces bases de données diffèrent, faisant du serveur de publication un hôte incorrect pour la base de données du serveur de publication.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Exécutez la procédure stockée `sp_changedistpublisher` pour modifier la base de données de distribution du nouveau serveur de publication et utiliser celle utilisée par le serveur de publication d'origine.  

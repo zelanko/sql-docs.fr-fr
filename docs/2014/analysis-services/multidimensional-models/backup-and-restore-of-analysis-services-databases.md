@@ -22,13 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077028"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sauvegarde et restauration de bases de données Analysis Services
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et la restauration afin que vous puissiez récupérer une base de données et ses objets à partir d'une date et heure spécifiques. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
   
  Les commandes de restauration et sauvegarde sont effectuées sur une base de données Analysis Services déployée. Pour vos projets et solutions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous devez utiliser un contrôle de code source pour garantir la récupération des versions spécifiques de vos fichiers sources, puis créer un plan de récupération de données pour le référentiel du système de contrôle de code source que vous utilisez.  
@@ -37,22 +38,22 @@ ms.locfileid: "66077028"
   
  L'automatisation de la sauvegarde a comme avantage certain que l'instantané des données sera toujours à jour, comme la fréquence automatisée de sauvegarde le spécifie. Les planificateurs automatisés empêchent tout oubli des sauvegardes. La restauration d'une base de données peut également être automatisée et peut représenter une manière intéressante de répliquer les données, mais assurez-vous de sauvegarder le fichier de clé de chiffrement sur l'instance vers laquelle vous effectuez la réplication. La fonctionnalité de synchronisation est dédiée à la réplication des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mais uniquement pour les données périmées. Toutes les fonctionnalités mentionnées ici peuvent être implémentées via l'interface utilisateur, à l'aide des commandes XML/A ou s'exécuter par programmation via les objets AMO.  
   
- Cette rubrique comprend les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
--   [Préparation de la sauvegarde](#bkmk_prep)  
+-   [Préparation à la sauvegarde](#bkmk_prep)  
   
--   [Sauvegarde d'une base de données multidimensionnelle ou tabulaire](#bkmk_cube)  
+-   [Sauvegarde d’une base de données multidimensionnelle ou tabulaire](#bkmk_cube)  
   
--   [Restauration d'une base de données Analysis Services](#bkmk_restore)  
+-   [Restauration d’une base de données Analysis Services](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> Conditions préalables  
+##  <a name="bkmk_prereq"></a>Conditions préalables  
  Vous devez disposer d'autorisations administratives pour l'instance Analysis Services ou d'autorisations Contrôle total (administrateur) pour la base de données que vous sauvegardez.  
   
  L'emplacement de restauration doit être une instance Analysis Services de la même version, ou d'une version plus récente, que l'instance à partir de laquelle la sauvegarde a été effectuée. Bien qu’il soit impossible de restaurer une base de données d’une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers une instance d’une version antérieure d’Analysis Services, il est courant de restaurer une base de données de version antérieure, telle que SQL Server 2012, sur une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] plus récente.  
   
  L'emplacement de restauration doit être du même type de serveur. Les bases de données tabulaires ne peuvent être restaurées que vers Analysis Services exécuté en mode tabulaire. Les bases de données multidimensionnelles nécessitent une instance exécutée en mode multidimensionnel.  
   
-##  <a name="bkmk_prep"></a> Préparation de la sauvegarde  
+##  <a name="bkmk_prep"></a>Préparation à la sauvegarde  
  Utilisez la liste de contrôle suivante pour préparer la sauvegarde :  
   
 -   Vérifiez l'emplacement où le fichier de sauvegarde sera stocké. Si vous utilisez un emplacement distant, vous devez le spécifier comme dossier UNC. Vérifiez que vous avez accès au chemin UNC.  
@@ -63,17 +64,18 @@ ms.locfileid: "66077028"
   
 -   Recherchez des fichiers existants portant le même nom. S'il existe déjà un fichier portant le même nom, la sauvegarde échoue, sauf si vous spécifiez des options pour remplacer le fichier.  
   
-##  <a name="bkmk_cube"></a> Sauvegarde d'une base de données multidimensionnelle ou tabulaire  
+##  <a name="bkmk_cube"></a>Sauvegarde d’une base de données multidimensionnelle ou tabulaire  
  Les administrateurs peuvent sauvegarder une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un seul fichier de sauvegarde [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), quelle que soit la taille de la base de données. Pour obtenir des instructions détaillées, consultez [How to Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) [(Comment sauvegarder une base de données Analysis Services Database (TechMantra)] et [Automate Backup an Analysis Services Database (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)[Automatiser la sauvegarde d’une base de données Analysis Services (TechMantra)].  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisé pour le chargement et l'interrogation des modèles de données PowerPivot dans un environnement SharePoint, charge ses modèles depuis des bases de données de contenu SharePoint. Ces bases de données de contenu sont relationnelles et s'exécutent sur le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, il n'existe aucune stratégie de sauvegarde et de restauration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les modèles de données PowerPivot. Si vous avez mis en place un plan de récupération d'urgence pour le contenu SharePoint, ce plan englobe les modèles de données PowerPivot stockés dans les bases de données de contenu.  
+>  
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilisé pour le chargement et l'interrogation des modèles de données PowerPivot dans un environnement SharePoint, charge ses modèles depuis des bases de données de contenu SharePoint. Ces bases de données de contenu sont relationnelles et s'exécutent sur le moteur de base de données relationnelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, il n'existe aucune stratégie de sauvegarde et de restauration [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les modèles de données PowerPivot. Si vous avez mis en place un plan de récupération d'urgence pour le contenu SharePoint, ce plan englobe les modèles de données PowerPivot stockés dans les bases de données de contenu.  
   
  **Partitions distantes**  
   
  Si la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contient des partitions distantes, celles-ci doivent aussi être sauvegardées. Lorsque vous sauvegardez une base de données avec des partitions distantes, toutes les partitions distantes sur chaque serveur distant sont sauvegardées dans un fichier unique sur chacun des serveurs distants correspondants. Ainsi, pour créer ces sauvegardes distantes sur d'autres ordinateurs que leurs ordinateurs hôtes respectifs, vous devez copier manuellement ces fichiers dans les zones de stockage désignées.  
   
- **Contenu d'un fichier de sauvegarde**  
+ **Contenu d’un fichier de sauvegarde**  
   
  La sauvegarde d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] produit un fichier de sauvegarde dont le contenu varie en fonction du mode de stockage utilisé par les objets de la base de données. Cette différence de contenu de sauvegarde résulte du fait que chaque mode de stockage stocke en fait un ensemble différent d'informations dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Par exemple, les partitions et les dimensions multidimensionnelles HOLAP (OLAP hybride) stockent les agrégations et les métadonnées dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , tandis que les partitions et les dimensions ROLAP (OLAP relationnel) stockent uniquement les métadonnées dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Comme le contenu réel d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] varie en fonction du mode de stockage de chaque partition, le contenu du fichier de sauvegarde varie également. Le tableau ci-dessous associe le contenu du fichier de sauvegarde au mode de stockage utilisé par les objets.  
   
@@ -99,7 +101,7 @@ ms.locfileid: "66077028"
   
  Pour plus d’informations sur la sauvegarde d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Options de sauvegarde](backup-options.md).  
   
-##  <a name="bkmk_restore"></a> Restauration d'une base de données Analysis Services  
+##  <a name="bkmk_restore"></a>Restauration d’une base de données Analysis Services  
  Les administrateurs peuvent restaurer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir d'un ou de plusieurs fichiers de sauvegarde.  
   
 > [!NOTE]  
@@ -124,7 +126,7 @@ ms.locfileid: "66077028"
  Pour plus d’informations sur la restauration d’une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consultez [Options de restauration](restore-options.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde, restauration et synchronisation de bases de données &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [Sauvegarde, restauration et synchronisation des bases de données &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [PowerShell Analysis Services](../analysis-services-powershell.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873620"
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
@@ -48,13 +48,13 @@ ms.locfileid: "62873620"
   
  Ces rôles sont stockés dans la base de données msdb. Par défaut, aucun utilisateur n'est membre de ces rôles de base de données. L'appartenance d'un utilisateur à ces rôles doit être accordée explicitement.  
   
- Les utilisateurs qui sont membres de la `sysadmin` rôle serveur fixe ont un accès complet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vues du collecteur de données et les objets Agent. Ils doivent toutefois être ajoutés explicitement aux rôles de collecteur de données.  
+ Les utilisateurs qui sont membres du `sysadmin` rôle serveur fixe ont un accès complet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux objets de l’agent et aux vues du collecteur de données. Ils doivent toutefois être ajoutés explicitement aux rôles de collecteur de données.  
   
 > [!IMPORTANT]  
 >  Les membres du rôle db_ssisadmin et du rôle dc_admin peuvent être en mesure d'élever leurs privilèges à sysadmin. Cette élévation de privilège peut se produire, car ces rôles peuvent modifier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être exécutés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du contexte de sécurité sysadmin de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous prémunir contre cette élévation de privilège lors de l'exécution de plans de maintenance, de jeux d'éléments de collecte de données et d'autres packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurez des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent des packages pour l'utilisation d'un compte proxy doté de privilèges limités ou ajoutez uniquement des membres sysadmin aux rôles db_ssisadmin et dc_admin.  
   
-### <a name="dcadmin-role"></a>Rôle dc_admin  
- Les utilisateurs affectés à la `dc_admin` rôle ont un accès administrateur complet (Create, Read, Update et Delete) à la configuration du collecteur de données sur une instance de serveur. Les membres de ce rôle peuvent effectuer les opérations suivantes :  
+### <a name="dc_admin-role"></a>Rôle dc_admin  
+ Les utilisateurs affectés au `dc_admin` rôle disposent d’un accès administrateur complet (création, lecture, mise à jour et suppression) à la configuration du collecteur de données sur une instance de serveur. Les membres de ce rôle peuvent effectuer les opérations suivantes :  
   
 -   définir des propriétés au niveau du collecteur ;  
   
@@ -64,16 +64,16 @@ ms.locfileid: "62873620"
   
 -   effectuer toutes les opérations autorisées pour le rôle **dc_operator** .  
   
- Le `dc_admin` rôle est un membre des rôles suivants :  
+ Le `dc_admin` rôle est membre des rôles suivants :  
   
 -   **SQLAgentUserRole**. Ce rôle est requis pour créer des planifications et exécuter des travaux.  
   
     > [!NOTE]  
-    >  Les proxys créés pour le collecteur de données doit accorder l’accès à `dc_admin` pour les créer et de les utiliser dans des étapes de travail nécessitant un proxy.  
+    >  Les proxies créés pour le collecteur de données doivent `dc_admin` accorder l’accès à pour les créer et les utiliser dans toutes les étapes de travail qui requièrent un proxy.  
   
--   **dc_operator**. Membres de `dc_admin` héritent des autorisations accordées à **dc_operator**.  
+-   **dc_operator**. Les membres `dc_admin` de héritent des autorisations accordées à **dc_operator**.  
   
-### <a name="dcoperator-role"></a>Rôle dc_operator  
+### <a name="dc_operator-role"></a>Rôle dc_operator  
  Les membres du rôle **dc_operator** disposent d’un accès en lecture et mise à jour. Ce rôle prend en charge les tâches d'opérations liées à l'exécution et la configuration des jeux d'éléments de collection. Les membres de ce rôle peuvent effectuer les opérations suivantes :  
   
 -   démarrer ou arrêter un jeu d'éléments de collection ;  
@@ -94,7 +94,7 @@ ms.locfileid: "62873620"
   
  Pour plus d’informations, consultez [Rôles Integration Services &#40;Service SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
-### <a name="dcproxy-role"></a>Rôle dc_proxy  
+### <a name="dc_proxy-role"></a>Rôle dc_proxy  
  Les membres du rôle **dc_proxy** disposent d’un accès en lecture aux jeux d’éléments de collecte du collecteur de données et aux propriétés au niveau du collecteur. Les membres de ce rôle peuvent également exécuter les travaux dont ils sont propriétaires, et créer des étapes de travail qui s'exécutent comme un compte proxy existant.  
   
  Les membres de ce rôle peuvent effectuer les opérations suivantes :  
@@ -124,9 +124,9 @@ ms.locfileid: "62873620"
   
  Ces rôles sont stockés dans la base de données msdb. Par défaut, aucun utilisateur n'est membre de ces rôles de base de données. L'appartenance d'un utilisateur à ces rôles doit être accordée explicitement.  
   
- Les utilisateurs qui sont membres de la `sysadmin` rôle serveur fixe ont un accès complet aux vues du collecteur de données. Toutefois, ils doivent être ajoutés explicitement aux rôles de base de données pour effectuer d'autres opérations.  
+ Les utilisateurs qui sont membres du `sysadmin` rôle serveur fixe ont un accès complet aux vues du collecteur de données. Toutefois, ils doivent être ajoutés explicitement aux rôles de base de données pour effectuer d'autres opérations.  
   
-### <a name="mdwadmin-role"></a>Rôle mdw_admin  
+### <a name="mdw_admin-role"></a>Rôle mdw_admin  
  Les membres du rôle **mdw_admin** disposent d’un accès en lecture, écriture, mise à jour et suppression à l’entrepôt de données de gestion.  
   
  Les membres de ce rôle peuvent effectuer les opérations suivantes :  
@@ -134,14 +134,14 @@ ms.locfileid: "62873620"
 -   modifier le schéma de l'entrepôt de données de gestion lorsque cela est nécessaire (par exemple, ajouter une table lorsqu'un nouveau type de collecte est installé) ;  
   
     > [!NOTE]  
-    >  Lorsqu’il existe une modification de schéma, l’utilisateur doit également être un membre de la `dc_admin` rôle pour installer un nouveau type de collecteur, car cette action requiert l’autorisation pour mettre à jour la configuration du collecteur de données dans msdb.  
+    >  En cas de modification de schéma, l’utilisateur doit également être membre du `dc_admin` rôle pour installer un nouveau type de collecteur, car cette action nécessite l’autorisation de mettre à jour la configuration du collecteur de données dans msdb.  
   
 -   exécuter des travaux de maintenance sur l'entrepôt de données de gestion, tels que l'archivage ou le nettoyage.  
   
-### <a name="mdwwriter-role"></a>Rôle mdw_writer  
+### <a name="mdw_writer-role"></a>Rôle mdw_writer  
  Les membres du rôle **mdw_writer** peuvent télécharger et écrire des données dans l’entrepôt de données de gestion. Tout collecteur de données qui stocke des données dans l'entrepôt de données de gestion doit être membre de ce rôle.  
   
-### <a name="mdwreader-role"></a>Rôle mdw_reader  
+### <a name="mdw_reader-role"></a>Rôle mdw_reader  
  Les membres du rôle **mdw_reader** disposent d’un accès en lecture à l’entrepôt de données de gestion. Comme ce rôle a pour but de prendre en charge la résolution de problèmes en fournissant l'accès aux données historiques, les membres de ce rôle ne peuvent pas consulter les autres éléments du schéma de l'entrepôt de données de gestion.  
   
 ## <a name="see-also"></a>Voir aussi  

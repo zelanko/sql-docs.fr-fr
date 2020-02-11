@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Linear Regression algorithme | Microsoft Docs
+title: Référence technique de l’algorithme de régression linéaire Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084059"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)
@@ -34,9 +34,9 @@ ms.locfileid: "66084059"
 ### <a name="scoring-methods-and-feature-selection"></a>Résultat des méthodes et sélection des fonctionnalités  
  Tous les algorithmes d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilisent automatiquement la sélection des fonctionnalités pour améliorer l'analyse et réduire la charge de traitement. La méthode utilisée pour la sélection des fonctionnalités dans la régression linéaire est le score d'intérêt et de pertinence, car le modèle prend uniquement en charge les colonnes continues. À titre de référence, la table suivante affiche la différence dans la sélection de fonctionnalités entre l'algorithme MLR (Microsoft Linear Regression) et l'algorithme MDT (Microsoft Decision Trees).  
   
-|Algorithm|Méthode d'analyse|Commentaires|  
+|Algorithme|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
-|Régression linéaire|Score d'intérêt et de pertinence|Valeur par défaut.<br /><br /> Les autres méthodes de sélection de fonctionnalités qui sont disponibles avec l'algorithme MDT s'appliquent uniquement aux variables discrètes. Par conséquent, elles ne peuvent s'appliquer aux modèles de régression linéaire.|  
+|régression linéaire|Score d'intérêt et de pertinence|valeur par défaut.<br /><br /> Les autres méthodes de sélection de fonctionnalités qui sont disponibles avec l'algorithme MDT s'appliquent uniquement aux variables discrètes. Par conséquent, elles ne peuvent s'appliquer aux modèles de régression linéaire.|  
 |Arbres de décision|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Si des colonnes contiennent des valeurs continues non binaires, le score d'intérêt et de pertinence est utilisé pour toutes les colonnes afin de garantir la cohérence. Sinon, la méthode par défaut ou spécifiée est utilisée.|  
   
  Les paramètres d'algorithme qui contrôlent la sélection des fonctionnalités pour un modèle d'arbre de décision sont MAXIMUM_INPUT_ATTRIBUTES et MAXIMUM_OUTPUT.  
@@ -59,24 +59,24 @@ ms.locfileid: "66084059"
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique aux colonnes de structure d'exploration de données.|  
-|REGRESSOR|Indique que la colonne contient des valeurs numériques continues qui doivent être traitées comme variables indépendantes potentielles pendant l'analyse.<br /><br /> Remarque : Marquage d’une colonne comme un régresseur ne garantit pas que la colonne sera être utilisée comme régresseur dans le modèle final.<br /><br /> S'applique aux colonnes de modèle d'exploration de données.|  
+|REGRESSOR|Indique que la colonne contient des valeurs numériques continues qui doivent être traitées comme variables indépendantes potentielles pendant l'analyse.<br /><br /> Remarque : attribuer un indicateur de régresseur sur une colonne ne garantit pas que la colonne sera utilisée comme régresseur dans le modèle final.<br /><br /> S'applique aux colonnes de modèle d'exploration de données.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Régresseurs dans les modèles de régression linéaire  
  Les modèles de régression linéaire sont basés sur l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Cependant, même si vous n’utilisez pas l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression), tout modèle d’arbre de décision peut contenir un arbre ou des nœuds qui représentent une régression sur un attribut continu.  
   
- Il est inutile de spécifier qu'une colonne continue représente un régresseur. L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l’indicateur REGRESSOR sur la colonne. La différence est que lorsque vous définissez l’indicateur de modélisation, l’algorithme tente de rechercher des équations de régression de la forme un * C1 + b\*C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
+ Il est inutile de spécifier qu'une colonne continue représente un régresseur. L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) partitionne le dataset en régions avec des séquences explicites même si vous ne définissez pas l’indicateur REGRESSOR sur la colonne. La différence réside dans le fait que lorsque vous définissez l’indicateur de modélisation, l’algorithme essaie de trouver des équations de régression de la\*forme a * C1 + b C2 +... pour faire tenir les séquences dans les nœuds de l’arborescence. La somme des résiduels est calculée et, si l'écart est trop grand, l'arbre est fractionné.  
   
  Par exemple, si vous prédisez le comportement d’achat de vos clients en utilisant **Income** comme attribut et que vous définissez l’indicateur de modélisation REGRESSOR sur la colonne, l’algorithme essaie tout d’abord de faire tenir les valeurs **Income** en utilisant une formule de régression standard. Si l'écart est trop grand, la formule de régression est abandonnée et l'arbre est fractionné sur un autre attribut. L’algorithme MDT essaie ensuite de faire tenir un régresseur pour le revenu dans chacune des branches après le fractionnement.  
   
  Vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé avec les algorithmes MDT et MLR.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Un modèle de régression linéaire doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
- L’algorithme MLR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
+ L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, Cyclique, Clé, Table et Ordonné|  
 |Attribut prédictible|Continu, Cyclique et Ordonné|  
@@ -85,8 +85,8 @@ ms.locfileid: "66084059"
 >  Les types de contenu `Cyclical` et `Ordered` sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm.md)   
- [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)   
+ [Exemples de requêtes de modèle de régression linéaire](linear-regression-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

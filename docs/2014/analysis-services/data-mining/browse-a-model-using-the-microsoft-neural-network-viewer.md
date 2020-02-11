@@ -1,5 +1,5 @@
 ---
-title: Explorer un modèle à l’aide de la visionneuse de réseau neuronal de Microsoft | Microsoft Docs
+title: Parcourir un modèle à l’aide de la visionneuse de réseau neuronal Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086054"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MNN (Microsoft Neural Network)
-  La Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d'exploration de données qui sont générés avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network). L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) crée des modèles d'exploration de données de classification et de régression qui peuvent analyser plusieurs entrées et sorties, et est très utile pour les analyses et l'exploration de durée indéterminée. Pour plus d'informations sur cet algorithme, consultez [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse du réseau [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] neuronal dans affiche les modèles d’exploration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] données générés avec l’algorithme de réseau neuronal. L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) crée des modèles d'exploration de données de classification et de régression qui peuvent analyser plusieurs entrées et sorties, et est très utile pour les analyses et l'exploration de durée indéterminée. Pour plus d'informations sur cet algorithme, consultez [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
   
  Lorsque vous explorez un modèle à l'aide de la Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), vous choisissez généralement des attributs et des états cibles, puis vous utilisez la visionneuse pour voir comment les attributs d'entrée affectent le résultat  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66086054"
   
  Si vous avez besoin d'informations plus détaillées, telles que les équations qui représentent chaque modèle qui a été découvert, vous pouvez basculer les vues et utiliser la visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a> Onglets de la visionneuse  
+##  <a name="BKMK_ViewerTabs"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) fournit les onglets suivants pour explorer les modèles d'exploration de données de réseau neuronal :  
   
 -   [Entrées](#BKMK_Inputs)  
@@ -52,7 +52,7 @@ ms.locfileid: "66086054"
   
 -   [Variables](#BKMK_Characteristics)  
   
-###  <a name="BKMK_Inputs"></a> Entrées  
+###  <a name="BKMK_Inputs"></a>Port  
  Utilisez l’onglet **Entrées** pour choisir les attributs et les valeurs que le modèle a utilisé comme entrées. Par défaut, la visionneuse s'ouvre avec tous les attributs inclus. Dans cette vue par défaut, le modèle choisit les valeurs d'attribut les plus importantes pour l'affichage.  
   
  Pour sélectionner un attribut d’entrée, cliquez à l’intérieur de la colonne **Attribut** de la grille **Entrée** et sélectionnez un attribut dans la liste déroulante. (Seuls les attributs figurant dans le modèle sont inclus dans la liste.)  
@@ -61,25 +61,25 @@ ms.locfileid: "66086054"
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Outputs"></a> Sorties  
+###  <a name="BKMK_Outputs"></a>Enverra  
  Utilisez l’onglet **Sorties** pour choisir l’attribut de résultats à étudier. Vous pouvez choisir deux états quelconques de résultats à comparer, en supposant que les colonnes ont été définies comme attributs prédictibles lorsque le modèle a été créé.  
   
  Utilisez la liste **Attribut de sortie** pour sélectionner un attribut. Vous pouvez ensuite sélectionner deux états qui sont associés à l’attribut dans les listes **Valeur 1** et **Valeur 2** . Ces deux états de l’attribut de sortie seront comparés dans le volet **Variables** .  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a> Variables  
- La grille dans le **Variables** onglet contient les colonnes suivantes : **Attribut**, **valeur**, **privilèges [valeur 1]**, et **privilèges [valeur 2]**. Par défaut, les colonnes sont triées en fonction de la valeur de **Privilèges [Valeur 1]**. En cliquant sur un en-tête de colonne, vous modifiez l'ordre de tri de la colonne sélectionnée.  
+###  <a name="BKMK_Characteristics"></a>Variables  
+ La grille sous l’onglet **Variables** contient les colonnes suivantes : **Attribut**, **Valeur**, **Privilèges [Valeur 1]** et **Privilèges [Valeur 2]**. Par défaut, les colonnes sont triées en fonction de la valeur de **Privilèges [Valeur 1]**. En cliquant sur un en-tête de colonne, vous modifiez l'ordre de tri de la colonne sélectionnée.  
   
  Une barre à droite de l'attribut indique quel état de l'attribut de sortie est privilégié par l'état d'attribut d'entrée spécifié. La taille de la barre indique à quel degré l'état de sortie favorise l'état d'entrée.  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d'exploration de données](data-mining-tools.md)   
+ [Algorithme de réseau neuronal Microsoft](microsoft-neural-network-algorithm.md)   
+ [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d’exploration de données](data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)  
   
   

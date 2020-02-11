@@ -1,5 +1,5 @@
 ---
-title: Général (boîte de dialogue Restauration de base de données) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Général (boîte de dialogue restaurer la base de données) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080944"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Général (boîte de dialogue Restaurer la base de données) (Analysis Services - Données multidimensionnelles)
   La page **Général** de la boîte de dialogue **Restaurer la base de données** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permet de spécifier le fichier de sauvegarde et les paramètres généraux à utiliser lors de la restauration d'une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
+>  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
   
 > [!NOTE]  
 >  Après la restauration d'une base de données existante, l'utilisateur qui a restauré la base de données peut perdre l'accès à la base de données restaurée. Cette perte d'accès peut se produire si, au moment de la sauvegarde, l'utilisateur n'était pas un membre du rôle de serveur ou un membre du rôle de base de données avec les autorisations de contrôle total (Administrateur).  
@@ -33,7 +33,7 @@ ms.locfileid: "66080944"
 -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** d’une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou sur une base de données dans **l’Explorateur d’objets**, cliquez sur **Restaurer**puis, sous **Sélectionner une page**, cliquez sur **Général**.  
   
 ## <a name="options"></a>Options  
- **Script**  
+ **Conseils**  
  Crée un script de restauration basé sur les options sélectionnées dans la boîte de dialogue. Le script de restauration est écrit en langage de script [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (ASSL).  
   
  Par défaut, lorsque vous cliquez sur l'icône **Script** , le script de restauration est envoyé dans une nouvelle fenêtre de requête.  
@@ -60,7 +60,7 @@ ms.locfileid: "66080944"
  **Autoriser le remplacement de la base de données**  
  Sélectionnez cette option pour autoriser [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à restaurer le contenu du fichier de sauvegarde sélectionné sur les objets existants dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] choisie.  
   
- **Inclure les informations de sécurité**  
+ **Inclure des informations sur la sécurité**  
  Sélectionnez cette option pour copier les informations sur la sécurité stockées dans le fichier de sauvegarde vers la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Lorsque cette option est sélectionnée, vous pouvez choisir la quantité d'informations sur la sécurité dans la liste déroulante activée par l'option. Les options suivantes sont disponibles :  
@@ -74,8 +74,8 @@ ms.locfileid: "66080944"
  Si le fichier de sauvegarde est chiffré, tapez le mot de passe utilisé lors de son chiffrement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Restaurer la base de données &#40;Analysis Services - Données multidimensionnelles&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partitions &#40;restaurer la boîte de dialogue base de données&#41; &#40;Analysis Services - données multidimensionnelles&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Boîte de dialogue restaurer la base de données &#40;Analysis Services-données multidimensionnelles&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Boîte de dialogue partitions &#40;boîte de dialogue restaurer la base de données&#41; &#40;Analysis Services-données multidimensionnelles&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Sauvegarde et restauration de bases de données Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

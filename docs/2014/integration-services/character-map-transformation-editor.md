@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Transformation de la table de caractères | Microsoft Docs
+title: Éditeur de transformation de la table des caractères | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060981"
 ---
 # <a name="character-map-transformation-editor"></a>Éditeur de transformation de la table des caractères
@@ -36,15 +36,15 @@ ms.locfileid: "66060981"
  **Destination**  
  Indiquez si vous voulez enregistrer le résultat des opérations de chaîne sur place en utilisant la colonne existante, ou enregistrer les données modifiées sous la forme d'une nouvelle colonne.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Nouvelle colonne|Enregistre les données dans une nouvelle colonne. Définissez le nom de la colonne sous **Alias de sortie**.|  
 |Modification sur place|Enregistre les données modifiées dans la colonne existante.|  
   
- **Opération**  
+ **opération**  
  Dans la liste, sélectionnez les fonctions de chaîne à appliquer aux données de la colonne.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Minuscules|Convertit les caractères en minuscules.|  
 |Majuscules|Convertit les caractères en majuscules|  

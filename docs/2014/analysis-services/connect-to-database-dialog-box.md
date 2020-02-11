@@ -1,5 +1,5 @@
 ---
-title: Se connecter à la boîte de dialogue base de données | Microsoft Docs
+title: Boîte de dialogue se connecter à la base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087083"
 ---
 # <a name="connect-to-database-dialog-box"></a>Se connecter à la base de données (boîte de dialogue)
@@ -26,12 +26,12 @@ ms.locfileid: "66087083"
   
 |Terme|Définition|  
 |----------|----------------|  
-|**Se connecter à la base de données existante**|Sélectionnez cette option pour vous connecter à une base de données existante. Dans la liste des bases de données existantes, cliquez sur celle à laquelle vous souhaitez vous connecter.|  
-|**Créer la nouvelle base de données**|Sélectionnez cette option pour créer une base de données.|  
+|**Se connecter à une base de données existante**|Sélectionnez cette option pour vous connecter à une base de données existante. Dans la liste des bases de données existantes, cliquez sur celle à laquelle vous souhaitez vous connecter.|  
+|**Create new database**|Sélectionnez cette option pour créer une base de données.|  
 |**Ajouter à la solution**|Sélectionnez cette option pour ajouter la base de données à la solution actuelle.|  
 |**Fermer la solution**|Sélectionnez cette option pour ajouter la base de données à une nouvelle solution.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

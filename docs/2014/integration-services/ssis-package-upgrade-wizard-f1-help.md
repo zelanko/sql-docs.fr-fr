@@ -11,35 +11,35 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889362"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
-  Utilisez l’Assistant Mise à niveau de packages SSIS pour mettre à niveau [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] packages et [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] packages au format de package pour la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Utilisez l’Assistant Mise à niveau de packages [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] SSIS pour [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] mettre à niveau des packages et des packages vers le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]format de package pour la version actuelle de.  
   
- **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
+ **Pour exécuter l’Assistant Mise à niveau de packages SSIS**  
   
--   [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section contient des rubriques qui décrivent les options affichées sur les pages de l'Assistant Mise à niveau de packages SSIS :  
   
--   [Assistant de mise à niveau de SSIS &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/ssis-upgrade-wizard-ssis-package-upgrade-wizard.md)  
+-   [Assistant Mise à niveau SSIS &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/ssis-upgrade-wizard-ssis-package-upgrade-wizard.md)  
   
--   [Sélectionner l’emplacement Source &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)  
+-   [Sélectionnez l’emplacement source &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)  
   
--   [Sélectionnez l’emplacement de Destination &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/select-destination-location-ssis-package-upgrade-wizard.md)  
+-   [Sélectionner l’emplacement de destination &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/select-destination-location-ssis-package-upgrade-wizard.md)  
   
--   [Sélectionner les Options de gestion de packages &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/select-package-management-options-ssis-package-upgrade-wizard.md)  
+-   [Sélectionnez Package Management options &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/select-package-management-options-ssis-package-upgrade-wizard.md)  
   
--   [Sélectionnez les Packages &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/select-packages-ssis-package-upgrade-wizard.md)  
+-   [Sélectionnez les packages &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/select-packages-ssis-package-upgrade-wizard.md)  
   
--   [Terminez l’Assistant &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/complete-the-wizard-ssis-package-upgrade-wizard.md)  
+-   [Terminez l’Assistant &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/complete-the-wizard-ssis-package-upgrade-wizard.md)  
   
--   [La mise à niveau les Packages &#40;Assistant Mise à niveau du Package SSIS&#41;](../../2014/integration-services/upgrading-the-packages-ssis-package-upgrade-wizard.md)  
+-   [Mise à niveau des packages &#40;Assistant Mise à niveau de packages SSIS&#41;](../../2014/integration-services/upgrading-the-packages-ssis-package-upgrade-wizard.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau des packages Integration Services](install-windows/upgrade-integration-services-packages.md)  

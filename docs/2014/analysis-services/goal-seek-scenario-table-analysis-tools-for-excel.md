@@ -1,5 +1,5 @@
 ---
-title: Valeur cible scénario (outils d’analyse de Table pour Excel) | Microsoft Docs
+title: Scénario de la valeur cible (outils d’analyse de table pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080737"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Scénario Valeur cible (Outils d'analyse de table pour Excel)
-  ![Bouton de recherche d’objectif dans Outils d’analyse de Table](media/tat-goalseek.gif "valeur cible de bouton dans Outils d’analyse de Table")  
+  ![Bouton Valeur cible dans les outils d'analyse de table](media/tat-goalseek.gif "Bouton Valeur cible dans les outils d'analyse de table")  
   
- Le **valeur cible** outil de scénario est complémentaire à la [que se passe-t-il si](what-if-scenario-table-analysis-tools-for-excel.md) outil de scénario. Le **What If** outil vous indique l’impact d’une modification, tandis que le **valeur cible** outil vous indique les facteurs sous-jacents qui doivent changer pour atteindre le résultat souhaité.  
+ L’outil de scénario de la valeur **cible** est complémentaire à l’outil de scénario de [What If](what-if-scenario-table-analysis-tools-for-excel.md) . L’outil de **simulation** vous indique l’impact d’une modification, tandis que l’outil **objectif cible** vous indique les facteurs sous-jacents qui doivent changer pour obtenir le résultat souhaité.  
   
- Par exemple, supposons que votre objectif est d’augmenter la satisfaction des clients. Vous pouvez utiliser **valeur cible** analyse pour déterminer les facteurs susceptibles d’augmenter la satisfaction des clients et décider si ces modifications sont rentables.  
+ Supposons, par exemple, que votre objectif est d’augmenter la satisfaction des clients. Vous pouvez utiliser l’analyse de la recherche de l' **objectif** pour déterminer les facteurs les plus susceptibles d’augmenter la satisfaction des clients et déterminer si ces modifications sont rentables.  
   
- Lorsqu'il termine son analyse, l'outil crée deux nouvelles colonnes dans la table de données source. Ces colonnes indiquent la *probabilité* que vous pouvez obtenir le résultat visé, ainsi que la modification recommandée, le cas échéant.  
+ Lorsqu'il termine son analyse, l'outil crée deux nouvelles colonnes dans la table de données source. Ces colonnes indiquent la *probabilité* que le résultat ciblé soit atteint et la modification recommandée, le cas échéant.  
   
  L'outil peut analyser un jeu de données et élaborer des prédictions pour le jeu entier, ou vous pouvez créer l'analyse puis tester les scénarios un par un.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "66080737"
   
 1.  Ouvrez un tableau Excel.  
   
-2.  Cliquez sur **scénarios**, puis sélectionnez **valeur cible**.  
+2.  Cliquez sur **scénarios**, puis sélectionnez valeur **cible**.  
   
-3.  Dans le **analyse de scénario : La valeur cible** boîte de dialogue, sélectionnez la colonne qui contient la cible valeur dans la liste.  
+3.  Dans la boîte de dialogue **analyse de scénario :** valeur cible, sélectionnez la colonne qui contient la valeur cible dans la liste.  
   
 4.  Spécifiez la valeur à atteindre.  
   
-     Si la cible de la colonne contient des valeurs numériques continues, vous pouvez également spécifier une hausse ou une baisse souhaitée de la valeur. Par exemple, vous pouvez choisir **Sales** en tant que la colonne et spécifier que la cible est une augmentation de 120 %.  
+     Si la cible de la colonne contient des valeurs numériques continues, vous pouvez également spécifier une hausse ou une baisse souhaitée de la valeur. Par exemple, vous pouvez choisir **Sales** comme colonne et spécifier que la cible est une augmentation de 120%.  
   
      Ou, vous pouvez spécifier la cible en tant que plage de valeurs, en tapant une limite inférieure et supérieure.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "66080737"
   
 7.  Indiquez si les prédictions à effectuer doivent porter sur la table entière ou uniquement sur la ligne sélectionnée.  
   
-8.  Si vous avez sélectionné le **table entière** option, l’outil ajoute les prédictions à la table source dans les deux nouvelles colonnes.  
+8.  Si vous avez sélectionné l’option **table entière** , l’outil ajoute les prédictions à la table source dans deux nouvelles colonnes.  
   
-9. Si vous avez sélectionné l’option **sur cette ligne**, les résultats d’analyse s’affichent à la boîte de dialogue pour révision. La boîte de dialogue reste ouverte afin que vous puissiez continuer à essayer différentes valeurs et cibles.  
+9. Si vous avez sélectionné l’option **sur cette ligne**, les résultats de l’analyse sont générés dans la boîte de dialogue à des fins de vérification. La boîte de dialogue reste ouverte afin que vous puissiez continuer à essayer différentes valeurs et cibles.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Cet outil utilise l'algorithme MLR (Microsoft Logistic Regression), qui peut traiter des valeurs numériques ou discrètes.  
   
  Vous pouvez exécuter la prédiction plusieurs fois et sélectionner par la suite d'autres colonnes, mais chaque combinaison de cible et de modification doit être calculée séparément.  
@@ -77,19 +77,19 @@ ms.locfileid: "66080737"
   
 -   il crée une prédiction pour chaque valeur que vous spécifiez.  
   
- Si vous testez des scénarios de valeur cible un par un, vous pouvez consulter les résultats interactivement. Il est identique à la création d’un *requête de prédiction singleton*.  
+ Si vous testez des scénarios de valeur cible un par un, vous pouvez consulter les résultats interactivement. Cela revient à créer une requête de *prédiction Singleton*.  
   
- L’outil de rapports dans le **résultats** volet de la boîte de dialogue zone si elle a réussi à trouver un scénario qui correspond à l’objectif souhaité. S'il trouve une solution adéquate, il émet une recommandation qui indique le changement requis. Par exemple, le **valeur cible** outil peut vous indiquer que la distance domicile-travail doit être inférieure à 5 miles.  
+ L’outil génère un rapport dans le volet des **résultats** de la boîte de dialogue s’il a réussi à trouver un scénario qui atteint l’objectif souhaité. S'il trouve une solution adéquate, il émet une recommandation qui indique le changement requis. Par exemple, l’outil valeur **cible** peut vous indiquer que la distance de trajet doit être inférieure à 5 kilomètres.  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
- **Valeur cible pour désir d’achat a trouvé une solution.**  
+ **La valeur cible pour Désir d'achat a trouvé une solution.**  
   
- **Correspondance la plus proche obtenue en remplaçant 'Distance domicile-travail' miles' ' 2-5.**  
+ **La correspondance la plus proche obtenue en remplaçant 'distance domicile-travail' par '3-8 km'.**  
   
  Ce résultat repose sur une ligne existante de la table de données. Autrement dit, si les données concernant un client lambda n'ont pas changé mais que sa distance domicile-travail a été ramenée à 3-8 km, le client sera, dans une certaine mesure, plus enclin à acheter une bicyclette.  
   
- Si vous créez des prédictions de recherche d’objectif pour toutes les lignes dans le tableau Excel en spécifiant **table entière**, thetool crée deux nouvelles colonnes dans la table de données d’origine. Dans la première colonne ajoutée à la table figure soit un cercle vert avec une coche pour indiquer que la cible a peut être atteinte, soit un cercle rouge avec un X pour indiquer qu'aucune modification permettant d'atteindre la cible ne peut être effectuée.  
+ Si vous créez des prédictions de recherche d’objectif pour toutes les lignes de la table Excel en spécifiant la **table entière**, theTool crée deux nouvelles colonnes dans la table de données d’origine. Dans la première colonne ajoutée à la table figure soit un cercle vert avec une coche pour indiquer que la cible a peut être atteinte, soit un cercle rouge avec un X pour indiquer qu'aucune modification permettant d'atteindre la cible ne peut être effectuée.  
   
  La deuxième colonne contient la modification recommandée.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "66080737"
 ## <a name="related-tools"></a>Outils connexes  
  Le client d'exploration de données pour Excel, un complément séparé qui fournit des fonctionnalités d'exploration de données plus avancées, comprend des Assistants pour créer des modèles d'exploration de données qui prédisent le comportement. Pour plus d’informations, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).  
   
- Pour plus d’informations sur l’algorithme utilisé par le **valeur cible** scénario outil, consultez la rubrique « Algorithme de régression logistique Microsoft » dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la documentation en ligne.  
+ Pour plus d’informations sur l’algorithme utilisé par l’outil de scénario de la valeur **cible** , consultez la rubrique « algorithme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de régression logistique Microsoft » dans la documentation en ligne de.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d’analyse de table pour Excel](table-analysis-tools-for-excel.md)  
+ [Outils d'analyse de table pour Excel](table-analysis-tools-for-excel.md)  
   
   

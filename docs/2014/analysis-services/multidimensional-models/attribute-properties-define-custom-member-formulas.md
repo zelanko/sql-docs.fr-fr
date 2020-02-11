@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077282"
 ---
 # <a name="define-custom-member-formulas"></a>Définir des formules de membre personnalisées
@@ -29,7 +29,7 @@ ms.locfileid: "66077282"
   
  La propriété `CustomRollupColumn` d'un attribut spécifie la colonne qui contient les formules de membre personnalisées pour les membres de l'attribut. Si une ligne de la colonne est vide, la valeur de la cellule pour le membre est retournée normalement. Si la formule figurant dans la colonne n'est pas valide, une erreur se produit au moment de l'exécution chaque fois qu'une valeur de cellule utilisant le membre est extraite.  
   
- Avant de spécifier des formules de membre personnalisées pour un attribut, assurez-vous que la table de dimension contenant l'attribut, ou une table qui lui est directement associée, contient une colonne de chaîne pour stocker les formules de membre personnalisées. Si c’est le cas, vous pouvez soit définir le `CustomRollupColumn` propriété sur un attribut manuellement ou utiliser l’amélioration de définir une formule de membre personnalisée de l’Assistant Business Intelligence pour activer une formule de membre personnalisée sur un attribut. Pour plus d’informations sur la façon d’utiliser cette amélioration, consultez [Définir des formules de membre personnalisées pour les attributs d’une dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
+ Avant de spécifier des formules de membre personnalisées pour un attribut, assurez-vous que la table de dimension contenant l'attribut, ou une table qui lui est directement associée, contient une colonne de chaîne pour stocker les formules de membre personnalisées. Si c’est le cas, vous pouvez soit définir manuellement `CustomRollupColumn` la propriété sur un attribut, soit utiliser l’amélioration définir la formule de membre personnalisée de l’Assistant Business Intelligence pour activer une formule de membre personnalisée sur un attribut. Pour plus d’informations sur la façon d’utiliser cette amélioration, consultez [Définir des formules de membre personnalisées pour les attributs d’une dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## <a name="evaluating-custom-member-formulas"></a>Évaluation des formules de membre personnalisées  
  Les formules de membre personnalisées sont différentes des membres calculés. Les formules de membre personnalisées s'appliquent à des membres qui existent dans des tables de dimension et fournissent seulement la valeur du membre. Pour leur part, les membres calculés ne sont pas stockés dans des tables de dimension, et les expressions de membre calculé définissent les données et les métadonnées de membres supplémentaires inclus dans une dimension ou une hiérarchie.  
@@ -38,23 +38,23 @@ ms.locfileid: "66077282"
   
 -   2003: 2100  
   
-    -   Trimestre 1 : 700  
+    -   Quarter 1: 700  
   
-    -   2e trimestre : 500  
+    -   Quarter 2: 500  
   
-    -   Trimestre 3 : 100  
+    -   Quarter 3: 100  
   
-    -   Trimestre 4 : 800  
+    -   Quarter 4: 800  
   
 -   2004: 1500  
   
-    -   Trimestre 1 : 600  
+    -   Quarter 1: 600  
   
-    -   2e trimestre : 200  
+    -   Quarter 2: 200  
   
-    -   Trimestre 3 : 300  
+    -   Quarter 3: 300  
   
-    -   Trimestre 4 : 400  
+    -   Quarter 4 : 400  
   
  Avec une formule de membre personnalisée, la valeur du membre est fournie par la formule de cumul personnalisée. Par exemple, la formule de membre personnalisée suivante permet de fournir 450 comme valeur du membre Quarter 4 enfant du membre 2004 dans la dimension Time.  
   
@@ -72,7 +72,7 @@ Time.[Quarter 3] * 1.5
  Si vous utilisez des membres calculés ainsi que des formules de cumul personnalisées pour les membres d'un attribut, vous devez être conscient de l'ordre d'évaluation. Les membres calculés sont résolus avant les formules de cumul personnalisées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d'attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Définir des formules de membre personnalisées pour les attributs d’une dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

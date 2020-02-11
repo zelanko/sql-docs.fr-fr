@@ -1,5 +1,5 @@
 ---
-title: Filtre de modèle de règles d’une règle dans une Association | Microsoft Docs
+title: Filtrer une règle dans un modèle de règles d’association | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084412"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrer une règle dans un modèle de règles d'association
@@ -43,7 +43,7 @@ ms.locfileid: "66084412"
   
 5.  Pour **Importance minimale**, augmentez la valeur d'importance afin de voir moins de règles ou réduisez cette valeur afin de voir davantage de règles.  
   
-6.  Pour **afficher**, sélectionnez une des options suivantes : **Afficher le nom de l’attribut et valeur**, **afficher uniquement le nom attribut**, ou **afficher la valeur de l’attribut uniquement**.  
+6.  Pour **Afficher**, sélectionnez l'une des options suivantes : **Afficher le nom et la valeur de l'attribut**, **Afficher le nom de l'attribut uniquement**ou **Afficher la valeur de l'attribut uniquement**.  
   
 7.  Pour **Lignes au maximum**, augmentez la valeur afin d'augmenter le nombre total de règles répondant aux conditions spécifiées ou réduisez la valeur afin de limiter le nombre de règles retournées. Les règles sont classées par ordre de probabilité ; par conséquent, vous risquez d'éliminer des règles supplémentaires qui répondent aux conditions spécifiées pour la probabilité ou l'importance.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66084412"
   
 ### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Créer une requête sur les jeux d'éléments dans un modèle d'association  
   
--   [Exemples de requêtes de modèle d’association](association-model-query-examples.md)  
+-   [Exemples de requêtes de modèle d'association](association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Parcourir un modèle à l’aide de la visionneuse des règles d’association Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Leçon 3 : création d’un scénario de panier de marché &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

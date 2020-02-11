@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914511"
 ---
-# <a name="mssqlserver33128"></a>MSSQLSERVER_33128
+# <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|33128|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|33128|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SEC_DEPRECATED_ALGO|  
 |Texte du message|Échec du chiffrement. La clé utilise l'algorithme déconseillé « %.*ls » qui n'est plus pris en charge.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62914511"
 > [!NOTE]  
 >  La mémoire tampon en anneau est un composant interne qui n'est pas entièrement documenté et qui n'est pas conçu pour être utilisé par les clients. Les messages de la mémoire tampon en anneau sont utiles lorsque vous contactez le support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Pour afficher la mémoire tampon en anneau, interrogez la vue de gestion dynamique sys.dm_os_ring_buffers.  
   
-|État|Description|  
+|State|Description|  
 |-----------|-----------------|  
 |1|Une clé RC4 est utilisée dans la fonction intégrée encryptbykey(). La fonction intégrée retourne NULL. Ce message apparaît uniquement dans la mémoire tampon en anneau.|  
 |2|Une clé RC4 est utilisée par la fonction intégrée decryptbykey(). Ce message apparaît uniquement dans la mémoire tampon en anneau.|  

@@ -1,5 +1,5 @@
 ---
-title: Références techniques relatives aux algorithmes de Clustering Microsoft | Microsoft Docs
+title: Informations techniques de référence sur l’algorithme de clustering Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084032"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme de gestion de clusters Microsoft
@@ -35,7 +35,7 @@ ms.locfileid: "66084032"
   
  Pour plus d'informations sur l'utilisation des modèles de clustering, consultez les rubriques suivantes :  
   
--   [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66084032"
   
  Pour obtenir un rapport technique qui décrit l’implémentation de la méthode EM dans l’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] , consultez [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964).  
   
-### <a name="k-means-clustering"></a>Clustering K-means  
+### <a name="k-means-clustering"></a>Clustering k-moyennes  
  Le clustering K-means est une méthode bien connue d'attribution de l'appartenance au cluster qui repose sur la minimisation des différences entre les éléments d'un cluster et la maximisation de la distance entre les clusters. Le terme « means » dans K-means fait référence au *centroïde* du cluster, c’est-à-dire un point de données choisi arbitrairement puis affiné de manière itérative jusqu’à ce qu’il représente la moyenne vraie de tous les points de données dans le cluster. La lettre « k » fait référence au nombre arbitraire de points qui sont utilisés pour ensemencer le processus de clustering. L'algorithme K-means calcule les distances euclidiennes au carré entre les enregistrements de données dans un cluster et le vecteur qui représente la moyenne du cluster, puis converge vers un jeu final de k clusters lorsque cette somme atteint sa valeur minimale.  
   
  L'algorithme K-means attribue chaque point de données à un seul cluster et n'accepte pas l'incertitude de l'appartenance. L'appartenance dans un cluster est exprimée sous forme d'une distance par rapport au centroïde.  
@@ -77,7 +77,7 @@ ms.locfileid: "66084032"
 > [!NOTE]  
 >  L'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] n'expose pas la fonction de distance utilisée pour calculer K-means, et les mesures de distance ne sont pas disponibles dans le modèle terminé. Toutefois, vous pouvez utiliser une fonction de prédiction pour retourner une valeur qui correspond à la distance, celle-ci étant calculée comme la probabilité d'appartenance d'un point de données au cluster. Pour plus d’informations, consultez [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx).  
   
- L'algorithme K-means offre deux méthodes d'échantillonnage du jeu de données : K-means non évolutif et K-means évolutif. La première charge le jeu de données entier et fait un passage de clustering. Dans la seconde, l'algorithme utilise les 50 000 premiers cas et ne lit davantage de cas que s'il a besoin de données supplémentaires pour trouver un modèle adapté aux données.  
+ L'algorithme K-means offre deux méthodes d'échantillonnage du jeu de données : K-means non évolutif et K-means évolutif. La première charge le jeu de données entier et fait un passage de clustering. Dans la seconde, l'algorithme utilise les 50 000 premiers cas et ne lit davantage de cas que s'il a besoin de données supplémentaires pour trouver un modèle adapté aux données.  
   
 ### <a name="updates-to-the-microsoft-clustering-algorithm-in-sql-server-2008"></a>Mises à jour apportées à l'algorithme de gestion de clusters Microsoft dans SQL Server 2008  
  Dans SQL Server 2008, la configuration par défaut de l’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] a été modifiée de façon à utiliser le paramètre interne, NORMALIZATION = 1. La normalisation est effectuée à l'aide de statistiques z-score et suppose une distribution normale. La finalité de cette modification du comportement par défaut est de réduire l'effet d'attributs susceptibles de présenter des grandeurs importantes et de nombreuses valeurs hors norme. Toutefois, la normalisation z-score peut modifier les résultats du clustering sur les distributions qui ne sont pas normales (loi uniforme, par exemple). Pour empêcher la normalisation et obtenir le même comportement que l’algorithme de gestion de clusters K-means de SQL Server 2005, vous pouvez utiliser la boîte de dialogue **Paramètres** pour ajouter le paramètre personnalisé, NORMALIZATION, et lui affecter la valeur 0.  
@@ -94,7 +94,7 @@ ms.locfileid: "66084032"
  CLUSTERING_METHOD  
  Spécifie la méthode de clustering que doit utiliser l'algorithme. Les méthodes de clustering disponibles sont les suivantes :  
   
-|ID|Méthode|  
+|id|Méthode|  
 |--------|------------|  
 |1|EM évolutif|  
 |2|EM non évolutif|  
@@ -106,7 +106,7 @@ ms.locfileid: "66084032"
  CLUSTER_COUNT  
  Spécifie le nombre approximatif de clusters que l'algorithme doit générer. S'il est impossible de générer ce nombre approximatif de clusters à partir des données, l'algorithme génère autant de clusters que possible. Si le paramètre CLUSTER_COUNT est défini à 0, l'algorithme utilise des valeurs heuristiques pour déterminer de manière optimale le nombre de clusters à générer.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est de 10.  
   
  CLUSTER_SEED  
  Spécifie la valeur de départ utilisée pour générer de façon aléatoire des clusters pour le stade initial de construction d'un modèle.  
@@ -130,12 +130,12 @@ ms.locfileid: "66084032"
   
  Le fait de réduire le nombre de modèles candidats peut améliorer les performances au risque de laisser passer quelques bons modèles candidats.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est de 10.  
   
  STOPPING_TOLERANCE  
  Spécifie la valeur utilisée pour déterminer quand une convergence est atteinte et quand l'algorithme a terminé la construction du modèle. La convergence est atteinte lorsque le changement global dans les probabilités de clusters est inférieur au rapport du paramètre STOPPING_TOLERANCE divisé par la taille du modèle.  
   
- La valeur par défaut est 10.  
+ La valeur par défaut est de 10.  
   
  SAMPLE_SIZE  
  Spécifie le nombre de cas que l'algorithme utilise à chaque passage si l'une des méthodes de clustering évolutif est définie pour le paramètre CLUSTERING_METHOD. Si la valeur 0 est attribuée au paramètre SAMPLE_SIZE, le jeu de données complet est organisé en clusters en un seul passage. Le chargement du dataset entier en un seul passage peut provoquer des problèmes de mémoire et de performances.  
@@ -154,23 +154,23 @@ ms.locfileid: "66084032"
   
  Le fait d'augmenter le nombre d'états peut nuire considérablement aux performances.  
   
- La valeur par défaut est 100.  
+ La valeur par défaut est 100.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  L'algorithme prend en charge les indicateurs de modélisation suivants. Vous définissez des indicateurs de modélisation lorsque vous créez la structure d'exploration de données ou le modèle d'exploration de données. Les indicateurs de modélisation spécifient le mode de traitement des valeurs dans chaque colonne pendant l'analyse.  
   
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|La colonne sera considérée comme ayant deux états possibles : Manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
+|MODEL_EXISTENCE_ONLY|La colonne sera considérée comme ayant deux états possibles : manquante et existante. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|La colonne ne peut pas contenir de valeur NULL. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Un modèle de clustering doit contenir une colonne clé et des colonnes d'entrée. Vous pouvez également définir les colonnes d'entrée comme prédictibles. Les colonnes ayant la valeur `Predict Only` ne sont pas utilisées pour générer des clusters. La distribution de ces valeurs dans les clusters est calculée après la création des clusters.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, cyclique, discret, discrétisé, clé, table, trié|  
 |Attribut prédictible|Continu, cyclique, discret, discrétisé, table, trié|  
@@ -179,8 +179,8 @@ ms.locfileid: "66084032"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm.md)   
+ [Algorithme de clustering Microsoft](microsoft-clustering-algorithm.md)   
  [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

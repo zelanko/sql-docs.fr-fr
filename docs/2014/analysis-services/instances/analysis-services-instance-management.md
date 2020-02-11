@@ -1,5 +1,5 @@
 ---
-title: Gestion de l’Instance Analysis Services | Microsoft Docs
+title: Gestion des instances de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080349"
 ---
 # <a name="analysis-services-instance-management"></a>Gestion d'instances Analysis Services
@@ -40,23 +40,23 @@ ms.locfileid: "66080349"
  En règle générale, la plupart des tâches d'administration que vous devez effectuer ne varient pas au niveau du mode. En tant qu'administrateur système d'Analysis Services, vous pouvez utiliser les mêmes procédures et scripts pour gérer une instance d'Analysis Services sur votre réseau, quelle que soit la manière dont elle a été installée.  
   
 > [!NOTE]  
->  PowerPivot pour SharePoint constitue toutefois une exception. L'administration de serveur d'un déploiement PowerPivot s'effectue toujours dans le contexte d'une batterie de serveurs SharePoint. PowerPivot diffère des autres modes serveur en ceci qu'il est toujours à instance unique et est toujours géré via l'Administration centrale de SharePoint ou l'outil de configuration de PowerPivot. Bien qu'il soit possible de se connecter à PowerPivot pour SharePoint dans SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cette méthode est déconseillée. Une batterie de serveurs SharePoint inclut l'infrastructure qui synchronise l'état du serveur et surveille la disponibilité du serveur. L'utilisation d'autres outils peut interférer avec ces opérations. Pour plus d’informations sur l’administration de serveur PowerPivot, consultez [PowerPivot pour SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  PowerPivot pour SharePoint constitue toutefois une exception. L'administration de serveur d'un déploiement PowerPivot s'effectue toujours dans le contexte d'une batterie de serveurs SharePoint. PowerPivot diffère des autres modes serveur en ceci qu'il est toujours à instance unique et est toujours géré via l'Administration centrale de SharePoint ou l'outil de configuration de PowerPivot. Bien qu'il soit possible de se connecter à PowerPivot pour SharePoint dans SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cette méthode est déconseillée. Une batterie de serveurs SharePoint inclut l'infrastructure qui synchronise l'état du serveur et surveille la disponibilité du serveur. L'utilisation d'autres outils peut interférer avec ces opérations. Pour plus d’informations sur l’administration du serveur PowerPivot, consultez [PowerPivot pour SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
 |Lien|Description de la tâche|  
 |----------|----------------------|  
-|[Configuration consécutive à l’installation &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Décrit les tâches obligatoires et facultatives qui complètent ou modifient une installation d'Analysis.|  
+|[&#40;de configuration postérieures à l’installation Analysis Services&#41;](post-install-configuration-analysis-services.md)|Décrit les tâches obligatoires et facultatives qui complètent ou modifient une installation d'Analysis.|  
 |[Se connecter à Analysis Services](connect-to-analysis-services.md)|Décrit les propriétés des chaînes de connexion, les bibliothèques clientes, les méthodologies d'authentification, ainsi que les étapes requises pour établir ou désactiver des connexions.|  
 |[Analyser une instance Analysis Services](monitor-an-analysis-services-instance.md)|Décrit les outils et techniques permettant de surveiller une instance de serveur, notamment l'utilisation de l'Analyseur de performances et de SQL Server Profiler.|  
-|[Tâches d'administration à l'aide de scripts dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explique comment automatiser de nombreuses tâches d'administration, notamment le traitement.|  
+|[Écrire des scripts pour les tâches d’administration dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explique comment automatiser de nombreuses tâches d'administration, notamment le traitement.|  
 |[Scénarios de globalisation pour données multidimensionnelles Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Explique la prise en charge linguistique et du classement, décrit les étapes permettant de modifier les deux propriétés et fournit des conseils pour définir et tester les comportements de langue et de classement.|  
-|[Enregistrer les opérations dans Analysis Services](log-operations-in-analysis-services.md)|Décrit les journaux et explique comment les configurer.|  
+|[Opérations de journalisation dans Analysis Services](log-operations-in-analysis-services.md)|Décrit les journaux et explique comment les configurer.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [Outils de Configuration de PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [Administration de serveur PowerPivot et de Configuration dans l’Administration centrale](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Outils de configuration de PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [Administration et configuration du serveur PowerPivot dans l’administration centrale](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Déterminer le mode serveur d’une instance de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

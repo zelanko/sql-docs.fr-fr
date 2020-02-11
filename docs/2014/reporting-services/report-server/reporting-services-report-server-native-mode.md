@@ -15,30 +15,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103310"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Serveur de rapports Reporting Services (mode natif)
   Un serveur de rapports configuré en mode natif s’exécute comme un serveur d’applications qui fournit toutes les fonctions de traitement et de gestion exclusivement par le biais de composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Vous pouvez utiliser soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , soit le Gestionnaire de rapports pour gérer des rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer un serveur de rapports en mode natif.  
+ Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou gestionnaire de rapports pour gérer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] les rapports. Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer un serveur de rapports en mode natif.  
   
  Si le serveur de rapports est configuré pour le mode SharePoint, vous devez utiliser les pages de gestion du contenu du site SharePoint pour gérer les rapports, les sources de données partagées et les autres éléments du serveur de rapports.  
   
  Cette rubrique contient les informations suivantes :  
   
--   [Récapitulatif du mode natif](#bkmk_sum)  
+-   [Résumé du mode natif](#bkmk_sum)  
   
 -   [Gestion du contenu](#bkmk_managecontent)  
   
--   [Sécurisation et gestion d'une ressource](#bkmk_manageresources)  
+-   [Sécurisation et gestion d’une ressource](#bkmk_manageresources)  
   
--   [Référencement d'une ressource image à partir d'un rapport](#bkmk_referenceimage)  
+-   [Référencement d’une ressource image à partir d’un rapport](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> Récapitulatif du mode natif  
+##  <a name="bkmk_sum"></a>Résumé du mode natif  
  Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif comprend plusieurs fonctionnalités côté serveur à gérer et à entretenir. Les fonctionnalités du serveur incluent les suivantes :  
   
 -   Le service web Report Server qui s'exécute au sein du service Report Server.  
@@ -55,7 +55,7 @@ ms.locfileid: "66103310"
   
 -   Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur un contrôleur de domaine, vous devez être administrateur de domaine.  
   
-##  <a name="bkmk_managecontent"></a> Gestion du contenu  
+##  <a name="bkmk_managecontent"></a>Gestion du contenu  
  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des rapports, des modèles, des dossiers, des ressources et des sources de données partagées. Tous ces éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu.  
   
 > [!NOTE]  
@@ -77,11 +77,12 @@ ms.locfileid: "66103310"
   
 -   Équilibrage des demandes de traitement de rapports adressées au serveur en planifiant le traitement des rapports, et en indiquant ceux qui peuvent être exécutés à la demande et ceux qui sont chargés à partir du cache.  
   
- Autorisation d’effectuer des tâches de gestion sont fournies via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués. Pour plus d’informations sur ces rôles prédéfinis, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
+ L'autorisation d'effectuer des tâches de gestion est accordée via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués. Pour plus d’informations sur ces rôles prédéfinis, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
- Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le gestionnaire de rapports. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le Gestionnaire de rapports permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports.  
+ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le gestionnaire de rapports. 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le Gestionnaire de rapports permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports.  
   
-##  <a name="bkmk_manageresources"></a> Sécurisation et gestion d'une ressource  
+##  <a name="bkmk_manageresources"></a>Sécurisation et gestion d’une ressource  
  Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier.  
   
  Pour ajouter une ressource à un serveur de rapports, vous devez télécharger ou publier un fichier :  
@@ -89,7 +90,7 @@ ms.locfileid: "66103310"
 |Opération|Type de fichier|  
 |---------------|---------------|  
 |Télécharger|Tous les fichiers sont téléchargés en tant que ressources, sauf les fichiers de définitions de rapports (.rdl) et les fichiers de modèles de rapports (.smdl).<br /><br /> Pour télécharger une ressource, vous devez utiliser le Gestionnaire de rapports si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [Charger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../reports/upload-a-file-or-report-report-manager.md) ou [Charger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
-|Publier|Tous les fichiers d'un projet sont téléchargés en tant que ressources, sauf les fichiers de source de données .rdl, .smdl et .rds. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
+|Publish|Tous les fichiers d'un projet sont téléchargés en tant que ressources, sauf les fichiers de source de données .rdl, .smdl et .rds. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
   
  Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. À l'exception de la limitation de la taille de fichier par défaut à 4 mégaoctets, imposée par ASP.NET, il n'y a pas de restrictions sur les types de fichiers que vous pouvez télécharger. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  
   
@@ -97,7 +98,7 @@ ms.locfileid: "66103310"
   
  Les ressources coexistent avec les rapports, les sources de données partagées, les planifications partagées et les dossiers en tant qu'éléments nommés dans l'arborescence des dossiers du serveur de rapports. Vous pouvez rechercher, afficher, sécuriser et définir des propriétés sur les ressources à l'instar de n'importe quel autre élément stocké sur un serveur de rapports. Pour afficher ou gérer une ressource, vous devez disposer des tâches Afficher les ressources ou Gérer les ressources dans le rôle qui vous est attribué.  
   
-##  <a name="bkmk_referenceimage"></a> Référencement d'une ressource image à partir d'un rapport  
+##  <a name="bkmk_referenceimage"></a>Référencement d’une ressource image à partir d’un rapport  
  Les ressources peuvent contenir une image que vous référencez dans un rapport. Si les spécifications d'un rapport incluent l'utilisation d'images externes, prenez en considération les avantages suivants liés au stockage de l'image en tant que ressource :  
   
 -   Stockage centralisé dans la base de données du serveur de rapports. Si vous déplacez la base de données du serveur de rapports et son contenu vers un autre ordinateur, l'image externe reste avec le rapport. Vous n'avez pas à effectuer le suivi des fichiers image stockés sur les disques de différents ordinateurs.  

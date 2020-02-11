@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e3d2a420529778584b9e187550772a112d459c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867963"
 ---
-# <a name="mssqlserver5229"></a>MSSQLSERVER_5229
+# <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|5229|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|5229|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, unité d’allocation ID A_ID (type TYPE) contient une colonne « antimatière », mais n’est pas un index non cluster.|  
+|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) ; il existe une colonne « anti-matière », mais il ne s'agit pas d'un index non cluster.|  
   
 ## <a name="explanation"></a>Explication  
  Un segment de mémoire ou un index cluster contient une colonne « antimatière » alors qu'il ne devrait pas.  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856512"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Afficher la définition d'une procédure stockée
@@ -28,7 +28,7 @@ ms.locfileid: "62856512"
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour afficher la définition d’une procédure, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher la définition d'une procédure, à l'aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62856512"
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure, puis développez **Programmabilité**.  
   
-3.  Développez **Stored Procedures**, avec le bouton droit de la procédure, puis cliquez sur **procédure stockée de Script en tant que**, puis cliquez sur une des opérations suivantes : **Créer à**, **Alter To**, ou **supprimer et créer dans**.  
+3.  Développez **Procédures stockées**, cliquez avec le bouton de droite sur la procédure, puis cliquez sur **Script de procédure stockée en tant que**, puis cliquez sur l'une des options suivantes : **Créer dans**, **Modifier dans** ou **Déposer et créer dans**.  
   
-4.  Sélectionnez **Nouvelle fenêtre d'éditeur de requête**. Cette action affiche la définition de la procédure.  
+4.  Sélectionnez **Nouvelle fenêtre d’éditeur de requête**. Cette action affiche la définition de la procédure.  
   
 ###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour afficher la définition d'une procédure dans l'éditeur de requête**  

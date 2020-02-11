@@ -19,14 +19,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875082"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
-  Cette rubrique explique comment afficher ou modifier le mode de récupération d'une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un *mode de récupération* est une propriété de base de données qui contrôle la façon dont les transactions sont journalisées, précise si le journal des transactions nécessite (et permet) une sauvegarde et spécifie les types d'opérations de restauration disponibles. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. En règle générale, une base de données utilise le mode de restauration complète ou le mode de récupération simple. Il est possible de modifier le mode de récupération d'une base de données à tout moment. La base de données **model** définit le mode de récupération par défaut des nouvelles bases de données.  
+  Cette rubrique explique comment afficher ou modifier le mode de récupération d'une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un *mode de récupération* est une propriété de base de données qui contrôle la façon dont les transactions sont journalisées, précise si le journal des transactions nécessite (et permet) une sauvegarde et spécifie les types d’opérations de restauration disponibles. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. En règle générale, une base de données utilise le mode de restauration complète ou le mode de récupération simple. Il est possible de modifier le mode de récupération d'une base de données à tout moment. La base de données **model** définit le mode de récupération par défaut des nouvelles bases de données.  
   
  **Dans cette rubrique**  
   
@@ -36,13 +36,13 @@ ms.locfileid: "62875082"
   
      [Sécurité](#Security)  
   
--   **Pour afficher ou modifier le mode de récupération d’une base de données, à l’aide de :**  
+-   **Pour afficher ou modifier le mode de récupération d'une base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Recommandations de suivi :**  [Après avoir modifié le mode de récupération](#FollowUp)  
+-   **Recommandations de suivi :**  [après avoir modifié le mode de récupération](#FollowUp)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -117,9 +117,9 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recommandations de suivi : Après avoir modifié le mode de récupération  
+##  <a name="FollowUp"></a>Recommandations de suivi : après avoir modifié le mode de récupération  
   
--   **Après un changement de mode de récupération complète ou de mode de récupération utilisant les journaux de transactions**  
+-   **Après le basculement entre les modes de récupération complète et de récupération utilisant les journaux de transactions**  
   
     -   Repassez immédiatement en mode de récupération complète après avoir effectué les opérations en bloc.  
   
@@ -128,7 +128,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!NOTE]  
         >  Votre stratégie de sauvegarde ne change pas : continuez à effectuer régulièrement des sauvegardes des bases de données, des sauvegardes des journaux et des sauvegardes différentielles.  
   
--   **Après basculement à partir du mode de récupération simple**  
+-   **Après le basculement à partir du mode de récupération simple**  
   
     -   Aussitôt après être passé en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions, procédez à une sauvegarde de base de données complète ou différentielle pour lancer la séquence de journaux.  
   
@@ -140,7 +140,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!IMPORTANT]  
         >  Si vous ne sauvegardez pas assez souvent le journal, il est susceptible de s'étendre jusqu'à manquer de l'espace disque nécessaire.  
   
--   **Après basculement en mode de récupération simple**  
+-   **Après basculement vers le mode de récupération simple**  
   
     -   Mettez fin à tous les travaux planifiés afin de sauvegarder le journal des transactions.  
   
@@ -154,17 +154,17 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Créer un travail](../../ssms/agent/create-a-job.md)  
   
--   [Activer ou désactiver un travail](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Plans de maintenance de base de données](../maintenance-plans/maintenance-plans.md) (dans la documentation en ligne de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
+-   [Plans de maintenance de base de données](../maintenance-plans/maintenance-plans.md) (dans [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] la documentation en ligne)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modes de récupération &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Journal des transactions &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [Modes de récupération &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

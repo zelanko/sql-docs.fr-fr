@@ -1,5 +1,5 @@
 ---
-title: Volet (vue prévision de modèle d’exploration de données) de conception | Microsoft Docs
+title: Volet de conception (vue prévision de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081848"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Volet Conception (vue Prévision de modèle d'exploration de données)
@@ -29,37 +29,37 @@ ms.locfileid: "66081848"
 > [!NOTE]  
 >  Si vous apportez des modifications manuelles à la requête, vous perdez les modifications lorsque vous repassez en mode Conception. Pour enregistrer la requête DMX, vous pouvez copier celle-ci vers le Presse-papiers Windows puis la coller dans un fichier texte.  
   
- **Pour plus d’informations :** [Requêtes d’exploration de données](data-mining/data-mining-queries.md)  
+ **Pour plus d’informations : requêtes d'** [exploration de données](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Options  
- **Basculez vers l’affichage des résultats de requête**  
- Sélectionnez cette option pour basculer entre les volets **Conception**, **Requête**et **Résultat** . Lorsque vous basculez vers le volet **Résultat** , la requête est exécutée.  
+ **Basculer vers l'affichage du résultat de la requête**  
+ Cliquez pour basculer entre les volets **Conception**, **Requête**et **Résultat** . Lorsque vous basculez vers le volet **Résultat** , la requête est exécutée.  
   
- **Enregistrer le résultat de requête**  
+ **Enregistrer le résultat de la requête**  
  Ouvre la boîte de dialogue **Enregistrer le résultat de la requête d’exploration de données** .  
   
  **Requête singleton**  
  Permet la création d'une requête singleton, dans laquelle vous pouvez fournir directement des valeurs pour la requête au lieu d'une table comme source des données connues. Le tableau **Sélectionner une ou plusieurs tables d’entrée** est remplacé par un tableau **Entrée de requête singleton** .  
   
- **Actualiser les résultats de requête**  
+ **Actualiser les résultats de la requête**  
  Traite une nouvelle fois la requête de prévision. Cette option est activée uniquement dans le volet **Résultat** .  
   
- **Modèle d'exploration de données**  
+ **Modèle d’exploration de données**  
  Choisissez le modèle d'exploration de données sur lequel vous souhaitez baser vos prévisions.  
   
  **Sélectionner un modèle**  
  Ouvre la boîte de dialogue **Sélectionnez un modèle d’exploration de données** .  
   
- **Sélectionnez une ou plusieurs tables d’entrée**  
+ **Sélectionner une ou plusieurs tables d'entrée**  
  Affiche les tables d'entrée sélectionnées qui contiennent les données connues sur lesquelles baser les prévisions.  
   
- **Supprimer la Table**  
+ **Supprimer la table**  
  Supprime la table sélectionnée. Ce bouton est désactivé si aucune table n'a été sélectionnée ou si elle n'existe pas.  
   
- **Sélectionnez la Table de cas**  
+ **Sélectionner la table de cas**  
  Ouvre la boîte de dialogue **Sélectionner une table** . Ce bouton s'affiche uniquement si aucune table de cas n'a été sélectionnée.  
   
- **Sélectionner la Table imbriquée**  
+ **Sélectionner la table imbriquée**  
  Ouvre la boîte de dialogue **Sélectionner une table** . Ce bouton s'affiche uniquement si une table de cas a été sélectionnée. Si la structure d'exploration de données associée ne contient pas de table imbriquée, ce bouton est désactivé.  
   
  **Modifier la jointure**  
@@ -68,9 +68,9 @@ ms.locfileid: "66081848"
  **Entrée de requête singleton**  
  Cette option est activée quand vous sélectionnez le bouton **Requête singleton** . Elle contient les colonnes suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Colonne du modèle d’exploration de données**|Affiche la liste des colonnes du modèle d’exploration de données sélectionné dans la table **Modèle d’exploration de données** .|  
+|**Colonne du modèle d'exploration de données**|Affiche la liste des colonnes du modèle d’exploration de données sélectionné dans la table **Modèle d’exploration de données** .|  
 |**Valeur**|Sélectionnez une valeur dans la liste qui contient tous les états possibles de la colonne du modèle d'exploration de données sélectionné.<br /><br /> Si la colonne est une colonne de table imbriquée, la boîte de dialogue **Entrée de la table imbriquée** s’ouvre quand vous cliquez dans la cellule de la valeur.|  
   
  **Source**  
@@ -78,21 +78,21 @@ ms.locfileid: "66081848"
   
  Les colonnes des tables contenant le modèle d'exploration de données et des tables d'entrée peuvent être glissées et déplacées sur la cellule.  
   
- **Field**  
+ **Champ**  
  Sélectionnez une colonne dans la liste des colonnes dérivées de la table source. Si vous avez sélectionné **Fonction de prédiction** dans **Source**, elle contient la fonction de prédiction disponible pour le modèle d’exploration de données sélectionné.  
   
- **Grouper**  
- Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple, `(expr1 Or expr2) And expr3`.  
+ **Groupe**  
+ Utilisez cette option avec la colonne **et/ou** pour regrouper les expressions. Par exemple : `(expr1 Or expr2) And expr3`.  
   
- **et/ou**  
- Utilisez cette option pour créer une requête logique. Par exemple, `(expr1 Or expr2) And expr3`.  
+ **Et/ou**  
+ Utilisez cette option pour créer une requête logique. Par exemple : `(expr1 Or expr2) And expr3`.  
   
- **Critères/Argument**  
+ **Critères/argument**  
  Spécifiez une condition ou une expression utilisateur qui s'applique à la colonne. Les colonnes des tables contenant le modèle d'exploration de données et des tables d'entrée peuvent être glissées et déplacées sur la cellule.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence des instructions](/sql/dmx/data-mining-extensions-dmx-statements)   
+ [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Interfaces de requête d’exploration de données](data-mining/data-mining-query-tools.md)   
- [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

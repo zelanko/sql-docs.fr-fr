@@ -1,5 +1,5 @@
 ---
-title: Actualiser le schéma dans une vue de Source de données (Analysis Services) | Microsoft Docs
+title: Actualiser le schéma dans une vue de source de données (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,24 +15,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32c9db875afff68125fcc14ef1587c7c4f80302e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073251"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualiser le schéma dans une vue de source de données (Analysis Services)
-  Après avoir défini une vue de source de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], le schéma d’une source de données sous-jacente peut être différent. Ces modifications ne sont pas détectés ni mises à jour automatiquement dans un projet de développement. De plus, si vous avez déployé le projet sur un serveur, vous rencontrerez maintenant des erreurs de traitement si Analysis Services ne peut plus se connecter à la source de données externe.  
+  Après avoir défini une vue de source de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , le schéma d’une source de données sous-jacente peut être différent. Ces modifications ne sont pas détectés ni mises à jour automatiquement dans un projet de développement. De plus, si vous avez déployé le projet sur un serveur, vous rencontrerez maintenant des erreurs de traitement si Analysis Services ne peut plus se connecter à la source de données externe.  
   
  Pour mettre à jour la vue DSV afin qu'elle corresponde à la source de données externe, vous pouvez actualiser la vue DSV dans Business Intelligence développement Studio (BIDS). L'actualisation de la vue DSV détecte les modifications apportées aux sources de données externes sur lesquelles est basée la vue et établit une liste de modifications qui énumère les ajouts ou les suppressions dans la source de données externe. Vous pouvez alors appliquer l'ensemble de modifications à la vue DSV qui l'alignera avec la source de données sous-jacente. Notez que des tâches supplémentaires sont souvent requises pour poursuivre la mise à jour des cubes et des dimensions dans le projet qui utilisent la vue DSV.  
   
- Cette rubrique comprend les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
- [Modifications prises en charge dans l'actualisation](#bkmk_changlist)  
+ [Modifications prises en charge dans l’actualisation](#bkmk_changlist)  
   
- [Actualiser une vue de source de données dans SQL Server Data Tools](#bkmk_DSVrefresh)  
+ [Actualiser une vue DSV dans SQL Server Data Tools](#bkmk_DSVrefresh)  
   
-##  <a name="bkmk_changlist"></a> Modifications prises en charge dans l'actualisation  
+##  <a name="bkmk_changlist"></a>Modifications prises en charge dans l’actualisation  
  L'actualisation d'une vue DSV peut inclure l'une des actions suivantes :  
   
 -   Suppression de tables, de colonnes et de relations  
@@ -43,16 +43,16 @@ ms.locfileid: "66073251"
   
  L'actualisation n'ajoute jamais de nouvelles tables à une vue DSV. Si vous souhaitez ajouter une nouvelle table, vous devez l'ajouter manuellement. Pour plus d’informations, consultez [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_DSVrefresh"></a> Actualiser une vue de source de données dans SQL Server Data Tools  
+##  <a name="bkmk_DSVrefresh"></a>Actualiser une vue DSV dans SQL Server Data Tools  
  Pour actualiser une vue de source de données, double-cliquez sur la vue en question dans l’Explorateur de solutions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis cliquez sur le bouton Actualiser la vue de source de données ou choisissez **Actualiser** dans le menu Vue de source de données.  
   
  Au cours de l'actualisation, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] interroge les sources de données relationnelles sous-jacentes pour déterminer si des modifications ont été apportées dans les tables/vues qui sont incluses dans la vue DSV. Si les connexions peuvent être établies à toutes les sources de données sous-jacentes et si des modifications ont été apportées, elles apparaîtront dans la boîte de dialogue **Actualiser la vue de source de données** .  
   
- ![Actualiser la boîte de dialogue de vue de Source de données](../media/ssas-olapdsv-refresh.gif "boîte de dialogue Actualiser la vue Source données")  
+ ![Actualiser la vue de source de données, boîte de dialogue](../media/ssas-olapdsv-refresh.gif "boîte de dialogue Actualiser la vue de source de données")  
   
  La boîte de dialogue répertorie les tables, colonnes, contraintes et relations qui vont être supprimées ou ajoutées dans la vue DSV. Le rapport répertorie également, le cas échéant, les requêtes ou calculs nommés qui ne peuvent pas être préparés. Les objets affectés sont répertoriés dans une arborescence dans laquelle les colonnes et les relations sont imbriquées sous les tables et le type de modification (suppression ou ajout) est indiqué pour chaque objet. Les icônes d'objet de vue de source de données standard représentent le type d'objet affecté.  
   
- L'actualisation est entièrement basée sur les noms des objets sous-jacents. Par conséquent, si un objet sous-jacent est renommé dans la source de données, Concepteur de vue de Source de données traite l’objet renommé comme deux distinct opérations une suppression et une addition. Dans ce cas, vous devrez peut-être réinsérer manuellement l'objet renommé dans la vue de source de données. Il vous faudra peut-être également recréer des relations ou des clés primaires logiques.  
+ L'actualisation est entièrement basée sur les noms des objets sous-jacents. Par conséquent, si un objet sous-jacent est renommé dans la source de données, le concepteur de vue de source de données traite l’objet renommé comme deux opérations distinctes : une suppression et un ajout. Dans ce cas, vous devrez peut-être réinsérer manuellement l'objet renommé dans la vue de source de données. Il vous faudra peut-être également recréer des relations ou des clés primaires logiques.  
   
 > [!IMPORTANT]  
 >  Si vous savez qu’une table a été renommée dans une source de données, vous pouvez avoir intérêt à utiliser la commande **Remplacer la table** afin de remplacer la table par la table renommée avant d’actualiser la vue de source de données. Pour plus d’informations, consultez [Remplacer une table ou une requête nommée dans une vue de source de données &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  

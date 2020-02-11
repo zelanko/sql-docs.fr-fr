@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899932"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
@@ -44,7 +44,7 @@ ms.locfileid: "62899932"
   
  La transformation d'extraction de terme génère un score pour chaque terme extrait. Ce score peut être une valeur TFIDF ou la fréquence brute, autrement dit le nombre de fois que le terme normalisé apparaît dans l'entrée. Dans les deux cas, le score est représenté par un nombre réel supérieur à 0. Par exemple, le score TFIDF peut avoir la valeur 0,5 et la fréquence peut être égale à 1 ou 2.  
   
- La sortie de la transformation d'extraction de terme contient seulement deux colonnes. Une colonne contient les termes extraits, tandis que l'autre contient le score. Les noms par défaut des colonnes sont **terme** et `Score`. La colonne de texte de l'entrée pouvant contenir plusieurs termes, la sortie de la transformation d'extraction de terme possède généralement plus de lignes que l'entrée.  
+ La sortie de la transformation d'extraction de terme contient seulement deux colonnes. Une colonne contient les termes extraits, tandis que l'autre contient le score. Les noms par défaut des colonnes sont **term** et `Score`. La colonne de texte de l'entrée pouvant contenir plusieurs termes, la sortie de la transformation d'extraction de terme possède généralement plus de lignes que l'entrée.  
   
  Si les termes extraits sont écrits dans une table, ils peuvent être utilisés par d'autres transformations de recherche telles que les transformations de recherche, de recherche de terme et de recherche floue.  
   
@@ -173,9 +173,9 @@ ms.locfileid: "62899932"
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation d’extraction de terme** , cliquez sur une des rubriques suivantes :  
   
--   [Éditeur de transformation d’extraction de terme &#40;onglet Extraction de terme&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Éditeur de transformation d’extraction de terme &#40;onglet extraction de terme&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Éditeur de transformation d’extraction de terme &#40;onglet Exclusion&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Éditeur de transformation d’extraction de terme &#40;onglet exclusion&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
 -   [Éditeur de transformation d’extraction de terme &#40;onglet Avancé&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
@@ -185,6 +185,6 @@ ms.locfileid: "62899932"
   
 -   [Propriétés personnalisées des transformations](transformation-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
   

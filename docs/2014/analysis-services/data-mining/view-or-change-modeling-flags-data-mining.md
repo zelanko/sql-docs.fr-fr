@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082677"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Afficher ou modifier les indicateurs de modélisation (Exploration de données)
@@ -28,7 +28,7 @@ ms.locfileid: "66082677"
   
 1.  Dans SQL Server Design Studio, ouvrez l'explorateur de solutions, puis double-cliquez sur la structure d'exploration de données.  
   
-2.  Pour définir l'indicateur de modélisation NOT NULL, cliquez sur l'onglet **Structure d'exploration de données** . Pour définir les indicateurs REGRESSOR ou MODEL_EXISTENCE_ONLY, cliquez sur l’onglet **Modèle d’exploration de données** .  
+2.  Pour définir l’indicateur de modélisation NOT NULL, cliquez sur l’onglet **structure d’exploration de données** . Pour définir les indicateurs de régression ou de MODEL_EXISTENCE_ONLY, cliquez sur l’onglet **modèle d’exploration de données** .  
   
 3.  Cliquez avec le bouton droit sur la colonne à afficher ou à modifier, puis sélectionnez **Propriétés**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66082677"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Indicateurs de modélisation &#40;&#41;d’exploration de données](modeling-flags-data-mining.md)  
   
   

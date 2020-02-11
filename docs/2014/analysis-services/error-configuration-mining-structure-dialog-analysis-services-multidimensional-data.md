@@ -1,5 +1,5 @@
 ---
-title: Configuration d’erreur (boîte de dialogue Structure d’exploration de données) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Configuration d’erreur (boîte de dialogue structure d’exploration de données) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081372"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configuration d'erreur (boîte de dialogue Structure d'exploration de données) (Analysis Services - Données multidimensionnelles)
@@ -26,70 +26,70 @@ ms.locfileid: "66081372"
  **Utiliser la configuration d’erreur par défaut**  
  Sélectionne la configuration par défaut des erreurs pour les objets dans le traitement.  
   
- **Action pour l'erreur de clé**  
+ **Action de l’erreur de clé**  
  Choisissez l'une des actions suivantes qui se produit lorsqu'une nouvelle clé est détectée lors du traitement sans recherche possible :  
   
--   L'option**Convertir en clé inconnue** agrège les informations de l'enregistrement dans le membre inconnu.  
+-   **Convertir en données inconnues** agrège les informations de l’enregistrement dans le membre inconnu.  
   
--   L'option**Annuler l'enregistrement** empêche le traitement des informations de l'enregistrement, avec cet objet.  
+-   **Ignorer l’enregistrement** exclut les informations de l’enregistrement du traitement de l’objet.  
   
  **Ignorer le nombre d’erreurs**  
  Cliquez sur cette option pour ignorer les erreurs qui se produisent lors du traitement.  
   
- **Arrêter en cas d'erreur**  
+ **Arrêter en cas d’erreur**  
  Cliquez sur cette option pour arrêter le traitement en cas d'erreurs. Cette option active les options **Nombre d'erreurs** et **Action pour l'erreur** .  
   
- **Nombre d'erreurs**  
+ **Nombre d’erreurs**  
  Tapez le nombre d'erreurs à ignorer avant l'arrêt du traitement.  
   
- **Action pour l'erreur**  
+ **Action en cas d’erreur**  
  Choisissez l’une des actions suivantes à effectuer quand le nombre d’erreurs dépasse la valeur spécifiée dans **Nombre d’erreurs**:  
   
--   L'option**Arrêter le traitement** met un terme au traitement.  
+-   **Arrêter le traitement** met fin à l’opération de traitement.  
   
--   L'option**Arrêter l'inscription dans le journal** arrête l'inscription des erreurs dans le journal mais elle continue le traitement.  
+-   **Arrêter la journalisation** arrête l’enregistrement des erreurs, mais poursuit l’opération de traitement.  
   
  **Clé introuvable**  
  Spécifiez une des actions suivantes à effectuer lorsqu'une clé est introuvable pendant le traitement d'un objet :  
   
--   **Ignorer l'erreur** ignore l'erreur  
+-   **Ignorer l’erreur** ignore l’erreur  
   
--   **Signaler et continuer** signale l'erreur et poursuit le traitement.  
+-   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
+-   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
   
  **Clé dupliquée**  
  Spécifiez une des actions suivantes à effectuer lorsqu'une clé dupliquée est trouvée pendant le traitement d'un objet :  
   
--   **Ignorer l'erreur** ignore l'erreur  
+-   **Ignorer l’erreur** ignore l’erreur  
   
--   **Signaler et continuer** signale l'erreur et poursuit le traitement.  
+-   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
+-   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
   
- **Clé NULL convertie en clé inconnue**  
+ **Clé null convertie en clé inconnue**  
  Spécifiez une des actions suivantes à effectuer lorsqu'un membre NULL est ajouté au membre inconnu pendant le traitement d'un objet :  
   
--   **Ignorer l'erreur** ignore l'erreur  
+-   **Ignorer l’erreur** ignore l’erreur  
   
--   **Signaler et continuer** signale l'erreur et poursuit le traitement.  
+-   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
+-   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
   
- **Clé NULL non autorisée**  
+ **Clé null non autorisée**  
  Spécifiez une des actions suivantes à effectuer lorsqu'une clé NULL est trouvée, mais non autorisée, pendant le traitement d'un objet :  
   
--   **Ignorer l'erreur** ignore l'erreur  
+-   **Ignorer l’erreur** ignore l’erreur  
   
--   **Signaler et continuer** signale l'erreur et poursuit le traitement.  
+-   **Signaler et continuer** signale l’erreur et poursuit l’opération de traitement  
   
--   **Signaler et arrêter** signale l'erreur et met fin au traitement.  
+-   **Signaler et arrêter** signale l’erreur et arrête l’opération de traitement.  
   
- **Chemin d'accès du journal des erreurs**  
+ **Chemin du journal des erreurs**  
  Tapez le chemin d'accès et le nom complets du fichier journal d'erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue de propriétés Structure d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
- [Général &#40;boîte de dialogue Structure d’exploration de données&#41; &#40;Analysis Services - Exploration de données&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
+ [Boîte de dialogue Propriétés de la structure d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [Boîte de dialogue structure d’exploration de données &#40;&#41; &#40;Analysis Services d’exploration de données&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

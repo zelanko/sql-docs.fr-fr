@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874877"
 ---
 # <a name="select-backup-destination"></a>Sélectionner la destination de la sauvegarde
@@ -40,16 +40,16 @@ ms.locfileid: "62874877"
   
 |||  
 |-|-|  
-|**Nom de fichier**|Sélectionnez cette option pour entrer le nom d'un fichier local ou distant de destination de la sauvegarde, dans la zone de texte.<br /><br /> Pour spécifier un fichier local, cliquez sur le bouton Parcourir à droite de la zone de texte et accédez à un fichier sur les lecteurs fixes de l’ordinateur qui exécute le serveur ou entrez le chemin d’accès complet et le nom de fichier directement ; par exemple, `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Pour spécifier un fichier distant en tant que destination de sauvegarde, tapez son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).<br /><br /> **\*\* Important \*\*** Étant donné que la sauvegarde de données sur un réseau peut faire l’objet d’erreurs réseau, nous vous recommandons de vérifier l’opération de sauvegarde quand elle est terminée. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
-|**unité de sauvegarde**|Choisissez cette option pour sélectionner une unité logique de sauvegarde.<br /><br /> Remarque : Pour plus d’informations sur la création d’une unité de sauvegarde de disque, consultez [définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
+|**Nom de fichier**|Sélectionnez cette option pour entrer le nom d'un fichier local ou distant de destination de la sauvegarde, dans la zone de texte.<br /><br /> Pour spécifier un fichier local, cliquez sur le bouton Parcourir à droite de la zone de texte et accédez à un fichier sur les lecteurs fixes de l’ordinateur qui exécute le serveur, ou entrez directement le chemin d’accès complet et le nom de fichier. par exemple, `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Pour spécifier un fichier distant en tant que destination de sauvegarde, tapez son nom complet UNC (Universal Naming Convention). Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).<br /><br /> **\*\* Important \*\*** Étant donné que la sauvegarde de données sur un réseau peut faire l’objet d’erreurs réseau, nous vous recommandons de vérifier l’opération de sauvegarde quand elle est terminée. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
+|**Unité de sauvegarde**|Choisissez cette option pour sélectionner une unité logique de sauvegarde.<br /><br /> Remarque : Pour plus d’informations sur la création d’une unité de sauvegarde sur disque, consultez [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
   
  **Destinations sur bande**  
  Indiquez comme destination de la sauvegarde un lecteur de bande connecté physiquement à l’ordinateur serveur (celui qui exécute l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Choisissez l'une des options suivantes.  
   
 |||  
 |-|-|  
-|**Lecteur de bande**|Choisissez cette option pour sélectionner un lecteur de bande choisi comme destination de la sauvegarde dans la liste des lecteurs de bande physiquement connectés à l'ordinateur qui exécute l'instance de serveur.<br /><br /> Remarque : Les unités de sauvegarde sur bande situées sur des ordinateurs distants ne sont pas des destinations de sauvegarde valides.|  
-|**unité de sauvegarde**|Choisissez cette option pour sélectionner une unité logique de sauvegarde existante. Ces unités logiques de sauvegarde correspondent aux lecteurs de bande connectés physiquement à l'ordinateur exécutant l'instance de serveur.<br /><br /> Remarque : Pour plus d’informations sur la création d’une unité de sauvegarde sur bande, consultez [définir une unité de sauvegarde logique pour un lecteur de bande &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
+|**Lecteur de bande**|Choisissez cette option pour sélectionner un lecteur de bande choisi comme destination de la sauvegarde dans la liste des lecteurs de bande physiquement connectés à l'ordinateur qui exécute l'instance de serveur.<br /><br /> Remarque : les unités de sauvegarde sur bande situées sur des ordinateurs distants ne sont pas des destinations de sauvegarde valides.|  
+|**Unité de sauvegarde**|Choisissez cette option pour sélectionner une unité logique de sauvegarde existante. Ces unités logiques de sauvegarde correspondent aux lecteurs de bande connectés physiquement à l'ordinateur exécutant l'instance de serveur.<br /><br /> Remarque : Pour plus d’informations sur la création d’une unité de sauvegarde sur bande, consultez [Définir une unité de sauvegarde logique pour un lecteur de bande &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md)   

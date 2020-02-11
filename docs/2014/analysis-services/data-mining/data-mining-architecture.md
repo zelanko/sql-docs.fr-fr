@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085079"
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
@@ -22,7 +22,7 @@ ms.locfileid: "66085079"
   
  En général, l'exploration de données SQL Server fonctionne en tant que service fourni dans le cadre d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécutée en mode multidimensionnel ; par conséquent, nous vous recommandons de consulter également les sections de la documentation en ligne suivantes qui décrivent le fonctionnement, la maintenance et la configuration des solutions multidimensionnelles d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Traitement des objets de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [Traitement des objets de modèles multidimensionnels](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
  [Se connecter à Analysis Services](../instances/connect-to-analysis-services.md)  
   
@@ -33,18 +33,18 @@ ms.locfileid: "66085079"
  Pour plus d'informations sur la façon dont vous pouvez implémenter l'exploration de données dans votre solution décisionnelle, consultez la section relative aux guides de solutions de MSDN Library.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Architecture logique &#40;Analysis Services - Exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Architecture logique &#40;Analysis Services d’exploration de données&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [Architecture physique &#40;Analysis Services - Exploration de données&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Architecture physique &#40;Analysis Services d’exploration de données&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [Services d'exploration de données et sources de données](data-mining-services-and-data-sources.md)  
   
- [Gestion des solutions et des objets d’exploration de données](management-of-data-mining-solutions-and-objects.md)  
+ [Gestion des solutions et des objets d'exploration de données](management-of-data-mining-solutions-and-objects.md)  
   
- [Vue d’ensemble de la sécurité &#40;exploration de données&#41;](security-overview-data-mining.md)  
+ [Vue d’ensemble de la sécurité &#40;l’exploration de données&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation de modèle multidimensionnel](../multidimensional-models/multidimensional-model-programming.md)   
+ [Programmation de modèles multidimensionnels](../multidimensional-models/multidimensional-model-programming.md)   
  [Programmation de l'exploration de données](../dev-guide/data-mining-programming.md)  
   
   

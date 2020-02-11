@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872053"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
@@ -58,7 +58,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- Cela semble relativement simple, mais plusieurs problèmes se posent. Étant donné que le classement d’une colonne dépend de la base de données dans laquelle la table est créée, les problèmes se posent pour l’utilisation des tables temporaires sont stockées dans `tempdb`. Le classement de `tempdb` correspond généralement au classement pour l’instance, ce qui n’a pas à correspondre au classement de base de données.  
+ Cela semble relativement simple, mais plusieurs problèmes se posent. Étant donné que le classement d’une colonne dépend de la base de données dans laquelle la table est créée, des problèmes se posent lors de l’utilisation de `tempdb`tables temporaires qui sont stockées dans. Le classement de `tempdb` correspond généralement au classement de l’instance, qui ne doit pas nécessairement correspondre au classement de la base de données.  
   
 ### <a name="example-2"></a>Exemple 2  
  Par exemple, examinez la base de données (chinoise) ci-dessus utilisée sur une instance avec un classement **Latin1_General** :  
@@ -85,7 +85,8 @@ JOIN #T2
   
  Impossible de résoudre le conflit de classement entre « Latin1_General_100_CI_AS_KS_WS_SC » et « Chinese_Simplified_Pinyin_100_CI_AS » dans l'opération égal à.  
   
- Nous pouvons résoudre ce problème en classant la table temporaire de façon explicite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simplifie quelque peu cette opération en fournissant le mot clé `DATABASE_DEFAULT` pour la clause `COLLATE`.  
+ Nous pouvons résoudre ce problème en classant la table temporaire de façon explicite. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simplifie quelque peu cette opération en fournissant le mot clé `DATABASE_DEFAULT` pour la clause `COLLATE`.  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -111,14 +112,14 @@ AS BEGIN
 END;  
 ```  
   
- C'est une fonction assez particulière. Dans un classement respectant la casse, le @i dans la clause return ne peut pas lier à soit @I ou @??. Dans un classement Latin1_General sans respect de la casse, @i est lié à @I, et la fonction retourne 1. Mais dans un classement turc non-respect de la casse, @i lie à @??, et la fonction retourne 2. Cela peut causer des dégâts dans une base de données qui se déplace entre des instances aux classements différents.  
+ C'est une fonction assez particulière. Dans un classement qui respecte la casse, le @i dans la clause return ne peut pas @I être lié à ou à @ ??. Dans un classement Latin1_General sans respect de la casse, @i est lié à @I, et la fonction retourne 1. Mais dans un classement turc ne respectant pas la casse @i , est lié à @ ??, et la fonction retourne 2. Cela peut causer des dégâts dans une base de données qui se déplace entre des instances aux classements différents.  
   
 ## <a name="contained-databases"></a>Bases de données autonomes  
  Comme un objectif de la conception de bases de données autonomes est de les rendre autonomes, la dépendance de l'instance et des classements de `tempdb` doit être supprimée. Pour cela, les bases de données autonomes présentent le concept de classement de catalogue. Le classement de catalogue est utilisé pour les métadonnées système et les objets transitoires. Des informations complémentaires sont fournies ci-dessous.  
   
  Dans une base de données autonome, le classement de catalogue est **Latin1_General_100_CI_AS_WS_KS_SC**. Ce classement est le même pour toutes les bases de données autonomes sur toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ne peut pas être changé.  
   
- Le classement de base de données est conservé, mais est utilisé uniquement comme classement par défaut des données utilisateur. Par défaut, le classement de base de données est égal au classement de base de données de modèle, mais peut être modifié par l’utilisateur via un `CREATE` ou `ALTER DATABASE` commande en tant que bases de données sans relation contenant contenu.  
+ Le classement de base de données est conservé, mais est utilisé uniquement comme classement par défaut des données utilisateur. Par défaut, le classement de base de données est égal au classement de la base de données model, mais peut être modifié par `CREATE` l' `ALTER DATABASE` utilisateur via une commande ou comme avec les bases de données sans relation contenant-contenu.  
   
  Un nouveau mot clé, `CATALOG_DEFAULT`, est disponible dans la clause `COLLATE`. Il est utilisé comme un raccourci du classement actuel de métadonnées à la fois dans les bases de données autonomes et non autonomes. Autrement dit, dans une base de données non autonome, `CATALOG_DEFAULT` retourne le classement de base de données actuel, puisque les métadonnées sont assemblées dans le classement de base de données. Dans une base de données autonome, ces deux valeurs peuvent être différentes, puisque l'utilisateur peut modifier le classement de base de données afin qu'il ne corresponde pas au classement de catalogue.  
   
@@ -126,7 +127,7 @@ END;
   
 ||||  
 |-|-|-|  
-|**Élément**|**Base de données non autonome**|**Base de données autonome**|  
+|**Item**|**Base de données non autonome**|**Base de données autonome**|  
 |Données utilisateur (valeur par défaut)|DATABASE_DEFAULT|DATABASE_DEFAULT|  
 |Données Temp (valeur par défaut)|Classement TempDB|DATABASE_DEFAULT|  
 |Métadonnées|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
@@ -235,7 +236,7 @@ GO
  Nom d'objet '#A' non valide.  
   
 ### <a name="example-3"></a>Exemple 3  
- L'exemple suivant illustre le cas où la référence trouve plusieurs correspondances qui étaient distinctes à l'origine. Tout d’abord, nous commençons `tempdb` (qui a le même classement respectant la casse que notre instance) et exécutez les instructions suivantes.  
+ L'exemple suivant illustre le cas où la référence trouve plusieurs correspondances qui étaient distinctes à l'origine. Tout d’abord, nous `tempdb` commençons dans (qui a le même classement respectant la casse que notre instance) et nous exécutons les instructions suivantes.  
   
 ```  
 USE tempdb;  

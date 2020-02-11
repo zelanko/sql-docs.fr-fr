@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38514159ca668a82f98582a9c5fde1d2aa98ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650180"
 ---
-# <a name="proxies-node-sql-server-agent-f1-help"></a>Nœud Proxies (Aide de SQL Server Agent)
+# <a name="proxies-node-sql-server-agent-f1-help"></a>Nœud Proxies (Aide de l'Agent SQL Server)
   Cette section contient l'aide obtenue via la touche F1 pour le nœud **Proxies** de l'Explorateur d'objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
   

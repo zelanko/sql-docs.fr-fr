@@ -1,5 +1,5 @@
 ---
-title: Utilisez SQL Server (XEvents) d’événements étendus pour surveiller Analysis Services | Microsoft Docs
+title: Utiliser SQL Server événements étendus (XEvents) pour analyser Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079735"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Utiliser des événements étendus SQL Server (XEvents) pour surveiller Analysis Services
-  Analysis Services fournit des fonctionnalités de suivi via l’utilisation de [événements étendus](../../relational-databases/extended-events/extended-events.md).  
+  Analysis Services fournit des fonctionnalités de suivi par le biais de l’utilisation d' [événements étendus](../../relational-databases/extended-events/extended-events.md).  
   
  Les événements étendus constituent une infrastructure d'événements qui est très évolutive et configurable pour les systèmes serveur. Les événements étendus sont un système léger d'analyse des performances qui utilise très peu de ressources de performances.  
   
- Tous les événements peuvent être capturés de Analysis Services et la cible sur des consommateurs spécifiques, tels que définis dans [événements étendus](../../relational-databases/extended-events/extended-events.md), via XEvents.  
+ Tous les événements de Analysis Services peuvent être capturés et ciblés sur des consommateurs spécifiques, comme défini dans [événements étendus](../../relational-databases/extended-events/extended-events.md), via XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Initialisation d'événements étendus dans Analysis Services  
  Le traçage d'événements étendus est activé à l'aide d'une commande de script de création d'objet XMLA semblable à celle ci-dessous :  

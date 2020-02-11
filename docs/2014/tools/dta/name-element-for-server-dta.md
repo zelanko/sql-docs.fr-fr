@@ -1,5 +1,5 @@
 ---
-title: Nom d’élément de serveur (DTA) | Microsoft Docs
+title: Élément Name pour le serveur (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657263"
 ---
 # <a name="name-element-for-server-dta"></a>Name, élément pour les serveurs (Assistant Paramétrage de base de données)
@@ -37,7 +37,8 @@ ms.locfileid: "62657263"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`string`, entre 1 et 255 caractères.|  
+|**Type de données et longueur**|
+  `string`, entre 1 et 255 caractères.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois par élément **Server** .|  
   
@@ -49,7 +50,7 @@ ms.locfileid: "62657263"
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  
- Pour voir un exemple d’utilisation de l’élément **Name** , consultez [Server Element &#40;DTA&#41;](server-element-dta.md).  
+ Pour voir un exemple d’utilisation de l’élément **Name** , consultez [Server, élément &#40;Assistant Paramétrage de base de données&#41;](server-element-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

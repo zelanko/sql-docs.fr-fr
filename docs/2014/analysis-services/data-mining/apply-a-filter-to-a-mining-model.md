@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086222"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Appliquer un filtre à un modèle d'exploration de données
@@ -66,7 +66,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Cliquez sur la zone de texte **Valeur** et tapez une valeur dans la zone.  
   
-     Par exemple, sélectionnez `Income` que la colonne, sélectionnez le plus grand que l’opérateur (>) et tapez `30000`.  
+     Par exemple, sélectionnez `Income` en tant que colonne, sélectionnez l’opérateur supérieur à (>), puis tapez `30000`.  
   
 9. Cliquez sur la ligne suivante dans la grille.  
   
@@ -78,7 +78,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Sélectionnez un opérateur et tapez une valeur comme décrit dans les étapes 7 et 8.  
   
-     Par exemple, sélectionnez `Income` que la colonne à nouveau, sélectionnez l’opérateur inférieur à (<), puis tapez `40000`.  
+     Par exemple, sélectionnez `Income` à nouveau en tant que colonne, sélectionnez l’opérateur inférieur à (<), puis `40000`tapez.  
   
 12. Cliquez sur la ligne suivante dans la grille.  
   
@@ -86,7 +86,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Pour ajouter un filtre sur la table imbriquée dans un modèle d'exploration de données  
   
-1.  Dans le  **\<nom > filtre de modèle** boîte de dialogue, cliquez sur une ligne vide dans la grille sous **colonne de Structure d’exploration de données**.  
+1.  Dans la ** \<boîte de dialogue nom>modèle de filtre** , cliquez sur une ligne vide dans la grille sous colonne de la **structure d’exploration de données**.  
   
 2.  Sélectionnez le nom de la table imbriquée dans la liste déroulante.  
   
@@ -96,9 +96,9 @@ WHERE [Model] <> 'Water Bottle' )
   
      Ce sont les seules conditions disponibles pour la table imbriquée dans la boîte de dialogue **Filtre de modèle** , car vous restreignez la table de cas uniquement aux cas qui contiennent une certaine valeur dans la table imbriquée. Vous allez définir la valeur pour la condition sur la table imbriquée lors de l'étape suivante.  
   
-4.  Cliquez sur le **valeur** , puis cliquez sur le **(...)**  bouton pour générer une expression.  
+4.  Cliquez sur la zone **valeur** , puis sur le bouton **(...)** pour générer une expression.  
   
-     Le  **\<nom > filtre** boîte de dialogue s’ouvre. Cette boîte de dialogue peut définir des conditions uniquement sur la table actuelle, qui est la table imbriquée dans ce cas.  
+     La boîte de ** \<dialogue nom>filtre** s’ouvre. Cette boîte de dialogue peut définir des conditions uniquement sur la table actuelle, qui est la table imbriquée dans ce cas.  
   
 5.  Cliquez sur la zone **Colonne de la structure d'exploration de données** et sélectionnez un nom de colonne dans les listes déroulantes des colonnes de la table imbriquée.  
   
@@ -106,7 +106,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Cliquez sur **Valeur** et tapez une valeur.  
   
-     Par exemple, pour **colonne de Structure d’exploration de données,** sélectionnez `Model`. Pour **opérateur**, sélectionnez `<>`, puis tapez la valeur `Water Bottle`. Cette condition crée l'expression de filtre suivante :  
+     Par exemple, pour colonne de la structure d' `Model`exploration de **données,** sélectionnez. Pour **opérateur**, sélectionnez `<>`, puis tapez la valeur `Water Bottle`. Cette condition crée l'expression de filtre suivante :  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +115,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Puisque le nombre d'attributs de table imbriquée est potentiellement illimité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne fournit pas de liste de valeurs possibles à sélectionner. Vous devez taper la valeur exacte. En outre, vous ne pouvez pas utiliser d'opérateur LIKE dans une table imbriquée.  
   
-1.  Ajouter d’autres conditions en fonction des besoins, combinez des conditions en sélectionnant `AND` ou `OR` dans le **et/ou** située à gauche de la **Conditions** grille. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Ajoutez d’autres conditions si nécessaire, en combinant les conditions `AND` en `OR` sélectionnant ou dans la zone **et/ou** à gauche de la grille **conditions** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  Dans la boîte de dialogue **Filtre de modèle** , examinez les conditions que vous avez créées en utilisant la boîte de dialogue **Filtre** . Les conditions pour la table imbriquée sont ajoutées aux conditions pour la table de cas, tandis que le jeu complet de conditions de filtre est affiché dans la zone de texte **Expression** .  
   
@@ -126,8 +126,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Filtres pour les modèles d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
  [Supprimer un filtre d'un modèle d'exploration de données](delete-a-filter-from-a-mining-model.md)  
   
   

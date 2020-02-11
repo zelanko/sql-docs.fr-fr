@@ -1,5 +1,5 @@
 ---
-title: Démarrer ou arrêter un PowerPivot pour SharePoint Server | Microsoft Docs
+title: Démarrer ou arrêter un serveur PowerPivot pour SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,38 +11,38 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071047"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Démarrer ou arrêter un service PowerPivot pour un serveur SharePoint
-  Le Service système PowerPivot et une [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance fonctionnent ensemble sur le même serveur d’application locale à la demande de support coordonné et traitement des données dans une batterie de serveurs SharePoint.  
+  Service système PowerPivot et une [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance de fonctionnent ensemble sur le même serveur d’applications local pour prendre en charge le traitement des requêtes et des données coordonné dans une batterie de serveurs SharePoint.  
   
  Cette rubrique contient les sections suivantes :  
   
- [Dépendances du service](#dependencies)  
+ [Dépendances de service](#dependencies)  
   
  [Démarrer ou arrêter les services](#startstop)  
   
- [Effets de l’arrêt d’un serveur PowerPivot](#effects)  
+ [Conséquences de l'arrêt d'un serveur PowerPivot](#effects)  
   
-##  <a name="dependencies"></a> Dépendances du service  
+##  <a name="dependencies"></a>Dépendances de service  
  Le service système PowerPivot est dépendant de l'instance de serveur Analysis Services locale qui est installée avec le service PowerPivot sur le même serveur physique. Si vous arrêtez le service système PowerPivot, vous devez également arrêter manuellement l'instance de serveur Analysis Services locale. Si un service s'exécute sans l'autre, vous rencontrerez des erreurs d'allocation des requêtes pour le traitement des données PowerPivot.  
   
  Le serveur Analysis Services doit être exécuté seul uniquement si vous diagnostiquez ou résolvez un problème. Dans tous les autres cas, le serveur nécessite l'exécution locale du service système PowerPivot sur le même serveur.  
   
-##  <a name="startstop"></a> Démarrer ou arrêter les services  
+##  <a name="startstop"></a>Démarrer ou arrêter les services  
  Utilisez toujours l'Administration centrale pour démarrer ou arrêter le service système PowerPivot ou l'instance du serveur Analysis Services. L'Administration centrale vous permet de démarrer ou d'arrêter les services de la même page ensemble. De plus, l'Administration centrale utilise un travail du minuteur appelé **Des services ont démarré ou se sont arrêtés** afin de redémarrer des services qui pour lui doivent s'exécuter. Si vous arrêtez le service système PowerPivot ou Analysis Services à l'aide d'un outil autre que SharePoint, les services seront redémarrés lors de l'exécution du travail du minuteur.  
   
  Le démarrage ou l'arrêt de services est une action qui s'applique à une instance de service physique. S'il existe d'autres serveurs PowerPivot pour SharePoint dans la batterie, les autres serveurs de la batterie continueront d'accepter les requêtes concernant des données PowerPivot.  
   
  Vous ne pouvez pas démarrer ou arrêter tous les services physiques simultanément dans la batterie de serveurs. Vous devez sélectionner chaque serveur, puis démarrer ou arrêter un service spécifique.  
   
- Vous ne pouvez pas démarrer, suspendre ou arrêter un service système PowerPivot pour une application Web spécifique, mais vous pouvez supprimer un service de la liste de connexions par défaut pour le rendre non disponible. Pour plus d’informations, consultez [connecter une Application de Service PowerPivot à une Application Web de SharePoint dans l’Administration centrale](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
+ Vous ne pouvez pas démarrer, suspendre ou arrêter un service système PowerPivot pour une application Web spécifique, mais vous pouvez supprimer un service de la liste de connexions par défaut pour le rendre non disponible. Pour plus d’informations, consultez [connecter une application de service PowerPivot à une application Web SharePoint dans l’administration centrale](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-1.  Dans Administration centrale, sous **Paramètres système**, cliquez sur **Gérer les services sur le serveur**.  
+1.  Dans l’administration centrale, sous **paramètres système**, cliquez sur **gérer les services sur le serveur**.  
   
 2.  En haut de la page, sous Serveur, cliquez sur la flèche orientée vers le bas, puis sur **Changer de serveur**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66071047"
   
 4.  Sélectionnez le service, puis cliquez sur l'action. N'oubliez pas de démarrer ou d'arrêter les services sous forme de paire. Si vous démarrez ou arrêtez le service système PowerPivot, pensez également à démarrer ou à arrêter l'instance de serveur Analysis Services qui s'exécute sur le même ordinateur.  
   
-##  <a name="effects"></a> Effets de l’arrêt d’un serveur PowerPivot  
+##  <a name="effects"></a>Conséquences de l’arrêt d’un serveur PowerPivot  
  Le tableau suivant décrit les conséquences de l'arrêt du service système PowerPivot et du service Analysis Services sur un serveur SharePoint.  
   
 |Éléments affectés|Description|  
@@ -62,6 +62,6 @@ ms.locfileid: "66071047"
 |Données d'utilisation|Les données d'utilisation ne seront pas recueillies pendant la période d'arrêt des services.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des comptes de service PowerPivot](configure-power-pivot-service-accounts.md)  
+ [Configuration des comptes de service PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

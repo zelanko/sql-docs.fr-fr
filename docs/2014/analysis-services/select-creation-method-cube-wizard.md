@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la méthode de création (Assistant Cube) | Microsoft Docs
+title: Sélectionner la méthode de création (Assistant Cube) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069632"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Sélectionner la méthode de création (Assistant Cube)
@@ -47,7 +47,7 @@ ms.locfileid: "66069632"
 >  Cette option est disponible uniquement quand l’option **Générer des tables dans la source de données** a été sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Objets de cube &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

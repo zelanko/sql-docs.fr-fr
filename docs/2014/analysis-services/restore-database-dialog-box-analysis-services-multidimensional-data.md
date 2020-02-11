@@ -1,5 +1,5 @@
 ---
-title: Restaurer la base de données, boîte de dialogue (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue restaurer la base de données (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070260"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Restaurer la base de données (Analysis Services - Données multidimensionnelles)
-  La boîte de dialogue **Restaurer la base de données** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permet de restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à partir d’un fichier de sauvegarde portant l’extension .abf ([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Backup File).  
+  La boîte de dialogue **Restaurer la base de données** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permet de restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à partir d'un fichier de sauvegarde portant l'extension .abf ([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Backup File).  
   
 > [!IMPORTANT]  
->  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
+>  Pour chaque fichier de sauvegarde, l'utilisateur qui exécute la commande de restauration doit avoir l'autorisation de lire à partir de l'emplacement de sauvegarde spécifié pour chaque fichier. Pour restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui n'est pas installée sur le serveur, l'utilisateur doit également être un membre du rôle serveur pour cette instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour remplacer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , l’utilisateur doit avoir l’un des rôles suivants : membre du rôle serveur pour l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou membre d’un rôle de base de données avec les autorisations de contrôle total (Administrateur) sur la base de données à restaurer.  
   
 > [!NOTE]  
 >  Après la restauration d'une base de données existante, l'utilisateur qui a restauré la base de données peut perdre l'accès à la base de données restaurée. Cette perte d'accès peut se produire si, au moment de la sauvegarde, l'utilisateur n'était pas un membre du rôle de serveur ou un membre du rôle de base de données avec les autorisations de contrôle total (Administrateur).  
@@ -42,7 +42,7 @@ ms.locfileid: "66070260"
  Cette page sert à restaurer les partitions locales vers des emplacements spécifiés, ainsi que restaurer les partitions distantes à partir de fichiers de sauvegarde à distance. Pour plus d’informations sur cette page, consultez [Partitions &#40;boîte de dialogue Restaurer la base de données&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Sauvegarde et restauration de bases de données Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

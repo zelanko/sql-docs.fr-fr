@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 : Tester le Package leçon 5 du didacticiel | Microsoft Docs'
+title: 'Étape 4 : Test du package du didacticiel de la leçon 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890941"
 ---
-# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Étape 4 : Test du package du tutoriel de la leçon 5
+# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Étape 4 : Test de la leçon 5 du Package du didacticiel
   Au moment de l'exécution, votre package récupère la valeur de la propriété `Directory` à partir d'une variable mise à jour à l'exécution au lieu d'utiliser le nom du répertoire d'origine spécifié lors de la création du package. La valeur de cette variable est remplie par le fichier SSISTutorial.dtsConfig.  
   
  Pour vérifier si le package met à jour la propriété Directory avec la nouvelle valeur lors de l'exécution, exécutez tout simplement le package. Étant donné que seuls trois fichiers de données exemple ont été copiés dans le nouveau répertoire, le flux de données ne sera exécuté que trois fois au lieu de parcourir les 14 fichiers du dossier d'origine.  
@@ -31,15 +31,15 @@ ms.locfileid: "62890941"
   
  **Flux de données**  
   
- ![Flux de données dans le package](../../2014/tutorials/media/task9lesson1data.gif "Flux de données dans le package")  
+ ![Transmission de données dans le package](../../2014/tutorials/media/task9lesson1data.gif "Transmission de données dans le package")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Pour tester le package du didacticiel Lesson 5  
   
 1.  Dans le menu **Déboguer** , cliquez sur **Démarrer le débogage**.  
   
-2.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
+2.  Une fois l’exécution du package terminée, dans le menu **Déboguer** , cliquez sur **arrêter le débogage**.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 6 : Utilisation de paramètres avec le modèle de déploiement de projet](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Leçon 6 : Utilisation des paramètres dans le modèle de déploiement de projet](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

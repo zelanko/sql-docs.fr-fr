@@ -1,5 +1,5 @@
 ---
-title: Visionneuses de modèle d’exploration de données | Microsoft Docs
+title: Visionneuses de modèles d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085044"
 ---
 # <a name="data-mining-model-viewers"></a>Visionneuses de modèle d’exploration de données
-  Après avoir effectué l’apprentissage d’un modèle d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez explorer le modèle pour rechercher des tendances intéressantes. Étant donné que les résultats des modèles d'exploration de données sont complexes et peuvent être difficiles à comprendre dans un format brut, l'examen visuel des données constitue souvent le moyen le plus simple pour comprendre les règles et les relations que les algorithmes découvrent au sein des données.  
+  Après l’apprentissage d’un modèle d’exploration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de données dans, vous pouvez explorer le modèle pour rechercher des tendances intéressantes. Étant donné que les résultats des modèles d'exploration de données sont complexes et peuvent être difficiles à comprendre dans un format brut, l'examen visuel des données constitue souvent le moyen le plus simple pour comprendre les règles et les relations que les algorithmes découvrent au sein des données.  
   
  Chacun des algorithmes que vous utilisez pour la construction d'un modèle renvoie un type différent de résultats. Par conséquent, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une visionneuse spécifique pour chaque algorithme. Quand vous explorez un modèle d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le modèle s’affiche sous l’onglet **Visionneuse de modèle d’exploration de données** du Concepteur d’exploration de données, à l’aide de la visionneuse appropriée pour ce modèle.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66085044"
   
      À gauche, la visionneuse générique affiche une liste des nœuds du modèle. Vous pouvez cliquer sur un nœud pour afficher son contenu dans le volet droit.  
   
- ![Vue d’ensemble du Concepteur de modèles d’exploration de données](../media/generic-mining-model-tab1.gif "vue d’ensemble du Concepteur de modèles d’exploration de données")  
+ ![Vue d'ensemble d'un concepteur de modèle d'exploration de données](../media/generic-mining-model-tab1.gif "Vue d'ensemble d'un concepteur de modèle d'exploration de données")  
   
 ## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>En savoir plus sur la visionneuse de l'arborescence de contenu générique Microsoft  
  Chaque modèle peut également être affiché à l’aide de la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Cette visionneuse affiche le contenu du modèle d'exploration de données en respectant un format de table HTML standard. Toutefois, la disposition des nœuds et le contenu de chaque nœud diffèrent considérablement selon l'algorithme utilisé pour générer les résultats.  
@@ -60,7 +60,7 @@ ms.locfileid: "66085044"
  [Explorer un modèle à l'aide de la visionneuse d'arborescences Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md)  
  Décrit la Visionneuse d'arborescences [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Cette visionneuse affiche les modèles d'exploration de données qui sont générés avec l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) et l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression).  
   
- [Explorer un modèle à l'aide de Microsoft Sequence Cluster](browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Explorer un modèle à l’aide de Microsoft Sequence Cluster](browse-a-model-using-the-microsoft-cluster-viewer.md)  
  Décrit le composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer. Cette visionneuse affiche les modèles d’exploration de données qui sont générés avec l’algorithme MC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering).  
   
  [Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)  
@@ -78,11 +78,11 @@ ms.locfileid: "66085044"
  [Explorer un modèle à l'aide de la visionneuse de l'algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md)  
  Décrit la Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network). Cette visionneuse affiche les modèles d'exploration de données qui sont générés avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), y compris les modèles qui utilisent l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression).  
   
- [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  Décrit les informations détaillées qui sont disponibles dans la visionneuse générique pour tous les modèles d'exploration de données et fournit des exemples sur l'interprétation des informations pour chaque algorithme.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Concepteur d’exploration de données](data-mining-designer.md)  
   
   

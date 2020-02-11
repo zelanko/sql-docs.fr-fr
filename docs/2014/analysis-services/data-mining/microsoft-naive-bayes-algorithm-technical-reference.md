@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Naive Bayes algorithme | Microsoft Docs
+title: Informations techniques de référence sur l’algorithme Microsoft Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,26 +19,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083898"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)
-  L’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) est un algorithme de classification fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui est conçu pour la modélisation prédictive. Cet algorithme calcule la probabilité conditionnelle entre les colonnes d'entrée et les colonnes prédictibles, et suppose que les colonnes sont indépendantes. Naive Bayes tire son nom de cette hypothèse d'indépendance.  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Naive Bayes est un algorithme de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] classification fourni par pour une utilisation dans la modélisation prédictive. Cet algorithme calcule la probabilité conditionnelle entre les colonnes d'entrée et les colonnes prédictibles, et suppose que les colonnes sont indépendantes. Naive Bayes tire son nom de cette hypothèse d'indépendance.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implémentation de l'algorithme MNB (Microsoft Naive Bayes)  
  Cet algorithme est informatiquement moins lourd que d’autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Ainsi, il est utile pour générer rapidement des modèles d’exploration de données permettant de découvrir les relations entre les colonnes d’entrée et les colonnes prédictibles. L'algorithme prend en considération chaque paire de valeurs d'attribut d'entrée et valeurs d'attribut de sortie.  
   
- Une description des propriétés mathématiques du théorème de Bayes n’entre pas dans le cadre de cette documentation ; Pour plus d’informations, consultez le document Microsoft Research intitulé [réseaux BAYÉSIENS : La combinaison de connaissance et données statistiques](https://go.microsoft.com/fwlink/?LinkId=207029).  
+ La description des propriétés mathématiques du théorème de Bayes n’est pas traitée dans cette documentation. Pour plus d’informations, consultez le document Microsoft Research intitulé [Réseaux bayésiens : connaissance et données statistiques](https://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Pour une description de la façon dont les probabilités dans tous les modèles sont ajustées pour expliquer des valeurs manquantes potentielles, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
-### <a name="feature-selection"></a>Sélection des fonctionnalités  
+### <a name="feature-selection"></a>Sélection de caractéristiques  
  L’algorithme MNB [!INCLUDE[msCoName](../../includes/msconame-md.md)] effectue une sélection des fonctionnalités automatique pour limiter le nombre de valeurs prises en considération pendant la génération du modèle. Pour plus d’informations, consultez [Sélection des fonctionnalités &#40;Exploration de données&#41;](feature-selection-data-mining.md).  
   
-|Algorithm|Méthode d'analyse|Commentaires|  
+|Algorithme|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme Naive Bayes accepte uniquement les attributs discrets ou discrétisés ; par conséquent, il ne peut pas utiliser le score d'intérêt et de pertinence.|  
   
@@ -72,25 +72,25 @@ ms.locfileid: "66083898"
  La valeur par défaut est 0.5.  
   
  *MAXIMUM_STATES*  
- Spécifie le nombre maximal d'états d'attribut que l'algorithme prend en charge. Si le nombre d’états d’un attribut est supérieur au nombre maximal d’états, l’algorithme utilise les États les plus utilisés de l’attribut et traite les autres États comme étant absents.  
+ Spécifie le nombre maximal d'états d'attribut que l'algorithme prend en charge. Si le nombre d’États d’un attribut est supérieur au nombre maximal d’États, l’algorithme utilise les États les plus populaires de l’attribut et traite les autres États comme étant manquants.  
   
- La valeur par défaut est 100.  
+ La valeur par défaut est 100.  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
  L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) prend en charge les indicateurs de modélisation suivants. Lorsque vous créez la structure d'exploration de données ou le modèle d'exploration de données, vous définissez des indicateurs de modélisation pour spécifier la façon dont les valeurs de chaque colonne sont gérées pendant l'analyse. Pour plus d’informations, consultez [Indicateurs de modélisation &#40;Exploration de données&#41;](modeling-flags-data-mining.md).  
   
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : Manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
+|MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Un modèle d'arbre Naive Bayes doit contenir une colonne clé, au moins un attribut prédictible et au moins un attribut d'entrée. Aucun attribut ne peut être continu ; si vos données contiennent des données numériques continues, elles seront ignorées ou discrétisées.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
- L’algorithme MNB ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
+ L’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu en cas d’utilisation dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md).  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Cyclique, Discret, Discrétisé, Clé, Table et Trié|  
 |Attribut prédictible|Cyclique, Discret, Discrétisé, Table et Trié|  
@@ -99,8 +99,8 @@ ms.locfileid: "66083898"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)   
- [Naive Bayes Model Query Examples](naive-bayes-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
+ [Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

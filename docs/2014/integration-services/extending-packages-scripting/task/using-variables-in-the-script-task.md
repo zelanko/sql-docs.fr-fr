@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894590"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilisation de variables dans la tâche de script
@@ -46,10 +46,10 @@ ms.locfileid: "62894590"
   
  Les variables permettent d'établir cette communication entre le conteneur de boucles Foreach et la tâche de script. Dans la page **Mappage de variables** de l’**Éditeur de boucle Foreach**, assignez des variables à chaque élément de données qui est retourné par un même élément énuméré. Par exemple, un énumérateur Foreach File retourne uniquement un nom de fichier à l'index 0 et ne requiert donc qu'un seul mappage de variables, alors qu'un énumérateur qui retourne plusieurs colonnes de données dans chaque ligne requiert que vous mappiez une variable différente à chaque colonne que vous souhaitez utiliser dans la tâche de script.  
   
- Après avoir mappé les éléments énumérés aux variables, vous devez ajouter les variables mappées à la `ReadOnlyVariables` propriété sur le **Script** page de la **éditeur de tâche de Script** pour les rendre accessibles à votre script. Pour obtenir un exemple de tâche de script dans un conteneur de boucles Foreach qui traite les fichiers image dans un dossier, consultez [Utilisation d’images à l’aide de la tâche de script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
+ Une fois que vous avez mappé les éléments énumérés aux variables, vous devez ajouter les variables mappées à la `ReadOnlyVariables` propriété dans la page **script** de l **'éditeur de tâche de script** pour les mettre à la disposition de votre script. Pour obtenir un exemple de tâche de script dans un conteneur de boucles Foreach qui traite les fichiers image dans un dossier, consultez [Utilisation d’images à l’aide de la tâche de script](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md).  
   
 ## <a name="variables-example"></a>Exemple de variables  
- L'exemple suivant montre comment accéder à des variables et les utiliser dans une tâche de script pour déterminer le chemin d'accès du flux de travail du package. L’exemple part du principe que vous avez créé des variables de type entier nommées `CustomerCount` et `MaxRecordCount` et ajoutées à la `ReadOnlyVariables` collection dans le **éditeur de tâche de Script**. La variable `CustomerCount` contient le nombre d'enregistrements de client à importer. Si sa valeur est supérieure à la valeur de `MaxRecordCount`, la tâche de script signale une défaillance. Lorsqu'une défaillance se produit en raison du dépassement du seuil `MaxRecordCount`, le chemin d'accès aux erreurs du flux de travail peut implémenter les opérations de nettoyage requises.  
+ L'exemple suivant montre comment accéder à des variables et les utiliser dans une tâche de script pour déterminer le chemin d'accès du flux de travail du package. L’exemple suppose que vous avez créé des variables de type `CustomerCount` entier `MaxRecordCount` nommées et que vous `ReadOnlyVariables` les avez ajoutées à la collection dans l **'éditeur de tâche de script**. La variable `CustomerCount` contient le nombre d'enregistrements de client à importer. Si sa valeur est supérieure à la valeur de `MaxRecordCount`, la tâche de script signale une défaillance. Lorsqu'une défaillance se produit en raison du dépassement du seuil `MaxRecordCount`, le chemin d'accès aux erreurs du flux de travail peut implémenter les opérations de nettoyage requises.  
   
  Pour compiler correctement l'exemple, vous devez ajouter une référence à l'assembly Microsoft.SqlServer.ScriptTask.  
   
@@ -114,7 +114,7 @@ public class ScriptMain
   
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services-ssis-variables.md)   

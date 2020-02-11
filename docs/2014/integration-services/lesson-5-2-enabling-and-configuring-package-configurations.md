@@ -1,5 +1,5 @@
 ---
-title: 'Étape 2 : Activation et configuration des Configurations de Package | Microsoft Docs'
+title: 'Étape 2 : Activation et configuration des configurations de package | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891055"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>Étape 2 : Activation et configuration des configurations de package
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>Étape 2 : activation et configuration des configurations de package
   Au cours de cette tâche, vous allez convertir le projet en modèle de déploiement de package et activer les configurations du package à l'aide de l'Assistant Configuration de package. Vous allez utiliser cet Assistant pour générer un fichier de configuration XML qui contient les paramètres de configuration de la propriété `Directory` du conteneur de boucles Foreach. La valeur de la propriété Directory est fournie par la nouvelle variable de niveau package que vous pouvez mettre à jour au moment de l'exécution. De plus, vous allez remplir un nouveau dossier de données exemple à utiliser au cours du test.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Pour créer une nouvelle variable de niveau package mappée à la propriété Directory  
@@ -26,24 +26,24 @@ ms.locfileid: "62891055"
   
 2.  Dans le menu [!INCLUDE[ssIS](../includes/ssis-md.md)] , cliquez sur **Variables**.  
   
-3.  Dans la fenêtre **Variables** , cliquez sur l’icône Ajouter une variable.  
+3.  Dans la fenêtre **Variables** , cliquez sur l’icône Ajouter une variable .  
   
 4.  Dans la zone **Nom** , tapez **varFolderName**.  
   
     > [!IMPORTANT]  
     >  Les noms des variables tiennent compte de la casse.  
   
-5.  Vérifiez que la zone **Étendue** affiche le nom du package de la leçon 5 (Lesson 5).  
+5.  Vérifiez que la zone **étendue** affiche le nom du package, leçon 5.  
   
 6.  Définissez la valeur de la zone **Type de données** de la variable `varFolderName` à **String**.  
   
 7.  Réaffichez l’onglet **Flux de contrôle** et double-cliquez sur le conteneur **Foreach File in Folder** .  
   
-8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, cliquez sur **Expressions**, puis sur le bouton **(...)** .  
+8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, cliquez sur **Expressions**, puis sur le bouton **(...)**.  
   
-9. Dans le **Éditeur d’Expressions de propriété**, cliquez dans le **propriété** liste, puis sélectionnez `Directory`.  
+9. Dans l' **éditeur d’expressions**de la propriété, **** cliquez dans la liste propriété `Directory`, puis sélectionnez.  
   
-10. Dans le **Expression** , cliquez sur le bouton de sélection **(...)** .  
+10. Dans la zone **expression** , cliquez sur le bouton de sélection **(...)**.  
   
 11. Dans le **Générateur d’expressions**, développez le dossier Variables et faites glisser la variable **User::varFolderName** vers la zone **Expression** .  
   
@@ -55,11 +55,11 @@ ms.locfileid: "62891055"
   
 ### <a name="to-enable-package-configurations"></a>Pour activer les configurations de package  
   
-1.  Dans le menu **Projet**, cliquez sur **Convertir en modèle de déploiement de package**.  
+1.  Dans le **menu Projet**, cliquez sur **convertir en modèle de déploiement de package**.  
   
 2.  Cliquez sur **OK** dans la boîte de dialogue d’avertissement et, une fois la conversion terminée, cliquez sur **OK** dans la boîte de dialogue **Convertir en modèle de déploiement de package** .  
   
-3.  Cliquez sur l’arrière-plan de l’onglet **Flux de contrôle** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+3.  Cliquez sur l’arrière-plan de l’onglet **Flux de contrôle** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 4.  Dans le menu **SSIS** , cliquez sur **Configurations du package**.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62891055"
   
 10. Dans la boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** , tapez **SSISTutorial** dans la zone **Nom de fichier**, puis cliquez sur **Enregistrer**.  
   
-11. Dans la page **Sélectionner le type de configuration** , cliquez sur **Suivant**.  
+11. Dans la page **Sélectionner le type de configuration** , cliquez sur **suivant.**  
   
-12. Dans la page **Sélectionner les propriétés à exporter** , dans le volet **Objets** , développez **Variables**, **varFolderName**, **Propriétés**, puis sélectionnez **Valeur**.  
+12. Dans la **page Sélectionner les propriétés à exporter** , dans le volet **objets** , développez **variables**, **varFolderName**, **Propriétés**, puis sélectionnez **valeur**.  
   
 13. Dans la page **Sélectionner les propriétés à exporter** , cliquez sur **Suivant**.  
   
@@ -87,24 +87,24 @@ ms.locfileid: "62891055"
   
 16. Cliquez sur **Fermer**.  
   
-17. L’Assistant crée un fichier de configuration appelé SSISTutorial.dtsConfig, qui contient les paramètres de configuration pour le `value` de la variable qui définit à son tour le `Directory` propriété de l’énumérateur.  
+17. L’Assistant crée un fichier de configuration, nommé SSISTutorial. dtsConfig, qui contient des paramètres de `value` configuration pour le de la variable qui, `Directory` à son tour, définit la propriété de l’énumérateur.  
   
     > [!NOTE]  
     >  Un fichier de configuration contient généralement des informations complexes sur les propriétés de package, mais dans le cadre de ce didacticiel, la seule information qui nous concerne est :  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    > Path = " : \package.variables [user :: varFolderName]. Propriétés [valeur] "ValueType =" chaîne "\>  
     >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Pour créer et remplir un nouveau dossier de données exemple  
   
-1.  Dans l’Explorateur Windows, à la racine de votre lecteur (par exemple, C:\\), créez un dossier nommé `New Sample Data`.  
+1.  Dans l’Explorateur Windows, au niveau racine de votre lecteur (par exemple, C :\\), créez un nouveau dossier nommé `New Sample Data`.  
   
 2.  Localisez les fichiers d'exemple sur votre ordinateur et copiez trois des fichiers du dossier.  
   
 3.  Dans le `New Sample Data` dossier, collez les fichiers copiés.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Modification de la valeur de Configuration de propriété de répertoire](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Étape 3 : modification de la valeur de configuration de la propriété Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

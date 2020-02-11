@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835219"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Connexion SQL Server pour la création d'une instance
@@ -29,7 +29,7 @@ ms.locfileid: "62835219"
  Tapez le nom du serveur où se trouve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Authentification**  
- Sélectionnez l'une des options suivantes :  
+ Sélectionnez l’un des suivants :  
   
 -   **Authentification Windows**  
   
@@ -52,6 +52,6 @@ ms.locfileid: "62835219"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer la base de données de modification SQL Server](create-the-sql-server-change-database.md)   
- [Autorisations de connexion SQL Server requises pour le concepteur CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [Autorisations de connexion SQL Server nécessaires pour le concepteur CDC](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Visionneuse d’arborescence de contenu générique Microsoft (exploration de données) | Microsoft Docs
+title: Visionneuse de l’arborescence de contenu générique Microsoft (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ba3b64847e2f63a96533a0f57cee41208176a7b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077809"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Visionneuse de l'arborescence de contenu générique Microsoft (exploration de données)
@@ -27,7 +27,7 @@ ms.locfileid: "66077809"
  Les informations affichées dans la visionneuse utilisent une structure commune basée sur l'ensemble de lignes de schéma du contenu des modèles d'exploration de données. L'ensemble de lignes de schéma de contenu est une infrastructure générique pour le stockage des modèles, des statistiques et d'autres contenus d'un modèle d'exploration de données. Pour obtenir la liste des colonnes contenues dans l’ensemble de lignes de schéma pour les modèles d’exploration de données, consultez [Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
 ## <a name="options"></a>Options  
- **Légende du nœud (ID Unique)**  
+ **Légende de nœud (identificateur unique)**  
  Ce volet affiche la liste de tous les nœuds dans le modèle d'exploration de données sélectionné. La façon dont les nœuds sont réorganisés dans l'arborescence est différente selon le type de modèle que vous affichez.  
   
  Vous pouvez cliquer sur chaque nœud pour afficher des détails le concernant dans le volet **Détails du nœud** .  
@@ -38,8 +38,8 @@ ms.locfileid: "66077809"
  Pour en savoir plus sur l’interprétation des informations de nœud d’un type de modèle spécifique, consultez [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Requêtes d’exploration de données](data-mining/data-mining-queries.md)  
   
   

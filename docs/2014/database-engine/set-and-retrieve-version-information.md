@@ -1,5 +1,5 @@
 ---
-title: Définir et récupérer des informations de Version | Microsoft Docs
+title: Définir et récupérer les informations de version | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843480"
 ---
 # <a name="set-and-retrieve-version-information"></a>Définir et récupérer des informations sur la version
-  Les informations sur une version comprennent l'historique et l'état en cours d'un fichier sous contrôle de code source. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe gère un historique complet pour chaque fichier sous contrôle de code source, de sorte que vous puissiez suivre l'évolution d'un ou de plusieurs fichiers dans le temps. Vous pouvez également utiliser ces informations pour récupérer une copie locale d'une version d'un fichier ou pour comparer deux versions d'un fichier.  
+  Les informations sur une version comprennent l'historique et l'état en cours d'un fichier sous contrôle de code source. 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe gère un historique complet pour chaque fichier sous contrôle de code source, de sorte que vous puissiez suivre l'évolution d'un ou de plusieurs fichiers dans le temps. Vous pouvez également utiliser ces informations pour récupérer une copie locale d'une version d'un fichier ou pour comparer deux versions d'un fichier.  
   
  L'historique d'un fichier comprend les informations suivantes :  
   
 -   Numéro de version, indiquant la séquence de la version parmi les autres versions du même fichier  
   
--   Action réalisée. Parmi les opérations de suivi figurent la création, l'archivage et la suppression de fichiers.  
+-   action effectuée. Parmi les opérations de suivi figurent la création, l'archivage et la suppression de fichiers.  
   
 -   Nom d'utilisateur de la personne à l'origine de l'action impliquant le fichier  
   
@@ -53,11 +54,11 @@ ms.locfileid: "62843480"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Afficher l’historique d’un fichier](../../2014/database-engine/view-file-history.md)  
+-   [Afficher l'historique d'un fichier](../../2014/database-engine/view-file-history.md)  
   
--   [Afficher l’historique d’un projet](../../2014/database-engine/view-project-history.md)  
+-   [Afficher l'historique d'un projet](../../2014/database-engine/view-project-history.md)  
   
--   [Afficher l’état d’un fichier](../../2014/database-engine/view-file-status.md)  
+-   [Afficher l'état d'un fichier](../../2014/database-engine/view-file-status.md)  
   
 -   [Récupérer des fichiers](../../2014/database-engine/retrieve-files.md)  
   
@@ -67,7 +68,7 @@ ms.locfileid: "62843480"
   
 -   [Partager des fichiers](../../2014/database-engine/share-files.md)  
   
--   [Créer des rapports d’état et d’historique](../../2014/database-engine/create-history-and-status-reports.md)  
+-   [Créer des rapports d'état et historiques](../../2014/database-engine/create-history-and-status-reports.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du contrôle de code source](../../2014/database-engine/source-control-basics.md)  

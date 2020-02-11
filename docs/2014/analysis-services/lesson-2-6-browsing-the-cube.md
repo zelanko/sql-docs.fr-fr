@@ -1,5 +1,5 @@
 ---
-title: Exploration du Cube | Microsoft Docs
+title: Exploration du cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078981"
 ---
 # <a name="browsing-the-cube"></a>Exploration du cube
@@ -30,18 +30,18 @@ ms.locfileid: "66078981"
   
 1.  Basculez vers le **Concepteur de dimensions** pour la dimension Product dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour cela, double-cliquez sur la dimension **Product** du nœud **Dimensions** de l’Explorateur de solutions.  
   
-2.  Cliquez sur le **navigateur** onglet pour afficher le **tous les** membre de la `Product Key` hiérarchie d’attribut. Dans la leçon 3, vous allez définir une hiérarchie utilisateur pour la dimension Product qui vous permettra de parcourir la dimension.  
+2.  Cliquez sur l’onglet **navigateur** pour afficher le membre **tous** de `Product Key` la hiérarchie d’attribut. Dans la leçon 3, vous allez définir une hiérarchie utilisateur pour la dimension Product qui vous permettra de parcourir la dimension.  
   
-3.  Basculez vers le **Concepteur de cube** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour cela, double-cliquez sur le cube **Analysis Services Tutorial** dans le nœud **Cubes** de l’Explorateur de solutions.  
+3.  Basculez vers le **Concepteur de cube** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour ce faire, double-cliquez sur le cube **Analysis Services Tutorial** dans le nœud **cubes** de Explorateur de solutions.  
   
 4.  Sélectionnez l'onglet **Navigateur** , puis cliquez sur l'icône **Reconnecter** dans la barre d'outils du concepteur.  
   
      Le volet gauche du concepteur affiche les objets du cube Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Sur le côté droit de l'onglet **Navigateur** se trouvent deux volets : le volet supérieur est le volet **Filtre** et le volet inférieur est le volet **Données** . Dans une prochaine leçon, vous utiliserez le navigateur de cube pour effectuer l'analyse.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Modification des mesures, attributs et hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Leçon 3 : Modification des mesures, des attributs et des hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de requête MDX &#40;Analysis Services - Données multidimensionnelles&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [Éditeur de requête MDX &#40;Analysis Services-données multidimensionnelles&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

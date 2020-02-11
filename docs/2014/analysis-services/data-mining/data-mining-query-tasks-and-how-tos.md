@@ -1,5 +1,5 @@
 ---
-title: Tâches et procédures de requête d’exploration de données | Microsoft Docs
+title: Tâches de requête d’exploration de données et procédures | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084947"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tâches de requête d’exploration de données et procédures
@@ -29,9 +29,9 @@ ms.locfileid: "66084947"
   
 -   [créer une requête singleton dans le Concepteur d'exploration de données](create-a-singleton-query-in-the-data-mining-designer.md)  
   
--   [Créer une requête de prédiction à l'aide du Générateur de requêtes de prédiction](create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
--   [Afficher et enregistrer les résultats d’une requête de prédiction](view-and-save-the-results-of-a-prediction-query.md)  
+-   [Afficher et enregistrer les résultats d'une requête de prédiction](view-and-save-the-results-of-a-prediction-query.md)  
   
 -   [Modifier manuellement une requête de prédiction](manually-edit-a-prediction-query.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66084947"
 ## <a name="using-other-data-mining-query-tools"></a>Utilisation d'autres outils de requête d'exploration de données  
  En plus d’utiliser le Générateur de requêtes de prédiction, vous pouvez taper une requête directement dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] avec DMX ou XMLA. Vous pouvez également générer des requêtes de prédiction par programmation et les envoyer à un serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les rubriques suivantes fournissent des informations sur la création et l'utilisation des requêtes de prédiction en dehors du générateur de requêtes de prédiction.  
   
- [Créer une requête de prédiction Singleton à partir d’un modèle](create-a-singleton-prediction-query-from-a-template.md)  
+ [Créer une requête singleton de prédiction à partir d'un modèle](create-a-singleton-prediction-query-from-a-template.md)  
  Décrit comment utiliser les outils fournis dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer et exécuter une requête de prédiction.  
   
  [Créer une requête singleton de prédiction à partir d'un modèle](create-a-singleton-prediction-query-from-a-template.md)  
@@ -54,11 +54,11 @@ ms.locfileid: "66084947"
  [Créer une requête de contenu sur un modèle d'exploration de données](create-a-content-query-on-a-mining-model.md)  
  Décrit comment créer des requêtes qui retournent des informations détaillées stockées dans le modèle d'exploration de données à l'aide des ensembles de lignes de schéma d'exploration de données.  
   
- [Créer une requête d’exploration de données à l’aide de XMLA](create-a-data-mining-query-by-using-xmla.md)  
+ [Créer une requête d’exploration de données en utilisant XMLA](create-a-data-mining-query-by-using-xmla.md)  
  Décrit comment créer une requête sur le contenu d'un modèle d'exploration de données en utilisant les modèles XMLA dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence du langage des requêtes et expressions &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Procédures stockées d’exploration de données &#40;Analysis Services - Exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procédures stockées d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

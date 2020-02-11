@@ -1,5 +1,5 @@
 ---
-title: Améliorations date / heure (OLE DB) | Microsoft Docs
+title: Améliorations de la date et de l’heure (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,37 +14,38 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62866831"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Améliorations des types de données de date et d’heure (OLE DB)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit de nouveaux types de données de date et d'heure. Cette section décrit comment ces nouveaux types sont exposés en tant qu’extensions dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Pour une vue d’ensemble de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les nouveaux types date et heure données, consultez [améliorations Date / heure](../native-client/features/date-and-time-improvements.md). Pour obtenir un exemple, consultez [utilisation améliorée fonctionnalités de Date et heure &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
- Pour obtenir des informations plus générales sur les types de données date et d’heure, consultez [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit de nouveaux types de données de date et d'heure. Cette section décrit comment ces nouveaux types sont exposés en tant qu' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extensions dans Native Client. Pour obtenir une vue d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ensemble de la prise en charge native client pour les nouveaux types de données de date et d’heure, consultez améliorations de la [date et](../native-client/features/date-and-time-improvements.md)de l’heure. Pour obtenir un exemple, consultez [utiliser les fonctionnalités de date et d’heure améliorées &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  
+ Pour plus d’informations générales sur les types de données de date et d’heure, consultez [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Prise en charge des types de données pour les améliorations de date et heure OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Fournit des informations sur OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) qui prennent en charge les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les types de données date et time.  
+ [Prise en charge des types de données pour les améliorations de date et d’heure OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
+ Fournit des informations sur les[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types OLE DB (Native Client) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prennent en charge les types de données de date et d’heure.  
   
  [Métadonnées &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- Contient des informations sur la structure DBBINDING, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset`et j’ai`ColumnsInfo::GetColumnInfo`. Contient aussi des informations sur les mises à jour des ensembles de lignes de schéma OLE DB.  
+ Contient des informations sur la structure DBBINDING `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo` `IColumnsRowset::GetColumnsRowset`,, et I`ColumnsInfo::GetColumnInfo`. Fournit également des informations sur les mises à jour de OLE DB ensembles de lignes de schéma.  
   
  [Liaisons et conversions &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  Décrit les règles de conversion entre le serveur et le client pour les types date nouveaux et existants.  
   
- [En bloc de modifications de copie pour améliorée Types de Date et heure &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
+ [Modifications de copie en bloc pour les types de date et d’heure améliorés &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  Décrit les améliorations des types date/time pour prendre en charge les opérations de copie en bloc.  
   
- [Prise en charge des API OLE DB pour les améliorations de date et heure](ole-db-api-support-for-date-and-time-enhancements.md)  
+ [Prise en charge des API OLE DB pour les améliorations de date et d’heure](ole-db-api-support-for-date-and-time-enhancements.md)  
  Décrit les API OLE DB qui prennent en charge les fonctionnalités améliorées des types date/time.  
   
  [Comparabilité pour IRowsetFind](../../relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind.md)  
  Décrit les types date/time et `IRowsetFind`.  
   
- [Nouvelles fonctionnalités de Date et heure avec les Versions précédentes de SQL Server &#40;OLE DB&#41;](new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
+ [Nouvelles fonctionnalités de date et d’heure avec des versions antérieures de SQL Server &#40;OLE DB&#41;](new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
  Décrit le comportement attendu lorsqu'une application cliente qui utilise les fonctionnalités améliorées des types date et time communique avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et lorsqu'un client compilé avec une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client envoie des commandes à un serveur qui prend en charge les fonctionnalités améliorées des types date et time.  
   
 ## <a name="see-also"></a>Voir aussi  

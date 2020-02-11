@@ -1,5 +1,5 @@
 ---
-title: Options (Page de requête d’exécution SQL Server-général) | Microsoft Docs
+title: Options (exécution de la requête-SQL Server-page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,32 +13,32 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089991"
 ---
-# <a name="options-query-execution-sql-server-general-page"></a>Options (Page de requête d’exécution SQL Server-général)
+# <a name="options-query-execution-sql-server-general-page"></a>Options (exécution de la requête-SQL Server-page général)
   Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options relatives à une requête en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit dans une fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**.  
   
 ## <a name="options"></a>Options  
- **SET ROWCOUNT**  
+ **DÉFINIR LE ROWCOUNT**  
  La valeur par défaut 0 indique que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] attend les résultats, tant que tous les résultats ne sont pas reçus. Spécifiez une valeur supérieure à 0 pour que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] arrête la requête après avoir obtenu le nombre de lignes spécifié. Pour désactiver cette option, de manière à renvoyer toutes les lignes, spécifiez SET ROWCOUNT 0.  
   
- **SET TEXTSIZE**  
+ **DÉFINIR TEXTSIZE**  
  La valeur par défaut de 2 147 483 647 octets indique que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournira des champs de données complets jusqu'à la limite des champs de données `text` et `ntext`. Spécifiez un nombre inférieur pour limiter les résultats en cas de valeurs importantes. Les colonnes d'une taille supérieure au nombre spécifié sont tronquées.  
   
- **Délai d'exécution**  
- Définit la valeur par défaut dans la boîte de dialogue **Nouvelle connexion** . Utilisez cette zone de sélection numérique pour indiquer à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le nombre de secondes à patienter avant d’annuler la requête. La valeur 0 indique un délai d'attente illimité ou pas de délai. Cette valeur est égale à 0 pour une nouvelle installation.  
+ **Délai d’exécution**  
+ Définit la valeur par défaut dans la boîte de dialogue **Nouvelle connexion** . Utilisez cette zone de sélection numérique pour indiquer à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le nombre de secondes à patienter avant d’annuler la requête. La valeur 0 indique une attente infinie ou aucun délai d’attente. Cette valeur est 0 sur une nouvelle installation.  
   
- **Délimiteur de lot**  
+ **Délimiteur de traitement**  
  Tapez un mot à utiliser pour séparer les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] en traitements. La valeur par défaut est GO.  
   
  **Par défaut, ouvrir les nouvelles requêtes en mode SQLCMD**  
- Activez cette case à cocher pour ouvrir les nouvelles requêtes en mode SQLCMD. Pour plus d’informations sur le mode SQLCMD, consultez [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
+ Activez cette case à cocher pour ouvrir les nouvelles requêtes en mode SQLCMD. Pour plus d’informations sur le mode SQLCMD, consultez [modifier des scripts sqlcmd avec l’éditeur de requête](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
- Lorsque vous sélectionnez cette option, prenez en compte les limitations suivantes :  
+ Lorsque vous sélectionnez cette option, prenez en compte les limitations suivantes :  
   
 -   IntelliSense dans l’Éditeur de requête du [!INCLUDE[ssDE](../includes/ssde-md.md)] est désactivé.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "66089991"
  Cliquez ici pour rétablir les valeurs par défaut d'origine de toutes les valeurs de cette page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sqlcmd Utility](../tools/sqlcmd-utility.md)  
+ [Utilitaire sqlcmd](../tools/sqlcmd-utility.md)  
   
   

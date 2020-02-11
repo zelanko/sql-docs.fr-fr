@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754594"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Suspendre ou reprendre une session de mise en miroir de bases de données (SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "62754594"
   
      [Sécurité](#Security)  
   
--   **Sur ReplaceThisText, à l'aide de :**  
+-   **À ReplaceThisText, à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir suspendu ou repris la mise en miroir de bases de données](#FollowUp)  
+-   **Suivi :**  [après avoir suspendu ou repris la mise en miroir de bases de données](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Vous pouvez à tout moment suspendre une session de mise en miroir de bases de données afin d'améliorer les performances pendant les goulots d'étranglement. De même, vous pouvez reprendre une session interrompue à tout moment.  
@@ -108,13 +108,13 @@ ms.locfileid: "62754594"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir suspendu ou repris la mise en miroir de bases de données  
+##  <a name="FollowUp"></a>Suivi : après avoir suspendu ou repris la mise en miroir de bases de données  
   
--   **Après avoir suspendu la mise en miroir de bases de données**  
+-   **Après la suspension de la mise en miroir de bases de données**  
   
      Sur la base de données primaire, prenez des précautions pour éviter la saturation du journal des transactions. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
--   **Après avoir repris la mise en miroir de bases de données**  
+-   **Après la reprise de la mise en miroir de bases de données**  
   
      La reprise de la mise en miroir de la base de données place la base de données miroir dans l'état Synchronisation. Si le niveau de sécurité est FULL, le miroir récupère le principal et la base de données miroir entre dans l'état Synchronisé. À ce stade, le basculement devient possible. Si le serveur témoin est présent et activé, le basculement automatique est possible. En l'absence de serveur témoin, le basculement manuel est possible.  
   

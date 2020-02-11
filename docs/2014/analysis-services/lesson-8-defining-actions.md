@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 8 : Définition des Actions | Microsoft Docs'
+title: 'Leçon 8 : définition des actions | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078228"
 ---
-# <a name="lesson-8-defining-actions"></a>Leçon 8 : Définition des actions
+# <a name="lesson-8-defining-actions"></a>Leçon 8 : Définition des actions
   Dans cette leçon, vous allez apprendre à définir des actions dans votre projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Une action est simplement une instruction MDX (Multidimensional Expressions) qui est stockée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et peut être incorporée dans des applications clientes et démarrée par un utilisateur.  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projets qui vont de ce didacticiel.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les types d’actions décrits dans le tableau suivant.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les types d’actions décrits dans le tableau suivant.  
   
 |||  
 |-|-|  
@@ -48,12 +49,12 @@ ms.locfileid: "66078228"
  Dans cette tâche, vous définissez, utilisez puis modifiez une action d'extraction à travers la relation de dimension de fait que vous avez définie antérieurement dans ce didacticiel.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 9 : Définition de Perspectives et traductions](lesson-9-defining-perspectives-and-translations.md)  
+ [Leçon 9 : Définition de perspectives et de traductions](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   
- [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Actions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [La modélisation multidimensionnelle &#40;le didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Actions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Actions dans les modèles multidimensionnels](multidimensional-models/actions-in-multidimensional-models.md)  
   
   

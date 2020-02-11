@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue visionneuse (Analysis Services - données multidimensionnelles) exemple de données | Microsoft Docs
+title: Visionneuse d’exemples de données, boîte de dialogue (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082623"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Visionneuse des données d'exemple (Analysis Services - Données multidimensionnelles)
@@ -31,7 +31,7 @@ ms.locfileid: "66082623"
  Affiche les lignes et les colonnes des 1 000 premières lignes de la table de faits contenant la colonne source sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Sélectionnez les mesures &#40;Assistant Cube&#41;](select-measures-cube-wizard.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Sélectionnez mesures &#40;Assistant Cube&#41;](select-measures-cube-wizard.md)  
   
   

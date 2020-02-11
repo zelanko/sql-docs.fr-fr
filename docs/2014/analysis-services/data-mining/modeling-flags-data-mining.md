@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083313"
 ---
 # <a name="modeling-flags-data-mining"></a>Indicateurs de modélisation (Exploration de données)
-  Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour fournir à un algorithme d’exploration de données des informations supplémentaires portant sur les données définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis.  
+  Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour fournir à un algorithme d'exploration de données des informations supplémentaires portant sur les données définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis.  
   
  Certains indicateurs de modélisation sont définis au niveau de la structure d'exploration de données, tandis que d'autres sont définis au niveau de la colonne du modèle d'exploration de données. Par exemple, l'indicateur de modélisation `NOT NULL` est utilisé avec les colonnes de structure d'exploration de données. Vous pouvez définir des indicateurs de modélisation supplémentaires sur les colonnes du modèle d'exploration de données, en fonction de l'algorithme que vous utilisez pour créer le modèle.  
   
@@ -71,7 +71,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Vous pouvez spécifier des indicateurs de modélisation dans une nouvelle structure d'exploration de données ou un nouveau modèle d'exploration de données à l'aide de DMX, ou à l'aide de scripts AMO ou XMLA. Cependant, vous ne pouvez pas utiliser DMX pour modifier les indicateurs de modélisation utilisés dans un modèle et une structure d'exploration de données existants. Vous devez créer un modèle d’exploration de données en utilisant la syntaxe `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
-##  <a name="bkmk_UseRegressors"></a> Utilisations de l’indicateur de modélisation REGRESSOR  
+##  <a name="bkmk_UseRegressors"></a>Utilisations de l’indicateur de modélisation de régression  
  Lorsque vous définissez l'indicateur de modélisation REGRESSOR sur une colonne, vous indiquez à l'algorithme que la colonne contient des régresseurs potentiels. Les régresseurs actuellement utilisés dans le modèle sont déterminés par l'algorithme. Un régresseur potentiel peut être ignoré s'il ne modélise pas l'attribut prédictible.  
   
  Lorsque vous générez un modèle à l'aide de l'Assistant Exploration de données, toutes les colonnes d'entrée continues sont marquées comme des régresseurs possibles. Par conséquent, même si vous ne définissez pas explicitement l'indicateur REGRESSOR sur une colonne, la colonne peut être utilisée comme régresseur dans le modèle.  
@@ -84,7 +84,7 @@ FROM $system.DMSCHEMA_MINING_COLUMNS
 WHERE MODEL_NAME = '<model name>'  
 ```  
   
- **Remarque** Si vous modifiez un modèle d’exploration de données et que vous remplacez le type de contenu continu d’une colonne par un type de contenu discret, vous devez modifier manuellement l’indicateur sur la colonne d’exploration de données, puis retraiter le modèle.  
+ **Remarque** Si vous modifiez un modèle d’exploration de données et que vous modifiez le type de contenu d’une colonne de continu à discret, vous devez modifier manuellement l’indicateur sur la colonne d’exploration de données, puis retraiter le modèle.  
   
 ### <a name="regressors-in-linear-regression-models"></a>Régresseurs dans les modèles de régression linéaire  
  Les modèles de régression linéaire sont basés sur l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Même si vous n’utilisez pas l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression), tout modèle d’arbre de décision peut contenir un arbre ou des nœuds qui représentent une régression sur un attribut continu.  
@@ -104,13 +104,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Tâche|Rubrique|  
 |----------|-----------|  
-|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](modeling-flags-data-mining.md)|  
+|Modifier les indicateurs de modélisation à l'aide du Concepteur d'exploration de données|[Afficher ou modifier les indicateurs de modélisation &#40;l’exploration de données&#41;](modeling-flags-data-mining.md)|  
 |Fournir une indication à l'algorithme pour recommander des régresseurs potentiels|[Spécifier une colonne à utiliser comme régresseur dans un modèle](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Voir les indicateurs de modélisation pris en charge par des algorithmes spécifiques (dans la section Indicateurs de modélisation de la rubrique de référence correspondant à chaque algorithme)|[Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Voir les indicateurs de modélisation pris en charge par des algorithmes spécifiques (dans la section Indicateurs de modélisation de la rubrique de référence correspondant à chaque algorithme)|[Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |En savoir plus sur les colonnes de structure d'exploration de données et les propriétés que vous pouvez définir dessus|[Colonnes de structure d'exploration de données](mining-structure-columns.md)|  
-|En savoir plus sur les colonnes du modèle d'exploration de données et les indicateurs de modélisation qui peuvent être appliqués au niveau du modèle|[Colonnes d’un modèle d’exploration de données](mining-model-columns.md)|  
-|Voir la syntaxe à utiliser pour travailler avec des indicateurs de modélisation dans des instructions DMX|[Indicateurs de modélisation &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
-|Comprendre les valeurs manquantes et la façon de les utiliser|[Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md)|  
+|En savoir plus sur les colonnes du modèle d'exploration de données et les indicateurs de modélisation qui peuvent être appliqués au niveau du modèle|[Colonnes d'un modèle d'exploration de données](mining-model-columns.md)|  
+|Voir la syntaxe à utiliser pour travailler avec des indicateurs de modélisation dans des instructions DMX|[Indicateurs de modélisation &#40;&#41;DMX](/sql/dmx/modeling-flags-dmx)|  
+|Comprendre les valeurs manquantes et la façon de les utiliser|[Valeurs manquantes &#40;Analysis Services d’exploration de données&#41;](missing-values-analysis-services-data-mining.md)|  
 |En savoir plus sur la gestion des modèles et des structures, et sur la définition de propriétés d'utilisation|[Déplacement d'objets d'exploration de données](moving-data-mining-objects.md)|  
   
   

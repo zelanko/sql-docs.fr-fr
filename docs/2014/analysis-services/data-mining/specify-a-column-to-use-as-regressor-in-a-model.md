@@ -1,5 +1,5 @@
 ---
-title: Spécifier une colonne à utiliser comme régresseur dans un modèle | Microsoft Docs
+title: Spécifier une colonne à utiliser comme régreseur dans un modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082910"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Spécifier une colonne à utiliser comme régresseur dans un modèle
@@ -26,7 +26,7 @@ ms.locfileid: "66082910"
   
 ### <a name="how-to-create-a-simple-linear-regression-model"></a>Procédure de création d'un modèle de régression linéaire simple  
   
-1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans l’ **Explorateur de solutions**, développez **Structures d’exploration de données**.  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans **Explorateur de solutions**, développez **structures d’exploration de données**.  
   
 2.  Double-cliquez sur Call Center.dmm pour l'ouvrir dans le concepteur.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66082910"
      Dans la visionneuse, le modèle est représenté sous la forme d'un nœud unique contenant la formule de régression. Vous pouvez afficher la formule dans la **Légende d’exploration de données**, ou extraire les coefficients de la formule à l’aide de requêtes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm.md)   
- [Requêtes d'exploration de données](data-mining-queries.md)   
- [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm.md)   
+ [Requêtes d’exploration de données](data-mining-queries.md)   
+ [Référence technique de l’algorithme de régression linéaire Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Test et Validation (exploration de données) | Microsoft Docs
+title: Test et validation (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -29,16 +29,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082799"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test et validation (exploration de données)
   La validation est le processus consistant à évaluer les performances de vos modèles d'exploration de données sur des données réelles. Il est important de valider les modèles d'exploration de données en comprenant leurs qualité et caractéristiques avant de les déployer dans un environnement de production.  
   
- Cette section présente des concepts de base liés à la qualité des modèles, et décrit les stratégies de validation de modèles fournies dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour obtenir une vue d’ensemble de la façon dont la validation de modèle s’adapte à des processus d’exploration de données plus importants, consultez [Solutions d’exploration de données](data-mining-solutions.md).  
+ Cette section présente des concepts de base liés à la qualité du modèle et décrit les stratégies de validation de modèle fournies [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dans. Pour obtenir une vue d’ensemble de la façon dont la validation de modèle s’adapte à des processus d’exploration de données plus importants, consultez [Solutions d’exploration de données](data-mining-solutions.md).  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Méthodes de test et de validation des modèles d'exploration de données  
  De nombreuses approches permettent d'évaluer la qualité et les caractéristiques d'un modèle d'exploration de données.  
@@ -54,14 +54,15 @@ ms.locfileid: "66082799"
 ## <a name="definition-of-criteria-for-validating-data-mining-models"></a>Définition des critères pour valider les modèles d'exploration de données  
  Les mesures de l'exploration de données s'expriment généralement en termes de précision, de fiabilité et d'utilité.  
   
- La*précision* mesure le degré de corrélation du modèle entre un résultat et les attributs des données fournies. Il existe différentes mesures de précision, mais toutes dépendent des données utilisées. Dans la réalité, les valeurs peuvent être absentes ou approximatives ; plusieurs processus peuvent avoir aussi modifié les données. Dans la phase d'exploration et de développement en particulier, vous pouvez décider d'accepter une certaine quantité d'erreurs dans les données, surtout si les données présentent des caractéristiques assez uniformes. Par exemple, un modèle qui prédit les ventes d'un magasin donné en fonction des ventes passées peut présenter un degré de corrélation très élevé et être très précis, même si ce magasin a utilisé régulièrement une mauvaise méthode de comptabilité. Par conséquent, les mesures de précision doivent être compensées par les évaluations de fiabilité.  
+ La *précision* est une mesure de la façon dont le modèle met en corrélation un résultat avec les attributs des données qui ont été fournies. Il existe différentes mesures de précision, mais toutes dépendent des données utilisées. Dans la réalité, les valeurs peuvent être absentes ou approximatives ; plusieurs processus peuvent avoir aussi modifié les données. Dans la phase d'exploration et de développement en particulier, vous pouvez décider d'accepter une certaine quantité d'erreurs dans les données, surtout si les données présentent des caractéristiques assez uniformes. Par exemple, un modèle qui prédit les ventes d'un magasin donné en fonction des ventes passées peut présenter un degré de corrélation très élevé et être très précis, même si ce magasin a utilisé régulièrement une mauvaise méthode de comptabilité. Par conséquent, les mesures de précision doivent être compensées par les évaluations de fiabilité.  
   
- La*fiabilité* évalue le fonctionnement d’un modèle d’exploration de données sur différents jeux de données. Un modèle d'exploration de données est fiable s'il génère le même type de prédictions ou trouve les mêmes types généraux de modèles quelles que soient les données de test fournies. Par exemple, le modèle que vous générez pour le magasin qui a utilisé la mauvaise méthode de comptabilité ne se généraliserait pas bien à d'autres magasins et ne serait par conséquent pas fiable.  
+ La *fiabilité* évalue le mode d’exécution d’un modèle d’exploration de données sur différents jeux de données. Un modèle d'exploration de données est fiable s'il génère le même type de prédictions ou trouve les mêmes types généraux de modèles quelles que soient les données de test fournies. Par exemple, le modèle que vous générez pour le magasin qui a utilisé la mauvaise méthode de comptabilité ne se généraliserait pas bien à d'autres magasins et ne serait par conséquent pas fiable.  
   
- *L’utilité* inclut diverses mesures indiquant si le modèle fournit des informations utiles. Par exemple, un modèle d'exploration de données qui met en corrélation l'emplacement du magasin et les ventes peut être précis et fiable, mais ne pas être utile, parce que vous ne pouvez pas généraliser ce résultat en ajoutant d'autres magasins au même emplacement. De plus, il ne répond pas à la question fondamentale de savoir pourquoi certains emplacements enregistrent plus de ventes. Vous pouvez également découvrir qu'un modèle semblant satisfaisant est en fait inutile, car il est basé sur des corrélations mutuelles des données.  
+ L' *utilité* inclut diverses mesures qui vous indiquent si le modèle fournit des informations utiles. Par exemple, un modèle d'exploration de données qui met en corrélation l'emplacement du magasin et les ventes peut être précis et fiable, mais ne pas être utile, parce que vous ne pouvez pas généraliser ce résultat en ajoutant d'autres magasins au même emplacement. De plus, il ne répond pas à la question fondamentale de savoir pourquoi certains emplacements enregistrent plus de ventes. Vous pouvez également découvrir qu'un modèle semblant satisfaisant est en fait inutile, car il est basé sur des corrélations mutuelles des données.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>Outils de test et de validation des modèles d'exploration de données  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propose plusieurs approches de validation des solutions d’exploration de données qui prennent en charge toutes les phases de la méthodologie de test de l’exploration de données.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propose plusieurs approches de validation des solutions d’exploration de données qui prennent en charge toutes les phases de la méthodologie de test de l’exploration de données.  
   
 -   Partitionnement des données en jeux d'apprentissage et de test.  
   
@@ -86,13 +87,13 @@ ms.locfileid: "66082799"
 |Rubriques|Liens|  
 |------------|-----------|  
 |Découvrez comment configurer un jeu de données de test à l'aide d'un Assistant ou de commandes DMX|[Jeux de données d'apprentissage et de test](training-and-testing-data-sets.md)|  
-|Apprenez à tester la distribution et la représentativité des données dans une structure d'exploration de données|[Validation croisée &#40;Analysis Services – Exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Découvrez les types de graphiques d'analyse de précision fournis dans [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Apprenez à créer une matrice de classification, parfois appelée matrice de confusion, pour évaluer le nombre d'éléments positifs et négatifs vrais ou faux.|[Matrice de classification &#40;Analysis Services - Exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|Apprenez à tester la distribution et la représentativité des données dans une structure d'exploration de données|[Validation croisée &#40;Analysis Services d’exploration de données&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Découvrez les types de graphiques d'analyse de précision fournis dans [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Graphique de courbes d’élévation &#40;Analysis Services d’exploration de données&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services d’exploration de données&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services d’exploration de données&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Apprenez à créer une matrice de classification, parfois appelée matrice de confusion, pour évaluer le nombre d'éléments positifs et négatifs vrais ou faux.|[Matrice de classification &#40;Analysis Services d’exploration de données&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d'exploration de données](data-mining-tools.md)   
+ [Outils d’exploration de données](data-mining-tools.md)   
  [Solutions d’exploration de données](data-mining-solutions.md)   
- [Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tâches de test et de validation et &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

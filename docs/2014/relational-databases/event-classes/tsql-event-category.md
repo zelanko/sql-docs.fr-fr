@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746083"
 ---
 # <a name="tsql-event-category"></a>TSQL, catégorie d’événement
@@ -30,7 +30,7 @@ ms.locfileid: "62746083"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événements Exec Prepared SQL](exec-prepared-sql-event-class.md)|Indique que SqlClient, ODBC, OLE DB ou la bibliothèque de bases de données a exécuté une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] préparées.|  
+|[Exec Prepared SQL, classe d’événements](exec-prepared-sql-event-class.md)|Indique que SqlClient, ODBC, OLE DB ou la bibliothèque de bases de données a exécuté une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] préparées.|  
 |[Classe d'événements Prepare SQL](prepare-sql-event-class.md)|Indique que SqlClient, ODBC, OLE DB ou DB-Library a préparé une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à utiliser.|  
 |[Classe d'événements SQL:BatchCompleted](sql-batchcompleted-event-class.md)|Indique que le traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] est terminé.|  
 |[Classe d'événements SQL:BatchStarting](sql-batchstarting-event-class.md)|Indique que le traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] démarre.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62746083"
 |[Classe d'événements SQL:StmtRecompile](sql-stmtrecompile-event-class.md)|Indique des recompilations au niveau instruction provoquées par tous les types de lots : procédures stockées, déclencheurs, lots ad hoc et requêtes.|  
 |[Classe d'événements SQL:StmtStarting](sql-stmtstarting-event-class.md)|Indique qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] démarre.|  
 |[Classe d'événements Unprepare SQL](unprepare-sql-event-class.md)|Indique que SqlClient, ODBC, OLE DB ou la bibliothèque de bases de données a supprimé une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] préparées.|  
-|[Classe d'événements XQuery Static Type](xquery-static-type-event-class.md)|Se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une expression XQuery.|  
+|[XQuery Static Type, classe d’événements](xquery-static-type-event-class.md)|Se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une expression XQuery.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence Transact-SQL &#40;moteur de base de données&#41;](/sql/t-sql/language-reference)  
