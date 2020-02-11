@@ -1,5 +1,5 @@
 ---
-title: Propriétés de mémoire | Microsoft Docs
+title: Propriétés de la mémoire | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068891"
 ---
 # <a name="memory-properties"></a>Propriétés de mémoire
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de mémoire du serveur répertoriées dans le tableau suivant. Pour obtenir des conseils sur la définition de ces propriétés, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Les valeurs comprises entre 1 et 100 représentent des pourcentages de **mémoire physique totale** ou d' **espace d'adressage virtuel**, la valeur la plus petite étant retenue. Les valeurs supérieures à 100 représentent les limites de mémoire en octets.  
   
  **S’applique à :** Mode serveur multidimensionnel et tabulaire, sauf indication contraire.  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
  `LowMemoryLimit`  
  Une propriété de nombre signé 64 bits à virgule flottante double précision qui définit le point auquel le serveur manque de mémoire, exprimée en pourcentage de mémoire physique totale. Lorsque cette limite est atteinte, l'instance commence lentement à nettoyer la mémoire des caches en fermant les sessions expirées et en déchargeant les calculs non utilisés. Le serveur ne libère pas la mémoire en dessous de cette limite. La valeur par défaut est 65, ce qui indique que la limite de mémoire inférieure correspond à 65 % de la mémoire physique ou de l'espace d'adressage virtuel, la valeur inférieure étant applicable.  
   
@@ -112,6 +113,6 @@ ms.locfileid: "66068891"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158754"
 ---
 # <a name="memory-optimized-tables"></a>Tables optimisées en mémoire
@@ -30,11 +30,11 @@ ms.locfileid: "63158754"
   
      Explique de façon détaillée comment les tables optimisées en mémoire et les procédures stockées compilées en mode natif sont compilées en DLL, et contient des considérations relatives à la sécurité.  
   
--   [Modification des tables optimisées en mémoire](altering-memory-optimized-tables.md)  
+-   [Modification des tables à mémoire optimisée](altering-memory-optimized-tables.md)  
   
      Directives pour la mise à jour des tables optimisées en mémoire (y compris la modification des colonnes des tables, des index et de bucket_count).  
   
--   [Comprendre les transactions sur les tables à mémoire optimisée](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+-   [Comprendre les transactions sur les tables mémoire optimisées](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
      Cette section contient plusieurs rubriques relatives à la réalisation de transactions sur les tables optimisées en mémoire, y compris les niveaux d'isolement des transactions et les transactions multiconteneurs.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63158754"
   
      Explique de façon détaillée la limite de 8 060 octets sur les lignes des tables optimisées en mémoire et donne un exemple de calcul de la taille d'une table et des lignes.  
   
--   [Guide du traitement des requêtes pour les tables mémoire optimisées](a-guide-to-query-processing-for-memory-optimized-tables.md)  
+-   [Guide du traitement des requêtes pour les tables optimisées en mémoire](a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
      Fournit une vue d'ensemble du traitement des requêtes pour les tables optimisées en mémoire et les procédures stockées compilées en mode natif.  
   

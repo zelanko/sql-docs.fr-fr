@@ -96,13 +96,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068868"
 ---
 # <a name="olap-properties"></a>Propriétés OLAP
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **S’applique à :** Mode serveur multidimensionnel uniquement  
@@ -134,18 +135,18 @@ ms.locfileid: "66068868"
  Propriété booléenne qui spécifie si le traitement différé des agrégations est activé.  
   
  `SleepIntervalSecs`  
- Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
   
  `MaxCPUUsage`  
- Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit sous la forme d'un pourcentage l'utilisation maximale de l'unité centrale pour les traitements différés. Le serveur surveille l'utilisation moyenne de l'unité centrale en prenant des instantanés à intervalles réguliers. Il est normal que l'unité centrale dépasse temporairement ce seuil lors des pointes d'activité.  
+ Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit sous la forme d'un pourcentage l'utilisation maximale de l'unité centrale pour les traitements différés. Le serveur surveille l'utilisation moyenne de l'unité centrale en prenant des instantanés à intervalles réguliers. Il est normal que l'unité centrale dépasse temporairement ce seuil lors des pointes d'activité.  
   
- La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
+ La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
   
  `MaxObjectsInParallel`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de partitions pouvant faire l'objet d'un traitement différé en parallèle.  
   
  `MaxRetries`  
- Propriété dont la valeur est un entier 32 bits signé qui définit le nombre de nouvelles tentatives en cas d'échec du traitement en différé avant qu'une erreur ne soit déclenchée.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit le nombre de nouvelles tentatives en cas d'échec du traitement en différé avant qu'une erreur ne soit déclenchée.  
   
 ## <a name="processplan"></a>ProcessPlan  
  `CacheRowsetRows`  
@@ -155,7 +156,7 @@ ms.locfileid: "66068868"
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `DistinctBuffer`  
- Propriété dont la valeur est un entier 32 bits signé qui définit la taille d'une mémoire tampon interne utilisée pour les comptages de valeurs. Augmentez cette valeur si vous souhaitez accélérer le traitement du comptage de valeurs au prix d'une plus grande consommation de mémoire.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit la taille d'une mémoire tampon interne utilisée pour les comptages de valeurs. Augmentez cette valeur si vous souhaitez accélérer le traitement du comptage de valeurs au prix d'une plus grande consommation de mémoire.  
   
  `EnableRolapDimQueryTableGrouping`  
  Propriété booléenne qui spécifie si le regroupement de tables est activé pour les dimensions ROLAP. Si sa valeur est True, lors de l'extraction des dimensions ROLAP au moment de l'exécution, les tables de dimension ROLAP sont consultées en entier immédiatement, au lieu d'utiliser des requêtes distinctes pour chaque attribut.  
@@ -176,7 +177,7 @@ ms.locfileid: "66068868"
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `MemoryLimit`  
- Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale à consacrer au traitement, exprimée en pourcentage de la mémoire physique.  
+ Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale à consacrer au traitement, exprimée en pourcentage de la mémoire physique.  
   
  La valeur par défaut de cette propriété, 65, indique que 65 % de la mémoire physique peut être consacrée au traitement des cubes et des dimensions.  
   
@@ -196,11 +197,11 @@ ms.locfileid: "66068868"
  `PartitionLatencyAccuracy`  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Traiter  
+## <a name="process"></a>Procédure  
  `AggregationMemoryLimitMax`  
  Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire maximale pouvant être consacrée au traitement des agrégations, exprimée en pourcentage de la mémoire physique.  
   
- La valeur par défaut de cette propriété, 80, indique que 80 % de la mémoire physique peut être consacrée au traitement des agrégations.  
+ La valeur par défaut de cette propriété, 80, indique que 80 % de la mémoire physique peut être consacrée au traitement des agrégations.  
   
  `AggregationMemoryLimitMin`  
  Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la capacité de mémoire minimale pouvant être consacrée au traitement des agrégations, exprimée en pourcentage de la mémoire physique. Une valeur supérieure est susceptible d'accélérer le traitement des agrégations au prix d'une plus grande consommation de mémoire.  
@@ -219,12 +220,12 @@ ms.locfileid: "66068868"
  `BufferMemoryLimit`  
  Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit la limite de la mémoire tampon de traitement, exprimée en pourcentage de la mémoire physique.  
   
- La valeur par défaut de cette propriété, 60, indique qu'il est possible d'utiliser jusqu'à 60 % de la mémoire physique comme mémoire tampon.  
+ La valeur par défaut de cette propriété, 60, indique qu'il est possible d'utiliser jusqu'à 60 % de la mémoire physique comme mémoire tampon.  
   
  `BufferRecordLimit`  
  Propriété dont la valeur est un entier 32 bits signé qui définit le nombre d'enregistrements qu'il est possible de stocker en mémoire tampon durant le traitement.  
   
- La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
+ La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
   
  `CacheRecordLimit`  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -271,7 +272,7 @@ ms.locfileid: "66068868"
  `IndexBuildThreshold`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie un seuil, exprimé en nombre de lignes, en dessous duquel les index ne seront pas générés pour les partitions.  
   
- La valeur par défaut de cette propriété est 4 096 (lignes).  
+ La valeur par défaut de cette propriété est 4 096 (lignes).  
   
  `IndexFileInitEnabled`  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -282,7 +283,7 @@ ms.locfileid: "66068868"
  `RecordsReportGranularity`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie la périodicité, exprimée en nombre de lignes, selon laquelle le serveur enregistre les événements Trace durant le traitement.  
   
- La valeur par défaut de cette propriété, 1 000, indique qu'un événement Trace est enregistré toutes les 1 000 lignes.  
+ La valeur par défaut de cette propriété, 1 000, indique qu'un événement Trace est enregistré toutes les 1 000 lignes.  
   
  `ROLAPDimensionProcessingEffort`  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -312,9 +313,9 @@ ms.locfileid: "66068868"
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `DefaultDrillthroughMaxRows`  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
   
- La valeur par défaut de cette propriété est 10 000 (lignes).  
+ La valeur par défaut de cette propriété est 10 000 (lignes).  
   
  `DimensionPropertyCacheSize`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie la quantité de mémoire (en octets) utilisée pour mettre en cache les membres de dimension utilisés dans une requête.  
@@ -327,7 +328,7 @@ ms.locfileid: "66068868"
   
      Notez que la mémoire utilisée par ces caches est considérée comme non réductible et est incluse dans la propriété **TotalMemoryLimit**.  
   
--   Affecte toutes les bases de données sur le serveur. **DimensionPropertyCachesize** est une propriété à l’échelle du serveur. La modification de cette propriété affecte toutes les bases de données exécutées sur l'instance actuelle.  
+-   Affecte toutes les bases de données sur le serveur. **DimensionPropertyCachesize** est une propriété à l’ensemble du serveur. La modification de cette propriété affecte toutes les bases de données exécutées sur l'instance actuelle.  
   
  Approche pour estimer la configuration requise du cache de dimension :  
   
@@ -479,6 +480,6 @@ ms.locfileid: "66068868"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

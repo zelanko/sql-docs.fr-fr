@@ -13,23 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072716"
 ---
 # <a name="use-aggregate-functions"></a>Utiliser des fonctions d'agrégation
   Lorsqu'une dimension est utilisée pour segmenter une mesure, celle-ci est résumée en fonction des hiérarchies contenues dans la dimension. Le comportement de sommation dépend de la fonction d'agrégation spécifiée pour la mesure. Pour la plupart des mesures contenant des données numériques, `Sum` est la fonction d'agrégation à utiliser. La valeur de la mesure est la somme de montants différents selon le niveau auquel la hiérarchie est active.  
   
- Dans Analysis Services, chaque mesure que vous créez s'appuie sur une fonction d'agrégation qui détermine l'opération associée à la mesure. Types d’agrégation prédéfinis incluent `Sum`, `Min`, `Max`, `Count`, **comptage de valeurs**, ainsi que plusieurs autres fonctions plus spécialisées. Si vous avez besoin d'agrégations basées sur des formules complexes ou personnalisées, vous pouvez aussi créer un calcul MDX au lieu d'utiliser une fonction d'agrégation prédéfinie. Par exemple, si vous souhaitez définir une mesure pour une valeur de pourcentage, utilisez une mesure calculée dans MDX. Consultez [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ Dans Analysis Services, chaque mesure que vous créez s'appuie sur une fonction d'agrégation qui détermine l'opération associée à la mesure. Les types `Sum`d’agrégation prédéfinis incluent `Max`, `Count` `Min`,,, **compte distinct**et plusieurs autres fonctions plus spécialisées. Si vous avez besoin d'agrégations basées sur des formules complexes ou personnalisées, vous pouvez aussi créer un calcul MDX au lieu d'utiliser une fonction d'agrégation prédéfinie. Par exemple, si vous souhaitez définir une mesure pour une valeur de pourcentage, utilisez une mesure calculée dans MDX. Consultez [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
  Les mesures créées à l'aide de l'Assistant Cube sont affectées à un type d'agrégation au moment de leur définition. Le type d'agrégation est toujours `Sum` (en supposant que la colonne source contient des données numériques). Le type `Sum` est utilisé quel que soit le type de données de la colonne source. Par exemple, si vous avez utilisé l'Assistant Cube pour créer des mesures et que vous avez extrait toutes les colonnes d'une table de faits, vous remarquerez que toutes les mesures obtenues comportent une agrégation de la fonction `Sum`, même si la colonne source est de type date/heure. Examinez toujours les méthodes d'agrégation prédéfinies pour les mesures créées via l'Assistant pour vous assurer que la fonction d'agrégation est appropriée.  
   
- Vous pouvez affecter ou changer la méthode d’agrégation dans la définition du cube, via [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] ou via MDX. Pour obtenir d’autres instructions, consultez [Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md) ou [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx).  
+ Vous pouvez affecter ou changer la méthode d’agrégation dans la définition du cube, via [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]ou via MDX. Pour obtenir d’autres instructions, consultez [Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md) ou [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx).  
   
-##  <a name="AggFunction"></a> Fonctions d'agrégation  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fournit des fonctions pour agréger des mesures avec les dimensions qui sont contenues dans des groupes de mesures. *L’additivité* d’une fonction d’agrégation détermine la manière dont la mesure est agrégée à travers toutes les dimensions du cube. Les fonctions d'agrégation sont divisées en trois catégories en fonction de leur niveau d'additivité :  
+##  <a name="AggFunction"></a>Fonctions d’agrégation  
+ 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fournit des fonctions pour agréger des mesures avec les dimensions qui sont contenues dans des groupes de mesures. 
+  *L’additivité* d’une fonction d’agrégation détermine la manière dont la mesure est agrégée à travers toutes les dimensions du cube. Les fonctions d'agrégation sont divisées en trois catégories en fonction de leur niveau d'additivité :  
   
  Additive  
  Une mesure additive, ou mesure entièrement additive, peut être agrégée avec toutes les dimensions incluses dans le groupe de mesures qui contient la mesure, sans aucune restriction.  
@@ -57,10 +59,10 @@ ms.locfileid: "66072716"
 |`FirstNonEmpty`|Semi-additive|Renvoie la valeur du premier membre enfant non vide.|  
 |`LastNonEmpty`|Semi-additive|Renvoie la valeur du dernier membre enfant non vide.|  
   
-##  <a name="bkmk_distinct"></a> Présentation des mesures de comptage de valeurs  
+##  <a name="bkmk_distinct"></a>À propos des mesures de comptage de valeurs  
  Une mesure dont la propriété **Fonction d’agrégation** a la valeur **Comptage de valeurs** est appelée mesure de comptage de valeurs. Une mesure de comptage de valeurs peut être utilisée pour compter les occurrences des membres du niveau le plus bas d'une dimension dans la table de faits. Avec ce type de comptage, si un membre apparaît plusieurs fois, il n'est compté qu'une seule fois. Une mesure de comptage de valeurs est toujours placée dans un groupe de mesures dédié. Placer une mesure de comptage de valeurs dans son propre groupe de mesures est une recommandation qui a été intégrée dans le concepteur afin d'optimiser les performances.  
   
- Les mesures de comptage de valeurs s'utilisent généralement pour déterminer pour chaque membre d'une dimension combien de membres distincts du niveau le plus bas d'une autre dimension possèdent des lignes identiques à celles de la table de faits. Par exemple, dans un cube Sales, pour chaque client et groupe de clients, combien de produits différents ont été achetés ? C'est-à-dire, pour chaque membre de la dimension Customers, combien de membres différents du niveau le plus bas de la dimension Products ont en commun des lignes avec la table de faits ? Ou, par exemple, dans un cube de visites d'un site Internet, pour chaque visiteur et chaque groupe de visiteurs, combien de pages distinctes ont été consultées sur le site Internet ? C'est-à-dire, pour chaque membre de la dimension Site Visitors, combien de membres différents du niveau le plus bas de la dimension Pages ont en commun des lignes avec la table de faits ? Dans chacun de ces exemples, les membres du niveau le plus bas de la deuxième dimension sont comptés par une mesure de comptage de valeurs.  
+ Les mesures de comptage de valeurs s'utilisent généralement pour déterminer pour chaque membre d'une dimension combien de membres distincts du niveau le plus bas d'une autre dimension possèdent des lignes identiques à celles de la table de faits. Par exemple, dans un cube Sales, pour chaque client et groupe de clients, combien de produits différents ont été achetés ? C'est-à-dire, pour chaque membre de la dimension Customers, combien de membres différents du niveau le plus bas de la dimension Products ont en commun des lignes avec la table de faits ? Ou, par exemple, dans un cube de visites d'un site Internet, pour chaque visiteur et chaque groupe de visiteurs, combien de pages distinctes ont été consultées sur le site Internet ? C'est-à-dire, pour chaque membre de la dimension Site Visitors, combien de membres différents du niveau le plus bas de la dimension Pages ont en commun des lignes avec la table de faits ? Dans chacun de ces exemples, les membres du niveau le plus bas de la deuxième dimension sont comptés par une mesure de comptage de valeurs.  
   
  Ce type d'analyse ne se limite pas forcément à deux dimensions. En fait, une mesure de comptage de valeurs peut être séparée et découpée selon n'importe quelle combinaison de dimensions du cube, y compris la dimension qui contient les membres comptés.  
   
@@ -68,7 +70,7 @@ ms.locfileid: "66072716"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mesures et groupes de mesures](measures-and-measure-groups.md)   
- [Informations de référence sur les fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Référence des fonctions MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
  [Définir le comportement semi-additif](define-semiadditive-behavior.md)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184405"
 ---
 # <a name="sequence-numbers"></a>Numéros séquentiels
@@ -47,7 +47,7 @@ ms.locfileid: "63184405"
   
 -   Vous devez modifier la spécification de la séquence, telle que la valeur de l'incrément.  
   
-## <a name="limitations"></a>Limitations  
+## <a name="limitations"></a>Limites  
  Contrairement aux colonnes d'identité, dont les valeurs ne peuvent pas être modifiées, les valeurs de séquence ne sont pas protégées automatiquement après leur insertion dans la table. Pour empêcher toute modification des valeurs de séquence, utilisez un déclencheur de mise à jour sur la table pour annuler les modifications.  
   
  L'unicité ne s'applique pas automatiquement aux valeurs de séquence. La possibilité de réutiliser des valeurs de séquence est un processus normal. Si les valeurs de séquence dans une table doivent obligatoirement être uniques, créez un index unique sur la colonne. Si les valeurs de séquence d'une table doivent obligatoirement être uniques dans l'ensemble d'un groupe de tables, créez des déclencheurs pour empêcher les doublons provoqués par les instructions UPDATE ou les cycles de numéros séquentiels.  
@@ -81,7 +81,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="examples"></a>Exemples  
  D’autres exemples sont fournis dans les rubriques [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql), [NEXT VALUE FOR &#40;Transact-SQL&#41;](/sql/t-sql/functions/next-value-for-transact-sql) et [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql).  
   
-### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Utilisation d'un numéro séquentiel dans une table individuelle  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>R. Utilisation d'un numéro séquentiel dans une table individuelle  
  L’exemple suivant crée un schéma nommé Test, une table nommée Orders et une séquence nommée CountBy1, puis insère des lignes dans la table à l’aide de la fonction NEXT VALUE FOR.  
   
 ```  
@@ -267,7 +267,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. Réinitialisation de numéros séquentiels  
- L'exemple E a utilisé les 79 premiers numéros séquentiels `Samples.IDLabel` (votre version d'`AdventureWorks2012` peut retourner un nombre différent de résultats). Exécutez le code suivant pour utiliser les 79 numéros séquentiels suivants (de 80 à 158).  
+ L'exemple E a utilisé les 79 premiers numéros séquentiels `Samples.IDLabel` (votre version d' `AdventureWorks2012` peut retourner un nombre différent de résultats). Exécutez le code suivant pour utiliser les 79 numéros séquentiels suivants (de 80 à 158).  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

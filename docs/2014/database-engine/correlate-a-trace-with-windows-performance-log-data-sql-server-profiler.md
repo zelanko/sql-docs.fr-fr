@@ -1,5 +1,5 @@
 ---
-title: Mettre en corrélation une Trace avec les données de journal de performances Windows (SQL Server Profiler) | Microsoft Docs
+title: Mettre en corrélation une trace avec les données du journal de performances Windows (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065052"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Corréler une trace aux données du journal de performances Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] peut corréler les compteurs du Moniteur système Microsoft Windows aux événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le Moniteur système Windows consigne dans des journaux de performances l'activité du système pour des compteurs spécifiés.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]peut corréler les compteurs du moniteur système Microsoft Windows avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] événements ou. Le Moniteur système Windows consigne dans des journaux de performances l'activité du système pour des compteurs spécifiés.  
   
 > [!NOTE]  
 >  Pour plus d'informations sur le partage de journaux entre plusieurs versions de Windows, consultez la procédure à la fin de cette rubrique.  
@@ -29,11 +29,11 @@ ms.locfileid: "66065052"
   
 1.  Dans [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], ouvrez un fichier de trace ou une table de trace enregistrée. Il est impossible de corréler une trace d'exécution qui regroupe encore des données d'événement. Pour garantir la précision de la corrélation aux données du Moniteur système, la trace doit contenir les colonnes de données **StartTime** et **EndTime** .  
   
-2.  Dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **du** , cliquez sur **Importer les données de performances**.  
+2.  Dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, click **Import Performance Data**.  
   
 3.  Dans la boîte de dialogue **Ouvrir** , sélectionnez un fichier qui contient un journal de performances. Les données du journal de performances doivent être capturées pendant la même période que celle de la capture des données de trace.  
   
-4.  Dans la boîte de dialogue **Limite des compteurs de performances** , activez les cases à cocher correspondant aux objets et aux compteurs du Moniteur système que vous souhaitez afficher aux côtés de la trace. Cliquez sur **OK.**  
+4.  Dans la boîte de dialogue **Limite des compteurs de performances** , activez les cases à cocher correspondant aux objets et aux compteurs du Moniteur système que vous souhaitez afficher aux côtés de la trace. Cliquez sur **OK**.  
   
 5.  Sélectionnez un événement dans la fenêtre des événements de trace ou faites défiler plusieurs lignes adjacentes dans la fenêtre des événements de trace à l'aide des touches de direction. La barre rouge verticale de la fenêtre **Données du Moniteur système** indique les données du journal de performances corrélées à l’événement de trace sélectionné.  
   

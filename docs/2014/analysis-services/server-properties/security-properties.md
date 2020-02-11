@@ -20,18 +20,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068910"
 ---
 # <a name="security-properties"></a>Propriétés de sécurité
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de sécurité du serveur répertoriées dans le tableau ci-dessous. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **S’applique à :** Mode serveur multidimensionnel et tabulaire  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
  `RequireClientAuthentication`  
  Propriété booléenne qui indique si le client doit être authentifié.  
   
@@ -57,9 +58,9 @@ ms.locfileid: "66068910"
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  `DataProtection\ RequiredProtectionLevel`  
- Propriété entière de 32 bits signée qui définit le niveau de protection nécessaire pour toutes les demandes des clients. Cette propriété peut prendre l'une des valeurs répertoriées dans le tableau suivant.  
+ Propriété entière de 32 bits signée qui définit le niveau de protection nécessaire pour toutes les demandes des clients. Cette propriété peut prendre l'une des valeurs répertoriées dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*0*|Aucun, texte clair autorisé.|  
 |*1*|(Valeur par défaut) Chiffrement requis, pas de journalisation en texte clair.|  
@@ -70,6 +71,6 @@ ms.locfileid: "66068910"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

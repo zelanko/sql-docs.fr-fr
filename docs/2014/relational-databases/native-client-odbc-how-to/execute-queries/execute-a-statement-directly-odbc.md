@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200406"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Exécuter directement une instruction (ODBC)
@@ -83,7 +83,7 @@ ms.locfileid: "63200406"
   
 6.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
- **Remarque** En règle générale, la liaison selon les colonnes et les lignes est davantage employée avec les fonctions [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) et [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) qu'avec [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Remarque** La liaison basée sur les colonnes et les lignes est plus généralement utilisée avec la [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) et [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) qu’avec [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

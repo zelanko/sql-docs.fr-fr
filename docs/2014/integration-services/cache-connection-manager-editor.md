@@ -1,5 +1,5 @@
 ---
-title: Éditeur de gestionnaire de connexions du cache | Microsoft Docs
+title: Éditeur du gestionnaire de connexions du cache | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061074"
 ---
 # <a name="cache-connection-manager-editor"></a>Éditeur du gestionnaire de connexions du cache
@@ -29,13 +29,13 @@ ms.locfileid: "66061074"
   
  La boîte de dialogue **Éditeur du gestionnaire de connexions du cache** inclut les onglets suivants :  
   
--   [Onglet Général](#generaltab)  
+-   [Onglet général](#generaltab)  
   
 -   [Onglet colonnes](#columnstab)  
   
- Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Pour en savoir plus sur le gestionnaire de connexions du cache, consultez [cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a> Onglet Général  
+##  <a name="generaltab"></a>Onglet général  
  Utilisez l’onglet **Général** de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** pour indiquer s’il faut lire le cache depuis un fichier ou l’enregistrer dans un fichier.  
   
 ### <a name="options"></a>Options  
@@ -45,7 +45,7 @@ ms.locfileid: "66061074"
  **Description**  
  Décrit la connexion. Il est recommandé de décrire la connexion selon son objectif, de sorte que les packages soient correctement documentés et plus faciles à gérer.  
   
- **Utiliser un cache de fichier**  
+ **Utiliser le cache de fichiers**  
  Indiquez s'il faut utiliser ou non un fichier cache.  
   
 > [!NOTE]  
@@ -66,14 +66,14 @@ ms.locfileid: "66061074"
  **Actualiser les métadonnées**  
  Supprimez les métadonnées de colonne dans le gestionnaire de connexions du cache et remplissez à nouveau celui-ci avec les métadonnées de colonne d'un fichier cache sélectionné.  
   
-##  <a name="columnstab"></a> Onglet Colonnes  
+##  <a name="columnstab"></a>Onglet colonnes  
  Utilisez l'onglet **Colonnes** de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** pour configurer les propriétés de chaque colonne dans le cache.  
   
 ### <a name="options"></a>Options  
  **Colonne**  
  Spécifiez le nom de la colonne.  
   
- **Position d'index**  
+ **Position d’index**  
  Spécifiez quelles colonnes sont des colonnes d'index en indiquant la position d'index de chaque colonne. L'index est une collection composée d'une ou de plusieurs colonnes.  
   
  Pour les colonnes qui ne sont pas des index, la position d'index est 0.  
@@ -99,6 +99,6 @@ ms.locfileid: "66061074"
  Spécifie la page de codes pour le type de colonne. Si le type de données le permet, vous pouvez mettre à jour `Code Page`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+ [Transformation de recherche](data-flow/transformations/lookup-transformation.md)  
   
   

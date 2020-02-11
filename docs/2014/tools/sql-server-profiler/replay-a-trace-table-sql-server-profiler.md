@@ -1,5 +1,5 @@
 ---
-title: Relire une Table de Trace (SQL Server Profiler) | Microsoft Docs
+title: Relire une table de trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240490"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Relire une table de trace (SQL Server Profiler)
@@ -37,7 +37,7 @@ ms.locfileid: "63240490"
   
     -   **Enregistrer dans le fichier** , ce qui spécifie un fichier dans lequel la relecture sera enregistrée.  
   
-    -   **Enregistrer dans la table**, ce qui spécifie une table de la base de données dans laquelle la relecture sera enregistrée.  
+    -   **Enregistrer dans la table**: spécifie une table de la base de données dans laquelle la relecture sera enregistrée.  
   
 5.  Choisissez **Relire les événements selon leur ordre de suivi**ou **Relire les événements en utilisant plusieurs threads**. Le tableau suivant explique la différence entre ces paramètres.  
   

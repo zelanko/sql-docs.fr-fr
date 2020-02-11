@@ -1,5 +1,5 @@
 ---
-title: Organisateur d’action (onglet Actions, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Organisateur d’action (onglet actions, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062931"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur d'action (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Dans le Concepteur de cube, utilisez le volet **Organisateur d'action** sous l'onglet **Actions** pour avoir accès aux actions contenues dans le cube spécifié.  
   
 ## <a name="options"></a>Options  
- **Liste**  
+ **List**  
  Affiche le nom de l'action.  
   
  Sélectionnez une action pour afficher l' **Éditeur de formulaire d'action**, une action d'extraction pour afficher l' **Éditeur de formulaire d'action d'extraction**ou une action de rapport pour afficher l' **Éditeur de formulaire d'action de rapport**.  
@@ -31,13 +31,13 @@ ms.locfileid: "66062931"
 ## <a name="context-menu"></a>Menu contextuel  
  Les options suivantes sont disponibles dans le menu contextuel qui s’affiche quand vous cliquez avec le bouton droit sur une action dans le volet **Organisateur d’action** :  
   
- **Nouvelle Action**  
+ **Nouvelle action**  
  Cliquez pour afficher le volet **Éditeur de formulaire d’action** et créer une action.  
   
- **Nouvelle Action d’extraction**  
+ **Nouvelle action d'extraction**  
  Cliquez pour afficher **Éditeur de formulaire d’action d’extraction** et créer une action d’extraction.  
   
- **Nouvelle Action de rapport**  
+ **Nouvelle action de rapport**  
  Cliquez pour afficher **Éditeur de formulaire d’action de rapport** et créer une action de rapport.  
   
  **Supprimer**  

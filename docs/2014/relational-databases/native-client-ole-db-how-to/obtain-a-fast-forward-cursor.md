@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225548"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Obtenir un curseur FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Obtenir un curseur FAST_FORWARD
   Pour obtenir un curseur avant uniquement, en lecture seule, définissez les propriétés d'ensemble de lignes DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT et DBPROP_OWNUPDATEDELETE sur VARIANT_TRUE.  
   
- Un exemple complet montre comment définir les propriétés de l'ensemble de lignes de façon à obtenir un curseur FAST_FORWARD. Une fois les propriétés définies, une instruction SELECT est exécutée pour récupérer et afficher la colonne **Name** de la table **Purchasing.Vendor** dans la base de données **AdventureWorks** .  
+ Un exemple complet montre comment définir les propriétés de l'ensemble de lignes de façon à obtenir un curseur FAST_FORWARD. Une fois les propriétés définies, une instruction SELECT est exécutée pour récupérer et afficher la colonne **Name** de la table **Purchasing. Vendor** dans la base de données **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Pour obtenir un curseur FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Pour obtenir un curseur FAST_FORWARD  
   
 1.  Établissez une connexion à la source de données.  
   

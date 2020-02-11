@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés, mise en Page de rapport | Microsoft Docs
+title: Boîte de dialogue Propriétés du rapport, mise en page | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104375"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Boîte de dialogue Propriétés du rapport, Mise en page
-  Sélectionnez **mise en Page** sur le **propriétés du rapport**, boîte de dialogue pour définir les options de page pour l’intégralité du rapport.  
+  Sélectionnez **mise en page** dans la boîte de dialogue **Propriétés du rapport**, pour définir les options de page pour l’ensemble du rapport.  
   
 ## <a name="options"></a>Options  
  **Pouces**  
@@ -36,25 +36,25 @@ ms.locfileid: "66104375"
  **Paysage**  
  Affiche l'orientation de la page du rapport. Paysage signifie que la page est présentée horizontalement, dans sa largeur.  
   
- **Format du papier**  
+ **Format de papier**  
  Sélectionnez une taille dans la liste, qui entre automatiquement les dimensions dans les contrôles Largeur et Hauteur. Ou bien, sélectionnez **Taille personnalisée** puis changez les contrôles Largeur et Hauteur pour indiquer la taille voulue.  
   
- **Width**  
+ **Largeur**  
  Affiche la largeur du papier sélectionné dans la liste **Type de papier** .  
   
- **Height**  
+ **Hauteur**  
  Affiche la hauteur du papier sélectionné dans la liste **Type de papier** .  
   
- **Top**  
+ **Retour au début**  
  Définit la distance entre le haut du rapport et le haut de sa première ligne.  
   
- **Bottom**  
+ **Bas**  
  Définit la distance entre le bas du rapport et le bas de sa dernière ligne.  
   
- **Left**  
+ **Gauche**  
  Définit la distance entre le bord gauche du rapport et le bord gauche des lignes.  
   
- **Right**  
+ **Oui**  
  Définit la distance entre le bord droit du rapport et le bord droit des lignes.  
   
 ## <a name="see-also"></a>Voir aussi  

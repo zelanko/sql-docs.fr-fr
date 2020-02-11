@@ -1,5 +1,5 @@
 ---
-title: Configurer une sortie d’erreur dans un composant de flux de données | Microsoft Docs
+title: Configurer une sortie d’erreur dans un composant de Data Flow | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060815"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurer une sortie d'erreur dans un composant de flux de données
@@ -82,14 +82,14 @@ ms.locfileid: "66060815"
   
 4.  Cliquez avec le bouton droit sur le composant dont vous voulez configurer les colonnes de sortie d’erreur et cliquez sur **Afficher l’éditeur avancé**.  
   
-5.  Cliquez sur l’onglet **Propriétés d’entrée et de sortie** et développez **Sortie d’erreur de \<nom du composant>** , puis **Colonnes de sortie**.  
+5.  Cliquez sur l’onglet **Propriétés d’entrée et de sortie** et développez **Sortie d’erreur de \<nom du composant>**, puis **Colonnes de sortie**.  
   
 6.  Cliquez sur une colonne et mettez à jour ses propriétés.  
   
     > [!NOTE]  
     >  La liste des colonnes comprend les colonnes de l’entrée du composant, les colonnes **ErrorCode** et **ErrorColumn** ajoutées par des sorties d'erreur précédentes et les colonnes **ErrorCode** et **ErrorColumn** ajoutées par ce composant.  
   
-7.  Cliquez sur **OK.**  
+7.  Cliquez sur **OK**.  
   
 8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
   

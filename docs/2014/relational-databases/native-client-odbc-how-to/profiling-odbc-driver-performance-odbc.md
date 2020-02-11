@@ -1,5 +1,5 @@
 ---
-title: Profilage des rubriques de procédures performances de pilote d’ODBC (ODBC) | Microsoft Docs
+title: Rubriques de procédures relatives au profilage des performances du pilote ODBC (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200286"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Rubriques de procédures relatives au profilage de performances du pilote ODBC (ODBC)
@@ -26,11 +26,11 @@ ms.locfileid: "63200286"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Profiler des données de performances du pilote &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [Données de performances du pilote de profil &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
   
--   [Journal des requêtes à Long terme &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [Journaliser les requêtes longues &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à ODBC](odbc-how-to-topics.md)  
+ [Rubriques de procédures ODBC](odbc-how-to-topics.md)  
   
   

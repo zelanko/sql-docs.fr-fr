@@ -17,13 +17,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245611"
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>Afficher le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
   Cette rubrique décrit comment afficher le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  La visionneuse du fichier journal affiche les informations de journalisation de nombreux composants différents. Après avoir ouvert la visionneuse du fichier journal, utilisez le volet **Sélectionner les journaux** pour sélectionner les journaux à afficher. Chaque journal affiche des colonnes appropriées à ce type de journal. Les journaux disponibles dépendent de la manière dont la visionneuse du fichier journal est ouverte.  
@@ -36,7 +36,7 @@ ms.locfileid: "63245611"
   
      [Sécurité](#Security)  
   
--   [Pour afficher le journal des erreurs de l'Agent SQL Server à l'aide de SQL Server Management Studio](#SSMSProcedure)  
+-   [Pour afficher le journal des erreurs SQL Server Agent, à l’aide de SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -56,13 +56,13 @@ ms.locfileid: "63245611"
   
 -   Changer les quotas de mémoire d'un processus (SeIncreaseQuotaPrivilege)  
   
- Pour plus d’informations sur les autorisations Windows requises pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service de l’Agent, consultez [sélectionner un compte pour le Service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de Service Windows et Autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Pour plus d’informations sur les autorisations Windows requises pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service de l’agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Pour afficher le journal des erreurs de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur qui contient le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que vous souhaitez afficher.  
+1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur qui contient le journal des erreurs de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez afficher.  
   
 2.  Cliquez sur le signe plus (+) pour développer **Agent SQL Server**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63245611"
   
 4.  Cliquez avec le bouton droit sur le journal d’erreurs que vous souhaitez afficher et sélectionnez **Afficher le journal de l’Agent**.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal -** _nom_serveur_ :  
+     Les options suivantes sont disponibles dans la boîte de dialogue **visionneuse du fichier journal-**_SERVER_NAME_ :  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
@@ -81,23 +81,23 @@ ms.locfileid: "63245611"
      **Actualiser**  
      Actualise l'affichage des journaux sélectionnés. Le bouton **Actualiser** permet de relire les journaux sélectionnés à partir du serveur cible lors de l'application des paramètres de filtre.  
   
-     **Filtre**  
+     **Filter**  
      Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date**et d’autres critères de filtre **Général** .  
   
-     **Recherche**  
+     **action**  
      Permet de rechercher un texte spécifique dans le fichier journal. La recherche des caractères génériques n'est pas prise en charge.  
   
-     **Arrêter**  
+     **Stop**  
      Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
   
      **Résumé du fichier journal**  
-     Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
+     Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
   
      **Détails de la ligne sélectionnée**  
      Sélectionnez une ligne pour afficher des détails supplémentaires sur la ligne d'événement sélectionnée en bas de la page. Vous pouvez changer l'ordre des colonnes en les faisant glisser sur la grille. Vous pouvez redimensionner les colonnes en faisant glisser les barres de séparation des colonnes dans l'en-tête de la grille vers la gauche ou la droite. Double-cliquez sur les barres de séparation des colonnes dans l'en-tête de la grille pour ajuster automatiquement la largeur de la colonne au contenu.  
   
      **Instance**  
-     Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme *nom de l'ordinateur*\\*nom de l'instance*.  
+     Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme nom d' *ordinateur*\\nom de l'*instance*.  
   
      **Date**  
      Affiche la date de l'événement.  

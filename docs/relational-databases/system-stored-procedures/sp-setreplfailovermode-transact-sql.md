@@ -16,10 +16,10 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b39a5fa53560abb825b303d37d111bcbd7d0886
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72173561"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72173561"
 
   Permet de configurer le mode de basculement des abonnements activés pour la mise à jour immédiate avec possibilité de basculement vers la mise à jour en attente. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné. Pour plus d’informations sur les modes de basculement, consultez [abonnements pouvant être mis à jour pour la réplication transactionnelle](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,25 +41,25 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'` est le nom de la publication. *publication* est de **type sysname**, sans valeur par défaut. La publication doit déjà exister.  
+`[ @publisher = ] 'publisher'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut. La publication doit déjà exister.  
   
-`[ @publisher_db = ] 'publisher_db'` est le nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'` est le nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @failover_mode = ] 'failover_mode'` est le mode de basculement de l’abonnement. *failover_mode* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
+`[ @failover_mode = ] 'failover_mode'`Mode de basculement de l’abonnement. *failover_mode* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**exécution** ou **synchronisation**|Les modifications de données effectuées sur l'Abonné sont instantanément copiées en bloc sur le serveur de publication.|  
-|**en attente**|Les modifications de données sont stockées dans une file d’attente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**en attente**|Les modifications de données sont stockées [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une file d’attente.|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing est déconseillé et n’est plus pris en charge.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing est déconseillé et n’est plus pris en charge.  
   
-`[ @override = ] override` usage interne uniquement.  
+`[ @override = ] override`À usage interne uniquement.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -69,7 +69,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md) jour   
+ [Basculer entre les modes de mise à jour d’un abonnement transactionnel pouvant être mis à jour](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

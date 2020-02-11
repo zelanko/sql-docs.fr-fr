@@ -1,5 +1,5 @@
 ---
-title: Les valeurs visibles et Non affichées | Microsoft Docs
+title: Totaux visuels et non visuels totaux | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073730"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Valeurs totales affichées et non affichées
@@ -36,11 +36,11 @@ ms.locfileid: "66073730"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Components**|  
-|**All Resellers**|**80 450 596,98 $**|**571 297,93 $**|**66 302 381,56 $**|**1 777 840,84 $**|**11 799 076,66 $**|  
-|**Specialty Bike Shop**|**6 756 166,18 $**|**65 125,48 $**|**6 080 117,73 $**|**252 933,91 $**|**357 989,07 $**|  
-|**Value Added Reseller**|**34 967 517,33 $**|**175 002,81 $**|**30 892 354,33 $**|**592 385,71 $**|**3 307 774,48 $**|  
-|**Warehouse**|**38 726 913,48 $**|**331 169,64 $**|**29 329 909,50 $**|**932 521,23 $**|**8 133 313,11 $**|  
+||**Tous les produits**|**Accessories**|**Bikes**|**Clothing**|**Components**|  
+|**Tous les revendeurs**|**$80 450 596,98**|**$571 297,93**|**$66 302 381,56**|**$1 777 840,84**|**$11 799 076,66**|  
+|**Magasin de bicyclettes Specialty**|**$6 756 166,18**|**$65 125,48**|**$6 080 117,73**|**$252 933,91**|**$357 989,07**|  
+|**Revendeur à valeur ajoutée**|**34 967 517,33 $**|**$175 002,81**|**$30 892 354,33**|**592 385,71 $**|**$3 307 774,48**|  
+|**Fonctionnalité**|**38 726 913,48 $**|**$331 169,64**|**$29 329 909,50**|**$932 521,23**|**$8 133 313,11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>Non affichées sur les lignes et les colonnes  
  Pour créer une table contenant uniquement les données pour les produits Accessories et Clothing, ainsi que les revendeurs Value Added Reseller et Warehouse, tout en conservant les totaux globaux, vous pouvez utiliser NON VISUAL comme suit :  
@@ -61,10 +61,10 @@ ms.locfileid: "66073730"
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**Clothing**|  
-|**All Resellers**|**80 450 596,98 $**|**571 297,93 $**|**1 777 840,84 $**|  
-|**Value Added Reseller**|**34 967 517,33 $**|**175 002,81 $**|**592 385,71 $**|  
-|**Warehouse**|**38 726 913,48 $**|**331 169,64 $**|**932 521,23 $**|  
+||**Tous les produits**|**Accessories**|**Clothing**|  
+|**Tous les revendeurs**|**$80 450 596,98**|**$571 297,93**|**$1 777 840,84**|  
+|**Revendeur à valeur ajoutée**|**34 967 517,33 $**|**$175 002,81**|**592 385,71 $**|  
+|**Fonctionnalité**|**38 726 913,48 $**|**$331 169,64**|**$932 521,23**|  
   
 ## <a name="non-visual-on-rows"></a>Non affichées sur les lignes  
  Pour créer une table qui additionne visuellement les colonnes mais qui, pour les totaux de ligne, affiche le total réel de tout l'élément [Category], vous pouvez utiliser la requête suivante :  
@@ -97,12 +97,12 @@ ms.locfileid: "66073730"
  Lorsque l'on effectue une comparaison avec les résultats précédents, on observe que la ligne [All Resellers] est additionnée avec les valeurs affichées pour [Value Added Reseller] et [Warehouse] mais que la colonne [All Products] affiche la valeur totale pour tous les produits, y compris ceux qui ne sont pas affichés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés dans MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
  [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [Restriction de la requête avec des axes de requête et de secteur &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [Définition d’un contexte de cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [Notions de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Requête MDX de base &#40;&#41;MDX](mdx-query-the-basic-query.md)   
+ [Restriction de la requête avec des axes de requête et de segment &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [Établissement d’un contexte de cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ce classeur contient une ou plusieurs requêtes qui actualisent les données externes. | Microsoft Docs
+title: Ce classeur contient une ou plusieurs requêtes qui actualisent les données externes. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070970"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Ce classeur contient une ou plusieurs requêtes qui actualisent les données externes.
@@ -26,7 +26,7 @@ ms.locfileid: "66070970"
 |-|-|  
 |Nom du produit|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Cause|Excel Services est configuré pour avertir lors de l'actualisation des données.|  
+|Cause :|Excel Services est configuré pour avertir lors de l'actualisation des données.|  
 |Texte du message|Ce classeur contient une ou plusieurs requêtes qui actualisent les données externes. Un utilisateur malveillant peut concevoir une requête pour accéder aux informations confidentielles et les distribuer à d'autres utilisateurs ou effectuer d'autres actions malfaisantes.<br /><br /> Si vous approuvez la source de ce classeur, cliquez sur Oui pour activer les requêtes à des données externes dans ce classeur. Si vous avez des doutes, cliquez sur Non afin que les modifications ne soient pas appliquées à votre classeur.<br /><br /> Souhaitez-vous activer des requêtes à des données externes dans ce classeur ?|  
   
 ## <a name="explanation"></a>Explication  
@@ -39,18 +39,18 @@ ms.locfileid: "66070970"
   
  Vous pouvez également modifier les paramètres de configuration de façon à ne plus avertir lors de l'actualisation des données :  
   
-1.  Dans l'Administration centrale, sous Gestion des applications, cliquez sur **Gérer les applications de service**.  
+1.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
   
 2.  Cliquez sur **Application Excel Services**.  
   
 3.  Cliquez sur **Emplacement de fichier approuvé**.  
   
-4.  Cliquez sur **http://** ou sur l’emplacement que vous voulez configurer.  
+4.  Cliquez sur **http://** ou sur l’emplacement à configurer.  
   
 5.  Dans Données externes, désactivez la case à cocher **Avertir lors de l'actualisation**.  
   
 6.  Cliquez sur **OK**.  
   
- Vous pouvez également créer un emplacement approuvé pour les sites qui contiennent des classeurs PowerPivot, puis modifier les paramètres de configuration uniquement pour ce site. Pour plus d'informations, consultez [Créer un emplacement approuvé pour les sites PowerPivot dans l'Administration centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Vous pouvez également créer un emplacement approuvé pour les sites qui contiennent des classeurs PowerPivot, puis modifier les paramètres de configuration uniquement pour ce site. Pour plus d'informations, consultez [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
   

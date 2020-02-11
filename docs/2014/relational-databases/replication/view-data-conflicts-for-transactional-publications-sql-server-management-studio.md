@@ -1,5 +1,5 @@
 ---
-title: Afficher les conflits de données pour les Publications transactionnelles (SQL Server Management Studio) | Microsoft Docs
+title: Afficher les conflits de données pour les publications transactionnelles (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144408"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>afficher les conflits de données pour les publications de fusion (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "63144408"
   
     -   Spécifiez une valeur de rétention pour le paramètre @conflict_retention de [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql).  
   
-    -   Spécifiez la valeur `'conflict_retention'` pour le @property paramètre et une valeur de rétention pour le @value paramètre de [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
+    -   Spécifiez une valeur `'conflict_retention'` pour le @property paramètre et une valeur de rétention pour le @value paramètre de [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
   
 ### <a name="to-view-conflicts"></a>Pour afficher les conflits  
   
@@ -56,14 +56,14 @@ ms.locfileid: "63144408"
   
     -   Sélectionner une ou plusieurs lignes dans la grille supérieure puis cliquer sur **Supprimer**, pour supprimer la ligne de la table des métadonnées des conflits.  
   
-    -   Cliquer sur le bouton des propriétés ( **...** ) pour afficher des informations plus détaillées sur une colonne concernée par un conflit.  
+    -   Cliquez sur le bouton des propriétés (**...**) pour afficher plus d’informations sur une colonne impliquée dans un conflit.  
   
-    -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir ( **...** ) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
+    -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir (**...**) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   
 6.  Fermer la Visionneuse des conflits de réplication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Réplication transactionnelle d’égal à égal](transactional/peer-to-peer-transactional-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
+ [Détection et résolution des conflits de mise à jour en attente](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

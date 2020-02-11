@@ -19,20 +19,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150909"
 ---
 # <a name="isolate-performance-problems"></a>Isoler les problèmes de performance
-  Il est souvent plus efficace d'utiliser plusieurs outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Microsoft Windows conjointement pour isoler les problèmes de performance de base de données que d'utiliser un seul outil à la fois. Par exemple, la fonctionnalité graphique Plan d'exécution, également appelée plan d'exécution de requêtes, vous aide à reconnaître rapidement les blocages dans une seule requête. Toutefois, vous pouvez reconnaître d'autres problèmes de performance plus facilement si vous utilisez les fonctions de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de Windows en même temps.  
+  Il est souvent plus efficace d’utiliser plusieurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outils ou Microsoft Windows conjointement pour isoler les problèmes de performances de la base de données que d’utiliser un seul outil à la fois. Par exemple, la fonctionnalité graphique Plan d'exécution, également appelée plan d'exécution de requêtes, vous aide à reconnaître rapidement les blocages dans une seule requête. Toutefois, vous pouvez reconnaître d'autres problèmes de performance plus facilement si vous utilisez les fonctions de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de Windows en même temps.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permet de surveiller et de résoudre les problèmes liés à Transact-SQL et à l’application. Le Moniteur système permet de surveiller les problèmes liés au matériel ou à d'autres aspects du système.  
+ 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permet de surveiller et de résoudre les problèmes liés à Transact-SQL et à l’application. Le Moniteur système permet de surveiller les problèmes liés au matériel ou à d'autres aspects du système.  
   
  Vous pouvez surveiller les éléments suivants pour résoudre les problèmes :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les traitements [!INCLUDE[tsql](../../includes/tsql-md.md)] envoyés par les applications des utilisateurs.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les traitements [!INCLUDE[tsql](../../includes/tsql-md.md)] envoyés par les applications des utilisateurs.  
   
 -   L'activité de l'utilisateur, notamment les verrous de blocage et les blocages.  
   
@@ -51,8 +53,8 @@ ms.locfileid: "63150909"
   
  Les rubriques suivantes décrivent différents outils de surveillance et de réglage et les problèmes correspondants.  
   
- [Identifier les goulots d’étranglement](identify-bottlenecks.md)  
+ [Identifier les goulots d'étranglement](identify-bottlenecks.md)  
   
- [Surveiller l'utilisation de la mémoire](../performance-monitor/monitor-memory-usage.md)  
+ [Surveiller l’utilisation de la mémoire](../performance-monitor/monitor-memory-usage.md)  
   
   

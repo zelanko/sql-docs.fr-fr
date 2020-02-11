@@ -1,5 +1,5 @@
 ---
-title: Créer des relations entre les Tables d’un schéma (Visual Database Tools) | Microsoft Docs
+title: Créer des relations entre des tables sur un diagramme (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184280"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Créer des relations entre des tables sur un diagramme (Visual Database Tools)
@@ -28,9 +28,9 @@ ms.locfileid: "63184280"
   
 2.  Faites glisser la ou les colonne(s) sélectionnée(s) vers la table associée.  
   
-3.  Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** et **Tables et colonnes**, cette dernière apparaissant au premier plan.  
+3.  Deux boîtes de dialogue s’ouvre : **Relation de clé étrangère** et **Tables et colonnes**, cette dernière apparaissant au premier plan.  
   
-4.  Le**nom de relation** a une nom fourni par le système au format FK_*localtable*_*foreigntable*. Vous pouvez modifier cette valeur.  
+4.  Le nom de la **relation** a un nom fourni par le système au format FK_*LocalTable*_*ForeignTable*. Vous pouvez modifier cette valeur.  
   
 5.  Vérifiez que la **table de clé primaire** spécifie la bonne table.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63184280"
   
 7.  Choisissez **OK**.  
   
-     La boîte de dialogue **Relation de clé étrangère** s’ouvre. La**Relation sélectionnée** affiche la relation créée.  
+     La boîte de dialogue **Relation de clé étrangère** s’ouvre. La **relation sélectionnée** affiche la relation que vous avez créée.  
   
 8.  Modifiez les propriétés de la relation dans la grille.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "63184280"
      Le Concepteur de base de données affiche une relation entre les colonnes que vous avez choisies.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et la boîte de dialogue colonnes &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Contraintes uniques et les contraintes Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [Utiliser des tables dans les schémas de base de données &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
+ [Tables et colonnes, boîte de dialogue &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Contraintes uniques et contraintes de validation](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Utiliser des tables dans les diagrammes de base de données &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161956"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Surveillance des performances des procédures stockées compilées en mode natif
@@ -23,16 +23,18 @@ ms.locfileid: "63161956"
 ## <a name="using-extended-events"></a>Utilisation des événements étendus  
  Utilisez l'événement étendu `sp_statement_completed` pour tracer l'exécution d'une requête. Créez une session d'événements étendus avec cet événement, éventuellement avec un filtre sur object_id pour une procédure stockée compilée en mode natif. L'événement étendu est déclenché après l'exécution de chaque requête. Le temps processeur et la durée signalés par l'événement étendu indiquent l'UC utilisée par la requête et le temps d'exécution. Une procédure stockée compilée en mode natif qui utilise beaucoup de temps processeur peut rencontrer des problèmes de performances.  
   
- `line_number` et `object_id` dans l'événement étendu peuvent être utilisés pour analyser la requête. La requête suivante peut être utilisée pour extraire la définition de procédure. Le numéro de ligne peut être utilisé pour identifier la requête dans la définition :  
+ 
+  `line_number` et `object_id` dans l'événement étendu peuvent être utilisés pour analyser la requête. La requête suivante peut être utilisée pour extraire la définition de procédure. Le numéro de ligne peut être utilisé pour identifier la requête dans la définition :  
   
 ```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Pour plus d’informations sur la `sp_statement_completed` événement étendu, consultez [comment extraire l’instruction qui a provoqué un événement](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Pour plus d’informations sur `sp_statement_completed` l’événement étendu, consultez [Comment récupérer l’instruction qui a provoqué un événement](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Utilisation des vues de gestion des données  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la collecte de statistiques d'exécution des procédures stockées compilées en mode natif, au niveau de la procédure et au niveau de la requête. Le collecte des statistiques d'exécution n'est pas activée par défaut en raison de l'impact sur les performances.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la collecte de statistiques d'exécution des procédures stockées compilées en mode natif, au niveau de la procédure et au niveau de la requête. Le collecte des statistiques d'exécution n'est pas activée par défaut en raison de l'impact sur les performances.  
   
  Vous pouvez activer et désactiver la collecte de statistiques sur les procédures stockées compilées en mode natif par le biais de [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql).  
   

@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105847"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
@@ -61,7 +61,7 @@ ms.locfileid: "66105847"
 |Type de champ de catégorie|Description|Exemple|  
 |-------------------------|-----------------|-------------|  
 |Numérique|Les catégories sont tracées par ordre numérique le long de l'axe des abscisses.|Un état des ventes par numéro d'identification des employés affiche les numéros d'identification des employés le long de l'axe des abscisses.|  
-|Date/heure|Les catégories sont tracées par ordre chronologique le long de l'axe des abscisses.|Un état des ventes par mois affiche des dates mises en forme le long de l'axe des abscisses.|  
+|Date/time|Les catégories sont tracées par ordre chronologique le long de l'axe des abscisses.|Un état des ventes par mois affiche des dates mises en forme le long de l'axe des abscisses.|  
 |Chaînes|Les catégories sont tracées le long de l'axe des abscisses dans l'ordre où elles apparaissent pour la première fois dans la source de données.|Un état des ventes par région affiche des noms de régions le long de l'axe des abscisses.|  
   
  Tous les types de graphiques comportant deux axes sont conçus pour supprimer des étiquettes des axes lorsque les catégories sont trop nombreuses pour s'ajuster à l'affichage, afin de produire une image plus claire sur le graphique et éviter les collisions d'étiquettes.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105847"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Exemple de calcul d'étiquettes d'axe par le graphique  
  Le tableau présenté ici contient des exemples de données de vente à tracer sur un histogramme. Le champ Name est ajouté à la zone Groupes d'abscisses et le champ Quantity est ajouté à la zone Valeurs.  
   
-|Nom|Quantity|  
+|Name|Quantité|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -117,7 +117,7 @@ ms.locfileid: "66105847"
 ## <a name="in-this-section"></a>Dans cette section  
  [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Placer des étiquettes dans un graphique &#40;Générateur de rapports et SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Positionner des étiquettes dans un graphique &#40;Générateur de rapports et SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet traductions, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Barre d’outils (onglet traductions, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065999"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Traductions, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -24,7 +24,7 @@ ms.locfileid: "66065999"
  **Ajouter Business Intelligence**  
  Affiche l’ **Assistant Business Intelligence** pour ajouter des fonctionnalités Business Intelligence.  
   
- **Traiter**  
+ **Procédure**  
  Affiche la boîte de dialogue **Traiter** pour le traitement de l’objet.  
   
  **Nouvelle traduction**  
@@ -58,7 +58,7 @@ ms.locfileid: "66065999"
  Cliquez sur cette option pour afficher ou masquer tous les attributs de la dimension sélectionnée, y compris les attributs pour lesquels les hiérarchies sont désactivées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traductions &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Détails des traductions &#40;onglet traductions, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Traductions &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Détails de la traduction &#40;onglet traductions, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

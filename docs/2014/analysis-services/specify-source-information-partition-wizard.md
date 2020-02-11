@@ -1,5 +1,5 @@
 ---
-title: Spécifier les informations Source (Assistant Partition) | Microsoft Docs
+title: Spécifier les informations sur la source (Assistant Partition) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068172"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Spécifier des informations sur la source (Assistant Partition)
@@ -49,6 +49,6 @@ ms.locfileid: "66068172"
 >  Si plusieurs tables sont sélectionnées, la page **Restreindre les lignes** ne peut alors pas s'afficher et les lignes ne peuvent pas être restreintes pour les partitions créées à partir des tables sélectionnées. Dans ce cas, pour restreindre les lignes relatives à chaque partition, lancez l'Assistant Partition une fois pour chaque table à partir de laquelle une partition doit être créée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

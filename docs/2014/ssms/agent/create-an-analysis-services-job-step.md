@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798251"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Créer une étape de travail Analysis Services
@@ -28,7 +28,7 @@ ms.locfileid: "72798251"
   
      [Sécurité](#Security)  
   
--   **Pour créer des étapes de travail SQL Server à l'aide de commande et/ou de requêtes Analysis Services, avec :**  
+-   **Pour créer une SQL Server étapes de travail à l’aide de commandes et/ou de requêtes Analysis Services, avec :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -42,15 +42,15 @@ ms.locfileid: "72798251"
   
 -   Si l'étape de travail utilise une commande Analysis Services, l'instruction de commande doit être une méthode **EXECUTE** XML pour Analysis Services. L’instruction ne peut pas contenir d’enveloppe SOAP (Simple Object Access Protocol) complète ni de méthode **Discover** XML pour Analysis Services. Si [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prend en charge les enveloppes SOAP (Simple Object Access Protocol) complètes et la méthode **Discover** , ce n'est pas le cas des étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur XML pour Analysis Services, consultez [Vue d’ensemble de XMLA (XML for Analysis)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
--   Si l'étape de travail utilise une requête Analysis Services, l'instruction de requête doit être une requête MDX (expressions multidimensionnelles). Pour plus d’informations sur MDX, consultez [principes de base &#40;des&#41;requêtes MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
+-   Si l'étape de travail utilise une requête Analysis Services, l'instruction de requête doit être une requête MDX (expressions multidimensionnelles). Pour plus d’informations sur MDX, consultez [principes de base des requêtes mdx &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Pour exécuter une étape de travail qui utilise le sous-système Analysis Services, un utilisateur doit être membre du rôle serveur fixe **sysadmin** ou avoir accès à un compte proxy valide, défini pour utiliser ce sous-système. De plus, le compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou du proxy doit correspondre à un compte administrateur Analysis Services et à un compte de domaine Windows valide.  
   
--   Seuls les membres du rôle serveur fixe **sysadmin** peuvent écrire les données de sortie de l'étape de travail dans un fichier. Si l'étape de travail est exécutée par des utilisateurs membres du rôle de base de données **SQLAgentUserRole** de la base de données **msdb** , les données de sortie peuvent uniquement être écrites dans une table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écrit les données de sortie de l'étape de travail dans la table **sysjobstepslog** de la base de données **msdb** .  
+-   Seuls les membres du rôle serveur fixe **sysadmin** peuvent écrire les données de sortie de l'étape de travail dans un fichier. Si l'étape de travail est exécutée par des utilisateurs membres du rôle de base de données **SQLAgentUserRole** de la base de données **msdb** , les données de sortie peuvent uniquement être écrites dans une table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’agent écrit la sortie de l’étape de travail dans la table **sysjobstepslog** de la base de données **msdb** .  
   
 -   Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72798251"
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Pour créer une étape de travail de commande Analysis Services  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**. Pour plus d’informations sur la création d’un travail, consultez [Créer des travaux](create-jobs.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72798251"
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Pour créer une étape de travail de requête Analysis Services  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**. Pour plus d’informations sur la création d’un travail, consultez [Créer des travaux](create-jobs.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72798251"
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Pour créer une étape de travail de commande Analysis Services  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -134,11 +134,11 @@ ms.locfileid: "72798251"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Pour plus d’informations, consultez [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Pour créer une étape de travail de requête Analysis Services  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "72798251"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Pour plus d’informations, consultez [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
- **Pour créer une étape de travail exécutant un script PowerShell**  
+ **Pour créer une étape de travail de script PowerShell**  
   
- Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, comme XMLA ou MDX. Pour plus d’informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, comme XMLA ou MDX. Pour plus d'informations, consultez [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

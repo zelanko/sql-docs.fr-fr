@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63239016"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilisation du contrôle Windows Forms ReportViewer
@@ -24,9 +24,9 @@ ms.locfileid: "63239016"
   
 ###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Pour ajouter le contrôle ReportViewer dans une application Windows  
   
-1.  Créez une application Windows à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Créez une application Windows à l’aide [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]ou de.  
   
-     \- Ou -  
+     \-Ni  
   
      Ouvrez un projet d'application Windows existant et ajoutez un nouveau formulaire.  
   
@@ -40,7 +40,8 @@ ms.locfileid: "63239016"
   
  Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport.  
   
- Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez l’option **\<Rapport du serveur>** dans la liste déroulante **Choisir un rapport**. Après le  **\<rapport du serveur >** option est sélectionnée, deux propriétés supplémentaires apparaissent : **Url du serveur de rapports** et **signaler le chemin d’accès**. **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet au rapport à restituer.  
+ Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez ** \<** l’option>de rapport du serveur dans la liste déroulante choisir un **rapport** . Une fois l’option de ** \<>de rapport du serveur** sélectionnée, deux propriétés supplémentaires s’affichent : URL du serveur de **rapports** et **chemin d’accès au rapport**. 
+  **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet au rapport à restituer.  
   
  ![Sélectionner le rapport du serveur](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Sélectionner le rapport du serveur")  
   
@@ -158,7 +159,7 @@ End Class
   
      Le fichier Sales Order Detail.rdl doit maintenant faire partie du projet.  
   
-     ![Rapport Sales Order Detail (Détail de la commande)](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Rapport Sales Order Detail (Détail de la commande)")  
+     ![Rapport Sales Order Detail (détail de la commande)](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Rapport Sales Order Detail (détail de la commande)")  
   
 5.  Cliquez avec le bouton droit sur le fichier Sales Order Detail.rdl dans l’Explorateur de solutions et sélectionnez **Renommer**. Renommez le rapport en **Sales Order Detail.rdlc** et appuyez sur Entrée.  
   
@@ -502,6 +503,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Intégration de Reporting Services à l’aide des contrôles ReportViewer](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Intégration de Reporting Services à l'aide des contrôles ReportViewer](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

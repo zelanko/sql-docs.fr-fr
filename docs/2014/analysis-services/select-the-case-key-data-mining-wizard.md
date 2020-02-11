@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez la clé de cas (Assistant exploration de données) | Microsoft Docs
+title: Sélectionner la clé de cas (Assistant Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069261"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Sélectionner la clé de cas (Assistant Exploration de données)
@@ -25,15 +25,15 @@ ms.locfileid: "66069261"
 > [!NOTE]  
 >  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services des&#41;d’exploration de données ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Attributs**  
  Cliquez sur l'attribut qui sera la clé de la structure d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Sélectionner la Dimension de Cube Source &#40;Assistant exploration de données&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [Colonnes de niveau de cas, sélectionnez &#40;Assistant exploration de données&#41;](select-case-level-columns-data-mining-wizard.md)  
+ [Aide (F1) de l’Assistant Exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Sélectionnez la dimension du cube source &#40;l’Assistant Exploration de données&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Sélectionner les colonnes de niveau de cas &#40;l’Assistant Exploration de données&#41;](select-case-level-columns-data-mining-wizard.md)  
   
   

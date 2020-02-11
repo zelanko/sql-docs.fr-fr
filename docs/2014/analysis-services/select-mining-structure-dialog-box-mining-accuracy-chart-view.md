@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez (vue graphique d’analyse de précision d’exploration de données) de boîte de dialogue Structure d’exploration de données | Microsoft Docs
+title: Boîte de dialogue Sélectionner la structure d’exploration de données (vue graphique d’analyse de précision d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069493"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Boîte de dialogue Sélectionnez une structure d'exploration de données (vue Graphique d'analyse de précision de l'exploration de données)
@@ -30,8 +30,8 @@ ms.locfileid: "66069493"
  La boîte de dialogue contient l'arborescence de chaque structure d'exploration de données qui existe sur la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Même si vous pouvez développer chaque structure d'exploration de données pour parcourir les modèles d'exploration de données qui y sont présents, vous pouvez utiliser la boîte de dialogue uniquement pour sélectionner une structure d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Tâches de test et de validation et &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -16,17 +16,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144678"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Tâche Vérifier l'intégrité de la base de données (Plan de maintenance)
-  Utilisez la boîte de dialogue **Tâche Vérifier l’intégrité de la base de données** pour vérifier l’intégrité d’allocation et de structure des tables utilisateur et système et des index de la base de données, en exécutant l’instruction `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . L'exécution de `DBCC` garantit que tous les problèmes d'intégrité de la base de données seront rapportés, ce qui permet de les signaler plus tard à l'administrateur système ou au propriétaire de la base de données.  
+  Utilisez la boîte de dialogue **tâche vérifier l’intégrité de la base de données** pour vérifier l’intégrité de l’allocation et de la structure des tables utilisateur et système `DBCC CHECKDB` [!INCLUDE[tsql](../../includes/tsql-md.md)] , ainsi que les index de la base de données, en exécutant l’instruction. L'exécution de `DBCC` garantit que tous les problèmes d'intégrité de la base de données seront rapportés, ce qui permet de les signaler plus tard à l'administrateur système ou au propriétaire de la base de données.  
   
 ## <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Sélectionnez la connexion serveur à utiliser pour exécuter la tâche.  
   
  **Nouveau**  
@@ -37,11 +37,11 @@ ms.locfileid: "63144678"
   
 -   **Toutes les bases de données**  
   
-     Génère un plan de maintenance qui exécute les tâches de maintenance sur toutes les bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l'exception de **tempdb**.  
+     Générez un plan de maintenance qui exécute des tâches [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de maintenance sur toutes les bases de données, à l’exception de **tempdb**.  
   
 -   **Toutes les bases de données système**  
   
-     Génère un plan de maintenance qui exécute des tâches de maintenance sur chaque base de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à l'exception de **tempdb**. Aucune tâche de maintenance n'est exécutée sur les bases de données créées par l'utilisateur.  
+     Générez un plan de maintenance qui exécute des tâches de maintenance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur chacune des bases de données système, à l’exception de **tempdb**. Aucune tâche de maintenance n'est exécutée sur les bases de données créées par l'utilisateur.  
   
 -   **Toutes les bases de données utilisateur**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63144678"
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
 ## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
- **Nom de la connexion**  
+ **Nom de connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
  **Sélectionnez ou entrez un nom de serveur.**  
@@ -77,10 +77,10 @@ ms.locfileid: "63144678"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de l’authentification Windows.  
+ Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
+ Se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  
   
  **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  

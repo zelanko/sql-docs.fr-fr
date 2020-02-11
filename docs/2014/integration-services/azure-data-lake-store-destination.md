@@ -14,14 +14,14 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ebf686807169bb850e5a3ae8fac8cfb0b8ca7791
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061463"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destination Azure Data Lake Store
-  Le composant **Destination Azure Data Lake Store** permet à un package SSIS d’écrire des données dans Azure Data Lake Store. Les formats de fichier pris en charge sont : Texte, Avro et ORC. 
+  Le composant **Destination Azure Data Lake Store** permet à un package SSIS d’écrire des données dans Azure Data Lake Store. Les formats de fichier pris en charge sont les formats texte, Avro et ORC. 
   
 ## <a name="configure-the-azure-data-lake-store-destination"></a>Configurer la destination Azure Data Lake Store 
 
@@ -33,7 +33,7 @@ ms.locfileid: "66061463"
   
     2.  Dans le champ **Format de fichier** , spécifiez le format de fichier à utiliser.  
   
-        Si le format de fichier est le format texte, vous devez renseigner le champ **Délimiteur de colonne** . Sélectionnez également l’option **Noms de colonne dans la première ligne de données** si la première ligne du fichier contient des noms de colonne.  
+        Si le format de fichier est texte, vous devez spécifier la valeur du **caractère de délimiteur de colonne** . Sélectionnez également l’option **Noms de colonne dans la première ligne de données** si la première ligne du fichier contient des noms de colonne.  
 
         Si le format de fichier est ORC, vous devez installer l’environnement JRE de la plateforme correspondante. 
   

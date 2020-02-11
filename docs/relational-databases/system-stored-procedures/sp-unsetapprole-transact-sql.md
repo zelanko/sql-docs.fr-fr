@@ -18,10 +18,10 @@ ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9cf190198859bb3202dc2bcc62b066e5995d8fed
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305162"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72305162"
 
   Désactive un rôle d'application et revient au contexte de sécurité antérieur.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +39,13 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **cookie \@**  
- Spécifie le cookie créé lors de l'activation du rôle d'application. Le cookie est créé par [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
+ **\@cookie**  
+ Spécifie le cookie créé lors de l'activation du rôle d'application. Le cookie est créé par [sp_setapprole &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)**.  
   
 > [!NOTE]  
->  Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)** . Les applications doivent continuer à réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si la taille de retour du cookie augmente dans une version ultérieure.  
+>  Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)**. Les applications doivent continuer à réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si la taille de retour du cookie augmente dans une version ultérieure.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (succès) et 1 (échec)  
   
 ## <a name="remarks"></a>Notes  

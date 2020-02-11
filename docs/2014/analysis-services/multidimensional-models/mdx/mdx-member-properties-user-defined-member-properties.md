@@ -1,5 +1,5 @@
 ---
-title: Propriétés de membre (MDX) défini par l’utilisateur | Microsoft Docs
+title: Propriétés de membre définies par l’utilisateur (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074258"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Propriétés de membre définies par l'utilisateur (MDX)
@@ -30,7 +30,7 @@ ms.locfileid: "66074258"
 -   Pour ajouter des propriétés de membre définies par l'utilisateur par programmation, votre application peut utiliser des objets AMO (Analysis Manager Object) ou une combinaison du langage XMLA (XML for Analysis) et du langage ASSL (Analysis Services Scripting Language). Pour plus d’informations, consultez [Relations d’attributs](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 ## <a name="retrieving-user-defined-member-properties"></a>Récupération de propriétés de membre définies par l'utilisateur  
- Vous pouvez récupérer les propriétés de membre définies par l’utilisateur à l’aide du `PROPERTIES` mot clé ou le [propriétés](/sql/mdx/properties-mdx) (fonction).  
+ Vous pouvez récupérer des propriétés de membre définies par l’utilisateur `PROPERTIES` à l’aide du mot clé ou de la fonction [Properties](/sql/mdx/properties-mdx) .  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>Utilisation du mot clé PROPERTIES pour récupérer des propriétés de membre définies par l'utilisateur  
  La syntaxe permettant de récupérer des propriétés de membre définies par l'utilisateur ressemble à celle utilisée pour faire référence aux propriétés de membre intrinsèques relatives à un niveau, comme le montre la syntaxe suivante :  

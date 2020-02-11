@@ -1,5 +1,5 @@
 ---
-title: date/heure de Conversions de Type de données (ODBC) | Microsoft Docs
+title: conversions de type de données DateTime (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206987"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Conversions du type de données datetime (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63206987"
   
 -   Le format des chaînes date est 'aaaa-mm-jj'  
   
- Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez les « Formats de données : Section de chaînes et littéraux » de [prise en charge du Type de données pour les améliorations ODBC Date / heure](data-type-support-for-odbc-date-and-time-improvements.md).  
+ Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez la section « formats de données : chaînes et littéraux » de [type de données prise en charge des améliorations de date et d’heure ODBC](data-type-support-for-odbc-date-and-time-improvements.md).  
   
  Les règles suivantes sont les règles générales de conversion :  
   
@@ -51,13 +51,13 @@ ms.locfileid: "63206987"
 -   Si la troncation de secondes ou de fractions de seconde se produit lors de la conversion de SQL en C, un enregistrement de diagnostic est généré avec la valeur SQLSTATE 01S07 et le message « Troncation fractionnelle ».  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Conversions de C à SQL](datetime-data-type-conversions-from-c-to-sql.md)  
+ [Conversions de C en SQL](datetime-data-type-conversions-from-c-to-sql.md)  
  Répertorie les problèmes à prendre en compte lorsque vous effectuez une conversion de types C en types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time.  
   
  [Conversions de SQL à C](datetime-data-type-conversions-from-sql-to-c.md)  
  Répertorie les problèmes à prendre en compte lorsque vous effectuez une conversion de types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time en types C.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations date / heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Améliorations de la date et de l’heure &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

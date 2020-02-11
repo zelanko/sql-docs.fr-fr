@@ -1,5 +1,5 @@
 ---
-title: Dépannage des diagrammes d’exploration de données Visio (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Résolution des problèmes des diagrammes d’exploration de données Visio (compléments d’exploration de données SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065723"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Dépannage des diagrammes d'exploration de données Visio (Compléments d'exploration de données SQL Server)
@@ -32,10 +32,10 @@ ms.locfileid: "66065723"
 ## <a name="common-issues"></a>Problèmes courants  
  Impossible de se connecter au modèle  
   Aucun contenu ne s'affiche  
-  Ne peut pas afficher les détails  
+  Impossible d’afficher les détails  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichage de modèles d’exploration de données dans Visio &#40;compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
- [Affichage de modèles d’exploration de données dans Visio &#40;compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ [Affichage des modèles d’exploration de données dans Visio &#40;les compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
+ [Affichage des modèles d’exploration de données dans Visio &#40;les compléments d’exploration de données&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
   

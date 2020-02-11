@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066635"
 ---
 # <a name="restore-from-powerpivot"></a>Restaurer à partir de PowerPivot
   Utilisez la fonctionnalité Restaurer à partir de PowerPivot dans SQL Server Management Studio pour créer une nouvelle base de données model tabulaire sur une instance Analysis Services (exécution en mode tabulaire), ou restaurer une base de données existante dans un classeur PowerPivot (.xlsx).  
   
 > [!NOTE]  
->  Le modèle de projet Importer à partir de PowerPivot dans SQL Server Data Tools fournit une fonctionnalité similaire. Pour plus d’informations, consultez [importation à partir de PowerPivot &#40;tabulaire SSAS&#41;](import-from-power-pivot-ssas-tabular.md).  
+>  Le modèle de projet Importer à partir de PowerPivot dans SQL Server Data Tools fournit une fonctionnalité similaire. Pour plus d’informations, consultez [Importer à partir de PowerPivot &#40;des&#41;tabulaires SSAS ](import-from-power-pivot-ssas-tabular.md).  
   
  Lorsque vous utilisez Restaurer à partir de PowerPivot, gardez les points suivants à l'esprit :  
   
@@ -39,16 +39,16 @@ ms.locfileid: "66066635"
   
 1.  Dans SSMS, dans l'instance Active Directory à restaurer, cliquez avec le bouton droit sur **Bases de données**, puis cliquez sur **Restaurer à partir de PowerPivot**.  
   
-2.  Dans la boîte de dialogue **Restaurer à partir de PowerPivot** , dans **Restaurer la source**, dans **Fichier de sauvegarde**, cliquez sur **Parcourir**, puis sélectionnez un fichier .abf ou .xslx à restaurer.  
+2.  Dans la boîte de dialogue **Restaurer à partir de PowerPivot**, dans **Source de restauration**, dans **Fichier de sauvegarde**, cliquez sur **Parcourir**, puis sélectionnez un fichier .abf ou .xslx à partir duquel effectuer la restauration.  
   
-3.  Dans **Destination de restauration**, dans **Restaurer la base de données**, tapez un nom pour une nouvelle base de données ou une base de données existante. Si vous n'indiquez pas de nom, le nom du classeur est utilisé.  
+3.  Dans **Destination de la restauration**, dans **Restaurer la base de données**, tapez un nom pour une nouvelle base de données ou une base de données existante. Si vous n'indiquez pas de nom, le nom du classeur est utilisé.  
   
 4.  Dans **Emplacement de stockage**, cliquez sur **Parcourir**, puis sélectionnez un emplacement pour stocker la base de données.  
   
 5.  Dans **Options**, conservez l'option **Inclure des informations sur la sécurité** activée. Lors de la restauration à partir d'un classeur PowerPivot, ce paramètre ne s'applique pas.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bases de données model tabulaires #40;SSAS Tabulaire#41;](tabular-model-databases-ssas-tabular.md)   
- [Importation à partir de PowerPivot &#40;SSAS tabulaire&#41;](import-from-power-pivot-ssas-tabular.md)  
+ [Bases de données model tabulaires &#40;&#41;SSAS tabulaire](tabular-model-databases-ssas-tabular.md)   
+ [Importer à partir de PowerPivot &#40;&#41;tabulaires SSAS](import-from-power-pivot-ssas-tabular.md)  
   
   

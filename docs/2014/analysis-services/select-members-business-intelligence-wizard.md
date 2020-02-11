@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069429"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Sélectionner les membres (Assistant Business Intelligence)
@@ -34,19 +34,19 @@ ms.locfileid: "66069429"
 |Option|Description|  
 |------------|-----------------|  
 |**Types de mesure intégrés**|Sélectionnez cette option afin d'inclure la fonctionnalité de conversion monétaire pour la mesure spécifiée.|  
-|**Mesures**|Sélectionnez la mesure dans le groupe de mesures de taux qui contient le taux de change à utiliser lors de la conversion de la mesure sélectionnée à la section **Types de mesures intégrés** .|  
+|**mesures**|Sélectionnez la mesure dans le groupe de mesures de taux qui contient le taux de change à utiliser lors de la conversion de la mesure sélectionnée à la section **Types de mesures intégrés** .|  
   
- **Hiérarchie de compte**  
- Sélectionnez cette option afin d'appliquer la fonctionnalité de conversion monétaire à un ou plusieurs membres dans la hiérarchie de comptes de la dimension incluse dans le cube. La hiérarchie de compte est la hiérarchie dans le compte de dimension dont la propriété `Type` propriété est définie sur *compte*.  
+ **Hiérarchie de comptes**  
+ Sélectionnez cette option afin d'appliquer la fonctionnalité de conversion monétaire à un ou plusieurs membres dans la hiérarchie de comptes de la dimension incluse dans le cube. La hiérarchie de compte est la hiérarchie dans la dimension de `Type` compte dont la propriété est définie sur *Account*.  
   
  Une fois cette option sélectionnée, la grille affiche les options répertoriées dans le tableau suivant.  
   
 |Option|Description|  
 |------------|-----------------|  
 |**Membre du compte**|Sélectionnez cette option afin d'inclure la fonctionnalité de conversion monétaire pour le membre spécifié de la hiérarchie de comptes.|  
-|**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives au membre choisi dans **Membre du compte** .|  
+|**mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives au membre choisi dans **Membre du compte** .|  
   
- **Selon le type de hiérarchie de compte**  
+ **Hiérarchie de comptes basée sur le type**  
  Sélectionnez afin d'appliquer la fonctionnalité de conversion monétaire à tous les membres d'attributs dans la hiérarchie de comptes dont la propriété `Type` est définie sur le type de compte indiqué.  
   
  Une fois cette option sélectionnée, la grille affiche les options répertoriées dans le tableau suivant.  
@@ -54,11 +54,11 @@ ms.locfileid: "66069429"
 |Option|Description|  
 |------------|-----------------|  
 |**Type de compte**|Sélectionnez cette option afin d'inclure la fonctionnalité de conversion monétaire pour le type de compte spécifié.|  
-|**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives aux membres d'attributs dont le type de compte correspond à celui indiqué dans **Type de compte** .|  
+|**mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives aux membres d'attributs dont le type de compte correspond à celui indiqué dans **Type de compte** .|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Compteurs de Performance XTP (OLTP en mémoire) | Microsoft Docs
+title: Compteurs de performance XTP (OLTP en mémoire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69b24c96e4833a45038bfcae20f0a5fecd0d2340
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151133"
 ---
 # <a name="xtp-in-memory-oltp-performance-counters"></a>Compteurs de performance XTP (OLTP en mémoire)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des objets et des compteurs qui peuvent être utilisés par l’Analyseur de performances pour analyser l’activité de l’OLTP en mémoire.  
   
-##  <a name="SQLServerPOs"></a> Objets de Performance XTP (OLTP en mémoire)  
+##  <a name="SQLServerPOs"></a>Objets de performance XTP (OLTP en mémoire)  
  Le tableau ci-dessous décrit les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Objet de performance|Description|  

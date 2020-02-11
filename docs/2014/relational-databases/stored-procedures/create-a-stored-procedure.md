@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796421"
 ---
 # <a name="create-a-stored-procedure"></a>Créer une procédure stockée
@@ -27,9 +27,9 @@ ms.locfileid: "72796421"
 ##  <a name="Top"></a>   
 -   **Avant de commencer :**  [Autorisations](#Permissions)  
   
--   **Pour créer une procédure, utilisez :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer une procédure avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
 ##  <a name="Procedures"></a> Comment créer une procédure stockée  
@@ -52,9 +52,9 @@ ms.locfileid: "72796421"
   
 5.  Dans la boîte de dialogue **Spécifier les valeurs des paramètres du modèle** , entrez les valeurs suivantes pour les paramètres affichés.  
   
-    |Paramètre|Value|  
+    |Paramètre|Valeur|  
     |---------------|-----------|  
-    |Author|*Votre nom*|  
+    |Auteur|*Votre nom*|  
     |Date de création|*Date du jour*|  
     |Description|Retourne des données sur les employés.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
@@ -92,7 +92,7 @@ ms.locfileid: "72796421"
 ###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour créer une procédure dans l'Éditeur de requête**  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans le menu **Fichier** , cliquez sur **Nouvelle requête**.  
   

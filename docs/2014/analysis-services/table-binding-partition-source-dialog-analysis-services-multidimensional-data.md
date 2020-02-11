@@ -1,5 +1,5 @@
 ---
-title: Détails (boîte de dialogue Source de Partition) de la liaison de table (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Détails de la liaison de table (boîte de dialogue source de partition) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067871"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Détails de la liaison de table (boîte de dialogue Source de partition) (Analysis Services - Données multidimensionnelles)
@@ -43,6 +43,6 @@ ms.locfileid: "66067871"
  Si un filtre est défini dans **Filtrer les tables**, la liste est encore limitée en comparant le filtre aux noms de tables qui répondent aux critères ci-dessous. Ainsi, seules les tables contenant la chaîne spécifiée dans **Filtrer les tables** sont affichées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Source de partition &#40;Analysis Services - données multidimensionnelles&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+ [Boîte de dialogue source de partition &#40;Analysis Services-données multidimensionnelles&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

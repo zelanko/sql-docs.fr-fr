@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874872"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -41,52 +41,52 @@ ms.locfileid: "70874872"
 |upgrade|**int**|Réservé pour le système.|  
 |name|**sysname**|Nom officiel de la langue, par exemple « Français ».|  
 |alias|**sysname**|Nom de la langue de remplacement, par exemple « French ».|  
-|mois|**nvarchar(372)**|Liste des noms complets des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 20 caractères.|  
-|mois courts|**nvarchar(132)**|Liste des noms abrégés des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 9 caractères.|  
-|jours|**nvarchar(217)**|Liste des noms des jours, séparés par des virgules, dans l'ordre, de lundi à dimanche. Chaque nom peut comporter jusqu'à 30 caractères.|  
+|mois|**nvarchar (372)**|Liste des noms complets des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 20 caractères.|  
+|mois courts|**nvarchar (132)**|Liste des noms abrégés des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 9 caractères.|  
+|days|**nvarchar (217)**|Liste des noms des jours, séparés par des virgules, dans l'ordre, de lundi à dimanche. Chaque nom peut comporter jusqu'à 30 caractères.|  
 |lcid|**int**|Identificateur des paramètres régionaux [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la langue.|  
-|msglangid|**smallint**|ID du groupe de messages du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]ID du groupe de messages.|  
   
  Les langues suivantes sont contenues dans [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 |Nom en anglais|LCID Windows|ID du groupe de messages [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
-|English|1033|1033|  
-|German|1031|1031|  
-|French|1036|1036|  
-|Japanese|1041|1041|  
+|Anglais|1033|1033|  
+|Allemand|1031|1031|  
+|Français|1036|1036|  
+|Japonais|1041|1041|  
 |Danois|1030|1030|  
-|Spanish|3082|3082|  
-|Italian|1040|1040|  
-|Dutch|1043|1043|  
+|Espagnol|3082|3082|  
+|Italien|1040|1040|  
+|Néerlandais|1043|1043|  
 |Norvégien|2068|2068|  
 |Portugais|2070|2070|  
-|Finlandais|1035|1035|  
-|Swedish|1053|1053|  
-|Czech|1029|1029|  
+|Finnois|1035|1035|  
+|Suédois|1053|1053|  
+|Tchèque|1029|1029|  
 |Hongrois|1038|1038|  
-|Polish|1045|1045|  
-|Romanian|1048|1048|  
-|Croatian|1050|1050|  
-|Slovak|1051|1051|  
+|Polonais|1045|1045|  
+|Roumain|1048|1048|  
+|Croate|1050|1050|  
+|Slovaque|1051|1051|  
 |Slovene|1060|1060|  
-|Greek|1032|1032|  
-|Bulgarian|1026|1026|  
-|Russian|1049|1049|  
-|Turkish|1055|1055|  
+|Grec|1032|1032|  
+|Bulgare|1026|1026|  
+|Russe|1049|1049|  
+|Turc|1055|1055|  
 |British English|2057|1033|  
 |Estonien|1061|1061|  
-|Latvian|1062|1062|  
-|Lithuanian|1063|1063|  
-|Portuguese (Brazil)|1046|1046|  
-|Traditional Chinese|1028|1028|  
-|Korean|1042|1042|  
-|Simplified Chinese|2052|2052|  
-|Arabic|1025|1025|  
-|Thai|1054|1054|  
+|Letton|1062|1062|  
+|Lituanien|1063|1063|  
+|Portugais (Brésil)|1046|1046|  
+|Chinois traditionnel|1028|1028|  
+|Coréen|1042|1042|  
+|Chinois simplifié|2052|2052|  
+|Arabe|1025|1025|  
+|Thaï|1054|1054|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues &#40;de compatibilité Transact-&#41; SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mappage de tables système à des &#40;vues système Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

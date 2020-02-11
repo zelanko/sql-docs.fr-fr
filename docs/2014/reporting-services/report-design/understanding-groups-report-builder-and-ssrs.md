@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ccdef0ccb338f268abd205a95421382eb554fce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104537"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Fonctionnement des groupes (Générateur de rapports et SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104537"
   
  Pour mieux visualiser ce qu’est un groupe, reportez-vous à l’illustration suivante qui montre la région de données de tableau matriciel dans l’aperçu. Dans cette illustration, les groupes de lignes classent le dataset par type de produit et les groupes de colonnes par région géographique et année.  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Zones de région de données de tableau matriciel](../media/rs-tablixareas.gif "Zones de région de données de tableau matriciel")  
   
  Les sections suivantes décrivent les divers aspects des groupes.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66104537"
  Un groupe possède un nom et un ensemble d'expressions de groupe que vous spécifiez. L'ensemble des expressions de groupe peut être une référence de champ de dataset unique ou une combinaison de plusieurs expressions. Lors de l'exécution, les expressions de groupe sont combinées (si le groupe possède plusieurs expressions) et appliquées aux données d'un groupe. Par exemple, vous avez un groupe qui utilise un champ de date pour organiser les données dans la région de données. Lors de l'exécution, les données sont organisées par date, puis affichées avec les totaux d'autres valeurs de dataset pour chaque date.  
   
 ## <a name="when-do-i-create-groups"></a>Quand dois-je créer des groupes ?  
- Dans la plupart des cas, le Générateur de rapports et le Concepteur de rapports créent automatiquement un groupe lorsque vous concevez une région de données. Pour un tableau, une matrice ou une liste, des groupes sont créés lorsque vous déposez des champs dans le volet de regroupement. Pour un graphique, des groupes sont créés lorsque vous déposez des champs dans les zones de dépôt du graphique. Pour une jauge, vous devez utiliser la boîte de dialogue des propriétés de la jauge. Pour une table, une matrice ou une liste, vous pouvez également créer manuellement un groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Pour obtenir un exemple de la façon d'ajouter des groupes lorsque vous créez un rapport, consultez [Tutoriel : création d’un rapport de table de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ Dans la plupart des cas, le Générateur de rapports et le Concepteur de rapports créent automatiquement un groupe lorsque vous concevez une région de données. Pour un tableau, une matrice ou une liste, des groupes sont créés lorsque vous déposez des champs dans le volet de regroupement. Pour un graphique, des groupes sont créés lorsque vous déposez des champs dans les zones de dépôt du graphique. Pour une jauge, vous devez utiliser la boîte de dialogue des propriétés de la jauge. Pour une table, une matrice ou une liste, vous pouvez également créer manuellement un groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Pour obtenir un exemple montrant comment ajouter des groupes quand vous créez un rapport, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Créer un rapport de table de base &#40;Didacticiel SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Comment puis-je modifier un groupe ?  
  Après avoir créé un groupe, vous pouvez définir les propriétés spécifiques à la région de données, telles que les expressions de filtre et de tri, les sauts de page et les variables de groupe pour accepter des données spécifiques à l'étendue. Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -63,10 +63,10 @@ ms.locfileid: "66104537"
 > [!NOTE]  
 >  Bien que les groupes aient des noms différents dans les différentes régions de données, les principes qui sous-tendent la création et l'utilisation de ces groupes sont identiques. Lorsque vous créez un groupe pour une région de données, vous spécifiez une méthode pour organiser les données de détail du dataset qui est lié à la région de données. Chaque région de données prend en charge une structure de groupe sur laquelle afficher des données groupées.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Groupes dans une région de données de tableau matriciel : Groupes Détails, Ligne et Colonne  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Groupes dans une région de données de tableau matriciel : groupes de détails, de lignes et de colonnes  
  Comme indiqué précédemment dans cette rubrique, une région de données de tableau matriciel vous permet d'organiser des données en groupes par lignes ou par colonnes. Toutefois, les groupes de lignes et de colonnes ne sont pas les seuls groupes disponibles dans une région de données de tableau matriciel. Cette région de données peut comporter les types de groupes suivants :  
   
--   **Groupe Détails** : le groupe Détails se compose de toutes les données extraites d’un dataset de rapport après que le Générateur de rapports et le Concepteur de rapports ont appliqué les filtres de datasets et de régions de données. Le groupe de détails est donc le seul groupe qui ne comporte aucune expression de groupe.  
+-   **Groupe de détails** Le groupe de détails se compose de toutes les données d’un DataSet de rapport après Générateur de rapports ou Concepteur de rapports appliquer des filtres de DataSet et de région de données. Le groupe de détails est donc le seul groupe qui ne comporte aucune expression de groupe.  
   
      En principe, le groupe de détails spécifie les données qui s'affichent lorsque vous exécutez une requête de dataset dans un concepteur de requêtes. Par exemple, vous avez une requête qui extrait toutes les colonnes d'un tableau de commandes client. Les données dans ce groupe de détails incluent donc toutes les valeurs de chaque ligne pour toutes les colonnes du tableau. Les données dans ce groupe de détails incluent également des valeurs pour tous les champs de dataset calculés que vous avez créés.  
   
@@ -75,19 +75,20 @@ ms.locfileid: "66104537"
   
      Par défaut, lorsque vous ajoutez un tableau ou une liste à votre rapport, le Générateur de rapports et le Concepteur de rapports créent automatiquement le groupe de détails et ajoute une ligne pour afficher les données de détail. Par défaut, lorsque vous ajoutez des champs de dataset aux cellules de cette ligne, vous voyez des expressions simples pour les champs, par exemple, [Sales]. Lorsque vous consultez la région de données, la ligne de détails n'est utilisée qu'à une seule reprise pour chaque valeur du jeu de résultats.  
   
--   **Groupes de lignes et groupes de colonnes** : vous pouvez organiser des données en groupes par lignes ou par colonnes. Les groupes de lignes apparaissent verticalement sur une page. Les groupes de colonnes apparaissent horizontalement sur une page. Les groupes peuvent être imbriqués, par exemple, vous pouvez regrouper d'abord par [Year], puis par [Quarter], puis par [Month]. Les groupes peuvent également être adjacents, par exemple, avec l'instruction de regrouper sur [Territory] et indépendamment sur [ProductCategory].  
+-   **Groupes de lignes et groupes de colonnes** Vous pouvez organiser les données en groupes par lignes ou par colonnes. Les groupes de lignes apparaissent verticalement sur une page. Les groupes de colonnes apparaissent horizontalement sur une page. Les groupes peuvent être imbriqués, par exemple, vous pouvez regrouper d'abord par [Year], puis par [Quarter], puis par [Month]. Les groupes peuvent également être adjacents, par exemple, avec l'instruction de regrouper sur [Territory] et indépendamment sur [ProductCategory].  
   
      Lorsque vous créez un groupe pour une région de données, le Générateur de rapports et le Concepteur de rapports ajoutent automatiquement des lignes ou des colonnes à la région de données et utilisent ces lignes ou colonnes pour afficher des données de groupe.  
   
--   **Groupes de hiérarchies récursives** : un groupe de hiérarchies récursives organise les données à partir d’un seul dataset de rapport qui inclut plusieurs niveaux. Par exemple, un groupe de hiérarchies récursives peut afficher un organigramme fonctionnel, par exemple, [Employee] qui est sous la responsabilité de [Employee]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des propriétés de groupe et des fonctions intégrées qui vous permettent de créer des groupes pour ce type de données de rapport. Pour plus d’informations, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Groupes de hiérarchies récursives** Un groupe de hiérarchies récursives organise les données d’un DataSet de rapport unique qui comprend plusieurs niveaux. Par exemple, un groupe de hiérarchies récursives peut afficher un organigramme fonctionnel, par exemple, [Employee] qui est sous la responsabilité de [Employee]. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des propriétés de groupe et des fonctions intégrées qui vous permettent de créer des groupes pour ce type de données de rapport. Pour plus d’informations, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  La liste suivante résume la façon dont vous utilisez les groupes pour chaque région de données :  
   
--   **Table** : définit des groupes des lignes imbriquées, des groupes de lignes adjacentes et des groupes de lignes de hiérarchie récursive (comme pour un organigramme fonctionnel). Par défaut, une table inclut un groupe de détails. Ajoutez des groupes en faisant glisser des champs de dataset sur le volet de regroupement pour une table sélectionnée.  
+-   **Table** Définir des groupes de lignes imbriqués, des groupes de lignes adjacents et des groupes de lignes de hiérarchie récursive (comme pour un organigramme). Par défaut, une table inclut un groupe de détails. Ajoutez des groupes en faisant glisser des champs de dataset sur le volet de regroupement pour une table sélectionnée.  
   
--   **Matrice** : définit des groupes de lignes et de colonnes imbriquées, et des groupes de lignes et de colonnes adjacentes. Ajoutez des groupes en faisant glisser des champs de dataset sur le volet de regroupement pour une matrice sélectionnée.  
+-   **Matrice** Définissez des groupes de lignes et de colonnes imbriqués et des groupes de lignes et de colonnes adjacents. Ajoutez des groupes en faisant glisser des champs de dataset sur le volet de regroupement pour une matrice sélectionnée.  
   
--   **Liste** : par défaut, prend en charge le groupe Détails. Généralement utilisée pour prendre en charge un niveau unique de regroupement. Ajoutez des groupes en faisant glisser des champs de dataset sur le volet de regroupement pour une liste sélectionnée.  
+-   **Liste** Par défaut, prend en charge le groupe de détails. Généralement utilisée pour prendre en charge un niveau unique de regroupement. Ajoutez des groupes en faisant glisser des champs de dataset sur le volet de regroupement pour une liste sélectionnée.  
   
  Après que vous avez ajouté un groupe, les handles de ligne et de colonne de la région de données se modifient pour refléter l'appartenance aux groupes. Lorsque vous supprimez un groupe, vous avez le choix entre supprimer la définition de groupe uniquement et supprimer le groupe et toutes ses lignes et colonnes associées. Pour plus d’informations, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   

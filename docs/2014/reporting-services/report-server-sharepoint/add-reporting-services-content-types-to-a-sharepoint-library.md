@@ -1,5 +1,5 @@
 ---
-title: Ajouter le composant WebPart Visionneuse de rapports à une Page Web (Reporting Services en Mode intégré SharePoint) | Microsoft Docs
+title: Ajouter le composant WebPart Visionneuse de rapports à une page Web (Reporting Services en mode intégré SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104288"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Ajouter le composant WebPart Visionneuse de rapports à une page Web (Reporting Services en mode intégré SharePoint)
@@ -59,6 +59,6 @@ ms.locfileid: "66104288"
  [Composant WebPart Visionneuse de rapports sur un site SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personnaliser le composant WebPart Visionneuse de rapports](../customize-the-report-viewer-web-part.md)   
  [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Installer ou désinstaller le complément Services Reporting pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Installer ou désinstaller le complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

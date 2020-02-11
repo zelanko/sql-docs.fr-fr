@@ -10,10 +10,10 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1623430eed752db7fa387caf33124082eb318490
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70774183"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Installation de SSMA pour le client DB2 (DB2ToSQL)
@@ -32,7 +32,7 @@ Le client SSMA se compose des fichiers programme qui effectuent les tâches suiv
   
 Cette rubrique décrit les conditions préalables à l’installation et les instructions pour l’installation de SSMA.  
   
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 SSMA est conçu pour fonctionner avec DB2 sur z/OS version 9,0 et 10,0 ou DB2 sur LUW version 9,8 et 10,1 ou versions ultérieures [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et 2012 ou versions ultérieures.  
   
@@ -42,11 +42,11 @@ Avant d’installer SSMA, assurez-vous que l’ordinateur remplit les conditions
   
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou versions ultérieures.  
   
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] La[!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4,0 ou une version ultérieure. La [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4,0 est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support du produit. Vous pouvez également l’obtenir à partir du [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
+- La [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4,0 ou une version ultérieure. La [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4,0 est disponible sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support du produit. Vous pouvez également l’obtenir à partir du [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 - Fournisseur Microsoft OLEDB pour DB2 version 5 ou version ultérieure, et connectivité aux bases de données DB2 que vous souhaitez migrer.  
   
-- Accès et autorisations suffisantes sur l’ordinateur qui héberge l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL DB où vous allez migrer des données et des objets de base de données. Pour plus d’informations, consultez [connexion à &#40;SQL Server&#41;DB2eToSQL](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+- Accès et autorisations suffisantes sur l’ordinateur qui héberge l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL DB où vous allez migrer des données et des objets de base de données. Pour plus d’informations, consultez [connexion à SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
   
 - 4 Go de RAM recommandés.  
   
@@ -54,7 +54,7 @@ Avant d’installer SSMA, assurez-vous que l’ordinateur remplit les conditions
 
 Pour télécharger le fournisseur OLEDB pour DB2 version 6,0, accédez à [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
-SSMA est un téléchargement Web. Pour télécharger la dernière version, consultez la [page de téléchargement de Assistant Migration SQL Server](https://aka.ms/ssmafordb2).  
+SSMA est téléchargeable sur le Web. Pour télécharger la dernière version, consultez la [page de téléchargement de Assistant Migration SQL Server](https://aka.ms/ssmafordb2).  
   
 Après avoir téléchargé la dernière version, extrayez les fichiers d’installation afin de pouvoir installer SSMA.  
   
@@ -62,7 +62,7 @@ Pour installer le client SSMA :
   
 1. Double-cliquez sur SSMA pour DB2 *n*. Install. exe, où *n* est le numéro de Build.  
   
-2. Dans la page **Bienvenue** , sélectionnez **suivant**.  
+2. Sur la page d’**accueil**, sélectionnez **Suivant**.  
   
    Si la configuration requise n’est pas installée, un message s’affiche pour indiquer que vous devez d’abord installer les composants requis. Assurez-vous que vous avez installé tous les composants requis, puis réexécutez le programme d’installation.  
   
@@ -79,5 +79,5 @@ L’emplacement d’installation par défaut est C:\Program Files\Microsoft Assi
   
 ## <a name="see-also"></a>Voir aussi
 
-[Installation des composants SSMA sur &#40;SQL Server DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
-[Migration de bases de données DB2 &#40;vers SQL Server DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Installation des composants SSMA sur SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[Migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

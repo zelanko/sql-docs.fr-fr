@@ -1,5 +1,5 @@
 ---
-title: Impossible de charger le fichier ou l’assembly &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; ou une de ses dépendances. Le système ne trouve pas le fichier spécifié. | Microsoft Docs
+title: Impossible de charger le fichier ou l’assembly &#39;Microsoft. Data. services, version = 3.5.0.0, culture = neutral, PublicKeyToken = b77a5c561934e089&#39; ou l’une de ses dépendances. Le système ne peut pas trouver le fichier spécifié. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071632"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>Impossible de charger le fichier ou l’assembly &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; ou une de ses dépendances. Le système ne trouve pas le fichier spécifié.
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>Impossible de charger le fichier ou l’assembly &#39;Microsoft. Data. services, version = 3.5.0.0, culture = neutral, PublicKeyToken = b77a5c561934e089&#39; ou l’une de ses dépendances. Le système ne peut pas trouver le fichier spécifié.
   Dans les environnements SharePoint 2010 qui disposent de PowerPivot pour SharePoint, cette erreur se produira si vous tentez une exportation de flux de données et que la version requise de Microsoft ADO.NET Data Services n'est pas disponible sur le système.  
   
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
-|S'applique à|PowerPivot pour SharePoint|  
+|S’applique à|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Cause|ADO.NET Data Services 3.5 SP1 est introuvable.|  
+|Cause :|ADO.NET Data Services 3.5 SP1 est introuvable.|  
 |Texte du message|Impossible de charger le fichier ou l'assembly 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' ou une de ses dépendances. Le système ne trouve pas le fichier spécifié.|  
   
 ## <a name="explanation"></a>Explication  
@@ -36,13 +36,13 @@ ms.locfileid: "66071632"
   
 ## <a name="user-action"></a>Action de l'utilisateur  
   
-1.  Accédez à la documentation relative à la configuration requise matérielle et logicielle pour SharePoint 2010, [déterminer la configuration matérielle et logicielle requise (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734).  
+1.  Accédez à la documentation relative à la configuration matérielle et logicielle requise pour SharePoint 2010, [déterminer la configuration matérielle et logicielle requise (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734).  
   
-2.  Dans **Installer les logiciels requis**, recherchez le lien pour ADO.NET Data Services 3.5 correspondant au système d'exploitation que vous utilisez.  
+2.  Dans **installation des composants logiciels requis**, recherchez le lien pour ADO.NET Data Services 3,5 qui correspond au système d’exploitation que vous utilisez.  
   
 3.  Cliquez sur le lien, puis exécutez le programme d'installation qui installe le service.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des Solutions PowerPivot pour SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
+ [Déployer des solutions PowerPivot sur SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

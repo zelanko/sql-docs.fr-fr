@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156832"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
@@ -36,7 +36,7 @@ ms.locfileid: "63156832"
   
  Les recommandations suivantes s'appliquent aux appels de procédures stockées compilées en mode natif à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Pour appeler une procédure stockée une seule fois, la meilleure méthode est d'émettre un appel RPC direct avec `SQLExecDirect` et les clauses ODBC CALL. N’utilisez pas le [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instruction. Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
+ Pour appeler une procédure stockée une seule fois, la meilleure méthode est d'émettre un appel RPC direct avec `SQLExecDirect` et les clauses ODBC CALL. N’utilisez pas l' [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instruction. Si une procédure stockée doit être appelée plusieurs fois, l'exécution préparée est plus efficace.  
   
  Il est recommandé d'utiliser des appels de procédure RPC préparés pour appeler la même procédure stockée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] plusieurs fois. Les appels RPC préparés sont mis en œuvre comme suit à l'aide du pilote ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  
   
@@ -48,7 +48,8 @@ ms.locfileid: "63156832"
   
 -   Exécutez la procédure stockée plusieurs fois avec `SQLExecute`.  
   
- Le fragment de code suivant illustre l'exécution préparée d'une procédure stockée conçue pour ajouter des lignes d'article à une commande. `SQLPrepare` est appelé une seule fois et `SQLExecute` est appelé plusieurs fois, à chaque exécution de la procédure.  
+ Le fragment de code suivant illustre l'exécution préparée d'une procédure stockée conçue pour ajouter des lignes d'article à une commande. 
+  `SQLPrepare` est appelé une seule fois et `SQLExecute` est appelé plusieurs fois, à chaque exécution de la procédure.  
   
 ```  
 // Bind parameters  

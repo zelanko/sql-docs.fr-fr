@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158174"
 ---
 # <a name="implementing-an-outer-join"></a>Implémentation d'une jointure externe
@@ -22,7 +22,7 @@ ms.locfileid: "63158174"
   
  Il utilise une variable de table pour simuler un curseur à gauche de la jointure et une variable de table pour construire un seul jeu de résultats, qui n'est appropriée que lors du traitement d'un nombre limité de lignes, car elle implique de créer une copie supplémentaire des lignes de données.  
   
- Une variable (@outer) de type t1_type permet d’itérer sur les lignes de t1, à l’aide d’un certain temps boucle pour simuler un curseur. La variable @result de type t1t2_join_type est ensuite utilisé pour construire le jeu de résultats.  
+ Une variable (@outer) de type t1_type est utilisée pour effectuer une itération sur les lignes de T1, à l’aide d’une boucle while pour simuler un curseur. La variable @result de type t1t2_join_type est ensuite utilisée pour construire le jeu de résultats.  
   
  Vous devez tester les performances de cette solution, pour vous assurer qu'elle s'exécute comme prévu dans votre application.  
   
@@ -114,6 +114,6 @@ exec dbo.usp_left_join
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de migration pour les procédures stockées compilées en mode natif](migration-issues-for-natively-compiled-stored-procedures.md)   
- [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [Constructions Transact-SQL non prises en charge par In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

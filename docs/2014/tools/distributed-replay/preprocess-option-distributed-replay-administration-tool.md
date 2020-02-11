@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149903"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Option preprocess (outil d'administration Distributed Replay)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outil d’administration Distributed Replay, `DReplay.exe`, est un outil de ligne de commande que vous pouvez utiliser pour communiquer avec distributed replay controller. Cette rubrique décrit l’option de ligne de commande **preprocess** et la syntaxe correspondante.  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outil d’administration Distributed Replay `DReplay.exe`,, est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec le contrôleur Distributed Replay. Cette rubrique décrit l’option de ligne de commande **preprocess** et la syntaxe correspondante.  
   
  L’option **preprocess** initialise l’étape de prétraitement. Lors de cette étape, le contrôleur prépare les données de trace d'entrée pour la relecture sur le serveur cible.  
   
- ![Icône de lien vers une rubrique](../../database-engine/media/topic-link.gif "Icône de lien vers une rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées par l’outil d’administration, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Icône de lien de rubrique](../../database-engine/media/topic-link.gif "Icône du lien de rubrique") Pour plus d’informations sur les conventions de syntaxe utilisées avec la syntaxe de l’outil d’administration, consultez conventions de la [syntaxe Transact-sql &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63149903"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- **-m** *controller*  
+ **-m** *contrôleur*  
  Spécifie le nom de l'ordinateur du contrôleur. Vous pouvez utiliser «`localhost`» ou «`.`» pour désigner l'ordinateur local.  
   
  Si le paramètre **-m** n’est pas spécifié, l’ordinateur local est utilisé.  
@@ -59,7 +59,7 @@ ms.locfileid: "63149903"
   
 -   Les chemins d'accès UNC ne sont pas pris en charge.  
   
- **-c** *config_file*  
+ **-c** *Config_file*  
  C'est le chemin d'accès complet au fichier de configuration de prétraitement ; il est utilisé pour spécifier l'emplacement du fichier de configuration de prétraitement en cas de stockage dans un autre emplacement. Ce paramètre peut être un chemin d'accès UNC, ou peut résider localement sur l'ordinateur où vous exécutez l'outil d'administration.  
   
  Le paramètre **-c** n’est pas obligatoire si aucun filtrage n’est exigé, ou si vous ne voulez pas modifier la durée d’inactivité maximale.  
@@ -78,7 +78,7 @@ ms.locfileid: "63149903"
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- Dans cet exemple, l'étape de prétraitement est initialisée et un fichier de configuration de prétraitement modifié est spécifié. Contrairement à l’exemple précédent, le paramètre **-c** est utilisé pour pointer sur le fichier de configuration modifié, si vous l’avez stocké dans un emplacement différent. Exemple :  
+ Dans cet exemple, l'étape de prétraitement est initialisée et un fichier de configuration de prétraitement modifié est spécifié. Contrairement à l’exemple précédent, le paramètre **-c** est utilisé pour pointer sur le fichier de configuration modifié, si vous l’avez stocké dans un emplacement différent. Par exemple :  
   
 ```  
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
@@ -104,7 +104,7 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
  Pour plus d’informations, voir [Distributed Replay Security](distributed-replay-security.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Préparer les données de trace d'entrée](prepare-the-input-trace-data.md)   
+ [Préparer les données de trace d’entrée](prepare-the-input-trace-data.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Configurer Distributed Replay](configure-distributed-replay.md)  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240731"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Révoquer des autorisations sur une collection de schémas XML
@@ -44,7 +44,7 @@ ms.locfileid: "63240731"
 ## <a name="examples"></a>Exemples  
  Les scénarios proposés dans les exemples suivants illustrent le fonctionnement des autorisations sur les schémas XML. Chaque exemple crée la base de données de test, les schémas relationnels et les connexions nécessaires. Ces connexions reçoivent les autorisations nécessaires sur la collection de schémas XML. Chaque exemple procède au nettoyage qui s'impose à la fin de la procédure.  
   
-### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. Retrait des autorisations de créer une collection de schémas XML  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>R. Retrait des autorisations de créer une collection de schémas XML  
  Cet exemple crée une connexion et un exemple de base de données. Il ajoute également un schéma relationnel à la base de données. Au départ, la connexion bénéficie d'une autorisation ALTER sur les deux schémas relationnels et des autorisations voulues pour créer des collections de schémas XML. Ensuite, l'exemple retire l'autorisation ALTER sur l'un des schémas relationnels de la base de données de façon à empêcher la connexion de créer une collection de schémas XML.  
   
 ```  

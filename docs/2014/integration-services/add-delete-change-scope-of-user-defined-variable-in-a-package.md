@@ -1,5 +1,5 @@
 ---
-title: Ajouter, supprimer, modifier l’étendue de la Variable définie par l’utilisateur dans un Package | Microsoft Docs
+title: Ajouter, supprimer et modifier l’étendue d’une variable définie par l’utilisateur dans un package | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061984"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Ajouter, supprimer, modifier l'étendue de la variable définie par l'utilisateur dans un package
-  Les procédures suivantes expliquent comment ajouter, supprimer et modifier l’étendue d’une variable définie par l’utilisateur dans un package, à l’aide de la fenêtre **Variables**.  
+  Les procédures suivantes expliquent comment ajouter, supprimer et modifier l’étendue d’une variable définie par l’utilisateur dans un package, à l’aide de la fenêtre **Variables** .  
   
  Pour plus d’informations sur la portée des variables, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit également des variables système qui rendent disponibles les informations système au moment de l'exécution, pour être utilisées dans des conteneurs tels que des packages et des gestionnaires d'événements. Vous ne pouvez pas supprimer des variables système.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit également des variables système qui rendent disponibles les informations système au moment de l'exécution, pour être utilisées dans des conteneurs tels que des packages et des gestionnaires d'événements. Vous ne pouvez pas supprimer des variables système.  
   
 ### <a name="to-add-a-variable"></a>Pour ajouter une variable  
   
@@ -85,7 +86,7 @@ ms.locfileid: "66061984"
 ## <a name="see-also"></a>Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)   
- [Définir les propriétés d’une Variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
+ [Définir les propriétés d’une variable définie par l’utilisateur](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Utiliser les valeurs des variables et des paramètres dans un package enfant](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
   

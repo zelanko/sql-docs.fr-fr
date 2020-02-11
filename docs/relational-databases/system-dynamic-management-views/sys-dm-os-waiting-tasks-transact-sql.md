@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72260378"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -33,34 +33,34 @@ ms.locfileid: "72260378"
   Renvoie les informations sur la file d'attente des tâches en attente de certaines ressources. Pour plus d’informations sur les tâches, consultez le [Guide d’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_os_waiting_tasks**.  
+>  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary(8)**|Adresse de la tâche en attente.|  
+|**waiting_task_address**|**varbinary (8)**|Adresse de la tâche en attente.|  
 |**session_id**|**smallint**|ID de la session associée à la tâche.|  
 |**exec_context_id**|**int**|ID du contexte d'exécution associé à la tâche.|  
 |**wait_duration_ms**|**bigint**|Temps d'attente total de ce type d'attente (en millisecondes). Cette heure est comprise entre **signal_wait_time**.|  
-|**wait_type**|**nvarchar(60)**|Nom du type d'attente.|  
-|**resource_address**|**varbinary(8)**|Adresse de la ressource que la tâche attend.|  
-|**blocking_task_address**|**varbinary(8)**|Tâche qui mobilise actuellement cette ressource.|  
+|**wait_type**|**nvarchar (60)**|Nom du type d’attente.|  
+|**resource_address**|**varbinary (8)**|Adresse de la ressource que la tâche attend.|  
+|**blocking_task_address**|**varbinary (8)**|Tâche qui mobilise actuellement cette ressource.|  
 |**blocking_session_id**|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé en raison de transitions d'état de verrou interne.|  
 |**blocking_exec_context_id**|**int**|ID du contexte d'exécution de la tâche bloquante.|  
-|**resource_description**|**nvarchar(3072)**|Description de la ressource actuellement mobilisée. Pour plus d'informations, consultez la liste ci-dessous.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**resource_description**|**nvarchar (3072)**|Description de la ressource actuellement mobilisée. Pour plus d'informations, consultez la liste ci-dessous.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="resource_description-column"></a>Colonne resource_description  
- Les valeurs possibles de la colonne resource_description sont les suivantes.  
+ La colonne resource_description comporte les valeurs possibles suivantes.  
   
- **Propriétaire de la ressource du pool de threads :**  
+ **Propriétaire des ressources de pool de threads :**  
   
--   threadpool id=scheduler\<hex-address>  
+-   ID de pool de threads => d’adresses\<hex du planificateur  
   
- **Propriétaire de la ressource de requête parallèle :**  
+ **Propriétaire de ressources de requêtes parallèles :**  
   
--   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
+-   exchangeEvent ID = {port | Pipe}\<adresse hexadécimale> WaitType =\<Exchange-type d’attente> NodeId =\<Exchange-Node-ID>  
   
- **Exchange-Wait-type :**  
+ **Exchange-wait-type :**  
   
 -   e_waitNone  
   
@@ -76,45 +76,45 @@ ms.locfileid: "72260378"
   
 -   e_waitRange  
   
- **Verrouiller le propriétaire de la ressource :**  
+ **Propriétaire de ressources de verrouillage :**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<spécifique au type-Description> ID = verrou\<Lock-hex-Address> mode =\<mode> associatedObjectId =\<associé-obj-ID>  
   
-     **\<> de description spécifique au type peut être :**  
+     **\<la> de description spécifique au type peut être :**  
   
-    -   Pour la base de données : databaselock Resource =\<databaselock-Resource > dbid =\<DB-ID >  
+    -   Pour la base de données : databaselock\<Resource = databaselock-Resource> dbid =\<DB-ID>  
   
-    -   Pour le fichier : filelock fileid =\<fichier-ID > sous-ressource =\<filelock-Resource > dbid =\<DB-ID >  
+    -   Pour le fichier : filelock fileid\<= file-ID> Resource =\<filelock-Resource\<> dbid = DB-ID>  
   
-    -   Pour Object : objectlock lockPartition =\<Lock-partition-ID > objid =\<obj-ID > Resource =\<objectlock-Resource > dbid =\<DB-ID >  
+    -   Pour Object : objectlock lockPartition =\<Lock-partition-ID> objid =\<obj-ID> Resource\<= objectlock-Resource>\<dbid = DB-ID>  
   
-    -   Pour page : PageLock fileid =\<fichier-ID > pageid =\<page-ID > dbid =\<DB-ID > Resource =\<PageLock-subressource >  
+    -   Pour la page : PageLock fileid\<= file-ID> pageid\<= page-ID> dbid\<= DB-ID> Resource =\<PageLock-Resource>  
   
-    -   Clé : Keylock hobtid =\<HoBT-ID > dbid =\<DB-ID >  
+    -   Clé : Keylock hobtid =\<HoBT-ID> dbid =\<DB-ID>  
   
-    -   Pour extent : extentlock fileid =\<fichier-ID > pageid = ID de page de\<> dbid =\<DB-ID >  
+    -   Pour extent : extentlock fileid\<= file-ID> pageid\<= page-ID> dbid\<= DB-ID>  
   
-    -   Pour RID : ridlock fileid =\<fichier-ID > pageid = ID de page de\<> dbid =\<DB-ID >  
+    -   Pour RID : ridlock fileid =\<file-ID> pageid =\<page-ID> dbid =\<DB-ID>  
   
-    -   Pour APPLICATION : applicationlock Hash =\<hachage > databasePrincipalId =\<Role-ID > dbid =\<DB-ID >  
+    -   Pour APPLICATION : applicationlock hash =\<Hash> databasePrincipalId =\<Role-ID> dbid =\<DB-ID>  
   
-    -   Pour les métadonnées : metadatalock Resource =\<métadonnées-Resource > ClassID =\<metadatalock-Description > dbid =\<DB-ID >  
+    -   Pour les métadonnées : metadatalock Resource =\<Metadata-Resource> ClassID =\<metadatalock-\<Description> dbid = DB-ID>  
   
-    -   Pour HoBT : hobtlock hobtid =\<HoBT-ID > Resource =\<HoBT-Resource > dbid =\<DB-ID >  
+    -   Pour HoBT : hobtlock hobtid =\<HoBT-ID> Resource\<= HoBT-Resource>\<dbid = DB-ID>  
   
-    -   Pour ALLOCATION_UNIT : allocunitlock hobtid =\<HoBT-ID > Resource =\<Alloc-Unit-Resource > dbid =\<DB-ID >  
+    -   Pour ALLOCATION_UNIT : allocunitlock hobtid =\<HoBT-ID> Resource\<= Alloc-Unit-Resource>\<dbid = DB-ID>  
   
-     **le mode de \<> peut être :**  
+     **\<le> du mode peut être :**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
- **Propriétaire de la ressource externe :**  
+ **Propriétaire de ressources externes :**  
   
--   Externalressource externe =\<Wait-type >  
+-   Externalressource externe =\<type d’attente>  
   
- **Propriétaire de la ressource générique :**  
+ **Propriétaire de ressources génériques :**  
   
--   TransactionMutex TransactionInfo Workspace =\<Workspace-ID >  
+-   TransactionMutex TransactionInfo Workspace =\<Workspace-ID>  
   
 -   Mutex  
   
@@ -126,21 +126,21 @@ ms.locfileid: "72260378"
   
 -   resourceWait  
   
- **Propriétaire de la ressource de verrou :**  
+ **Propriétaire de ressources de verrou :**  
   
--   \<db-id>:\<file-id>:\<page-in-file>  
+-   \<DB-ID> :\<file-ID> :\<page in-file>  
   
--   GUID de \<>  
+-   \<GUID>  
   
--   \<latch-class> (\<latch-address>)  
+-   \<> de classe LATCH (\<verrou-adresse>)  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` autorisation.   
-Sur les niveaux [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium, requiert l’autorisation `VIEW DATABASE STATE` dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
  
 ## <a name="example"></a>Exemple
-Cet exemple identifie les sessions bloquées. Exécutez la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Cet exemple identifie les sessions bloquées. Exécutez la [!INCLUDE[tsql](../../includes/tsql-md.md)] requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
@@ -148,7 +148,7 @@ WHERE blocking_session_id IS NOT NULL;
 ``` 
   
 ## <a name="see-also"></a>Voir aussi  
-[SQL Server les &#40;vues de gestion dynamique liées au système d'&#41; exploitation     Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+[SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
 [Guide d’architecture de thread et de tâche](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

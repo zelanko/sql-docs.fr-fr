@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798332"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installer PowerPivot à partir de l'invite de commandes
@@ -80,9 +80,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  Remplacez les espaces réservés pour \<domaine\nom_utilisateur > et \<StrongPassword > par des comptes d’utilisateur et des mots de passe valides.  
+3.  Remplacez les espaces réservés pour \<domaine\nom_utilisateur> et \<StrongPassword>par des comptes d’utilisateur et des mots de passe valides.  
   
-     Les paramètres `/assvaccount` et **/ASSVCPASSWORD** sont utilisés pour configurer l’instance [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] sur le serveur d’applications. Remplacez ces espaces réservés par des informations de compte valides.  
+     Les `/assvaccount` paramètres et **/ASSVCPASSWORD** sont utilisés pour configurer l' [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance sur le serveur d’applications. Remplacez ces espaces réservés par des informations de compte valides.  
   
      Le paramètre **/ASSYSADMINACCOUNTS** doit être défini sur l’identité de l’utilisateur qui exécute SQL Server installation. Vous devez spécifier au moins un administrateur système. Notez que le programme d'installation de SQL Server n'accorde plus d'autorisations sysadmin automatiques aux membres du groupe intégré Administrateurs.  
   
@@ -100,8 +100,8 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 10. Pour vérifier l'installation, vérifiez le fichier summary.txt dans \Program Files\SQL Server\120\Setup Bootstrap\Log. Le résultat final doit indiquer « Réussite » si le serveur a été installé sans erreurs.  
   
-11. Configurez le serveur. Vous devez au minimum déployer des solution, créer une application de service et activer la fonction pour chaque collection de sites. Pour plus d’informations, consultez [configurer ou réparer l' &#40;&#41; outil de configuration de PowerPivot PowerPivot pour SharePoint 2010](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) ou [l’administration et la configuration du serveur PowerPivot dans l’administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
+11. Configurez le serveur. Vous devez au minimum déployer des solution, créer une application de service et activer la fonction pour chaque collection de sites. Pour plus d’informations, consultez [configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de configuration powerpivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) ou [administration et configuration du serveur PowerPivot dans l’administration centrale](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer des comptes de service PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
- [Installation de PowerPivot pour SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

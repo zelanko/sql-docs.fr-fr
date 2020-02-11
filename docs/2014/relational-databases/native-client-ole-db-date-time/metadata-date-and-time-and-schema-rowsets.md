@@ -1,5 +1,5 @@
 ---
-title: Date / heure et ensembles de lignes de schéma | Microsoft Docs
+title: Ensembles de lignes de date et d’heure et de schéma | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238012"
 ---
-# <a name="date-and-time-and-schema-rowsets"></a>Date / heure et ensembles de lignes de schéma
+# <a name="date-and-time-and-schema-rowsets"></a>Ensembles de lignes de date et d’heure et de schéma
   Cette rubrique fournit des informations sur l'ensemble de lignes COLUMNS et l'ensemble de lignes PROCEDURE_PARAMETERS. Ces informations concernent les améliorations apportées aux date et heure OLE DB pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="columns-rowset"></a>Ensemble de lignes COLUMNS  
@@ -27,10 +27,10 @@ ms.locfileid: "63238012"
   
 |Type de colonne|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Désactiver|0|  
+|Date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|Définissez|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Désactiver|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Désactiver|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Définissez|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Définissez|0..7|  
   
@@ -56,21 +56,21 @@ ms.locfileid: "63238012"
   
  DBCOLUMNFLAGS_SS_ISVARIABLESCALE est valide seulement en cas de connexion à un serveur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou ultérieur. DBCOLUMNFLAGS_SS_ISFIXEDSCALE est non défini en cas de connexion à des serveurs de bas niveau.  
   
-## <a name="procedureparameters-rowset"></a>Ensemble de lignes PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Ensemble de lignes PROCEDURE_PARAMETERS  
  DATA_TYPE contient les mêmes valeurs que l'ensemble de lignes de schéma COLUMNS et TYPE_NAME contient le type de serveur.  
   
  Une nouvelle colonne, SS_DATETIME_PRECISION, a été ajoutée pour retourner la précision du type comme dans la colonne DATETIME_PRECISION, semblable à l'ensemble de lignes COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Ensemble de lignes PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Ensemble de lignes PROVIDER_TYPES  
  Les lignes suivantes sont retournées pour les types date/heure :  
   
-|Type -><br /><br /> colonne|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Type -><br /><br /> Colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|»|»|»|»|»|»|  
-|LITERAL_SUFFIX|»|»|»|»|»|»|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
@@ -78,14 +78,14 @@ ms.locfileid: "63238012"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE à moins que l'un des éléments suivants ne soit vrai :<br /><br /> -Est client connecté à un serveur de bas niveau.<br />-La propriété de connexion de compatibilité de type données spécifie un niveau de compatibilité égal à 80.|VARIANT_TRUE à moins que l'un des éléments suivants ne soit vrai :<br /><br /> -Est client connecté à un serveur de bas niveau.<br />-La propriété de connexion de compatibilité de type données spécifie un niveau de compatibilité égal à 80.|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE à moins que l'un des éléments suivants ne soit vrai :<br /><br /> -Le client est connecté à un serveur de niveau supérieur.<br />-La propriété de connexion de compatibilité de type de données spécifie un niveau de compatibilité égal à 80.|VARIANT_TRUE à moins que l'un des éléments suivants ne soit vrai :<br /><br /> -Le client est connecté à un serveur de niveau supérieur.<br />-La propriété de connexion de compatibilité de type de données spécifie un niveau de compatibilité égal à 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  Comme OLE DB ne définit MINIMUM_SCALE et MAXIMUM_SCALE que pour les types numériques et décimaux, l'utilisation par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client de ces colonnes pour les types time, datetime2 et datetimeoffset n'est pas standard.  

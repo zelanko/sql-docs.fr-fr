@@ -1,5 +1,5 @@
 ---
-title: L’exécution de requêtes (ODBC) | Microsoft Docs
+title: Exécution de requêtes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b924596a4071f59175faa629006e9e5b220f66ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200231"
 ---
 # <a name="executing-queries-odbc"></a>Exécution de requêtes (ODBC)
-  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut alors exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions sur le descripteur d’instruction. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
+  Après qu'une application ODBC a initialisé un handle de connexion et s'est connectée avec une source de données, elle alloue un ou plusieurs descripteurs d'instruction sur le handle de connexion. L’application peut ensuite exécuter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des instructions sur le descripteur d’instruction. La séquence générale des événements lors de l'exécution d'une instruction SQL est :  
   
 1.  Définition des attributs de l'instruction requis.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63200231"
   
 4.  Extraction des jeux de résultats éventuels.  
   
- Après qu'une application a extrait toutes les lignes dans tous les jeux de résultats retournés par l'instruction SQL, elle peut exécuter une autre requête sur le même descripteur d'instruction. Si une application détermine qu’il n’est pas nécessaire pour récupérer toutes les lignes dans un jeu de résultats particulier, elle peut annuler le reste du jeu de résultats en appelant [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
+ Après qu'une application a extrait toutes les lignes dans tous les jeux de résultats retournés par l'instruction SQL, elle peut exécuter une autre requête sur le même descripteur d'instruction. Si une application détermine qu’il n’est pas nécessaire d’extraire toutes les lignes d’un jeu de résultats particulier, elle peut annuler le reste du jeu de résultats en appelant [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
   
  Si, dans une application ODBC, vous devez exécuter plusieurs fois la même instruction SQL avec des données différentes, utilisez un marqueur de paramètre dénoté par un point d'interrogation (?) dans la construction d'une instruction SQL :  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63200231"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Chaque marqueur de paramètre peut ensuite être liée à une variable de programme en appelant [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md).  
+ Chaque marqueur de paramètre peut ensuite être lié à une variable de programme en appelant [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md).  
   
  Après l'exécution de toutes les instructions SQL et le traitement de leurs jeux de résultats, l'application libère le descripteur d'instruction.  
   
@@ -50,19 +50,19 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Allocation d’un descripteur d’instruction](allocating-a-statement-handle.md)  
+-   [Allocation d'un descripteur d'instruction](allocating-a-statement-handle.md)  
   
 -   [Construction d’une instruction SQL &#40;ODBC&#41;](constructing-an-sql-statement-odbc.md)  
   
--   [Construction d’instructions SQL pour les curseurs](constructing-sql-statements-for-cursors.md)  
+-   [Construction d'instructions SQL pour les curseurs](constructing-sql-statements-for-cursors.md)  
   
--   [Utilisation de paramètres d’instruction](using-statement-parameters.md)  
+-   [Utilisation de paramètres d'instruction](using-statement-parameters.md)  
   
--   [L’exécution d’instructions &#40;ODBC&#41;](executing-statements/executing-statements-odbc.md)  
+-   [Exécution d’instructions &#40;ODBC&#41;](executing-statements/executing-statements-odbc.md)  
   
--   [Libération d’un descripteur d’instruction](freeing-a-statement-handle.md)  
+-   [Libération d'un descripteur d'instruction](freeing-a-statement-handle.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;&#41;ODBC](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

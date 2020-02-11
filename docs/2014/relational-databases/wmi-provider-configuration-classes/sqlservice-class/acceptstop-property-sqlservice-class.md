@@ -1,5 +1,5 @@
 ---
-title: AcceptStop, propriété (classe SqlService) | Microsoft Docs
+title: Propriété AcceptStop (classe SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223333"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>Propriété AcceptStop (classe SqlService)
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Un [classe SqlService](sqlservice-class.md) objet qui représente le service  
+ *dessin*  
+ Objet de [classe SqlService](sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur booléenne qui spécifie si le service peut être arrêté : `true` si le service peut être arrêté ou `false` si le service ne peut pas être arrêté.  
@@ -46,6 +46,6 @@ object
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage et arrêt des Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

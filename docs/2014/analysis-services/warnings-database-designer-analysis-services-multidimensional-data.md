@@ -1,5 +1,5 @@
 ---
-title: Avertissements (Concepteur de base de données) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Avertissements (Concepteur de bases de données) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065426"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Avertissements (Concepteur de bases de données) (Analysis Services - Données multidimensionnelles)
-  L’onglet **Avertissements** permet d’afficher et d’ignorer des règles globalement, et d’afficher et de réactiver des instances spécifiques d’avertissements ignorés. Le **avertissements** onglet affiche deux grilles : **Règles d’avertissements de conception** et **avertissements ignorés**.  
+  L’onglet **Avertissements** permet d’afficher et d’ignorer des règles globalement, et d’afficher et de réactiver des instances spécifiques d’avertissements ignorés. L'onglet **Avertissements** affiche deux grilles : **Règles d'avertissements de conception** et **Avertissements ignorés**.  
   
- **Pour afficher l’onglet avertissements**  
+ **Pour afficher l'onglet Avertissements**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-2.  Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur **Modifier la base de données**, puis sur l’onglet **Avertissements** .  
+2.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis cliquez sur **Modifier la base de données**, puis sur l’onglet **Avertissements** .  
   
 ## <a name="design-warning-rules-grid"></a>Grille Règles d'avertissements de conception  
  La grille **Règles d'avertissements de conception** affiche toutes les règles d'avertissements de conception. Cette grille contrôle également les règles activées pour la base de données. Pour activer ou désactiver une règle d'avertissement, activez ou désactivez la case à cocher correspondante.  
@@ -47,7 +47,7 @@ ms.locfileid: "66065426"
   
  Les colonnes de la grille **Avertissements ignorés** sont les suivantes :  
   
- **Objet**  
+ **Object**  
  Affiche une icône qui représente le type d'objet et le nom d'objet.  
   
  **Type**  
@@ -69,7 +69,7 @@ ms.locfileid: "66065426"
 >  Si un objet a un avertissement mais que son état est non valide ou que cet objet a été supprimé manuellement du projet, une icône d'erreur apparaît à côté de l'avertissement dans la liste. Pour ignorer l’avertissement, sélectionnez-le, puis cliquez sur **Ignorer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Faire disparaître la boîte de dialogue d’avertissement &#40;Analysis Services - données multidimensionnelles&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
- [Général &#40;Concepteur de base de données&#41; &#40;Analysis Services - données multidimensionnelles&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
+ [Boîte de dialogue ignorer l’avertissement &#40;Analysis Services-données multidimensionnelles&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [Concepteur de base de données &#40;général&#41; &#40;Analysis Services-données multidimensionnelles&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   

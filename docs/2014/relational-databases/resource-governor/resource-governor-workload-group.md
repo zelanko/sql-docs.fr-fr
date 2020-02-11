@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de33dafe9c2274e8e016d619c1e7b5762d73e7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209707"
 ---
 # <a name="resource-governor-workload-group"></a>Groupe de charge de travail de Resource Governor
@@ -51,7 +51,7 @@ ms.locfileid: "63209707"
 ## <a name="see-also"></a>Voir aussi  
  [Resource Governor](resource-governor.md)   
  [Activer Resource Governor](enable-resource-governor.md)   
- [Pool de ressources du gouverneur de ressources](resource-governor-resource-pool.md)   
+ [Pool de ressources de Resource Governor](resource-governor-resource-pool.md)   
  [Fonction classifieur de Resource Governor](resource-governor-classifier-function.md)   
  [Configurer le gouverneur de ressources à l'aide d'un modèle](configure-resource-governor-using-a-template.md)   
  [Afficher les propriétés du gouverneur de ressources](view-resource-governor-properties.md)  

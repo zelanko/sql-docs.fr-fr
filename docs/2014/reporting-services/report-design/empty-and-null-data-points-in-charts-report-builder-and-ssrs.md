@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b450470ea945f42cfdb625f7ff92444c046b04a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105964"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Points de données vides et Null dans les graphiques (Générateur de rapports et SSRS)
   Si vous affichez des champs avec des valeurs vides ou Null dans votre graphique, l'aspect du graphique peut ne pas correspondre à vos attentes. Les graphiques traitent les valeurs vides différemment en fonction du type de graphique spécifié :  
   
--   Si le type de graphique est un type de graphique linéaire (graphique à barres, histogramme, graphique en nuage de points, graphique en courbes, graphique en aires, graphique d'étendue), les valeurs vides sont affichées sous forme d'espaces vides, ou « vides », dans le graphique. Si vous souhaitez spécifier des points vides, vous devez ajouter des espaces réservés à ces points. Pour plus d’informations, consultez [ajouter des Points vides au graphique &#40;Générateur de rapports et SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Si le type de graphique est un type de graphique linéaire (graphique à barres, histogramme, graphique en nuage de points, graphique en courbes, graphique en aires, graphique d'étendue), les valeurs vides sont affichées sous forme d'espaces vides, ou « vides », dans le graphique. Si vous souhaitez spécifier des points vides, vous devez ajouter des espaces réservés à ces points. Pour plus d’informations, consultez [Ajouter des points vides au graphique &#40;générateur de rapports et SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Si le graphique utilisé est un graphique linéaire contigu (graphique à aires, graphique à barres, histogramme, graphique en courbes, graphique à nuages de points), des points de données vides y sont ajoutés pour maintenir la continuité dans les séries.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66105964"
   
 -   Dans les types de graphiques à base de formes, les valeurs Null sont omises.  
   
- Un exemple de graphique avec des points de données vides est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Exemples de rapports du Générateur de rapports et du Concepteur de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de graphique avec des points de données vides est disponible sous forme d'exemple de rapport. Pour plus d’informations sur le téléchargement de cet exemple de rapport [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]et d’autres, consultez [Générateur de rapports et concepteur de rapports des exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -39,7 +39,7 @@ ms.locfileid: "66105964"
 ## <a name="fields-with-no-values-in-a-chart"></a>Champs sans valeurs dans un graphique  
  Si un champ ne contient aucune valeur dans le dataset retourné, le graphique affiche un graphique vide sans point de données, mais le nom de la série (en général, le nom du champ) est ajouté en tant qu'élément de légende.  
   
- Ce comportement est différent du cas où il n'y a aucune ligne de données dans le dataset retourné, ce qui peut se produire lorsque le rapport est paramétré et que la valeur sélectionnée retourne un jeu de résultats vide. Si votre requête de dataset retourne zéro ligne de données, un message s'affiche au moment de l'exécution pour indiquer qu'aucune donnée ne peut être présentée. Vous pouvez personnaliser ce message en modifiant la légende NoDataMessage pour le rapport dans le volet **Propriétés** . Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Ce comportement est différent du cas où il n'y a aucune ligne de données dans le dataset retourné, ce qui peut se produire lorsque le rapport est paramétré et que la valeur sélectionnée retourne un jeu de résultats vide. Si votre requête de dataset retourne zéro ligne de données, un message s'affiche au moment de l'exécution pour indiquer qu'aucune donnée ne peut être présentée. Vous pouvez personnaliser ce message en modifiant la légende NoDataMessage pour le rapport dans le volet **Propriétés** . Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   

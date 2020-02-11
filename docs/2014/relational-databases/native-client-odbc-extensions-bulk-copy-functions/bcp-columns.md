@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225514"
 ---
-# <a name="bcpcolumns"></a>bcp_columns
-  Définit le nombre total de colonnes trouvées dans le fichier utilisateur pour une utilisation avec une copie en bloc vers ou depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) peut être utilisé au lieu de bcp_columns et [bcp_colfmt](bcp-colfmt.md).  
+# <a name="bcp_columns"></a>bcp_columns
+  Définit le nombre total de colonnes trouvées dans le fichier utilisateur pour une utilisation avec une copie en bloc vers ou depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) peut être utilisé à la place de bcp_columns et [bcp_colfmt](bcp-colfmt.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,19 +47,19 @@ nColumns
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *nColumns*  
- Nombre total de colonnes dans le fichier utilisateur. Même si vous vous apprêtez à la copie de données à partir du fichier utilisateur à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table et n’envisagez pas de copier toutes les colonnes dans le fichier utilisateur, vous devez toujours définir *nColumns* au nombre total de colonnes du fichier utilisateur.  
+ Nombre total de colonnes dans le fichier utilisateur. Même si vous vous préparez à copier en bloc des données à partir du fichier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisateur vers une table et que vous n’envisagez pas de copier toutes les colonnes dans le fichier utilisateur, vous devez toujours définir *nColumns* sur le nombre total de colonnes de fichier utilisateur.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction peut être appelée uniquement après avoir [bcp_init](bcp-init.md) a été appelé avec un nom de fichier valide.  
+ Cette fonction ne peut être appelée qu’une fois que [bcp_init](bcp-init.md) a été appelé avec un nom de fichier valide.  
   
  Vous devez appeler cette fonction uniquement si vous envisagez d'utiliser un format de fichier utilisateur qui diffère du format par défaut. Pour plus d’informations sur une description du format de fichier utilisateur par défaut, consultez **bcp_init**.  
   
- Après avoir appelé `bcp_columns`, vous devez appeler [bcp_colfmt](bcp-colfmt.md)pour chaque colonne dans le fichier utilisateur afin de définir complètement un format de fichier personnalisé.  
+ Après avoir `bcp_columns`appelé, vous devez appeler [bcp_colfmt](bcp-colfmt.md)pour chaque colonne dans le fichier utilisateur afin de définir complètement un format de fichier personnalisé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

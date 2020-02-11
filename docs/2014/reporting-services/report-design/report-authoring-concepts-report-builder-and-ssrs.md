@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105310"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concepts de création de rapport (Générateur de rapports et SSRS)
@@ -30,13 +30,13 @@ ms.locfileid: "66105310"
  [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Décrit un certain nombre de termes utilisés pour décrire un rapport dans différents états, notamment la définition initiale, le rapport publié et le rapport affiché tel qu'il apparaît à l'utilisateur.  
   
- [Incorporée et partagée des connexions de données ou Sources de données &#40;Générateur de rapports et SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
+ [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  Décrit les façons de définir les connexions aux sources de données utilisées dans les rapports, les modèles de rapport et les abonnements pilotés par les données.  
   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explique les différences en matière de création, de stockage et de gestion des datasets incorporés et partagés.  
   
- [Cartes et régions de données &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)  
+ [Régions de données et cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)  
  Décrit les types de régions de données qui peuvent être ajoutées à la mise en page d'un rapport. Les régions de données déterminent l'aspect d'un rapport : table, matrice, liste ou graphique.  
   
  [Concept des paramètres de rapport &#40;Générateur de rapports et SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  

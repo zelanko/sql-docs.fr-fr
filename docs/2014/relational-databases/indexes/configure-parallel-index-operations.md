@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a70d58caba2b2a443f0017c52611331e9257972
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157479"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurer des opérations d'index parallèles
   Cette rubrique définit le degré maximal de parallélisme et explique comment modifier ce paramètre dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Sur les ordinateurs multiprocesseurs qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise ou une version ultérieure, les instructions d'index peuvent, à l'instar d'autres requêtes, utiliser des processeurs multiples pour réaliser les opérations d'analyse, de tri et d'indexation associées à l'instruction d'index. Le nombre de processeurs utilisés pour exécuter une instruction d’index est déterminé par l’option de configuration [Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) , par la charge de travail actuelle et par les statistiques d’index. L'option max degree of parallelism détermine le nombre maximal de processeurs à utiliser au cours de l'exécution d'un plan parallèle. Si le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] détecte que le système est occupé, le degré de parallélisme de l'opération d'index est automatiquement réduit avant l'exécution de l'instruction. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut également réduire le degré de parallélisme si la colonne clé principale d’un index non partitionné a un nombre limité de valeurs distinctes ou si la fréquence de chaque valeur distincte varie considérablement.  
   
 > [!NOTE]  
->  Les opérations d'index parallèles ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Les opérations d'index parallèles ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  **Dans cette rubrique**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63157479"
   
      [Sécurité](#Security)  
   
--   **Pour configurer l'option Degré maximal de parallélisme à l'aide de :**  
+-   **Pour définir le degré maximal de parallélisme, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63157479"
   
 -   L'option d'index MAXDOP remplace l'option de configuration max degree of parallelism uniquement pour la requête qui la spécifie. Le tableau suivant répertorie les valeurs entières valides qui peuvent être spécifiées au moyen de l'option de configuration max degree of parallelism et de l'option d'index MAXDOP.  
   
-    |Value|Description|  
+    |Valeur|Description|  
     |-----------|-----------------|  
     |0|Spécifie que le serveur détermine le nombre de processeurs utilisés, selon la charge système actuelle. Il s'agit de la valeur par défaut et recommandée.|  
     |1|Supprime la création de plans parallèles. L'opération est exécutée en série.|  
@@ -71,7 +71,7 @@ ms.locfileid: "63157479"
   
 -   L'option d'index MAXDOP ne peut pas être spécifiée dans l'instruction ALTER INDEX REORGANIZE.  
   
--   Les besoins en mémoire des opérations d'index partitionné avec tri peuvent augmenter si l'optimiseur de requête applique des degrés de parallélisme à l'opération de construction. Plus le degré de parallélisme est élevé, plus les besoins en mémoire sont importants. Pour plus d'informations, consultez [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
+-   Les besoins en mémoire des opérations d'index partitionné avec tri peuvent augmenter si l'optimiseur de requête applique des degrés de parallélisme à l'opération de construction. Plus le degré de parallélisme est élevé, plus les besoins en mémoire sont importants. Pour plus d’informations, consultez [Tables et index partitionnés](../partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -102,7 +102,7 @@ ms.locfileid: "63157479"
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Pour définir le degré maximal de parallélisme sur un index existant  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "63157479"
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>Définir le degré maximal de parallélisme sur un nouvel index  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Créer un Cube à l’aide d’une vue de Source de données | Microsoft Docs
+title: Créer un cube à l’aide d’une vue de source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076554"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
@@ -51,7 +51,7 @@ ms.locfileid: "66076554"
 > [!NOTE]  
 >  Sous l’onglet **Diagramme** , vous pouvez agrandir ou maximiser la fenêtre de l’Assistant pour visualiser le schéma.  
   
- S'il existe une table de dimension de temps dans la vue de source de données, sélectionnez-la dans la liste **Table de dimension de temps** . Si aucun n’est, laissez  **\<None >** sélectionné. Il s'agit de l'élément par défaut dans la liste. La sélection d'une table comme table de dimension de temps sélectionne également cette dernière comme table de dimension sous les onglets **Tables** et **Diagramme** .  
+ S'il existe une table de dimension de temps dans la vue de source de données, sélectionnez-la dans la liste **Table de dimension de temps** . S’il n’y en a pas, laissez ** \<aucun>** sélectionné. Il s'agit de l'élément par défaut dans la liste. La sélection d'une table comme table de dimension de temps sélectionne également cette dernière comme table de dimension sous les onglets **Tables** et **Diagramme** .  
   
 ## <a name="defining-time-periods"></a>Définition de périodes  
  Si vous spécifiez une table de dimension de temps tout en sélectionnant des types de tables, utilisez la page **Définir des périodes** de l'Assistant pour spécifier les colonnes de la table qui correspondent aux périodes standard. Recherchez les périodes standard sous **Nom de la propriété de temps**. Pour chaque ligne qui a une colonne correspondante dans la table de dimension de temps, choisissez la colonne correcte sous **Colonnes de la table de temps**. L'Assistant utilise les associations que vous spécifiez pour créer des attributs et pour proposer les hiérarchies de temps qui se justifient pour vos données. Ces associations définissent également la propriété **Type** pour les attributs correspondant dans la nouvelle dimension de temps. L'Assistant crée ensuite une dimension de temps selon une table de dimension de temps.  
@@ -61,7 +61,7 @@ ms.locfileid: "66076554"
 ## <a name="selecting-dimensions"></a>Sélection de dimensions  
  Utilisez la page **Sélectionner des dimensions** de l'Assistant pour ajouter les dimensions existantes au cube. Cette page s'affiche uniquement s'il existe déjà des dimensions partagées qui correspondent aux tables de dimension dans le nouveau cube.  
   
- Pour ajouter des dimensions existantes, sélectionnez une ou plusieurs dimensions dans la liste **Dimensions partagées** et cliquez sur le bouton fléché droit ( **>** ) pour les déplacer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux flèches ( **>>** ) pour déplacer toutes les dimensions dans la liste.  
+ Pour ajouter des dimensions existantes, sélectionnez-en une ou plusieurs dans la liste **Dimensions partagées** et cliquez sur le bouton représentant une flèche droite (**>**) pour les placer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux**>>** flèches () pour déplacer toutes les dimensions de la liste.  
   
  Si une dimension existante n'apparaît pas dans la liste et que vous pensez qu'elle le devrait, vous pouvez cliquer sur **Précédent** et modifier les paramètres de type de table pour une ou plusieurs tables. Une dimension existante doit également être liée à au moins une des tables de faits du cube pour apparaître dans la liste des **dimensions partagées** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66076554"
   
  Pour supprimer un objet dans l'arborescence du cube, désactivez la case à cocher en regard de celle-ci. Désactiver la case à cocher en regard d'un objet supprime également tous les objets situés sous celui-ci. Les dépendances entre les objets sont appliquées. Par conséquent, si vous supprimez un attribut, tous les niveaux de la hiérarchie dépendants de l'attribut sont également supprimés. Par exemple, la désactivation d'une case à cocher en regard d'une hiérarchie efface les cases à cocher en regard de tous les niveaux de la hiérarchie et supprime les niveaux ainsi que les hiérarchies. Il n'est pas possible de supprimer l'attribut clé d'une dimension.  
   
- Vous pouvez renommer une dimension, attribut, hiérarchie ou un niveau soit en cliquant sur le nom ou en cliquant sur le nom, puis sur le menu contextuel en cliquant sur **renommer \<objet >** , où  **\< objet >** est **Dimension**, **attribut**, ou **niveau**.  
+ Vous pouvez renommer une dimension, un attribut, une hiérarchie ou un niveau en cliquant sur le nom ou en cliquant avec le bouton droit sur le nom, puis dans le menu contextuel, en cliquant sur **Renommer \<l’objet>**, où ** \<objet>** est **dimension**, **attribut**ou **niveau**.  
   
  Il n’existe pas nécessairement une relation un-à-un entre le nombre de tables de dimension définies dans la page **Identifier les tables de faits et de dimension** de l’Assistant et le nombre de dimensions répertoriées dans cette page de l’Assistant. Selon les relations entre les tables dans la vue de source de données, l'Assistant peut utiliser deux tables ou plus pour générer une dimension (comme requis, par exemple, par un schéma en flocons).  
   

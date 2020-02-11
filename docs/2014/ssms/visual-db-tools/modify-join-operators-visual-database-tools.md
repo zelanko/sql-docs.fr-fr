@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232846"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifier des opérateurs de jointure (Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63232846"
 3.  Dans la boîte de dialogue **Joindre** , sélectionnez un nouvel opérateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Joindre automatiquement des Tables &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [Joindre manuellement des Tables &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [Joindre automatiquement des tables &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Joindre des tables manuellement &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
  [Interroger avec des jointures &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

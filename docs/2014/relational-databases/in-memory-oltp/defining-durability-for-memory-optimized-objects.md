@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161990"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Définition de la durabilité des objets mémoire optimisés
-  L'OLTP en mémoire garantit l'atomicité complète, la cohérence, l'isolation et les propriétés de durabilité complète (ACID). Dans le contexte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des tables mémoire optimisées, la durabilité fournit les garanties suivantes :  
+  L'OLTP en mémoire garantit l'atomicité complète, la cohérence, l'isolation et les propriétés de durabilité complète (ACID). Dans le contexte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des tables mémoire optimisées, la durabilité fournit les garanties suivantes :  
   
  Durabilité transactionnelle  
  Lorsque vous validez une transaction à durabilité complète ayant effectué des modifications (DDL ou DML) dans une table mémoire optimisée, les modifications apportées à une table durable mémoire optimisée sont conservées.  
@@ -58,6 +58,6 @@ ms.locfileid: "63161990"
 -   Nombre d'enregistrements de journal dans la partie active du journal devant être restaurés par progression.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création et gestion du stockage des objets mémoire optimisés](creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Création et gestion du stockage des objets à mémoire optimisée](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

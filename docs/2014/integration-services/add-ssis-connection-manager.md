@@ -1,5 +1,5 @@
 ---
-title: Ajouter le Gestionnaire de connexions SSIS | Microsoft Docs
+title: Ajouter un gestionnaire de connexions SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061819"
 ---
 # <a name="add-ssis-connection-manager"></a>Ajout d'un gestionnaire de connexions SSIS
@@ -27,7 +27,7 @@ ms.locfileid: "66061819"
  Pour en savoir plus sur les gestionnaires de connexions, consultez [Connexions Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="options"></a>Options  
- **Type du gestionnaire de connexions**  
+ **Type de gestionnaire de connexions**  
  Sélectionnez un type de connexion et cliquez sur **Ajouter**ou double-cliquez sur un type de connexion, pour spécifier les propriétés de connexion à l’aide de l’éditeur pour chaque type de connexion.  
   
  **Ajouter**  

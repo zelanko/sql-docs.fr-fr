@@ -1,5 +1,5 @@
 ---
-title: Tableau de bord de gestion PowerPivot et les données d’utilisation | Microsoft Docs
+title: Tableau de bord de gestion PowerPivot et données d’utilisation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071119"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion PowerPivot et données d'utilisation
   Le tableau de bord de gestion PowerPivot est une collection de rapports et de composants WebPart prédéfinis dans l'Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server PowerPivot pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
   
- [Conditions préalables](#prereq)  
+ [Prérequis](#prereq)  
   
  [Vue d’ensemble des sections du tableau de bord](#items)  
   
- [Tableau de bord de gestion PowerPivot ouverte](#open)  
+ [Ouvrir le Tableau de bord de gestion PowerPivot](#open)  
   
- [Données sources dans des tableaux de bord](#sourcedata)  
+ [Données sources dans les tableaux de bord](#sourcedata)  
   
  [Modifier le tableau de bord PowerPivot](#edit)  
   
- [Créer des rapports personnalisés pour le tableau de bord de gestion PowerPivot](#reports)  
+ [Créer des rapports personnalisés pour le Tableau de bord de gestion PowerPivot](#reports)  
   
-##  <a name="prereq"></a> Conditions préalables  
+##  <a name="prereq"></a>Conditions préalables  
  Pour ouvrir le tableau de bord de gestion PowerPivot pour une application de service PowerPivot que vous gérez, vous devez être administrateur du service.  
   
-##  <a name="items"></a> Présentation des différentes sections du tableau de bord  
+##  <a name="items"></a>Vue d’ensemble des sections du tableau de bord  
  Le tableau de bord de gestion PowerPivot contient des composants WebPart et des rapports incorporés qui explorent des catégories d'informations spécifiques. La liste suivante décrit chaque élément du tableau de bord :  
   
-|Tableau de bord|Description|  
+|tableau de bord|Description|  
 |---------------|-----------------|  
 |Infrastructure - Intégrité du serveur|Affiche les tendances d'utilisation de l'UC, de consommation de mémoire et de temps de réponse aux requêtes au fil du temps afin que vous puissiez évaluer si les ressources système s'approchent de leur capacité maximale ou sont sous-utilisées.|  
 |Actions|Contient des liens vers d'autres pages de l'Administration centrale, notamment l'application de service actuelle, une liste des applications de service et la journalisation de l'utilisation.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66071119"
 |Actualisation des données - Défaillances récentes|Répertorie les classeurs PowerPivot pour lesquels l'actualisation des données n'a pas abouti.|  
 |Rapports|Contient des liens vers des rapports que vous pouvez ouvrir dans Excel.|  
   
-##  <a name="open"></a> Tableau de bord de gestion PowerPivot ouverte  
+##  <a name="open"></a>Ouvrir le tableau de bord de gestion PowerPivot  
  Le tableau de bord affiche les informations d'une seule application de service PowerPivot à la fois. Vous pouvez ouvrir le tableau de bord de gestion à partir de deux emplacements.  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Ouvrir le tableau de bord à partir des Paramètres généraux de l'application  
@@ -59,40 +59,40 @@ ms.locfileid: "66071119"
   
 ### <a name="open-the-dashboard-from-a-powerpivot-service-application"></a>Ouvrir le tableau de bord à partir d'une application de service PowerPivot  
   
-1.  Dans Administration centrale, sous **Gestion des applications**, cliquez sur **Gérer les applications de service**.  
+1.  Dans administration centrale, dans **gestion des applications**, cliquez sur **gérer les applications de service**.  
   
 2.  Cliquez sur le nom de l'application de service PowerPivot. Le tableau de bord de gestion PowerPivot affiche les données opérationnelles de l'application de service actuelle.  
   
 ### <a name="change-the-current-service-application"></a>Modifiez l'application de service actuelle.  
  Pour modifier l'application de service PowerPivot actuelle dans le tableau de bord de gestion :  
   
-1.  En haut du tableau de bord de gestion PowerPivot, repérez le nom de l’application de service actuelle, par exemple **Application de Service PowerPivot par défaut**.  
+1.  En haut du tableau de bord de gestion PowerPivot, notez le nom de l’application de service actuelle, par exemple **application de service PowerPivot par défaut**.  
   
 2.  Dans le tableau de bord **Actions** , cliquez sur **Lister les applications de service**.  
   
 3.  Cliquez sur le nom de l'application de service PowerPivot dont vous souhaitez afficher les rapports du tableau de bord de gestion.  
   
-##  <a name="sourcedata"></a> Données sources dans les tableaux de bord  
+##  <a name="sourcedata"></a>Données sources dans les tableaux de bord  
  Les tableaux de bord, rapports et composants WebPart affichent les données à partir d'un modèle de données interne qui extrait des données du système et des bases de données d'application PowerPivot. Le modèle de données interne est incorporé dans un classeur PowerPivot hébergé sur le site Administration centrale. La structure du modèle de données est fixe. Même si vous pouvez utiliser le classeur PowerPivot comme source de données pour créer des rapports, vous ne devez pas en modifier la structure d'une manière qui risquerait de rompre les rapports prédéfinis qui l'utilisent.  
   
  Pour plus d'informations sur la procédure de collecte des données, consultez les rubriques suivantes :  
   
--   [Collecte des données d’utilisation de PowerPivot](power-pivot-usage-data-collection.md)  
+-   [Collecte des données d'utilisation PowerPivot](power-pivot-usage-data-collection.md)  
   
--   [Configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+-   [Configurer la collecte des données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Pour capturer des données sur le système du serveur PowerPivot, vérifiez que la messagerie d'événements, l'historique d'actualisation des données et les autres historiques d'utilisation sont activés pour chaque application de service PowerPivot. Les données sur le serveur et l'utilisation collectées lors du fonctionnement normal du serveur constituent la source de données utilisée dans le modèle de données interne. **Remarque :** Si vous désactivez les historiques d’événements ou l’utilisation, les rapports composites seront incomplets ou erronés.  
+ Pour capturer des données sur le système du serveur PowerPivot, vérifiez que la messagerie d'événements, l'historique d'actualisation des données et les autres historiques d'utilisation sont activés pour chaque application de service PowerPivot. Les données sur le serveur et l'utilisation collectées lors du fonctionnement normal du serveur constituent la source de données utilisée dans le modèle de données interne. **Remarque :** Si vous désactivez l’historique des événements ou de l’utilisation, les rapports composites seront incomplets ou erronés.  
   
-##  <a name="edit"></a> Modifier le tableau de bord PowerPivot  
+##  <a name="edit"></a>Modifier le tableau de bord PowerPivot  
  Si vous avez des compétences en matière de développement ou de personnalisation de tableaux de bord, vous pouvez modifier le tableau de bord pour y inclure de nouveaux composants WebPart. Vous avez également la possibilité de modifier les propriétés des composants WebPart inclus dans le tableau de bord.  
   
-##  <a name="reports"></a> Créer des rapports personnalisés pour le tableau de bord de gestion PowerPivot  
+##  <a name="reports"></a>Créer des rapports personnalisés pour le tableau de bord de gestion PowerPivot  
  À des fins de création de rapports, les données d'utilisation et l'historique PowerPivot sont conservés dans un classeur PowerPivot interne créé et configuré en même temps que le tableau de bord. Si les rapports par défaut ne fournissent pas les informations qui vous intéressent, vous pouvez créer des rapports personnalisés dans Excel, basés sur le classeur. Le classeur et tous les rapports personnalisés créés sont conservés si vous mettez à niveau ou désinstallez les fichiers solution PowerPivot ultérieurement. Le classeur et les rapports sont stockés dans la bibliothèque de gestion PowerPivot sur le site Administration centrale. Cette bibliothèque n'est pas visible par défaut, mais vous pouvez l'afficher en utilisant l'action Afficher tout le contenu du site dans les Actions du site.  
   
  Pour vous aider à prendre en main la génération de rapports personnalisés, le tableau de bord de gestion PowerPivot propose un fichier Office Data Connection (.odc) pour la connexion au classeur source. Par exemple, vous pouvez utiliser le fichier .odc dans Excel pour créer des rapports supplémentaires.  
   
 > [!NOTE]  
->  Modifiez le fichier pour éviter l’erreur suivante lorsque vous tentez d’utiliser le fichier .odc dans Excel : « Échec de l’initialisation de la source de données ». Le fichier .odc généré automatiquement inclut un paramètre qui n'est pas pris en charge par le fournisseur OLE DB MSOLAP. Les instructions suivantes fournissent la solution de contournement permettant de supprimer ces paramètres.  
+>  Modifiez le fichier pour éviter l'erreur suivante lors de la tentative d'utilisation du fichier .odc dans Excel : « Échec de l'initialisation de la source de données ». Le fichier .odc généré automatiquement inclut un paramètre qui n'est pas pris en charge par le fournisseur OLE DB MSOLAP. Les instructions suivantes fournissent la solution de contournement permettant de supprimer ces paramètres.  
   
  Vous devez être administrateur de batterie de serveurs ou de service pour générer des rapports basés sur le classeur PowerPivot dans l'Administration centrale.  
   
@@ -118,13 +118,13 @@ ms.locfileid: "66071119"
   
     4.  Cliquez sur le fichier .ODC si vous le voyez. Si vous ne voyez pas le fichier .ODC, cliquez sur **Parcourir** , puis dans le chemin d'accès du fichier, spécifiez le fichier .odc.  
   
-    5.  Cliquez sur **Ouvrir**  
+    5.  Cliquez sur **ouvrir**  
   
     6.  Cliquez sur **Tester la connexion** pour vérifier que la connexion aboutit.  
   
     7.  Entrez un nom pour la connexion, puis cliquez sur **Suivant**.  
   
-    8.  Dans spécifier la requête MDX, cliquez sur **conception** pour ouvrir le Concepteur de requêtes MDX pour assembler les données que vous souhaitez travailler avec **si vous voyez le message d’erreur** « le nom de la propriété Mode édition n’est pas formaté correctement. », vérifiez vous modifications le. Fichier ODC.  
+    8.  Dans spécifier la requête MDX, cliquez sur **conception** pour ouvrir le concepteur de requêtes MDX afin d’assembler les données que vous souhaitez utiliser **si vous voyez le message d’erreur** « le nom de la propriété du mode d’édition n’est pas mis en forme correctement. », vérifiez que vous modifiez le. Fichier ODC.  
   
     9. Cliquez sur **OK** , puis sur **Terminer**.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "66071119"
   
 ## <a name="see-also"></a>Voir aussi  
  [Actualisation des données PowerPivot avec SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
- [Configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [Configurer la collecte des données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

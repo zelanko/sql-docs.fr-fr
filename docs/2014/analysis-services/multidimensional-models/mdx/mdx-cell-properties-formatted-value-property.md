@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE et FORMAT_STRING sur FORMATED_VALUE | Microsoft Docs
+title: LANGUE et FORMAT_STRING sur FORMATED_VALUE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074399"
 ---
-# <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE et FORMAT_STRING sur FORMATED_VALUE
+# <a name="language-and-format_string-on-formated_value"></a>LANGUAGE et FORMAT_STRING sur FORMATED_VALUE
   La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  
   
-## <a name="value-formatstring-language-properties"></a>Propriétés VALUE, FORMAT_STRING et LANGUAGE  
+## <a name="value-format_string-language-properties"></a>Propriétés VALUE, FORMAT_STRING et LANGUAGE  
  La table suivante décrit ces propriétés afin de vous aider à les combiner.  
   
- VALUE  
+ VALEUR  
  Valeur sans mise en forme de la cellule.  
   
  FORMAT_STRING  
@@ -32,7 +32,7 @@ ms.locfileid: "66074399"
  LANGUAGE  
  Spécification de paramètres régionaux à appliquer dans toute la propriété FORMAT_STRING pour générer une version localisée de FORMATTED_VALUE  
   
-## <a name="formattedvalue-constructed"></a>Création de FORMATTED_VALUE  
+## <a name="formatted_value-constructed"></a>Création de FORMATTED_VALUE  
  La propriété FORMATTED_VALUE est créée en utilisant la valeur de la propriété VALUE et en appliquant le modèle de mise en forme spécifié dans la propriété FORMAT_STRING à cette valeur. De plus, chaque fois que la valeur de mise en forme est un `named formatting literal`, la spécification de propriété LANGUAGE modifie la sortie de FORMAT_STRING pour se conformer à la langue utilisée pour la mise en forme nommée. Les littéraux de mise en forme nommée sont tous définis d'une façon permettant leur localisation. Par exemple, `"General Date"` est une spécification qui peut être localisée, par opposition au modèle suivant `"YYYY-MM-DD hh:nn:ss",` qui présente la date sous la forme définie par le modèle indépendamment de la spécification de langue.  
   
  S'il y a un conflit entre le modèle FORMAT_STRING et la spécification LANGUAGE, le modèle FORMAT_STRING remplace la spécification LANGUAGE. Par exemple, si FORMAT_STRING="$ #0" et LANGUAGE=1034 (Espagne), et si VALUE=123.456, puis FORMATTED_VALUE="$ 123" au lieu de FORMATTED_VALUE="€ 123", le format attendu est en euros car la valeur du modèle de mise en forme remplace la langue spécifiée.  
@@ -78,7 +78,7 @@ ms.locfileid: "66074399"
   
 |Membre|FORMATTED_VALUE|Explication|  
 |------------|----------------------|-----------------|  
-|A|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
+|Un|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
 |B|€5.040,00|FORMAT_STRING a pour valeur `Currency` (hérité de A) et LANGUAGE a pour valeur explicite `1034` (Espagne), ce qui explique le symbole de l’euro, le séparateur décimal différent et le séparateur des milliers différent.|  
 |C|$5.040,00|FORMAT_STRING a pour valeur `$#,##0.00` en remplacement de la devise héritée de A, et LANGUAGE a pour valeur explicite `1034` (Espagne). Étant donné que la propriété FORMAT_STRING a pour valeur explicite le symbole monétaire $, FORMATTED_VALUE est présenté avec le signe $. Toutefois, étant donné que `.` (point) et `,` (virgule) sont respectivement des espaces réservés pour le séparateur décimal et le séparateur des milliers, la spécification de langue les affecte et une sortie localisée pour les séparateurs décimal et des milliers est générée.|  
 |D|5.04E+03|FORMAT_STRING a pour valeur `Scientific` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système. Le signe `.` (point) est donc utilisé comme séparateur décimal.|  
@@ -128,7 +128,7 @@ ms.locfileid: "66074399"
   
 |Membre|FORMATTED_VALUE|Explication|  
 |------------|----------------------|-----------------|  
-|Objet|3/12/1959 6:30:00 AM|La valeur de FORMAT_STRING est implicitement définie sur `General Date` par l’expression CDate() et LANGUAGE a pour valeur `1033` (anglais), valeur héritée des paramètres régionaux système.|  
+|Un|3/12/1959 6:30:00 AM|La valeur de FORMAT_STRING est implicitement définie sur `General Date` par l’expression CDate() et LANGUAGE a pour valeur `1033` (anglais), valeur héritée des paramètres régionaux système.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING a pour valeur explicite `Long Date` et LANGUAGE a pour valeur `1033` (anglais), valeur héritée des paramètres régionaux système.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING a pour valeur explicite `General Date` et LANGUAGE a pour valeur explicite `1034` (espagnol).<br /><br /> Notez que le mois et le jour sont inversés par rapport au style de mise en forme américain.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING a pour valeur explicite `Long Date` et LANGUAGE a pour valeur explicite `1034` (espagnol).<br /><br /> Notez que le mois et le jour de la semaine sont rédigés en espagnol.|  
@@ -142,9 +142,9 @@ ms.locfileid: "66074399"
 |L|06:30|FORMAT_STRING a pour valeur explicite `Short Time` et LANGUAGE a pour valeur explicite `1041` (japonais).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu de FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
+ [Contenu de FORMAT_STRING &#40;&#41;MDX](mdx-cell-properties-format-string-contents.md)   
  [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Création et utilisation de valeurs de propriété &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Notions de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074689"
 ---
 # <a name="calculation-context"></a>Contexte de calcul
@@ -38,7 +38,7 @@ ms.locfileid: "66074689"
   
 5.  Cellules du cube ou du sous-cube sur chaque axe avec suppression des tuples vides sur l'axe et application de la clause HAVING.  
   
-6.  Pour plus d’informations, consultez [Establishing Cube Context in a Query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md).  
+6.  Pour plus d’informations, consultez [Définition d’un contexte de cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md).  
   
  Dans la requête qui suit, le contexte de calcul de l'axe des lignes est limité par les membres d'attribut Country et Calendar Year spécifiés dans la clause WHERE.  
   
@@ -70,8 +70,8 @@ WHERE (Customer.Country.France,
 >  Pour accroître les performances de la requête, pensez à éliminer les membres et les tuples le plus tôt possible au cours du processus de résolution. De cette manière, les calculs de temps des requêtes complexes dans le jeu de membres final peuvent cibler le plus petit nombre de cellules possible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définition d’un contexte de cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [Établissement d’un contexte de cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [Notions de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Concepts clés dans MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

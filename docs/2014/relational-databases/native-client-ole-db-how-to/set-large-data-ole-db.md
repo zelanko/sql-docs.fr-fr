@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218664"
 ---
 # <a name="set-large-data-ole-db"></a>Définir des données volumineuses (OLE DB)
@@ -27,17 +27,17 @@ ms.locfileid: "63218664"
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="procedures"></a>Procédures  
   
 #### <a name="to-set-blob-data"></a>Pour définir des données BLOB  
   
-1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définir le **dwFlag** élément de la DBOBJECT à STGM_READ, de structure et définissez l’élément iid sur `IID_ISequentialStream` (l’interface à exposer).  
+1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définissez l’élément **dwFlag** de la structure DBOBJECT sur STGM_READ et définissez l’élément iid sur `IID_ISequentialStream` (l’interface à exposer).  
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l'élément **wType** dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l'élément **pObject** de sorte qu'il pointe vers la structure DBOBJECT que vous avez créée.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l’élément **wType** dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l’élément **pObject** de sorte qu’il pointe vers la structure DBOBJECT que vous avez créée.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   

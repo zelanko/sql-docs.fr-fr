@@ -1,5 +1,5 @@
 ---
-title: Propriété de contexte (classe SecurityCertificate) | Microsoft Docs
+title: Propriété Context (classe SecurityCertificate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dc183a6bde5dc56454804472ee2e74042ed415ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242896"
 ---
 # <a name="context-property-securitycertificate-class"></a>Propriété Context (classe SecurityCertificate)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe SecurityCertificate](securitycertificate-class.md) qui représente un certificat de sécurité.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

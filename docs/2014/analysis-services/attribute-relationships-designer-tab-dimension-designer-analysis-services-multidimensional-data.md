@@ -1,5 +1,5 @@
 ---
-title: Attribut de relations (onglet Concepteur relations d’attributs, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Relations d’attributs (onglet Concepteur de relations d’attributs, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062271"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Relations d'attributs (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez la liste **Relation d'attribut** pour rechercher une relation d'attribut spécifique dans le diagramme des relations d'attributs et pour gérer cette relation. Ce volet apparaît immédiatement sous le volet qui contient le diagramme des relations d'attributs.  
   
- **Pour afficher le volet relations d’attributs**  
+ **Pour afficher le volet Relations d'attributs**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans l’Explorateur de solutions, double-cliquez sur une dimension pour ouvrir le Concepteur de dimensions, puis cliquez sur l’onglet **Relation d’attribut** .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66062271"
  Pour gérer la relation d'attribut, cliquez avec le bouton droit sur la relation d'attribut et cliquez sur la commande appropriée dans le menu contextuel.  
   
 ### <a name="shortcut-menu-options"></a>Options du menu contextuel  
- **Modifier la relation d’attribut**  
+ **Modifier la relation d'attribut**  
  Ouvre la boîte de dialogue **Modifier la relation d’attribut**, dans laquelle vous pouvez modifier la relation d’attribut.  
   
  Pour plus d’informations, consultez [Boîtes de dialogue Créer une relation d’attribut et Modifier la relation d’attribut &#40;onglet Concepteur de relations d’attributs, Concepteur de dimensions&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) et [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md).  
@@ -56,9 +56,9 @@ ms.locfileid: "66062271"
  Affiche les propriétés de l’attribut dans la fenêtre **Propriétés** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relations d’attributs &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet Concepteur de relations d’attributs, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Attributs &#40;onglet Concepteur de relations d’attributs, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Diagramme des relations d’attributs &#40;onglet Concepteur de relations d’attributs, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
+ [Relations d’attributs &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet Concepteur de relations d’attributs, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Attributs &#40;onglet Concepteur de relations d’attributs, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Diagramme des relations d’attributs &#40;onglet Concepteur de relations d’attributs, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
   
   

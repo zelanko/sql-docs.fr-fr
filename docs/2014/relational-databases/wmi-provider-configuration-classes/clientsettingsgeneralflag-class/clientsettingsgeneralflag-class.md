@@ -1,5 +1,5 @@
 ---
-title: Clientsettingsgeneralflag, classe | Microsoft Docs
+title: ClientSettingsGeneralFlag, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a9b52652ec3e684c75a790f41899db2c117b62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63243154"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Classe ClientSettingsGeneralFlag
-  Le [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) représente les paramètres de l’indicateur général sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+  La [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) représente les paramètres de l’indicateur général sur une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance du client.  
   
- Le [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) peut être utilisé pour effectuer les opérations suivantes :  
+ La [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) peut être utilisée pour effectuer les opérations suivantes :  
   
 -   afficher le nom de l'indicateur ;  
   

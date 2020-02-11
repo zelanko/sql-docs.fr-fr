@@ -1,5 +1,5 @@
 ---
-title: Connecter une Application de Service PowerPivot à une Application Web SharePoint dans l’Administration centrale | Microsoft Docs
+title: Connecter une application de service PowerPivot à une application Web SharePoint dans l’administration centrale | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071677"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Connecter une application de service PowerPivot à une application Web SharePoint dans l'Administration centrale
@@ -25,11 +25,11 @@ ms.locfileid: "66071677"
   
  Cette rubrique contient les sections suivantes :  
   
- [Ajouter l’Application de service PowerPivot au groupe par défaut](#default)  
+ [Ajouter une application de service PowerPivot au groupe par défaut](#default)  
   
- [Ajouter l’Application de service PowerPivot une liste d’Association de services personnalisée](#custom)  
+ [Ajouter une application de service PowerPivot à une liste d'association de services personnalisée](#custom)  
   
-##  <a name="default"></a> Ajouter l’Application de service PowerPivot au groupe par défaut  
+##  <a name="default"></a>Ajouter une application de services PowerPivot au groupe par défaut  
  Une liste d'association de services est une liste de services partagés qui fournissent des ressources à d'autres applications Web SharePoint de la batterie de serveurs. Il existe un groupe par défaut d'association de services pour la batterie de serveurs.  
   
  Pour faire figurer une application de service PowerPivot dans la liste, vous pouvez l'ajouter, soit lorsque vous créez l'application, soit ultérieurement en effectuant la procédure suivante.  
@@ -42,23 +42,23 @@ ms.locfileid: "66071677"
   
 4.  Cliquez sur **OK**.  
   
-##  <a name="custom"></a> Ajouter l’Application de service PowerPivot une liste d’Association de services personnalisée  
+##  <a name="custom"></a>Ajouter une application de services PowerPivot à une liste d’association de services personnalisée  
  Le groupe par défaut peut être remplacé par une liste personnalisée. Une liste personnalisée est créée spécifiquement pour une application Web SharePoint précise. Elle remplace le groupe par défaut par les associations de services spécifiées par un administrateur de batterie de serveurs ou de service. Si vous avez créé plusieurs applications de service PowerPivot, vous devez utiliser une liste personnalisée pour spécifier l'application à utiliser. Une liste personnalisée ne peut pas être réutilisée par d'autres applications Web. Elle s'applique uniquement à l'application Web pour laquelle elle a été créée.  
   
-1.  Dans Administration Centrale, sous **Gestion des applications**, cliquez sur **Gérer les applications Web**.  
+1.  Dans administration centrale, dans **gestion des applications**, cliquez sur **gérer les applications Web**.  
   
 2.  Sélectionnez l'application (par exemple, SharePoint -80).  
   
 3.  Dans Applications Web, dans Gérer, cliquez sur **Connexions aux services**.  
   
-4.  Dans **Modifier le groupe suivant de connexions**, sélectionnez **[personnalisé]** .  
+4.  Dans **Modifier le groupe suivant de connexions**, sélectionnez **[personnalisé]**.  
   
 5.  Activez la case à cocher en regard de chaque connexion d'application de service que vous souhaitez utiliser. Si vous disposez de plusieurs applications de service PowerPivot (signalées par la valeur `PowerPivot Service Application Proxy` pour Type), veillez à n'en choisir qu'une seule.  
   
 6.  Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et configurer une Application de Service PowerPivot dans l’Administration centrale](create-and-configure-power-pivot-service-application-in-ca.md)   
+ [Créer et configurer une application de service PowerPivot dans l’administration centrale](create-and-configure-power-pivot-service-application-in-ca.md)   
  [Configuration initiale &#40;PowerPivot pour SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
   

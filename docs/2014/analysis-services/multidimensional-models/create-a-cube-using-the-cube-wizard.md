@@ -1,5 +1,5 @@
 ---
-title: Créer un Cube à l’aide de l’Assistant Cube | Microsoft Docs
+title: Créer un cube à l’aide de l’Assistant Cube | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076503"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Créer un cube à l'aide de l'Assistant Cube
@@ -24,7 +24,7 @@ ms.locfileid: "66076503"
   
 ### <a name="to-create-a-new-cube"></a>Pour créer un cube  
   
-1.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Cubes**, puis cliquez sur **Nouveau cube**.  
+1.  Dans **Explorateur de solutions**, cliquez avec le bouton droit sur **cubes**, puis cliquez sur **Nouveau Cube**.  
   
 2.  Dans la page **Sélectionner la méthode de création** de l’Assistant Cube, sélectionnez **Utiliser des tables existantes**, puis cliquez sur **Suivant**.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66076503"
   
     2.  Dans la liste **Tables de groupes de mesures** , sélectionnez les tables qui à utiliser pour créer des groupes de mesures.  
   
-    3.  Cliquer sur **Suivant**.  
+    3.  Cliquez sur **Suivant**.  
   
 4.  Dans la page **Sélectionner les mesures** , sélectionnez les mesures à inclure dans le cube, puis cliquez sur **Suivant**.  
   

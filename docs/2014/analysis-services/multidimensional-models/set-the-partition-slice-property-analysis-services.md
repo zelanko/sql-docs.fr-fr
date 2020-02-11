@@ -1,5 +1,5 @@
 ---
-title: Définissez la propriété Slice de Partition (Analysis Services) | Microsoft Docs
+title: Définir la propriété tranche de partition (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072942"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Définir la propriété Secteur de partition (Analysis Services)
   Une tranche de données est une fonctionnalité d'optimisation importante qui permet de diriger les requêtes vers les données des partitions appropriées. Définir explicitement la propriété Slice peut améliorer les performances des requêtes en remplaçant les tranches par défaut générées pour les partitions MOLAP ou HOLAP. En outre, la propriété Slice permet un contrôle de validation supplémentaire lors du traitement de la partition.  
   
- Vous pouvez spécifier une tranche de données après avoir créé une partition, mais avant son traitement, à l'aide de la propriété Slice. Sous l'onglet Partitions, développez un groupe de mesures, cliquez avec le bouton droit sur une partition, puis sélectionnez **Propriétés**.  
+ Vous pouvez spécifier une tranche de données après avoir créé une partition, mais avant son traitement, à l'aide de la propriété Slice. Sous l’onglet Partitions, développez un groupe de mesures, cliquez avec le bouton droit sur une partition, puis sélectionnez **Propriétés**.  
   
 ## <a name="defining-a-slice"></a>Définition d'une tranche  
  Les valeurs valides pour une propriété Slice sont les suivantes : un membre, un jeu ou un tuple MDX. Les exemples suivants illustrent la syntaxe valide de la propriété Slide :  
@@ -41,7 +41,7 @@ ms.locfileid: "66072942"
 > [!NOTE]  
 >  Notez que les fonctions MDX dynamiques (telles que [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) ou [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) ne sont pas prises en charge dans la propriété Slice des partitions. Vous devez définir la tranche à l'aide de tuples explicites ou de références à des membres.  
 >   
->  Par exemple, au lieu d’utiliser le [: &#40;plage&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) de fonction pour définir une plage, vous devez énumérer chaque membre par année spécifique.  
+>  Par exemple, au lieu d’utiliser la &#40;plage de la fonction [&#41; &#40;MDX&#41;](/sql/mdx/range-mdx) pour définir une plage, vous devez énumérer chaque membre par année spécifique.  
 >   
 >  Si vous devez définir une tranche complexe, nous vous recommandons de définir les tuples de la tranche en utilisant un script XMLA Alter. Ensuite, vous pouvez utiliser l'outil en ligne de commande ascmd ou la [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) SSIS pour exécuter le script et créer le jeu de membres spécifié juste avant de traiter la partition.  
   

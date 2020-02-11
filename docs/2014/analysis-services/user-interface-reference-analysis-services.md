@@ -1,5 +1,5 @@
 ---
-title: Référence de l’Interface utilisateur (Analysis Services) | Microsoft Docs
+title: Informations de référence sur l’interface utilisateur (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065539"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Référence de l'interface utilisateur (Analysis Services)
-  Cette section présente les rubriques d'aide de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez également accéder à ces rubriques à partir de l'interface utilisateur en appuyant sur la touche F1 ou en cliquant sur **Aide** dans les Assistants, les concepteurs et les boîtes de dialogue.  
+  Cette section contient des rubriques d' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]aide pour. Vous pouvez également accéder à ces rubriques à partir de l'interface utilisateur en appuyant sur la touche F1 ou en cliquant sur **Aide** dans les Assistants, les concepteurs et les boîtes de dialogue.  
   
 ## <a name="topic-list"></a>Liste des rubriques  
   
 |Section|Contient|  
 |-------------|--------------|  
-|[Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)|Rubriques d’aide relatives aux Assistants [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensionnels).|  
-|[Concepteurs et boîtes de dialogue d’exploration de données](data-mining-designers-and-dialog-boxes.md)|Rubriques d'aide relatives aux Assistants [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (exploration de données)|  
-|[Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|Rubriques d'aide relatives aux concepteurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et aux boîtes de dialogue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (multidimensionnels)|  
-|[Concepteurs et boîtes de dialogue Analysis Services &#40;tabulaire&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|Rubriques d'aide relatives aux concepteurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et aux boîtes de dialogue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et de modélisation tabulaire [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
-|[Concepteurs et boîtes de dialogue d’exploration de données](data-mining-designers-and-dialog-boxes.md)|Rubriques d'aide relatives aux concepteurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et aux boîtes de dialogue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (exploration de données)|  
+|[Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)|Rubriques d’aide relatives aux Assistants [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensionnels).|  
+|[Concepteurs et boîtes de dialogue d'exploration de données](data-mining-designers-and-dialog-boxes.md)|Rubriques d'aide relatives aux Assistants [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (exploration de données)|  
+|[Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|Rubriques d'aide relatives aux concepteurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et aux boîtes de dialogue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (multidimensionnels)|  
+|[Analysis Services les concepteurs et boîtes de dialogue &#40;&#41;tabulaires](analysis-services-designers-and-dialog-boxes-tabular.md)|Rubriques d'aide relatives aux concepteurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et aux boîtes de dialogue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et de modélisation tabulaire [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
+|[Concepteurs et boîtes de dialogue d'exploration de données](data-mining-designers-and-dialog-boxes.md)|Rubriques d'aide relatives aux concepteurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et aux boîtes de dialogue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (exploration de données)|  
   
   

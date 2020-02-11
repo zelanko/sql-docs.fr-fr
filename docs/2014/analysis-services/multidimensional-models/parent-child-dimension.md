@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073387"
 ---
 # <a name="parent-child-hierarchy"></a>Hiérarchie parent-enfant
@@ -35,7 +35,7 @@ ms.locfileid: "66073387"
 ## <a name="dimension-schema"></a>Schéma de dimension  
  Le schéma de dimension d'une hiérarchie parent-enfant dépend de la présence d'une relation d'auto-référencement dans la table principale de la dimension. Par exemple, le diagramme suivant montre la table de dimension principale **DimOrganization** de l’exemple de base de données [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] .  
   
- ![Jointure auto-référencée dans la table DimOrganization](../dev-guide/media/dimorganization.gif "jointure auto-référencée dans la table DimOrganization")  
+ ![Jointure auto-référencée dans la table DimOrganization](../dev-guide/media/dimorganization.gif "Jointure auto-référencée dans la table DimOrganization")  
   
  Dans cette table de dimension, la colonne **ParentOrganizationKey** a une relation de clé étrangère avec la colonne clé primaire **OrganizationKey** . En d'autres termes, chaque enregistrement dans cette table peut être associé à un autre enregistrement de la table par une relation parent-enfant. Ce type de jointure réflexive est généralement utilisé pour représenter les données d'une entité d'une organisation, telles que la structure de gestion des employés dans un service.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66073387"
   
  Toutefois, les dimensions de type parent-enfant construisent les hiérarchies de type parent-enfant en analysant les données de la table de dimension principale et en évaluant les relations de type parent-enfant entre les enregistrements dans la table. Pour plus d’informations sur les hiérarchies parent-enfant, consultez [Hiérarchies utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md).  
   
- Les hiérarchies parent-enfant ne dérivent pas les noms de leurs niveaux des attributs utilisés pour créer la hiérarchie. Au lieu de cela, ces dimensions créent les noms de niveaux automatiquement en utilisant une expression de chaîne, un modèle d’affectation de noms, vous pouvez spécifier au niveau de l’attribut parent qui contrôle la façon dont l’attribut génère la hiérarchie d’attribut. Pour plus d’informations sur la façon de définir le modèle de nom d’un attribut parent, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+ Les hiérarchies parent-enfant ne dérivent pas les noms de leurs niveaux des attributs utilisés pour créer la hiérarchie. Au lieu de cela, ces dimensions créent automatiquement des noms de niveau à l’aide d’un modèle de nom : une expression de chaîne que vous pouvez spécifier au niveau de l’attribut parent qui contrôle la manière dont l’attribut génère la hiérarchie d’attribut. Pour plus d’informations sur la façon de définir le modèle de nom d’un attribut parent, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="data-members"></a>Données membres  
  En général, les membres feuilles d'une dimension contiennent des données directement dérivées des sources de données sous-jacentes, tandis que les membres non-feuilles contiennent des données dérivées d'agrégations effectuées sur les membres enfants.  
@@ -52,7 +52,7 @@ ms.locfileid: "66073387"
  Toutefois, les hiérarchies parent-enfant peuvent avoir certains membres non-feuilles dont les données sont dérivées des sources de données sous-jacentes, en plus des données agrégées des membres enfants. Pour ces membres non-feuilles d'une hiérarchie parent-enfant, il est possible de créer des membres enfants spéciaux générés par le système qui contiennent les données de la table de faits sous-jacente. Appelés *données membres*, ces membres enfants spéciaux contiennent une valeur directement associée à un membre non feuille et indépendante de la valeur résumée calculée à partir des descendants du membre non feuille. Pour plus d’informations sur les membres de données, consultez [Attributs dans des hiérarchies de type parent-enfant](parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs dans des hiérarchies de type parent-enfant](parent-child-dimension-attributes.md)   
+ [Attributs dans les hiérarchies parent-enfant](parent-child-dimension-attributes.md)   
  [Propriétés de dimension d'une base de données](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

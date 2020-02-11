@@ -1,5 +1,5 @@
 ---
-title: Dans les modèles multidimensionnels, les vues de Source de données | Microsoft Docs
+title: Vues de sources de données dans les modèles multidimensionnels | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076099"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vues de sources de données dans les modèles multidimensionnels
@@ -35,7 +35,7 @@ ms.locfileid: "66076099"
   
  [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [Modifier les propriétés d’une vue de source de données &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [Modifiez les propriétés d’une vue de source de données &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
  [Définir des relations logiques dans une vue de source de données &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
@@ -47,16 +47,16 @@ ms.locfileid: "66076099"
   
  [Remplacer une table ou une requête nommée dans une vue de source de données &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Utiliser des diagrammes dans le concepteur de vue de source de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [Explorer des données dans une vue de source de données &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [Explorez les données dans une vue de source de données &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
  [Supprimer une vue de source de données &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
  [Actualiser le schéma dans une vue de source de données &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
+ [Assistant génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

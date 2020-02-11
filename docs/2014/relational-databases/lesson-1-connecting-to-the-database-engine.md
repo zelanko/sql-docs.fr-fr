@@ -11,23 +11,23 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63145481"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
   Les outils installés lors de l'installation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] dépendent de l'édition du produit et de la configuration choisies. Cette leçon passe en revue les outils principaux et décrit comment faire pour se connecter et exécuter une fonction de base (autorisation de plusieurs utilisateurs).  
   
   
   
-##  <a name="tools"></a> Outils de mise en route  
+##  <a name="tools"></a>Outils pour Prise en main  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d’outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l’outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer**. Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu’éléments inhérents aux composants clients lors de l’installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
   
 ### <a name="basic-tools"></a>Outils de base  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est l’outil principal pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et l’écriture [!INCLUDE[tsql](../includes/tsql-md.md)] code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Il n'est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mais est disponible en tant que téléchargement distinct à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]est l’outil principal pour l’administration du [!INCLUDE[ssDE](../includes/ssde-md.md)] et l' [!INCLUDE[tsql](../includes/tsql-md.md)] écriture de code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Il n'est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mais est disponible en tant que téléchargement distinct à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les outils clients. Il vous permet d'activer les protocoles serveur, configurer des options de protocole (notamment les ports TCP), configurer le démarrage automatique de services serveur et configurer des ordinateurs clients pour définir leur mode de connexion selon vos préférences. Cet outil configure les éléments de connectivité les plus avancés mais n'active pas les fonctionnalités.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63145481"
   
 -   Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-##  <a name="connect"></a> Connexion à Management Studio  
+##  <a name="connect"></a>Connexion avec Management Studio  
  La connexion au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d'outils s'exécutant sur le même ordinateur est un jeu d'enfant si vous connaissez le nom de l'instance et si vous vous connectez en tant que membre du groupe Administrateurs sur l'ordinateur. Vous devez effectuer les procédures suivantes sur le même ordinateur qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Pour définir le nom de l'instance du moteur de base de données  
@@ -72,11 +72,11 @@ ms.locfileid: "63145481"
   
 2.  Sélectionnez **Moteur de base de données**.  
   
-3.  Dans la zone **Nom du serveur** , tapez le nom de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Pour l'instance par défaut de SQL Server, le nom du serveur est celui de l'ordinateur. Pour une instance nommée de SQL Server, le nom du serveur est *<nom_ordinateur>***\\***<nom_instance>,* par exemple **ACCTG_SRVR\SQLEXPRESS**.  
+3.  Dans la zone **Nom du serveur** , tapez le nom de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Pour l'instance par défaut de SQL Server, le nom du serveur est celui de l'ordinateur. Pour une instance nommée de SQL Server, le nom du serveur est le *<computer_name ***\\***>*<instance_name>, par exemple **ACCTG_SRVR \sqlexpress**.  
   
-4.  Cliquer sur **Se connecter**.  
+4.  Cliquez sur **Connecter**.  
   
-##  <a name="additional"></a> Autorisation de connexions supplémentaires  
+##  <a name="additional"></a>Autorisation de connexions supplémentaires  
  Une fois que vous êtes connecté à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'administrateur, l'une de vos premières tâches consiste à autoriser d'autres utilisateurs à se connecter. Pour cela, vous pouvez créer une connexion et l'autoriser à accéder à une base de données en tant qu'utilisateur. Les connexions peuvent désigner des connexions d'authentification Windows qui exploitent les informations d'identification Windows, ou bien des connexions d'authentification SQL Server qui stockent les données d'authentification dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et qui n'ont aucun lien avec vos informations d'identification Windows. Utilisez l'authentification Windows chaque fois que cela est possible.  
   
 ##### <a name="create-a-windows-authentication-login"></a>Créer une connexion d'authentification Windows  
@@ -85,7 +85,7 @@ ms.locfileid: "63145481"
   
      La boîte de dialogue **Nouvelle connexion** apparaît.  
   
-2.  Sur le **général** page, dans le **nom de connexion** , tapez un compte de connexion Windows au format  *\<domaine >\\< connexion\>* .  
+2.  Dans la page **général** , dans la zone **nom de connexion** , tapez une connexion Windows au format * \<domaine>\\<connexion\>*.  
   
 3.  Dans la zone **Base de données par défaut** , sélectionnez [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] (si disponible). Sinon, sélectionnez **master**.  
   
@@ -101,6 +101,6 @@ ms.locfileid: "63145481"
 >  Ces informations sont des notions de base destinées à vous aider au démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un environnement de sécurité de qualité. La sécurité est à l'évidence un aspect primordial des opérations de base de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Connexion à partir d’un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
+ [Leçon 2 : Connexion depuis un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
   
   

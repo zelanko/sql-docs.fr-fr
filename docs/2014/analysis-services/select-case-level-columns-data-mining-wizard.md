@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez cas des colonnes de niveau (Assistant exploration de données) | Microsoft Docs
+title: Sélectionner les colonnes de niveau de cas (Assistant Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069663"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Sélectionner les colonnes de niveau de cas (Assistant Exploration de données)
@@ -25,15 +25,15 @@ ms.locfileid: "66069663"
 > [!NOTE]  
 >  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services des&#41;d’exploration de données ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Attributs et mesures associés**  
  Sélectionnez les attributs et les mesures qui représenteront les colonnes de niveau de cas de la structure d'exploration de données. Tous les attributs sélectionnés doivent figurer dans des hiérarchies, ou bien leur hiérarchie d'attributs doit être activée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Sélectionnez la clé de cas &#40;Assistant exploration de données&#41;](select-the-case-key-data-mining-wizard.md)   
- [Spécifier l’utilisation des colonnes du modèle d’exploration de données &#40;Assistant exploration de données&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Aide (F1) de l’Assistant Exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Sélectionnez la clé de cas &#40;Assistant Exploration de données&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Spécifier l’utilisation des colonnes du modèle d’exploration de données &#40;l’Assistant Exploration de données&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

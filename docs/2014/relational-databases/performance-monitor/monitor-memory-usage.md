@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63239144"
 ---
 # <a name="monitor-memory-usage"></a>Surveiller l'utilisation de la mémoire
@@ -35,15 +35,15 @@ ms.locfileid: "63239144"
   
  Pour surveiller l'état de la mémoire basse, utilisez les compteurs des objets suivants :  
   
--   **Mémoire : Octets disponibles**  
+-   **Mémoire : Octets disponibles**  
   
--   **Mémoire : Pages/sec**  
+-   **Mémoire : Pages/s**  
   
  Le compteur **Octets disponibles** indique combien d'octets de mémoire sont actuellement disponibles pour les processus. Le compteur **Pages/s** indique le nombre de pages qui ont été extraites du disque en raison de défauts de page ou écrites sur le disque pour libérer de l’espace dans la plage de travail en raison de défauts de page.  
   
- Des valeurs faibles du compteur **Octets disponibles** peuvent indiquer un manque global de mémoire sur l'ordinateur ou bien qu'un programme ne libère pas la mémoire. Une valeur élevée du compteur **Pages/s** peut indiquer une pagination excessive. Analyse le **mémoire : Défauts de page/s** pour vérifier que l’activité du disque n’est pas due à la pagination.  
+ Des valeurs faibles du compteur **Octets disponibles** peuvent indiquer un manque global de mémoire sur l'ordinateur ou bien qu'un programme ne libère pas la mémoire. Une valeur élevée du compteur **Pages/s** peut indiquer une pagination excessive. Surveillez le compteur **Mémoire : Défauts de page/s** pour vérifier que l’activité du disque n’est pas due à la pagination.  
   
- Un faible taux de pagination (et donc des défauts de page) est typique, même si l'ordinateur dispose de beaucoup de mémoire disponible. Le gestionnaire de mémoire virtuelle de Microsoft Windows soustrait des pages à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à d'autres processus quand il réduit la taille des parties actives de ces processus. Son activité a tendance à provoquer des défauts de page. Pour déterminer si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un autre processus est la cause de pagination excessive, surveillez la **processus : Défauts de page/s** pour l’instance de processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Un faible taux de pagination (et donc des défauts de page) est typique, même si l'ordinateur dispose de beaucoup de mémoire disponible. Le gestionnaire de mémoire virtuelle de Microsoft Windows soustrait des pages à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à d'autres processus quand il réduit la taille des parties actives de ces processus. Son activité a tendance à provoquer des défauts de page. Pour déterminer si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un autre processus provoque une pagination excessive, surveillez le compteur **Processus : Défauts de page/s** pour l’instance du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Pour plus d'informations sur la résolution d'une pagination excessive, consultez la documentation du système d'exploitation Windows.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "63239144"
   
  Pour surveiller la mémoire utilisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , examinez les compteurs de performances suivants :  
   
--   **Processus : Plage de travail**  
+-   **Process: Working Set**  
   
--   **SQL Server : Gestionnaire de tampons : Taux d’accès au cache**  
+-   **SQL Server: Buffer Manager: Buffer Cache Hit Ratio**  
   
--   **SQL Server : Gestionnaire de tampons : Pages de base de données**  
+-   **SQL Server: Buffer Manager: Database Pages**  
   
--   **SQL Server : Gestionnaire de mémoire : Mémoire totale du serveur (Ko)**  
+-   **SQL Server: Memory Manager: Total Server Memory (KB)**  
   
  Le compteur **WorkingSet** indique la quantité de mémoire utilisée par un processus. Si ce nombre est régulièrement inférieur à la quantité de mémoire définie par les options du serveur **min server memory** et **max server memory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour utiliser trop de mémoire.  
   

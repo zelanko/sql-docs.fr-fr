@@ -1,5 +1,5 @@
 ---
-title: En bloc éditeur de tâche d’insertion (Page Général) | Microsoft Docs
+title: Éditeur de tâche d’insertion en bloc (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061140"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Éditeur de tâche d'insertion en bloc (page Général)
@@ -38,7 +38,7 @@ ms.locfileid: "66061140"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche d’insertion en bloc &#40;page Connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Éditeur de tâche d’insertion en bloc &#40;page Options&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Page Expressions](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   

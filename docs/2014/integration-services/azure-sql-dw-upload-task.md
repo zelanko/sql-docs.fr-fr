@@ -14,14 +14,14 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061291"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tâche de chargement Azure SQL Data Warehouse
-La **tâche de chargement Azure SQL Data Warehouse** permet à un package SSIS de charger des données locales sur une table dans Azure SQL Data Warehouse. Le format de fichier de données source pris en charge actuellement est le texte délimité dans l’encodage UTF-8. Le processus de chargement suit l’approche PolyBase efficace. Plus précisément, les données sont tout d’abord chargées sur le stockage Blob Azure, puis sur Azure SQL Data Warehouse. Par conséquent, un compte de stockage Blob Azure est nécessaire pour utiliser cette tâche.
+La **tâche de chargement Azure SQL Data Warehouse** permet à un package SSIS de charger des données locales sur une table dans Azure SQL Data Warehouse. Le format de fichier de données source pris en charge actuellement est le texte délimité dans l’encodage UTF-8. Le processus de chargement suit l’approche Polybase efficace. Plus précisément, les données sont tout d’abord chargées sur le stockage Blob Azure, puis sur Azure SQL Data Warehouse. Par conséquent, un compte de stockage Blob Azure est nécessaire pour utiliser cette tâche.
 
 Pour ajouter une **tâche de chargement Azure SQL Data Warehouse**, faites-la glisser de la boîte à outils SSIS vers le canevas du concepteur, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue de l’éditeur de tâche.
 
@@ -31,9 +31,9 @@ Champ|Description
 -----|-----------
 LocalDirectory|Spécifie le répertoire local qui contient les fichiers de données à charger.
 Recursively|Spécifie s’il convient d’effectuer des recherches de façon récursive dans les sous-répertoires.
-FileName|Indique un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par ex. MaFeuille\*.xsl\* inclut les fichiers MaFeuille001.xsl et MaFeuilleABC.xslx.
+FileName|Indique un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par exemple, MaFeuille*.xsl\* inclut les fichiers MaFeuille001.xsl et MaFeuilleABC.xslx.
 RowDelimiter|Spécifie le ou les caractères qui marquent la fin de chaque ligne.
-ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par ex. &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
+ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de chaque colonne. Par exemple, &#124; (barre verticale), \t (tabulation), ’ (apostrophe), “ (guillemets doubles) et 0x5c (barre oblique inverse).
 IsFirstRowHeader|Spécifie si la première ligne de chaque fichier de données contient les noms de colonne au lieu des données réelles.
 AzureStorageConnection|Spécifie un gestionnaire de connexions de stockage Azure.
 BlobContainer|Spécifie le nom du conteneur d’objets blob sur lequel les données locales seront chargées et relayées vers Azure Data Warehouse via PolyBase. Un conteneur sera créé s’il n’existe pas.

@@ -1,5 +1,5 @@
 ---
-title: Ipaddresses, propriété (classe ServerNetworkProtocol) | Microsoft Docs
+title: Propriété adressesIP (classe ServerNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e7b2adf53bc6ebca14e2d3b4dc2cee248a4b6720
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190300"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>Propriété IpAddresses (classe ServerNetworkProtocol)
@@ -37,11 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Un `ServerNetworkProtocol` objet qui représente le protocole réseau utilisé par l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *dessin*  
+ `ServerNetworkProtocol` Objet qui représente le protocole réseau utilisé par l’instance de. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
- Un tableau de [classe ServerNetworkProtocolIPAdress](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) objets qui représentent les adresses IP prises en charge par le protocole réseau serveur.  
+ Tableau d’objets de [classe ServerNetworkProtocolIPAdress](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) qui représentent les adresses IP prises en charge par le protocole réseau serveur.  
   
 ## <a name="remarks"></a>Notes  
   

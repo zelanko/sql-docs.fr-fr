@@ -1,5 +1,5 @@
 ---
-title: Modifier les connexions qui utilisent des protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX SPX | Microsoft Docs
+title: Modifier les connexions qui utilisent les protocoles réseau Banyan VINEs Séquencéd paquet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX SPX | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdbcaa39e3d9630bd4ea50919f31cdbb15a36d14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093897"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Modifier les connexions utilisant les protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX/SPX
@@ -36,17 +36,18 @@ ms.locfileid: "66093897"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne prend pas en charge les protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX/SPX. Les clients précédemment connectés au moyen de ces protocoles doivent sélectionner un autre protocole.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne prend pas en charge les protocoles réseau Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX/SPX. Les clients précédemment connectés au moyen de ces protocoles doivent sélectionner un autre protocole.  
   
 ## <a name="corrective-action"></a>Action corrective  
  Modifiez les applications clientes pour qu'elles utilisent un protocole pris en charge lorsqu'elles se connectent au serveur. Si un alias est défini, qui utilise l'un des protocoles non pris en charge, cet alias doit alors être modifié pour utiliser un protocole pris en charge.  
   
- Si votre connexion de l’application chaîne spécifiquement utilise ou charge d’un de ces protocoles, par un réseau en spécifiant = des DBMSRPCN pour RPC, NETWORK = DBMSADSN pour Appletalk ou réseau = DBMSVINN pour la propriété de Banyan VINES, ou à l’aide d’un préfixe explicite tel que « spx : *serveur\instance*» pour SPX, « bv :*server*» pour Banyan VINES, » adsp :*server*» pour AppleTalk, ou » rpc :*server*« pour multiprotocole, puis vous devez modifier votre application pour utiliser un des protocoles pris en charge.  
+ Si la chaîne de connexion de votre application utilise ou charge spécifiquement l’un de ces protocoles, soit en spécifiant NETWORK = DBMSRPCN pour RPC, NETWORK = DBMSADSN pour AppleTalk ou NETWORK = DBMSVINN pour la propriété Banyan VINEs, ou en utilisant un préfixe explicite tel que « SPX :*server\instance*» pour SPX, « BV :*serveur*» pour Banyan VINES, « ADSP :*serveur*» pour AppleTalk ou « RPC :*serveur*» pour le multiprotocole, vous devez modifier votre application pour utiliser l’un des protocoles pris en charge.  
   
  Pour plus d'informations, consultez « Choix d'un protocole réseau » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

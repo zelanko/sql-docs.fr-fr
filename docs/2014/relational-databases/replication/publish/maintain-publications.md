@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238809"
 ---
 # <a name="maintain-publications"></a>Gestion des publications
@@ -26,8 +26,8 @@ ms.locfileid: "63238809"
   
 ## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](../administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
+ [Meilleures pratiques pour l’administration de la réplication](../administration/best-practices-for-replication-administration.md)   
  [Publier des données et des objets de base de données](publish-data-and-database-objects.md)   
- [Maintenance d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+ [Maintenance d’une base de données de publication AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   

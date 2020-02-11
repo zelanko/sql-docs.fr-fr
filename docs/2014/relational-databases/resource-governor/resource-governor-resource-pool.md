@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209875"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
@@ -65,8 +65,8 @@ ms.locfileid: "63209875"
   
 |Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
-|par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
+|default|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
 |Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
 |Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63209875"
 |Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
-|par défaut|0|100|25|25|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50+5)) = 25. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
+|default|0|100|25|25|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50+5)) = 25. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
 |Pool 1|20|100|45|25|La valeur MAX effectif est calculée comme suit : min(100,100-55) = 45. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
 |Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-25) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
 |Pool 3|5|100|30|25|La valeur MAX effectif est calculée comme suit : min(100,100-70) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 25.|  
@@ -104,7 +104,7 @@ ms.locfileid: "63209875"
 > [!NOTE]  
 >  Le groupe par défaut est modifiable, mais il ne peut pas être déplacé hors du pool par défaut.  
   
- **Pools de ressources définis par l'utilisateur**  
+ **Pools de ressources définis par l’utilisateur**  
   
  Les pools de ressources définis par l'utilisateur sont ceux que vous créez pour les charges de travail spécifiques dans votre environnement. Le gouverneur de ressources fournit des instructions DDL pour créer, modifier et supprimer des pools de ressources.  
   
@@ -117,10 +117,10 @@ ms.locfileid: "63209875"
 |Décrit comment supprimer un pool de ressources.|[Supprimer un pool de ressources](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [gouverneur de ressources](resource-governor.md)   
- [Groupe de charge de travail du gouverneur de ressources](resource-governor-workload-group.md)   
- [Fonction classifieur du gouverneur de ressources](resource-governor-classifier-function.md)   
- [Configurer le gouverneur de ressources à l'aide d'un modèle](configure-resource-governor-using-a-template.md)   
+ [Resource Governor](resource-governor.md)   
+ [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md)   
+ [Fonction classifieur Resource Governor](resource-governor-classifier-function.md)   
+ [Configurer Resource Governor à l’aide d’un modèle](configure-resource-governor-using-a-template.md)   
  [Afficher les propriétés du gouverneur de ressources](view-resource-governor-properties.md)  
   
   

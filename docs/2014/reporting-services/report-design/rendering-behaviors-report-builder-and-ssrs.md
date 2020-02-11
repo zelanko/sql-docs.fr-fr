@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 624681d8f784d3169b1f5e17a34daef99a71459b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105374"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportements de rendu (Générateur de rapports et SSRS)
@@ -128,7 +128,7 @@ ms.locfileid: "66105374"
 -   Les sauts de page logiques définis sur les éléments de cellules de tableau ou de matrice ne sont pas conservés. Cela ne s'applique pas aux éléments de listes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu au format HTML &#40;Générateur de rapports et SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Nom correspondant (Assistant sources de données) (Analysis Services) | Microsoft Docs
+title: Correspondance de noms (Assistant vue de source de données) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072394"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Correspondance de noms (Assistant Vue de source de données) (Analysis Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66072394"
 >  Cette page apparaît uniquement si vous sélectionnez une source de données qui dispose de plusieurs tables, mais pas de relations de clés étrangères entre les tables.  
   
 ## <a name="options"></a>Options  
- **Créer des relations logiques en faisant correspondre les colonnes**  
+ **Créer des relations logiques en faisant correspondre des colonnes**  
  Sélectionnez cette option pour utiliser un critère de correspondance de noms pour détecter les dépendances logiques et les relations possibles entre les tables que vous sélectionnez pour les inclure dans la vue de source de données et les autres tables du schéma. Si vous désactivez cette case à cocher, aucun critère de correspondance de noms n'est utilisé pour identifier les relations logiques entre les tables dans la source de données.  
   
  **Correspondances de clés étrangères**  
  Sélectionnez le critère à utiliser pour créer des relations logiques entre les tables et les vues dans la source de données. Les caractères non alphanumériques sont ignorés dans les chaînes de correspondance. Par exemple, « ID Client », « ID_Client », « IDClient » correspondent tous. Sélectionnez l'une des options suivantes dans le tableau ci-dessous pour créer des relations dans les cas indiqués.  
   
-|Select|Élément créé|  
+|Sélectionnez|Élément créé|  
 |------------|---------------|  
 |**Nom identique à la clé primaire**|Relation logique à une table avec un nom de colonne qui correspond au nom de la colonne clé primaire d'une table sélectionnée.|  
 |**Nom identique à celui de la table de destination**|Relation logique à une table avec un nom de colonne qui correspond au nom de la table sélectionnée.|  

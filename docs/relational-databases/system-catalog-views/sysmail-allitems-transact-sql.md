@@ -18,10 +18,10 @@ ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70745451"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
@@ -29,36 +29,36 @@ ms.locfileid: "70745451"
 
   Contient une ligne pour chaque message traité par la messagerie de base de données. Utilisez cette vue lorsque vous voulez voir l'état de tous les messages.  
   
- Pour afficher uniquement les messages dont l’État a échoué, utilisez [sysmail_faileditems &#40;Transact&#41;-SQL](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Pour afficher uniquement les messages non envoyés, [Utilisez &#40;SYSMAIL_UNSENTITEMS Transact-&#41;SQL](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Pour afficher uniquement les messages qui ont été envoyés, utilisez [sysmail_sentitems &#40;Transact&#41;-SQL](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Pour afficher uniquement les messages dont l’État a échoué, utilisez [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Pour afficher uniquement les messages non envoyés, utilisez [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Pour afficher uniquement les messages qui ont été envoyés, utilisez [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**mailitem_id**|**Int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
-|**profile_id**|**Int**|Identificateur du profil utilisé pour envoyer le message.|  
-|**recipients**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
+|**mailitem_id**|**int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
+|**profile_id**|**int**|Identificateur du profil utilisé pour envoyer le message.|  
+|**destinataire**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
 |**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
 |**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
-|**subject**|**nvarchar(510)**|Ligne d'objet du message.|  
-|**body**|**varchar(max)**|Corps du message.|  
-|**body_format**|**varchar(20)**|Format du corps du message. Les valeurs possibles sont TEXT et HTML.|  
-|**importance**|**varchar(6)**|Paramètre d' **importance** du message.|  
-|**sensibilité**|**varchar(12)**|Paramètre de **sensibilité** du message.|  
+|**Objet**|**nvarchar (510)**|Ligne d'objet du message.|  
+|**organismes**|**varchar(max)**|le corps du message.|  
+|**body_format**|**varchar (20)**|Format du corps du message. Les valeurs possibles sont TEXT et HTML.|  
+|**importance**|**varchar (6)**|Paramètre d' **importance** du message.|  
+|**sensibilité**|**varchar (12)**|Paramètre de **sensibilité** du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
-|**attachment_encoding**|**varchar(20)**|Type de pièce jointe.|  
+|**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
 |**demande**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
 |**query_result_width**|**int**|Paramètre **query_result_width** du message.|  
-|**query_result_separator**|**char(1)**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
-|**exclude_query_output**|**bit**|Paramètre **exclude_query_output** du message. Pour plus d’informations, [consultez &#40;SP_SEND_DBMAIL Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**query_result_separator**|**Char(1**|Caractère utilisé pour séparer les colonnes dans la sortie de la requête.|  
+|**exclude_query_output**|**bit**|Paramètre **exclude_query_output** du message. Pour plus d’informations, consultez [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|Paramètre **append_query_error** du message. La valeur 0 indique que la messagerie de base de données ne doit pas envoyer le message électronique s'il existe une erreur dans la requête.|  
-|**send_request_date**|**datetime**|Date et heure d'arrivée du message dans la file d'attente des messages.|  
+|**send_request_date**|**DATETIME**|Date et heure d'arrivée du message dans la file d'attente des messages.|  
 |**send_request_user**|**sysname**|Utilisateur qui a envoyé le message. Il s'agit du contexte utilisateur de la procédure de la messagerie de base de données, et non du champ De : du message.|  
-|**sent_account_id**|**Int**|Identificateur du compte de messagerie de base de données utilisé pour envoyer le message.|  
-|**sent_status**|**varchar(8)**|État du message. Les valeurs possibles sont les suivantes :<br /><br /> **sent** : le message a été envoyé.<br /><br /> non **envoyé** : la messagerie de base de données tente toujours d’envoyer le message.<br /><br /> **nouvelle tentative** -Database mail n’a pas pu envoyer le message, mais tente de l’envoyer à nouveau.<br /><br /> **échec** : la messagerie de base de données n’a pas pu envoyer le message.|  
-|**sent_date**|**datetime**|Date et heure d'envoi du message.|  
-|**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
+|**sent_account_id**|**int**|Identificateur du compte de messagerie de base de données utilisé pour envoyer le message.|  
+|**sent_status**|**varchar (8)**|État du message. Les valeurs possibles sont :<br /><br /> **sent** : le message a été envoyé.<br /><br /> non **envoyé** : la messagerie de base de données tente toujours d’envoyer le message.<br /><br /> **nouvelle tentative** -Database mail n’a pas pu envoyer le message, mais tente de l’envoyer à nouveau.<br /><br /> **échec** : la messagerie de base de données n’a pas pu envoyer le message.|  
+|**sent_date**|**DATETIME**|Date et heure d'envoi du message.|  
+|**last_mod_date**|**DATETIME**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
 ## <a name="remarks"></a>Notes  

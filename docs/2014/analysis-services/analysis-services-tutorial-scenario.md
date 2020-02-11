@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062438"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scénario du didacticiel Analysis Services
-  Ce didacticiel est basé sur [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], une société fictive. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une grande entreprise multinationale spécialisée dans la fabrication et la distribution de métaux et de pièces détachées de vélos pour les marchés d'Amérique du Nord, d'Europe et d'Asie. Le siège de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est situé dans la ville de Bothell, à Washington, où 500 personnes sont employées. Par ailleurs, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
+  Ce didacticiel est basé sur [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], une société fictive. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est une grande entreprise multinationale spécialisée dans la fabrication et la distribution de métaux et de pièces détachées de vélos pour les marchés d'Amérique du Nord, d'Europe et d'Asie. Le siège de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est situé dans la ville de Bothell, à Washington, où 500 personnes sont employées. Par ailleurs, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emploie plusieurs équipes commerciales régionales pour couvrir son marché.  
   
  Il y a quelques années, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] a acheté une petite usine de fabrication, Importadores Neptuno, située au Mexique. Importadores Neptuno fabrique des sous-composants importants qui entrent dans la fabrication de la ligne de produits [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Ces sous-composants sont livrés à Bothell pour l'assemblage du produit final. En 2005, Importadores Neptuno est devenu le seul fabricant et distributeur de bicyclettes de tourisme du groupe de produits.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "66062438"
 -   Les données sont difficiles à auditer. Le service financier utilise actuellement uniquement la base de données **AdventureWorksDW2012** comme source de données à partir de laquelle il effectue des requêtes en bloc. Il charge ensuite ces données dans des feuilles de calcul individuelles et passe beaucoup de temps à organiser les données et à manipuler les feuilles de calcul. Les rapports financiers de l'entreprise sont par conséquent difficiles à préparer, auditer et gérer au niveau de l'entreprise.  
   
 ## <a name="the-solution"></a>La solution  
- L'équipe chargée de l'entrepôt de données a récemment examiné la conception du système d'analyse actuel. Cet examen a permis d'analyser les écarts entre les problèmes présents et les demandes futures. Cette équipe a pu déterminer que la base de données **AdventureWorksDW2012** était une base de données dimensionnelles bien conçue avec des dimensions conformes et des clés de substitution. Les dimensions conformes permettent à une dimension d'être utilisée dans plusieurs mini-Data Warehouses, telle qu'une dimension de temps ou une dimension de produits. Les clés de substitution sont des clés artificielles qui lient les dimensions et les tables de faits et qui sont utilisées pour garantir l'unicité et améliorer les performances. Par ailleurs, l'équipe chargée de l'entrepôt de données a déterminé qu'il n'existait actuellement aucun problème important concernant le chargement et la gestion des tables de base dans la base de données **AdventureWorksDW2012** . Cette équipe a par conséquent décidé d'utiliser [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour accomplir les opérations suivantes :  
+ L'équipe chargée de l'entrepôt de données a récemment examiné la conception du système d'analyse actuel. Cet examen a permis d'analyser les écarts entre les problèmes présents et les demandes futures. Cette équipe a pu déterminer que la base de données **AdventureWorksDW2012** était une base de données dimensionnelles bien conçue avec des dimensions conformes et des clés de substitution. Les dimensions conformes permettent à une dimension d'être utilisée dans plusieurs mini-Data Warehouses, telle qu'une dimension de temps ou une dimension de produits. Les clés de substitution sont des clés artificielles qui lient les dimensions et les tables de faits et qui sont utilisées pour garantir l'unicité et améliorer les performances. Par ailleurs, l'équipe chargée de l'entrepôt de données a déterminé qu'il n'existait actuellement aucun problème important concernant le chargement et la gestion des tables de base dans la base de données **AdventureWorksDW2012** . L’équipe a donc décidé d’utiliser [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour accomplir les opérations suivantes :  
   
 -   fournir un accès unifié aux données via une couche de métadonnées communes pour le traitement analytique et les rapports ;  
   
@@ -60,9 +61,9 @@ ms.locfileid: "66062438"
   
 -   permettre aux utilisateurs de l'entreprise en dehors des États-Unis d'utiliser des versions localisées.  
   
- Les leçons du didacticiel Analysis Services fournissent de l'aide en générant une base de données de cube qui répond à tous ces critères. Pour commencer, passez à la première leçon : [Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
+ Les leçons du didacticiel Analysis Services fournissent de l'aide en générant une base de données de cube qui répond à tous ces critères. Pour commencer, passez à la première leçon : [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [La modélisation multidimensionnelle &#40;le didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Setnumvalue, méthode (classe ClientNetworkProtocolProperty) | Microsoft Docs
+title: Méthode SetNumValue (classe ClientNetworkProtocolProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: faf680e657cc533f9874b0d041aac0d3fe29f34b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63244994"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>Méthode SetNumValue (classe ClientNetworkProtocolProperty)
@@ -37,14 +37,14 @@ object
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  A [classe ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) qui représente un attribut du protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*value*|Valeur `uint32` qui spécifie la valeur numérique de la propriété référencée.|  
+|*ajoutée*|Valeur `uint32` qui spécifie la valeur numérique de la propriété référencée.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

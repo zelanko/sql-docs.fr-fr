@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103727"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Déplacer ou supprimer un élément (Gestionnaire de rapports)
@@ -30,18 +30,18 @@ ms.locfileid: "66103727"
   
 |Icône|Élément pouvant être déplacé|  
 |----------|-------------------|  
-|![Icône Rapport](../media/hlp-16doc.gif "Icône Rapport")|Rapport|  
+|![Icône de rapport](../media/hlp-16doc.gif "Icône de rapport")|Rapport|  
 |![Icône Rapport lié](../media/hlp-16linked.gif "Icône Rapport lié")|Rapport lié|  
 |![Icône Dossier](../media/hlp-16folder.gif "Icône Dossier")|Dossier|  
-|![Icône Ressource générique](../media/hlp-16file.gif "Icône Ressource générique")|Ressource générique|  
-|![Icône Source de données partagée](../media/hlp-16datasource.png "Icône Source de données partagée")|Source de données partagée|  
+|![icône de ressource générique](../media/hlp-16file.gif "icône de ressource générique")|Ressource générique|  
+|![Icône de source de données partagée](../media/hlp-16datasource.png "Icône de source de données partagée")|Source de données partagée|  
 ||Dataset partagé|  
   
- Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L’autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l’élément en question : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
+ Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Pour déplacer un élément à partir de la page Contenu  
   
-1.  Démarrer [Gestionnaire de rapports &#40;SSRS en Mode natif&#41;]... / mode.md du natif ssrs report manager).  
+1.  Démarrer [Gestionnaire de rapports &#40;le mode natif SSRS&#41;].. /report-manager-ssrs-native-mode.md).  
   
 2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis recherchez l’élément à déplacer.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "66103727"
  Vous pouvez aussi accéder à l’objet à déplacer, cliquer sur **Propriétés**, puis sur **Déplacer** en haut de la page.  
   
 ## <a name="delete-an-item"></a>Supprimer un élément  
- Avant de supprimer un élément, déterminez s'il est utilisé par d'autres éléments. Par exemple, si vous supprimez une source de données partagée, les rapports et les modèles qui l'utilisent ne pourront plus s'exécuter. Si vous supprimez un rapport, les abonnements et l'historique de rapport associés sont également supprimés. Pour rechercher des éléments dépendants pour un élément, consultez [Page éléments dépendants &#40;le Gestionnaire de rapports&#41;]... / manager.md du rapport page dépendante des éléments).  
+ Avant de supprimer un élément, déterminez s'il est utilisé par d'autres éléments. Par exemple, si vous supprimez une source de données partagée, les rapports et les modèles qui l'utilisent ne pourront plus s'exécuter. Si vous supprimez un rapport, les abonnements et l'historique de rapport associés sont également supprimés. Pour rechercher des éléments dépendants pour un élément, consultez la page [éléments dépendants &#40;Gestionnaire de rapports&#41;]. /dependent-items-page-report-manager.md).  
   
 #### <a name="to-delete-a-report-or-item"></a>Pour supprimer un rapport ou un élément  
   
-1.  Démarrer [Gestionnaire de rapports &#40;SSRS en Mode natif&#41;]... / mode.md du natif ssrs report manager).  
+1.  Démarrer [Gestionnaire de rapports &#40;le mode natif SSRS&#41;].. /report-manager-ssrs-native-mode.md).  
   
 2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis recherchez l’élément à supprimer.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66103727"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;]... / contenu-page-rapport-manager.md)   
+ [Page contenu &#40;Gestionnaire de rapports&#41;]. /contents-page-report-manager.md)   
  [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

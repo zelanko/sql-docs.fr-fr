@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796837"
 ---
 # <a name="implementing-endpoints"></a>Implémentation de points de terminaison
@@ -49,7 +49,7 @@ ms.locfileid: "72796837"
  Lorsque le point de terminaison a été créé et complètement défini, l'accès peut être accordé, révoqué ou refusé aux utilisateurs, groupes, rôles et ouvertures de session de la base de données.  
   
 ## <a name="example"></a>Exemple  
- Dans l'exemple de code suivant, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) et [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Dans l'exemple de code suivant, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) et [créer un projet Visual C&#35; Smo dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Création d'un service de point de terminaison de mise en miroir de bases de données en Visual Basic  
  L'exemple de code montre comment créer un point de terminaison pour la mise en miroir de bases de données dans SMO. Cette étape est requise avant la création du miroir de base de données. Utilisez la propriété <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> et d'autres propriétés sur l'objet <xref:Microsoft.SqlServer.Management.Smo.Database> pour créer un miroir de base de données.  

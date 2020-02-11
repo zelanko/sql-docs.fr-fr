@@ -15,37 +15,37 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224625"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Récupération d'urgence WSFC par le quorum forcé (SQL Server)
   L'échec du quorum est généralement dû à un problème systémique grave, à un échec de communication persistant ou à une mauvaise configuration impliquant plusieurs nœuds dans le cluster WSFC.  Une intervention manuelle est nécessaire pour la récupération d'une défaillance de quorum.  
   
--   **Avant de commencer :**  [Prérequis](#Prerequisites), [Sécurité](#Security)  
+-   **Avant de commencer :**  [conditions préalables](#Prerequisites), [sécurité](#Security)  
   
--   **Récupération d'urgence WSFC par le quorum forcé** [Récupération d'urgence WSFC par le quorum forcé](#Main)  
+-   **Récupération d’urgence WSFC par le biais de la procédure de quorum forcé** [WSFC récupération d’urgence par le biais de la procédure de quorum forcé](#Main)  
   
 -   [Tâches associées](#RelatedTasks)  
   
--   [Contenu connexe](#RelatedContent)  
+-   [Contenu associé](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="BeforeYouBegin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  La procédure de quorum forcé suppose qu'un quorum sain existait avant l'échec de quorum.  
   
 > [!WARNING]  
 >  L'utilisateur doit bien connaître les concepts et les interactions du clustering de basculement Windows Server, des modèles de quorum WSFC, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et de la configuration de déploiement spécifique à l'environnement.  
 >   
->  Pour plus d'informations, consultez :  [Windows Server Clustering de basculement (WSFC) avec SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de Quorum WSFC et Configuration de vote (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Pour plus d’informations, consultez :  [Clustering de basculement Windows Server (WSFC) avec SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modes de quorum WSFC et configuration de vote (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx).  
   
 ###  <a name="Security"></a> Sécurité  
  L'utilisateur doit être un compte de domaine qui est membre du groupe Administrateurs local sur chaque nœud du cluster WSFC.  
   
-##  <a name="Main"></a> Récupération d'urgence WSFC par le quorum forcé  
+##  <a name="Main"></a>Récupération d’urgence WSFC par le biais de la procédure de quorum forcé  
  N'oubliez pas qu'un échec de quorum met hors ligne tous les services cluster, toutes les instances SQL Server et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]dans le cluster WSFC, car le cluster, tel que configuré, ne peut pas garantir la tolérance de panne au niveau du nœud.  Un échec de quorum signifie que les nœuds votants sains dans le cluster WSFC ne satisfont plus le modèle de quorum. Certains nœuds ont peut-être échoué complètement, et d'autres ont peut-être simplement arrêté le service WSFC et sont sains par ailleurs, sauf en ce qui concerne la perte de la capacité de communiquer avec un quorum.  
   
  Pour remettre le cluster WSFC en ligne, vous devez corriger la cause première de l'échec de quorum dans la configuration existante, récupérer les bases de données concernées si nécessaire et, éventuellement, reconfigurer les nœuds restants dans le cluster WSFC pour refléter la topologie de cluster survivante.  
@@ -56,7 +56,7 @@ ms.locfileid: "63224625"
   
 #### <a name="to-recover-from-quorum-failure"></a>Pour une récupération en cas d'échec de quorum :  
   
-1.  **Déterminez l'étendue de l'échec.** Identifiez les groupes de disponibilité ou les instances de SQL Server non sensibles et les nœuds du cluster qui sont en ligne et disponibles à l'utilisation post-incident, puis examinez les journaux des événements Windows et les journaux système de SQL Server.  Si possible, vous devez conserver les données d'analyse et les journaux système pour les examiner ultérieurement.  
+1.  **Déterminez l’étendue de l’échec.** Identifiez les groupes de disponibilité ou les instances de SQL Server non sensibles et les nœuds du cluster qui sont en ligne et disponibles à l'utilisation post-incident, puis examinez les journaux des événements Windows et les journaux système de SQL Server.  Si possible, vous devez conserver les données d'analyse et les journaux système pour les examiner ultérieurement.  
   
     > [!TIP]  
     >  Sur une instance de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]qui répond, vous pouvez obtenir des informations sur l’état d’intégrité des groupes de disponibilité qui possèdent un réplica de disponibilité sur l’instance de serveur local en interrogeant la vue de gestion dynamique (DMV) [sys.dm_hadr_availability_group_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql) .  
@@ -70,38 +70,39 @@ ms.locfileid: "63224625"
     > [!NOTE]  
     >  L'application d'un quorum forcé bloque les contrôles de quorum sur l'ensemble du cluster jusqu'à ce que le cluster WSFC logique atteigne une majorité des votes et passe automatiquement à un mode d'opération de quorum standard.  
   
-3.  **Démarrez le service WSFC normalement sur chaque nœud par ailleurs sain, en procédant avec un nœud à la fois.** Vous ne devez pas spécifier l'option de quorum forcé lorsque vous démarrez le service de cluster sur les autres nœuds.  
+3.  **Démarrez le service WSFC normalement sur chaque nœud sain, un à la fois.** Vous ne devez pas spécifier l'option de quorum forcé lorsque vous démarrez le service de cluster sur les autres nœuds.  
   
      Lorsque le service WSFC revient en ligne sur chaque nœud, il négocie avec les autres nœuds sains pour synchroniser le nouvel état de configuration du cluster.  N'oubliez pas d'effectuer ces opérations sur un nœud à la fois, afin d'éviter des conditions potentielles de concurrence lors de la résolution du dernier état connu du cluster.  
   
     > [!WARNING]  
     >  Vérifiez que chaque nœud que vous démarrez peut communiquer avec les autres nœuds récemment mis en ligne.  Éventuellement, désactivez le service WSFC sur les autres nœuds.  Sinon, vous courez le risque de créer plusieurs jeux de nœuds de quorum et de créer un scénario de fractionnement des partitions. Si vos résultats à l'étape 1 étaient précis, cela ne devrait pas se produire.  
   
-4.  **Appliquez le nouveau mode de quorum et la nouvelle configuration de vote des nœuds.** Si l'application forcée d'un quorum a redémarré tous les nœuds du cluster et la cause première de l'échec de quorum a été corrigée, le mode de quorum d'origine et la configuration de vote des nœuds n'ont pas besoin d'être modifiés.  
+4.  **Appliquez le nouveau mode de quorum et la configuration de vote de nœud.** Si l'application forcée d'un quorum a redémarré tous les nœuds du cluster et la cause première de l'échec de quorum a été corrigée, le mode de quorum d'origine et la configuration de vote des nœuds n'ont pas besoin d'être modifiés.  
   
      Sinon, vous devez évaluer la topologie de nœud de cluster et de réplica de disponibilité nouvellement créée et modifier le mode de quorum et les affectations de vote pour chaque nœud, comme il convient. Les nœuds non récupérés doivent être mis hors connexion, ou bien leurs votes de nœud doivent être définis sur zéro.  
   
     > [!TIP]  
     >  À ce stade, les nœuds et les instances de SQL Server dans le cluster peuvent apparaître comme restaurés et sembler fonctionner normalement.  Toutefois, il est possible qu'il n'y ait pas encore de quorum sain.  À l'aide du Gestionnaire du cluster de basculement, ou du Tableau de bord AlwaysOn dans SQL Server Management Studio, ou des vues DMV appropriées, vérifiez qu'un quorum a été restauré.  
   
-5.  **Récupérez les réplicas de base de données du groupe de disponibilité si nécessaire.** Les bases de données qui n'appartiennent pas au groupe de disponibilité doivent être restaurées et remises en ligne au cours du processus de démarrage normal de SQL Server, sans autre intervention.  
+5.  **Récupérez les réplicas de base de données du groupe de disponibilité en fonction des besoins.** Les bases de données qui n'appartiennent pas au groupe de disponibilité doivent être restaurées et remises en ligne au cours du processus de démarrage normal de SQL Server, sans autre intervention.  
   
      Vous pouvez minimiser la perte potentielle de données et le temps de récupération pour les réplicas de groupe de disponibilité en les remettant en ligne dans cette séquence : réplica principal, réplicas secondaires synchrones, réplicas secondaires asynchrones.  
   
-6.  **Réparez ou remplacez les composants en échec et re-validez le cluster.** Maintenant que vous avez récupéré le sinsitre et l'échec de quorum, vous devez réparer ou remplacer les nœuds ayant échoué et modifier les configurations WSFC et AlwaysOn relatives en conséquence.  Cela peut inclure la suppression des réplicas de groupe de disponibilité, l'éviction des nœuds du cluster ou la mise à plat et la réinstallation des logiciels sur un nœud.  
+6.  **Réparez ou remplacez les composants en échec et revalidez le cluster.** Maintenant que vous avez récupéré le sinsitre et l'échec de quorum, vous devez réparer ou remplacer les nœuds ayant échoué et modifier les configurations WSFC et AlwaysOn relatives en conséquence.  Cela peut inclure la suppression des réplicas de groupe de disponibilité, l'éviction des nœuds du cluster ou la mise à plat et la réinstallation des logiciels sur un nœud.  
   
-     Vous devez réparer ou supprimer tous les réplicas de disponibilité.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne tronquera pas le journal des transactions après le dernier point connu du réplica de disponibilité le plus lointain.   Si un réplica n'est pas réparé ou n'est pas supprimé du groupe de disponibilité, les journaux des transactions vont prendre du volume et vous allez courir le risque de manquer d'espace pour les autres réplicas.  
+     Vous devez réparer ou supprimer tous les réplicas de disponibilité.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne tronquera pas le journal des transactions après le dernier point connu du réplica de disponibilité le plus lointain.   Si un réplica n'est pas réparé ou n'est pas supprimé du groupe de disponibilité, les journaux des transactions vont prendre du volume et vous allez courir le risque de manquer d'espace pour les autres réplicas.  
   
     > [!NOTE]  
     >  Si vous exécutez l'Assistant WSFC Valider une configuration alors qu'un écouteur du groupe de disponibilité existe sur le cluster WSFC, l'Assistant génère le message d'avertissement incorrect suivant :  
     >   
-    >  « La propriété RegisterAllProviderIP pour le nom réseau 'Name:<network_name>' est définie sur 1. Pour la configuration de cluster actuelle, cette valeur doit être définie sur 0. »  
+    >  « La propriété RegisterAllProviderIP du nom réseau 'Name:<nom_réseau>' est définie sur 1. Pour la configuration de cluster actuelle, cette valeur doit être définie sur 0. »  
     >   
     >  Veuillez ignorer ce message.  
   
-7.  **Répétez l'étape 4 si nécessaire.** L'objectif est de rétablir le niveau de la tolérance de panne approprié et une haute disponibilité pour des opérations saines.  
+7.  **Répétez l’étape 4 si nécessaire.** L'objectif est de rétablir le niveau de la tolérance de panne approprié et une haute disponibilité pour des opérations saines.  
   
-8.  **Effectuez une analyse RPO/RTO.** Vous devez analyser les journaux système SQL Server, les horodateurs de base de données et les journaux des événements Windows pour déterminer la cause première de l'échec et pour documenter les expériences de point et de temps de récupération actuelles.  
+8.  **Procédez à une analyse RPO/RTO.** Vous devez analyser les journaux système SQL Server, les horodateurs de base de données et les journaux des événements Windows pour déterminer la cause première de l'échec et pour documenter les expériences de point et de temps de récupération actuelles.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -113,13 +114,13 @@ ms.locfileid: "63224625"
   
 -   [Configurer les paramètres NodeWeight pour un quorum de cluster](configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 
+-   [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Afficher les événements et journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Afficher les événements et les journaux pour un cluster de basculement](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Applets de commande de cluster de basculement Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Applet de commande de cluster de basculement de la commande](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  

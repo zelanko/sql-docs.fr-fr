@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés de catalogue | Microsoft Docs
+title: Boîte de dialogue Propriétés du catalogue | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061110"
 ---
 # <a name="catalog-properties-dialog-box"></a>Boîte de dialogue Propriétés du catalogue
-  Utilisez la boîte de dialogue Propriétés du catalogue pour configurer le catalogue SSISDB. Les propriétés de catalogue définissent la façon dont les données sensibles sont chiffrées, la façon dont les opérations et les données du contrôle de version du projet sont conservées et le délai d'attente des opérations de validation. Le catalogue SSISDB est une base de données qui représente le point d’administration et de stockage central pour les projets, les packages, les paramètres et les environnements [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Utilisez la boîte de dialogue Propriétés du catalogue pour configurer le catalogue SSISDB. Les propriétés de catalogue définissent la façon dont les données sensibles sont chiffrées, la façon dont les données d’opérations et de contrôle de version de projet sont conservées, ainsi que l’expiration des opérations de validation. Le catalogue SSISDB est un point de stockage et d’administration [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] central pour les projets, les packages, les paramètres et les environnements.  
   
  Vous pouvez également consulter les propriétés de catalogue dans la vue catalog.catalog_property et les définir à l'aide de la procédure stockée catalog.configure_catalog. Pour plus d’informations, consultez [catalog.catalog_properties &#40;Base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) et [catalog.configure_catalog &#40;Base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
@@ -29,11 +29,11 @@ ms.locfileid: "66061110"
   
  **Que voulez-vous faire ?**  
   
--   [Ouvrez la boîte de dialogue Propriétés du catalogue.](#open_dialog)  
+-   [Ouvrir la boîte de dialogue Propriétés du catalogue](#open_dialog)  
   
 -   [Configurer les options](#options)  
   
-##  <a name="open_dialog"></a> Ouvrez la boîte de dialogue Propriétés du catalogue.  
+##  <a name="open_dialog"></a>Ouvrir la boîte de dialogue Propriétés du catalogue  
   
 1.  Ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66061110"
   
 |Nom de la propriété (boîte de dialogue Propriétés du catalogue)|Nom de la propriété (vue catalog.catalog_property)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|Nom de l'algorithme de chiffrement|ENCRYPTION_CLEANUP_ENABLED|Spécifie le type de chiffrement utilisé pour chiffrer les valeurs des paramètres sensibles dans le catalogue. Les valeurs possibles sont les suivantes :<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (valeur par défaut)|  
+|Nom de l'algorithme de chiffrement|ENCRYPTION_CLEANUP_ENABLED|Spécifie le type de chiffrement utilisé pour chiffrer les valeurs des paramètres sensibles dans le catalogue. Les valeurs possibles sont les suivantes :<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (par défaut)|  
 |Délai d'attente de validation (secondes)|VALIDATION_TIMEOUT|Spécifiez le nombre maximum de secondes qu'une validation de projet ou qu'une validation de package peut mettre pour s'exécuter avant qu'elle ne soit arrêtée. La valeur par défaut est 300 secondes.<br /><br /> La validation est une opération asynchrone. Plus le projet ou le package est gros, plus la validation prendra du temps.<br /><br /> Pour plus d’informations sur la validation des projets et des packages, consultez [Types de données Integration Services dans les expressions](expressions/integration-services-data-types-in-expressions.md).|  
 |Nettoyer les journaux régulièrement|OPERATION_CLEANUP_ENABLED|Définissez la propriété sur True pour indiquer que le travail de l'Agent SQL Server, à savoir le nettoyage des opérations, doit être exécuté. Sinon, définissez la propriété sur False.|  
 |Période de rétention (jours)|RETENTION_WINDOW|Spécifiez l'âge maximal des données opérationnelles autorisées (en jours). Les données qui sont plus anciennes que le nombre de jours spécifié seront supprimés par le travail de l'agent SQL, à savoir le nettoyage des opérations.|  

@@ -14,14 +14,14 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061353"
 ---
 # <a name="azure-data-lake-store-source"></a>Source Azure Data Lake Store
-  Le composant **Source Azure Data Lake Store** permet à un package SSIS de lire des données dans Azure Data Lake Store. Les formats de fichier pris en charge sont : Texte et Avro.
+  Le composant **Source Azure Data Lake Store** permet à un package SSIS de lire des données dans Azure Data Lake Store. Les formats de fichier pris en charge sont le format texte et Avro.
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Configurer la source Azure Data Lake Store 
   
@@ -33,6 +33,6 @@ ms.locfileid: "66061353"
   
     2.  Dans le champ **Format de fichier** , spécifiez le format du fichier source.  
   
-        Si le format de fichier est le format texte, vous devez renseigner le champ **Délimiteur de colonne** . Sélectionnez également l’option **Noms de colonne dans la première ligne de données** si la première ligne du fichier contient des noms de colonne.  
+        Si le format de fichier est texte, vous devez spécifier la valeur du **caractère de délimiteur de colonne** . Sélectionnez également les **noms de colonne dans la première ligne de données** si la première ligne du fichier contient des noms de colonnes.  
   
 3.  Après avoir spécifié les informations de connexion, basculez vers la page **Colonnes** pour mapper les colonnes sources sur les colonnes de destination du flux de données SSIS.  

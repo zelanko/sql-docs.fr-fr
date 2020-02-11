@@ -1,5 +1,5 @@
 ---
-title: Définir des relations logiques dans une vue de Source de données (Analysis Services) | Microsoft Docs
+title: Définir des relations logiques dans une vue de source de données (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075620"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Définir des relations logiques dans une vue de source de données (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "66075620"
   
  Les relations sont dirigées. Pour chaque valeur dans la colonne source, il existe une valeur correspondante dans la colonne de destination. Dans un diagramme de vue de source de données, tel que les diagrammes affichés dans le volet **Diagramme** , une flèche placée sur la ligne entre deux tables indique le sens de la relation.  
   
- Cette rubrique comprend les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Pour ajouter une relation entre des tables, des requêtes nommées ou des vues](#bkmk_addRel)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66075620"
   
  [Pour afficher ou modifier une relation dans le volet Tables](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a> Pour ajouter une relation entre des tables, des requêtes nommées ou des vues  
+##  <a name="bkmk_addRel"></a>Pour ajouter une relation entre des tables, des requêtes nommées ou des vues  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet ou connectez-vous à la base de données qui contient la vue de source de données dans laquelle vous souhaitez ajouter une relation logique.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075620"
   
     4.  Si vous le souhaitez, dans la zone **Description** , tapez la description de la relation.  
   
-##  <a name="bkmk_diagrampane"></a> Pour afficher ou modifier une relation dans le volet Diagramme  
+##  <a name="bkmk_diagrampane"></a>Pour afficher ou modifier une relation dans le volet Diagramme  
   
 -   Dans le volet **Diagramme** , dans **Concepteur de vue de source de données**, cliquez avec le bouton droit sur la relation que vous souhaitez afficher, puis sélectionnez **Modifier la relation** (ou double-cliquez simplement sur la flèche représentant la relation).  Utilisez la boîte de dialogue **Modifier la relation** pour modifier la relation.  
   
-##  <a name="bkmk_tablespane"></a> Pour afficher ou modifier une relation dans le volet Tables  
+##  <a name="bkmk_tablespane"></a>Pour afficher ou modifier une relation dans le volet Tables  
   
 1.  Dans le volet **Tables** dans **Concepteur de vue de source de données**, développez la table, la vue ou la requête nommée contenant la relation que vous souhaitez afficher ou modifier.  
   

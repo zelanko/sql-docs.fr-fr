@@ -1,5 +1,5 @@
 ---
-title: Événement cible d’appariement | Microsoft Docs
+title: Cible d’appariement des événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064847"
 ---
 # <a name="event-pairing-target"></a>Cible d'appariement d'événements
@@ -38,12 +38,12 @@ ms.locfileid: "66064847"
 |end_matching_columns|Une liste ordonnée de noms de colonnes séparés par des virgules.|Les colonnes sur lesquelles effectuer la correspondance.|  
 |begin_matching_actions|Liste ordonnée d'actions séparées par des virgules.|Actions sur lesquelles effectuer la correspondance.|  
 |end_matching_actions|Liste ordonnée d'actions séparées par des virgules.|Actions sur lesquelles effectuer la correspondance.|  
-|respond_to_memory_pressure|Une des valeurs suivantes :<br /><br /> 0 = ne pas répondre.<br /><br /> 1 = arrêter d'ajouter de nouveaux orphelins à la liste en cas de sollicitation de la mémoire.|La réponse cible aux événements de mémoire. Si la valeur spécifiée est 1 et que la mémoire du serveur est insuffisante, les informations non couplées qui sont conservées sont supprimées.|  
+|respond_to_memory_pressure|L’une des valeurs suivantes :<br /><br /> 0 = ne pas répondre.<br /><br /> 1 = arrêter d'ajouter de nouveaux orphelins à la liste en cas de sollicitation de la mémoire.|La réponse cible aux événements de mémoire. Si la valeur spécifiée est 1 et que la mémoire du serveur est insuffisante, les informations non couplées qui sont conservées sont supprimées.|  
 |max_orphans||Spécifie le nombre total d'événements non couplés qui seront collectés dans la cible. Une fois la limite atteinte, les événements non couplés sont supprimés selon le principe FIFO (premier entré/premier sorti). Par défaut = 10,000.|  
   
  Toutes les données associées à un événement sont capturées et stockées pour un appariement futur. De plus, les données ajoutées par les actions sont également collectées. Les données d'événement collectées sont stockées en mémoire et ont donc une limite finie. Cette limite est basée sur la capacité et l'activité du système. Plutôt que prendre la quantité maximale de mémoire à utiliser comme paramètre, la quantité de mémoire utilisée sera basée sur les ressources système disponibles. Lorsque celles-ci ne sont pas disponibles, les événements non couplés qui ont été conservés seront supprimés. Si un événement n'a pas été couplé et est supprimé, l'événement correspondant apparaîtra comme un événement non couplé.  
   
- La cible d'appariement applique en série des événements non couplés à un format XML. Ce format n'est conforme à aucun schéma. Le format contient uniquement deux types d'éléments. Le  **\<non appariés >** élément est la racine, suivi d’une unité. **\<événement >** élément pour chaque événement non couplé qui est actuellement en cours de suivi. Le  **\<événement >** élément contient un attribut qui contient le nom de l’événement non couplé.  
+ La cible d'appariement applique en série des événements non couplés à un format XML. Ce format n'est conforme à aucun schéma. Le format contient uniquement deux types d'éléments. L' ** \<élément>non couplé** est la racine, suivi de un. événement>élément pour chaque événement non couplé qui fait actuellement l’objet d’un suivi. ** \<** L' ** \<élément>d’événement** contient un attribut qui contient le nom de l’événement non couplé.  
   
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la paire cible correspondante à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  

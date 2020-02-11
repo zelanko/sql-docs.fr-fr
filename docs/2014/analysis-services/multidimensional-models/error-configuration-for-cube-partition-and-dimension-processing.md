@@ -1,5 +1,5 @@
 ---
-title: Configuration d’erreur pour le Cube, Partition et le traitement de Dimension (SSAS - multidimensionnel) | Microsoft Docs
+title: Configuration d’erreur pour le traitement des cubes, des partitions et des dimensions (SSAS-multidimensionnel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,50 +15,51 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075103"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Configuration d'erreur pour le traitement des cubes, des partitions et des dimensions (SSAS - Multidimensionnel)
   Les propriétés de configuration d'erreur sur les objets cube, partition ou de dimension déterminent le mode de réponse du serveur lorsqu'une erreur d'intégrité des données se produit pendant le traitement. Les clés dupliquées, manquantes et les valeurs NULL dans une colonne clé déclenchent généralement ces erreurs, et comme l'enregistrement à l'origine de l'erreur n'est pas ajouté à la base de données, vous pouvez définir des propriétés qui déterminent ce qui se produit après. Par défaut, le traitement s'arrête. Cependant, lorsque vous développez le cube, vous pouvez souhaiter que le traitement continue lorsque des erreurs se produisent afin de tester le comportement du cube avec des données importées, même si elles sont incomplètes.  
   
- Cette rubrique comprend les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
 -   [Ordre d’exécution](#bkmk_exec)  
   
 -   [Comportements par défaut](#bkmk_default)  
   
--   [Propriétés de configuration d'erreur](#bkmk_props)  
+-   [Propriétés de configuration d’erreur](#bkmk_props)  
   
--   [Emplacement de définition des propriétés de configuration d'erreur](#bkmk_tools)  
+-   [Emplacement de définition des propriétés de configuration d’erreur](#bkmk_tools)  
   
 -   [Clés manquantes (KeyNotFound)](#bkmk_missing)  
   
--   [Clés étrangères NULL dans une table de faits (KeyNotFound)](#bkmk_nullfact)  
+-   [Clés étrangères null dans une table de faits (KeyNotFound)](#bkmk_nullfact)  
   
 -   [Clés NULL dans une dimension](#bkmk_nulldim)  
   
 -   [Clés dupliquées résultant de relations incohérentes (KeyDuplicate)](#bkmk_dupe)  
   
--   [Modifier le nombre maximal d'erreurs ou l'action lorsque le nombre maximal d'erreurs est atteint](#bkmk_limit)  
+-   [Modifier l’action limite d’erreurs ou limite d’erreurs](#bkmk_limit)  
   
--   [Définir le chemin d'accès du journal des erreurs](#bkmk_log)  
+-   [Définir le chemin d’accès du journal des erreurs](#bkmk_log)  
   
 -   [Étape suivante](#bkmk_next)  
   
-##  <a name="bkmk_exec"></a> Ordre d’exécution  
+##  <a name="bkmk_exec"></a>Ordre d’exécution  
  Le serveur exécute toujours les règles `NullProcessing` avant les règles `ErrorConfiguration` pour chaque enregistrement. Il est important de comprendre cela, car les propriétés de traitement Null qui convertissent les valeurs Null en zéros peuvent introduire des erreurs de clé dupliquée lorsque plusieurs enregistrements d'erreur contiennent un zéro dans une colonne clé.  
   
-##  <a name="bkmk_default"></a> Comportements par défaut  
+##  <a name="bkmk_default"></a>Comportements par défaut  
  Par défaut, le traitement s'arrête à la première erreur impliquant une colonne clé. Ce comportement est contrôlé par un nombre maximal d'erreurs qui spécifie zéro comme nombre d'erreurs autorisées et la directive Arrêter le traitement qui indique au serveur d'arrêter le traitement lorsque le nombre d'erreurs est atteint.  
   
- Les enregistrements qui déclenchent une erreur, en raison de valeurs NULL, manquantes ou dupliquées, sont convertis en membre inconnu ou ignorés. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’importe pas les données qui ne respectent pas les contraintes d’intégrité des données.  
+ Les enregistrements qui déclenchent une erreur, en raison de valeurs NULL, manquantes ou dupliquées, sont convertis en membre inconnu ou ignorés. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n’importe pas les données qui ne respectent pas les contraintes d’intégrité des données.  
   
 -   La conversion en membre inconnu se produit par défaut, en raison du paramètre `ConvertToUnknown` de `KeyErrorAction`. Les enregistrements alloués à un membre inconnu sont mis en quarantaine dans la base de données en tant que preuve d'un problème que vous pouvez examiner une fois le traitement terminé.  
   
-     Membres inconnus sont exclus des charges de travail de requête, mais ils seront visibles dans certaines applications clientes si le `UnknownMember` a la valeur **Visible**.  
+     Les membres inconnus sont exclus des charges de travail de requête, mais ils sont visibles dans certaines `UnknownMember` applications clientes si le est défini sur **visible**.  
   
      Pour effectuer le suivi du nombre de valeurs NULL converties en membre inconnu, modifiez la propriété `NullKeyConvertedToUnknown` de façon à consigner ces erreurs dans le journal ou dans la fenêtre de traitement.  
   
@@ -76,18 +77,32 @@ ms.locfileid: "66075103"
   
  Les erreurs sont consignées dans la boîte de dialogue Traiter, mais ne sont pas enregistrées. Vous pouvez spécifier un nom de fichier journal d'erreurs de clé pour collecter les erreurs dans un fichier texte.  
   
-##  <a name="bkmk_props"></a> Propriétés de configuration d'erreur  
+##  <a name="bkmk_props"></a>Propriétés de configuration d’erreur  
  Il existe neuf propriétés de configuration d'erreur. Cinq sont utilisées pour déterminer la réponse du serveur lorsqu'une erreur spécifique se produit. Les quatre autres concernent les charges de travail de configuration d'erreur, telles que le nombre d'erreurs à autoriser, l'action à entreprendre lorsque le nombre maximal d'erreurs est atteint et s'il faut collecter les erreurs dans un fichier journal.  
   
  **Réponse du serveur à des erreurs spécifiques**  
   
-|Propriété|Par défaut|Autres valeurs|  
+|Propriété|Default|Autres valeurs|  
 |--------------|-------------|------------------|  
-|`CalculationError`<br /><br /> Se produit lors de l'initialisation de la configuration d'erreur.|`IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal.|`ReportAndContinue` consigne et comptabilise l'erreur.<br /><br /> `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.|  
-|`KeyNotFound`<br /><br /> Se produit lorsqu'une clé étrangère dans une table de faits n'a pas de clé primaire correspondante dans une table de dimension associée (par exemple, une table de faits Sales contient in enregistrement avec un ID de produit qui n'existe pas dans la table de dimension Product). Cette erreur se produit lors du traitement des partitions, ou du traitement des dimensions en flocons.|`ReportAndContinue` consigne et comptabilise l'erreur.|`ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.<br /><br /> `IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal. Les enregistrements qui déclenchent cette erreur sont convertis en membre inconnu par défaut, mais vous pouvez modifier la propriété `KeyErrorAction` de façon à les ignorer.|  
-|`KeyDuplicate`<br /><br /> Se produit lorsque des clés d'attribut en double sont détectées dans une dimension. Dans la plupart des cas, il est possible de disposer de clés d'attribut dupliquées, mais cette erreur vous informe des doublons afin que vous puissiez rechercher dans la dimension les erreurs de conception qui peuvent entraîner des relations incohérentes entre les attributs.|`IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal.|`ReportAndContinue` consigne et comptabilise l'erreur.<br /><br /> `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.|  
-|`NullKeyNotAllowed`<br /><br /> Se produit lorsque `NullProcessing`  =  `Error` est défini sur un attribut de dimension ou lorsque les valeurs null existent dans une colonne clé d’attribut utilisée pour identifier un membre.|`ReportAndContinue` consigne et comptabilise l'erreur.|`ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.<br /><br /> `IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal. Les enregistrements qui déclenchent cette erreur sont convertis en membre inconnu par défaut, mais vous pouvez définir la propriété `KeyErrorAction` de façon à les ignorer.|  
-|`NullKeyConvertedToUnknown`<br /><br /> Se produit lorsque des valeurs NULL sont, par la suite, converties en membre inconnu. Paramètre `NullProcessing`  =  `ConvertToUnknown` sur une dimension attribut déclenche cette erreur.|`IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal.|Pour afficher cette erreur à titre d'information, conservez la valeur par défaut. Sinon, vous choisissez `ReportAndContinue` de façon à signaler l'erreur dans la fenêtre de traitement et la comptabiliser dans le nombre maximal d'erreurs.<br /><br /> `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.|  
+|`CalculationError`<br /><br /> Se produit lors de l'initialisation de la configuration d'erreur.|
+  `IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal.|
+  `ReportAndContinue` consigne et comptabilise l'erreur.<br /><br /> 
+  `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.|  
+|`KeyNotFound`<br /><br /> Se produit lorsqu'une clé étrangère dans une table de faits n'a pas de clé primaire correspondante dans une table de dimension associée (par exemple, une table de faits Sales contient in enregistrement avec un ID de produit qui n'existe pas dans la table de dimension Product). Cette erreur se produit lors du traitement des partitions, ou du traitement des dimensions en flocons.|
+  `ReportAndContinue` consigne et comptabilise l'erreur.|
+  `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.<br /><br /> 
+  `IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal. Les enregistrements qui déclenchent cette erreur sont convertis en membre inconnu par défaut, mais vous pouvez modifier la propriété `KeyErrorAction` de façon à les ignorer.|  
+|`KeyDuplicate`<br /><br /> Se produit lorsque des clés d'attribut en double sont détectées dans une dimension. Dans la plupart des cas, il est possible de disposer de clés d'attribut dupliquées, mais cette erreur vous informe des doublons afin que vous puissiez rechercher dans la dimension les erreurs de conception qui peuvent entraîner des relations incohérentes entre les attributs.|
+  `IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal.|
+  `ReportAndContinue` consigne et comptabilise l'erreur.<br /><br /> 
+  `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.|  
+|`NullKeyNotAllowed`<br /><br /> Se produit `NullProcessing`  =  `Error` lorsque est défini sur un attribut de dimension ou lorsque des valeurs NULL existent dans une colonne clé d’attribut utilisée pour identifier de façon unique un membre.|
+  `ReportAndContinue` consigne et comptabilise l'erreur.|
+  `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.<br /><br /> 
+  `IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal. Les enregistrements qui déclenchent cette erreur sont convertis en membre inconnu par défaut, mais vous pouvez définir la propriété `KeyErrorAction` de façon à les ignorer.|  
+|`NullKeyConvertedToUnknown`<br /><br /> Se produit lorsque des valeurs NULL sont, par la suite, converties en membre inconnu. La `NullProcessing`  =  `ConvertToUnknown` définition d’un attribut de dimension déclenche cette erreur.|
+  `IgnoreError` ne consigne pas ou ne comptabilise pas l'erreur ; le traitement continue tant que le nombre d'erreurs est inférieur au nombre maximal.|Pour afficher cette erreur à titre d'information, conservez la valeur par défaut. Sinon, vous choisissez `ReportAndContinue` de façon à signaler l'erreur dans la fenêtre de traitement et la comptabiliser dans le nombre maximal d'erreurs.<br /><br /> 
+  `ReportAndStop` signale l'erreur et arrête le traitement immédiatement, indépendamment du nombre maximal d'erreurs.|  
   
  **Propriétés générales**  
   
@@ -98,7 +113,7 @@ ms.locfileid: "66075103"
 |`KeyErrorLimit`|Il s'agit du nombre maximal d'erreurs d'intégrité des données que le serveur autorise avant que le traitement échoue. Une valeur égale à -1 indique un nombre illimité. La valeur par défaut est 0, ce qui signifie que le traitement s'arrête après la première erreur. Vous pouvez également définir un nombre entier.|  
 |`KeyErrorLimitAction`|Il s'agit de l'action entreprise par le serveur lorsque le nombre maximal d'erreurs de clé est atteint. Avec **Arrêter le traitement**, le traitement se termine immédiatement. Avec **Arrêter l’enregistrement dans le journal**, le traitement continue, mais les erreurs ne sont plus signalées ou comptabilisées.|  
   
-##  <a name="bkmk_tools"></a> Emplacement de définition des propriétés de configuration d'erreur  
+##  <a name="bkmk_tools"></a>Emplacement de définition des propriétés de configuration d’erreur  
  Utilisez les pages de propriétés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] après avoir déployé la base de données, ou dans le projet de modèle dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Les mêmes propriétés sont disponibles dans les deux outils. Vous pouvez également définir les propriétés de configuration d'erreur dans le fichier msmdrsrv.ini pour modifier les valeurs par défaut du serveur pour la configuration d'erreur, et dans les commandes `Batch` et `Process` si le traitement s'exécute en tant qu'opération faisant l'objet d'un script.  
   
  Vous pouvez définir la configuration d'erreur sur n'importe quel objet pouvant être traité en tant qu'opération autonome.  
@@ -111,21 +126,21 @@ ms.locfileid: "66075103"
   
 #### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
-1.  Dans l'Explorateur de solutions, double-cliquez sur une dimension ou sur un cube. `ErrorConfiguration` apparaît dans les propriétés dans le volet inférieur.  
+1.  Dans l'Explorateur de solutions, double-cliquez sur une dimension ou sur un cube. `ErrorConfiguration`apparaît dans Propriétés dans le volet ci-dessous.  
   
-2.  Sinon, pour une seule dimension, cliquez sur la dimension dans l’Explorateur de solutions, sélectionnez `Process`, puis choisissez **modifier les paramètres** dans la boîte de dialogue traiter la Dimension. Les options de configuration d'erreur s'affichent dans l'onglet Erreurs de clé de dimension.  
+2.  Sinon, pour une seule dimension, cliquez avec le bouton droit sur la dimension dans Explorateur de solutions, `Process`choisissez, puis **modifier les paramètres** dans la boîte de dialogue traiter la dimension. Les options de configuration d'erreur s'affichent dans l'onglet Erreurs de clé de dimension.  
   
-##  <a name="bkmk_missing"></a> Clés manquantes (KeyNotFound)  
+##  <a name="bkmk_missing"></a>Clés manquantes (KeyNotFound)  
  Les enregistrements avec une valeur de clé manquante ne sont pas ajoutés à la base de données, même lorsque les erreurs sont ignorées ou le nombre d'erreurs est illimité.  
   
  Le serveur génère l'erreur `KeyNotFound` lors du traitement des partitions, lorsqu'un enregistrement de table de faits contient une valeur de clé étrangère, mais la clé étrangère n'a aucun enregistrement correspondant dans une table de dimension associée. Cette erreur se produit également lors du traitement des tables de dimension associées ou en flocons, où un enregistrement dans une dimension spécifie une clé étrangère qui n'existe pas dans la dimension associée.  
   
- Lorsqu'une erreur `KeyNotFound` se produit, l'enregistrement incriminé est alloué au membre inconnu. Ce comportement est contrôlé par le **Action clé**, dont la valeur `ConvertToUnknown`, de sorte que vous pouvez afficher les enregistrements alloués à un examen approfondi.  
+ Lorsqu'une erreur `KeyNotFound` se produit, l'enregistrement incriminé est alloué au membre inconnu. Ce comportement est contrôlé par le biais de l' **action clé**, défini sur `ConvertToUnknown`, afin que vous puissiez afficher les enregistrements alloués pour une investigation plus poussée.  
   
-##  <a name="bkmk_nullfact"></a> Clés étrangères NULL dans une table de faits (KeyNotFound)  
+##  <a name="bkmk_nullfact"></a>Clés étrangères null dans une table de faits (KeyNotFound)  
  Par défaut, une valeur NULL dans une colonne clé étrangère d'une table de faits est convertie en zéro. En supposant que zéro n'est pas une valeur de clé étrangère valide, une erreur `KeyNotFound` est consignée et comptabilisée dans le nombre maximal d'erreurs qui est zéro par défaut.  
   
- Pour autoriser la poursuite du traitement, vous pouvez gérer la valeur NULL avant conversion et recherche des erreurs. Pour ce faire, définissez `NullProcessing` à `Error`.  
+ Pour autoriser la poursuite du traitement, vous pouvez gérer la valeur NULL avant conversion et recherche des erreurs. Pour ce faire, `NullProcessing` affectez `Error`à la valeur.  
   
 #### <a name="set-nullprocessing-property-on-a-measure"></a>Définir la propriété NullProcessing sur une mesure  
   
@@ -133,18 +148,18 @@ ms.locfileid: "66075103"
   
 2.  Cliquez avec le bouton droit sur une mesure dans le volet Mesures et choisissez **Propriétés**.  
   
-3.  Dans Propriétés, développez **Source** pour afficher `NullProcessing` propriété. Elle a la valeur **Automatic** par défaut qui, pour les éléments OLAP, convertit les valeurs NULL en zéros pour les champs contenant des données numériques.  
+3.  Dans Propriétés, développez la propriété `NullProcessing` **source** à afficher. Elle a la valeur **Automatic** par défaut qui, pour les éléments OLAP, convertit les valeurs NULL en zéros pour les champs contenant des données numériques.  
   
-4.  Remplacez la valeur par `Error` à exclure tous les enregistrements ayant une valeur null, ce qui évite la conversion null numériques (zéros). Cette modification vous permet d’éviter des erreurs de clé dupliquée reliés à plusieurs enregistrements contenant un zéro dans la colonne clé et également éviter `KeyNotFound` erreurs lorsqu’une clé étrangère de valeur zéro ne possède aucune clé primaire équivalente dans une table de dimension associée.  
+4.  Remplacez la valeur par `Error` pour exclure tous les enregistrements ayant une valeur null, ce qui évite la conversion null-numérique (zéro). Cette modification vous permet d’éviter les erreurs de clé dupliquées liées à plusieurs enregistrements contenant zéro dans la colonne clé `KeyNotFound` et d’éviter les erreurs quand une clé étrangère de valeur zéro n’a pas de clé primaire équivalente dans une table de dimension associée.  
   
-##  <a name="bkmk_nulldim"></a> Clés NULL dans une dimension  
+##  <a name="bkmk_nulldim"></a>Clés NULL dans une dimension  
  Pour continuer le traitement lorsque des valeurs NULL sont détectées dans les clés étrangères d'une dimension en flocons, dans un premier temps gérez les valeurs NULL en définissant `NullProcessing` sur `KeyColumn` de l'attribut de dimension. Cela permet d'ignorer ou de convertir l'enregistrement, avant que l'erreur `KeyNotFound` ne se produise.  
   
  Vous avez deux options de gestion des valeurs NULL sur l'attribut de dimension :  
   
--   Définissez `NullProcessing` = `UnknownMember` pour allouer les enregistrements avec des valeurs null au membre inconnu. Cela génère une erreur `NullKeyConvertedToUnknown`, qui est ignorée par défaut.  
+-   `NullProcessing` = Défini `UnknownMember` pour allouer les enregistrements avec des valeurs NULL au membre inconnu. Cela génère une erreur `NullKeyConvertedToUnknown`, qui est ignorée par défaut.  
   
--   Définissez `NullProcessing` = `Error` pour exclure les enregistrements avec des valeurs null. Cela génère l'erreur `NullKeyNotAllowed`, qui est consignée et comptabilisée dans le nombre maximal d'erreurs. Vous pouvez définir la propriété de configuration d’erreur sur **clé Null non autorisée** à `IgnoreError` pour permettre la poursuite du traitement.  
+-   `NullProcessing` = Défini `Error` pour exclure les enregistrements avec des valeurs NULL. Cela génère l'erreur `NullKeyNotAllowed`, qui est consignée et comptabilisée dans le nombre maximal d'erreurs. Vous pouvez définir la propriété de configuration d’erreur sur la **clé null non autorisée** à `IgnoreError` pour permettre au traitement de continuer.  
   
  Les valeurs NULL peuvent poser des problèmes pour les champs non-clé. De fait, les requêtes MDX retournent un résultat différent si la valeur NULL est interprétée en tant que zéro ou chaîne vide. C'est pourquoi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des options de traitement des valeurs NULL qui vous permettent de prédéfinir le comportement de conversion souhaité. Pour plus d’informations, consultez [Définition du membre inconnu et des propriétés de traitement Null](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) et <xref:Microsoft.AnalysisServices.NullProcessing> .  
   
@@ -154,28 +169,28 @@ ms.locfileid: "66075103"
   
 2.  Cliquez avec le bouton droit sur un attribut dans le volet Attributs et choisissez **Propriétés**.  
   
-3.  Dans Propriétés, développez **KeyColumns** pour afficher `NullProcessing` propriété. Elle a la valeur **Automatic** par défaut, qui convertit les valeurs NULL en zéros pour les champs contenant des données numériques. Modifiez la valeur en `Error` ou `UnknownMember`.  
+3.  Dans Propriétés, développez **KeyColumns** to `NullProcessing` View Property. Elle a la valeur **Automatic** par défaut, qui convertit les valeurs NULL en zéros pour les champs contenant des données numériques. Remplacez la valeur par `Error` ou. `UnknownMember`  
   
-     Cette modification supprime les conditions sous-jacentes qui déclenchent `KeyNotFound` en ignorant ou en convertissant l’enregistrement avant qu’il est vérifié pour les erreurs.  
+     Cette modification supprime les conditions sous-jacentes `KeyNotFound` qui se déclenchent en ignorant ou en convertissant l’enregistrement avant de vérifier les erreurs.  
   
-     Selon la configuration d'erreur, ces actions entraînent une erreur qui est signalée et comptabilisée. Vous devrez peut-être modifier d’autres propriétés, telles que la définition `KeyNotFound` à `ReportAndContinue` ou `KeyErrorLimit` à une valeur différente de zéro, pour permettre le traitement continue lorsque ces erreurs sont signalées et comptabilisées.  
+     Selon la configuration d'erreur, ces actions entraînent une erreur qui est signalée et comptabilisée. Vous devrez peut-être ajuster des propriétés supplémentaires, telles `KeyNotFound` que `ReportAndContinue` définir `KeyErrorLimit` sur ou sur une valeur différente de zéro, pour permettre au traitement de continuer lorsque ces erreurs sont signalées et comptées.  
   
-##  <a name="bkmk_dupe"></a> Clés dupliquées résultant de relations incohérentes (KeyDuplicate)  
+##  <a name="bkmk_dupe"></a>Clés dupliquées résultant de relations incohérentes (KeyDuplicate)  
  Par défaut, la présence d'une valeur de clé dupliquée n'arrête pas le traitement, mais l'erreur est ignorée et l'enregistrement en double est exclu de la base de données.  
   
  Pour modifier ce comportement, affectez à `KeyDuplicate` la valeur `ReportAndContinue` ou `ReportAndStop` pour signaler l'erreur. Vous pourrez ensuite examiner l'erreur pour déterminer les failles potentielles dans la conception de la dimension.  
   
-##  <a name="bkmk_limit"></a> Modifier le nombre maximal d'erreurs ou l'action lorsque le nombre maximal d'erreurs est atteint  
- Vous pouvez augmenter le nombre maximal d'erreurs pour permettre plus d'erreurs lors du traitement. Il n'y a aucune indication pour augmenter le nombre maximal d'erreurs ; la valeur appropriée varie selon votre scénario. Limites d’erreur sont spécifiés en tant que `KeyErrorLimit` dans `ErrorConfiguration` propriétés dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou en tant que **nombre d’erreurs** dans l’onglet Configuration d’erreur des propriétés des dimensions, cubes ou groupes de mesures dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+##  <a name="bkmk_limit"></a>Modifier l’action limite d’erreurs ou limite d’erreurs  
+ Vous pouvez augmenter le nombre maximal d'erreurs pour permettre plus d'erreurs lors du traitement. Il n'y a aucune indication pour augmenter le nombre maximal d'erreurs ; la valeur appropriée varie selon votre scénario. Les limites d’erreur sont `KeyErrorLimit` spécifiées comme dans `ErrorConfiguration` les propriétés dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou comme **nombre d’erreurs** sous l’onglet Configuration d’erreur pour les propriétés des dimensions, des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]cubes ou des groupes de mesures dans.  
   
- Une fois le nombre maximal d'erreurs atteint, spécifiez que le traitement s'arrête ou que l'enregistrement dans le journal s'arrête. Par exemple, supposons que vous affectez à l'action la valeur `StopLogging` avec un nombre maximal d'erreurs de 100. À la 101è erreur, le traitement continue, mais les erreurs ne sont plus consignées ou comptabilisées. Actions de limite d’erreur sont spécifiées en tant que `KeyErrorLimitAction` dans `ErrorConfiguration` propriétés dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou en tant que **sur l’action pour l’erreur** dans l’onglet Configuration d’erreur des propriétés des dimensions, cubes ou groupes de mesures dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+ Une fois le nombre maximal d'erreurs atteint, spécifiez que le traitement s'arrête ou que l'enregistrement dans le journal s'arrête. Par exemple, supposons que vous affectez à l'action la valeur `StopLogging` avec un nombre maximal d'erreurs de 100. À la 101è erreur, le traitement continue, mais les erreurs ne sont plus consignées ou comptabilisées. Les actions de limite d’erreur `KeyErrorLimitAction` sont `ErrorConfiguration` spécifiées [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]comme dans les propriétés dans, ou comme action en cas d' **erreur** sous l’onglet Configuration d’erreur pour les propriétés des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]dimensions, des cubes ou des groupes de mesures dans.  
   
-##  <a name="bkmk_log"></a> Définir le chemin d'accès du journal des erreurs  
+##  <a name="bkmk_log"></a>Définir le chemin d’accès du journal des erreurs  
  Vous pouvez spécifier un fichier pour stocker les messages d'erreur associés aux clés qui sont signalés lors du traitement. Par défaut, les erreurs sont visibles pendant le traitement interactif dans la fenêtre Traiter, puis ignorées si vous fermez la fenêtre ou la session. Le journal contient uniquement les informations d'erreur associées aux clés, identiques aux erreurs signalées dans les boîtes de dialogue de traitement.  
   
  Les erreurs sont enregistrées dans un fichier texte et il doit avoir une extension de fichier .log. Le fichier est vide sauf si des erreurs se produisent. Par défaut, un fichier est créé dans le dossier DATA. Vous pouvez spécifier un autre dossier tant que le compte de service Analysis Services peut écrire à cet emplacement.  
   
-##  <a name="bkmk_next"></a> Étape suivante  
+##  <a name="bkmk_next"></a>Étape suivante  
  Décidez si les erreurs arrêtent le traitement ou sont ignorées. N'oubliez pas que seule l'erreur est ignorée. L'enregistrement ayant provoqué l'erreur n'est pas ignoré ; il est annulé ou converti en membre inconnu. Les enregistrements qui ne sont pas conformes aux règles d'intégrité des données ne sont jamais ajoutés à la base de données. Par défaut, le traitement s'arrête lorsqu'la première erreur se produit, mais vous pouvez modifier ce comportement en augmentant le nombre maximal d'erreurs. Dans le développement de cube, il peut être utile d'abaisser les règles de configuration d'erreur, ce qui autorise la poursuite du traitement, de façon à ce qu'il y ait des données à tester.  
   
  Décidez s'il faut modifier les comportements de traitement des valeurs NULL par défaut. Par défaut, les valeurs NULL dans une colonne de chaîne sont traitées en tant que valeurs vides, alors que les valeurs NULL dans une colonne numérique sont traitées en tant que zéro. Pour obtenir des instructions sur la définition du traitement de la valeur NULL sur un attribut, consultez [Définition du membre inconnu et des propriétés de traitement Null](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  

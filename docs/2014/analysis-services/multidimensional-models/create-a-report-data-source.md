@@ -1,5 +1,5 @@
 ---
-title: Créer une Source de données de rapport | Microsoft Docs
+title: Créer une source de données de rapport | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076338"
 ---
 # <a name="create-a-report-data-source"></a>Créer une source de données de rapport
@@ -39,10 +39,10 @@ ms.locfileid: "66076338"
   
 1.  Cliquez sur l'onglet **Documents** dans le ruban de la bibliothèque.  
   
-2.  Cliquez sur **Nouveau document** > **Source de données du rapport**.  
+2.  Cliquez sur nouvelle**source de données de rapport** **de document** > .  
   
     > [!NOTE]  
-    >  Si l’élément **Source de données du rapport** ne figure pas dans le menu, cela signifie que le type de contenu de la source de données du rapport n’a pas été activé pour cette bibliothèque. Pour plus d’informations, consultez [ajouter Types serveur de rapports contenus dans une bibliothèque &#40;Reporting Services en Mode intégré SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Si l’élément **Source de données du rapport** ne figure pas dans le menu, cela signifie que le type de contenu de la source de données du rapport n’a pas été activé pour cette bibliothèque. Pour plus d’informations, consultez [Ajouter des types de contenu de serveur de rapports à une bibliothèque &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  Dans la page **Propriétés de la source de données** , dans la zone **Nom**, entrez un nom pour le fichier .rsds de connexion.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66076338"
   
      (Facultatif) Les cubes peuvent contenir des perspectives qui fournissent aux utilisateurs une vue sélectionnée dans laquelle seules certaines dimensions ou seuls certains groupes de mesures sont visibles dans le client. Pour spécifier une perspective, entrez le nom de la perspective en tant que valeur de la propriété Cube : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Facultatif) Les cubes peuvent disposer de traductions de données et de métadonnées, spécifiées pour différentes langues au sein du modèle. Pour voir les traductions (données et métadonnées), vous devez ajouter la propriété « Locale Identifier » à la chaîne de connexion : `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     (Facultatif) Les cubes peuvent disposer de traductions de données et de métadonnées, spécifiées pour différentes langues au sein du modèle. Pour voir les traductions (données et métadonnées), vous devez ajouter la propriété « locale identifier » à la chaîne de connexion :`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  Dans **Informations d'identification**, spécifiez comment le serveur de rapports obtient les informations d'identification permettant d'accéder à la source de données externe.  
   

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232403"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utiliser des requêtes FOR XML imbriquées
-  Le `xml` type de données et la [directive TYPE dans les requêtes FOR XML](type-directive-in-for-xml-queries.md) permettent au XML retourné par les requêtes FOR XML d’être traité sur le serveur et sur le client.  
+  Le `xml` type de données et la [directive type dans les requêtes for XML](type-directive-in-for-xml-queries.md) permettent au XML retourné par les requêtes for XML d’être traité sur le serveur et sur le client.  
   
 ## <a name="processing-with-xml-type-variables"></a>Traitement avec des variables de type xml  
  Vous pouvez affecter le résultat de la requête FOR XML à une variable de type `xml` ou bien utiliser XQuery pour interroger le résultat et affecter celui-ci à une variable de type `xml` en vue d'un traitement supplémentaire.  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <myRoot>  
@@ -76,14 +76,14 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Renvoi de résultats de requêtes FOR XML internes à des requêtes externes en tant qu'instances de type xml  
- Vous pouvez écrire des requêtes `FOR XML` imbriquées où le résultat de la requête interne est retourné en tant que type `xml` à la requête externe. Exemple :  
+ Vous pouvez écrire des requêtes `FOR XML` imbriquées où le résultat de la requête interne est retourné en tant que type `xml` à la requête externe. Par exemple :  
   
 ```  
 SELECT Col1,   

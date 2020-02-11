@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067271"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Supprimer une colonne (SSAS Tabulaire)
@@ -23,7 +23,7 @@ ms.locfileid: "66067271"
 ## <a name="delete-a-model-table-column"></a>Supprimer une colonne de table de modèle  
   
 > [!NOTE]  
->  La suppression d'une colonne d'une table de modèle ne supprime pas la colonne d'une définition de requête de partition. Si la colonne que vous supprimez fait partie d'une partition, vous devez supprimer manuellement la colonne de la définition de requête de partition. Si vous ne supprimez pas la colonne de la définition de requête de partition, la colonne sera interrogée et des données retournées, mais elles ne seront pas ajoutées la table de modèle pendant le traitement des opérations. Pour plus d’informations, consultez [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+>  La suppression d'une colonne d'une table de modèle ne supprime pas la colonne d'une définition de requête de partition. Si la colonne que vous supprimez fait partie d'une partition, vous devez supprimer manuellement la colonne de la définition de requête de partition. Si vous ne supprimez pas la colonne de la définition de requête de partition, la colonne sera interrogée et des données retournées, mais elles ne seront pas ajoutées la table de modèle pendant le traitement des opérations. Pour plus d’informations, consultez [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md).  
   
 #### <a name="to-delete-a-model-table-column"></a>Pour supprimer une colonne de table de modèle  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66067271"
 3.  Dans la boîte de dialogue **Modifier les propriétés de la table** , dans la fenêtre d’aperçu de la table, décochez la colonne à supprimer, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des colonnes à une table &#40;SSAS Tabulaire&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md)  
+ [Ajouter des colonnes à une table &#40;&#41;SSAS tabulaire](add-columns-to-a-table-ssas-tabular.md)   
+ [Partitions &#40;&#41;tabulaire SSAS](partitions-ssas-tabular.md)  
   
   

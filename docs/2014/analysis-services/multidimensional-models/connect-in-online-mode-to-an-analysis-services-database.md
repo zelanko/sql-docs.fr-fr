@@ -1,5 +1,5 @@
 ---
-title: Se connecter en Mode en ligne à une base de données Analysis Services | Microsoft Docs
+title: Se connecter en mode en ligne à une base de données Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076571"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Connexion en mode en ligne à une base de données Analysis Services
-  Vous pouvez vous connecter directement à une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et modifier directement les objets qu’elle contient. Si vous vous connectez directement à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les modifications sont immédiates et aucun projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Vous pouvez vous connecter directement à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données existante et modifier directement les objets de cette base de données. Si vous vous connectez directement à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les modifications sont immédiates et aucun projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-connect-directly-to-an-analysis-services-database-by-using-sql-server-data-tools"></a>Pour se connecter directement à une base de données Analysis Services à l'aide des outils de données SQL Server  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66076571"
      Vous pouvez maintenant modifier directement des objets dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation de projets et de bases de données Analysis Services en phase de développement](work-with-analysis-services-projects-and-databases-in-development.md)   
- [Création de modèles multidimensionnels à l’aide des Outils de données SQL Server &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Utilisation des projets et des bases de données Analysis Services pendant la phase de développement](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Création de modèles multidimensionnels à l’aide de SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

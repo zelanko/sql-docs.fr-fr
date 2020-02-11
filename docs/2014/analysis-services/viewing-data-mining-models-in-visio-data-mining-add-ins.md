@@ -1,5 +1,5 @@
 ---
-title: Affichage de modèles d’exploration de données dans Visio (compléments d’exploration de données) | Microsoft Docs
+title: Affichage des modèles d’exploration de données dans Visio (compléments d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065517"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Affichage de modèles d'exploration de données dans Visio (Compléments d'exploration de données)
   Les formes Visio pour l'exploration de données vous permettent de vous connecter à un serveur et de créer un diagramme représentant un modèle d'exploration de données existant. Les diagrammes peuvent alors être personnalisés à l'aide de contrôles Visio, mais vous pouvez également explorer plus en détail les données, exposer une partie des statistiques sous-jacentes et utiliser le modèle sous-jacent.  
   
 ## <a name="building-a-model-diagram"></a>Génération d'un diagramme de modèle  
- Lorsque vous ouvrez le fichier contenant les formes Visio pour l’exploration de données, le **formes** volet affiche les formes suivantes.  
+ Lorsque vous ouvrez le fichier contenant les formes Visio pour l’exploration de données, le volet **formes** affiche les formes suivantes.  
   
  Si vous ne voyez pas les formes d'exploration de données en ouvrant Visio, ouvrez le fichier modèle dans le dossier d'installation.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66065517"
 |Forme Visio|Modèles pris en charge|  
 |-----------------|----------------------|  
 |Arbre de décision|Utilisez cette forme pour les modèles basés sur les algorithmes d'arbre de décision ou de régression linéaire.|  
-|Réseau de dépendances|Utilisez cette forme pour les modèles basés sur un des algorithmes suivants : Naive Bayes, Decision Trees ou Association Rules.|  
+|Réseau de dépendances|Utilisez cette forme pour les modèles basés sur l'un des algorithmes suivants : Naive Bayes, Decision Trees ou Association Rules.|  
 |Cluster|Utilisez cette forme pour les modèles basés sur les algorithmes de clustering.|  
   
  Selon le type de données figurant dans votre modèle d'exploration de données, l'Assistant peut proposer des options différentes. Par exemple, les colonnes qui contiennent des nombres continus sont visualisées différemment des variables catégorielles.  
@@ -70,13 +70,13 @@ ms.locfileid: "66065517"
 ## <a name="walkthroughs"></a>Procédures pas à pas  
  Pour obtenir des exemples d'utilisation et d'interprétation d'un diagramme fini, consultez les rubriques suivantes :  
   
- [Procédure pas à pas : Diagramme de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
+ [Procédure pas à pas Diagramme de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Procédure pas à pas diagramme de réseau de dépendance](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Procédure pas à pas Diagramme de réseau de dépendances](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Procédure pas à pas : Diagramme d’arbre de décision](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
+ [Procédure pas à pas Diagramme d'arbre de décision](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exploration des modèles dans Excel &#40;compléments d’exploration de données SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Exploration des modèles dans Excel &#40;SQL Server les compléments d’exploration de données&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

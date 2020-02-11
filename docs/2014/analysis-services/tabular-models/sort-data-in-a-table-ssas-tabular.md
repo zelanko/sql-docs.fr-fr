@@ -1,5 +1,5 @@
 ---
-title: Trier des données dans une Table (SSAS tabulaire) | Microsoft Docs
+title: Trier des données dans une table (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066660"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Trier des données dans une table (SSAS Tabulaire)
@@ -47,8 +47,8 @@ ms.locfileid: "66066660"
     >  Si les résultats ne sont pas ce attendus, il se peut que la colonne contienne des nombres stockés sous forme de texte plutôt que sous forme de nombres. Par exemple, les nombres négatifs importés à partir de certains logiciels de comptabilité ou un nombre entré avec un signe ' (apostrophe) de début sont stockés sous forme de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtrer et trier les données &#40;SSAS tabulaire&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md)   
- [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md)  
+ [Filtrer et trier des données &#40;la&#41;tabulaire SSAS](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectives &#40;&#41;tabulaire SSAS](perspectives-ssas-tabular.md)   
+ [Rôles &#40;&#41;tabulaire SSAS](roles-ssas-tabular.md)  
   
   

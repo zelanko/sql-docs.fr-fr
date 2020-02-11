@@ -1,5 +1,5 @@
 ---
-title: Remplacer une Table ou une requête nommée dans une vue de Source de données (Analysis Services) | Microsoft Docs
+title: Remplacer une table ou une requête nommée dans une vue de source de données (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073129"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Remplacer une table ou une requête nommée dans une vue de source de données (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66073129"
 > [!IMPORTANT]  
 >  Si vous renommez une table dans une source de données, suivez la procédure de remplacement d'une table et définissez la table renommée en tant que source de la table correspondante dans la vue DSV avant d'actualiser une vue DSV. Le fait de mettre fin au processus de remplacement et de changement de nom permet de conserver la table, les références de la table et les relations de la table dans la vue DSV. Sinon, lorsque vous actualisez la vue DSV, la table renommée dans la source de données est considérée comme supprimée. Pour plus d’informations, consultez [Actualiser le schéma dans une vue de source de données &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_nq"></a> Remplacer une table par une requête nommée  
+##  <a name="bkmk_nq"></a>Remplacer une table par une requête nommée  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet ou connectez-vous à la base de données qui contient la vue de source de données dans laquelle vous souhaitez remplacer une table ou une requête nommée.  
   

@@ -1,5 +1,5 @@
 ---
-title: Créer et exécuter un Script MDX dans SQL Server Data Tools | Microsoft Docs
+title: Créer et exécuter un script MDX dans SQL Server Data Tools | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076210"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Créer et exécuter un script MDX dans les outils de données SQL Server
@@ -35,8 +35,8 @@ ms.locfileid: "66076210"
 4.  Pour exécuter le script MDX, déployez et traitez le cube avec les modifications du nouveau script MDX.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Script MDX de base &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Instructions de script MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
+ [Script MDX de base &#40;&#41;MDX](mdx/the-basic-mdx-script-mdx.md)   
+ [Notions de base de l’écriture de scripts MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Instructions de script MDX &#40;&#41;MDX](/sql/mdx/mdx-scripting-statements-mdx)  
   
   

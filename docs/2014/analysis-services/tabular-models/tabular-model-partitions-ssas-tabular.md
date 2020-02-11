@@ -1,5 +1,5 @@
 ---
-title: Partitions de modèles tabulaires (SSAS tabulaire) | Microsoft Docs
+title: Partitions de modèle tabulaire (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066389"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partitions de modèle tabulaire (SSAS Tabulaire)
@@ -26,16 +26,16 @@ ms.locfileid: "66066389"
   
 -   [Avantages](#bkmk_benefits)  
   
--   [Autorisations](#bkmk_permissions)  
+-   [autorisations](#bkmk_permissions)  
   
 -   [Traiter les partitions](#bkmk_process_partitions)  
   
 -   [Tâches associées](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Avantages  
+##  <a name="bkmk_benefits"></a>Avantageuse  
  La création de modèles efficaces fait appel à des partitions permettant d'éliminer tout traitement inutile et la charge qui en résulte au niveau du processeur sur les serveurs Analysis Services, tout en veillant en même temps à ce que les données soient traitées et actualisées suffisamment souvent pour refléter les données les plus récentes des sources de données.  
   
- Par exemple, un modèle tabulaire peut avoir une table des ventes qui inclut des données de ventes pour l'exercice fiscal 2011 et chacun des exercices précédents. Table des ventes du modèle a trois partitions suivantes :  
+ Par exemple, un modèle tabulaire peut avoir une table des ventes qui inclut des données de ventes pour l'exercice fiscal 2011 et chacun des exercices précédents. La table Sales du modèle contient les trois partitions suivantes :  
   
 |Partition|Données de|  
 |---------------|---------------|  
@@ -47,22 +47,22 @@ ms.locfileid: "66066389"
   
  Il est inutile de traiter les données de la partition Sales2010-2001 de nuit ; toutefois, étant donné que les chiffres des ventes pour les dix exercices fiscaux précédents peuvent néanmoins occasionnellement changer en raison de retours de produit et d'autres ajustements, ils doivent toujours être traités régulièrement. De ce fait, les données de la partition Sales2010-2001 sont traitées sur une base mensuelle. Les données de la partition SalesOld ne changent jamais ; par conséquent, elles sont traitées une fois par an uniquement.  
   
- Lorsque vous entrez l’exercice fiscal 2012, une nouvelle partition Sales2012 est ajoutée à la table des ventes du mode. La partition Sales2011 peut ensuite être fusionnée avec la partition Sales2010-2001 et renommée en Sales2011-2002. Les données de l'exercice fiscal 2001 sont éliminées de la nouvelle partition Sales2011-2002 et déplacées vers la partition SalesOld. Toutes les partitions sont ensuite traitées pour refléter les modifications.  
+ Lorsque vous entrez l’année fiscale 2012, une nouvelle partition Sales2012 est ajoutée à la table Sales du mode. La partition Sales2011 peut ensuite être fusionnée avec la partition Sales2010-2001 et renommée en Sales2011-2002. Les données de l'exercice fiscal 2001 sont éliminées de la nouvelle partition Sales2011-2002 et déplacées vers la partition SalesOld. Toutes les partitions sont ensuite traitées pour refléter les modifications.  
   
- Façon dont vous implémentez une stratégie de partition pour les modèles tabulaires de votre organisation seront en grande partie dépend de vos besoins de traitement des données de modèle particulier et les ressources disponibles.  
+ La façon dont vous implémentez une stratégie de partition pour les modèles tabulaires de votre organisation dépend en grande partie de vos besoins en matière de traitement des données de modèle et des ressources disponibles.  
   
 ##  <a name="bkmk_permissions"></a> Autorisations  
  Pour créer, gérer et traiter des partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez disposer des autorisations appropriées pour Analysis Services définies dans un rôle de sécurité. Chaque rôle de sécurité dispose d'une des autorisations suivantes :  
   
-|Permission|Actions|  
+|Autorisation|Actions|  
 |----------------|-------------|  
 |Administrateur|Lire, traiter, créer, copier, fusionner, supprimer|  
-|Traiter|Lire, traiter|  
+|Procédure|Lire, traiter|  
 |Lecture seule|Lire|  
   
  Pour en savoir plus sur la création des rôles pendant la création de modèles à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consultez [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md). Pour en savoir plus sur la gestion des membres de rôles de modèles tabulaires déployés à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [Rôles de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_process_partitions"></a> Traiter les partitions  
+##  <a name="bkmk_process_partitions"></a>Traiter les partitions  
  Les partitions peuvent être traitées (actualisées) indépendamment d’autres partitions à l’aide de la boîte de dialogue **Partitions** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou à l’aide d’un script. Les options suivantes sont disponibles pour le traitement :  
   
 |Mode|Description|  
@@ -77,7 +77,7 @@ ms.locfileid: "66066389"
   
 |Tâche|Description|  
 |----------|-----------------|  
-|[Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Explique comment créer et gérer des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|[Traiter les partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](process-tabular-model-partitions-ssas-tabular.md)|Explique comment traiter des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Créer et gérer des partitions de modèles tabulaires &#40;&#41;SSAS tabulaire](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Explique comment créer et gérer des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Traiter les partitions de modèles tabulaires &#40;les&#41;tabulaires SSAS](process-tabular-model-partitions-ssas-tabular.md)|Explique comment traiter des partitions dans un modèle tabulaire déployé à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   

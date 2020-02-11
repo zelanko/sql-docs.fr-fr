@@ -1,5 +1,5 @@
 ---
-title: Élément de colonne pour les Index (DTA) | Microsoft Docs
+title: Élément Column pour index (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149847"
 ---
 # <a name="column-element-for-index-dta"></a>Column, élément pour les index (Assistant Paramétrage de base de données)
@@ -40,8 +40,8 @@ ms.locfileid: "63149847"
   
 |Attribut de colonne|Description|  
 |----------------------|-----------------|  
-|`Type`|Facultatif. Spécifie le type de colonne d'index. Utilisez un type de données **string** pour spécifier cet attribut avec l'une des valeurs autorisées suivantes :<br /><br /> `KeyColumn`:<br />                  Spécifie que la colonne est référencée par une clé d'index. Utilisez la syntaxe suivante pour définir cet attribut :<br />`<Column Type="KeyColumn">`<br />Pour plus d’informations sur les colonnes clés, consultez [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`: Spécifie que la colonne est une colonne non clé (au lieu d'une colonne clé). Utilisez la syntaxe suivante pour définir cet attribut :<br />`<Column Type="IncludedColumn">`<br />Pour plus d’informations sur les colonnes incluses, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|`SortOrder`|Facultatif. Spécifie l'ordre de tri de la colonne. Utilisez un type de données **string** pour spécifier un ordre de tri **"Ascending"** ou **"Descending"** comme suit :<br /><br /> `<Column SortOrder="Ascending">`|  
+|`Type`|facultatif. Spécifie le type de colonne d'index. Utilisez un type de données **string** pour spécifier cet attribut avec l'une des valeurs autorisées suivantes :<br /><br /> `KeyColumn`:<br />                  Spécifie que la colonne est référencée par une clé d'index. Utilisez la syntaxe suivante pour définir cet attribut :<br />`<Column Type="KeyColumn">`<br />Pour plus d’informations sur les colonnes clés, consultez [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`: Spécifie que la colonne est une colonne incluse (au lieu d’une colonne clé). Utilisez la syntaxe suivante pour définir cet attribut :<br />`<Column Type="IncludedColumn">`<br />Pour plus d’informations sur les colonnes incluses, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
+|`SortOrder`|facultatif. Spécifie l'ordre de tri de la colonne. Utilisez un type de données **string** pour spécifier un ordre de tri **"Ascending"** ou **"Descending"** comme suit :<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
@@ -55,8 +55,8 @@ ms.locfileid: "63149847"
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Index, élément &#40;Assistant Paramétrage de base de données&#41;](index-element-dta.md)|  
-|**Éléments enfants**|[Name, élément pour les colonnes &#40;Assistant Paramétrage de base de données&#41;](name-element-for-column-dta.md)|  
+|**Élément parent**|[Élément index &#40;DTA&#41;](index-element-dta.md)|  
+|**Éléments enfants**|[Élément Name pour la colonne &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

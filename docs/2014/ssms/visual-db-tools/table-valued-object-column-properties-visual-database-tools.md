@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204531"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Propriétés de l’objet table (colonne) (Visual Database Tools)
@@ -37,7 +37,7 @@ ms.locfileid: "63204531"
  **Catégorie Concepteur de requêtes**  
  Peut être développée pour afficher les propriétés de **Autoriser les valeurs NULL**, **Classement**, **Type de données**, **Longueur**, **Précision**, **Échelle**et **Taille**.  
   
- **Autoriser les valeurs NULL**  
+ **Null autorisé**  
  Précise si le type de données de la colonne autorise les valeurs NULL.  
   
  **Classement**  
@@ -55,7 +55,7 @@ ms.locfileid: "63204531"
  **Précision**  
  Affiche le nombre maximal de chiffres autorisés pour les types de données numériques. Cette propriété affiche **0** pour les types de données non numériques.  
   
- **Échelle**  
+ **Mettre à l'échelle**  
  Affiche le nombre maximal de chiffres qui peuvent apparaître à droite de la virgule décimale pour les types de données numériques. Cette valeur doit être inférieure ou égale à la précision. Cette propriété affiche **0** pour les types de données non numériques.  
   
  **Taille**  

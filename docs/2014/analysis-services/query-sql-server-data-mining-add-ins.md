@@ -1,5 +1,5 @@
 ---
-title: Requête (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Requête (SQL Server les compléments d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070478"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Requête (Compléments d'exploration de données SQL Server)
-  ![Bouton modèle de requête, ruban Exploration de données](media/dmc-query.gif "bouton modèle de requête, ruban Exploration de données")  
+  ![Bouton Modèle de requête, ruban Exploration de données](media/dmc-query.gif "Bouton Modèle de requête, ruban Exploration de données")  
   
  L'Assistant **Requête** vous permet d'interagir avec les modèles d'exploration de données existants pour établir des prédictions en fonction des données d'un tableau Excel, d'une plage Excel ou d'une autre source de données. Le processus consistant à appliquer de nouvelles données à un modèle existant pour prévoir des tendances est appelé *requête de prédiction*.  
   
  L'Assistant **Requête** propose également un éditeur avancé pour créer ou modifier des modèles d'exploration de données, pour générer des requêtes personnalisées ou pour utiliser des structures qui ne sont pas prises en charge dans les autres outils, tels que des datasets imbriqués.  
   
--   Utilisez l’éditeur de texte pour taper ou coller dans les instructions d’Extensions DMX (Data Mining) que vous avez créé un autre emplacement.  
+-   Utilisez l’éditeur de texte pour taper ou coller des instructions DMX (Data Mining Extensions) que vous avez créées ailleurs.  
   
 -   Utilisez le générateur de requêtes interactif pour composer une instruction DMX personnalisée à l'aide de modèles et de boîtes de dialogue.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "66070478"
   
 4.  En dernier lieu, l'Assistant vous permet également de choisir une ou plusieurs prédictions et de spécifier une destination afin d'y stocker les résultats.  
   
- Vous pouvez à tout moment cliquer sur **Avancé** pour basculer vers l' **Éditeur de requêtes avancé d'exploration de données**qui vous permet de contrôler davantage chaque partie de l'instruction DMX. Pour plus d’informations sur l’utilisation des outils de modification de requête avancés, consultez [éditeur de requête d’exploration de données données avancé](advanced-data-mining-query-editor.md).  
+ Vous pouvez à tout moment cliquer sur **Avancé** pour basculer vers l' **Éditeur de requêtes avancé d'exploration de données**qui vous permet de contrôler davantage chaque partie de l'instruction DMX. Pour plus d’informations sur l’utilisation des outils avancés de modification de requêtes, consultez [éditeur de requêtes d’exploration de données avancé](advanced-data-mining-query-editor.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Pour utiliser l'Assistant **Requête** , vous devez être connecté à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Qui plus est, le serveur doit contenir au moins un modèle d'exploration de données d'un type approprié. Si aucun modèle d'exploration de données n'est disponible, vous pouvez en créer un à l'aide des Assistants fournis dans le Client d'exploration de données pour Excel. Pour plus d’informations sur la création d’un nouveau mode d’exploration de données à l’aide d’un Assistant, consultez [création d’un modèle d’exploration de données](creating-a-data-mining-model.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement et mise à l’échelle des modèles d’exploration de données &#40;les données des compléments d’exploration de données pour Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
- [Client d’exploration de données pour Excel &#40;compléments d’exploration de données SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+ [Déploiement et mise à l’échelle des modèles d’exploration de données &#40;les compléments d’exploration de données pour Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
+ [Client d’exploration de données pour Excel &#40;SQL Server des compléments d’exploration de données&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
   

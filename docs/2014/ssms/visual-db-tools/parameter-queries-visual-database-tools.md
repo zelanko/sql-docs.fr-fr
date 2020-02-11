@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194989"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Requêtes avec paramètres (Visual Database Tools)
@@ -65,8 +65,8 @@ WHERE au_fname = %first name% AND
  Quand vous exécutez la requête dans le Concepteur de requêtes et de vues, la boîte de dialogue [Paramètres de la requête](query-parameters-dialog-box-visual-database-tools.md) s’affiche avec la liste des paramètres nommés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requête avec des paramètres &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [Prise en charge des Types de requêtes &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Interroger avec des paramètres &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
+ [Types de requêtes pris en charge &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

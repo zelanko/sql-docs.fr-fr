@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs
+title: sys. fn_translate_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055373"
 ---
-# <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
+# <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Convertit le masque de bits des autorisations retourné par la trace SQL en une table de noms d'autorisations.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,23 +43,23 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *level*  
- Type d'élément sécurisable auquel l'autorisation est appliquée. *niveau* est **nvarchar (60)** .  
+ *niveau*  
+ Type d'élément sécurisable auquel l'autorisation est appliquée. le *niveau* est **nvarchar (60)**.  
   
- *Perms*  
- Masque de bits retourné dans la colonne d'autorisations. *Perms* est **varbinary (16)** .  
+ *perms*  
+ Masque de bits retourné dans la colonne d'autorisations. *perms* est **de type varbinary (16)**.  
   
-## <a name="returns"></a>Valeur renvoyée  
- **table**  
+## <a name="returns"></a>Retours  
+ **Tableau**  
   
 ## <a name="remarks"></a>Notes  
- La valeur retournée dans le **autorisations** colonne d’une Trace SQL est une représentation entière du masque de bits utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **Sys.fn_translate_permissions** convertit ce masque de bits dans une table de noms d’autorisations.  
+ La valeur retournée dans la colonne **permissions** d’une trace SQL est une représentation d’entier d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un masque de réutilisation utilisé par pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **sys. fn_translate_permissions** convertit ce masque de masque en une table de noms d’autorisations.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="example"></a>Exemple  
- La requête suivante utilise `sys.fn_builtin_permissions` pour afficher les autorisations qui s’appliquent aux certificats, puis utilise `sys.fn_translate_permissions` pour retourner les résultats du masque de bits des autorisations.  
+ La requête suivante utilise `sys.fn_builtin_permissions` pour afficher les autorisations qui s’appliquent aux certificats, puis `sys.fn_translate_permissions` utilise pour retourner les résultats du masque de sous-masque des autorisations.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -69,8 +69,8 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [Autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys. server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

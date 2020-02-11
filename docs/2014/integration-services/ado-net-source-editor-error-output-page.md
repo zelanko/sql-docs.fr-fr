@@ -1,5 +1,5 @@
 ---
-title: Éditeur de Source ADO NET (Page sortie d’erreur) | Microsoft Docs
+title: Éditeur de source ADO NET (page sortie d’erreur) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061634"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Éditeur de source ADO NET (page Sortie d'erreur)
@@ -39,10 +39,10 @@ ms.locfileid: "66061634"
  **Colonne**  
  Affichez les colonnes externes (sources) que vous avez sélectionnées dans la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source ADO NET** .  
   
- **Erreur**  
+ **Error**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
@@ -58,7 +58,7 @@ ms.locfileid: "66061634"
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de source ADO NET &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Éditeur de source ADO NET &#40;page Colonnes&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Éditeur de source ADO NET &#40;page colonnes&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

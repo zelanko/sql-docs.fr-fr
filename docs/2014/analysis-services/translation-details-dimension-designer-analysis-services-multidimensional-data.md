@@ -1,5 +1,5 @@
 ---
-title: Détails des traductions (onglet traductions, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Détails des traductions (onglet traductions, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065853"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Détails des traductions (onglet Traductions, Concepteur de dimensions) (Analysis Services - données multidimensionnelles)
   Le volet **Détails des traductions** de l’onglet **Traductions** du Concepteur de dimensions permet de définir et de gérer les traductions pour la dimension actuellement sélectionnée.  
   
- **Pour afficher le volet de détails des traductions**  
+ **Pour afficher le volet Détails des traductions**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis ouvrez la dimension souhaitée.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66065853"
   
      Propriétés `Caption` et `AttributeAllMember`  
   
--   Attribute  
+-   Attribut  
   
      Propriétés `Caption`, `AttributeHierarchyDisplayFolder` et `NamingTemplate`  
   
@@ -52,12 +52,12 @@ ms.locfileid: "66065853"
   
 -   Level  
   
-     Propriété `Caption`  
+     `Caption`propriété  
   
- **\<Language>**  
- Tapez ou sélectionnez la valeur de propriété de l'objet de dimension dans la langue sélectionnée. Des boîtes de dialogue supplémentaires s’ouvrent quand vous cliquez sur le bouton de sélection ( **...** ), en fonction de la propriété en cours de modification :  
+ **\<>de langue**  
+ Tapez ou sélectionnez la valeur de propriété de l'objet de dimension dans la langue sélectionnée. Des boîtes de dialogue supplémentaires s’ouvrent quand vous cliquez sur le bouton de sélection (**...**), en fonction de la propriété en cours de modification :  
   
--   Propriété `NamingTemplate`  
+-   `NamingTemplate`propriété  
   
      Affiche la [Boîte de dialogue Modèle de nom de niveau &#40;Analysis Services - Données multidimensionnelles&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -99,6 +99,6 @@ ms.locfileid: "66065853"
  Sélectionnez cette option pour afficher ou masquer tous les attributs définis pour la dimension sélectionnée, notamment les attributs dont les hiérarchies sont désactivées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traductions &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Traductions &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

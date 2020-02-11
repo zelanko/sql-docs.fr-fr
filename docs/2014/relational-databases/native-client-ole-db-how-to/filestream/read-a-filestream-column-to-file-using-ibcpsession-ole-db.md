@@ -11,25 +11,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233147"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Lire une colonne FILESTREAM dans un fichier à l'aide d'IBCPSession (OLE DB)
   Cet exemple lit une colonne Filestream dans un fichier à l'aide de l'interface IBCPSession et écrit un fichier de format.  
   
- Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Pour plus d’informations sur la fonctionnalité FileStream, consultez [prise en charge de filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Exemple  
  Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Utilisez l'un des exemples suivants pour créer la table à partir de laquelle cet exemple lit :  
   
--   [Envoyer des données à une colonne FILESTREAM avec l’interface ISequentialStream liée au paramètre ICommandText (OLE DB) &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Envoyer des données à une colonne FILESTREAM à l’aide de ISequentialStream liée au paramètre ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Envoyer des données à une colonne FILESTREAM avec IRowsetFastUpload (OLE DB) &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Envoyer des données à une colonne FILESTREAM à l’aide de IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copiez la première liste de code et collez-la dans un fichier appelé ISSHelper.h.  
   

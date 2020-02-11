@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188216"
 ---
 # <a name="manage-events"></a>Gérer les événements
@@ -88,6 +88,6 @@ ms.locfileid: "63188216"
 >  Un travail pouvant déclencher un événement, veillez à ne pas créer de boucle récursive de travail d'alerte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+ [sys. sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

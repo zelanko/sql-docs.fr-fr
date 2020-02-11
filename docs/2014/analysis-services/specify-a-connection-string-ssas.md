@@ -1,5 +1,5 @@
 ---
-title: Spécifiez une chaîne de connexion (SSAS) | Microsoft Docs
+title: Spécifier une chaîne de connexion (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068550"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Spécifier une chaîne de connexion (SSAS)
-  Cette page de l' **Assistant Importation de table** vous permet de spécifier une chaîne de connexion pour vous connecter à une source de données OLE DB ou ODBC. Pour accéder à l'Assistant du [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
+  Cette page de l' **Assistant Importation de table** vous permet de spécifier une chaîne de connexion pour vous connecter à une source de données OLE DB ou ODBC. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
   
  Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur. Pour plus d’informations sur les fournisseurs et les sources de données pris en charge, consultez [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Nom convivial pour cette connexion**  
+ **Nom convivial de cette connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
  **Chaîne de connexion**  

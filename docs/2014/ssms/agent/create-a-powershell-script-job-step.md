@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798302"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
@@ -31,7 +31,7 @@ ms.locfileid: "72798302"
   
      [Sécurité](#Security)  
   
--   **Pour créer une étape de travail exécutant un script PowerShell, utilisez :**  
+-   **Pour créer une étape de travail de script PowerShell, utilisez :**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72798302"
   
 #### <a name="to-create-a-powershell-script-job-step"></a>Pour créer une étape de travail exécutant un script PowerShell  
   
-1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Développez **SQL Server Agent**, créez un travail ou cliquez avec le bouton droit de la souris sur un travail existant, puis cliquez sur **Propriétés**. Pour plus d'informations sur la création d'un travail, consultez [Création de travaux](create-jobs.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "72798302"
   
 #### <a name="to-create-a-powershell-script-job-step"></a>Pour créer une étape de travail exécutant un script PowerShell  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "72798302"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Pour plus d’informations, consultez [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
- **Pour créer une étape de travail exécutant un script PowerShell**  
+ **Pour créer une étape de travail de script PowerShell**  
   
  Utilisez la classe `JobStep` à l'aide d'un langage de programmation que vous choisissez, tel que Visual Basic, Visual C# ou PowerShell.  

@@ -1,5 +1,5 @@
 ---
-title: Création d’étendue de requête de membres (MDX) calculés | Microsoft Docs
+title: Création de membres calculés d’étendue de requête (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074531"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Création de membres calculés d'étendue de requête (MDX)
@@ -91,8 +91,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Instruction SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Création de membres calculés au niveau de la session &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
+ [Instruction SELECT &#40;&#41;MDX](/sql/mdx/mdx-data-manipulation-select)   
+ [Création de membres calculés au niveau de la session &#40;&#41;MDX](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

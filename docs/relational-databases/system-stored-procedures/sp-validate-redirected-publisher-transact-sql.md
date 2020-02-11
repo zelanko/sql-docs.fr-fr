@@ -16,10 +16,10 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252051"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72252051"
 
   Vérifie que l'hôte actuel de la base de données de publication peut prendre en charge la réplication. Doit être exécutée à partir d'une base de données de distribution. Cette procédure est appelée par **sp_get_redirected_publisher**.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +40,20 @@ ms.locfileid: "72252051"
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @original_publisher = ] 'original_publisher'` le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @original_publisher = ] 'original_publisher'`Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'` le nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'`Nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` la cible de redirection spécifiée lors de l’appel de **sp_redirect_publisher** pour la paire serveur de publication/base de données. *redirected_publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @redirected_publisher = ] 'redirected_publisher'`Cible de redirection spécifiée lors de l’appel de **sp_redirect_publisher** pour la paire serveur de publication/base de données. *redirected_publisher* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
 ## <a name="remarks"></a>Notes  
- Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null dans le paramètre de sortie *\@redirected_publisher*. Si une entrée existe, elle est retournée dans le paramètre de sortie dans les deux cas (réussite et échec).  
+ Si aucune entrée n’existe pour le serveur de publication et la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null dans le paramètre * \@* de sortie redirected_publisher. Si une entrée existe, elle est retournée dans le paramètre de sortie dans les deux cas (réussite et échec).  
   
  Si la validation réussit, **sp_validate_redirected_publisher** retourne une indication de réussite.  
   

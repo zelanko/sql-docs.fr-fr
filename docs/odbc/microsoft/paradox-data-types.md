@@ -18,46 +18,46 @@ ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043692"
 ---
 # <a name="paradox-data-types"></a>Types de données Paradox
-Le pilote ODBC Paradox mappe les types de données Paradox aux types de données ODBC SQL. Le tableau suivant répertorie tous les types de données Paradox et montre le SQL ODBC qu’ils sont mappés à des types de données.  
+Le pilote ODBC Paradox mappe les types de données Paradox aux types de données ODBC SQL. Le tableau suivant répertorie tous les types de données Paradox et indique les types de données SQL ODBC auxquels ils sont mappés.  
   
 |Type de données Paradox|Type de données ODBC|  
 |-----------------------|--------------------|  
-|ALPHANUMÉRIQUE|SQL_VARCHAR|  
+|COMPORTANT|SQL_VARCHAR|  
 |AUTOINCREMENT [1]|SQL_INTEGER|  
-|BCD[1]|SQL_DOUBLE|  
+|BCD [1]|SQL_DOUBLE|  
 |OCTETS [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGE [2]|SQL_LONGVARBINARY|  
 |LOGIQUE [1]|SQL_BIT|  
 |LONG [1]|SQL_INTEGER|  
-|MEMO[2]|SQL_LONGVARCHAR|  
+|MÉMO [2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
-|COURT|SQL_SMALLINT|  
-|TIME[1]|SQL_TIMESTAMP|  
-|TIMESTAMP[1]|SQL_TIMESTAMP|  
+|Résumé|SQL_SMALLINT|  
+|HEURE [1]|SQL_TIMESTAMP|  
+|HORODATEUR [1]|SQL_TIMESTAMP|  
   
- Valide [1] uniquement pour les versions de Paradox 5. *x*.  
+ [1] valide uniquement pour les versions Paradox 5. *x*.  
   
- [2] de valide uniquement pour les versions de Paradox 4. *x* et 5. *x*.  
+ [2] valide uniquement pour Paradox versions 4. *x* et 5. *x*.  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** retourne des types de données ODBC SQL. Toutes les conversions dans l’annexe D de la *de référence du programmeur ODBC* sont pris en charge pour les types de données ODBC SQL répertoriées plus haut dans cette rubrique.  
+>  **SQLGetTypeInfo** retourne des types de données ODBC SQL. Toutes les conversions de l’annexe D de la *Référence du programmeur ODBC* sont prises en charge pour les types de données SQL ODBC répertoriés précédemment dans cette rubrique.  
   
- Le tableau suivant présente des limitations sur les types de données Paradox.  
+ Le tableau suivant présente les limitations relatives aux types de données Paradox.  
   
 |Type de données|Description|  
 |---------------|-----------------|  
-|ALPHANUMÉRIQUE|Création d’une colonne d’alphanumériques de zéro ou de longueur non spécifiée retourne en fait une colonne de 255 octets.|  
-|BYTES|Si vous insérez NULL dans une colonne binaire avec le pilote Paradox5, il est modifié en 0.|  
-|LONG|La valeur négative maximale prise en charge par le pilote Paradox pour le type de données de type Long dans Paradox 5. *x* n’est pas -2 ^ 31 (-2147483648), comme il convient depuis Long maps pour les données ODBC tapez SQL_INTEGER. La valeur négative maximale prise en charge pour Long est réellement -2 ^ 31 + 1 (-2147483647).|  
-|TIMESTAMP|Lorsqu’une valeur est insérée dans une colonne TIMESTAMP par le pilote Paradox, puis extraites par la suite de la colonne, la valeur récupérée peut être différente de la valeur insérée autant que de 1 seconde en raison de l’arrondi.|  
+|COMPORTANT|La création d’une colonne alphanumérique de zéro ou d’une longueur non spécifiée renvoie en fait une colonne de 255 octets.|  
+|BYTES|Si vous insérez la valeur NULL dans une colonne binaire avec le pilote Paradox5, elle est remplacée par la valeur 0.|  
+|LONG|Valeur négative maximale prise en charge par le pilote Paradox pour le type de données long dans Paradox 5. *x* n’est pas-2 ^ 31 (-2147483648), car long est mappé au type de données ODBC SQL_INTEGER. La valeur négative maximale prise en charge pour long est en fait-2 ^ 31 + 1 (-2147483647).|  
+|timestamp|Lorsqu’une valeur est insérée dans une colonne TIMESTAMP par le pilote Paradox, puis Récupérée à partir de la colonne, la valeur récupérée peut différer de la valeur insérée de 1 seconde en raison de l’arrondi.|  
   
- Vous trouverez davantage de limites sur les types de données dans [Limitations des types de données](../../odbc/microsoft/data-type-limitations.md).
+ Vous trouverez plus de restrictions sur les types de données dans limitations des types de [données](../../odbc/microsoft/data-type-limitations.md).

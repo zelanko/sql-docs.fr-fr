@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63217813"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Compter les lignes d'une table (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63217813"
   
 2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Ajouter un groupe par** dans le menu contextuel. Le [Concepteur de requêtes et de vues](visual-database-tools.md) ajoute une colonne **Group By** à la grille dans le volet Critères.  
   
-3.  Sélectionnez  **\* (toutes les colonnes)** dans le rectangle représentant la table ou l’objet table.  
+3.  Sélectionnez ** \* (toutes les colonnes)** dans le rectangle représentant la table ou l’objet table.  
   
      Le Concepteur de requêtes et de vues insère automatiquement le terme **Count** dans la colonne **Group By** du volet Critères et assigne un alias de colonne à la colonne que vous synthétisez. Il est possible de remplacer l'alias généré automatiquement par un autre, plus significatif. Pour plus d’informations, consultez [Créer des alias de colonnes &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63217813"
   
 2.  Cliquez avec le bouton droit sur un point de l’arrière-plan du volet Schéma, puis choisissez **Ajouter un groupe par** dans le menu contextuel. Le Concepteur de requêtes et de vues ajoute une colonne **Group By** à la grille dans le volet Critères.  
   
-3.  Sélectionnez  **\*(toutes les colonnes)** dans le rectangle représentant la table ou l’objet structuré en table.  
+3.  Sélectionnez ** \*(toutes les colonnes)** dans le rectangle représentant la table ou l’objet structuré en table.  
   
      Le Concepteur de requêtes et de vues insère automatiquement le terme **Count** dans la colonne **Group By** du volet Critères et assigne un alias de colonne à la colonne que vous synthétisez. Pour créer un en-tête de colonne plus significatif dans le résultat de la requête, consultez [Créer des alias de colonnes &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63217813"
 5.  Exécute la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Trier et grouper les résultats de requête &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Trier et regrouper les résultats des requêtes &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   
