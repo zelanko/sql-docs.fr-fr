@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189131"
 ---
 # <a name="make-a-master-server"></a>Créer un serveur maître
@@ -37,7 +37,7 @@ ms.locfileid: "68189131"
   
      [Sécurité](#Security)  
   
--   **Pour créer un serveur maître à l'aide de :**  
+-   **Pour créer un serveur maître, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68189131"
 ###  <a name="Security"></a> Sécurité  
  Les travaux distribués dont les étapes sont associées à un proxy sont exécutés dans le contexte du compte proxy du serveur cible. Assurez-vous que les conditions suivantes sont remplies ou que les étapes de travail associées à un proxy ne seront pas téléchargées du serveur maître vers la cible :  
   
--   La sous-clé de Registre du serveur maître **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*nom_instance*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) a pour valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
+-   La sous-clé de Registre du serveur maître **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) a la valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
   
 -   Il existe sur le serveur cible un compte proxy possédant le même nom que le compte proxy du serveur maître sur lequel l'étape du travail est exécutée.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68189131"
   
 #### <a name="to-make-a-master-server"></a>Pour créer un serveur maître  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Cliquez avec le bouton droit sur **Agent SQL Server**, pointez sur **Administration multiserveur**, puis cliquez sur **Transformer en serveur maître**. L' **Assistant Serveur maître** vous guide au sein du processus de définition d'un serveur maître et d'ajout de serveurs cibles.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68189131"
      **Adresse de radiomessagerie**  
      Permet de spécifier l'adresse de radiomessagerie de l'opérateur.  
   
-     **Adresse d'envoi réseau**  
+     **Adresse d’envoi réseau**  
      Permet de spécifier l’adresse **net send** de l’opérateur.  
   
 4.  Dans la page **Serveur cible** , sélectionnez les serveurs cibles pour le serveur maître.  
@@ -107,7 +107,7 @@ ms.locfileid: "68189131"
      **Ajouter une connexion**  
      Ajoute un serveur à la liste des serveurs cibles sans inscrire le serveur.  
   
-     **Connexion**  
+     **Connection**  
      Modifie les propriétés de connexion du serveur sélectionné.  
   
 5.  Dans la page **Infos d'identification de connexion du serveur maître** , spécifiez si vous souhaitez créer une connexion pour le serveur cible, le cas échéant, et lui attribuer des droits sur le serveur maître.  

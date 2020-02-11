@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211668"
 ---
 # <a name="create-views"></a>Créer des vues
@@ -62,7 +62,7 @@ ms.locfileid: "68211668"
   
 2.  Cliquez avec le bouton droit sur le dossier **Vues**, puis cliquez sur **Nouvelle vue...** .  
   
-3.  Dans la boîte de dialogue **Ajouter une table**, sélectionnez le ou les éléments que vous souhaitez inclure dans votre nouvel affichage dans l'un des onglets suivants : Tables, affichages, fonctions et synonymes.  
+3.  Dans la boîte de dialogue **Ajouter une table** , sélectionnez le ou les éléments que vous souhaitez inclure dans votre nouvelle vue dans l'un des onglets suivants : Tables, Vues, Fonctions et Synonymes.  
   
 4.  Cliquez sur **Ajouter**, puis sur **Fermer**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68211668"
   
 #### <a name="to-create-a-view"></a>Pour créer une vue  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

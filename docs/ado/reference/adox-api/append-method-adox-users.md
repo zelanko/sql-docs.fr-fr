@@ -17,14 +17,14 @@ ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967228"
 ---
 # <a name="append-method-adox-users"></a>Append, méthode (utilisateurs ADOX)
-Ajoute un nouveau [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) de l’objet à la [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collection.  
+Ajoute un nouvel objet [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) à la collection [Users](../../../ado/reference/adox-api/users-collection-adox.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,25 +34,25 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *User*  
- Un **Variant** valeur qui contient le **utilisateur** objet à ajouter ou le nom de l’utilisateur à créer et à ajouter.  
+ *Utilisateur*  
+ Valeur de **type Variant** qui contient l’objet **utilisateur** à ajouter ou le nom de l’utilisateur à créer et à ajouter.  
   
  *Mot de passe*  
- facultatif. Un **chaîne** valeur qui contient le mot de passe pour l’utilisateur. Le *mot de passe* paramètre correspond à la valeur spécifiée par le [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) méthode d’un **utilisateur** objet.  
+ facultatif. Valeur de **chaîne** qui contient le mot de passe de l’utilisateur. Le paramètre de *mot de passe* correspond à la valeur spécifiée par la méthode [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) d’un objet **utilisateur** .  
   
 ## <a name="remarks"></a>Notes  
- Le **utilisateurs** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui ont une appartenance au groupe spécifique.  
+ La collection d' **utilisateurs** d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le regroupement **utilisateurs** pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui ont une appartenance au groupe spécifique.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge la création d’utilisateurs.  
   
 > [!NOTE]
->  Avant d’ajouter un **utilisateur** de l’objet à la **utilisateurs** collection d’un **groupe** objet, un **utilisateur** objet comportant le même [nom ](../../../ado/reference/adox-api/name-property-adox.md) que celui à ajouter doit déjà exister dans le **utilisateurs** collection de la **catalogue**.  
+>  Avant d’ajouter un objet **utilisateur** à la collection **Users** d’un objet **Group** , un objet **utilisateur** portant le même [nom](../../../ado/reference/adox-api/name-property-adox.md) que celui à ajouter doit déjà exister dans la collection **Users** du **catalogue**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisateurs et groupes Append, ChangePassword, méthodes exemple (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Groups and Users Append, ChangePassword, exemple de méthodes (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append, méthode (colonnes ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append, méthode (groupes ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append, méthode (Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

@@ -14,32 +14,32 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964126"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions, propriété (RDS)
-Indique le type de l’extraction asynchrone.  
+Indique le type d’extraction asynchrone.  
   
 > [!IMPORTANT]
->  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="setting-and-return-values"></a>Définition et valeurs de retour  
- Définit ou retourne une des valeurs suivantes.  
+ Définit ou retourne l’une des valeurs suivantes.  
   
-|Constante|Description|  
+|Constant|Description|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|Tous les enregistrements de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont extraites avant que le contrôle est retourné à l’application. L’ensemble **Recordset** est extrait avant que l’application est autorisée à faire quoi que ce soit avec lui.|  
-|**adcFetchBackground**|Contrôle peut retourner à l’application dès le premier lot d’enregistrements ont été extraites. Suivante de lecture de la **Recordset** que non extrait dans le premier lot est retardée jusqu'à ce que l’enregistrement recherché est extrait, moment auquel le contrôle retourne à l’application.|  
-|**adcFetchAsync**|Valeur par défaut. Contrôle retourne immédiatement à l’application tandis que les enregistrements sont récupérés en arrière-plan. Si l’application tente de lire un enregistrement qui n’a pas encore été extraites, l’enregistrement le plus proche de l’enregistrement recherché est lues et le contrôle retourne immédiatement, ce qui indique que la fin actuelle de la **Recordset** a été atteinte. Par exemple, un appel à [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) déplacera la position actuelle vers le dernier enregistrement extrait, même si plusieurs enregistrements continuera à remplir la **Recordset**.|  
+|**adcFetchUpFront**|Tous les enregistrements du [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont récupérés avant que le contrôle soit retourné à l’application. L’intégralité du **Recordset** est extraite pour que l’application soit autorisée à faire quoi que ce soit.|  
+|**adcFetchBackground**|Le contrôle peut retourner à l’application dès que le premier lot d’enregistrements a été extrait. Une lecture ultérieure du **Recordset** qui tente d’accéder à un enregistrement qui n’est pas récupéré dans le premier lot est retardée jusqu’à ce que l’enregistrement recherché soit réellement extrait, à partir duquel le contrôle retourne à l’application.|  
+|**adcFetchAsync**|valeur par défaut. Le contrôle retourne immédiatement à l’application tandis que les enregistrements sont extraits en arrière-plan. Si l’application tente de lire un enregistrement qui n’a pas encore été extrait, l’enregistrement le plus proche de l’enregistrement recherché est lu et le contrôle est retourné immédiatement, ce qui indique que la fin actuelle du **Recordset** a été atteinte. Par exemple, un appel à [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) déplace la position de l’enregistrement actuel vers le dernier enregistrement effectivement extrait, même si un plus grand nombre d’enregistrements continueront à remplir le **Recordset**.|  
   
 > [!NOTE]
->  Chaque fichier exécutable côté client qui utilise ces constantes doit fournir les déclarations. Vous pouvez couper et coller les déclarations des constantes à partir du fichier Adcvbs.inc, situé dans le dossier d’installation par défaut pour la bibliothèque de services Bureau à distance.  
+>  Chaque fichier exécutable côté client qui utilise ces constantes doit fournir des déclarations pour ceux-ci. Vous pouvez couper et coller les déclarations de constantes de votre choix à partir du fichier Adcvbs. Inc, situé dans le dossier d’installation par défaut de la bibliothèque RDS.  
   
 ## <a name="remarks"></a>Notes  
- Dans une application Web, vous souhaiterez généralement utiliser **adcFetchAsync** (la valeur par défaut), car il offre de meilleures performances. Dans une application cliente compilée, vous souhaiterez généralement utiliser **adcFetchBackground**.  
+ Dans une application Web, vous souhaiterez généralement utiliser **adcFetchAsync** (valeur par défaut), car il offre de meilleures performances. Dans une application cliente compilée, vous devez généralement utiliser **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

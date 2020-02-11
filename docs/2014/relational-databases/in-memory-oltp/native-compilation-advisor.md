@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072752"
 ---
 # <a name="native-compilation-advisor"></a>Conseiller de compilation native
-  L'outil de génération de rapports sur les performances des transactions (voir [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) vous indique quelles procédures stockées interprétées dans votre base de données tireront parti de l'utilisation de la compilation native. Après avoir identifié une procédure stockée que vous souhaitez déplacer pour utiliser la compilation native, vous pouvez utiliser le conseiller de compilation native pour vous aider à migrer la procédure stockée interprétée vers la compilation native. Pour plus d'informations sur les procédures stockées compilées en mode natif, consultez [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
+  L'outil de génération de rapports sur les performances des transactions (voir [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) vous indique quelles procédures stockées interprétées dans votre base de données tireront parti de l'utilisation de la compilation native. Après avoir identifié une procédure stockée que vous souhaitez déplacer pour utiliser la compilation native, vous pouvez utiliser le conseiller de compilation native pour vous aider à migrer la procédure stockée interprétée vers la compilation native. Pour plus d'informations sur les procédures stockées compilées en mode natif, consultez [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
  Pour démarrer, connectez-vous à l'instance qui contient la procédure stockée interprétée. Vous pouvez vous connecter à l'instance [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Toutefois, si vous souhaitez effectuer une opération de migration avec le conseiller, vous devez vous connecter à une instance [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sur laquelle la fonctionnalité OLTP en mémoire est activée. Pour plus d'informations sur les spécifications applicables à la fonctionnalité OLTP en mémoire, consultez [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   

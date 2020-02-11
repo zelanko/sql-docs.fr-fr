@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016951"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
@@ -29,21 +29,21 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
   
 ## <a name="arguments"></a>Arguments  
  *Set_Expression*  
- Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
+ Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Compter*  
+ *Saut*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
- Si une expression numérique est précisée, cette fonction trie les tuples par ordre croissant dans le jeu spécifié en fonction de la valeur de cette expression numérique telle qu'évaluée sur le jeu. Le **BottomCount** fonction puis retourne le nombre spécifié de tuples avec la valeur la plus basse.  
+ Si une expression numérique est précisée, cette fonction trie les tuples par ordre croissant dans le jeu spécifié en fonction de la valeur de cette expression numérique telle qu'évaluée sur le jeu. La fonction **BottomCount** retourne ensuite le nombre spécifié de tuples ayant la valeur la plus faible.  
   
 > [!IMPORTANT]  
->  Le **BottomCount** fonction, comme le [TopCount](../mdx/topcount-mdx.md) de fonction, la hiérarchie.  
+>  La fonction **BottomCount** , comme la fonction [TopCount](../mdx/topcount-mdx.md) , interrompt toujours la hiérarchie.  
   
- Si une expression numérique n’est pas spécifiée, la fonction retourne le jeu de membres dans l’ordre naturel sans effectuer de tri, qui se comporte comme la [Tail (MDX)](../mdx/tail-mdx.md) (fonction).  
+ Si aucune expression numérique n’est spécifiée, la fonction retourne le jeu de membres dans l’ordre naturel, sans aucun tri, qui se comporte comme la fonction [tail (MDX)](../mdx/tail-mdx.md) .  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne la mesure Reseller Order Quantity pour chaque année civile pour les cinq ventes de sous-catégorie de produit les plus basses classées selon la mesure Reseller Sales Amount.  
@@ -61,6 +61,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   
