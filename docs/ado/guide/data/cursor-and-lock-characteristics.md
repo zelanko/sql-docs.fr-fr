@@ -1,5 +1,5 @@
 ---
-title: Curseur et les caractéristiques de verrou | Microsoft Docs
+title: Caractéristiques des curseurs et des verrous | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,22 +15,22 @@ ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4d6f86539e1abc7ee74087b130e0186322346e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925678"
 ---
 # <a name="cursor-and-lock-characteristics"></a>Caractéristiques des curseurs et des verrous
-Bien que les caractéristiques d’un curseur dépendent des fonctionnalités du fournisseur, les avantages et inconvénients suivants s’appliquent généralement aux différents types de curseurs et des verrous.  
+Bien que les caractéristiques d’un curseur dépendent des capacités du fournisseur, les avantages et inconvénients suivants s’appliquent généralement aux différents types de curseurs et de verrous.  
   
 |Type de curseur ou de verrou|Avantages|Inconvénients|  
 |-------------------------|----------------|-------------------|  
-|**adOpenForwardOnly**|-Besoins en ressources faible|-Impossible de faire défiler vers l’arrière<br />-Aucun accès concurrentiel aux données|  
-|**adOpenStatic**|-Avec défilement|-Aucun accès concurrentiel aux données|  
-|**adOpenKeyset**|-Certains accès concurrentiel aux données<br />-Avec défilement|-Besoins en ressources supérieur<br />-Non disponible dans un scénario déconnecté|  
-|**adOpenDynamic**|-Accès concurrentiel aux données haute<br />-Avec défilement|-Besoins en ressources le plus élevés<br />-Non disponible dans un scénario déconnecté|  
-|**adLockReadOnly**|-Besoins en ressources faible<br />-Hautement évolutif|-À jour des données via un curseur|  
-|**adLockBatchOptimistic**|-Mises à jour batch<br />-Autorise des scénarios déconnectés<br />-Autres utilisateurs en mesure d’accéder aux données|-Les données peuvent être modifiées par plusieurs utilisateurs à la fois|  
-|**adLockPessimistic**|-Les données ne peut pas être modifiées par d’autres utilisateurs lors du verrouillage|: Empêche les autres utilisateurs d’accéder aux données lors du verrouillage|  
-|**adLockOptimistic**|-Autres utilisateurs en mesure d’accéder aux données|-Les données peuvent être modifiées par plusieurs utilisateurs à la fois|
+|**adOpenForwardOnly**|-Exigences de ressources insuffisantes|-Impossible de faire défiler vers l’arrière<br />-Pas d’accès concurrentiel aux données|  
+|**adOpenStatic**|Avec défilement|-Pas d’accès concurrentiel aux données|  
+|**adOpenKeyset**|-Accès concurrentiel aux données<br />Avec défilement|-Exigences de ressources plus élevées<br />-Non disponible dans un scénario déconnecté|  
+|**adOpenDynamic**|-Accès concurrentiel aux données élevées<br />Avec défilement|-Exigences de ressources les plus élevées<br />-Non disponible dans un scénario déconnecté|  
+|**adLockReadOnly**|-Exigences de ressources insuffisantes<br />-Hautement évolutif|-Les données ne pouvant pas être mises à jour via le curseur|  
+|**adLockBatchOptimistic**|-Mises à jour par lot<br />-Autorise les scénarios déconnectés<br />-Autres utilisateurs capables d’accéder aux données|-Les données peuvent être modifiées simultanément par plusieurs utilisateurs|  
+|**adLockPessimistic**|-Les données ne peuvent pas être modifiées par d’autres utilisateurs quand elles sont verrouillées|-Empêche les autres utilisateurs d’accéder aux données pendant qu’ils sont verrouillés|  
+|**adLockOptimistic**|-Autres utilisateurs capables d’accéder aux données|-Les données peuvent être modifiées simultanément par plusieurs utilisateurs|

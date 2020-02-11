@@ -1,5 +1,5 @@
 ---
-title: Métadonnées (onglet navigateur, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Métadonnées (onglet navigateur, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077844"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Métadonnées (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -38,7 +38,7 @@ ms.locfileid: "66077844"
   
  Lorsque vous utilisez un modèle tabulaire, la liste des fonctions inclut les fonctions MDX et les fonctions DAX. Sinon, la liste inclut uniquement MDX. Un modèle multidimensionnel ne peut pas utiliser les fonctions DAX directement, bien qu'une expression DAX puisse être incluse dans le cadre d'une définition d'objet.  
   
- Conseil : Les dossiers qui contiennent des fonctions DAX sont répertoriés en lettres majuscules. Tous les autres dossiers contiennent des fonctions MDX. Par exemple, il existe deux dossiers pour les fonctions statistiques : **STATISTIQUES** contient les fonctions DAX connexes.  
+ Conseil : les dossiers qui contiennent des fonctions DAX sont répertoriés en lettres majuscules. Tous les autres dossiers contiennent des fonctions MDX. Par exemple, il existe deux dossiers pour les fonctions statistiques : **STATISTICAL** contient les fonctions DAX connexes.  
   
 ## <a name="context-menu"></a>Menu contextuel  
  Les options suivantes sont disponibles dans le menu contextuel qui s’affiche quand vous cliquez avec le bouton droit sur un élément se trouvant dans le volet **Métadonnées** :  
@@ -46,13 +46,13 @@ ms.locfileid: "66077844"
 |Option|Description|  
 |------------|-----------------|  
 |**Ajouter à la requête**|Cliquez pour ajouter l'objet sélectionné dans le volet inférieur de la zone de génération de la requête.|  
-|**Ajouter au filtre**|Permet d’ajouter la dimension, l’attribut, la hiérarchie ou le niveau sélectionné à la zone de filtre du **Navigateur**.<br /><br /> Remarque : Cette option est activée uniquement si une dimension, l’attribut, la hiérarchie ou niveau est sélectionné.|  
-|**Copier**|Permet d'ajouter l'élément sélectionné dans le Presse-papiers.<br /><br /> Remarque : Cette option copie le nom qualifié complet de l’objet.|  
+|**Ajouter au filtre**|Permet d’ajouter la dimension, l’attribut, la hiérarchie ou le niveau sélectionné à la zone de filtre du **Navigateur**.<br /><br /> Remarque : cette option n’est active que si une dimension, un attribut, une hiérarchie ou un niveau est sélectionné.|  
+|**Copy**|Permet d'ajouter l'élément sélectionné dans le Presse-papiers.<br /><br /> Remarque : cette option copie le nom complet de l’objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Barre d’outils &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analyser dans Excel &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Interroger et filtrer &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Navigateur &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Barre d’outils &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analyser dans Excel &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Requête et filtrage &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Navigateur &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

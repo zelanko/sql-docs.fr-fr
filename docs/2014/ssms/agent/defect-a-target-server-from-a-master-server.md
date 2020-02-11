@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783218"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Annuler l'inscription d'un serveur cible dans un serveur maître
-  Cette rubrique décrit comment désinscrire un serveur cible d'un serveur maître dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets SMO (SQL Server Management Objects). Exécutez cette procédure à partir du serveur cible.  
+  Cette rubrique décrit comment désinscrire un serveur cible d'un serveur maître dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'objets SMO (SQL Server Management Objects). Exécutez cette procédure à partir du serveur cible.  
   
  **Dans cette rubrique**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "72783218"
   
      [Sécurité](#Security)  
   
--   **Pour annuler l'inscription d'un serveur cible à l'aide de :**  
+-   **Pour annuler l’inscription d’un serveur cible à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72783218"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -71,12 +71,12 @@ ms.locfileid: "72783218"
 sp_msx_defect ;  
 ```  
   
- Pour plus d’informations, [consultez &#40;SP_MSX_DEFECT Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
+ Pour plus d’informations, consultez [sp_msx_defect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a>Utilisation de SQL Server Management Objects (SMO)  
  Utilisez la méthode `MsxDefect Method`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un environnement multi-serveur](create-a-multiserver-environment.md)   
- [Administration automatisée à l'échelle d'une entreprise](automated-administration-across-an-enterprise.md)   
+ [Administration automatisée à l’échelle d’une entreprise](automated-administration-across-an-enterprise.md)   
  [Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître](defect-multiple-target-servers-from-a-master-server.md)  

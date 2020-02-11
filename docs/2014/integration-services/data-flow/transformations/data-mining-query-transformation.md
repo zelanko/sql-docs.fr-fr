@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890527"
 ---
 # <a name="data-mining-query-transformation"></a>transformation de requête d'exploration de données
@@ -32,13 +32,13 @@ ms.locfileid: "68890527"
   
  Cette transformation a une entrée et une sortie. Elle ne prend pas en charge de sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur de transformation de requête d’exploration de données**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de transformation de requête d’exploration de données &#40;onglet Modèle d'exploration de données&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Éditeur de transformation de requête d’exploration de données &#40;onglet modèle d’exploration de données&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Éditeur de transformation de requête d’exploration de données &#40;onglet Modèle d’exploration de données&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Éditeur de transformation de requête d’exploration de données &#40;onglet modèle d’exploration de données&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -46,6 +46,6 @@ ms.locfileid: "68890527"
   
 -   [Propriétés personnalisées des transformations](transformation-custom-properties.md)  
   
- Pour plus d’informations sur la façon de définir des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md).  
   
   

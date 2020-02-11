@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b87a950c29cf202124e27b319eb56fb6a6e1857d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914914"
 ---
-# <a name="mssqlserver208"></a>MSSQLSERVER_208
+# <a name="mssqlserver_208"></a>MSSQLSERVER_208
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|208|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|208|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQ_BADOBJECT|  
 |Texte du message|Nom d'objet '%.*ls' non valide.|  
@@ -70,8 +70,8 @@ ms.locfileid: "62914914"
 -   L'utilisateur a l'autorisation d'accéder à l'objet. Pour vérifier les autorisations de l’utilisateur sur l’objet, utilisez la fonction système **Has_Perms_By_Name**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)   
- [Configuration de visibilité des métadonnées](../security/metadata-visibility-configuration.md)   
+ [UTILISER &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/use-transact-sql)   
+ [Configuration de la visibilité des métadonnées](../security/metadata-visibility-configuration.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql)  
   
   

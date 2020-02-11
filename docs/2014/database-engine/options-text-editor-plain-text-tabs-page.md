@@ -1,5 +1,5 @@
 ---
-title: Options (Page d’onglets de l’éditeur de texte - texte brut -) | Microsoft Docs
+title: Options (éditeur de texte-texte brut-page onglets) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089859"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Éditeur de texte - Texte brut - Page Onglets)
@@ -29,14 +29,14 @@ ms.locfileid: "66089859"
  **Aucun**  
  Ne met pas en retrait la nouvelle ligne créée en appuyant sur Entrée. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **Block**  
+ **Plage**  
  Met en retrait la nouvelle ligne créée en appuyant sur Entrée, exactement à la même distance que la ligne précédente.  
   
- **Smart**  
+ **Intelligente**  
  L'éditeur de texte brut ne prend pas en charge ce type de mise en forme.  
   
-## <a name="tabs"></a>Tabulations  
- **Taille des tabulations**  
+## <a name="tabs"></a>Onglets  
+ **Taille des tabulation**  
  Définit la distance en espaces entre les taquets de tabulation. La valeur par défaut est quatre espaces.  
   
  **Taille du retrait**  

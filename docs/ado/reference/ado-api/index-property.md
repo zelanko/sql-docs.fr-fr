@@ -16,43 +16,43 @@ ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932437"
 ---
 # <a name="index-property"></a>Index, propriété
-Indique le nom de l’index actuellement en vigueur pour un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
+Indique le nom de l’index actuellement en vigueur pour un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **chaîne** valeur, qui est le nom de l’index.  
+ Définit ou retourne une valeur de **chaîne** , qui est le nom de l’index.  
   
 ## <a name="remarks"></a>Notes  
- L’index nommé par le **Index** propriété doit avoir été préalablement déclarée sur la table de base sous-jacent le **Recordset** objet. Autrement dit, que l’index doit avoir été déclaré par programmation soit comme un ADOX [Index](../../../ado/reference/adox-api/index-object-adox.md) objet, ou lorsque la table de base a été créée.  
+ L’index nommé par la propriété **index** doit avoir été précédemment déclaré sur la table de base sous-jacente à l’objet **Recordset** . Autrement dit, l’index doit avoir été déclaré par programmation comme un objet d' [index](../../../ado/reference/adox-api/index-object-adox.md) ADOX ou lors de la création de la table de base.  
   
- Une erreur d’exécution se produit si l’index ne peut pas être définie. Le **Index** propriété ne peut pas être définie dans les conditions suivantes :  
+ Une erreur d’exécution se produit si l’index ne peut pas être défini. La propriété d' **index** ne peut pas être définie dans les conditions suivantes :  
   
--   Au sein d’un [WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) ou **RecordsetChangeComplete** Gestionnaire d’événements.  
+-   Dans un gestionnaire d’événements [WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) ou **RecordsetChangeComplete** .  
   
--   Si le **Recordset** est en cours d’exécution une opération (qui peut être déterminée par le [état](../../../ado/reference/ado-api/state-property-ado.md) propriété).  
+-   Si le **jeu d’enregistrements** est toujours en cours d’exécution d’une opération (ce qui peut être déterminé par la propriété [State](../../../ado/reference/ado-api/state-property-ado.md) ).  
   
--   Si un filtre a été défini sur le **Recordset** avec la [filtre](../../../ado/reference/ado-api/filter-property.md) propriété.  
+-   Si un filtre a été défini sur le **jeu d’enregistrements** avec la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) .  
   
- Le **Index** propriété peut toujours être définie avec succès si le **Recordset** est fermé, mais le **Recordset** s’ouvre pas correctement, ou l’index ne sera pas utilisable, si le fournisseur sous-jacent ne prend pas en charge les index.  
+ La propriété **index** peut toujours être définie correctement si le **jeu d’enregistrements** est fermé, mais que l' **objet Recordset** ne s’ouvre pas correctement, ou l’index ne peut pas être utilisé si le fournisseur sous-jacent ne prend pas en charge les index.  
   
- Si l’index peut être définie, la position de ligne actuelle peut changer. Cela entraîne une mise à jour le [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriété et déclenche le **WillChangeRecordset**, **RecordsetChangeComplete**, [WillMove ](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), et [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) événements.  
+ Si l’index peut être défini, la position de la ligne actuelle peut changer. Cela entraînera une mise à jour de la propriété [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) et déclenchera les événements **WillChangeRecordset**, **RecordsetChangeComplete**, [WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)et [MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md) .  
   
- Si l’index peut être défini et le [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriété est **adLockPessimistic** ou **adLockOptimistic**, puis implicite [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) opération est effectuée. Cela libère les groupes actuels et affectés. Un filtre existant est libéré, et la position de ligne actuelle est modifiée pour la première ligne de réorganisés **Recordset**.  
+ Si l’index peut être défini et si la propriété [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) est **adLockPessimistic** ou **adLockOptimistic**, une opération [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) implicite est effectuée. Cela libère les groupes actuels et affectés. Tout filtre existant est libéré, et la position de ligne actuelle est remplacée par la première ligne de l’ensemble d' **enregistrements**réorganisé.  
   
- Le **Index** propriété est utilisée conjointement avec la [recherche](../../../ado/reference/ado-api/seek-method.md) (méthode). Si le fournisseur sous-jacent ne prend pas en charge la **Index** propriété et donc le **Seek** (méthode), envisagez d’utiliser le [trouver](../../../ado/reference/ado-api/find-method-ado.md) (méthode) à la place. Déterminer si le **Recordset** objet prend en charge les index avec la [prend en charge](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** (méthode).  
+ La propriété **index** est utilisée conjointement avec la méthode [Seek](../../../ado/reference/ado-api/seek-method.md) . Si le fournisseur sous-jacent ne prend pas en charge la propriété d' **index** , et donc la méthode **Seek** , envisagez d’utiliser la méthode [Find](../../../ado/reference/ado-api/find-method-ado.md) à la place. Déterminez si l’objet **Recordset** prend en charge les index avec la méthode [prend en charge](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** .  
   
- Intégrés **Index** propriété n’est pas liée à la dynamique [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété, bien que les deux portent sur les index.  
+ La propriété d' **index** intégrée n’est pas liée à la propriété d' [optimisation](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dynamique, bien qu’elle traite les deux index.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Seek (méthode) et Index, exemple de propriété (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Méthode Seek et index, exemple de propriété (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)
