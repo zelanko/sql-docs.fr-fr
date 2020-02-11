@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015301"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migration vers OLTP en mémoire
@@ -22,13 +22,13 @@ ms.locfileid: "63015301"
   
 -   [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   
--   [Conseiller d'optimisation de la mémoire](memory-optimization-advisor.md)  
+-   [Conseil d’optimisation par mémoire](memory-optimization-advisor.md)  
   
 -   [Conseiller de compilation native](native-compilation-advisor.md)  
   
--   [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+-   [Constructions Transact-SQL non prises en charge par In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
--   [Implémentation de colonnes LOB dans une table à mémoire optimisée](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
+-   [Implémentation de colonnes LOB dans une table mémoire optimisée](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   
 -   [Implémentation de SQL_VARIANT dans un tableau mémoire optimisé](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
@@ -42,12 +42,12 @@ ms.locfileid: "63015301"
   
 -   [Migration des contraintes de validation et de clé étrangère](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
   
--   [Implémentation d’IDENTITY dans une table à mémoire optimisée](implementing-identity-in-a-memory-optimized-table.md)  
+-   [Implémentation d'IDENTITY dans une table optimisée en mémoire](implementing-identity-in-a-memory-optimized-table.md)  
   
  Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLTP en mémoire &#40;Optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)   
- [Estimer les besoins en mémoire des tables optimisées en mémoire](memory-optimized-tables.md)  
+ [OLTP en mémoire &#40;optimisation en mémoire&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [Estimer les besoins en mémoire des tables mémoire optimisées](memory-optimized-tables.md)  
   
   

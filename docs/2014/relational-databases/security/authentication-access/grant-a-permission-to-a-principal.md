@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011957"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Accorder une autorisation à un principal
@@ -65,7 +65,7 @@ ms.locfileid: "63011957"
   
 4.  Cliquez avec le bouton droit sur une procédure stockée, puis sélectionnez **Propriétés**.  
   
-5.  Dans le **propriétés de la procédure stockée -** _nom_procédure_stockée_ boîte de dialogue, sous sélectionner une page, sélectionnez **autorisations**. Utilisez cette page pour ajouter des utilisateurs ou des rôles à la procédure stockée et spécifier les autorisations dont disposeront ces utilisateurs ou rôles.  
+5.  Dans la boîte de dialogue Propriétés de la **procédure stockée-**_stored_procedure_name_ , sous sélectionner une page, sélectionnez **autorisations**. Utilisez cette page pour ajouter des utilisateurs ou des rôles à la procédure stockée et spécifier les autorisations dont disposeront ces utilisateurs ou rôles.  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63011957"
   
 #### <a name="to-grant-permission-to-a-principal"></a>Pour accorder une autorisation à un principal  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -19,17 +19,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6c174fe5cdf1ebe1dbc9b0350a01fb6e8027effa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768965"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Développement d'un composant de flux de données personnalisé
-  La tâche de flux de données comprend des composants qui se connectent à diverses sources de données et qui transforment et acheminent ces données à haut débit. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un modèle objet extensible qui permet aux développeurs de créer des sources, des transformations et des destinations personnalisées que vous pouvez utiliser dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et dans des packages déployés. Cette section contient des rubriques qui vous guideront afin de développer des composants de flux de données personnalisés.  
+  La tâche de flux de données comprend des composants qui se connectent à diverses sources de données et qui transforment et acheminent ces données à haut débit. [!INCLUDE[msCoName](../../../includes/msconame-md.md)]fournit un modèle objet extensible qui permet aux développeurs de créer des sources, des transformations et des destinations personnalisées [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] que vous pouvez utiliser dans et dans des packages déployés. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Cette section contient des rubriques qui vous guideront afin de développer des composants de flux de données personnalisés.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d’un composant de flux de données personnalisé](creating-a-custom-data-flow-component.md)  
+ [Création d'un composant de flux de données personnalisé](creating-a-custom-data-flow-component.md)  
  Décrit les étapes initiales permettant de créer un composant de flux de données personnalisé.  
   
  [Méthodes de conception d’un composant de flux de données](design-time-methods-of-a-data-flow-component.md)  
@@ -38,37 +38,37 @@ ms.locfileid: "62768965"
  [Méthodes d’exécution d’un composant de flux de données](run-time-methods-of-a-data-flow-component.md)  
  Décrit les méthodes d'exécution à implémenter dans un composant de flux de données personnalisé.  
   
- [Plan d’exécution et allocation de mémoire tampon](execution-plan-and-buffer-allocation.md)  
+ [Plan d'exécution et allocation de mémoire tampon](execution-plan-and-buffer-allocation.md)  
  Décrit le plan d'exécution du flux de données et l'allocation des tampons de données.  
   
  [Utilisation de types de données dans le flux de données](working-with-data-types-in-the-data-flow.md)  
  Explique comment le flux mappe les types de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] aux types de données managées .NET Framework.  
   
- [Validation d’un composant de flux de données](validating-a-data-flow-component.md)  
+ [Validation d'un composant de flux de données](validating-a-data-flow-component.md)  
  Explique les méthodes utilisées pour valider la configuration du composant et reconfigurer les métadonnées du composant.  
   
  [Implémentation des métadonnées externes](implementing-external-metadata.md)  
  Explique comment utiliser des colonnes de métadonnées externes pour la validation des données.  
   
- [Déclenchement et définition d’événements dans un composant de flux de données](raising-and-defining-events-in-a-data-flow-component.md)  
+ [Déclenchement et définition d'événements dans un composant de flux de données](raising-and-defining-events-in-a-data-flow-component.md)  
  Explique comment déclencher des événements prédéfinis et personnalisés.  
   
- [Enregistrement et définition d’entrées de journal dans un composant de flux de données](logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [Enregistrement et définition d'entrées de journal dans un composant de flux de données](logging-and-defining-log-entries-in-a-data-flow-component.md)  
  Explique comment créer et écrire des entrées de journal personnalisées.  
   
- [Utilisation de sorties d’erreur dans un composant de flux de données](using-error-outputs-in-a-data-flow-component.md)  
+ [Utilisation de sorties d'erreur dans un composant de flux de données](using-error-outputs-in-a-data-flow-component.md)  
  Explique comment rediriger des lignes d'erreur vers une autre sortie.  
   
- [Mise à niveau de la version d’un composant de flux de données](upgrading-the-version-of-a-data-flow-component.md)  
+ [Mise à niveau de la version d'un composant de flux de données](upgrading-the-version-of-a-data-flow-component.md)  
  Explique comment mettre à jour les métadonnées de composant enregistrées lorsqu'une nouvelle version de votre composant est utilisée pour la première fois.  
   
- [Développement d’une interface utilisateur pour un composant de flux de données](developing-a-user-interface-for-a-data-flow-component.md)  
+ [Développement d'une interface utilisateur pour un composant de flux de données](developing-a-user-interface-for-a-data-flow-component.md)  
  Explique comment implémenter un éditeur personnalisé pour un composant.  
   
  [Développement de types spécifiques de composants de flux de données](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Contient des informations sur le développement des trois types de composants de flux de données : sources, transformations et destinations.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Informations de référence  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  Contient les classes et les interfaces qui permettent de créer des composants de flux de données personnalisés.  
   
@@ -110,10 +110,10 @@ ms.locfileid: "62768965"
  [Développement d’un énumérateur ForEach personnalisé](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Décrit comment programmer des énumérateurs personnalisés.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extension du flux de données avec le composant Script] (.. /.. /Extending-packages-Scripting/Data-Flow-script-Component/Extending-the-Data-Flow-with-the-Script-Component.MD   
+ [Extension du workflow de données à l’aide du composant Script] (.. /.. /extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md   
  [Comparaison des solutions de script et des objets personnalisés](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

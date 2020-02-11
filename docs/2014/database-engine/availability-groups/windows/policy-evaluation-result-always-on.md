@@ -1,5 +1,5 @@
 ---
-title: Résultat d’évaluation de stratégie (AlwaysOn) | Microsoft Docs
+title: Résultat de l’évaluation de la stratégie (AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789079"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Résultat d'évaluation de stratégie (AlwaysOn)
@@ -25,30 +25,30 @@ ms.locfileid: "62789079"
   
 
   
-##  <a name="Options"></a> Options de la boîte de dialogue  
+##  <a name="Options"></a>Options de boîte de dialogue  
  **Problème détecté**  
  Affiche une ligne pour chaque problème détecté. L'icône associée à un problème fournit un indicateur visuel pour indiquer la gravité du problème, comme suit :  
   
-|Icône|Severity|  
+|Icône|severity|  
 |----------|--------------|  
-|![Icône d’interface utilisateur : erreur](../../../relational-databases/replication/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|Critique|  
-|![Icône d’interface utilisateur : avertissement](../../../relational-databases/replication/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|Warning|  
+|![Icône d'IU : erreur](../../../relational-databases/replication/media/repl-icon-error.gif "Icône d'IU : erreur")|Critique|  
+|![Icône d'IU : avertissement](../../../relational-databases/replication/media/repl-icon-warn.gif "Icône d'IU : avertissement")|Avertissement|  
   
  **Description**  
  Cette grille affiche une brève description du problème sélectionné.  
   
- **Informations supplémentaires**  
+ **Plus d’informations**  
  Cliquez sur ce lien pour ouvrir la rubrique d'aide correspondant au problème sélectionné.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
--   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [Utiliser les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Utilisez les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn](always-on-policies-for-operational-issues-always-on-availability.md) &#40;SQL Server&#41; 
   
   

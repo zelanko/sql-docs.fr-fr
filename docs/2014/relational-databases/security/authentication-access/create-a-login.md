@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012028"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
@@ -36,17 +36,17 @@ ms.locfileid: "63012028"
   
 -   **Avant de commencer :**  
   
-     [Arrière-plan](#Background)  
+     [Contexte](#Background)  
   
      [Sécurité](#Security)  
   
--   **Pour créer une connexion, à l’aide de :**  
+-   **Pour créer un compte de connexion, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Étapes à suivre après avoir créé un compte de connexion](#FollowUp)  
+-   **Suivi :**  [étapes à suivre après avoir créé une connexion](#FollowUp)  
   
 ##  <a name="Background"></a> Arrière-plan  
  Un compte de connexion est un principal de sécurité, ou une entité qui peut être authentifiée par un système sécurisé. Pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les utilisateurs doivent disposer d'un compte de connexion. Vous pouvez créer un compte de connexion basé sur un principal Windows (tel qu'un utilisateur de domaine ou un groupe de domaines Windows) ou créer un compte de connexion qui n'est pas basé sur un principal Windows (tel qu'un compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
@@ -87,7 +87,7 @@ ms.locfileid: "63012028"
   
 5.  Pour créer un compte de connexion qui est enregistré sur une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sélectionnez **Authentification SQL Server**.  
   
-    1.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouvel utilisateur. Entrez à nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
+    1.  Dans la zone **Mot de passe** , entrez un mot de passe pour le nouvel utilisateur. Entrez de nouveau ce mot de passe dans la zone **Confirmer le mot de passe** .  
   
     2.  Lorsque vous modifiez un mot de passe existant, sélectionnez **Spécifier l'ancien mot de passe**, puis tapez l'ancien mot de passe dans la zone **Ancien mot de passe** .  
   
@@ -148,7 +148,7 @@ ms.locfileid: "63012028"
  **Utilisateurs mappés à cette connexion**  
  Sélectionnez les bases de données auxquelles cette connexion peut accéder. Lorsque vous sélectionnez une base de données, ses rôles de base de données valides s’affichent dans le volet **Appartenance au rôle de base de données pour :** _nom_base_de_données_ .  
   
- **Carte**  
+ **Map**  
  Autorise la connexion à accéder aux bases de données répertoriées au-dessous.  
   
  **Sauvegarde de la base de données**  
@@ -160,10 +160,10 @@ ms.locfileid: "63012028"
  **Schéma par défaut**  
  Spécifie le schéma par défaut de l'utilisateur. Lors de la création d'un utilisateur, son schéma par défaut est **dbo**. Il est possible de spécifier un schéma par défaut qui n'existe pas encore. Vous ne pouvez pas spécifier de schéma par défaut pour un utilisateur mappé sur un groupe Windows, un certificat ou une clé asymétrique.  
   
- **Guest account enabled for:**  _database_name_  
+ **Compte Invité activé pour :**  _nom_base_de_données_  
  Attribut en lecture seule indiquant si le compte Invité est activé sur la base de données sélectionnée. Utilisez la page **État** de la boîte de dialogue **Propriétés de la connexion** du compte Invité pour activer ou désactiver le compte Invité.  
   
- **Database role membership for:**  _database_name_  
+ **Appartenance au rôle de base de données pour :**  _nom_base_de_données_  
  Sélectionnez les rôles pour l'utilisateur dans la base de données spécifiée. Tous les utilisateurs sont membres du rôle **public** de chaque base de données et ne peuvent pas être supprimés. Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](database-level-roles.md).  
   
 ### <a name="securables"></a>Éléments sécurisables  
@@ -176,10 +176,10 @@ ms.locfileid: "63012028"
   
 1.  Cliquez sur **Rechercher**.  
   
-2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez l’une des options suivantes : **Objets spécifiques...** , **Tous les objets des types...** , ou **le serveur**_nom_serveur_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Dans la boîte de dialogue **Ajouter des objets** , sélectionnez l’une des options suivantes : **objets spécifiques...**, **tous les objets des types...** ou **le serveur**_SERVER_NAME_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  La sélection de l’option **Le serveur**_nom_serveur_ remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
+    >  La sélection de **la**_SERVER_NAME_ serveur remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
   
 3.  Si vous sélectionnez **Objets spécifiques…**  :  
   
@@ -204,7 +204,7 @@ ms.locfileid: "63012028"
  **Onglet Autorisations explicites**  
  Énumère les autorisations possibles pour les éléments sécurisables sélectionnés dans la grille supérieure. Toutes les options ne sont pas disponibles pour toutes les autorisations explicites.  
   
- **Autorisations**  
+ **autorisations**  
  Nom de l'autorisation.  
   
  **Fournisseur d'autorisations**  
@@ -216,10 +216,10 @@ ms.locfileid: "63012028"
  **Avec autorisation**  
  Reflète l'état de l'option WITH GRANT pour l'autorisation indiquée dans la liste. Cette zone est en lecture seule. Pour appliquer cette autorisation, utilisez l'instruction [GRANT](/sql/t-sql/statements/grant-transact-sql) .  
   
- **Refuser**  
+ **Deny**  
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
-### <a name="status"></a>État  
+### <a name="status"></a>Statut  
  La page **État** répertorie certaines des options d'authentification et d'autorisation qui peuvent être configurées sur la connexion sélectionnée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Les options suivantes sont disponibles sur cette page :  
@@ -236,14 +236,14 @@ ms.locfileid: "63012028"
   
  Sélectionnez cette option pour activer ou désactiver cette connexion. Cette option utilise l'instruction ALTER LOGIN avec l'option ENABLE ou DISABLE.  
   
- **SQL Server Authentication**  
+ **Authentification SQL Server**  
  La case à cocher **La connexion est verrouillée** est disponible uniquement si la connexion sélectionnée se connecte à l’aide de l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elle a été verrouillée. Ce paramètre est en lecture seule. Pour déverrouiller une connexion verrouillée, exécutez ALTER LOGIN avec l'option UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>Pour créer une connexion à l'aide de l'authentification Windows  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "63012028"
   
 #### <a name="to-create-a-login-using-sql-server-authentication"></a>Pour créer une connexion via l'authentification SQL Server  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Rubriques de procédures relatives à des procédures stockées (ODBC) en cours d’exécution | Microsoft Docs
+title: Rubriques de procédures relatives à l’exécution de procédures stockées (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781753"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Rubriques de procédures relatives à l'exécution des procédures stockées (ODBC)
@@ -26,9 +26,9 @@ ms.locfileid: "62781753"
   
 -   [Appeler des procédures stockées &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
--   [Traiter des Codes de retour et les paramètres de sortie &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)  
+-   [Traiter les codes de retour et les paramètres de sortie &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Rubriques de procédures ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

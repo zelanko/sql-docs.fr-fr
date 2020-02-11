@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786744"
 ---
 # <a name="check-out-files"></a>Extraire des fichiers
@@ -26,18 +26,18 @@ ms.locfileid: "62786744"
   
  Vous pouvez extraire des fichiers en mode exclusif ou en mode partagé. Lorsque vous procédez à l'extraction d'un fichier de manière exclusive, aucun autre utilisateur ne peut l'extraire tant que vous ne l'avez pas archivé. Lorsque vous procédez à l'extraction d'un fichier en mode partagé, d'autres utilisateurs peuvent l'extraire et le modifier ; lorsque vous l'archivez, vous pouvez être amené à fusionner la version que vous avez extraite avec les versions créées par d'autres utilisateurs.  
   
- Utilisez le **Check Out** commande pour extraire les fichiers et les projets sous contrôle de code source. Si vous utilisez cette commande pour extraire une solution ou un projet, tous les fichiers dans la solution ou le projet sont également extraits. Toutefois, la récupération d’un fichier de code source individuel n’entraîne l’extraction du projet ou solution auquel il appartient.  
+ Utilisez la commande **extraire** pour extraire des projets et des fichiers sous contrôle de code source. Si vous utilisez cette commande pour extraire une solution ou un projet, tous les fichiers de la solution ou du projet sont également extraits. Toutefois, l’extraction d’un fichier de code source individuel n’entraîne pas l’extraction du projet ou de la solution auxquels il appartient.  
   
 > [!NOTE]  
->  Si le [!INCLUDE[msCoName](../includes/msconame-md.md)] base de données Visual SourceSafe pour votre projet est configuré pour autoriser les extractions multiples, et que vous souhaitez extraire un fichier exclusivement, vous devez effacer le **autoriser les extractions multiples** option dans le  **Advanced Options d’extraction** boîte de dialogue avant d’extraire le fichier. Vous devez redémarrer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour que ce paramètre soit pris en compte.  
+>  Si la [!INCLUDE[msCoName](../includes/msconame-md.md)] base de données Visual SourceSafe pour votre projet est configurée pour autoriser plusieurs extractions et que vous souhaitez extraire un fichier en mode exclusif, vous devez désactiver l’option **autoriser plusieurs extractions** dans la boîte de dialogue Options d’extraction **avancées** avant d’extraire le fichier. Vous devez redémarrer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour que ce paramètre soit pris en compte.  
   
 ### <a name="to-check-out-a-file"></a>Pour extraire un fichier  
   
 1.  Dans l'Explorateur de solutions, sélectionnez le projet ou le fichier.  
   
-2.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **extraire pour modification**.  
+2.  Dans le menu **fichier** , pointez sur **contrôle de code source**, puis cliquez sur **Extraire pour modification**.  
   
-3.  Si le **extraire pour modification** boîte de dialogue s’affiche, sélectionnez les éléments de votre choix, cliquez sur **Check Out**. Si vous avez configuré le [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environnement ne pas pour afficher le **Check Out** boîte de dialogue, les éléments sélectionnés dans l’Explorateur de solutions et toutes leurs enfants potentiels sont immédiatement extraits.  
+3.  Si la boîte **de dialogue Extraire pour modification** s’affiche, sélectionnez les éléments souhaités, puis cliquez sur **extraire**. Si vous avez configuré l' [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] environnement pour qu’il n’affiche pas la boîte de dialogue **extraire** , les éléments sélectionnés dans Explorateur de solutions et tous les enfants qu’ils peuvent avoir sont immédiatement extraits.  
   
      **Vérifier**  
      Extrait tous les éléments sélectionnés.  
@@ -48,14 +48,14 @@ ms.locfileid: "62786744"
      **Commentaires**  
      Ajoutez un commentaire à associer à l'opération d'extraction.  
   
-     **Ne pas afficher boîte de dialogue lors de l’extraction d’éléments**  
+     **Ne pas afficher la boîte de dialogue Extraire lors de l'extraction d'éléments**  
      La boîte de dialogue n'est pas affichée au cours des opérations d'extraction.  
   
      **Affichage en 2D**  
      Affiche les éléments que vous extrayez sous forme de liste en 2D sous leur connexion de contrôle de code source.  
   
      **Modifier**  
-     Modifier un élément sans l’extraire. Le **modifier** bouton s’affiche uniquement si vous avez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configuré pour prendre en charge la modification des fichiers archivés.  
+     Modifiez un élément sans l’extraire. Le bouton **modifier** s’affiche uniquement si vous [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] avez configuré pour prendre en charge la modification des fichiers archivés.  
   
      **Nom**  
      Affiche les noms des éléments disponibles en vue d'une extraction. Les cases à cocher activées indiquent les éléments sélectionnés. Si vous ne souhaitez pas extraire un élément donné, désactivez la case à cocher correspondante.  
@@ -63,16 +63,16 @@ ms.locfileid: "62786744"
      **Options**  
      Affiche les options d'extraction spécifiques du plug-in de contrôle de code source quand vous cliquez sur la flèche à droite du bouton.  
   
-     **Sort**  
+     **Trier**  
      Trie les colonnes affichées.  
   
-     **Vue d’arborescence**  
+     **Arborescence**  
      Affiche la hiérarchie de dossiers et de fichiers pour l'élément que vous extrayez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier des fichiers archivés](../../2014/database-engine/edit-checked-in-files.md)   
- [Extraire automatiquement des fichiers lors de leur modification](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
- [Annuler des extractions](../../2014/database-engine/undo-checkouts.md)   
+ [Modifier les fichiers archivés](../../2014/database-engine/edit-checked-in-files.md)   
+ [Extraire automatiquement des fichiers lors de la modification](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
+ [Annulation des extractions](../../2014/database-engine/undo-checkouts.md)   
  [Gérer les extractions](../../2014/database-engine/manage-checkouts.md)  
   
   

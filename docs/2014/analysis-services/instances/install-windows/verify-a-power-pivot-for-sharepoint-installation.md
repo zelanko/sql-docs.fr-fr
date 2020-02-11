@@ -1,5 +1,5 @@
 ---
-title: Verify a PowerPivot for SharePoint Installation | Microsoft Docs
+title: Vérifier une installation de PowerPivot pour SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079865"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Vérifier une installation PowerPivot pour SharePoint
   Une instance de PowerPivot pour SharePoint que vous installez dans une batterie de serveurs SharePoint est administrée via l'Administration centrale de SharePoint. Au minimum, vous pouvez vérifier des pages dans l'Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur PowerPivot sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d'un classeur PowerPivot que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d'une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d'exemple contenant déjà des données PowerPivot et l'utiliser pour confirmer que l'intégration SharePoint est correctement configurée.  
   
-##  <a name="verifyinstall"></a> Vérifiez l'intégration de l'Administration centrale  
+##  <a name="verifyinstall"></a>Vérifier l’intégration de l’administration centrale  
  Pour vérifier l'intégration de PowerPivot avec l'Administration centrale, procédez comme suit :  
   
-1.  Dans le menu Démarrer, cliquez sur **tous les programmes**, ouvrez produits Microsoft SharePoint 2010, puis cliquez sur **Administration centrale de SharePoint 2010**.  
+1.  Dans le menu Démarrer, cliquez sur **tous les programmes**, ouvrez produits Microsoft SharePoint 2010, puis cliquez sur **administration centrale de SharePoint 2010**.  
   
 2.  Entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur **OK**.  
   
@@ -50,27 +50,27 @@ ms.locfileid: "66079865"
   
 6.  Vérifiez que **SQL Server Analysis Services** et le **service système SQL Server PowerPivot** sont démarrés.  
   
-7.  Dans l'Administration centrale, sous Gestion des applications, cliquez sur **Gérer les applications de service**.  
+7.  Dans administration centrale, dans gestion des applications, cliquez sur **gérer les applications de service**.  
   
-8.  Cliquez sur **Application de Service PowerPivot par défaut** pour ouvrir le tableau de bord de gestion PowerPivot pour cette application. À la première utilisation, le tableau de bord prend plusieurs minutes à charger.  
+8.  Cliquez sur **application de service PowerPivot par défaut** pour ouvrir le tableau de bord de gestion PowerPivot pour cette application. À la première utilisation, le tableau de bord prend plusieurs minutes à charger.  
   
-     Ou bien, cliquez sur l’espace vide en regard **Application de Service PowerPivot par défaut** pour sélectionner la ligne, cliquez sur **propriétés** pour afficher les paramètres de configuration pour cette application de service. Vous pouvez modifier à la fois des paramètres de configuration et des propriétés d'application pour modifier votre configuration du serveur. Pour plus d’informations sur ces paramètres, consultez [créer et configurer une Application de Service PowerPivot dans l’Administration centrale](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
+     Vous pouvez également cliquer sur l’espace vide en regard de l' **application de service PowerPivot par défaut** pour sélectionner la ligne, puis cliquer sur **Propriétés** pour afficher les paramètres de configuration de cette application de service. Vous pouvez modifier à la fois des paramètres de configuration et des propriétés d'application pour modifier votre configuration du serveur. Pour plus d’informations sur ces paramètres, consultez [créer et configurer une application de service PowerPivot dans l’administration centrale](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## <a name="verify-integration-at-the-site-level"></a>Vérifiez l'intégration au niveau du site  
  Pour vérifier l'intégration de PowerPivot avec un site SharePoint, procédez comme suit :  
   
-1.  Dans un navigateur, ouvrez l'application Web que vous avez créée. Si vous avez utilisé les valeurs par défaut, vous pouvez spécifier http://\<votre nom d’ordinateur > dans l’adresse URL.  
+1.  Dans un navigateur, ouvrez l'application Web que vous avez créée. Si vous avez utilisé des valeurs par défaut, vous\<pouvez spécifier http://le nom de votre ordinateur> dans l’adresse URL.  
   
 2.  Vérifiez que l'accès aux données et les fonctionnalités de traitement de PowerPivot sont disponibles dans l'application. Pour cela, vous pouvez vérifier la présence de modèles de bibliothèque fournis par PowerPivot :  
   
-    1.  Dans Actions du Site, cliquez sur **plus d’Options...** .  
+    1.  Sur actions du site, cliquez sur **autres options.**..  
   
-    2.  Dans les bibliothèques, vous devez voir **bibliothèque de flux de données** et **galerie PowerPivot**. Ces modèles de bibliothèque sont fournis par la fonctionnalité PowerPivot et sont visibles dans la liste des bibliothèques si la fonctionnalité est intégrée correctement.  
+    2.  Dans les bibliothèques, vous devriez voir **bibliothèque de flux de données** et **Galerie PowerPivot**. Ces modèles de bibliothèque sont fournis par la fonctionnalité PowerPivot et sont visibles dans la liste des bibliothèques si la fonctionnalité est intégrée correctement.  
   
 ## <a name="verify-data-access-on-the-server"></a>Vérifiez l'accès aux données sur le serveur  
  Pour vérifier l'accès aux données PowerPivot sur le serveur, procédez comme suit :  
   
-1.  [Téléchargez](https://go.microsoft.com/fwlink/?LinkID=219108) l'exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Extrayez les fichiers.  
+1.  [Téléchargez](https://go.microsoft.com/fwlink/?LinkID=219108) l’exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l'exemple de classeur des fichiers téléchargés pour vérifier l'accès aux données PowerPivot. Procédez à l’extraction des fichiers.  
   
 2.  Téléchargez le classeur Excel (.xlsx) dans Documents partagés. Le classeur contient des données PowerPivot incorporées.  
   
@@ -86,12 +86,12 @@ ms.locfileid: "66079865"
   
 7.  Dans Type de serveur, sélectionnez **Analysis Services**.  
   
-8.  Nom du serveur, entrez  **\<nom-serveur > \powerpivot**, où  **\<nom-serveur >** est le nom de l’ordinateur qui a l’installation de PowerPivot pour SharePoint.  
+8.  Dans nom du serveur, entrez ** \<Server-Name> \powerpivot**, où ** \<Server-Name>** correspond au nom de l’ordinateur sur lequel est installé le PowerPivot pour SharePoint.  
   
-9. Cliquer sur **Se connecter**. Le programme vérifie que le serveur Analysis Services est disponible.  
+9. Cliquez sur **Connecter**. Le programme vérifie que le serveur Analysis Services est disponible.  
   
 10. Dans l’Explorateur d’objets, vous pouvez cliquer sur **bases de données** pour afficher la liste des fichiers de données PowerPivot qui sont chargés.  
   
-11. Sur le système de fichiers de l'ordinateur, vérifiez le dossier suivant pour déterminer si les fichiers sont mis en cache sur disque. La présence de fichiers mis en cache est une vérification supplémentaire que votre déploiement est opérationnel. Pour afficher le cache de fichiers, accédez à la \<lecteur > : \Program Files\Microsoft SQL Server\MSAS11. Dossier de l’Application de Service PowerPivot POWERPIVOT\OLAP\Backup\Sandboxes\Default. Chaque base de données mise en cache est stockée dans son propre dossier, en utilisant une convention d'affectation de noms basés sur les GUID pour garantir un nom unique.  
+11. Sur le système de fichiers de l'ordinateur, vérifiez le dossier suivant pour déterminer si les fichiers sont mis en cache sur disque. La présence de fichiers mis en cache est une vérification supplémentaire que votre déploiement est opérationnel. Pour afficher le cache de fichiers, accédez au \<lecteur> : \Program Files\Microsoft SQL Server\MSAS11. Dossier d’application de service PowerPivot Powerpivot\olap\backup\sandboxes\dossier. Chaque base de données mise en cache est stockée dans son propre dossier, en utilisant une convention d'affectation de noms basés sur les GUID pour garantir un nom unique.  
   
   

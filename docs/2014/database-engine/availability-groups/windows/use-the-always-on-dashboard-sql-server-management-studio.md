@@ -1,5 +1,5 @@
 ---
-title: Utilisez le tableau de bord AlwaysOn (SQL Server Management Studio) | Microsoft Docs
+title: Utiliser le tableau de bord AlwaysOn (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788726"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord AlwaysOn (SQL Server Management Studio)
@@ -53,7 +53,7 @@ ms.locfileid: "62788726"
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  Vous devez être connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instance de serveur) qui héberge soit le réplica principal, soit un réplica secondaire d'un groupe de disponibilité.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -61,14 +61,14 @@ ms.locfileid: "62788726"
 ####  <a name="Permissions"></a> Autorisations  
  Requiert les autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Pour démarrer le tableau de bord AlwaysOn  
+##  <a name="SSMSProcedure"></a>Pour démarrer le tableau de bord AlwaysOn  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous souhaitez exécuter le tableau de bord AlwaysOn.  
   
 2.  Développez le nœud **Haute disponibilité AlwaysOn** , cliquez avec le bouton droit sur le nœud **Groupes de disponibilité** , puis sélectionnez **Afficher le tableau de bord**.  
   
-###  <a name="DashboardOptions"></a> Pour modifier les Options de tableau de bord AlwaysOn  
- Vous pouvez utiliser la boîte de dialogue **Options** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour configurer le comportement du tableau de bord [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn en ce qui concerne l’actualisation automatique et l’activation d’une stratégie AlwaysOn définie automatiquement.  
+###  <a name="DashboardOptions"></a>Pour modifier les options du tableau de bord AlwaysOn  
+ Vous pouvez utiliser la boîte de dialogue [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]Options** de ** pour configurer le comportement du tableau de bord [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn en ce qui concerne l’actualisation automatique et l’activation d’une stratégie AlwaysOn définie automatiquement.  
   
 1.  Dans le menu **Outils** , cliquez sur **Options**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62788726"
   
 3.  Pour activer une stratégie définie par l'utilisateur, sélectionnez **Activer la stratégie AlwaysOn définie par l'utilisateur**.  
   
-##  <a name="AvGroupsView"></a> Résumé des groupes de disponibilité  
+##  <a name="AvGroupsView"></a>Résumé du groupe de disponibilité  
  L'écran de groupe de disponibilité affiche une ligne de résumé pour chaque groupe de disponibilité pour lequel l'instance de serveur connectée héberge un réplica. Ce volet inclut les colonnes suivantes.  
   
  **Nom du groupe de disponibilité**  
@@ -93,21 +93,21 @@ ms.locfileid: "62788726"
 -   **Manuel**. Indique qu'aucun réplica n'est en mode de basculement automatique.  
   
  **Problèmes**  
- Cliquez sur le lien **Problèmes** pour ouvrir la documentation de dépannage relative à un problème donné. Pour obtenir la liste de tous les problèmes de stratégie AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Cliquez sur le lien **Problèmes** pour ouvrir la documentation de dépannage relative à un problème donné. Pour obtenir la liste de tous les problèmes de stratégie AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Cliquez sur les en-têtes de colonne pour trier les informations de groupe de disponibilité selon le nom du groupe de disponibilité, l'instance principale, le mode de basculement ou le problème.  
   
-##  <a name="AvGroupDetails"></a> Détails du groupe de disponibilité  
+##  <a name="AvGroupDetails"></a>Détails du groupe de disponibilité  
  Les informations détaillées suivantes sont affichées pour le groupe de disponibilité que vous sélectionnez dans l'écran récapitulatif :  
   
  **État du groupe de disponibilité**  
  Affiche l'état d'intégrité du groupe de disponibilité.  
   
- **Primary instance**  
+ **Instance principale**  
  Nom de l'instance de serveur qui héberge le réplica principal du groupe de disponibilité.  
   
- **Failover mode**  
+ **Mode de basculement**  
  Affiche le mode de basculement pour lequel le réplica est configuré. Les valeurs possibles pour le mode de basculement sont les suivantes :  
   
 -   **Automatique**. Indique qu'un ou plusieurs réplicas se trouvent en mode de basculement automatique.  
@@ -117,13 +117,13 @@ ms.locfileid: "62788726"
  **État du cluster**  
  Nom et état du cluster dans lequel l'instance du serveur connecté et du groupe de disponibilité est un nœud membre.  
   
-##  <a name="AvReplicaDetails"></a> Détails du réplica de disponibilité  
+##  <a name="AvReplicaDetails"></a>Détails du réplica de disponibilité  
  Le volet **Réplica de disponibilité** affiche les colonnes suivantes :  
   
  **Nom**  
  Nom de l'instance du serveur qui héberge le réplica de disponibilité. Cette colonne est affichée par défaut.  
   
- **Rôle**  
+ **Actif**  
  Indique le rôle actuel du réplica de disponibilité, à savoir **Principal** ou **Secondaire**. Pour plus d’informations sur les rôles des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md). Cette colonne est affichée par défaut.  
   
  **Mode de basculement**  
@@ -138,24 +138,24 @@ ms.locfileid: "62788726"
   
 -   **Non synchronisé**. Une ou plusieurs bases de données du réplica ne sont pas synchronisées ou n'ont pas encore été jointes au groupe de disponibilité.  
   
--   **Synchronisation**. Une ou plusieurs bases de données du réplica sont synchronisées.  
+-   **Synchronisation**en cours. Une ou plusieurs bases de données du réplica sont synchronisées.  
   
 -   **Synchronisé**. Toutes les bases de données du réplica secondaire sont synchronisées avec les base de données primaires correspondantes sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.  
   
     > [!NOTE]  
     >  En mode de performances, la base de données n'est jamais dans l'état synchronisé.  
   
--   **NULL**. État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).  
+-   **Valeur null**. État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).  
   
  **Problèmes**  
- Énonce le nom du problème. Cette valeur est affichée par défaut. Pour obtenir la liste de tous les problèmes de stratégie AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Énonce le nom du problème. Cette valeur est affichée par défaut. Pour obtenir la liste de tous les problèmes de stratégie AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Mode de disponibilité**  
  Indique la propriété de réplica que vous définissez séparément pour chaque réplica de disponibilité. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
   
 -   **Asynchrone**. Le réplica secondaire n'est jamais synchronisé avec le réplica principal.  
   
--   **Synchronous**. Lors du rattrapage du retard par rapport à la base de données primaire, une base de données secondaire entre dans cet état, mais reste en retard tant que la synchronisation des données se poursuit pour la base de données.  
+-   **Synchrone**. Lors du rattrapage du retard par rapport à la base de données primaire, une base de données secondaire entre dans cet état, mais reste en retard tant que la synchronisation des données se poursuit pour la base de données.  
   
  **Mode de connexion principal**  
  Indique le mode utilisé pour se connecter au réplica principal.  Cette valeur est masquée par défaut.  
@@ -172,26 +172,26 @@ ms.locfileid: "62788726"
   
     -   Une fois la déconnexion détectée, le réplica secondaire tente de se reconnecter au réplica principal.  
   
--   **Connected**. Réplica de disponibilité distant qui est actuellement connecté au réplica local.  
+-   **Connecté**. Réplica de disponibilité distant qui est actuellement connecté au réplica local.  
   
- **État opérationnel**  
+ **État de fonctionnement**  
  Indique l'état opérationnel actuel du réplica secondaire. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
   
- **0**. Basculement en attente  
+ **0**. basculement en attente  
   
- **1**. En attente  
+ **1**. en attente  
   
- **2**. En ligne  
+ **2**. en ligne  
   
- **3**. Hors connexion  
+ **3**. hors connexion  
   
- **4**. Échec  
+ **4**. échec  
   
- **5**. Échec, pas de quorum  
+ **5**. échec, pas de quorum  
   
- **NULL**. Le réplica n'est pas local  
+ **Valeur null**. Le réplica n'est pas local  
   
- **Numéro de la dernière erreur de connexion**  
+ **N ° de la dernière erreur de connexion**  
  Numéro de la dernière erreur de connexion.  Cette valeur est masquée par défaut.  
   
  **Description de la dernière erreur de connexion**  
@@ -203,16 +203,16 @@ ms.locfileid: "62788726"
 > [!NOTE]  
 >  Pour plus d’informations sur les compteurs de performances pour les réplicas de disponibilité, consultez [SQL Server, réplica de disponibilité](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Pour regrouper les informations de groupe de disponibilité  
+##  <a name="AvDbDetails"></a>Pour regrouper les informations de groupe de disponibilité  
  Pour regrouper les informations, cliquez sur **Regrouper par**, puis sélectionnez l'une des commandes suivantes :  
   
 -   **Réplicas de disponibilité**  
   
 -   **Bases de données de disponibilité**  
   
--   **Synchronization state**  
+-   **État de synchronisation**  
   
--   **Disponibilité de basculement**  
+-   **Disponibilité du basculement**  
   
 -   **Problèmes**  
   
@@ -227,13 +227,13 @@ ms.locfileid: "62788726"
  **État de synchronisation**  
  Indique si la base de données de disponibilité est actuellement synchronisée avec le réplica principal. Cette valeur est affichée par défaut. Les états de synchronisation possibles sont les suivants :  
   
--   **Sans synchronisation**.  
+-   **Non synchronisé**.  
   
     -   Pour le rôle principal, indique que la base de données n'est pas prête à synchroniser son journal des transactions avec les bases de données secondaires correspondantes.  
   
     -   Pour une base de données secondaire, indique que la base de données n'a pas commencé la synchronisation du journal en raison d'un problème de connexion, est suspendue, ou passe par des états de transition pendant le démarrage ou lors d'un changement de rôle.  
   
--   **Synchronisation**.  
+-   **Synchronisation**en cours.  
   
      Sur un réplica principal :  
   
@@ -263,7 +263,7 @@ ms.locfileid: "62788726"
     > [!CAUTION]  
     >  Lorsqu'une base de données est dans l'état INITIALIZING, forcer le basculement vers le réplica secondaire laisse toujours cette base de données dans un état dans lequel elle ne peut pas être démarrée.  
   
- **Failover Readiness**  
+ **Disponibilité du basculement**  
  Indique le réplica de disponibilité qui peut basculer avec ou sans perte possible de données. Cette colonne est affichée par défaut. Les valeurs possibles sont les suivantes :  
   
 -   **Perte de données**  
@@ -277,7 +277,7 @@ ms.locfileid: "62788726"
   
 -   **Critique**. Cliquez pour afficher les problèmes critiques.  
   
- Pour obtenir la liste de tous les problèmes de stratégie AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Pour obtenir la liste de tous les problèmes de stratégie AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Suspendu**  
  Indique si la base de données est à l’état **Suspendu** ou si elle a été **reprise**. Cette valeur est masquée par défaut.  
@@ -300,13 +300,13 @@ ms.locfileid: "62788726"
  **Débit d'envoi du journal (Ko/s)**  
  Indique le débit, en Ko par seconde, auquel les enregistrements de journal sont envoyés au réplica secondaire. Cette valeur est masquée par défaut.  
   
- **Taille de la file d'attente de restauration par progression (Ko)**  
+ **Taille de la file d’attente de restauration par progression (Ko)**  
  Indique la quantité d'enregistrements du journal dans les fichiers journaux du réplica secondaire qui n'ont pas encore été restaurés. Cette valeur est masquée par défaut.  
   
- **Débit de la restauration par progression (Ko/s)**  
+ **Taux de restauration par progression (Ko/s)**  
  Indique le débit, en Ko par seconde, auquel les enregistrements de journal sont restaurés. Cette valeur est masquée par défaut.  
   
- **Vitesse d'envoi de flux de fichiers (Ko/s)**  
+ **Taux d’envoi FileStream (Ko/s)**  
  Indique le débit de FileStream, en Ko par seconde, auquel les transactions sont envoyées au réplica. Cette valeur est masquée par défaut.  
   
  **LSN de fin du journal**  
@@ -318,42 +318,42 @@ ms.locfileid: "62788726"
  **LSN de troncation**  
  Indique la valeur minimale de troncation du journal du réplica principal. Cette valeur est masquée par défaut.  
   
- **LSN de dernière validation**  
+ **LSN de la dernière validation**  
  Indique le numéro séquentiel dans le journal réel correspondant au dernier enregistrement de validation dans le journal des transactions. Cette valeur est masquée par défaut.  
   
- **Heure de dernière validation**  
+ **Heure de la dernière validation**  
  Indique l'heure correspondant au dernier enregistrement de validation. Cette valeur est masquée par défaut.  
   
- **LSN de dernier envoi**  
+ **LSN du dernier envoi**  
  Indique le point jusqu'auquel tous les blocs de journal ont été envoyés par le réplica principal. Cette valeur est masquée par défaut.  
   
- **Heure de dernier envoi**  
+ **Heure du dernier envoi**  
  Indique l'heure à laquelle le dernier bloc du journal a été envoyé. Cette valeur est masquée par défaut.  
   
  **LSN de dernière réception**  
  Indique le point jusqu'auquel tous les blocs de journal ont été reçus par le réplica secondaire qui héberge la base de données secondaire. Cette valeur est masquée par défaut.  
   
- **Heure de dernière réception**  
+ **Heure de la dernière réception**  
  Indique l'heure à laquelle l'identificateur de bloc de journal du dernier message reçu a été lu sur le réplica secondaire. Cette valeur est masquée par défaut.  
   
  **LSN de dernière sécurisation renforcée**  
  Indique le point jusqu'auquel tous les enregistrements de journal ont été vidés sur le disque du réplica secondaire. Cette valeur est masquée par défaut.  
   
- **Heure de dernière sécurisation renforcée**  
+ **Heure de la dernière sécurisation renforcée**  
  Indique l'heure à laquelle l'identificateur de bloc de journal a été reçu pour le LSN de dernière sécurisation renforcée sur le réplica secondaire. Cette valeur est masquée par défaut.  
   
- **LSN de dernière restauration par progression**  
+ **LSN de la dernière opération de restauration**  
  Indique le numéro séquentiel réel dans l'enregistrement du journal qui a été reconstruit pour la dernière fois sur le réplica secondaire. Cette valeur est masquée par défaut.  
   
- **Heure de dernière restauration par progression**  
+ **Heure de la dernière restauration**  
  Indique l'heure à laquelle le dernier enregistrement du journal a été restauré sur la base de données secondaire. Cette valeur est masquée par défaut.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
--   [Utiliser les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Utilisez les stratégies AlwaysOn pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [sys. dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Surveillance des groupes de disponibilité &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

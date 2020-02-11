@@ -1,5 +1,5 @@
 ---
-title: Propriétés de la liste de mots vides en texte intégral | Microsoft Docs
+title: Propriétés de la STOPLIST de texte intégral | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779406"
 ---
 # <a name="full-text-stoplist-properties"></a>Propriétés de la liste de mots vides de texte intégral
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des mots vides, supprimer tous les mots vides pour une langue spécifique ou effacer la liste de mots vides actuelle. Un mot vide est un mot utilisé couramment et inclus dans une liste de mots vides. Les mots vides répertoriés dans une liste de mots vides sont omis de l'indexation de texte intégral pour les tables qui utilisent la liste de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/full-text-search.md).  
   
- **Pour utiliser SQL Server Management Studio pour modifier les propriétés de la liste de mots vides**  
+ **Pour utiliser SQL Server Management Studio pour modifier des propriétés de liste de mots vides**  
   
 -   [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/full-text-search.md)  
   
@@ -40,10 +40,10 @@ ms.locfileid: "62779406"
  **Supprimer tous les mots vides**  
  Supprimer tous les mots vides pour une langue spécifique.  
   
- **Liste de mots vides clair**  
+ **Effacer la liste de mots vides**  
  Effacer la liste de mots vides en supprimant tous les mots vides pour toutes les langues.  
   
- **mot vide**  
+ **Mot vide**  
  Si vous avez sélectionné **Ajouter un mot vide** ou **Supprimer le mot vide**, entrez le mot vide dans le champ **Mot vide** . Tout nouveau mot vide doit être unique ; autrement dit, il ne doit pas déjà figurer dans la liste de mots vides correspondant à la langue sélectionnée.  
   
  **Langue de texte intégral**  

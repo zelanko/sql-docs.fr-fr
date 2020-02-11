@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955842"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Répliquer des données dans des colonnes chiffrées (SQL Server Management Studio)
@@ -60,7 +60,7 @@ ms.locfileid: "62955842"
   
 6.  Abonnez-vous à la publication. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../create-a-pull-subscription.md) ou [Créer un abonnement par émission (push)](../create-a-push-subscription.md).  
   
-7.  Initialisez l'abonnement. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+7.  Initialisez l'abonnement. Pour plus d’informations, voir [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 8.  Sur l'abonné, exécutez [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) en utilisant les mêmes valeurs pour ALGORITHM, KEY_SOURCE et IDENTITY_VALUE qu'à l'étape 1. Vous pouvez spécifier une valeur différente pour la clause ENCRYPTION BY.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62955842"
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité de la réplication SQL Server](view-and-modify-replication-security-settings.md)   
+ [Sécurité Réplication SQL Server](view-and-modify-replication-security-settings.md)   
  [Créer des clés symétriques identiques sur deux serveurs](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

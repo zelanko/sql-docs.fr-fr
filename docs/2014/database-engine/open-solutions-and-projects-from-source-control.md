@@ -1,5 +1,5 @@
 ---
-title: Ouvrir des Solutions et projets de contrôle de code Source | Microsoft Docs
+title: Ouvrir des solutions et des projets à partir du contrôle de code source | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774774"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Ouvrir des solutions et des projets à partir du contrôle de code source
-  Vous pouvez utiliser [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ouvrir une solution ou un projet directement à partir de contrôle de code source. Lorsque vous ouvrez une solution à partir du contrôle de code source, l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] récupère automatiquement la dernière version de la solution en question et la copie à l'emplacement que vous avez spécifié.  
+  Vous pouvez utiliser [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ouvrir une solution ou un projet directement à partir du contrôle de code source. Lorsque vous ouvrez une solution à partir du contrôle de code source, l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] récupère automatiquement la dernière version de la solution en question et la copie à l'emplacement que vous avez spécifié.  
   
- Si vous ne disposez pas de copie locale d'une solution, vous devez ouvrir cette solution à partir du contrôle de code source avant de pouvoir y effectuer des opérations de contrôle de code source. Une fois que vous avez récupéré une copie locale de la solution, vous n’avez pas besoin de rouvrir à partir du contrôle de code source ; Vous pouvez ouvrir la copie locale et utiliser les commandes de contrôle de code source standard, tels que **obtenir la dernière Version** ou **Check Out**, pour effectuer l’opération souhaitée.  
+ Si vous ne disposez pas de copie locale d'une solution, vous devez ouvrir cette solution à partir du contrôle de code source avant de pouvoir y effectuer des opérations de contrôle de code source. Une fois que vous avez récupéré une copie locale de la solution, vous n’avez pas besoin de l’ouvrir à nouveau à partir du contrôle de code source. vous pouvez ouvrir la copie locale et utiliser les commandes de contrôle de code source standard, telles que **récupérer la dernière version** ou **extraire**, pour effectuer l’opération souhaitée.  
   
  Le tableau suivant décrit les rubriques de cette section.  
   

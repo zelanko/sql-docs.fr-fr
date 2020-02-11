@@ -1,5 +1,5 @@
 ---
-title: Renommer une Instance Analysis Services | Microsoft Docs
+title: Renommer une instance de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079621"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renommer une instance d'Analysis Services
-  Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la **renommer l’Instance** boîte de dialogue.  
+  Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la boîte de dialogue **Renommer l’instance** .  
   
 > [!IMPORTANT]  
 >  Pendant que l’instance est renommée, l’utilitaire Modification du nom d’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécute avec des privilèges élevés et met à jour le nom de service Windows, les comptes de sécurité et les entrées de Registre associées à cette instance. Pour vous assurer que ces actions sont effectuées, veillez à exécuter cet outil en tant qu'administrateur système local.  
@@ -35,7 +35,7 @@ ms.locfileid: "66079621"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Pour renommer une instance d'Analysis Services  
   
-1.  Lancer le **Instance renommer** outil, **asinstancerename.exe**, à partir de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Lancez l’outil **modification du nom d’instance** , **asinstancerename. exe**, à partir de C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  Dans la boîte de dialogue **Renommer l’instance** , sélectionnez dans la liste **Instance à renommer** l’instance que vous souhaitez renommer.  
   
@@ -59,20 +59,20 @@ ms.locfileid: "66079621"
   
      L'exemple suivant en est l'illustration. Supposons que vous avez installé un serveur en mode tabulaire en tant qu’instance nommée « Tabular » à l’aide du compte virtuel par défaut, ce qui entraîne la configuration suivante :  
   
-    1.  Nom de l’instance = \<serveur > \TABULAR  
+    1.  Nom de l' \<instance = serveur> \tabular  
   
     2.  Nom du service = MSOLAP$TABULAR  
   
     3.  Compte virtuel = NT Service\ MSOLAP$TABULAR  
   
-     Maintenant Supposons que vous renommez l’instance en « TAB2 ». Suite au changement de nom, la configuration se présente à présent comme suit :  
+     Supposons à présent que vous renommez l’instance en « TAB2 ». Suite au changement de nom, la configuration se présente à présent comme suit :  
   
-    1.  Nom de l’instance = \<serveur > \TAB2  
+    1.  Nom de l' \<instance = serveur> \tab2  
   
     2.  Nom du service = MSOLAP$TAB2  
   
     3.  Compte virtuel = NT Service\ MSOLAP$TAB2  
   
-     Comme vous pouvez le voir, les autorisations de base de données et les fichiers qui ont été précédemment accordées à « NT Service\ MSOLAP$ TABULAR » ne sont plus valides. Pour vous assurer que les tâches et les opérations effectuées par le service s’exécute comme précédemment, vous devez maintenant devez accorder des autorisations de base de données et les fichiers nouveaux à « NT Service\ MSOLAP$ TAB2 ».  
+     Comme vous pouvez le voir, les autorisations de base de données et de fichier précédemment accordées à « NT Service \ MSOLAP $ TABULAr » ne sont plus valides. Pour vous assurer que les tâches et les opérations effectuées par le service s’exécutent comme avant, vous devez maintenant accorder aux nouvelles autorisations de base de données et de fichier la valeur « NT Service \ MSOLAP $ TAB2 ».  
   
   

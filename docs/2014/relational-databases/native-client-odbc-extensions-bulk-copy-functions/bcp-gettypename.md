@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689026"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -43,13 +43,13 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *token*  
+ *lexical*  
  Valeur indiquant un jeton de type BCP.  
   
- *field*  
+ *case*  
  Indique si le jeton demandé possède le type max.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  Chaîne contenant le nom de type SQL qui correspond au type BCP. Si un type BCP non valide est spécifié, une chaîne vide est retournée.  
   
 ## <a name="remarks"></a>Notes  
@@ -57,46 +57,46 @@ fIsMaxType
   
  Le tableau suivant spécifie les types BCP possibles, s'ils sont ou pas de type max et la sortie attendue.  
   
-|Nom du type BCP|MaxType|Sortie|  
+|Nom du type BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|Avant ou après|**decimal**|  
-|`SQLNUMERIC`|Avant ou après|**numeric**|  
-|`SQLINT1`|Avant ou après|**tinyint**|  
-|`SQLINT2`|Avant ou après|**smallint**|  
-|`SQLINT4`|Avant ou après|**Int**|  
-|`SQLMONEY`|Avant ou après|**money**|  
-|`SQLFLT8`|Avant ou après|**float**|  
-|`SQLDATETIME`|Avant ou après|**datetime**|  
-|`SQLBITN`|Avant ou après|**bit-null**|  
-|`SQLBIT`|Avant ou après|**bit**|  
+|`SQLDECIMAL`|Vous pouvez soit utiliser|**sépar**|  
+|`SQLNUMERIC`|Vous pouvez soit utiliser|**chiffre**|  
+|`SQLINT1`|Vous pouvez soit utiliser|**tinyint**|  
+|`SQLINT2`|Vous pouvez soit utiliser|**smallint**|  
+|`SQLINT4`|Vous pouvez soit utiliser|**int**|  
+|`SQLMONEY`|Vous pouvez soit utiliser|**money**|  
+|`SQLFLT8`|Vous pouvez soit utiliser|**float**|  
+|`SQLDATETIME`|Vous pouvez soit utiliser|**DATETIME**|  
+|`SQLBITN`|Vous pouvez soit utiliser|**bit-null**|  
+|`SQLBIT`|Vous pouvez soit utiliser|**bit**|  
 |`SQLBIGCHAR`|Non|**char**|  
 |`SQLCHARACTER`|Non|**char**|  
 |`SQLBIGVARCHAR`|Non|**varchar**|  
 |`SQLVARCHAR`|Non|**varchar**|  
-|`SQLTEXT`|Avant ou après|**texte**|  
-|`SQLBIGBINARY`|Non|**binaire**|  
-|`SQLBINARY`|Non|**Binaire**|  
+|`SQLTEXT`|Vous pouvez soit utiliser|**text**|  
+|`SQLBIGBINARY`|Non|**binary**|  
+|`SQLBINARY`|Non|**Binaire2**|  
 |`SQLBIGVARBINARY`|Non|**Varbinary**|  
 |`SQLVARBINARY`|Non|**Varbinary**|  
-|`SQLIMAGE`|Avant ou après|**Image**|  
-|`SQLINTN`|Avant ou après|**int-null**|  
-|`SQLDATETIMN`|Avant ou après|**datetime-null**|  
-|`SQLMONEYN`|Avant ou après|**money-null**|  
-|`SQLFLTN`|Avant ou après|**float-null**|  
-|`SQLAOPSUM`|Avant ou après|**Sum**|  
-|`SQLAOPAVG`|Avant ou après|**Avg**|  
-|`SQLAOPCNT`|Avant ou après|**Compter**|  
-|`SQLAOPMIN`|Avant ou après|**Min**|  
-|`SQLAOPMAX`|Avant ou après|**Max**|  
-|`SQLDATETIM4`|Avant ou après|**smalldatetime**|  
-|`SQLMONEY4`|Avant ou après|**Smallmoney**|  
-|`SQLFLT4`|Avant ou après|**réel**|  
-|`SQLUNIQUEID`|Avant ou après|**uniqueidentifier**|  
-|`SQLNCHAR`|Non|**Nchar**|  
+|`SQLIMAGE`|Vous pouvez soit utiliser|**Image**|  
+|`SQLINTN`|Vous pouvez soit utiliser|**int-null**|  
+|`SQLDATETIMN`|Vous pouvez soit utiliser|**datetime-null**|  
+|`SQLMONEYN`|Vous pouvez soit utiliser|**money-null**|  
+|`SQLFLTN`|Vous pouvez soit utiliser|**float-null**|  
+|`SQLAOPSUM`|Vous pouvez soit utiliser|**Checksum**|  
+|`SQLAOPAVG`|Vous pouvez soit utiliser|**AVG**|  
+|`SQLAOPCNT`|Vous pouvez soit utiliser|**Saut**|  
+|`SQLAOPMIN`|Vous pouvez soit utiliser|**Min**|  
+|`SQLAOPMAX`|Vous pouvez soit utiliser|**Max**|  
+|`SQLDATETIM4`|Vous pouvez soit utiliser|**smalldatetime**|  
+|`SQLMONEY4`|Vous pouvez soit utiliser|**Smallmoney**|  
+|`SQLFLT4`|Vous pouvez soit utiliser|**Non**|  
+|`SQLUNIQUEID`|Vous pouvez soit utiliser|**uniqueidentifier**|  
+|`SQLNCHAR`|Non|**NCHAR**|  
 |`SQLNVARCHAR`|Non|**Nvarchar**|  
-|`SQLNTEXT`|Avant ou après|**Ntext**|  
-|`SQLVARIANT`|Avant ou après|**sql_variant**|  
-|`SQLINT8`|Avant ou après|**Bigint**|  
+|`SQLNTEXT`|Vous pouvez soit utiliser|**Text**|  
+|`SQLVARIANT`|Vous pouvez soit utiliser|**sql_variant**|  
+|`SQLINT8`|Vous pouvez soit utiliser|**Comportant**|  
 |`SQLCHARACTER`|Oui|**varchar(max)**|  
 |`SQLBIGCHAR`|Oui|**varchar(max)**|  
 |`SQLBIGVARCHAR`|Oui|**varchar(max)**|  
@@ -107,15 +107,15 @@ fIsMaxType
 |`SQLVARBINARY`|Oui|**varbinary(max)**|  
 |`SQLNCHAR`|Oui|**nvarchar(max)**|  
 |`SQLNVARCHAR`|Oui|**nvarchar(max)**|  
-|`SQLXML`|Oui|**Xml**|  
-|`SQLUDT`|Avant ou après|**Udt**|  
+|`SQLXML`|Oui|**Langage**|  
+|`SQLUDT`|Vous pouvez soit utiliser|**Assorti**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
- Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
+ Les valeurs de paramètre de jeton pour les types date/time sont décrites dans la colonne « type dans sqlncli. h » de la table dans les [modifications de copie en bloc pour les types de date et d’heure améliorés &#40;OLE DB et ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  
   
- Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

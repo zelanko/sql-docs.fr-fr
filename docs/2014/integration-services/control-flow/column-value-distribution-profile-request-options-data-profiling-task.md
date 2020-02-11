@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a79ba9f2ff211ed4bf56e749acba7f1d4601643
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832424"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Options Demande de profil de distribution de valeurs de colonne (tâche de profilage des données)
@@ -32,7 +32,7 @@ ms.locfileid: "62832424"
   
 -   **Données**, qui incluent les options **TableOrView** et **Column**  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62832424"
   
  Pour plus d'informations, consultez la section « Options TableorView » dans cette rubrique.  
   
- **Column**  
+ **Colonne**  
  Sélectionnez la colonne existante à profiler. Sélectionnez **(\*)** pour profiler toutes les colonnes.  
   
  Pour plus d'informations, consultez la section « Options de colonne » dans cette rubrique.  
@@ -70,15 +70,15 @@ ms.locfileid: "62832424"
 > [!NOTE]  
 >  Si vous utilisez le caractère générique **(\*)** pour **ColumnName**, **CompareOptions** est en lecture seule et est définie avec le paramètre **Default**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
+|**Par défaut**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
 |**DictionarySort**|Trie et compare des données d'après les règles de tri et de comparaison telles que définies dans les dictionnaires de la langue ou de l'alphabet associé.|  
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -93,7 +93,7 @@ ms.locfileid: "62832424"
  **ValueDistributionOption**  
  Spécifiez si la distribution est à calculer pour toutes les valeurs de colonne. La valeur par défaut de cette option est **FrequentValues**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**AllValues**|La distribution est calculée pour toutes les valeurs de colonne.|  
 |**FrequentValues**|La distribution est calculée uniquement pour les valeurs dont la fréquence dépasse la valeur minimale spécifiée dans **FrequentValueThreshold**. Les valeurs qui ne correspondent pas à **FrequentValueThreshold** sont exclues du rapport de sortie.|  

@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831476"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
+  La tâche MSMQ vous permet d’utiliser Message Queuing (également appelé MSMQ) pour envoyer et recevoir des messages entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] des packages, ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
   
  L'utilisation de la tâche MSMQ vous permet de coordonner des opérations à l'échelle de votre entreprise. Les messages peuvent être placés dans la file d'attente et remis ultérieurement si la destination est indisponible ou occupée ; par exemple, la tâche peut mettre en file d'attente les messages destinés à l'ordinateur portable hors connexion des représentants commerciaux, qui reçoivent leurs messages lorsqu'ils se connectent au réseau. Vous pouvez utiliser la tâche MSMQ pour effectuer les opérations suivantes :  
   
@@ -51,9 +51,11 @@ ms.locfileid: "62831476"
   
 -   Un message `String` spécifie le message en tant que chaîne. Lors de la réception de messages, vous pouvez configurer la tâche de façon à comparer la chaîne reçue avec une chaîne définie par l'utilisateur et exécuter une action en fonction du résultat de la comparaison. La comparaison de chaînes peut être exacte, sensible ou non à la casse, ou utiliser une sous-chaîne.  
   
--   `String message to variable` spécifie le message source en tant que chaîne envoyée à une variable de destination. Vous pouvez configurer la tâche de façon à comparer la chaîne reçue avec une chaîne définie par l'utilisateur à l'aide d'une comparaison exacte, non sensible à la casse ou de sous-chaîne. Ce type de message est disponible uniquement lorsque la tâche reçoit des messages.  
+-   
+  `String message to variable` spécifie le message source en tant que chaîne envoyée à une variable de destination. Vous pouvez configurer la tâche de façon à comparer la chaîne reçue avec une chaîne définie par l'utilisateur à l'aide d'une comparaison exacte, non sensible à la casse ou de sous-chaîne. Ce type de message est disponible uniquement lorsque la tâche reçoit des messages.  
   
--   `Variable` spécifie que le message contient une ou plusieurs variables. Vous pouvez configurer la tâche de façon à spécifier les noms des variables contenues dans le message. Lors de la réception de messages, vous pouvez configurer la tâche de façon à spécifier à la fois le package à partir duquel elle peut recevoir des messages et la variable qui est la destination du message.  
+-   
+  `Variable` spécifie que le message contient une ou plusieurs variables. Vous pouvez configurer la tâche de façon à spécifier les noms des variables contenues dans le message. Lors de la réception de messages, vous pouvez configurer la tâche de façon à spécifier à la fois le package à partir duquel elle peut recevoir des messages et la variable qui est la destination du message.  
   
 ## <a name="sending-messages"></a>sending messages  
  Lorsque vous configurez la tâche MSMQ pour envoyer des messages, vous pouvez utiliser l'un des algorithmes de chiffrement actuellement pris en charge par la technologie Message Queuing, RC2 et RC4, pour chiffrer le message. Ces deux algorithmes de chiffrement sont aujourd'hui considérés comme faibles d'un point de vue du chiffrement par rapport aux algorithmes plus récents, non encore pris en charge par la technologie Microsoft Message Queuing. Par conséquent, vous devez minutieusement évaluer vos besoins en matière de chiffrement si vous souhaitez envoyer des messages à l'aide de la tâche MSMQ.  
@@ -88,11 +90,11 @@ ms.locfileid: "62831476"
 ## <a name="configuration-of-the-message-queue-task"></a>Configuration de la tâche MSMQ  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche MSMQ &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche MSMQ &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Éditeur de tâche MSMQ &#40;page Recevoir&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Éditeur de tâche MSMQ &#40;page de réception&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Éditeur de tâche MSMQ &#40;page Envoyer&#41;](../message-queue-task-editor-send-page.md)  
+-   [Éditeur de tâche MSMQ &#40;page envoyer&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

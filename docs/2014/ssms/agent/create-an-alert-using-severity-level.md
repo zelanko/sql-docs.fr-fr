@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136740"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Créer une alerte à l'aide d'un niveau de gravité
-  Cette rubrique explique comment créer une alerte de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est déclenchée lou desqu'un événement d'un niveau de gravité spécifique a lieu dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique explique comment créer une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de l’agent qui est déclenchée lorsqu’un événement d’un niveau de gravité [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] spécifique se [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] produit [!INCLUDE[tsql](../../includes/tsql-md.md)]dans à l’aide de ou de.  
   
  **Dans cette rubrique**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63136740"
   
      [Sécurité](#Security)  
   
--   **Pour créer une alerte à l'aide d'un niveau de gravité, utilisez :**  
+-   **Pour créer une alerte à l’aide d’un niveau de gravité, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,7 +43,8 @@ ms.locfileid: "63136740"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, fonctionnant en mode graphique, qui permet de gérer tout le système d'alerte. Son utilisation est recommandée pour configurer une infrastructure d'alertes.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil simple, fonctionnant en mode graphique, qui permet de gérer tout le système d'alerte. Son utilisation est recommandée pour configurer une infrastructure d'alertes.  
   
 -   Les événements créés à l’aide de **xp_logevent** surviennent dans la base de données master. Ainsi, la procédure **xp_logevent** ne déclenche pas d’alerte sauf si la valeur de **@database_name** pour l’alerte est **'master'** ou NULL.  
   
@@ -80,7 +81,7 @@ ms.locfileid: "63136740"
   
 #### <a name="to-create-an-alert-using-severity-level"></a>Pour créer une alerte à l'aide d'un niveau de gravité  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

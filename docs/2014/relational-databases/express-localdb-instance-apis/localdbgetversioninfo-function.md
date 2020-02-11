@@ -1,5 +1,5 @@
 ---
-title: Fonction LocalDBGetVersionInfo | Microsoft Docs
+title: LocalDBGetVersionInfo fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032229"
 ---
 # <a name="localdbgetversioninfo-function"></a>Fonction LocalDBGetVersionInfo
   Retourne des informations pour la version spécifiée de SQL Server Express LocalDB, notamment si elle existe, ainsi que le numéro de version complet de LocalDB (avec les numéros de build et de version).  
   
- Les informations sont retournées sous la forme d’un `struct` nommé **LocalDBVersionInfo**, qui a la définition suivante.  
+ Les informations sont retournées sous la forme `struct` d’un **LocalDBVersionInfo**nommé, qui a la définition suivante.  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -49,7 +49,7 @@ typedef struct _LocalDBVersionInfo
   
 ```  
   
- **Fichier d'en-tête :** sqlncli.h  
+ **Fichier d’en-tête :** sqlncli. h  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,10 +66,10 @@ HRESULT LocalDBGetVersionInfo(
  [Sortie] La mémoire tampon pour stocker des informations sur la version de LocalDB.  
   
  *dwVersionInfoSize*  
- [Entrée] Contient la taille de la *VersionInfo* mémoire tampon.  
+ Entrée Contient la taille de la mémoire tampon *VERSIONINFO* .  
   
-## <a name="returns"></a>Valeur renvoyée  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+## <a name="returns"></a>Retours  
+ S_OK  
  La fonction a réussi.  
   
  [LOCALDB_ERROR_NOT_INSTALLED](../express-localdb-error-messages/localdb-error-not-installed.md)  
@@ -82,14 +82,14 @@ HRESULT LocalDBGetVersionInfo(
  La version spécifiée de LocalDB n'existe pas.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
+ Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="details"></a>Détails  
- Le raisonnement derrière l’introduction de la `struct` argument de taille (*lpVersionInfoSize*) consiste à activer l’API doit retourner différentes versions de la **LocalDBVersionInfostruct**, efficacement activation de la compatibilité descendante et ascendante.  
+ Le raisonnement derrière l’introduction de l' `struct` argument de taille (*lpVersionInfoSize*) consiste à permettre à l’API de retourner différentes versions du **LocalDBVersionInfostruct**, ce qui permet une compatibilité ascendante et descendante.  
   
- Si le `struct` argument de taille (*lpVersionInfoSize*) correspond à la taille d’une version connue de la **LocalDBVersionInfostruct**, cette version de la `struct` est retourné. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
+ Si l' `struct` argument de taille (*lpVersionInfoSize*) correspond à la taille d’une version connue du **LocalDBVersionInfostruct**, cette version de `struct` est retournée. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
   
- Un exemple typique de **LocalDBGetVersionInfo** utilisation de l’API se présente comme suit :  
+ Voici un exemple typique d’utilisation de l’API **LocalDBGetVersionInfo** :  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -101,6 +101,6 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
  Pour un exemple de code qui utilise l'API LocalDB, consultez [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-tête et informations de version de la base de données locale SQL Server Express](sql-server-express-localdb-header-and-version-information.md)  
+ [En-tête et informations de version SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

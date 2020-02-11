@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035708"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tâche de nettoyage de maintenance (Plan de maintenance)
@@ -28,7 +28,7 @@ ms.locfileid: "63035708"
 >  La tâche de nettoyage de maintenance ne supprime pas automatiquement les fichiers dans les sous-dossiers du répertoire spécifié. Cette fonctionnalité réduit la possibilité d'une attaque malveillante qui utilise la tâche de nettoyage de maintenance pour supprimer des fichiers. Pour supprimer des fichiers dans les sous-dossiers de premier niveau, vous devez sélectionner **Inclure les sous-dossiers de premier niveau**.  
   
 ## <a name="options"></a>Options  
- **Connexion**  
+ **Connection**  
  Affiche la connexion active.  
   
  **Nouveau**  
@@ -49,7 +49,7 @@ ms.locfileid: "63035708"
  **Rechercher dans le dossier et supprimer les fichiers en fonction de l'extension**  
  Supprimez tous les fichiers contenant l'extension spécifiée dans le dossier spécifié. Utilisez cette option pour supprimer plusieurs fichiers à la fois, par exemple tous les fichiers de sauvegarde possédant l'extension .bak dans le dossier Mardi.  
   
- **Dossier**  
+ **Folder**  
  Chemin d'accès et nom du dossier contenant les fichiers à supprimer.  
   
  **Extension de fichier**  
@@ -58,10 +58,10 @@ ms.locfileid: "63035708"
  **Inclure les sous-dossiers de premier niveau**  
  Supprimez les fichiers portant l’extension spécifiée pour l’option **Extension de fichier** , des sous-dossiers de premier niveau situés dans le dossier défini dans l’option **Dossier**.  
   
- **Supprimer les fichiers en fonction de l'ancienneté du fichier au moment de l'exécution de la tâche**  
+ **Supprimer les fichiers en fonction de l’ancienneté du fichier au moment de l’exécution de la tâche**  
  Spécifiez l’ancienneté minimale des fichiers à supprimer en entrant un chiffre et une unité de temps dans la zone **Supprimer les fichiers antérieurs à** .  
   
- **Supprimer les fichiers antérieurs à**  
+ **Supprimer les fichiers antérieurs à ce qui suit**  
  Spécifiez l'ancienneté minimale des fichiers à supprimer en fournissant un chiffre et une unité de temps (Jour, Semaine, Mois ou Année). Les fichiers antérieurs au délai spécifié seront supprimés.  
   
  **Vue T-SQL**  
@@ -71,7 +71,7 @@ ms.locfileid: "63035708"
 >  Si le nombre d'objets impliqués est élevé, l'affichage des instructions peut prendre un temps considérable.  
   
 ## <a name="new-connection-dialog-box"></a>Boîte de dialogue Nouvelle connexion  
- **Nom de la connexion**  
+ **Nom de connexion**  
  Entrez un nom pour la nouvelle connexion.  
   
  **Sélectionnez ou entrez un nom de serveur.**  

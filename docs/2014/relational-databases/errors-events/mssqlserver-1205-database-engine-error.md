@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915893"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|1205|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|1205|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|LK_VICTIM|  
 |Texte du message|La transaction (ID de processus %d) a été bloquée sur les ressources %.*ls par un autre processus et a été choisie comme victime. Relancez la transaction.|  
   
 ## <a name="explanation"></a>Explication  
- L'accès aux ressources s'effectue dans un ordre conflictuel sur des transactions distinctes, ce qui cause un interblocage. Exemple :  
+ Des ressources sont accessibles dans un ordre conflictuel sur des transactions distinctes, ce qui provoque un blocage. Par exemple :  
   
 -   Transaction1 met à jour **Table1.Row1**, tandis que Transaction2 met à jour **Table2.Row2**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62915893"
   
 -   Un blocage survient car Transaction1 attend que Transaction2 se termine, alors que Transaction2 attend que Transaction1 se termine.  
   
- Le système détectera ce blocage et choisira l'une des transactions impliquées comme 'victime' et émettra ce message, tout en annulant la transaction de la victime.  
+ Dans ce cas, le système détecte le blocage et choisit une des transactions impliquées en tant que « victime », pour émettre ce message tout en annulant la transaction de la victime.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Exécutez de nouveau la transaction. Vous pouvez également réviser l'application pour éviter les blocages. La transaction qui a été choisie comme victime peut être retentée et réussira probablement, en fonction des opérations qui sont exécutées simultanément.  

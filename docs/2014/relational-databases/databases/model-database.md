@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916945"
 ---
 # <a name="model-database"></a>model, base de données
@@ -56,9 +56,9 @@ ms.locfileid: "62916945"
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
 |AUTO_CLOSE|OFF|Oui|  
-|AUTO_CREATE_STATISTICS|ON|Oui|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_SHRINK|OFF|Oui|  
-|AUTO_UPDATE_STATISTICS|ON|Oui|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
 |CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
@@ -73,12 +73,12 @@ ms.locfileid: "62916945"
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
 |READ_COMMITTED_SNAPSHOT|OFF|Oui|  
-|RECOVERY|Dépend de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] édition<sup>1</sup>|Oui|  
+|RECOVERY|Dépend de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’édition<sup>1</sup>|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
 |Options de Service Broker|DISABLE_BROKER|Non|  
 |TRUSTWORTHY|OFF|Non|  
   
- <sup>1</sup> pour vérifier le mode de récupération actuel de la base de données, consultez [afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> pour vérifier le mode de récupération actuel de la base de données, consultez [afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) ou [sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Pour obtenir une description de ces options de base de données, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62916945"
   
 -   Modification du classement. Le classement par défaut est le classement du serveur.  
   
--   Modification du propriétaire de la base de données. La base de données**model** appartient à **sa**.  
+-   Modification du propriétaire de la base de données. le **modèle** appartient à **sa**.  
   
 -   Suppression de la base de données  
   
--   Suppression de l'utilisateur **Invité** de la base de données  
+-   Suppression de l’utilisateur **invité** de la base de données.  
   
 -   Activation de la capture des données modifiées.  
   

@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808690"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words (option de configuration de serveur)
-  Utilisez le `transform noise words` option de configuration de serveur pour supprimer un message d’erreur si des mots parasites, autrement dit [mots vides](../../relational-databases/search/full-text-search.md), provoquent une opération booléenne sur une requête de recherche en texte intégral retourne zéro ligne. Cette option est utile pour les requêtes de texte intégral qui utilisent le prédicat CONTAINS dans lequel les opérations booléennes ou les opérations de proximité (NEAR) incluent des mots parasites. Les valeurs possibles sont décrites dans le tableau suivant.  
+  Utilisez l' `transform noise words` option de configuration de serveur pour supprimer un message d’erreur si des mots parasites, autrement dit des [mots vides](../../relational-databases/search/full-text-search.md), provoquent le retour de lignes nulles d’une opération booléenne sur une requête de texte intégral. Cette option est utile pour les requêtes de texte intégral qui utilisent le prédicat CONTAINS dans lequel les opérations booléennes ou les opérations de proximité (NEAR) incluent des mots parasites. Les valeurs possibles sont décrites dans le tableau suivant.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|Les mots parasites (ou mots vides) ne sont pas transformés. Lorsqu'une requête de texte intégral contient des mots parasites, la requête retourne des lignes nulles, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un avertissement. Il s'agit du comportement par défaut.<br /><br /> Notez que l’avertissement est un avertissement au moment de l’exécution. Par conséquent, si la clause de texte intégral dans la requête n'est pas exécutée, l'avertissement n'est pas généré. Pour une requête locale, un seul avertissement est généré, même lorsqu'il y a plusieurs clauses de requêtes de texte intégral. Pour une requête distante, le serveur lié peut ne pas relayer l'erreur ; par conséquent, l'avertissement peut ne pas être généré.|  
 |1|Les mots parasites (ou mots vides) sont transformés. Ils sont ignorés, et le reste de la requête est évalué.<br /><br /> Si des mots parasites sont spécifiés dans un terme de proximité, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les supprime. Par exemple, le mot parasite `is` est supprimé de `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, en transformant la requête de recherche en `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Notez que `CONTAINS(<column_name>, 'NEAR(hello,is)')` serait transformé en `CONTAINS(<column_name>, hello)` , car il n'existe qu'un seul terme de recherche valide.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62808690"
   
 -   Avec transform noise words défini sur 0 :  
   
-    |Chaîne de requête|Résultat|  
+    |Chaîne de requête|Résultats|  
     |------------------|------------|  
     |"`cat`" AND "`the`"|Aucun résultat (Le comportement est le même pour "`the`" AND "`cat`".)|  
     |"`cat`" NEAR "`the`"|Aucun résultat (Le comportement est le même pour "`the`" NEAR "`cat`".)|  
@@ -48,7 +48,7 @@ ms.locfileid: "62808690"
   
 -   Avec transform noise words défini sur 1 :  
   
-    |Chaîne de requête|Résultat|  
+    |Chaîne de requête|Résultats|  
     |------------------|------------|  
     |"`cat`" AND "`the`"|Accès à la ligne portant l'ID 1|  
     |"`cat`" NEAR "`the`"|Accès à la ligne portant l'ID 1|  
@@ -56,7 +56,7 @@ ms.locfileid: "62808690"
     |"`black`" AND NOT "`the`"|Accès à la ligne portant l'ID 1|  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant affecte la valeur `1` à `transform noise words`.  
+ L'exemple suivant affecte la valeur `transform noise words` à `1`.  
   
 ```  
 sp_configure 'show advanced options', 1;  

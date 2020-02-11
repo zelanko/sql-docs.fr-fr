@@ -14,22 +14,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773295"
 ---
 # <a name="view-file-history"></a>Afficher l'historique d'un fichier
-  Vous pouvez utiliser la **historique** commande pour afficher un historique des versions pour les fichiers sous contrôle de code source. Cet historique indique la date et l'heure auxquelles le fichier a été ajouté au contrôle de code source ou y a été archivé.  
+  Vous pouvez utiliser la commande **History** pour afficher un historique des versions des fichiers sous contrôle de code source. Cet historique indique la date et l'heure auxquelles le fichier a été ajouté au contrôle de code source ou y a été archivé.  
   
 ### <a name="to-view-the-history-of-a-file"></a>Pour afficher l'historique d'un fichier  
   
 1.  Dans l'Explorateur de solutions, sélectionnez le fichier.  
   
-2.  Sur le **fichier** menu, pointez sur **contrôle de code Source** et cliquez sur **historique**.  
+2.  Dans le menu **fichier** , pointez sur **contrôle de code source** , puis cliquez sur **historique**.  
   
-3.  Dans le **historique du fichier** boîte de dialogue zone, effectuez l’une des actions suivantes :  
+3.  Dans la boîte **de dialogue historique du fichier** , effectuez l’une des actions suivantes :  
   
 4.  Afficher la version sélectionnée.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "62773295"
   
 9. Exporter le rapport de l'historique vers une imprimante, un fichier ou le Presse-Papiers [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- Pour plus d’informations sur la façon d’effectuer ces tâches, cliquez sur le **aide** situé dans le **historique du fichier** boîte de dialogue.  
+ Pour plus d’informations sur la façon d’effectuer ces tâches, cliquez sur le bouton **aide** dans la boîte **de dialogue historique du fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir et récupérer des informations de Version](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Afficher l’historique de projet](../../2014/database-engine/view-project-history.md)   
- [Afficher l’état de fichier](../../2014/database-engine/view-file-status.md)   
- [Récupérer des fichiers](../../2014/database-engine/retrieve-files.md)   
+ [Définir et récupérer les informations de version](../../2014/database-engine/set-and-retrieve-version-information.md)   
+ [Afficher l’historique du projet](../../2014/database-engine/view-project-history.md)   
+ [Afficher l’état du fichier](../../2014/database-engine/view-file-status.md)   
+ [Récupérer les fichiers](../../2014/database-engine/retrieve-files.md)   
  [Comparer des fichiers](../../2014/database-engine/compare-files.md)  
   
   

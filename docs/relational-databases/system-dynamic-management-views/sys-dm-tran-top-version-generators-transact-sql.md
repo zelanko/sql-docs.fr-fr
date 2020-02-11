@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
+title: sys. dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262611"
 ---
-# <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
+# <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie une table virtuelle pour les objets qui génèrent la majorité des versions d'un magasin de versions. **Sys.dm_tran_top_version_generators** retourne les 256 premières longueurs d’enregistrements qui sont regroupées par agrégés le **database_id** et **rowset_id**. **Sys.dm_tran_top_version_generators** récupère les données en interrogeant le **dm_tran_version_store** table virtuelle. **Sys.dm_tran_top_version_generators** est une vue inefficace pour exécuter, car cette vue interroge la banque des versions et la banque des versions peut être très volumineux. Nous vous recommandons d'utiliser cette fonction pour rechercher les clients les plus volumineux de la banque des versions.  
+  Renvoie une table virtuelle pour les objets qui génèrent la majorité des versions d'un magasin de versions. **sys. dm_tran_top_version_generators** retourne les 256 premières longueurs d’enregistrements agrégés regroupées par le **database_id** et **rowset_id**. **sys. dm_tran_top_version_generators** récupère les données en interrogeant la table virtuelle **dm_tran_version_store** . **sys. dm_tran_top_version_generators** est une vue inefficace à exécuter, car cette vue interroge la Banque des versions et la Banque des versions peut être très volumineuse. Nous vous recommandons d'utiliser cette fonction pour rechercher les clients les plus volumineux de la banque des versions.  
   
 > [!NOTE]  
->  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_tran_top_version_generators**.  
+>  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,16 +48,16 @@ sys.dm_tran_top_version_generators
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID de la base de données.|  
 |**rowset_id**|**bigint**|ID de l'ensemble de lignes.|  
-|**aggregated_record_length_in_bytes**|**int**|Somme des longueurs des enregistrements pour chaque **database_id** et **rowset_id paire** dans la banque des versions.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**aggregated_record_length_in_bytes**|**int**|Somme des longueurs d’enregistrements pour chaque paire **database_id** et **rowset_id** dans la Banque des versions.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
 
-Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
+Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiert `VIEW SERVER STATE` l’autorisation.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ## <a name="remarks"></a>Notes  
- Étant donné que **sys.dm_tran_top_version_generators** devra peut-être lire de nombreuses pages lors de l’analyse le magasin de versions entier, en cours d’exécution **sys.dm_tran_top_version_generators** peut interférer avec le système performances.  
+ Étant donné que **sys. dm_tran_top_version_generators** peut avoir besoin de lire de nombreuses pages au cours de l’analyse de l’intégralité de la Banque des versions, l’exécution de **sys. dm_tran_top_version_generators** peut interférer avec les performances du système.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre un scénario de test dans lequel quatre transactions simultanées, chacune étant identifiée par un numéro de séquence de transaction, sont exécutées dans une base de données où les options ALLOW_SNAPSHOT_ISOLATION et READ_COMMITTED_SNAPSHOT sont définies à ON. Les transactions suivantes sont exécutées :  
@@ -89,7 +89,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- La sortie indique que toutes les versions sont créées par `database_id``9` et que les versions génèrent à partir de deux tables.  
+ La sortie indique que toutes les versions sont créées `database_id``9` par et que les versions sont générées à partir de deux tables.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

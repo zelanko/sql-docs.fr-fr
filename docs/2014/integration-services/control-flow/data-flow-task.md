@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832451"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
@@ -44,7 +44,9 @@ ms.locfileid: "62832451"
  ![Flux de données](../media/mw-dts-09.gif "Flux de données")  
   
 ## <a name="log-entries"></a>Entrées du journal  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble de journaux d’événements disponibles pour toutes les tâches. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un ensemble de journaux d’événements disponibles pour toutes les tâches. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit également des entrées de journal personnalisées pour de nombreuses tâches. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) et [Messages personnalisés pour la journalisation](../custom-messages-for-logging.md). La tâche de flux de données comprend les entrées de journal personnalisées suivantes :  
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
@@ -64,7 +66,7 @@ ms.locfileid: "62832451"
   
  Pour plus d'informations sur la façon d'utiliser ces entrées de journal pour analyser et améliorer les performances du flux de données, consultez l'une des rubriques suivantes :  
   
--   [Compteurs de performances](../performance/performance-counters.md)  
+-   [Compteurs de performance](../performance/performance-counters.md)  
   
 -   [Fonctionnalités de performances de flux de données](../data-flow/data-flow-performance-features.md)  
   
@@ -86,13 +88,13 @@ ms.locfileid: "62832451"
   
  De nombreux événements de journal écrivent plusieurs entrées et les messages liés à de nombreuses entrées de journal contiennent des données complexes. Pour faciliter la compréhension et la communication du contenu des messages complexes, vous pouvez analyser leur texte. En fonction de l'emplacement des journaux, vous pouvez utiliser des instructions Transact-SQL ou un composant Script pour répartir le texte complexe sur plusieurs colonnes ou sous d'autres formats que vous jugez plus utiles.  
   
- Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Trier : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l'événement `OnPipelineRowsSent` au moment où les lignes ont été transmises de la source OLE DB vers la transformation de tri.  
+ Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Tri : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l'événement `OnPipelineRowsSent` au moment où les lignes ont été transmises de la source OLE DB vers la transformation de tri.  
   
-|colonne|Description|Value|  
+|Colonne|Description|Valeur|  
 |------------|-----------------|-----------|  
 |**PathID**|Valeur de la propriété `ID` du chemin d'accès entre la source OLE DB et la transformation de tri.|1185|  
 |**PathName**|Valeur de la propriété `Name` du chemin d'accès.|Sortie de source OLE DB|  
-|**ComponentID**|La valeur de la `ID` propriété de la transformation de tri.|1180|  
+|**ComponentID**|Valeur de la `ID` propriété de la transformation de tri.|1180|  
 |**ComponentName**|Valeur de la propriété `Name` de la transformation de tri.|Trier|  
 |**InputID**|Valeur de la propriété `ID` de l'entrée à la transformation de tri.|1181|  
 |**InputName**|Valeur de la propriété `Name` de l'entrée à la transformation de tri.|Entrée de tri|  

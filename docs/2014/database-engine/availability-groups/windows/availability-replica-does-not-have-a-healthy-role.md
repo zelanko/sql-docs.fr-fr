@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815596"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>Le réplica de disponibilité n'a pas un rôle sain
@@ -29,7 +29,7 @@ ms.locfileid: "62815596"
 |-|-|  
 |**Nom de la stratégie**|État du rôle du réplica de disponibilité|  
 |**Problème**|Le réplica de disponibilité n'a pas un rôle sain.|  
-|**Catégorie**|**Critique**|  
+|**Catégorie**|**Critical**|  
 |**Facette**|Réplica de disponibilité|  
   
 ## <a name="description"></a>Description  
@@ -41,10 +41,10 @@ ms.locfileid: "62815596"
 ## <a name="possible-causes"></a>Causes possibles  
  Le rôle de ce réplica de disponibilité n'est pas sain. Le réplica n'a pas le rôle principal ou secondaire.  
   
-## <a name="possible-solution-informationstilltocome"></a>Solution possible : Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>Solution possible : Information_à_venir  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

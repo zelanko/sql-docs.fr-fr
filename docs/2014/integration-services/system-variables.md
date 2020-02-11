@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62927224"
 ---
 # <a name="system-variables"></a>Variables système
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d'exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d’exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
   
  Toutes les variables (système et définies par l’utilisateur) peuvent être utilisées dans les liaisons de paramètres que la tâche d’exécution SQL utilise pour mapper des variables à des paramètres.  
   
@@ -33,23 +33,23 @@ ms.locfileid: "62927224"
   
 |Variable système|Type de données|Description|  
 |---------------------|---------------|-----------------|  
-|**CancelEvent**|Int32|Gestionnaire d'un objet d'événement Windows que la tâche peut signaler pour indiquer que la tâche doit interrompre son exécution.|  
+|**AnnulerEvénement**|Int32|Gestionnaire d'un objet d'événement Windows que la tâche peut signaler pour indiquer que la tâche doit interrompre son exécution.|  
 |`ContainerStartTime`|DateTime|Heure de démarrage du conteneur.|  
 |**CreationDate**|DateTime|Date de création du package.|  
 |`CreatorComputerName`|String|Ordinateur sur lequel le package a été créé.|  
 |**CreatorName**|String|Nom de la personne qui a créé le package.|  
 |`ExecutionInstanceGUID`|String|Identificateur unique de l'instance exécutée d'un package.|  
 |`FailedConfigurations`|String|Noms des configurations de package ayant échoué.|  
-|`IgnoreConfigurationsOnLoad`|Booléen|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
-|**InteractiveMode**|Booléen|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package est en cours d’exécution à l’aide de la **DTExec** utilitaire de ligne de commande, la propriété est définie sur `False`.|  
+|`IgnoreConfigurationsOnLoad`|Boolean|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
+|**InteractiveMode**|Boolean|Indique si le package est exécuté en mode interactif. Si un package s'exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], cette propriété a la valeur `True`. Si un package s’exécute à l' **** aide de l’utilitaire d' `False`invite de commandes dtexec, la propriété a la valeur.|  
 |`LocaleId`|Int32|Paramètre régional utilisé par le package.|  
 |**MachineName**|String|Nom de l'ordinateur sur lequel s'exécute le package.|  
-|**OfflineMode**|Booléen|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
+|**OfflineMode**|Boolean|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
 |**PackageID**|String|Identificateur unique du package.|  
 |**PackageName**|String|Nom du package.|  
 |**StartTime**|DateTime|Heure de début d'exécution du package.|  
 |`ServerExecutionID`|Int64|ID d'exécution du package exécuté sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> La valeur par défaut est zéro. La valeur est modifiée uniquement si le package est exécuté par ISServerExec sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Lorsqu'il existe un package enfant, la valeur est passée du package parent au package enfant.|  
-|**UserName**|String|Compte de l'utilisateur qui a démarré le package. Le nom d'utilisateur est qualifié par le nom de domaine.|  
+|**Nom d’utilisateur**|String|Compte de l'utilisateur qui a démarré le package. Le nom d'utilisateur est qualifié par le nom de domaine.|  
 |**VersionBuild**|Int32|Version du package.|  
 |**VersionComment**|String|Commentaires sur la version du package.|  
 |**VersionGUID**|String|Identificateur unique de la version.|  
@@ -79,17 +79,17 @@ ms.locfileid: "62927224"
   
 |Variable système|Type de données|Description|Gestionnaire d'événements|  
 |---------------------|---------------|-----------------|-------------------|  
-|**Annuler**|Booléen|Indique si l'exécution du gestionnaire d'événements s'arrête lorsqu'une erreur, un avertissement ou une annulation de requête se produit.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnWarning<br /><br /> Gestionnaire d'événements OnQueryCancel|  
+|**Annuler**|Boolean|Indique si l'exécution du gestionnaire d'événements s'arrête lorsqu'une erreur, un avertissement ou une annulation de requête se produit.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnWarning<br /><br /> Gestionnaire d'événements OnQueryCancel|  
 |**ErrorCode**|Int32|Identificateur de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
 |**ErrorDescription**|String|Description de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
-|**ExecutionStatus**|Booléen|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
+|**ExecutionStatus**|Boolean|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
 |`ExecutionValue`|DBNull|Valeur de l'exécution.|Gestionnaire d'événements OnTaskFailed|  
 |`LocaleId`|Int32|Paramètre régional utilisé par le gestionnaire d'événements.|Tous les gestionnaires d'événements|  
 |**PercentComplete**|Int32|Pourcentage de travail terminé.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |`ProgressCountLow`|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
-|`Propagate`|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : La valeur de la `Propagate` variable est ignorée lors de la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
+|`Propagate`|Boolean|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : la valeur de la variable `Propagate` est ignorée lors de la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
 |`SourceDescription`|String|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |`SourceID`|String|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceName**|String|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Définition et déploiement d’un Cube | Microsoft Docs'
+title: 'Leçon 2 : définition et déploiement d’un cube | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078935"
 ---
-# <a name="lesson-2-defining-and-deploying-a-cube"></a>Leçon 2 : Définition et déploiement d’un cube
-  Lorsque vous avez défini une vue de source de données dans votre projet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous êtes prêt à définir un premier cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+# <a name="lesson-2-defining-and-deploying-a-cube"></a>Leçon 2 : Définition et déploiement d'un cube
+  Une fois que vous avez défini une vue de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source de données dans votre projet, vous êtes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prêt à définir un cube initial.  
   
  Vous pouvez également définir un cube et ses dimensions en une même phase, en utilisant l'Assistant Cube. Vous pouvez également définir une ou plusieurs dimensions, puis utiliser l'Assistant Cube pour définir un cube qui utilise ces dimensions. Si vous concevez une solution complexe, vous démarrez généralement en définissant les dimensions. Pour plus d’informations, consultez [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projet de ce didacticiel.  
+>  Les projets achevés de toutes les leçons de ce didacticiel sont disponibles en ligne. Vous pouvez sauter des leçons en utilisant le projet achevé de la leçon précédente comme point de départ. [Cliquez ici](https://go.microsoft.com/fwlink/?LinkID=221866) pour télécharger les exemples de projets qui vont de ce didacticiel.  
   
  Cette leçon contient les tâches suivantes :  
   
  [Définition d'une dimension](lesson-2-1-defining-a-dimension.md)  
  Au cours de cette tâche, vous allez utiliser l'Assistant Dimension pour définir une dimension.  
   
- [Définition d’un cube](lesson-2-2-defining-a-cube.md)  
+ [Définition d'un cube](lesson-2-2-defining-a-cube.md)  
  Au cours de cette tâche, vous allez utiliser l'Assistant Cube pour définir un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] initial.  
   
- [Ajout d’attributs aux dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  
+ [Ajout d'attributs aux dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  
  Au cours de cette tâche, vous allez ajouter des attributs aux dimensions que vous avez créées.  
   
  [Vérification des propriétés de cube et de dimension](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
@@ -46,15 +46,15 @@ ms.locfileid: "66078935"
  Au cours de cette tâche, vous allez explorer le cube et les données de dimension à l'aide d'Excel ou du Concepteur de requêtes MDX.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Modification des mesures, attributs et hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Leçon 3 : Modification des mesures, des attributs et des hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   
- [Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [La modélisation multidimensionnelle &#40;le didacticiel Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Générer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Configurez Analysis Services propriétés du projet &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Générer des projets de Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Déployer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

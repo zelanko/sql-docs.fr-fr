@@ -1,5 +1,5 @@
 ---
-title: Modifier des fichiers archivés | Microsoft Docs
+title: Modifier les fichiers archivés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779603"
 ---
 # <a name="edit-checked-in-files"></a>Modifier des fichiers archivés
-  Vous devez généralement extraire les fichiers sous contrôle de code source avant de pouvoir les modifier. Vous pouvez toutefois configurer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de telle sorte que vous puissiez modifier des fichiers archivés. Ainsi, vos modifications sont conservées en mémoire jusqu'à ce que vous enregistriez les fichiers. Vous êtes ensuite invité à extraire le fichier à partir du contrôle de code source.  
+  Vous devez généralement extraire les fichiers sous contrôle de code source avant de pouvoir les modifier. Toutefois, vous pouvez configurer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de sorte que vous puissiez modifier les fichiers que vous n’avez pas extraits. Dans ce cas, vos modifications sont conservées en mémoire jusqu’à ce que vous enregistriez les fichiers. Vous êtes ensuite invité à extraire le fichier à partir du contrôle de code source.  
   
  Si vous travaillez en équipe, il n'est pas recommandé d'autoriser la modification des fichiers archivés, sauf si votre fournisseur de contrôle de code source prend en charge l'extraction à la fois de la version locale et de la version serveur. La plupart des fournisseurs ne prennent pas en charge les extractions de versions locales. Si votre fournisseur ne prend pas en charge les extractions de versions locales et que vous modifiez un fichier archivé, vous devez fusionner manuellement les versions en mémoire et sur le serveur pour pouvoir archiver le fichier. Les fusions automatiques et assistées par le fournisseur ne sont pas prises en charge dans cette situation.  
   

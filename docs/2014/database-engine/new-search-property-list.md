@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774498"
 ---
 # <a name="new-search-property-list"></a>Nouvelle liste de propriétés de recherche
   Utilisez cette boîte de dialogue pour créer une liste de propriétés de recherche.  
   
 ## <a name="options"></a>Options  
- **Nom de liste de propriétés de recherche**  
+ **Nom de la liste de propriétés de recherche**  
  Entrez le nom de la liste de propriétés de recherche.  
   
  **Propriétaire**  
@@ -45,7 +45,7 @@ ms.locfileid: "62774498"
  Sélectionnez le nom d'une liste de propriétés de recherche existante parmi celles appartenant à la base de données sélectionnée.  
   
 ## <a name="permissions"></a>Autorisations  
- Consultez [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
+ Consultez [créer une liste de propriétés de recherche &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Pour utiliser SQL Server Management Studio pour gérer des listes de propriétés de recherche  
  Pour plus d'informations sur la façon de créer, afficher, modifier ou supprimer une liste de propriétés de recherche et sur la configuration d'un index de recherche en texte intégral pour la recherche de propriétés, consultez [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  

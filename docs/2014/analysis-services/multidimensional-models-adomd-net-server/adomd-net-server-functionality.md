@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités serveur ADOMD.NET | Microsoft Docs
+title: Fonctionnalités du serveur ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cc127a8bafc9ad2f53465caeca013d5033e5c396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702974"
 ---
 # <a name="adomdnet-server-functionality"></a>Fonctionnalités serveur ADOMD.NET
   Tous les objets serveur ADOMD.NET fournissent un accès en lecture seule aux données et aux métadonnées présentes sur le serveur. Pour récupérer les données et les métadonnées, vous devez utiliser le modèle d'objet serveur ADOMD.NET, car le modèle d'objet serveur ne prend pas en charge les ensembles de lignes de schéma.  
   
- Avec des objets serveur ADOMD.NET, vous pouvez créer une fonction définie par l’utilisateur (UDF) ou une procédure stockée pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ces méthodes in-process sont appelées par l'intermédiaire d'instructions de requête créées dans des langages tels que MDX (Multidimensional Expressions), DMX (Data Mining Extensions) ou SQL. Ces méthodes in-process fournissent également des fonctionnalités supplémentaires sans les temps d'attente inhérents aux communications réseau.  
+ Avec les objets serveur ADOMD.NET, vous pouvez créer une fonction définie par l’utilisateur (UDF) ou une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]procédure stockée pour. Ces méthodes in-process sont appelées par l'intermédiaire d'instructions de requête créées dans des langages tels que MDX (Multidimensional Expressions), DMX (Data Mining Extensions) ou SQL. Ces méthodes in-process fournissent également des fonctionnalités supplémentaires sans les temps d'attente inhérents aux communications réseau.  
   
 > [!NOTE]  
 >  L'objet <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> ne prend en charge que le langage DMX.  
   
 ## <a name="what-is-a-udf"></a>Qu'est qu'une fonction définie par l'utilisateur ?  
- Un *UDF* est une méthode qui présente les caractéristiques suivantes :  
+ Une fonction *définie* par l’un est une méthode qui présente les caractéristiques suivantes :  
   
 -   Vous pouvez appeler une fonction définie par l'utilisteur dans le contexte d'une requête.  
   
@@ -46,9 +46,9 @@ FROM SalesModel
 ```  
   
 ## <a name="what-is-a-stored-procedure"></a>Qu'est-ce qu'une procédure stockée ?  
- Un *procédure stockée* est une méthode qui présente les caractéristiques suivantes :  
+ Une *procédure stockée* est une méthode qui présente les caractéristiques suivantes :  
   
--   Vous appelez une procédure stockée sur son propre avec MDX [appeler](/sql/mdx/mdx-data-manipulation-call) instruction.  
+-   Vous appelez une procédure stockée seule avec l’instruction MDX [Call](/sql/mdx/mdx-data-manipulation-call) .  
   
 -   Une procédure stockée peut prendre un nombre illimité de paramètres.  
   

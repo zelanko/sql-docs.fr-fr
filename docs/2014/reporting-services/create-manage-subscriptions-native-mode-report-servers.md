@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109596"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
@@ -32,11 +32,11 @@ ms.locfileid: "66109596"
 -   La tâche « Gérer tous les abonnements » permet aux utilisateurs d'accéder à tous les abonnements pour les modifier. Cette tâche est obligatoire pour créer des abonnements pilotés par les données. Dans les rôles prédéfinis, seul le rôle Gestionnaire de contenu inclut cette tâche.  
   
 ## <a name="disabling-subscriptions"></a>Désactivation des abonnements  
- Désactivez la tâche « Gérer les abonnements individuels » du rôle pour retirer aux utilisateurs la possibilité de créer des abonnements. Lorsque vous supprimez cette tâche, les pages Abonnements ne sont plus disponibles. Dans le Gestionnaire de rapports, la page Mes abonnements semble vide (il est impossible de la supprimer) même si elle contenait auparavant des abonnements. La suppression de tâches liées à des abonnements empêche les utilisateurs de créer et de modifier des abonnements, mais elle ne supprime pas les abonnements existants. Ces abonnements continuent de s'exécuter tant qu'ils ne sont pas supprimés. Pour plus d’informations sur la suppression des abonnements, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+ Désactivez la tâche « Gérer les abonnements individuels » du rôle pour retirer aux utilisateurs la possibilité de créer des abonnements. Lorsque vous supprimez cette tâche, les pages Abonnements ne sont plus disponibles. Dans le Gestionnaire de rapports, la page Mes abonnements semble vide (il est impossible de la supprimer) même si elle contenait auparavant des abonnements. La suppression de tâches liées à des abonnements empêche les utilisateurs de créer et de modifier des abonnements, mais elle ne supprime pas les abonnements existants. Ces abonnements continuent de s'exécuter tant qu'ils ne sont pas supprimés. Pour plus d’informations sur la suppression des abonnements, consultez [créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Pour désactiver le traitement des abonnements sur un serveur de rapports, vous pouvez définir le `ScheduleEventsAndReportDeliveryEnabled` propriété `False` dans le **Configuration de Surface d’exposition pour Reporting Services** facette de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basée sur des stratégies de gestion. Vous empêcherez ainsi l'exécution de toutes les opérations planifiées. Vous ne pouvez pas désactiver seulement le traitement des abonnements sur le serveur de rapports.  
+ Pour désactiver le traitement des abonnements sur un serveur de rapports, `ScheduleEventsAndReportDeliveryEnabled` vous pouvez `False` affecter à la propriété la valeur dans la **zone Configuration de la surface d’exposition pour Reporting Services** facette de la gestion basée sur des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stratégies. Vous empêcherez ainsi l'exécution de toutes les opérations planifiées. Vous ne pouvez pas désactiver seulement le traitement des abonnements sur le serveur de rapports.  
   
- Pour obtenir des instructions sur la façon d’annuler l’abonnement est en cours sur le serveur de rapports, consultez [gérer un processus en cours d’exécution](subscriptions/manage-a-running-process.md).  
+ Pour obtenir des instructions sur l’annulation d’un abonnement qui est en cours de traitement sur le serveur de rapports, consultez [gérer un processus en cours d’exécution](subscriptions/manage-a-running-process.md).  
   
 ## <a name="disabling-delivery-extensions"></a>Désactivation des extensions de remise  
  Toutes les extensions de remise installées sur un serveur de rapports sont disponibles pour tout utilisateur autorisé à créer un abonnement à un rapport donné. Les extensions de remise suivantes sont disponibles et configurées automatiquement :  
@@ -45,9 +45,9 @@ ms.locfileid: "66109596"
   
 -   Bibliothèque SharePoint (disponible uniquement à partir d'un site SharePoint intégré à un serveur de rapports en mode intégré SharePoint)  
   
- La remise par messagerie électronique doit être configurée avant de pouvoir être utilisée. Si vous ne la configurez pas, elle n'est pas disponible. Pour plus d’informations, consultez [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ La remise par messagerie électronique doit être configurée avant de pouvoir être utilisée. Si vous ne la configurez pas, elle n'est pas disponible. Pour plus d’informations, consultez [configurer un serveur de rapports pour la remise par messagerie &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Si vous souhaitez désactiver des extensions spécifiques, vous pouvez supprimer les entrées d'extension appropriées dans le fichier RSReportServer.config. Pour plus d’informations, consultez [fichier de Configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md) et [configurer un serveur de rapports pour la remise du courrier électronique &#40;Gestionnaire de Configuration de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ Si vous souhaitez désactiver des extensions spécifiques, vous pouvez supprimer les entrées d'extension appropriées dans le fichier RSReportServer.config. Pour plus d’informations, consultez [fichier de configuration RSReportServer](report-server/rsreportserver-config-configuration-file.md) et [configurer un serveur de rapports pour la remise par messagerie &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
  Lorsqu'une extension de remise est supprimée, elle n'est plus disponible dans le Gestionnaire de rapports, ni dans un site SharePoint. La suppression d'une extension de remise peut engendrer des abonnements inactifs. Avant de supprimer une extension, prenez soin de supprimer ces abonnements ou configurez-les pour qu'ils utilisent une autre extension de remise.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "66109596"
  Décrit comment vous pouvez déterminer si un abonnement a réussi ou échoué, ainsi que les effets des modifications apportées aux rapports sur les abonnements existants.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer, modifier et supprimer des abonnements Standard &#40;Reporting Services en Mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+ [Créez, modifiez et supprimez les abonnements standard &#40;Reporting Services en mode natif&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

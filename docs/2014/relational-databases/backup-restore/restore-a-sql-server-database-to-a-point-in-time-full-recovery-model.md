@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921056"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
@@ -33,7 +33,7 @@ ms.locfileid: "62921056"
   
      [Sécurité](#Security)  
   
--   **Pour restaurer une base de données SQL Server à un point précis dans le temps, utilisez :**  
+-   **Pour restaurer une base de données SQL Server à un point dans le temps, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62921056"
 ####  <a name="Permissions"></a> Autorisations  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
- Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
+ Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas lorsque RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour restaurer une base de données à un point dans le temps**  
@@ -63,7 +63,7 @@ ms.locfileid: "62921056"
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, sur **Restaurer**, puis cliquez sur **Base de données**.  
   
-4.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l'une des options suivantes :  
+4.  Dans la page **Général** , utilisez la section **Source** pour préciser la source et l'emplacement des jeux de sauvegarde à restaurer. Sélectionnez l’une des options suivantes :  
   
     -   **Sauvegarde de la base de données**  
   
@@ -72,19 +72,19 @@ ms.locfileid: "62921056"
     > [!NOTE]  
     >  Si la sauvegarde est prise à partir d'un serveur différent, le serveur de destination ne disposera pas des informations d'historique de sauvegarde pour la base de données spécifiée. Dans ce cas, sélectionnez **Unité** pour spécifier manuellement le fichier ou l'unité à restaurer.  
   
-    -   **Unité**  
+    -   **Passerelle**  
   
-         Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
+         Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde**, sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde**, cliquez sur **Ajouter**.  
   
-         Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
+         Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde**, cliquez sur **OK** pour revenir à la page **Général**.  
   
-         Dans la zone de liste **Source : Unité : Base de données**, sélectionnez le nom de la base de données à restaurer.  
+         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.  
   
-         **Remarque** Cette liste n'est disponible que lorsque **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
+         **Remarque** Cette liste n’est disponible que si l’option **périphérique** est sélectionnée. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
   
 5.  Dans la section **Destination** , la zone **Base de données** est automatiquement renseignée avec le nom de la base de données à restaurer. Pour changer le nom de la base de données, entrez le nouveau nom dans la zone **Base de données** .  
   
-6.  Cliquez sur **Chronologie** pour accéder à la boîte de dialogue **Chronologie de sauvegarde** .  
+6.  Cliquez sur **Chronologie** pour accéder à la boîte de dialogue **Chronologie de sauvegarde**.  
   
 7.  Dans la section **Restaurer sur** , cliquez sur **Date et heure spécifiques**.  
   
@@ -93,38 +93,38 @@ ms.locfileid: "62921056"
     > [!NOTE]  
     >  Utilisez la zone **Chronologie - Intervalle** pour modifier la durée affichée dans la chronologie.  
   
-9. Après avoir défini un point spécifique dans le temps, l'assistant de récupération de base de données garantit que seules les sauvegardes nécessaires à la restauration à un point précis dans le temps sont sélectionnées dans la colonne **Restaurer** de la grille **Jeux de sauvegarde à restaurer** . Ces sauvegardes sélectionnées constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Utilisez uniquement les sauvegardes sélectionnées pour votre opération de restauration jusqu'à une date et heure.  
+9. Après avoir défini un point spécifique dans le temps, l'assistant de récupération de base de données garantit que seules les sauvegardes nécessaires à la restauration à un point précis dans le temps sont sélectionnées dans la colonne **Restaurer** de la grille **Jeux de sauvegarde à restaurer**. Ces sauvegardes sélectionnées constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Utilisez uniquement les sauvegardes sélectionnées pour votre opération de restauration jusqu'à une date et heure.  
   
      Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer** , consultez [Restaurer la base de données &#40;page Général&#41;](../../integration-services/general-page-of-integration-services-designers-options.md). Pour plus d’informations sur l’Assistant de récupération de base de données, consultez [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md).  
   
 10. Dans la page **Options** , dans le volet **Options de restauration** , vous pouvez choisir les options suivantes si elles s'appliquent à votre situation :  
   
-    -   **Remplacer la base de données existante (WITH REPLACE)**  
+    -   **REMPLACER la base de données existante (WITH REPLACE)**  
   
-    -   **Conserver les paramètres de la réplication (WITH KEEP_REPLICATION)**  
+    -   **Conserver les paramètres de réplication (avec KEEP_REPLICATION)**  
   
-    -   **Restreindre l'accès à la base de données restaurée (WITH RESTRICTED_USER)**  
+    -   **Restreindre l’accès à la base de données restaurée (avec RESTRICTED_USER)**  
   
      Pour plus d’informations sur ces options, consultez [Restaurer la base de données &#40;page Options&#41;](restore-database-options-page.md).  
   
 11. Sélectionnez une option pour la zone **État de récupération** . Cette zone détermine l'état de la base de données à l'issue de l'opération de restauration.  
   
-    -   **RESTORE WITH RECOVERY** est le comportement par défaut qui laisse la base de données opérationnelle en annulant les transactions non validées. Les journaux des transactions supplémentaires ne peuvent pas être restaurés. Choisissez cette option si vous restaurez toutes les sauvegardes nécessaires maintenant.  
+    -   **Restore with Recovery** est le comportement par défaut qui laisse la base de données opérationnelle en restaurant les transactions non validées. Les journaux des transactions supplémentaires ne peuvent pas être restaurés. Choisissez cette option si vous restaurez toutes les sauvegardes nécessaires maintenant.  
   
-    -   **RESTORE WITH NORECOVERY** qui laisse la base de données non opérationnelle et n’annule pas les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. La base de données ne peut pas être utilisée tant qu'elle n'est pas récupérée.  
+    -   **RESTORE WITH NORECOVERY** qui laisse la base de données non opérationnelle et ne restaure pas les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. La base de données ne peut pas être utilisée tant qu'elle n'est pas récupérée.  
   
-    -   **RESTORE WITH STANDBY** qui laisse la base de données en lecture seule. Elle annule les transactions non validées, mais enregistre les actions d'annulation dans un fichier afin de rendre réversibles les effets de la récupération.  
+    -   **Restore with Standby** qui laisse la base de données en mode lecture seule. Elle annule les transactions non validées, mais enregistre les actions d'annulation dans un fichier afin de rendre réversibles les effets de la récupération.  
   
      Pour obtenir des descriptions des options, consultez [Restaurer la base de données &#40;page Options&#41;](restore-database-options-page.md).  
   
-12. L’option **Effectuer la sauvegarde de la fin du journal avant la restauration** est sélectionnée si elle s’avère nécessaire pour le moment sélectionné. Vous n'avez pas besoin de modifier ce paramètre, mais vous pouvez choisir de sauvegarder la fin du journal même si ce n'est pas obligatoire.  
+12. **Effectuer une sauvegarde de la fin du journal avant la restauration** est sélectionnée si elle est nécessaire pour le moment que vous avez sélectionné. Vous n'avez pas besoin de modifier ce paramètre, mais vous pouvez choisir de sauvegarder la fin du journal même si ce n'est pas obligatoire.  
   
 13. Les opérations de restauration peuvent échouer s'il existe des connexions actives à la base de données. Activez l'option **Fermer les connexions existantes** pour garantir que toutes les connexions actives entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et la base de données sont fermées. Cette case à cocher définit la base de données en mode mono-utilisateur avant d'effectuer les opérations de restauration, et définit la base de données en mode multi-utilisateur une fois l'opération terminée.  
   
 14. Sélectionnez **Demander confirmation avant chaque restauration de sauvegarde** si vous souhaitez être invité entre chaque opération de restauration. Cela n'est généralement pas nécessaire à moins que la base de données ne soit volumineuse et que vous ne souhaitiez surveiller l'état de l'opération de restauration.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- **Before you begin**  
+ **Avant de commencer**  
   
  La restauration d'une heure spécifiée est toujours effectuée à partir d'une sauvegarde de fichier journal. Dans chaque instruction RESTORE LOG de la séquence de restauration, vous devez spécifier votre heure cible ou votre transaction dans une clause STOPAT identique. Comme condition préalable dans une restauration limitée dans le temps, vous devez restaurer une sauvegarde complète de base de données dont le point d'arrêt est antérieur à votre heure de restauration cible. Cette sauvegarde complète de base de données peut être plus ancienne que la sauvegarde complète de base de données la plus récente dans la mesure où vous restaurez ensuite chaque sauvegarde de fichier journal suivante jusqu'à la sauvegarde de fichier journal (comprise) contenant votre limite dans le temps cible.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "62921056"
   
  **Syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] de base**  
   
- RESTORE LOG *database_name* FROM < unité_sauvegarde > WITH STOPAT  **= *`time`* ,** récupération...  
+ Restaurer les *database_name* de journal à partir de <backup_device> avec STOPAT ** = *`time`*,** Recovery...  
   
- Le point de récupération est la dernière validation de transaction qui s’est produite à ou avant la `datetime` valeur spécifiée par *temps*.  
+ Le point de récupération est la dernière validation de transaction qui s’est produite `datetime` à ou avant la valeur spécifiée par *heure*.  
   
- Pour restaurer uniquement les modifications apportées avant un moment spécifique dans le temps, spécifiez WITH STOPAT **=** *time* pour chaque sauvegarde que vous restaurez. De cette manière, vous êtes certain de ne pas dépasser le moment cible.  
+ Pour restaurer uniquement les modifications apportées avant un point spécifique dans le temps, spécifiez **=** *with STOPAT* pour chaque sauvegarde que vous restaurez. De cette manière, vous êtes certain de ne pas dépasser le moment cible.  
   
  **Pour restaurer une base de données à un point dans le temps**  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921056"
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Appliquez chaque sauvegarde de journal de transactions dans l’ordre dans lequel ils ont été créés, en spécifiant l’heure à laquelle vous souhaitez arrêter la restauration du journal (RESTORE DATABASE *database_name* à partir de < appareil_sauvegarde > WITH STOPAT **= *`time`* ,** Récupération).  
+4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre dans lequel elles ont été créées, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* de <backup_device> avec STOPAT**=*`time`*,** Recovery).  
   
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  

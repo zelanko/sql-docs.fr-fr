@@ -1,5 +1,5 @@
 ---
-title: Installer un Service Pack sur un système avec un temps mort Minimal pour les bases de données miroir | Microsoft Docs
+title: Installer un Service Pack sur un système avec un temps d’arrêt minimal pour les bases de données mises en miroir | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779593"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installer un Service Pack sur un système avec un temps mort minimal pour les bases de données mises en miroir
-  Cette rubrique décrit comment réduire le temps mort pour les bases de données mises en miroir lorsque vous installez des Service Packs et des correctifs. Ce processus implique la mise à niveau séquentielle des instances de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] qui participent à la mise en miroir de bases de données. Cette forme de mise à jour, ce qui est appelé un *mise à jour propagée*, réduit le temps mort que pour un seul basculement. Notez que pour les sessions en mode hautes performances dans lequel le serveur miroir est géographiquement distant du serveur principal, une mise à jour propagée peut être inappropriée.  
+  Cette rubrique décrit comment réduire le temps mort pour les bases de données mises en miroir lorsque vous installez des Service Packs et des correctifs. Ce processus implique la mise à niveau séquentielle des instances de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] qui participent à la mise en miroir de bases de données. Cette forme de mise à jour, appelée *mise à jour propagée*, réduit le temps d’arrêt à un seul basculement. Notez que pour les sessions en mode hautes performances dans lesquelles le serveur miroir est géographiquement distant du serveur principal, une mise à jour propagée peut être inappropriée.  
   
  Une mise à jour propagée est un processus en plusieurs étapes impliquant les différentes étapes suivantes :  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62779593"
 -   Si la session inclut un témoin, nous vous recommandons de le supprimer. Sinon, lorsque l'instance de serveur miroir est mise à jour, la disponibilité de la base de données dépend du témoin qui reste connecté à l'instance de serveur principal. Après avoir supprimé un témoin, vous pouvez le mettre à jour à tout moment pendant le processus de mise à jour propagée sans risquer un temps mort de la base de données.  
   
     > [!NOTE]  
-    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Si une session s'exécute en mode hautes performances, convertissez le mode d'opération en mode haute sécurité.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62779593"
   
      **Pour sauvegarder une base de données**  
   
-    -   [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+    -   [Créez une sauvegarde complète de base de données &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  Exécutez la commande [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur chaque base de données principale.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "62779593"
   
 1.  Si une session de mise en miroir s'exécute en mode hautes performances, avant d'effectuer une mise à jour propagée, convertissez le mode d'opération en mode haute sécurité sans basculement automatique. Appliquez l'une des méthodes suivantes :  
   
-    -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Modifier le **mode d’opération** option **haute sécurité sans basculement automatique (synchrone)** à l’aide de la [Page mise en miroir](../relational-databases/databases/database-properties-mirroring-page.md) de la **base de données Propriétés** boîte de dialogue. Pour plus d’informations sur la façon d’accéder à cette page, consultez [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] : affectez la valeur **Haute sécurité sans basculement automatique (synchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données**. Pour plus d’informations sur la façon d’accéder à cette page, consultez [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)]: Sécurité des transactions la valeur FULL. Pour plus d’informations, consultez [Modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)] : attribuez à la sécurité des transactions la valeur FULL. Pour plus d’informations, consultez [Modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Pour effectuer la mise à jour propagée  
   
-1.  Pour réduire le temps mort, nous recommandons ce qui suit : Démarrer la mise à jour propagée en mettant à jour tout serveur partenaire de mise en miroir est actuellement le serveur miroir dans toutes ses sessions de mise en miroir. Vous pourriez devoir mettre à jour plusieurs instances de serveur à ce stade.  
+1.  Pour réduire le temps mort, nous vous recommandons d'appliquer la procédure suivante : démarrez la mise à jour propagée en mettant à jour tout serveur partenaire de mise en miroir qui fait actuellement office de serveur miroir dans toutes ses sessions de mise en miroir. Vous pourriez devoir mettre à jour plusieurs instances de serveur à ce stade.  
   
     > [!NOTE]  
     >  Un témoin peut être mis à jour à tout moment au cours du processus de mise à jour propagée. Par exemple, si une instance de serveur est un serveur miroir dans la session 1 et un témoin dans la session 2, vous pouvez la mettre à jour dès maintenant.  
@@ -97,7 +97,7 @@ ms.locfileid: "62779593"
   
     -   [Basculer manuellement une session de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Basculer manuellement une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   [Basculer manuellement une session de mise en miroir de bases de données &#40;&#41;Transact-SQL ](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
      Pour plus d’informations sur le fonctionnement du basculement manuel, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62779593"
 4.  Installez le Service Pack ou le correctif sur chaque instance de serveur qui est désormais le serveur miroir dans toutes les sessions de mise en miroir dans lesquelles il est un serveur partenaire. Vous pourriez devoir mettre à jour plusieurs serveurs à ce stade.  
   
     > [!IMPORTANT]  
-    >  Dans une configuration de mise en miroir complexe, certaines instances de serveur pourraient encore être le serveur principal d'origine dans une ou plusieurs sessions de mise en miroir. Répétez les étapes 2 à 4 pour ces instances de serveur jusqu'à ce que toutes les instances concernées sont mises à jour.  
+    >  Dans une configuration de mise en miroir complexe, certaines instances de serveur pourraient encore être le serveur principal d'origine dans une ou plusieurs sessions de mise en miroir. Répétez les étapes 2-4 pour ces instances de serveur jusqu’à ce que toutes les instances concernées soient mises à jour.  
   
 5.  Reprenez la session de mise en miroir.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "62779593"
   
 1.  Rétablissez éventuellement le mode hautes performances en appliquant l'une des méthodes suivantes :  
   
-    -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Modifier le **mode d’opération** option **haute performance (asynchrone)** à l’aide de la [Page mise en miroir](../relational-databases/databases/database-properties-mirroring-page.md) du **propriétés de base de données**boîte de dialogue.  
+    -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: affectez la valeur **Haute performance (asynchrone)** à l’option **Mode d’opération** dans la [page Mise en miroir](../relational-databases/databases/database-properties-mirroring-page.md) de la boîte de dialogue **Propriétés de la base de données** .  
   
-    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)]: Utilisez [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) pour définir la sécurité des transactions désactivée (OFF).  
+    -   Dans [!INCLUDE[tsql](../includes/tsql-md.md)]: utilisez [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) pour désactiver la sécurité des transactions.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Pour réintégrer un témoin dans une session de mise en miroir  
   

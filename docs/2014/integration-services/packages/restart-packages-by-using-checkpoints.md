@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767031"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
@@ -59,21 +59,21 @@ ms.locfileid: "62767031"
 |CheckpointUsage|Indique si les points de contrôle sont utilisés.|  
 |SaveCheckpoints|Indique si le package enregistre les points de contrôle. Cette propriété doit avoir pour valeur True pour redémarrer le package à partir d'un point d'échec.|  
   
- En outre, vous devez définir la propriété FailPackageOnFailure sur `true` pour tous les conteneurs dans le package que vous voulez identifier comme points de redémarrage.  
+ En outre, vous devez définir la propriété FailPackageOnFailure sur `true` pour tous les conteneurs du package que vous souhaitez identifier comme points de redémarrage.  
   
  Vous pouvez utiliser la propriété ForceExecutionResult pour tester l’utilisation des points de contrôle dans un package. En affectant la valeur la valeur Failure à la propriété ForceExecutionResult d’une tâche ou d’un conteneur, vous pouvez imiter un échec en temps réel. Lorsque vous redémarrez le package, la tâche et les conteneurs ayant échoué sont réexécutés.  
   
 ### <a name="checkpoint-usage"></a>Utilisation des points de contrôle  
  La propriété CheckpointUsage peut avoir les valeurs suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |`Never`|Spécifie que le fichier de point de contrôle n'est pas utilisé et que le package est exécuté à partir du début du flux de travail du package.|  
 |`Always`|Spécifie que le fichier de point de contrôle est toujours utilisé et que le package redémarre à partir du point de l'échec de la précédente exécution. Si le fichier de point de contrôle est introuvable, le package échoue.|  
 |`IfExists`|Spécifie que le fichier de point de contrôle est utilisé s'il existe. Si le fichier de point de contrôle existe, le package redémarre à partir du point de l'échec de la précédente exécution. Sinon il est exécuté à partir du début du flux de travail du package.|  
   
 > [!NOTE]  
->  Le **/CheckPointing sur** option de dtexec revient à affecter la `SaveCheckpoints` propriété du package à `True`et le `CheckpointUsage` Always à la propriété. Pour plus d’informations, voir [dtexec Utility](dtexec-utility.md).  
+>  L’option **/checkpointing on on** de dtexec équivaut à affecter à la `SaveCheckpoints` propriété du package `True`la valeur et à la `CheckpointUsage` propriété la valeur Always. Pour plus d’informations, consultez l' [utilitaire dtexec](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sécurisation des fichiers de point de contrôle  
  La protection au niveau du package n'inclut pas la protection des fichiers de point de contrôle ; vous devez donc sécuriser ces fichiers séparément. Les données de point de contrôle peuvent être stockées uniquement dans le système de fichiers et vous devez utiliser une liste de contrôle d'accès au système d'exploitation pour sécuriser l'emplacement ou le dossier de stockage du fichier. Il est important de sécuriser les fichiers de point de contrôle car ceux-ci contiennent des informations sur l'état du package, notamment les valeurs actuelles des variables. Une variable peut ainsi contenir un ensemble d'enregistrements doté de plusieurs lignes de données privées, telles que des numéros de téléphone. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../access-to-files-used-by-packages.md).  

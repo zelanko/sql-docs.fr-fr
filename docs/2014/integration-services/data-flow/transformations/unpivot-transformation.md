@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770177"
 ---
 # <a name="unpivot-transformation"></a>Transformation Unpivot
@@ -29,11 +29,11 @@ ms.locfileid: "62770177"
   
  Le schéma suivant illustre un dataset avant que les données n'aient été transformées dans la colonne Product.  
   
- ![DataSet après transformation Unpivot](../../media/mw-dts-18.gif "Dataset après transformation Unpivot")  
+ ![Dataset après la suppression du tableau croisé dynamique](../../media/mw-dts-18.gif "Dataset après la suppression du tableau croisé dynamique")  
   
  Le schéma suivant illustre un dataset après transformation de la colonne Product.  
   
- ![DataSet avant transformation Unpivot](../../media/mw-dts-17.gif "Dataset avant transformation Unpivot")  
+ ![Dataset avant la suppression du tableau croisé dynamique](../../media/mw-dts-17.gif "Dataset avant la suppression du tableau croisé dynamique")  
   
  Dans certaines circonstances, les résultats de la suppression du tableau croisé dynamique peuvent contenir des lignes aux valeurs inattendues. Par exemple, si les exemples de données du diagramme qui doivent être supprimées du tableau croisé dynamique possèdent des valeurs Null dans toutes les colonnes Qty pour Fred, la sortie ne comprend qu'une ligne pour Fred, au lieu de cinq. La colonne Qty contient Null ou zéro, suivant le type de données de la colonne.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62770177"
   
  Cette transformation a une entrée et une sortie. Elle ne possède aucune sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation UnPivot** , cliquez sur l’une des rubriques suivantes :  
   

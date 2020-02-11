@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917443"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Créer un type de données d'alias défini par l'utilisateur
@@ -59,7 +59,7 @@ ms.locfileid: "62917443"
      **Autoriser les valeurs NULL**  
      Spécifiez si le type de données défini par l'utilisateur accepte les valeurs NULL. L'acceptation de valeurs Null par un type de données défini par l'utilisateur existant n'est pas modifiable.  
   
-     **Data type**  
+     **Type de données**  
      Sélectionnez le type de données de base dans la zone de liste. La zone de liste affiche tous les types de données, à l'exception des types de données `geography`, `geometry`, `hierarchyid`, `sysname`, `timestamp` et `xml`. Le type de données d'un type de données défini par l'utilisateur existant n'est pas modifiable.  
   
      **Par défaut**  
@@ -71,12 +71,12 @@ ms.locfileid: "62917443"
      La longueur n'est pas affichée pour les types de données `nvarchar(max)`, `varchar(max)` ou `varbinary(max)`.  
   
      **Nom**  
-     Si vous créez un nouvel alias de type de données défini par l'utilisateur, tapez un nom unique à utiliser dans la base de données pour représenter le type de données défini par l'utilisateur. Le nombre maximal de caractères doit correspondre au système `sysname` type de données. Le nom d'un alias de type de données défini par l'utilisateur existant n'est pas modifiable.  
+     Si vous créez un nouvel alias de type de données défini par l'utilisateur, tapez un nom unique à utiliser dans la base de données pour représenter le type de données défini par l'utilisateur. Le nombre maximal de caractères doit correspondre au type `sysname` de données système. Le nom d'un alias de type de données défini par l'utilisateur existant n'est pas modifiable.  
   
      **Règle**  
      (Facultatif) Sélectionnez une règle pour la liaison à l'alias de type de données défini par l'utilisateur.  
   
-     **Échelle**  
+     **Mettre à l'échelle**  
      Spécifie le nombre maximal de chiffres décimaux pouvant figurer à droite de la virgule décimale.  
   
      **Schéma**  
@@ -87,12 +87,12 @@ ms.locfileid: "62917443"
   
     |||  
     |-|-|  
-    |1 - 9|5|  
+    |1-9|5|  
     |10 - 19|9|  
     |20 - 28|13|  
     |29 - 38|17|  
   
-     Pour `nchar` et `nvarchar` des types de données, la valeur de stockage est toujours deux fois la valeur de **longueur**.  
+     Pour `nchar` les `nvarchar` types de données et, la valeur de stockage est toujours deux fois supérieure à la valeur de **longueur**.  
   
      Le stockage n'est pas affiché pour les types de données `nvarchar(max)`, `varchar(max)` ou `varbinary(max)`.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62917443"
   
 6.  Activez **Autoriser les valeurs NULL** si le nouvel alias de type de données peut autoriser les valeurs NULL.  
   
-7.  Dans la zone **Liaison** , renseignez les zones **Par défaut** ou **Règle** pour lier une valeur par défaut ou une règle au nouvel alias de type de données. Vous ne pouvez pas créer de valeurs par défaut, ni de règles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilisez plutôt [!INCLUDE[tsql](../../includes/tsql-md.md)] Un exemple de code de création de valeurs par défaut et de règles est disponible dans l'Explorateur de modèles.  
+7.  Dans la zone **Liaison** , renseignez les zones **Par défaut** ou **Règle** pour lier une valeur par défaut ou une règle au nouvel alias de type de données. Vous ne pouvez pas créer de valeurs par défaut, ni de règles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilisez [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un exemple de code de création de valeurs par défaut et de règles est disponible dans l'Explorateur de modèles.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

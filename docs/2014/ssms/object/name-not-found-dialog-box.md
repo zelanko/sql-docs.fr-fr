@@ -15,29 +15,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999550"
 ---
-# <a name="name-not-found-dialog-box"></a>Nom introuvable, boîte de dialogue
+# <a name="name-not-found-dialog-box"></a>Nom introuvable (boîte de dialogue)
   Le ou les noms d'objets répertoriés dans la boîte de dialogue sont introuvables. Sélectionnez une option pour continuer.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Corriger ces informations et effectuer une nouvelle recherche**  
  Sélectionnez cette option pour autoriser l’utilisation des zones **Sélectionnez ce type d’objet**, **Type d’objet**et **Entrez le nom de l’objet** .  
   
- **Sélectionnez ce type d’objet**  
+ **Sélectionner ce type d’objet**  
  Affiche les types des objets sélectionnés à l’aide du bouton **Types d’objets** .  
   
  **Types d’objets**  
  Cliquez sur ce bouton pour afficher la boîte de dialogue **Sélectionner les types d’objets** et sélectionner les types d’objets dans une liste.  
   
- **Entrez le nom de l’objet**  
+ **Entrer le nom de l’objet**  
  Contient le nom de l'objet qui n'a pas été trouvé. Corrigez le nom de l'objet ou tapez un nouveau nom d'objet.  
   
- **Supprimer** *\<nom_objet >* **à partir de la sélection**  
+ **Supprimer le nom** **de** l'*objet>de\< *la sélection      
  Sélectionnez cette option pour fermer la boîte de dialogue **Nom introuvable** et supprimer l’élément de la boîte de dialogue **Sélectionner des objets** .  
   
   

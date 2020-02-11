@@ -1,5 +1,5 @@
 ---
-title: Implémenter une Transformation de recherche en Mode Cache complet à l’aide du Gestionnaire de connexions du Cache | Microsoft Docs
+title: Implémenter une transformation de recherche en mode cache complet à l’aide du gestionnaire de connexions du cache | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833676"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache
@@ -49,7 +49,7 @@ ms.locfileid: "62833676"
   
 -   Configurez les gestionnaires de connexions du cache des différents packages afin qu'ils utilisent le même fichier cache.  
   
- Pour plus d’informations, consultez les rubriques suivantes :  
+ Pour plus d'informations, voir les rubriques suivantes :  
   
 -   [Transformation du cache](../data-flow/transformations/cache-transform.md)  
   
@@ -57,11 +57,11 @@ ms.locfileid: "62833676"
   
 -   [Contraintes de précédence](../control-flow/precedence-constraints.md)  
   
--   [Tâche d'exécution de package](../control-flow/execute-package-task.md)  
+-   [Tâche d’exécution de package](../control-flow/execute-package-task.md)  
   
 -   [Conteneur de séquences](../control-flow/sequence-container.md)  
   
- Pour obtenir une vidéo qui montre comment utiliser le gestionnaire de connexions du cache pour implémenter une transformation de recherche en mode Cache complet, consultez [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031) (en anglais).  
+ Pour savoir comment implémenter la transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache, consultez la vidéo [Procédure : implémenter une transformation de recherche en mode Cache complet (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Pour implémenter une transformation de recherche en mode Cache complet dans un seul package en utilisant le gestionnaire de connexions du cache et une source de données dans le flux de données  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62833676"
   
 7.  Configurez la transformation du cache selon vos besoins. Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../cache-transformation-editor-connection-manager-page.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](../cache-transformation-editor-mappings-page.md).  
   
-8.  Dans le second flux de données, ajoutez une transformation de recherche, puis configurez la transformation en effectuant les tâches suivantes :  
+8.  Dans le second flux de données, ajoutez une transformation de recherche, puis configurez la transformation en effectuant les tâches suivantes :  
   
     1.  Connectez la transformation de recherche au flux de données en faisant glisser un connecteur à partir d'une source ou d'une transformation précédente jusqu'à la transformation de recherche.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62833676"
   
     2.  Double-cliquez sur la transformation source ou précédente pour configurer le composant.  
   
-    3.  Double-cliquez sur la transformation de recherche puis, dans **l’Éditeur de transformation de recherche**, dans la page **Général** , sélectionnez **Cache complet**.  
+    3.  Double-cliquez sur la transformation de recherche, puis dans **l’Éditeur de transformation de recherche**, dans la page **Général** , sélectionnez **Cache complet**.  
   
     4.  Dans la zone **Type de connexion** , sélectionnez **Gestionnaire de connexions du cache**.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62833676"
   
     6.  Dans la page **Connexion** , dans la liste **Gestionnaire de connexions du cache** , sélectionnez un gestionnaire de connexions du cache.  
   
-    7.  Cliquez dans la page **Colonnes** , puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles** .  
+    7.  Cliquez sur la page **Colonnes** , puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles** .  
   
         > [!NOTE]  
         >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
@@ -122,7 +122,7 @@ ms.locfileid: "62833676"
   
     8.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes. Ensuite, dans la liste **Opération de recherche** , indiquez si les valeurs des colonnes de recherche doivent remplacer les valeurs des colonnes d’entrée ou si elles sont écrites dans une nouvelle colonne.  
   
-    9. Pour configurer la sortie d’erreur, cliquez dans la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Cliquez sur **OK** pour enregistrer les modifications que vous avez apportées à la transformation de recherche.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62833676"
   
 7.  Configurez la transformation du cache selon vos besoins. Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../cache-transformation-editor-connection-manager-page.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](../cache-transformation-editor-mappings-page.md).  
   
-8.  Effectuez l'une des opérations suivantes pour renseigner le gestionnaire de connexions du cache utilisé dans le second package :  
+8.  Effectuez l'une des opérations suivantes pour renseigner le gestionnaire de connexions du cache utilisé dans le second package :  
   
     -   Exécutez le package parent.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "62833676"
   
     6.  Dans la page **Connexion** , dans la liste **Gestionnaire de connexions du cache** , sélectionnez le gestionnaire de connexions du cache que vous avez ajouté.  
   
-    7.  Cliquez dans la page **Colonnes** , puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles** .  
+    7.  Cliquez sur la page **Colonnes** , puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles** .  
   
         > [!NOTE]  
         >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
@@ -208,7 +208,7 @@ ms.locfileid: "62833676"
   
     8.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes. Ensuite, dans la liste **Opération de recherche** , indiquez si les valeurs des colonnes de recherche doivent remplacer les valeurs des colonnes d’entrée ou si elles sont écrites dans une nouvelle colonne.  
   
-    9. Pour configurer la sortie d’erreur, cliquez dans la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Cliquez sur **OK** pour enregistrer les modifications que vous avez apportées à la transformation de recherche.  
   
@@ -255,7 +255,7 @@ ms.locfileid: "62833676"
   
     2.  Double-cliquez sur la transformation source ou précédente pour configurer le composant.  
   
-    3.  Double-cliquez sur la transformation de recherche puis, dans **l’Éditeur de transformation de recherche**, dans la page **Général** , sélectionnez **Cache complet**.  
+    3.  Double-cliquez sur la transformation de recherche, puis dans **l’Éditeur de transformation de recherche**, dans la page **Général** , sélectionnez **Cache complet**.  
   
     4.  Sélectionnez **Gestionnaire de connexions du cache** dans la zone **Type de connexion** .  
   
@@ -263,7 +263,7 @@ ms.locfileid: "62833676"
   
     6.  Dans la page **Connexion** , dans la liste **Gestionnaire de connexions du cache** , sélectionnez le gestionnaire de connexions du cache que vous avez ajouté.  
   
-    7.  Cliquez dans la page **Colonnes** , puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles** .  
+    7.  Cliquez sur la page **Colonnes** , puis faites glisser au moins une colonne de la liste **Colonnes d’entrée disponibles** vers une colonne de la liste **Colonnes de recherche disponibles** .  
   
         > [!NOTE]  
         >  La transformation de recherche mappe automatiquement les colonnes ayant le même nom et le même type de données.  
@@ -273,14 +273,14 @@ ms.locfileid: "62833676"
   
     8.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes. Ensuite, dans la liste **Opération de recherche** , indiquez si les valeurs des colonnes de recherche doivent remplacer les valeurs des colonnes d’entrée ou si elles sont écrites dans une nouvelle colonne.  
   
-    9. Pour configurer la sortie d’erreur, cliquez dans la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Cliquez sur **OK** pour enregistrer les modifications que vous avez apportées à la transformation de recherche.  
   
 9. Exécutez le package.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implémenter une recherche en mode Aucun cache ou Cache partiel](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

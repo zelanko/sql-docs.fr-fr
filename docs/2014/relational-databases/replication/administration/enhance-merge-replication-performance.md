@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805881"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
@@ -33,7 +33,7 @@ ms.locfileid: "62805881"
   
 -   Colonnes d'index utilisées dans des filtres de lignes et des filtres de jointure.  
   
-     Si vous utilisez un filtre de lignes sur un article publié, créez un index sur chacune des colonnes utilisées dans la clause WHERE du filtre. S'il n'y a pas d'index, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit lire chaque ligne de la table pour déterminer si la ligne doit être incluse dans la partition. Avec un index, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut localiser rapidement les lignes à inclure. Le traitement le plus rapide s'effectue si la réplication peut résoudre complètement la clause WHERE du filtre à partir de l'index seul.  
+     Si vous utilisez un filtre de lignes sur un article publié, créez un index sur chacune des colonnes utilisées dans la clause WHERE du filtre. Sans index, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit lire chaque ligne de la table pour déterminer si la ligne doit être incluse dans la partition. Avec un index, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut localiser rapidement les lignes à inclure. Le traitement le plus rapide s'effectue si la réplication peut résoudre complètement la clause WHERE du filtre à partir de l'index seul.  
   
      L'indexation de toutes les colonnes utilisées dans des filtres de jointure est également importante. À chaque exécution, l'Agent de fusion recherche dans la table de base quelles lignes de la table parente et quelles lignes des tables associées sont incluses dans une partition. La création d'un index sur les colonnes jointes dispense [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de devoir lire chaque ligne de la table à chaque exécution de l'Agent de fusion.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62805881"
   
 -   Utilisez des partitions précalculées avec des filtres paramétrés (cette fonctionnalité est utilisée par défaut). Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Les partitions précalculées imposent plusieurs limitations au fonctionnement du filtrage. Si votre application ne peut pas s'adapter à ces limitations, définissez l'option **keep_partition_changes** à **True**, ce qui permet d'obtenir un gain de performances. Pour plus d’informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+     Les partitions précalculées imposent plusieurs limitations au fonctionnement du filtrage. Si votre application ne peut pas s'adapter à ces limitations, définissez l'option **keep_partition_changes** à **True**, ce qui permet d'obtenir un gain de performances. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Utilisez des partitions qui ne se chevauchent pas si les données sont filtrées mais pas partagées entre les utilisateurs.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62805881"
   
 -   Échelonnez les planifications de synchronisation des abonnements.  
   
-     Si un grand nombre d'Abonnés se synchronisent avec un serveur de publication, envisagez d'échelonner les planifications de façon à ce que les Agents de fusion s'exécutent à des moments différents. Pour plus d'informations, voir [Specify Synchronization Schedules](../specify-synchronization-schedules.md).  
+     Si un grand nombre d'Abonnés se synchronisent avec un serveur de publication, envisagez d'échelonner les planifications de façon à ce que les Agents de fusion s'exécutent à des moments différents. Pour plus d’informations, consultez [spécifier des planifications de synchronisation](../specify-synchronization-schedules.md).  
   
 ## <a name="merge-agent-parameters"></a>Paramètres de l'Agent de fusion  
  Pour plus d'informations sur l'Agent de fusion et sur ses paramètres, consultez [Replication Merge Agent](../agents/replication-merge-agent.md).  
@@ -102,7 +102,7 @@ ms.locfileid: "62805881"
   
 -   Si un abonnement est synchronisé par le biais d’une connexion rapide et si des modifications sont envoyées à partir du serveur de publication et à partir de l’Abonné, utilisez le paramètre **-ParallelUploadDownload** pour l’Agent de fusion.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un nouveau paramètre pour l’Agent de fusion : **-ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez :  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]a introduit un nouveau paramètre Agent de fusion : **-ParallelUploadDownload**. La définition de ce paramètre permet à l'Agent de fusion de traiter en parallèle les modifications chargées vers le serveur de publication et celles qui sont téléchargées vers l'Abonné. Ceci est utile dans les environnements où les volumes sont élevés, avec une bande passante réseau élevée. Les paramètres des agents peuvent être spécifiés dans des profils d'agent et sur la ligne de commande. Pour plus d'informations, consultez les pages suivantes :  
   
     -   [Utiliser des profils d’agent de réplication](../agents/replication-agent-profiles.md)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62805881"
   
 -   Lorsque vous synchroniser des lignes de données avec une grande quantité de données (par exemple, des lignes avec des colonnes LOB), la synchronisation Web peur exiger une allocation supplémentaire de mémoire et nuire aux performances. Cette situation se produit lorsque l'Agent de fusion génère un message XML qui contient trop de lignes de données avec de gros volumes de données. Si l'Agent de fusion consomme trop de ressources lors de la synchronisation Web, réduisez le nombre de lignes transmises dans un seul message de l'une des manières suivantes :  
   
-    -   Utilisez le profil de liaison lente de l'Agent de fusion. Pour plus d’informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
+    -   Utilisez le profil de liaison lente de l'Agent de fusion. Pour plus d'informations, voir [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
     -   Réduisez les paramètres **- DownloadGenerationsPerBatch** et **- UploadGenerationsPerBatch** de l’Agent de fusion à une valeur de 10 maximum. La valeur par défaut de ces paramètres est 50.  
   
@@ -140,10 +140,10 @@ ms.locfileid: "62805881"
   
 -   Réindexez occasionnellement les tables système d'une réplication de fusion  
   
-     Dans le cadre de la gestion de la réplication de fusion, contrôlez le développement des tables système associées à la réplication de fusion : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Dans le cadre de la gestion d'une réplication de fusion, contrôlez de temps en temps le développement des tables système associées à cette réplication : **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**et **MSmerge_past_partition_mappings**. Réindexez périodiquement ces tables. Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Analysez les performances de la synchronisation à l'aide de l'onglet **Historique de synchronisation** dans le moniteur de réplication.  
   
-     Pour la réplication de fusion, le moniteur de réplication affiche des statistiques détaillées dans l'onglet **Historique de synchronisation** pour chaque article traité lors de la synchronisation, notamment la quantité de temps passé dans chaque phase du traitement (chargement des modifications, téléchargement des modifications, etc.). Il peut être utile d'identifier les tables spécifiques qui provoquent les ralentissements ; il s'agit du meilleur observatoire pour résoudre les problèmes de performance avec les abonnements de fusion. Pour plus d’informations sur l’affichage de statistiques détaillées, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Pour la réplication de fusion, le moniteur de réplication affiche des statistiques détaillées dans l'onglet **Historique de synchronisation** pour chaque article traité lors de la synchronisation, notamment la quantité de temps passé dans chaque phase du traitement (chargement des modifications, téléchargement des modifications, etc.). Il peut être utile d'identifier les tables spécifiques qui provoquent les ralentissements ; il s'agit du meilleur observatoire pour résoudre les problèmes de performance avec les abonnements de fusion. Pour plus d’informations sur l’affichage des statistiques détaillées, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

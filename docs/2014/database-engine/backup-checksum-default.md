@@ -10,10 +10,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788798"
 ---
 # <a name="backup-checksum-default"></a>paramètre par défaut de la somme de contrôle de sauvegarde
@@ -25,9 +25,9 @@ ms.locfileid: "62788798"
 |-|-|  
 |**Valeur**|**Signification**|  
 |0|Désactivé. Il s'agit du paramètre par défaut.|  
-|1|Enabled|  
+|1|activé|  
   
- Ce paramètre prend effet immédiatement.  
+ Le paramètre prend effet immédiatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Activer ou désactiver des sommes de contrôle de sauvegarde au cours d’opérations de sauvegarde ou de restauration &#40;SQL Server&#41;](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

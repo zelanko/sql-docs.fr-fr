@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771065"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Charger des données à l'aide de la destination ODBC
@@ -34,9 +34,9 @@ ms.locfileid: "62771065"
   
 6.  Sélectionnez la méthode d'accès aux données.  
   
-    -   **Nom de la table – Lot** : Sélectionnez cette option pour configurer la destination ODBC en mode par lot. Lorsque vous sélectionnez cette option, vous pouvez définir **Taille du lot**.  
+    -   **Nom de la table - Lot**: sélectionnez cette option pour configurer la destination ODBC de manière à utiliser le mode de traitement par lots. Lorsque vous sélectionnez cette option, vous pouvez définir **Taille du lot**.  
   
-    -   **Nom de la table – Ligne par ligne** : Sélectionnez cette option pour configurer la destination ODBC de manière à insérer les lignes dans la table de destination une par une. Lorsque vous sélectionnez cette option, les données sont chargées dans la table une ligne à la fois.  
+    -   **Nom de la table - Ligne par ligne**: sélectionnez cette option pour configurer la destination ODBC de manière à insérer les lignes de la table de destination une par une. Lorsque vous sélectionnez cette option, les données sont chargées dans la table une ligne à la fois.  
   
 7.  Dans le champ **Nom de la table ou de la vue** , sélectionnez une table ou une vue disponible de la base de données dans la liste ou tapez une expression régulière pour identifier la table. Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.  
   

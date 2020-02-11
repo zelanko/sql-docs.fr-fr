@@ -18,18 +18,18 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896596"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Définit ou désactive l'exécution automatique d'une procédure stockée. Une procédure stockée qui est la valeur d’exécution automatique s’exécute chaque fois qu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré.  
+  Définit ou désactive l'exécution automatique d'une procédure stockée. Une procédure stockée qui a la valeur exécution automatique s’exécute chaque fois qu' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une instance de est démarrée.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,17 +41,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @ProcName = ] 'procedure'` Est le nom de la procédure pour laquelle définir une option. *procédure* est **nvarchar(776)** , sans valeur par défaut.  
+`[ @ProcName = ] 'procedure'`Nom de la procédure pour laquelle définir une option. la *procédure* est **nvarchar (776)**, sans valeur par défaut.  
   
-`[ @OptionName = ] 'option'` Est le nom de l’option à définir. La seule valeur pour *option* est **démarrage**.  
+`[ @OptionName = ] 'option'`Nom de l’option à définir. La seule valeur pour l' *option* est **Startup**.  
   
-`[ @OptionValue = ] 'value'` Indique si l’option sur (**true** ou **sur**) ou désactivé (**false** ou **hors**). *valeur* est **varchar(12)** , sans valeur par défaut.  
+`[ @OptionValue = ] 'value'`Indique s’il faut définir l’option sur (**true** ou **on**) ou sur OFF (**false** ou **off**). la *valeur* est de type **varchar (12)**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou numéro d'erreur (échec)  
   
 ## <a name="remarks"></a>Notes  
- Procédures de démarrage doivent se trouver dans le **master** de base de données et ne peut pas contenir de paramètres d’entrée ou de sortie. L'exécution des procédures stockées démarre lorsque toutes les bases de données sont récupérées et le message « Récupération terminée » est enregistré au démarrage.  
+ Les procédures de démarrage doivent se trouver dans la base de données **Master** et ne peuvent pas contenir de paramètres d’entrée ou de sortie. L'exécution des procédures stockées démarre lorsque toutes les bases de données sont récupérées et le message « Récupération terminée » est enregistré au démarrage.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  

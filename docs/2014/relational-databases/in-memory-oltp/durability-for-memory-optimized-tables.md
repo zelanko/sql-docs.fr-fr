@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072749"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fournit la durabilité complète pour les tables optimisées en mémoire. Lorsqu'une transaction qui a modifié une table optimisée en mémoire est validée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (comme pour les tables sur disque), garantit que les modifications sont permanentes (perdureront au redémarrage d'une base de données), à condition que le stockage sous-jacent soit disponible. Il existe deux composantes clés de durabilité : l'enregistrement des transactions et la conservation des modifications de données dans un stockage sur disque.  
   
 ## <a name="transaction-log"></a>Journal des transactions  
@@ -43,7 +44,7 @@ ms.locfileid: "63072749"
 ## <a name="populating-data-and-delta-files"></a>Remplissage des fichiers de données et des fichiers delta  
  Les fichiers de données et delta sont remplis par un thread d'arrière-plan appelé point de contrôle hors connexion. Ce thread lit les enregistrements du journal des transactions générés par les transactions validées sur les tables mémoire optimisées et ajoute des informations concernant les lignes insérées et supprimées dans les fichiers de données et delta appropriés. Contrairement aux tables sur disque où les pages de données/index sont vidées avec des E/S aléatoires lorsque le point de contrôle est effectué, la persistance de la table optimisée en mémoire est une opération en arrière-plan continue. Plusieurs fichiers delta sont accédés car une transaction peut supprimer ou mettre à jour toute ligne ayant été insérée par une transaction précédente. Les informations de suppression sont toujours ajoutées à la fin du fichier delta. Par exemple, une transaction avec un horodateur de validation de 600 insère une nouvelle ligne et supprime les lignes insérées par les transactions ayant un horodateur de validation de 150, 250 et 450, comme le montre l'illustration ci-après. Les quatre opérations d'E/S de fichier (trois pour les lignes supprimées et une pour les nouvelles lignes insérées) sont des opérations Append-Only sur les fichiers de données et delta correspondants.  
   
- ![Lecture des enregistrements du journal des tables optimisées en mémoire](../../database-engine/media/read-logs-hekaton.gif "Lecture des enregistrements du journal des tables optimisées en mémoire")  
+ ![Lecture des enregistrements du journal des tables optimisées en mémoire.](../../database-engine/media/read-logs-hekaton.gif "Lecture des enregistrements du journal des tables optimisées en mémoire.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Accès aux fichiers de données et aux fichiers delta  
  Les paires de fichiers de données et delta sont accessibles dans les cas suivants.  
@@ -87,8 +88,9 @@ ms.locfileid: "63072749"
   
  Un thread d'arrière-plan évalue toutes les paires de fichiers de point de contrôle fermées à l'aide d'une stratégie de fusion, puis initie une ou plusieurs demandes de fusion pour les paires de fichiers de point de contrôle qualifiées. Ces demandes de fusion sont traitées par le thread de point de contrôle hors connexion. L'évaluation de la stratégie de fusion est effectuée périodiquement et lorsqu'un point de contrôle est fermé.  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Stratégie de fusion  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implémente la stratégie de fusion suivante :  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Stratégie de fusion  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implémente la stratégie de fusion suivante :  
   
 -   Une fusion est planifiée si 2 ou plus paires de fichiers de point de contrôle peuvent être consolidées, après avoir tenu compte des lignes supprimées, de sorte que les lignes résultantes puissent tenir dans une paire de fichiers de point de contrôle de taille idéale. La taille idéale d'une paire de fichiers de point de contrôle est déterminée comme suit :  
   
@@ -108,16 +110,16 @@ ms.locfileid: "63072749"
   
  Toutes les paires de fichiers de point de contrôle avec de l'espace disponible ne sont pas qualifiées pour la fusion. Par exemple, si deux paires de fichiers de point de contrôle adjacentes sont complètes à 60 %, elles ne seront pas qualifiées pour la fusion et chacune des paires aura 40 % de stockage inutilisé. Dans le pire des cas, toutes les paires de fichiers de point de contrôle seront complètes à 50%, soit une utilisation du stockage de seulement 50 %. Alors que les lignes supprimées peuvent exister dans le stockage car les paires de fichiers de contrôle ne sont pas qualifiées pour la fusion, les lignes supprimées peuvent déjà avoir été supprimées de la mémoire par le garbage collection en mémoire. La gestion du stockage et de la mémoire est indépendante du garbage collection. Le stockage pris par des paires de fichiers de point de contrôle actives (certaines paires de fichiers de point de contrôle n'ont pas été mises à jour) peut être jusqu'à 2 fois supérieur à la taille des tables durables en mémoire.  
   
- Si nécessaire, une fusion manuelle peut être effectuée en appelant explicitement [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
+ Si nécessaire, une fusion manuelle peut être effectuée explicitement en appelant [sys. sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Cycle de vie d'une paire de fichiers de point de contrôle  
- Les paires de fichiers de point de contrôle traversent plusieurs états avant de pouvoir être libérées. À un moment donné, elles sont dans une des phases suivantes : PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE et TOMBSTONE. Pour obtenir une description de ces phases, consultez [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Les paires de fichiers de point de contrôle traversent plusieurs états avant de pouvoir être libérées. À tout moment, les paires de fichiers de point de contrôle sont dans l'une des phases suivantes : PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE, et TOMBSTONE. Pour obtenir une description de ces phases, consultez [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Après prise en compte du stockage occupé par les paires de fichiers de point de contrôle selon leurs états, le stockage global pris par les tables mémoire optimisées peut être bien plus grand que 2 fois la taille des tables en mémoire. La DMV [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) peut être interrogée pour répertorier toutes les paires dans le groupe de fichiers mémoire optimisé, y compris leur phase. Les paires de fichiers de point de contrôle qui passent de l'état MERGE SOURCE à l'état TOMBSTONE et l'opération de garbage collection peuvent occuper jusqu'à cinq points de contrôle, et chaque point est suivi d'une sauvegarde du journal des transactions, si la base de données est configurée selon un mode de restauration complète ou de récupération utilisant les journaux de transactions.  
+ Après prise en compte du stockage occupé par les paires de fichiers de point de contrôle selon leurs états, le stockage global pris par les tables mémoire optimisées peut être bien plus grand que 2 fois la taille des tables en mémoire. La DMV [sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) peut être interrogée pour répertorier toutes les paires dans le groupe de fichiers mémoire optimisé, y compris leur phase. Les paires de fichiers de point de contrôle qui passent de l'état MERGE SOURCE à l'état TOMBSTONE et l'opération de garbage collection peuvent occuper jusqu'à cinq points de contrôle, et chaque point est suivi d'une sauvegarde du journal des transactions, si la base de données est configurée selon un mode de restauration complète ou de récupération utilisant les journaux de transactions.  
   
  Forcez manuellement le point de contrôle, puis la sauvegarde de fichier journal pour accélérer l'opération de garbage collection, mais cela ajoutera 5 paires de fichiers de point de contrôle vides (5 paires de fichiers de données/delta avec chacune une taille de fichier de données de 128 Mo). Dans les scénarios de production, les points de contrôle automatiques et les sauvegardes de fichier journal effectuées dans le cadre de la stratégie de sauvegarde basculent sans problème les paires de fichiers de point de contrôle vers ces phases sans aucune intervention manuelle. L'impact du processus de garbage collection est le suivant : les bases de données avec des tables mémoire optimisées peuvent avoir une plus grande taille de stockage comparée à leur taille en mémoire. Il n'est pas rare que les paires de fichiers de point de contrôle soient jusqu'à quatre fois plus volumineuses que les tables mémoire optimisées durables en mémoire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création et gestion du stockage des objets mémoire optimisés](creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Création et gestion du stockage des objets à mémoire optimisée](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

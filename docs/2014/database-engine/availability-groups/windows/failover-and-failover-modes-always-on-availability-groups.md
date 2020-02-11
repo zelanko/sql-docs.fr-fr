@@ -1,5 +1,5 @@
 ---
-title: Basculement et Modes de basculement (groupes de disponibilité AlwaysOn) | Microsoft Docs
+title: Basculement et modes de basculement (groupes de disponibilité AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814494"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité AlwaysOn)
@@ -32,9 +32,9 @@ ms.locfileid: "62814494"
   
  Les formes de basculement qu’un réplica de disponibilité donné prend en charge sont spécifiées par la propriété *mode de basculement* . Pour un réplica de disponibilité spécifique, les modes de basculement possibles dépendent du [mode de disponibilité](availability-modes-always-on-availability-groups.md) du réplica, comme suit :  
   
--   Les **réplicas avec validation synchrone** prennent en charge deux paramètres : automatique ou manuel. Le paramètre « automatic » prend en charge le basculement automatique et le basculement de manuel. Pour empêcher la perte de données, le basculement automatique et le basculement planifié requièrent que la cible de basculement soit un réplica secondaire avec validation synchrone et présente un état de synchronisation intègre (cela indique que chaque base de données secondaire sur la cible de basculement est synchronisée avec sa base de données primaire correspondante). Si un réplica secondaire ne remplit pas ces deux conditions, il prend en charge seulement le basculement forcé. Notez que le basculement forcé est également pris en charge sur les réplicas dont le rôle est dans l'état RESOLVING.  
+-   **Les réplicas avec validation synchrone** prennent en charge deux paramètres : automatique ou manuel. Le paramètre « automatic » prend en charge le basculement automatique et le basculement de manuel. Pour empêcher la perte de données, le basculement automatique et le basculement planifié requièrent que la cible de basculement soit un réplica secondaire avec validation synchrone et présente un état de synchronisation intègre (cela indique que chaque base de données secondaire sur la cible de basculement est synchronisée avec sa base de données primaire correspondante). Si un réplica secondaire ne remplit pas ces deux conditions, il prend en charge seulement le basculement forcé. Notez que le basculement forcé est également pris en charge sur les réplicas dont le rôle est dans l'état RESOLVING.  
   
--   Les**réplicas avec validation asynchrone** prennent en charge uniquement le mode de basculement manuel. De plus, étant donné qu'ils ne sont jamais synchronisés, ils prennent en charge uniquement le basculement forcé.  
+-   Les **réplicas avec validation asynchrone** prennent en charge uniquement le mode de basculement manuel. De plus, étant donné qu'ils ne sont jamais synchronisés, ils prennent en charge uniquement le basculement forcé.  
   
 > [!NOTE]  
 >  Suite à un basculement, les applications clientes qui doivent accéder aux bases de données primaires doivent se connecter au nouveau réplica principal. En outre, si le nouveau réplica secondaire est configuré pour autoriser l'accès en lecture seule, les applications clientes en lecture seule peuvent s'y connecter. Pour plus d’informations sur la connexion de clients à un groupe de disponibilité, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
@@ -59,16 +59,16 @@ ms.locfileid: "62814494"
  [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]  
  Dans un groupe de disponibilité donné, l'ensemble de tous les réplicas de disponibilité dont l'état opérationnel est actuellement ONLINE, quel que soit le mode de disponibilité et le mode de basculement. Le [!INCLUDE[ssFosEntire](../../../includes/ssfosentire-md.md)]est approprié quand aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
-##  <a name="Overview"></a> Présentation du basculement  
+##  <a name="Overview"></a>Vue d’ensemble du basculement  
  Le tableau ci-dessous résume les formes de basculement prises en charge dans différents modes de disponibilité et de basculement. Pour chaque couplage, le mode de disponibilité et le mode de basculement les plus efficaces sont déterminés par l'intersection des modes du réplica principal et des modes d'un ou plusieurs réplicas secondaires.  
   
 ||Mode de validation asynchrone|Mode de validation synchrone avec mode de basculement manuel|Mode de validation synchrone avec mode de basculement automatique|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Basculement automatique|Non|Non|Oui|  
 |Basculement manuel planifié|Non|Oui|Oui|  
-|basculement forcé|Oui|Oui|Oui **<sup>*</sup>**|  
+|basculement forcé|Oui|Oui|Oui**<sup>*</sup>**|  
   
- **<sup>*</sup>**  Si vous exécutez une commande de basculement forcé sur un réplica secondaire synchronisé, le réplica secondaire comporte de la même manière que pour un basculement manuel.  
+ **<sup>*</sup>** Si vous exécutez une commande de basculement forcé sur un réplica secondaire synchronisé, le réplica secondaire se comporte de la même façon que pour un basculement manuel.  
   
  La durée pendant laquelle la base de données n'est pas disponible lors d'un basculement dépend du type de basculement et de la raison de ce dernier.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62814494"
 ### <a name="failover-sets"></a>Ensembles de basculement  
  Les formes de basculement possibles pour un groupe de disponibilité donné peuvent être présentées en termes de groupes de basculement. Un groupe de basculement comprend le réplica principal et les réplicas secondaires qui prennent en charge un type donné de basculement, comme suit :  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (facultatif) :**  Dans un groupe de disponibilité donné, paire de réplicas de disponibilité (réplica principal actuel compris) qui est configurée pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un groupe des basculements automatiques est appliqué uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   (facultatif) : ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] **  Dans un groupe de disponibilité donné, une paire de réplicas de disponibilité (y compris le réplica principal actuel) qui est configurée pour le mode de validation synchrone avec basculement automatique, le cas échéant. Un groupe des basculements automatiques est appliqué uniquement si le réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facultatif) :**  Dans un groupe de disponibilité donné, un groupe de deux ou trois réplicas de disponibilité (réplica principal actuel compris) qui est configuré pour le mode de validation synchrone, le cas échéant. Un groupe de basculements avec validation synchrone est appliqué uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu'au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   (facultatif) : ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] **  Dans un groupe de disponibilité donné, un ensemble de deux ou trois réplicas de disponibilité (y compris le réplica principal actuel) qui sont configurés pour le mode de validation synchrone, le cas échéant. Un groupe de basculements avec validation synchrone est appliqué uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu'au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dans un groupe de disponibilité donné, l'ensemble de tous les réplicas de disponibilité dont l'état opérationnel est actuellement ONLINE, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dans un groupe de disponibilité donné, ensemble de tous les réplicas de disponibilité dont l’état opérationnel est actuellement en ligne, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
  Lorsque vous configurez un réplica de disponibilité en tant que validation synchrone avec basculement automatique, le réplica de disponibilité devient partie intégrante du [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Toutefois, l'entrée en vigueur de l'ensemble dépend du réplica principal actuel. Les formes de basculement qui sont en fait possibles à un moment donné dépendent des ensembles de basculement actuellement en vigueur.  
   
@@ -99,16 +99,16 @@ ms.locfileid: "62814494"
   
  ![Effet de la configuration du réplica principal sur le basculement](../../media/aoag-failoversetexample.gif "Effet de la configuration du réplica principal sur le basculement")  
   
-##  <a name="AutomaticFailover"></a> Automatic Failover  
+##  <a name="AutomaticFailover"></a>Basculement automatique  
  Un basculement automatique entraîne la transition automatique d'un réplica secondaire qualifié vers le rôle principal une fois que le réplica principal n'est plus disponible. Le basculement automatique convient idéalement lorsque le nœud WSFC qui héberge le réplica principal est local au nœud qui héberge le réplica secondaire. Cela est dû au fait que la synchronisation des données fonctionne mieux avec une faible latence de message entre les ordinateurs et parce que les connexions clientes peuvent rester locales.  
   
   
-###  <a name="RequiredConditions"></a> Conditions requises pour un basculement automatique  
+###  <a name="RequiredConditions"></a>Conditions requises pour un basculement automatique  
  Le basculement automatique intervient uniquement dans les conditions suivantes :  
   
 -   Il existe un groupe de basculements automatiques. Ce groupe se compose d’un réplica principal et d’un réplica secondaire (la *cible du basculement automatique*) qui sont tous les deux configurés pour le mode de validation synchrone et sont définis en mode de basculement automatique (AUTOMATIC). HYPERLINK "file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6fe88e12-4df1-4025-ba24-7579635ccecf\\\HTM\\\html\\\29e0ac5d-eb58-4801-82b9-e278f08db920"  Si le réplica principal est défini en vue d’un basculement manuel (MANUAL), le basculement automatique ne peut pas se produire, même si un réplica secondaire est défini sur le basculement automatique (AUTOMATIC).  
   
-     Pour plus d’informations, consultez [Modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md).  
+     Pour plus d’informations, consultez [modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md).  
   
 -   L'état de synchronisation de la cible de basculement automatique est sain (cela indique que chaque base de données secondaire sur la cible de basculement est synchronisée avec sa base de données primaire correspondante).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62814494"
   
 -   Le réplica principal n'est plus disponible, et les niveaux de condition de basculement définis par votre stratégie de basculement souple ont été atteints. Pour plus d’informations sur les niveaux de condition de basculement, consultez [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md).  
   
-###  <a name="HowAutoFoWorks"></a> Fonctionnement du basculement automatique  
+###  <a name="HowAutoFoWorks"></a>Fonctionnement du basculement automatique  
  Un basculement automatique initie la série d'actions suivante :  
   
 1.  Si l'instance de serveur qui héberge le réplica principal actuel est encore en cours d'exécution, elle modifie l'état des bases de données primaires en DISCONNECTED et déconnecte tous les clients.  
@@ -137,10 +137,10 @@ ms.locfileid: "62814494"
   
 4.  Par la suite, lorsque l'instance de serveur qui héberge le réplica principal précédent redémarre, il identifie qu'un autre réplica de disponibilité joue maintenant le rôle principal. Le réplica principal précédent joue à présent le rôle secondaire, et ses bases de données deviennent des bases de données secondaires. Le nouveau réplica secondaire se connecte au réplica principal actuel et rattrape sa base de données pour qu'elle soit au niveau des bases de données primaires actuelles le plus rapidement possible. Dès que le nouveau réplica secondaire a resynchronisé ses bases de données, le basculement est à nouveau possible, mais en sens inverse.  
   
-###  <a name="EnableAutoFo"></a> Pour configurer un basculement automatique  
+###  <a name="EnableAutoFo"></a>Pour configurer le basculement automatique  
  Un réplica de disponibilité peut être configuré pour prendre en charge le basculement automatique à tout moment.  
   
- **To configure automatic failover**  
+ **Pour configurer le basculement automatique**  
   
 1.  Vérifiez que le réplica secondaire est configuré pour utiliser le mode de disponibilité avec validation synchrone. Pour plus d’informations, consultez [Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md).  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62814494"
   
 3.  Si vous le souhaitez, modifiez la stratégie de basculement flexible du groupe de disponibilité pour spécifier les types d'échecs qui peuvent déclencher un basculement automatique. Pour plus d’informations, consultez [Configurer la stratégie de basculement flexible pour contrôler les conditions du basculement automatique &#40;groupes de disponibilité AlwaysOn&#41;](configure-flexible-automatic-failover-policy.md) HYPERLINK "file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6a8d98a9-6e6a-40d1-9809-efa9013d7452\\\HTM\\\html\\\1ed564b4-9835-4245-ae35-9ba67419a4ce"  and [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
-##  <a name="ManualFailover"></a> Basculement manuel planifié (sans perte de données)  
+##  <a name="ManualFailover"></a>Basculement manuel planifié (sans perte de données)  
  Un basculement manuel provoque la transition d'un réplica secondaire synchronisé vers le rôle principal après qu'un administrateur de base de données a émis une commande de basculement manuel sur l'instance de serveur qui héberge le réplica secondaire cible. Pour prendre en charge le basculement manuel, le réplica secondaire et le réplica principal actuel doivent tous deux être configurés pour le mode de validation synchrone, le cas échéant. Chaque base de données secondaire sur le réplica de disponibilité doit être jointe au groupe de disponibilité et être synchronisée avec sa base de données primaire correspondante (autrement dit, le réplica secondaire doit être synchronisé). Cela garantit que chaque transaction validée sur une base de données primaire précédente a également été validée sur la nouvelle base de données primaire. Par conséquent, les nouvelles bases de données primaires sont identiques aux anciennes bases de données primaires.  
   
  L'illustration suivante montre les étapes d'un basculement planifié :  
@@ -159,10 +159,10 @@ ms.locfileid: "62814494"
   
 3.  La cible de basculement (sur `Node02`) devient le nouveau réplica principal. Comme il s'agit d'un basculement planifié, le réplica principal précédent passe sur le rôle secondaire pendant le basculement et met immédiatement ses bases de données en ligne comme bases de données secondaires.  
   
- ![Illustration d’un basculement manuel planifié](../../media/aoag-plannedmanualfailover.gif "Illustration d’un basculement manuel planifié")  
+ ![Illustration d'un basculement manuel planifié](../../media/aoag-plannedmanualfailover.gif "Illustration d'un basculement manuel planifié")  
   
   
-###  <a name="ManualFailoverConditions"></a> Conditions requises pour un basculement manuel  
+###  <a name="ManualFailoverConditions"></a>Conditions requises pour un basculement manuel  
  Pour prendre en charge un basculement manuel, le réplica principal actuel doit être défini en mode de validation synchrone et un réplica secondaire doit être :  
   
 -   configuré pour le mode de validation synchrone ;  
@@ -171,7 +171,7 @@ ms.locfileid: "62814494"
   
  Pour basculer manuellement un groupe de disponibilité, vous devez être connecté au réplica secondaire qui va devenir le nouveau réplica principal.  
   
-###  <a name="ManualFailoverHowWorks"></a> Fonctionnement d'un basculement manuel planifié  
+###  <a name="ManualFailoverHowWorks"></a>Fonctionnement d’un basculement manuel planifié  
  Un basculement manuel planifié, qui doit être initié sur le réplica secondaire cible, démarre la séquence d'actions suivante :  
   
 1.  Pour vous assurer qu'aucune nouvelle transaction utilisateur ne se produira sur les bases de données primaires d'origine, le cluster WSFC envoie une demande de mise hors connexion au réplica principal.  
@@ -192,22 +192,22 @@ ms.locfileid: "62814494"
   
  Après le basculement, les clients doivent se reconnecter à la base de données primaire actuelle. Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
-###  <a name="ManualFailoverDuringUpgrades"></a> Maintien de la disponibilité lors des mises à niveau  
- L'administrateur de base de données de vos groupes de disponibilité peut faire appel à des basculements manuels pour maintenir la disponibilité de la base de données lorsque vous mettez à niveau le matériel ou le logiciel. Pour utiliser un groupe de disponibilité pour les mises à niveau logicielles, l'instance de serveur et/ou le nœud ordinateur qui héberge le réplica secondaire cible doivent avoir déjà reçu les mises à niveau. Pour plus d’informations, consultez [mise à niveau et mise à jour des serveurs de groupe de disponibilité avec un temps mort et une perte de données](upgrading-always-on-availability-group-replica-instances.md).  
+###  <a name="ManualFailoverDuringUpgrades"></a>Maintien de la disponibilité lors des mises à niveau  
+ L'administrateur de base de données de vos groupes de disponibilité peut faire appel à des basculements manuels pour maintenir la disponibilité de la base de données lorsque vous mettez à niveau le matériel ou le logiciel. Pour utiliser un groupe de disponibilité pour les mises à niveau logicielles, l'instance de serveur et/ou le nœud ordinateur qui héberge le réplica secondaire cible doivent avoir déjà reçu les mises à niveau. Pour plus d’informations, consultez [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](upgrading-always-on-availability-group-replica-instances.md).  
   
-##  <a name="ForcedFailover"></a> Basculement forcé (avec possible perte de données)  
+##  <a name="ForcedFailover"></a>Basculement forcé (avec perte de données possible)  
  Le basculement forcé d’un groupe de disponibilité (avec perte de données possible) est une méthode de récupération d’urgence qui vous permet d’utiliser un réplica secondaire en tant que serveur de secours actif. Le basculement forcé entraînant un risque de perte de données, il convient de l’utiliser avec prudence et parcimonie. Nous recommandons de forcer le basculement uniquement si vous devez restaurer immédiatement le service sur vos base de données de disponibilité et que vous êtes prêt à courir le risque de perdre des données. Pour plus d’informations sur les conditions préalables requises et les recommandations pour forcer un basculement et pour obtenir un exemple de scénario qui utilise un basculement forcé pour effectuer une récupération suite à une défaillance irrémédiable, consultez [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 > [!WARNING]  
 >  Le basculement forcé exige que le cluster WSFC dispose d'un quorum. Pour plus d’informations sur la configuration du quorum et le quorum forcé, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
   
-###  <a name="ForcedFailoverHowWorks"></a> Fonctionnement du basculement forcé  
+###  <a name="ForcedFailoverHowWorks"></a>Fonctionnement du basculement forcé  
  Le fait de forcer le basculement initie la transition du rôle principal sur un réplica cible dont le rôle est dans l'état SECONDARY ou RESOLVING. La cible de basculement devient le nouveau réplica principal et sert immédiatement ses copies de base de données aux clients. Lorsque le réplica principal précédent est disponible, il adopte le rôle secondaire, et ses bases de données deviennent des bases de données secondaires.  
   
  Toutes les bases de données secondaires (y compris les anciennes bases de données primaires, lorsqu'elles deviennent disponibles) sont interrompues (SUSPENDED). En fonction de l'état précédent de synchronisation des données d'une base de données secondaire interrompue, il peut convenir pour récupérer des données validées manquantes pour cette base de données primaire. Sur un réplica secondaire configuré pour autoriser l'accès en lecture seule, vous pouvez interroger les bases de données secondaires afin de découvrir manuellement des données manquantes. Vous pouvez alors émettre des instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] sur les nouvelles bases de données primaires afin d'apporter les modifications nécessaires.  
   
-###  <a name="ForcedFailoverRisks"></a> Risques posés par le basculement forcé  
+###  <a name="ForcedFailoverRisks"></a>Risques liés au basculement forcé  
  Il est essentiel de comprendre que le basculement forcé peut entraîner la perte de données. La perte de données est possible car le réplica cible ne peut pas communiquer avec le réplica principal et, par conséquent, ne peut pas garantir la synchronisation des bases de données. Le basculement forcé démarre un nouveau point de branchement de récupération. Étant donné que les base de données primaires d'origine et les bases de données secondaires sont situées sur différents branchements de récupération, chacune d'elles contient maintenant des données qui ne figurent pas dans l'autre base de données : chaque base de données primaire d'origine contient toutes les modifications qui n'avaient pas encore été envoyées de sa file d'attente d'envoi à l'ancienne base de données secondaire (le journal non envoyé) ; les anciennes bases de données secondaires contiennent toutes les modifications qui surviennent une fois le basculement forcé effectué.  
   
  Si le basculement est forcé suite à une défaillance du réplica principal, le risque de perte de données varie selon que les journaux de transactions ont été envoyés ou non au réplica secondaire avant la défaillance. En mode de validation asynchrone, une accumulation du journal non envoyé est toujours possible. En mode de validation synchrone, cela est possible uniquement tant que les bases de données secondaires ne sont pas synchronisées.  
@@ -223,19 +223,19 @@ ms.locfileid: "62814494"
   
  Les bases de données secondaires suivent uniquement deux branchements de récupération. Par conséquent, si vous exécutez plusieurs basculements forcés, il est possible que certaines bases de données secondaires qui ont démarré la synchronisation des données avec le basculement forcé précédent, ne puissent pas être reprises. Si cela se produit, les bases de données secondaires qui ne peuvent pas être reprises devront être supprimées du groupe de disponibilité, restaurées au moment approprié et rejoindre le groupe de disponibilité. Une restauration ne fonctionnera pas entre plusieurs branchements de récupération, par conséquent, vous devez veiller à sauvegarder le journal après l'exécution de plus d'un basculement forcé.  
   
-###  <a name="WhyFFoPostForcedQuorum"></a> Raisons pour lesquelles le basculement forcé est requis après avoir forcé le quorum  
+###  <a name="WhyFFoPostForcedQuorum"></a>Pourquoi le basculement forcé est requis après avoir forcé le quorum  
  Après avoir forcé le quorum sur le cluster WSFC (*quorum forcé*), vous devez forcer le basculement de chaque groupe de disponibilité (avec perte possible de données). Le basculement forcé est requis, car l'état réel des valeurs de cluster WSFC peut avoir été perdu. Il est nécessaire d'empêcher les basculements normaux après un quorum forcé, car un réplica secondaire non synchronisé pourrait apparaître comme synchronisé sur le cluster WSFC reconfiguré.  
   
- Par exemple, considérez un cluster WSFC qui héberge un groupe de disponibilité sur trois nœuds :  le nœud A héberge le réplica principal et les nœuds B et C hébergent un réplica secondaire. Le nœud C est déconnecté du cluster WSFC tandis que le réplica secondaire local est SYNCHRONIZED.  Mais le nœud A et le nœud B conservent un quorum sain et le groupe de disponibilité reste en ligne. Sur le nœud A, le réplica principal continue d'accepter les mises à jour, et sur le nœud B, le réplica secondaire continue d'être synchonisé avec le réplica principal. Le réplica secondaire sur le nœud C n'est plus synchronisé et passe de plus en plus derrière le réplica principal. Toutefois, étant donné que le nœud C est déconnecté, le réplica reste incorrectement dans l'état SYNCHRONIZED.  
+ Par exemple, considérez un cluster WSFC qui héberge un groupe de disponibilité sur trois nœuds : le nœud A héberge le réplica principal et les nœuds B et C hébergent un réplica secondaire. Le nœud C est déconnecté du cluster WSFC tandis que le réplica secondaire local est SYNCHRONIZED.  Mais le nœud A et le nœud B conservent un quorum sain et le groupe de disponibilité reste en ligne. Sur le nœud A, le réplica principal continue d'accepter les mises à jour, et sur le nœud B, le réplica secondaire continue d'être synchonisé avec le réplica principal. Le réplica secondaire sur le nœud C n'est plus synchronisé et passe de plus en plus derrière le réplica principal. Toutefois, étant donné que le nœud C est déconnecté, le réplica reste incorrectement dans l'état SYNCHRONIZED.  
   
  Si le quorum est perdu et s’il est ensuite forcé sur le nœud A, l’état de synchronisation du groupe de disponibilité sur le cluster WSFC devrait être correct, et le réplica secondaire sur le nœud C apparaît comme UNSYNCHRONIZED. Toutefois, si le quorum est forcé sur le nœud C, la synchronisation du groupe de disponibilité sera incorrecte. L’état de synchronisation sur le cluster retrouve le même niveau que lorsque le nœud C a été déconnecté, et le réplica secondaire sur le nœud C apparaît *incorrectement* comme SYNCHRONIZED. Puisque les basculements manuels planifiés garantissent la sécurité des données, ils ne sont pas autorisés pour ramener un groupe de disponibilité en ligne après qu'un quorum a été forcé.  
   
-###  <a name="TrackPotentialDataLoss"></a> Suivi de la perte de données potentielle  
+###  <a name="TrackPotentialDataLoss"></a>Suivi de la perte de données potentielle  
  Lorsque le cluster WSFC a un quorum sain, vous pouvez estimer le risque potentiel actuel de perte de données sur les bases de données. Pour un réplica secondaire donné, le risque potentiel actuel de perte de données dépend du décalage des bases de données secondaires par rapport aux bases de données primaires correspondantes. Étant donné que le décalage varie dans le temps, nous vous recommandons de suivre régulièrement la perte de données potentielle de vos bases de données secondaires non synchronisées. Le suivi du décalage implique de comparer le LSN de dernière validation et l'Heure de dernière validation de chaque base de données primaire avec ses bases de données secondaires, comme suit :  
   
 1.  Connectez-vous au réplica principal.  
   
-2.  Requête la `last_commit_lsn` (LSN de la dernière transaction validée) et `last_commit_time` colonnes (heure de la dernière validation) de la [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) vue de gestion dynamique.  
+2.  Interrogez `last_commit_lsn` les colonnes (LSN de la dernière transaction validée) et `last_commit_time` (heure des dernières validations) de la vue de gestion dynamique [sys. dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
   
 3.  Comparez les valeurs retournées pour chaque base de données primaire et pour chacune de ses bases de données secondaires. La différence entre leurs LSN de dernière validation indique le niveau du décalage.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "62814494"
 > [!IMPORTANT]  
 >  Lorsque le cluster WSFC n'a pas un quorum suffisant ou lorsque le quorum a été forcé, `last_commit_lsn` et `last_commit_time` ont la valeur NULL. Pour plus d’informations sur la façon d’éviter la perte de données après avoir forcé un quorum, consultez « Méthodes possibles pour éviter la perte de données après un quorum forcé » dans [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="ForcedFailoverManagingDataLoss"></a> Gestion de la perte de données potentielle  
+###  <a name="ForcedFailoverManagingDataLoss"></a>Gestion de la perte de données potentielle  
  Après un basculement forcé, toutes les bases de données secondaires sont interrompues. Cela inclut les anciennes bases de données principales, une fois que l'ancien réplica principal est repassé en ligne et découvre qu'il s'agit maintenant d'un réplica secondaire. Vous devez reprendre manuellement chaque base de données interrompue individuellement sur chaque réplica secondaire.  
   
  Une fois l'ancien réplica principal disponible, en supposant que ses bases de données ne soient pas endommagées, vous pouvez tenter de gérer la perte de données potentielle. L'approche disponible pour gérer la perte de données potentielle varie selon que le réplica principal d'origine s'est connecté au nouveau réplica principal. En supposant que le réplica principal d'origine puisse accéder à la nouvelle instance principale, la reconnexion se produit automatiquement et de manière transparente.  
@@ -279,13 +279,13 @@ ms.locfileid: "62814494"
 >  La troncation du journal des transactions est différée sur une base de données principale tant que l'une de ses bases de données secondaires est interrompue. De même, l'état de synchronisation d'un réplica secondaire avec validation synchrone ne peut pas effectuer la transition vers l'état HEALTHY tant qu'une base de données locale reste interrompue.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
- **Pour configurer le comportement d'un basculement**  
+ **Pour configurer le comportement de basculement**  
   
 -   [Modifier le mode de disponibilité d’un réplica de disponibilité &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
 -   [Modifier le mode de basculement d’un réplica de disponibilité &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Configurer la stratégie de basculement Flexible pour contrôler les Conditions pour le basculement automatique &#40;groupes de disponibilité AlwaysOn&#41;](configure-flexible-automatic-failover-policy.md)  
+-   [Configurez la stratégie de basculement flexible pour contrôler les conditions du basculement automatique &#40;groupes de disponibilité AlwaysOn&#41;](configure-flexible-automatic-failover-policy.md)  
   
  **Pour effectuer un basculement manuel**  
   
@@ -297,7 +297,7 @@ ms.locfileid: "62814494"
   
 -   [Gestion des connexions et des travaux pour les bases de données d’un groupe de disponibilité &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
- **Pour configurer le quorum WSFC**  
+ **Pour configurer la configuration du quorum WSFC**  
   
 -   [Configurer les paramètres NodeWeight pour un quorum de cluster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
@@ -307,15 +307,15 @@ ms.locfileid: "62814494"
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de Solutions Microsoft SQL Server AlwaysOn pour une haute disponibilité et récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de solutions Microsoft SQL Server AlwaysOn pour la haute disponibilité et la récupération d'urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog de l’équipe AlwaysOn SQL Server : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server AlwaysOn : blog officiel de l’équipe SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Transactions entre bases de données non pris en charge pour la mise en miroir de base de données ou de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
+ [Transactions entre bases de données non prises en charge pour la mise en miroir de bases de données ou groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
  [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;Transact-SQL&#41;](flexible-automatic-failover-policy-availability-group.md)  
   

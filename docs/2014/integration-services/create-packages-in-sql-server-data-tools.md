@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828889"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Créer des packages dans les outils de données SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "62828889"
   
  Les procédures suivantes décrivent comment créer ou supprimer un package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- Pour obtenir une vidéo qui montre comment créer un package de base à l’aide du modèle de package par défaut, consultez[Création d’un package de base (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023).  
+ Pour obtenir une vidéo qui montre comment créer un package de base à l’aide du modèle de package par défaut, consultez [Création d’un package de base (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023).  
   
 ### <a name="to-create-a-package-in-sql-server-data-tools-using-the-package-template"></a>Pour créer un package dans les outils de données SQL Server à l'aide du modèle de package  
   

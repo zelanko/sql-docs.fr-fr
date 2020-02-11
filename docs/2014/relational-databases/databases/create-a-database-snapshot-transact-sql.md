@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762344"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Créer un instantané de base de données (Transact-SQL)
@@ -24,20 +24,20 @@ ms.locfileid: "62762344"
   
 -   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
+     [Prérequis](#Prerequisites)  
   
      [Sécurité](#Security)  
   
-     [Bonne pratique : Dénomination des instantanés de base de données](#Naming)  
+     [Meilleure pratique : attribution de noms aux instantanés de base de données](#Naming)  
   
--   **Pour créer une base de données de capture instantanée, à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer un instantané de base de données à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
  La base de données source, qui peut utiliser n'importe quel mode de récupération, doit respecter les conditions préalables suivantes :  
   
--   L’instance de serveur doit exécuter une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge l’instantané de base de données. Pour plus d’informations sur la prise en charge pour les instantanés de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   L’instance de serveur doit exécuter une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui prend en charge l’instantané de base de données. Pour plus d’informations sur la prise en charge [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]des instantanés de base de données dans, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   La base de données source doit être en ligne, à moins que la base de données soit une base de données miroir au sein d'une session de mise en miroir de bases de données.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "62762344"
 ###  <a name="Recommendations"></a> Recommandations  
  Cette section présente les recommandations suivantes :  
   
--   [Bonne pratique : Dénomination des instantanés de base de données](#Naming)  
+-   [Meilleure pratique : attribution de noms aux instantanés de base de données](#Naming)  
   
--   [Bonne pratique : Limitation du nombre d’instantanés de base de données](#Limiting_Number)  
+-   [Recommandation : limitation du nombre d’instantanés de base de données](#Limiting_Number)  
   
--   [Bonne pratique : Connexions clientes à un instantané de base de données](#Client_Connections)  
+-   [Recommandation : connexions clientes à un instantané de base de données](#Client_Connections)  
   
-####  <a name="Naming"></a> Bonne pratique : Dénomination des instantanés de base de données  
+####  <a name="Naming"></a>Meilleure pratique : attribution de noms aux instantanés de base de données  
  Avant de créer des instantanés, il est important de déterminer comment ils seront nommés. Chaque instantané de base de données nécessite un nom de base de données unique. Pour faciliter l'administration, le nom de l'instantané peut intégrer des informations identifiant la base de données, telles que :  
   
 -   Nom de la base de données source.  
@@ -82,13 +82,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> Bonne pratique : Limitation du nombre de captures instantanées de base de données  
+####  <a name="Limiting_Number"></a>Recommandation : limitation du nombre d’instantanés de base de données  
  La création d'une série d'instantanés dans le temps fournit des instantanés consécutifs de la base de données source. Chaque instantané est conservé jusqu'à ce qu'il soit explicitement supprimé. Chaque instantané continuant à grandir au fur et à mesure que les pages d'origine sont mises à jour, vous voudrez peut-être conserver de l'espace disque en supprimant un instantané plus ancien après en avoir créé un nouveau.  
   
 > [!NOTE]  
 >  Si vous souhaitez revenir à un instantané de base de données, vous devez supprimer tous les autres instantanés de cette base de données.  
   
-####  <a name="Client_Connections"></a> Bonne pratique : Connexions client à un instantané de base de données  
+####  <a name="Client_Connections"></a>Recommandation : connexions clientes à un instantané de base de données  
  Pour utiliser un instantané de base de données, les clients ont besoin de savoir où il se trouve. Les utilisateurs peuvent lire un instantané de base de données pendant qu'un autre instantané est créé ou supprimé. Cependant, lorsque vous substituez un nouvel instantané de base de données à un instantané existant, vous devez rediriger les clients vers le nouvel instantané. Les utilisateurs peuvent se connecter manuellement à un instantané de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cependant, pour prendre en charge un environnement de production, vous devez créer une solution de programmation qui dirige de façon transparente les clients écrivant des rapports vers le dernier instantané de la base de données.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -96,7 +96,7 @@ AdventureWorks_snapshot_evening
 ####  <a name="Permissions"></a> Autorisations  
  Tout utilisateur ayant la possibilité de créer une base de données peut également créer un instantané de base de données. Toutefois, pour créer un instantané d’une base de données miroir, vous devez être membre du rôle serveur fixe **sysadmin** .  
   
-##  <a name="TsqlProcedure"></a> Comment créer un instantané de base de données (en utilisant Transact-SQL)  
+##  <a name="TsqlProcedure"></a>Création d’un instantané de base de données (à l’aide de Transact-SQL)  
  **Pour créer un instantané de base de données**  
   
 > [!NOTE]  
@@ -104,15 +104,15 @@ AdventureWorks_snapshot_evening
   
 1.  En vous basant sur la taille actuelle de la base de données source, vérifiez que votre disque dispose de suffisamment d'espace pour en accueillir un instantané. La taille maximale d'un instantané est la taille de la base de données source au moment où l'instantané est créé. Pour plus d’informations, consultez [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
-2.  Exécutez une instruction CREATE DATABASE sur les fichiers en utilisant la clause AS SNAPSHOT OF. Pour créer un instantané, vous devez spécifier le nom logique de chaque fichier de la base de données source. La syntaxe de base est la suivante :  
+2.  Exécutez une instruction CREATE DATABASE sur les fichiers en utilisant la clause AS SNAPSHOT OF. Pour créer un instantané, vous devez spécifier le nom logique de chaque fichier de la base de données source. La syntaxe est la suivante :  
   
      CREATE DATABASE *nom_capture_instantanée_base_de_données*  
   
-     ON  
+     ACTIVÉ  
   
      (  
   
-     NAME =*nom_fichier_logique*,  
+     NAME =*logical_file_name*,  
   
      FILENAME =’*nom_fichier_se*’  
   
@@ -122,7 +122,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Où *nom_base_de_données_**source* représente la base de données source, *nom_fichier_logique* le nom logique utilisé dans SQL Server pour référencer le fichier, *nom_fichier_se* le chemin et le nom de fichier utilisés par le système d’exploitation quand vous créez le fichier, et *nom_capture_instantanée_base_de_données* le nom de la capture instantanée à laquelle vous souhaitez restaurer la base de données. Pour obtenir une description complète de cette syntaxe, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)+.  
+     Où *source_ * * database_name* est la base de données source, *logical_file_name i*s le nom logique utilisé dans SQL Server lors de la référence du fichier, *os_file_name* est le chemin d’accès et le nom de fichier utilisés par le système d’exploitation lorsque vous créez le fichier, et *database_snapshot_name* est le nom de l’instantané vers lequel vous souhaitez restaurer la base de données. Pour obtenir une description complète de cette syntaxe, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)+.  
   
     > [!NOTE]  
     >  Lorsque vous créez un instantané de base de données, les fichiers journaux, les fichiers hors connexion, les fichiers de restauration et les anciens fichiers ne sont pas autorisés dans l'instruction CREATE DATABASE.  
@@ -132,13 +132,13 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  L'extension `.ss` utilisée dans les exemples est arbitraire.  
   
- Cette section contient les exemples suivants :  
+ Cette section contient les exemples suivants :  
   
--   A. [Création d'un instantané sur la base de données AdventureWorks](#Creating_on_AW)  
+-   R. [Création d’un instantané sur la base de données AdventureWorks](#Creating_on_AW)  
   
--   B. [Création d'un instantané sur la base de données Sales (Ventes)](#Creating_on_Sales)  
+-   B. [Création d’un instantané sur la base de données Sales](#Creating_on_Sales)  
   
-####  <a name="Creating_on_AW"></a> A. Création d'un instantané sur la base de données AdventureWorks  
+####  <a name="Creating_on_AW"></a>Un. Création d'un instantané sur la base de données AdventureWorks  
  Cet exemple montre comment créer un instantané de base de données sur la base de données `AdventureWorks` . Le nom de l'instantané, `AdventureWorks_dbss_1800`, et le nom de son fichier partiellement alloué, `AdventureWorks_data_1800.ss`, précisent l'heure de création, 6H00 du soir (18 heures).  
   
 ```  
@@ -149,8 +149,8 @@ AS SNAPSHOT OF AdventureWorks;
 GO  
 ```  
   
-####  <a name="Creating_on_Sales"></a> B. Création d'un instantané sur la base de données Sales (Ventes)  
- Cet exemple montre comment créer un instantané de base de données, `sales_snapshot1200`, sur la base de données `Sales` . Cette base de données a été créé dans l’exemple, « Création d’une base de données qui a des groupes de fichiers » dans [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
+####  <a name="Creating_on_Sales"></a>P. Création d'un instantané sur la base de données Sales (Ventes)  
+ Cet exemple montre comment créer un instantané de base de données, `sales_snapshot1200`, sur la base de données `Sales` . Cette base de données a été créée dans l’exemple « création d’une base de données qui a des groupes de fichiers » dans [Create database &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  

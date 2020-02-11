@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921846"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planifier et exécuter des séquences de restauration (mode de récupération complète)
@@ -56,7 +56,7 @@ ms.locfileid: "62921846"
   
     -   Si ce point correspond au point de défaillance, vous devez restaurer chaque sauvegarde du journal ayant été créée depuis la dernière sauvegarde de données (complète ou différentielle) que vous avez restaurée. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-    -   Pour une restauration limitée dans le temps, vous n'aurez sans doute pas besoin des sauvegardes du journal les plus récentes. Si vous utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'Assistant Récupération de base de données garantit que seules les sauvegardes requises pour la restauration de votre limite dans le temps spécifique sont sélectionnées. Ces sauvegardes constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;Mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+    -   Pour une restauration limitée dans le temps, vous n'aurez sans doute pas besoin des sauvegardes du journal les plus récentes. Si vous utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'Assistant Récupération de base de données garantit que seules les sauvegardes requises pour la restauration de votre limite dans le temps spécifique sont sélectionnées. Ces sauvegardes constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 ## <a name="restarting-a-restore-sequence"></a>Redémarrage d'une séquence de restauration  
  Si vous rencontrez un problème avec le résultat d'une séquence de restauration, vous pouvez l'arrêter et la redémarrer à partir du début. Par exemple, si vous restaurez accidentellement un trop grand nombre de sauvegardes de journal et allez au-delà du point de récupération souhaité, vous devez redémarrer la séquence de restauration jusqu'à la sauvegarde du journal qui contient le point de récupération cible.  

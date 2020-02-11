@@ -13,25 +13,25 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773667"
 ---
 # <a name="search-property-list-editor"></a>Éditeur de listes de propriétés de recherche
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des propriétés de recherche dans une liste de propriétés de recherche.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Pour utiliser SQL Server Management Studio pour gérer des listes de propriétés de recherche  
- Pour plus d’informations sur la façon de créer, afficher ou supprimer une liste de propriétés de recherche et sur la configuration d’un index de recherche en texte intégral pour la recherche de propriétés, consultez [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Pour plus d’informations sur la création, l’affichage ou la suppression d’une liste de propriétés de recherche, ainsi que sur la configuration d’un index de recherche en texte intégral pour la recherche de propriétés, consultez [Rechercher des propriétés de document avec des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Options  
- **Nom de propriété**  
- Spécifiez le nom à utiliser pour identifier la propriété dans les requêtes de texte intégral. Un nom de propriété peut contenir des espaces internes. La longueur maximale de **Property Name** est de 256 caractères. Ce nom peut être un nom convivial, tel que « Auteur » ou « Domicile », ou ce peut être le nom canonique Windows de la propriété, tel que `System.Author` ou `System.Contact.HomeAddress`. **Property Name** doit identifier la propriété de manière unique dans le jeu de propriétés.  
+ **Nom de la propriété**  
+ Spécifiez le nom à utiliser pour identifier la propriété dans les requêtes de texte intégral. Un nom de propriété peut contenir des espaces internes. La longueur maximale de **Property Name** est de 256 caractères. Ce nom peut être un nom convivial, tel que « Auteur » ou « Domicile », ou ce peut être le nom canonique Windows de la propriété, tel que `System.Author` ou `System.Contact.HomeAddress`. Le nom de la **propriété** doit identifier la propriété de manière unique dans le jeu de propriétés.  
   
  Les développeurs utilisent le nom de la propriété pour identifier la propriété dans le prédicat [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Par conséquent, lors de l'ajout d'une propriété, il est important de spécifier une valeur qui représente la propriété de manière significative.  
   
- **GUID du jeu de propriété**  
+ **GUID du jeu de propriétés**  
  Spécifiez l'identificateur du jeu de propriétés auquel appartient la propriété. Il s'agit d'un identificateur global unique (GUID). Un jeu de propriétés est un groupe de propriétés connexes du point du vue logique. Pour plus d'informations sur l'obtention de cette valeur, consultez les « Notes », dans la suite de cette rubrique.  
   
  **ID entier de propriété**  
@@ -50,10 +50,10 @@ ms.locfileid: "62773667"
   
  **Pour configurer une liste de propriétés de recherche pour un index de recherche en texte intégral**  
   
--   [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+-   [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## <a name="permissions"></a>Autorisations  
- Consultez [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
+ Consultez la page [ALTER Search Property LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   

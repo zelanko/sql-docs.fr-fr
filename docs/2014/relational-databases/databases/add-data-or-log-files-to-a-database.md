@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917715"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Ajouter des fichiers de données ou journaux à une base de données
@@ -75,7 +75,7 @@ ms.locfileid: "62917715"
   
 8.  Spécifiez la taille initiale du fichier. Attribuez aux fichiers de données un maximum d'espace en tenant compte du volume maximal de données qu'est censée contenir la base de données.  
   
-9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur ( **...** ) dans la colonne **Croissance automatique**. Sélectionnez l'une des options suivantes :  
+9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur ( **...** ) dans la colonne **Croissance automatique**. Choisissez parmi les options suivantes :  
   
     1.  Pour autoriser la croissance du fichier sélectionné au fur et à mesure que l'espace requis pour les données augmente, activez la case à cocher **Activer la croissance automatique** , puis sélectionnez l'une des options suivantes :  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62917715"
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple ajoute un groupe de deux fichiers à une base de données. L'exemple crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple ajoute un groupe de deux fichiers à une base de données. L'exemple crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase2)]  
   
@@ -118,6 +118,6 @@ ms.locfileid: "62917715"
 ## <a name="see-also"></a>Voir aussi  
  [Database Files and Filegroups](database-files-and-filegroups.md)   
  [Supprimer des fichiers de données ou des fichiers journaux d'une base de données](delete-data-or-log-files-from-a-database.md)   
- [Augmenter la taille d'une base de données](increase-the-size-of-a-database.md)  
+ [Augmenter la taille d’une base de données](increase-the-size-of-a-database.md)  
   
   

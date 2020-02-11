@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136417"
 ---
 # <a name="create-an-operator"></a>Créer un opérateur
-  Cette rubrique explique comment configurer un compte d’utilisateur pour qu'il reçoive des notifications relatives aux travaux de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Cette rubrique explique comment configurer un utilisateur pour qu’il reçoive [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des notifications [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur les [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] travaux [!INCLUDE[tsql](../../includes/tsql-md.md)]de l’agent dans à l’aide de ou de.  
   
  **Dans cette rubrique**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63136417"
   
      [Sécurité](#Security)  
   
--   **Pour créer un opérateur, utilisez :**  
+-   **Pour créer un opérateur, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,11 +45,12 @@ ms.locfileid: "63136417"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version future de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
+-   Les options de radiomessagerie et **net send** seront [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprimées de l’agent dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]une version ultérieure de. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
 -   Remarque : SQL Server Agent doit être configuré pour utiliser la messagerie de base de données pour envoyer des notifications aux opérateurs par messagerie électronique ou radiomessagerie. Pour plus d'informations, consultez [Affecter des alertes à un opérateur](assign-alerts-to-an-operator.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
 ###  <a name="Security"></a> Sécurité  
   
@@ -74,19 +75,19 @@ ms.locfileid: "63136417"
      **Activé**  
      Permet d'activer l'opérateur. Aucune notification n'est envoyée à l'opérateur lorsque cette option est désactivée.  
   
-     **Nom de messagerie électronique**  
+     **Nom du courrier électronique**  
      Spécifie l'adresse de messagerie de l'opérateur.  
   
-     **Adresse d'envoi réseau**  
+     **Adresse d’envoi réseau**  
      Spécifie l’adresse à utiliser pour **net send**.  
   
-     **Nom de l'adresse de radiomessagerie**  
+     **Nom de la messagerie de radiomessagerie**  
      Spécifie l'adresse de messagerie à utiliser pour la radiomessagerie de l'opérateur.  
   
-     **Planification de la radiomessagerie active**  
+     **Planification de la radiomessagerie**  
      Définit les périodes d'activité de la radiomessagerie.  
   
-     **Lundi - Dimanche**  
+     **Lundi-dimanche**  
      Permet de sélectionner les jours d'activité de la radiomessagerie.  
   
      **Début de journée**  
@@ -100,22 +101,22 @@ ms.locfileid: "63136417"
      **Alertes**  
      Affiche les alertes dans l'instance.  
   
-     **Travaux**  
+     **travaux**  
      Affiche les travaux dans l'instance.  
   
-     **Liste d'alertes**  
+     **Liste des alertes**  
      Affiche la liste des alertes dans l'instance.  
   
      **Liste des travaux**  
      Affiche la liste des travaux dans l'instance.  
   
-     **Messagerie électronique**  
+     **Courriel**  
      Notifie cet opérateur à l'aide d'un courrier électronique.  
   
-     **Récepteur de radiomessagerie**  
+     **Destinés**  
      Notifie cet opérateur en envoyant un courrier électronique à son adresse de radiomessagerie.  
   
-     **Net send**  
+     **Envoi réseau**  
      Notifie cet opérateur à l’aide de **net send**.  
   
 4.  Lorsque la création du nouvel opérateur est terminée, cliquez sur **OK**.  
@@ -124,7 +125,7 @@ ms.locfileid: "63136417"
   
 #### <a name="to-create-an-operator"></a>Pour créer un opérateur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

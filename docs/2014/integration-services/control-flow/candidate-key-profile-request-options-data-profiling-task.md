@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832954"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Options Demande de profil de clé candidate (tâche de profilage des données)
@@ -36,7 +36,7 @@ ms.locfileid: "62832954"
   
 -   Quand vous sélectionnez le caractère générique **(\*)** dans **KeyColumns**, la tâche calcule la puissance de clé de chaque colonne dans la table ou la vue.  
   
- Par exemple, imaginez une table qui contient des colonnes A, B et C. Vous effectuez les sélections suivantes pour **KeyColumns** :  
+ Par exemple, imaginez une table qui contient des colonnes A, B et C. Vous effectuez les sélections suivantes pour **KeyColumns**:  
   
 -   Vous sélectionnez (\*) et la colonne C dans **KeyColumns**. La tâche calcule la puissance de clé de la colonne C, puis celle des candidats de clé composite (A, C) et (B, C).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62832954"
   
 -   **Données**, qui incluent les options **TableOrView** et **KeyColumns** .  
   
--   **Général**  
+-   **Généralités**  
   
 -   **Options**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62832954"
  **KeyColumns**  
  Sélectionnez la colonne ou les colonnes existantes à profiler. Sélectionnez **(\*)** pour profiler toutes les colonnes.  
   
- Pour plus d'informations, consultez les sections « Fonctionnement de la sélection des colonnes pour la propriété KeyColumns » et « Options KeyColumns », plus haut dans cette rubrique.  
+ Pour plus d'informations, consultez les sections « Fonctionnement de la sélection des colonnes pour la propriété KeyColumns » et « Options KeyColumns », plus haut dans cette rubrique.  
   
 #### <a name="tableorview-options"></a>Options TableOrView  
  **Schéma**  
@@ -92,15 +92,15 @@ ms.locfileid: "62832954"
 > [!NOTE]  
 >  Quand vous utilisez un caractère générique **(\*)** pour **ColumnName**, l’option **CompareOptions** est en lecture seule et est définie sur le paramètre **Par défaut**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Default**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
+|**Par défaut**|Trie et compare des données d'après le classement de la colonne dans la table source.|  
 |**BinarySort**|Trie et compare les données en fonction des modèles binaires définis pour chaque caractère. L'ordre de tri binaire respecte la casse et les accents. Il s'agit aussi de l'ordre de tri le plus rapide.|  
 |**DictionarySort**|Trie et compare des données d'après les règles de tri et de comparaison telles que définies dans les dictionnaires de la langue ou de l'alphabet associé.|  
   
  Si vous sélectionnez **DictionarySort**, vous pouvez également sélectionner toutes les combinaisons d’options répertoriées dans le tableau suivant. Par défaut, aucune de ces options supplémentaires n'est sélectionnée.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
@@ -111,14 +111,14 @@ ms.locfileid: "62832954"
  **RequestID**  
  Tapez un nom descriptif pour identifier cette demande de profil. En règle générale, il n'est pas nécessaire de modifier la valeur générée automatiquement.  
   
-### <a name="options"></a>.  
+### <a name="options"></a>Options  
  **ThresholdSetting**  
- Cette propriété dispose des options répertoriées dans le tableau suivant. La valeur par défaut de cette propriété est **Spécifié**.  
+ Cette propriété dispose des options répertoriées dans le tableau suivant. La valeur par défaut de cette propriété est **Specified**.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n’est spécifié. La puissance de la clé est signalée, quelle que soit sa valeur.|  
-|**Spécifié**|Un seuil est spécifié dans **KeyStrengthThreshold**. La puissance de clé est précisée uniquement si elle est supérieure au seuil.|  
+|**Specified**|Un seuil est spécifié dans **KeyStrengthThreshold**. La puissance de clé est précisée uniquement si elle est supérieure au seuil.|  
 |**Exact**|Aucun seuil n’est spécifié. La puissance de clé est précisée uniquement si les colonnes sélectionnées sont une clé exacte.|  
   
  **KeyStrengthThreshold**  

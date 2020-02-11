@@ -1,5 +1,5 @@
 ---
-title: L’accès à des Types définis par l’utilisateur dans ADO.NET | Microsoft Docs
+title: Accès aux types définis par l’utilisateur dans ADO.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 893b2c69a20974bb379cc032f442e5fcb3525ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919682"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>Accès aux types définis par l'utilisateur dans ADO.NET
-  Types définis par l’utilisateur (UDT) sont écrits en utilisant l’une des langues prises en charge par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR qui produisent du code vérifiable). notamment [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. Les types définis par l'utilisateur permettent de stocker des objets et des structures de données personnalisées dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les données sont exposées en tant que membres publics d'une classe ou d'une structure .NET Framework, et les comportements sont définis par des méthodes de la classe ou de la structure. Un type UDT peut être utilisé en tant que définition de colonne d’une table, en tant que variable dans un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en tant qu’argument d’une fonction ou d’une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Les types définis par l’utilisateur (UDT) sont écrits à l’aide de l’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] des langages pris en charge par le .NET Framework Common Language Runtime (CLR) qui produit un code vérifiable. notamment [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. Les types définis par l'utilisateur permettent de stocker des objets et des structures de données personnalisées dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les données sont exposées en tant que membres publics d'une classe ou d'une structure .NET Framework, et les comportements sont définis par des méthodes de la classe ou de la structure. Un type UDT peut être utilisé en tant que définition de colonne d’une table, en tant que variable dans un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] ou en tant qu’argument d’une fonction ou d’une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Dans ADO.NET, le fournisseur `System.Data.SqlClient` expose les types définis par l'utilisateur des manières suivantes :  
   
@@ -40,6 +40,6 @@ ms.locfileid: "62919682"
  Décrit comment utiliser les types définis par l'utilisateur dans `DataSets` et comment mettre à jour les données UDT à l'aide de `DataAdapters`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR définis par l’utilisateur](clr-user-defined-types.md)  
+ [Types CLR définis par l'utilisateur](clr-user-defined-types.md)  
   
   

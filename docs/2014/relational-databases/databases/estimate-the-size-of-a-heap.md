@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916743"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
@@ -40,7 +40,7 @@ ms.locfileid: "62916743"
   
      ***Num_Variable_Cols***  = nombre de colonnes de longueur variable  
   
-     ***Max_Var_Size***  = taille maximale en octets de toutes les colonnes de longueur variable  
+     ***Max_Var_Size*** = taille maximale en octets de toutes les colonnes de longueur variable  
   
 3.  Une partie de la ligne, connue sous le nom de bitmap NULL, est réservée pour gérer la possibilité de valeur NULL de la colonne. Calculez sa taille :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62916743"
      Les octets ajoutés à ***Max_Var_Size*** servent à assurer le suivi de chaque colonne de longueur variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de ***Max_Var_Size*** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
-    >  Vous pouvez combiner des colonnes `varchar`, `nvarchar`, `varbinary` ou `sql_variant` qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour un `varchar`, `nvarchar,``varbinary`, ou `sql_variant` colonne. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
+    >  Vous pouvez combiner des colonnes `varchar`, `nvarchar`, `varbinary` ou `sql_variant` qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être comprise dans la limite de 8 000 octets `varchar`pour `nvarchar,``varbinary`une colonne `sql_variant` , ou. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
      En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à ***Variable_Data_Size*** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916743"
   
 7.  Calculez ensuite le nombre de pages de données requises pour le stockage de toutes les lignes :  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
   
      Le nombre de pages de données estimé doit être arrondi à la page entière la plus proche.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916743"
   
 -   Valeurs LOB  
   
-     L’algorithme pour déterminer avec exactitude la quantité d’espace sera utilisée pour stocker les types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **ntextxml**, et `image` valeurs est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
+     L’algorithme permettant de déterminer avec précision la quantité d’espace qui sera utilisée pour stocker `varchar(max)`les `varbinary(max)`types `nvarchar(max)`de `text`données **** LOB,, `image` ,, ntextxml et les valeurs est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
   
 -   Compression  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62916743"
  [Créer des index cluster](../indexes/create-clustered-indexes.md)   
  [Créez des index non-cluster](../indexes/create-nonclustered-indexes.md)   
  [Estimer la taille d'une table](estimate-the-size-of-a-table.md)   
- [Estimer la taille d'un index cluster](estimate-the-size-of-a-clustered-index.md)   
+ [Estimer la taille d’un index cluster](estimate-the-size-of-a-clustered-index.md)   
  [Estimer la taille d'un index non-cluster](estimate-the-size-of-a-nonclustered-index.md)   
  [Estimer la taille d'une base de données](estimate-the-size-of-a-database.md)  
   

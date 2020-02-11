@@ -24,24 +24,24 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211969"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
-  Cette rubrique indique comment créer un utilisateur de base de données mappé à un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utilisateur de base de données est l'identité du compte de connexion lorsqu'il est connecté à la base de données. Il peut utiliser le même nom que celui du compte de connexion, mais cela n'est pas obligatoire. Cette rubrique part du principe qu'il existe déjà un compte de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’un compte de connexion, consultez [créer une connexion](create-a-login.md).  
+  Cette rubrique indique comment créer un utilisateur de base de données mappé à un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utilisateur de base de données est l'identité du compte de connexion lorsqu'il est connecté à la base de données. Il peut utiliser le même nom que celui du compte de connexion, mais cela n'est pas obligatoire. Cette rubrique part du principe qu'il existe déjà un compte de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’une connexion, consultez [créer une connexion](create-a-login.md).  
   
  **Dans cette rubrique**  
   
 -   **Avant de commencer :**  
   
-     [Arrière-plan](#Restrictions)  
+     [Contexte](#Restrictions)  
   
      [Sécurité](#Security)  
   
--   **Pour créer un utilisateur de base de données, à l’aide de :**  
+-   **Pour créer un utilisateur de base de données, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211969"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Arrière-plan  
- Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement autonome, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données autonome, consultez [CREATE USER &#40;Transact-SQL &#41;](/sql/t-sql/statements/create-user-transact-sql). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
+ Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement autonome, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données autonome, consultez [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
   
 > [!IMPORTANT]  
 >  L'utilisateur invité est habituellement désactivé. Ne l'activez que lorsque cela est nécessaire.  
@@ -70,24 +70,24 @@ ms.locfileid: "68211969"
   
 2.  Développez la base de données où créer le nouvel utilisateur de base de données.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur...** .  
+3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur...**.  
   
-4.  Dans la boîte de dialogue **Nouvel utilisateur de base de données**, dans la page **Général**, sélectionnez un des types d’utilisateurs suivants à partir de la liste **Type d’utilisateur** : **Utilisateur SQL avec connexion**, **utilisateur SQL sans connexion**, **utilisateur mappé à un certificat**, **utilisateur mappé à une clé asymétrique**, ou **utilisateur de Windows** .  
+4.  Dans la **boîte de dialogue utilisateur de base de données-nouveau** , dans la page **général** , sélectionnez l’un des types d’utilisateur suivants dans la liste **type d’utilisateur** : **utilisateur SQL avec connexion**, **utilisateur SQL sans connexion**, **utilisateur mappé à un certificat**, **utilisateur mappé à une clé asymétrique**ou **utilisateur Windows**.  
   
 5.  Dans la zone **Nom d'utilisateur** , entrez un nom pour le nouvel utilisateur. Si vous avez choisi **Utilisateur Windows** dans la liste **Type d’utilisateur**, vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
   
-6.  Dans la zone **Nom de connexion** , entrez l'identifiant de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion**. **Nom de connexion** est disponible si vous sélectionnez **Utilisateur SQL avec connexion** ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
+6.  Dans la zone **Nom de connexion** , entrez l'identifiant de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion**. Le **nom de connexion** est disponible si vous sélectionnez **utilisateur SQL avec connexion** ou **utilisateur Windows** dans la liste **type d’utilisateur** .  
   
-7.  Dans la zone **Schéma par défaut** , spécifie le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma**. **Schéma par défaut** est disponible si vous sélectionnez **Utilisateur SQL avec connexion**, **Utilisateur SQL sans connexion**ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
+7.  Dans la zone **Schéma par défaut** , spécifie le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma**. **Le schéma par défaut** est disponible si vous **Sélectionnez utilisateur SQL avec connexion**, **utilisateur SQL sans connexion**ou **utilisateur Windows** dans la liste **type d’utilisateur** .  
   
-8.  Dans la zone **Nom du certificat** , entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le certificat**. **Nom du certificat** est disponible si vous sélectionnez **Utilisateur mappé à un certificat** dans la liste **Type d'utilisateur** .  
+8.  Dans la zone **Nom du certificat** , entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le certificat**. Le **nom du certificat** est disponible si vous sélectionnez **utilisateur mappé à un certificat** dans la liste **type d’utilisateur** .  
   
-9. Dans la zone **Nom de la clé asymétrique**  , entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique**. **Nom de la clé asymétrique** est disponible si vous sélectionnez **Utilisateur mappé à une clé asymétrique** dans la liste **Type d'utilisateur** .  
+9. Dans la zone **Nom de la clé asymétrique**  , entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique**. Le nom de la **clé asymétrique** est disponible si vous sélectionnez **utilisateur mappé à une clé asymétrique** dans la liste **type d’utilisateur** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Utilisateur de base de données - Nouveau** offre également des options sur quatre pages supplémentaires : **schémas détenus**, **appartenance**, **éléments sécurisables** et **propriétés étendues**.  
+ La boîte de dialogue **Nouvel utilisateur de base de données** offre également des options dans quatre pages supplémentaires : **Schémas appartenant à un rôle**, **Appartenance**, **Éléments sécurisables** et **Propriétés étendues**.  
   
 -   La page **Schémas appartenant à un rôle** répertorie tous les schémas possibles qui peuvent être détenus par le nouvel utilisateur de base de données. Pour ajouter des schémas à un utilisateur de base de données ou lui en supprimer, sous **Schémas appartenant à cet utilisateur**, activez ou désactivez les cases à cocher en regard de ces schémas.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "68211969"
   
 -   La page **Propriétés étendues** vous permet d'ajouter des propriétés personnalisées aux utilisateurs de base de données. Les options supplémentaires suivantes sont disponibles sur cette page.  
   
-     **Base de données**  
+     **Sauvegarde de la base de données**  
      Affiche le nom de la base de données sélectionnée. Ce champ est en lecture seule.  
   
      **Classement**  
@@ -116,7 +116,7 @@ ms.locfileid: "68211969"
   
 #### <a name="to-create-a-database-user"></a>Pour créer un utilisateur de base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

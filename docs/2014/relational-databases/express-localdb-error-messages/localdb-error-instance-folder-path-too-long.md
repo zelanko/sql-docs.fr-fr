@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94439a6981a2cf891a55bcbda7498db83e1fa52e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990566"
 ---
-# <a name="localdberrorinstancefolderpathtoolong"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
+# <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|260|  
-|Source de l'événement|Runtime de base de données locale SQL Server 12.0|  
+|ID de l’événement|260|  
+|Source de l’événement|Runtime de base de données locale SQL Server 12.0|  
 |Composant|API d'exécution de la base de données locale|  
-|Texte du message|Le chemin complet du dossier d'instance de base de données locale est plus long que MAX_PATH. L’instance doit être stockée dans le dossier : %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server Local DB\Instances\\< nom de l’instance\>.|  
+|Texte du message|Le chemin complet du dossier d'instance de base de données locale est plus long que MAX_PATH. L’instance doit être stockée dans le dossier :%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server\\ DB\Instances local<\>nom de l’instance.|  
   
 ## <a name="explanation"></a>Explication  
  Le chemin d'accès où l'instance doit être stockée est plus long que MAX_PATH.  

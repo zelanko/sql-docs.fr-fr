@@ -1,5 +1,5 @@
 ---
-title: 'Étape 7 : Ajout et configuration de la Destination OLE DB | Microsoft Docs'
+title: 'Étape 7 : Ajout et configuration de la destination OLE DB | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767558"
 ---
-# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Étape 7 : Ajout et configuration de la destination OLE DB
+# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Étape 7 : ajout et configuration de la destination OLE DB
   Votre package peut maintenant extraire des données à partir de la source de fichier plat pour les transformer dans un format compatible avec la destination. La tâche suivante consiste à charger les données transformées dans la destination. Pour charger les données, vous devez ajouter une destination OLE DB au flux de données. La destination OLE DB peut utiliser une table de base de données, un affichage ou une commande SQL pour charger les données dans plusieurs bases de données compatibles OLE DB.  
   
  Au cours de cette procédure, vous allez ajouter et configurer une destination OLE DB pour utiliser le Gestionnaire de connexions OLE DB que vous avez créé précédemment.  
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Pour ajouter et configurer la destination OLE DB fournie en exemple  
   
-1.  Dans la **Boîte à outils SSIS**, développez **Autres destinations**, puis faites glisser **Destination OLE DB** dans la zone de conception de l’onglet **Flux de données** . Placez la destination OLE DB directement sous la transformation **Lookup Date Key** .  
+1.  Dans la **boîte à outils SSIS**, développez **autres destinations**, puis faites glisser **OLE DB destination** sur l’aire de conception de l’onglet de **Workflow** . Placez le OLE DB destination directement sous la transformation **Lookup Date Key** .  
   
 2.  Sélectionnez la transformation **Lookup Date Key** et faites glisser la flèche verte vers la nouvelle **Destination OLE DB** pour connecter les deux composants.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62767558"
   
 6.  Dans la boîte de dialogue **Éditeur de destination OLE DB** , vérifiez que **localhost.AdventureWorksDW2012** est sélectionné dans la zone **Gestionnaire de connexions OLE DB** .  
   
-7.  Dans la zone **Nom de la table ou de la vue** , tapez ou sélectionnez **[dbo].[FactCurrencyRate]** .  
+7.  Dans la zone **Nom de la table ou de la vue** , tapez ou sélectionnez **[dbo].[FactCurrencyRate]**.  
   
 8.  Cliquez sur le bouton **Nouveau** pour créer une table.  Modifiez le nom de la table dans le script en **NewFactCurrencyRate**.  Cliquez sur **OK**.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "62767558"
   
 13. Cliquez avec le bouton droit sur la **Destination OLE DB exemple** , puis cliquez sur **Propriétés**.  
   
-14. Dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)** et`DefaultCodePage` propriété est définie sur **1252**.  
+14. Dans la Fenêtre Propriétés, vérifiez que la `LocaleID` propriété est définie sur **anglais (États-Unis)** et que`DefaultCodePage` la propriété a la valeur **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 8 : Rendre le Package de la leçon 1 plus facile à comprendre](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [Étape 8 : comment rendre le package de la leçon 1 plus facile à assimiler](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](data-flow/ole-db-destination.md)  

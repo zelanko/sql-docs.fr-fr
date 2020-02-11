@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5daf807904f833a5e8cbe8f237d3f5df77e3887b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107822"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Masquer un élément (Générateur de rapports et SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66107822"
     > [!NOTE]  
     >  Pour sélectionner l’intégralité d’une région de données de table ou de matrice, cliquez dans la région de données pour la sélectionner, cliquez avec le bouton droit sur une ligne, une colonne ou une poignée d’angle, puis cliquez sur **Propriétés du tableau matriciel**.  
   
-2.  Cliquez sur **Visibilité**.  
+2.  Cliquez sur **visibilité.**  
   
 3.  Dans **Lors de la première exécution du rapport**, spécifiez s’il faut masquer ou non l’élément quand le rapport est affiché pour la première fois :  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66107822"
   
         > [!NOTE]  
         >  Quand vous spécifiez une expression de visibilité, vous définissez la propriété Hidden de l’élément de rapport, comment indiqué dans l’image suivante. L'expression évaluée affiche l'élément de rapport lorsque la valeur est False et le masque lorsque la valeur est True.   
-        > ![Boîte de dialogue et propriété masquée Properties_Visibility](../media/hiddenproperty-propertiesvisibility.png "Boîte de dialogue et propriété masquée Properties_Visibility")  
+        > ![Boîte de dialogue de visibilité de propriétés et propriété masquée](../media/hiddenproperty-propertiesvisibility.png "Boîte de dialogue de visibilité de propriétés et propriété masquée")  
   
 4.  Cliquez deux fois sur **OK** .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66107822"
   
 ## <a name="see-also"></a>Voir aussi  
  [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [Ajouter une action développer ou réduire à un élément &#40;Générateur de rapports et SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

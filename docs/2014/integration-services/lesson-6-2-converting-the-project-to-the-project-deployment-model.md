@@ -1,5 +1,5 @@
 ---
-title: 'Étape 2 : Convertir le projet dans le modèle de déploiement de projet | Microsoft Docs'
+title: 'Étape 2 : Conversion du projet en modèle de déploiement de projet | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767351"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Étape 2 : Conversion du projet en modèle de déploiement de projet
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Étape 2 : Conversion du projet en modèle de déploiement de projet
   Dans cette tâche, vous allez utiliser l'Assistant Conversion de projet Integration Services pour convertir le projet en modèle de déploiement de projet.  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>Conversion du projet en modèle de déploiement de projet  
@@ -51,6 +51,6 @@ ms.locfileid: "62767351"
 13. Cliquez sur l'onglet Paramètres et vérifiez que le package contient désormais un paramètre pour VarFolderName et que la valeur est le même chemin d'accès que celui spécifié pour le dossier New Sample Data du fichier de configuration de la leçon 5.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Test du Package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
+ [Étape 3 : Test du package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

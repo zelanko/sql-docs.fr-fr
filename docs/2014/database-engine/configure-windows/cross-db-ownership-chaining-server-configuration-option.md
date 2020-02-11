@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5630579e787a3bfcb5d64ee3bcf0ec5bee368611
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782393"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining (option de configuration de serveur)
@@ -32,7 +32,7 @@ ms.locfileid: "62782393"
   
 -   Vous pouvez définir le chaînage des propriétés des bases de données croisées pour des bases de données spécifiques à l'aide de la clause SET de l'instruction ALTER DATABASE. Si vous créez une nouvelle base de données, vous pouvez définir l'option de chaînage des propriétés des bases de données croisées pour la nouvelle base de données à l'aide de l'instruction CREATE DATABASE.  
   
-     Il n’est pas recommandé d’attribuer la valeur 1 à l’option **Chaînage des propriétés des bases de données croisées** , sauf si toutes les bases de données hébergées par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent participer au chaînage des propriétés des bases de données croisées et que vous êtes conscient de l’impact de ce paramétrage sur la sécurité.  
+     Il n’est pas recommandé d’attribuer la valeur 1 à l’option **cross db ownership chaining** , sauf si toutes les bases de données hébergées par l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent participer au chaînage des propriétés des bases de données croisées et que vous êtes conscient de l’impact de ce paramétrage sur la sécurité.  
   
 ## <a name="controlling-cross-database-ownership-chaining"></a>Contrôle du chaînage des propriétés des bases de données croisées  
  Avant d'activer ou de désactiver le chaînage des propriétés des bases de données croisées, prenez en considération les points suivants :  

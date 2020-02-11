@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832575"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tâche de profilage des données et visionneuse
@@ -58,12 +58,12 @@ ms.locfileid: "62832575"
  **Étape 1 : Configuration de la tâche de profilage des données**  
  La tâche de profilage des données vous permet de configurer les profils à calculer. Vous exécutez ensuite le package qui contient la tâche de profilage des données pour calculer les profils. La tâche enregistre la sortie du profil au format XML dans un fichier ou une variable de package.  
   
- **Pour plus d'informations, consultez :** [Configuration de la tâche de profilage des données](data-profiling-task.md)  
+ **Pour plus d'informations :** [Configuration de la tâche de profilage des données](data-profiling-task.md)  
   
  **Étape 2 : Vérification des profils calculés par la tâche de profilage des données**  
  Pour examiner les profils de données calculés par la tâche de profilage des données, vous envoyez la sortie à un fichier, puis vous utilisez la visionneuse du profil des données. Cette visionneuse est un utilitaire autonome qui affiche la sortie du profil, sous forme d'informations résumées et détaillées, avec en option une fonction d'exploration vers le bas.  
   
- **Pour plus d'informations, consultez :** [Visionneuse du profil des données](data-profile-viewer.md)  
+ **Pour plus d'informations :** [Visionneuse du profil des données](data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Ajout de la logique conditionnelle au flux de travail de profilage des données  
  La tâche de profilage des données n'inclut pas de fonctionnalités intégrées vous permettant d'utiliser la logique conditionnelle pour connecter cette tâche aux tâches en aval basées sur la sortie du profil. Toutefois, vous pouvez ajouter facilement cette logique, avec un minimum de programmation, dans une tâche de script. Par exemple, vous pouvez définir une tâche de script qui effectue une requête XPath sur le fichier de sortie de la tâche de profilage des données. La requête peut déterminer si le pourcentage de valeurs NULL dans une colonne particulière dépasse un certain seuil. Si tel est le cas, vous pouvez interrompre le package et résoudre le problème dans les données sources avant de continuer. Pour plus d’informations, consultez [Incorporer une tâche de profilage des données dans le flux de travail du package](incorporate-a-data-profiling-task-in-package-workflow.md).  

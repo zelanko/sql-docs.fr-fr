@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770337"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Fusionner des données à l'aide de la transformation d'union totale
@@ -55,9 +55,9 @@ ms.locfileid: "62770337"
 9. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Union All Transformation](union-all-transformation.md)   
+ [Transformation d'union totale](union-all-transformation.md)   
  [Transformations Integration Services](integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](../integration-services-paths.md)   
+ [Chemins Integration Services](../integration-services-paths.md)   
  [tâche de flux de données](../../control-flow/data-flow-task.md)  
   
   

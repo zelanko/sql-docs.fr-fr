@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806701"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de maintenance (Propriétés du sous-plan)
@@ -30,7 +30,7 @@ ms.locfileid: "62806701"
  **Description**  
  Entrez une description pour le sous-plan. La description est limitée à 512 caractères.  
   
- **Planifier**  
+ **Planification**  
  Cliquez sur l'icône de planification pour spécifier quand exécuter les tâches de sous-plan ou cliquez sur l'icône de planification avec une x rouge pour supprimer la planification du sous-plan existant.  
   
 ## <a name="see-also"></a>Voir aussi  

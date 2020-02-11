@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771648"
 ---
 # <a name="validate-dialog-box"></a>Boîte de dialogue Valider
@@ -46,7 +46,7 @@ ms.locfileid: "62771648"
 5.  Cliquez avec le bouton droit sur le projet ou le package, puis cliquez sur **Valider**.  
   
 ##  <a name="general"></a> Définir les options sur la page Général  
- **Environnement**  
+ **Environment**  
  Sélectionnez l'environnement à utiliser pour valider le projet ou le package.  
   
  **Runtime 32 bits**  

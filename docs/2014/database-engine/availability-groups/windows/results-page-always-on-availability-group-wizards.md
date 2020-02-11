@@ -1,5 +1,5 @@
 ---
-title: Résultats de Page (Assistants groupe de disponibilité AlwaysOn) | Microsoft Docs
+title: Page résultats (assistants de groupe de disponibilité AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789010"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Page Résultats (assistants de groupe de disponibilité AlwaysOn)
@@ -31,13 +31,13 @@ ms.locfileid: "62789010"
  **Nom**  
  Affiche une expression qui décrit une opération spécifique.  
   
- **Result**  
+ **Résultat**  
  Pour chaque étape terminée, affiche l'un des textes de lien hypertexte suivants.  
   
-|Résultat|Description|  
+|Résultats|Description|  
 |------------|-----------------|  
-|**Erreur**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
-|**Réussi**|Indique que l'étape de validation s'est terminée avec succès.|  
+|**Error**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
+|**Success**|Indique que l'étape de validation s'est terminée avec succès.|  
   
 
   
@@ -54,6 +54,6 @@ ms.locfileid: "62789010"
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

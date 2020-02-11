@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771192"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
@@ -80,7 +80,7 @@ ms.locfileid: "62771192"
   
  Lorsque la capture est initialement activée pour la table `<schema-name>.<table-name>`, le nom par défaut de l'instance de capture est `<schema-name>_<table-name>`. Par exemple, le nom par défaut de l'instance de capture pour la table Oracle HR.EMPLOYEES est HR_EMPLOYEES et la table de modifications associée est [cdc]. [HR_EMPLOYEES_CT].  
   
- Les tables de capture sont écrites par l'instance Oracle CDC. Elles sont lues à l'aide de fonctions table spéciales générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance de capture est créée. Par exemple, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Pour plus d’informations sur ces fonctions CDC, consultez [Fonctions de capture de données modifiées (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ Les tables de capture sont écrites par l'instance Oracle CDC. Elles sont lues à l'aide de fonctions table spéciales générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance de capture est créée. Par exemple : `fn_cdc_get_all_changes_HR_EMPLOYEES`. Pour plus d’informations sur ces fonctions CDC, consultez [Fonctions de capture de données modifiées (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
 ###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  La table **[cdc].[lsn_time_mapping]** est générée par le composant SQL Server CDC. Son utilisation dans le cas de capture de données modifiées Oracle est différente de son utilisation normale.  
@@ -98,7 +98,7 @@ ms.locfileid: "62771192"
 |----------|-----------------|  
 |version|Effectue le suivi de la version de la configuration de l'instance CDC. Elle est mise à jour chaque fois que la table est mise à jour et chaque fois qu'une nouvelle instance de capture est ajoutée ou qu'une instance de capture existante est supprimée.|  
 |connect_string|Chaîne de connexion Oracle. Voici un exemple de base :<br /><br /> `<server>:<port>/<instance>` (par exemple, `erp.contoso.com:1521/orcl`).<br /><br /> La chaîne de connexion peut également spécifier un descripteur de connexion Oracle Net, par exemple, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si vous utilisez un serveur d'annuaire ou des noms TNS, la chaîne de connexion peut être le nom de la connexion.<br /><br /> Pour plus d’informations sur les chaînes de connexion Oracle, consultez [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) pour obtenir des informations détaillées sur les chaînes de connexion de base de données Oracle pour le client Oracle Instant qui est utilisée par le service de capture des changements de données Oracle.|  
-|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut)<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
+|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut) ;<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
 |username|Nom de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
 |password|Mot de passe de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Durée, en secondes, pendant laquelle une transaction Oracle non enregistrée est gardée en mémoire avant d’être écrite dans la table **cdc.xdbcdc_staged_transactions** . La valeur par défaut est 120 secondes.|  
@@ -107,17 +107,17 @@ ms.locfileid: "62771192"
   
  Le tableau suivant décrit les options disponibles.  
   
-|Nom|Par défaut|Min|Max|Statique|Description|  
+|Name|Default|Min|Max|statique|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|trace|False|-|-|False|Les valeurs disponibles :<br /><br /> **True**<br /><br /> **False**<br /><br /> **actif**<br /><br /> **off**|  
+|trace|False|-|-|False|Valeurs disponibles :<br /><br /> **True**<br /><br /> **False**<br /><br /> **sur**<br /><br /> **arrêt**|  
 |cdc_update_state_interval|10|1|120|False|Taille (en kilo-octets) des segments de mémoire alloués pour une transaction (une transaction peut allouer plusieurs segments). Consultez la colonne memory_limit dans la table [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  
-|target_max_batched_transactions|100|1|1000|True|Nombre maximal de transactions Oracle qui peuvent être traitées comme une transaction avec mise à jour de tables SQL Server CT.|  
+|target_max_batched_transactions|100|1|1 000|True|Nombre maximal de transactions Oracle qui peuvent être traitées comme une transaction avec mise à jour de tables SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|False|Intervalle (en secondes) de mise à jour de la table **lsn_time_mapping** quand les tables capturées n’ont aucune activité.|  
 |trace_retention_period|24|1|24*31|False|Durée (en heures pour conserver les messages dans la table de trace).|  
 |sql_reconnect_interval|2|2|3600|False|Délai (en secondes) qui doit s'écouler avant la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet intervalle est utilisé en plus du délai d’attente de connexion du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |sql_reconnect_limit|-1|-1|-1|False|Nombre maximal de reconnexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut -1 signifie que le processus tente de se reconnecter jusqu'à ce qu'il s'arrête.|  
 |cdc_restart_limit|6|-1|3600|False|Dans la plupart des cas, le service de capture de données modifiées redémarre automatiquement une instance CDC qui s'est terminée de façon anormale. Cette propriété définit après combien d'échecs par heure le service cesse de redémarrer l'instance. La valeur -1 signifie que l'instance doit toujours être redémarrée.<br /><br /> Le service retourne pour redémarrer l'instance après toute mise à jour de la table de configuration.|  
-|cdc_memory_report|0|0|1000|False|Si la valeur du paramètre a été modifiée, l'instance CDC imprime son rapport mémoire sur la table de trace.|  
+|cdc_memory_report|0|0|1 000|False|Si la valeur du paramètre a été modifiée, l'instance CDC imprime son rapport mémoire sur la table de trace.|  
 |target_command_timeout|600|1|3600|False|Délai d'attente de commande utilisé avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |source_character_set|-|-|-|True|Peut être défini sur un encodage Oracle spécifique pour être utilisé à la place de la page de codes de la base de données Oracle. Cela peut être utile lorsque l'encodage réel que les données caractères utilisent est différent de celui exprimé par la page de codes de la base de données Oracle.|  
 |source_error_retry_interval|30|1|3600|False|Utilisé avant reprise en cas de plusieurs erreurs, telles qu'une erreur de connexion ou un échec temporaire de synchronisation entre les tables système.|  
@@ -142,9 +142,9 @@ ms.locfileid: "62771192"
 |status|Code d'état actuel de l'instance Oracle CDC active. Décrit l'état actuel de l'instance CDC.|  
 |sub_status|État de deuxième niveau qui fournit des informations supplémentaires sur l'état actuel.|  
 |active|Valeur booléenne qui peut être :<br /><br /> **0**: le processus d’instance Oracle CDC n’est pas actif.<br /><br /> **1**: le processus d’instance Oracle CDC est actif.|  
-|erreur|Valeur booléenne qui peut être :<br /><br /> **0**: le processus d’instance Oracle CDC n’est pas dans un état d’erreur.<br /><br /> **1**: l’instance Oracle CDC est dans un état d’erreur.|  
+|error|Valeur booléenne qui peut être :<br /><br /> **0**: le processus d’instance Oracle CDC n’est pas dans un état d’erreur.<br /><br /> **1**: l’instance Oracle CDC est dans un état d’erreur.|  
 |status_message|Chaîne qui fournit une description de l'erreur ou de l'état.|  
-|TIMESTAMP|Horodateur avec l'heure (UTC) à laquelle l'état de capture a été mis à jour pour la dernière fois.|  
+|timestamp|Horodateur avec l'heure (UTC) à laquelle l'état de capture a été mis à jour pour la dernière fois.|  
 |active_capture_node|Nom de l'hôte (l'hôte peut être un nœud dans un cluster) qui exécute actuellement le service de capture de données modifiées Oracle et l'instance Oracle CDC (qui traite les journaux des transactions Oracle).|  
 |last_transaction_timestamp|Horodateur avec l'heure (UTC) à laquelle la dernière transaction a été écrite dans les tables de modifications.|  
 |last_change_timestamp|Horodateur avec l'heure (UTC) à laquelle l'enregistrement de modification le plus récent a été lu dans le journal des transactions Oracle source. Cet horodateur aide à identifier la latence actuelle du processus de capture de données modifiées.|  
@@ -164,13 +164,13 @@ ms.locfileid: "62771192"
   
 |Élément|Description|  
 |----------|-----------------|  
-|TIMESTAMP|Horodateur UTC exact de l'enregistrement de trace.|  
-|type|Contient l'une des valeurs suivantes :<br /><br /> erreur<br /><br /> INFO<br /><br /> trace|  
+|timestamp|Horodateur UTC exact de l'enregistrement de trace.|  
+|type|Contient l'une des valeurs suivantes :<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
 |node|Nom du nœud sur lequel l'enregistrement a été écrit.|  
 |status|Code d'état utilisé par la table d'état.|  
 |sub_status|Code de sous-état utilisé par la table d'état.|  
 |status_message|Message d'état utilisé par la table d'état.|  
-|données|Informations supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile (par exemple, un enregistrement de journal endommagé).|  
+|data|Informations supplémentaires pour les cas où l'erreur ou l'enregistrement de trace contient une charge utile (par exemple, un enregistrement de journal endommagé).|  
   
 ###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  Cette table stocke les enregistrements de modification des transactions de grande taille ou longues jusqu'à ce que l'événement de validation ou de restauration de transaction soit capturé. Le service de capture de données modifiées Oracle classe les enregistrements de journal capturés par heure de validation de transaction, puis par ordre chronologique pour chaque transaction. Les enregistrements de journaux pour la même transaction sont stockés en mémoire jusqu'à ce que la transaction se termine, puis sont écrits dans la table de modifications cible ou ignorés (en cas de restauration). Comme il existe une quantité limitée de mémoire disponible, les grandes transactions sont écrites dans la table **cdc.xdbcdc_staged_transactions** jusqu’à ce que la transaction soit terminée. Les transactions sont également écrites dans la table de mise en lots lorsqu'elles s'exécutent longtemps. Par conséquent, lorsque l'instance Oracle CDC est redémarrée, les anciennes modifications n'ont pas besoin d'être relues dans les journaux des transactions Oracle.  

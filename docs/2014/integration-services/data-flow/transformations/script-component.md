@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770658"
 ---
 # <a name="script-component"></a>Composant Script
@@ -56,7 +56,7 @@ ms.locfileid: "62770658"
  Dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , le composant Script propose deux modes : le mode Création des métadonnées et le mode Création du code. En mode Création des métadonnées, vous pouvez ajouter et modifier les entrées et les sorties du composant Script, mais vous ne pouvez pas écrire de code. Une fois toutes les entrées et sorties configurées, vous devez basculer en mode Création du code afin d'écrire le script. Le composant Script génère automatiquement le code de base à partir des métadonnées des entrées et des sorties. Si vous modifiez les métadonnées une fois que le composant Script a généré le code de base, votre code risque de ne plus se compiler, car le code de base compilé mis à jour sera peut-être incompatible avec votre code.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Écriture du script utilisé par le composant  
- Le composant Script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement d’écriture des scripts. Vous pouvez accéder à VSTA à partir de **l’Éditeur de transformation de script**. Pour plus d’informations, consultez [Script Transformation Editor &#40;Script Page&#41;](../../script-transformation-editor-script-page.md).  
+ Le composant script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement dans lequel vous écrivez les scripts. Vous pouvez accéder à VSTA à partir de **l’Éditeur de transformation de script**. Pour plus d’informations, consultez [Script Transformation Editor &#40;Script Page&#41;](../../script-transformation-editor-script-page.md).  
   
  Le composant Script propose un projet VSTA qui inclut une classe auto-générée, nommée ScriptMain, qui représente les métadonnées du composant. Par exemple, si le composant Script est utilisé en tant que transformation avec trois sorties, ScriptMain inclut une méthode pour chaque sortie. ScriptMain est le point d'entrée dans le script.  
   
@@ -90,17 +90,17 @@ ms.locfileid: "62770658"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configuration du composant Script dans le concepteur  
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de transformation de script**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de transformation de script &#40;page Colonnes d’entrée&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Éditeur de transformation de script &#40;page colonnes d’entrée&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Éditeur de transformation de script &#40;page entrées et sorties&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Éditeur de transformation de script &#40;page Script&#41;](../../script-transformation-editor-script-page.md)  
+-   [Éditeur de transformation de script &#40;page de script&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Éditeur de transformation de script &#40;page Gestionnaires de connexions&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Éditeur de transformation de script &#40;page gestionnaires de connexions&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'un composant de flux de données](../set-the-properties-of-a-data-flow-component.md)  
+-   [Définir les propriétés d’un composant de flux de données](../set-the-properties-of-a-data-flow-component.md)  
   
 ### <a name="configuring-the-script-component-programmatically"></a>Configuration du composant Script par programmation  
  Pour plus d’informations sur les propriétés définissables dans la fenêtre **Propriétés** ou par programmation, cliquez sur l’une des rubriques suivantes :  

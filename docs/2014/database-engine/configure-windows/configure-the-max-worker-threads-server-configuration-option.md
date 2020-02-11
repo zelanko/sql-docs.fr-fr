@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787211"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
@@ -62,11 +62,11 @@ ms.locfileid: "62787211"
     |16 processeurs|352|704|  
     |32 processeurs|480|960|  
     |64 processeurs|736|1472|  
-    |128 processeurs|4224|4480|  
+    |128 processeurs|4 224|4480|  
     |256 processeurs|8320|8576|  
   
     > [!NOTE]  
-    >  Pour obtenir des recommandations concernant l'utilisation de plus de 64 unités centrales, consultez [Recommandations pour l'exécution de SQL Server sur des ordinateurs comportant plus de 64 unités centrales](https://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
+    >  Pour obtenir des recommandations concernant l’utilisation de plus de 64 unités centrales, consultez [Recommandations pour l’exécution de SQL Server sur des ordinateurs comportant plus de 64 unités centrales](https://technet.microsoft.com/library/ee210547\(SQL.105\).aspx).  
   
     > [!WARNING]  
     >  Nous vous recommandons d'utiliser 1 024 comme nombre maximal de threads de travail pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur un ordinateur 32 bits.  
@@ -113,7 +113,7 @@ WHERE s.is_user_process = 0;
   
 2.  Cliquez sur le nœud **Processeurs** .  
   
-3.  Dans la zone de définition du **nombre maximum de threads de travail** , entrez ou sélectionnez une valeur comprise entre 128 et 32767.  
+3.  Dans la zone **nombre maximal de threads de travail** , tapez ou sélectionnez une valeur comprise entre 128 et 32767.  
   
      Utilisez l'option de définition du **nombre maximal de threads de travail** pour définir le nombre de threads de travail disponibles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le paramètre par défaut de **max worker threads** est adapté à la plupart des systèmes. Cependant, selon votre configuration système, l'attribution d'une valeur plus faible à l'option **max worker threads** (Nombre maximum de threads de travail) permet parfois d'accroître les performances.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 : Ajout de configurations au package | Microsoft Docs'
+title: 'Étape 4 : Ajout de configurations au package | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767641"
 ---
-# <a name="step-4-adding-package-configurations"></a>Étape 4 : Ajout de configurations au package
+# <a name="step-4-adding-package-configurations"></a>Étape 4 : Ajout de configurations au package
   Au cours de cette tâche, vous allez ajouter une configuration à chaque package. Les configurations mettent à jour les valeurs des propriétés de package et des objets de package au moment de l'exécution.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un éventail de types de configuration. Vous pouvez stocker des configurations dans des variables d'environnement, des entrées de registre, des variables définies par l'utilisateur, des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et des fichiers XML. Pour une souplesse accrue, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge l'utilisation des configurations indirectes. Cela signifie que vous utilisez une variable d'environnement pour spécifier l'emplacement de la configuration qui de son côté spécifie les valeurs réelles. Les packages du projet Didacticiel de déploiement utilisent une combinaison des fichiers de configuration XML et des configurations indirectes. Un fichier de configuration XML peut inclure des configurations destinées à plusieurs propriétés et, le cas échéant, peut être référencé par plusieurs packages. Dans ce didacticiel, vous allez utiliser un fichier de configuration séparé pour chaque package.  
@@ -42,12 +42,12 @@ ms.locfileid: "62767641"
   
 5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
   
-6.  Dans la page Sélectionner un Type de Configuration, sélectionnez **fichier de configuration XML** dans le **type de Configuration** , sélectionnez le **emplacement de Configuration est stocké dans une variable d’environnement** option, puis tapez `DataTransfer,` ou sélectionnez le **DataTransfer** variable d’environnement dans la liste.  
+6.  Dans la page Sélectionner le type de configuration, sélectionnez **fichier de configuration XML** dans la liste **type de configuration** , sélectionnez l’option l' **emplacement de la configuration est stocké dans une variable d’environnement** , puis tapez `DataTransfer,` ou sélectionnez la variable d’environnement **DataTransfer** dans la liste.  
   
     > [!NOTE]  
     >  Pour que la variable d'environnement soit disponible dans la liste, vous devrez peut-être redémarrer votre ordinateur après l'ajout de la variable. Si vous ne souhaitez pas redémarrer l'ordinateur, vous pouvez taper le nom de la variable d'environnement.  
   
-7.  Cliquer sur **Suivant**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Dans la page Fin de l'Assistant, tapez **DataTransfer EV Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration dans le volet **Aperçu** , puis cliquez sur **Terminer**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62767641"
   
 10. Dans Gestionnaires de connexions, développez NewCustomers, puis cochez la case **Chaîne de connexion** .  
   
-11. Cliquer sur **Suivant**.  
+11. Cliquez sur **Suivant**.  
   
 12. Dans la page Fin de l'Assistant, tapez **DataTransfer Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration puis cliquez sur **Terminer**.  
   
@@ -93,12 +93,12 @@ ms.locfileid: "62767641"
   
 5.  Dans la page Assistant Configuration de package, cliquez sur **Suivant**.  
   
-6.  Dans la page Sélectionner un Type de Configuration, sélectionnez **fichier de configuration XML** dans le **type de Configuration** , sélectionnez le **emplacement de Configuration est stocké dans une variable d’environnement** option, tapez `LoadXMLData` ou sélectionnez le `LoadXMLData` variable d’environnement dans la liste.  
+6.  Dans la page Sélectionner le type de configuration, sélectionnez **fichier de configuration XML** dans la liste **type de configuration** , sélectionnez l’option l' **emplacement de la configuration est stocké dans une variable d’environnement** , tapez `LoadXMLData` ou sélectionnez la `LoadXMLData` variable d’environnement dans la liste.  
   
     > [!NOTE]  
     >  Pour que la variable d'environnement soit disponible dans la liste, vous devrez peut-être redémarrer votre ordinateur après l'ajout de la variable.  
   
-7.  Cliquer sur **Suivant**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Dans la page Fin de l'Assistant, tapez **LoadXMLData EV Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration puis cliquez sur **Terminer**.  
   
@@ -122,16 +122,16 @@ ms.locfileid: "62767641"
   
 9. Dans la page Sélectionner les propriétés à exporter, développez successivement LoadXMLData, Exécutables, Charger les données XML et Propriétés, puis cochez les cases **[XMLSource].[XMLData]** et **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Cliquer sur **Suivant**.  
+10. Cliquez sur **Suivant**.  
   
 11. Dans la page Fin de l'Assistant, tapez **LoadXMLData Configuration** dans la zone **Nom de la configuration** , examinez le contenu de la configuration puis cliquez sur **Terminer**.  
   
 12. Dans la boîte de dialogue **Bibliothèque des configurations du package** , vérifiez que LoadXMLData EV Configuration est en haut de la liste et que LoadXMLData Configuration est second, puis cliquez sur **Fermer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurations du package](../../2014/integration-services/package-configurations.md)   

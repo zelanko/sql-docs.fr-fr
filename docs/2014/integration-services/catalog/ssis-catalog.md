@@ -11,37 +11,38 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771575"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
-  Le `SSISDB` catalogue est le point central pour travailler avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projets (SSIS) que vous avez déployés sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  Le `SSISDB` catalogue est le point central pour l’utilisation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] des projets (SSIS) que vous avez déployés [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le serveur. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Les objets qui sont stockés dans le `SSISDB` catalogue inclut les projets, packages, paramètres, des environnements et l’historique opérationnel.  
+ Les objets stockés dans le `SSISDB` catalogue incluent les projets, les packages, les paramètres, les environnements et l’historique opérationnel.  
   
- Vous Inspectez les objets, paramètres et les données opérationnelles sont stockées dans le `SSISDB` catalogue, en interrogeant les vues dans le `SSISDB` base de données. Vous gérez des objets en appelant des procédures stockées le `SSISDB` de base de données ou à l’aide de l’interface utilisateur de la `SSISDB` catalogue. Dans de nombreux cas, la même tâche peut être effectuée dans l'interface utilisateur ou en appelant une procédure stockée.  
+ Vous Inspectez les objets, les paramètres et les données opérationnelles stockés `SSISDB` dans le catalogue, en interrogeant les vues `SSISDB` de la base de données. Vous gérez les objets en appelant des procédures stockées dans `SSISDB` la base de données ou à l’aide `SSISDB` de l’interface utilisateur du catalogue. Dans de nombreux cas, la même tâche peut être effectuée dans l'interface utilisateur ou en appelant une procédure stockée.  
   
  Pour maintenir la base de données `SSISDB`, il est recommandé d'appliquer des stratégies d'entreprise standard pour la gestion des bases de données utilisateur. Pour plus d'informations sur la création de plans de maintenance, consultez [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Le `SSISDB` catalogue et le `SSISDB` prise en charge de la base de données Windows PowerShell. Pour plus d'informations sur l'utilisation de SQL Server avec Windows PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Pour des exemples d'utilisation de Windows PowerShell pour exécuter des tâches telles que le déploiement d'un projet, consultez l'entrée de blog [SSIS et PowerShell dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com.  
+ Le `SSISDB` catalogue et la `SSISDB` base de données prennent en charge Windows PowerShell. Pour plus d'informations sur l'utilisation de SQL Server avec Windows PowerShell, consultez [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Pour des exemples d'utilisation de Windows PowerShell pour exécuter des tâches telles que le déploiement d'un projet, consultez l'entrée de blog [SSIS et PowerShell dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539), sur blogs.msdn.com.  
   
- Pour plus d’informations sur l’affichage des données opérationnelles, consultez [surveillance des exécutions de Package et d’autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
+ Pour plus d’informations sur l’affichage des données d’opérations, consultez [surveillance des exécutions de packages et d’autres opérations](../performance/monitor-running-packages-and-other-operations.md).  
   
- Vous accédez à la `SSISDB` catalogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en vous connectant à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur de base de données, puis en développant le **catalogues Integration Services** nœud dans l’Explorateur d’objets. Vous accédez à la `SSISDB` dans la base de données [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en développant le nœud bases de données dans l’Explorateur d’objets.  
+ Pour accéder au `SSISDB` catalogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , connectez-vous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au Moteur de base de données puis développez le nœud **Integration Services catalogues** dans l’Explorateur d’objets. Pour accéder à `SSISDB` la base [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de données dans, développez le nœud bases de données dans l’Explorateur d’objets.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas renommer la `SSISDB` base de données.  
   
 > [!NOTE]  
->  Si le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’instance qui le `SSISDB` base de données est attachée à arrête ou ne répond pas, le ISServerExec.exe fin du processus. Un message est écrit dans un journal des événements Windows.  
+>  Si l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à laquelle `SSISDB` la base de données est attachée, s’arrête ou ne répond pas, le processus ISServerExec. exe se termine. Un message est écrit dans un journal des événements Windows.  
 >   
 >  Si les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basculent dans le cadre d'un basculement de cluster, les packages en cours de exécution ne redémarrent pas. Vous pouvez utiliser les points de contrôle pour redémarrer les packages. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Identificateurs d'objets de catalogue  
- Lorsque vous créez un objet dans le catalogue, attribuez-lui un nom. Ce nom constitue l'identificateur de l'objet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit des règles quant aux caractères pouvant être utilisés dans un identificateur. Les noms des objets suivants doivent respecter les règles liées aux identificateurs.  
+ Lorsque vous créez un objet dans le catalogue, attribuez-lui un nom. Ce nom constitue l'identificateur de l'objet. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit des règles quant aux caractères pouvant être utilisés dans un identificateur. Les noms des objets suivants doivent respecter les règles liées aux identificateurs.  
   
 -   Dossier  
   
@@ -51,7 +52,7 @@ ms.locfileid: "62771575"
   
 -   Paramètre  
   
--   Variable d'environnement  
+-   Variable d’environnement  
   
 ### <a name="folder-project-environment"></a>Dossier, projet, environnement  
  Lorsque vous renommez un dossier, un projet ou un environnement, respectez les règles suivantes.  
@@ -60,7 +61,8 @@ ms.locfileid: "62771575"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
+-   
+  \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -71,14 +73,15 @@ ms.locfileid: "62771575"
   
 -   Les caractères suivants peuvent être des lettres ou des nombres conformément à la norme Unicode 2.0, ou un trait de soulignement (_).  
   
-### <a name="environment-variable"></a>Variable d'environnement  
+### <a name="environment-variable"></a>Variable d’environnement  
  Lorsque vous attribuez un nom à une variable d'environnement, respectez les règles suivantes :  
   
 -   Les caractères non valides sont les caractères ASCII/Unicode allant de 1 à 31, les guillemets ("), le signe inférieur à (\<), le signe supérieur à (>), la barre verticale (|), le retour arrière (\b), la valeur null (\0) et la tabulation (\t).  
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
+-   
+  \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -92,9 +95,9 @@ ms.locfileid: "62771575"
 ### <a name="operations-and-project-version-cleanup"></a>Nettoyage des opérations et des versions de projet  
  Les données d'état de nombreuses opérations du catalogue sont stockées dans des tables de base de données internes. Ainsi, le catalogue effectue le suivi de l'état des exécutions de packages et des déploiements de projets. Pour limiter la taille des données opérationnelles, le **travail de maintenance de serveur SSIS** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est utilisé pour supprimer les anciennes données. Ce travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est créé lors de l'installation de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Vous pouvez mettre à jour ou redéployer un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en le déployant avec le même nom dans le même dossier du catalogue. Par défaut, chaque fois que vous redéployez un projet, le `SSISDB` catalogue conserve la version précédente du projet. Pour limiter la taille des données opérationnelles, le **travail de maintenance de serveur SSIS** est utilisé pour supprimer les anciennes versions des projets.  
+ Vous pouvez mettre à jour ou redéployer un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en le déployant avec le même nom dans le même dossier du catalogue. Par défaut, chaque fois que vous redéployez un projet `SSISDB` , le catalogue conserve la version précédente du projet. Pour limiter la taille des données opérationnelles, le **travail de maintenance de serveur SSIS** est utilisé pour supprimer les anciennes versions des projets.  
   
- Ce qui suit `SSISDB` propriétés du catalogue définissent comment cette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comporte de travail de l’Agent. Vous pouvez afficher et modifier les propriétés à l’aide de la boîte de dialogue **Propriétés du catalogue** ou à l’aide de [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) et [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Les propriétés `SSISDB` de catalogue suivantes définissent le comportement de ce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’agent. Vous pouvez afficher et modifier les propriétés à l’aide de la boîte de dialogue **Propriétés du catalogue** ou à l’aide de [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) et [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Nettoyer les journaux régulièrement**  
  L'étape de travail de nettoyage des opérations s'exécute lorsque cette propriété a la valeur `True`.  
@@ -102,7 +105,7 @@ ms.locfileid: "62771575"
  **Période de rétention (jours)**  
  Définit l'âge maximal des données opérationnelles autorisées (en jours). Les données plus anciennes sont supprimées.  
   
- La valeur minimale est de un jour. La valeur maximale est limitée uniquement par la valeur maximale de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` données. Pour plus d’informations sur ce type de données, consultez [int, bigint, smallint et tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
+ La valeur minimale est de un jour. La valeur maximale est limitée uniquement par la valeur maximale des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` données. Pour plus d’informations sur ce type de données, consultez [int, bigint, smallint et tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Supprimer régulièrement les anciennes versions**  
  L'étape de travail de nettoyage des versions de projet s'exécute lorsque cette propriété a la valeur `True`.  
@@ -131,7 +134,7 @@ ms.locfileid: "62771575"
   
  La modification de l'algorithme de chiffrement est une opération qui prend du temps. Tout d'abord, le serveur doit utiliser l'algorithme précédemment spécifié pour déchiffrer toutes les valeurs de configuration. Le serveur doit ensuite utiliser le nouvel algorithme pour ré-chiffrer les valeurs. Pendant ce temps, aucune autre opération [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut être effectuée sur le serveur. Ainsi, pour permettre aux opérations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de continuer de façon ininterrompue, l’algorithme de chiffrement est une valeur en lecture seule dans la boîte de dialogue dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Pour modifier le **algorithme de chiffrement** paramètre de propriété, définissez la `SSISDB` de base de données en mode mono-utilisateur, puis appelez la procédure stockée catalog.configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name* . Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Pour modifier le paramètre de propriété **algorithme de chiffrement** , définissez la `SSISDB` base de données en mode mono-utilisateur, puis appelez la procédure stockée Catalog. configure_catalog. Utilisez ENCRYPTION_ALGORITHM pour l’argument *property_name*. Pour connaître les valeurs de propriétés prises en charge, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Pour plus d’informations sur la procédure stockée, consultez [catalog.configure_catalog &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Pour plus d’informations sur le mode mono-utilisateur, consultez [Définir une base de données en mode mono-utilisateur](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Pour plus d’informations sur le chiffrement et les algorithmes de chiffrement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez les rubriques de la section [Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -149,7 +152,7 @@ ms.locfileid: "62771575"
 |Niveau d'enregistrement par défaut au niveau du serveur|SERVER_LOGGING_LEVEL|  
   
 ## <a name="permissions"></a>Autorisations  
- Les projets, les environnements et les packages sont contenus dans des dossiers qui sont des objets sécurisables. Vous pouvez accorder des autorisations à un dossier, notamment l'autorisation de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS vous permet de déléguer l'administration du contenu du dossier à un utilisateur sans avoir à accorder à celui-ci l'appartenance au rôle ssis_admin. Vous pouvez également accorder des autorisations relatives à des projets, des environnements et des opérations. Opérations incluent l’initialisation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], déploiement de projets, création et démarrage d’exécutions, validation des projets et des packages et la configuration du `SSISDB` catalogue.  
+ Les projets, les environnements et les packages sont contenus dans des dossiers qui sont des objets sécurisables. Vous pouvez accorder des autorisations à un dossier, notamment l'autorisation de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS vous permet de déléguer l'administration du contenu du dossier à un utilisateur sans avoir à accorder à celui-ci l'appartenance au rôle ssis_admin. Vous pouvez également accorder des autorisations relatives à des projets, des environnements et des opérations. Les opérations incluent l' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]initialisation, le déploiement de projets, la création et le démarrage d’exécutions, la validation de projets et `SSISDB` de packages, ainsi que la configuration du catalogue.  
   
  Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
@@ -157,7 +160,7 @@ ms.locfileid: "62771575"
   
  Si le principal a accordé ou refusé des autorisations à d'autres principaux, révoquez les autorisations données par le fournisseur d'autorisations, avant que le principal puisse être supprimé. Sinon, un message d'erreur est retourné lorsque le système essaie de supprimer le principal. Le déclencheur supprime tous les enregistrements d'autorisation dans lesquels le principal de la base de données est un bénéficiaire.  
   
- Il est recommandé que le déclencheur n’est pas désactivé, car il garantit que n’il aucun enregistrement d’autorisation orphelin après la suppression d’un principal de base de données à partir de la `SSISDB` base de données.  
+ Il est recommandé de ne pas désactiver le déclencheur, car il garantit qu’il ne s’agit pas d’enregistrements d’autorisation orphelins après `SSISDB` la suppression d’un principal de base de données de la base de données.  
   
 ### <a name="managing-permissions"></a>Gestion des autorisations  
  Vous pouvez gérer les autorisations à l’aide de l’interface utilisateur de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , des procédures stockées et de l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> .  
@@ -168,10 +171,10 @@ ms.locfileid: "62771575"
   
 -   Dans le cas d'un projet, utilisez la page **Autorisations** de la [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Pour gérer les autorisations à l’aide de Transact-SQL, appelez [catalog.grant_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) et [catalog.revoke_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Pour afficher les autorisations effectives pour le principal actuel pour tous les objets, interrogez [catalog.effective_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Cette rubrique fournit les descriptions des différents types d'autorisations. Pour afficher les autorisations affectées explicitement à l’utilisateur, interrogez [catalog.explicit_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
+ Pour gérer les autorisations à l’aide de Transact-SQL, appelez [Catalog. grant_permission &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. Deny_permission &#40;base de données SSISDB](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database)&#41;et [Catalog. revoke_permission &#40;&#41;de base de données SSISDB ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Pour afficher les autorisations effectives pour le principal actuel pour tous les objets, interrogez [catalog.effective_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Cette rubrique fournit les descriptions des différents types d'autorisations. Pour afficher les autorisations affectées explicitement à l’utilisateur, interrogez [catalog.explicit_object_permissions &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
   
 ## <a name="folders"></a>Dossiers  
- Un dossier contient un ou plusieurs projets et environnements le `SSISDB` catalogue. Vous pouvez utiliser la vue [catalog.folders &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) pour accéder aux informations relatives aux dossiers du catalogue. Vous pouvez utiliser les procédures stockées suivantes pour gérer des dossiers.  
+ Un dossier contient un ou plusieurs projets et environnements dans le `SSISDB` catalogue. Vous pouvez utiliser la vue [catalog.folders &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) pour accéder aux informations relatives aux dossiers du catalogue. Vous pouvez utiliser les procédures stockées suivantes pour gérer des dossiers.  
   
 -   [catalog.create_folder &#40;Base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
   

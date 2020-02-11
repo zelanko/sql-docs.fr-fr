@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917042"
 ---
 # <a name="master-database"></a>Base de données master
@@ -38,16 +38,16 @@ ms.locfileid: "62917042"
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Non|  
+|ALLOW_SNAPSHOT_ISOLATION|ACTIVÉ|Non|  
 |ANSI_NULL_DEFAULT|OFF|Oui|  
 |ANSI_NULLS|OFF|Oui|  
 |ANSI_PADDING|OFF|Oui|  
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
 |AUTO_CLOSE|OFF|Non|  
-|AUTO_CREATE_STATISTICS|ON|Oui|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_SHRINK|OFF|Non|  
-|AUTO_UPDATE_STATISTICS|ON|Oui|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
 |CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
@@ -55,7 +55,7 @@ ms.locfileid: "62917042"
 |CURSOR_DEFAULT|GLOBAL|Oui|  
 |Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|Non|  
+|DB_CHAINING|ACTIVÉ|Non|  
 |ENCRYPTION|OFF|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM|Oui|  
@@ -76,7 +76,7 @@ ms.locfileid: "62917042"
   
 -   Modification du classement. Le classement par défaut est le classement du serveur.  
   
--   Modification du propriétaire de la base de données. La base de données**master** appartient à **sa**.  
+-   Modification du propriétaire de la base de données. **Master** appartient à **sa**.  
   
 -   création d'un catalogue ou d'un index de texte intégral ;  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62917042"
   
 -   Suppression de la base de données  
   
--   Suppression de l'utilisateur **Invité** de la base de données  
+-   Suppression de l’utilisateur **invité** de la base de données.  
   
 -   Activation de la capture des données modifiées.  
   

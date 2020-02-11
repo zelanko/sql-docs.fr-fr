@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6585733a4b864e14815990189fd6924e217de546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770659"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Fractionner un dataset à l'aide de la transformation de fractionnement conditionnel
@@ -64,7 +64,7 @@ ms.locfileid: "62770659"
  [Transformations Integration Services](integration-services-transformations.md)   
  [Chemins Integration Services](../integration-services-paths.md)   
  [Types de données d’Integration Services](../integration-services-data-types.md)   
- [tâche de flux de données](../../control-flow/data-flow-task.md)   
+ [Tâche de flux de données](../../control-flow/data-flow-task.md)   
  [Expressions Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

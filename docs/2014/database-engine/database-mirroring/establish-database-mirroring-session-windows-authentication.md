@@ -1,5 +1,5 @@
 ---
-title: Établir une base de données mise en miroir de la Session à l’aide de l’authentification Windows (SQL Server Management Studio) | Microsoft Docs
+title: Établir une session de mise en miroir de bases de données à l’aide de l’authentification Windows (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806906"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Établir une session de mise en miroir de bases de données au moyen de l'authentification Windows (SQL Server Management Studio)
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] à la place.  
   
  Pour établir une session de mise en miroir de bases de données et modifier les propriétés de la mise en miroir d'une base de données, utilisez la page **Mise en miroir** de la boîte de dialogue **Propriétés de la base de données** . Avant d'utiliser la page **Mise en miroir** pour configurer la mise en miroir de bases de données, assurez -vous que les conditions suivantes sont remplies :  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62806906"
   
 -   La base de données miroir doit exister et être active.  
   
-     La création d'une base de données miroir nécessite la restauration d'une sauvegarde récente de la base de données principale (au moyen de WITH NORECOVERY) sur l'instance de serveur miroir. Elle requiert également de prendre une ou plusieurs sauvegardes de journaux après la sauvegarde complète et de les restaurer dans l'ordre dans la base de données miroir (à l'aide de WITH NORECOVERY). Pour plus d’informations, consultez [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     La création d'une base de données miroir nécessite la restauration d'une sauvegarde récente de la base de données principale (au moyen de WITH NORECOVERY) sur l'instance de serveur miroir. Elle requiert également de prendre une ou plusieurs sauvegardes de journaux après la sauvegarde complète et de les restaurer dans l'ordre dans la base de données miroir (à l'aide de WITH NORECOVERY). Pour plus d’informations, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Si les instances de serveurs s'exécutent sous différents comptes d'utilisateurs de domaine, chacune requiert une connexion dans la base de données **master** des autres. Si la connexion n'existe pas, vous devez la créer avant de configurer la mise en miroir. Pour plus d’informations, consultez [Autoriser l’accès sur le réseau à un point de terminaison de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62806906"
     |------------|--------------|-----------------|  
     |**Haute performance (asynchrone)**|Nul (s'il existe, non utilisé mais la session requiert un quorum)|Pour optimiser les performances, la base de données miroir reste toujours en léger décalage par rapport à la base de données principale, sans jamais complètement le rattraper. Toutefois, l'écart entre les bases de données est généralement faible. La perte d'un partenaire a les effets suivants :<br /><br /> Si l'instance de serveur miroir devient non disponible, le principal continue.<br /><br /> Si l'instance de serveur principal devient indisponible, le miroir s'arrête ; mais si la session n'a aucun témoin (comme recommandé) ou si le témoin est connecté au serveur miroir, celui-ci est accessible en tant que secours semi-automatique ; le propriétaire de la base de données peut forcer le service sur l'instance de serveur miroir (avec une perte de données possible).<br /><br /> <br /><br /> Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).|  
     |**Haute sécurité sans basculement automatique (synchrone)**|Non|Ce mode garantit que toutes les transactions validées sont écrites sur disque sur le serveur miroir.<br /><br /> Le basculement manuel est possible lorsque les partenaires sont connectés entre eux et que la base de données est synchronisée. La perte d'un partenaire a les effets suivants :<br /><br /> Si l'instance de serveur miroir devient non disponible, le principal continue.<br /><br /> Si l'instance de serveur principal devient indisponible, l'instance miroir s'arrête mais reste accessible en tant que secours semi-automatique ; le propriétaire de la base de données peut forcer le service sur l'instance de serveur miroir (avec une perte de données possible).<br /><br /> Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).|  
-    |**Haute sécurité avec basculement automatique (synchrone)**|Oui (requis)|Ce mode garantit que toutes les transactions validées sont écrites sur disque sur le serveur miroir. La disponibilité est optimisée par l'inclusion d'une instance de serveur témoin pour prendre en charge le basculement automatique. Notez que vous pouvez sélectionner l’option **Haute sécurité avec basculement automatique (synchrone)** seulement si vous avez spécifié au préalable une adresse de serveur témoin. Le basculement manuel est possible lorsque les partenaires sont connectés entre eux et que la base de données est synchronisée.<br /><br /> En présence d'un témoin, la conséquence de la perte d'un partenaire est la suivante :<br /><br /> -Si l’instance de serveur principal devient indisponible, le basculement automatique se produit. L'instance de serveur miroir prend le rôle de principal et propose sa base de données comme base de données principale.<br /><br /> -Si l’instance de serveur miroir devenue indisponible, le principal continue.<br /><br /> Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Important \*\*** Si le témoin est déconnecté, les partenaires doivent être connectés entre eux pour que la base de données soit disponible. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
+    |**Haute sécurité avec basculement automatique (synchrone)**|Oui (requis)|Ce mode garantit que toutes les transactions validées sont écrites sur disque sur le serveur miroir. La disponibilité est optimisée par l'inclusion d'une instance de serveur témoin pour prendre en charge le basculement automatique. Notez que vous pouvez sélectionner l’option **Haute sécurité avec basculement automatique (synchrone)** seulement si vous avez spécifié au préalable une adresse de serveur témoin. Le basculement manuel est possible lorsque les partenaires sont connectés entre eux et que la base de données est synchronisée.<br /><br /> En présence d'un témoin, la conséquence de la perte d'un partenaire est la suivante :<br /><br /> -Si l’instance de serveur principal devient indisponible, un basculement automatique se produit. L'instance de serveur miroir prend le rôle de principal et propose sa base de données comme base de données principale.<br /><br /> -Si l’instance du serveur miroir devient indisponible, le principal continue.<br /><br /> Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> ** \* Important \* \* ** Si le témoin est déconnecté, les partenaires doivent être connectés entre eux pour que la base de données soit disponible. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  Lorsque toutes les conditions suivantes sont réunies, cliquez sur **Démarrer la mise en miroir** pour commencer la mise en miroir :  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62806906"
  [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Gérer les métadonnées lors de la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Ajouter ou remplacer un témoin de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

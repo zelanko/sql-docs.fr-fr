@@ -1,5 +1,5 @@
 ---
-title: Gestion de texte et image rubriques de procédures relatives à des colonnes (ODBC) | Microsoft Docs
+title: Rubriques de procédures relatives à la gestion des colonnes de texte et d’image (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780984"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Rubriques des procédures relatives à la gestion des colonnes de type text et image (ODBC)
@@ -22,11 +22,11 @@ ms.locfileid: "62780984"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Utiliser des paramètres de Data-at-Execution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md)  
+-   [Utiliser des paramètres de données en cours d’exécution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md)  
   
--   [Utiliser des colonnes de Data-at-Execution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
+-   [Utiliser des colonnes de données en cours d’exécution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures liées à ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Rubriques de procédures ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

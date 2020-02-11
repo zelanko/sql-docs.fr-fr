@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831619"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporer une tâche de profilage des données dans le flux de travail du package
-  Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données doit habituellement faire l’objet d’une analyse visuelle et d’un jugement personnel pour qu’il soit déterminé si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
+  Le profilage des données et le nettoyage des données ne sont pas des candidats pour un processus automatisé à leur stade initial. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la sortie de la tâche de profilage des données nécessite généralement une analyse visuelle et un jugement humain pour déterminer si les violations signalées sont significatives ou excessives. Même après avoir reconnu des problèmes de qualité des données, un plan soigneusement pensé doit être appliqué pour déterminer la meilleure approche pour le nettoyage.  
   
  Toutefois, après avoir établi des critères de qualité des données, vous pouvez souhaiter automatiser une analyse et un nettoyage périodiques de la source de données. Considérez les scénarios suivants :  
   
--   **Vérification de la qualité des données avant une charge incrémentielle**. Utilisez la tâche de profilage des données pour calculer le profil de ratio Null de la colonne de nouvelles données prévues pour la colonne CustomerName dans un tableau Customers. Si le pourcentage de valeurs NULL est supérieur à 20 %, envoyez un message électronique qui contient la sortie de profil à l'opérateur et terminez le package. Dans le cas contraire, continuez la charge incrémentielle.  
+-   **Vérification de la qualité des données avant un chargement incrémentiel**. Utilisez la tâche de profilage des données pour calculer le profil de ratio Null de la colonne de nouvelles données prévues pour la colonne CustomerName dans un tableau Customers. Si le pourcentage de valeurs NULL est supérieur à 20 %, envoyez un message électronique qui contient la sortie de profil à l'opérateur et terminez le package. Dans le cas contraire, continuez la charge incrémentielle.  
   
--   **Automatisation du nettoyage lorsque les conditions spécifiées sont satisfaites**. Utilisez la tâche de profilage des données pour calculer le profil d'inclusion de valeur de la colonne State (État) par rapport à une table de recherche d'états, et de la colonne ZIP Code/Postal Code (Code postal) par rapport à une table de recherche de codes postaux. Si la puissance d'inclusion des valeurs d'état est inférieure à 80 %, mais que la puissance d'inclusion des valeurs de code postal est supérieure à 99 %, cela indique deux choses. En premier lieu, les données d'état sont erronées. En second lieu, les données de code postal sont correctes. Lancez une tâche de flux de données qui nettoie les données d'état en effectuant une recherche de la valeur d'état correcte à partir de la valeur de code postal actuelle.  
+-   **Automatisation du nettoyage lorsque les conditions spécifiées sont remplies**. Utilisez la tâche de profilage des données pour calculer le profil d'inclusion de valeur de la colonne State (État) par rapport à une table de recherche d'états, et de la colonne ZIP Code/Postal Code (Code postal) par rapport à une table de recherche de codes postaux. Si la puissance d'inclusion des valeurs d'état est inférieure à 80 %, mais que la puissance d'inclusion des valeurs de code postal est supérieure à 99 %, cela indique deux choses. En premier lieu, les données d'état sont erronées. En second lieu, les données de code postal sont correctes. Lancez une tâche de flux de données qui nettoie les données d'état en effectuant une recherche de la valeur d'état correcte à partir de la valeur de code postal actuelle.  
   
  Une fois que vous avez un flux de travail dans lequel vous pouvez incorporer la tâche de flux de données, vous devez comprendre les étapes requises pour ajouter cette tâche. La section suivante décrit le processus général d'incorporation de la tâche de flux de données. Les deux sections finales décrivent comment connecter la tâche de flux de données, soit directement à une source de données, soit à des données transformées à partir du flux de données.  
   
@@ -45,12 +45,12 @@ ms.locfileid: "62831619"
   
  Lorsque vous incorporez la tâche de profilage des données dans le flux de travail d'un package, gardez à l'esprit les deux fonctionnalités suivantes de la tâche :  
   
--   **Sortie de la tâche**. La tâche de profilage des données écrit sa sortie dans un fichier ou une variable de package au format XML selon le schéma DataProfile.xsd. Par conséquent, vous devez interroger la sortie XML si vous souhaitez utiliser les résultats du profil dans le flux de travail conditionnel d'un package. Vous pouvez facilement utiliser le langage de requête Xpath pour interroger cette sortie XML. Pour étudier la structure de cette sortie XML, vous pouvez ouvrir un fichier de sortie exemple ou le schéma lui-même. Pour ouvrir le fichier de sortie ou le schéma, vous pouvez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], un autre éditeur XML ou un éditeur de texte, tel que le Bloc-notes.  
+-   **Sortie**de la tâche. La tâche de profilage des données écrit sa sortie dans un fichier ou une variable de package au format XML selon le schéma DataProfile.xsd. Par conséquent, vous devez interroger la sortie XML si vous souhaitez utiliser les résultats du profil dans le flux de travail conditionnel d'un package. Vous pouvez facilement utiliser le langage de requête Xpath pour interroger cette sortie XML. Pour étudier la structure de cette sortie XML, vous pouvez ouvrir un fichier de sortie exemple ou le schéma lui-même. Pour ouvrir le fichier ou le schéma de sortie, vous [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]pouvez utiliser, un autre éditeur XML ou un éditeur de texte, tel que le bloc-notes.  
   
     > [!NOTE]  
     >  Certains résultats du profil, affichés dans la visionneuse du profil des données, sont des valeurs calculées qui n'ont pas été trouvées directement dans la sortie. Par exemple, la sortie du profil de ratio Null de la colonne contient le nombre total de lignes et le nombre de lignes qui contiennent des valeurs Null. Vous devez effectuer une requête sur ces deux valeurs, puis calculer le pourcentage des lignes qui contiennent des valeurs Null, pour obtenir le ratio Null de la colonne.  
   
--   **Entrée de la tâche**. La tâche de profilage des données lit son entrée à partir des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, vous devez enregistrer les données en mémoire dans des tables intermédiaires si vous voulez profiler les données qui ont déjà été chargées et transformées dans le flux de données.  
+-   **Entrée de tâche**. La tâche de profilage des données lit son entrée à partir des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, vous devez enregistrer les données en mémoire dans des tables intermédiaires si vous voulez profiler les données qui ont déjà été chargées et transformées dans le flux de données.  
   
  Les sections suivantes appliquent ce flux de travail général pour profiler les données qui proviennent directement d'une source de données externe ou qui proviennent transformées de la tâche de flux de données. Ces sections indiquent également comment gérer les conditions préalables d'entrée et de sortie de la tâche de flux de données.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "62831619"
   
 -   Dans la fenêtre **Variables** , ajoutez et configurez les deux variables de package suivantes :  
   
-    -   Entrez le nom, `ProfileConnectionName`, pour l’une des variables et définissez le type de cette variable **chaîne**.  
+    -   Entrez le nom, `ProfileConnectionName`, pour l’une des variables et définissez le type de cette variable sur **chaîne**.  
   
-    -   Entrez le nom, `AddressLine2NullRatio`, pour l’autre variable et définissez le type de cette variable **Double**.  
+    -   Entrez le nom, `AddressLine2NullRatio`, pour l’autre variable et définissez le type de cette variable sur **double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurer la tâche de profilage des données  
  La tâche de profilage des données doit être configurée de la façon suivante :  

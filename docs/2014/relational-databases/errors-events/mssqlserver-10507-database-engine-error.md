@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916298"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|10507|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|10507|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_STMT_DOES_NOT_MATCH|  
-|Texte du message|Impossible de créer le repère de plan '%.\*ls, car l’instruction spécifiée par `@stmt` et `@module_or_batch`, ou par `@plan_handle` et `@statement_start_offset`, ne correspond à aucune instruction dans le module spécifié ou lot. Modifiez les valeurs pour qu'elles correspondent à une instruction dans le module ou le lot.|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls', car l’instruction spécifiée par `@stmt` et `@module_or_batch` ou par `@plan_handle` et `@statement_start_offset` ne correspond à aucune instruction dans le module ou lot spécifié. Modifiez les valeurs pour qu'elles correspondent à une instruction dans le module ou le lot.|  
   
 ## <a name="explanation"></a>Explication  
  Une instruction dans le module ou le lot spécifié n'a pas pu être mise en correspondance avec l'instruction ou la valeur de décalage de l'instruction spécifiée.  

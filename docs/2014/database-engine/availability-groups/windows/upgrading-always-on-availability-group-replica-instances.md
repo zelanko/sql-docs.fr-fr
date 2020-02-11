@@ -1,5 +1,5 @@
 ---
-title: Mise à niveau et mise à jour des serveurs de groupe de disponibilité avec un temps mort et une perte de données | Microsoft Docs
+title: Mise à niveau et mise à jour des serveurs de groupe de disponibilité avec un temps d’arrêt et une perte de données minimes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812932"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Mise à niveau et mise à jour des serveurs de groupes de disponibilité avec un temps mort minimal et perte de données
   Lorsque de la mise à jour ou de la mise à niveau d'instances de serveur de SQL Server 2012 vers un Service Pack ou une version plus récente, réduisez le temps mort d'un groupe de disponibilité à un seul basculement manuel en effectuant une mise à jour ou une mise à niveau séquentielle. En ce qui concerne la mise à niveau des versions de SQL Server, cette mise à niveau s'appelle une mise à niveau propagée. En ce qui concerne la mise à jour de la version actuelle de SQL Server avec les correctifs ou les Service Pack, cette mise à jour s'appelle une mise à jour propagée.  
   
- Cette rubrique limite la discussion aux mises à niveau/mises à jour de SQL Server. Pour le système d’exploitation mises à niveau/mises à jour fonctionnant sur les instances de SQL Server hautement disponible, consultez [Cross-cluster Migration de groupes de disponibilité AlwaysOn pour les mises à niveau du système d’exploitation](https://msdn.microsoft.com/library/jj873730.aspx)  
+ Cette rubrique limite la discussion aux mises à niveau/mises à jour de SQL Server. Pour les mises à niveau/mises à jour liées au système d’exploitation sur lesquelles s’exécutent les instances de SQL Server hautement disponibles, consultez [migration entre clusters de groupes de disponibilité AlwaysOn pour les mises à niveau du système d’exploitation](https://msdn.microsoft.com/library/jj873730.aspx) .  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Meilleures pratiques pour la mise à niveau/mise à jour propagée de groupes de disponibilité AlwaysOn  
  Appliquez les meilleures pratiques suivantes lorsque vous effectuez la mise à niveau/mise à jour du serveur afin de réduire le temps mort et la perte de données de vos groupes de disponibilité :  
@@ -50,7 +50,7 @@ ms.locfileid: "62812932"
 ## <a name="rolling-upgradeupdate-process"></a>Processus de mise à niveau/mise à jour propagée  
  Dans la pratique, le processus exact dépend de facteurs tels que la topologie de déploiement de vos groupes de disponibilité et du mode de validation de chaque réplica. Cependant, dans le scénario le plus simple, une mise à niveau/mise à jour propagée est un processus en plusieurs étapes impliquant les différentes étapes suivantes :  
   
- ![Mise à niveau d’un groupe de disponibilité dans le scénario HADR](../../media/alwaysonupgrade-ag-hadr.gif "Mise à niveau d’un groupe de disponibilité dans le scénario HADR")  
+ ![Mise à niveau du groupe de disponibilité dans le scénario HADR](../../media/alwaysonupgrade-ag-hadr.gif "Mise à niveau du groupe de disponibilité dans le scénario HADR")  
   
 1.  Supprimer le basculement automatique sur tous les réplicas avec validation synchrone  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62812932"
 ## <a name="availability-group-with-one-remote-secondary-replica"></a>Groupe de disponibilité avec un réplica secondaire distant  
  Si vous avez déployé un groupe de disponibilité uniquement à des fins de récupération d'urgence, vous devrez peut-être le basculer sur un réplica secondaire avec validation asynchrone. Cette configuration est illustrée dans la figure ci-dessous :  
   
- ![Mise à niveau d’un groupe de disponibilité dans le scénario DR](../../media/agupgrade-ag-dr.gif "Mise à niveau d’un groupe de disponibilité dans le scénario DR")  
+ ![Mise à niveau du groupe de disponibilité dans le scénario DR](../../media/agupgrade-ag-dr.gif "Mise à niveau du groupe de disponibilité dans le scénario DR")  
   
  Dans ce cas, vous devez basculer le groupe de disponibilité sur le réplica secondaire avec validation asynchrone lors de la mise à niveau/mise à jour. Pour éviter la perte de données, changez le mode de validation en validation synchrone et attendez que le réplica secondaire soit synchronisé avant de basculer le groupe de disponibilité. Par conséquent, le processus de mise à niveau/mise à jour peut ressembler à ce qui suit :  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62812932"
 ## <a name="availability-group-with-failover-cluster-instance-nodes"></a>Groupe de disponibilité avec nœuds d'instance de cluster de basculement  
  Si un groupe de disponibilité contient des nœuds d'instance de cluster de basculement, mettez à niveau/jour les nœuds inactifs avant de mettre à niveau/jour les nœuds actifs. La figure ci-dessous illustre un scénario de groupe de disponibilité courant avec instances de cluster de basculement pour la haute disponibilité et la validation asynchrone entre les instances de cluster de basculement à des fins de récupération d'urgence, et l'ordre de mise à niveau.  
   
- ![Mise à niveau d’un groupe de disponibilité avec des FCI](../../media/agupgrade-ag-fci-dr.gif "Mise à niveau d’un groupe de disponibilité avec des FCI")  
+ ![Mise à niveau du groupe de disponibilité avec instances de cluster de basculement](../../media/agupgrade-ag-fci-dr.gif "Mise à niveau du groupe de disponibilité avec instances de cluster de basculement")  
   
 1.  Mettre à niveau/jour REMOTE2  
   
@@ -115,9 +115,9 @@ ms.locfileid: "62812932"
   
 |Groupe de disponibilité|Nœud1|Nœud2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|Principale|||  
-|AG2||Principale||  
-|AG3|||Principale|  
+|AG1|Principal|||  
+|AG2||Principal||  
+|AG3|||Principal|  
   
  Il peut s'avérer nécessaire d'effectuer une mise à niveau/mise à jour propagée à charge équilibrée dans l'ordre suivant :  
   
@@ -139,9 +139,9 @@ ms.locfileid: "62812932"
   
 |Groupe de disponibilité|Nœud1|Nœud2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||Principale||  
-|AG2|Principale|||  
-|AG3|||Principale|  
+|AG1||Principal||  
+|AG2|Principal|||  
+|AG3|||Principal|  
   
  Le chemin d'accès de la mise à niveau/mise à jour varie selon votre implémentation, ainsi que le temps mort pour=vant être rencontré par les applications clientes.  
   

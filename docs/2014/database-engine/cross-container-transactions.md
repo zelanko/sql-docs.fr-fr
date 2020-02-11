@@ -1,5 +1,5 @@
 ---
-title: Les Transactions entre conteneurs | Microsoft Docs
+title: Transactions entre conteneurs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807423"
 ---
 # <a name="cross-container-transactions"></a>Transactions entre conteneurs
@@ -24,8 +24,8 @@ ms.locfileid: "62807423"
   
  Toute requête interprétée référençant des tables mémoire optimisées est considérée comme une partie d'une transaction entre conteneurs, qu'elle soit exécutée à partir d'une transaction explicite ou implicite, ou en mode de validation automatique.  
   
-##  <a name="isolation"></a> Isolation d’opérations individuelles  
- Chaque transaction [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est caractérisée par un niveau d'isolation. Le niveau d'isolation par défaut est READ COMMITTED. Pour utiliser un niveau d’isolation différent, vous pouvez définir le niveau d’isolation à l’aide [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+##  <a name="isolation"></a>Isolement des opérations individuelles  
+ Chaque transaction [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est caractérisée par un niveau d'isolation. Le niveau d'isolation par défaut est READ COMMITTED. Pour utiliser un niveau d’isolation différent, vous pouvez définir le niveau d’isolation à l’aide de l' [instruction Set transaction isolation level &#40;&#41;Transact-SQL ](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Il est souvent nécessaire d'effectuer des opérations sur les tables mémoire optimisées avec un niveau d'isolation différent des opérations sur les tables sur disque. Dans une transaction, il est possible de définir un niveau d'isolation différent pour un ensemble d'instructions ou pour une opération de lecture individuelle.  
   
@@ -65,13 +65,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Sémantique d'isolation d'opérations individuelles  
  Une transaction sérialisable T est exécutée avec l'isolation complète. C'est comme si chaque autre transaction avait été soit validée avant le démarrage de T, soit démarrée après la validation de T. Cela devient plus complexe lorsque plusieurs opérations dans une transaction présentent des niveaux d'isolation différents.  
   
- La sémantique générale des niveaux d’isolation de transaction dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], et les conséquences sur le verrouillage, est expliqué dans [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ La sémantique générale des niveaux d’isolation des transactions dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ainsi que les implications sur le verrouillage, sont expliquées dans [définir le niveau d’isolation des transactions &#40;&#41;Transact-SQL ](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Pour les transactions entre conteneurs dans lesquelles les opérations peuvent avoir différents niveaux d'isolation, vous devez comprendre la sémantique de l'isolation des opérations de lecture individuelles. Les opérations d'écriture sont toujours isolées. Les écritures effectuées dans des transactions distinctes n'ont aucun impact les unes sur les autres.  
   
  Une opération de lecture de données retourne plusieurs lignes répondant à une condition de filtre.  
   
- Les lectures sont effectuées comme partie une transaction T. niveau d’Isolation pour les opérations de lecture permettre être interprétés comme suit,  
+ Les lectures sont effectuées dans le cadre d’une transaction T. les niveaux d’isolation pour les opérations de lecture peuvent être compris en termes de,  
   
  État de validation  
  L'état de validation indique si la validation de la lecture de données est garantie.  
@@ -80,9 +80,9 @@ commit
  La cohérence transactionnelle pour un ensemble de lectures vérifie si toutes les versions de ligne lues comprennent les mises à jour du même ensemble de transactions précisément.  
   
  La stabilité garantit que le système permet à la transaction T de lire les données.  
- La stabilité détermine si les lectures des transactions sont renouvelables. c'est-à-dire si les lectures renouvelées retournent les mêmes lignes et versions de ligne.  
+ La stabilité fait référence au fait que les lectures de la transaction sont reproductibles. c'est-à-dire si les lectures renouvelées retournent les mêmes lignes et versions de ligne.  
   
- Certaines garanties font référence à l'heure de fin logique de la transaction. En général, l'heure de fin logique est l'heure à laquelle la transaction est validée dans la base de données. Si la transaction accède à des tables mémoire optimisées, l'heure de fin logique correspond techniquement au début de la phase de validation. (Pour plus d’informations, consultez la discussion de durée de vie de transaction dans [Transactions dans les Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Certaines garanties font référence à l'heure de fin logique de la transaction. En général, l'heure de fin logique est l'heure à laquelle la transaction est validée dans la base de données. Si la transaction accède à des tables mémoire optimisées, l'heure de fin logique correspond techniquement au début de la phase de validation. (Pour plus d’informations, consultez la discussion sur la durée de vie des transactions dans les [tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Indépendamment du niveau d'isolation, une transaction (T) voit toujours ses propres mises à jour :  
   
@@ -99,7 +99,7 @@ commit
  La validation et la stabilité de la lecture de données sont garanties jusqu'à l'heure de fin logique de la transaction.  
   
  SERIALIZABLE  
- Toutes les garanties de lecture RENOUVELÉE plus empêcher les lignes fantômes et la cohérence transactionnelle sont toutes les opérations de lecture sérialisables effectuées par T. fantôme évitement signifie que l’opération d’analyse peut retourner uniquement les lignes supplémentaires écrites par T, mais aucune lignes qui ont été écrits par d’autres transactions.  
+ Toutes les garanties de la lecture renouvelable plus la prévention fantôme et la cohérence transactionnelle en ce qui concerne toutes les opérations de lecture sérialisables effectuées par T. la prévention fantôme signifie que l’opération d’analyse ne peut retourner que des lignes supplémentaires écrites par T, mais pas lignes écrites par d’autres transactions.  
   
  Prenons l'exemple de transaction suivante :  
   
@@ -135,7 +135,7 @@ commit
   
  Le côté sur disque d'une transaction T atteint un certain niveau d'isolation X si au moins une des conditions suivantes est remplie :  
   
--   Il commence à X. Autrement dit, la valeur par défaut de la session est X, soit parce que vous avez exécuté `SET TRANSACTION ISOLATION LEVEL`, ou il s’agit du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par défaut.  
+-   Il commence par X. Autrement dit, la valeur par défaut de la session était X, `SET TRANSACTION ISOLATION LEVEL`soit parce que vous avez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécuté, soit il s’agit de la valeur par défaut.  
   
 -   Pendant la transaction, le niveau d'isolation est remplacé par X à l'aide de `SET TRANSACTION ISOLATION LEVEL`.  
   
@@ -183,11 +183,11 @@ commit
   
  Les transactions en lecture seule entre conteneurs qui sont exécutées en mode de validation automatique sont simplement restaurées une fois leur exécution terminée. Aucune validation n'est effectuée.  
   
- Les transactions en lecture seule, explicites ou implicites, entre conteneurs exécutent la validation à l'heure prédéfinie si elles accèdent aux tables mémoire optimisées avec l'isolation REPEATABLE READ ou SERIALIZABLE. Pour plus d’informations sur la validation de voir la section sur la détection de conflit, Validation, et contrôles de dépendance de validation dans [Transactions dans les Tables optimisées en mémoire](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Les transactions en lecture seule, explicites ou implicites, entre conteneurs exécutent la validation à l'heure prédéfinie si elles accèdent aux tables mémoire optimisées avec l'isolation REPEATABLE READ ou SERIALIZABLE. Pour plus d’informations sur la validation, consultez la section sur la détection de conflit, la validation et les vérifications de dépendance de validation dans les [transactions dans les tables mémoire optimisées](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation des Transactions sur les Tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Instructions pour les niveaux d’Isolation des transactions avec Tables optimisées en mémoire](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
- [Instructions pour la logique de nouvelle tentative des transactions sur des tables à mémoire optimisée](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [Fonctionnement des transactions sur les tables optimisées en mémoire](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Instructions relatives aux niveaux d’isolation des transactions avec des tables mémoire optimisées](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [Instructions pour la logique de nouvelle tentative des transactions sur des tables mémoire optimisées](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

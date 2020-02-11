@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services) de traitement par lots | Microsoft Docs
+title: Traitement par lots (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076942"
 ---
 # <a name="batch-processing-analysis-services"></a>Traitement par lots (Analysis Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66076942"
   
  Les procédures de cette rubrique décrivent les étapes de traitement complet de dimensions et de partitions. Le traitement par lots peut également inclure d'autres options de traitement, telles que le traitement incrémentiel. Pour que ces procédures fonctionnent correctement, vous devez utiliser une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante qui contient au moins deux dimensions et une partition.  
   
- Cette rubrique comprend les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
  [Traitement par lots dans SQL Server Data Tools](#bkmk_ssdt)  
   
- [Traitement par lots à l'aide de XMLA dans Management Studio](#bkmk_xmla)  
+ [Traitement par lots à l’aide de XMLA dans Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a> Traitement par lots dans SQL Server Data Tools  
+##  <a name="bkmk_ssdt"></a>Traitement par lots dans SQL Server Data Tools  
  Pour que des objets puissent être traités dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], le projet contenant les objets doit être déployé. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Ouvrez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -53,13 +53,13 @@ ms.locfileid: "66076942"
   
 9. Sous **Options de traitement**, marquez les paramètres suivants :  
   
-    -   **Ordre de traitement** a la valeur **Séquentiel**et **Mode de transaction** a la valeur **Une seule transaction**.  
+    -   L' **ordre de traitement** est défini sur **séquentiel**et le mode de **transaction** est défini sur **une seule transaction**.  
   
-    -   **Option de la table d'écriture différée** a la valeur **Utiliser l'existante**.  
+    -   L' **option de table d’écriture différée** est définie pour **utiliser l’existant**.  
   
     -   Sous **Objets affectés**, activez la case à cocher **Traiter les objets affectés** .  
   
-10. Cliquez sur l'onglet **Erreurs de clé de dimension** . Vérifiez que l'option **Utiliser la configuration d'erreur par défaut** est sélectionnée.  
+10. Cliquez sur l’onglet **Erreurs de clé de dimension** . Vérifiez que l’option utiliser la configuration d' **erreur par défaut** est sélectionnée.  
   
 11. Cliquez sur **OK** pour fermer l'écran **Modifier les paramètres** .  
   
@@ -69,12 +69,12 @@ ms.locfileid: "66076942"
   
 14. Cliquez sur **Fermer** sur l'écran **Traiter les objets** .  
   
-##  <a name="bkmk_xmla"></a> Traitement par lots à l'aide de XMLA dans Management Studio  
+##  <a name="bkmk_xmla"></a>Traitement par lots à l’aide de XMLA dans Management Studio  
  Vous pouvez créer un script XMLA qui exécute le traitement par lots. Commencez en générant un script XMLA dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour chaque objet, puis associez-les dans une seule requête XMLA que vous exécutez de façon interactive ou dans une tâche planifiée.  
   
  Pour obtenir des dansstructions étape par étape, consultez l’ **exemple 2** dans [Schedule SSAS Admdansistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)  
+ [Traitement des objets de modèles multidimensionnels](processing-a-multidimensional-model-analysis-services.md)  
   
   

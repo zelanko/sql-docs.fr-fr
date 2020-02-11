@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066307"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
@@ -40,7 +40,7 @@ ms.locfileid: "63066307"
   
  Pour spécifier un programme de résolution personnalisé, consultez [Spécifier un programme de résolution d'articles de fusion](../publish/specify-a-merge-article-resolver.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Détection et résolution des conflits de réplication de fusion avancée](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft-programmes de résolution COM](advanced-merge-replication-conflict-com-based-resolvers.md)  
   

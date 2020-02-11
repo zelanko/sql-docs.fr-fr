@@ -1,5 +1,5 @@
 ---
-title: Exemples de mise à jour d’Applications (SQLXML 4.0) | Microsoft Docs
+title: Exemples d’applications mise à jour (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780417"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Exemples d'applications de code de mise à jour (SQLXML 4.0)
   Cette section fournit des exemples d'utilisation de codes de mise à jour.  
   
- Tous les exemples dans cette section utilisent la base de données AdventureWorks dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutes les mises à jour sont appliquées aux tables de la base de données AdventureWorks.  
+ Tous les exemples de cette section utilisent l’exemple de base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]données AdventureWorks dans. Toutes les mises à jour sont appliquées aux tables de la base de données AdventureWorks.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Exécution d’une mise à jour à l’aide de ADO &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  
+ [Exécution d’un mise à jour à l’aide d’ADO &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  
  Fournit une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic qui utilise ADO pour établir une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécuter un code de mise à jour.  
   
- [Exécution d’une mise à jour à l’aide de OLE DB &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md)  
+ [Exécution d’un mise à jour à l’aide de OLE DB &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md)  
  Fournit un exemple fonctionnel de l'utilisation d'OLE DB pour exécuter un code de mise à jour.  
   
- [À l’aide d’une mise à jour dans un exemple d’Application ASP &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md)  
+ [Utilisation d’un mise à jour dans un exemple d’application ASP &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md)  
  Fournit une application ASP (Active Server Pages) pour mettre à jour les informations client dans la table Person.Contact de la base de données AdventureWorks.  
   
   

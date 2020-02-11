@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773885"
 ---
 # <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est un environnement intégré pour l’accès à configurer, gérer, administrer et développer tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS associe un groupe d'outils graphiques à des éditeurs de script performants pour permettre aux développeurs et aux administrateurs de tous niveaux d'avoir accès à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) est un environnement intégré d’accès, de configuration, de gestion, d’administration et de développement de tous les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]composants de. SSMS associe un groupe d'outils graphiques à des éditeurs de script performants pour permettre aux développeurs et aux administrateurs de tous niveaux d'avoir accès à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  SSMS associe dans un environnement unique les fonctionnalités d'Enterprise Manager, de l'Analyseur de requêtes et d'Analysis Manager, comprises dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En outre, SSMS fonctionne avec tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tels que [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les développeurs retrouvent des outils familiers et les administrateurs disposent d'un utilitaire complet qui associe des outils graphiques conviviaux à des fonctionnalités de scripts puissantes.  
   
- Téléchargez et installez SSMS à partir de la [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
+ Téléchargez et installez SSMS à partir du [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Fonctionnalités de SQL Server Management Studio](features-in-sql-server-management-studio.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "62773885"
  [Se connecter à n'importe quel composant de SQL Server à partir de SQL Server Management Studio](../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
  Décrit comment se connecter aux instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et effectuer certaines tâches sans connexion.  
   
- [Explorateur d'objets](../ssms/object/object-explorer.md)  
+ [l’Explorateur d’objets](../ssms/object/object-explorer.md)  
  Décrit les fonctionnalités de l'Explorateur d'objets.  
   
  [Assistance utilisateur de SQL Server Management Studio](../ssms/user-assistance-in-sql-server-management-studio.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "62773885"
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
  Décrit comment utiliser l'environnement d'édition performant dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour modifier des scripts [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX et XML/A.  
   
- [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)  
+ [Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)  
  Décrit les possibilités et les limites de l'utilisation de l'Éditeur de requête en mode SQLCMD.  
   
  [Codage en couleurs dans les éditeurs de requête](../relational-databases/scripting/color-coding-in-query-editors.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "62773885"
  [Solutions &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
  Décrit comment développer des projets de script et des solutions.  
   
- [Explorateur de modèles](../ssms/template/template-explorer.md)  
+ [l’Explorateur de modèles](../ssms/template/template-explorer.md)  
  Décrit comment utiliser les modèles [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et créer des modèles personnalisés.  
   
  [Pages des propriétés dans SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "62773885"
  Décrit les outils Visual Database Tools que vous pouvez utiliser pour créer des requêtes, concevoir ou modifier une structure de base de données ou mettre à jour des données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+ [Affichez ou modifiez les propriétés du serveur &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

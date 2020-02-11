@@ -1,5 +1,5 @@
 ---
-title: Propriétés de l’Index de recherche en texte intégral (Page Général) | Microsoft Docs
+title: Propriétés de l’index de recherche en texte intégral (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778940"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriétés d'index de recherche en texte intégral (page Général)
-  **Pour afficher ou modifier les propriétés modifiables d’un index de recherche en texte intégral**  
+  **Pour afficher ou changer les propriétés modifiables d'un index de recherche en texte intégral**  
   
--   [Gérer les index en texte intégral](../relational-databases/indexes/indexes.md)  
+-   [Gérer les index de recherche en texte intégral](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Catalogue de texte intégral**  
@@ -34,10 +34,10 @@ ms.locfileid: "62778940"
  **Table**  
  Affiche le nom de la table dans laquelle est défini l'index de recherche en texte intégral.  
   
- **Clé d’Index de recherche en texte intégral**  
+ **Clé d'index de recherche en texte intégral**  
  Affiche le nom de la clé d'index de recherche en texte intégral, qui est un index unique dans une colonne unique de la table.  
   
- **État de remplissage de table de texte intégral**  
+ **État de remplissage de la table de texte intégral**  
  Affiche l'état de remplissage de la table indexée de texte intégral.  
   
  Les valeurs possibles sont les suivantes :  
@@ -61,11 +61,11 @@ ms.locfileid: "62778940"
   
  0 = False  
   
- **Index de recherche en texte intégral**  
+ **Groupe de fichiers d'un index de recherche en texte intégral**  
  Le groupe de fichiers auquel l'index de recherche en texte intégral appartient.  
   
- **Liste de mots vides de l’index de recherche en texte intégral**  
- La liste de mots vides actuellement associée à l'index de recherche en texte intégral. Une liste de mots vides est une liste de [mots vides](../relational-databases/search/full-text-search.md). La liste de mots vides associée à un index de recherche en texte intégral, s'applique aux requêtes de texte intégral sur cet index. Vous pouvez supprimer la liste de mots vides de l’index en sélectionnant  **\<OFF >** dans la liste, ou vous pouvez sélectionner une autre liste de mots vides ;  **\<Système >** indique la liste de mots vides système.  
+ **Index de recherche en texte intégral (STOPLIST)**  
+ La liste de mots vides actuellement associée à l'index de recherche en texte intégral. Une liste de mots vides est une liste de [mots vides](../relational-databases/search/full-text-search.md). La liste de mots vides associée à un index de recherche en texte intégral, s'applique aux requêtes de texte intégral sur cet index. Vous pouvez supprimer la liste de mots vides de l’index en sélectionnant ** \<dés>** dans la liste, ou vous pouvez sélectionner une autre liste de mots vides ;>système indique la STOPLIST du système. ** \<**  
   
  **Pour créer une liste de mots vides**  
   
@@ -74,21 +74,21 @@ ms.locfileid: "62778940"
  **Liste de propriétés de recherche**  
  Liste de propriétés de recherche actuellement associée à l'index de recherche en texte intégral, le cas échéant. Une liste de propriétés de recherche spécifie un ensemble de propriétés du document incluses dans l'index de recherche en texte intégral associé, s'il est rempli. Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- **\<OFF >** indique qu’il n’existe actuellement aucune liste de propriétés de recherche associée à l’index. Vous pouvez supprimer la liste de propriétés de recherche en cours de l’index en sélectionnant  **\<Off >** dans la liste, ou vous pouvez sélectionner une liste de propriétés de recherche différente dans la liste. Seules les listes des propriétés de recherche de la base de données actuelle sont répertoriées ici.  
+ OFF>indique qu’il n’existe actuellement aucune liste de propriétés de recherche associée à l’index. ** \<** Vous pouvez supprimer la liste de propriétés de recherche actuelle de l’index en sélectionnant ** \<dés>** dans la liste, ou vous pouvez sélectionner une autre liste de propriétés de recherche dans la liste. Seules les listes des propriétés de recherche de la base de données actuelle sont répertoriées ici.  
   
 > [!NOTE]  
 >  Vous pouvez associer une liste de propriétés de recherche donnée à plusieurs index de recherche en texte intégral dans la même base de données.  
   
  **Pour créer une liste de propriétés de recherche**  
   
--   [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+-   [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
- **Nombre d’éléments de la recherche en texte intégral de table**  
+ **Nombre d'éléments de la table de texte intégral**  
  Indique le nombre de lignes qui ont été correctement indexées en texte intégral.  
   
  Cette propriété correspond à la propriété `TableFulltextItemCount` retournée par la fonction OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
- **Documents traités de la recherche en texte intégral table**  
+ **Documents traités de la table de texte intégral**  
  Affiche le nombre de lignes qui ont été traitées depuis le démarrage de l'indexation de texte intégral. Dans une table en cours d'indexation pour une recherche en texte intégral, toutes les colonnes d'une ligne sont considérées comme faisant partie d'un même document à indexer. Les lignes supprimées ne sont pas comptées.  
   
 |||  
@@ -96,19 +96,19 @@ ms.locfileid: "62778940"
 |0|Indique que l'indexation de texte intégral est terminée et qu'aucun remplissage n'est actif.|  
 |> 0|Dans le cas d'un remplissage actif, indique le nombre de documents traités par des opérations d'insertion ou de mise à jour depuis une opération de remplissage, d'activation d'un suivi de modification avec remplissage de l'index de mise à jour en arrière-plan (par exemple, suivi des modifications automatique), de modification du schéma d'index de recherche en texte intégral, de reconstruction du catalogue de texte intégral, de redémarrage de l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], etc.|  
   
- **Table de texte intégral modifications en attente**  
+ **Modifications en attente de la table de texte intégral**  
  Nombre d'entrées de suivi des modifications en attente de traitement.  
   
  0 = Le suivi des modifications n'est pas activé.  
   
  NULL = La table n'a pas d'index de recherche en texte intégral.  
   
- **Nombre d’échecs de recherche en texte intégral de table**  
+ **Nombre d'erreurs de la table de texte intégral**  
  Nombre de lignes que la recherche en texte intégral n'a pas indexées.  
   
  0 = Le remplissage est terminé.  
   
- \>0 = une des opérations suivantes :  
+ \>0 = l’un des éléments suivants :  
   
 -   Nombre de documents qui n'ont pas été indexés depuis le début d'un remplissage de suivi des modifications intégral, incrémentiel ou manuel.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62778940"
   
 |||  
 |-|-|  
-|**True**|Enabled|  
+|**True**|activé|  
 |**False**|Désactivé|  
   
  **Suivi des modifications**  
@@ -129,18 +129,18 @@ ms.locfileid: "62778940"
   
 |||  
 |-|-|  
-|**Off**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
-|**Manual**|L'index de recherche en texte intégral n'est pas mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes. Toutefois, les modifications apportées aux données sous-jacentes sont conservées et vous pouvez les propager à l'index de recherche en texte intégral soit de manière planifiée à l'aide de l'Agent SQL Server, soit de façon manuelle.|  
-|**Automatic**|L'index de recherche en texte intégral est mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes dans la table de base.|  
+|**Préférable**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
+|**Manuel**|L'index de recherche en texte intégral n'est pas mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes. Toutefois, les modifications apportées aux données sous-jacentes sont conservées et vous pouvez les propager à l'index de recherche en texte intégral soit de manière planifiée à l'aide de l'Agent SQL Server, soit de façon manuelle.|  
+|**Automatique**|L'index de recherche en texte intégral est mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes dans la table de base.|  
   
- **Remplir à nouveau les index**  
+ **Remplir à nouveau l'index**  
  Cliquez pour démarrer le remplissage de l'index de recherche en texte intégral lors de la sortie de la boîte de dialogue. Sélectionnez l'un des types de remplissage suivants :  
   
 |||  
 |-|-|  
-|**Complet**|Au cours d'un remplissage complet d'une table, les entrées d'index sont créées pour toutes les lignes.|  
-|**Incremental**|Le remplissage incrémentiel permet de mettre à jour l'index de recherche en texte intégral pour les lignes ajoutées, supprimées ou modifiées après le dernier remplissage ou pendant l'exécution de ce dernier. Pour effectuer un remplissage incrémentiel, il est nécessaire que la table de base contienne une colonne du type de données `timestamp`.|  
-|**Update**|L'index de recherche en texte intégral est mis à jour chaque fois que les données de la table de base sont modifiées.|  
+|**Complète**|Au cours d'un remplissage complet d'une table, les entrées d'index sont créées pour toutes les lignes.|  
+|**Incrémentielle**|Le remplissage incrémentiel permet de mettre à jour l'index de recherche en texte intégral pour les lignes ajoutées, supprimées ou modifiées après le dernier remplissage ou pendant l'exécution de ce dernier. Pour effectuer un remplissage incrémentiel, il est nécessaire que la table de base contienne une colonne du type de données `timestamp`.|  
+|**Mise à jour**|L'index de recherche en texte intégral est mis à jour chaque fois que les données de la table de base sont modifiées.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Commencer à utiliser la recherche en texte intégral](../relational-databases/search/get-started-with-full-text-search.md)  

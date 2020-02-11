@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918970"
 ---
 # <a name="set-or-change-the-column-collation"></a>Définir ou changer le classement des colonnes
   Vous pouvez remplacer le classement de la base de données pour les données `char`, `varchar`, `text`, `nchar`, `nvarchar` et `ntext` en spécifiant un classement différent pour une colonne spécifique d'une table et en utilisant l'un des éléments suivants :  
   
--   Clause COLLATE de [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) et [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). Exemple :  
+-   Clause COLLATE de [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) et [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql). Par exemple :  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -36,9 +36,9 @@ ms.locfileid: "62918970"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](collation-and-unicode-support.md).  
   
--   À l’aide de la `Column.Collation` propriété dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Utilisation de `Column.Collation` la propriété [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans SMO (Management Objects).  
   
  Vous ne pouvez pas modifier le classement d'une colonne actuellement référencée par l'un des éléments suivants :  
   
@@ -55,7 +55,8 @@ ms.locfileid: "62918970"
  Quand vous utilisez **tempdb**, la clause [COLLATE](/sql/t-sql/statements/collations) contient une option *database_default* pour spécifier qu’une colonne de table temporaire utilise, pour la connexion, le classement par défaut de la base de données utilisateur active à la place du classement de **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Classements et colonnes text  
- Vous pouvez insérer ou mettre à jour les valeurs d'une colonne `text` dont le classement est différent de la page de codes du classement par défaut de la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement les valeurs en fonction du classement de la colonne.  
+ Vous pouvez insérer ou mettre à jour les valeurs d'une colonne `text` dont le classement est différent de la page de codes du classement par défaut de la base de données. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement les valeurs en fonction du classement de la colonne.  
   
 ## <a name="collations-and-tempdb"></a>Classements et tempdb  
  La base de données **tempdb** est créée à chaque démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a le même classement par défaut que la base de données **model** . Il est en général identique au classement par défaut de l'instance. Si vous créez une base de données utilisateur et spécifiez un classement par défaut différent de **model**, la base de données utilisateur a un classement par défaut différent de **tempdb**. Toutes les procédures stockées ou tables temporaires sont créées et stockées dans **tempdb**. En d'autres termes, toutes les colonnes implicites des tables temporaires et toutes les constantes, variables et paramètres modifiables par défaut des procédures stockées temporaires ont d'autres classements que les objets comparables créés dans les tables et procédures stockées permanentes.  
@@ -68,7 +69,7 @@ USE TestDB;
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   
- Dans ce système, la base de données **tempdb** utilise le classement Latin1_General_CS_AS avec la page de codes 1252, et `TestDB` et `TestPermTab.Col1` utilisent le classement `Estonian_CS_AS` avec la page de codes 1257. Exemple :  
+ Dans ce système, la base de données **tempdb** utilise le classement Latin1_General_CS_AS avec la page de codes 1252, et `TestDB` et `TestPermTab.Col1` utilisent le classement `Estonian_CS_AS` avec la page de codes 1257. Par exemple :  
   
 ```  
 USE TestDB;  
@@ -81,13 +82,13 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- Dans l’exemple précédent, la base de données **tempdb** utilise le classement Latin1_General_CS_AS, et `TestDB` et `TestTab.Col1` utilisent le classement `Estonian_CS_AS` . Exemple :  
+ Dans l’exemple précédent, la base de données **tempdb** utilise le classement Latin1_General_CS_AS, et `TestDB` et `TestTab.Col1` utilisent le classement `Estonian_CS_AS` . Par exemple :  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Étant donné que **tempdb** utilise le classement du serveur par défaut et `TestPermTab.Col1` utilise un autre classement, SQL Server affiche l’erreur : « Impossible de résoudre un conflit de classement entre « Latin1_General_CI_AS_KS_WS » et « Chinese_simplified_pinyin_100_ci_as » dans égal à l’opération ».  
+ Comme **tempdb** utilise le classement par défaut du serveur et que `TestPermTab.Col1` utilise un autre classement, SQL Server affiche l’erreur suivante : impossible de résoudre le conflit de classement entre « Latin1_General_100_CI_AS_KS_WS » et « Chinese_Simplified_Pinyin_100_CI_AS » dans l’opération égal à.  
   
  Pour éviter l'erreur, vous pouvez utiliser une des solutions suivantes :  
   
@@ -112,6 +113,6 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
 ## <a name="see-also"></a>Voir aussi  
  [Définir ou modifier le classement du serveur](set-or-change-the-server-collation.md)   
  [Définir ou modifier le classement de la base de données](set-or-change-the-database-collation.md)   
- [Prise en charge d’Unicode et du classement](collation-and-unicode-support.md)  
+ [Prise en charge d'Unicode et du classement](collation-and-unicode-support.md)  
   
   

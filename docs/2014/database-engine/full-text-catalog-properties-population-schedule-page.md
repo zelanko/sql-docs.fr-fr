@@ -1,5 +1,5 @@
 ---
-title: Propriétés du catalogue de texte intégral (Page de planification de remplissage) | Microsoft Docs
+title: Propriétés du catalogue de texte intégral (page planification du remplissage) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778821"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Propriétés du catalogue de texte intégral (page Planification du remplissage)

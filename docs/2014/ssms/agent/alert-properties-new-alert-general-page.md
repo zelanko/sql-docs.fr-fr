@@ -1,5 +1,5 @@
 ---
-title: Alerte des propriétés de nouvelle alerte (Page Général) | Microsoft Docs
+title: Propriétés de l’alerte-nouvelle alerte (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062145"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>Alerte de propriétés de nouvelle alerte (Page Général)
-  Utilisez cette page pour afficher et modifier les propriétés générales des alertes de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="alert-properties-new-alert-general-page"></a>Propriétés de l’alerte-nouvelle alerte (page général)
+  Utilisez cette page pour afficher et modifier les propriétés générales des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertes de l’agent.  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -32,20 +32,20 @@ ms.locfileid: "63062145"
  **Type**  
  Sélectionnez le type d'alerte :  
   
--   Une**alerte d'événement SQL Server** répond aux messages dans le journal des événements de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+-   **SQL Server alerte d’événement** répond aux messages dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] le journal des événements Windows.  
   
--   Une**alerte de condition de performances SQL Server** répond à une condition spécifique liée à un compteur de performance.  
+-   **SQL Server alerte de condition de performance** répond à une condition spécifique dans un compteur de performance.  
   
--   Une**alerte d’événement WMI** répond à un événement WMI (Windows Management Instrumentation).  
+-   L' **alerte d’événement WMI** répond à un événement de Windows Management Instrumentation (WMI).  
   
 ## <a name="sql-server-event-alert-options"></a>Options des alertes d'événement SQL Server  
  **Nom de la base de données**  
  Indiquez une base de données pour l’événement, ou sélectionnez **Toutes les bases de données** pour répondre à un message quelle que soit la base de données dans laquelle l’événement a lieu.  
   
- **Numéro d'erreur**  
+ **Numéro d’erreur**  
  Indique que cet événement répond à une erreur. Précisez le numéro de l'erreur.  
   
- **Severity**  
+ **severity**  
  Indique que cet événement répond à un message quelconque d'un niveau de gravité spécifique. Précisez le niveau de gravité.  
   
  **Déclencher une alerte quand le message contient**  
@@ -55,7 +55,7 @@ ms.locfileid: "63062145"
  Spécifiez la chaîne à utiliser pour filtrer les événements.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Alertes de condition de performances de SQL Server  
- **Objet**  
+ **Object**  
  Précisez l'objet de performance à surveiller.  
   
  **Compteur**  
@@ -64,7 +64,7 @@ ms.locfileid: "63062145"
  **Instance**  
  Indiquez l'instance du compteur à surveiller.  
   
- **Alerte si compteur**  
+ **Alerte si le compteur**  
  Spécifiez le comportement du compteur auquel l'alerte répond. Par exemple, vous pouvez faire en sorte que l’alerte réponde à une baisse de la valeur du compteur **Espace disponible dans tempdb (Ko)** en deçà d’une valeur spécifiée, ou à un dépassement d’une valeur spécifiée par la valeur du compteur **Compilations SQL/s** .  
   
  **Valeur**  
@@ -79,8 +79,8 @@ ms.locfileid: "63062145"
   
 ## <a name="see-also"></a>Voir aussi  
  [Alerts](alerts.md)   
- [À l’aide de WQL avec le fournisseur WMI pour les événements serveur](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
- [Créer une alerte à l’aide d’un numéro d’erreur](create-an-alert-using-an-error-number.md)   
- [Créer une alerte à l’aide d’un niveau de gravité](create-an-alert-using-severity-level.md)  
+ [Utilisation de WQL avec le fournisseur WMI pour les événements de serveur](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
+ [Créer une alerte en utilisant un numéro d’erreur](create-an-alert-using-an-error-number.md)   
+ [Créer une alerte à l'aide d'un niveau de gravité](create-an-alert-using-severity-level.md)  
   
   

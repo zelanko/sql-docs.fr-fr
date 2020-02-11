@@ -1,5 +1,5 @@
 ---
-title: L’emprunt d’identité et de sécurité de l’intégration CLR | Microsoft Docs
+title: Emprunt d’identité et sécurité de l’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781127"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Emprunt d'identité et sécurité de l'intégration du CLR
   Lorsque du code managé accède à des ressources externes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'emprunte pas automatiquement l'identité du contexte d'exécution actuel sous lequel la routine s'exécute. Le code dans les assemblys `EXTERNAL_ACCESS` et `UNSAFE` peut emprunter l'identité du contexte d'exécution actuel de manière explicite.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les changements de comportement d’emprunt d’identité, consultez [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Pour plus d’informations sur les changements de comportement dans l’emprunt d’identité, consultez [modifications critiques apportées aux fonctionnalités de moteur de base de données dans SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  Le fournisseur d'accès aux données in-process fournit une interface de programmation d'applications, `SqlContext.WindowsIdentity`, qui peut être utilisée pour extraire le jeton associé au contexte de sécurité actuel. Le code managé dans les assemblys `EXTERNAL_ACCESS` et `UNSAFE` peut utiliser cette méthode pour extraire le contexte et utiliser la méthode `WindowsIdentity.Impersonate` .NET Framework pour emprunter l'identité de contexte. Les restrictions suivantes s'appliquent lorsque le code utilisateur emprunte l'identité de manière explicite :  
   
@@ -39,10 +39,10 @@ ms.locfileid: "62781127"
   
  Lorsque le code s'exécute dans un contexte dont l'identité a été empruntée qui est différent de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il ne peut pas effectuer d'appels d'accès aux données in-process ; il doit annuler le contexte d'emprunt d'identité avant d'effectuer des appels d'accès aux données in-process. Lorsque l'accès aux données in-process est effectué à partir de code managé, le contexte d'exécution d'origine du point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le code managé est toujours utilisé pour l'autorisation.  
   
- Les assemblys `EXTERNAL_ACCESS` et `UNSAFE` accèdent tous deux aux ressources de système d'exploitation avec le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à moins qu'ils n'empruntent volontairement l'identité du contexte de sécurité actuel comme décrit précédemment. Pour cette raison, les auteurs des assemblys `EXTERNAL_ACCESS` nécessitent un niveau supérieur d'approbation que ceux des assemblys `SAFE`, spécifié par l'autorisation au niveau de la connexion `EXTERNAL ACCESS`. L'autorisation `EXTERNAL ACCESS` doit être accordée uniquement aux connexions approuvées pour exécuter du code sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Les assemblys `EXTERNAL_ACCESS` et `UNSAFE` accèdent tous deux aux ressources de système d'exploitation avec le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à moins qu'ils n'empruntent volontairement l'identité du contexte de sécurité actuel comme décrit précédemment. Pour cette raison, les auteurs des assemblys `EXTERNAL_ACCESS` nécessitent un niveau supérieur d'approbation que ceux des assemblys `SAFE`, spécifié par l'autorisation au niveau de la connexion `EXTERNAL ACCESS`. L'autorisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être accordée uniquement aux connexions approuvées pour exécuter du code sous le compte de service `EXTERNAL ACCESS`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécurité d’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
- [Emprunt d’identité et informations d’identification pour les connexions](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
+ [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Emprunt d'identité et informations d'identification pour les connexions](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   
   

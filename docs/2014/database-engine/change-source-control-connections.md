@@ -1,5 +1,5 @@
 ---
-title: Modifier les connexions du contrôle de code Source | Microsoft Docs
+title: Modifier les connexions du contrôle de code source | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812788"
 ---
 # <a name="change-source-control-connections"></a>Modifier les connexions du contrôle de code source
@@ -31,11 +31,11 @@ ms.locfileid: "62812788"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Pour ouvrir l'interface utilisateur du contrôle de code source à partir de l'environnement Studio  
   
-1.  Sur le **fichier** menu, pointez sur **contrôle de code Source**, puis cliquez sur **démarrer Microsoft Visual SourceSafe**.  
+1.  Dans le menu **fichier** , pointez sur **contrôle de code source**, puis cliquez sur **Démarrer Microsoft Visual SourceSafe**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation de contrôle de code source](../../2014/database-engine/source-control-basics.md)   
- [Définir les Options de contrôle de code Source](../../2014/database-engine/set-source-control-options.md)   
+ [Notions de base sur le contrôle de code source](../../2014/database-engine/source-control-basics.md)   
+ [Définir les options de contrôle de code source](../../2014/database-engine/set-source-control-options.md)   
  [Exclure des fichiers du contrôle de code source](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

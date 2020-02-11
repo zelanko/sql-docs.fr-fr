@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793926"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -49,7 +49,7 @@ ms.locfileid: "67793926"
  Les scénarios suivants illustrent des utilisations standard de la réplication d'égal à égal.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>Topologie comprenant deux bases de données participantes  
- ![Réplication d’égal à égal, deux nœuds](../media/repl-multinode-01.gif "Réplication d’égal à égal, deux nœuds")  
+ ![Réplication d'égal à égal, deux nœuds](../media/repl-multinode-01.gif "Réplication d'égal à égal, deux nœuds")  
   
  Les deux illustrations ci-dessus montrent deux bases de données participantes dont le trafic utilisateur est dirigé vers les bases de données par le biais d'un serveur d'applications. Cette configuration peut être utilisée avec de nombreuses applications (des sites Web aux applications de groupe de travail) et présente les avantages suivants :  
   
@@ -61,22 +61,22 @@ ms.locfileid: "67793926"
   
 -   À gauche, les mises à jour sont partitionnées entre les deux serveurs. Si la base de données contenait un catalogue de produits, une application personnalisée pourrait par exemple diriger vers le nœud **A** les mises à jour des produits dont le nom commence par les lettres A à M et vers le nœud **B** les mises à jour des produits dont le nom commence par les lettres N à Z. Les mises à jour sont ensuite répliquées sur l'autre nœud.  
   
--   À droite, toutes les mises à jour sont dirigées vers le nœud **B**. De là, les mises à jour sont répliquées sur le nœud **A**. Si le nœud **B** est hors connexion (pour cause de maintenance, par exemple), le serveur d’applications peut diriger toutes les activités vers le nœud **A**. Lorsque le nœud **B** revient en ligne, il peut de nouveau recevoir les mises à jour ; le serveur d’applications peut alors retransférer toutes les mises à jour vers **B** ou continuer à les diriger vers **A**.  
+-   À droite, toutes les mises à jour sont dirigées vers le nœud **B**. À partir de là, les mises à jour sont répliquées sur **le nœud A**. Si **B** est hors connexion (par exemple, pour la maintenance), le serveur d’applications peut diriger toutes les activités vers **un**. Lorsque **B** est de nouveau en ligne, les mises à jour peuvent être transmises à celui-ci et le serveur d’applications peut retransférer toutes les mises à jour vers **B** ou continuer à les diriger vers **un**.  
   
  Si la réplication d'égal à égal prend en charge les deux méthodes, l'exemple de mise à jour centralisée à droite est également souvent utilisé avec la réplication transactionnelle standard.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topologie comprenant au moins trois bases de données participantes  
- ![Réplication d’égal à égal vers des emplacements dispersés](../media/repl-multinode-02.gif "Réplication d’égal à égal vers des emplacements dispersés")  
+ ![Réplication d'égal à égal vers des emplacements dispersés](../media/repl-multinode-02.gif "Réplication d'égal à égal vers des emplacements dispersés")  
   
  L'illustration ci-dessus montre trois bases de données participantes qui fournissent des données à une entreprise internationale d'assistance technique de logiciels dont les bureaux se trouvent à Los Angeles, Londres et Taipei. Les ingénieurs de support enregistrent les appels clients dans chaque bureau et ils entrent et mettent à jour les informations sur chaque appel client. Les fuseaux horaires des trois bureaux ayant huit heures d'écart, il n'y a pas de chevauchement pendant une journée de travail : lorsque le bureau de Taipei ferme, le bureau de Londres ouvre. Si un appel n'est pas terminé à la fermeture d'un bureau, il est transféré à un conseiller client dans un autre bureau qui ouvre.  
   
  Chaque bureau possède un serveur de base de données et un serveur d'applications dont se servent les ingénieurs de support lorsqu'ils entrent et mettent à jour les informations sur les appels clients. La topologie est partitionnée selon l'horaire. Les mises à jour n'ont donc lieu que sur le nœud actuellement ouvert, puis elles sont acheminées aux autres bases de données participantes. Cette topologie présente les avantages suivants :  
   
--   Indépendance sans isolement : Chaque bureau peut insérer, mettre à jour, ou supprimer des données indépendamment, mais également partager les données, car elle est répliquée sur tous les autres bases de données participantes.  
+-   indépendance sans isolement : chaque bureau peut insérer, mettre à jour ou supprimer des données indépendamment, mais aussi les partager du fait de leur réplication sur toutes les bases de données participantes ;  
   
 -   disponibilité élevée en cas de panne ou de maintenance sur une ou plusieurs bases de données participante.  
   
-     ![Réplication d’égal à égal, trois et quatre nœuds](../media/repl-multinode-04.gif "Réplication d’égal à égal, trois et quatre nœuds")  
+     ![Réplication d'égal à égal, trois et quatre nœuds](../media/repl-multinode-04.gif "Réplication d'égal à égal, trois et quatre nœuds")  
   
  L'illustration ci-dessus montre l'ajout d'un nœud dans la topologie qui en compte déjà trois. Un nœud pourrait être ajouté dans ce scénario pour les raisons suivantes :  
   
@@ -92,7 +92,7 @@ ms.locfileid: "67793926"
 ## <a name="considerations-for-using-peer-to-peer-replication"></a>Considérations sur l'utilisation de la réplication d'égal à égal  
  Cette section fournit des informations et des consignes à considérer lors de l'utilisation de la réplication d'égal à égal.  
   
-### <a name="general-considerations"></a>Considérations générales  
+### <a name="general-considerations"></a>Considérations d’ordre général  
   
 -   La réplication d'égal à égal est disponible uniquement dans les versions Enterprise de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793926"
   
     -   Les noms d'objets, le schéma d'objet et les noms de publication doivent être identiques.  
   
-    -   Les publications doivent autoriser la réplication des modifications de schéma. (Pour cela la propriété de publication **replicate_ddl** doit avoir la valeur **1**, ce qui est le paramètre par défaut.) Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
+    -   Les publications doivent autoriser la réplication des modifications de schéma. (Il s’agit du paramètre **1** pour la propriété de publication **replicate_ddl**, qui est le paramètre par défaut.) Pour plus d’informations, consultez [modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
   
     -   Le filtrage des lignes et des colonnes n'est pas pris en charge.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "67793926"
   
 -   L'utilisation de colonnes d'identité est déconseillée. Avec les identités, vous devez gérer manuellement les plages affectées aux tables sur chaque base de données participante. Pour plus d’informations, consultez la section « Affectation de plages pour la gestion manuelle de plages d’identité » dans [Répliquer des colonnes d’identité](../publish/replicate-identity-columns.md).  
   
-### <a name="feature-restrictions"></a>Restrictions liées aux fonctionnalités  
+### <a name="feature-restrictions"></a>Restrictions des fonctionnalités  
  La réplication d'égal à égal prend en charge les principales fonctionnalités de la réplication transactionnelle, mais ne prend pas en charge les options suivantes :  
   
 -   initialisation et réinitialisation avec instantané ;  
@@ -137,24 +137,24 @@ ms.locfileid: "67793926"
   
 -   paramètre de l'Agent de Distribution **-SubscriptionStreams** et paramètre de l'Agent de lecture du journal **-MaxCmdsInTran**;  
   
--   Les propriétés de l’article  **\@destination_owner** et  **\@destination_table**.  
+-   Les propriétés ** \@** d’article destination_owner et ** \@destination_table**.  
 
 -   La réplication transactionnelle d’égal à égal ne prend pas en charge la création d’un abonnement transactionnel à sens unique à une publication d’égal à égal.
   
  Les propriétés suivantes présentent des considérations spéciales :  
   
--   La propriété de publication  **\@allow_initialize_from_backup** requiert la valeur `true`.  
+-   La propriété ** \@** de `true`publication allow_initialize_from_backup requiert la valeur.  
   
--   La propriété d’article  **\@replicate_ddl** requiert la valeur `true`;  **\@identityrangemanagementoption** requiert une valeur de `manual`; et  **\@état** nécessite que l’option **24** est défini.  
+-   La propriété ** \@** de `true`l’article replicate_ddl requiert la valeur ; identityrangemanagementoption requiert une valeur `manual`; ** \@** l' ** \@État** et requiert que l’option **24** soit définie.  
   
--   La valeur de propriétés de l’article  **\@ins_cmd**,  **\@del_cmd**, et  **\@upd_cmd** ne peut pas être définie sur `SQL`.  
+-   La valeur des propriétés `SQL` ** \@** d’article ins_cmd, ** \@del_cmd**et ** \@upd_cmd** ne peut pas être définie sur.  
   
--   La propriété d’abonnement  **\@sync_type** requiert une valeur de `none` ou `automatic`.  
+-   La propriété `none` ** \@** d’abonnement sync_type requiert la valeur ou `automatic`.  
   
 ### <a name="maintenance-considerations"></a>Considérations sur la maintenance  
  Pour les actions suivantes, le système doit être suspendu. Ce qui signifie que toute activité sur les tables publiées doit être interrompue au niveau de tous les nœuds et que la réception par chacun des nœuds de toutes les modifications provenant des autres nœuds doit être vérifiée.  
   
--   Ajout d’un [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] nœud à une topologie existante  
+-   Ajout d' [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] un nœud à une topologie existante  
   
 -   ajout d'un article à une publication existante ;  
   

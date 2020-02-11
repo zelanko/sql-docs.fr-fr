@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767719"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
@@ -43,11 +43,11 @@ ms.locfileid: "62767719"
   
  Le diagramme qui suit montre un package simple composé d'un conteneur de boucles For contenant une tâche d'exécution SQL.  
   
- ![Package, boucle For, hôte de tâche et tâche d’exécution SQL](media/mw-dts-eventhandlerpkg.gif "Package, boucle For, hôte de tâche et tâche d’exécution SQL")  
+ ![Package, boucle For, hôte de tâche et tâche d'exécution SQL](media/mw-dts-eventhandlerpkg.gif "Package, boucle For, hôte de tâche et tâche d'exécution SQL")  
   
  Seul le package possède un gestionnaire d'événements (pour son événement `OnError`). Si une erreur se produit pendant l'exécution de la tâche d'exécution SQL, le gestionnaire d'événements `OnError` du package s'exécute. Le diagramme qui suit montre la séquence d'appels qui conduit à l'exécution du gestionnaire d'événements `OnError` du package.  
   
- ![Flux de gestionnaire d’événements](media/mw-dts-eventhandlers.gif "Flux de gestionnaire d’événements")  
+ ![Flux de gestionnaire d'événements](media/mw-dts-eventhandlers.gif "Flux de gestionnaire d'événements")  
   
  Les gestionnaires d'événements sont membres d'une collection de gestionnaires d'événements. Tous les conteneurs incluent cette collection. Si vous créez le package à l’aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , vous pouvez afficher les membres des collections de gestionnaires d’événements dans les dossiers **Gestionnaires d’événements** de l’onglet **Explorateur de package** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62767719"
 -   spécifiez le mode de journalisation utilisé par le gestionnaire d'événements.  
   
 ## <a name="event-handler-content"></a>Contenu du gestionnaire d'événements  
- La création d'un gestionnaire d'événements est similaire à la création d'un package. Un gestionnaire d'événements contient des tâches et des conteneurs qui sont mis en séquence de manière à former un flux de contrôle et peut inclure des flux de données. Le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] comprend un onglet **Gestionnaires d’événements** qui permet de créer des gestionnaires d’événements personnalisés. Pour plus d’informations, consultez [gestionnaires d’événements de Package SSIS](integration-services-ssis-event-handlers.md).  
+ La création d'un gestionnaire d'événements est similaire à la création d'un package. Un gestionnaire d'événements contient des tâches et des conteneurs qui sont mis en séquence de manière à former un flux de contrôle et peut inclure des flux de données. Le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] comprend un onglet **Gestionnaires d’événements** qui permet de créer des gestionnaires d’événements personnalisés. Pour plus d’informations, consultez [gestionnaires d’événements de package SSIS](integration-services-ssis-event-handlers.md).  
   
  Vous pouvez également créer des gestionnaires d'événements par programme. Pour plus d’informations, consultez [Gestion des erreurs et des avertissements](building-packages-programmatically/handling-events-programmatically.md).  
   
@@ -73,25 +73,25 @@ ms.locfileid: "62767719"
   
 |Gestionnaire d'événements|Événement|  
 |-------------------|-----------|  
-|`OnError`|Le Gestionnaire d’événements pour le `OnError` événement. Cet événement est déclenché par un exécutable lorsqu'une erreur se produit.|  
-|**OnExecStatusChanged**|Gestionnaire d’événements de l’événement **OnExecStatusChanged** . Cet événement est déclenché par un exécutable lorsque son état d'exécution change.|  
-|**OnInformation**|Gestionnaire d’événements de l’événement **OnInformation** . Cet événement se déclenche au cours de la validation et de l'exécution d'un exécutable afin de rapporter des informations. Cet événement véhicule des informations uniquement (aucune erreur ni avertissement).|  
-|**OnPostExecute**|Gestionnaire d’événements de l’événement **OnPostExecute** . Cet événement est déclenché par un exécutable immédiatement après la fin de son exécution.|  
-|**OnPostValidate**|Gestionnaire d’événements de l’événement **OnPostValidate** . Cet événement est déclenché par un exécutable lorsque sa validation est terminée.|  
+|`OnError`|Gestionnaire d’événements pour l' `OnError` événement. Cet événement est déclenché par un exécutable lorsqu'une erreur se produit.|  
+|**OnExecStatusChanged**|Gestionnaire d’événements de l’événement **OnExecStatusChanged**. Cet événement est déclenché par un exécutable lorsque son état d'exécution change.|  
+|**OnInformation**|Gestionnaire d’événements de l’événement **OnInformation**. Cet événement se déclenche au cours de la validation et de l'exécution d'un exécutable afin de rapporter des informations. Cet événement véhicule des informations uniquement (aucune erreur ni avertissement).|  
+|**OnPostExecute**|Gestionnaire d’événements de l’événement **OnPostExecute**. Cet événement est déclenché par un exécutable immédiatement après la fin de son exécution.|  
+|**L’OnPostValidate**|Gestionnaire d’événements de l’événement **OnPostValidate** . Cet événement est déclenché par un exécutable lorsque sa validation est terminée.|  
 |**OnPreExecute**|Gestionnaire d’événements de l’événement **OnPreExecute** . Cet événement est déclenché par un exécutable immédiatement avant son exécution.|  
 |**OnPreValidate**|Gestionnaire d’événements de l’événement **OnPreValidate** . Cet événement est déclenché par un exécutable lorsque sa validation démarre.|  
-|**OnProgress**|Gestionnaire d’événements de l’événement **OnProgress** . Cet événement est déclenché par un exécutable lorsqu'une progression mesurable est réalisée par l'exécutable.|  
-|**OnQueryCancel**|Gestionnaire d’événements de l’événement **OnQueryCancel** . Cet événement est déclenché par un exécutable pour déterminer si son exécution doit s'arrêter.|  
+|**OnProgress**|Gestionnaire d’événements de l’événement **OnProgress**. Cet événement est déclenché par un exécutable lorsqu'une progression mesurable est réalisée par l'exécutable.|  
+|**OnQueryCancel**|Gestionnaire d’événements de l’événement **OnQueryCancel**. Cet événement est déclenché par un exécutable pour déterminer si son exécution doit s'arrêter.|  
 |**OnTaskFailed**|Gestionnaire d’événements de l’événement **OnTaskFailed** . Cet événement est déclenché par une tâche lorsqu'elle échoue.|  
-|**OnVariableValueChanged**|Gestionnaire d’événements de l’événement **OnVariableValueChanged** . Cet événement est déclenché par un exécutable lorsque la valeur d'une variable change. L'événement est déclenché par l'exécutable sur lequel la variable est définie. Cet événement n’est pas déclenché si vous définissez la **RaiseChangeEvent** propriété pour la variable à `False`. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
-|**OnWarning**|Gestionnaire d’événements de l’événement **OnWarning** . Cet événement est déclenché par un exécutable lorsqu'un avertissement se produit.|  
+|**OnVariableValueChanged**|Gestionnaire d’événements de l’événement **OnVariableValueChanged**. Cet événement est déclenché par un exécutable lorsque la valeur d'une variable change. L'événement est déclenché par l'exécutable sur lequel la variable est définie. Cet événement n’est pas déclenché si vous affectez à `False`la propriété **RaiseChangeEvent** de la variable la valeur. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
+|**OnWarning**|Gestionnaire d’événements de l’événement **OnWarning**. Cet événement est déclenché par un exécutable lorsqu'un avertissement se produit.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configuration d'un gestionnaire d'événements  
- Vous pouvez définir les propriétés dans la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou par programme.  
+ Vous pouvez définir les propriétés dans la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou par programmation.  
   
  Pour plus d’informations sur la définition de ces propriétés dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consultez [Définir les propriétés d’une tâche ou d’un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  
   
- Pour plus d'informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Pour plus d’informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur l’ajout d’un gestionnaire d’événements à un package, consultez [Ajouter un gestionnaire d’événements à un package](../../2014/integration-services/add-an-event-handler-to-a-package.md).  

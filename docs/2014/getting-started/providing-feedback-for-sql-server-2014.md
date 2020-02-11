@@ -1,5 +1,5 @@
 ---
-title: Envoi de commentaires sur SQL Server 2014 | Microsoft Docs
+title: Fournir des commentaires pour SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,14 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772276"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Envoi de commentaires sur SQL Server 2014
+  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] vous remercie de l'aide que vous lui apportez afin d'améliorer ses produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leur documentation. Vous pouvez transmettre vos suggestions et rapports de bogues sur les caractéristiques et l'interface utilisateur d'un produit, soumettre des commentaires sur la documentation, ou envoyer automatiquement des rapports d'erreurs et des données sur l'utilisation à [!INCLUDE[msCoName](../includes/msconame-md.md)] en vue de leur analyse. Chacune de ces trois options d'envoi de commentaires est décrite ici.  
   
 ## <a name="submitting-feedback-about-the-product"></a>Envoi de commentaires sur le produit  
@@ -37,9 +38,9 @@ ms.locfileid: "62772276"
   
  Pour accéder à la page de commentaires sur [!INCLUDE[msCoName](../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect, vous pouvez procéder de l'une des manières suivantes.  
   
--   Accédez à la [page web](https://go.microsoft.com/fwlink/?linkid=34178) de commentaires sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Accédez à la [!INCLUDE[msCoName](../includes/msconame-md.md)]page web[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de commentaires sur [ de ](https://go.microsoft.com/fwlink/?linkid=34178) Connect.  
   
--   Cliquez sur le bouton **Envoyer des commentaires** de la barre d’outils d’aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou sélectionnez la commande **Communauté/Envoyer des commentaires**.  
+-   Cliquez sur le bouton [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Envoyer des commentaires** de la barre d’outils d’aide de ** ou sélectionnez la commande **Communauté/Envoyer des commentaires**.  
   
 -   Dans la barre d’outils d’aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez sur le bouton **Envoyer des commentaires**.  
   
@@ -49,13 +50,15 @@ ms.locfileid: "62772276"
   
 -   vous n'accédez pas à l'aide à partir de l'utilitaire ;  
   
--   Sélectionnez le **aide** case à cocher sur la **barres d’outils** onglet de la **outils/Personnaliser...**  commande.  
+-   Activez la case à cocher **aide** sous l’onglet **barres** d’outils de la commande **Outils/Personnaliser.** ...  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Rapports d'erreur et d'utilisation automatiques  
- Vous pouvez décider d'envoyer automatiquement des rapports d'erreur ou des informations sur la façon dont vous utilisez le logiciel et les services de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../includes/msconame-md.md)] se sert de ces informations pour améliorer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toutes les données sont traitées de manière confidentielle.  
+ Vous pouvez décider d'envoyer automatiquement des rapports d'erreur ou des informations sur la façon dont vous utilisez le logiciel et les services de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] se sert de ces informations pour améliorer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toutes les données sont traitées de manière confidentielle.  
   
 ### <a name="managing-automatic-usage-reporting"></a>Gestion des rapports d'utilisation automatiques  
- Les rapports d'utilisation automatiques vous permettent de décider s'il faut recueillir et envoyer des données à [!INCLUDE[msCoName](../includes/msconame-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise deux pipelines pour signaler des données d'utilisation. Ces deux pipelines collectent des données similaires, mais relèvent les informations d'utilisation de programmes différents. Ils peuvent être activés ou désactivés séparément. Si vous activez ou désactivez un pipeline à l'aide d'un des programmes qui l'utilise, vous arrêtez ou démarrez la collecte des données à partir des autres programmes qui partagent ce pipeline.  
+ Les rapports d'utilisation automatiques vous permettent de décider s'il faut recueillir et envoyer des données à [!INCLUDE[msCoName](../includes/msconame-md.md)]. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise deux pipelines pour signaler des données d'utilisation. Ces deux pipelines collectent des données similaires, mais relèvent les informations d'utilisation de programmes différents. Ils peuvent être activés ou désactivés séparément. Si vous activez ou désactivez un pipeline à l'aide d'un des programmes qui l'utilise, vous arrêtez ou démarrez la collecte des données à partir des autres programmes qui partagent ce pipeline.  
   
 -   Le premier pipeline sert à collecter les données d'utilisation pour tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], à l'exception de la documentation en ligne et de certains éléments d'interface utilisateur, basés sur [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio, des outils de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Après l'installation, vous pouvez également désactiver (ou activer) ce pipeline. Pour ce faire, dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez un projet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis, dans le menu **Aide**, sélectionnez **Options pour les commentaires client**. Cette commande n'apparaît que si vous ouvrez un projet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

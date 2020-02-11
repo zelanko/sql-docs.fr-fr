@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762781"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|7903|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|7903|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ORPHANED_FILE|  
-|Texte du message|Erreur de table, Le fichier orphelin 'FILE' a été trouvé dans le répertoire Filestream pour l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID de colonne C_ID.|  
+|Texte du message|Erreur de table : le fichier orphelin 'FILE' a été trouvé dans le répertoire FileStream de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID de colonne C_ID.|  
   
 ## <a name="explanation"></a>Explication  
  Un fichier FILESTREAM figure dans un répertoire de colonnes FILESTREAM, mais la valeur de colonne correspondante est absente de la partition.  

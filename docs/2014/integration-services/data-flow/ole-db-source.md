@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770986"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
@@ -80,7 +80,7 @@ ms.locfileid: "62770986"
  La procédure stockée attend les variables, `@StartProductID` et `@CheckDate`, pour fournir des valeurs de paramètres. L’ordre dans lequel les paramètres apparaissent dans la liste **Mappages** n’est pas pertinent. Le seul impératif est que les noms de paramètres correspondent aux noms de variables dans la procédure stockée, y compris le signe \@.  
   
 ### <a name="mapping-parameters-to-variables"></a>Mappage de paramètres à des variables  
- Les paramètres sont mappés à des variables qui fournissent les valeurs de paramètres au moment de l'exécution. Les variables sont généralement des variables définies par l’utilisateur, bien que vous puissiez utiliser les variables système fournies par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si vous utilisez des variables définies par l'utilisateur, assurez-vous que vous choisissez un type de données compatible avec celui de la colonne référencée par le paramètre mappé. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  
+ Les paramètres sont mappés à des variables qui fournissent les valeurs de paramètres au moment de l'exécution. Les variables sont généralement des variables définies par l’utilisateur, bien que vous puissiez utiliser les variables système fournies par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si vous utilisez des variables définies par l'utilisateur, assurez-vous que vous choisissez un type de données compatible avec celui de la colonne référencée par le paramètre mappé. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>Résolution des problèmes liés à la source OLE DB  
  Vous pouvez consigner les appels que la source OLE DB effectue vers des fournisseurs de données externes. Cette fonctionnalité de journalisation permet de résoudre des problèmes liés au chargement de données que réalise la source OLE DB depuis des sources de données externes. Pour consigner les appels que la source OLE DB effectue vers des fournisseurs de données externes, activez la journalisation de package et sélectionnez l’événement **Diagnostic** au niveau du package. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -90,11 +90,11 @@ ms.locfileid: "62770986"
   
  Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source OLE DB**, cliquez sur l’une des rubriques suivantes :  
   
--   [Éditeur de source OLE DB &#40;page Gestionnaire de connexions&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Éditeur de source de OLE DB &#40;page Gestionnaire de connexions&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Éditeur de source OLE DB &#40;page Colonnes&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Éditeur de source de OLE DB &#40;page colonnes&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Éditeur de source OLE DB &#40;page Sortie d’erreur&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Éditeur de source de OLE DB &#40;page sortie d’erreur&#41;](../ole-db-source-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62770986"
 -   [Trier des données pour les transformations de fusion et de jointure de fusion](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Article Wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS avec connecteurs Oracle) sur social.technet.microsoft.com.  
+ Article wiki, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), sur social.technet.Microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](ole-db-destination.md)   

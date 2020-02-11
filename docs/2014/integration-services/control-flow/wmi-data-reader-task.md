@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829492"
 ---
 # <a name="wmi-data-reader-task"></a>Tâche Lecteur de données WMI
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche Lecteur de données WMI &#40;page Options WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Éditeur de tâche lecteur de données WMI &#40;page Options WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

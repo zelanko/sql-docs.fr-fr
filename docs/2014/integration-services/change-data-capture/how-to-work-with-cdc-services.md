@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d047d1c584e176f5446361dd29821eb4ff18aa74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771209"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Procédure : utiliser des services de capture de données modifiées
@@ -55,6 +55,6 @@ ms.locfileid: "62771209"
          Pour plus d’informations sur la façon d’entrer des informations d’identification pour une connexion ayant l’autorisation d’écriture dans la base de données MSXDBCDC, tel le rôle de base de données **db_owner** , consultez [Créer et modifier un service de capture de données modifiées Oracle](create-and-edit-an-oracle-cdc-service.md) et [Connexion à SQL Server](connection-to-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des services de capture de données modifiées](work-with-cdc-services.md)  
+ [Utiliser les services CDC](work-with-cdc-services.md)  
   
   

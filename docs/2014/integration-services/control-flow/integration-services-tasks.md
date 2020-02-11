@@ -27,21 +27,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831433"
 ---
 # <a name="integration-services-tasks"></a>Tâches Integration Services
-  Les tâches sont des éléments de flux de contrôle qui définissent des unités de travail qui sont exécutées dans un flux de contrôle de package. Un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est composé d’une ou plusieurs tâches. Si le package contient plusieurs tâches, elles sont connectées et organisées dans le flux de contrôle par des contraintes de priorité.  
+  Les tâches sont des éléments de flux de contrôle qui définissent des unités de travail qui sont exécutées dans un flux de contrôle de package. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package est constitué d’une ou de plusieurs tâches. Si le package contient plusieurs tâches, elles sont connectées et organisées dans le flux de contrôle par des contraintes de priorité.  
   
  Vous pouvez également écrire des tâches personnalisées à l'aide d'un langage de programmation qui prend en charge COM, tel que Visual Basic, ou d'un langage de programmation .NET, tel que C#.  
   
- Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , outil graphique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettant de manipuler les packages, met à votre disposition une aire de conception pour la création des flux de contrôle de package, ainsi que des éditeurs personnalisés pour la configuration des tâches. Vous pouvez aussi programmer le modèle objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer des packages par programmation.  
+ Le [!INCLUDE[ssIS](../../includes/ssis-md.md)] concepteur, outil graphique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour l’utilisation des packages, fournit l’aire de conception pour la création du contrôle de package et fournit des éditeurs personnalisés pour la configuration des tâches. Vous pouvez également programmer le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] modèle objet pour créer des packages par programme.  
   
 ## <a name="types-of-tasks"></a>Types de tâches  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les types de tâches suivants.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les types de tâches suivants.  
   
  tâche de flux de données  
  Tâche qui exécute les flux de données pour extraire les données, pour appliquer les transformations au niveau des colonnes et pour charger des données.  

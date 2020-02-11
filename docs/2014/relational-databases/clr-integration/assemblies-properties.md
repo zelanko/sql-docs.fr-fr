@@ -1,5 +1,5 @@
 ---
-title: Propriétés de l’assembly (Page Général) | Microsoft Docs
+title: Propriétés de l’assembly (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919292"
 ---
 # <a name="assembly-properties-general-page"></a>Propriétés de l'assembly (page Général)
   Cette page vous permet d'afficher et de modifier les propriétés de l'assembly.  
   
 ## <a name="options"></a>Options  
- **Nom de l’assembly**  
+ **Nom de l'assembly**  
  Indique le nom de l'assembly, lequel correspond toujours au nom de l'assembly CLR.  
   
- **Propriétaire de l’assembly**  
+ **Propriétaire de l'assembly**  
  Tapez le nom du propriétaire ou le nom du schéma, ou effectuez votre sélection dans la liste.  
   
- **Jeu d’autorisations**  
- Définissez le niveau de sécurité pour l'assembly. Trois niveaux de sécurité sont fournis : **Safe**, **accès externe**, et **Unsafe** accès.  
+ **Jeu d'autorisations**  
+ Définissez le niveau de sécurité pour l'assembly. Trois niveaux de sécurité sont fournis : **Sûr**, **Accès externe**et accès **Illimité** .  
   
- **Chemin d’accès à l’assembly**  
+ **Chemin d'accès de l'assembly**  
  Tapez le chemin d'accès du fichier d'assembly.  
   
  **Parcourir**  

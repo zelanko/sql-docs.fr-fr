@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770945"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propriétés personnalisées de la destination de traitement de partition
@@ -25,16 +25,16 @@ ms.locfileid: "62770945"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|Chaîne de connexion d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|KeyDuplicate|Integer (énumération)|Quand UseDefaultConfiguration a la valeur `False`, une valeur qui indique comment gérer les erreurs de clé dupliquée. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `IgnoreError` (0).|  
-|KeyErrorAction|Integer (énumération)|Quand UseDefaultConfiguration a la valeur `False`, une valeur qui indique comment gérer les erreurs de clé. Les valeurs possibles sont `ConvertToUnknown` (0) et `DiscardRecord` (1). La valeur par défaut de cette propriété est `ConvertToUnknown` (0).|  
-|KeyErrorLimit|Entier|Quand UseDefaultConfiguration a la valeur `False`, la limite supérieure des erreurs de clé sont autorisés.|  
-|KeyErrorLimitAction|Integer (énumération)|Quand UseDefaultConfiguration a `False`, une valeur qui indique l’action à entreprendre lorsque `KeyErrorLimit` est atteinte. Les valeurs possibles sont `StopLogging` (1) et `StopProcessing` (0). La valeur par défaut de cette propriété est `StopProcessing` (0).|  
-|KeyErrorLogFile|String|Quand UseDefaultConfiguration a la valeur `False`, le chemin d’accès et le nom de fichier de journal des erreurs.|  
-|KeyNotFound|Integer (énumération)|Quand UseDefaultConfiguration a la valeur `False`, une valeur qui indique comment gérer des erreurs de clé manquant. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `ReportAndContinue` (1).|  
-|NullKeyConvertedToUnknown|Integer (énumération)|Quand UseDefaultConfiguration a la valeur `False`, une valeur qui indique comment gérer les clés null converties en valeur inconnue. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `IgnoreError` (0).|  
-|NullKeyNotAllowed|Integer (énumération)|Quand UseDefaultConfiguration a la valeur `False`, une valeur qui indique comment gérer les clés NULL. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `ReportAndContinue` (1).|  
+|KeyDuplicate|Integer (énumération)|Quand UseDefaultConfiguration a `False`la valeur, valeur qui indique comment gérer les erreurs de clé en double. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `IgnoreError` (0).|  
+|KeyErrorAction|Integer (énumération)|Quand UseDefaultConfiguration a `False`la valeur, valeur qui indique comment gérer les erreurs de clé. Les valeurs possibles sont `ConvertToUnknown` (0) et `DiscardRecord` (1). La valeur par défaut de cette propriété est `ConvertToUnknown` (0).|  
+|KeyErrorLimit|Integer|Lorsque UseDefaultConfiguration est `False`, limite supérieure des erreurs de clé autorisées.|  
+|KeyErrorLimitAction|Integer (énumération)|Quand UseDefaultConfiguration a `False`la valeur, valeur qui indique l’action à prendre `KeyErrorLimit` lorsque est atteint. Les valeurs possibles sont `StopLogging` (1) et `StopProcessing` (0). La valeur par défaut de cette propriété est `StopProcessing` (0).|  
+|KeyErrorLogFile|String|Lorsque UseDefaultConfiguration est `False`, le chemin d’accès et le nom du fichier journal des erreurs.|  
+|KeyNotFound|Integer (énumération)|Quand UseDefaultConfiguration a `False`la valeur, valeur qui indique comment gérer les erreurs de clé manquantes. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `ReportAndContinue` (1).|  
+|NullKeyConvertedToUnknown|Integer (énumération)|Quand UseDefaultConfiguration a `False`la valeur, valeur qui indique comment gérer les clés NULL converties en valeur inconnue. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `IgnoreError` (0).|  
+|NullKeyNotAllowed|Integer (énumération)|Quand UseDefaultConfiguration a `False`la valeur, valeur qui indique comment gérer les valeurs NULL non autorisées. Les valeurs possibles sont `IgnoreError` (0), `ReportAndContinue` (1) et `ReportAndStop` (2). La valeur par défaut de cette propriété est `ReportAndContinue` (1).|  
 |ProcessType|Integer (énumération)|Type de traitement de partition que la transformation utilise. Les valeurs possibles sont `ProcessAdd` (1) (incrémentiel), `ProcessFull` (0) et `ProcessUpdate` (2).|  
-|UseDefaultConfiguration|Booléen|Valeur qui spécifie si la transformation utilise la configuration d'erreur par défaut. Si cette propriété est `False`, la transformation utilise les valeurs des propriétés de la gestion des erreurs personnalisées répertoriées dans ce tableau, notamment KeyDuplicate, KeyErrorAction et ainsi de suite.|  
+|UseDefaultConfiguration|Boolean|Valeur qui spécifie si la transformation utilise la configuration d'erreur par défaut. Si cette propriété a `False`la valeur, la transformation utilise les valeurs des propriétés personnalisées de gestion des erreurs énumérées dans ce tableau, y compris KeyDuplicate, KeyErrorAction, et ainsi de suite.|  
   
  L'entrée et les colonnes d'entrée de la destination de traitement de partition ne disposent pas de propriétés personnalisées.  
   

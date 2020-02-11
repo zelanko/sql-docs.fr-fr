@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780830"
 ---
 # <a name="preparing-to-use-smo"></a>Préparation à l'utilisation de SMO
@@ -25,6 +25,6 @@ ms.locfileid: "62780830"
   
 |||  
 |-|-|  
-|**Préparation à l’utilisation de SMO**<br /><br /> -   [Conventions de syntaxe](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) décrit les conventions de syntaxe utilisées dans cette section.<br />-   [Configuration système requise](../../../2014/database-engine/dev-guide/system-requirements.md) spécifie la configuration système requise pour l’installation et à l’aide de SMO.<br />-   [Fichiers et numéros de Version](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) répertorie les composants SMO et les numéros de version correspondant.|-   [Installation de SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) fournit des instructions pour installer SMO.|  
+|**Préparation à l'utilisation de SMO**<br /><br /> -   [Conventions de syntaxe](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) décrit les conventions de syntaxe utilisées dans cette section.<br />-   [Configuration système requise](../../../2014/database-engine/dev-guide/system-requirements.md) spécifie la configuration système requise pour l’installation et l’utilisation de Smo.<br />-   [Fichiers et numéros de version](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) répertorie les composants Smo et les numéros de version correspondants.|-   [L’installation de Smo](../../relational-databases/server-management-objects-smo/installing-smo.md) fournit des instructions pour installer Smo.|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Installer SQL Server 2014 à l’aide d’un fichier de Configuration | Microsoft Docs
+title: Installer SQL Server 2014 à l’aide d’un fichier de configuration | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775282"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installer SQL Server 2014 à l'aide d'un fichier de configuration
@@ -52,11 +52,12 @@ FEATURES=SQL,Tools
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ne crée pas de fichier de configuration automatiquement. La commande suivante démarre l’installation et crée un fichier de configuration.  
+    >  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ne crée pas de fichier de configuration automatiquement. La commande suivante démarre l’installation et crée un fichier de configuration.  
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Suivez le déroulement des étapes de l'Assistant jusqu'à la page **Prêt pour l'installation** . Le chemin d'accès au fichier de configuration est spécifié dans la page **Prêt pour l'installation** , dans la section relative au chemin d'accès du fichier de configuration. Pour plus d’informations sur l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Suivez le déroulement des étapes de l'Assistant jusqu'à la page **Prêt pour l'installation** . Le chemin d'accès au fichier de configuration est spécifié dans la page **Prêt pour l'installation** , dans la section relative au chemin d'accès du fichier de configuration. Pour plus d’informations sur l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, consultez [installer SQL Server 2014 à partir de l’assistant Installation &#40;&#41;d' ](install-sql-server-from-the-installation-wizard-setup.md)installation.  
   
 3.  Annulez l'exécution du programme d'installation sans réellement terminer l'installation afin de générer le fichier INI.  
   
@@ -71,7 +72,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Comment utiliser un fichier de configuration pour installer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome  
   
--   Exécutez l'installation à partir de l'invite de commandes et spécifiez le fichier ConfigurationFile.ini à l'aide du paramètre *ConfigurationFile* .  
+-   Exécutez l’installation à l’aide de l’invite de commandes et fournissez fichier ConfigurationFile. ini à l’aide du paramètre *fichier ConfigurationFile* .  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Procédure d'utilisation d'un fichier de configuration afin de préparer et finaliser une image d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome (SysPrep)  
   
@@ -140,7 +141,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2014 à partir de l’invite de commandes](install-sql-server-from-the-command-prompt.md)   
- [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
+ [SQL Server l’installation du cluster de basculement](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Mettre à niveau un cluster de basculement SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

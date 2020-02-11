@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : Extension de la série chronologique de modèle | Microsoft Docs'
+title: 'Leçon 5 : extension du modèle de série chronologique | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822063"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Leçon 5 : Extension du modèle de série chronologique
+# <a name="lesson-5-extending-the-time-series-model"></a>Leçon 5 : Extension du modèle de série chronologique
   Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, vous pouvez ajouter de nouvelles données à un modèle de série chronologique et les incorporer automatiquement au modèle. Vous ajoutez de nouvelles données à un modèle d'exploration de données de série chronologique de l'une des deux manières suivantes :  
   
 -   Utilisez une instruction PREDICTION JOIN pour joindre des données d'une source externe aux données d'apprentissage.  
@@ -26,7 +26,7 @@ ms.locfileid: "62822063"
   
  Par exemple, supposons que vous avez effectué l'apprentissage du modèle d'exploration de données sur les données de ventes existantes il y a quelques mois. Lorsque vous effectuez de nouvelles ventes, vous pouvez avoir envie de mettre à jour les prédictions de ventes afin d'incorporer ces nouvelles données. Pour cela, il vous suffit de fournir les nouveaux chiffres de ventes en tant que données d'entrée et de générer de nouvelles prédictions basées sur le jeu de données composite.  
   
-## <a name="making-predictions-with-extendmodelcases"></a>Exécution de prédictions avec EXTEND_MODEL_CASES  
+## <a name="making-predictions-with-extend_model_cases"></a>Exécution de prédictions avec EXTEND_MODEL_CASES  
  Les exemples génériques suivants de prédiction de série chronologique utilisent EXTEND_MODEL_CASES. Le premier exemple vous permet de spécifier le nombre de prédictions commençant à partir de la dernière étape du modèle d'origine :  
   
 ```  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>Pour créer une requête singleton de prédiction sur un modèle de série chronologique  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -138,15 +138,15 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+7.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-8.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Singleton_TimeSeries_Query.dmx`.  
+8.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Singleton_TimeSeries_Query.dmx`.  
   
-9. Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+9. Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
      La requête renvoie des prédictions de quantité de ventes pour le vélo M200 dans les régions Europe et Pacific.  
   
-## <a name="understanding-prediction-start-with-extendmodelcases"></a>Démarrage de prédiction avec EXTEND_MODEL_CASES  
+## <a name="understanding-prediction-start-with-extend_model_cases"></a>Démarrage de prédiction avec EXTEND_MODEL_CASES  
  Maintenant que vous avez créé des prédictions basées sur le modèle d'origine, et avec de nouvelles données, vous pouvez comparer les résultats pour observer comment la mise à jour des données de ventes affecte les prédictions. Avant cela, examinez le code que vous venez de créer et remarquez ce qui suit :  
   
 -   Vous avez fourni de nouvelles données uniquement pour la région Europe.  
@@ -160,11 +160,11 @@ PREDICTION JOIN <source query>
 |||||  
 |-|-|-|-|  
 |||Modèle existant (`PredictTimeSeries`)|Modèle avec les données de ventes (`PredictTimeSeries` mises à jour avec `EXTEND_MODEL_CASES`)|  
-|M200 Europe|25/7/2008 12:00:00 AM|77|10|  
-|M200 Europe|25/8/2008 12:00:00 AM|64|15|  
-|M200 Europe|25/9/2008 12:00:00 AM|59|72|  
-|M200 Europe|25/10/2008 12:00:00 AM|56|69|  
-|M200 Europe|25/11/2008 12:00:00 AM|56|68|  
+|M200 Europe|7/25/2008 12:00:00|77|10|  
+|M200 Europe|8/25/2008 12:00:00|64|15|  
+|M200 Europe|9/25/2008 12:00:00|59|72|  
+|M200 Europe|10/25/2008 12:00:00|56|69|  
+|M200 Europe|11/25/2008 12:00:00|56|68|  
 |M200 Europe|25/12/2008 12:00:00|74|89|  
   
  **Produit et région : M200 Pacific**  
@@ -172,11 +172,11 @@ PREDICTION JOIN <source query>
 |||||  
 |-|-|-|-|  
 |||Modèle existant (`PredictTimeSeries`)|Modèle avec les données de ventes (`PredictTimeSeries` mises à jour avec `EXTEND_MODEL_CASES`)|  
-|M200 Pacific|25/7/2008 12:00:00 AM|41|41|  
-|M200 Pacific|25/8/2008 12:00:00 AM|44|44|  
-|M200 Pacific|25/9/2008 12:00:00 AM|38|38|  
-|M200 Pacific|25/10/2008 12:00:00 AM|41|41|  
-|M200 Pacific|25/11/2008 12:00:00 AM|36|36|  
+|M200 Pacific|7/25/2008 12:00:00|41|41|  
+|M200 Pacific|8/25/2008 12:00:00|44|44|  
+|M200 Pacific|9/25/2008 12:00:00|38|38|  
+|M200 Pacific|10/25/2008 12:00:00|41|41|  
+|M200 Pacific|11/25/2008 12:00:00|36|36|  
 |M200 Pacific|25/12/2008 12:00:00|39|39|  
   
  D'après ces résultats, vous pouvez conclure deux choses :  
@@ -192,7 +192,7 @@ PREDICTION JOIN <source query>
   
 -   Demandez des prédictions pour quatre tranches de temps, dont le point de départ est la tranche de temps 3 et le point de terminaison la tranche de temps 6.  
   
- En d’autres termes, si vos nouvelles données contiennent n tranches horaires et que vous demandez des prédictions pour les étapes 1 à n, les prédictions coïncideront avec la même période que les nouvelles données. Pour obtenir de nouvelles prédictions pour des périodes non couvertes par vos données, vous devez commencer les prédictions à la tranche de temps n+1 après la nouvelle série de données ou vous assurer de demander des tranches de temps supplémentaires.  
+ En d’autres termes, si vos nouvelles données contiennent n tranches de temps et que vous demandez des prédictions pour les étapes 1 à n, les prédictions coïncideront avec la même période que les nouvelles données. Pour obtenir de nouvelles prédictions pour des périodes non couvertes par vos données, vous devez commencer les prédictions à la tranche de temps n+1 après la nouvelle série de données ou vous assurer de demander des tranches de temps supplémentaires.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas effectuer de prédictions historiques lorsque vous ajoutez de nouvelles données.  
@@ -224,16 +224,16 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ||||  
 |-|-|-|  
-|M200 Europe|25/9/2008 12:00:00 AM|72|  
-|M200 Europe|25/10/2008 12:00:00 AM|69|  
-|M200 Europe|25/11/2008 12:00:00 AM|68|  
+|M200 Europe|9/25/2008 12:00:00|72|  
+|M200 Europe|10/25/2008 12:00:00|69|  
+|M200 Europe|11/25/2008 12:00:00|68|  
 |M200 Europe|25/12/2008 12:00:00|89|  
   
-## <a name="making-predictions-with-replacemodelcases"></a>Exécution de prédictions avec REPLACE_MODEL_CASES  
- Le remplacement des cas de modèles s'avère utile lorsque vous souhaitez effectuer l'apprentissage d'un modèle sur un ensemble de cas, puis appliquer ce modèle à une série de données différente. Une description détaillée de ce scénario est présentée dans [leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+## <a name="making-predictions-with-replace_model_cases"></a>Exécution de prédictions avec REPLACE_MODEL_CASES  
+ Le remplacement des cas de modèles s'avère utile lorsque vous souhaitez effectuer l'apprentissage d'un modèle sur un ensemble de cas, puis appliquer ce modèle à une série de données différente. Une procédure pas à pas détaillée de ce scénario est présentée dans la [leçon 2 : génération d’un scénario de prévision &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries&#41;DMX &#40;](/sql/dmx/predicttimeseries-dmx)  
   
   

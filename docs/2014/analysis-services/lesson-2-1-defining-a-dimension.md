@@ -1,5 +1,5 @@
 ---
-title: Définition d’une Dimension | Microsoft Docs
+title: Définition d’une dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079084"
 ---
 # <a name="defining-a-dimension"></a>Définition d'une dimension
@@ -35,37 +35,37 @@ ms.locfileid: "66079084"
   
 5.  Dans la liste **Table principale** , sélectionnez **Date**.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
 7.  Dans la page **Sélectionner les attributs de la dimension** , cochez les cases à côté des attributs suivants :  
   
-    -   **Date Key**  
+    -   **Clé de date**  
   
-    -   **Full Date Alternate Key**  
+    -   **Clé de remplacement de date complète**  
   
-    -   **English Month Name**  
+    -   **Nom du mois anglais**  
   
-    -   **Calendar Quarter**  
+    -   **Trimestre civil**  
   
-    -   **Calendar Year**  
+    -   **Année civile**  
   
-    -   **Calendar Semester**  
+    -   **Semestre calendaire**  
   
-8.  Modifiez le paramètre de la colonne **Type d’attribut** de l’attribut **Full Date Alternate Key** de **Regular** en **Date**. Pour cela, cliquez sur **Regular** dans la colonne **Type d’attribut** . Puis, cliquez sur la flèche pour développer les options. Ensuite, cliquez sur **Date** > **Calendar** > **Date**. Cliquez sur **OK**. Répétez ces étapes pour modifier le type d’attribut des attributs suivants comme suit :  
+8.  Modifiez le paramètre de la colonne **Type d’attribut** de l’attribut **Full Date Alternate Key** de **Regular** en **Date**. Pour cela, cliquez sur **Regular** dans la colonne **Type d’attribut** . Puis, cliquez sur la flèche pour développer les options. Ensuite, cliquez sur **Date** > **calendrier** > **Date**. Cliquez sur **OK**. Répétez ces étapes pour modifier le type d’attribut des attributs suivants comme suit :  
   
-    -   **English Month Name** en **Month**  
+    -   **Nom du mois anglais** **du mois**  
   
-    -   **Calendar Quarter** en **Quarter**  
+    -   **Trimestre calendaire** à **trimestre**  
   
-    -   **Calendar Year** en **Year**  
+    -   **Année civile** à **année**  
   
-    -   **Calendar Semester** en **Half Year**  
+    -   Semestre **calendaire** jusqu’au **semestre**  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
 10. Dans la page **Fin de l’Assistant** , dans le volet de visualisation, vous pouvez consulter la dimension **Date** et ses attributs.  
   
-11. Cliquez sur **Terminer** pour terminer l’Assistant.  
+11. Cliquez sur **Terminer** pour terminer l'Assistant.  
   
      Dans l’Explorateur de solutions, dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la dimension Date apparaît dans le dossier **Dimensions** . Au centre de l'environnement de développement, le Concepteur de dimensions affiche la dimension Date.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66079084"
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Créer une Dimension à l’aide d’une Table existante](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Créer une dimension à l’aide de l’Assistant Dimension](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
+ [Créer une dimension à l’aide d’une table existante](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [Créer une dimension à l'aide de l'Assistant Dimension](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

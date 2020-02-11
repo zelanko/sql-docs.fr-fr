@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770717"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implémenter une recherche en mode Aucun cache ou Cache partiel
@@ -54,7 +54,7 @@ ms.locfileid: "62770717"
   
 7.  Dans la page **Connexion** , sélectionnez un gestionnaire de connexions dans la liste **Gestionnaire de connexions OLE DB** ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions. Pour plus d’informations, consultez [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
-8.  Procédez de l’une des manières suivantes :  
+8.  Effectuez l’une des étapes suivantes :  
   
     -   Cliquez sur **Utiliser une table ou une vue**, puis sélectionnez une table ou une vue, ou cliquez sur **Nouveau** pour créer une table ou une vue.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62770717"
   
     1.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes.  
   
-    2.  Dans la liste **Opération de recherche** , spécifiez si les valeurs des colonnes de recherche remplacent les valeurs des colonnes d’entrée ou sont écrites dans une nouvelle colonne.  
+    2.  Dans la liste **Opération de recherche** , spécifiez si les valeurs des colonnes de recherche remplacent les valeurs des colonnes d’entrée ou si elles sont écrites dans une nouvelle colonne.  
   
 11. Si vous avez sélectionné **Cache partial** à l’étape 5, dans la page **Avancé** , définissez les options de cache suivantes :  
   

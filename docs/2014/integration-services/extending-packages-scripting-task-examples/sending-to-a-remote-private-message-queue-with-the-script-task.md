@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768465"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Envoi vers une file d'attente de messages privée distante à l'aide de la tâche de script
@@ -30,7 +30,7 @@ ms.locfileid: "62768465"
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- L’exemple suivant utilise un gestionnaire de connexions MSMQ existant, avec des objets et des méthodes de l’espace de noms System.Messaging, pour envoyer le texte contenu dans une variable de package à une file d’attente de messages privée distante. L’appel à la méthode M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) du Gestionnaire de connexions MSMQ retourne un **MessageQueue** de l’objet dont la propriété `Send` pour cela, méthode tâche.  
+ L’exemple suivant utilise un gestionnaire de connexions MSMQ existant, avec des objets et des méthodes de l’espace de noms System.Messaging, pour envoyer le texte contenu dans une variable de package à une file d’attente de messages privée distante. L’appel à la méthode M :Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection (System. Object) du gestionnaire de connexions MSMQ retourne un objet **MessageQueue** dont `Send` la méthode effectue cette tâche.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62768465"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  Créer un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable nommée **MessageText** de type `String` pour transmettre le texte du message dans le script. Entrez un message par défaut en tant que valeur de la variable.  
+2.  Créez une [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable nommée **MessageText** de type `String` pour passer le texte du message dans le script. Entrez un message par défaut en tant que valeur de la variable.  
   
 3.  Ajoutez une tâche de script à l'aire de conception et modifiez-la. Sous l’onglet **Script** de l’**Éditeur de tâche de script**, ajoutez la variable `MessageText` à la propriété **ReadOnlyVariables** pour rendre la variable disponible dans le script.  
   
@@ -102,9 +102,9 @@ public class ScriptMain
 }  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche MSMQ](../control-flow/message-queue-task.md)  
+ [Message Queue Task](../control-flow/message-queue-task.md)  
   
   

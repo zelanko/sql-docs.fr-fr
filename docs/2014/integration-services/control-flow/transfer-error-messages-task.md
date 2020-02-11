@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830121"
 ---
 # <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur
@@ -40,13 +40,13 @@ ms.locfileid: "62830121"
   
  La tâche de transfert de messages d’erreur prend en charge une source et une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chacune des versions peut être utilisée indifféremment comme source ou comme destination.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Événements  
  La tâche génère un événement d'information qui indique le nombre de messages d'erreur transférés.  
   
  La tâche de transfert de messages d'erreur n'indique pas les stades intermédiaires de l'avancement du transfert des messages d'erreur : elle signale la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
- La valeur de l’exécution, définie dans le `ExecutionValue` propriété de la tâche, retourne le nombre de messages d’erreur qui ont été transférés. En affectant une variable définie par l'utilisateur à la propriété `ExecValueVariable` de la tâche de transfert de messages d'erreur, les informations sur le transfert de messages d'erreur peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
+ La valeur d’exécution, définie dans `ExecutionValue` la propriété de la tâche, retourne le nombre de messages d’erreur qui ont été transférés. En affectant une variable définie par l'utilisateur à la propriété `ExecValueVariable` de la tâche de transfert de messages d'erreur, les informations sur le transfert de messages d'erreur peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert de messages d'erreur comporte les entrées de journal personnalisées suivantes :  
@@ -65,7 +65,7 @@ ms.locfileid: "62830121"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche de transfert de messages d’erreur &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Éditeur de tâche de transfert de messages d’erreur &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Éditeur de tâche de transfert de messages d’erreur &#40;page Messages&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   

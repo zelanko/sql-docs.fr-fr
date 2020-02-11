@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015700"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Ajouter des colonnes à des requêtes (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63015700"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Pour ajouter toutes les colonnes d'une table ou d'un objet table  
   
--   Dans le **volet schéma**, activez la case à cocher  **\*(toutes les colonnes)** .  
+-   Dans le **volet Schéma**, activez la case à cocher en regard de ** \*(toutes les colonnes)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Pour ajouter toutes les colonnes de l'ensemble des tables ou des objets structurés comme des tables  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63015700"
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer des colonnes des résultats de la requête &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Supprimer des colonnes des requêtes &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
- [Spécifiez les critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Spécifier les critères de recherche &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
  [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
