@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637823"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
@@ -90,7 +90,7 @@ ms.locfileid: "73637823"
 ## <a name="configuring-individual-data-flow-components"></a>Configuration de composants de flux de données individuels  
  Pour configurer des composants de flux de données individuels afin d'obtenir de meilleures performances, il y a plusieurs règles générales que vous pouvez suivre. D'autres règles spécifiques s'appliquent également à chaque type de composant de flux de données : source, transformation et destination.  
   
-### <a name="general-guidelines"></a>Règles générales  
+### <a name="general-guidelines"></a>Instructions générales  
  Indépendamment du composant de flux de données, deux règles générales sont à suivre pour améliorer les performances : optimiser les requêtes et éviter les chaînes inutiles.  
   
 #### <a name="optimize-queries"></a>Optimisation des requêtes  
@@ -125,20 +125,20 @@ ms.locfileid: "73637823"
  Utilisez les suggestions de cette section pour améliorer les performances des transformations d'agrégation, de recherche floue, de regroupement probable, de recherche, de jointure de fusion et de dimension à variation lente.  
   
 #### <a name="aggregate-transformation"></a>Transformation d'agrégation  
- La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif de groupes attendus d’une opération **Group by** , définissez les propriétés `Keys` et `KeysScale`, respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes qui sont supposées résulter d’une opération de **comptage** de valeurs, définissez respectivement les propriétés `CountDistinctKeys` et `CountDistinctScale`.  
+ La transformation d'agrégation inclut les propriétés `Keys`, `KeysScale`, `CountDistinctKeys` et `CountDistinctScale`. Ces propriétés améliorent les performances en permettant à la transformation de préallouer la quantité de mémoire dont la transformation a besoin pour les données que la transformation met en cache. Si vous connaissez le nombre exact ou approximatif de groupes attendus d’une opération **Group by** , définissez les `Keys` propriétés et `KeysScale` , respectivement. Si vous connaissez le nombre exact ou approximatif de valeurs distinctes attendues d’une opération de **comptage** de valeurs, définissez les `CountDistinctKeys` propriétés et `CountDistinctScale` , respectivement.  
   
  Si vous devez créer plusieurs agrégations dans un flux de données, songez à créer plusieurs agrégations qui utilisent une transformation d'agrégation au lieu de créer plusieurs transformations. Cette approche améliore les performances lorsqu'une agrégation est un sous-ensemble d'une autre agrégation, car la transformation peut optimiser le stockage interne et analyser une seule fois les données entrantes. Par exemple, si une agrégation utilise une clause GROUP BY et une agrégation AVG, le fait de les combiner en une seule transformation peut améliorer les performances. Toutefois, du fait que la réalisation de plusieurs agrégations au sein d'une transformation d'agrégation sérialise les opérations d'agrégation, il est possible que les performances ne s'améliorent pas lorsque plusieurs agrégations doivent être calculées indépendamment.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformations de recherche floue et de regroupement probable  
  Pour plus d'informations sur l'optimisation des performances des transformations de recherche floue et de regroupement probable, consultez le livre blanc [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
-#### <a name="lookup-transformation"></a>Lookup Transformation  
+#### <a name="lookup-transformation"></a>Transformation de recherche  
  Réduisez la taille des données de référence en mémoire en entrant une instruction SELECT qui recherche uniquement les colonnes dont vous avez besoin. Cette approche est plus performante que la sélection d'une table ou d'une vue entière qui retourne une quantité importante de données inutiles.  
   
-#### <a name="merge-join-transformation"></a>Transformation de jointure de fusion  
+#### <a name="merge-join-transformation"></a>transformation de jointure de fusion  
  Vous n'avez plus à configurer la valeur de la propriété `MaxBuffersPerInput` car Microsoft a apporté des modifications qui réduisent le risque que la transformation de jointure de fusion consomme de la mémoire en excès. Ce problème s'est quelquefois produit lorsque plusieurs entrées de jointure de fusion produisaient des données à des taux irréguliers.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
+#### <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente  
  L'Assistant Dimension à variation lente et la transformation de dimension à variation lente sont des outils à caractère général qui répondent aux besoins de la plupart des utilisateurs. Toutefois, le flux de données généré par l'Assistant n'est pas optimisé en termes de performances.  
   
  En général, les composants les plus lents de la transformation de dimension à variation lente sont les transformations de commande OLE DB qui effectuent des mises à jour sur une ligne à la fois. Par conséquent, le moyen le plus efficace pour améliorer les performances de la transformation de dimension à variation lente consiste à remplacer les transformations de commande OLE DB. Vous pouvez remplacer ces transformations par des composants de destination qui enregistrent toutes les lignes à mettre à jour dans une table de transit. Ensuite, vous pouvez ajouter une tâche d'exécution SQL qui effectue une opération UPDATE Transact-SQL basée sur un jeu unique sur toutes les lignes en même temps.  
@@ -198,6 +198,6 @@ ms.locfileid: "73637823"
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Outils de dépannage pour l'exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Outils de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

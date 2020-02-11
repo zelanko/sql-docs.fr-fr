@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721203"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implémenter un gestionnaire de logique métier pour un article de fusion
@@ -99,18 +99,18 @@ ms.locfileid: "62721203"
   
 1.  Sur le serveur de publication, exécutez [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) pour vérifier que l’assembly n’a pas été inscrit en tant que gestionnaire de logique métier.  
   
-2.  Sur le serveur de distribution, exécutez [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), en spécifiant un nom convivial pour le Gestionnaire de logique métier pour **@article_resolver** , une valeur de `true`pour **@is_dotnet_assembly** , le nom de l’assembly pour **@dotnet_assembly_name** et le nom qualifié complet de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour  **@dotnet_class_name** .  
+2.  Sur le serveur de distribution, exécutez [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), en spécifiant un nom convivial pour le **@article_resolver**gestionnaire de logique métier `true` pour **@is_dotnet_assembly**, la valeur pour, le nom **@dotnet_assembly_name**de l’assembly pour et le nom complet de la classe qui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> substitue **@dotnet_class_name**pour.  
   
     > [!NOTE]  
-    >  Si l'assembly n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion ni dans le GAC (Global Assembly Cache), vous devez spécifier le chemin d'accès complet avec le nom de l'assembly pour **@dotnet_assembly_name** . Lorsque vous utilisez la synchronisation Web, vous devez spécifier l'emplacement de l'assembly sur le serveur Web.  
+    >  Si l’assembly n’est pas déployé dans le même répertoire que le fichier exécutable Agent de fusion, dans le même répertoire que l’application qui démarre de façon synchrone le Agent de fusion ou dans le Global Assembly Cache (GAC), vous devez spécifier le chemin d’accès complet avec le **@dotnet_assembly_name**nom de l’assembly pour. Lorsque vous utilisez la synchronisation Web, vous devez spécifier l'emplacement de l'assembly sur le serveur Web.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un nouvel article de table  
   
-1.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) pour définir un article, en spécifiant le nom convivial du gestionnaire de logique métier pour **@article_resolver** . Pour plus d'informations, voir [Define an Article](publish/define-an-article.md).  
+1.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) pour définir un article, en spécifiant le nom convivial du gestionnaire de logique métier pour **@article_resolver**. Pour plus d’informations, consultez [définir un Article](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un article de table existant  
   
-1.  Exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en spécifiant **@publication** , **@article** , en affectant la valeur **article_resolver** à **@property** et le nom convivial du gestionnaire de logique métier obtenu à l’étape 1 à **@value** .  
+1.  Exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en **@publication** **@article**spécifiant,, une valeur de **@property** **article_resolver** pour et le nom convivial du gestionnaire de logique métier **@value**pour.  
   
 ###  <a name="TsqlExample"></a> Exemples (programmation de la réplication)  
  Cet exemple illustre un gestionnaire de logique métier qui crée un journal d'audit.  
@@ -170,11 +170,11 @@ ms.locfileid: "62721203"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
   
 3.  Appelez <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> et vérifiez l'objet <xref:System.Collections.ArrayList> retourné pour vous assurer que l'assembly n'a pas déjà été inscrit en tant que gestionnaire de logique métier.  
   
-4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Spécifiez les propriétés suivantes :  
+4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Spécifiez les propriétés suivantes :  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> – nom de l'assembly .NET. Si l'assembly n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion ou dans le GAC, vous devez inclure le chemin d'accès complet avec le nom de l'assembly. Vous devez inclure le chemin d'accès complet avec le nom de l'assembly lorsque vous utilisez un gestionnaire de logique métier avec la synchronisation Web ;  
   
@@ -182,7 +182,8 @@ ms.locfileid: "62721203"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> – nom convivial que vous utilisez lorsque vous accédez au gestionnaire de logique métier ;  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> – valeur `true`.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> – valeur `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>Pour déployer un gestionnaire de logique métier  
   
@@ -192,7 +193,7 @@ ms.locfileid: "62721203"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeArticle> . Définissez les propriétés suivantes :  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeArticle>. Définissez les propriétés suivantes :  
   
     -   Le nom de l'article pour <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
@@ -202,13 +203,13 @@ ms.locfileid: "62721203"
   
     -   le nom convivial du gestionnaire de logique métier (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) pour <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Pour plus d'informations, voir [Define an Article](publish/define-an-article.md).  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Pour plus d’informations, consultez [définir un Article](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un article de table existant  
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>et <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   

@@ -16,21 +16,21 @@ ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928660"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-Spécifie si l’ensemble du flux ou la ligne suivante doit être lue à partir d’un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
+Spécifie si l’intégralité du flux ou la ligne suivante doit être lue à partir d’un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Constante|Value|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|Valeur par défaut. Lit tous les octets dans le flux, à partir de la position actuelle et les versions ultérieures à la [EOS](../../../ado/reference/ado-api/eos-property.md) marqueur. Cette option est uniquement valide **StreamReadEnum** valeur avec des flux binaires ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeBinary**).|  
-|**adReadLine**|-2|Lit la ligne suivante à partir du flux (désigné par le [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) propriété).|  
+|**adReadAll**|-1|valeur par défaut. Lit tous les octets du flux, à partir de la position actuelle jusqu’au marqueur [EOS](../../../ado/reference/ado-api/eos-property.md) . Il s’agit de la seule valeur **StreamReadEnum** valide avec des flux binaires ([type](../../../ado/reference/ado-api/type-property-ado-stream.md) **adTypeBinary**).|  
+|**adReadLine**|-2|Lit la ligne suivante dans le flux (désigné par la propriété [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) ).|  
   
-## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
+## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  

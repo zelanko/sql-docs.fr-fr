@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a441595fa07c86ff1cdbeac4e67e3a6ca0361f80
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782975"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>Activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)
@@ -34,11 +34,11 @@ ms.locfileid: "72782975"
   
      [Sécurité](#Security)  
   
--   **Procédure :**  
+-   **Comment:**  
   
-    -   [Déterminer si groupes de disponibilité AlwaysOn est activé](#IsEnabled)  
+    -   [Déterminer si l'option Groupes de disponibilité AlwaysOn est activée](#IsEnabled)  
   
-    -   [Activer les groupes de disponibilité AlwaysOn](#EnableAOAG)  
+    -   [Activer groupes de disponibilité AlwaysOn](#EnableAOAG)  
   
     -   [Désactiver les groupes de disponibilité AlwaysOn](#DisableAOAG)  
   
@@ -52,12 +52,12 @@ ms.locfileid: "72782975"
   
 -   Activez les groupes de disponibilité AlwaysOn sur une seule instance de serveur à la fois. Après avoir activé les groupes de disponibilité AlwaysOn, attendez le redémarrage du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avant de passer à une autre instance de serveur.  
   
- Pour plus d’informations sur les conditions préalables supplémentaires pour la création et la configuration des groupes de disponibilité, consultez [conditions préalables requises &#40;,&#41;Restrictions et recommandations pour groupes de disponibilité AlwaysOn SQL Server](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Pour plus d’informations sur les conditions préalables supplémentaires pour la création et la configuration des groupes de disponibilité, consultez [conditions préalables requises, restrictions et recommandations pour groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Security"></a> Sécurité  
  Lorsque les groupes de disponibilité AlwaysOn sont activés sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'instance de serveur a le contrôle total sur le cluster WSFC.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au groupe **Administrateur** sur l'ordinateur local et le contrôle total sur le cluster WSFC. Pour activer AlwaysOn à l'aide de PowerShell, ouvrez la fenêtre d'invite de commandes en utilisant l'option **Exécuter en tant qu'administrateur** .  
   
  Requiert des autorisations de création et de gestion d'objets Active Directory.  
@@ -71,18 +71,18 @@ ms.locfileid: "72782975"
 -   [PowerShell](#PowerShell1Procedure)  
   
 ###  <a name="SSMS1Procedure"></a> Utilisation de SQL Server Management Studio  
- **Pour déterminer si groupes de disponibilité AlwaysOn est activé**  
+ **Pour déterminer si l'option Groupes de disponibilité AlwaysOn est activée**  
   
-1.  Dans l'Explorateur d'objets, cliquez avec le bouton droit sur l'instance de serveur, puis sélectionnez **Propriétés**.  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur l’instance de serveur, puis sélectionnez **Propriétés**.  
   
 2.  Dans la boîte de dialogue **Propriétés du serveur** , cliquez sur la page **Général** . La propriété **Is HADR Enabled** affiche une des valeurs suivantes :  
   
-    -   **True**, si l'option Groupes de disponibilité AlwaysOn est activée  
+    -   **True**si groupes de disponibilité AlwaysOn est activé  
   
-    -   **False**, si l'option Groupes de disponibilité AlwaysOn est désactivée.  
+    -   **False**, si groupes de disponibilité AlwaysOn est désactivé.  
   
 ###  <a name="Tsql1Procedure"></a> Utilisation de Transact-SQL  
- **Pour déterminer si groupes de disponibilité AlwaysOn est activé**  
+ **Pour déterminer si l'option Groupes de disponibilité AlwaysOn est activée**  
   
 1.  Utilisez l'instruction [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) suivante :  
   
@@ -97,12 +97,12 @@ ms.locfileid: "72782975"
     -   Si `IsHadrEnabled` = 0, l'option Groupes de disponibilité AlwaysOn est désactivée.  
   
     > [!NOTE]  
-    >  Pour plus d’informations sur la propriété `IsHadrEnabled` Server, consultez l' [instruction &#40;ServerProperty&#41;Transact-SQL](/sql/t-sql/functions/serverproperty-transact-sql).  
+    >  Pour plus d’informations sur `IsHadrEnabled` la propriété de serveur, consultez [ServerProperty &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql).  
   
 ###  <a name="PowerShell1Procedure"></a> Utilisation de PowerShell  
- **Pour déterminer si groupes de disponibilité AlwaysOn est activé**  
+ **Pour déterminer si l'option Groupes de disponibilité AlwaysOn est activée**  
   
-1.  Définissez la valeur par défaut (`cd`) sur l’instance de serveur (par exemple, `\SQL\NODE1\DEFAULT`) sur laquelle vous souhaitez déterminer si la [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activée.  
+1.  Définissez la valeur`cd`par défaut () sur l’instance de `\SQL\NODE1\DEFAULT`serveur (par exemple,) sur laquelle [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vous souhaitez déterminer si est activé.  
   
 2.  Entrez la commande PowerShell `Get-Item` suivante :  
   
@@ -111,54 +111,54 @@ ms.locfileid: "72782975"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="EnableAOAG"></a> Activer les groupes de disponibilité AlwaysOn  
- **Pour activer AlwaysOn, utilisez :**  
+ **Pour activer AlwaysOn, utilisez :**  
   
 -   [Gestionnaire de configuration SQL Server](#SQLCM2Procedure)  
   
 -   [PowerShell](#PScmd2Procedure)  
   
 ###  <a name="SQLCM2Procedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
- **Pour activer groupes de disponibilité AlwaysOn**  
+ **Pour activer les groupes de disponibilité AlwaysOn**  
   
 1.  Connectez-vous au nœud de clustering de basculement Windows Server (WSFC) qui héberge l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous souhaitez activer les groupes de disponibilité AlwaysOn.  
   
 2.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-3.  Dans **Gestionnaire de configuration SQL Server**, cliquez sur **services SQL Server**, cliquez avec le bouton droit sur SQL Server ( **< *`instance name`* >)** , où<`instance name`>est le nom d’une instance de serveur local pour laquelle vous souhaitez activer groupes de disponibilité AlwaysOn, puis cliquez sur **Propriétés.**  
+3.  Dans **Gestionnaire de configuration SQL Server**, cliquez sur **services SQL Server**, cliquez avec le bouton droit sur SQL Server ( ** < *`instance name`* ** ** < *`instance name`*>)**, où est le nom d’une instance de serveur local pour laquelle vous souhaitez activer groupes de disponibilité AlwaysOn, puis cliquez sur **Propriétés.**  
   
 4.  Sélectionnez l'onglet **Haute disponibilité AlwaysOn** .  
   
 5.  Vérifiez que le champ **Nom du cluster de basculement Windows** contient le nom du cluster de basculement local. Si ce champ est vide, cette instance de serveur ne prend pas en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]pour le moment. L'ordinateur local n'est pas un nœud de cluster, le cluster WSFC a été arrêté, ou cette édition de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ne prend pas en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
-6.  Activez la case à cocher **Activer les groupes de disponibilité AlwaysOn** , puis cliquez sur **OK**.  
+6.  Activez la case à cocher **activer la groupes de disponibilité AlwaysOn** , puis cliquez sur **OK**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enregistre votre modification. Ensuite, vous devez redémarrer manuellement le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Cela vous permet de choisir l'heure de redémarrage la plus adaptée aux besoins de l'entreprise. Lorsque le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redémarre, AlwaysOn est activé, et la propriété de serveur `IsHadrEnabled` a la valeur 1.  
   
-###  <a name="PScmd2Procedure"></a> Utilisation de PowerShell SQL Server  
+###  <a name="PScmd2Procedure"></a>Utilisation de SQL Server PowerShell  
  **Pour activer AlwaysOn**  
   
 1.  Changez de répertoire (`cd`) pour accéder à une instance de serveur pour laquelle vous voulez activer les groupes de disponibilité AlwaysOn.  
   
 2.  Utilisez l'applet de commande `Enable-SqlAlwaysOn` pour activer les groupes de disponibilité AlwaysOn.  
   
-     Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+     Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
     > [!NOTE]  
-    >  Pour plus d’informations sur la façon de contrôler si l’applet de commande `Enable-SqlAlwaysOn` redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez à [quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
+    >  Pour plus d’informations sur la façon de `Enable-SqlAlwaysOn` contrôler si l’applet de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] commande redémarre le service, consultez à [quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-####  <a name="ExmplEnable-SqlHadrServic"></a> Exemple : Enable-SqlAlwaysOn  
- La commande PowerShell suivante active les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur une instance de SQL Server (*Ordinateur*\\*Instance*).  
+####  <a name="ExmplEnable-SqlHadrServic"></a>Exemple : Enable-SqlAlwaysOn  
+ La commande PowerShell suivante active [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur une instance de SQL Server (**\\*instance*de l’ordinateur).  
   
 ```powershell
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -166,17 +166,17 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 ##  <a name="DisableAOAG"></a>Désactiver les groupes de disponibilité AlwaysOn  
   
--   **Avant de désactiver AlwaysOn :**  
+-   **Avant de désactiver AlwaysOn :**  
   
      [Recommandations](#Recommendations)  
   
--   **Pour désactiver AlwaysOn, utilisez :**  
+-   **Pour désactiver AlwaysOn, utilisez :**  
   
     -   [Gestionnaire de configuration SQL Server](#SQLCM3Procedure)  
   
     -   [PowerShell](#PScmd3Procedure)  
   
--   **Suivi :**  [Après la désactivation d'AlwaysOn](#FollowUp)  
+-   **Suivi :**  [après la désactivation d’AlwaysOn](#FollowUp)  
   
 > [!IMPORTANT]  
 >  Désactivez AlwaysOn sur une seule instance de serveur à la fois. Après avoir désactivé les groupes de disponibilité AlwaysOn, attendez le redémarrage du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avant de passer à une autre instance de serveur.  
@@ -193,37 +193,38 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Connectez-vous au nœud de clustering de basculement Windows Server (WSFC) qui héberge l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous souhaitez désactiver les groupes de disponibilité AlwaysOn.  
   
-2.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
+2.  Dans le **menu Démarrer** , pointez sur **tous les programmes**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]sur, sur **outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-3.  Dans **Gestionnaire de configuration SQL Server**, cliquez sur **services SQL Server**, cliquez avec le bouton droit sur SQL Server ( **< *`instance name`* >)** , où<`instance name`>est le nom d’une instance de serveur local pour laquelle vous souhaitez désactiver groupes de disponibilité AlwaysOn, puis cliquez sur **Propriétés**.  
+3.  Dans **Gestionnaire de configuration SQL Server**, cliquez sur **services SQL Server**, cliquez avec le bouton droit sur SQL Server ( ** < *`instance name`* ** ** < *`instance name`*>)**, où est le nom d’une instance de serveur local pour laquelle vous souhaitez désactiver groupes de disponibilité AlwaysOn, puis cliquez sur **Propriétés**.  
   
 4.  Sur l’onglet**Haute disponibilité AlwaysOn**, décochez la case **Activer les groupes de disponibilité AlwaysOn** , puis cliquez sur **OK**.  
   
-     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enregistre votre modification et redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Lorsque le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redémarre, AlwaysOn est désactivé, et la propriété de serveur `IsHadrEnabled` a la valeur 0, pour indiquer que l'option Groupes de disponibilité AlwaysOn est désactivée.  
+     
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enregistre votre modification et redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Lorsque le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redémarre, AlwaysOn est désactivé, et la propriété de serveur `IsHadrEnabled` a la valeur 0, pour indiquer que l'option Groupes de disponibilité AlwaysOn est désactivée.  
   
 5.  Nous vous recommandons de lire les informations de la section [Suivi : Après la désactivation d'AlwaysOn](#FollowUp), plus loin dans cette rubrique.  
   
-###  <a name="PScmd3Procedure"></a> Utilisation de PowerShell SQL Server  
+###  <a name="PScmd3Procedure"></a>Utilisation de SQL Server PowerShell  
  **Pour désactiver AlwaysOn**  
   
-1.  Remplacez le répertoire (`cd`) par une instance de serveur actuellement activée que vous souhaitez désactiver pour groupes de disponibilité AlwaysOn.  
+1.  Remplacez le répertoire`cd`() par une instance de serveur actuellement activée que vous souhaitez désactiver pour groupes de disponibilité AlwaysOn.  
   
 2.  Utilisez l'applet de commande `Disable-SqlAlwaysOn` pour activer les groupes de disponibilité AlwaysOn.  
   
-     Par exemple, la commande suivante désactive les groupes de disponibilité AlwaysOn sur une instance de SQL Server (*Ordinateur*\\*Instance*).  Cette commande nécessite le redémarrage de l'instance et vous serez invité à confirmer ce redémarrage.  
+     Par exemple, la commande suivante désactive groupes de disponibilité AlwaysOn sur une instance de SQL Server (*instance*de l'*ordinateur*\\).  Cette commande nécessite le redémarrage de l'instance et vous serez invité à confirmer ce redémarrage.  
   
     ```powershell
     Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  Pour plus d’informations sur la façon de contrôler si l’applet de commande `Disable-SqlAlwaysOn` redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez à [quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
+    >  Pour plus d’informations sur la façon de `Disable-SqlAlwaysOn` contrôler si l’applet de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] commande redémarre le service, consultez à [quel moment une applet de commande redémarre-t-elle le service SQL Server ?](#WhenCmdletRestartsSQL), plus loin dans cette rubrique.  
   
-     Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+     Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a>Suivi : après la désactivation d’AlwaysOn  
  Après avoir désactivé des groupes de disponibilité AlwaysOn, l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être redémarrée. Le Gestionnaire de configuration SQL redémarre l'instance de serveur automatiquement. Toutefois, si vous avez utilisé l'applet de commande `Disable-SqlAlwaysOn`, vous devez redémarrer l'instance de serveur manuellement. Pour plus d’informations, consultez [sqlservr Application](../../../tools/sqlservr-application.md).  
@@ -246,16 +247,16 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 4.  Les bases de données secondaires passent à l'état RESTORING. Vous pouvez les supprimer ou les restaurer à l'aide de RESTORE WITH RECOVERY. Toutefois, les bases de données restaurées ne participent plus à la synchronisation des données des groupes de disponibilité.  
   
-##  <a name="WhenCmdletRestartsSQL"></a> À quel moment une applet de commande redémarre-t-elle le service SQL Server ?  
+##  <a name="WhenCmdletRestartsSQL"></a>Quand une applet de commande redémarre-t-elle le service SQL Server ?  
  Sur une instance de serveur en cours d'exécution, l'utilisation de `Enable-SqlAlwaysOn` ou de `Disable-SqlAlwaysOn` pour modifier le paramètre actuel d'AlwaysOn peut entraîner le redémarrage du service SQL Server. Le comportement de redémarrage dépend des conditions suivantes :  
   
 |Paramètre -NoServiceRestart spécifié|Paramètre -Force spécifié|Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a-t-il été redémarré ?|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|Non|Non|Par défaut. Mais l'applet de commande vous invite à agir comme suit :<br /><br /> **Pour effectuer cette action, vous devez redémarrer le service SQL Server pour l’instance de serveur « < instance_name > ». Voulez-vous continuer ?**<br /><br /> **[Y] Oui [N] Non [S] Suspendre [?] Aide (la valeur par défaut est « Y ») :**<br /><br /> Si vous spécifiez **N** ou **S**, le service n'est pas redémarré.|  
+|Non|Non|Par défaut. Mais l'applet de commande vous invite à agir comme suit :<br /><br /> **Pour effectuer cette action, vous devez redémarrer le service SQL Server pour l’instance de serveur « <instance_name> ». Voulez-vous continuer ?**<br /><br /> **[Y] Oui [N] non [S] suspendre [ ?] Aide (la valeur par défaut est « Y ») :**<br /><br /> Si vous spécifiez **N** ou **S**, le service n'est pas redémarré.|  
 |Non|Oui|Le service est redémarré.|  
 |Oui|Non|Le service n'est pas redémarré.|  
 |Oui|Oui|Le service n'est pas redémarré.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble &#40;de&#41; groupes de disponibilité AlwaysOn SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  

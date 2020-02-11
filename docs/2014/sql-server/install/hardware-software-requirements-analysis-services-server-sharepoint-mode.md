@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245610"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Configurations matérielle et logicielle requises pour le serveur Analysis Services en mode SharePoint (SQL Server 2014)
@@ -44,7 +44,7 @@ ms.locfileid: "75245610"
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services installé sur SharePoint 2013  
  Si vous installez le serveur Analysis Services en mode SharePoint seul sur un serveur, alors la configuration système minimale requise est basée sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] plutôt que sur la configuration requise pour SharePoint Server.  
   
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
  L'exécution de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint est optimale sur des serveurs professionnels de nouvelle génération qui offrent des seuils de RAM plus élevés et une plus grande capacité de traitement. De grandes quantités de mémoire RAM sont utilisées pour stocker les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en mémoire. La mémoire RAM prend en charge la capacité à s'adapter aux modifications structurelles. Des processeurs supplémentaires prennent en charge les analyses longue durée des données brutes, non agrégées. Les données assument leur structure dans un environnement dynamique, en réponse à une analyse de données pilotée par l'utilisateur et initialisée via un client Excel ou une interface frontale.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "75245610"
   
  Si vous installez le serveur Analysis Services en mode SharePoint sur un serveur de batterie SharePoint, reportez-vous à la configuration système minimale requise pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et SharePoint Server aux adresses suivantes :  
   
--   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Configurations matérielle et logicielle requises pour l'installation de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Configurations matérielle et logicielle requises pour SharePoint 2013](https://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75245610"
  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 s'exécute sur des serveurs d'applications dans une batterie de serveurs SharePoint 2010 et utilise les fonctionnalités et l'infrastructure SharePoint pour prendre en charge des opérations de serveur. Le tableau suivant récapitule les conditions requises liées à des déploiements de SharePoint 2010 :  
   
-|Composant|Prérequis|  
+|Composant|Condition requise|  
 |---------------|-----------------|  
 |Version SharePoint|SharePoint 2010 Enterprise, avec Excel Services, le service Banque d'informations sécurisé et le service d'émission de jetons Revendications vers Windows configurés sur la même batterie de serveurs.<br /><br /> SharePoint doit être installé à l'aide de l'option Batterie de serveurs du programme d'installation de SharePoint (l'option d'installation autonome de SharePoint n'est pas prise en charge). 
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] requiert l'infrastructure de batterie de serveurs pour pouvoir prendre en charge l'accès aux données et en tant qu'administrateur. L'installation autonome ne fournit pas ces services.<br /><br /> L'édition développeur, qui s'exécute sur Windows 7 ou Windows Vista, n'est pas prise en charge pour les installations serveur de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|  

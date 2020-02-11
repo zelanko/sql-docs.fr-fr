@@ -1,5 +1,5 @@
 ---
-title: Status, exemple de propriété (objet Recordset) (VB) | Microsoft Docs
+title: Status, exemple de propriété (Recordset) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916794"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status, exemple de propriété (objet Recordset) (VB)
-Cet exemple utilise le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété pour afficher les enregistrements qui ont été modifiées dans une opération par lot avant une mise à jour du lot s’est produite.  
+Cet exemple utilise la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) pour afficher les enregistrements qui ont été modifiés dans une opération de traitement par lot avant qu’une mise à jour par lot ait eu lieu.  
   
 ```  
 'BeginStatusRecordsetVB  

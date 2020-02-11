@@ -18,21 +18,21 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095858"
 ---
-# <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
+# <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Dissocie une règle d'une colonne ou d'un type de données alias dans la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Nous vous recommandons de créer des définitions par défaut à l’aide du mot clé DEFAULT dans le [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instructions à la place.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Nous vous recommandons de créer à la place des définitions default en utilisant le mot clé DEFAULT dans les instructions [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [Create table](../../t-sql/statements/create-table-transact-sql.md) .  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,22 +43,23 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object_name'` Est le nom de la table et colonne ou le type de données d’alias à partir de laquelle la règle est dissociée. *object_name* est **nvarchar(776)** , sans valeur par défaut. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias. Lorsque vous dissociez une règle d'un type de données alias, les colonnes de ce type de données ayant la même règle sont également dissociées. Les colonnes de ce type de données auxquelles des règles sont directement liées ne sont pas affectées.  
+`[ @objname = ] 'object_name'`Nom de la table et de la colonne ou du type de données alias à partir duquel la règle est détachée. *object_name* est de type **nvarchar (776)**, sans valeur par défaut. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias. Lorsque vous dissociez une règle d'un type de données alias, les colonnes de ce type de données ayant la même règle sont également dissociées. Les colonnes de ce type de données auxquelles des règles sont directement liées ne sont pas affectées.  
   
 > [!NOTE]  
->  *object_name* peut contenir des crochets **[]** comme délimitée par des caractères d’identificateur. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+>  les *object_name* peuvent contenir des crochets **[]** comme des caractères d’identificateur délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Est utilisé seulement pour dissocier une règle d’un type de données alias. *l’argument futureonly_flag* est **varchar(15)** , avec NULL comme valeur par défaut. Lorsque *futureonly_flag* est **futureonly**, les colonnes existantes de ce type de données ne perdent pas de la règle spécifiée.  
+`[ @futureonly = ] 'futureonly_flag'`Est utilisé uniquement lors de la dissociation d’une règle d’un type de données alias. *futureonly_flag* est de type **varchar (15)**, avec NULL comme valeur par défaut. Lorsque *futureonly_flag* est **futureonly**, les colonnes existantes de ce type de données ne perdent pas la règle spécifiée.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
  Pour afficher le texte d’une règle, exécutez **sp_helptext** en donnant le nom de la règle comme paramètre.  
   
- Lorsqu’une règle est détachée, les informations relatives à la liaison sont supprimées de la **sys.columns** table si la règle a été liée à une colonne et à partir de la **sys.types** si la règle a été liée à un type de données d’alias de table.  
+ Lorsqu’une règle est indépendante, les informations sur la liaison sont supprimées de la table **sys. Columns** si la règle a été liée à une colonne, et à partir de la table **sys. types** si la règle a été liée à un type de données d’alias.  
   
- Lorsqu'une règle est dissociée d'un type de données alias, elle l'est aussi des colonnes ayant ce type de données alias. La règle peut toujours être associée aux colonnes dont les types de données ont été modifiés ultérieurement par la clause ALTER COLUMN d’une instruction ALTER TABLE, vous devez dissocier spécifiquement la règle à partir de ces colonnes à l’aide de **sp_unbindrule** et en spécifiant le nom de colonne.  
+ Lorsqu'une règle est dissociée d'un type de données alias, elle l'est aussi des colonnes ayant ce type de données alias. La règle peut également être liée à des colonnes dont les types de données ont été modifiés ultérieurement par la clause ALTER COLUMN d’une instruction ALTER TABLE, vous devez détacher spécifiquement la règle de ces colonnes à l’aide de **sp_unbindrule** et en spécifiant le nom de la colonne.  
   
 ## <a name="permissions"></a>Autorisations  
  La dissociation d'une règle d'une colonne de table nécessite l'autorisation ALTER sur la table. La dissociation d'une règle d'un type de données alias nécessite l'autorisation CONTROL sur le type ou l'autorisation ALTER sur le schéma auquel le type appartient.  
@@ -79,15 +80,15 @@ EXEC sp_unbindrule 'employees.startdate';
 EXEC sp_unbindrule ssn;  
 ```  
   
-### <a name="c-using-futureonlyflag"></a>C. Utilisation de l'argument futureonly_flag  
+### <a name="c-using-futureonly_flag"></a>C. Utilisation de l'argument futureonly_flag  
  L'exemple suivant dissocie la règle du type de données alias `ssn` sans affecter les colonnes `ssn` existantes.  
   
 ```  
 EXEC sp_unbindrule 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. À l’aide d’identificateurs délimités  
- L’exemple suivant illustre l’utilisation des identificateurs délimités dans le *object_name* paramètre.  
+### <a name="d-using-delimited-identifiers"></a>D. Utilisation d’identificateurs délimités  
+ L’exemple suivant montre l’utilisation d’identificateurs délimités dans le paramètre *object_name* .  
   
 ```  
 CREATE TABLE [t.4] (c1 int); -- Notice the period as part of the table   
@@ -104,9 +105,9 @@ EXEC sp_unbindrule '[t.4].c1';
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [CRÉER une règle &#40;&#41;Transact-SQL](../../t-sql/statements/create-rule-transact-sql.md)   
+ [SUPPRIMER la règle &#40;&#41;Transact-SQL](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
