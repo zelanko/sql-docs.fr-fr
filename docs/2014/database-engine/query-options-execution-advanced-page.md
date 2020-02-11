@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199328"
 ---
 # <a name="query-options-execution-advanced-page"></a>Options Exécution de la requête (page Avancé)
@@ -33,7 +33,7 @@ ms.locfileid: "71199328"
 
 **SET ARITHABORT** Lorsque cette case à cocher est activée, `INSERT`lorsqu' `DELETE` une `UPDATE` instruction, ou rencontre une erreur arithmétique (dépassement de capacité, Division par zéro ou erreur de domaine) lors de l’évaluation de l’expression, la requête ou le traitement est terminé. Lorsque cette case à cocher est désactivée, une valeur `NULL` est fournie pour cette valeur, si possible, la requête se poursuit et un message est inclus avec le résultat. Consultez la documentation en ligne pour une description plus complète de ce comportement. Cette option est activée par défaut.
   
-**SET SHOWPLAN_TEXT** Lorsque cette case à cocher est activée, le plan de requête est retourné sous forme de texte avec chaque requête. Cette option est désactivée par défaut.
+**définir SHOWPLAN_TEXT** Lorsque cette case à cocher est activée, le plan de requête est retourné sous forme de texte avec chaque requête. Cette option est désactivée par défaut.
   
 **définir l’heure des statistiques** Lorsque cette case à cocher est activée, les statistiques de temps sont retournées avec chaque requête. Cette option est désactivée par défaut.
   
@@ -66,4 +66,4 @@ Les protocoles d’attestation actuellement pris en charge sont les suivants :
 
 Pour plus d’informations, consultez [Always Encrypted avec les enclaves sécurisées](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) et l' [attestation d’enclave sécurisée](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
-**Rétablir les valeurs par défaut** Rétablit toutes les valeurs par défaut initiales des options de cette page.
+**Rétablir les valeurs par défaut** Rétablit les valeurs par défaut d’origine de toutes les valeurs de cette page.
