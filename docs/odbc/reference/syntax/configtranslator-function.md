@@ -1,5 +1,5 @@
 ---
-title: ConfigTranslator, fonction | Microsoft Docs
+title: ConfigTranslator fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18bf7e3f66140ef92b520ea7c86b616ea7067b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016700"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator, fonction
 **Conformité**  
- Version introduite : ODBC VERSION 2.0  
+ Version introduite : ODBC 2,0  
   
  **Résumé**  
- **ConfigTranslator** renvoie une option de traduction par défaut pour un traducteur. Il peut être dans le traducteur de DLL ou d’une DLL d’installation distinct.  
+ **ConfigTranslator** retourne une option de traduction par défaut pour un traducteur. Il peut se trouver dans la DLL du traducteur ou dans une DLL d’installation distincte.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,30 +44,30 @@ BOOL ConfigTranslator(
   
 ## <a name="arguments"></a>Arguments  
  *hwndParent*  
- [Entrée] Handle de fenêtre parente. La fonction n’affichera pas les boîtes de dialogue si le handle est null.  
+ Entrée Handle de fenêtre parente. La fonction n’affiche pas de boîtes de dialogue si le handle a la valeur null.  
   
  *pvOption*  
- [Sortie] Une option de traduction de 32 bits.  
+ Sortie Option de traduction 32 bits.  
   
-## <a name="returns"></a>Valeur renvoyée  
- La fonction retourne la valeur TRUE si elle réussit, FALSE en cas d’échec.  
+## <a name="returns"></a>Retours  
+ La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **ConfigTranslator** retourne FALSE, associé à un  *\*pfErrorCode* valeur est publiée dans le tampon d’erreur de programme d’installation par un appel à **SQLPostInstallerError**et peut être obtenu en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournés par **SQLInstallerError** et explique chacune dans le contexte de cette fonction.  
+ Quand **ConfigTranslator** retourne false, une valeur * \*pfErrorCode* associée est publiée dans la mémoire tampon d’erreur du programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_HWND|Handle de fenêtre non valide|Le *hwndParent* argument était non valide ou NULL.|  
-|ODBC_ERROR_DRIVER_SPECIFIC|Erreur spécifique du pilote ou du traducteur|Une erreur spécifique au pilote pour lesquels il n’existe aucune erreur de programme d’installation ODBC défini. Le *SzError* argument dans un appel à la **SQLPostInstallerError** (fonction) doit contenir le message d’erreur spécifique au pilote.|  
-|ODBC_ERROR_INVALID_OPTION|Option de conversion non valide|Le *pvOption* argument contenue une valeur non valide.|  
+|ODBC_ERROR_INVALID_HWND|Handle de fenêtre non valide|L’argument *hwndParent* n’est pas valide ou a la valeur null.|  
+|ODBC_ERROR_DRIVER_SPECIFIC|Erreur spécifique au pilote ou au traducteur|Erreur propre au pilote pour laquelle il n’existe aucune erreur de programme d’installation ODBC définie. L’argument *SzError* dans un appel à la fonction **SQLPostInstallerError** doit contenir le message d’erreur spécifique au pilote.|  
+|ODBC_ERROR_INVALID_OPTION|Option de traduction non valide|L’argument *pvOption* contient une valeur non valide.|  
   
 ## <a name="comments"></a>Commentaires  
- Si le convertisseur prend en charge uniquement une option de traduction unique, **ConfigTranslator** retourne la valeur TRUE et définit *pvOption* à l’option 32 bits. Sinon, il détermine l’option de traduction par défaut à utiliser. **ConfigTranslator** peut afficher une boîte de dialogue avec laquelle un utilisateur sélectionne une option de traduction par défaut.  
+ Si le traducteur ne prend en charge qu’une seule option de traduction, **ConfigTranslator** retourne true et définit *pvOption* sur l’option 32 bits. Dans le cas contraire, il détermine l’option de traduction par défaut à utiliser. **ConfigTranslator** peut afficher une boîte de dialogue permettant à un utilisateur de sélectionner une option de traduction par défaut.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Obtention d’une option de traduction|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|En sélectionnant un traducteur|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
+|Sélection d’un convertisseur|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |Définition d’une option de traduction|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

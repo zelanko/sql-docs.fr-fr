@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de réplication SQL Server 'Informations sur le serveur de distribution' | Microsoft Docs
+title: Réplication SQL Server boîte de dialogue « informations sur le serveur de distribution » | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721361"
 ---
-# <a name="distributor-information-dialog-box"></a>Boîte de dialogue informations de serveur de distribution 
-Cette rubrique fournit des informations sur le **distributeur** boîte de dialogue 
+# <a name="distributor-information-dialog-box"></a>Boîte de dialogue informations sur le serveur de distribution 
+Cette rubrique fournit des informations sur la boîte de dialogue serveur de **distribution** 
 
 ## <a name="publications"></a>Publications
 
@@ -59,12 +59,12 @@ Cette rubrique fournit des informations sur le **distributeur** boîte de dialog
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Error    
--   Réessayer    
+-   Recommencer    
 -   Exécution en cours    
 -   Non exécuté    
 -   Jamais démarré  
   
- **Serveur de publication**  
+ **Publisher**  
  Instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur de publication.  
   
  **Publication**  
@@ -79,7 +79,7 @@ Cette rubrique fournit des informations sur le **distributeur** boîte de dialog
  **Dernière heure de début**  
  Dernière heure à laquelle l'Agent a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée pendant laquelle l'agent s'est exécuté. Cette durée représente le temps actuel si l'agent est en cours d'exécution ou le temps total d'exécution s'il a été exécuté et s'est terminé.  
   
  **Dernière action**  
@@ -105,12 +105,12 @@ Cette rubrique fournit des informations sur le **distributeur** boîte de dialog
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
 -   Error    
--   Réessayer    
+-   Recommencer    
 -   Exécution en cours    
 -   Non exécuté    
 -   Jamais démarré  
   
- **Serveur de publication**  
+ **Publisher**  
  Instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du serveur de publication.  
   
  **Publication**  
@@ -125,7 +125,7 @@ Cette rubrique fournit des informations sur le **distributeur** boîte de dialog
  **Dernière heure de début**  
  Dernière heure à laquelle l'Agent a démarré.  
   
- **Duration**  
+ **Durée**  
  Durée pendant laquelle l'agent s'est exécuté. Cette durée représente le temps actuel si l'agent est en cours d'exécution ou le temps total d'exécution s'il a été exécuté et s'est terminé.  
   
  **Dernière action**  

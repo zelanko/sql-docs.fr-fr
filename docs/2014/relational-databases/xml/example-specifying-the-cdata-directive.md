@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Spécification de la directive CDATA | Microsoft Docs'
+title: 'Exemple : spécification de la directive CDATA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287770"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Exemple : Spécification de la directive CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Exemple : spécification de la directive CDATA
   Si la directive a pour valeur **CDATA**, les données contenues ne sont pas encodées comme une entité, mais placées dans la section CDATA. Les attributs **CDATA** doivent être dépourvus de nom.  
   
  La requête suivante insère la description résumée des modèles de produits dans une section CDATA.  
@@ -38,7 +38,7 @@ WHERE   ProductModelID=19
 FOR XML EXPLICIT  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916881"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
@@ -33,7 +33,7 @@ ms.locfileid: "62916881"
   
 -   Versions de ligne qui sont générées par les transactions de modification de données pour les fonctionnalités telles que : opérations d'index en ligne, MARS (Multiple Active Result Sets) et déclencheurs AFTER.  
   
- Les opérations effectuées dans **tempdb** sont soumises à un enregistrement minimal dans le journal. Cela permet de restaurer des transactions. La base de données**tempdb** étant recréée chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré, le système démarre toujours avec une copie propre de la base de données. Les tables et les procédures stockées temporaires sont automatiquement supprimées à la déconnexion et aucune connexion n'est active lorsque le système est arrêté. Par conséquent, aucune donnée de la base de données **tempdb** ne doit être enregistrée d'une session de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'autre. La sauvegarde et la restauration ne sont pas autorisées sur la base de données **tempdb**.  
+ Les opérations effectuées dans **tempdb** sont soumises à un enregistrement minimal dans le journal. Cela permet de restaurer des transactions. **tempdb** est recréé à chaque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarrage, de sorte que le système démarre toujours avec une copie propre de la base de données. Les tables et les procédures stockées temporaires sont automatiquement supprimées à la déconnexion et aucune connexion n'est active lorsque le système est arrêté. Par conséquent, il n’y a jamais de contenu dans **tempdb** à enregistrer d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] une session de à l’autre. La sauvegarde et la restauration ne sont pas autorisées sur la base de données **tempdb**.  
   
 ## <a name="physical-properties-of-tempdb"></a>Propriétés physiques de tempdb  
  Le tableau suivant répertorie les valeurs de configuration initiales des fichiers de données et des journaux de **tempdb** . La taille de ces fichiers peut varier légèrement en fonction des éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "62916881"
 |Données primaires|tempdev|tempdb.mdf|Croissance automatique de 10 pour cent jusqu'à ce que le disque soit plein|  
 |Journal|templog|templog.ldf|Croissance automatique de 10 % jusqu'à un maximum de 2 téraoctets|  
   
- La taille de **tempdb** peut affecter les performances d’un système. Par exemple, si le **tempdb** taille est trop petite, le traitement du système est peut-être trop occupée à faire croître la base de données pour prendre en charge les besoins de votre charge de travail chaque fois que vous démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez éviter cette surcharge en augmentant la taille de **tempdb**.  
+ La taille de **tempdb** peut affecter les performances d’un système. Par exemple, si la taille de **tempdb** est trop petite, le traitement du système peut être trop occupé avec la croissance automatique de la base de données pour prendre en charge les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]exigences de votre charge de travail chaque fois que vous démarrez. Vous pouvez éviter cette surcharge en accroissant la taille de **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Performances accrues dans tempdb  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les performances de **tempdb** connaissent les améliorations suivantes :  
@@ -54,13 +54,13 @@ ms.locfileid: "62916881"
   
 -   La surcharge d'enregistrement pour **tempdb** est réduite. Cela réduit la consommation de bande passante au niveau des E/S de disque sur le fichier journal **tempdb** .  
   
--   L’algorithme d’allocation de pages mixtes dans **tempdb** est améliorée.  
+-   L’algorithme d’allocation des pages mixtes dans **tempdb** est amélioré.  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>Déplacement des fichiers de données et des journaux de tempdb  
- Pour déplacer les données **tempdb** et les fichiers journaux, consultez [Déplacer des bases de données système](system-databases.md).  
+ Pour déplacer les fichiers de données et les fichiers journaux **tempdb** , consultez [déplacer des bases de données système](system-databases.md).  
   
 ### <a name="database-options"></a>Options de base de données  
- Le tableau suivant répertorie les valeurs par défaut de chaque option de la base de données **tempdb** et précise si elles sont modifiables. Pour afficher les valeurs actuelles de ces options, utilisez l'affichage catalogue [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
+ Le tableau suivant répertorie la valeur par défaut de chaque option de base de données de la base de données **tempdb** et indique si l’option peut être modifiée. Pour afficher les valeurs actuelles de ces options, utilisez l'affichage catalogue [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) .  
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
@@ -71,9 +71,9 @@ ms.locfileid: "62916881"
 |ANSI_WARNINGS|OFF|Oui|  
 |ARITHABORT|OFF|Oui|  
 |AUTO_CLOSE|OFF|Non|  
-|AUTO_CREATE_STATISTICS|ON|Oui|  
+|AUTO_CREATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_SHRINK|OFF|Non|  
-|AUTO_UPDATE_STATISTICS|ON|Oui|  
+|AUTO_UPDATE_STATISTICS|ACTIVÉ|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
 |CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
@@ -81,7 +81,7 @@ ms.locfileid: "62916881"
 |CURSOR_DEFAULT|GLOBAL|Oui|  
 |Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Non<br /><br /> Non|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
-|DB_CHAINING|ON|Non|  
+|DB_CHAINING|ACTIVÉ|Non|  
 |ENCRYPTION|OFF|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM pour les nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE pour les mises à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Oui|  
@@ -104,13 +104,13 @@ ms.locfileid: "62916881"
   
 -   Modification du classement. Le classement par défaut est le classement du serveur.  
   
--   Modification du propriétaire de la base de données. La base de données**tempdb** appartient à **sa**.  
+-   Modification du propriétaire de la base de données. **tempdb** appartient à **sa**.  
   
 -   Création d'un instantané de base de données  
   
 -   Suppression de la base de données  
   
--   Suppression de l'utilisateur **Invité** de la base de données  
+-   Suppression de l’utilisateur **invité** de la base de données.  
   
 -   Activation de la capture des données modifiées.  
   

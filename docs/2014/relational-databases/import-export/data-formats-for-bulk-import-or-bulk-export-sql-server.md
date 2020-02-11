@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012075"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formats de données pour l'importation en bloc ou l'exportation en bloc (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66012075"
 |Exportation en bloc de données vers un fichier texte à utiliser dans un autre programme.|-|-|Oui|-|  
 |Transferts en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui contient des données Unicode et qui ne comporte aucun caractère étendu ou DBCS.|-|-|-|Oui|  
   
- <sup>1</sup> méthode la plus rapide pour l’exportation en bloc de données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de l’utilisation **bcp**.  
+ <sup>1</sup> méthode la plus rapide pour l’exportation en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de données à partir de lors de l’utilisation de **BCP**.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

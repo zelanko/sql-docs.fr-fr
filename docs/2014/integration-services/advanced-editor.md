@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772189"
 ---
 # <a name="advanced-editor"></a>Éditeur avancé
@@ -46,7 +46,7 @@ ms.locfileid: "62772189"
   
 -   [Propriétés personnalisées des transformations](data-flow/transformations/transformation-custom-properties.md)  
   
--   [Propriétés du chemin d'accès](../../2014/integration-services/path-properties.md)  
+-   [Propriétés du chemin](../../2014/integration-services/path-properties.md)  
   
  Pour plus d'informations sur le composant spécifique que vous modifiez, consultez la description du composant dans la section « Composants des flux de données » de la documentation Objets et concepts d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   

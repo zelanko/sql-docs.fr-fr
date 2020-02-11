@@ -1,5 +1,5 @@
 ---
-title: Page de propriétés de sécurité, éléments (Gestionnaire de rapports) | Microsoft Docs
+title: Page Propriétés de sécurité, éléments (Gestionnaire de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102166"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Page Propriétés de sécurité, Éléments (Gestionnaire de rapports)
@@ -50,19 +50,19 @@ ms.locfileid: "66102166"
  Activez la case à cocher en regard du nom d'utilisateur ou de groupe à supprimer et cliquez sur **Supprimer**. Vous ne pouvez pas supprimer une attribution de rôle s'il s'agit de la dernière ou s'il s'agit d'une attribution de rôle intégrée (par exemple « Built-in\Administrateurs ») qui définit la ligne de base de la sécurité du serveur de rapports. La suppression d'une attribution de rôle n'entraîne pas celle d'un compte d'utilisateur ou de groupe ou des définitions de rôles.  
   
  **Nouvelle attribution de rôle**  
- Cliquez pour ouvrir la page Nouvelle attribution de rôle qui permet de créer des attributions de rôles supplémentaires pour l'élément actif. Pour plus d’informations, consultez [nouvelle attribution de rôle : Page Modifier le rôle attribution &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
+ Cliquez pour ouvrir la page Nouvelle attribution de rôle qui permet de créer des attributions de rôles supplémentaires pour l'élément actif. Pour plus d’informations, consultez la [page nouvelle attribution de rôle : modifier l’attribution de rôle &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
- **Rétablir la sécurité du Parent**  
+ **Rétablir la sécurité parente**  
  Cliquez pour rétablir les paramètres de sécurité en fonction de ceux du dossier immédiatement parent. Si l'héritage est arrêté dans toute l'arborescence des dossiers du serveur de rapports, les paramètres de sécurité du dossier de niveau supérieur (Dossier racine) sont utilisés.  
   
  **Groupe ou utilisateur**  
  Répertorie les groupes et les utilisateurs qui font partie de l'attribution de rôle existante pour l'élément actuel. Les attributions de rôle existantes pour le dossier actif sont définies pour les groupes et les utilisateurs qui apparaissent dans cette colonne. Vous pouvez cliquer sur un nom d'utilisateur ou de groupe pour afficher ou modifier les détails d'une attribution de rôle.  
   
- **Roles**  
+ **Rôles**  
  Répertorie une ou plusieurs définitions de rôles qui font partie d'une attribution de rôle existante. Si plusieurs rôles sont attribués à un compte d'utilisateur ou de groupe, ce groupe ou cet utilisateur peut effectuer toutes les tâches qui appartiennent à ces rôles. Pour afficher les tâches associées à un rôle, utilisez SQL Server Management Studio pour consulter les tâches dans chaque définition de rôle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Aide (F1) Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Rôles prédéfinis](security/role-definitions-predefined-roles.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Attributions de rôles](security/role-assignments.md)   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165024"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Exécuter des scripts pendant la synchronisation (programmation Transact-SQL de la réplication)
@@ -32,7 +32,7 @@ ms.locfileid: "74165024"
   
 2.  Enregistrez le fichier de script dans un emplacement accessible à l'Agent d'instantané pour la publication.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Spécifiez **\@publication**, le nom du fichier de script avec le chemin UNC complet créé à l’étape 2 pour **\@scriptfile**et l’une des valeurs suivantes pour **\@SkipError**:  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Spécifiez ** \@publication**, le nom du fichier de script avec le chemin UNC complet créé à l’étape 2 pour ** \@scriptfile**et l’une des valeurs suivantes pour ** \@SkipError**:  
   
     -   **0** – l'agent arrêtera d'exécuter le script en cas d'erreur.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "74165024"
 4.  Le script spécifié sera exécuté sur chaque Abonné lorsque l'agent s'exécutera de nouveau pour synchroniser l'abonnement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Synchronisez les données](synchronize-data.md)  
+ [Synchroniser les données](synchronize-data.md)  
   
   
