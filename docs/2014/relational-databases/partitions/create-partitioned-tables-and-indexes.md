@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519162"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Créer des tables et des index partitionnés
@@ -75,7 +75,7 @@ ms.locfileid: "62519162"
 ####  <a name="Permissions"></a> Autorisations  
  La création d'une table partitionnée nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table est créée. La création d'un index partitionné nécessite l'autorisation ALTER sur la table ou la vue dans laquelle l'index est créé. La création d'une table ou d'un index partitionné(e) nécessite l'une des autorisations supplémentaires suivantes :  
   
--   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
+-   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
   
 -   Autorisation CONTROL ou ALTER sur la base de données dans laquelle la fonction de partition et le schéma de partition sont créés.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62519162"
   
 #### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
-1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...** .  
+1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...**.  
   
 2.  Dans l' **Assistant Création de partition**, sur la page **Assistant Création de partition** , cliquez sur **Suivant**.  
   
@@ -119,10 +119,10 @@ ms.locfileid: "62519162"
   
      Les options supplémentaires suivantes sont disponibles sur cette page :  
   
-     **Colocaliser cette table avec la table partitionnée sélectionnée**  
+     **Colocaliser cette table à la table partitionnée sélectionnée**  
      Permet de sélectionner une table partitionnée qui contient les données connexes à joindre à cette table sur la colonne de partitionnement. Les requêtes portant sur des tables présentant des partitions jointes sur les colonnes de partitionnement sont généralement plus efficaces.  
   
-     **Aligner les index non uniques et uniques avec une colonne de partition indexée lors du stockage**  
+     **Aligner les index non uniques et uniques avec une colonne de partition indexée dans le stockage**  
      Aligne tous les index de la table qui sont partitionnés avec le même schéma de partition. Lorsqu'une table et ses index sont alignés, vous pouvez plus efficacement déplacer des partitions dans et hors de tables partitionnées, car vos données sont partitionnées avec le même algorithme.  
   
      Après avoir sélectionné la colonne de partitionnement et toute autre option, cliquez sur **Suivant**.  
@@ -141,7 +141,7 @@ ms.locfileid: "62519162"
   
      Les options supplémentaires suivantes sont disponibles sur cette page :  
   
-     **Définir les limites...**  
+     **Définir des limites...**  
      Ouvre la boîte de dialogue **Définir les valeurs limites** pour sélectionner les valeurs limites et les plages de dates voulues pour vos partitions. Cette option est disponible uniquement lorsque vous avez sélectionné une colonne de partitionnement qui contient l'un des types de données suivants : `date`, `datetime`, `smalldatetime`, `datetime2` ou `datetimeoffset`.  
   
      **Estimer le stockage**  
@@ -239,7 +239,7 @@ ms.locfileid: "62519162"
      **Message**  
      Indique les messages d'erreur ou d'avertissement retournés par le processus.  
   
-     **Rapport**  
+     **Report**  
      Crée un rapport qui contient les résultats de l'Assistant Création de partition. Les options sont **Afficher le rapport**, **Enregistrer le rapport dans un fichier**, **Copier le rapport dans le Presse-papiers**et **Envoyer le rapport sous forme de courrier électronique**.  
   
      **Afficher le rapport**  
@@ -262,7 +262,7 @@ ms.locfileid: "62519162"
   
 #### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -407,13 +407,13 @@ ms.locfileid: "62519162"
     GO  
     ```  
   
- Pour plus d'informations, consultez :  
+ Pour plus d'informations, consultez les pages suivantes :  
   
 -   [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
--   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)  
+-   [CRÉER une fonction de PARTITION &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-function-transact-sql)  
   
--   [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
+-   [CRÉER un schéma de PARTITION &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-scheme-transact-sql)  
   
 -   [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   

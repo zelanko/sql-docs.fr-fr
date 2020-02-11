@@ -18,10 +18,10 @@ ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35162b8f8c359ba1e1eed9ef461773a3b87533a6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657812"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>Propriété NumberOfFlags (classe ServerSettings)
@@ -36,7 +36,7 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
+ *dessin*  
  Objet de [classe ServerSettings](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) qui représente les paramètres du serveur sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
@@ -45,6 +45,6 @@ object.NumberOfFlags [= value]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des protocoles réseau du serveur et des bibliothèques Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

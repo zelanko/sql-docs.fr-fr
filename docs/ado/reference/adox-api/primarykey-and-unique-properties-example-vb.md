@@ -1,5 +1,5 @@
 ---
-title: PrimaryKey et Unique de propriétés, exemple (VB) | Microsoft Docs
+title: PrimaryKey et unique, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965551"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey et Unique, exemples de propriétés (VB)
-Cet exemple montre la [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) et [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propriétés d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée une nouvelle table avec deux colonnes. Le **PrimaryKey** et **Unique** propriétés sont utilisées pour définir une colonne clé primaire pour laquelle les valeurs en double ne sont pas autorisées.  
+Cet exemple illustre les propriétés [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) et [unique](../../../ado/reference/adox-api/unique-property-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée une nouvelle table avec deux colonnes. Les propriétés **PrimaryKey** et **unique** sont utilisées pour définir une colonne comme clé primaire pour laquelle les valeurs dupliquées ne sont pas autorisées.  
   
 ```  
 ' BeginPrimaryKeyVB  

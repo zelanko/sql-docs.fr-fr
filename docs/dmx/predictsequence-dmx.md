@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041921"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
@@ -30,14 +30,14 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>Type de retour  
- Un \<table expression >.  
+ Expression \<de table>.  
   
 ## <a name="remarks"></a>Notes  
- Si le *n* paramètre est spécifié, il retourne les valeurs suivantes :  
+ Si le paramètre *n* est spécifié, les valeurs suivantes sont renvoyées :  
   
--   Si *n* est supérieure à zéro, les valeurs de séquence probables dans le prochain *n* étapes.  
+-   Si *n* est supérieur à zéro, les valeurs de séquence les plus probables dans les *n* étapes suivantes.  
   
--   Si les deux *n-début* et *n-fin* sont spécifiés, les valeurs de séquence à partir de *n-début* à *n-fin*.  
+-   Si *n-Start* et *n-end* sont spécifiés, les valeurs de séquence de *n-Start* à *n-end*.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne une séquence des cinq produits les plus susceptibles d'être achetés par un client dans la base de données [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], selon le modèle d'exploration de données Sequence Clustering.  
@@ -50,8 +50,8 @@ From
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
   
   

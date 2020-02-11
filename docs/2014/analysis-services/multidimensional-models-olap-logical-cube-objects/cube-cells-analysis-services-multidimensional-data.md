@@ -27,16 +27,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d9ca444c4e889c68f90abf4cf76c07d1c2d574a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887912"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Cellules de cube (Analysis Services - Données multidimensionnelles)
   Un cube est composé de cellules organisées en groupes de mesures et en dimensions. Une cellule représente l'unique intersection logique dans un cube d'un membre de chaque dimension du cube. Par exemple, le cube décrit dans le diagramme suivant contient un groupe de mesures comprenant deux mesures, organisées en fonction de trois dimensions nommées Source, Itinéraire et Temps.  
   
- ![Diagramme de cube identifiant une seule cellule](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "Diagramme de cube identifiant une seule cellule")  
+ ![Diagramme de cube identifiant une cellule unique](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "Diagramme de cube identifiant une cellule unique")  
   
  L'unique cellule ombrée dans ce diagramme est l'intersection des membres suivants :  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68887912"
   
  le membre de la deuxième partie de la dimension Temps est un membre non-feuille ; par conséquent, toutes les valeurs qui lui sont associées doivent être agrégées, comme le montre le diagramme suivant.  
   
- ![cellules 3e et 4e trimestre pour le 2e semestre](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro6.gif "cellules 3e et 4e trimestre pour le 2e semestre")  
+ ![Cellules des 3e et 4e trimestres pour le membre de la 2e moitié](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro6.gif "Cellules des 3e et 4e trimestres pour le membre de la 2e moitié")  
   
  Si l'on part du principe que les membres du troisième trimestre et du quatrième trimestre sont des sommes, la valeur de la cellule spécifiée est 400, soit le total de toutes les cellules feuille ombrées dans le diagramme précédent. Étant donné que la valeur de la cellule est dérivée de l’agrégation d’autres cellules, la cellule spécifiée est considérée comme une cellule non- *feuille*.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "68887912"
   
  ![Diagramme de cube identifiant les cellules vides](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "Diagramme de cube identifiant les cellules vides")  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une cellule vide est une cellule qui a des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]qualités spéciales. Les cellules vides pouvant fausser les résultats des jointures croisées, des comptages, etc., un grand nombre de fonctions MDX permettent de les ignorer. Pour plus d’informations, consultez [référence &#40;MDX&#41; des expressions multidimensionnelles](/sql/mdx/multidimensional-expressions-mdx-reference)et [concepts clés dans &#40;MDX&#41;Analysis Services](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une cellule vide est une cellule qui a des qualités spéciales. Les cellules vides pouvant fausser les résultats des jointures croisées, des comptages, etc., un grand nombre de fonctions MDX permettent de les ignorer. Pour plus d’informations, consultez [expressions multidimensionnelles &#40;référence de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)et [concepts clés dans mdx &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>Sécurité  
- Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'accès aux données des cellules est géré au niveau des rôles et il peut être soigneusement contrôlé en utilisant des expressions MDX Pour plus d’informations, consultez [accorder un accès personnalisé à &#40;des&#41;données de dimension Analysis Services](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)et [accorder un accès &#40;personnalisé&#41;à des données de cellule Analysis Services](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
+ Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'accès aux données des cellules est géré au niveau des rôles et il peut être soigneusement contrôlé en utilisant des expressions MDX Pour plus d’informations, consultez [Grant Custom Access to dimension data &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)et [accordez un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Stockage &#40;de cube Analysis Services-données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
- [Agrégations et conceptions d’agrégation](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+ [Stockage cube &#40;Analysis Services-données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [Agrégations et conceptions d'agrégation](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

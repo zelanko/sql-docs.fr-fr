@@ -16,18 +16,18 @@ ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 21e9d91978a01152f22d18f03fa54bf29b776b8a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769170"
 ---
-# <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
+# <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Crée une partition filtrée dynamiquement pour un abonnement qui est filtrée par les valeurs [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) ou [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) sur l’abonné. Cette procédure stockée, exécutée sur le serveur de publication dans la base de données en cours de publication, est utilisée pour générer manuellement des partitions.  
+  Crée une partition filtrée dynamiquement pour un abonnement qui est filtrée par les valeurs de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) ou [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) au niveau de l’abonné. Cette procédure stockée, exécutée sur le serveur de publication dans la base de données en cours de publication, est utilisée pour générer manuellement des partitions.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +45,7 @@ sp_addmergepartition [ @publication = ] 'publication'
   
 `[ @host_name = ] 'host_name'`Valeur utilisée lors de la création de la partition pour un abonnement filtré par la valeur de la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) sur l’abonné. *HOST_NAME* est de **type sysname**, sans valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
@@ -59,6 +59,6 @@ sp_addmergepartition [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un instantané pour une publication de fusion avec des filtres paramétrés](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Filtres de lignes paramétrés](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Filtres de lignes paramétrables](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

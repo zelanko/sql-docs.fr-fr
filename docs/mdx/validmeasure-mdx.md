@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037949"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
@@ -32,13 +32,13 @@ ValidMeasure(Tuple_Expression)
  Expression MDX (Multidimensional Expressions) valide qui retourne un tuple.  
   
 ## <a name="remarks"></a>Notes  
- Le **ValidMeasure** fonction renvoie la valeur d’un tuple, en ignorant les attributs qui n’ont aucune relation avec le groupe de mesures de la mesure dont la valeur du tuple. Un attribut peut être sans relation avec une mesure pour deux raisons :  
+ La fonction **ValidMeasure** retourne la valeur d’un tuple, en ignorant les attributs qui n’ont aucune relation avec le groupe de mesures de la mesure dont le tuple retourne la valeur. Un attribut peut être sans relation avec une mesure pour deux raisons :  
   
 -   La dimension de l'attribut n'a aucune relation avec le groupe de mesures de la mesure dans le tuple.  
   
 -   La dimension de l'attribut n'a pas de relation avec le groupe de mesures de la mesure, mais l'attribut de granularité n'est pas l'attribut de clé, et l'attribut de granularité n'a pas de relation directe avec l'attribut dans le tuple.  
   
- Le comportement spécifié par cette fonction est le comportement côté serveur par défaut et est contrôlé par le **IgnoreUnrelatedDimensions** propriété de l’objet de groupe de mesures.  
+ Le comportement spécifié par cette fonction est le comportement côté serveur par défaut et est contrôlé par la propriété **IgnoreUnrelatedDimensions** sur l’objet de groupe de mesures.  
   
  Pour chaque attribut du tuple spécifié avec granularité (c'est-à-dire lorsque le membre du tuple n'est pas le membre All), la coordonnée actuelle de cet attribut est déplacée comme suit :  
   
@@ -69,6 +69,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

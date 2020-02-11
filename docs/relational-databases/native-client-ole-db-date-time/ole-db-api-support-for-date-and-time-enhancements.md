@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e1d995abd5bb718e9e1df1e2d5af5d1c22769014
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73772336"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Prise en charge des API OLE DB pour les améliorations de date et d’heure
@@ -26,7 +26,7 @@ ms.locfileid: "73772336"
 |Fonction|Description|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|Un indicateur est ajouté dans la structure DBBINDING pour permettre aux applications de faire la distinction entre les valeurs **DateTime**, **datetime2**et **smalldatetime** . Pour plus d’informations, consultez [métadonnées des paramètres et des ensembles de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IBCPSession::BCPColFmt|Pour plus d’informations, consultez [modifications de copie en bloc pour les types &#40;de date et&#41;d’heure améliorés OLE DB et ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
+|IBCPSession::BCPColFmt|Pour plus d’informations, consultez [modifications de copie en bloc pour les types de date et d’heure améliorés &#40;OLE DB et ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
 |ICommandWithParameters::GetParameterInfo|Pour plus d’informations, consultez[métadonnées des paramètres et des ensembles de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |ICommandWithParameters::SetParameterinfo|Pour plus d’informations, consultez[métadonnées des paramètres et des ensembles de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IColumnsRowset::GetColumnsRowset|Pour plus d’informations, consultez[métadonnées des paramètres et des ensembles de lignes](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
@@ -36,6 +36,6 @@ ms.locfileid: "73772336"
 |ITableDefinition::CreateTable|Pour plus d’informations, consultez [prise en charge du type de données pour OLE DB améliorations de la date et de l’heure](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Améliorations de la date et de l’heure &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

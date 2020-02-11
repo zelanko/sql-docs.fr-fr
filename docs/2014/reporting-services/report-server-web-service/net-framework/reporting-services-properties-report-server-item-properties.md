@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519139"
 ---
 # <a name="report-server-item-properties"></a>Propriétés d'élément du serveur de rapports
@@ -36,11 +36,11 @@ ms.locfileid: "62519139"
 |**CreationDate**|Date et heure auxquelles l'élément a été ajouté à la base de données du serveur de rapports.|  
 |**Description**|Description de l'élément.|  
 |**Hidden**|Valeur qui indique si l'élément est visible et accessible aux utilisateurs.|  
-|**ID**|ID d'un élément dans la base de données du serveur de rapports.|  
+|**Identifiant**|ID d'un élément dans la base de données du serveur de rapports.|  
 |**ModifiedBy**|Nom du dernier utilisateur ayant modifié l'élément dans la base de données du serveur de rapports.|  
 |**ModifiedDate**|Date et heure auxquelles le dernier utilisateur a modifié l'élément.|  
 |**Nom**|Nom d'un élément dans la base de données du serveur de rapports.|  
-|**Chemin d'accès**|Nom de chemin d'accès complet de l'élément. Le chemin d'accès à un élément quelconque dans la base de données du serveur de rapports peut comprendre 260 caractères au maximum.|  
+|**Chemin d’accès**|Nom de chemin d'accès complet de l'élément. Le chemin d'accès à un élément quelconque dans la base de données du serveur de rapports peut comprendre 260 caractères au maximum.|  
 |**Taille**|Taille, en octets, d'un élément dans la base de données du serveur de rapports.|  
 |**Type**|Type d'un élément dans la base de données du serveur de rapports.|  
 |**VirtualPath**|Chemin d'accès virtuel à un élément dans la base de données du serveur de rapports. La valeur de la propriété <xref:ReportService2010.CatalogItem.VirtualPath%2A> est le chemin d'accès sous lequel un utilisateur s'attend à voir l'élément. Par exemple, le chemin d'accès virtuel d'un rapport nommé report1 se trouvant dans le dossier My Reports personnel de l'utilisateur est /My Reports. Le chemin d'accès réel de l'élément est /Users/nom_utilisateur/My Reports.|  
@@ -58,7 +58,7 @@ ms.locfileid: "62519139"
 |Propriété|Description|  
 |--------------|-----------------|  
 |**Langage**|Langue utilisé dans un rapport. La valeur est un code de langue défini dans la spécification RFC1766 du groupe de travail IETF (Internet Engineering Task Force). La première partie est une désignation de deux caractères de la langue de base. La deuxième partie est séparée par un trait d'union et désigne la variation ou le dialecte de la langue. Si aucune valeur n'est spécifiée dans l'élément `Style` associé à l'élément `Body` dans la définition du rapport, la valeur par défaut est la langue du serveur de rapports.|  
-|`ReportProcessingTimeout`|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est `-1`, le rapport n'arrive pas à expiration au cours du traitement. Si la valeur est `null`, la valeur de la propriété système `ReportProcessingTimeout` est utilisé pour le délai d’attente de traitement de rapport. La valeur par défaut est `null`. Pour plus d’informations, consultez [Propriétés système de Report Server](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est `-1`, le rapport n'arrive pas à expiration au cours du traitement. Si la valeur est `null`, la valeur de la propriété `ReportProcessingTimeout` système est utilisée pour le délai d’attente de traitement du rapport. La valeur par défaut `null`est. Pour plus d’informations, consultez [Propriétés système de Report Server](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Date et heure de dernière création d'un instantané de rapport pour un rapport.|  
 |**CanRunUnattended**|Valeur qui indique si un rapport peut être exécuté sans assistance selon une planification. Si cette propriété a la valeur `true`, les valeurs par défaut pour les paramètres de rapport sont définies et les informations d'identification de la source de données sont stockées avec le rapport, ou l'option de récupération des informations d'identification a la valeur `None`. Si cette propriété a la valeur `false`, les conditions requises pour exécuter un rapport sans assistance ne sont pas satisfaites. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Valeur qui indique si le rapport a des valeurs par défaut valides définies pour tous les paramètres de rapport. La valeur est également `true` si un rapport ne possède pas de paramètres de rapport. Si cette propriété a la valeur `false`, un ou plusieurs paramètres de rapport n'ont pas de valeur par défaut valide.|  

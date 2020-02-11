@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de l’ensemble de lignes de schéma (OLE DB) | Microsoft Docs
+title: Prise en charge des ensembles de lignes de schéma (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,25 +17,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625957"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Prise en charge des ensembles de lignes de schéma (OLE DB)
-  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native prend également en charge le retour des informations de schéma à partir d’un serveur lié lors du traitement [!INCLUDE[tsql](../../../includes/tsql-md.md)] les requêtes distribuées.  
+  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client prend également en charge le retour des informations de schéma à [!INCLUDE[tsql](../../../includes/tsql-md.md)] partir d’un serveur lié lors du traitement des requêtes distribuées.  
   
 > [!NOTE]  
 >  Bien que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prenne en charge les synonymes, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne retourne pas les métadonnées de ces derniers.  
   
- Les tableaux ci-après liste des ensembles de lignes de schéma et les colonnes de restriction prises en charge par le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif.  
+ Les tableaux suivants répertorient les ensembles de lignes de schéma et les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonnes de restriction prises en charge par le fournisseur de OLE DB Native Client.  
   
 |Ensemble de lignes de schéma|Colonnes de restriction|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|Toutes les restrictions sont prises en charge.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|Toutes les restrictions sont prises en charge.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Les colonnes supplémentaires suivantes sont propres à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :<br /><br /> -COLUMN_LCID désigne l’ID de paramètres régionaux du classement. COLUMN_LCID affiche une valeur identique à un LCID Windows.<br />-COLUMN_COMPFLAGS définit les comparaisons sont pris en charge pour le classement. Le format de données est le même que DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID désigne le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tri de style pour le classement.<br />-COLUMN_TDSCOLLATION désigne le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] classement pour la colonne.<br />-IS_COMPUTED a la valeur VARIANT_TRUE si la colonne est une colonne calculée et sur VARIANT_FALSE autrement.|  
+|DBSCHEMA_COLUMNS|Toutes les restrictions sont prises en charge.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Les colonnes supplémentaires suivantes sont propres à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :<br /><br /> -COLUMN_LCID, qui est l’ID de paramètres régionaux du classement. COLUMN_LCID affiche une valeur identique à un LCID Windows.<br />-COLUMN_COMPFLAGS définit les comparaisons prises en charge pour le classement. Le format de données est le même que DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, qui est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] style de tri du classement.<br />-COLUMN_TDSCOLLATION, qui est le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] classement de la colonne.<br />-IS_COMPUTED, qui est VARIANT_TRUE si la colonne est une colonne calculée et VARIANT_FALSE dans le cas contraire.|  
 |DBSCHEMA_FOREIGN_KEYS|Toutes les restrictions sont prises en charge.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|Les restrictions 1, 2, 3 et 5 sont prises en charge.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|Toutes les restrictions sont prises en charge.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -52,10 +52,10 @@ ms.locfileid: "62625957"
 ## <a name="in-this-section"></a>Dans cette section  
  [Prise en charge des requêtes distribuées dans les ensembles de lignes de schéma](schema-rowsets-distributed-query-support.md)  
   
- [Ensemble de lignes LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [&#40;de l’ensemble de lignes LINKEDSERVERS OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   
- [Utilisation de types définis par l’utilisateur](../features/using-user-defined-types.md)  
+ [Utilisation des types définis par l'utilisateur](../features/using-user-defined-types.md)  
   
   

@@ -20,20 +20,20 @@ ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966425"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule, propriété (ADOX)
 Indique l’action effectuée lorsqu’une clé primaire est supprimée.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit et renvoie un **Long** valeur peut s’agir de la [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constantes. La valeur par défaut est **adRINone**.  
+ Définit et retourne une valeur de **type long** qui peut être l’une des constantes [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . La valeur par défaut est **adRINone**.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété est en lecture seule sur [clé](../../../ado/reference/adox-api/key-object-adox.md) objets déjà ajoutés à une collection.  
+ Cette propriété est en lecture seule sur les objets [clés](../../../ado/reference/adox-api/key-object-adox.md) déjà ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Key, objet (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

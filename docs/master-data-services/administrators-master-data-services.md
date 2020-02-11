@@ -15,17 +15,17 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729795"
 ---
 # <a name="administrators-master-data-services"></a>Administrateurs (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Cet article décrit les types d’administrateurs dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] : administrateurs de modèle, administrateurs d’entité et super utilisateur.  
+  Cet article décrit les types d’administrateurs dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administrateurs de modèle, administrateurs d’entité et super utilisateur.  
   
 ## <a name="model-administrators"></a>Administrateurs de modèle  
  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur de modèle est un utilisateur qui dispose d’une autorisation d' **administrateur** affectée à l’objet modèle de niveau supérieur sous l’onglet **objets de modèle** . Lorsqu’un utilisateur dispose d’une autorisation d’administrateur sur un modèle particulier, toutes les autres autorisations sur les objets enfants du modèle (à la fois l’objet de modèle et les autorisations de membre) sont découpées par l’autorisation d' **administrateur** de modèle et sont effectivement ignorées.  
@@ -36,7 +36,7 @@ ms.locfileid: "73729795"
   
  Chaque modèle peut avoir plusieurs administrateurs. Chaque utilisateur peut être un administrateur de modèle pour un, plusieurs ou tous les modèles du déploiement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Un utilisateur peut être configuré en tant qu'administrateur de modèle dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou par programme. Pour plus d’informations, consultez [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Un utilisateur peut être configuré en tant qu'administrateur de modèle dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ou par programme. Pour plus d’informations, consultez [Créer un administrateur de modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Administrateurs d’entité  
  Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrateur d’entité est un utilisateur disposant d’autorisations d’administrateur attribuées à l’objet entité sous l’onglet objets de modèle. Lorsqu’un utilisateur dispose des autorisations d’administrateur pour une entité, toutes les autres autorisations sur les objets enfants de l’entité (à la fois l’objet de modèle et les autorisations de membre) sont remplacées par les autorisations d’administrateur et sont ignorées.  
@@ -66,7 +66,7 @@ ms.locfileid: "73729795"
   
 |Type d'administrateur|Description|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Super utilisateur|Les autorisations affectées dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] n’ont aucun effet sur l’accès de l’administrateur.<br /><br /> Peut être super utilisateur en fonction des autorisations de zones fonctionnelles qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les modèles.<br /><br /> Accès automatique à toutes les zones fonctionnelles.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Super utilisateur|Les autorisations affectées dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] n’ont aucun effet sur l’accès de l’administrateur.<br /><br /> Peut être super utilisateur en fonction des autorisations de zones fonctionnelles qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les modèles.<br /><br /> Accès automatique à toutes les zones fonctionnelles.|  
 |Administrateur de modèle|Peut être administrateur de modèle en fonction des autorisations d’administrateur qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Accès uniquement aux zones fonctionnelles auxquelles l'accès est accordé.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les objets et membres dans le modèle spécifique.|  
 |Administrateur d’entité|Peut être administrateur d’entité en fonction des autorisations d’administrateur qui lui sont affectées explicitement ou de celles héritées d’un groupe.<br /><br /> Accès uniquement aux zones fonctionnelles auxquelles l'accès est accordé.<br /><br /> Dispose automatiquement de toutes les autorisations sur tous les objets et membres dans l’entité spécifique.<br /><br /> Peut approuver les ensembles de modifications en attente si les modifications de l’entité doivent être approuvées.|  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73729795"
 ## <a name="see-also"></a>Voir aussi  
  [Créer un administrateur de modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Créer une base de données Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
+ [&#40;de notifications Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
   

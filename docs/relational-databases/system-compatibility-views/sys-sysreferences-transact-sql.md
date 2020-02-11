@@ -1,5 +1,5 @@
 ---
-title: Sys.sysreferences (Transact-SQL) | Microsoft Docs
+title: sys. sysreferences (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3edce02f20a16ebd9814f995f00023f8f3b153de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986493"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
@@ -38,13 +38,13 @@ ms.locfileid: "67986493"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**constid**|**Int**|ID de la contrainte FOREIGN KEY.|  
+|**constid**|**int**|ID de la contrainte FOREIGN KEY.|  
 |**fkeyid**|**int**|ID de la table qui contient la référence.|  
 |**rkeyid**|**int**|ID de la table référencée.|  
 |**rkeyindid**|**smallint**|ID de l'index unique de la table référencée comprenant les colonnes clé référencées.|  
 |**keycnt**|**smallint**|Nombre de colonnes dans la clé.|  
-|**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**refkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**forkeys**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**refkeys**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**fkeydbid**|**smallint**|Réservé.|  
 |**rkeydbid**|**smallint**|Réservé.|  
 |**fkey1**|**smallint**|ID de la colonne qui contient la référence.|  
@@ -81,7 +81,7 @@ ms.locfileid: "67986493"
 |**rkey16**|**smallint**|ID de colonne de la colonne référencée.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Affichages de compatibilité &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Vues de compatibilité &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

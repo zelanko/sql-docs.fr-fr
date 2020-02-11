@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b893480036b607dc1e6639ed9f50232520663879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473016"
 ---
 # <a name="visual-database-tools-f1-help"></a>Aide (F1) de Visual Database Tools
@@ -25,7 +25,7 @@ ms.locfileid: "62473016"
  Pour accéder aux rubriques relatives aux boîtes de dialogue, appuyez sur F1 lorsque vous avez ouvert une boîte de dialogue et qu'il s'agit de la fenêtre active. Pour accéder aux rubriques relatives aux fenêtres de propriétés, cliquez dans la fenêtre Propriétés et appuyez sur F1.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conception de Tables &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Concevoir des tables &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

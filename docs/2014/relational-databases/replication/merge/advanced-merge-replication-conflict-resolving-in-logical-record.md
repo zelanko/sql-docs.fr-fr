@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629928"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Détection et résolution des conflits dans les enregistrements logiques
-  Cette rubrique couvre les différentes combinaisons des approches possibles de détection et de résolution des conflits lors de l'utilisation d'enregistrements logiques. Un conflit se produit dans une réplication de fusion quand un ou plusieurs nœuds modifient les mêmes données, ou quand la réplication de fusion rencontre certains types d'erreurs lors de la réplication de modifications, par exemple une violation de contrainte. Pour plus d'informations sur la détection et la résolution des conflits, consultez [Détection et résolution avancées des conflits de réplication de fusion](advanced-merge-replication-conflict-detection-and-resolution.md).  
+  Cette rubrique couvre les différentes combinaisons des approches possibles de détection et de résolution des conflits lors de l'utilisation d'enregistrements logiques. Un conflit se produit dans une réplication de fusion quand un ou plusieurs nœuds modifient les mêmes données, ou quand la réplication de fusion rencontre certains types d'erreurs lors de la réplication de modifications, par exemple une violation de contrainte. Pour plus d'informations sur la détection et la résolution des conflits, consultez [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [spécifier le niveau de résolution et de suivi de conflit pour les Articles de fusion](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   

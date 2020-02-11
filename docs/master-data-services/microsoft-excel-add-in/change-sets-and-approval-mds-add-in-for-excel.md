@@ -11,10 +11,10 @@ ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728018"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Ensembles de modifications et approbation (complément MDS pour Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "73728018"
 
   Dans le complément [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour Excel, vous pouvez enregistrer les modifications en attente concernant une entité dans un ensemble de modifications. Vous pouvez appliquer un ensemble de modifications existant pour afficher et modifier les modifications en attente, et vous pouvez valider un ensemble de modifications existant.  
   
- Si l’entité exige une approbation des modifications, vous devez enregistrer les modifications en attente dans un ensemble de modifications et les soumettre à des fins d’approbation. Pour plus d’informations, consultez [Approbation requise &#40;Master Data Services&#41;](../../master-data-services/approval-required-master-data-services.md).  
+ Si l’entité exige une approbation des modifications, vous devez enregistrer les modifications en attente dans un ensemble de modifications et les soumettre à des fins d’approbation. Pour plus d’informations, consultez [Approbation requise &#40;Master Data Services&#41;](../../master-data-services/approval-required-master-data-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ensembles de modifications &#40;Master Data Services&#41;](../../master-data-services/changesets-master-data-services.md)  
