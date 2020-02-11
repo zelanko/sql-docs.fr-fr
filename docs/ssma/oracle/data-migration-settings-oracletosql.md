@@ -1,5 +1,5 @@
 ---
-title: Paramètres de Migration de données (OracleToSQL) | Microsoft Docs
+title: Paramètres de migration des données (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,47 +11,47 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 2b435b02060d32e61bc3e75054171023262a87b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264214"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Paramètres de migration de données (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>Paramètres de migration de données  
-**Paramètres de Migration de données** permet à l’utilisateur d’écrire des requêtes personnalisées pour la migration de données.  
+Les **paramètres de migration des données** permettent à l’utilisateur d’écrire des requêtes personnalisées pour la migration des données.  
   
--   Cet onglet est disponible lorsque **étendu d’options de migration de données** a la valeur **afficher** et est masqué lorsque le paramètre est défini sur **masquer** dans Paramètres du projet. Pour plus d’informations sur les paramètres de Migration de projet, consultez [paramètres du projet (Migration)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
+-   Cet onglet est disponible lorsque l' **option options de migration étendue des données** est définie sur **Afficher** et est masquée lorsque le paramètre est défini sur **Masquer** dans les paramètres du projet. Pour plus d’informations sur les paramètres de migration de projet, consultez [paramètres du projet (migration)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
   
--   L’analyse des instructions SQL de personnalisé sera implémenté dans **les paramètres de migration de données** onglet du nœud de la Table.  
+-   L’analyse des instructions SQL personnalisées sera implémentée dans l’onglet **paramètres de migration de données** du nœud de la table.  
   
--   Voici les deux cases à cocher disponibles dans le **les paramètres de Migration de données** reportages. :  
+-   Voici les deux cases à cocher disponibles dans les **paramètres de migration de données** , à savoir :  
   
-    1.  TRUNCATE table SQL Server  
+    1.  Tronquer la table SQL Server  
   
-    2.  Sélectionnez utilisation personnalisée  
+    2.  Utiliser une sélection personnalisée  
   
-1.  **TRUNCATE table SQL Server :**  
-     Cette option permet à l’utilisateur d’avoir une vue claire des données migrées à la base de données cible.  
+1.  **Tronquer la table SQL Server :**  
+     Cette option permet à l’utilisateur de disposer d’une vue claire des données migrées au niveau de la base de données cible.  
   
-    -   Par défaut, cette zone de texte est activée.  
+    -   Par défaut, cette zone de texte est cochée.  
   
-    -   Si cette zone de texte est désactivée, puis les données qui sont migrées figurera sur les données existantes à la base de données cible.  
+    -   Si cette zone de texte est désactivée, les données qui sont migrées seront ajoutées aux données existantes dans la base de données cible.  
   
-2.  **Utilisation personnalisée sélectionnez :**  
-     Cette option permet à l’utilisateur de modifier le **sélectionnez** instruction présente (**sélectionnez** instruction permet aux utilisateurs de sélectionner les données à afficher à la base de données cible).  
+2.  **Utiliser la sélection personnalisée :**  
+     Cette option permet à l’utilisateur de modifier l’instruction **Select** présente (l’instruction**Select** permet aux utilisateurs de sélectionner les données à afficher dans la base de données cible).  
   
     1.  Par défaut, cette zone de texte est désactivée.  
   
-    2.  Si cette zone de texte est activée, elle permet aux utilisateurs de modifier le **sélectionnez** instruction présents.  
+    2.  Si cette zone de texte est cochée, elle permet aux utilisateurs de modifier l’instruction **Select** présente.  
   
-Il existe deux boutons présents reportages. :  
+Deux boutons sont présents, à savoir :  
   
--   **S’appliquent :** Cliquez sur **appliquer** pour appliquer les paramètres qui ont été modifiés.  
+-   **Appliquer :** Cliquez sur **appliquer** pour appliquer les paramètres qui ont été modifiés.  
   
--   **Annuler :** Cliquez sur **Annuler** pour restaurer les paramètres présents avant que les modifications sont apportées.  
+-   **Annuler :** Cliquez sur **Annuler** pour restaurer les paramètres présents avant l’établissement des modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration de données Oracle vers SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
+[Migration des données Oracle vers SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

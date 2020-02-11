@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833842"
 ---
 # <a name="excel-connection-manager"></a>Gestionnaire de connexions Excel
-  Un gestionnaire de connexions Excel permet à un package de se connecter à un fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. La source et la destination Excel qui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclure utiliser le Gestionnaire de connexions Excel.  
+  Un gestionnaire de connexions Excel permet à un package de se connecter à un fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. La source Excel et la destination Excel qui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluent utilisent le gestionnaire de connexions Excel.  
   
  Lorsque vous ajoutez un gestionnaire de connexions Excel à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera converti en connexion Excel au moment de l'exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection `Connections` du package.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62833842"
   
  Si le gestionnaire de connexions Excel est utilisé par une source Excel, les noms de colonnes sont inclus avec les données extraites. S'il est utilisé par une destination Excel, les noms de colonnes sont inclus dans les données écrites.  
   
- Le gestionnaire de connexions Excel utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Jet 4.0 et son pilote de prise en charge Excel ISAM (Indexed Sequential Access Method) pour se connecter aux sources de données Excel, puis y lire et écrire des données. Pour plus d’informations sur le comportement de ce fournisseur et le pilote lorsqu’il est utilisé avec des sources et destinations Excel, consultez [Source Excel](../data-flow/excel-source.md) et [Destination Excel](../data-flow/excel-destination.md).  
+ Le gestionnaire de connexions Excel utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Jet 4.0 et son pilote de prise en charge Excel ISAM (Indexed Sequential Access Method) pour se connecter aux sources de données Excel, puis y lire et écrire des données. Pour plus d’informations sur le comportement de ce fournisseur et de ce pilote lorsqu’il est utilisé avec des sources Excel et des destinations Excel, consultez [source](../data-flow/excel-source.md) Excel et [destination](../data-flow/excel-destination.md)Excel.  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   

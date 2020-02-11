@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889849"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>S'applique à  
- Expression qui retourne une table, telle qu’une référence \<de colonne de table >, ou une fonction qui retourne une table.  
+ Expression qui retourne une table, telle qu’une référence \<de colonne de table>, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<expression de table >  
+ \<expression de table>  
   
 ## <a name="remarks"></a>Notes  
- La valeur fournie par l' \<expression de classement > argument détermine l’ordre croissant de classement pour les lignes fournies dans l' \<expression de table > argument et le nombre de lignes les plus basses spécifiées dans l’expression de table. \<l’argument Count > est retourné.  
+ La valeur fournie par l' \<expression de classement> argument détermine l’ordre croissant de classement des lignes fournies dans l' \<expression de table> argument, et le nombre de lignes les plus basses spécifiées dans l' \<argument Count> est retourné.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
@@ -52,20 +52,20 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 > [!NOTE]  
 >  Dans cet exemple, la valeur fournie en tant qu'entrée contient un guillemet simple et doit donc être placée dans une séquence d'échappement en la préfaçant avec un autre guillemet simple. Si vous n'êtes pas certain de la syntaxe permettant d'insérer un caractère d'échappement, vous pouvez utiliser le Générateur de requêtes de prédiction pour créer la requête. Lorsque vous sélectionnez la valeur dans la liste déroulante, le caractère d'échappement requis est inséré pour vous. Pour plus d’informations, consultez [créer une requête singleton dans le concepteur d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Modèle|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291283016|0.252695851|  
-|Water Bottle|2866|0.192620472|0.175205052|  
-|Patch kit|2113|0.142012232|0.132389356|  
-|Mountain Tire Tube|1992|0.133879965|0.125304948|  
-|Mountain-200|1755|0.117951475|0.111260823|  
-|Road Tire Tube|1588|0.106727603|0.101229538|  
-|Cycling Cap|1473|0.098998589|0.094256014|  
-|Fender Set - Mountain|1415|0.095100477|0.090718432|  
-|Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|Sport-100|4334|0,291283016|0,252695851|  
+|Water Bottle|2866|0,192620472|0,175205052|  
+|Patch kit|2113|0,142012232|0,132389356|  
+|Mountain Tire Tube|1992|0,133879965|0,125304948|  
+|Mountain-200|1755|0,117951475|0,111260823|  
+|Road Tire Tube|1588|0,106727603|0,101229538|  
+|Cycling Cap|1473|0,098998589|0,094256014|  
+|Fender Set - Mountain|1415|0,095100477|0,090718432|  
+|Mountain Bottle Cage|1367|0,091874454|0,087780332|  
+|Road Bottle Cage|1195|0,080314537|0,077173962|  
   
  La fonction BottomCount prend les résultats de cette requête et retourne les lignes dont la valeur la plus petite somme au pourcentage spécifié.  
   
@@ -88,21 +88,21 @@ NATURAL PREDICTION JOIN
   
  Le troisième argument de la fonction BottomCount spécifie le nombre de lignes. Pour obtenir les trois lignes dont le niveau de classement est le plus bas, tel que classé par $SUPPORT, tapez 3.  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Modèle|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
-|Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Fender Set - Mountain|1415|0.095100477|0.090718432|  
+|Road Bottle Cage|1195|0,080314537|0,077173962|  
+|Mountain Bottle Cage|1367|0,091874454|0,087780332|  
+|Fender Set - Mountain|1415|0,095100477|0,090718432|  
   
  **Remarque** Cet exemple est fourni uniquement pour illustrer l’utilisation de BottomCount. L'exécution de cette requête peut prendre beaucoup de temps, en fonction de la taille de votre jeu de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Fonctions &#40;de prédiction générales DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
- [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
- [DMX de &#40;la TopCount&#41;](../dmx/topcount-dmx.md)  
+ [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent&#41;DMX &#40;](../dmx/bottompercent-dmx.md)   
+ [BottomSum&#41;DMX &#40;](../dmx/bottomsum-dmx.md)   
+ [&#40;DMX&#41;](../dmx/topcount-dmx.md)  
   
   

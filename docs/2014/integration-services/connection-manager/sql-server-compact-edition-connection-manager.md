@@ -15,20 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 752c825cb34fbf2afe5d2306afbd562a49f74b7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833144"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gestionnaire de connexions de SQL Server Compact Edition
-  Un gestionnaire de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact permet à un package de se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. La destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions pour charger des données dans une table d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+  Un gestionnaire de connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact permet à un package de se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination compact qui [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend utilise ce gestionnaire de connexions pour charger des données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une base de données compact.  
   
 > [!NOTE]  
 >  Sur un ordinateur 64 bits, vous devez exécuter les packages qui se connectent à des sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact en mode 32 bits. Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact utilisé par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour se connecter à des sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact n’est disponible qu’en version 32 bits.  
   
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>Configuration du gestionnaire de connexions SQL Server Compact Edition  
- Lorsque vous ajoutez un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de connexions Compact à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée une connexion de gestionnaire qui sera converti en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion Compact au moment de l’exécution, définit les propriétés du Gestionnaire des connexions et ajoute le Gestionnaire de connexion à la `Connections` collection sur le package.  
+ Lorsque vous ajoutez un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestionnaire de connexions compact à un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crée un gestionnaire de connexions qui sera résolu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en une connexion compacte au moment de l’exécution, définit les propriétés du gestionnaire de connexions et `Connections` ajoute le gestionnaire de connexions à la collection sur le package.  
   
  La propriété `ConnectionManagerType` du gestionnaire de connexions a pour valeur `SQLMOBILE`.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "62833144"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Connexion&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+-   [Éditeur du gestionnaire de connexions de l’édition de SQL Server Compact &#40;page connexion&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
--   [Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Tout&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
+-   [Éditeur du gestionnaire de connexions de l’édition de SQL Server Compact &#40;toutes les pages&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../building-packages-programmatically/adding-connections-programmatically.md).  
   

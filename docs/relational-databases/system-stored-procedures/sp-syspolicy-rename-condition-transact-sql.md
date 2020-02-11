@@ -18,18 +18,18 @@ ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 077ec13d8a4cfa5fb42c0b728cd36842a6672e52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081479"
 ---
-# <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
+# <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renomme une condition existante dans la Gestion basée sur des stratégies.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,25 +40,25 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Est le nom de la condition que vous souhaitez renommer. *nom* est **sysname**et doit être spécifié si *condition_id* a la valeur NULL.  
+`[ @name = ] 'name'`Nom de la condition que vous souhaitez renommer. *Name* est de **type sysname**et doit être spécifié si *condition_id* a la valeur null.  
   
-`[ @condition_id = ] condition_id` Est l’identificateur pour la condition que vous souhaitez renommer. *condition_id* est **int**et doit être spécifié si *nom* est NULL.  
+`[ @condition_id = ] condition_id`Est l’identificateur de la condition que vous souhaitez renommer. *condition_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
   
-`[ @new_name = ] 'new_name'` Est le nouveau nom de la condition. *new_name* est **sysname**et est requis. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
+`[ @new_name = ] 'new_name'`Nouveau nom de la condition. *new_name* est de **type sysname**et est obligatoire. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_rename_condition dans le contexte de la base de données système msdb.  
   
- Vous devez spécifier une valeur pour *nom* ou *condition_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue msdb.dbo.syspolicy_conditions.  
+ Vous devez spécifier une valeur pour *Name* ou *condition_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue msdb.dbo.syspolicy_conditions.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : Les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets d’être créées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement [!INCLUDE[ssDE](../../includes/ssde-md.md)]de l’instance du. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la création de la plupart des objets [!INCLUDE[ssDE](../../includes/ssde-md.md)]dans le. En raison de cette élévation possible des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs approuvés par le contrôle de la configuration [!INCLUDE[ssDE](../../includes/ssde-md.md)]du.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant renomme une condition nommée « Change Tracking Enabled ».  

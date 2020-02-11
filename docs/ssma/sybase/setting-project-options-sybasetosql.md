@@ -1,5 +1,5 @@
 ---
-title: Définition des Options de projet (SybaseToSQL) | Microsoft Docs
+title: Définition des options du projet (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020917"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Définition des options du projet (SybaseToSQL)
-Pour chaque projet SSMA, vous pouvez définir des options au niveau du projet. Ces options spécifient la conversion de l’objet, lors du chargement de l’objet, SQL azure, l’interface utilisateur et les paramètres de migration de données. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
+Pour chaque projet SSMA, vous pouvez définir des options au niveau du projet. Ces options spécifient la conversion d’objet, le chargement d’objet, SQL Azure, l’interface utilisateur et les paramètres de migration de données. Avant de convertir des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en SQL Azure ou de migrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des données vers ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
   
-SSMA vous permet de configurer les options par défaut pour tous les projets. Ces options sont appliquées à tout nouveau projet que vous créez. Vous pouvez ensuite personnaliser les options pour chaque projet.  
+SSMA vous permet de configurer les options par défaut pour tous les projets. Ces options sont appliquées à tous les nouveaux projets que vous créez. Vous pouvez ensuite personnaliser les options pour chaque projet.  
   
-## <a name="configuration-options-and-modes"></a>Modes et les Options de configuration  
-SSMA a cinq jeux de paramètres de projet :  
+## <a name="configuration-options-and-modes"></a>Options de configuration et modes  
+SSMA comporte cinq jeux de paramètres de projet :  
   
 1.  Informations sur le projet  
   
-2.  Général (Conversion, Migration et collecte des données)  
+2.  Général (conversion, migration et collecte des données)  
   
 3.  Synchronization  
   
@@ -36,9 +36,9 @@ SSMA a cinq jeux de paramètres de projet :
   
 5.  Mappage de type  
   
-Il a également quatre modes de configuration de ces paramètres :  
+Il comporte également quatre modes de configuration de ces paramètres :  
   
-1.  Par défaut  
+1.  Default  
   
 2.  Optimistic  
   
@@ -46,60 +46,60 @@ Il a également quatre modes de configuration de ces paramètres :
   
 4.  Custom  
   
-Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste permet de maintenir davantage de la syntaxe de Sybase Adaptive Server Enterprise (ASE) actuelle et est plus facile à lire. Toutefois, en conservant la syntaxe actuelle peut manquer de précision. Si la syntaxe de l’ASE doit être convertie en équivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la syntaxe SQL Azure, le mode effectue une conversion terminée, mais le code résultant peut être plus difficile à lire. Dans le mode personnalisé, vous définissez les options.  
+Le mode par défaut est recommandé pour la plupart des utilisateurs. Le mode optimiste conserve davantage la syntaxe Sybase Adaptive Server Enterprise (ASE) actuelle et est plus facile à lire. Toutefois, il se peut que la conservation de la syntaxe actuelle ne soit pas exacte. Si la syntaxe de l’ASE doit être convertie en syntaxe équivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, le mode complet effectue une conversion complète, mais le code obtenu peut être plus difficile à lire. Dans le mode personnalisé, vous définissez les options.  
   
-Les paramètres sont décrits dans la section de référence de l’Interface utilisateur de cette documentation. Pour plus d’informations sur les paramètres et la façon dont les paramètres sont appliqués dans chaque mode, consultez les rubriques suivantes :  
+Les paramètres sont décrits dans la section Référence de l’interface utilisateur de cette documentation. Pour plus d’informations sur les paramètres et sur la façon dont les paramètres sont appliqués dans chaque mode, consultez les rubriques suivantes :  
   
--   [Paramètres du projet &#40;Conversion&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+-   [Paramètres du projet &#40;conversion&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
--   [Paramètres du projet &#40;Migration&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)  
+-   [Paramètres du projet &#40;&#41; &#40;de migration SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)  
   
 -   [Paramètres du projet &#40;synchronisation&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)  
   
 -   [Paramètres du projet &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)  
   
--   [Paramètres du projet &#40;mappage de Type&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
+-   [Paramètres du projet &#40;le mappage de type&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
   
 -   [Paramètres du projet &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
   
 ## <a name="setting-project-options"></a>Définition des options du projet  
-Dans SSMA, vous pouvez configurer les paramètres par défaut pour tous les projets. Ces paramètres sont enregistrés dans le fichier de configuration de SSMA et appliqués à tout nouveau projet que vous créez.  
+Dans SSMA, vous pouvez configurer des paramètres par défaut pour tous les projets. Ces paramètres sont enregistrés dans le fichier de configuration SSMA et appliqués à tous les nouveaux projets que vous créez.  
   
 **Pour définir les options de projet par défaut**  
   
-1.  Sur le **outils** menu, sélectionnez **par défaut des paramètres de projet**.  
+1.  Dans le menu **Outils** , sélectionnez **paramètres du projet par défaut**.  
   
-2.  Dans le **par défaut des paramètres de projet** boîte de dialogue, utilisez une des procédures suivantes :  
+2.  Dans la boîte de dialogue **paramètres du projet par défaut** , utilisez l’une des procédures suivantes :  
   
-    -   Sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichées ou modifiées à partir de **Version cible de Migration** déplacer vers le bas sur général en bas du volet gauche, puis sélectionnez Conversion ou de Migration ou de SQL Azure.  
+    -   Sélectionnez le type de projet de migration pour lequel les paramètres doivent être affichés ou modifiés dans la liste déroulante **version cible** de la migration cliquez sur général en bas du volet gauche, puis sélectionnez conversion ou migration ou SQL Azure.  
   
-    -   Pour sélectionner un mode prédéfini, dans le **Mode** zone de liste déroulante, sélectionnez **par défaut**, **Optimistic**, ou **complète**.  
+    -   Pour sélectionner un mode prédéfini, dans la zone de liste déroulante **mode** , sélectionnez **par défaut**, **optimiste**ou **complète**.  
   
-    -   Pour spécifier des paramètres personnalisés, simplement Sélectionnez ou entrez les nouveaux paramètres ou les valeurs.  
+    -   Pour spécifier des paramètres personnalisés, il vous suffit de sélectionner ou d’entrer les nouveaux paramètres ou valeurs.  
   
 3.  Cliquez sur **OK** pour enregistrer les paramètres.  
   
-Vous pouvez également personnaliser les paramètres pour le projet actuel. Ces paramètres sont enregistrés dans le fichier de projet actuel.  
+Vous pouvez également personnaliser les paramètres du projet actuel. Ces paramètres sont enregistrés dans le fichier projet actif.  
   
-**Pour personnaliser les paramètres pour le projet actuel**  
+**Pour personnaliser les paramètres du projet actif**  
   
-1.  Sur le **outils** menu, sélectionnez **paramètres du projet**.  
+1.  Dans le menu **Outils** , sélectionnez **paramètres du projet**.  
   
-2.  Dans le **paramètres du projet** boîte de dialogue, utilisez une des procédures suivantes :  
+2.  Dans la boîte de dialogue **paramètres du projet** , utilisez l’une des procédures suivantes :  
   
-    -   Pour sélectionner un mode prédéfini, dans le **Mode** zone de liste déroulante, sélectionnez **par défaut**, **Optimistic**, ou **complète**.  
+    -   Pour sélectionner un mode prédéfini, dans la zone de liste déroulante **mode** , sélectionnez **par défaut**, **optimiste**ou **complète**.  
   
-    -   Pour spécifier un mode personnalisé, dans le **Mode** liste déroulante, sélectionnez **personnalisé**, sélectionnez une option dans le volet gauche, cliquez sur le paramètre ou une valeur dans le volet droit, puis sélectionnez ou entrez le nouveau paramètre ou la valeur.  
+    -   Pour spécifier un mode personnalisé, dans la zone déroulante **mode** , sélectionnez **personnalisé**, sélectionnez une option dans le volet gauche, cliquez sur le paramètre ou la valeur dans le volet droit, puis sélectionnez ou entrez le nouveau paramètre ou la nouvelle valeur.  
   
 3.  Cliquez sur **OK** pour enregistrer les paramètres.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
 L’étape suivante de la migration dépend des besoins de votre projet :  
   
--   Si vous souhaitez personnaliser le mappage des types de données source et cible, consultez [mappage Sybase ASE et Types de données SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+-   Si vous souhaitez personnaliser le mappage des types de données sources et cibles, consultez [mappage des types de données Sybase ASE et SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
--   Sinon, vous pouvez convertir les définitions d’objets de base de données Sybase dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou définitions d’objets SQL Azure. Pour plus d’informations, consultez [convertir les objets de base de données Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
+-   Dans le cas contraire, vous pouvez convertir les définitions d' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de base de données Sybase en SQL Azure définitions d’objets ou. Pour plus d’informations, consultez [conversion d’objets de base de données Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration des bases de données de Sybase ASE pour SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migration de bases de données Sybase ASE vers SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

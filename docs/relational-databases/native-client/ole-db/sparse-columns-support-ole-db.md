@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b00205a02b1455ad49eb17970193bd6ee46f13c0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759290"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Prise en charge des colonnes éparses (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "73759290"
 ## <a name="ole-db-catalog-metadata"></a>Métadonnées de catalogue OLE DB  
  Deux colonnes supplémentaires spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ont été ajoutées à DBSCHEMA_COLUMNS.  
   
-|Nom de colonne|Type de données|Valeur/commentaires|  
+|Nom de la colonne|Type de données|Valeur/commentaires|  
 |-----------------|---------------|---------------------|  
 |SS_IS_SPARSE|DBTYPE_BOOL|Si la colonne est une colonne éparse, la valeur est VARIANT_TRUE ; sinon, VARIANT_FALSE.|  
 |SS_IS_COLUMN_SET|DBTYPE_BOOL|Si la colonne est la colonne **column_set** éparse, la valeur est VARIANT_TRUE ; sinon, VARIANT_FALSE.|  
@@ -37,7 +37,7 @@ ms.locfileid: "73759290"
  Deux ensembles de lignes de schéma supplémentaires ont également été ajoutés. Ces ensembles de lignes ont la même structure que DBSCHEMA_COLUMNS mais retournent un contenu différent. DBSCHEMA_COLUMNS_EXTENDED retourne toutes les colonnes, indépendamment de l’appartenance à **column_set**. DBSCHEMA_SPARSE_COLUMN_SET retourne seulement les colonnes qui sont membres du **column_set** épars.  
   
 ## <a name="ole-db-datatypecompatibility-behavior"></a>Comportement OLE DB de DataTypeCompatibility  
- Le comportement avec **DataTypeCompatibility = 80** (dans la chaîne de connexion) est cohérent avec un client [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], comme suit :  
+ Le comportement avec **DataTypeCompatibility = 80** (dans la chaîne de connexion) est cohérent [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] avec un client, comme suit :  
   
 -   Les nouveaux ensembles de lignes de schéma ne sont pas visibles, et il n'y a pas de lignes pour eux dans l'ensemble de lignes d'ensembles de lignes de schéma.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73759290"
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS retourne deux nouvelles colonnes : SS_IS_COLUMN_SET et SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS retourne seulement les colonnes qui ne sont pas membres d’un **column_set**.<br /><br /> Deux nouveaux ensembles de lignes de schéma ont été ajoutés : DBSCHEMA_COLUMNS_EXTENDED retourne toutes les colonnes, indépendamment du caractère épars de l’appartenance à **column_set**. DBSCHEMA_SPARSE_COLUMN_SET retourne seulement les colonnes qui sont membres d’un **column_set**. Ces nouveaux ensembles de lignes ont les mêmes colonnes et restrictions que DBSCHEMA_COLUMNS.|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas inclut les GUID des nouveaux ensembles de lignes DBSCHEMA_COLUMNS_EXTENDED et DBSCHEMA_SPARSE_COLUMN_SET dans la liste des ensembles de lignes de schéma disponibles.|  
 |ICommand::Execute|Si **select \* from** *table* est utilisé, il retourne toutes les colonnes qui ne sont pas membres du **column_set** épars, plus une colonne XML qui contient les valeurs de toutes les colonnes non Null membres du **column_set** épars, le cas échéant.|  
-|IOpenRowset::OpenRowset|IOpenRowset :: OpenRowset retourne un ensemble de lignes avec les mêmes colonnes que ICommand :: Execute, avec une requête **select \*** sur la même table.|  
+|IOpenRowset::OpenRowset|IOpenRowset :: OpenRowset retourne un ensemble de lignes avec les mêmes colonnes que ICommand :: Execute, avec une requête **Select \* ** sur la même table.|  
 |ITableDefinition|Il n’y a aucune modification de cette interface pour les colonnes éparses ou les colonnes d’un **column_set**. Les applications qui doivent effectuer des modifications de schéma doivent exécuter le [!INCLUDE[tsql](../../../includes/tsql-md.md)] approprié directement.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: sys. DM _external_script_requests | Microsoft Docs
+title: sys. dm_external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68476278"
 ---
-# <a name="sysdmexternalscriptrequests"></a>Sys.dm_external_script_requests
+# <a name="sysdm_external_script_requests"></a>Sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Renvoie une ligne pour chaque compte de travail actif qui exécute un script externe.
@@ -74,7 +74,7 @@ FROM sys.dm_external_script_requests;
 Résultats  
 
 
-external_script_request_id  |langue  |degree_of_parallelism  |external_user_name  
+external_script_request_id  |langage  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01       
 
@@ -82,8 +82,8 @@ external_script_request_id  |langue  |degree_of_parallelism  |external_user_name
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+ [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

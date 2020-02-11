@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809380"
 ---
 # <a name="server-properties-advanced-page"></a>Propriétés du serveur (page Avancé)
@@ -35,7 +35,7 @@ ms.locfileid: "62809380"
  Indique le niveau actuel de prise en charge de FILESTREAM sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour modifier le niveau d'accès, sélectionnez l'une des valeurs suivantes :  
   
  **Désactivé**  
- Les données BLOB ne peuvent pas être stockées dans le système de fichiers. Il s'agit de la valeur par défaut.  
+ Les données BLOB ne peuvent pas être stockées dans le système de fichiers. Il s’agit de la valeur par défaut.  
   
  **Accès Transact-SQL activé**  
  Les données FILESTREAM sont accessibles à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)], mais pas par le biais du système de fichiers.  
@@ -76,7 +76,7 @@ ms.locfileid: "62809380"
   
  Si aucun catalogue de texte intégral n'est disponible, les index de recherche en texte intégral associés sont reconstruits. Cette option est disponible uniquement pour les bases de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- **Reconstruire**  
+ **Recréation**  
  Les catalogues de texte intégral sont reconstruits à l'aide des analyseurs lexicaux nouveaux et améliorés. La reconstruction des index peut prendre du temps, et une quantité importante de ressources en termes d'UC et de mémoire peut être requise après la mise à niveau.  
   
  **Réinitialiser**  
@@ -112,7 +112,7 @@ ms.locfileid: "62809380"
   
  Toute modification apportée à ce paramètre prend effet immédiatement.  
   
-## <a name="parallelism"></a>Parallelism:  
+## <a name="parallelism"></a>Parallélisme :  
  **Cost Threshold for Parallelism**  
  Spécifie le seuil de création et d'exécution des plans parallèles par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce coût fait référence à l'estimation du temps (exprimé en secondes) nécessaire à l'exécution du plan de série pour une configuration matérielle spécifique. Spécifiez cette option uniquement sur des multiprocesseurs symétriques. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur cost threshold for parallelism](configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   

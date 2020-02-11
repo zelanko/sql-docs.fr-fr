@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493850"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur
@@ -22,7 +22,7 @@ ms.locfileid: "69493850"
   
  Avec une hiérarchie naturelle, si vous définissez des relations d'attributs entres les attributs qui composent les niveaux, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser l'agrégation d'un attribut pour obtenir les résultats à partir d'un attribut connexe. S'il n'existe aucune relation entre les attributs, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agrège tous les attributs non clé à partir de l'attribut clé. Par conséquent, si les données sous-jacentes le prennent en charge, il est également conseillé de définir des relations d'attributs entre les attributs. La définition des relations d'attributs améliore les performances des dimensions, des partitions et du traitement des requêtes. Pour plus d’informations, consultez [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md) et [Relations d’attributs](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
- Lorsque vous définissez des relations d'attributs, vous pouvez spécifier si la relation est flexible ou rigide. Si vous définissez une relation rigide, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conserve les agrégations une fois la dimension mise à jour. Si une relation rigide change, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère une erreur au cours du traitement, excepté si la dimension est traitée entièrement. En spécifiant les relations et les propriétés de relations appropriées, vous améliorez les performances de requête et de traitement. Pour plus d’informations, consultez [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md) et [Propriétés de la hiérarchie définie par l’utilisateur](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ Lorsque vous définissez des relations d'attributs, vous pouvez spécifier si la relation est flexible ou rigide. Si vous définissez une relation rigide, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conserve les agrégations une fois la dimension mise à jour. Si une relation rigide change, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] génère une erreur au cours du traitement, excepté si la dimension est traitée entièrement. En spécifiant les relations et les propriétés de relations appropriées, vous améliorez les performances de requête et de traitement. Pour plus d’informations, consultez [définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md)et propriétés de la hiérarchie de l' [utilisateur](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  Au cours des tâches de cette rubrique, vous allez définir des relations d'attributs pour les attributs des hiérarchies utilisateur naturelles dans le projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Il s’agit de la hiérarchie **Customer Geography** dans la dimension **Customer**, de la hiérarchie **Sales Territory** dans la dimension **Sales Territory** , de la hiérarchie **Product Model Lines** dans la dimension **Product** et des hiérarchies **Fiscal Date** et **Calendar Date** dans la dimension **Date** . Ces hiérarchies utilisateur sont toutes des hiérarchies naturelles.  
   
@@ -32,17 +32,17 @@ ms.locfileid: "69493850"
   
      Dans le volet **Hiérarchies** , notez les niveaux de la hiérarchie **Customer Geography** définie par l’utilisateur. Cette hiérarchie est simplement un chemin d'exploration pour les utilisateurs, aucune relation entre les niveaux et les attributs n'étant définie.  
   
-2.  Cliquez sur l’onglet **Relations d’attributs**.  
+2.  Cliquez sur l’onglet **Relations d’attributs** .  
   
      Notez les quatre relations d’attributs qui lient les attributs non-clé de la table **Geography** à l’attribut clé de la table **Geography** . L’attribut **Geography** est mis en rapport avec l’attribut **Nom complet** . L’attribut **Code postal** est indirectement lié à l’attribut **Nom complet** via l’attribut **Géographie** , car **Code postal** est lié à l’attribut **Géographie** et **Géographie** est lié à l’attribut **Nom complet** . Ensuite, nous modifierons les relations d’attributs afin qu’ils n’utilisent pas l’attribut **Géographie** .  
   
 3.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Nom complet** puis sélectionnez **Nouvelle relation d’attribut**.  
   
-4.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Nom complet**. Définissez **l’Attribut associé** avec la valeur **Code postal**. Dans la liste **Type de relation** , laissez le type de relation défini sur **Flexible** , car les relations entre les membres peuvent changer au fil du temps.  
+4.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Nom complet**. Définissez **l’Attribut associé** avec la valeur **Code postal**. Dans la liste **Type de relation** , laissez le type de relation défini sur **Flexible** car les relations entre les membres peuvent changer au fil du temps.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Une icône d'avertissement apparaît dans le diagramme parce que la relation est redondante. La relation **Nom complet** -> **Géographie**-> **Code postal** existe déjà, et vous venez de créer la relation **Nom complet** -> **Code postal**. La relation **Géographie**-> **Code postal** étant maintenant redondante, nous allons la supprimer.  
+     Une icône d'avertissement apparaît dans le diagramme parce que la relation est redondante. Le nom complet de la****-> relation **nom** -> complet du**Code postal** existe déjà, et vous venez de créer le**Code postal**de la relation **nom** -> complet. Le**Code postal** de la relation **Geography**-> est maintenant redondant. nous allons donc le supprimer.  
   
 6.  Dans le volet **Relations d’attributs** , cliquez avec le bouton droit sur **Géographie**-> **Code postal** , puis cliquez sur **Supprimer**.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "69493850"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     La relation **Géographie**-> **Ville** étant maintenant redondante, nous la supprimerons.  
+     La relation **Geography**-> **City** est maintenant redondante. nous allons donc la supprimer.  
   
-11. Dans le volet Relations d’attributs, cliquez avec le bouton droit sur **Géographie**-> **Ville** , puis cliquez sur **Supprimer**.  
+11. Dans le volet relations d’attributs, cliquez avec le bouton droit sur **Geography**-> **City** , puis cliquez sur **supprimer**.  
   
 12. Quand la boîte de dialogue **Supprimer les objets** apparaît, cliquez sur **OK**.  
   
 13. Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Ville** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-14. Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Ville**. Définissez **l’Attribut associé** sur **État-Province**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide** , car la relation entre une ville et un état ne change pas au fil du temps.  
+14. Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **City**. Affectez la valeur **State-Province** à **Attribut associé**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide** , car la relation entre une ville et un état ne change pas au fil du temps.  
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -70,13 +70,13 @@ ms.locfileid: "69493850"
   
 17. Quand la boîte de dialogue **Supprimer les objets** apparaît, cliquez sur **OK**.  
   
-18. Dans le diagramme, cliquez avec le bouton droit sur l’attribut **État-Province**, puis sélectionnez **Nouvelle relation d’attribut**.  
+18. Dans le diagramme, cliquez avec le bouton droit sur l’attribut **State-Province** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-19. Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **State-Province**. Définissez **l’Attribut associé** sur **Pays-Région**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide** , car la relation entre un état-province et un pays-région ne change pas au fil du temps.  
+19. Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **State-Province**. Affectez la valeur **Country-Region** à **Attribut associé**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide** , car la relation entre un état-province et un pays-région ne change pas au fil du temps.  
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. Dans le volet Relations d’attributs, cliquez avec le bouton droit sur **Géographie**-> **Pays-Région** , puis cliquez sur **Supprimer**.  
+21. Dans le volet relations d’attributs, cliquez avec le bouton droit sur **Geography**-> **Country-Region** , puis cliquez sur **supprimer**.  
   
 22. Quand la boîte de dialogue **Supprimer les objets** apparaît, cliquez sur **OK**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "69493850"
   
      Notez que quand vous supprimez la dernière relation d’attribut entre **Géographie** et d’autres attributs, cet attribut **Géographie** est lui-même supprimé. Cela est dû au fait que l'attribut n'est plus utilisé.  
   
-24. Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
+24. Dans le menu Fichier , cliquez sur **Enregistrer tout**.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>Définition des relations d'attributs pour les attributs dans la hiérarchie Sales Territory  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69493850"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L’attribut**Groupe du secteur de vente** est maintenant lié à l’attribut **Pays du secteur de vente**et l’attribut **Pays du secteur de vente** est maintenant lié à l’attribut **Région du secteur de vente**. La propriété **RelationshipType** de chacune de ces relations doit avoir la valeur **Flexible** , car le regroupement des régions d’un pays peut changer dans le temps, de même que le regroupement des pays dans les groupes.  
+     Le **groupe du secteur de vente** est maintenant lié au pays du **secteur**de vente et le pays du secteur de **vente** est maintenant lié à la région du **secteur de vente**. La propriété **RelationshipType** de chacune de ces relations doit avoir la valeur **Flexible** , car le regroupement des régions d’un pays peut changer dans le temps, de même que le regroupement des pays dans les groupes.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>Définition des relations d'attributs pour les attributs dans la hiérarchie Product Model Lines  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493850"
   
 2.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Nom du modèle** puis sélectionnez **Nouvelle relation d’attribut**.  
   
-3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Model Name**. Définissez **l’Attribut associé** sur **Product Line**. Dans la liste **Type de relation**, laissez le type de relation défini sur **Flexible**.  
+3.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Model Name**. Définissez **l’Attribut associé** sur **Product Line**. Dans la liste **Type de relation** , laissez le type de relation défini sur **Flexible**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -134,19 +134,19 @@ ms.locfileid: "69493850"
   
 1.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Month Name** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-2.  Dans la boîte de dialogue **Créer une relation d’attribut**, **l’Attribut source** est **Month Name**. Définissez **l’Attribut associé** avec la valeur **Calendar Quarter**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+2.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Month Name**. Définissez **l’Attribut associé** avec la valeur **Calendar Quarter**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Quarter** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-5.  Dans la boîte de dialogue **Créer une relation d’attribut**, **l’Attribut source** est **Calendar Quarter**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+5.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Quarter**. Définissez **l’Attribut associé** avec la valeur **Calendar Semester**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Calendar Semester** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-8.  Dans la boîte de dialogue **Créer une relation d’attribut**, **l’Attribut source** est **Calendar Semester**. Définissez **l’Attribut associé** avec la valeur **Calendar Year**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+8.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Calendar Semester**. Définissez **l’Attribut associé** avec la valeur **Calendar Year**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -162,11 +162,11 @@ ms.locfileid: "69493850"
   
 5.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **Ville** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
-6.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **Ville**. Affectez la valeur **State-Province** à **Attribut associé**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
+6.  Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **City**. Affectez la valeur **State-Province** à **Attribut associé**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-8.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **État-Province** , puis sélectionnez **Nouvelle relation d’attribut**.  
+8.  Dans le diagramme, cliquez avec le bouton droit sur l’attribut **State-Province** , puis sélectionnez **Nouvelle relation d’attribut**.  
   
 9. Dans la boîte de dialogue **Créer une relation d’attribut** , **l’Attribut source** est **State-Province**. Affectez la valeur **Country-Region** à **Attribut associé**. Dans la liste **Type de relation** , définissez le type de relation sur **Rigide**.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "69493850"
   
 12. Définissez la propriété **AttributeHierarchyOptimizedState** sur **NotOptimized**, la propriété **AttributeHierarchyOrdered** sur **False**et la propriété **AttributeHierarchyVisible** sur **False**.  
   
-13. Dans le menu **Fichier**, cliquez sur **Enregistrer tout**.  
+13. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 14. Dans le menu **Générer** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], cliquez sur **Déployer Analysis Services Tutorial**.  
   
@@ -185,6 +185,6 @@ ms.locfileid: "69493850"
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md)   
- [Propriétés de la hiérarchie utilisateur](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
+ [Propriétés de la hiérarchie définie par l'utilisateur](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

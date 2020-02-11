@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093145"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Supprimer les références aux tables système non documentées
@@ -80,16 +80,16 @@ ms.locfileid: "66093145"
 ## <a name="corrective-action"></a>Action corrective  
  Modifiez vos applications d'après le tableau suivant.  
   
-|À la place de|Utiliser|  
+|À la place de|Utilisation|  
 |----------------|---------|  
-|**sysfulltextnotify**|propriété**TableFulltextPendingChanges** de la fonction OBJECTPROPERTYEX.|  
-|**syslocks**|vue de gestion dynamique**sys.dm_tran_locks** , sp_lock, ou vue de compatibilité **sys.syslockinfo** .|  
-|**sysproperties**|affichage catalogue**sys.extended_properties** ou fonction **fn_listextendedproperty**|  
-|**sysxlogins**|affichage catalogue**sys.server_principals** ou vue de compatibilité **syslogins**|  
+|**sysfulltextnotify**|Propriété **TableFulltextPendingChanges** de la fonction OBJECTPROPERTYEX.|  
+|**syslocks**|**sys. dm_tran_locks** vue de gestion dynamique, ou sp_lock, ou vue de compatibilité **sys. syslockinfo** .|  
+|**sysproperties**|vue de catalogue **sys. extended_properties** ou fonction **fn_listextendedproperty**|  
+|**sysxlogins**|vue de catalogue **sys. server_principals** ou vue de compatibilité **syslogins** .|  
 |toutes les tables **spt_**|Aucun remplacement disponible|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

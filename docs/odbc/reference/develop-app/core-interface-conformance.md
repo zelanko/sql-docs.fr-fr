@@ -1,5 +1,5 @@
 ---
-title: Conformité de l’Interface de base | Microsoft Docs
+title: Conformité de l’interface principale | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,56 +15,56 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002110"
 ---
 # <a name="core-interface-conformance"></a>Conformité de l’interface principale
-Tous les pilotes ODBC doivent présenter au moins au niveau du noyau conformité de l’interface. Les fonctionnalités dans le niveau principal sont celles qui sont requises par les applications interopérables plus génériques, le pilote peut travailler avec ces applications. Les fonctionnalités du niveau Core correspondent également pour les fonctionnalités définies dans la spécification ISO CLI et les fonctionnalités obligatoires définies dans la spécification CLI de groupe ouvert. Un pilote ODBC de conforme à l’interface au niveau du noyau permet à l’application effectuer toutes les conditions suivantes :  
+Tous les pilotes ODBC doivent présenter la conformité de l’interface au niveau du noyau. Étant donné que les fonctionnalités du niveau principal sont celles requises par la plupart des applications interopérables génériques, le pilote peut fonctionner avec ces applications. Les fonctionnalités du niveau principal correspondent également aux fonctionnalités définies dans la spécification de l’interface CLI ISO et aux fonctionnalités non facultatives définies dans la spécification de l’interface CLI de groupe ouverte. Un pilote ODBC conforme à l’interface de niveau principal permet à l’application d’effectuer toutes les opérations suivantes :  
   
--   Allouer et libérer tous les types de handles, en appelant **SQLAllocHandle** et **SQLFreeHandle**.  
+-   Allouez et libérez tous les types de handles en appelant **SQLAllocHandle** et **SQLFreeHandle**.  
   
--   Utiliser toutes les formes de la **SQLFreeStmt** (fonction).  
+-   Utilisez toutes les formes de la fonction **SQLFreeStmt** .  
   
--   Lier des colonnes du jeu de résultats, en appelant **SQLBindCol**.  
+-   Liez les colonnes du jeu de résultats en appelant **SQLBindCol**.  
   
--   Gérer des paramètres dynamiques, y compris les tableaux de paramètres, dans la direction d’entrée uniquement, en appelant **SQLBindParameter** et **SQLNumParams**. (Les paramètres dans la direction de sortie sont des fonctionnalités 203 dans [au niveau de conformité de l’Interface 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Gérez les paramètres dynamiques, y compris les tableaux de paramètres, dans la direction d’entrée uniquement, en appelant **SQLBindParameter** et **SQLNumParams**. (Les paramètres dans le sens de sortie sont les fonctionnalités 203 dans la conformité de l' [interface de niveau 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Spécifier un décalage de la liaison.  
+-   Spécifiez un décalage de liaison.  
   
--   Utilisez la boîte de dialogue data-at-execution, impliquant des appels à **SQLParamData** et **SQLPutData**.  
+-   Utilisez la boîte de dialogue données en cours d’exécution, qui implique des appels à **SQLParamData** et **SQLPutData**.  
   
--   Gérer les curseurs et les noms de curseur, en appelant **SQLCloseCursor**, **SQLGetCursorName**, et **SQLSetCursorName**.  
+-   Gérez les curseurs et les noms de curseurs en appelant **SQLCloseCursor**, **SQLGetCursorName**et **SQLSetCursorName**.  
   
--   Accéder à la description (métadonnées) de jeux de résultats, en appelant **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, et **SQLRowCount** . (Utilisation de ces fonctions sur la colonne numéro 0 pour récupérer les métadonnées de signet est fonctionnalité 204 dans [au niveau de conformité de l’Interface 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Accédez à la description (métadonnées) des jeux de résultats en appelant **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**et **SQLRowCount**. (L’utilisation de ces fonctions sur le numéro de colonne 0 pour récupérer les métadonnées de signet est la fonctionnalité 204 dans la conformité de l' [interface de niveau 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Interroger le dictionnaire de données, en appelant les fonctions de catalogue **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, et **SQLTables**.  
+-   Interrogez le dictionnaire de données en appelant les fonctions de catalogue **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**et **SQLTables**.  
   
-     Le pilote n’est pas requis pour prendre en charge des noms en plusieurs parties des tables de base de données et des vues. (Pour plus d’informations, consultez la fonctionnalité de 101 [au niveau de conformité de l’Interface 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md) et fonctionnalité 201 dans [au niveau de conformité de l’Interface 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).) Toutefois, certaines fonctionnalités de la spécification de SQL-92, telles que les noms d’index et de qualification de la colonne sont syntaxiquement comparables d’affectation de noms en plusieurs parties. La présente liste de fonctions ODBC n’est pas destinée à introduire de nouvelles options dans ces aspects de SQL-92.  
+     Le pilote n’est pas requis pour prendre en charge les noms en plusieurs parties des tables et des vues de base de données. (Pour plus d’informations, consultez la fonctionnalité 101 dans la conformité de l' [interface de niveau 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md) et la fonctionnalité 201 dans la conformité de l' [interface de niveau 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).) Toutefois, certaines fonctionnalités de la spécification SQL-92, telles que la qualification de colonne et les noms d’index, sont syntaxiquement comparables à l’affectation de noms en plusieurs parties. La liste actuelle des fonctionnalités ODBC n’est pas destinée à introduire de nouvelles options dans ces aspects de SQL-92.  
   
--   Gérer les sources de données et les connexions, en appelant **SQLConnect**, **SQLDataSources**, **SQLDisconnect**, et **SQLDriverConnect**. Obtenir des informations sur les pilotes, quel que soit le ODBC niveau pris en charge, en appelant **SQLDrivers**.  
+-   Gérer les sources de données et les connexions, en appelant **SQLConnect**, **SQLDataSources**, **SQLDisconnect**et **SQLDriverConnect**. Obtenir des informations sur les pilotes, quel que soit le niveau ODBC pris en charge, en appelant **SQLDrivers**.  
   
--   Préparer et exécuter des instructions SQL, en appelant **SQLExecDirect**, **SQLExecute**, et **SQLPrepare**.  
+-   Préparez et exécutez des instructions SQL en appelant **SQLExecDirect**, **SQLExecute**et **SQLPrepare**.  
   
--   Extraire une ligne d’un jeu de résultats ou de plusieurs lignes, dans la direction vers l’avant uniquement, en appelant **SQLFetch** ou en appelant **SQLFetchScroll** avec la *FetchOrientation* argument la valeur SQL_FETCH_NEXT.  
+-   Extraire une ligne d’un jeu de résultats ou plusieurs lignes, dans la direction avant uniquement, en appelant **SQLFetch** ou en appelant **SQLFetchScroll** avec l’argument *FetchOrientation* défini sur SQL_FETCH_NEXT.  
   
--   Obtenir une colonne indépendante en parties, en appelant **SQLGetData**.  
+-   Obtenez une colonne indépendante en parties, en appelant **SQLGetData**.  
   
--   Obtenir les valeurs actuelles de tous les attributs, en appelant **SQLGetConnectAttr**, **SQLGetEnvAttr**, et **SQLGetStmtAttr**et définir les attributs de toutes les valeurs par défaut et définir certains attributs pour les valeurs par défaut en appelant **SQLSetConnectAttr**, **SQLSetEnvAttr**, et **SQLSetStmtAttr**.  
+-   Obtenez les valeurs actuelles de tous les attributs, en appelant **SQLGetConnectAttr**, **SQLGetEnvAttr**et **SQLGetStmtAttr**, puis affectez à tous les attributs leurs valeurs par défaut et affectez à certains attributs des valeurs différentes de celles par défaut en appelant **SQLSetConnectAttr**, **SQLSetEnvAttr**et **SQLSetStmtAttr**.  
   
--   Manipuler certains champs de descripteurs, en appelant **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**, et **SQLSetDescRec**.  
+-   Manipuler certains champs de descripteurs, en appelant **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**et **SQLSetDescRec**.  
   
--   Obtenir des informations de diagnostic, en appelant **SQLGetDiagField** et **SQLGetDiagRec**.  
+-   Obtenez des informations de diagnostic en appelant **SQLGetDiagField** et **SQLGetDiagRec**.  
   
--   Détecter les fonctionnalités du pilote, en appelant **SQLGetFunctions** et **SQLGetInfo**. En outre, détecter le résultat de remplacements de n’importe quel texte apportées à une instruction SQL avant leur envoi à la source de données, en appelant **SQLNativeSql**.  
+-   Détectez les fonctionnalités des pilotes en appelant **SQLGetFunctions** et **SQLGetInfo**. En outre, détectez le résultat de toutes les substitutions de texte effectuées dans une instruction SQL avant qu’elle ne soit envoyée à la source de données, en appelant **SQLNativeSql**.  
   
--   Utilisez la syntaxe de **SQLEndTran** pour valider une transaction. Un pilote au niveau du noyau devez prend pas en charge les transactions réelles ; Par conséquent, l’application ne peut pas spécifier SQL_ROLLBACK ni SQL_AUTOCOMMIT_OFF pour l’attribut de connexion SQL_ATTR_AUTOCOMMIT. (Pour plus d’informations, consultez la fonctionnalité de 109 [au niveau de conformité de l’Interface 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Utilisez la syntaxe de **SQLEndTran** pour valider une transaction. Un pilote de niveau principal n’A pas besoin de prendre en charge les véritables transactions ; par conséquent, l’application ne peut pas spécifier SQL_ROLLBACK ni SQL_AUTOCOMMIT_OFF pour l’attribut de connexion SQL_ATTR_AUTOCOMMIT. (Pour plus d’informations, consultez la fonctionnalité 109 dans la conformité de l' [interface de niveau 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Appelez **SQLCancel** pour annuler la boîte de dialogue data-at-execution et, dans un environnement multithread, pour annuler un ODBC en cours d’exécution dans un autre thread. Conformité de l’interface d’au niveau du noyau n’impose pas de prise en charge de l’exécution asynchrone de fonctions, ni l’utilisation de **SQLCancel** pour annuler une fonction ODBC exécuter de façon asynchrone. La plateforme, ni le pilote ODBC ne doivent être multithread pour le pilote gérer les activités indépendantes en même temps. Toutefois, dans un environnement multithread, le pilote ODBC doit être thread-safe. Sérialisation de demandes de l’application est conforme permettent d’implémenter cette spécification, même si elle peut créer de graves problèmes de performances.  
+-   Appelez **SQLCancel** pour annuler la boîte de dialogue de données en cours d’exécution et, dans les environnements multithread, pour annuler une fonction ODBC s’exécutant dans un autre thread. La conformité de l’interface au niveau du noyau n’autorise pas la prise en charge de l’exécution asynchrone des fonctions, ni l’utilisation de **SQLCancel** pour annuler une fonction ODBC s’exécutant de manière asynchrone. Ni la plateforme, ni le pilote ODBC n’ont besoin d’être multithread pour que le pilote exécute des activités indépendantes en même temps. Toutefois, dans les environnements multithread, le pilote ODBC doit être thread-safe. La sérialisation des requêtes à partir de l’application est une méthode conforme pour implémenter cette spécification, même si elle peut créer de sérieux problèmes de performances.  
   
--   Obtenir la colonne d’identification de ligne SQL_BEST_ROWID des tables, en appelant **SQLSpecialColumns**. (Prise en charge de SQL_ROWVER est fonctionnalité 208 dans [au niveau de conformité de l’Interface 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Obtenez le SQL_BEST_ROWID colonne d’identification de lignes des tables en appelant **SQLSpecialColumns**. (La prise en charge de SQL_ROWVER est la fonctionnalité 208 dans la conformité de l' [interface de niveau 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
     > [!IMPORTANT]  
-    >  Pilotes ODBC doit implémenter les fonctions dans le niveau de la conformité de l’interface Core.
+    >  Les pilotes ODBC doivent implémenter les fonctions dans le niveau de conformité de l’interface principale.

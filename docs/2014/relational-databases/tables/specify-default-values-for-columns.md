@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196722"
 ---
 # <a name="specify-default-values-for-columns"></a>Spécifier des valeurs par défaut pour les colonnes
@@ -35,7 +35,7 @@ ms.locfileid: "68196722"
   
      [Sécurité](#Security)  
   
--   **Pour spécifier une valeur à l'aide de :**  
+-   **Pour spécifier une valeur par défaut à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68196722"
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Pour spécifier une valeur par défaut pour une colonne  
   
-1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant les colonnes dont vous souhaitez modifier l’échelle et cliquez sur **Conception**.  
+1.  Dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant les colonnes dont vous souhaitez modifier l’échelle et cliquez sur **Conception**.  
   
 2.  Sélectionnez la colonne pour laquelle vous souhaitez spécifier une valeur par défaut.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "68196722"
     > [!NOTE]  
     >  Pour entrer une valeur par défaut numérique, entrez le nombre. Pour un objet ou une fonction, entrez son nom. Pour une valeur par défaut alphanumérique, entrez la valeur dans des guillemets simples.  
   
-4.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+4.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Pour spécifier une valeur par défaut pour une colonne  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

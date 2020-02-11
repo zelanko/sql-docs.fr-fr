@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892964"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Spécifications pour un modèle de série chronologique (Didacticiel sur l'exploration de données intermédiaire)
@@ -24,14 +24,15 @@ ms.locfileid: "68892964"
   
  Pour ce didacticiel, les données de ventes sont collectées quotidiennement dans la base de données des ventes transactionnelles, mais pour l'exploration de données, les données ont été préagrégées par mois, à l'aide d'une vue.  
   
- De plus, il est souhaitable pour l'analyse que les données aient aussi peu d'écart possible. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries devraient commencer et se terminer de préférence aux mêmes dates. Si les données comportent des intervalles, mais que les espaces ne se trouvent pas au début ou à la fin d’une série, vous pouvez utiliser le paramètre MISSING_VALUE_SUBSTITUTION pour remplir la série. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit également plusieurs options permettant de remplacer des données manquantes par des données, telles que l'utilisation de moyennes ou de constantes.  
+ De plus, il est souhaitable pour l'analyse que les données aient aussi peu d'écart possible. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries devraient commencer et se terminer de préférence aux mêmes dates. Si les données comportent des intervalles, mais que les espaces ne se trouvent pas au début ou à la fin d’une série, vous pouvez utiliser le paramètre MISSING_VALUE_SUBSTITUTION pour remplir la série. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit également plusieurs options permettant de remplacer des données manquantes par des données, telles que l'utilisation de moyennes ou de constantes.  
   
 > [!WARNING]  
 >  Les outils de graphique croisé dynamique et de tableau croisé dynamique qui ont été inclus dans les versions antérieures du concepteur de vue de source de données ne sont plus fournis. Nous vous conseillons d'identifier au préalable les écarts dans les données de série chronologique à l'aide des outils tels que le profileur de données inclus dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>Pour identifier la clé de temps pour le modèle de prévision  
   
-1.  Dans le volet **SalesByRegion. DSV [Design]** , cliquez avec le bouton droit sur la table vTimeSeries, puis sélectionnez **Explorer les données**.  
+1.  Dans le volet **SalesByRegion. DSV [Design]**, cliquez avec le bouton droit sur la table vTimeSeries, puis sélectionnez **Explorer les données**.  
   
      Un nouvel onglet s’ouvre, intitulé **Explorer la table vTimeSeries**.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68892964"
 ## <a name="handling-missing-data-optional"></a>Gestion des données manquantes (facultatif)  
  S'il manque des données dans une série, vous risquez d'obtenir une erreur lorsque vous essayez de traiter le modèle. Il existe plusieurs manières de gérer les données manquantes :  
   
--   Vous pouvez laisser Analysis Services remplir les valeurs manquantes, en calculant une moyenne ou en utilisant une valeur précédente. Pour ce faire, définissez le paramètre MISSING_VALUE_SUBSTITUTION sur le modèle d'exploration de données. Pour plus d’informations sur ce paramètre, consultez informations techniques de référence sur l' [algorithme MTS (Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)). Pour plus d’informations sur la modification des paramètres d’un modèle d’exploration de données existant, consultez [afficher ou modifier les paramètres](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md)d’algorithme.  
+-   Vous pouvez laisser Analysis Services remplir les valeurs manquantes, en calculant une moyenne ou en utilisant une valeur précédente. Pour ce faire, définissez le paramètre MISSING_VALUE_SUBSTITUTION sur le modèle d'exploration de données. Pour plus d’informations sur ce paramètre, consultez informations techniques de référence sur l' [algorithme MTS (Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)). Pour plus d’informations sur la modification des paramètres d’un modèle d’exploration de données existant, consultez [afficher ou modifier les paramètres d’algorithme](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md).  
   
 -   Vous pouvez modifier la source de données ou filtrer la vue sous-jacente pour éliminer la série irrégulière ou remplacer des valeurs. Pour ce faire, vous devez utiliser la source de données relationnelle ou modifier la vue de source de données en créant des requêtes ou des calculs nommés personnalisés. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models). Une tâche ultérieure au cours de cette leçon fournit un exemple de la manière de générer à la fois une requête nommée et un calcul personnalisé.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "68892964"
 -   Cliquez avec le bouton droit sur l’onglet, **Explorez la table vTimeSeries**, puis sélectionnez **Fermer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Création d’une structure de prévision et &#40;d’un modèle d’exploration de données intermédiaire didacticiel&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [Création d’une structure et d’un modèle de prévision &#40;didacticiel sur l’exploration de données intermédiaire&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  

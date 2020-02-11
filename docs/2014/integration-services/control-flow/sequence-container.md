@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec92f58f4dcd44fc39bfc34968a7883cb9c4cb4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830115"
 ---
 # <a name="sequence-container"></a>conteneur de séquences
@@ -57,7 +57,7 @@ ms.locfileid: "62830115"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connecter des tâches et des conteneurs à l'aide d'une contrainte de précédence par défaut](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
+ [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Conteneurs Integration Services](integration-services-containers.md)  
   
   

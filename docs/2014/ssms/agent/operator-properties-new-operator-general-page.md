@@ -1,5 +1,5 @@
 ---
-title: Propriétés de l’opérateur et New, opérateur (Page Général) | Microsoft Docs
+title: Propriétés de l’opérateur et nouvel opérateur (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211349"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Propriétés de l’opérateur et Nouvel opérateur (page Général)
-  Utilisez cette page pour afficher et modifier les propriétés générales des opérateurs de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilisez cette page pour afficher et modifier les propriétés générales des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opérateurs de l’agent.  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -29,26 +29,26 @@ ms.locfileid: "68211349"
  **Activé**  
  Permet d'activer l'opérateur. Aucune notification n'est envoyée à l'opérateur lorsque cette option est désactivée.  
   
- **Nom de messagerie électronique**  
+ **Nom du courrier électronique**  
  Spécifie l'adresse de messagerie de l'opérateur.  
   
- **Adresse d'envoi réseau**  
+ **Adresse d’envoi réseau**  
  Spécifie l’adresse à utiliser pour **net send**.  
   
- **Nom de l'adresse de radiomessagerie**  
+ **Nom de la messagerie de radiomessagerie**  
  Spécifie l'adresse de messagerie à utiliser pour la radiomessagerie de l'opérateur.  
   
- **Planification de la radiomessagerie active**  
+ **Planification de la radiomessagerie**  
  Définit les périodes d'activité de la radiomessagerie.  
   
- **Lundi - Dimanche**  
+ **Lundi-dimanche**  
  Permet de sélectionner les jours d'activité de la radiomessagerie.  
   
  **Début de journée**  
  Sélectionne l’heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envoie des messages à la radiomessagerie.  
   
  **Fin de journée**  
- Sélectionne l’heure après laquelle l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’envoie plus de messages à la radiomessagerie.  
+ Sélectionne l’heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n’envoie plus de messages à la radiomessagerie.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérateurs](operators.md)  

@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobservers (Transact-SQL) | Microsoft Docs
+title: dbo. sysjobservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70026204"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
@@ -34,19 +34,19 @@ Stocke les associations ou les relations existant entre un travail particulier e
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|Numéro d’identification du travail.|  
-|server_id|**Int**|Numéro d’identification du serveur.|  
+|server_id|**int**|Numéro d’identification du serveur.|  
 |last_run_outcome|**tinyint**|Issue de la dernière exécution du travail :<br /><br /> **0** = échec<br /><br /> **1** = opération réussie<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annuler<br /><br /> **4** = en cours<br /><br /> **5** = Unknown (voir la section Notes suivante) |  
-|message last_outcome_|**nvarchar(1024)**|Message associé, le cas échéant, à la colonne last_run_outcome.|  
-|last_run_date|**Int**|Date de la dernière exécution du travail.|  
+|last_outcome_ message|**nvarchar(1024)**|Message associé, le cas échéant, à la colonne last_run_outcome.|  
+|last_run_date|**int**|Date de la dernière exécution du travail.|  
 |last_run_time|**int**|Heure de la dernière exécution du travail.|  
-|last_run_duration|**Int**|Durée d'exécution du travail, en heures, minutes et secondes. Calculé à l’aide de la formule suivante: (*heures*\*10000) + (*minutes*\*100) + *secondes*.|  
+|last_run_duration|**int**|Durée d'exécution du travail, en heures, minutes et secondes. Calculé à l’aide de la formule suivante : (*heures*\*10000) + (*minutes*\*100) + *secondes*.|  
 
 
 ## <a name="remarks"></a>Notes
 
-Une valeur supérieure à *4* signifie que l’agent SQL ne connaît pas l’état de ce travail. Le *last_run_outcome* est initialement défini sur *5* lorsqu’un travail est créé.
+Une valeur supérieure à *4* signifie que l’agent SQL ne connaît pas l’état de ce travail. La *last_run_outcome* est initialement définie sur *5* lorsqu’un travail est créé.
 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Tables &#40;SQL Server Agent Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+[Tables SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

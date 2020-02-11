@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210743"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
@@ -89,14 +89,14 @@ ms.locfileid: "68210743"
  **-?**  
  Imprime tous les paramètres disponibles.  
   
- **-Publisher** _server_name_[ **\\** _instance_name_]  
- Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-** _SERVER_NAME_du serveur**\\**de publication [_instance_name_]  
+ Nom du serveur de publication. Spécifiez *SERVER_NAME* pour l’instance par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] défaut de sur ce serveur. Spécifiez _SERVER_NAME_**\\**_instance_name_ pour une instance nommée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de sur ce serveur.  
   
  **-PublisherDB** _publisher_database_  
  Nom de la base de données du serveur de publication.  
   
- **-Subscriber** _server_name_[ **\\** _instance_name_]  
- Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-Abonné** _SERVER_NAME_[**\\**_instance_name_]  
+ Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _SERVER_NAME_**\\**_instance_name_ pour une instance nommée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de sur ce serveur.  
   
  **-SubscriberDB** _subscriber_database_  
  Nom de la base de données de l'Abonné.  
@@ -105,21 +105,21 @@ ms.locfileid: "68210743"
  Chemin d'accès au dossier contenant l'instantané initial pour un abonnement.  
   
  **-BcpBatchSize** _bcp_batch_size_  
- Nombre de lignes à envoyer dans une opération de copie en bloc. Lorsque vous effectuez une opération **bcp in** , la taille du lot correspond au nombre de lignes à envoyer au serveur en une transaction, mais aussi au nombre de lignes à envoyer avant que l'Agent de distribution ne journalise un message de progression **bcp** . Lorsque vous effectuez une opération **bcp out** , une taille de lot fixe de **1000** est utilisée.  
+ Nombre de lignes à envoyer dans une opération de copie en bloc. Lorsque vous effectuez une opération **bcp in** , la taille du lot correspond au nombre de lignes à envoyer au serveur en une transaction, mais aussi au nombre de lignes à envoyer avant que l’Agent de distribution ne journalise un message de progression **bcp** . Lors de l’exécution d’une opération **BCP out** , une taille de lot fixe de **1000** est utilisée.  
   
  **-CommitBatchSize** _commit_batch_size_  
- Nombre de transactions à délivrer à l'Abonné avant l'émission d'une instruction COMMIT. La valeur par défaut est 100.  
+ Nombre de transactions à délivrer à l'Abonné avant l'émission d'une instruction COMMIT. La valeur par défaut est 100.  
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
  Nombre de commandes de réplication à délivrer à l'Abonné avant l'émission d'une instruction COMMIT. La valeur par défaut est 1000.  
   
- **-Continuous**  
+ **-Continu**  
  Spécifie si l'agent tente d'interroger les transactions répliquées de manière continue. S'il est spécifié, l'Agent interroge les transactions répliquées de la source à des fréquences d'interrogation définies, même s'il n'y a pas de transactions en attente.  
   
  **-DefinitionFile** _def_path_and_file_name_  
  Chemin d'accès du fichier de définition d'agent. Un fichier de définition d'agent contient des arguments d'invite de commandes pour l'agent. Le contenu du fichier est analysé en tant que fichier exécutable. Utilisez des guillemets doubles (") pour spécifier des valeurs d'argument qui contiennent des caractères arbitraires.  
   
- **-Distributor** _distributor_  
+ **-Distributeur de serveurs de distribution** __  
  Nom du serveur de distribution. Pour la distribution du serveur de distribution (transmission de type push), le nom a comme valeur par défaut le nom du serveur de distribution local.  
   
  **-DistributorLogin** _distributor_login_  
@@ -143,7 +143,7 @@ ms.locfileid: "68210743"
  > [!NOTE]  
  >  Un certificat SSL valide est défini avec le nom de domaine complet de l’instance SQL Server. Pour que l’agent puisse se connecter lorsque vous définissez EncryptionLevel sur 2, créez un alias sur l’instance locale de SQL Server. Le paramètre « Nom de l’alias » doit correspondre au nom du serveur, et le paramètre « Serveur » doit être défini sur le nom complet de l’instance SQL Server.
 
- Pour plus d’informations, consultez [sécurité de réplication SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Pour plus d’informations, consultez [réplication SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
  **-ErrorFile** _error_path_and_file_name_  
  Chemin d'accès et nom du fichier d'erreurs généré par l'Agent de distribution. Ce fichier est généré là où une erreur s'est produite lors de l'application de transactions de réplication sur l'Abonné ; les erreurs se produisant sur le serveur de publication ou de distribution ne sont pas journalisées dans ce fichier. Ce fichier contient les transactions de réplication ayant échoué, avec les messages d'erreur associés. S'il n'est pas spécifié, le fichier d'erreurs est créé dans le répertoire même de l'Agent de distribution. Le nom du fichier d'erreurs est le nom de l'Agent de distribution avec une extension .err. Si le nom de fichier spécifié existe, les messages d'erreur sont ajoutés au fichier. Ce paramètre peut contenir jusqu'à 256 caractères Unicode.  
@@ -172,21 +172,21 @@ ms.locfileid: "68210743"
 |Valeur HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Les messages de progression sont écrits dans la console ou dans un fichier de sortie. Les enregistrements d'historique ne sont pas journalisés dans la base de données de distribution.|  
-|**1**|Valeur par défaut. Met toujours à jour un message d'historique précédent du même état (démarrage, progression, succès, et ainsi de suite). Si aucun enregistrement précédent du même état n'existe, insère un nouvel enregistrement.|  
+|**1**|valeur par défaut. Met toujours à jour un message d'historique précédent du même état (démarrage, progression, succès, et ainsi de suite). Si aucun enregistrement précédent du même état n'existe, insère un nouvel enregistrement.|  
 |**2**|Insère de nouveaux enregistrements d'historique, sauf s'il s'agit d'un enregistrement concernant notamment un message inactif ou un message de travail de longue durée, auquel cas les enregistrements précédents sont mis à jour.|  
-|**3**|Insère toujours de nouveaux enregistrements, sauf s'il s'agit de messages inactifs.|  
+|**1,3**|Insère toujours de nouveaux enregistrements, sauf s'il s'agit de messages inactifs.|  
   
- **-Hostname** _host_name_  
+ **-Hostname** _HOST_NAME_  
  Nom d'hôte utilisé pour la connexion au serveur de publication Ce paramètre peut contenir jusqu'à 128 caractères Unicode.  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Durée en secondes au terme de laquelle le thread d'historique doit vérifier si l'une des connexions existantes attend une réponse du serveur. Vous pouvez réduire cette valeur pour éviter que l'agent de vérification ne marque l'Agent de distribution comme suspect lors de l'exécution d'un lot de longue durée. La valeur par défaut est **300** secondes.  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- Nombre de secondes avant l'expiration de la connexion. La valeur par défaut est **15** secondes.  
+ Nombre de secondes avant l’expiration du délai d’attente de la connexion. La valeur par défaut est **15** secondes.  
   
  **-MaxBcpThreads** _number_of_threads_  
- Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la transaction de synchronisation dans la base de données de distribution. **MaxBcpThreads** doit présenter une valeur supérieure à **0** et n’a aucune limite supérieure codée en dur. La valeur par défaut est **2** fois le nombre de processeurs, la valeur maximale étant de **8**. Lors de l’application d’une capture instantanée qui a été générée au niveau du serveur de publication à l’aide de l’option de capture instantanée simultanée, un seul thread est utilisé, quel que soit le nombre que vous spécifiez pour **MaxBcpThreads**.  
+ Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la transaction de synchronisation dans la base de données de distribution. **MaxBcpThreads** doit avoir une valeur supérieure à **0** et n’a aucune limite supérieure codée en dur. La valeur par défaut est **2** fois le nombre de processeurs, la valeur maximale étant de **8**. Lors de l’application d’une capture instantanée qui a été générée au niveau du serveur de publication à l’aide de l’option de capture instantanée simultanée, un seul thread est utilisé, quel que soit le nombre que vous spécifiez pour **MaxBcpThreads**.  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  Nombre maximal de transactions par émission ou par extraction appliquées aux Abonnés dans le cadre d'une synchronisation. La valeur **0** indique que la valeur maximale est un nombre infini de transactions. D'autres valeurs peuvent être utilisées par les Abonnés pour réduire la durée d'une synchronisation qui est extraite d'un serveur de publication.  
@@ -212,7 +212,7 @@ ms.locfileid: "68210743"
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Spécifie si la sortie doit être en clair. Si le niveau de détail est **0**, seuls les messages d'erreur sont imprimés. Si le niveau de détail est **1**, tous les messages du rapport de progression sont imprimés. Si le niveau de détail est **2** (valeur par défaut), tous les messages d'erreur et tous les messages du rapport de progression sont imprimés, ce qui peut s'avérer utile lors du débogage.  
   
- **-PacketSize** _packet_size_  
+ **-Taille paquet** _packet_size_  
  Taille du paquet en octets. La valeur par défaut est 4 096 octets.  
   
  **-PollingInterval** _polling_interval_  
@@ -221,16 +221,16 @@ ms.locfileid: "68210743"
  **-ProfileName** _profile_name_  
  Spécifie un profil d'agent à utiliser pour les paramètres d'agent. Si **ProfileName** a la valeur NULL, le profil d'agent est désactivé. Si **ProfileName** n'est pas spécifié, le profil par défaut du type d'agent est utilisé. Pour plus d’informations, consultez [Profils de l’Agent de réplication](replication-agent-profiles.md).  
   
- **-Publication**  _publication_  
+ **-Publication de publication**__    
  Nom de la publication. Ce paramètre est uniquement valide si la publication est configurée de telle sorte qu'un instantané soit toujours disponible pour les nouveaux abonnements ou les abonnements réinitialisés.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- Nombre de secondes avant l'expiration de la requête. La valeur par défaut est 1800 secondes.  
+ Nombre de secondes avant l’expiration de la requête. La valeur par défaut est 1800 secondes.  
   
- **-QuotedIdentifier** _quoted_identifier_  
+ **-QuotedIdentifier** _QUOTED_IDENTIFIER_  
  Spécifie le caractère de l'identificateur entre guillemets à utiliser. Le premier caractère de la valeur indique la valeur utilisée par l'Agent de distribution. Si **QuotedIdentifier** est utilisé sans valeur, l’Agent de distribution utilise un espace. Si **QuotedIdentifier** n’est pas utilisé, l’Agent de distribution utilise n’importe quel identificateur entre guillemets pris en charge par l’Abonné.  
   
- **-SkipErrors** _native_error_id_ [ **:** _...n_]  
+ **-SkipErrors** _native_error_id_ [**:**_... n_]  
  Liste séparée par des virgules spécifiant les numéros d'erreur à ignorer par cet agent.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -252,9 +252,9 @@ ms.locfileid: "68210743"
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|Source de données ODBC|  
-|**3**|Source de données OLE DB|  
+|**1,3**|Source de données OLE DB|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**|**1**|**2**|... **64**]  
  Nombre de connexions autorisées par l'Agent de distribution afin d'appliquer des lots de modifications en parallèle à un Abonné, tout en conservant bon nombre des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. Pour un serveur de publication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , une plage de valeurs comprises entre 1 et 64 est prise en charge. Ce paramètre est uniquement pris en charge lorsque le serveur de publication et le serveur de distribution s'exécutent sur [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure. Ce paramètre n'est pas pris en charge ou doit être égal à 0 pour les Abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou les abonnements d'égal à égal.  
   
 > [!NOTE]  
@@ -273,7 +273,7 @@ ms.locfileid: "68210743"
  Spécifie le type d'abonnement pour la distribution. La valeur **0** indique un abonnement par émission de données, la valeur **1** un abonnement par extraction et la valeur **2** un abonnement anonyme.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. Consultez le paramètre **-MessageInterval** précédent.  
+ Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. Consultez le paramètre **-MessageInterval** précédent.  
   
  **-UseDTS**  
  Doit être spécifié en tant que paramètre pour une publication qui autorise la transformation de données.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs
+title: sys. dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005103"
 ---
-# <a name="sysdmcryptographicproviderproperties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
+# <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur les fournisseurs de services de chiffrement inscrits.  
@@ -33,12 +33,12 @@ ms.locfileid: "68005103"
  
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|provider_id|**Int**|Numéro d'identification du fournisseur de services de chiffrement.|  
-|GUID|**uniqueidentifier**|GUID unique du fournisseur.|  
-|provider_version|**nvarchar (256)**|Version du fournisseur dans le format '*aa.bb.cccc.dd*».|  
-|sqlcrypt_version|**nvarchar (256)**|Version principale de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API de chiffrement dans le format '*aa.bb.cccc.dd*».|  
-|friendly_name|**nvarchar(2048)**|Nom fourni par le fournisseur.|  
-|authentication_type|**nvarchar (256)**|WINDOWS, BASIC ou autres.|  
+|provider_id|**int**|Numéro d'identification du fournisseur de services de chiffrement.|  
+|guid|**uniqueidentifier**|GUID unique du fournisseur.|  
+|provider_version|**nvarchar (256)**|Version du fournisseur au format'*AA.bb.CCCC.DD*'.|  
+|sqlcrypt_version|**nvarchar (256)**|Version principale de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API de chiffrement au format'*AA.bb.CCCC.DD*'.|  
+|friendly_name|**nvarchar (2048)**|Nom fourni par le fournisseur.|  
+|authentication_type|**nvarchar (256)**|WINDOWS, de base ou autre.|  
 |symmetric_key_support|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
 |symmetric_key_export|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
 |symmetric_key_import|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
