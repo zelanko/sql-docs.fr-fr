@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054626"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Afficher les entrées de journal dans la fenêtre Journaux d’événements
@@ -36,7 +36,7 @@ ms.locfileid: "66054626"
   
      Dès que l’exécution rencontre les événements et les messages personnalisés activés à des fins de journalisation, les entrées de journal de chaque événement ou message sont écrites dans la fenêtre **Journaux d’événements** .  
   
-4.  Dans le menu **Débogage** , cliquez sur **Arrêter le débogage**.  
+4.  Dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
      Les entrées de journal restent disponibles dans la fenêtre **Journaux d’événements** jusqu’à la prochaine exécution du package, l’exécution d’un autre package ou la fermeture de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
