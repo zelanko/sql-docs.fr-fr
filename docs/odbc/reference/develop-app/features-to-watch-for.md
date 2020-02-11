@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités à considérer avec attention | Microsoft Docs
+title: Fonctionnalités à surveiller | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069882"
 ---
 # <a name="features-to-watch-for"></a>Fonctionnalités à considérer avec attention
-Cette section décrit un certain nombre de fonctionnalités qui application adoptent souvent les développeurs pour reçoivent. En fait, ces fonctionnalités varient largement prise en charge et la manière de prise en charge entre les SGBD ; Échec pour qu’il est susceptible de causer des problèmes dans les applications interopérables.  
+Cette section décrit un certain nombre de fonctionnalités qui sont souvent accordées aux développeurs d’applications. En fait, ces fonctionnalités varient largement en matière de prise en charge et de mode de prise en charge entre les SGBD. l’échec du code pour ceux-ci risque de provoquer des problèmes dans les applications interopérables.  
   
- Cette section ne répertorie pas toutes les fonctionnalités dont les développeurs d’applications ont besoin à prendre en compte. Pour plus d’informations, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), et [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) fonction descriptions, [annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)et les sections de ce manuel qui décrivent chaque fonction.  
+ Cette section ne répertorie pas toutes les fonctionnalités que les développeurs d’applications doivent prendre en compte. Pour plus d’informations, consultez les descriptions des fonctions [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)et [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) , [annexe C : grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)et les sections de ce manuel qui décrivent chaque fonctionnalité.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Numéro de version](../../../odbc/reference/develop-app/version-number.md)  
   

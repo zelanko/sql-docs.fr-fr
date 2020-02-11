@@ -1,5 +1,5 @@
 ---
-title: StayInSync, propriété-Exemple (VC ++) | Microsoft Docs
+title: StayInSync, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930756"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync, exemple de propriété (VC++)
-Cet exemple montre comment la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété facilite l’accès aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Cet exemple montre comment la propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilite l’accès aux lignes d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)hiérarchique.  
   
- La boucle externe affiche le nom et prénom de chaque auteur, l’état et identification. Ajouté **Recordset** pour chaque ligne est récupérée à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection et attribué automatiquement aux **affectation** par le **StayInSync**  propriété chaque fois que le parent **Recordset** se déplace vers une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans l’objet recordset ajouté.  
+ La boucle externe affiche le prénom et le nom, l’État et l’identification de chaque auteur. Le **Recordset** ajouté pour chaque ligne est extrait de la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) et affecté automatiquement à **rstTitleAuthor** par la propriété **StayInSync** chaque fois que le **jeu d’enregistrements** parent passe à une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans le Recordset ajouté.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -144,6 +144,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync, propriété](../../../ado/reference/ado-api/stayinsync-property.md)
