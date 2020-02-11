@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082689"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Afficher ou modifier les paramètres d'algorithme
   Vous pouvez modifier les paramètres fournis avec les algorithmes que vous utilisez pour générer des modèles d'exploration de données pour personnaliser les résultats du modèle.  
   
- Les paramètres d’algorithme disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifient beaucoup plus que les seules propriétés du modèle. En effet, ils peuvent être utilisés pour modifier radicalement le traitement, le regroupement et l’affichage des données. Par exemple, vous pouvez utiliser des paramètres d'algorithme pour effectuer les opérations suivantes :  
+ Les paramètres d’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournis dans modifient bien plus que simplement les propriétés du modèle : ils peuvent être utilisés pour modifier fondamentalement la manière dont les données sont traitées, regroupées et affichées. Par exemple, vous pouvez utiliser des paramètres d'algorithme pour effectuer les opérations suivantes :  
   
 -   modifier la méthode d'analyse, telle que la méthode de clustering ;  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66082689"
   
 -   spécifier une valeur de départ ou la taille du jeu de données d'exclusion interne utilisé pour la création de modèle.  
   
- Les paramètres fournis pour chaque algorithme varient considérablement ; Pour obtenir la liste des paramètres que vous pouvez définir pour chaque algorithme, consultez les rubriques de référence technique de cette section : [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
+ Les paramètres fournis pour chaque algorithme varient considérablement. Pour obtenir la liste des paramètres que vous pouvez définir pour chaque algorithme, consultez les rubriques de références techniques dans cette section : [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
 ### <a name="change-an-algorithm-parameter"></a>Changer un paramètre d'algorithme  
   
@@ -65,6 +65,6 @@ ms.locfileid: "66082689"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures des modèles d’exploration de données](mining-model-tasks-and-how-tos.md)  
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)  
   
   

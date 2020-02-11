@@ -1,5 +1,5 @@
 ---
-title: Objet boîte de dialogue liaison | Microsoft Docs
+title: Liaison d’objets, boîte de dialogue | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072184"
 ---
 # <a name="object-binding-dialog-box"></a>Boîte de dialogue Liaison d'objets
@@ -57,6 +57,6 @@ ms.locfileid: "66072184"
  Affiche la liste des colonnes de la table sélectionnée dans le champ **Table source**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Mettre à jour les expressions OPENXML XPath pour supprimer les fonctions non prises en charge | Microsoft Docs
+title: Mettre à jour les expressions XPath OPENXML pour supprimer les fonctions non prises en charge | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec0edb2e72143fd41709355a3e9cc338544289a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091684"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>Mettre à jour les expressions OPENXML XPath pour supprimer les fonctions non prises en charge
@@ -44,7 +44,7 @@ ms.locfileid: "66091684"
  Pour format-number() et formatNumber(), vous pouvez utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour les autres fonctions présentées précédemment qui ne sont plus prises en charge, il n'existe pas de solution de remplacement directe.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problèmes de mise à niveau Moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

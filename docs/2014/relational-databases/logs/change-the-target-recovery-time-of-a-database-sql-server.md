@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743215"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modifier la durée de récupération cible d'une base de données (SQL Server)
@@ -23,9 +23,9 @@ ms.locfileid: "62743215"
 > [!NOTE]  
 >  La limite supérieure spécifiée pour une base de données spécifique par son paramètre de temps de récupération cible peut être dépassée si une transaction longue entraîne des durées UNDO excessives.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
+-   **Avant de commencer :**  [limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour changer le temps de récupération cible à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure) ou de [Transact-SQL](#TsqlProcedure)  
+-   **Pour modifier le temps de récupération cible, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure) ou [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62743215"
   
 2.  Utilisez l'instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)suivante, comme suit :  
   
-     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ {secondes | MAXIMUM  
   
      *target_recovery_time*  
      Lorsque la valeur est supérieure à 0 (valeur par défaut), spécifie la limite supérieure du temps de récupération de la base de données spécifiée en cas de sinistre.  

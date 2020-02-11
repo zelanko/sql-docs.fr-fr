@@ -1,5 +1,5 @@
 ---
-title: Structure (Concepteur de Cube) de cube (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Structure de cube (Concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086576"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Structure de cube (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -28,17 +28,17 @@ ms.locfileid: "66086576"
   
 |Volet|Définition|  
 |----------|----------------|  
-|**Barre d'outils**|Utilisez la barre d'outils pour effectuer des actions courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [Barre d’outils &#40;onglet Structure de cube, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Mesures**|Utilisez le volet **Mesures** pour créer et modifier les groupes de mesures et les mesures pour le cube sélectionné. Pour plus d’informations sur ce volet, consultez [Mesures &#40;onglet Structure de cube, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barre d'outils**|Utilisez la barre d’outils pour effectuer des actions courantes dans cet onglet. Pour plus d’informations sur ce volet, consultez [barre d’outils &#40;onglet structure de cube, concepteur de cube&#41; &#40;Analysis Services-&#41;de données multidimensionnelles ](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**mesures**|Utilisez le volet **Mesures** pour créer et modifier les groupes de mesures et les mesures pour le cube sélectionné. Pour plus d’informations sur ce volet, consultez [Mesures &#40;onglet Structure de cube, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Dimensions**|Utilisez le volet **Dimensions** pour inclure et modifier les dimensions du cube sélectionné. Pour plus d’informations sur ce volet, consultez [Dimensions &#40;onglet Structure de cube, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Vue de Source de données**|Utilisez le volet **Vue de source de données** pour afficher et modifier la vue de source de données associée au cube sélectionné. Pour plus d’informations sur ce volet, consultez [Vue de source de données &#40;onglet Structure de cube, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Vue de source de données**|Utilisez le volet **Vue de source de données** pour afficher et modifier la vue de source de données associée au cube sélectionné. Pour plus d’informations sur ce volet, consultez [Vue de source de données &#40;onglet Structure de cube, Concepteur de cube&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Architecture logique &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Configurer les propriétés de mesure](multidimensional-models/configure-measure-properties.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

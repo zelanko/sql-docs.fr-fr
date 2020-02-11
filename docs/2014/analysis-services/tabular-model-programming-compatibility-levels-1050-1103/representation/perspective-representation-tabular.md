@@ -1,5 +1,5 @@
 ---
-title: Représentation d’une perspective (tabulaire) | Microsoft Docs
+title: Représentation en perspective (tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757749"
 ---
 # <a name="perspective-representation-tabular"></a>Représentation (tabulaire) d'une perspective
   Une perspective permet de simplifier ou mettre l'accent sur une plus petite partie du modèle pour l'application cliente.  
   
- Consultez [représentation (tabulaire) d’une Perspective](perspective-representation-tabular.md) pour une explication détaillée sur la façon de créer et manipuler la représentation sous forme de point de vue.  
+ Pour une explication détaillée sur la création et la manipulation de la représentation perspective, consultez [représentation en perspective (tabulaire)](perspective-representation-tabular.md) .  
   
 > [!WARNING]  
 >  Les perspectives ne sont pas un mécanisme de sécurité ; les objets en dehors de la perspective sont toujours accessibles à l'utilisateur via d'autres interfaces.  
@@ -29,7 +29,7 @@ ms.locfileid: "62757749"
  En termes d'objets AMO, une représentation de perspective a une relation de mappage un-à-un avec <xref:Microsoft.AnalysisServices.Perspective> et aucun autre objet AMO principal n'est requis.  
   
 ### <a name="perspective-in-amo"></a>Perspective dans AMO  
- L'extrait de code suivant montre comment créer une perspective dans un modèle tabulaire. L'élément clé dans cet extrait de code est l'élément de perspective ; cet objet est une représentation graphique de tous les objets du modèle tabulaire accessibles à l'utilisateur. *élément de perspective* contient 4 colonnes et, pour ce scénario, seules les colonnes 1, 2 et 3 sont pertinentes. La colonne 1 contient le type d'élément affiché (elementTypeValue) ; la colonne 2 contient le nom complet de l'élément (--), qui devra probablement être analysé pour entrer l'élément dans la perspective ; la colonne 3 contient un élément de case à cocher (checkedElement) qui indique si l'élément fait partie ou non de la perspective.  
+ L'extrait de code suivant montre comment créer une perspective dans un modèle tabulaire. L'élément clé dans cet extrait de code est l'élément de perspective ; cet objet est une représentation graphique de tous les objets du modèle tabulaire accessibles à l'utilisateur. *perspective* contient 4 colonnes et, pour ce scénario, seules les colonnes 1, 2 et 3 sont pertinentes. La colonne 1 contient le type d'élément affiché (elementTypeValue) ; la colonne 2 contient le nom complet de l'élément (--), qui devra probablement être analysé pour entrer l'élément dans la perspective ; la colonne 3 contient un élément de case à cocher (checkedElement) qui indique si l'élément fait partie ou non de la perspective.  
   
 ```  
   

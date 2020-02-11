@@ -1,5 +1,5 @@
 ---
-title: Traiter une Structure d’exploration de données | Microsoft Docs
+title: Traiter une structure d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083110"
 ---
 # <a name="process-a-mining-structure"></a>traiter une structure d'exploration de données
@@ -28,7 +28,7 @@ ms.locfileid: "66083110"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA : commande Process  
+-   XMLA : commande Process  
   
  Pour plus d’informations sur la façon de traiter les différents modèles, consultez [Traiter un modèle d’exploration de données](process-a-mining-model.md).  
   
@@ -38,15 +38,15 @@ ms.locfileid: "66083110"
   
      Si vous modifiez la structure, un message vous demande de la redéployer avant de traiter les modèles. Cliquez sur **Oui**.  
   
-2.  Cliquez sur **exécuter** dans le **traiter la Structure d’exploration de données - \<structure >** boîte de dialogue.  
+2.  Cliquez sur **exécuter** dans la boîte de dialogue traitement de la structure d' **exploration de données \<-structure>** .  
   
      La boîte de dialogue **État d’avancement du traitement** s’ouvre avec les informations sur le traitement des modèles.  
   
 3.  Cliquez sur **Fermer** dans la boîte de dialogue **État d’avancement du traitement** une fois que les modèles ont été traités.  
   
-4.  Cliquez sur **fermer** dans le **traiter la Structure d’exploration de données - \<structure >** boîte de dialogue.  
+4.  Cliquez sur **Fermer** dans la boîte de dialogue traitement de la structure d' **exploration de données \<-structure>** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures relatives aux structures d’exploration de données](mining-structure-tasks-and-how-tos.md)  
+ [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
   
   

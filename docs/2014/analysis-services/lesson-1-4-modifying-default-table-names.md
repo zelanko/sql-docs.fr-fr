@@ -1,5 +1,5 @@
 ---
-title: Modification des noms de Table par défaut | Microsoft Docs
+title: Modification des noms de tables par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079230"
 ---
 # <a name="modifying-default-table-names"></a>Modification des noms de tables par défaut
@@ -33,11 +33,11 @@ ms.locfileid: "66079230"
   
      Il est plus facile de modifier les propriétés de chaque table dans la vue de source de données si la fenêtre des propriétés reste ouverte. Si vous n'ouvrez pas la fenêtre en utilisant le bouton **Masquer automatiquement** , elle se ferme lorsque vous cliquez sur un autre objet dans le volet **Diagramme** .  
   
-3.  Modifier le **FriendlyName** propriété pour le **FactInternetSales** objet *`InternetSales`* .  
+3.  Modifiez la propriété **FriendlyName** de l’objet **FactInternetSales** en *`InternetSales`*.  
   
      Lorsque vous cliquez en dehors de la cellule correspondant à la propriété **FriendlyName** , la modification est appliquée. Dans la leçon suivante, vous définirez un groupe de mesures basé sur cette table de faits. Le nom de la table de faits sera InternetSales au lieu de FactInternetSales à cause de la modification que vous avez apportée dans cette leçon.  
   
-4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la fenêtre Propriétés, modifiez le **FriendlyName** propriété *`Product`* .  
+4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la Fenêtre Propriétés, remplacez la **** valeur de la *`Product`* propriété FriendlyName par.  
   
 5.  Modifiez la propriété **FriendlyName** de chaque table restante dans la vue de source de données en procédant de la même façon, pour supprimer le préfixe «**Dim**».  
   
@@ -46,10 +46,10 @@ ms.locfileid: "66079230"
 7.  Dans le menu **Fichier** , ou dans la barre d'outils de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur **Enregistrer tout** pour enregistrer les modifications vous avez faites à ce stade dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez arrêter le didacticiel ici si vous le souhaitez et le reprendre ultérieurement.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Définition et déploiement d’un Cube](lesson-2-defining-and-deploying-a-cube.md)  
+ [Leçon 2 : Définition et déploiement d'un cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Modifier les propriétés d’une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Modifiez les propriétés d’une vue de source de données &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

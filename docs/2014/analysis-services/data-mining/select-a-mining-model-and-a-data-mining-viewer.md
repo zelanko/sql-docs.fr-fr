@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez un modèle d’exploration de données et une visionneuse d’exploration de données | Microsoft Docs
+title: Sélectionner un modèle d’exploration de données et une visionneuse d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082880"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Sélectionner un modèle d'exploration de données et une visionneuse d'exploration de données
@@ -24,7 +24,7 @@ ms.locfileid: "66082880"
   
 -   La zone de liste déroulante **Modèle d’exploration de données** de l’onglet **Visionneuse de modèle d’exploration de données** du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contient la liste de tous les modèles d’exploration de données qui se trouvent dans la structure d’exploration de données actuelle.  
   
--   Les visionneuses personnalisées sont fournies pour chaque type de modèle. Pour obtenir une vue d’ensemble de toutes les visionneuses personnalisées, consultez [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md). Pour une procédure pas à pas montrant comment utiliser les visionneuses personnalisées pour comprendre un modèle, consultez [leçon 4 : Exploration des modèles de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
+-   Les visionneuses personnalisées sont fournies pour chaque type de modèle. Pour obtenir une vue d’ensemble de toutes les visionneuses personnalisées, consultez [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md). Pour obtenir une procédure pas à pas montrant comment utiliser les visionneuses personnalisées pour comprendre un modèle, consultez [Leçon 4 : Exploration des modèles de publipostage ciblé &#40;Didacticiel sur l’exploration de données de base&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
   
 -   La Visionneuse d’arborescences de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] affiche les schémas découverts par l’algorithme dans une représentation standard de nœuds dans une arborescence. Bien que l'arborescence générique affiche tout le contenu pour le modèle avec de nombreux détails, son interprétation est plus difficile. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
@@ -41,6 +41,6 @@ ms.locfileid: "66082880"
  Le modèle d'exploration de données s'ouvre dans la visionneuse fournie pour ce type de modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures de la visionneuse de modèle d’exploration de données](mining-model-viewer-tasks-and-how-tos.md)  
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)  
   
   

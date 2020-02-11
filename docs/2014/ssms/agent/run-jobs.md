@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22d1b8074fb40cdd7eda3a5f57704b893242cfcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666826"
 ---
 # <a name="run-jobs"></a>Exécuter des travaux
@@ -30,11 +30,11 @@ ms.locfileid: "62666826"
 |||  
 |-|-|  
 |**Description**|**Rubrique**|  
-|Explique comment lancer l'exécution d'un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Start a Job](start-a-job.md)|  
-|Explique comment arrêter un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Stop a Job](stop-a-job.md)|  
-|Explique comment désactiver ou activer un travail [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Activer ou désactiver un travail](disable-or-enable-a-job.md)|  
+|Explique comment lancer l'exécution d'un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Démarrer un travail](start-a-job.md)|  
+|Explique comment arrêter un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Arrêter un travail](stop-a-job.md)|  
+|Explique comment désactiver ou activer un travail [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Disable or Enable a Job](disable-or-enable-a-job.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+ [dbo. sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

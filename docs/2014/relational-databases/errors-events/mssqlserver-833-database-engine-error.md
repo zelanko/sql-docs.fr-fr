@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762074"
 ---
-# <a name="mssqlserver833"></a>MSSQLSERVER_833
+# <a name="mssqlserver_833"></a>MSSQLSERVER_833
     
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|833|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|833|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|BUF_LONG_IO|  
-|Texte du message|SQL Server a rencontré %d occurrence (s) de demandes d’e/s mettant plus de %d secondes à effectuer dans le fichier [%ls] de la base de données`[%ls] (%d)`.  Le descripteur de fichier du système d'exploitation est 0x%p.  Le décalage de la dernière E/S longue est : %#016I64x.|  
+|Texte du message|SQL Server a rencontré% d occurrence (s) de requêtes d’e/s qui prennent plus de% d secondes à se terminer dans le fichier [%`[%ls] (%d)`ls] de la base de données.  Le descripteur de fichier du système d'exploitation est 0x%p.  Le décalage de la dernière E/S longue est : %#016I64x.|  
   
 ## <a name="explanation"></a>Explication  
  Ce message indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a émis une demande de lecture ou d'écriture à partir du disque et que la demande a mis plus de 15 secondes à retourner un résultat. Cette erreur est signalée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et indique un problème avec le sous-système d'E/S.  

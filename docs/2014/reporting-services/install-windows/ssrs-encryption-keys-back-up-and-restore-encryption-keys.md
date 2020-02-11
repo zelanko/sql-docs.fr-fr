@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796402"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Sauvegarder et restaurer les clés de chiffrement Reporting Services
   Une part importante de la configuration d'un serveur de rapports est réservée à la création d'une copie de sauvegarde de la clé symétrique utilisée pour le chiffrement d'informations confidentielles. Cet exemplaire de clé sauvegardée est nécessaire dans de nombreuses opérations courantes. Elle vous permet de réutiliser une base de données de serveur de rapports existante dans une nouvelle installation.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Mode natif | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint  
   
  La restauration de la copie de sauvegarde de la clé de chiffrement est indispensable lorsque l'un des événements suivants se produit :  
   
@@ -46,14 +46,14 @@ ms.locfileid: "72796402"
 ## <a name="backing-up-the-encryption-keys"></a>Sauvegarde des clés de chiffrement  
  La sauvegarde de la clé symétrique est un processus qui consiste à écrire la clé dans le fichier que vous spécifiez, puis à brouiller ces données à l'aide du mot de passe que vous fournissez. En aucun cas la clé symétrique ne peut être conservée sans être chiffrée, vous devez donc fournir un mot de passe afin de chiffrer la clé au moment de son enregistrement sur un disque. Une fois le fichier créé, vous devez le stocker dans un endroit sécurisé et **vous souvenir du mot de passe** qui permet de déverrouiller le fichier. Pour sauvegarder la clé symétrique, utilisez les outils suivants :  
   
- **Mode natif :** le Gestionnaire de configuration de Reporting Services ou l'utilitaire **rskeymgmt** .  
+ **Mode natif :** L’Gestionnaire de configuration de Reporting Services ou l’utilitaire **rskeymgmt** .  
   
- **Mode SharePoint :** pages de l'Administration centrale de SharePoint ou PowerShell.  
+ **Mode SharePoint :** Pages de l’administration centrale de SharePoint ou PowerShell.  
   
-####  <a name="bkmk_backup_sharepoint"></a> Sauvegarde de serveurs de rapports en mode SharePoint  
+####  <a name="bkmk_backup_sharepoint"></a>Sauvegarder les serveurs de rapports en mode SharePoint  
  Pour les serveurs de rapports en mode SharePoint, vous pouvez utiliser des commandes PowerShell ou utiliser les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Gestion des clés » de l’article [Gérer une application de service Reporting Services SharePoint](../manage-a-reporting-services-sharepoint-service-application.md).  
   
-####  <a name="bkmk_backup_configuration_manager"></a> Sauvegarder les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
+####  <a name="bkmk_backup_configuration_manager"></a>Sauvegarder les clés de chiffrement-Gestionnaire de configuration de Reporting Services (mode natif)  
   
 1.  Démarrez le Gestionnaire de configuration de Reporting Services et connectez-vous à l'instance de serveur de rapports à configurer.  
   
@@ -61,11 +61,12 @@ ms.locfileid: "72796402"
   
 3.  Tapez un mot de passe fort.  
   
-4.  Spécifiez un fichier pour contenir la clé stockée. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ajoute une extension de fichier .snk au fichier. Prévoyez de conserver le fichier à part sur un disque, pour qu'il soit indépendant du serveur de rapports.  
+4.  Spécifiez un fichier pour contenir la clé stockée. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ajoute une extension de fichier .snk au fichier. Prévoyez de conserver le fichier à part sur un disque, pour qu'il soit indépendant du serveur de rapports.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a> Sauvegarder les clés de chiffrement - rskeymgmt (mode natif)  
+####  <a name="bkmk_backup_rskeymgmt"></a>Sauvegarder des clés de chiffrement-rskeymgmt (mode natif)  
   
 1.  Exécutez le fichier **rskeymgmt.exe** localement sur l'ordinateur qui héberge le serveur de rapports. Vous devez utiliser l'argument d'extraction `-e` pour copier la clé, fournir un nom de fichier et spécifier un mot de passe. L'exemple suivant illustre les arguments que vous devez spécifier :  
   
@@ -86,11 +87,11 @@ ms.locfileid: "72796402"
   
  Pour restaurer une clé de chiffrement, vous devez posséder un exemplaire de la clé de chiffrement dans un fichier et connaître le mot de passe permettant de déverrouiller l'exemplaire stocké. Si vous détenez la clé et le mot de passe, procédez à la restauration en exécutant l'outil de configuration de Reporting Services ou l'utilitaire **rskeymgmt** . La clé symétrique doit être identique à l'exemplaire qui verrouille et déverrouille les données chiffrées stockées à ce moment-là dans la base de données du serveur de rapports. Si vous restaurez un exemplaire non valide, le serveur de rapports est incapable d'accéder à ces données. Vous serez amené à supprimer toutes les valeurs chiffrées si jamais la restauration d'une clé valide est impossible. Si, pour une raison quelconque, vous ne pouvez pas restaurer la clé de chiffrement (vous ne possédez pas de copie de sauvegarde par exemple), supprimez la clé et le contenu chiffré. Pour plus d’informations, consultez [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Pour plus d’informations sur la création de clés symétriques, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
-####  <a name="bkmk_restore_configuration_manager"></a> Restaurer les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
+####  <a name="bkmk_restore_configuration_manager"></a>Restaurer les clés de chiffrement-Gestionnaire de configuration de Reporting Services (mode natif)  
   
 1.  Démarrez le Gestionnaire de configuration de Reporting Services et connectez-vous à l'instance de serveur de rapports à configurer.  
   
-2.  Dans la page Clés de chiffrement, cliquez sur **Restaurer**.  
+2.  Dans la page clés de chiffrement, cliquez sur **restaurer**.  
   
 3.  Sélectionnez le fichier .snk contenant la copie de sauvegarde.  
   
@@ -98,7 +99,7 @@ ms.locfileid: "72796402"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a> Restaurer les clés de chiffrement - rskeymgmt (mode natif)  
+####  <a name="bkmk_restore_rskeymgmt"></a>Restaurer les clés de chiffrement-rskeymgmt (mode natif)  
   
 1.  Exécutez le fichier **rskeymgmt.exe** localement sur l'ordinateur qui héberge le serveur de rapports. Utilisez l'argument `-a` pour restaurer les clés. Vous devez fournir un nom de fichier complet et spécifier un mot de passe. L'exemple suivant illustre les arguments que vous devez spécifier :  
   

@@ -1,5 +1,5 @@
 ---
-title: Installer Analysis Services en Mode tabulaire | Microsoft Docs
+title: Installer Analysis Services en mode tabulaire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079908"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installer Analysis Services en mode tabulaire
@@ -29,11 +29,11 @@ ms.locfileid: "66079908"
   
 1.  Sélectionnez **Analysis Services** dans l'Arborescence de fonctionnalités dans l'Installation.  
   
-     ![Arborescence de fonctionnalités d’installation d’Analysis Services](../../../sql-server/install/media/ssas-setupas.gif "arborescence de fonctionnalités d’installation d’Analysis Services")  
+     ![Arborescence de la fonctionnalité Programme d'installation d'Analysis Services](../../../sql-server/install/media/ssas-setupas.gif "Arborescence de la fonctionnalité Programme d'installation d'Analysis Services")  
   
 2.  Dans la page Configuration d'Analysis Services, veillez à sélectionner **Mode Tabulaire**.  
   
-     ![Page d’installation avec les options de configuration d’Analysis Services](../../../sql-server/install/media/ssas-setupasconfig.gif "page le programme d’installation avec les options de configuration d’Analysis Services")  
+     ![Page installation avec les options de configuration d'Analysis Services](../../../sql-server/install/media/ssas-setupasconfig.gif "Page installation avec les options de configuration d'Analysis Services")  
   
  Le mode tabulaire utilise le moteur d'analyse en mémoire xVelocity (VertiPaq), qui est le stockage par défaut pour les modèles tabulaires que vous déployez dans Analysis Services. Après le déploiement des solutions de modèle tabulaire sur le serveur, vous pouvez configurer les solutions tabulaires de manière sélective pour qu'elles utilisent le stockage sur disque de DirectQuery comme alternative au stockage gourmand en mémoire.  
   
@@ -45,23 +45,25 @@ ms.locfileid: "66079908"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- `INSTANCENAME` doit contenir moins de 17 caractères.  
+ 
+  `INSTANCENAME` doit contenir moins de 17 caractères.  
   
  Toutes les valeurs de compte de l'espace réservé doivent être remplacées par des comptes valides et un mot de passe.  
   
- Des outils, tels que SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , ne sont pas installés à l'aide de l'exemple de syntaxe de ligne de commande fourni. Pour plus d’informations sur l’ajout de fonctionnalités, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Des outils, tels que SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , ne sont pas installés à l'aide de l'exemple de syntaxe de ligne de commande fourni. Pour plus d’informations sur l’ajout de fonctionnalités, voir [installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
- `ASSERVERMODE` respecte la casse.  Toutes les valeurs doivent être exprimées en majuscules. Le tableau suivant décrit les valeurs valides pour `ASSERVERMODE`.  
+ 
+  `ASSERVERMODE` respecte la casse.  Toutes les valeurs doivent être exprimées en majuscules. Le tableau suivant décrit les valeurs valides pour `ASSERVERMODE`.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|Valeur par défaut. Si vous ne définissez pas `ASSERVERMODE`, le serveur est installé en mode serveur multidimensionnel.|  
+|MULTIDIMENSIONAL|Il s’agit de la valeur par défaut. Si vous ne définissez pas `ASSERVERMODE`, le serveur est installé en mode serveur multidimensionnel.|  
 |POWERPIVOT|Cette valeur est facultative. En pratique, si vous définissez le paramètre `ROLE`, le mode serveur est automatiquement défini sur 1, ce qui rend `ASSERVERMODE` facultatif pour une installation de PowerPivot pour SharePoint. Pour plus d'informations, consultez [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Cette valeur est obligatoire si vous installez Analysis Services en mode tabulaire à partir de la ligne de commande.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déterminer le mode serveur d'une instance Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Configurer l’accès de DirectQuery pour une base de données de modèle tabulaire ou de In-Memory](../../tabular-models/enable-directquery-mode-in-ssms.md)   
- [Modélisation tabulaire &#40;SSAS tabulaire&#41;](../../tabular-models/tabular-models-ssas.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Configurer l’accès en mémoire ou DirectQuery pour une base de données model tabulaire](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [Modélisation tabulaire &#40;la&#41;tabulaire SSAS](../../tabular-models/tabular-models-ssas.md)  
   
   

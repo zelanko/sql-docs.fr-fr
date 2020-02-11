@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - organiser les colonnes | Microsoft Docs
+title: SQL Server Profiler-organiser les colonnes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089757"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>Générateur de profils SQL Server - Organiser les colonnes
   Utilisez la boîte de dialogue **Organiser les colonnes** pour sélectionner des colonnes de données en vue de regrouper ou d'agréger des événements affichés dans une trace et faciliter ainsi la consultation et l'analyse des tables ou des fichiers de trace volumineux.  
   
- L'agrégation déplace et réduit tous les événements de la trace sous leur type de classe d'événements respectif. Un signe plus ( **+** ) apparaît à gauche du nom de la classe d’événements. Si vous cliquez sur le signe plus, la classe d'événements se développe et affiche tous les événements de ce type.  
+ L'agrégation déplace et réduit tous les événements de la trace sous leur type de classe d'événements respectif. Un signe plus (**+**) apparaît à gauche du nom de la classe d’événements. Si vous cliquez sur le signe plus, la classe d'événements se développe et affiche tous les événements de ce type.  
   
  Le regroupement regroupe toutes les classes d'événements d'un type spécifique dans l'affichage de la fenêtre de trace. Les événements ne sont toutefois pas réduits sous le type de classe d'événements.  
   
@@ -34,21 +34,21 @@ ms.locfileid: "66089757"
  **Groupes**  
  Déplacez des noms de colonne de données sous **Groupes** pour regrouper ou agréger des classes d’événements dans la fenêtre de trace.  
   
- Pour agréger des événements, déplacez une colonne de données vers **Groupes**. Tous les événements d'un type spécifique sont alors réduits sous le nom du type de la classe d'événements dans l'affichage de la fenêtre de trace. Un signe plus ( **+** ) apparaît à gauche du nom de la classe d’événements. Cliquez sur ce signe plus pour développer le type de la classe d'événements et afficher tous les événements. Vous pouvez activer et désactiver l'agrégation et le regroupement en cliquant sur **Vue agrégée** ou sur **Vue groupée** dans le menu **Affichage** .  
+ Pour agréger des événements, déplacez une colonne de données vers **Groupes**. Tous les événements d'un type spécifique sont alors réduits sous le nom du type de la classe d'événements dans l'affichage de la fenêtre de trace. Un signe plus (**+**) apparaît à gauche du nom de la classe d’événements. Cliquez sur ce signe plus pour développer le type de la classe d'événements et afficher tous les événements. Vous pouvez activer et désactiver l'agrégation et le regroupement en cliquant sur **Vue agrégée** ou sur **Vue groupée** dans le menu **Affichage** .  
   
  Pour regrouper des événements, déplacez plusieurs colonnes de données vers **Groupes**. Tous les événements d'un type spécifique sont alors regroupés dans l'affichage de la fenêtre de trace, mais les événements ne sont pas réduits sous chaque nom de type de classe d'événements. Vous pouvez basculer entre une vue groupée et une vue non groupée en cliquant sur **Vue groupée** dans le menu Affichage. Lorsque plusieurs colonnes de données sont déplacées vers **Groupes**, l'option de basculement vers **Vue agrégée** n'est pas disponible.  
   
  **Colonnes**  
- Répertorie les colonnes de données qui peuvent être déplacées vers **Groupes**. Cliquez sur le signe plus ( **+** ) à gauche de l’option **Colonnes** pour développer la liste.  
+ Répertorie les colonnes de données qui peuvent être déplacées vers **Groupes**. Cliquez sur le signe plus**+**() à gauche de **colonnes** pour développer la liste.  
   
- **Monter**  
+ **Haut**  
  Lorsque vous avez sélectionné une colonne de données, cliquez sur **Haut** pour déplacer des colonnes de données vers le haut dans **Groupes**. Vous pouvez également cliquer sur **Haut** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  
   
- **Descendre**  
+ **Baisse**  
  Lorsque vous avez sélectionné une colonne de données, cliquez sur **Bas** pour déplacer des colonnes de données vers le bas dans **Groupes**. Vous pouvez également cliquer sur **Bas** pour réorganiser l'affichage des colonnes dans l'affichage de la fenêtre de trace.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Organiser les colonnes affichées dans une Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
+ [Organiser les colonnes affichées dans une trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [Créer une trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Créer un modèle de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   

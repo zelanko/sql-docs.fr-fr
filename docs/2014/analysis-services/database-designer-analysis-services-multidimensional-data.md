@@ -1,5 +1,5 @@
 ---
-title: Concepteur (Analysis Services - données multidimensionnelles) de base de données | Microsoft Docs
+title: Concepteur de base de données (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082409"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Concepteur de bases de données (Analysis Services - Données multidimensionnelles)
-  Le Concepteur de bases de données dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet d'analyser les avertissements générés par une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et de modifier les propriétés de celle-ci.  
+  Utilisez le concepteur de base [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] de données dans pour modifier les propriétés de et vérifier les [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avertissements générés par une base de données.  
   
-## <a name="tabs"></a>Tabulations  
+## <a name="tabs"></a>Onglets  
  Le Concepteur de bases de données contient les onglets suivants :  
   
  [Général](general-database-designer-analysis-services-multidimensional-data.md)  
@@ -30,7 +30,7 @@ ms.locfileid: "66082409"
  L’onglet **Avertissements** permet d’afficher et d’ignorer des règles globalement, et d’afficher et de réactiver des instances spécifiques d’avertissements ignorés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Bases de données de modèle multidimensionnels &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75e5953d8f7ef9af1134db56f7061261eee2c0fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721435"
 ---
 # <a name="delete-a-push-subscription"></a>Supprimer un abonnement par émission (push)
@@ -65,15 +65,15 @@ ms.locfileid: "62721435"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Pour supprimer un abonnement par émission de données à une publication transactionnelle ou d'instantané  
   
-1.  Dans la base de données de publication du serveur de publication, exécutez [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Spécifiez **@publication** et **@subscriber** . Affectez la valeur **all** à **@article** . (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
+1.  Dans la base de données de publication du serveur de publication, exécutez [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). **@publication** Spécifiez **@subscriber**et. Affectez la valeur **all** à **@article**. (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
   
 2.  Dans la base de données d’abonnement de l’Abonné, exécutez [sp_subscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql) pour supprimer les métadonnées de réplication dans la base de données d’abonnement.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Pour supprimer un abonnement par émission de données à une publication de fusion  
   
-1.  Sur le serveur de publication, exécutez [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql), en spécifiant **@publication** , **@subscriber** et **@subscriber_db** . (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
+1.  Sur le serveur de publication, exécutez [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql), **@subscriber** en **@subscriber_db**spécifiant **@publication**et. (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
   
-2.  Dans la base de données d’abonnement de l’Abonné, exécutez [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). Specify **@publisher** , de **@publisher_db** et **@publication** . Les métadonnées de fusion sont alors supprimées de la base de données d'abonnement.  
+2.  Dans la base de données d’abonnement de l’Abonné, exécutez [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql). **@publisher**Spécifiez **@publisher_db**, et **@publication**. Les métadonnées de fusion sont alors supprimées de la base de données d'abonnement.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple supprime un abonnement par émission de données à une publication transactionnelle.  
@@ -91,7 +91,7 @@ ms.locfileid: "62721435"
   
 1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>et <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62721435"
   
 1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>et <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62721435"
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [S’abonner à des publications](subscribe-to-publications.md)   
+ [S’abonner aux Publications](subscribe-to-publications.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
   
   

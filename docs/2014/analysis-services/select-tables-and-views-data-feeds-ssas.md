@@ -1,5 +1,5 @@
 ---
-title: Sélectionner des Tables et vues (flux de données) (SSAS) | Microsoft Docs
+title: Sélectionner des tables et des vues (flux de données) (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069281"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Sélectionner des tables et des vues (flux de données) (SSAS)
@@ -42,10 +42,10 @@ ms.locfileid: "66069281"
  **Détails du filtre**  
  Affiche le filtre d’importation de données dans la boîte de dialogue **Détails du filtre** quand un filtre a été appliqué aux données importées. Pour plus d’informations, consultez [Détails du filtre &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Aperçu et filtrer**  
+ **Afficher un aperçu et filtrer**  
  Affiche la boîte de dialogue **Aperçu de la table sélectionnée** qui permet d’appliquer un filtre aux données importées. Pour plus d’informations, consultez [Aperçu de la table sélectionnée &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
- **Sélectionner les Tables associées**  
+ **Sélectionner les tables associées**  
  Sélectionnez les tables associées aux tables et aux vues que vous avez sélectionnées.  
   
   

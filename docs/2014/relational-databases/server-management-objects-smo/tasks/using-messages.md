@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ff94bf10dee2bda0a61b573b87621fa5d3256b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781798"
 ---
 # <a name="using-messages"></a>Utilisation de messages
@@ -27,7 +27,7 @@ ms.locfileid: "72781798"
  Les messages définis par l'utilisateur sont représentés par programme dans SMO par l'objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>. Les messages définis par l'utilisateur existants peuvent être découverts en parcourant la collection. Les nouveaux messages définis par l'utilisateur peuvent être créés par instanciation d'un nouvel objet `UserDefinedMessage` et définition des propriétés appropriées.  
   
 ## <a name="examples"></a>Exemples  
- Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) et [créer un projet&#35; Smo Visual C dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un projet Visual Basic Smo dans Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) et [créer un projet Visual C&#35; Smo dans Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Recherche d'un message système particulier en Visual Basic  
  L'exemple de code montre comment identifier un message système par son numéro d'ID et afficher le message.  

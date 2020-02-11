@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666695"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
     
 ## <a name="message-details"></a>Détails du message  
   
 |||  
 |-|-|  
 |Nom du produit|SQL Server|  
-|ID d'événement|2627|  
-|Source de l'événement|MSSQLSERVER|  
+|ID de l’événement|2627|  
+|Source de l’événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique|N/A|  
-|Texte du message|Violation de la contrainte '%.*ls'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
+|Texte du message|Violation de %1! contrainte '%2!'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explication  
  C'est une erreur générale qui peut être déclenchée qu'une base de données soit répliquée ou non. Dans les bases de données répliquées, l'erreur est généralement déclenchée car les clés primaires n'ont pas été gérés de manière appropriée à travers la topologie. Dans un environnement distribué, il est primordial de s'assurer que la même valeur n'est pas insérée dans une colonne de clé primaire ou toute autre colonne unique sur plus d'un seul nœud. Les raisons peuvent être les suivantes :  
@@ -59,7 +59,7 @@ ms.locfileid: "62666695"
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](errors-and-events-reference-replication.md)   
  [Réplication de fusion](merge/merge-replication.md)   
- [Réplication transactionnelle d’égal à égal](transactional/peer-to-peer-transactional-replication.md)   
- [Abonnements pouvant être mis à jour pour la réplication transactionnelle](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

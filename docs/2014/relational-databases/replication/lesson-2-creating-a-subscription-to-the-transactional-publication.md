@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Création d’un abonnement à la Publication transactionnelle | Microsoft Docs'
+title: 'Leçon 2 : Création d’un abonnement à la publication transactionnelle | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721078"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Leçon 2 : Création d’un abonnement à la Publication transactionnelle
-  Dans cette leçon, vous allez créer l'abonnement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cette leçon requiert que vous avez terminé la leçon précédente, [leçon 1 : Publication des données à l’aide de la réplication transactionnelle](lesson-1-publishing-data-using-transactional-replication.md).  
+# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Leçon 2 : Création d'un abonnement à la publication transactionnelle
+  Dans cette leçon, vous allez créer l'abonnement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour effectuer cette leçon, vous devez avoir terminé la leçon précédente, [Leçon 1 : Publication de données à l’aide de la réplication transactionnelle](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Pour créer l'abonnement  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud du serveur, puis le dossier **Réplication** .  
+1.  Connectez-vous au serveur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, développez le nœud du serveur, puis développez le dossier **réplication** .  
   
 2.  Dans le dossier **Publications locales** , cliquez avec le bouton droit sur la publication **AdvWorksProductTrans** , puis cliquez sur **Nouveaux abonnements**.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "62721078"
   
 5.  Dans la page Abonnés, si le nom de l’instance de l’Abonné n’apparaît pas, cliquez sur **Ajouter un Abonné**, sur **Ajouter un Abonné SQL Server**, entrez le nom de l’instance de l’Abonné dans la boîte de dialogue **Se connecter au serveur** , puis cliquez sur **Se connecter**.  
   
-6.  Dans la page abonnés, sélectionnez le nom de l’instance de l’abonné, puis  **\<nouvelle base de données >** sous **base de données d’abonnement**.  
+6.  Sur la page abonnés, sélectionnez le nom de l’instance du serveur de l’abonné, puis sélectionnez ** \<nouvelle base de données>** sous **base de données d’abonnement**.  
   
 7.  Dans la boîte de dialogue **Nouvelle base de données** , entrez **ProductReplica** dans la zone **Nom de la base de données** , cliquez sur **OK**, puis sur **Suivant**.  
   
-8.  Dans le **sécurité de l’Agent de Distribution** boîte de dialogue, cliquez sur le bouton de sélection ( **...** ), entrez \< _nom_ordinateur >_ **\repl_distribution** dans le **compte de processus** , entrez le mot de passe pour ce compte, cliquez sur **OK**, puis cliquez sur **suivant**.  
+8.  Dans la boîte de dialogue **agent de distribution la sécurité** , cliquez sur le bouton des points de suspension (**...**), entrez \< _Machine_Name>_ **\ repl_distribution** dans la zone **compte de processus** , entrez le mot de passe de ce compte, cliquez sur **OK**, puis sur **suivant**.  
   
 9. Cliquez sur **Terminer** pour accepter les valeurs par défaut des pages restantes et terminer l’Assistant.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "62721078"
   
 2.  Dans la page **Général** , dans la liste **Type d’utilisateur** , sélectionnez **Utilisateur Windows**.  
   
-3.  Sélectionnez le **nom d’utilisateur** puis cliquez sur le bouton de sélection (...), dans le **Entrez le nom de l’objet à sélectionner** zone, tapez < nom_ordinateur > **\repl_distribution**, cliquez sur  **Vérifier les noms**, puis cliquez sur **OK**.  
+3.  Sélectionnez la **zone nom d’utilisateur** et cliquez sur le bouton des points de suspension (...), dans la zone **Entrez le nom de l’objet à sélectionner** , tapez <Machine_Name>**\ repl_distribution**, cliquez sur **vérifier les noms**, puis cliquez sur **OK**.  
   
 4.  Dans la page **Appartenance** , dans la zone **Appartenance au rôle de base de données** , sélectionnez **db_owner**, puis cliquez sur **OK** pour créer l’utilisateur.  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Pour afficher l'état de synchronisation de l'abonnement  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis développez le nœud du serveur et le dossier **Réplication** .  
+1.  Connectez-vous au serveur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, développez le nœud du serveur, puis développez le dossier **réplication** .  
   
 2.  Dans le dossier **Publications locales** , développez la publication **AdvWorksProductTrans** , cliquez avec le bouton droit sur l’abonnement dans la base de données **ProductReplica** , puis cliquez sur **Afficher l’état de synchronisation**.  
   

@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084377"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Rechercher un nœud spécifique dans un réseau de dépendances
-  Un réseau de dépendances dans un modèle d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut contenir plusieurs nœuds, ce qui rend difficile la recherche des données qui vous intéressent. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  
+  Un réseau de dépendances [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans un modèle d’exploration de données peut contenir de nombreux nœuds, ce qui rend difficile la localisation des données qui vous intéressent. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Pour rechercher un nœud spécifique dans un réseau de dépendances  
   
@@ -37,6 +37,6 @@ ms.locfileid: "66084377"
 3.  Sélectionnez le nœud approprié dans la liste, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures de la visionneuse de modèle d’exploration de données](mining-model-viewer-tasks-and-how-tos.md)  
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)  
   
   

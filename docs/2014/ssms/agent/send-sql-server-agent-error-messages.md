@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666786"
 ---
-# <a name="send-sql-server-agent-error-messages"></a>Envoyer des messages d'erreur SQL Server Agent
-  Cette rubrique explique comment configurer l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour envoyer ses messages d'erreur sur le réseau dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+# <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
+  Cette rubrique explique comment configurer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’agent pour envoyer ses messages d’erreur par le biais de net send dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l' [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aide de.  
   
  **Dans cette rubrique**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62666786"
   
      [Sécurité](#Security)  
   
--   [Pour envoyer des messages d'erreur de SQL Server Agent à l'aide de SQL Server Management Studio](#SSMSProcedure)  
+-   [Pour envoyer des messages d’erreur SQL Server Agent à l’aide de SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -56,17 +56,17 @@ ms.locfileid: "62666786"
   
 -   Changer les quotas de mémoire d'un processus (SeIncreaseQuotaPrivilege)  
   
- Pour plus d’informations sur les autorisations Windows requises pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service de l’Agent, consultez [sélectionner un compte pour le Service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de Service Windows et Autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Pour plus d’informations sur les autorisations Windows requises pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service de l’agent, consultez [Sélectionner un compte pour le service SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) et [configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### <a name="to-send-sql-server-agent-error-messages"></a>Pour envoyer des messages d'erreur de SQL Server Agent  
+#### <a name="to-send-sql-server-agent-error-messages"></a>Pour envoyer des messages d'erreur SQL Server Agent  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus pour développer le serveur qui contient le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dont vous souhaitez envoyer des messages d'erreur via le réseau.  
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans le **propriétés de l’Agent SQL Server -** _nom_serveur_ boîte de dialogue **journal des erreurs** sur le **général** , tapez le nom d’utilisateur ou nom de l’ordinateur auquel vous souhaitez envoyer les erreurs des messages dans la **destinataire Net send** boîte.  
+3.  Dans la boîte de dialogue Propriétés de la **SQL Server Agent-**_SERVER_NAME_ , sous **Journal des erreurs** dans la page **général** , tapez le nom d’utilisateur ou le nom de l’ordinateur auquel vous souhaitez envoyer des messages d’erreur dans la zone **destinataire net send** .  
   
 4.  Cliquez sur **OK**.  
   

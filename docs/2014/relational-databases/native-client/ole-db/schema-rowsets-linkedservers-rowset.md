@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667334"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Ensemble de lignes LINKEDSERVERS (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "62667334"
   
  L'ensemble de lignes **LINKEDSERVERS** contient les colonnes suivantes.  
   
-|Nom de colonne|Indicateur de type|Description|  
+|Nom de la colonne|Indicateur de type|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nom d'un serveur lié.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricant ou autre nom identifiant le type de banque de données représenté par le nom du serveur lié.|  

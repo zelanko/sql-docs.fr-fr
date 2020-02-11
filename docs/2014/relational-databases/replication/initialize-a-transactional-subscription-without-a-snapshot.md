@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721155"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
@@ -44,7 +44,7 @@ ms.locfileid: "62721155"
   
  Pour initialiser un abonnement avec une sauvegarde, vous devez d'abord activer l'option lorsque vous créez une publication, puis spécifier des valeurs pour plusieurs options lorsque vous créez un abonnement. Les publications peuvent être activées par le biais de l'Assistant Nouvelle publication ou par programme. Cependant, les valeurs requises pour les options d'abonnement ne peuvent être spécifiées que par programme.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Activer l’initialisation avec une sauvegarde pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Activer l’initialisation avec une sauvegarde pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Programmation Transact-SQL de la réplication : [Initialiser un abonnement transactionnel à partir d’une sauvegarde &#40;programmation Transact-SQL de la réplication&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -74,6 +74,6 @@ ms.locfileid: "62721155"
  Pour initialiser un abonnement avec une méthode de remplacement, consultez [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Initialize a Subscription](initialize-a-subscription.md)  
+ [Initialiser un abonnement](initialize-a-subscription.md)  
   
   

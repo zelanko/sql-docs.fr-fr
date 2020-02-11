@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721015"
 ---
 # <a name="rename-a-stored-procedure"></a>Renommer une procédure stockée
@@ -54,13 +54,13 @@ ms.locfileid: "62721015"
  Nécessite l’autorisation CREATE PROCEDURE dans la base de données et l’autorisation ALTER sur le schéma dans lequel la procédure est créée, ou nécessite l’appartenance au rôle de base de données fixe **db_ddladmin** .  
   
  ALTER PROCEDURE  
- Requiert l’autorisation ALTER sur la procédure ou l’appartenance au rôle de base de données fixe **db_ddladmin** .  
+ Nécessite l’autorisation ALTER sur la procédure ou l’appartenance au rôle de base de données fixe **db_ddladmin**.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Pour renommer une procédure stockée  
   
-1.  Dans l’Explorateur d’objets, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
+1.  Dans l'Explorateur d'objets, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure, puis développez **Programmabilité**.  
   
@@ -112,7 +112,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CRÉER une procédure &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql)   
  [Créer une procédure stockée](../stored-procedures/create-a-stored-procedure.md)   
  [Modifier une procédure stockée](../stored-procedures/modify-a-stored-procedure.md)   
  [Supprimer une procédure stockée](../stored-procedures/delete-a-stored-procedure.md)   

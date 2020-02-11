@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711133"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Boîte de dialogue Joindre (Visual Database Tools)
@@ -34,10 +34,10 @@ ms.locfileid: "62711133"
 |**Table**|Noms des tables ou des objets table impliqués dans la jointure. Les noms des tables sont affichés ici à titre d’information et ne peuvent pas être modifiés.|  
 |**Colonne**|Noms des colonnes utilisées pour joindre les tables. L'opérateur dans la liste Opérateur définit la relation entre les données présentes dans les colonnes. Les noms des colonnes sont affichés ici à titre d’information et ne peuvent pas être modifiés.|  
 |**Opérateur**|Spécifiez l'opérateur utilisé pour mettre en relation les colonnes de jointure. Pour spécifier un opérateur autre que le signe (=), sélectionnez-le dans la liste. Lorsque vous fermez la page de propriétés, l'opérateur sélectionné apparaît dans le graphique en forme de losange de la ligne de jointure, comme dans l'illustration suivante :<br /><br /> ![Icône Visual Database Tools](../../database-engine/media//dv3wbii.gif "Icône Visual Database Tools")|  
-|**Toutes les lignes de \<table1 >**|Spécifie que toutes les lignes de la table de gauche apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de droite. Les colonnes auxquelles ne correspond aucune donnée dans la table de droite apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier LEFT OUTER JOIN dans l'instruction SQL.|  
-|**Toutes les lignes de \<table2 >**|Spécifie que toutes les lignes de la table de droite apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de gauche. Les colonnes auxquelles ne correspond aucune donnée dans la table de gauche apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier RIGHT OUTER JOIN dans l'instruction SQL.|  
+|**Toutes les lignes \<de la table1>**|Spécifie que toutes les lignes de la table de gauche apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de droite. Les colonnes auxquelles ne correspond aucune donnée dans la table de droite apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier LEFT OUTER JOIN dans l'instruction SQL.|  
+|**Toutes les lignes \<de table2>**|Spécifie que toutes les lignes de la table de droite apparaissent dans la sortie, y compris s'il n'existe aucune correspondance dans la table de gauche. Les colonnes auxquelles ne correspond aucune donnée dans la table de gauche apparaissent avec la valeur NULL. Choisir cette option équivaut à spécifier RIGHT OUTER JOIN dans l'instruction SQL.|  
   
- En sélectionnant toutes les **lignes \<table1 >** et **toutes les lignes de \<table2 >** équivaut à spécifier FULL OUTER JOIN dans l’instruction SQL.  
+ La sélection de toutes les **lignes \<de la>table1** et **toutes les lignes de \<TABLE2>** revient à spécifier FULL OUTER JOIN dans l’instruction SQL.  
   
  Lorsque vous sélectionnez une option pour créer une jointure externe, le losange sur la ligne de jointure change pour indiquer qu'il s'agit d'une jointure externe gauche, droite ou entière.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313610"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Éditeur de requêtes d’exploration de données avancée
@@ -25,12 +25,12 @@ ms.locfileid: "72313610"
  Pour accéder à la **éditeur avancé de requête d’exploration de données**, cliquez sur **requête** , puis sur **avancé**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Volet requête DMX**  
+ **Volet Requête DMX**  
  L'instruction DMX active s'affiche.  
   
  Cliquez avec le bouton droit sur le volet pour copier l'instruction DMX active.  
   
- Cliquez sur une partie sélectionnée de l'instruction pour obtenir des options spécifiques à cette clause. Par exemple, pour supprimer, ajouter ou modifier une sortie, cliquez avec le bouton droit sur le lien **\<Output >** .  
+ Cliquez sur une partie sélectionnée de l'instruction pour obtenir des options spécifiques à cette clause. Par exemple, pour supprimer, ajouter ou modifier une sortie, cliquez avec le bouton droit ** \<** sur le lien>de sortie.  
   
  **Modifier la requête/Générateur de requêtes**  
  Utilisez ce bouton pour basculer l’éditeur entre un éditeur de texte, dans lequel vous pouvez écrire des instructions DMX directement. et le **Générateur de requêtes**, qui vous aide à générer une instruction DMX.  
@@ -41,37 +41,37 @@ ms.locfileid: "72313610"
  **Modèles DMX**  
  Cliquez et sélectionnez à partir d'une liste de modèles qui contient des exemples DMX. Les modèles fournissent tous les types de modèle ou requête de prédiction nécessaires, notamment les requêtes qui utilisent des tables imbriquées, et les instructions DMX pour gérer des modèles. Même si vous connaissez certaines instructions DMX, les modèles permettent de gagner du temps en obtenant la syntaxe correcte.  
   
- **Choisir un modèle**  
+ **Choisir le modèle**  
  Cliquez pour afficher la liste des modèles d'exploration de données disponibles sur la connexion actuelle.  
   
  Vous pouvez également afficher une liste des modèles disponibles en cliquant sur le nom du modèle dans l’instruction DMX dans le volet **requête DMX** . Le nom du modèle est généralement surligné en rouge.  
   
  **Sélectionner l’entrée**  
- Cliquez pour sélectionner les données à utiliser comme entrée dans le modèle d'exploration de données. Si aucune source de données n’a été spécifiée, vous pouvez également cliquer sur le lien **\<Input >** , qui est mis en surbrillance en rouge dans le volet **requête DMX** .  
+ Cliquez pour sélectionner les données à utiliser comme entrée dans le modèle d'exploration de données. Si aucune source de données n’a été spécifiée, vous pouvez également cliquer sur le ** \<lien>d’entrée** , qui est mis en surbrillance en rouge dans le volet **requête DMX** .  
   
- Sélectionnez **\@InputRowset** dans la liste déroulante pour ouvrir la boîte de dialogue **remplacer InputRowset** et modifier une entrée existante.  
+ Sélectionnez ** \@InputRowset** dans la liste déroulante pour ouvrir la boîte de dialogue **remplacer InputRowset** et modifier une entrée existante.  
   
  Sélectionnez **Ajouter une entrée** pour ouvrir la boîte de dialogue **Ajouter une entrée** et spécifier une nouvelle source de données.  
   
- Vous pouvez également modifier une entrée existante en cliquant sur le lien **\@InputRowset** , qui est mis en surbrillance en rouge dans le volet requête DMX.  
+ Vous pouvez également modifier une entrée existante en cliquant sur ** \@** le lien InputRowset, qui est mis en surbrillance en rouge dans le volet requête DMX.  
   
  **Mapper les colonnes**  
  Sélectionnez des colonnes dans le modèle d'exploration de données et mappez-les aux colonnes de la source de données externe.  
   
- Vous pouvez également cliquer sur le lien **\<Mapping >** en surbrillance dans le volet requête DMX.  
+ Vous pouvez également cliquer sur le lien ** \<>de mappage** en surbrillance dans le volet requête DMX.  
   
  **Ajouter une sortie**  
  Cliquez pour sélectionner les colonnes qui correspondent à la sortie dans la requête de prédiction.  
   
- Vous pouvez également cliquer sur le lien **> de sortie \<Add** en surbrillance dans le volet requête DMX.  
+ Vous pouvez également cliquer sur le lien ** \<ajouter une>de sortie** en surbrillance dans le volet requête DMX.  
   
- **Colonnes de modèle**  
+ **Colonnes de modèles**  
  Répertorie les colonnes du modèle d'exploration de données sélectionné. Une marque en forme de losange en regard du nom de la colonne indique que celle-ci est une colonne prévisible.  
   
- **Colonnes d'entrée**  
+ **Colonnes d’entrée**  
  Répertorie les colonnes issues de la source de données externes ajoutées comme entrées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Compléments d’exploration de données SQL Server de requêtes &#40;&#41;](query-sql-server-data-mining-add-ins.md)  
+ [&#40;de requêtes SQL Server des compléments d’exploration de données&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

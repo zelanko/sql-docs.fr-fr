@@ -1,5 +1,5 @@
 ---
-title: Ajouter des modèles d’exploration de données à une Structure (Analysis Services - Exploration de données) | Microsoft Docs
+title: Ajouter des modèles d’exploration de données à une structure (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086248"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Ajouter des modèles d'exploration de données à une structure (Analysis Services - Exploration de données)
@@ -28,7 +28,7 @@ ms.locfileid: "66086248"
  Lorsque vous utilisez l'Assistant Exploration de données pour créer un nouveau modèle d'exploration de données, par défaut, vous devez toujours d'abord créer une structure d'exploration de données. L'Assistant vous donne ensuite la possibilité d'ajouter un modèle d'exploration de données initial à la structure. Toutefois, vous n'êtes pas obligé de créer un modèle immédiatement après. Si vous créez uniquement la structure, vous n'avez pas besoin de prendre de décision concernant la colonne à utiliser comme attribut prédictible ou la façon d'utiliser les données dans un modèle particulier. Il vous suffit de définir la structure de données générale que vous souhaitez utiliser ultérieurement. Par la suite, vous pouvez utiliser le [Concepteur d’exploration de données](data-mining-designer.md) pour ajouter de nouveaux modèles d’exploration de données basés sur la structure.  
   
 > [!NOTE]  
->  Dans DMX, l'instruction CREATE MINING MODEL commence par le modèle d'exploration de données. Autrement dit, vous définissez votre choix de modèle d'exploration de données, et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère automatiquement la structure sous-jacente. Plus tard, vous pouvez continuer à ajouter de nouveaux modèles d’exploration de données à cette structure, à l’aide de l’instruction ALTER STRUCTURE... ADD MODEL.  
+>  Dans DMX, l'instruction CREATE MINING MODEL commence par le modèle d'exploration de données. Autrement dit, vous définissez votre choix de modèle d'exploration de données, et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère automatiquement la structure sous-jacente. Par la suite, vous pouvez continuer à ajouter de nouveaux modèles d’exploration de données à cette structure à l’aide de l’instruction ALTER STRUCTURE... Ajoutez l’instruction MODEL.  
   
 ## <a name="choosing-an-algorithm"></a>Choix d'un algorithme  
  Lorsque vous ajoutez un nouveau modèle à une structure existante, la première chose à faire est de sélectionner un algorithme d'exploration de données à utiliser dans ce modèle. Le choix de l'algorithme est important car chaque algorithme effectue un type d'analyse différent et a des exigences différentes.  
@@ -58,9 +58,9 @@ ms.locfileid: "66086248"
  Pour certaines colonnes, vous devrez peut-être spécifier le *contenu de colonne*. Dans l'exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la propriété Type de contenu de chaque colonne de données indique à l'algorithme comment il doit traiter les données dans cette colonne. Par exemple, si vos données ont une colonne Income, vous devez spécifier que la colonne contient des nombres continus en définissant Continu comme type de contenu. Vous pouvez aussi spécifier que les nombres dans la colonne Revenu doivent être regroupés dans des compartiments en attribuant au contenu le type Discrétisé et en indiquant éventuellement le nombre exact de compartiments. Vous pouvez créer des modèles distincts qui gèrent les colonnes différemment : par exemple, vous pouvez faire des essais avec un modèle qui répartit les clients en trois groupes d'âge et un autre modèle qui répartit les clients en dix groupes d'âge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Créer une structure d'exploration de données relationnelle](create-a-relational-mining-structure.md)   
- [Propriétés du modèle d'exploration de données](mining-model-properties.md)   
+ [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Créer une structure d’exploration de données relationnelle](create-a-relational-mining-structure.md)   
+ [Propriétés du modèle d’exploration de données](mining-model-properties.md)   
  [Colonnes d'un modèle d'exploration de données](mining-model-columns.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Barre d’outils (onglet Structure de Dimension, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Barre d’outils (onglet structure de dimension, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066049"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -24,17 +24,17 @@ ms.locfileid: "66066049"
  **Ajouter Business Intelligence**  
  Affiche l’ **Assistant Business Intelligence** pour ajouter des fonctionnalités Business Intelligence.  
   
- **Traiter**  
+ **Procédure**  
  Affiche la boîte de dialogue **Traiter** pour le traitement de l’objet.  
   
- **Afficher les attributs en tant que**  
+ **Afficher les attributs sous forme de**  
  Cliquez pour passer de l’un des modes d’affichage suivants à l’autre dans le volet **Attributs** :  
   
--   Liste  
+-   List  
   
-     Affiche la liste des attributs de la dimension actuelle. Il s'agit du paramètre par défaut.  
+     Affiche la liste des attributs de la dimension actuelle. Il s’agit de la valeur par défaut.  
   
--   trEE  
+-   Arborescence  
   
      Affiche l'arborescence des attributs de la dimension actuelle avec les propriétés de membres des attributs affichés sous la forme d'une note subordonnée des attributs.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "66066049"
  **Supprimer la sélection**  
  Supprime l'objet sélectionné.  
   
- **Afficher la Table**  
+ **Afficher la table**  
  Affiche la boîte de dialogue **Afficher la table** pour rechercher une table dans le volet **Vue de source de données** .  
   
- **Masquer la Table**  
+ **Masquer la table**  
  Cliquez pour masquer la table sélectionnée dans le volet **Vue de source de données** .  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ ms.locfileid: "66066049"
  **Afficher**  
  Cliquez pour passer de l’un des modes d’affichage suivants à l’autre dans le volet **Vue de source de données** :  
   
--   Vue de diagramme  
+-   Vue du diagramme  
   
      Affiche un diagramme des tables et des colonnes associées à la dimension active.  
   

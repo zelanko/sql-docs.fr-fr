@@ -1,5 +1,5 @@
 ---
-title: Configurer les propriétés de création de rapports pour les rapports Power View | Microsoft Docs
+title: Configurer les propriétés de création de rapports pour les rapports de Power View | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067958"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurer les propriétés de création de rapports pour les rapports Power View
@@ -22,12 +22,12 @@ ms.locfileid: "66067958"
   
  Après avoir terminé cette leçon et redéployé le modèle dans une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] intégrée à SharePoint et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vous pourrez créer une source de données, spécifier les informations de connexion de données, lancer Power View et concevoir des rapports par rapport au modèle.  
   
- Cette section ne décrit pas comment créer et utiliser des rapports Power View. Cette leçon est destinée à fournir aux auteurs de modèles tabulaires une présentation de ces propriétés et paramètres qui ont un impact sur l'affichage des données de modèle dans Power View. Pour en savoir plus sur la création de rapports Power View, consultez [didacticiel : Créer un exemple de rapport dans Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
+ Cette section ne décrit pas comment créer et utiliser des rapports Power View. Cette leçon est destinée à fournir aux auteurs de modèles tabulaires une présentation de ces propriétés et paramètres qui ont un impact sur l'affichage des données de modèle dans Power View. Pour en savoir plus sur la création de rapports Power View, consultez la rubrique [Didacticiel : créer un exemple de rapport dans Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
  Durée estimée pour effectuer cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Prérequis  
- Cette leçon supplémentaire fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
+## <a name="prerequisites"></a>Conditions préalables requises  
+ Cette leçon supplémentaire fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon supplémentaire, vous devez avoir suivi toutes les leçons précédentes.  
   
  Pour pouvoir effectuer cette leçon supplémentaire, les composants suivants doivent également être installés :  
   
@@ -40,17 +40,17 @@ ms.locfileid: "66067958"
 ## <a name="model-properties-that-affect-reporting"></a>Propriétés de modèle qui affectent la création de rapports  
  Lorsque vous créez un modèle tabulaire, vous pouvez définir certaines propriétés sur des tables et colonnes individuelles afin d'améliorer l'expérience de création de rapports dans Power View. En outre, vous pouvez créer des données de modèle supplémentaires pour prendre en charge la visualisation des données et d'autres fonctionnalités spécifiques au client de création de rapports. Pour l'exemple de modèle Adventure Works Internet Sales, voici quelques-unes des modifications que vous allez apporter :  
   
--   **Ajouter de nouvelles données** -Ajout de nouvelles données dans une colonne calculée à l’aide d’une formule DAX crée des informations de date dans un format qui est plus facile à utiliser dans les graphiques.  
+-   **Ajouter de nouvelles données** -l’ajout de nouvelles données dans une colonne calculée à l’aide d’une formule Dax crée des informations de date dans un format plus facile à afficher dans les graphiques.  
   
--   **Masquer des tables et colonnes inutiles pour l’utilisateur final** - La propriété **Hidden** indique si les tables et colonnes sont affichées dans le client de création de rapports. Les éléments masqués font toujours partie du modèle et demeurent disponibles pour les requêtes et les calculs.  
+-   **Masquer les tables et les colonnes qui ne sont pas utiles à l’utilisateur final** -la propriété **Hidden** contrôle si les tables et les colonnes de table sont affichées dans le client de création de rapports. Les éléments masqués font toujours partie du modèle et demeurent disponibles pour les requêtes et les calculs.  
   
--   **Activer les tables en un clic** -par défaut, aucune action se produit si un utilisateur final clique sur une table dans la liste de champs. Pour modifier ce comportement de façon à qu'un clic sur une table ajoute la table au rapport, vous devez définir Ensemble de champs par défaut sur chaque colonne à inclure dans la table. Cette propriété est définie sur les colonnes de table que les utilisateurs finaux utiliseront le plus probablement.  
+-   **Activer les tables en un clic** : par défaut, aucune action ne se produit si un utilisateur final clique sur une table dans la liste de champs. Pour modifier ce comportement de façon à qu'un clic sur une table ajoute la table au rapport, vous devez définir Ensemble de champs par défaut sur chaque colonne à inclure dans la table. Cette propriété est définie sur les colonnes de table que les utilisateurs finaux utiliseront le plus probablement.  
   
--   **Définir le regroupement si nécessaire** - La propriété **Conserver les lignes uniques** indique si les valeurs de la colonne doivent être regroupées par valeurs dans un autre champ, tel qu’un champ d’identificateur. En ce qui concerne les colonnes qui contiennent des valeurs en double, telles que Customer Name (par exemple, plusieurs clients appelés John Smith), il est important de regrouper (conserver les lignes uniques) sur le champ **Identificateur de ligne** pour fournir les résultats appropriés aux utilisateurs finaux.  
+-   **Définir le regroupement si nécessaire** -la propriété **conserver les lignes uniques** détermine si les valeurs de la colonne doivent être regroupées par valeurs dans un autre champ, tel qu’un champ d’identificateur. En ce qui concerne les colonnes qui contiennent des valeurs en double, telles que Customer Name (par exemple, plusieurs clients appelés John Smith), il est important de regrouper (conserver les lignes uniques) sur le champ **Identificateur de ligne** pour fournir les résultats appropriés aux utilisateurs finaux.  
   
--   **Définir les types de données et les formats de données** - Par défaut, Power View applique des règles basées sur le type de données de colonne pour déterminer si le champ peut être utilisé comme mesure. Étant donné que chaque visualisation de données dans Power View comprend également des règles indiquant où peuvent être placées les mesures et les non-mesures, il est important de définir le type de données dans le modèle, ou de remplacer la valeur par défaut, pour obtenir le comportement voulu pour l’utilisateur final.  
+-   **Définir les types de données et les formats de données** -par défaut, Power View applique des règles basées sur le type de données de la colonne pour déterminer si le champ peut être utilisé comme mesure. Étant donné que chaque visualisation de données dans Power View comprend également des règles indiquant où peuvent être placées les mesures et les non-mesures, il est important de définir le type de données dans le modèle, ou de remplacer la valeur par défaut, pour obtenir le comportement voulu pour l’utilisateur final.  
   
--   **Définir le tri par colonne** propriété - le **trier par colonne** propriété spécifie si les valeurs dans la colonne doivent être triées par valeurs dans un autre champ. Par exemple, dans la colonne Month Calendar qui contient les noms de mois, triez les noms de mois en fonction de la colonne Month Number.  
+-   **Définir la propriété Trier par colonne** : la propriété **Trier par colonne** spécifie si les valeurs de la colonne doivent être triées par valeurs dans un autre champ. Par exemple, dans la colonne Month Calendar qui contient les noms de mois, triez les noms de mois en fonction de la colonne Month Number.  
   
 ## <a name="hide-tables-from-client-tools"></a>Masquer des tables des outils clients  
  Étant donné qu'il existe déjà une colonne calculée Product Category et une colonne calculée Product Subcategory dans la table Product, il est inutile que les tables Product Category et Product Subcategory soient visibles pour les applications clientes.  
@@ -59,7 +59,7 @@ ms.locfileid: "66067958"
   
 1.  Dans le générateur de modèles, cliquez avec le bouton droit sur la table **Product Category** , puis cliquez sur **Masquer dans les outils clients**.  
   
-2.  Cliquez avec le bouton droit sur la table **Product Subcategory** , puis cliquez sur **Masquer dans les outils clients**.  
+2.  Cliquez avec le bouton droit sur la table **Product Subcategory**, puis cliquez sur **Masquer dans les outils clients**.  
   
 ## <a name="create-new-data-for-charts"></a>Créer des données pour les graphiques  
  Il peut parfois s'avérer nécessaire de créer des données dans votre modèle en utilisant des formules DAX. Dans cette tâche, vous allez ajouter deux colonnes calculées à la table Date. Ces nouvelles colonnes fourniront des champs de date dans un format pratique à utiliser dans les graphiques.  
@@ -82,33 +82,33 @@ ms.locfileid: "66067958"
   
 #### <a name="to-set-default-field-set-for-tables"></a>Pour définir un ensemble de champs par défaut pour les tables  
   
-1.  Dans le concepteur de modèles, cliquez sur la table **Customer** (onglet).  
+1.  Dans le concepteur de modèles, cliquez sur la table (onglet) **Customer** .  
   
 2.  Dans la fenêtre **Propriétés** , sous **Propriétés de création de rapports**, dans la propriété **Ensemble de champs par défaut** , cliquez sur **Cliquer pour modifier** pour ouvrir la boîte de dialogue **Ensemble de champs par défaut** .  
   
 3.  Dans la boîte de dialogue **Ensemble de champs par défaut** , dans la zone de liste **Champs dans la table** , appuyez sur Ctrl, puis sélectionnez les champs suivants et cliquez sur **Ajouter**.  
   
-     **Birth Date**, **Customer Alternate Id**, **First Name**, **Last Name**.  
+     **Date de naissance**, **ID secondaire du client**, **prénom**, **nom**.  
   
-4.  Dans la fenêtre **Champs par défaut, dans l’ordre** , utilisez les boutons Monter et Descendre pour définir l’ordre suivant :  
+4.  Dans la fenêtre **Champs par défaut, dans l’ordre**, utilisez les boutons Monter et Descendre pour définir l’ordre suivant :  
   
-     **Customer Alternate Id**  
+     **ID secondaire du client**  
   
-     **First Name**  
+     **Prénom**  
   
-     **Last Name**  
+     **Nom**  
   
-     **Birth Date**.  
+     **Date de naissance**.  
   
 5.  Cliquez sur **Ok** pour fermer la boîte de dialogue **Ensemble de champs par défaut** pour la table **Customer** .  
   
 6.  Effectuez ces mêmes étapes pour la table **Geography** , en sélectionnant les champs suivants et en les plaçant dans cet ordre.  
   
-     **Ville**, **State Province Code**, **état Code région**.  
+     **Ville**, **code province état**, **code région État**.  
   
 7.  Pour finir, effectuez ces mêmes étapes pour la table **Product** , en sélectionnant les champs suivants et en les plaçant dans cet ordre.  
   
-     **Product Alternate Id**, **Product Name**.  
+     **ID alternatif du produit**, **nom du produit**.  
   
 ## <a name="table-behavior"></a>Comportement de la table  
  La propriété Comportement de la table, vous permet de modifier le comportement par défaut des différents types de visualisation et le comportement de regroupement des tables utilisées dans les rapports Power View. Cela produit un meilleur placement par défaut des informations d'identification, telles que les noms, photos ou titres, dans les mises en page de mosaïque, de carte et de graphique.  
@@ -136,7 +136,7 @@ ms.locfileid: "66067958"
 7.  Répétez ces étapes pour la table **Product** , en sélectionnant la colonne **Product Id** comme identificateur de ligne et la colonne **Product Name** dans la zone de liste **Conserver les lignes uniques** . Pour **Étiquette par défaut**, sélectionnez **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Propriétés de création de rapports pour les colonnes  
- Il existe plusieurs propriétés de colonne de base et propriétés de création de rapports spécifiques sur les colonnes que vous pouvez définir pour améliorer l'expérience de création de rapports d'un modèle. Par exemple, il n'est peut-être pas nécessaire que toutes les colonnes s'affichent dans chacune des tables. Tout comme vous avez masqué les tables Product Category et Product Subcategory précédemment, à l’aide masquée propriété d’une colonne, vous pouvez masquer des colonnes spécifiques d’une table qui est indiqué dans le cas contraire. D'autres propriétés, telles que le Format de date et Trier par colonne, peuvent également affecter le mode d'affichage des données de colonne dans les rapports. Vous allez maintenant définir certaines de ces propriétés sur des colonnes spécifiques. D'autres colonnes ne nécessitent aucune intervention, et ne figurent pas ci-dessous.  
+ Il existe plusieurs propriétés de colonne de base et propriétés de création de rapports spécifiques sur les colonnes que vous pouvez définir pour améliorer l'expérience de création de rapports d'un modèle. Par exemple, il n'est peut-être pas nécessaire que toutes les colonnes s'affichent dans chacune des tables. De la même façon que vous avez masqué la catégorie de produit et les tables de sous-catégories de produits, en utilisant la propriété Hidden d’une colonne, vous pouvez masquer des colonnes spécifiques d’une table qui est autrement affichée. D'autres propriétés, telles que le Format de date et Trier par colonne, peuvent également affecter le mode d'affichage des données de colonne dans les rapports. Vous allez maintenant définir certaines de ces propriétés sur des colonnes spécifiques. D'autres colonnes ne nécessitent aucune intervention, et ne figurent pas ci-dessous.  
   
  Vous n'allez définir que quelques propriétés de colonne, mais il en existe de nombreuses autres. Pour des informations détaillées sur les propriétés de création de rapports d’une colonne, consultez [Propriétés de la colonne &#40;SSAS Tabulaire&#41;](tabular-models/properties-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66067958"
   
      **Customer**  
   
-    |colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Format de données|Date courte|  
@@ -160,9 +160,9 @@ ms.locfileid: "66067958"
      **Date**  
   
     > [!NOTE]  
-    >  Étant donné que la table de Date a été sélectionnée comme table de dates du modèle à l’aide de la marque en tant que paramètre de la Table de dates, dans la leçon 7 : Marquer en tant que Table de dates, la colonne de Date dans la table de dates en tant que la colonne à utiliser comme identificateur unique de la propriété identificateur de ligne pour la colonne de Date sera automatiquement la valeur True et ne peut pas être modifié. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [Spécifier la marque comme table de dates pour l’utiliser avec Time Intelligence &#40;SSAS Tabulaire&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
+    >  Étant donné que la table Date a été sélectionnée comme table de date du modèle à l'aide du paramètre Marquer en tant que table de dates, dans la leçon 7 : Marquer en tant que table de dates, et la colonne Date de la table Date comme la colonne à utiliser en tant qu'identificateur unique, la propriété Identificateur de ligne de la colonne Date se verra automatiquement affecter la valeur True, et ne pourra pas être modifiée. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [Spécifier la marque comme table de dates pour l’utiliser avec Time Intelligence &#40;SSAS Tabulaire&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
-    |colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |------------|--------------|-----------|  
     |Date|Format de données|Date courte|  
     |Day Number of Week|Hidden|True|  
@@ -177,16 +177,16 @@ ms.locfileid: "66067958"
     |Fiscal Year|Hidden|True|  
     |Fiscal Semester|Hidden|True|  
   
-     **Geography**  
+     **Région**  
   
-    |colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Product**  
+     **Produit**  
   
-    |colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Étiquette par défaut|True|  
@@ -195,9 +195,9 @@ ms.locfileid: "66067958"
     |Product End Date|Format de données|Date courte|  
     |Large Photo|Hidden|True|  
   
-     **Internet Sales**  
+     **Ventes sur Internet**  
   
-    |colonne|Propriété|Value|  
+    |Colonne|Propriété|Valeur|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -210,13 +210,13 @@ ms.locfileid: "66067958"
     |Ship Date|Type de données|Date courte|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Redéployer le modèle tabulaire Internet Sales Adventure Works  
- Étant donné que vous avez modifié le modèle, vous devez le redéployer. Essentiel, vous allez répéter les tâches effectuées dans [leçon 14 : Déployer](lesson-13-deploy.md).  
+ Étant donné que vous avez modifié le modèle, vous devez le redéployer. Pour l’essentiel, vous allez répéter les tâches effectuées à la [Leçon 14 : Déploiement](lesson-13-deploy.md).  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Pour redéployer le modèle tabulaire Internet Sales Adventure Works  
   
 -   Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu de **Générer**, puis cliquez sur **Déployer Adventure Works Internet Sales Model**.  
   
-     La boîte de dialogue **Déployer** apparaît et affiche l’état de déploiement des métadonnées, ainsi que de chaque table incluse dans le modèle.  
+     La boîte de dialogue **déployer** apparaît et affiche l’état du déploiement des métadonnées ainsi que de chaque table incluse dans le modèle.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Utilisez maintenant Power View pour visualiser les données du modèle. Assurez-vous que les comptes Analysis Services et Reporting Services sur le site SharePoint disposent des autorisations en lecture sur l'instance Analysis Services sur laquelle vous avez déployé le modèle.  

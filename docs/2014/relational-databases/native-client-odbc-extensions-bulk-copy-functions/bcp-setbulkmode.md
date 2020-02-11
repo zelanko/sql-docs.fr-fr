@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688795"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
-  bcp_setbulkmode vous permet de spécifier le format de colonne dans une opération de copie en bloc, définition de tous les attributs de colonne dans un seul appel de fonction.  
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
+  bcp_setbulkmode vous permet de spécifier le format de colonne dans une opération de copie en bloc, en définissant tous les attributs de colonne dans un appel de fonction unique.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +52,7 @@ cbRow
  *hdbc*  
  Descripteur de connexion ODBC compatible avec la copie en bloc.  
   
- *property*  
+ *propriété*  
  Constante de type BYTE. Consultez le tableau dans la section Notes pour obtenir une liste des constantes.  
   
  *pField*  
@@ -67,28 +67,28 @@ cbRow
  *cbRow*  
  Longueur, en octets, de la valeur de marque de fin de ligne.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL  
   
 ## <a name="remarks"></a>Notes  
- bcp_setbulkmode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque bcp_setbulkmode est utilisé pour copier une instruction de requête en bloc, il doit être appelé avant d’appeler bcp_control avec BCP_HINT.  
+ bcp_setbulkmode peut être utilisé pour effectuer une copie en bloc à partir d’une requête ou d’une table. Lorsque bcp_setbulkmode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler bcp_control avec BCP_HINT.  
   
- bcp_setbulkmode est une alternative à l’utilisation de [bcp_setcolfmt](bcp-setcolfmt.md) et [bcp_columns](bcp-columns.md), ce qui vous permettent uniquement de spécifier le format d’une colonne par un appel de fonction.  
+ bcp_setbulkmode est une alternative à l’utilisation de [bcp_setcolfmt](bcp-setcolfmt.md) et [bcp_columns](bcp-columns.md), qui vous permettent uniquement de spécifier le format d’une colonne par appel de fonction.  
   
  Le tableau suivant répertorie les constantes du paramètre *property* .  
   
-|property|Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et à bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option -w dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option -N dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété définie sur `SQLNCHAR` si le type de colonne est une chaîne (valeur par défaut si ce n’est pas une chaîne).|  
-|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option - n dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` propriété la valeur par défaut.|  
+|BCP_OUT_CHARACTER_MODE|Spécifie le mode de sortie de caractères.<br /><br /> Correspond à l’option-c dans BCP. EXE et pour bcp_setcolfmt avec `BCP_FMT_TYPE` la propriété définie sur `SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Spécifie le mode de sortie Unicode.<br /><br /> Correspond à l’option-w dans BCP. EXE et bcp_setcolfmt dont `BCP_FMT_TYPE` la propriété a `SQLNCHAR`la valeur.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Spécifie des types natifs pour les types de non-caractères et Unicode pour les types de caractères.<br /><br /> Correspond à l’option-N dans BCP. EXE et bcp_setcolfmt dont `BCP_FMT_TYPE` la propriété a `SQLNCHAR` la valeur si le type de colonne est une chaîne (valeur par défaut, s’il ne s’agit pas d’une chaîne).|  
+|BCP_OUT_NATIVE_MODE|Spécifie les types de base de données natifs.<br /><br /> Correspond à l’option-n dans BCP. EXE et bcp_setcolfmt avec `BCP_FMT_TYPE` la propriété définie sur la valeur par défaut.|  
   
- Vous ne devez pas utiliser bcp_setbulkmode avec une séquence d’appels de fonction qui inclut bcp_setcolfmt, bcp_control et bcp_readfmt. Par exemple, vous ne devez pas appeler bcp_control(BCPTEXTFILE) et bcp_setbulkmode.  
+ Vous ne devez pas utiliser bcp_setbulkmode avec une séquence d’appels de fonction qui comprend bcp_setcolfmt, bcp_control et bcp_readfmt. Par exemple, vous ne devez pas appeler bcp_control (BCPTEXTFILE) et bcp_setbulkmode.  
   
- Vous pouvez appeler bcp_control et bcp_setbulkmode pour bcp_control options qui ne sont pas en conflit avec bcp_setbulkmode. Par exemple, vous pouvez appeler bcp_control(BCPFIRST) et bcp_setbulkmode.  
+ Vous pouvez appeler bcp_control et bcp_setbulkmode pour les options de bcp_control qui ne sont pas en conflit avec bcp_setbulkmode. Par exemple, vous pouvez appeler bcp_control (BCPFIRST) et bcp_setbulkmode.  
   
- Si vous essayez d’appeler bcp_setbulkmode avec une séquence d’appels de fonction qui inclut bcp_setcolfmt, bcp_control et bcp_readfmt, un des appels de fonction renvoie un échec d’erreur de séquence. Si vous choisissez de corriger l’échec, appelez bcp_init pour réinitialiser tous les paramètres et recommencer.  
+ Si vous tentez d’appeler bcp_setbulkmode avec une séquence d’appels de fonction qui comprend bcp_setcolfmt, bcp_control et bcp_readfmt, l’un des appels de fonction retourne un échec de séquence. Si vous choisissez de corriger l’échec, appelez bcp_init pour réinitialiser tous les paramètres et recommencer.  
   
  Le tableau suivant présente quelques exemples d'appels de fonction qui provoquent une erreur de séquence de fonction :  
   
@@ -296,6 +296,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

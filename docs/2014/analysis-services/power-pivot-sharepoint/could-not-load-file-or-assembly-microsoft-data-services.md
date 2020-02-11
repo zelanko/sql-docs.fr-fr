@@ -1,5 +1,5 @@
 ---
-title: Impossible de charger le fichier ou l’assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; | Microsoft Docs
+title: Impossible de charger le fichier ou l’assembly &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39; | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071667"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Impossible de charger le fichier ou l’assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
+# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Impossible de charger le fichier ou l’assembly &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39;
   Dans les environnements SharePoint 2010 qui disposent de PowerPivot pour SharePoint, cette erreur se produira si la solution au niveau de l'application pour PowerPivot n'a pas été déployée correctement.  
   
 ## <a name="details"></a>Détails  
   
 |||  
 |-|-|  
-|S'applique à|PowerPivot pour SharePoint|  
+|S’applique à|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Cause|La solution Powerpivotwebapp n'est pas déployée ou n'a pas été déployée correctement.|  
+|Cause :|La solution Powerpivotwebapp n'est pas déployée ou n'a pas été déployée correctement.|  
 |Texte du message|Impossible de charger le fichier ou l'assembly 'Microsoft.AnalysisServices.SharePoint.Integration'|  
   
 ## <a name="explanation"></a>Explication  
@@ -46,6 +46,6 @@ ms.locfileid: "66071667"
 5.  Cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des Solutions PowerPivot pour SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
+ [Déployer des solutions PowerPivot sur SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086143"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
   Pour créer une requête de prédiction, vous devez d'abord sélectionner le modèle d'exploration de données sur lequel la requête sera basée. Vous pouvez sélectionner n'importe quel modèle d'exploration de données existant du projet actuel.  
   
- Après avoir sélectionné un modèle, ajoutez une *fonction de prédiction* à la requête. Il est important de comprendre que les fonctions de prédiction sont utilisées pour à des fins de nombreux-Oui, vous pouvez prédire des valeurs, mais vous pouvez également obtenir des statistiques connexes, ainsi que des informations qui a été utilisées pour générer la prédiction. Les fonctions de prédiction peuvent retourner les types de valeurs suivants :  
+ Après avoir sélectionné un modèle, ajoutez une *fonction de prédiction* à la requête. Il est important de comprendre que les fonctions de prédiction sont utilisées à de nombreuses fins : Oui, vous pouvez prédire des valeurs, mais vous pouvez également obtenir des statistiques connexes, ainsi que des informations qui ont été utilisées pour générer la prédiction. Les fonctions de prédiction peuvent retourner les types de valeurs suivants :  
   
 -   le nom de l'attribut prédictible et la valeur prédite ;  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66086143"
   
     |||  
     |-|-|  
-    |**\<nom du modèle >**|Sélectionnez cette option pour inclure des valeurs du modèle d'exploration de données dans la sortie. Vous pouvez uniquement ajouter des colonnes prédictibles.<br /><br /> Lorsque vous ajoutez une colonne du modèle, le résultat retourné est la liste non distinctive des valeurs se trouvant dans cette colonne.<br /><br /> Les colonnes que vous ajoutez à cette option sont incluses dans la partie SELECT de l'instruction DMX obtenue.|  
-    |**Prediction Function**|Sélectionnez cette option pour parcourir une liste de fonctions de prédiction.<br /><br /> Les valeurs ou fonctions que vous sélectionnez sont ajoutées à la partie SELECT de l'instruction DMX obtenue.<br /><br /> La liste des fonctions de prédiction n'est pas filtrée ou limitée par le type de modèle sélectionné. Par conséquent, si vous avez un doute sur la prise en charge, ou non, de la fonction pour le type de modèle actuel, vous pouvez simplement ajouter la fonction à la liste et voir s'il y a une erreur.<br /><br /> Les éléments de la liste qui sont précédés d'un symbole $ (tel que $AdjustedProbability) représentent les colonnes de la table imbriquée qui est produite en sortie lorsque vous utilisez la fonction `PredictHistogram`. Vous trouverez ci-après les raccourcis que vous pouvez utiliser pour retourner une seule colonne, et non une table imbriquée.|  
+    |**\<nom du modèle>**|Sélectionnez cette option pour inclure des valeurs du modèle d'exploration de données dans la sortie. Vous pouvez uniquement ajouter des colonnes prédictibles.<br /><br /> Lorsque vous ajoutez une colonne du modèle, le résultat retourné est la liste non distinctive des valeurs se trouvant dans cette colonne.<br /><br /> Les colonnes que vous ajoutez à cette option sont incluses dans la partie SELECT de l'instruction DMX obtenue.|  
+    |**Fonction de prédiction**|Sélectionnez cette option pour parcourir une liste de fonctions de prédiction.<br /><br /> Les valeurs ou fonctions que vous sélectionnez sont ajoutées à la partie SELECT de l'instruction DMX obtenue.<br /><br /> La liste des fonctions de prédiction n'est pas filtrée ou limitée par le type de modèle sélectionné. Par conséquent, si vous avez un doute sur la prise en charge, ou non, de la fonction pour le type de modèle actuel, vous pouvez simplement ajouter la fonction à la liste et voir s'il y a une erreur.<br /><br /> Les éléments de la liste qui sont précédés d'un symbole $ (tel que $AdjustedProbability) représentent les colonnes de la table imbriquée qui est produite en sortie lorsque vous utilisez la fonction `PredictHistogram`. Vous trouverez ci-après les raccourcis que vous pouvez utiliser pour retourner une seule colonne, et non une table imbriquée.|  
     |**Expression personnalisée**|Sélectionnez cette option pour taper une expression personnalisée puis affecter un alias à la sortie.<br /><br /> L'expression personnalisée est ajoutée à la partie SELECT de la requête de prédiction DMX obtenue.<br /><br /> Cette option est utile si vous voulez ajouter du texte pour une sortie avec chaque ligne, pour appeler des fonctions VB ou pour appeler des procédures stockées personnalisées.<br /><br /> Pour plus d’informations sur l’utilisation de fonctions VBA et Excel à partir de DMX, consultez [Fonctions VBA dans MDX et DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Après avoir ajouté une fonction ou expression, basculez vers la vue DMX pour voir comment la fonction est ajoutée dans l'instruction DMX.  
@@ -76,7 +76,7 @@ ms.locfileid: "66086143"
     > [!WARNING]  
     >  Le Générateur de requêtes de prédiction ne valide pas l’instruction DMX tant que vous n’avez pas cliqué sur **Résultats**. Vous constaterez souvent que l'expression qui est produite par le générateur de requêtes n'est pas une instruction DMX valide. Les causes les plus courantes sont la référence à une colonne qui n'est pas liée à la colonne prédictible ou la tentative de prédire une colonne d'une table imbriquée, ce qui requiert une instruction sub-SELECT. À ce stade, vous pouvez basculer vers la vue DMX et continuer à modifier l'instruction.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Exemple : Créer une requête sur un modèle de clustering  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Exemple : créer une requête sur un modèle de clustering  
   
 1.  Si aucun modèle de clustering n’est disponible pour générer cet exemple de requête, créez le modèle, [TM_Clustering], en utilisant le [Didacticiel sur l’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md).  
   
@@ -92,9 +92,9 @@ ms.locfileid: "66086143"
   
 5.  Dans la grille de requête, pour **Source**, sélectionnez le modèle d’exploration de données TM_Clustering, puis ajoutez la colonne [Bike Buyer].  
   
-6.  Pour **Source**, sélectionnez **fonction de prédiction**et ajoutez la fonction `Cluster`.  
+6.  Pour **source**, sélectionnez **fonction de prédiction**, puis ajoutez la fonction `Cluster`.  
   
-7.  Pour **Source**, sélectionnez **fonction de prédiction**, ajoutez la fonction `PredictSupport`, puis faites glisser la colonne du modèle [Bike Buyer] dans le **critères/Argument** boîte. Tapez **Support** dans la colonne **Alias** .  
+7.  Pour **source**, sélectionnez **fonction de prédiction**, ajoutez la fonction `PredictSupport`, et faites glisser la colonne modèle [Bike Buyer] dans la zone **critères/argument** . Tapez **Support** dans la colonne **Alias** .  
   
      Copiez l’expression représentant la fonction de prédiction et la référence de colonne dans la zone **Critères/Argument** .  
   
@@ -118,11 +118,11 @@ ms.locfileid: "66086143"
   
      Le tableau suivant indique les résultats attendus :  
   
-    |Bike Buyer|$Cluster|Support|CEILING|  
+    |Bike Buyer|$Cluster|SUPPORT|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- Si vous souhaitez ajouter d’autres clauses ailleurs dans l’instruction-par exemple, si vous souhaitez ajouter une clause WHERE-vous ne pouvez pas l’ajouter à l’aide de la grille ; Vous devez tout d’abord basculer vers la vue DMX.  
+ Si vous souhaitez ajouter d’autres clauses ailleurs dans l’instruction (par exemple, si vous souhaitez ajouter une clause WHERE), vous ne pouvez pas l’ajouter à l’aide de la grille. vous devez d’abord basculer vers la vue DMX.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)  

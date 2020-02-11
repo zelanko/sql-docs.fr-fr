@@ -1,5 +1,5 @@
 ---
-title: Interrogation des données d’ensembles de lignes de schéma d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
+title: Interrogation des ensembles de lignes de schéma d’exploration de données (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084910"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Interrogation des ensembles de lignes de schéma d'exploration de données (Analysis Services - Exploration de données)
@@ -51,7 +51,7 @@ ms.locfileid: "66084910"
 ## <a name="examples"></a>Exemples  
  La section suivante fournit quelques exemples de requêtes sur les ensembles de lignes de schéma d'exploration de données.  
   
-### <a name="example-1-list-data-mining-services"></a>Exemple 1 : Services d’exploration de données de liste  
+### <a name="example-1-list-data-mining-services"></a>Exemple 1 : Répertorier les services d'exploration de données  
  La requête suivante retourne une liste des services d'exploration de données qui sont disponibles sur le serveur actuel, c'est-à-dire les algorithmes qui sont activés. Les colonnes fournies pour chaque service d'exploration de données comprennent notamment les indicateurs de modélisation et les types de contenu qui peuvent être utilisés par chaque algorithme, le GUID pour chaque service et toute limite de prédiction ayant pu être ajoutée pour chaque service.  
   
 ```  
@@ -59,7 +59,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Exemple 2 : Liste des paramètres de modèle d’exploration de données  
+### <a name="example-2-list-mining-model-parameters"></a>Exemple 2 : Répertorier les paramètres du modèle d'exploration de données  
  L'exemple suivant retourne les paramètres utilisés pour créer un modèle d'exploration de données spécifique :  
   
 ```  
@@ -68,7 +68,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Exemple 3 : Répertorier tous les ensembles de lignes  
+### <a name="example-3-list-all-rowsets"></a>Exemple 3 : Répertorier tous les ensembles de lignes  
  L'exemple suivant retourne une liste complète des ensembles de lignes disponibles sur le serveur actuel :  
   
 ```  

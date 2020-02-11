@@ -17,26 +17,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088492"
 ---
 # <a name="browsing-a-forecasting-model"></a>Exploration d'un modèle de prévision
-  Lorsque vous ouvrez un modèle de prévision à l’aide **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de modèle de série de temps dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les tendances, de comparer les séries, de créer des prédictions et d'obtenir des informations sur le modèle et les données sous-jacentes.  
+  Lorsque vous ouvrez un modèle de prévision à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive, similaire à la visionneuse de modèle de série chronologique dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les tendances, de comparer les séries, de créer des prédictions et d'obtenir des informations sur le modèle et les données sous-jacentes.  
   
-##  <a name="bkmk_Top"></a> Explorer le modèle  
- Le **Parcourir** visionneuse pour les modèles de prévision fournit une vue graphique, qui montre les tendances au fil du temps et vous permet de créer des prédictions et un modèle, qui représente la série chronologique en tant qu’un arbre de décision ou un arbre de régression.  
+##  <a name="bkmk_Top"></a>Explorer le modèle  
+ La visionneuse de **recherche** pour les modèles de prévision fournit une vue graphique, qui montre les tendances au fil du temps et vous permet de créer des prédictions, ainsi qu’une vue de modèle, qui représente la série chronologique sous la forme d’un arbre de décision ou d’un arbre de régression.  
   
 -   [Vue graphique](#bkmk_charts)  
   
 -   [Vue du modèle](#bkmk_Model)  
   
- Pour faire des essais avec un modèle de prévision, vous pouvez utiliser les exemples de données sur l’onglet prévision de l’exemple de classeur de données et créez un modèle de série de temps avec le [Assistant prévision &#40;des compléments d’exploration de données pour Excel&#41; ](forecast-wizard-data-mining-add-ins-for-excel.md) dans le  **Exploration de données** ruban, ou [prévision &#40;Table Analysis Tools pour Excel&#41; ](forecast-table-analysis-tools-for-excel.md) dans le **analyser** ruban.  
+ Pour expérimenter un modèle de prévision, vous pouvez utiliser les exemples de données de l’onglet Prévision du classeur d’exemples de données, puis générer un modèle de série chronologique à l’aide de l' [Assistant prévision &#40;les compléments d’exploration de données pour excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) dans le ruban **exploration de données** , ou [prévoir &#40;outils d’analyse de table pour Excel&#41;](forecast-table-analysis-tools-for-excel.md) dans le ruban **analyser** .  
   
-###  <a name="bkmk_charts"></a> Graphique  
- Le **graphique** onglet affiche la tendance de votre série de données au fil du temps, avec les valeurs prévues. L'axe vertical du graphique représente les valeurs de la série et l'axe horizontal le temps.  
+###  <a name="bkmk_charts"></a>Nuages  
+ L’onglet **graphique** affiche la tendance dans vos séries de données au fil du temps, ainsi que les valeurs prédites. L'axe vertical du graphique représente les valeurs de la série et l'axe horizontal le temps.  
   
 ##### <a name="explore-the-forecasting-chart"></a>Explorer le graphique de prévision  
   
@@ -46,37 +46,37 @@ ms.locfileid: "66088492"
   
      Utilisez ces cases à cocher pour sélectionner la prévision pour « North America » seulement, et uniquement pour « Sales Amount ».  
   
-2.  Cliquez sur **étapes de prédiction** et tapez une nouvelle valeur pour contrôler les valeurs de combien de temps futures que vous souhaitez voir dans le graphique.  
+2.  Cliquez sur **étapes de prédiction** et tapez une nouvelle valeur pour contrôler le nombre de valeurs de temps futures que vous souhaitez afficher dans le graphique.  
   
      La valeur par défaut est 5.  
   
-3.  Cliquez sur n’importe quel point dans la ligne, passé ou futur, pour voir les valeurs exactes de ce point dans le temps, affichées dans le **légende d’exploration de données**.  
+3.  Cliquez sur n’importe quel point de la ligne, historique ou futur, pour afficher les valeurs exactes de ce point dans le temps, affichées dans la **légende d’exploration de données**.  
   
 4.  Le graphique affiche à la fois les données historiques et les données futures. Notez la ligne en pointillé, avec un arrière-plan ombré. Ces valeurs sont les prédictions futures, en fonction du modèle.  
   
      Les données historiques (que vous avez utilisées pour créer le modèle) sont affichées à gauche du graphique.  
   
-5.  Sélectionnez le **afficher les prévisions historiques** option pour faire une idée de la stabilité de la série chronologique.  
+5.  Sélectionnez l’option **afficher les prédictions historiques** pour avoir une idée de la stabilité de la série chronologique.  
   
      ![prévisions pour une série unique dans le modèle](media/dm13-forecast-chart-singleseries.gif "prévisions pour une série unique dans le modèle")  
   
      Les prédictions historiques sont des valeurs prédites en fonction de la série jusqu'à ce point précis, et sont comparées aux valeurs historiques effectives. Si la ligne en pointillé (avec les valeurs prédites) est très éloignée de la ligne continue (les valeurs effectives), cela indique que la première partie de la série ne prédit pas de façon précise les valeurs ultérieures. Vous avez peut être besoin de plus de données, ou bien cela peut simplement indiquer une volatilité dans le cycle.  
   
-6.  Sélectionnez le **afficher les écarts** option pour afficher les barres d’erreur dans le graphique.  
+6.  Sélectionnez l’option **afficher les écarts** pour afficher les barres d’erreur dans le graphique.  
   
      Les barres d'erreur vous permettent d'évaluer visuellement la variabilité des prédictions. La qualité des prédictions varie en fonction de vos données sources, mais en augmentant le nombre d'étapes de prédiction, vous devez constater une augmentation stable des déviations.  
   
- **Conseils**  
+ **Conseil**  
   
--   Pour afficher ou masquer la **légende d’exploration de données**, avec le bouton droit n’importe quel point dans le graphique.  
+-   Pour activer/désactiver l’affichage de la **légende d’exploration de données**, cliquez avec le bouton droit sur n’importe quel point du graphique.  
   
      Vous pouvez afficher une plage de temps spécifique en cliquant sur le graphique, en faisant glisser une plage de temps dans le graphique, puis en recliquant pour effectuer un zoom avant sur la plage sélectionnée.  
   
--   Pour obtenir une copie du graphique actuel, cliquez sur **copier dans Excel**, puis cliquez sur une feuille de calcul Excel. Un graphique est inséré sur la feuille avec toutes les options définies, y compris la légende.  
+-   Pour obtenir une copie du graphique actif, cliquez sur **copier dans Excel**, puis cliquez sur une feuille de calcul dans Excel. Un graphique est inséré sur la feuille avec toutes les options définies, y compris la légende.  
   
-     Toutefois, ce graphique est statique afin que vous ne pouvez pas modifier la légende ou afficher les données sous-jacentes ; Si vous avez besoin d’une vue graphique plus interactive, utilisez le [visionneuses Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
+     Toutefois, ce graphique est statique et vous ne pouvez pas modifier la légende ou afficher les données sous-jacentes ; Si vous avez besoin d’une vue graphique plus interactive, utilisez les [visionneuses Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
   
--   Cliquez sur **Abs** dans la barre de menus de visionneuse pour basculer entre des courbes absolues et relatives.  
+-   Cliquez sur **ABS** dans la barre de menus de la visionneuse pour basculer entre les courbes absolues et relatives.  
   
      Cette option est utile si votre graphique contient plusieurs modèles, mais l'échelle des données pour chaque modèle est très différente.  
   
@@ -86,30 +86,30 @@ ms.locfileid: "66088492"
   
  [Explorer le modèle](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a> Modèle  
+###  <a name="bkmk_Model"></a>Modélisation  
  Un modèle de prévision peut également être représenté sous la forme d'un arbre de décision, ou bien, si la série est principalement linéaire, sous la forme d'un modèle de régression.  
   
  Par exemple, dans ce modèle il y a une différence dans la formule de régression en fonction d'une certaine condition, par conséquent, l'arbre se ramifie en trois branches, chacune avec une formule de régression différente.  
   
- ![Filtrer une série unique dans le modèle de prévision](media/dm13-forecast-model-northamerica.gif "filtrer une série unique dans le modèle de prévision")  
+ ![Filtrer une série unique dans le modèle de prévision](media/dm13-forecast-model-northamerica.gif "Filtrer une série unique dans le modèle de prévision")  
   
 ##### <a name="explore-the-forecasting-model-as-a-tree"></a>Explorer le modèle de prévision sous forme d'arborescence  
   
-1.  Cliquez sur le **arborescence** liste déroulante liste et choisissez un modèle à afficher.  
+1.  Cliquez sur la liste déroulante **arborescence** et choisissez un modèle à afficher.  
   
      Un arbre distinct ou un nœud de régression est affiché pour chaque attribut prédictible. Par exemple, si vos données comprennent les ventes pour l'Europe, l'Amérique du Nord et le Pacifique, il y aura trois modèles différents, un pour chaque série de données.  
   
-2.  Faites glisser le **afficher le niveau** curseur pour filtrer des niveaux inférieurs de l’arborescence et vous concentrer sur les principaux fractionnements.  
+2.  Faites glisser le curseur **afficher le niveau** pour filtrer les niveaux inférieurs de l’arborescence et concentrez-vous sur les fractionnements les plus importants.  
   
-3.  Cliquez sur chaque nœud pour afficher des statistiques descriptives dans le **légende d’exploration de données**.  
+3.  Cliquez sur chaque nœud pour afficher des statistiques descriptives dans la **légende d’exploration de données**.  
   
      Lorsque vous immobilisez la souris sur un nœud, une info-bulle affiche également les mêmes statistiques, ainsi que la formule complète décrivant le nœud.  
   
-4.  Si vous souhaitez copier les informations contenues dans le **légende d’exploration de données**, avec le bouton droit le **légende d’exploration de données**, sélectionnez **copie**et cliquez à l’intérieur de votre feuille de calcul Excel. Le **copier dans Excel** option permet de copier le graphique, pas les statistiques.  
+4.  Si vous souhaitez copier les informations dans la **légende d’exploration**de données, cliquez avec le bouton droit sur la **légende d’exploration**de données, sélectionnez **copier**, puis cliquez à l’intérieur de votre feuille de calcul Excel. L’option **copier dans Excel** copie le graphique, pas les statistiques.  
   
  [Explorer le modèle](#bkmk_Top)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exploration des modèles dans Excel &#40;compléments d’exploration de données SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Exploration des modèles dans Excel &#40;SQL Server les compléments d’exploration de données&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Spécification des partitions et des Options de déploiement de rôles | Microsoft Docs
+title: Spécification des options de déploiement de partitions et de rôles | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,26 +23,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075349"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Spécification des options de déploiement de partitions et de rôles
-  Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de déploiement de rôles et de partitions à partir de la \< *nom_projet*> .deploymentoptions fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les options de déploiement de partitions et de rôles du courant de projet lorsque le \< *nom_projet*> .deploymentoptions fichier est créé. Pour plus d'informations sur les paramètres de configuration, consultez [Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md).  
+  L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de déploiement de partitions et \<de rôles à partir du *nom du projet*> fichier. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crée ce fichier lorsque vous générez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le projet. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]utilise les options de déploiement de partitions et de rôles du projet actif \<lorsque le *nom du projet*> fichier. deploymentoptions est créé. Pour plus d'informations sur les paramètres de configuration, consultez [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>Examen des options de déploiement de partitions et de rôles  
- Les options de déploiement dans le \< *nom_projet*> .deploymentoptions fichier incluent les éléments suivants :  
+ Les options de déploiement dans \<le *nom du projet*> fichier. deploymentoptions sont les suivantes :  
   
  **Options de déploiement de partitions**  
- Le \< *nom_projet*> fichier de .deploymentoptions Spécifie si les partitions existantes de la base de données de destination sont conservées ou remplacée (option par défaut). Si les partitions existantes sont conservées, seules les nouvelles partitions sont déployées, et les partitions et les conceptions d'agrégation sur tous les groupes de mesures restent inchangées.  
+ Le \< *nom du projet*> fichier. deploymentoptions spécifie si les partitions existantes dans la base de données de destination sont conservées ou remplacées (par défaut). Si les partitions existantes sont conservées, seules les nouvelles partitions sont déployées, et les partitions et les conceptions d'agrégation sur tous les groupes de mesures restent inchangées.  
   
 > [!NOTE]  
 >  Si le groupe de mesures dans lequel existe la partition est supprimé, la partition est supprimée automatiquement.  
   
- **Options de déploiement de rôles**  
- Le \< *nom_projet*> .deploymentoptions fichier spécifie une des options de déploiement de rôles suivantes :  
+ **Options de déploiement de rôle**  
+ Le \< *nom du projet*> fichier. deploymentoptions spécifie l’une des options de déploiement de rôle suivantes :  
   
 -   Les rôles et les membres de rôle existant dans la base de données de destination sont conservés, et seuls les nouveaux rôles et membres de rôle sont déployés.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "66075349"
   
 -   Les rôles et les membres de rôle existant dans la base de données de destination sont conservés, et aucun nouveau rôle n'est déployé.  
   
--   **Remarque** Lorsque des membres et des rôles existants sont conservés, les autorisations associées à ces rôles sont réinitialisées à Aucune autorisation. Les autorisations de sécurité sont contenues dans les objets qu'elles sécurisent, et non dans les rôles de sécurité auxquels elles sont associées. Pour plus d’informations sur la façon de travailler avec ce comportement à l’aide de l’Assistant Déploiement d’Analysis Service, consultez « Conservation de rôles et membres » dans la Base de connaissances Microsoft.  
+-   **Remarque** Lorsque les rôles et les membres existants sont conservés, les autorisations associées à ces rôles sont réinitialisées sur aucun. Les autorisations de sécurité sont contenues dans les objets qu'elles sécurisent, et non dans les rôles de sécurité auxquels elles sont associées. Pour plus d’informations sur l’utilisation de ce comportement à l’aide de l’Assistant Déploiement d’Analysis Services, consultez la rubrique relative à la conservation des rôles et des membres dans la base de connaissances Microsoft.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modification des options de déploiement de partitions et de rôles  
- Vous devrez peut-être déployer la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet à l’aide des options de partitions et de rôles différentes de celles stockées dans le \< *nom_projet*> .deploymentoptions fichier. Par exemple, vous pouvez choisir de conserver des partitions existantes, les rôles et les membres du rôle, au lieu de remplacer toutes les partitions existantes, les rôles et les membres comme indiqué dans le \< *nom_projet*> .deploymentoptions fichier.  
+ Vous devrez peut-être déployer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le projet en utilisant des options de partitions et de rôles différentes \<de celles stockées dans le *nom du projet*> fichier. deploymentoptions. Par exemple, vous souhaiterez peut-être conserver les partitions, rôles et membres de rôle existants, au lieu de remplacer l’ensemble des partitions, rôles et membres existants, \<comme indiqué dans le *nom du projet*> fichier. deploymentoptions.  
   
- Pour modifier le déploiement de partitions et des rôles dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet, vous ne pouvez pas modifier les paramètres de partitions et de rôles au sein du projet, car le  *\<nom_projet >* **Pages de propriétés**  boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’affiche pas ces options. Si vous souhaitez modifier les options de déploiement pour les rôles et les partitions, vous devez modifier ces informations dans le \< *nom_projet*> fichier .deploymentoptions lui-même. La procédure suivante décrit comment modifier les options de déploiement de partitions et de rôles au sein de la \< *nom_projet*> .deploymentoptions fichier.  
+ Pour modifier le déploiement des partitions et des rôles dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet, vous ne pouvez pas modifier les paramètres de partitions et de rôles dans le projet, car la boîte de dialogue [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] * \<nom du projet>* pages de **Propriétés** de n’affiche pas ces options. Si vous souhaitez modifier les options de déploiement pour les rôles et les partitions, vous devez modifier ces informations dans \<le *nom du projet*> fichier. deploymentoptions. La procédure suivante décrit comment modifier les options de déploiement de partitions et de rôles \<dans le *nom du projet*> fichier. deploymentoptions.  
   
 #### <a name="to-change-the-deployment-of-partitions-or-roles-after-the-input-files-have-been-generated"></a>Pour modifier le déploiement de partitions ou de rôles après la génération des fichiers d'entrée  
   
@@ -63,15 +63,15 @@ ms.locfileid: "66075349"
   
      -ou-  
   
--   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. (Pour plus d’informations sur le mode fichier de réponses, consultez [Exécution de l’Assistant Déploiement d’Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
+-   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. (Pour plus d’informations sur le mode fichier de réponses, consultez [exécution de l’Assistant Déploiement de Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
   
      -ou-  
   
--   Ouvrez le \< *nom_projet*> .deploymentoptions dans un éditeur de texte et manuellement modifier les options.  
+-   Ouvrez le \< *nom du projet*>. deploymentoptions dans n’importe quel éditeur de texte et modifiez manuellement les options.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécification de la cible d'installation](deployment-script-files-specifying-the-installation-target.md)   
- [Spécification de paramètres de configuration pour le déploiement de solutions](deployment-script-files-solution-deployment-config-settings.md)   
+ [Spécification de la cible d’installation](deployment-script-files-specifying-the-installation-target.md)   
+ [Spécification des paramètres de configuration pour le déploiement de solutions](deployment-script-files-solution-deployment-config-settings.md)   
  [Spécification d'options de traitement](deployment-script-files-specifying-processing-options.md)  
   
   

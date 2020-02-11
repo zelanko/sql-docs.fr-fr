@@ -1,5 +1,5 @@
 ---
-title: Onglet jeux d’éléments (visionneuse de modèle d’exploration de données) | Microsoft Docs
+title: Onglet Jeux d’éléments (visionneuse de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079557"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Onglet Jeux d'éléments (Visionneuse de modèle d'exploration de données)
   Vous pouvez utiliser le volet **Jeux d’éléments** pour afficher les jeux d’éléments fréquents contenus dans un modèle d’exploration de données de règles d’association. Étant donné qu'un modèle d'association peut contenir un grand nombre de jeux d'éléments, des contrôles sont fournis dans la visionneuse pour vous aider à filtrer les jeux d'éléments affichés dans la visionneuse.  
   
- **Pour plus d’informations :** [Algorithme Microsoft Association](data-mining/microsoft-association-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de règles Microsoft Association](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Pour plus d’informations :** [algorithme Microsoft Association](data-mining/microsoft-association-algorithm.md), [Parcourir un modèle à l’aide de la visionneuse des règles d’association Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de l’Observateur**  
+ **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d'exploration de données**  
+ **Modèle d’exploration de données**  
  Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  
@@ -37,10 +37,10 @@ ms.locfileid: "66079557"
  **Prise en charge minimale**  
  Modifiez cette valeur pour définir la prise en charge minimale que doit contenir un jeu d'éléments pour être affiché dans la visionneuse. La valeur par défaut affichée à l'ouverture du modèle est calculée par le modèle, mais vous pouvez la modifier pour afficher plus ou moins de jeux d'éléments.  
   
- **Taille minimale de jeu d’éléments**  
+ **Taille minimale du jeu d'éléments**  
  Modifiez cette valeur pour définir le nombre minimal d'éléments qui doivent être inclus dans un jeu d'éléments avant que ce dernier puisse être affiché dans la visionneuse.  
   
- **Filtrer le jeu d’éléments**  
+ **Filtrer le jeu d'éléments**  
  Tapez une valeur de chaîne pour filtrer le nombre de jeux d'éléments affichés dans la visionneuse.  
   
  Vous pouvez également taper des expressions régulières .NET comme critères de filtre. Par exemple, l'expression suivante retourne tous les jeux d'éléments qui contiennent « Road Bottle Cage » :  
@@ -68,18 +68,18 @@ ms.locfileid: "66079557"
  **Nombre maximal de lignes**  
  Limitez le nombre de jeux d'éléments affichés dans la visionneuse. Par défaut, les jeux d'éléments sont classés selon la prise en charge, par ordre décroissant ; une valeur plus faible limite ainsi la liste aux jeux d'éléments les plus courants.  
   
- **Prise en charge**  
+ **Supporter**  
  Affiche la prise en charge de chaque jeu d'éléments.  
   
  **Taille**  
  Affiche le nombre d'éléments présents dans chaque jeu d'éléments.  
   
- **Itemset**  
+ **Jeu d’éléments**  
  Affiche la description de chaque jeu d'éléments. Par défaut, les jeux d'éléments sont présentés sous forme de liste d'attributs et de leurs valeurs séparés par des virgules. Vous pouvez modifier la façon dont ils sont affichés à l’aide de l’option **Afficher** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

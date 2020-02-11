@@ -1,5 +1,5 @@
 ---
-title: Graphique de courbes d’élévation (Analysis Services - Exploration de données) | Microsoft Docs
+title: Graphique de courbes d’élévation (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084310"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
-  Un **graphique de courbes d’élévation** graphiquement représente l’amélioration apportée par un modèle d’exploration de données par rapport à une estimation aléatoire, et mesure la modification en termes d’un *de courbes d’élévation* score. En comparant les scores de courbes d’élévation pour différentes parties de votre jeu de données et pour différents modèles, vous pouvez déterminer quel modèle plus performant, ainsi que le pourcentage de cas dans le jeu de données tireront parti d’appliquer les prédictions du modèle.  
+  Un **graphique de courbes d’élévation** représente graphiquement l’amélioration apportée par un modèle d’exploration de données par rapport à une estimation aléatoire, et mesure la modification en termes de score d' *élévation* . En comparant les scores d’élévation pour différentes parties de votre jeu de données et pour différents modèles, vous pouvez déterminer quel modèle est le mieux possible et quel pourcentage des cas du jeu de données tirent parti de l’application des prédictions du modèle.  
   
  Avec un graphique de courbes d'élévation, vous pouvez comparer la précision des prédictions pour plusieurs modèles qui ont le même attribut prédictible. Vous pouvez également évaluer la précision de la prédiction de résultats uniques (une seule valeur de l'attribut prédictible) ou de tous les résultats (toutes les valeurs de l'attribut spécifié).  
   
  Un graphique des bénéfices est un type de graphique associé qui contient les mêmes informations qu'un graphique de courbes d'élévation, mais qui affiche également l'augmentation projetée des bénéfices associée à l'utilisation de chaque modèle.  
   
-##  <a name="bkmk_Top"></a> Fonctionnement du graphique de courbes d'élévation  
+##  <a name="bkmk_Top"></a>Fonctionnement du graphique de courbes d’élévation  
  Il peut être difficile de comprendre dans l'abstrait le fonctionnement de graphiques de courbes d'élévation. Par conséquent, pour illustrer l'utilisation des outils de graphique de courbes d'élévation et les informations du graphique, cette section présente un scénario dans lequel un graphique de courbes d'élévation est utilisé pour estimer la réponse à une campagne de publipostage ciblée.  
   
  Dans ce scénario, le service marketing sait qu’un taux de réponse de 10 % est plus ou moins classique des campagnes de publipostage. L'entreprise possède une liste de 10 000 clients potentiels stockés dans une table de la base de données. En fonction du taux de réponse habituel, l'entreprise s'attend normalement à ce qu'environ 1 000 clients potentiels seulement répondent. Toutefois, le budget prévu pour le projet n'est pas suffisant pour atteindre les 10 000 clients de la base de données et la société souhaite améliorer son taux de réponse. Supposons pour ce scénario que le budget permette de poster une annonce à 5 000 clients uniquement. Le service marketing a le choix entre deux options :  
@@ -40,7 +40,7 @@ ms.locfileid: "66084310"
   
 -   utiliser un modèle d’exploration de données pour cibler les 5 000 clients qui ont le plus de chance de répondre.  
   
- À l'aide d'un graphique de courbes d'élévation, vous pouvez comparer les résultats attendus des deux options. Par exemple, si l'entreprise a sélectionné au hasard 5 000 clients, elle peut s'attendre à recevoir seulement 500 réponses, conformément au taux de réponse habituel. Ce scénario est représenté par la ligne *aléatoire* dans le graphique de courbes d’élévation. Toutefois, si le service marketing a utilisé un modèle d'exploration de données pour cibler le publipostage, il est possible d'espérer un taux de réponse supérieur, car le modèle permet d'identifier les clients les plus susceptibles de répondre. Si le modèle était parfait, ce qui signifie qu'il pourrait créer des prédictions toujours exactes, la société pourrait s'attendre à recevoir les 1 000 réponses pour un publipostage aux 1 000 clients potentiels recommandés par le modèle. Ce scénario est représenté par la ligne *idéale* dans le graphique de courbes d’élévation.  
+ À l'aide d'un graphique de courbes d'élévation, vous pouvez comparer les résultats attendus des deux options. Par exemple, si l'entreprise a sélectionné au hasard 5 000 clients, elle peut s'attendre à recevoir seulement 500 réponses, conformément au taux de réponse habituel. Ce scénario correspond à ce que représente la ligne *aléatoire* dans le graphique de courbes d’élévation. Toutefois, si le service marketing a utilisé un modèle d'exploration de données pour cibler le publipostage, il est possible d'espérer un taux de réponse supérieur, car le modèle permet d'identifier les clients les plus susceptibles de répondre. Si le modèle était parfait, ce qui signifie qu'il pourrait créer des prédictions toujours exactes, la société pourrait s'attendre à recevoir les 1 000 réponses pour un publipostage aux 1 000 clients potentiels recommandés par le modèle. Ce scénario est représenté par la ligne *idéale* dans le graphique de courbes d’élévation.  
   
  En réalité, le modèle d'exploration de données se trouve probablement entre ces deux extrêmes, c'est-à-dire entre une estimation aléatoire et une prédiction parfaite. Toute amélioration par rapport à l'estimation aléatoire est considérée comme une élévation.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66084310"
   
  Ce graphique contient plusieurs modèles basés sur les mêmes données. Un de ces modèles a été personnalisé pour cibler des clients spécifiques. Vous pouvez personnaliser un modèle en ajoutant des filtres sur les données utilisées pour l'apprentissage du mode. Ce filtre restreint les cas utilisés à la fois pour l'apprentissage et l'évaluation aux clients de moins de 30 ans. Notez qu'un effet de filtrage consiste en une utilisation par le modèle de base et le modèle filtré de jeux de données différents ; par conséquent, le nombre de cas utilisés pour l'évaluation dans le graphique de courbes d'élévation est différent également. Il est important de ne pas oublier ce point lorsque vous interprétez les résultats de prédiction et d'autres statistiques.  
   
- ![montrant deux modèles de graphique de courbes d’élévation](../media/newliftchart-tm30-30.gif "montrant deux modèles de graphique de courbes d’élévation")  
+ ![graphique de courbes d'élévation montrant deux modèles](../media/newliftchart-tm30-30.gif "graphique de courbes d'élévation montrant deux modèles")  
   
  L'axe x du graphique représente le pourcentage du jeu de données de test utilisé pour comparer les prédictions. L'axe y du graphique représente le pourcentage de valeurs prévues.  
   
@@ -70,8 +70,8 @@ ms.locfileid: "66084310"
 |Publipostage ciblé global|0.71|47.40%|61.38%|  
 |Publipostage ciblé inférieur à 30|0.85|51.81%|46.62%|  
 |Modèle d'estimation aléatoire||31.00%||  
-|Modèle idéal pour : Publipostage ciblé global||62.48%||  
-|Modèle idéal pour : Publipostage ciblé inférieur à 30||65.28%||  
+|Modèle idéal pour : Publipostage ciblé global||62.48%||  
+|Modèle idéal pour : Publipostage ciblé inférieur à 30||65.28%||  
   
  [Retour au début](#bkmk_Top)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66084310"
   
  L'axe x est identique à celui du graphique avec la colonne prédictible spécifiée, mais l'axe y représente à présent le pourcentage de prédictions correctes. Par conséquent, la ligne idéale est la ligne diagonale, qui indique qu'à 50 % des données le modèle prédit correctement 50 % des cas, le maximum qu'il est possible d'attendre.  
   
- ![Prédictions correctes d’affichage graphique de courbes d’élévation](../media/lift1.gif "graphique de courbes d’élévation affichant les prédictions correctes")  
+ ![Graphique de courbes d'élévation affichant les prédictions correctes](../media/lift1.gif "Graphique de courbes d'élévation affichant les prédictions correctes")  
   
  Vous pouvez cliquer dans le graphique pour déplacer la barre grise verticale et la **légende d’exploration de données** indique le pourcentage total de cas et le pourcentage des cas prédits correctement. Par exemple, si vous positionnez la barre grise de curseur sur le repère 50 %, la **légende d’exploration de données** affiche les scores de précision ci-dessous. Ces illustrations sont basées sur le modèle TM_Decision_Tree créé dans le Didacticiel sur l'exploration de données de base.  
   
@@ -117,6 +117,6 @@ ms.locfileid: "66084310"
  [Retour au début](#bkmk_Top)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+ [Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)  
   
   

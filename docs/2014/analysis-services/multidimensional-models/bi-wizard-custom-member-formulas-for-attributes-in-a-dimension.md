@@ -1,5 +1,5 @@
 ---
-title: Définir des formules de membre personnalisées pour les attributs d’une Dimension | Microsoft Docs
+title: Définir des formules de membre personnalisées pour les attributs d’une dimension | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08db0d81ac198795386391f977d09d20ff8d22ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076878"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>Définir des formules de membre personnalisées pour les attributs d’une dimension

@@ -1,5 +1,5 @@
 ---
-title: Créer une nouvelle Structure d’exploration de données relationnelles | Microsoft Docs
+title: Créer une structure d’exploration de données relationnelle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085390"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>créer une structure d'exploration de données relationnelle
-  Utilisez l’Assistant Exploration de données pour créer une nouvelle structure d’exploration de données, utiliser les données d’une base de données relationnelle ou d’une autre source, puis enregistrer la structure et tous les modèles associés dans une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  Utilisez l’Assistant Exploration de données pour créer une nouvelle structure d’exploration de données, en utilisant les données d’une base de données relationnelle ou d’une autre source, puis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enregistrer la structure et tous les modèles associés dans une base de données.  
   
 ### <a name="to-create-a-relational-mining-structure"></a>Pour créer une structure d'exploration de données relationnelle  
   
@@ -34,11 +34,11 @@ ms.locfileid: "66085390"
   
 3.  Dans la page **Sélectionner la méthode de définition** , sélectionnez **À partir d'une base de données relationnelles ou d'un entrepôt de données qui existent déjà**, puis cliquez sur **Suivant**.  
   
-4.  Dans la page **Sélectionner la technique d’exploration de données**, sélectionnez l’algorithme d’exploration de données à utiliser, puis cliquez sur **Suivant**.  
+4.  Dans la page **Sélectionner la technique d’exploration de données** , sélectionnez l’algorithme d’exploration de données à utiliser, puis cliquez sur **Suivant**.  
   
      Pour plus d’informations sur les algorithmes d’exploration de données, consultez [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
-5.  Dans la page **Sélectionner une vue de source de données**, sous **Vues de sources de données disponibles**, cliquez sur la vue de source de données à utiliser, puis cliquez sur **Suivant**.  
+5.  Dans la page **Sélectionner une vue de source de données** , sous **Vues de sources de données disponibles**, cliquez sur la vue de source de données à utiliser, puis cliquez sur **Suivant**.  
   
      Pour plus d’informations sur la création d’une vue de source de données, consultez [Vues de sources de données dans les modèles multidimensionnels](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
@@ -48,18 +48,18 @@ ms.locfileid: "66085390"
   
      Après avoir sélectionné la colonne prédictible, cliquez sur le bouton **Suggérer** pour ouvrir la boîte de dialogue **Suggérer des colonnes associées** . Vous pouvez accepter les colonnes suggérées en cliquant sur **OK** dans cette boîte de dialogue pour inclure les colonnes sélectionnées dans la structure d’exploration de données, ou vous pouvez changer les sélections dans la colonne **Entrée** , puis cliquer sur **OK**. Pour ignorer les suggestions, cliquez sur **Annuler**.  
   
-8.  Cliquer sur **Suivant**.  
+8.  Cliquez sur **Suivant**.  
   
 9. Dans la page **Spécifier le type de contenu et de données des colonnes** , sous **Structure du modèle d’exploration de données**, vous pouvez définir le type de contenu et le type de données de chaque colonne.  
   
     > [!NOTE]  
-    >  Cliquez sur **Détecter** pour détecter automatiquement si une colonne contient des données continues ou des données discrètes. Après avoir cliqué sur ce bouton, le type de contenu et le type de données sont mis à jour dans les colonnes **Type de contenu** et **Type de données**. Pour plus d’informations sur les types de contenu et les types de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md) et [Types de données &#40;Exploration de données&#41;](data-types-data-mining.md).  
+    >  Cliquez sur **Détecter** pour détecter automatiquement si une colonne contient des données continues ou des données discrètes. Après avoir cliqué sur ce bouton, le type de contenu et le type de données sont mis à jour dans les colonnes **Type de contenu** et **Type de données** . Pour plus d’informations sur les types de contenu et les types de données, consultez [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md) et [Types de données &#40;Exploration de données&#41;](data-types-data-mining.md).  
   
-10. Cliquer sur **Suivant**.  
+10. Cliquez sur **Suivant**.  
   
 11. Dans la page **Fin de l'Assistant** , entrez le nom de la structure d’exploration de données et le modèle d’exploration de données associé initial à créer, puis cliquez sur **Terminer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures relatives aux structures d’exploration de données](mining-structure-tasks-and-how-tos.md)  
+ [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
   
   

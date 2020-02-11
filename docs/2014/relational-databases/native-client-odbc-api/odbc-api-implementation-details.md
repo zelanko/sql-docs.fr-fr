@@ -1,5 +1,5 @@
 ---
-title: Détails d’implémentation API ODBC | Microsoft Docs
+title: Détails de l’implémentation de l’API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62715086"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   Cette section fournit des informations sur les fonctions ODBC qui présentent des comportements spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsqu'elles sont utilisées avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Toutes les fonctions ODBC ne sont pas documentées ici. Les rubriques individuelles présentent uniquement les problèmes spécifiques à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une fonction ODBC. Elles ne constituent pas une référence complète pour les fonctions ODBC.  
   
- Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se conforme à la spécification d'ODBC 3.51 et, si vous utilisez le kit de développement logiciel (SDK) Windows 7, avec la spécification ODBC 3.8. Pour obtenir une référence ODBC complète, affichez le [de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
+ Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se conforme à la spécification d'ODBC 3.51 et, si vous utilisez le kit de développement logiciel (SDK) Windows 7, avec la spécification ODBC 3.8. Pour obtenir une référence ODBC complète, consultez le guide [de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62715086"
 -   [SQLTables](sqltables.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;ODBC&#41; référence](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
+ [Référence de&#41; ODBC SQL Server Native Client &#40;](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [Génération d’applications avec SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

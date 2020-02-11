@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663808"
 ---
 # <a name="broker-event-category"></a>Catégorie d'événement Broker
@@ -30,13 +30,13 @@ ms.locfileid: "62663808"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Classe d'événement Broker:Activation](broker-activation-event-class.md)|Événement généré lorsqu'un moniteur de file d'attente démarre une procédure stockée d'activation.|  
-|[Classe d'événement Broker:Connection](broker-connection-event-class.md)|Événement généré pour signaler l'état d'une connexion de transport gérée par Service Broker.|  
-|[Classe d'événements Broker:Conversation](broker-conversation-event-class.md)|Événement généré pour rapporter les progrès d'une conversation.|  
-|[Classe d'événement Broker:Conversation Group](broker-conversation-group-event-class.md)|Événement généré lorsque la base de données crée ou supprime un groupe de conversations.|  
-|[Classe d'événements Broker:Corrupted Message](broker-corrupted-message-event-class.md)|Événement généré pour indiquer que la base de données a reçu un message endommagé.|  
-|[Classe d'événements Broker:Forwarded Message Dropped](broker-forwarded-message-dropped-event-class.md)|Événement généré lorsque SQL Server supprime un message Service Broker qui aurait dû être transféré.|  
-|[Broker:Forwarded Message Sent (classe d'événements)](broker-forwarded-message-sent-event-class.md)|Événement généré lorsque SQL Server transfère un message Service Broker.|  
+|[Broker:Activation, classe d’événements](broker-activation-event-class.md)|Événement généré lorsqu'un moniteur de file d'attente démarre une procédure stockée d'activation.|  
+|[Broker:Connection, classe d’événements](broker-connection-event-class.md)|Événement généré pour signaler l'état d'une connexion de transport gérée par Service Broker.|  
+|[Broker:Conversation, classe d’événements](broker-conversation-event-class.md)|Événement généré pour rapporter les progrès d'une conversation.|  
+|[Broker:Conversation Group, classe d’événements](broker-conversation-group-event-class.md)|Événement généré lorsque la base de données crée ou supprime un groupe de conversations.|  
+|[Broker:Corrupted Message, classe d’événements](broker-corrupted-message-event-class.md)|Événement généré pour indiquer que la base de données a reçu un message endommagé.|  
+|[Broker:Forwarded Message Dropped, classe d’événements](broker-forwarded-message-dropped-event-class.md)|Événement généré lorsque SQL Server supprime un message Service Broker qui aurait dû être transféré.|  
+|[Broker:Forwarded Message Sent, classe d’événements](broker-forwarded-message-sent-event-class.md)|Événement généré lorsque SQL Server transfère un message Service Broker.|  
 |[Classe d'événements Broker:Message Classify](broker-message-classify-event-class.md)|Événement généré lorsque Service Broker détermine le routage d'un message.|  
 |[Classe d'événements Broker:Message Drop](broker-message-drop-event-class.md)|Événement généré lorsque Service Broker ne peut pas conserver un message reçu qui aurait dû être remis à un service dans cette instance.|  
 |[Classe d'événements Broker:Remote Message Ack](broker-remote-message-ack-event-class.md)|Événement généré lorsque Service Broker envoie ou reçoit un accusé de réception du message.|  

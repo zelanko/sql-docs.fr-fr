@@ -1,5 +1,5 @@
 ---
-title: Tester une Action | Microsoft Docs
+title: Tester une action | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d2ba009efa61cd4694ca0d008d8885ae7ae6c48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072807"
 ---
 # <a name="test-an-action"></a>Tester une action
-  Vous testez une action à l'aide de la vue Navigateur dans le Concepteur de cube. Le Concepteur de cube est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé l'action, vous devez traiter le cube avant que l'action puisse être testée. Pour plus d’informations, consultez [traitement d’un objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  
+  Vous testez une action à l'aide de la vue Navigateur dans le Concepteur de cube. Le Concepteur de cube est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé l'action, vous devez traiter le cube avant que l'action puisse être testée. Pour plus d’informations, consultez traitement de l' [objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-test-an-action"></a>Pour tester une action  
   

@@ -1,5 +1,5 @@
 ---
-title: Éditeur de formulaire de membre (onglet calculs, Concepteur de Cube) calculé (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Éditeur de formulaire de membre calculé (onglet calculs, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088372"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire de membre calculé (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire de membre calculé** de l'onglet **Calculs** dans le Concepteur de cube pour créer et modifier un membre calculé.  
   
- **Remarque** Ce volet s'affiche uniquement en mode Formulaire.  
+ **Remarque** Ce volet s’affiche uniquement en mode formulaire.  
   
 ## <a name="options"></a>Options  
  **Nom**  
@@ -37,9 +37,9 @@ ms.locfileid: "66088372"
  **Membre parent**  
  Sélectionnez le membre parent sous lequel le membre calculé doit apparaître.  
   
- **Remarque** Cette option est disponible si **Hiérarchie parente** spécifie une hiérarchie différente de MESURES.  
+ **Remarque** Cette option est disponible si la **Hiérarchie parente** spécifie une hiérarchie autre que mesures.  
   
- **Change**  
+ **Modifiés**  
  Affiche la boîte de dialogue **Sélectionnez le membre parent** pour choisir un **Membre parent**. Pour plus d’informations sur la boîte de dialogue **Sélectionnez le membre parent**, consultez [Boîte de dialogue Sélectionnez le membre parent &#40;Analysis Services - Données multidimensionnelles&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expression**  
@@ -65,12 +65,12 @@ ms.locfileid: "66088372"
  Sélectionnez le nom de la mesure utilisée pour résoudre les requêtes NON EMPTY dans la chaîne MDX du membre calculé. Si la propriété **Comportement non vide** est vide, le membre calculé doit être évalué à plusieurs reprises pour déterminer si un membre est vide. Si la propriété **Comportement non vide** contient le nom d'une mesure, le membre calculé est considéré comme vide si la mesure spécifiée est vide.  
   
 > [!WARNING]  
->  Cette propriété est déconseillée. Évitez de l'utiliser. Consultez [Analysis Services déconseillées dans SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) pour plus d’informations.  
+>  Cette propriété est déconseillée. Évitez de l'utiliser. Pour plus d’informations, consultez [fonctionnalités de Analysis Services dépréciées dans SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) .  
   
  **Expressions de couleur**  
  Développez cette branche pour afficher les options **Couleur avant** et **Couleur d’arrière-plan** .  
   
- **Couleur de premier plan**  
+ **Couleur avant**  
  Tapez l'expression MDX qui fournit la couleur de premier plan du membre calculé.  
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
@@ -87,14 +87,14 @@ ms.locfileid: "66088372"
  **Expressions de police**  
  Développez cette branche pour afficher les options **Nom de police**, **Taille de police**et **Indicateurs de police** .  
   
- **Nom de police**  
+ **Nom de la police**  
  Tapez l'expression MDX qui fournit le nom de la police utilisée pour le membre calculé.  
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
   
  Cliquez sur le bouton de sélection pour afficher la boîte de dialogue **Police** et insérer les valeurs des propriétés d'une police spécifiée dans l'expression MDX. Pour plus d’informations sur les valeurs des propriétés, consultez [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
- **Taille de la police**  
+ **Taille de police**  
  Tapez l'expression MDX qui fournit la taille de la police utilisée pour le membre calculé.  
   
  Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.  
@@ -109,14 +109,14 @@ ms.locfileid: "66088372"
  Cliquez sur le bouton de sélection pour afficher la boîte de dialogue **Police** et insérer les valeurs des propriétés d'une police spécifiée dans l'expression MDX. Pour plus d’informations sur les valeurs des propriétés, consultez [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Touchant](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Créer des membres calculés](multidimensional-models/create-calculated-members.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Calculs &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organisateur de script &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Outils de calcul &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de formulaire de jeu nommé &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de script &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculs &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organisateur de script &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Outils de calcul &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire de jeu nommé &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de script &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

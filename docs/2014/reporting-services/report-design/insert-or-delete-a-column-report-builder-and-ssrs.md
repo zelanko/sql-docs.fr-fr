@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1d5f5d846a690676942e0d4ffcba0475a35595a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105678"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Insérer ou supprimer une colonne (Générateur de rapports et SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66105678"
   
 -   En mode Conception, cliquez dans l'angle supérieur gauche de la région de données de tableau matriciel pour faire apparaître les poignées de colonne et de ligne au-dessus et en regard de cette région.  
   
-     Pour plus d’informations sur les zones de région de données, consultez [répertorie &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Pour plus d’informations sur les zones de région de données, consultez [listes &#40;générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="to-insert-a-column-in-a-selected-data-region"></a>Pour insérer une colonne dans une région de données sélectionnée  
   
 -   Cliquez avec le bouton droit sur une poignée de colonne à l’emplacement où vous souhaitez insérer une colonne, cliquez sur **Insérer une colonne**, puis sur **Gauche** ou **Droite**.  
   
-     -- ou --  
+     \- ou -  
   
 -   Cliquez avec le bouton droit sur une cellule de la région de données au niveau de laquelle vous souhaitez insérer une colonne, cliquez sur **Insérer une colonne**, puis sur **Gauche** ou **Droite**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66105678"
   
 -   Sélectionnez la ou les colonnes que vous souhaitez supprimer, cliquez avec le bouton droit sur la poignée de l’une des colonnes sélectionnées, puis cliquez sur **Supprimer les colonnes**.  
   
-     -- ou --  
+     \- ou -  
   
 -   Cliquez avec le bouton droit sur une cellule de la région de données au niveau de laquelle vous souhaitez supprimer une colonne, puis cliquez sur **Supprimer les colonnes**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de Table (Analysis Services - données multidimensionnelles) Rechercher | Microsoft Docs
+title: Rechercher une table, boîte de dialogue (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081090"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Rechercher une table (Analysis Services - Données multidimensionnelles)
@@ -42,8 +42,8 @@ ms.locfileid: "66081090"
  Tapez le filtre utilisé pour limiter les objets répertoriés, puis cliquez sur le bouton pour filtrer les tables affichées dans **Sélectionnez une table dans la vue de source de données**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue de propriétés assembly &#40;Analysis Services - données multidimensionnelles&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
- [Vue de Source de données &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Vue de Source de données &#40;onglet Structure de Cube, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+ [Boîte de dialogue Propriétés de l’assembly &#40;Analysis Services-données multidimensionnelles&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
+ [Vue de source de données &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Vue de source de données &#40;onglet structure de cube, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

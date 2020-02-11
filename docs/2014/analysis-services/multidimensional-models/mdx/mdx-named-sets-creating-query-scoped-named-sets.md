@@ -1,5 +1,5 @@
 ---
-title: Création d’étendue de requête de jeux nommés (MDX) | Microsoft Docs
+title: Création de jeux nommés d’étendue de requête (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074068"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Création de jeux nommés d'étendue de requête (MDX)
@@ -93,7 +93,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Création de jeux nommés dans l’étendue de session &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Instruction SELECT &#40;&#41;MDX](/sql/mdx/mdx-data-manipulation-select)   
+ [Création de jeux nommés d’étendue de session &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

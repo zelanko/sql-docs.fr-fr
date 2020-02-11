@@ -1,5 +1,5 @@
 ---
-title: Onlineindexoperation, élément (DTA) | Microsoft Docs
+title: Élément OnlineIndexOperation, (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657214"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation, élément (Assistant Paramétrage de base de données)
@@ -38,10 +38,11 @@ ms.locfileid: "62657214"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`string`, aucune longueur maximale.|  
-|**Valeurs autorisées**|**OFF**<br /> Aucune PDS ne peut être créée en ligne.<br /><br /> **ON**<br /> Toutes les PDS recommandées peuvent être créées en ligne.<br /><br /> **MIXED**<br /> L'Assistant Paramétrage du moteur de base de données tente de recommander des PDS pouvant être créées en ligne lorsque cela est possible.<br /><br /> Utilisez une de ces valeurs avec cet élément. Si les index sont créés en ligne, le mot clé **ONLINE = ON** est ajouté à sa définition d’objet.|  
+|**Type de données et longueur**|
+  `string`, aucune longueur maximale.|  
+|**Valeurs autorisées**|**OFF**<br /> Aucune PDS ne peut être créée en ligne.<br /><br /> **ON**<br /> Toutes les PDS recommandées peuvent être créées en ligne.<br /><br /> **CONDITIONS MIXTES**<br /> L'Assistant Paramétrage du moteur de base de données tente de recommander des PDS pouvant être créées en ligne lorsque cela est possible.<br /><br /> Utilisez une de ces valeurs avec cet élément. Si les index sont créés en ligne, le mot clé **ONLINE = ON** est ajouté à sa définition d’objet.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Si utilisé, est utilisable uniquement une fois pour le `TuningOptions` élément.|  
+|**Occurrence**|facultatif. S’il est utilisé, ne peut être utilisé qu' `TuningOptions` une seule fois pour l’élément.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62665321"
 ---
 # <a name="lockacquired-event-class"></a>Classe d'événements Lock:Acquired
@@ -34,7 +34,7 @@ ms.locfileid: "62665321"
 |BigintData1|`bigint`|ID de partition si la ressource Lock est partitionnée.|52|Oui|  
 |BinaryData|`image`|Identificateur de ressource du verrou.|2|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|DatabaseID|`int`|ID de la base de données dans laquelle le verrou a été obtenu. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|`int`|ID de la base de données dans laquelle le verrou a été obtenu. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |Duration|`bigint`|Délai (en microsecondes) entre l'émission de la demande de verrou et l'acquisition du verrou.|13|Oui|  
 |EndTime|`datetime`|Heure de fin de l'événement.|15|Oui|  
 |EventClass|`int`|Type d’événement = 24.|27|Non|  
@@ -58,10 +58,10 @@ ms.locfileid: "62665321"
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |TextData|`ntext`|Valeur de texte dépendant du type de verrou acquis. Il s'agit de la même valeur que la colonne resource_description de sys.dm_tran_locks.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
-|type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Oui|  
+|Type|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe d'événements Lock:Released](lock-released-event-class.md)   
+ [Lock : Released, classe d’événements](lock-released-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

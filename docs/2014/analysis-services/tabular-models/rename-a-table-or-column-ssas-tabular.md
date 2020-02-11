@@ -1,5 +1,5 @@
 ---
-title: Renommer une Table ou une colonne (SSAS tabulaire) | Microsoft Docs
+title: Renommer une table ou une colonne (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066690"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Renommer une table ou une colonne (SSAS Tabulaire)
@@ -46,7 +46,7 @@ ms.locfileid: "66066690"
   
 -   Caractères de contrôle  
   
--   Les caractères suivants (qui ne sont pas valides dans les noms d’objets Analysis Services) :., ' : / \\*|? & % $! [] de () +={}<>  
+-   Les caractères suivants (qui ne sont pas valides dans les noms des objets Analysis Services) :.,; ':/ \\*|? &% $ ! + = () []{}<>  
   
 -   Mots clés réservés Analysis Services, notamment les opérateurs et les noms de fonction MDX et DMX.  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66066690"
  De plus, tous les calculs qui utilisent la table renommée, ou qui utilisent des colonnes de la table que vous avez renommée, doivent également être mis à jour, et les données dérivées de ces calculs doivent être actualisées et recalculées. Selon le nombre de tables et de calculs affectés, cette opération peut prendre quelque temps. Par conséquent, le meilleur moment pour renommer des tables est soit pendant le processus d'importation, soit avant de commencer à générer des relations et des calculs complexes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS Tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
- [Importation à partir de PowerPivot &#40;SSAS tabulaire&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Importer à partir d’Analysis Services &#40;SSAS Tabulaire&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Tables et colonnes &#40;SSAS tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
+ [Importer à partir de PowerPivot &#40;&#41;tabulaires SSAS](import-from-power-pivot-ssas-tabular.md)   
+ [Importation à partir de Analysis Services &#40;SSAS tabulaire&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

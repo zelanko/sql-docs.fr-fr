@@ -1,5 +1,5 @@
 ---
-title: Exemples de requête de modèle Naive Bayes | Microsoft Docs
+title: Exemples de requêtes de modèle Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083278"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Exemples de requêtes de modèle Naive Bayes
@@ -26,26 +26,26 @@ ms.locfileid: "66083278"
   
  **Requêtes de contenu**  
   
- [Obtention de métadonnées de modèle avec DMX](#bkmk_Query1)  
+ [Obtention de métadonnées de modèle à l’aide de DMX](#bkmk_Query1)  
   
- [Récupération d'un résumé de données d'apprentissage](#bkmk_Query2)  
+ [Récupération d’un résumé des données d’apprentissage](#bkmk_Query2)  
   
- [Recherche d'informations sur les attributs](#bkmk_Query3)  
+ [Recherche d’informations supplémentaires sur les attributs](#bkmk_Query3)  
   
  [Utilisation des procédures stockées système](#bkmk_Query4)  
   
  **Requêtes de prédiction**  
   
- [Prédiction des résultats à l'aide d'une requête singleton](#bkmk_Query5)  
+ [Prédiction des résultats à l’aide d’une requête singleton](#bkmk_Query5)  
   
- [Obtention de prédictions avec une probabilité et des valeurs de prise en charge](#bkmk_Query6)  
+ [Obtention de prédictions avec les valeurs de probabilité et de prise en charge](#bkmk_Query6)  
   
- [Prédiction d'associations](#bkmk_Query7)  
+ [Prédiction d’associations](#bkmk_Query7)  
   
 ## <a name="finding-information-about-a-naive-bayes-model"></a>Recherche d'informations relatives à un modèle Naive Bayes  
  Le contenu d'un modèle Naive Bayes fournit des informations d'agrégat sur la distribution de valeurs dans les données d'apprentissage. Vous pouvez également récupérer des informations sur les métadonnées du modèle en créant des requêtes sur les ensembles de lignes de schéma d'exploration de données.  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : Obtention des métadonnées du modèle avec DMX  
+###  <a name="bkmk_Query1"></a>Exemple de requête 1 : obtention de métadonnées de modèle à l’aide de DMX  
  En interrogeant l'ensemble de lignes de schéma d'exploration de données, vous pouvez obtenir les métadonnées du modèle. Celles-ci peuvent inclure la date de création du modèle, celle de son dernier traitement, le nom de la structure d'exploration de données sur laquelle le modèle est basé, ainsi que le nom des colonnes utilisées comme attribut prédictible. Vous pouvez également retourner les paramètres qui ont été utilisés lors de la création du modèle.  
   
 ```  
@@ -69,7 +69,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
   
  Le modèle utilisé pour cet exemple est basé sur le modèle Naive Bayes créé dans le [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md), mais il a été modifié en ajoutant un deuxième attribut prédictible et en appliquant un filtre aux données d'apprentissage.  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Récupération d’un résumé des données d’apprentissage  
+###  <a name="bkmk_Query2"></a>Exemple de requête 2 : récupération d’un résumé des données d’apprentissage  
  Dans un modèle Naive Bayes, le nœud des statistiques marginales stocke des informations d'agrégat sur la distribution de valeurs dans les données d'apprentissage. Ce résumé est pratique et vous évite d'avoir à créer des requêtes SQL sur les données d'apprentissage pour obtenir les mêmes informations.  
   
  L'exemple suivant utilise une requête de contenu DMX pour récupérer les données du nœud (NODE_TYPE = 24). Les statistiques étant stockées dans une table imbriquée, le mot clé FLATTENED est utilisé pour simplifier l'affichage des résultats.  
@@ -86,20 +86,20 @@ WHERE NODE_TYPE = 26
   
  Résultats partiels :  
   
-|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |TM_NaiveBayes|Bike Buyer|Manquant|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
 |TM_NaiveBayes|Bike Buyer|1|8615|0.492736216|4|  
-|TM_NaiveBayes|Gender|Manquant|0|0|1|  
-|TM_NaiveBayes|Gender|F|8656|0.495081217|4|  
-|TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
+|TM_NaiveBayes|Sexe|Manquant|0|0|1|  
+|TM_NaiveBayes|Sexe|F|8656|0.495081217|4|  
+|TM_NaiveBayes|Sexe|M|8828|0.504918783|4|  
   
  Par exemple, ces résultats vous indiquent le nombre de cas d'apprentissage pour chaque valeur discrète (VALUETYPE = 4), ainsi que la probabilité calculée, ajustée pour les valeurs manquantes (VALUETYPE = 1).  
   
  Pour obtenir la définition des valeurs indiquées dans la table NODE_DISTRIBUTION d’un modèle Naive Bayes, consultez [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md). Pour plus d’informations sur la façon dont les valeurs manquantes affectent les calculs de prise en charge et de probabilité, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3 : Recherche d’informations sur les attributs  
+###  <a name="bkmk_Query3"></a>Exemple de requête 3 : recherche d’informations supplémentaires sur les attributs  
  Un modèle Naive Bayes contenant souvent des informations complexes sur les relations entre les différents attributs, la méthode la plus facile pour consulter ces relations consiste à utiliser la [Visionneuse de l'algorithme MNB (Microsoft Naive Bayes)](browse-a-model-using-the-microsoft-naive-bayes-viewer.md). Vous pouvez cependant créer des requêtes DMX pour retourner les données.  
   
  L'exemple suivant montre comment retourner des informations à partir du modèle d'un attribut spécifique, `Region`.  
@@ -146,7 +146,7 @@ ORDER BY MSOLAP_NODE_SCORE DESC
   
  En parcourant le contenu du modèle dans la [Visionneuse de l'arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md), vous obtiendrez une meilleure idée des statistiques qui peuvent s'avérer intéressantes. Les exemples présentés dans la présente documentation sont simples, mais la plupart du temps, il peut s'avérer nécessaire d'exécuter plusieurs requêtes ou de stocker les résultats et de les traiter sur le client.  
   
-###  <a name="bkmk_Query4"></a> Exemple de requête 4 : À l’aide du système de procédures stockées  
+###  <a name="bkmk_Query4"></a>Exemple de requête 4 : utilisation des procédures stockées système  
  Outre l'écriture de vos propres requêtes de contenu, vous pouvez utiliser des procédures stockées système Analysis Services pour explorer les résultats. Pour utiliser une procédure stockée système, préfixez son nom avec le mot clé CALL :  
   
 ```  
@@ -167,7 +167,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 ## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Utilisation d'un modèle Naive Bayes pour élaborer des prédictions  
  L'algorithme MNB (Microsoft Naive Bayes) est en général moins utilisé pour la prédiction qu'il ne l'est pour l'exploration des relations entre les attributs d'entrée et prévisibles. Toutefois, le modèle prend en charge l'utilisation de fonctions de prédiction à la fois pour la prédiction et l'association.  
   
-###  <a name="bkmk_Query5"></a> Exemple de requête 5 : Prédiction de résultats à l’aide d’une requête Singleton  
+###  <a name="bkmk_Query5"></a>Exemple de requête 5 : prédiction des résultats à l’aide d’une requête singleton  
  La requête suivante utilise une requête singleton pour fournir une nouvelle valeur et prédire, selon le modèle, si un client présentant ces caractéristiques est susceptible d'acheter un vélo. La méthode la plus facile pour créer une requête singleton sur un modèle de régression consiste à utiliser la boîte de dialogue **Entrée de requête singleton** . Par exemple, pour créer la requête DMX suivante, sélectionnez le modèle `TM_NaiveBayes` , choisissez **Requête Singleton**, puis sélectionnez des valeurs pour `[Commute Distance]` et `Gender`dans les listes déroulantes.  
   
 ```  
@@ -180,7 +180,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Expression|  
 |----------------|  
@@ -188,7 +188,7 @@ NATURAL PREDICTION JOIN
   
  La fonction de prédiction retourne la valeur la plus probable, dans ce cas 0, qui signifie qu'il est peu probable que ce type de client achète un vélo.  
   
-###  <a name="bkmk_Query6"></a> Exemple de requête 6 : Obtention de prédictions avec une probabilité et les valeurs de prise en charge  
+###  <a name="bkmk_Query6"></a>Exemple de requête 6 : obtention de prédictions avec des valeurs de probabilité et de prise en charge  
  Outre la prédiction d'un résultat, vous souhaitez souvent connaître sa pertinence. La requête suivante utilise la même requête singleton que l’exemple précédent, mais ajoute la fonction de prédiction [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) pour retourner une table imbriquée qui contient des statistiques pour la prédiction.  
   
 ```  
@@ -202,7 +202,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
@@ -212,8 +212,8 @@ NATURAL PREDICTION JOIN
   
  La ligne finale de la table indique les ajustements apportés aux paramètres de prise en charge et de probabilité pour la valeur manquante. Les valeurs de variance et d'écart type sont toujours 0, car les modèles Naive Bayes ne peuvent pas modéliser de valeurs continues.  
   
-###  <a name="bkmk_Query7"></a> Exemple de requête 7 : Prédiction d'associations  
- L'algorithme MNB (Microsoft Naive Bayes) permet d'analyser les associations, si la structure d'exploration de données contient une table imbriquée avec l'attribut prédictible comme clé. Par exemple, vous créer un modèle Naive Bayes, utilisez la structure d’exploration de données créée dans [leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) du didacticiel d’exploration de données. Le modèle utilisé dans cet exemple a été modifié pour ajouter des informations sur le revenu et la région du client dans la table de cas.  
+###  <a name="bkmk_Query7"></a>Exemple de requête 7 : prédiction d’associations  
+ L'algorithme MNB (Microsoft Naive Bayes) permet d'analyser les associations, si la structure d'exploration de données contient une table imbriquée avec l'attribut prédictible comme clé. Par exemple, pour créer un modèle Naive Bayes, utilisez la structure d’exploration de données créée dans [Leçon 3 : Génération d’un scénario de panier d’achat &#40;Didacticiel sur l’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) du didacticiel d’exploration de données. Le modèle utilisé dans cet exemple a été modifié pour ajouter des informations sur le revenu et la région du client dans la table de cas.  
   
  L'exemple de requête suivant présente une requête singleton qui prédit les produits associés aux achats, `'Road Tire Tube'`. Vous pouvez utiliser ces informations pour recommander des produits à un type de client spécifique.  
   
@@ -243,20 +243,20 @@ AS t
   
 |||  
 |-|-|  
-|Fonction de prédiction|Utilisation|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
-|[Predict &#40;DMX&#41;](/sql/dmx/predict-dmx)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité pondérée.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Prédit l'appartenance à un dataset associatif.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Retourne Node_ID pour chaque cas.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour la valeur prédite.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
+|Fonction de prédiction|Usage|  
+|[IsDescendant&#41;DMX &#40;](/sql/dmx/isdescendant-dmx)|Détermine si un nœud est un enfant d'un autre nœud dans le modèle.|  
+|[Prédire &#40;&#41;DMX](/sql/dmx/predict-dmx)|Retourne une valeur ou un ensemble de valeurs prédites pour une colonne spécifiée.|  
+|[PredictAdjustedProbability&#41;DMX &#40;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité pondérée.|  
+|[PredictAssociation&#41;DMX &#40;](/sql/dmx/predictassociation-dmx)|Prédit l'appartenance à un dataset associatif.|  
+|[PredictNodeId&#41;DMX &#40;](/sql/dmx/predictnodeid-dmx)|Retourne Node_ID pour chaque cas.|  
+|[PredictProbability&#41;DMX &#40;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour la valeur prédite.|  
+|[PredictSupport&#41;DMX &#40;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
   
  Pour connaître la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)   
- [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Informations techniques de référence sur l’algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)   
+ [Algorithme Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0548709be4a95bf67b295fe90e06843feb7ec48c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073294"
 ---
 # <a name="power-view-for-multidimensional-models"></a>Power View pour les modèles multidimensionnels
@@ -26,6 +26,6 @@ ms.locfileid: "66073294"
   
 -   [Créer une source de données de rapport](create-a-report-data-source.md)  
   
--   [Créer un rapport Power View avec une source de données multidimensionnelle](create-a-power-view-report-with-a-multidimensional-data-source.md)  
+-   [Créer un rapport de Power View avec une source de données multidimensionnelles](create-a-power-view-report-with-a-multidimensional-data-source.md)  
   
   

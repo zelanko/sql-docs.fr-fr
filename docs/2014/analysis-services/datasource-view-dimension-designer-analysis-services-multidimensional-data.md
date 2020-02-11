@@ -1,5 +1,5 @@
 ---
-title: (Onglet Structure de Dimension, Concepteur de dimensions) de vue de Source de données (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Vue de source de données (onglet structure de dimension, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082345"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vue de source de données (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Vue de source de données** pour afficher les tables et les colonnes associées à la dimension sélectionnée. Ce volet sert à créer des attributs, des propriétés de membres, des hiérarchies et des niveaux. Pour cela, faites glisser des colonnes du volet **Vue de source de données** dans le volet **Attributs** ou **Hiérarchies et niveaux** .  
   
 ## <a name="options"></a>Options  
- **Vue de Source de données**  
+ **Vue de source de données**  
  Affiche la vue de source de données associée à la dimension sélectionnée.  
   
  **(Déplacer le point de vue)**  
@@ -32,25 +32,25 @@ ms.locfileid: "66082345"
 ## <a name="diagram-context-menu"></a>Menu contextuel Diagramme  
  Les options répertoriées dans le tableau suivant sont disponibles dans le menu contextuel qui s’affiche en cliquant avec le bouton droit sur l’arrière-plan du schéma du volet **Vue de source de données** .  
   
- **Afficher les Tables**  
+ **Afficher les tables**  
  Affiche la boîte de dialogue **Afficher la table**. Pour plus d’informations sur la boîte de dialogue **Afficher la table**, consultez [Boîte de dialogue Afficher la table &#40;Analysis Services – Données multidimensionnelles&#41;](show-table-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Afficher toutes les Tables**  
+ **Afficher toutes les tables**  
  Affiche dans le volet toutes les tables figurant dans la vue de source de données associées à la dimension.  
   
- **Afficher seulement les Tables utilisées**  
+ **Afficher seulement les tables utilisées**  
  Affiche dans le volet toutes les tables utilisées par la dimension à partir de la vue de source de données associée.  
   
  **Afficher les noms conviviaux**  
  Sélectionnez cette option pour afficher les noms conviviaux des objets du volet.  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne tous les objets se trouvant dans le volet.  
   
  **Rechercher une table**  
  Affiche la boîte de dialogue **Rechercher une table**. Pour plus d’informations sur la boîte de dialogue **Rechercher une table**, consultez [Boîte de dialogue Rechercher une table &#40;Analysis Services – Données multidimensionnelles&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Réorganiser des Tables**  
+ **Réorganiser les tables**  
  Organise les objets du volet en fonction de la disposition page spécifiée en sélectionnant **Basculer en présentation diagonale** ou **Basculer en présentation rectangulaire**.  
   
  **Basculer en présentation diagonale**  
@@ -65,17 +65,17 @@ ms.locfileid: "66082345"
 > [!NOTE]  
 >  Cette option s’affiche seulement si **Basculer en présentation diagonale** est sélectionné.  
   
- **Modifier la vue de Source de données**  
+ **Modifier la vue de source de données**  
  Affiche le **Concepteur de vue de source de données** pour la vue de source de données associée à la dimension. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Afficher la vue de Source de données dans**  
+ **Afficher vue de source de données dans**  
  Sélectionnez une des options suivantes pour faire passer le volet **Vue de source de données** entre les modes suivants :  
   
--   Schéma  
+-   Diagramme  
   
      Affiche un diagramme des tables et des colonnes associées à la dimension active.  
   
--   trEE  
+-   Arborescence  
   
      Affiche une arborescence des tables et des colonnes associées à la dimension active.  
   
@@ -91,16 +91,16 @@ ms.locfileid: "66082345"
 ## <a name="table-context-menu"></a>Menu contextuel Table  
  Les options répertoriées dans le tableau suivant sont disponibles dans le menu contextuel qui s’affiche en cliquant le bouton droit sur le nom d’une table ou d’une vue dans le volet **Vue de source de données** .  
   
- **Afficher les Tables associées**  
+ **Afficher les tables associées**  
  Affiche dans le volet les tables relatives à la table sélectionnée dans la vue de source de données.  
   
- **Masquer la Table**  
+ **Masquer la table**  
  Supprime la table du volet.  
   
  **Explorer les données**  
  Ouvre la boîte de dialogue **Explorer les données** pour la table sélectionnée.  
   
- **Modifier la vue de Source de données**  
+ **Modifier la vue de source de données**  
  Affiche le **Concepteur de vue de source de données** pour la vue de source de données qui contient la table sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriétés**  
@@ -115,7 +115,7 @@ ms.locfileid: "66082345"
  **Explorer les données**  
  Affiche la boîte de dialogue **Explorer les données** pour la table contenant la colonne sélectionnée.  
   
- **Modifier la vue de Source de données**  
+ **Modifier la vue de source de données**  
  Affiche le **Concepteur de vue de source de données** pour la vue de source de données qui contient la colonne sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriétés**  
@@ -124,16 +124,16 @@ ms.locfileid: "66082345"
 ## <a name="relationship-context-menu"></a>Menu contextuel Relation  
  Les options répertoriées dans le tableau suivant sont disponibles dans le menu contextuel qui s’affiche en cliquant avec le bouton droit sur une relation dans le volet **Vue de source de données** .  
   
- **Modifier la vue de Source de données**  
+ **Modifier la vue de source de données**  
  Affiche le **Concepteur de vue de source de données** pour la vue de source de données qui contient la relation sélectionnée. Pour plus d’informations sur le **Concepteur de vue de source de données**, consultez [Concepteur de vue de source de données &#40;Analysis Services – Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriétés**  
  Affiche la fenêtre **Propriétés** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour la relation sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structure de dimension &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
- [Attributs &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Hiérarchies &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Structure de dimension &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
+ [Attributs &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Hiérarchies &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

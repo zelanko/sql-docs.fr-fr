@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue contexte de sécurité (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue contexte de sécurité (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069848"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Contexte de sécurité (Analysis Services - Données multidimensionnelles)
@@ -31,14 +31,14 @@ ms.locfileid: "66069848"
   
  Le domaine et nom de l'utilisateur ou groupe arborent le format suivant :  
   
- *\<Nom de domaine >* ** \\ ** * \<nom de compte d’utilisateur >*  
+ Nom de **\\** domaine>* \<nom du compte d’utilisateur>* * \<*  
   
- **Roles**  
+ **Rôles**  
  Permet d'utiliser un ou plusieurs rôles spécifiés lors de l'affichage des données et métadonnées de l'objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez sélectionner les rôles à utiliser si plusieurs rôles sont définis dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Indicateurs de performance clés &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Navigateur &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Indicateurs de performance clés &#40;&#41; &#40;concepteur de cube Analysis Services-données multidimensionnelles&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Navigateur &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

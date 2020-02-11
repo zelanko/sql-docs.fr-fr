@@ -1,5 +1,5 @@
 ---
-title: Explorer un modèle à l’aide de la visionneuse d’arborescences Microsoft | Microsoft Docs
+title: Parcourir un modèle à l’aide de la visionneuse d’arborescences Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,28 +24,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085936"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Explorer un modèle à l'aide de la visionneuse d'arborescences Microsoft
-  La Visionneuse d’arborescence [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les arbres de décision qui sont générés avec l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme d'arbre de décision hybride qui prend en charge à la fois la classification et la régression. Par conséquent, vous pouvez également utiliser cette visionneuse pour consulter les modèles fondés sur l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression). L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est utilisé pour la modélisation prédictive des attributs discrets et continus. Pour plus d’informations sur cet algorithme, consultez [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md).  
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] visionneuse de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l’arborescence dans affiche les arbres de décision [!INCLUDE[msCoName](../../includes/msconame-md.md)] qui sont générés avec l’algorithme MDT (Decision Trees). L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme d'arbre de décision hybride qui prend en charge à la fois la classification et la régression. Par conséquent, vous pouvez également utiliser cette visionneuse pour consulter les modèles fondés sur l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression). L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est utilisé pour la modélisation prédictive des attributs discrets et continus. Pour plus d’informations sur cet algorithme, consultez [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
 >  La visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] permet de consulter des informations détaillées relatives aux équations utilisées dans le modèle et les motifs découverts. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a> Onglets de la visionneuse  
+##  <a name="BKMK_TabsPanes"></a>Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse d'arborescences [!INCLUDE[msCoName](../../includes/msconame-md.md)] contient les onglets et volets suivants :  
   
 -   [Arbre de décision](#BKMK_DecisionTree)  
   
 -   [Réseau de dépendances](#BKMK_DependencyNetwork)  
   
--   [Légende d'exploration de données](#BKMK_MiningLegend)  
+-   [Légende d’exploration de données](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a> Arbre de décision  
+###  <a name="BKMK_DecisionTree"></a>Arbre de décision  
  Lorsque vous créez un modèle d'arbre de décision, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère un arbre distinct pour chaque attribut prévisible. Vous pouvez afficher un arbre spécifique en le sélectionnant dans la liste **Arborescence** sous l’onglet **Arbre de décision** de la visionneuse.  
   
  Un arbre de décision se compose d’une série de fractionnements, le fractionnement le plus important (tel que déterminé par l’algorithme) figurant à gauche de la visionneuse dans le nœud **Tout** . Des fractionnements supplémentaires apparaissent à droite. La division se trouvant dans le nœud **Tout** est la plus importante car elle contient l’instruction conditionnelle de fractionnement la plus forte du dataset et est, par conséquent, à l’origine de la première division.  
@@ -75,7 +75,7 @@ ms.locfileid: "66085936"
   
  [Retour au début](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a> Réseau de dépendances  
+###  <a name="BKMK_DependencyNetwork"></a>Réseau de dépendances  
  Le **Réseau de dépendances** affiche les dépendances entre les attributs d’entrée et les attributs prévisibles du modèle. Le curseur situé à gauche de la visionneuse agit comme un filtre lié à la force des dépendances. Si vous déplacez le curseur vers le bas, la visionneuse affiche uniquement les liens les plus forts.  
   
  Lorsque vous sélectionnez un nœud, la visionneuse met en surbrillance les dépendances propres à ce nœud. Par exemple, si vous choisissez un nœud prévisible, la visionneuse met également en surbrillance chacun des nœuds permettant de prédire le nœud prévisible.  
@@ -86,7 +86,7 @@ ms.locfileid: "66085936"
   
  [Retour au début](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a> Légende d'exploration de données  
+###  <a name="BKMK_MiningLegend"></a>Légende d’exploration de données  
  La **Légende d’exploration de données** affiche les informations suivantes lorsque vous sélectionnez un nœud dans le modèle d’arbre de décision :  
   
 -   le nombre de cas dans le nœud, décomposés en fonction des différents états de l'attribut prévisible ;  
@@ -105,9 +105,9 @@ ms.locfileid: "66085936"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)   
- [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d'exploration de données](data-mining-tools.md)   
+ [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d’exploration de données](data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)  
   
   

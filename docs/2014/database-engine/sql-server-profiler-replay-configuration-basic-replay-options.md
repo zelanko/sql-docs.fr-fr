@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Configuration de la relecture (Options de relecture de base) | Microsoft Docs
+title: SQL Server Profiler-configuration de la relecture (options de relecture de base) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089717"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Générateur de profils SQL Server – Configuration de la relecture (Options de relecture de base)
   Dans la boîte de dialogue **Configuration de la relecture**, utilisez la page **Options de relecture de base** pour spécifier la manière de relire un fichier ou une table de trace.  
   
- Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace ou une table qui contient les événements appropriés pour la relecture. Pour plus d’informations, consultez [Conditions préalables à la relecture](../tools/sql-server-profiler/replay-requirements.md). Lorsque le fichier ou la table de trace est ouvert, dans le menu **Relire**, cliquez sur **Début**, puis connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans laquelle vous voulez relire la trace.  
+ Pour afficher cette fenêtre, utilisez le [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour ouvrir un fichier de trace ou une table qui contient les événements appropriés pour la relecture. Pour plus d’informations, consultez [Conditions préalables à la relecture](../tools/sql-server-profiler/replay-requirements.md). Lorsque le fichier ou la table de trace est ouvert, dans le menu **Relire** , cliquez sur **Début**, puis connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans laquelle vous voulez relire la trace.  
   
 ## <a name="options"></a>Options  
  **Serveur de relecture**  
@@ -34,10 +34,12 @@ ms.locfileid: "66089717"
  Affiche la boîte de dialogue **Se connecter au serveur** pour se connecter à un autre serveur.  
   
  **Enregistrer dans le fichier**  
- Permet d'enregistrer les résultats de relecture dans un fichier. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de fichier standard, qui vous permet de spécifier l’emplacement où enregistrer le fichier.  
+ Permet d'enregistrer les résultats de relecture dans un fichier. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de fichier standard, qui vous permet de spécifier l’emplacement où enregistrer le fichier.  
   
  **Enregistrer dans la table**  
- Permet d'enregistrer les résultats de relecture dans une table. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de sélection de table, qui vous permet de spécifier l’emplacement où enregistrer la table.  
+ Permet d'enregistrer les résultats de relecture dans une table. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] affiche la boîte de dialogue de sélection de table, qui vous permet de spécifier l’emplacement où enregistrer la table.  
   
  **Nombre de threads de relecture**  
  Spécifiez le nombre de threads de relecture à utiliser simultanément. Plus ce nombre est important, plus la relecture consomme de ressources, mais plus elle est rapide.  

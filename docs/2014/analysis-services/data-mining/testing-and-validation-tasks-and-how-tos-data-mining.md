@@ -1,5 +1,5 @@
 ---
-title: Test et des tâches de Validation et des procédures (exploration de données) | Microsoft Docs
+title: Tâches de test et validation et procédures (exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082869"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tâches de test et validation et procédures (exploration de données)
@@ -39,7 +39,7 @@ ms.locfileid: "66082869"
   
  Les trois premiers graphiques utilisent l’onglet **Sélection d’entrée** pour définir les données utilisées pour générer le graphique.  
   
- Le graphique de validation croisée est créé à l’aide d’entrées supplémentaires, disponibles sous l’onglet **Validation croisée** . Pour plus d’informations, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](cross-validation-analysis-services-data-mining.md).  
+ Le graphique de validation croisée est créé à l’aide d’entrées supplémentaires, disponibles sous l’onglet **validation croisée** . Pour plus d’informations, consultez [validation croisée &#40;Analysis Services d’exploration de données&#41;](cross-validation-analysis-services-data-mining.md).  
   
  Pour plus d’informations sur la façon d’utiliser le graphique d’analyse de précision de l’exploration des données, consultez [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md).  
   

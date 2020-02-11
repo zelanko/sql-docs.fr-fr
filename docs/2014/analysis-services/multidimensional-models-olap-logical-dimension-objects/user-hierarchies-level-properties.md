@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c55a596461e03ce91a822e4578f7de56fe27f8f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702193"
 ---
 # <a name="level-properties"></a>Propriétés de niveau 
@@ -26,12 +26,12 @@ ms.locfileid: "62702193"
 |Propriété|Description|  
 |--------------|-----------------|  
 |Description|Contient la description du niveau.|  
-|HideMemberIf|Indique si et quand un membre d'un niveau doit être masqué par rapport aux applications clientes. Cette propriété peut avoir les valeurs suivantes :<br /><br /> Never<br /> Les membres ne sont jamais masqués. Valeur par défaut.<br /><br /> OnlyChildWithNoName<br /> Le membre est masqué s'il est le seul enfant de son parent et que son nom est vide.<br /><br /> OnlyChildWithParentName<br /> Le membre est masqué s'il est le seul enfant de son parent et qu'il a le même nom que lui.<br /><br /> NoName<br /> Le membre est masqué si son nom est vide.<br /><br /> ParentName<br /> Le membre est masqué s'il a le même nom que son parent.|  
-|ID|Contient l'identificateur (ID) unique du niveau.|  
-|Nom|Contient le nom convivial du niveau. Par défaut, le niveau a le même nom que l'attribut source.|  
+|HideMemberIf|Indique si et quand un membre d'un niveau doit être masqué par rapport aux applications clientes. Cette propriété peut avoir les valeurs suivantes :<br /><br /> Jamais<br /> Les membres ne sont jamais masqués. Il s’agit de la valeur par défaut.<br /><br /> OnlyChildWithNoName<br /> Le membre est masqué s'il est le seul enfant de son parent et que son nom est vide.<br /><br /> OnlyChildWithParentName<br /> Le membre est masqué s'il est le seul enfant de son parent et qu'il a le même nom que lui.<br /><br /> NoName<br /> Le membre est masqué si son nom est vide.<br /><br /> ParentName<br /> Le membre est masqué s'il a le même nom que son parent.|  
+|id|Contient l'identificateur (ID) unique du niveau.|  
+|Name|Contient le nom convivial du niveau. Par défaut, le niveau a le même nom que l'attribut source.|  
 |SourceAttribute|Contient le nom de l'attribut source sur lequel est basé le niveau.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de la hiérarchie utilisateur](user-hierarchies-properties.md)  
+ [Propriétés de la hiérarchie définie par l'utilisateur](user-hierarchies-properties.md)  
   
   

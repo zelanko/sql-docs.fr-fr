@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105618"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Tri interactif (Générateur de rapports et SSRS)
@@ -27,15 +27,15 @@ ms.locfileid: "66105618"
   
  Lorsque vous ajoutez un tri interactif, vous devez spécifier les éléments suivants :  
   
--   **Quoi trier :** les lignes ou les colonnes ?  
+-   **Que trier** : lignes ou colonnes ?  
   
--   **Sur quel élément trier :** un champ affiché dans une colonne de la table ? Un champ non affiché ?  
+-   **Sur quel élément trier** : un champ affiché dans une colonne de la table ? Un champ non affiché ?  
   
--   **Dans quel contexte trier :** par exemple, vous pouvez trier sur les lignes associées à des groupes de lignes, sur les colonnes associées à des groupes de colonnes, sur les lignes de détails, sur les groupes enfants dans un groupe parent, ou encore sur le groupe parent et enfant ensemble.  
+-   **Dans quel contexte trier** : par exemple, vous pouvez trier sur les lignes associées aux groupes de lignes ; sur les colonnes associées aux groupes de colonnes ; sur les lignes de détails ; sur les groupes enfants dans un groupe parent ; ou encore sur le groupe parent et enfant ensemble.  
   
--   **À quelle zone de texte ajouter le bouton de tri :** dans l’en-tête de colonne ou dans l’en-tête de ligne du groupe ?  
+-   **À quelle zone de texte ajouter le bouton de tri** : dans l’en-tête de colonne ou dans l’en-tête de ligne de groupe ?  
   
--   **Faut-il ou non synchroniser le tri pour plusieurs régions de données :** vous pouvez concevoir un rapport de sorte que, lorsque l’utilisateur bascule l’ordre de tri, d’autres régions de données possédant le même ancêtre soient également triées.  
+-   **Faut-il synchroniser le tri pour plusieurs régions de données** : vous pouvez concevoir un rapport afin que lorsque l’utilisateur bascule l’ordre de tri, d’autres régions de données avec le même ancêtre soient également triées.  
   
  Pour obtenir des instructions détaillées, consultez [Ajouter un tri interactif à un tableau ou une matrice &#40;Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   

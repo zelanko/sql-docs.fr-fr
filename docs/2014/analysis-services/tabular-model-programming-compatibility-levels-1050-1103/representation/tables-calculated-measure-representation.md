@@ -1,5 +1,5 @@
 ---
-title: Calculé représentation (tabulaire) d’une mesure | Microsoft Docs
+title: Représentation de la mesure calculée (tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757661"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Représentation de la mesure calculée (tabulaire)
@@ -23,7 +23,7 @@ ms.locfileid: "62757661"
 ## <a name="calculated-measure-representation"></a>Représentation de la mesure calculée  
   
 ### <a name="calculated-measure-in-amo"></a>Mesure calculée dans AMO  
- Lorsque vous utilisez AMO pour traiter une mesure calculée de modèle tabulaire, il existe une correspondance linéaire entre l'objet de mesure calculée logique et une mesure définie dans un objet <xref:Microsoft.AnalysisServices.Command> de l'objet <xref:Microsoft.AnalysisServices.MdxScript>. Chaque **mesure calculée** est défini comme un `CREATE MEASURE` expression au sein d’un <xref:Microsoft.AnalysisServices.Command> de l’objet et séparés par un point-virgule. Toutes les mesures calculées dans un modèle tabulaire correspondent à la chaîne `CREATE MEASURE` de collection dans un objet de commande dans un objet <xref:Microsoft.AnalysisServices.MdxScript>. Pour chaque mesure calculée, il existe un mappage un-à-un avec un <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Lorsque vous utilisez AMO pour traiter une mesure calculée de modèle tabulaire, il existe une correspondance linéaire entre l'objet de mesure calculée logique et une mesure définie dans un objet <xref:Microsoft.AnalysisServices.Command> de l'objet <xref:Microsoft.AnalysisServices.MdxScript>. Chaque **mesure calculée** est définie en tant `CREATE MEASURE` qu’expression à <xref:Microsoft.AnalysisServices.Command> l’intérieur d’un objet et séparée par un point-virgule. Toutes les mesures calculées dans un modèle tabulaire correspondent à la chaîne `CREATE MEASURE` de collection dans un objet de commande dans un objet <xref:Microsoft.AnalysisServices.MdxScript>. Pour chaque mesure calculée, il existe un mappage un-à-un avec un <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  L'extrait de code suivant montre comment créer une mesure calculée.  
   

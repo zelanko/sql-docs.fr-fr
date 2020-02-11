@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721499"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Déboguer un gestionnaire de logique métier (programmation de la réplication)
-  Utilisez un gestionnaire de logique métier pour appeler une logique métier personnalisée lorsqu'un abonnement de fusion est synchronisé. Pour plus d’informations, consultez [Exécuter la logique pendant la synchronisation de fusion](merge/execute-business-logic-during-merge-synchronization.md).  
+  Utilisez un gestionnaire de logique métier pour appeler une logique métier personnalisée lorsqu'un abonnement de fusion est synchronisé. Pour plus d’informations, consultez [Exécuter la logique métier lors de la synchronisation de fusion](merge/execute-business-logic-during-merge-synchronization.md).  
   
  Le réconciliateur de réplication de fusion (replrec.dll) appelle l'assembly de code managé qui contient la logique métier. Dans la plupart des cas, replrec.dll et la logique métier personnalisée sont exécutés sur l'ordinateur où s'exécute l'Agent de fusion (sur l'Abonné pour un abonnement par extraction ou sur le serveur de distribution pour un abonnement par émission de données). Dans le cas de la synchronisation Web ou dans le cas d'un Abonné [!INCLUDE[ssEW](../../includes/ssew-md.md)] , le réconciliateur et la logique métier personnalisée sont exécutés sur le serveur Web.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "62721499"
   
 1.  Configurez la publication et la distribution, créez une publication et créez un abonnement à la publication. Pour plus d’informations, consultez [Configurer la publication et la distribution](configure-publishing-and-distribution.md) et [Créer une Publication](publish/create-a-publication.md).  
   
-2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, consultez [implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Créez un projet Replication Management Objects dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio qui démarre par programme l'Agent de fusion de façon synchrone. Pour plus d’informations, voir [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
+3.  Créez un projet Replication Management Objects dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio qui démarre par programme l'Agent de fusion de façon synchrone. Pour plus d’informations, consultez [Synchroniser un abonnement par extraction (pull)](synchronize-a-pull-subscription.md).  
   
 4.  Définissez un point d'arrêt dans le code du gestionnaire de logique métier, soit dans la méthode en cours de débogage, soit dans le constructeur de classe. Pour plus d'informations sur les méthodes qui peuvent être implémentées dans un gestionnaire de logique métier, consultez la rubrique sur les méthodes <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721499"
   
 1.  Configurez la publication et la distribution, créez une publication et créez un abonnement par extraction à la publication. La publication doit prendre en charge la synchronisation Web ou les Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, consultez [implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Définissez un point d'arrêt dans le code du gestionnaire de logique métier, soit dans la méthode en cours de débogage, soit dans le constructeur de classe. Pour plus d'informations sur les méthodes qui peuvent être implémentées dans un gestionnaire de logique métier, consultez la rubrique sur les méthodes <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   

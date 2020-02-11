@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667814"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
@@ -55,15 +55,15 @@ ms.locfileid: "62667814"
 ###  <a name="Restrictions"></a> Limitations et restrictions  
  Les jetons de suivi peuvent également être utiles lors de la suspension d'un système, qui consiste à arrêter toute l'activité pour vérifier que tous les nœuds ont reçu les changements en cours. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Pour utiliser les jetons de suivi, vous devez utiliser certaines versions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Pour utiliser les jetons de suivi, vous avez besoin de certaines versions de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   Le serveur de distribution doit être [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure.  
   
 -   Le serveur de publication doit être [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure, ou un serveur de publication Oracle.  
   
--   Pour les abonnements par envoi de données, les statistiques de jetons de suivi sont rassemblées à partir du serveur de publication, du serveur de distribution et des Abonnés si l'Abonné exécute [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou version ultérieure.  
+-   Pour les abonnements par envoi de données, les statistiques de jetons de suivi sont collectées à partir du serveur de publication, du serveur de distribution et des Abonnés si l’Abonné exécute [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou une version ultérieure.  
   
--   Pour les abonnements par extraction de données, les statistiques de jetons de suivi sont rassemblées uniquement à partir des Abonnés si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 7.0 ou version ultérieure. Si l'Abonné exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], les statistiques ne sont rassemblées qu'à partir du serveur de publication et du serveur de distribution.  
+-   Pour les abonnements par extraction de données, les statistiques de jetons de suivi sont rassemblées uniquement à partir des Abonnés si l'Abonné exécute [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 7.0 ou version ultérieure. Si l’Abonné exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], les statistiques sont collectées uniquement à partir du serveur de publication et du serveur de distribution.  
   
  Il existe aussi d'autres problèmes et restrictions à connaître :  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62667814"
   
 3.  Cliquez sur **Insérer un suivi**.  
   
-4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Pour afficher les informations d'un jeton de suivi inséré précédemment  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62667814"
   
 3.  Sélectionnez une heure dans la liste déroulante **Heure de l'insertion** .  
   
-4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
     > [!NOTE]  
     >  Les informations de jeton de suivi sont conservées pour la même durée que toute autre donnée d'historique, elles-mêmes étant régies par la période de rétention des historiques définie dans la base de données de distribution. Pour plus d’informations sur la modification des propriétés de base de données de distribution, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../view-and-modify-distributor-and-publisher-properties.md).  
@@ -111,21 +111,21 @@ ms.locfileid: "62667814"
   
 2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Vérifiez que l'abonnement existe et que l'état est actif.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), en spécifiant **@publication** . Notez la valeur du paramètre de sortie **@tracer_token_id** .  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), en spécifiant **@publication**. Notez la valeur du paramètre **@tracer_token_id** de sortie.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
   
 1.  Publiez un jeton de suivi sur la publication à l'aide de la procédure précédente.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication** . La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez le **tracer_id** désiré dans le jeu de résultats.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez le **tracer_id** désiré dans le jeu de résultats.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi obtenu à l’étape 2 pour **@tracer_id** . Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi obtenu à l’étape 2 pour **@tracer_id**. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
   
 #### <a name="to-remove-tracer-tokens"></a>Pour supprimer les jetons de suivi  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication** . La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id** .  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id**.  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple publie un enregistrement de jeton de suivi et utilise l'ID retourné du jeton de suivi publié pour consulter les informations de latence.  
@@ -138,7 +138,7 @@ ms.locfileid: "62667814"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication, et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62667814"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62667814"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Définissez les propriétés <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>, et <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la connexion créée à l'étape 1.  
   

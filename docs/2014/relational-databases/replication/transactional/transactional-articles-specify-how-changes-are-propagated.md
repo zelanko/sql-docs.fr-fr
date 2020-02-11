@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655674"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Spécifier le mode de propagation des modifications des articles transactionnels
@@ -43,7 +43,7 @@ ms.locfileid: "62655674"
   
 -   **sp_MSdel_\<** *nomdetable* **>** , qui gère les suppressions.  
   
- Le **\<***nom de table***>** utilisé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
+ Le **\< ***nomdetable ***>** employé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
   
  N'importe laquelle de ces procédures peut être remplacée par une procédure personnalisée que vous spécifiez lors de l'ajout d'un article à une publication. Les procédures personnalisées sont utilisées dans le cas où l'application exige une logique personnalisée, par exemple l'insertion de données dans une table d'audit lors de la mise à jour d'une ligne sur l'Abonné. Pour plus d'informations sur la définition de procédures stockées personnalisées, reportez-vous à la liste des rubriques ci-dessus.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62655674"
   
 -   Si vous modifiez le schéma d'une table publiée, les procédures personnalisées doivent être régénérées. Pour plus d’informations, consultez [Régénérer des procédures transactionnelles personnalisées pour refléter des modifications de schéma](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Si vous utilisez une valeur supérieure à 1 pour le paramètre **-SubscriptionStreams** de l’Agent de distribution, vérifiez que les mises à jour des colonnes clés primaires se sont correctement déroulées. Exemple :  
+-   Si vous utilisez une valeur supérieure à 1 pour le paramètre **-SubscriptionStreams** de l’Agent de distribution, vérifiez que les mises à jour des colonnes clés primaires se sont correctement déroulées. Par exemple :  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  

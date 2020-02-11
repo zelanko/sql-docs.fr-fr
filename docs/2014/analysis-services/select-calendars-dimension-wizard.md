@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069691"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Sélectionner des calendriers (Assistant Dimension)
@@ -35,13 +35,13 @@ ms.locfileid: "66069691"
 > [!NOTE]  
 >  Cette option est disponible uniquement quand **Calendrier fiscal** est sélectionné.  
   
- **Convention d’affectation de noms de calendrier fiscal**  
+ **Convention de nom de calendrier fiscal**  
  Sélectionnez la convention de nom utilisée par le calendrier fiscal. Sélectionnez **Nom de l’année civile** ou **Nom de l’année civile + 1**.  
   
 > [!NOTE]  
 >  Cette option est disponible uniquement quand **Calendrier fiscal** est sélectionné.  
   
- **Calendrier de rapport (ou marketing)**  
+ **Calendrier de rapports (ou du marketing)**  
  Sélectionnez cette option pour créer une hiérarchie de temps en fonction d'un calendrier de rapports.  
   
  **Semaine et mois de départ**  
@@ -50,7 +50,7 @@ ms.locfileid: "66069691"
 > [!NOTE]  
 >  Cette option est disponible uniquement quand **Calendrier rapports (ou marketing)** est sélectionné.  
   
- **Semaine du mois**  
+ **Modèle semaine du mois**  
  Sélectionnez le modèle de semaine du mois utilisé par le calendrier des rapports.  
   
 > [!NOTE]  
@@ -58,7 +58,7 @@ ms.locfileid: "66069691"
   
  Le tableau suivant répertorie les options disponibles pour le modèle de semaine du mois.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Semaine 445**|Le premier mois du trimestre compte 4 semaines, le deuxième mois en compte 4, et le troisième mois en compte 5.|  
 |**Semaine 454**|Le premier mois du trimestre compte 4 semaines, le deuxième mois en compte 5, et le troisième mois en compte 4.|  
@@ -83,8 +83,8 @@ ms.locfileid: "66069691"
  Sélectionnez cette option pour créer une hiérarchie en fonction du calendrier ISO 8601.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de l’Assistant Dimension](dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Aide (F1) de l’Assistant Dimension](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

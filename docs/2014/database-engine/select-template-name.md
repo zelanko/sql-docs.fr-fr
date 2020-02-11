@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez le nom de modèle | Microsoft Docs
+title: Sélectionner un nom de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089803"
 ---
 # <a name="select-template-name"></a>Sélectionnez le nom du modèle

@@ -1,5 +1,5 @@
 ---
-title: Fin de l’Assistant (Assistant de conception d’agrégation) | Microsoft Docs
+title: Fin de l’Assistant (Assistant conception d’agrégation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087730"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Fin de l'Assistant (Assistant Conception d'agrégation)
@@ -33,7 +33,7 @@ ms.locfileid: "66087730"
  Terminez l'exécution de l'Assistant et affectez la conception d'agrégation aux partitions sélectionnées, mais ne déployez pas et ne traitez pas les partitions sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide de F1 l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
- [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)  
   
   

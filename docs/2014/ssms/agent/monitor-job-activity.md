@@ -22,17 +22,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704775"
 ---
 # <a name="monitor-job-activity"></a>Surveiller l'activité des travaux
   Vous pouvez surveiller l'activité en cours de tous les travaux définis sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du moniteur d'activité des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="sql-server-agent-sessions"></a>Sessions de SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crée une session à chaque démarrage du service. Quand une session est créée, la table **sysjobactivity** de la base de données **msdb** est remplie avec tous les travaux définis existants. Cette table conserve la dernière activité des travaux lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est redémarré. Chaque session enregistre l'activité normale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent du début à la fin du travail. Les informations relatives à ces sessions sont stockées dans la table **syssessions** de la base de données **msdb** .  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent crée une session à chaque démarrage du service. Quand une session est créée, la table **sysjobactivity** de la base de données **msdb** est remplie avec tous les travaux définis existants. Cette table conserve la dernière activité des travaux lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est redémarré. Chaque session enregistre l'activité normale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent du début à la fin du travail. Les informations relatives à ces sessions sont stockées dans la table **syssessions** de la base de données **msdb** .  
   
 ## <a name="job-activity-monitor"></a>Moniteur d'activité des travaux  
  Le moniteur d’activité des travaux vous permet de visualiser la table **sysjobactivity** à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez visualiser tous les travaux sur le serveur ou définir des filtres afin de limiter le nombre de travaux affichés. Vous pouvez également trier les informations sur les travaux en cliquant sur un en-tête de colonne dans la grille **Activité du travail de l’Agent** . Par exemple, quand vous sélectionnez l’en-tête de colonne **Dernière exécution** , vous pouvez visualiser les travaux dans l’ordre de leur dernière exécution. Vous pouvez cliquer sur l'en-tête de la colonne pour classer les travaux en fonction de la date de leur dernière exécution, dans l'ordre croissant ou décroissant.  
@@ -62,8 +63,8 @@ ms.locfileid: "62704775"
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher l’activité du travail](view-job-activity.md)   
- [dbo.sysjobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [dbo.syssessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [dbo. sysjobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo. syssessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
  [sp_help_jobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

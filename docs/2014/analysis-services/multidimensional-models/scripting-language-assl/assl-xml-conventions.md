@@ -1,5 +1,5 @@
 ---
-title: Conventions ASSL XML | Microsoft Docs
+title: Conventions XML ASSL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736392"
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
@@ -36,9 +36,9 @@ ms.locfileid: "62736392"
   
  Pour représenter la hiérarchie d'objets, ASSL utilise les conventions XML suivantes :  
   
--   Tous les objets et propriétés sont représentées en tant qu’éléments, à l’exception des attributs XML standard tels que « XML : lang ».  
+-   Tous les objets et propriétés sont représentés en tant qu’éléments, à l’exception des attributs XML standard tels que « XML : lang ».  
   
--   Les noms d’éléments et les valeurs d’énumération suivent la convention d’affectation de noms Microsoft .NET Framework de Pascal sans traits de soulignement de mise en majuscules.  
+-   Les noms d'élément et les valeurs d'énumération suivent la convention d'affectation de noms Microsoft .NET Framework, à savoir, une casse Pascal sans traits de soulignement.  
   
 -   La casse de toutes les valeurs est préservée. Les valeurs des énumérations respectent également la casse.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62736392"
  Valeur entière comprise entre-231 et 231-1.  
   
  `Long`  
- Valeur entière dans la plage de -263 et 263-1.  
+ Valeur entière comprise entre-263 et 263-1.  
   
  `String`  
  Valeur de chaîne conforme aux règles globales suivantes :  
@@ -135,10 +135,10 @@ ms.locfileid: "62736392"
   
 -   les espaces internes sont conservés.  
   
- Les propriétés `Name` et `ID` imposent des limitations spéciales en matière de validité des caractères dans les éléments de chaîne. Pour plus d’informations sur `Name` et `ID` conventions, consultez [objets ASSL et caractéristiques des objets](assl-objects-and-object-characteristics.md).  
+ Les propriétés `Name` et `ID` imposent des limitations spéciales en matière de validité des caractères dans les éléments de chaîne. Pour plus d’informations `Name` sur `ID` les conventions et, consultez [objets ASSL et caractéristiques](assl-objects-and-object-characteristics.md)de l’objet.  
   
  `DateTime`  
- Un `DateTime` structure à partir de .NET Framework. Une valeur `DateTime` ne peut pas être NULL. La date la plus reculée prise en charge par le type de données `DataTime` est le 1er janvier 1601, qui est accessible aux programmeurs via `DateTime.MinValue`. La présence de cette date indique qu'il manque une valeur `DateTime`.  
+ `DateTime` Structure de l' .NET Framework. Une valeur `DateTime` ne peut pas être NULL. La date la plus reculée prise en charge par le type de données `DataTime` est le 1er janvier 1601, qui est accessible aux programmeurs via `DateTime.MinValue`. La présence de cette date indique qu'il manque une valeur `DateTime`.  
   
  `Boolean`  
  Énumération constituée de seulement deux valeurs, telles que {true, false} ou {0, 1}.  
@@ -150,8 +150,8 @@ ms.locfileid: "62736392"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (chaîne vide)|  
-|`Integer` ou `Long`|0 (zéro)|  
-|`Timestamp`|12:00:00 AM, 1/1/0001 (correspondant à un .NET Framework `System.DateTime` avec 0 battement)|  
+|`Integer`ni`Long`|0 (zéro)|  
+|`Timestamp`|12:00:00 AM, 1/1/0001 (correspondant à un .NET Framework `System.DateTime` avec 0 graduations)|  
   
  Un élément qui est présent mais vide est considéré comme ayant une valeur de chaîne null, et non la valeur par défaut.  
   
@@ -178,6 +178,6 @@ ms.locfileid: "62736392"
   
  `</Dimension>`  
   
- Pour plus d’informations sur les valeurs par défaut héritées, consultez [objets ASSL et caractéristiques des objets](assl-objects-and-object-characteristics.md).  
+ Pour plus d’informations sur les valeurs par défaut héritées, consultez [objets ASSL et caractéristiques](assl-objects-and-object-characteristics.md)de l’objet.  
   
   

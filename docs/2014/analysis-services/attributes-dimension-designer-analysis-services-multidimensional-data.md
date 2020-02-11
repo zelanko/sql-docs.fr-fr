@@ -1,5 +1,5 @@
 ---
-title: Attributs (onglet Structure de Dimension, Concepteur de dimensions) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Attributs (onglet structure de dimension, concepteur de dimensions) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064401"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributs (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
@@ -24,7 +24,7 @@ ms.locfileid: "66064401"
   
  Pour créer un attribut, faites glisser une colonne depuis le volet **Vue de source de données** vers le volet **Attributs** en mode Liste, Arborescence ou Vue. Pour supprimer un attribut, sélectionnez **Supprimer** dans le menu contextuel.  
   
- **Pour afficher le volet attributs**  
+ **Pour afficher le volet Attributs**  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis ouvrez la dimension souhaitée.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "66064401"
  **Nom**  
  Affiche le nom de l'attribut.  
   
- **Usage**  
+ **Utilisation**  
  Définit l'utilisation de l'attribut sélectionné. Cliquez sur la flèche orientée vers le bas pour sélectionner l'une des options suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|Regular|Définit un attribut normal.|  
-|Touche|Définit l'attribut de clé de la dimension. Cela correspond aux membres de nœud terminal de la dimension. Il ne peut exister qu'un seul attribut clé par dimension. Pour modifier, cliquez sur le bouton avec les points de suspension (**...**) situé à côté de la propriété **KeyColumns** dans le volet **Propriétés** .|  
+|Standard |Définit un attribut normal.|  
+|Clé|Définit l'attribut de clé de la dimension. Cela correspond aux membres de nœud terminal de la dimension. Il ne peut exister qu'un seul attribut clé par dimension. Pour modifier, cliquez sur le bouton avec les points de suspension (**...**) situé à côté de la propriété **KeyColumns** dans le volet **Propriétés** .|  
 |Parent|Définit l'attribut parent d'une relation parent-enfant. L'attribut enfant de la relation doit toujours correspondre à l'attribut de clé.|  
 |AccountType|Définit un attribut de type compte. Cette option est utilisée par le serveur ou le moteur lorsque la valeur « par compte » est affectée à la fonction d'agrégation d'une mesure.|  
   
@@ -72,8 +72,8 @@ ms.locfileid: "66064401"
  Affiche l'emplacement de la colonne sous-jacente. Lorsque vous créez un attribut, cliquez sur la flèche orientée vers le bas pour sélectionner **Identique à la clé** ou **Colonne séparée**. Si vous choisissez **Colonne séparée** , la propriété **NameColumn** dans le volet **Propriétés** définit la colonne qui contient le nom à utiliser pour l'attribut.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structure de dimension &#40;Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Hiérarchies &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet Structure de Dimension, Concepteur de dimensions&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+ [Structure de dimension &#40;concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Hiérarchies &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet structure de dimension, concepteur de dimensions&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

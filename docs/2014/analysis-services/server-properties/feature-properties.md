@@ -1,5 +1,5 @@
 ---
-title: Propriétés de la fonctionnalité | Microsoft Docs
+title: Propriétés des fonctionnalités | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,22 +20,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069048"
 ---
-# <a name="feature-properties"></a>Propriétés de la fonctionnalité
+# <a name="feature-properties"></a>Propriétés de fonctionnalité
   Les propriétés de fonctionnalité se rapportent à des fonctionnalités de produit, le plus souvent de caractère avancé. Il s'agit notamment de propriétés qui contrôlent les liaisons entre les instances de serveur.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans le tableau suivant. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans le tableau suivant. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **S’applique à :** Mode serveur multidimensionnel uniquement  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
   
-|Propriété|Par défaut|Description|  
+|Propriété|Default|Description|  
 |--------------|-------------|-----------------|  
 |`ManagedCodeEnabled`|1|Propriété booléenne qui indique si les procédures de stockage du Common Language Runtime sont activées.|  
 |`LinkInsideInstanceEnabled`|1|Propriété booléenne qui indique si un objet lié peut être créé dans la même instance du serveur.|  
@@ -49,7 +50,7 @@ ms.locfileid: "66069048"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Utilisez les vues de gestion dynamique &#40;les DMV&#41; pour surveiller Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

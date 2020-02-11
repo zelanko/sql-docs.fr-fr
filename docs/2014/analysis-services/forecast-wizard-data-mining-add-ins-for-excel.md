@@ -1,5 +1,5 @@
 ---
-title: Prévision de l’Assistant (Data Mining Add-ins pour Excel) | Microsoft Docs
+title: Assistant Prévision (compléments d’exploration de données pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081032"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Assistant Prévisions (Compléments d'exploration de données pour Excel)
-  ![Assistant association dans le ruban Exploration de données](media/dmc-forecast.gif "associer l’Assistant dans le ruban Exploration de données")  
+  ![Assistant Association sur le ruban Exploration de données](media/dmc-forecast.gif "Assistant Association sur le ruban Exploration de données")  
   
  L'Assistant Prévision vous permet de prévoir des valeurs dans une série chronologique. Cet Assistant utilise l'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series), un algorithme de régression utilisé pour prévoir les colonnes continues telles que les ventes de produits.  
   
@@ -29,19 +29,19 @@ ms.locfileid: "66081032"
   
  Vous pouvez créer des prédictions à partir du modèle de prévision sans fournir de nouvelles données d'entrée.  
   
- Le [prévision &#40;Table Analysis Tools pour Excel&#41; ](forecast-table-analysis-tools-for-excel.md) de l’outil, dans le **analyser** ruban, aussi vous permet de vous créer des modèles de prévision, mais il est moins personnalisable et peut uniquement utiliser les données dans des tables Excel.  
+ L’outil [prévision &#40;table Analysis Tools for Excel&#41;](forecast-table-analysis-tools-for-excel.md) , dans le ruban **analyser** , vous permet également de créer des modèles de prévision, mais il est moins personnalisable et ne peut utiliser que des données dans les tables Excel.  
   
 ## <a name="using-the-forecast-wizard"></a>Utilisation de l'Assistant Prévision  
   
-1.  Dans le **d’exploration de données** ruban, cliquez sur **prévision**.  
+1.  Dans le ruban **exploration de données** , cliquez sur **prévision**.  
   
-2.  Dans le **sélectionner les données Source**, sélectionnez la table Excel, plage ou la source de données externe à utiliser comme entrées.  
+2.  Dans **Sélectionner les données source**, choisissez le tableau, la plage ou la source de données externe Excel à utiliser comme entrées.  
   
      Si vous utilisez une source de données externe, vous pouvez définir une vue personnalisée ou des requêtes et les enregistrer en tant que source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-3.  Sur le **Forecasting** page, pour **horodatage**, sélectionnez une colonne qui contient la valeur numérique unique (y compris les valeurs de date et heure) qui peut être utilisé en tant que la série de cas. La source de données doit être triée par ordre croissant dans cette colonne.  
+3.  Dans la page **prévision** , pour **horodatage**, sélectionnez une colonne qui contient une valeur numérique unique (y compris des valeurs de date et d’heure) qui peut être utilisée comme série de cas. La source de données doit être triée par ordre croissant dans cette colonne.  
   
-     Si vos données n’ayant pas une telle colonne, vous pouvez utiliser l’option \<aucun horodatage >. L'Assistant ajoutera une colonne d'ordre unique pour les données d'entrée ; par conséquent, vous devez vous assurer que les données sont triées comme vous le souhaitez avant d'exécuter l'assistant et de choisir cette option.  
+     Si vos données n’ont pas une telle colonne, vous pouvez utiliser l’option \<sans horodatage>. L'Assistant ajoutera une colonne d'ordre unique pour les données d'entrée ; par conséquent, vous devez vous assurer que les données sont triées comme vous le souhaitez avant d'exécuter l'assistant et de choisir cette option.  
   
 4.  Si vous le souhaitez, vous pouvez cliquer sur **paramètres** et personnaliser le comportement du modèle d’exploration de données.  
   
@@ -53,26 +53,26 @@ ms.locfileid: "66081032"
   
     -   ARTXP et ARIMA combinés  
   
-     Pour plus d’informations sur les différences, consultez [Microsoft Time Series algorithme Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+     Pour plus d’informations sur les différences, consultez informations techniques de référence sur l' [algorithme MTS (Microsoft Time Series](data-mining/microsoft-time-series-algorithm-technical-reference.md)).  
   
      Vous pouvez également ajouter des indicateurs de périodicité, spécifiant des options de lissage, et personnaliser les options de régression pour le modèle.  
   
-5.  Sur le **Terminer** page, fournissez un nom descriptif pour votre jeu de données et le modèle et définir les options suivantes qui contrôlent la façon dont vous travaillez avec le modèle fini :  
+5.  Dans la page **Terminer** , indiquez un nom descriptif pour votre jeu de données et votre modèle, puis définissez les options suivantes qui contrôlent la façon dont vous travaillez avec le modèle terminé :  
   
-    -   **Parcourir le modèle**. Lorsque cette option est sélectionnée, dès que l’Assistant termine de traiter le modèle, il ouvre une **Parcourir** fenêtre pour vous aider à Explorer les résultats. Le contenu de la visionneuse dépend du type de modèle que vous créez. Pour plus d’informations, consultez [exploration d’un modèle de prévision](browsing-a-forecasting-model.md).  
+    -   **Parcourir le modèle**. Lorsque cette option est sélectionnée, dès que l’Assistant a terminé de traiter le modèle, il ouvre une fenêtre **Parcourir** pour vous aider à explorer les résultats. Le contenu de la visionneuse dépend du type de modèle que vous créez. Pour plus d’informations, consultez [exploration d’un modèle de prévision](browsing-a-forecasting-model.md).  
   
     -   **Activer l’extraction**. Sélectionnez cette option pour examiner les données sous-jacentes du modèle terminé. Cette option est disponible uniquement si vous créez un modèle d'arbre de décision.  
   
-    -   **Utiliser le modèle temporaire**. Si cette option est sélectionnée, le modèle ne sera pas enregistré sur le serveur. Lorsque vous fermez Excel, les modèles temporaires sont supprimés.  
+    -   **Utilisez le modèle temporaire**. Si cette option est sélectionnée, le modèle ne sera pas enregistré sur le serveur. Lorsque vous fermez Excel, les modèles temporaires sont supprimés.  
   
-### <a name="requirements"></a>Configuration requise  
- Vos données doivent inclure au moins une colonne pouvant être utilisée en tant que série chronologique. Les valeurs de cette colonne doivent être unique et continue : autrement dit, il ne doit y avoir aucun écart. Avant d'exécuter l'assistant, triez les données de la colonne de série chronologique par ordre croissant.  
+### <a name="requirements"></a>Spécifications  
+ Vos données doivent inclure au moins une colonne pouvant être utilisée en tant que série chronologique. Les valeurs de cette colonne doivent être uniques et continues, autrement dit, il ne doit pas y avoir d’écarts. Avant d'exécuter l'assistant, triez les données de la colonne de série chronologique par ordre croissant.  
   
  Si vos données ne contiennent pas de colonne de date ou d'heure, vous pouvez utiliser une série numérique arbitraire ou laisser l'assistant s'en charger. Si vous laissez l'assistant créer la colonne d'ordre de la série, assurez-vous que les autres colonnes sont triées dans l'ordre souhaité avant de démarrer l'assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un modèle d’exploration de données](creating-a-data-mining-model.md)   
- [Prévision &#40;outils d’analyse de Table pour Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
- [Exploration d’un modèle de prévision](browsing-a-forecasting-model.md)  
+ [Outils d’analyse de table &#40;de prévision pour Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
+ [Exploration d'un modèle de prévision](browsing-a-forecasting-model.md)  
   
   

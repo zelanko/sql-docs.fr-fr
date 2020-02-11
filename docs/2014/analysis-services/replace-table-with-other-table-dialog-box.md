@@ -1,5 +1,5 @@
 ---
-title: Remplacer la Table par une autre Table, boîte de dialogue | Microsoft Docs
+title: Boîte de dialogue remplacer la table par une autre table | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070273"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Boîte de dialogue Remplacer la table par une autre table
@@ -28,7 +28,7 @@ ms.locfileid: "66070273"
  **Source de données**  
  Sélectionnez la source de données d'extraction de la table.  
   
- **Grid**  
+ **Boutons**  
  Affiche les objets et leurs types disponibles dans la source de données sélectionnée, qui ne sont pas encore inclus dans la vue de source de données.  
   
  **Filter**  
@@ -38,7 +38,7 @@ ms.locfileid: "66070273"
  Sélectionnez cette option pour afficher les objets système de la source de données sélectionnée dans la **Grille**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Concepteur de vue de source de données &#40;Analysis Services-données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

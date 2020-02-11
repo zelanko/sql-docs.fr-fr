@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue Propriétés (SSAS) vue de Source de données | Microsoft Docs
+title: Boîte de dialogue Propriétés de la vue de source de données (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082500"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Boîte de dialogue Propriétés de la vue de source de données (SSAS)
@@ -27,10 +27,10 @@ ms.locfileid: "66082500"
 |Terme|Définition|  
 |----------|----------------|  
 |**Nom**|Affiche le nom de la vue de source de données.|  
-|**ID**|Affiche l'identificateur de la vue de source de données.|  
+|**IDENTIFI**|Affiche l'identificateur de la vue de source de données.|  
 |**Description**|Affiche la description de la vue de source de données.|  
 |**Créer un horodateur**|Affiche la date et l'heure de création de la vue de source de données.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la vue de source de données.|  
-|**Source de données principale**|Affiche le nom de la source de données primaire associée à la vue de source de données.|  
+|**Source de données primaire**|Affiche le nom de la source de données primaire associée à la vue de source de données.|  
   
   

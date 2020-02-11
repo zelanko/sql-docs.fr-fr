@@ -1,5 +1,5 @@
 ---
-title: Traductions de dimension | Microsoft Docs
+title: Traductions de dimensions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728525"
 ---
 # <a name="dimension-translations"></a>Traductions de dimension
@@ -29,15 +29,15 @@ ms.locfileid: "62728525"
   
  Un objet <xref:Microsoft.AnalysisServices.Translation> simple est composé d'un numéro d'ID de langue et de la légende traduite. Le numéro d'ID de langue est un `Integer` avec l'ID de langue. La légende traduite est le texte traduit.  
   
- Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une traduction de dimension est une représentation spécifique à la langue du nom d’une dimension, le nom d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet ou l’une de ses membres, par exemple un légende, membre ou un niveau hiérarchique. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend également en charge les traductions d’objets de cube.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une traduction de dimension est une représentation spécifique au langage du nom d’une dimension, le nom d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet ou l’un de ses membres, par exemple une légende, un membre ou un niveau de hiérarchie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend également en charge les traductions d’objets de cube.  
   
- Les traductions permettent au serveur de prendre en charge les applications clientes qui autorisent l'emploi de plusieurs langues. Souvent, des utilisateurs de différents pays affichent un cube et ses dimensions. Il est utile de pouvoir traduire divers éléments d'un cube et ses dimensions dans une langue différente, de sorte que ces utilisateurs puissent afficher et comprendre le cube. Par exemple, un utilisateur situé en France peut accéder à un cube à partir d’une station de travail avec les paramètres régionaux Français et afficher les valeurs de propriété d’objet en Français. En revanche, un utilisateur d'une entreprise en Allemagne qui accède au même cube depuis une station de travail avec les paramètres régionaux allemands peut voir les mêmes valeurs des propriétés des objets en allemand.  
+ Les traductions permettent au serveur de prendre en charge les applications clientes qui autorisent l'emploi de plusieurs langues. Souvent, des utilisateurs de différents pays affichent un cube et ses dimensions. Il est utile de pouvoir traduire divers éléments d'un cube et ses dimensions dans une langue différente, de sorte que ces utilisateurs puissent afficher et comprendre le cube. Par exemple, un utilisateur professionnel en France peut accéder à un cube à partir d’une station de travail avec des paramètres régionaux français et voir les valeurs des propriétés de l’objet en français. En revanche, un utilisateur d'une entreprise en Allemagne qui accède au même cube depuis une station de travail avec les paramètres régionaux allemands peut voir les mêmes valeurs des propriétés des objets en allemand.  
   
  Les informations de classement et de langue pour l'ordinateur client sont stockées sous la forme d'un identificateur local (LCID). Lors de la connexion, le client envoie cet identificateur à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cette instance utilise ensuite l'identificateur LCID pour déterminer quel jeu de traductions utiliser en fournissant les métadonnées pour des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si un objet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne contient pas la traduction spécifiée, la langue par défaut est utilisée pour retourner le contenu au client.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traductions de cube](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Traductions &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Conseils de globalisation et meilleures pratiques &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

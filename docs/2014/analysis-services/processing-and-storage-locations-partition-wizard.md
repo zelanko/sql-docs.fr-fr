@@ -1,5 +1,5 @@
 ---
-title: Traitement et les emplacements de stockage (Assistant Partition) | Microsoft Docs
+title: Emplacements de traitement et de stockage (Assistant Partition) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070652"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Emplacements pour le traitement et le stockage (Assistant Partition)
-  Utilisez la page **Emplacements pour le traitement et le stockage** pour spécifier l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]du cube qui possède la partition, ainsi que l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui stocke les données de la partition. Vous pouvez définir une partition distante en spécifiant une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distante ou un emplacement de stockage différent de l'emplacement par défaut. Pour plus d’informations sur les partitions distantes, consultez [Partitions distantes](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
+  Utilisez la page **Emplacements pour le traitement et le stockage** pour spécifier l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] du cube qui possède la partition, ainsi que l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui stocke les données de la partition. Vous pouvez définir une partition distante en spécifiant une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distante ou un emplacement de stockage différent de l'emplacement par défaut. Pour plus d’informations sur les partitions distantes, consultez [Partitions distantes](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
   
 ## <a name="processing-location-options"></a>Options d'emplacement du traitement  
  **Instance de serveur actuelle**  
@@ -48,8 +48,8 @@ ms.locfileid: "66070652"
  Affiche la boîte de dialogue **Rechercher un dossier distant** dans laquelle vous sélectionnez un dossier pour l’option **Dossier spécifié**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide F1 de l’Assistant de partition &#40;Analysis Services - données multidimensionnelles&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Recherchez la boîte de dialogue dossier distant &#40;Analysis Services - données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant partition &#40;Analysis Services-données multidimensionnelles&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Boîte de dialogue Rechercher un dossier distant &#40;Analysis Services-données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

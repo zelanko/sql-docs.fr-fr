@@ -1,5 +1,5 @@
 ---
-title: Extension des fonctionnalités OLAP | Microsoft Docs
+title: Extension de la fonctionnalité OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2d4d08795351b93615954ad64e004482745f768d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725953"
 ---
 # <a name="extending-olap-functionality"></a>Étendre les fonctionnalités OLAP
@@ -25,9 +25,9 @@ ms.locfileid: "62725953"
  Les personnalisations sont des objets personnalisés que vous ajoutez à un cube pour fournir un comportement qui varie selon l'utilisateur. Les personnalisations ne sont pas des objets permanents dans le cube. Il s'agit d'objets que l'application cliente applique dynamiquement pendant la session de l'utilisateur. Voici quelques exemples : modifier la devise d'une valeur monétaire en fonction de la personne qui accède aux données en fournissant des indicateurs de performance clés individualisés, ou créer une liste ciblée de suggestions pour les clients standard qui achètent en ligne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Extension d’OLAP via des personnalisations](extending-olap-through-personalizations.md)  
+ [Extension d'OLAP par des personnalisations](extending-olap-through-personalizations.md)  
   
- [Extensions de personnalisation d’Analysis Services](analysis-services-personalization-extensions.md)  
+ [Extensions de personnalisation Analysis Services](analysis-services-personalization-extensions.md)  
   
  [Définition de procédures stockées](../../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

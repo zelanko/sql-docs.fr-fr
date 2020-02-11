@@ -1,5 +1,5 @@
 ---
-title: Inscrire une Instance Analysis Services dans un groupe de serveurs | Microsoft Docs
+title: Inscrire une instance de Analysis Services dans un groupe de serveurs | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29ecf740948d9e02d258a5daa03859d3867eb463
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079648"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Inscrire une instance Analysis Services dans un groupe de serveurs
   Si vous utilisez un grand nombre d'instances de serveur Analysis Services, vous pouvez créer des groupes de serveurs dans Management Studio pour faciliter l'administration des serveurs. La finalité d'un groupe de serveurs est d'assurer la proximité au sein d'un groupe de serveurs associés dans l'espace de travail d'administration. Par exemple, supposons que votre rôle consiste à gérer dix instances distinctes d'Analysis Services. En les regroupant par mode serveur, par critères de temps d'exécution ou par service ou région, vous pouvez afficher les instances qui partagent les mêmes caractéristiques et vous y connecter plus facilement. Vous pouvez également ajouter des informations descriptives qui vous permettent de vous souvenir du mode d'utilisation du serveur.  
   
- ![Volet de serveur inscrit avec les serveurs membres](../media/ssas-ssms-registerserver.gif "volet serveur inscrit avec les serveurs membres")  
+ ![Volet Serveur inscrit avec des serveurs membres](../media/ssas-ssms-registerserver.gif "Volet Serveur inscrit avec des serveurs membres")  
   
  Les groupes de serveurs peuvent être créés dans une structure hiérarchique. Le groupe de serveurs locaux est le nœud racine. Il contient toujours les instances d'Analysis Services qui s'exécutent sur l'ordinateur local. Vous pouvez ajouter des serveurs distants à n'importe quel groupe, y compris le groupe local.  
   

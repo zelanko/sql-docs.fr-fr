@@ -1,5 +1,5 @@
 ---
-title: Importer à partir d’une Source de données multidimensionnelle (SSAS tabulaire) | Microsoft Docs
+title: Importer à partir d’une source de données multidimensionnelles (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080555"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>Importer à partir d'une source de données multidimensionnelle (SSAS Tabulaire)
@@ -33,7 +33,7 @@ ms.locfileid: "66080555"
 3.  Suivez les étapes de l'Assistant Importation de table. Vous pouvez spécifier une requête MDX sur la page **Spécifier une requête MDX** . Pour utiliser le concepteur de requêtes MDX, sur la page Spécifier une requête MDX, cliquez sur **Conception**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importer des données &#40;SSAS Tabulaire&#41;](import-data-ssas-tabular.md)   
- [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Importer des données &#40;&#41;tabulaire SSAS](import-data-ssas-tabular.md)   
+ [Sources de données prises en charge &#40;&#41;tabulaire SSAS](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

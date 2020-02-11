@@ -1,5 +1,5 @@
 ---
-title: Créer un Alias pour une colonne de modèle | Microsoft Docs
+title: Créer un alias pour une colonne de modèle | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085316"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Créer un alias pour une colonne du modèle
@@ -37,7 +37,7 @@ ms.locfileid: "66085316"
 2.  Dans la fenêtre **Propriétés** située à droite de l’écran, cliquez sur la cellule à côté de la propriété Name et supprimez la valeur actuelle. Tapez un nouveau nom pour la colonne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
  [Propriétés du modèle d'exploration de données](mining-model-properties.md)  
   
   

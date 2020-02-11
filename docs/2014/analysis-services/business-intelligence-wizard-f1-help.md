@@ -1,5 +1,5 @@
 ---
-title: L’Assistant Business Intelligence F1 | Microsoft Docs
+title: Aide (F1) de l’Assistant Business Intelligence | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088403"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Aide (F1) de l'Assistant Business Intelligence
@@ -46,59 +46,59 @@ ms.locfileid: "66088403"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Choisir des améliorations &#40;Assistant Business Intelligence&#41;](choose-enhancement-business-intelligence-wizard.md)  
+-   [Choisissez amélioration &#40;Assistant Business Intelligence&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
 -   [Choisir les calculs de temps &#40;Assistant Business Intelligence&#41;](choose-time-calculations-business-intelligence-wizard.md)  
   
 -   [Définir l’étendue des calculs &#40;Assistant Business Intelligence&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
   
--   [Définir l’Intelligence comptable &#40;Dimension&#41; &#40;Assistant Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
+-   [Définir l’intelligence comptable &#40;dimension&#41; &#40;Assistant Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [Configurer les attributs de Dimension &#40;Assistant Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [Configurer les attributs de la dimension &#40;Assistant Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
--   [Définir l’Intelligence comptable &#40;Assistant Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
+-   [Définir l’intelligence comptable &#40;l’Assistant Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
--   [Définir les Options d’Intelligence des dimensions &#40;Assistant Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
+-   [Définir les options d’intelligence des dimensions &#40;Assistant Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
--   [Définir l’Intelligence des dimensions &#40;Assistant Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
+-   [Définir l’intelligence des dimensions &#40;Assistant Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
--   [Spécifier un opérateur unaire &#40;Dimension&#41; &#40;Assistant Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
+-   [Spécifiez un opérateur unaire &#40;de dimension&#41; &#40;Assistant Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
--   [Spécifier un opérateur unaire &#40;Assistant Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
+-   [Spécifiez un opérateur unaire &#40;Assistant Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
   
--   [Créer une formule de membre personnalisée &#40;Dimension&#41; &#40;Assistant Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
+-   [Créer une formule de membre personnalisée &#40;de dimension&#41; &#40;Assistant Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
   
 -   [Créer une formule de membre personnalisée &#40;Assistant Business Intelligence&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
   
--   [Spécifier l’ordre des attributs &#40;Dimension&#41; &#40;Assistant Business Intelligence&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
+-   [Spécifier l’ordre des attributs &#40;dimension&#41; &#40;Assistant Business Intelligence&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
   
 -   [Spécifier l’ordre des attributs &#40;Assistant Business Intelligence&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
   
--   [Activer l’écriture différée de Dimension &#40;Dimension&#41; &#40;Assistant Business Intelligence&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
+-   [Activer l’écriture différée de la dimension &#40;&#41; &#40;l’Assistant Business Intelligence&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
   
--   [Activer l’écriture différée de Dimension &#40;Assistant Business Intelligence&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
+-   [Activer l’écriture différée de la dimension &#40;l’Assistant Business Intelligence&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
   
 -   [Définir le comportement semi-additif &#40;Assistant Business Intelligence&#41;](define-semiadditive-behavior-business-intelligence-wizard.md)  
   
--   [Définir les Options de Conversion monétaire &#40;Assistant Business Intelligence&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
+-   [Définir les options de conversion monétaire &#40;Assistant Business Intelligence&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
   
--   [Sélectionner les membres &#40;Assistant Business Intelligence&#41;](select-members-business-intelligence-wizard.md)  
+-   [Sélectionnez les membres &#40;Assistant Business Intelligence&#41;](select-members-business-intelligence-wizard.md)  
   
--   [Sélectionnez le Type de Conversion &#40;Assistant Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
+-   [Sélectionner le type de conversion &#40;Assistant Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
--   [Définir le référencement pour les devises locales &#40;Assistant Business Intelligence&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
+-   [Définir la référence locale de la devise &#40;Assistant Business Intelligence&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   
--   [Spécifier les devises pour les rapports &#40;Assistant Business Intelligence&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
+-   [Spécifier les devises pour les rapports &#40;l’Assistant Business Intelligence&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
   
--   [Définir la Conversion monétaire &#40;Assistant Business Intelligence&#41;](define-currency-conversion-business-intelligence-wizard.md)  
+-   [Définition de la conversion monétaire &#40;l’Assistant Business Intelligence&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
--   [Sélectionnez une boîte de dialogue colonne &#40;Assistant Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
+-   [Boîte de dialogue Sélectionner une colonne &#40;Assistant Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
 -   [Fin de l’Assistant &#40;Assistant Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)  
   
   

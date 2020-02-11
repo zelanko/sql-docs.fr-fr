@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714866"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visionneuse des conflits de réplication de Microsoft (réplication transactionnelle)
@@ -45,13 +45,13 @@ ms.locfileid: "62714866"
  **Appliquer ou supprimer le filtre**  
  Applique ou supprime un filtre défini dans la boîte de dialogue **Définir les filtres** .  
   
- **Tout sélectionner**  
+ **Sélectionner tout**  
  Sélectionne tous les conflits de la grille.  
   
  **Aucune sélection**  
  Désélectionne tous les conflits de la grille.  
   
- **Supprimer**  
+ **Remove**  
  Supprime les conflits sélectionnés et leurs métadonnées associées des tables système de réplication.  
   
  **Afficher toutes les colonnes**  
@@ -60,8 +60,8 @@ ms.locfileid: "62714866"
  **Afficher les cinq premières colonnes et les autres colonnes qui contiennent des données conflictuelles**  
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
- **Informations sur la colonne** ( **…** )  
- Cliquez pour afficher les informations de colonne : **Nom de la table**, **Nom de la colonne**, **Type de données** et **Valeur de la colonne**.  
+ **Afficher les informations de colonne** (**...**)  
+ Affiche les informations sur la colonne : **Nom de la table**, **Nom de la colonne**, **Type de données**et **Valeur de la colonne**.  
   
  **Consigner les détails de ce conflit**  
  Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration ( **...** ) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  

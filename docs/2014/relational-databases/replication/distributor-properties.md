@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721398"
 ---
-# <a name="sql-server-replication-distributor-properties"></a>Propriétés du serveur de distribution de réplication SQL Server
-Cette rubrique décrit les propriétés présentes dans le **général**, **éditeurs**, et **base de données de Distribution** pages au sein de la **des propriétés de serveur de distribution**  fenêtre. 
+# <a name="sql-server-replication-distributor-properties"></a>Propriétés du serveur de distribution Réplication SQL Server
+Cette rubrique présente les propriétés disponibles dans les pages **général**, **éditeurs**et **base de données de distribution de** la fenêtre **Propriétés** du serveur de distribution. 
 
 ## <a name="general"></a>Général
   La page **Général** de la boîte de dialogue **Propriétés du serveur de distribution** vous permet d'ajouter et de supprimer des bases de données de distribution et d'en définir des propriétés.  
@@ -51,12 +51,12 @@ Cette rubrique décrit les propriétés présentes dans le **général**, **édi
   
 ### <a name="options"></a>Options  
  **Serveurs de publication**  
- Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton Propriétés **(...)** situé en regard d'un serveur de publication pour voir et définir d'autres propriétés.  
+ Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton des propriétés **(...)** en regard d’un serveur de publication pour afficher et définir des propriétés supplémentaires.  
   
  **Ajouter**  
- Si le serveur souhaité ne figure pas dans la liste, cliquez sur **Ajouter** afin d'ajouter un serveur de publication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Oracle Publisher à la liste des serveurs de publication disponibles. Si le serveur ajouté est le premier à utiliser ce serveur de distribution en tant que serveur de distribution distant, vous serez invité à fournir un mot de passe de lien d'administration.  
+ Si le serveur souhaité ne figure pas dans la liste, cliquez sur **Ajouter** afin d'ajouter un serveur de publication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un serveur de publication Oracle à la liste des serveurs de publication disponibles. Si le serveur ajouté est le premier à utiliser ce serveur de distribution en tant que serveur de distribution distant, vous serez invité à fournir un mot de passe de lien d'administration.  
   
- **Mot de passe du lien d'administration**  
+ **Mot de passe du lien d’administration**  
  Permet de spécifier ou de mettre à jour le mot de passe utilisé pour assurer la réplication de connexion entre le serveur de publication et le serveur de distribution distant à l'aide de la connexion **distributor_admin** :  
   
 -   Si le serveur de distribution sert uniquement au niveau local, ce mot de passe est généré de manière aléatoire et configuré automatiquement.  
@@ -66,7 +66,7 @@ Cette rubrique décrit les propriétés présentes dans le **général**, **édi
  Pour plus d’informations sur la sécurité des serveurs de distribution, consultez [Sécuriser le serveur de distribution](security/secure-the-distributor.md).  
 
 ## <a name="distribution-database"></a>Base de données de distribution
- La boîte de dialogue **Propriétés de la base de données de distribution** vous permet d'afficher certaines propriétés et de définir la période de rétention de transaction ainsi que la période de rétention d'historique pour la base de données.  
+ La boîte de dialogue **Propriétés de la base de données de distribution** permet d’afficher un certain nombre de propriétés et de définir la période de rétention des transactions et la période de rétention de l’historique pour la base de données.  
   
 ### <a name="options"></a>Options  
  **Nom**  
@@ -78,10 +78,10 @@ Cette rubrique décrit les propriétés présentes dans le **général**, **édi
  **Période de rétention des transactions**  
  Également appelée période de rétention de distribution. Durée de stockage des transactions pour une réplication transactionnelle. Pour plus d’informations, voir [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
- **Période de rétention de l'historique**  
+ **Période de rétention de l’historique**  
  Durée de stockage des métadonnées de l'historique pour tous les types de réplications.  
   
- **Sécurité de l'Agent de lecture de la file d'attente**  
+ **Sécurité Agent de lecture de la file d’attente**  
  L'Agent de lecture de la file d'attente est utilisé par la réplication transactionnelle avec les abonnements mis à jour en file d'attente. Un Agent de lecture de la file d'attente est créé automatiquement si vous sélectionnez l'option **Publication transactionnelle avec abonnements pouvant être mis à jour** dans la page **Type de publication** de l'Assistant Nouvelle publication. Cliquez sur **Paramètres de sécurité…** pour modifier le compte sous lequel l’Agent est exécuté et effectue des connexions au serveur de distribution.  
   
  Un Agent de lecture de la file d'attente peut également être créé en sélectionnant l'option **Créer un Agent de lecture de la file d'attente** dans cette page (cette option est désactivée si l'Agent a déjà été créé).  
@@ -90,7 +90,7 @@ Cette rubrique décrit les propriétés présentes dans le **général**, **édi
 -   L'Agent se connecte au serveur de publication à l'aide des informations d'identification spécifiées dans la boîte de dialogue **Propriétés du serveur de publication** , qui est accessible à partir de la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution** .    
 -   L'Agent se connecte à l'Abonné à l'aide des informations d'identification spécifiées pour l'Agent de distribution dans l'Assistant Nouvel abonnement.  
   
- Pour plus d’informations, consultez  \\[Replication Agent Security Model](security/replication-agent-security-model.md). 
+ Pour plus d’informations, \\consultez [modèle de sécurité de l’agent de réplication](security/replication-agent-security-model.md). 
 
   
 ## <a name="see-also"></a>Voir aussi  

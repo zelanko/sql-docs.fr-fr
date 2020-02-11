@@ -1,5 +1,5 @@
 ---
-title: Algorithme Microsoft Sequence Clustering | Microsoft Docs
+title: Algorithme de mise en cluster de séquences Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083833"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algorithme MSC (Microsoft Sequence Clustering)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Sequence Clustering est un algorithme d’analyse de séquence fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous pouvez utiliser cet algorithme pour Explorer les données qui contient les événements qui peuvent être liés en suivant des chemins ou *séquences*. L'algorithme recherche les séquences les plus communes en groupant, ou en regroupant en clusters, les séquences identiques. Voici quelques exemples de données qui contiennent des séquences qui peuvent être utilisées pour l'exploration de données, pour fournir des précisions sur des problèmes courants ou des scénarios d'entreprise :  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Sequence Clustering est un algorithme d’analyse [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de séquence fourni par. Vous pouvez utiliser cet algorithme pour explorer des données qui contiennent des événements pouvant être liés par des chemins d’accès ou des *séquences*suivants. L'algorithme recherche les séquences les plus communes en groupant, ou en regroupant en clusters, les séquences identiques. Voici quelques exemples de données qui contiennent des séquences qui peuvent être utilisées pour l'exploration de données, pour fournir des précisions sur des problèmes courants ou des scénarios d'entreprise :  
   
 -   Séquence de clics qui sont créées lorsque les utilisateurs parcourent un site Web.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66083833"
  Cet algorithme est semblable à de nombreux égards à l’algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Toutefois, au lieu de rechercher des clusters de cas qui contiennent des attributs similaires, l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) recherche des clusters de cas qui contiennent des chemins similaires dans une séquence.  
   
 ## <a name="example"></a>Exemple  
- Le [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] site Web de collecte des informations sur les pages du site les utilisateurs visitent et sur l’ordre dans lequel les pages sont consultées. Comme la société permet de commander en ligne, les clients doivent se connecter au site. Cela fournit à la société des informations sur les clics effectués pour chaque profil de client. En utilisant l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) sur ces données, la société peut détecter des groupes, ou des clusters, de clients qui présentent des modèles ou des séquences de clics similaires. La société peut ensuite utiliser ces clusters pour analyser comment les utilisateurs se déplacent sur le site Web, pour identifier les pages les plus étroitement liées à la vente d'un produit particulier et pour prévoir les pages qui ont le plus de chance d'être consultées ensuite.  
+ Le [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] site Web collecte des informations sur les pages que les utilisateurs du site visitent et sur l’ordre dans lequel les pages sont consultées. Comme la société permet de commander en ligne, les clients doivent se connecter au site. Cela fournit à la société des informations sur les clics effectués pour chaque profil de client. En utilisant l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) sur ces données, la société peut détecter des groupes, ou des clusters, de clients qui présentent des modèles ou des séquences de clics similaires. La société peut ensuite utiliser ces clusters pour analyser comment les utilisateurs se déplacent sur le site Web, pour identifier les pages les plus étroitement liées à la vente d'un produit particulier et pour prévoir les pages qui ont le plus de chance d'être consultées ensuite.  
   
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
  L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme hybride qui associe les techniques de clustering à l’analyse en chaînes de Markov pour identifier les clusters et leur séquence. Une des particularités de l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est qu'il utilise des données de séquence. Ces données représentent généralement une série d'événements ou de transitions entre des états dans un dataset, comme par exemple une série d'achats de produits ou de clics Web pour un utilisateur particulier. L’algorithme examine toutes les probabilités de transitions et mesure les différences, ou distances, entre toutes les séquences possibles dans le dataset pour identifier les séquences les mieux adaptées pour servir d’entrées au clustering. Une fois que l'algorithme a créé la liste des séquences candidates, il utilise les informations de séquence comme entrée pour la méthode EM de clustering.  
@@ -52,7 +52,7 @@ ms.locfileid: "66083833"
   
 -   **Une colonne de séquence** Pour les données de séquence, le modèle doit avoir une table imbriquée qui contient une colonne d’ID de séquence. L'ID de séquence peut être tout type de données pouvant être trié. Par exemple, vous pouvez utiliser un identificateur de page Web, un entier ou une chaîne de texte, tant que la colonne identifie les événements dans une séquence. Un seul identificateur de séquence est autorisé pour chaque séquence, et un seul type de séquence est autorisé dans chaque modèle.  
   
--   **Des attributs non-séquence facultatifs** L’algorithme prend en charge l’ajout d’autres attributs non liés à un séquencement. Ces attributs peuvent inclure des colonnes imbriquées.  
+-   **Attributs non-séquence facultatifs** L’algorithme prend en charge l’ajout d’autres attributs qui ne sont pas liés au séquencement. Ces attributs peuvent inclure des colonnes imbriquées.  
   
  Prenons l'exemple cité précédemment concernant le site Web [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] , un modèle Sequence Clustering peut inclure des informations sur les commandes sous forme de table de cas, des statistiques démographiques sur un client spécifique pour chaque commande sous forme d'attributs non-séquence et une table imbriquée contenant l'ordre dans lequel le client a parcouru le site ou a placé des articles dans son panier sous forme d'informations de séquence.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66083833"
 -   Prend en charge l'utilisation de modèles d'exploration de données OLAP et la création de dimensions d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Références techniques relatives à l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Exemples de requêtes de modèle MSC (Sequence Clustering)](clustering-model-query-examples.md)   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Informations techniques de référence sur l’algorithme Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Exemples de requêtes de modèle Sequence Clustering](clustering-model-query-examples.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MSC (Microsoft Sequence Cluster)](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

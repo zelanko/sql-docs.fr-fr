@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075536"
 ---
 # <a name="define-semiadditive-behavior"></a>Définir le comportement semi-additif
@@ -50,9 +50,9 @@ ms.locfileid: "66075536"
   
 -   None  
   
- Cette option ne change pas les mesures avec une fonction d’agrégation normale : `Sum`, `Min`, `Max`, `Count`, ou `Distinct``Count`.  
+ Cette option ne change pas les mesures avec une fonction d’agrégation `Sum`normale `Min`: `Max`, `Count`,, `Distinct``Count`ou.  
   
- **L’Assistant a détecté le « compte » dimension de compte, qui contient des membres semi-additifs. Le serveur agrégera les membres de cette dimension selon le comportement semi-additif spécifié pour chaque type de compte.**  
+ **L’Assistant a détecté une dimension de compte « compte », qui contient des membres semi-additifs. Le serveur agrégera les membres de cette dimension en fonction du comportement semi-additif spécifié pour chaque type de compte.**  
  Provoque la définition de toutes les mesures d'un groupe de mesures dimensionné par une dimension de type Compte dans la fonction d'agrégation par le système, et le serveur agrège les membres de la dimension en fonction du comportement semi-additif spécifié pour chaque type de compte.  
   
 > [!NOTE]  

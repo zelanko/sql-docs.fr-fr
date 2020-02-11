@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704877"
 ---
 # <a name="resource-governor"></a>gouverneur de ressources
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Resource Governor vous permet de spécifier des limites sur l'utilisation de la quantité d'UC, d'E/S physiques et de mémoire par les demandes d'application entrantes.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la charge de travail et la consommation des ressources système. Le gouverneur des ressources vous permet de spécifier des limites sur la quantité d’UC,d’E/S physiques et de mémoire utilisables par les requêtes d’application entrantes.  
   
 ## <a name="benefits-of-resource-governor"></a>Avantages de Resource Governor  
  Resource Governor vous permet de gérer les ressources et les charge de travail [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en spécifiant des limites concernant la consommation de ressources par les demandes entrantes. Du point de vue de Resource Governor, la charge de travail est un ensemble de requêtes de taille similaire qui peuvent ou devraient être traitées comme une entité unique. Bien que cela ne soit pas indispensable, plus le modèle d'utilisation des ressources d'une charge de travail est uniforme, plus il est avantageux d'utiliser Resource Governor. Les limites de ressources peuvent être reconfigurées en temps réel avec un impact négligeable sur les charges de travail en cours d'exécution.  
@@ -56,7 +56,7 @@ ms.locfileid: "62704877"
   
 -   **Pools de ressources.** Un pool de ressources représente les ressources physiques du serveur. Vous pouvez envisager un pool comme une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuelle dans une instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Deux pools de ressources (interne et par défaut) sont créés lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé. Resource Governor prend aussi en charge des pools de ressources définis par l'utilisateur. Pour plus d’informations, consultez [Pool de ressources de Resource Governor](resource-governor-resource-pool.md).  
   
--   **Groupes de charges de travail.** Un groupe de charges de travail sert de conteneur aux demandes de session qui ont des critères de classification similaires. Une charge de travail autorise l'analyse globale des sessions et définit les stratégies pour les sessions. Chaque groupe de charges de travail se trouve dans un pool de ressources. Deux groupes de charges de travail (interne et par défaut) sont créés et mappés à leurs pools de ressources correspondants lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé. Resource Governor prend aussi en charge des groupes de charges de travail définis par l'utilisateur. Pour plus d’informations, consultez [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md).  
+-   **Groupes de charge de travail.** Un groupe de charges de travail sert de conteneur aux demandes de session qui ont des critères de classification similaires. Une charge de travail autorise l'analyse globale des sessions et définit les stratégies pour les sessions. Chaque groupe de charges de travail se trouve dans un pool de ressources. Deux groupes de charges de travail (interne et par défaut) sont créés et mappés à leurs pools de ressources correspondants lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé. Resource Governor prend aussi en charge des groupes de charges de travail définis par l'utilisateur. Pour plus d’informations, consultez [Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md).  
   
 -   **Classification.** Le processus de classification affecte les sessions entrantes à un groupe de charges de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur. Resource Governor prend en charge également une fonction classifieur définie par l'utilisateur pour implémenter des règles de classification. Pour plus d’informations, consultez [Fonction classifieur de Resource Governor](resource-governor-classifier-function.md).  
   
@@ -83,11 +83,11 @@ ms.locfileid: "62704877"
 |----------------------|-----------|  
 |Décrit comment activer Resource Governor.|[Activer Resource Governor](resource-governor.md)|  
 |Décrit comment désactiver Resource Governor.|[Désactiver Resource Governor](disable-resource-governor.md)|  
-|Décrit comment créer, modifier et supprimer un pool de ressources.|[Pool de ressources de Resource Governor](resource-governor-resource-pool.md)|  
+|Décrit comment créer, modifier et supprimer un pool de ressources.|[Pool de ressources du gouverneur de ressources](resource-governor-resource-pool.md)|  
 |Décrit comment créer, modifier, déplacer et supprimer un groupe de charge de travail.|[Groupe de charge de travail de Resource Governor](resource-governor-workload-group.md)|  
 |Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Fonction classifieur de Resource Governor](resource-governor-classifier-function.md)|  
-|Décrit comment configurer Resource Governor à l'aide d'un modèle.|[Configurer Resource Governor à l’aide d’un modèle](configure-resource-governor-using-a-template.md)|  
-|Décrit comment afficher les propriétés de Resource Governor.|[Afficher les propriétés de Resource Governor](view-resource-governor-properties.md)|  
+|Décrit comment configurer Resource Governor à l'aide d'un modèle.|[Configurer Resource Governor à l'aide d'un modèle](configure-resource-governor-using-a-template.md)|  
+|Décrit comment afficher les propriétés de Resource Governor.|[Afficher les propriétés du gouverneur de ressources](view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instances du moteur de base de données &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  

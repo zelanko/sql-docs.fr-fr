@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755278"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs (option de configuration de serveur)
@@ -24,12 +24,12 @@ ms.locfileid: "62755278"
   
  Les valeurs possibles sont décrites dans le tableau suivant :  
   
-|Value|Signification|  
+|Valeur|Signification|  
 |-----------|-------------|  
 |0|Les procédures étendues SMO ne sont pas disponibles.|  
-|1|Les procédures étendues SMO sont disponibles. Il s'agit du paramètre par défaut.|  
+|1|Les procédures étendues SMO sont disponibles. Il s’agit de la valeur par défaut.|  
   
- Ce paramètre prend effet immédiatement.  
+ Le paramètre prend effet immédiatement.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant active les procédures stockées étendues de SMO.  

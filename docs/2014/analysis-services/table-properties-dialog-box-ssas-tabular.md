@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de propriétés (SSAS - tabulaire) du tableau | Microsoft Docs
+title: Boîte de dialogue Propriétés du tableau (SSAS-tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067851"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Propriétés de la table, boîte de dialogue (SSAS - Tabulaire)
@@ -29,11 +29,11 @@ ms.locfileid: "66067851"
 |Terme|Définition|  
 |----------|----------------|  
 |**Nom**|Affiche le nom de la table.|  
-|**ID**|Affiche l'identificateur de la table.|  
+|**IDENTIFI**|Affiche l'identificateur de la table.|  
 |**Description**|Affiche la description de la table.|  
 |**Créer un horodateur**|Affiche la date et l'heure de la création de la table.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière modification apportée aux métadonnées de la table.|  
-|**État**|Affiche l'état de traitement de la table. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**State**|Affiche l'état de traitement de la table. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la table.|  
 |**Mode de stockage actuel**|Affiche le mode de stockage actuel de la table. Le mode de stockage est défini au niveau de la base de données et est hérité par toutes les tables. Vous ne pouvez pas utiliser des modes de stockage différents au niveau de la table. Les valeurs valides sont InMemory (valeur par défaut), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory.|  
   

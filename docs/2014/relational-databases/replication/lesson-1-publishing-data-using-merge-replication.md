@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Publication des données à l’aide de la réplication de fusion | Microsoft Docs'
+title: 'Leçon 1 : Publication de données à l’aide de la réplication de fusion | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721179"
 ---
-# <a name="lesson-1-publishing-data-using-merge-replication"></a>Leçon 1 : Publication de données à l’aide de la réplication de fusion
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>Leçon 1 : publication de données à l'aide de la réplication de fusion
   Dans cette leçon, vous créez une publication de fusion à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble des tables **Employee**, **SalesOrderHeader**et **SalesOrderDetail** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Ces tables sont filtrées avec des filtres de lignes paramétrables pour que chaque abonnement contienne une partition unique des données. Vous ajoutez également la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par l’Agent de fusion à la liste d’accès à la publication. Pour suivre ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Pour créer une publication et définir des articles  
@@ -51,7 +51,7 @@ ms.locfileid: "62721179"
   
 9. Cliquez sur **Une ligne de cette table ira à un seul abonnement**, puis sur **OK**.  
   
-10. Dans la page **Filtrer les lignes de la table** , cliquez sur **Employee (Human Resources)** , cliquez sur **Ajouter** , puis sur **Ajouter une jointure pour étendre le filtre sélectionné**.  
+10. Dans la page **Filtrer les lignes de la table** , cliquez sur **Employee (Human Resources)**, cliquez sur **Ajouter** , puis sur **Ajouter une jointure pour étendre le filtre sélectionné**.  
   
 11. Dans la boîte de dialogue **Ajouter une jointure** , sélectionnez **Sales.SalesOrderHeader** sous **Table jointe**, cliquez sur **Créer manuellement l’instruction de jointure**et complétez l’instruction de jointure comme suit :  
   
@@ -77,13 +77,13 @@ ms.locfileid: "62721179"
   
 18. Dans **Spécifiez les options de jointure**, sélectionnez **Clé unique**, puis cliquez sur **OK**.  
   
-19. Dans la page **Filtrer les lignes de la table** , cliquez sur **SalesOrderHeader (Sales)** , sur **Ajouter**, puis sur **Ajouter une jointure pour étendre le filtre sélectionné**.  
+19. Dans la page **Filtrer les lignes de la table** , cliquez sur **SalesOrderHeader (Sales)**, sur **Ajouter**, puis sur **Ajouter une jointure pour étendre le filtre sélectionné**.  
   
 20. Dans la boîte de dialogue **Ajouter une jointure** , sélectionnez **Sales.SalesOrderDetail** sous **Table jointe**, cliquez sur **OK**, puis sur **Suivant**.  
   
 21. Sélectionnez **Créer un instantané immédiatement**, décochez **Planifier l’exécution de l’Agent d’instantané aux heures suivantes**, puis cliquez sur **Suivant**.  
   
-22. Dans la page Sécurité de l’agent, cliquez sur **Paramètres de sécurité**, tapez \<_nom_ordinateur>_ **\repl_snapshot** dans la zone **Compte de processus**, fournissez le mot de passe du compte et cliquez sur **OK**. Cliquez sur **Terminer**.  
+22. Dans la page sécurité de l’agent, cliquez sur **paramètres de sécurité**, tapez \< _Machine_Name>_ **\ repl_snapshot** dans la zone **compte de processus** , fournissez le mot de passe de ce compte, puis cliquez sur **OK**. Cliquez sur **Terminer**.  
   
 23. Dans la page Terminer l’Assistant, entrez **AdvWorksSalesOrdersMerge** dans la zone **Nom de la publication** , puis cliquez sur **Terminer**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721179"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Pour afficher l'état d'une génération d'instantané  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud du serveur, puis le dossier **Réplication** .  
+1.  Connectez-vous au serveur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, développez le nœud du serveur, puis développez le dossier **réplication** .  
   
 2.  Dans le dossier Publications locales, cliquez avec le bouton droit sur **AdvWorksSalesOrdersMerge**, puis cliquez sur **Afficher l’état de l’Agent d’instantané**.  
   
@@ -99,22 +99,22 @@ ms.locfileid: "62721179"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>Pour ajouter la connexion de l'Agent de fusion à la liste d'accès à la publication  
   
-1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud du serveur, puis le dossier **Réplication** .  
+1.  Connectez-vous au serveur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de publication dans, développez le nœud du serveur, puis développez le dossier **réplication** .  
   
 2.  Dans le dossier Publications locales, cliquez avec le bouton droit sur **AdvWorksSalesOrdersMerge**, puis cliquez sur **Propriétés**.  
   
      La boîte de dialogue **Propriétés de la publication** s’affiche.  
   
-3.  Sélectionnez la page **Liste d’accès à la publication**, puis cliquez sur **Ajouter**.  
+3.  Sélectionnez la page **Liste d’accès à la publication** , puis cliquez sur **Ajouter**.  
   
-4.  Dans la boîte de dialogue Ajouter un accès à une publication, sélectionnez _<nom_ordinateur>_ **\repl_merge** et cliquez sur **OK**. Cliquez sur **OK**.  
+4.  Dans la boîte de dialogue Ajouter un accès à une publication, sélectionnez _<Machine_Name>_ **\ repl_merge** , puis cliquez sur **OK**. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès la publication de fusion. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la Publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ Vous avez créé avec succès la publication de fusion. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer des données publiées](publish/filter-published-data.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtres de lignes paramétrés](merge/parameterized-filters-parameterized-row-filters.md)   
  [Définir un article](publish/define-an-article.md)  
   
   

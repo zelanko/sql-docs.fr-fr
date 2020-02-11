@@ -1,5 +1,5 @@
 ---
-title: Interroger et filtrer (onglet navigateur, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Requête et filtre (onglet navigateur, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070540"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Interroger et filtrer (onglet Navigateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -37,13 +37,13 @@ ms.locfileid: "66070540"
  **Opérateur**  
  Sélectionnez l’opérateur qui définit comment l’expression dans **Expression de filtre** est appliquée à la hiérarchie sélectionnée. Le tableau suivant décrit les opérateurs disponibles.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**égal**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
-|**Non égal**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
+|**Valeur**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
+|**Différent de**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
 |**Dans**|Les résultats se limitent à l'ensemble nommé choisi dans **Expression de filtre**.|  
 |**Pas dans**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble nommé choisi dans **Expression de filtre**.|  
-|**Contient**|Les résultats se limitent aux membres dont le nom contient la chaîne de caractères figurant dans **Expression de filtre**.|  
+|**Comprend**|Les résultats se limitent aux membres dont le nom contient la chaîne de caractères figurant dans **Expression de filtre**.|  
 |**Commence par**|Les résultats se limitent aux membres dont le nom commence par la chaîne de caractères figurant dans **Expression de filtre**.|  
 |**Plage (limites incluses)**|Les résultats se limitent à la plage choisie dans **Expression de filtre**.|  
 |**Plage (limites exclues)**|Les résultats se limitent aux membres n'appartenant pas à la plage choisie dans **Expression de filtre**.|  
@@ -56,10 +56,10 @@ ms.locfileid: "66070540"
 >  Ce champ est un élément dynamique de saisie des données dont l'aspect change en fonction des types de données nécessaires à l'opérateur sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Navigateur &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analyser dans Excel &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Métadonnées &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Navigateur &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barre d’outils &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analyser dans Excel &#40;onglet navigateur, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Onglets du navigateur &#40;de métadonnées, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

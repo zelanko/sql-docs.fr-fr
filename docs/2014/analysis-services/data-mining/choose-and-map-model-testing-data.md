@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085759"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Choisir et mapper les données de test du modèle
@@ -43,13 +43,13 @@ ms.locfileid: "66085759"
   
  Cette rubrique explique comment choisir et mapper les données de test :  
   
- [Sélectionner des tables d'entrée pour tester la précision d'un modèle d'exploration de données](#bkmk_SelectInputs)  
+ [Sélectionner des tables d’entrée pour tester la précision d’un modèle d’exploration de données](#bkmk_SelectInputs)  
   
- [Mapper des colonnes aux colonnes des données de test](#bkmk_MapColumns)  
+ [Mapper les colonnes du modèle aux colonnes des données de test](#bkmk_MapColumns)  
   
  [Modifier la façon dont les colonnes des données de test sont mappées au modèle](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a> Pour sélectionner des tables d'entrée pour tester la précision d'un modèle d'exploration de données  
+##  <a name="bkmk_SelectInputs"></a>Pour sélectionner des tables d’entrée pour tester la précision d’un modèle d’exploration de données  
   
 1.  Dans le Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-cliquez sur la structure d'exploration de données qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "66085759"
   
 3.  Sous l’onglet **Sélection d’entrée** de la vue **Graphique d’analyse de précision de l’exploration de données** , sélectionnez l’une des options suivantes :  
   
-     **Utiliser des scénarios de test de modèle d'exploration de données**  
+     **Utiliser des scénarios de test de modèle d’exploration de données**  
   
-     **Utiliser des scénarios de test de structure d'exploration de données**  
+     **Utiliser les cas de test de la structure d’exploration de données**  
   
      **Spécifier un autre jeu de données**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085759"
   
 5.  Cliquez sur l’onglet **Graphique de courbes d’élévation** ou sur l’onglet **Matrice de classification** pour générer automatiquement le graphique en utilisant les données de test spécifiées.  
   
-##  <a name="bkmk_MapColumns"></a> Pour mapper des colonnes aux colonnes des données de test  
+##  <a name="bkmk_MapColumns"></a>Pour mapper les colonnes du modèle aux colonnes des données de test  
   
 1.  Pour ouvrir la structure et les modèles dans le Concepteur d'exploration de données, double-cliquez sur la structure d'exploration de données qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66085759"
   
 3.  Dans **Sélection d’entrée** , sous **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez **Spécifier un autre jeu de données**.  
   
-4.  Cliquez sur le bouton Parcourir **(...)**  pour ouvrir une boîte de dialogue et créer la définition du jeu de données externe.  
+4.  Cliquez sur le bouton Parcourir **(...)** pour ouvrir une boîte de dialogue et créer la définition du jeu de données externe.  
   
 5.  Dans la boîte de dialogue **Sélectionner la structure d’exploration de données** , sélectionnez la structure d’exploration de données qui contient les modèles à utiliser, puis cliquez sur **OK**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085759"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a> Pour modifier le mappage des données d'entrée au modèle  
+##  <a name="bkmk_ChangeMappings"></a>Pour modifier la façon dont les données d’entrée sont mappées au modèle  
   
 1.  Dans le Concepteur d’exploration de données, double-cliquez sur la structure qui contient les modèles pour lesquels vous souhaitez établir un graphique.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66085759"
   
 3.  Cliquez sur l’onglet **Sélection d’entrée** .  
   
-4.  Dans **Sélectionner le jeu de données à utiliser pour le graphique d’analyse de précision**, sélectionnez l’option **Spécifier un autre jeu de données**.  
+4.  Dans **Sélectionner le jeu de données à utiliser pour le graphique d’exactitude**, sélectionnez l’option **spécifier un autre jeu de données**.  
   
-5.  Cliquez sur le bouton Parcourir **(...)**  pour ouvrir une boîte de dialogue et créer la définition de la source de données externe.  
+5.  Cliquez sur le bouton Parcourir **(...)** pour ouvrir une boîte de dialogue et créer la définition de la source de données externe.  
   
 6.  Dans la boîte de dialogue **Spécifier le mappage des colonnes** , cliquez sur **Sélectionner la table de cas**.  
   
@@ -120,6 +120,6 @@ ms.locfileid: "66085759"
      Les nouveaux mappages de colonnes sont affichés dans la boîte de dialogue **Spécifier le mappage des colonnes** . Pour supprimer un mappage, sélectionnez la ligne située entre les colonnes, puis appuyez sur la touche Suppr. Pour créer une connexion, sélectionnez une colonne dans la table **Structure d’exploration de données** , puis faites-la glisser vers la colonne correspondante de la table **Sélectionner une ou plusieurs tables d’entrée** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de test et validation et procédures &#40;exploration des données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tâches de test et de validation et &#40;d’exploration de données&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

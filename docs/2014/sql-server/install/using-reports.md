@@ -1,5 +1,5 @@
 ---
-title: À l’aide de rapports | Microsoft Docs
+title: Utilisation des rapports | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -36,22 +36,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091228"
 ---
 # <a name="using-reports"></a>Utilisation de rapports
-  Un rapport distinct est généré pour chaque composant et, si nécessaire, pour chaque instance, que l'Assistant Analyse du Conseiller de mise à niveau analyse sur un serveur. Le rapport contient des détails sur les problèmes connus qui affectent une mise à niveau. Il fournit également des liens vers des informations et les actions suggérées pour traiter les problèmes identifiés.  
+  Un rapport distinct est généré pour chaque composant et, si nécessaire, pour chaque instance, que l'Assistant Analyse du Conseiller de mise à niveau analyse sur un serveur. Le rapport contient des détails sur les problèmes connus qui affectent une mise à niveau. Il fournit également des liens vers des informations et des actions suggérées pour traiter les problèmes identifiés.  
   
 > [!NOTE]  
->  Si la visionneuse de rapports de conseiller de mise à niveau ne trouve pas tous les rapports dans le répertoire de rapports par défaut, vous pouvez charger un rapport à partir d’un autre répertoire en utilisant le **ouvrir le rapport** lien.  
+>  Si la visionneuse de rapports du conseiller de mise à niveau ne trouve pas de rapports dans le répertoire des rapports par défaut, vous pouvez charger un rapport à partir d’un répertoire différent à l’aide du lien **ouvrir le rapport** .  
   
 ## <a name="viewing-reports"></a>Affichage de rapports  
- La visionneuse de rapports vous permet d'afficher les rapports du Conseiller de mise à niveau. Pour afficher des rapports, sur la page de démarrage du Conseiller de mise à niveau, cliquez sur **lancer la visionneuse de rapports**.  
+ La visionneuse de rapports vous permet d'afficher les rapports du Conseiller de mise à niveau. Pour afficher les rapports, sur la page de démarrage du conseiller de mise à niveau, cliquez sur **lancer le conseiller de mise à niveau**.  
   
- Après avoir chargé le rapport d'un serveur, vous pouvez sélectionner un composant pour consulter les problèmes de mise à niveau le concernant. Vous pouvez appliquer un filtre à partir de la **filtrer par** zone pour afficher les éléments suivants :  
+ Après avoir chargé le rapport d'un serveur, vous pouvez sélectionner un composant pour consulter les problèmes de mise à niveau le concernant. Vous pouvez appliquer un filtre à partir de la zone **Filtrer par** pour afficher les éléments suivants :  
   
 -   Tous les problèmes  
   
@@ -65,27 +65,27 @@ ms.locfileid: "66091228"
   
 -   Problèmes non résolus  
   
- Si votre rapport comporte plus de 20 problèmes, vous pouvez déplacer au groupe de problèmes suivant ou précédent en cliquant sur **20 suivants** ou **20 précédents** en haut ou bas de la liste des problèmes.  
+ Si votre rapport contient plus de 20 problèmes, vous pouvez passer au groupe de problèmes suivant ou précédent en cliquant sur **20 suivants** ou **20 précédents** en haut ou en bas de la liste des problèmes.  
   
- Vous pouvez afficher jusqu'à cinq rapports enregistrés en sélectionnant les rapports à partir de la **rapport** zone de liste déroulante. Les rapports sont répertoriés selon le horodateur à partir du moment où ils ont été générés.  
+ Vous pouvez afficher jusqu’à cinq rapports enregistrés en sélectionnant les rapports dans la zone de liste déroulante **rapport** . Les rapports sont répertoriés selon le horodateur à partir du moment où ils ont été générés.  
   
 ## <a name="report-format"></a>Format de rapport  
  La visionneuse de rapports affiche les problèmes répertoriés dans trois colonnes. Chaque problème est réductible afin que vous puissiez masquer la description et afficher uniquement les informations importantes.  
   
- La première colonne est la **Importance** colonne. Des icônes indiquent l'importance de chaque problème en affichant un cercle rouge avec un X pour signifier des problèmes importants ou entraînant un blocage ou un triangle jaune avec un point d'exclamation pour signifier des problèmes faisant l'objet d'un avertissement ou d'une information. La deuxième colonne, **date de résolution**, indique lorsque vous devez résoudre le problème. Vous pouvez trier le rapport en fonction du **Importance** ou **date de résolution** colonne. La troisième colonne, **Description**, affiche le titre du problème.  
+ La première colonne est la colonne **importance** . Des icônes indiquent l'importance de chaque problème en affichant un cercle rouge avec un X pour signifier des problèmes importants ou entraînant un blocage ou un triangle jaune avec un point d'exclamation pour signifier des problèmes faisant l'objet d'un avertissement ou d'une information. La deuxième colonne, **quand elle est à corriger**, indique quand vous devez résoudre le problème. Vous pouvez trier le rapport en fonction de l' **importance** ou **de la correction de** la colonne. La troisième colonne, **Description**, répertorie le titre du problème.  
   
- Vous pouvez développer un problème pour afficher des informations supplémentaires, un lien vers des informations détaillées à propos de la résolution du problème et un lien pour afficher les détails du problème. Lorsque vous cliquez sur le lien pour obtenir des précisions concernant le problème, une rubrique d'aide s'affiche avec des informations sur le problème et des instructions pour le résoudre. Après avoir résolu un problème ou pour gérer vos éléments d’action, vous pouvez marquer un problème comme étant terminé en sélectionnant le **ce problème a été résolu** case à cocher. Si vous souhaitez supprimer les problèmes résolus dans la liste des problèmes de mise à niveau, cliquez sur **Actualiser**. Le problème ne sera plus affiché jusqu'à ce que vous exécutez l’Assistant analyse du Conseiller de mise à niveau sur le même composant ou appliquez le **problèmes résolus** filtrer dans le **filtrer par** option.  
+ Vous pouvez développer un problème pour afficher des informations supplémentaires, un lien vers des informations détaillées à propos de la résolution du problème et un lien pour afficher les détails du problème. Lorsque vous cliquez sur le lien pour obtenir des précisions concernant le problème, une rubrique d'aide s'affiche avec des informations sur le problème et des instructions pour le résoudre. Une fois que vous avez corrigé un problème ou géré vos éléments d’action, vous pouvez marquer les problèmes comme terminés en activant la case à cocher **ce problème a été résolu** . Si vous souhaitez supprimer les problèmes résolus de la liste des problèmes de mise à niveau, cliquez sur **Actualiser**. Le problème ne s’affiche plus tant que vous n’avez pas exécuté l’Assistant analyse du conseiller de mise à niveau sur le même composant, ou appliqué le filtre **problèmes résolus** à partir de l’option **Filtrer par** .  
   
 ## <a name="report-files"></a>Fichiers de rapport  
- L’Assistant analyse du Conseiller de mise à niveau crée des rapports dans les Documents Mes\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Advisor\110\Reports mise à niveau directory et crée un sous-répertoire pour chaque serveur analysé. Les fichiers de rapport sont des fichiers XML qui respectent une convention d'affectation de noms spécifique. Lorsque vous lancez la visionneuse de rapports du Conseiller de mise à niveau, les fichiers de rapport dans le répertoire par défaut sont affichés. Lorsque vous copiez des fichiers de rapport dans ce dossier, ceux-ci doivent respecter la convention d'affectation de noms sinon la visionneuse de rapports ne les affiche pas automatiquement.  
+ L’Assistant analyse du conseiller de mise à niveau crée des\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapports dans le répertoire Mes documents Upgrade Advisor\110\Reports et crée un sous-répertoire pour chaque serveur que vous analysez. Les fichiers de rapport sont des fichiers XML qui respectent une convention d'affectation de noms spécifique. Lorsque vous lancez la visionneuse de rapports du Conseiller de mise à niveau, les fichiers de rapport dans le répertoire par défaut sont affichés. Lorsque vous copiez des fichiers de rapport dans ce dossier, ceux-ci doivent respecter la convention d'affectation de noms sinon la visionneuse de rapports ne les affiche pas automatiquement.  
   
  Si vous souhaitez partager les informations avec d'autres personnes, vous pouvez leur envoyer le rapport XML. Ou, si vous souhaitez utiliser une autre application, vous pouvez exporter le rapport dans un fichier de valeurs séparées par des virgules (CSV) qui vous permettra de créer une feuille de calcul, un fichier texte ou un message électronique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédure : Afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [Procédure : Exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Procédure : Rapports de filtre](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [Procédure : afficher un rapport du conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [Procédure : exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Comment : filtrer des rapports](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Le conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

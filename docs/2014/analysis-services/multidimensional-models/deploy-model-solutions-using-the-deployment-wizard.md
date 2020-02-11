@@ -1,5 +1,5 @@
 ---
-title: Déployer des Solutions de modèle à l’aide de l’Assistant de déploiement | Microsoft Docs
+title: Déployer des solutions de modèle à l’aide de l’Assistant Déploiement | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e18b1786201be9ba671bc08fe7b24ba2207469e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075378"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
-  L'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les fichiers de sortie XML générés à partir d'un projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme fichiers d'entrée. Il est facile de modifier ces fichiers d'entrée pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
+  L' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de utilise les fichiers de sortie XML générés à partir d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet en tant que fichiers d’entrée. Il est facile de modifier ces fichiers d'entrée pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
   
  Vous pouvez déployer un projet à l'aide de l'Assistant comme l'explique la présente rubrique. Vous pouvez aussi automatiser le déploiement ou utiliser la fonctionnalité de Synchronisation. Si la base de données déployée est de grande taille, envisagez d'utiliser des partitions sur les systèmes cibles. Vous pouvez aussi automatiser la création et le remplissage des partitions à l'aide d'objets AMO (Analysis Management Objects).  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66075378"
 |[Description du script de déploiement Analysis Services](understanding-the-analysis-services-deployment-script.md)|Décrit le contenu du script de déploiement et explique comment il s'exécute.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des solutions de modèle à l'aide de XMLA](deploy-model-solutions-using-xmla.md)   
- [Synchroniser des base de données Analysis Services](synchronize-analysis-services-databases.md)   
- [Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)   
+ [Déployer des solutions de modèle à l’aide de XMLA](deploy-model-solutions-using-xmla.md)   
+ [Synchroniser les bases de données Analysis Services](synchronize-analysis-services-databases.md)   
+ [Comprendre les fichiers d’entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)   
  [Déployer des solutions de modèle avec l'utilitaire de déploiement](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

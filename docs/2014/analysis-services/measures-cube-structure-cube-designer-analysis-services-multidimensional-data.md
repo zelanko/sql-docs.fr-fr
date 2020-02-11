@@ -1,5 +1,5 @@
 ---
-title: Mesures (onglet Structure de Cube, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Mesures (onglet structure de cube, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077921"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Mesures (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66077921"
  mesures  
  Affiche les groupes de mesures et les mesures figurant dans le cube en fonction de la vue sélectionnée :  
   
- trEE  
+ Arborescence  
  Affiche une arborescence des groupes de mesure, les mesures étant des nœuds enfants.  
   
  Développez les groupes de mesures pour afficher les mesures. Cliquez sur un groupe de mesures ou une mesure sélectionné pour renommer respectivement le groupe ou la mesure.  
@@ -62,8 +62,8 @@ ms.locfileid: "66077921"
   
 |Option|Définition|  
 |------------|----------------|  
-|**Arborescence**|Affiche les groupes et les mesures sous forme d'arborescence.|  
-|**Grid**|Affiche les groupes et les mesures sous forme de tableau.|  
+|**Arbres**|Affiche les groupes et les mesures sous forme d'arborescence.|  
+|**Boutons**|Affiche les groupes et les mesures sous forme de tableau.|  
   
  **Renommer**  
  Sélectionnez cette option pour renommer la mesure ou le groupe de mesures sélectionné.  

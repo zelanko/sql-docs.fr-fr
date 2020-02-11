@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62651488"
 ---
 # <a name="create-nonclustered-indexes"></a>Créer des index non cluster
@@ -34,7 +34,7 @@ ms.locfileid: "62651488"
   
      [Sécurité](#Security)  
   
--   **Pour créer un index non-cluster à l'aide de :**  
+-   **Pour créer un index non-cluster à l’aide de :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62651488"
 ###  <a name="Implementations"></a> Implémentations types  
  Les index non-cluster sont implémentés comme ceci :  
   
--   **Contraintes UNIQUE**  
+-   **Contraintes uniques**  
   
      Lorsque vous créez une contrainte UNIQUE, un index non-cluster unique est créé pour appliquer par défaut une contrainte UNIQUE. Vous pouvez spécifier un index cluster unique si aucun index cluster n'existe déjà sur la table. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62651488"
   
 3.  Cliquez avec le bouton droit sur la table sur laquelle vous souhaitez créer un index non-cluster, puis sélectionnez **Conception**.  
   
-4.  Dans le menu **Concepteur de tables** , cliquez sur **Index/Clés**.  
+4.  Dans le menu **Concepteur de tables** , cliquez sur **index/clés**.  
   
 5.  Dans la boîte de dialogue **Index/Clés** , cliquez sur **Ajouter**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62651488"
   
 8.  Cliquez sur **Fermer**.  
   
-9. Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
+9. Dans le menu **fichier** , cliquez sur **Enregistrer**_table_name_.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Pour créer un index non-cluster à l'aide de l'Explorateur d'objets  
   
@@ -92,11 +92,11 @@ ms.locfileid: "62651488"
   
 3.  Développez la table sur laquelle vous souhaitez créer un index non-cluster.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...** .  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
+6.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
 7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases de la ou des colonnes de table à ajouter à l’index non cluster.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62651488"
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>Pour créer un index non-cluster sur une table  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

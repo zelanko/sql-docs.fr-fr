@@ -16,33 +16,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084828"
 ---
 # <a name="data-mining-tools"></a>Outils d'exploration de données
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit les outils suivants que vous pouvez utiliser pour créer des solutions d'exploration de données :  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les outils suivants que vous pouvez utiliser pour créer des solutions d’exploration de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données :  
   
 -   L' **Assistant Exploration de données** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] vous permet de créer facilement des structures et des modèles d'exploration de données basés sur des sources de données relationnelles ou des données mutidimensionnelles dans des cubes.  
   
      Dans l'Assistant, choisissez les données à utiliser, puis appliquez des techniques spécifiques d'exploration de données, telles que le clustering, les réseaux neuronaux ou la modélisation de série chronologique.  
   
--   Les**visionneuses de modèle** sont fournies à la fois dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], pour la consultation de vos modèles d'exploration de données après leur création.  Vous pouvez parcourir des modèles à l'aide de visionneuses adaptées à chaque algorithme, ou approfondir l'analyse à l'aide de la visionneuse de contenu du modèle.  
+-   Les **visionneuses de modèle** sont [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournies [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]à la fois dans et, pour l’exploration de vos modèles d’exploration de données après leur création.  Vous pouvez parcourir des modèles à l'aide de visionneuses adaptées à chaque algorithme, ou approfondir l'analyse à l'aide de la visionneuse de contenu du modèle.  
   
 -   Le **Générateur de requêtes de prédiction** est fourni à la fois dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour vous aider à créer des requêtes de prédiction. Vous pouvez également tester la précision des modèles sur un jeu de données d'exclusion ou des données externes, ou utiliser la validation croisée pour évaluer la qualité de votre ensemble de données.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est l'interface où vous gérez des solutions d'exploration de données existantes déployées dans une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous pouvez retraiter des structures et des modèles pour mettre à jour les données qu'ils contiennent.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est l'interface où vous gérez des solutions d'exploration de données existantes déployées dans une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous pouvez retraiter des structures et des modèles pour mettre à jour les données qu'ils contiennent.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des outils que vous pouvez utiliser pour nettoyer les données, pour automatiser des tâches telles que la création de prédictions et la mise à jour de modèles, et créer des solutions d'exploration de texte.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des outils que vous pouvez utiliser pour nettoyer des données, pour automatiser des tâches telles que la création de prédictions et la mise à jour de modèles, et pour créer des solutions d’exploration de texte.  
   
  Les sections suivantes fournissent des informations complémentaires sur les outils d'exploration de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-mining-wizard"></a>Assistant Exploration de données  
  Utilisez l'Assistant Exploration de données pour commencer la création de solutions d'exploration de données. Cet Assistant est facile et rapide à utiliser, et vous guide tout au long du processus de création d'une structure d'exploration de données et d'un modèle d'exploration de données initial qui lui est associé ; il inclut les tâches de sélection d'un type d'algorithme et d'une source de données, ainsi que la définition des données de cas utilisées pour l'analyse.  
   
- **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Concepteur d’exploration de données  
  Après avoir créé une structure et un modèle d'exploration de données à l'aide de l'Assistant Exploration de données, vous pouvez utiliser le Concepteur d'exploration de données depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser les structures et les modèles existants.  
@@ -61,17 +62,18 @@ ms.locfileid: "66084828"
   
 -   Créer des prédictions et des requêtes de contenu sur des modèles d'exploration de données existants. Générer des requêtes uniques ou configurer des requêtes afin de générer des prédictions pour des tables entières de données externes.  
   
- **Pour plus d’informations :** [Concepteur d’exploration de données](data-mining-designer.md)  
+ **Pour plus d’informations : concepteur d'** [exploration de données](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Après avoir créé et déployé des modèles d'exploration de données sur un serveur, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui héberge les objets d'exploration de données. Vous pouvez également continuer à exécuter des tâches qui utilisent le modèle, telles que l'exploration des modèles, le traitement de nouvelles données et la création de prédictions.  
   
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] contient également les éditeurs de requêtes que vous pouvez utiliser pour concevoir et exécuter des requêtes DMX (data mining extensions), ou pour travailler avec des objets d’exploration de données à l’aide de XMLA.  
+ 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] contient également les éditeurs de requêtes que vous pouvez utiliser pour concevoir et exécuter des requêtes DMX (data mining extensions), ou pour travailler avec des objets d’exploration de données à l’aide de XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Tâches et transformations d'exploration de données d'Integration Services  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit de nombreux composants qui prennent en charge l'exploration de données.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit de nombreux composants qui prennent en charge l’exploration de données.  
   
- Certains outils dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont conçus pour vous aider à automatiser des tâches courantes d'exploration de données, y compris la prédiction, la création de modèles et le traitement. Exemple :  
+ Certains outils dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont conçus pour vous aider à automatiser des tâches courantes d'exploration de données, y compris la prédiction, la création de modèles et le traitement. Par exemple :  
   
 -   Créez un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui met automatiquement à jour le modèle chaque fois que le dataset est actualisé avec de nouveaux clients  
   
@@ -79,7 +81,7 @@ ms.locfileid: "66084828"
   
 -   Générez automatiquement des modèles transmis aux paramètres.  
   
- Toutefois, vous pouvez également utiliser l'exploration de données dans un flux de travail de package, en tant qu'entrée à d'autres processus. Exemple :  
+ Toutefois, vous pouvez également utiliser l'exploration de données dans un flux de travail de package, en tant qu'entrée à d'autres processus. Par exemple :  
   
 -   Utilisez les valeurs de probabilité générées par le modèle pour pondérer les scores pour l'exploration de texte ou d'autres tâches de classification.  
   
@@ -87,12 +89,12 @@ ms.locfileid: "66084828"
   
 -   Utilisation de la régression logistique pour segmenter les clients entrants par risque.  
   
- **Pour plus d’informations :** [Projets connexes pour des solutions d’exploration de données](data-mining-solutions.md)  
+ **Pour plus d’informations :** [projets connexes pour les solutions d’exploration de données](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Solutions d’exploration de données](data-mining-solutions.md)  
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d’exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Solutions d'exploration de données](data-mining-solutions.md)  
   
   

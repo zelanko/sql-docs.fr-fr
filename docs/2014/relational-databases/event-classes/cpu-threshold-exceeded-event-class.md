@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663482"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe d'événements CPU Threshold Exceeded
@@ -31,12 +31,12 @@ ms.locfileid: "62663482"
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|Unité centrale|`int`|Utilisation de l'UC en millisecondes.|18|Oui|  
+|UC|`int`|Utilisation de l'UC en millisecondes.|18|Oui|  
 |EventClass|`int`|214|27|Non|  
 |EventSubClass|`int`|Violation de la limite de l'UC.|21|Oui|  
 |GroupID|`int`|ID de groupe où la violation s'est produite.|66|Oui|  
 |OwnerID|`int`|SPID du processus qui a provoqué la violation.|58|Oui|  
-|SPID|`int`|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : Cela peut différer de l’utilisateur réel SPID si un thread système valide l’utilisation du processeur en tant que tâche en arrière-plan.|12|Oui|  
+|SPID|`int`|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : il peut être différent du SPID de l’utilisateur réel si un thread système valide l’utilisation de l’UC comme une tâche en arrière-plan.|12|Oui|  
 |StartTime|`datetime`|Heure de déclenchement de cet événement.|14|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

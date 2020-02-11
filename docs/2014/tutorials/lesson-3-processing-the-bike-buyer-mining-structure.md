@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : Traitement de la Structure d’exploration de données Bike Buyer | Microsoft Docs'
+title: 'Leçon 3 : traitement de la structure d’exploration de données vélo Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655802"
 ---
-# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Leçon 3 : Traitement de la structure d’exploration de données Bike Buyer
-  Dans cette leçon, vous allez utiliser l’insertion dans l’instruction et la vue vTargetMail de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données exemple pour traiter les structures d’exploration de données et les modèles d’exploration de données que vous avez créé dans [leçon 1 : Création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) et [leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Leçon 3 : traitement de la structure d'exploration de données Bike Buyer
+  Dans cette leçon, vous allez utiliser l’instruction INSERT INTO et la vue vTargetMail de l' [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] exemple de base de données pour traiter les structures et les modèles d’exploration de données que vous avez créés au cours de la [leçon 1 : création de la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) et [leçon 2 : ajout de modèles d’exploration de données à la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
- Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Lorsque vous traitez un modèle d'exploration de données, les données définies par la structure sont transmises via l'algorithme d'exploration de données de votre choix. L'algorithme recherche des tendances et des modèles, puis stocke les informations recueillies dans le modèle d'exploration de données. Par conséquent, le modèle d'exploration de données ne contient pas les données source réelles mais plutôt les informations recueillies par l'algorithme. Pour plus d’informations sur les modèles d’exploration de données de traitement, consultez [traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Lorsque vous traitez un modèle d'exploration de données, les données définies par la structure sont transmises via l'algorithme d'exploration de données de votre choix. L'algorithme recherche des tendances et des modèles, puis stocke les informations recueillies dans le modèle d'exploration de données. Par conséquent, le modèle d'exploration de données ne contient pas les données source réelles mais plutôt les informations recueillies par l'algorithme. Pour plus d’informations sur le traitement des modèles d’exploration de données, consultez [exigences et considérations relatives au traitement &#40;&#41;d’exploration de données ](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Si vous modifiez une colonne de structure ou les données sources, vous devez simplement retraiter la structure d'exploration de données. Si vous ajoutez un modèle d'exploration de données à une structure d'exploration de données déjà traitée, vous pouvez utiliser l'instruction INSERT INTO MINING MODEL pour effectuer l'apprentissage du nouveau modèle d'exploration de données.  
   
 ## <a name="train-structure-template"></a>Modèle de structure d'apprentissage  
- Pour l’apprentissage de la structure d’exploration de données et ses modèles d’exploration de données associé, utilisez le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction. Le code dans l’instruction peut être divisé en parties suivantes :  
+ Pour effectuer l’apprentissage de la structure d’exploration de données et de ses modèles d’exploration de données associés, utilisez l’instruction [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) . Le code de l’instruction peut être divisé en plusieurs parties :  
   
 -   Identification de la structure d'exploration de données  
   
@@ -63,7 +63,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- Dans cette leçon, vous allez utiliser l'instruction `OPENQUERY` pour définir les données sources. Pour plus d’informations sur les autres méthodes de définition de la requête source, consultez [ &#60;requête de source de données&#62;](/sql/dmx/source-data-query).  
+ Dans cette leçon, vous allez utiliser l'instruction `OPENQUERY` pour définir les données sources. Pour plus d’informations sur les autres méthodes de définition de la requête source, consultez [&#60;&#62;de requête de données source ](/sql/dmx/source-data-query).  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
  Au cours de cette leçon, vous allez effectuer la tâche suivante :  
@@ -74,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Pour traiter la structure d'exploration de données à l'aide de l'instruction INSERT INTO  
   
-1.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
+1.  Dans l' **Explorateur d’objets**, cliquez avec le bouton [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]droit sur l’instance de, pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
      L'Éditeur de requête s'ouvre et contient une nouvelle requête vide.  
   
@@ -168,15 +168,15 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  Sur le **fichier** menu, cliquez sur **enregistrer DMXQuery1.dmx sous**.  
+6.  Dans le menu **fichier** , cliquez sur **Enregistrer DMXQuery1. DMX sous**.  
   
-7.  Dans le **enregistrer en tant que** boîte de dialogue, accédez au dossier approprié et nommez le fichier `Process Bike Buyer Structure.dmx`.  
+7.  Dans la boîte de dialogue **Enregistrer sous** , accédez au dossier approprié et nommez le fichier `Process Bike Buyer Structure.dmx`.  
   
-8.  Dans la barre d’outils, cliquez sur le **Execute** bouton.  
+8.  Dans la barre d’outils, cliquez sur le bouton **exécuter** .  
   
  Dans la leçon suivante, vous allez explorer le contenu des modèles d'exploration de données que vous avez ajoutés à la structure d'exploration de données au cours de cette leçon.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Leçon 4 : Exploration des modèles d'exploration de données Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

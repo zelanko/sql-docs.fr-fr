@@ -1,5 +1,5 @@
 ---
-title: Synchroniser un abonnement à l’aide du Gestionnaire de synchronisation Windows (Windows Synchronization Manager) | Microsoft Docs
+title: Synchroniser un abonnement à l’aide du gestionnaire de synchronisation Windows (gestionnaire de synchronisation Windows) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745758"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>synchroniser un abonnement à l'aide du Gestionnaire de synchronisation Windows (Windows Synchronization Manager)
   Le Gestionnaire de synchronisation[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne peut être utilisé que pour synchroniser des abonnements à des publications Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est exécuté sur le même ordinateur que le Gestionnaire de synchronisation (il peut également servir à synchroniser des fichiers hors connexion et des pages Web). Pour utiliser le Gestionnaire de synchronisation :  
   
-1.  Activez la synchronisation des abonnements par extraction avec le Gestionnaire de synchronisation Windows dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement**. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
+1.  Activez la synchronisation des abonnements par extraction avec le Gestionnaire de synchronisation Windows dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>**. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
   
 2.  Accédez au Gestionnaire de synchronisation par le menu **Démarrer** de Windows.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745758"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Pour activer la synchronisation des abonnements par extraction de données (pull) avec le Gestionnaire de synchronisation Windows  
   
-1.  Dans la page **Général **de la boîte de dialogue** Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>** , sélectionnez la valeur **Activer** pour l’option **Utiliser le Gestionnaire de synchronisation Windows**.  
+1.  Dans la page **Général** de la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>**, sélectionnez la valeur **Activer** pour l’option **Utiliser le Gestionnaire de synchronisation Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62745758"
   
     -   Cliquez sur **Démarrer**, pointez sur **Programmes** ou **Tous les programmes**, puis sur **Accessoires**et cliquez sur **Synchroniser**.  
   
-    -   Cliquez sur **Démarrer**, puis sur **Exécuter** Dans le **exécuter** boîte de dialogue, tapez `mobsync.exe` dans le **Open** champ, puis cliquez sur **OK**.  
+    -   Cliquez sur **Démarrer**, puis sur **exécuter.** Dans la boîte de dialogue **exécuter** , `mobsync.exe` tapez dans le champ **ouvrir** , puis cliquez sur **OK**.  
   
 2.  Dans la boîte de dialogue **Éléments à synchroniser** , sélectionnez les abonnements à synchroniser. Les abonnements sont listés sous les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installées sur l'ordinateur.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "62745758"
   
 2.  Affichez et modifiez les propriétés dans les onglets suivants :  
   
-    -   **Identification**  
+    -   **Détermination**  
   
-    -   **Connexion à l'Abonné**, **Connexion au serveur de distribution**et **Connexion au serveur de publication** (pour la réplication de fusion uniquement)  
+    -   Connexion de l' **abonné**, connexion au serveur de **distribution**et connexion de l' **éditeur** (pour la réplication de fusion uniquement)  
   
-    -   **Informations sur le serveur Web** (pour les abonnements de fusion sur les abonnés exécutant SQL Server 2005 ou supérieur)  
+    -   **Informations sur le serveur Web** (pour les abonnements de fusion sur les abonnés exécutant SQL Server 2005 ou version ultérieure)  
   
     -   **Autres**  
   
@@ -103,13 +103,13 @@ ms.locfileid: "62745758"
   
 3.  Modifiez au besoin toute colonne affichée dans l'outil de résolution interactive, puis cliquez sur l'un des boutons suivants pour résoudre le conflit :  
   
-    -   **Accepter la suggestion**  
+    -   **Accepter les suggestions**  
   
     -   **Accepter le serveur de publication**  
   
-    -   **Accepter l'Abonné**  
+    -   **Accepter l’abonné**  
   
-    -   **Tout résoudre automatiquement** (tous les conflits actuels sont résolus sans données complémentaires)  
+    -   **Tout résoudre automatiquement** (tous les conflits actuels sont résolus sans entrée supplémentaire)  
   
      La ligne sélectionné est ensuite appliqué au serveur de publication et/ou à l'Abonné ; elle est propagée à d'autres nœuds dans la topologie lors des synchronisations suivantes.  
   

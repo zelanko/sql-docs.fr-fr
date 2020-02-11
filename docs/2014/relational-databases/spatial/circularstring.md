@@ -11,17 +11,17 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688708"
 ---
 # <a name="circularstring"></a>CircularString
   Un `CircularString` est une collection de zéro ou plusieurs segments d'arc de cercle continus. Un segment d'arc de cercle est un segment courbé défini par trois points dans un plan à deux dimensions ; le premier point doit être différent du troisième point. Si les trois points d'un segment d'arc de cercle sont colinéaires, le segment d'arc est traité comme un segment de ligne.  
   
 > [!IMPORTANT]  
->  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y compris le sous-type `CircularString`, téléchargez le livre blanc [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Pour obtenir une description détaillée et des exemples des nouvelles fonctionnalités spatiales [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]introduites dans `CircularString` , y compris le sous-type, téléchargez le livre blanc [nouvelles fonctionnalités spatiales dans SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Instances CircularString  
  Le dessin suivant montre des instances `CircularString` valides :  
@@ -29,7 +29,7 @@ ms.locfileid: "72688708"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Une instance de `CircularString` est acceptée si elle est vide ou si elle contient un nombre impair de points, n, où n > 1. Les instances `CircularString` suivantes sont acceptées.  
+ Une `CircularString` instance est acceptée si elle est vide ou si elle contient un nombre impair de points, n, où n > 1. Les instances `CircularString` suivantes sont acceptées.  
   
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -37,7 +37,8 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` montre que l'instance `CircularString` peut être acceptée, mais pas valide. La déclaration suivante d'instance de CircularString n'est pas acceptée. Cette déclaration lève une `System.FormatException`.  
+ 
+  `@g3` montre que l'instance `CircularString` peut être acceptée, mais pas valide. La déclaration suivante d'instance de CircularString n'est pas acceptée. Cette déclaration lève une `System.FormatException`.  
   
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
@@ -87,7 +88,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Instanciation d'une instance géométrique à l'aide d'un CircularString vide  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>R. Instanciation d'une instance géométrique à l'aide d'un CircularString vide  
  Cet exemple indique comment créer une instance `CircularString` vide :  
   
 ```sql  
@@ -133,7 +134,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Notez que la valeur de l’exemple de `CircularString` est proche de&#x03c0; 2 (2 * pi), qui est la circonférence réelle du cercle.  
+ Notez que la valeur de l' `CircularString` exemple est proche de 2&#x03c0; (2 * pi), qui est la circonférence réelle du cercle.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Déclaration et instanciation d'une instance géométrique avec un CircularString dans la même instruction  
  Cet extrait de code indique comment déclarer et instancier une instance `geometry` avec un `CircularString` dans la même instruction :  
@@ -162,7 +163,7 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [CompoundCurve](compoundcurve.md)   
  [MakeValid &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   
  [MakeValid &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type)   
- [STIsValid &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
+ [STIsValid &#40;Type de données geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
  [STIsValid &#40;type de données geography&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)   
  [STLength &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;type de données geometry&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   

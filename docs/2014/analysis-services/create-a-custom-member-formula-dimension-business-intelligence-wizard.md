@@ -1,5 +1,5 @@
 ---
-title: Créer une formule de membre personnalisée (Dimension) (Assistant Business Intelligence) | Microsoft Docs
+title: Créer une formule de membre personnalisée (dimension) (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3976d9bd4c6f76e9bb970bce280c1e2da0d6fe22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086952"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Créer une formule de membre personnalisée (Dimension) (Assistant Business Intelligence)
-  Utilisez le **créer une formule de membre personnalisée** page pour sélectionner une dimension à laquelle l’Assistant Business Intelligence associe les attributs avec la formule colonnes-colonnes de membre personnalisée qui contiennent des Expressions multidimensionnelles (MDX) instructions qui définissent les valeurs de membre pour cet attribut.  
+  Utilisez la page **créer une formule de membre personnalisée** pour sélectionner une dimension à laquelle l’Assistant Business Intelligence associera des attributs avec des colonnes de formules de membre personnalisées-colonnes contenant des instructions MDX (Multidimensional Expressions) qui définissent des valeurs de membre pour cet attribut.  
   
 ## <a name="options"></a>Options  
  **Dimension**  
  Sélectionnez la dimension pour laquelle l'Assistant associe les attributs contenus dans la dimension dotée de formules de membre personnalisées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

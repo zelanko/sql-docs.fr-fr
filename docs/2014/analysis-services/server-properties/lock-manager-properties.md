@@ -1,5 +1,5 @@
 ---
-title: Propriétés du Gestionnaire de verrous | Microsoft Docs
+title: Propriétés du gestionnaire de verrous | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 607654924a9f7e2d071bbce1ee4797792cb760c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068943"
 ---
 # <a name="lock-manager-properties"></a>Propriétés du gestionnaire de verrous
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés du serveur du gestionnaire de verrous répertoriées dans le tableau suivant. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **S’applique à :** Mode serveur multidimensionnel et tabulaire  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>Propriétés  
  `DefaultLockTimeoutMS`  
  Propriété dont la valeur est un entier 32 bits signé qui définit le délai d'expiration de verrouillage par défaut (en millisecondes) pour les demandes de verrous internes.  
   
@@ -41,6 +42,6 @@ ms.locfileid: "66068943"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

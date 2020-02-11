@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721139"
 ---
 # <a name="initialize-subscriptions"></a>Initialiser les abonnements
@@ -32,8 +32,8 @@ ms.locfileid: "62721139"
 >  Il se peut que l'Assistant demande une connexion au serveur de distribution pour pouvoir démarrer le travail approprié pour l'Agent de distribution ou l'Agent de fusion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
- [Créer un abonnement par émission (push)](create-a-push-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
  [Initialiser un abonnement](initialize-a-subscription.md)   
  [S'abonner à des publications](subscribe-to-publications.md)  
   

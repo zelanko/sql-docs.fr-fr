@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721039"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
-  Cette rubrique explique comment recompiler une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il existe trois manières de procéder : `WITH RECOMPILE` option dans la définition de procédure ou lorsque la procédure est appelée, le `RECOMPILE` indicateur de requête sur des instructions, ou en utilisant le `sp_recompile` procédure stockée système. Cette rubrique décrit l’utilisation de l’option WITH RECOMPILE lors de la création d’une définition de procédure et de l’exécution d’une procédure existante. Elle décrit également l’utilisation de la procédure stockée système sp_recompile pour recompiler une procédure existante.  
+  Cette rubrique explique comment recompiler une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il existe trois façons d’effectuer cette opération `WITH RECOMPILE` : option dans la définition de la procédure ou lorsque la procédure est `RECOMPILE` appelée, l’indicateur de requête sur des instructions individuelles `sp_recompile` ou à l’aide de la procédure stockée système. Cette rubrique décrit l’utilisation de l’option WITH RECOMPILE lors de la création d’une définition de procédure et de l’exécution d’une procédure existante. Elle décrit également l’utilisation de la procédure stockée système sp_recompile pour recompiler une procédure existante.  
   
  **Dans cette rubrique**  
   
@@ -54,15 +54,15 @@ ms.locfileid: "62721039"
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- `WITH RECOMPILE` Option  
+ `WITH RECOMPILE`Option  
  Si cette option est utilisée lorsque la définition de la procédure est créée, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
  Si cette option est utilisée dans une instruction EXECUTE, elle nécessite des autorisations EXECUTE sur la procédure. Aucune autorisation n'est requise sur l'instruction EXECUTE elle-même, mais une autorisation est requise sur la procédure référencée dans l'instruction EXECUTE. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
- `RECOMPILE` Indicateur de requête  
+ `RECOMPILE`Indicateur de requête  
  Cette fonctionnalité est utilisée lorsque la procédure est créée et l’indicateur est inclus dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de la procédure. Par conséquent, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
- `sp_recompile` Procédure stockée système  
+ `sp_recompile`Procédure stockée système  
  Nécessite l'autorisation ALTER pour la procédure spécifiée.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>Pour recompiler une procédure stockée à l'aide de sp_recompile  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Pour recompiler une procédure stockée à l'aide de sp_recompile  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -136,7 +136,7 @@ GO
  [Modifier une procédure stockée](../stored-procedures/modify-a-stored-procedure.md)   
  [Renommer une procédure stockée](rename-a-stored-procedure.md)   
  [Afficher la définition d'une procédure stockée](view-the-definition-of-a-stored-procedure.md)   
- [Afficher les dépendances d'une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)   
+ [Afficher les dépendances d’une procédure stockée](view-the-dependencies-of-a-stored-procedure.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

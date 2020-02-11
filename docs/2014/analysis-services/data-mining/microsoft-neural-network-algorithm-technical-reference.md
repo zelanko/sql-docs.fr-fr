@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Neural Network algorithme | Microsoft Docs
+title: Informations techniques de référence sur l’algorithme Microsoft neuronal Network | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083859"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
@@ -81,20 +81,20 @@ ms.locfileid: "66083859"
   
  Le fournisseur d'algorithme évalue de façon itérative le poids de toutes les entrées se trouvant sur le réseau au même moment, en prenant l'ensemble de données d'apprentissage qui a été auparavant mis de côté et en comparant la valeur réelle connue de chacun des cas figurant dans les données d'exclusion à la prédiction du réseau : ce processus s'appelle l' *apprentissage par lots*. Une fois que l'algorithme a évalué l'intégralité des données d'apprentissage, l'algorithme passe en revue la valeur prédite et la valeur réelle de chaque neurone. L'algorithme calcule, le cas échéant, le taux d'erreur et ajuste les poids attribués aux entrées de ce neurone en propageant les informations vers l'arrière, c'est-à-dire en partant des neurones de sortie et en remontant aux neurones d'entrée : ce processus s'appelle la *rétropropagation*. L'algorithme répète ensuite le processus sur l'intégralité des données d'apprentissage. Étant donné que l'algorithme peut prendre en charge de nombreux poids et neurones de sortie, l'algorithme du gradient conjugué est utilisé afin de guider le processus d'apprentissage pour l'attribution et l'évaluation des poids des entrées. L'algorithme du gradient conjugué n'est pas traité dans la présente documentation.  
   
-### <a name="feature-selection"></a>Sélection des fonctionnalités  
+### <a name="feature-selection"></a>Sélection de caractéristiques  
  Si le nombre d’attributs d’entrée ou d’attributs prédictibles est supérieur respectivement à la valeur du paramètre *MAXIMUM_INPUT_ATTRIBUTES* ou du paramètre *MAXIMUM_OUTPUT_ATTRIBUTES* , un algorithme de sélection des fonctionnalités est utilisé pour réduire la complexité des réseaux inclus dans le modèle d’exploration de données. La sélection des fonctionnalités réduit le nombre d'attributs d'entrée ou prévisibles à ceux qui sont statistiquement les plus pertinents pour le modèle.  
   
  La sélection des fonctionnalités est automatiquement utilisée par tous les algorithmes d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour améliorer l'analyse et réduire la charge de traitement. La méthode utilisée pour la sélection des fonctionnalités dans les modèles de réseau neuronal dépend du type de données de l'attribut. Pour référence, le tableau suivant présente les méthodes de sélection de fonctionnalités utilisées pour les modèles de réseau neuronal et pour l'algorithme Logistic Regression qui est basé sur l'algorithme Neural Network.  
   
-|Algorithm|Méthode d'analyse|Commentaires|  
+|Algorithme|Méthode d'analyse|Commentaires|  
 |---------------|------------------------|--------------|  
-|Neural Network|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme MNN (Microsoft Neural Network, réseau neuronal de Microsoft) peut utiliser les deux méthodes de calcul de score (entropie et bayésien), tant que les données contiennent des colonnes continues.<br /><br /> Valeur par défaut.|  
+|Neural Network|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|L'algorithme MNN (Microsoft Neural Network, réseau neuronal de Microsoft) peut utiliser les deux méthodes de calcul de score (entropie et bayésien), tant que les données contiennent des colonnes continues.<br /><br /> valeur par défaut.|  
 |Logistic Regression|Score d'intérêt et de pertinence<br /><br /> Entropie de Shannon<br /><br /> Bayésien avec a priori K2<br /><br /> Équivalent bayésien de Dirichlet avec a priori uniforme (par défaut)|Étant donné que vous ne pouvez pas passer de paramètre à cet algorithme pour contrôler le comportement de la sélection des fonctionnalités, les valeurs par défaut sont utilisées. Par conséquent, si tous les attributs sont discrets ou discrétisés, la valeur par défaut est BDEU.|  
   
  Les paramètres d'algorithme qui contrôlent la sélection des fonctionnalités d'un modèle de réseau neuronal sont MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES et MAXIMUM_STATES. Vous pouvez également contrôler le nombre de couches masquées en définissant le paramètre HIDDEN_NODE_RATIO.  
   
 ### <a name="scoring-methods"></a>Méthodes de calcul de score  
- Le*score* est une sorte de normalisation qui, dans le contexte de l'apprentissage d'un modèle de réseau neuronal, désigne le processus de conversion d'une valeur, telle qu'une étiquette de texte discrète, en une valeur qui peut être comparée avec d'autres types d'entrées et être pondérée dans le réseau. Par exemple, si un attribut d'entrée est Gender et que les valeurs possibles sont Male et Female, et qu'un autre attribut d'entrée est Income, avec une plage de valeurs variable, les valeurs pour chaque attribut ne sont pas directement comparables, et doivent donc être encodées à une échelle commune afin que les poids puissent être calculés. Le score est le processus qui consiste à normaliser ces entrées en valeurs numériques, plus précisément en une plage de probabilités. Les fonctionnalités utilisées pour la normalisation permettent également de répartir la valeur d'entrée plus équitablement sur une échelle uniforme afin que les valeurs extrêmes ne déforment pas les résultats d'analyse.  
+ Le *score* est une sorte de normalisation, qui, dans le contexte de l’apprentissage d’un modèle de réseau neuronal, désigne le processus de conversion d’une valeur, telle qu’une étiquette de texte discrète, en une valeur qui peut être comparée à d’autres types d’entrées et pondérée dans le réseau. Par exemple, si un attribut d'entrée est Gender et que les valeurs possibles sont Male et Female, et qu'un autre attribut d'entrée est Income, avec une plage de valeurs variable, les valeurs pour chaque attribut ne sont pas directement comparables, et doivent donc être encodées à une échelle commune afin que les poids puissent être calculés. Le score est le processus qui consiste à normaliser ces entrées en valeurs numériques, plus précisément en une plage de probabilités. Les fonctionnalités utilisées pour la normalisation permettent également de répartir la valeur d'entrée plus équitablement sur une échelle uniforme afin que les valeurs extrêmes ne déforment pas les résultats d'analyse.  
   
  Les sorties du réseau neuronal sont également encodées. Lorsqu'il y a une cible unique pour la sortie (c'est-à-dire, la prédiction), ou plusieurs cibles utilisées uniquement pour la prédiction et non pas pour l'entrée, le modèle crée un réseau unique et il peut ne pas s'avérer nécessaire de normaliser les valeurs. Toutefois, si plusieurs attributs sont utilisés pour l'entrée et la prédiction, le modèle doit créer plusieurs réseaux ; par conséquent, toutes les valeurs doivent être normalisées, et les sorties doivent également être encodées lorsqu'elles quittent le réseau.  
   
@@ -102,15 +102,15 @@ ms.locfileid: "66083859"
   
  **Valeurs discrètes**  
   
- Μg = p - probabilité antérieure d’un état  
+ μ = p-la probabilité antérieure d’un État  
   
- StdDev  = sqrt(p(1-p))  
+ StdDev = sqrt (p (1 p))  
   
  **Valeurs continues**  
   
- Valeur présente = 1 - μg/σ  
+ Valeur présente = 1-μ/σ  
   
- Aucune valeur existante = - μg/σ  
+ Aucune valeur existante =-μ/σ  
   
  Une fois les valeurs encodées, les entrées font l'objet d'une addition pondérée, avec les contours du réseau comme poids.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66083859"
  MAXIMUM_STATES  
  Spécifie le nombre maximal d'états discrets par attribut qui est pris en charge par l'algorithme. Si le nombre d'états d'un attribut spécifique est supérieur au nombre spécifié pour ce paramètre, l'algorithme sélectionne les états les plus fréquents pour cet attribut et traite les autres comme étant absents.  
   
- La valeur par défaut est 100.  
+ La valeur par défaut est 100.  
   
  SAMPLE_SIZE  
  Spécifie le nombre de cas à utiliser pour effectuer l'apprentissage du modèle. L'algorithme utilise soit ce nombre, soit le pourcentage du nombre total de cas non inclus dans les données d'exclusion conformément au paramètre HOLDOUT_PERCENTAGE, la plus petite valeur étant retenue.  
@@ -177,7 +177,7 @@ ms.locfileid: "66083859"
 ### <a name="distribution-flags"></a>Indicateurs de distribution  
  Les indicateurs de distribution suivants sont pris en charge pour une utilisation avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network). Les indicateurs sont uniquement utilisés comme indications pour le modèle ; si l'algorithme détecte une autre distribution, il utilisera celle-ci et non pas celle spécifiée dans l'indication.  
   
- Normale  
+ Normal  
  Indique que les valeurs de la colonne doivent être considérées comme étant la normale, ou gaussiennes.  
   
  Uniforme  
@@ -186,13 +186,13 @@ ms.locfileid: "66083859"
  Log-normale  
  Indique que les valeurs de la colonne doivent être considérées comme étant distribuées selon la courbe *log-normale* , ce qui signifie que le logarithme des valeurs est distribué normalement.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Un modèle de réseau neuronal doit contenir au moins une colonne d'entrée et une colonne de sortie.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) prend en charge les colonnes d'entrée spécifiques et les colonnes prédictibles répertoriées dans le tableau suivant.  
   
-|colonne|Types de contenu|  
+|Colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, Cyclique, Discret, Discrétisé, Clé, Table et Trié|  
 |Attribut prédictible|Continu, Cyclique, Discret, Discrétisé et Trié|  
@@ -201,8 +201,8 @@ ms.locfileid: "66083859"
 >  Les types de contenu Cyclique et Trié sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm.md)   
- [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Algorithme de réseau neuronal Microsoft](microsoft-neural-network-algorithm.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)  
   
   

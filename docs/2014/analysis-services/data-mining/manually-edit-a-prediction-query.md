@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084213"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Modifier manuellement une requête de prédiction
@@ -43,8 +43,8 @@ ms.locfileid: "66084213"
     >  Si la requête que vous avez créée n'est pas valide, la fenêtre Résultats n'affiche ni erreur ni résultats. Cliquez sur le bouton **Conception** ou sélectionnez **Conception** ou **Requête** dans le menu **Modèle d’exploration de données** pour résoudre le problème et réexécuter la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d'exploration de données](data-mining-queries.md)   
- [Générateur de requêtes de prédiction &#40;exploration de données&#41;](../prediction-query-builder-data-mining.md)   
- [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Requêtes d’exploration de données](data-mining-queries.md)   
+ [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](../prediction-query-builder-data-mining.md)   
+ [Leçon 6 : création et utilisation de prédictions &#40;didacticiel sur l’exploration de données de base&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

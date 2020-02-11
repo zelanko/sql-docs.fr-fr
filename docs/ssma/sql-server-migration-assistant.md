@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252124"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant Migration SQL Server
 
-Assistant Migration Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de bases de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
+L’assistant Migration SQL Server de Microsoft (SSMA) est un outil conçu pour automatiser la migration de base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
   
 ## <a name="migration-sources"></a>Sources de migration  
   
-- [Assistant Migration SQL Server pour l’accès](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [Assistant de migration SQL Server pour Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [Assistant Migration SQL Server pour DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [Assistant de migration SQL Server pour DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [Assistant Migration SQL Server pour MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [Assistant de migration SQL Server pour MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [Assistant Migration SQL Server pour Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [Assistant de migration SQL Server pour Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [Assistant Migration SQL Server pour SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -46,7 +46,7 @@ Les versions cibles suivantes sont prises en charge pour SSMA.
 - Azure SQL Database
 - Azure SQL Data Warehouse * *
 
-\* * Cette cible est prise en charge uniquement par SSMA pour Oracle.
+* * Cette cible est prise en charge uniquement par SSMA pour Oracle.
 
 ## <a name="downloads"></a>Téléchargements
 

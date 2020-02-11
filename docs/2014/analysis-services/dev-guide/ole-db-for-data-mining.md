@@ -14,21 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62732034"
 ---
 # <a name="ole-db-for-data-mining"></a>OLE DB pour l'exploration de données
-  Les fonctionnalités d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] respecter la [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour la spécification de Data Mining 1.0 de juin 2000.  
+  Les fonctionnalités d’exploration de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] données de sont conformes [!INCLUDE[msCoName](../../includes/msconame-md.md)] à la OLE DB pour la spécification de l’exploration de données 1,0 publiée en juin 2000.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] représente une extension de cette spécification par l'ajout de nouveaux ensembles de lignes de schéma, l'ajout de colonnes aux ensembles de lignes de schéma existants et l'ajout d'une syntaxe au langage DMX (Data Mining Extensions) pour la création et la gestion de structures d'exploration de données.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] représente une extension de cette spécification par l'ajout de nouveaux ensembles de lignes de schéma, l'ajout de colonnes aux ensembles de lignes de schéma existants et l'ajout d'une syntaxe au langage DMX (Data Mining Extensions) pour la création et la gestion de structures d'exploration de données.  
   
- **Pour plus d’informations :** [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx), [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx), [DROP MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
+ **Pour plus d’informations : ensembles de** [lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), créer une structure d’exploration de données [&#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx), [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx), [Drop Mining structure &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
- [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Ensembles de lignes de schéma Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
+ [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

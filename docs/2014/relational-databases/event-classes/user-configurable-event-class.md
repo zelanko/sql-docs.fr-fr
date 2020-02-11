@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724828"
 ---
-# <a name="user-configurable-event-class"></a>Configurables par l’utilisateur, classe d’événements
+# <a name="user-configurable-event-class"></a>User-Configurable (classe d'événements)
   Utilisez la catégorie d'événement Configurables par l'utilisateur pour surveiller les événements définis par l'utilisateur. Créez des événements définis par l'utilisateur pour surveiller des événements ne pouvant pas être surveillés par les événements fournis par le système dans les autres catégories d'événement. Par exemple, il est possible de créer un événement défini par l'utilisateur pour surveiller la progression de l'application que vous testez. Durant l'exécution de l'application, des événements peuvent être générés à des points prédéfinis, ce qui vous permet de définir le point d'exécution actuel de votre application.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Colonnes de la classe d'événements configurables par l'utilisateur  
@@ -31,8 +31,8 @@ ms.locfileid: "62724828"
 |ApplicationName|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |BinaryData|`image`|Valeur binaire dépendante de la classe d'événements capturés dans la trace.|2|Oui|  
 |ClientProcessID|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
-|DatabaseID|`int`|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
-|DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
+|DatabaseID|`int`|ID de la base de données spécifiée par l’instruction USE *Database* ou la base de données par défaut si aucune instruction USE *Database* n’a été émise pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|nom_base_de_données|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d'événement = 82-91.|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  

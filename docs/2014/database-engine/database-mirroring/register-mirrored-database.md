@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754466"
 ---
 # <a name="register-mirrored-database"></a>Inscrire la base de données mise en miroir
@@ -36,7 +36,7 @@ ms.locfileid: "62754466"
 > [!NOTE]  
 >  Pour inscrire des bases de données sur plusieurs instances de serveurs, une fois que vous avez sélectionné les bases de données souhaitées pour une instance de serveur, cliquez sur **Appliquer**et sélectionnez une autre instance de serveur.  
   
- **Se connecter**  
+ **Connexion**  
  Pour spécifier de nouvelles informations d’identification pour l’instance de serveur, cliquez sur **Se connecter** et connectez-vous en utilisant ces nouvelles informations. Lors de la connexion à une instance de serveur, le moniteur de mise en miroir de bases de données affiche le message **Attente de données**.  
   
  **Bases de données mises en miroir**  
@@ -44,9 +44,9 @@ ms.locfileid: "62754466"
   
  Cette grille comporte les colonnes suivantes :  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
-|**Inscrire**|Sélectionnez chaque base de données à inscrire. Si une base de données est actuellement surveillée, la case à cocher correspondante est sélectionnée et inactive.<br /><br /> Remarque : Pour annuler l’inscription d’une base de données, fermez la boîte de dialogue **Inscrire la base de données mise en miroir**, sélectionnez la base de données dans l’arborescence de navigation, puis choisissez **Annuler l’inscription** dans le menu **Action**.|  
+|**S’inscrire**|Sélectionnez chaque base de données à inscrire. Si une base de données est actuellement surveillée, la case à cocher correspondante est sélectionnée et inactive.<br /><br /> Remarque : pour annuler l’inscription d’une base de données, fermez la boîte de dialogue **Inscrire la base de données mise en miroir** , sélectionnez la base de données dans l’arborescence de navigation, puis choisissez **Annuler l’inscription** dans le menu **Action** .|  
 |**Sauvegarde de la base de données**|Nom d'une base de données mise en miroir sur l'instance de serveur sélectionnée.|  
 |**Rôle actuel**|Rôle actuel de mise en miroir de la base de données (Principal ou Miroir) sur l'instance de serveur sélectionnée.|  
 |**Partenaire (Se connecter en tant que)**|Nom du partenaire de basculement pour la base de données. **Authentification Windows de l’utilisateur de la console** ou **Authentification SQL Server de '***\<nom_compte_de_connexion>***'** s’affiche entre parenthèses. Il s'agit des informations d'authentification actuellement utilisées si l'instance a été ajoutée auparavant ou qui seront utilisées si l'instance n'a pas encore été ajoutée au moniteur.|  

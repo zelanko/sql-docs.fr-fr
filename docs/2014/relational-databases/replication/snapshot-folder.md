@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676521"
 ---
 # <a name="snapshot-folder"></a>Dossier d'instantanés
@@ -25,14 +25,15 @@ ms.locfileid: "62676521"
  Le dossier d'instantanés correspond à un simple répertoire que vous définissez sous la forme d'un partage ; les agents qui lisent et écrivent dans le dossier doivent disposer des autorisations suffisantes pour pouvoir y accéder. Pour plus d’informations sur une sécurisation appropriée du dossier, consultez [Sécuriser le dossier d’instantanés](security/secure-the-snapshot-folder.md). Avant d'implémenter la réplication, vérifiez que les agents de réplication peuvent se connecter au dossier d'instantanés. Connectez-vous sous le compte qu'utilisera chaque agent et essayez ensuite d'accéder au dossier d'instantanés.  
   
 ## <a name="options"></a>Options  
- **Snapshot folder**  
+ **Dossier d'instantanés**  
  Entrez le chemin d'accès au dossier où vous souhaitez stocker les fichiers d'instantanés.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un partage réseau comme emplacement pour le dossier d'instantanés. Les chemins locaux (ceux qui commencent par une lettre de lecteur, tel que C:\\) ne sont pas accessibles aux agents sur les autres ordinateurs.  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un partage réseau comme emplacement pour le dossier d'instantanés. Les chemins locaux (ceux qui commencent par une lettre de lecteur, tel que C:\\) ne sont pas accessibles aux agents sur les autres ordinateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autres emplacements du dossier d’instantanés](alternate-snapshot-folder-locations.md)   
+ [Autres emplacements de dossier d’instantanés](alternate-snapshot-folder-locations.md)   
  [Configurer la distribution](configure-distribution.md)   
  [Configurer la publication et la distribution](configure-publishing-and-distribution.md)   
  [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md)   

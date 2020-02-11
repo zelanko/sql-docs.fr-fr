@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088027"
 ---
 # <a name="choosing-data-for-data-mining"></a>Choisir les données pour l'exploration de données
-  Lorsque vous commencez l’exploration de données, vous vous demandez peut-être « la quantité de données besoin ? » ou « Quels sont les exigences spéciales à que connaître lors du nettoyage ou de mise en forme de mes données ? »  
+  Lorsque vous démarrez l’exploration de données, vous pouvez demander « quelle quantité de données ai-je besoin ? » ou « existe-t-il des exigences spéciales à connaître lors du nettoyage ou de la mise en forme de mes données ? »  
   
  En particulier, ces personnes rencontrent souvent des problèmes avec les données Excel, notamment, pour mettre en forme uniformément les données dans les colonnes, pour nettoyer les valeurs manquantes, ou pour placer des nombres dans un conteneur. Cette section répertorie également les spécifications de données pour des types de modèles spécifiques.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66088027"
   
  [Autres spécifications de données](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a> Choix des données  
+##  <a name="bkmk_ChoosingData"></a>Choix des données  
  Le choix des données utilisées pour l'analyse est peut-être l'étape la plus importante du processus d'exploration de données, plus encore que le choix d'un algorithme. En effet, l'exploration des données ne repose généralement pas sur des hypothèses, mais est pilotée par les données. Plutôt que choisir et tester les variables à l'avance, comme vous le feriez dans le cadre d'une modélisation statistique traditionnelle, l'exploration des données peut extraire des données et découvrir de nouvelles corrélations (ou ne trouver aucun modèle). La qualité et la quantité des données peuvent avoir un impact significatif sur les résultats.  
   
  En général, suivez les règles suivantes :  
@@ -63,12 +63,12 @@ ms.locfileid: "66088027"
   
 -   Créez plusieurs versions de vos données et construisez plusieurs modèles.  
   
- Pour des conseils supplémentaires sur la façon de sélectionner, modifier et analyser les données, consultez [liste de vérification de préparation pour l’exploration de données](checklist-of-preparation-for-data-mining.md).  
+ Pour obtenir des conseils supplémentaires sur la façon de sélectionner, de modifier et de consulter les données, consultez [liste de contrôle de préparation pour l’exploration de données](checklist-of-preparation-for-data-mining.md).  
   
 ### <a name="how-much-data-do-i-need"></a>De quelle quantité de données a-t-on besoin ?  
  En règle générale, vous devez avoir au moins 50 à 100 lignes de données pour les types de modèles et les scénarios les plus simples. Par exemple, si vous évaluez un seul attribut à l'aide d'un modèle utilisant la classification naïve bayésienne et le jeu de données est bien constitué, vous obtiendrez des prédictions assez précises en utilisant 50 à 100 lignes de données.  
   
- Pour les modèles d’association, vous devez généralement beaucoup plus de données - un millier de lignes peut ne pas suffire si vous analysez beaucoup d’attributs, tels que des associations entre les produits. Si votre jeu de données est trop grand ou trop petit, vous obtiendrez parfois de meilleurs résultats en réduisant les lignes en catégories. Par exemple, au lieu d'analyser les associations entre des produits individuels, vous pouvez classer les produits par catégorie.  
+ Pour les modèles d’association, vous avez généralement besoin de beaucoup plus de données : un millier de lignes peut ne pas suffire si vous analysez de nombreux attributs, tels que des associations entre produits. Si votre jeu de données est trop grand ou trop petit, vous obtiendrez parfois de meilleurs résultats en réduisant les lignes en catégories. Par exemple, au lieu d'analyser les associations entre des produits individuels, vous pouvez classer les produits par catégorie.  
   
  Si vous disposez d'un jeu de données d'une taille raisonnable, concentrez-vous davantage sur leur qualité au lieu d'ajouter une plus grande quantité de données. Au bout d'un certain temps, vous aurez déterminé tous les modèles statistiquement valides, et l'ajout de plus de données n'aura pas d'influence sur leur validité. À l'inverse, lorsque vous ajoutez plus de données, des corrélations accidentelles sont parfois introduites.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "66088027"
   
  Vous pouvez également décider de considérer les nombres comme des valeurs discrètes lorsque les valeurs sont clairement séparées, sans possibilité de valeurs fractionnaires, ou lorsque les valeurs fractionnaires ne sont pas utiles.  
   
- Les données numériques*continues* peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de revenus est un exemple de colonne d'attributs continue. Si vous spécifiez qu'une colonne est numérique, chaque valeur dans cette colonne doit être un nombre, à l'exception des valeurs NULL. Notez que dans Excel, les horodateurs et les autres représentations de date-heure qui peuvent être converties en type de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent être pris en compte.  
+ Les données numériques *continues* peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de revenus est un exemple de colonne d'attributs continue. Si vous spécifiez qu'une colonne est numérique, chaque valeur dans cette colonne doit être un nombre, à l'exception des valeurs NULL. Notez que dans Excel, les horodateurs et les autres représentations de date-heure qui peuvent être converties en type de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent être pris en compte.  
   
- **Conversion de nombres en Variables catégorielles**  
+ **Conversion de nombres en variables catégorielles**  
   
- Le fait qu'une colonne contienne des nombres ne signifie pas que vous devez les traiter comme des nombres continus. La*discrétisation* fournit de nombreux avantages pour l'analyse. Le problème d'espace est réduit. Par ailleurs, les nombres ne sont parfois pas la meilleure façon d'exprimer un résultat.  
+ Le fait qu'une colonne contienne des nombres ne signifie pas que vous devez les traiter comme des nombres continus. La *discrétisation* offre de nombreux avantages pour l’analyse. Le problème d'espace est réduit. Par ailleurs, les nombres ne sont parfois pas la meilleure façon d'exprimer un résultat.  
   
  Par exemple, le nombre d'enfants par famille peut être traité comme une valeur discrète ou continue. Étant donné qu'il est impossible d'avoir 2,5 enfants dans la famille, les familles avec 3 enfants ou plus peuvent se comporter très différemment des familles avec 2 enfants. Par conséquent, vous obtiendrez de meilleurs résultats en traitant ce nombre comme une catégorie. Cependant, si vous créez un modèle de régression ou si avez besoin d'une valeur moyenne (par exemple, 1,357 enfants par famille), vous devriez utiliser un type de données numériques continues.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66088027"
   
  Très souvent, les valeurs discrètes, telles que Male et Female, sont représentées comme données numériques et utilisent les étiquettes 1 et 2. En général, ce codage est effectué pour simplifier l'entrée de données ou pour économiser l'espace de stockage dans une base de données, mais le codage peut être source d'ambiguïté quant à la nature ou la signification des valeurs. De plus, dans la mesure où les valeurs discrètes sont stockées sous forme de nombres, lorsque vous déplacez des données entre applications vous pouvez rencontrer des erreurs de conversion de type de données, et les valeurs peuvent être calculées ou traitées comme continues. Pour empêcher de tels problèmes, avant de commencer l'exploration de données, vous devez convertir les étiquettes numériques en étiquettes de texte discrètes.  
   
- **Numéros de compartimentage**  
+ **Placer des nombres dans des conteneurs**  
   
  Même si tous les nombres sont en principe infinis et donc continus, il est souvent plus efficace lorsque vous modélisez des informations de *discrétiser* ou *placer dans un conteneur* les valeurs disponibles.  
   
@@ -109,10 +109,10 @@ ms.locfileid: "66088027"
   
 -   En les approchant d'une moyenne ou d'une valeur représentative.  
   
-##  <a name="bkmk_CommonDataProblems"></a> Problèmes de données courants  
+##  <a name="bkmk_CommonDataProblems"></a>Problèmes de données courants  
   
 ### <a name="excel-number-formats"></a>Formats de nombres Excel  
- Excel est un outil facile à utiliser, car il est indulgent : vous pouvez placer n’importe quel type de données n’importe où ! Toutefois, avant de commencer à rechercher des modèles et à analyser les corrélations, vous devez appliquer une structure ou des contraintes à vos données.  
+ Excel est un outil simple à utiliser, car il est indulgent avec. vous pouvez tout mettre en place tout en n’importe quel type de données. Toutefois, avant de commencer à rechercher des modèles et à analyser les corrélations, vous devez appliquer une structure ou des contraintes à vos données.  
   
  Par défaut, lors de l'importation de données numériques dans [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, les nombres sont stockés au format décimal avec deux décimales. Si ce format numérique ne convient pas, vous devez le remplacer par un format numérique différent ou changer le nombre de décimales.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66088027"
   
  Si vous rencontrez des difficultés pour utiliser des dates et que vous souhaitez analyser celles-ci en utilisant des regroupements classiques tels que le mois ou le jour, faites appel aux fonctions DATE dans Excel pour extraire l'année, le mois ou le jour dans une colonne séparée, puis utilisez à la place cette colonne pour la classification.  
   
-##  <a name="bkmk_OtherRequirements"></a> Autres spécifications de données  
+##  <a name="bkmk_OtherRequirements"></a>Autres exigences relatives aux données  
   
 ### <a name="requirements-by-algorithm-type"></a>Spécifications par type d'algorithme  
  Certains algorithmes utilisés dans les compléments requièrent des types de données ou des types de contenu spécifiques pour créer un modèle.  
@@ -156,13 +156,13 @@ ms.locfileid: "66088027"
   
 -   En outre, ce type de modèle ne peut pas prédire des valeurs continues. Par conséquent, si vous voulez prédire un nombre continu, par exemple un revenu, vous devez d'abord placer les valeurs dans des conteneurs selon des plages significatives. Si vous avez des doutes en ce qui concerne les plages correctes, utilisez l'algorithme de clustering pour identifier les blocs de nombres dans vos données.  
   
--   Lorsque vous utilisez un Assistant basé sur cet algorithme (tel que [analyser les facteurs d’influence clés &#40;Table Analysis Tools pour Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), colonnes continues sont placées dans un conteneur par l’Assistant vous.  
+-   Lorsque vous utilisez un assistant basé sur cet algorithme (par exemple, [analyser les influenceurs clés &#40;les outils d’analyse de table pour Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), les colonnes qui sont continues sont Binned (es par l’Assistant.  
   
--   Si vous générez un modèle Naive Bayes avec le [avancés de modélisation &#40;des compléments d’exploration de données pour Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) option, colonnes de nombres sont supprimées à partir du modèle. Si vous souhaitez éviter ce problème, utilisez le [Réétiqueter &#40;SQL Server Data Mining Add-ins&#41; ](relabel-sql-server-data-mining-add-ins.md) outil pour créer une nouvelle colonne avec les valeurs compartimentées.  
+-   Si vous générez un modèle Naive Bayes à l’aide de l’option modèles [avancés &#40;des compléments d’exploration de données pour Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) , les colonnes de nombres sont supprimées du modèle. Si vous souhaitez éviter cela, utilisez l’outil [réétiqueter le &#40;SQL Server&#41;des compléments d’exploration de données](relabel-sql-server-data-mining-add-ins.md) pour créer une colonne avec des valeurs Binned (.  
   
  **Modèles de clustering**  
   
--   Les outils de clustering ([Assistant Cluster &#40;des compléments d’exploration de données pour Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) et [détecter les catégories &#40;Table Analysis Tools pour Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) ne pouvez pas utiliser continue nombres, mais ces deux outils placent automatiquement colonnes de nombres pour vous.  
+-   Les outils de clustering ([Assistant cluster &#40;les compléments d’exploration de données pour excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) et [détecter les catégories &#40;les outils d’analyse de Table pour Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) ne peuvent pas non plus utiliser de nombres continus, mais ces deux outils comprendront automatiquement les colonnes de nombre.  
   
 -   Les deux outils vous donnent la possibilité de choisir le nombre de catégories de sortie dans les résultats, mais si vous souhaitez contrôler la façon dont les valeurs de colonnes sont regroupées, vous devez créer une nouvelle colonne avec le regroupement souhaité.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66088027"
   
  Par exemple, si une colonne contient des nombres qui se répètent à une fréquence spécifique pour indiquer les jours de la semaine, définissez le type de contenu de cette colonne comme étant `Cyclical`.  
   
- Vous n’avez pas à vous soucier des types de contenu si vous utilisez les Assistants et les outils fournis dans ce module complémentaire. Toutefois, si vous utilisez le [ajouter le modèle à la Structure &#40;des compléments d’exploration de données pour Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) option pour ajouter un nouveau modèle aux données existantes de modélisation, vous pouvez obtenir une erreur relative aux types de contenu.  
+ Vous n’avez pas à vous soucier des types de contenu si vous utilisez les assistants et les outils fournis dans ces compléments. Toutefois, si vous utilisez l’option [Ajouter un modèle à la Structure &#40;des compléments d’exploration de données pour Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) de modélisation pour ajouter un nouveau modèle aux données existantes, vous pouvez obtenir une erreur relative aux types de contenu.  
   
  La raison en est que certains types de modèle requièrent un certain type de données (par exemple un horodatage). Les outils traitent ces colonnes en fonction d'exigences spécifiques et ajoutent également une propriété de type de contenu. Par conséquent, si vous réutilisez les données avec un algorithme complètement différent, il sera peut-être nécessaire de remplacer le type de données ou le type de contenu.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66088027"
   
  En général la colonne clé est un identificateur numérique ou texte qui ne doit pas être utilisé pour l'analyse, uniquement pour le suivi des enregistrements. Les exceptions sont les clés de série chronologique et les clés de séquence.  
   
- Les**clés de tables imbriquées** s'utilisent uniquement si vous obtenez les données d'une source de données externe ayant été définie comme une vue de source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour plus d’informations sur les tables imbriquées, consultez [ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
+ Les **clés de table imbriquée** sont utilisées uniquement lorsque vous récupérez des données à partir d’une source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe qui a été définie comme une vue de source de données. Pour plus d’informations sur les tables imbriquées [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx), consultez :  
   
  Ce type de contenu peut être utilisé avec les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66088027"
   
  Cela signifie que chaque ligne de données contient réellement une table de données imbriquée, avec une ou plusieurs colonnes et une ou plusieurs lignes.  
   
- Tables imbriquées sont très pratiques, mais vous pouvez les utiliser uniquement avec le [avancés de modélisation &#40;des compléments d’exploration de données pour Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) options de modélisation. Par exemple, les exemples de données pour le [Assistant associer &#40;Client d’exploration de données pour Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) Assistant et [analyse de panier d’achat &#40;outils d’analyse de Table pour Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) outil contient des données qui ont été aplaties à partir d’une table imbriquée.  
+ Les tables imbriquées sont très pratiques, mais vous pouvez les utiliser uniquement avec la [modélisation avancée &#40;compléments d’exploration de données pour les options de modélisation d’Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) . Par exemple, les exemples de données de l' [Assistant association &#40;client d’exploration de données pour excel&#41;](associate-wizard-data-mining-client-for-excel.md) l’Assistant et l' [analyse du panier d’achat &#40;table outils pour Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) outil contient des données qui ont été aplaties à partir d’une table imbriquée.  
 
   
   

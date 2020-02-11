@@ -1,5 +1,5 @@
 ---
-title: Options (requête-Page exécution SQL ANSI de serveur) | Microsoft Docs
+title: Options (exécution de la requête-SQL Server-page ANSI) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089380"
 ---
-# <a name="options-query-execution-sql-server-ansi-page"></a>Options (Page de serveur-ANSI SQL de l’exécution de requête)
-  Ensemble, ces options SET ANSI (ISO) définissent l'environnement de traitement des requêtes pour la durée de la requête de l'utilisateur, de l'exécution d'un déclencheur ou d'une procédure stockée. Toutefois, ces options SET ne contiennent pas toutes les options requises pour assurer la conformité à la norme ISO. Utilisez cette page pour spécifier si [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes avec l'ensemble ou une partie des paramètres spécifiés dans la norme ISO. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit dans la fenêtre Requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**. Dans la boîte de dialogue **Options de requête** , sous **Exécution**, cliquez sur **ANSI**.  
+# <a name="options-query-execution-sql-server-ansi-page"></a>Options (exécution de la requête-SQL Server-page ANSI)
+  Ensemble, ces options SET ANSI (ISO) définissent l'environnement de traitement des requêtes pour la durée de la requête de l'utilisateur, de l'exécution d'un déclencheur ou d'une procédure stockée. Toutefois, ces options SET ne contiennent pas toutes les options requises pour assurer la conformité à la norme ISO. Utilisez cette page pour spécifier que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes à l’aide de l’ensemble ou d’une partie des paramètres spécifiés dans la norme ISO. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour que ces modifications s’appliquent aux requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit sur la fenêtre Requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**. Dans la boîte de dialogue **Options de requête** , sous **Exécution**, cliquez sur **ANSI**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **SET ANSI_DEFAULTS**  
+ **DÉFINIR ANSI_DEFAULTS**  
  Activez cette case à cocher pour sélectionner tous les paramètres ISO par défaut. Les options ISO ne sont pas toutes sélectionnées par défaut.  
   
  **SET QUOTED_IDENTIFIER**  

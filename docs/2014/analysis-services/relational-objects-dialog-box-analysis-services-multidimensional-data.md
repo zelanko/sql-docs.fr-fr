@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue objets relationnels (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Boîte de dialogue objets relationnels (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070346"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Objets relationnels (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte de dialogue **Objets relationnels** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner des tables, des vues ou d'autres objets dans une source de données à laquelle vous voulez appliquer la mise en cache proactive. Vous pouvez afficher cette boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur le bouton avec des points de suspension ( **...** ) des options **Spécifier les tables de suivi** de l’onglet **Notifications** de la boîte de dialogue **Options de stockage** .  
+  Utilisez la boîte de dialogue **Objets relationnels** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner des tables, des vues ou d'autres objets dans une source de données à laquelle vous voulez appliquer la mise en cache proactive. Vous pouvez afficher cette boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur le bouton avec des points de suspension (**...**) des options **Spécifier les tables de suivi** de l'onglet **Notifications** de la boîte de dialogue **Options de stockage**.  
   
 ## <a name="options"></a>Options  
- **Sélectionnez les objets relationnels pour lesquels vous souhaitez définir la mise en cache proactive**  
- Sélectionnez les objets qui vont être suivi. Cette option affiche une grille des objets disponibles et de leur type correspondant au filtre défini dans **Filtre** (ou bien toutes les tables si **Filtre** n’est pas défini) et n’ayant pas encore été affichés dans le diagramme actuel.  
+ **Sélectionnez les objets relationnels pour lesquels vous souhaitez définir la mise en cache proactive.**  
+ Sélectionnez les objets dont vous souhaitez effectuer le suivi. Cette option affiche une grille des objets disponibles et leurs types qui correspondent au filtre défini dans **filtre** (ou toutes les tables si **filtre** n’est pas défini) et n’ont pas encore été affichés dans le diagramme actuel.  
   
  **Filter**  
  Tapez le filtre à utiliser pour restreindre la liste des objets, puis cliquez sur le bouton pour filtrer les tables figurant dans **Sélectionnez les objets relationnels pour lesquels vous souhaitez définir la mise en cache proactive**.  
@@ -33,7 +33,7 @@ ms.locfileid: "66070346"
  Sélectionnez cette option pour afficher les objets système de la source de données dans **Sélectionnez les objets relationnels pour lesquels vous souhaitez définir la mise en cache proactive**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Notifications &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Boîte de dialogue Options de stockage des &#40;de notification&#41; &#40;Analysis Services-données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   
   

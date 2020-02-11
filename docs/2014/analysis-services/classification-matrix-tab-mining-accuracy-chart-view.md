@@ -1,5 +1,5 @@
 ---
-title: Onglet matrice de classification (vue graphique d’analyse de précision d’exploration de données) | Microsoft Docs
+title: Onglet matrice de classification (vue graphique d’analyse de précision de l’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca3471a96a2ad171255f488b255deee55f73e2e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087950"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>Onglet Matrice de classification (vue Graphique d'analyse de précision de l'exploration de données)
-  L’onglet **Matrice de classification** affiche une matrice de classification pour chaque modèle sélectionné dans la grille des modèles de l’onglet **Mappage de colonne** . La matrice de classification est disponible uniquement si la colonne prédictible sélectionnée sous l’onglet **Mappage de colonne** n’est pas continue. Pour une description plus détaillée de l’onglet **Matrice de classification** , consultez [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  
+  L’onglet **matrice de classification** affiche une matrice de classification pour chaque modèle sélectionné dans la grille modèles sous l’onglet Mappage de **colonnes** . La matrice de classification est disponible uniquement si la colonne prévisible sélectionnée dans l’onglet **mappage de colonnes** n’est pas continue. Pour une description plus détaillée de l’onglet **Matrice de classification** , consultez [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  
   
 ## <a name="options"></a>Options  
- **Copier**  
+ **Copy**  
  Copie le contenu de chaque matrice de classification dans le Presse-papiers.  
   
- **Nombre pour \<modèle > sur \< colonne prédictible >**  
+ **Nombre de \<> de modèle \< sur une colonne prévisible>**  
  Affiche une matrice de classification pour chaque modèle d'exploration de données de la structure d'exploration de données. La matrice contient les colonnes suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Prédit**|Contient une ligne pour chaque état de la colonne prédictible.|  
-|**\<states> (actual)**|Colonne pour chaque état de la colonne prédictible. Si l'état de la ligne et de la colonne correspond, la cellule représente le nombre réel de fois où l'état existe dans la base de données. S'il ne correspond pas, la cellule représente l'erreur de la prévision.|  
+|**Prédite**|Contient une ligne pour chaque état de la colonne prédictible.|  
+|**\<États> (réel)**|Colonne pour chaque état de la colonne prédictible. Si l'état de la ligne et de la colonne correspond, la cellule représente le nombre réel de fois où l'état existe dans la base de données. S'il ne correspond pas, la cellule représente l'erreur de la prévision.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Tâches de test et de validation et &#40;d’exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Test et validation &#40;l’exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

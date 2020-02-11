@@ -1,5 +1,5 @@
 ---
-title: Spécifier les données d’apprentissage (Assistant exploration de données) | Microsoft Docs
+title: Spécifier les données d’apprentissage (Assistant Exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068066"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Spécifier les données d'apprentissage (Assistant Exploration de données)
@@ -27,13 +27,13 @@ ms.locfileid: "66068066"
 > [!NOTE]  
 >  Les différents algorithmes d'exploration de données utilisent les clés différemment. Pour en savoir plus sur les différents types de clés, consultez [Types de contenu &#40;exploration de données&#41;](data-mining/content-types-data-mining.md).  
   
- **Pour plus d’informations :** [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [colonnes du modèle d’exploration de données](data-mining/mining-model-columns.md), [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [ Créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations : structures d'** [exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [colonnes de modèle d’exploration](data-mining/mining-model-columns.md)de données, [Assistant Exploration de données &#40;Analysis Services-exploration de données ](data-mining/data-mining-wizard-analysis-services-data-mining.md)&#41;, [créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
- **Tables/colonnes**  
+ **Tables/Colonnes**  
  Affiche les tables et les colonnes sélectionnées dans la page précédente de l'Assistant.  
   
- **\<case à cocher >**  
+ **\<case à cocher>**  
  Sélectionnez les colonnes à inclure dans la structure d'exploration de données.  
   
  Si votre source de données inclut des tables imbriquées ou plusieurs vues, développez la liste de colonnes pour afficher les tables imbriquées.  
@@ -45,28 +45,28 @@ ms.locfileid: "66068066"
   
  Pour une table imbriquée, la **Clé** indique l’identificateur d’une ligne dans le contexte du cas associé.  
   
- **Entrée**  
+ **Input**  
  Sélectionnez cette option pour utiliser la colonne dans la création des prévisions.  
   
 > [!NOTE]  
 >  Cette colonne est uniquement disponible lorsque vous créez un modèle d'exploration de données avec la structure d'exploration de données.  
   
- **Prévisibles**  
+ **Prédictible**  
  Sélectionnez cette option pour permettre à la table ou à la colonne d'être prédite en fonction d'une entrée supplémentaire ultérieure.  
   
  Si vous marquez également une table imbriquée comme prévisible, la totalité de la table imbriquée devient prévisible. Si aucune colonne de la table imbriquée n'est marquée comme colonne d'entrée ou colonne prédictible, la table imbriquée est visible dans la structure d'exploration de données, mais elle est ignorée dans le modèle.  
   
- **Remarque** Cette colonne est uniquement disponible quand vous créez un modèle d’exploration de données avec la structure d’exploration de données.  
+ **Remarque** Cette colonne n’est disponible que lorsque vous créez un modèle d’exploration de données avec la structure d’exploration de données.  
   
  **Suggérer**  
  Cliquez sur ce bouton pour ouvrir la boîte de dialogue **Suggérer des colonnes associées** , qui effectue l’analyse d’un échantillon de données pour identifier les colonnes d’entrée qui présentent la relation la plus forte avec la colonne **Prédictible** sélectionnée basée sur la méthode entropique. Cette analyse s'applique également aux colonnes de tables imbriquées ou aux structures d'exploration de données basées sur les sources OLAP.  
   
- **Remarque** Cette colonne est uniquement disponible quand vous créez un modèle d’exploration de données avec la structure d’exploration de données.  
+ **Remarque** Cette colonne n’est disponible que lorsque vous créez un modèle d’exploration de données avec la structure d’exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données d’aide F1 de l’Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Suggérer des colonnes associées &#40;Assistant exploration de données&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Spécifier les Types de tables &#40;Assistant exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
- [Spécifier le contenu et le Type de données de la colonne &#40;Assistant exploration de données&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Aide (F1) de l’Assistant Exploration de données &#40;Analysis Services-exploration de données&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Suggérer des colonnes associées &#40;l’Assistant Exploration de données&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Spécifier les types de tables &#40;l’Assistant Exploration de données&#41;](specify-table-types-data-mining-wizard.md)   
+ [Spécifiez le contenu et le type de données de la colonne &#40;l’Assistant Exploration de données&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

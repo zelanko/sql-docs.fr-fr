@@ -1,5 +1,5 @@
 ---
-title: Créer la boîte de dialogue de Dimension d’exploration de données | Microsoft Docs
+title: Boîte de dialogue créer une dimension d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 801dbaaa8f267c2936f86644cc4a7ad3de6549a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086958"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>Boîte de dialogue Créer une dimension d'exploration de données
@@ -29,11 +29,11 @@ ms.locfileid: "66086958"
  **Nom de la dimension**  
  Entrez le nom de la nouvelle dimension.  
   
- **Créer un Cube**  
+ **Créer un cube**  
  Sélectionnez cette option pour créer un cube basé sur la dimension du modèle d'exploration de données à créer. Après avoir sélectionné cette option, vous pouvez donner un nouveau nom au cube.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue de Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Créer une dimension d’exploration de données](data-mining/create-a-data-mining-dimension.md)  
+ [Vue structure d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Créer une dimension d'exploration de données](data-mining/create-a-data-mining-dimension.md)  
   
   

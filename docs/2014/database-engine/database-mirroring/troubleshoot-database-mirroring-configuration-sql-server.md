@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754207"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62754207"
 > [!NOTE]  
 >  Assurez-vous que vous prenez en charge toutes les [conditions préalables à la mise en miroir de bases de données](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
-|Problème|Récapitulatif|  
+|Problème|Résumé|  
 |-----------|-------------|  
 |Message d'erreur 1418|Ce message [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indique que l'adresse réseau du serveur ne peut pas être atteinte ou n'existe pas, et il suggère de vérifier le nom de l'adresse réseau puis de réexécuter la commande. Pour plus d’informations, consultez la rubrique [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) .|  
 |[Comptes (Accounts)](#Accounts)|Traite des conditions nécessaires à la configuration correcte des comptes sous lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.|  
@@ -37,10 +37,10 @@ ms.locfileid: "62754207"
 |[Accès réseau](#NetworkAccess)|Traite de l'exigence selon laquelle chaque instance de serveur doit être autorisée à accéder aux ports de l'autre instance ou des autres instances de serveur par le biais du protocole TCP.|  
 |[Préparation de la base de données miroir](#MirrorDbPrep)|Résume les conditions requises pour la préparation de la base de données miroir afin de permettre le démarrage de la mise en miroir.|  
 |[Échec d'opération de création de fichier](#FailedCreateFileOp)|Décrit comment réagir à un échec d'opération de création de fichier.|  
-|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='***serveur_partenaire***'** .|  
+|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *database_name* Set Partner **= '***partner_server***'** .|  
 |[Transactions entre bases de données](#CrossDbTxns)|Un basculement automatique peut entraîner une résolution automatique et éventuellement incorrecte des transactions incertaines. Pour cette raison, la mise en miroir de bases de données ne prend pas en charge les transactions entre bases de données.|  
   
-##  <a name="Accounts"></a> Accounts  
+##  <a name="Accounts"></a> Comptes (Accounts)  
  Les comptes sous lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution doivent être configurés correctement.  
   
 1.  Les comptes possèdent-ils les autorisations appropriées ?  
@@ -51,7 +51,7 @@ ms.locfileid: "62754207"
   
 2.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution en tant que service utilisant le compte système local, vous devez utiliser des certificats pour l'authentification. Pour plus d'informations, consultez [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Points de terminaison  
+##  <a name="Endpoints"></a> Endpoints  
  Les points de terminaison doivent être correctement configurés.  
   
 1.  Vérifiez que chaque instance de serveur (serveur principal, serveurs miroir et témoin, le cas échéant) a un point de terminaison de mise en miroir de bases de données. Pour plus d’informations, consultez [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) et, selon la forme d’authentification, soit [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md), soit [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -142,7 +142,7 @@ ms.locfileid: "62754207"
  Pour plus d’informations, consultez [Suppression de la mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md), [Préparer une base de données miroir pour la mise en miroir&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md), [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md), [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) ou [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Démarrage de la mise en miroir à l'aide de Transact-SQL  
- L’ordre dans lequel les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='***serveur_partenaire***'** sont émises est très important.  
+ L’ordre dans lequel les instructions ALTER DATABASE *database_name* Set Partner **= '***partner_server***'** sont émises est très important.  
   
 1.  La première instruction doit être exécutée sur le serveur miroir. Lorsque cette instruction est exécutée, le serveur miroir n'essaie pas de contacter d'autre instance de serveur. Au lieu de cela, le serveur miroir indique à sa base de données de patienter que le serveur miroir soit contacté par le serveur principal.  
   
@@ -166,6 +166,6 @@ ms.locfileid: "62754207"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
+ [Sécurité de transport pour la mise en miroir de bases de données et les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 603a2b5be4ca75495f094aa838d0373a9689a523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657774"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
@@ -26,6 +26,6 @@ ms.locfileid: "62657774"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetCursorName, fonction](https://go.microsoft.com/fwlink/?LinkId=59349)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

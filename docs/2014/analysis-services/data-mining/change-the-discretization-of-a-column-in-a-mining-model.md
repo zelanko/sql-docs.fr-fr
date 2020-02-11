@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085896"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Modifier la discrétisation d'une colonne dans un modèle d'exploration de données
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discrétise automatiquement les valeurs-autrement dit, il place les données numérique de colonne dans certains scénarios. Par exemple, si vos données contiennent des données numériques continues et que vous créez un modèle d'arbre de décision, chaque colonne de données continues est intégrée automatiquement, selon la distribution des données. Si vous souhaitez contrôler la discrétisation des données, vous devez modifier les propriétés de la colonne de structure d'exploration de données, qui contrôle l'utilisation des données dans le modèle.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]discrétise automatiquement les valeurs, autrement dit, il place les données dans une colonne numérique, dans certains scénarios. Par exemple, si vos données contiennent des données numériques continues et que vous créez un modèle d'arbre de décision, chaque colonne de données continues est intégrée automatiquement, selon la distribution des données. Si vous souhaitez contrôler la discrétisation des données, vous devez modifier les propriétés de la colonne de structure d'exploration de données, qui contrôle l'utilisation des données dans le modèle.  
   
  Pour obtenir des informations générales sur la façon de définir des propriétés dans un modèle d’exploration de données, consultez [Colonnes de modèle d’exploration de données](mining-model-columns.md).  
   
@@ -39,14 +39,14 @@ ms.locfileid: "66085896"
   
 ### <a name="to-change-the-discretization-method"></a>Pour modifier la méthode de discrétisation  
   
-1.  Dans le **propriétés d’exploration de données** , cliquez sur la zone de texte en regard **contenu**, puis sélectionnez `Discretized` dans la liste déroulante.  
+1.  Dans la fenêtre **propriétés d’exploration de données** , cliquez sur la zone de texte en regard de **contenu**, puis sélectionnez `Discretized` dans la liste déroulante.  
   
      La fenêtre <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> et <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> sont maintenant activées.  
   
-2.  Dans le **propriétés** , cliquez sur la zone de texte en regard <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> et sélectionnez une des valeurs suivantes : `Automatic`, `EqualAreas`, ou `Cluster`.  
+2.  Dans la fenêtre **Propriétés** , cliquez sur la zone de texte <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> en regard de et sélectionnez l’une des `Automatic`valeurs `EqualAreas`suivantes : `Cluster`, ou.  
   
     > [!NOTE]  
-    >  Si l’utilisation des colonnes est définie sur `Ignore`, le **propriétés** fenêtre pour la colonne est vide.  
+    >  Si l’utilisation de la colonne est `Ignore`définie sur, la fenêtre **Propriétés** de la colonne est vide.  
   
      La nouvelle valeur est appliquée lorsque vous sélectionnez un élément différent dans le concepteur.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "66085896"
     >  Si vous modifiez ces propriétés, la structure doit être traitée à nouveau, avec tous les modèles auxquels s'applique le nouveau paramètre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures des modèles d’exploration de données](mining-model-tasks-and-how-tos.md)  
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)  
   
   

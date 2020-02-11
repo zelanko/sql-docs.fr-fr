@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4464b0ca035bc19695b37aea01385f737549fec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768395"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Connexion à des sources de données dans la tâche de script
@@ -38,12 +38,12 @@ ms.locfileid: "62768395"
  Lorsque vous appelez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> d'un gestionnaire de connexions, le gestionnaire de connexions se connecte à la source de données, s'il n'est pas déjà connecté, puis renvoie la connexion ou les informations de connexion appropriées que vous devez utiliser dans le code de votre tâche de script.  
   
 > [!NOTE]  
->  Vous devez connaître le type de connexion renvoyé par le Gestionnaire de connexions avant d’appeler `AcquireConnection`. Étant donné que la tâche de script a `Option Strict` activé, vous devez effectuer un cast de la connexion, qui est retournée en tant que type `Object`, vers le type de connexion approprié avant de pouvoir l'utiliser.  
+>  Vous devez connaître le type de connexion renvoyé par le gestionnaire de connexions avant `AcquireConnection`d’appeler. Étant donné que la tâche de script a `Option Strict` activé, vous devez effectuer un cast de la connexion, qui est retournée en tant que type `Object`, vers le type de connexion approprié avant de pouvoir l'utiliser.  
   
  Vous pouvez utiliser la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> de la collection <xref:Microsoft.SqlServer.Dts.Runtime.Connections> renvoyée par la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> pour rechercher une connexion existante avant d'utiliser la connexion dans votre code.  
   
 > [!IMPORTANT]  
->  Vous ne pouvez pas appeler la méthode AcquireConnection des gestionnaires de connexions qui renvoient des objets non managés, tels que le gestionnaire de connexions OLE DB et le gestionnaire de connexions Excel, dans le code managé d’une tâche de script. Toutefois, vous pouvez lire la propriété ConnectionString de ces gestionnaires de connexions et vous connecter à la source de données directement dans votre code à l’aide de la chaîne de connexion avec un `OledbConnection` à partir de la **System.Data.OleDb** espace de noms.  
+>  Vous ne pouvez pas appeler la méthode AcquireConnection des gestionnaires de connexions qui renvoient des objets non managés, tels que le gestionnaire de connexions OLE DB et le gestionnaire de connexions Excel, dans le code managé d’une tâche de script. Toutefois, vous pouvez lire la propriété ConnectionString de ces gestionnaires de connexions et vous connecter directement à la source de données dans votre code en utilisant la chaîne de `OledbConnection` connexion avec un de l’espace de noms **System. Data. OleDb** .  
 >   
 >  Si vous devez appeler la méthode AcquireConnection d’un gestionnaire de connexions qui retourne un objet non managé, utilisez un gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Lorsque vous configurez le gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] afin d'utiliser un fournisseur OLE DB, il se connecte en utilisant le fournisseur de données [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour OLE DB. Dans ce cas, la méthode AcquireConnection retourne un `System.Data.OleDb.OleDbConnection` au lieu d’un objet non managé. Pour configurer un gestionnaire de connexions [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] en vue de son utilisation avec une source de données Excel, sélectionnez le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB pour Jet, spécifiez un fichier Excel, puis entrez `Excel 8.0` (pour Excel 97 et versions ultérieures) comme valeur **Propriétés étendues** dans la page **Tout** de la boîte de dialogue **Gestionnaire de connexions**.  
   
@@ -98,10 +98,10 @@ public class ScriptMain
   
 ```  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexions Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;les connexions de&#41; SSIS](../../connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](../../create-connection-managers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Définir l’Intelligence comptable (Assistant Business Intelligence) | Microsoft Docs
+title: Définir l’intelligence comptable (Assistant Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082197"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Définir l'intelligence comptable (Assistant Business Intelligence)
@@ -26,7 +26,7 @@ ms.locfileid: "66082197"
 >  Cette page s’affiche si un attribut de dimension a été mis en correspondance avec le type d’attribut **Type de compte** dans la page **Configurer les attributs de la dimension** .  
   
 ## <a name="options"></a>Options  
- **Types de comptes de Table source**  
+ **Types de comptes de la table source**  
  Affiche les valeurs contenues dans l’attribut de dimension affecté au type d’attribut **Type de compte** défini dans la page **Configurer les attributs de la dimension** .  
   
  **Types de comptes intégrés**  
@@ -34,19 +34,19 @@ ms.locfileid: "66082197"
   
  Le tableau ci-dessous répertorie les types de comptes définis dans une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**Actif**|Valeur des biens possédés à un moment donné.|  
+|**Asset**|Valeur des biens possédés à un moment donné.|  
 |**Balance**|Comptage d'une grandeur à un moment donné.|  
-|**Dépenses**|Valeur des dépenses engagées.|  
-|**Flux**|Comptage incrémental de biens.|  
-|**Revenu**|Valeur des biens reçus.|  
-|**Dettes**|Valeur des biens dus à un moment donné.|  
+|**Dépensé**|Valeur des dépenses engagées.|  
+|**Organigramme**|Comptage incrémental de biens.|  
+|**Produits**|Valeur des biens reçus.|  
+|**Pourra**|Valeur des biens dus à un moment donné.|  
 |**Statistique**|Rapport calculé d'une grandeur, ou comptage d'une grandeur qu'il n'est pas possible d'agréger.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Concepteur de dimensions &#40;Analysis Services-données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -15,20 +15,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084798"
 ---
 # <a name="data-types-data-mining"></a>Types de données (Exploration de données)
-  Quand vous créez un modèle d’exploration de données ou une structure d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez définir les types de données pour chacune des colonnes dans la structure d’exploration de données. Le type de données indique au moteur d'exploration de données si les données dans la source de données sont numériques ou de texte, et comment elles doivent être traitées. Par exemple, si vos données sources contiennent des données numériques, vous pouvez spécifier si les nombres doivent être traités en tant qu'entiers ou en utilisant des décimales.  
+  Lorsque vous créez un modèle d’exploration de données ou une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]structure d’exploration de données dans, vous devez définir les types de données pour chacune des colonnes de la structure d’exploration de données. Le type de données indique au moteur d'exploration de données si les données dans la source de données sont numériques ou de texte, et comment elles doivent être traitées. Par exemple, si vos données sources contiennent des données numériques, vous pouvez spécifier si les nombres doivent être traités en tant qu'entiers ou en utilisant des décimales.  
   
  Chaque type de données prend en charge un ou plusieurs types de contenu. En définissant le type de contenu, vous pouvez personnaliser la façon dont les données de la colonne sont traitées ou calculées dans le modèle d'exploration de données.  
   
  Par exemple, si une colonne contient des données numériques, vous pouvez choisir de les gérer en tant que type de données numérique ou en tant que type de données texte. Si vous choisissez le type de données numérique, vous pouvez définir plusieurs types de contenu différents : vous pouvez discrétiser les nombres ou les gérer en tant que valeurs continues. Pour obtenir la liste de tous les types de contenu, consultez [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md).  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les types de données suivants pour les colonnes de structure d’exploration de données :  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les types de données suivants pour les colonnes de structure d’exploration de données :  
   
 |Type de données|Types de contenu pris en charge|  
 |---------------|-----------------------------|  
@@ -48,12 +49,12 @@ ms.locfileid: "66084798"
  Si vous modifiez le type de données d'une colonne, vous devez toujours retraiter la structure d'exploration de données et tous modèles d'exploration de données basés sur cette structure. Si vous modifiez le type de données, il est possible que cette colonne ne puisse plus être utilisée dans un modèle particulier. Dans ce cas, Analysis Services génère une erreur lorsque vous retraitez le modèle, ou traite le modèle mais en ignorant cette colonne particulière.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md)   
- [Types de contenu &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Types de données &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
- [Colonnes d'un modèle d'exploration de données](mining-model-columns.md)   
+ [Types de contenu &#40;l’exploration de données&#41;](content-types-data-mining.md)   
+ [Types de contenu &#40;&#41;DMX](/sql/dmx/content-types-dmx)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Types de données &#40;&#41;DMX](/sql/dmx/data-types-dmx)   
+ [Colonnes du modèle d’exploration de données](mining-model-columns.md)   
  [Colonnes de structure d'exploration de données](mining-structure-columns.md)  
   
   

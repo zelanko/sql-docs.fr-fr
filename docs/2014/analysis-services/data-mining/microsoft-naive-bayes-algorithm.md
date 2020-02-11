@@ -1,5 +1,5 @@
 ---
-title: L’algorithme Microsoft Naive Bayes | Microsoft Docs
+title: Algorithme Microsoft Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083880"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algorithme MNB (Microsoft Naive Bayes)
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Naive Bayes est un algorithme de classification basé sur les théorèmes de Bayes et fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour la modélisation prédictive. Le terme Naïve dans le nom Naïve Bayes est dérivé du fait que l'algorithme utilise des techniques bayésiennes, mais ne prend pas en compte les dépendances qui peuvent exister.  
+  L' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Naive Bayes est un algorithme de classification basé sur les classes de Bayes' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et fourni par pour une utilisation dans la modélisation prédictive. Le terme Naïve dans le nom Naïve Bayes est dérivé du fait que l'algorithme utilise des techniques bayésiennes, mais ne prend pas en compte les dépendances qui peuvent exister.  
   
  Cet algorithme est informatiquement moins lourd que d’autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Ainsi, il est utile pour générer rapidement des modèles d’exploration de données permettant de découvrir les relations entre les colonnes d’entrée et les colonnes prédictibles. Vous pouvez utiliser cet algorithme pour effectuer l'exploration initiale de données et appliquer ensuite les résultats pour créer des modèles d'exploration de données supplémentaires avec d'autres algorithmes qui sont informatiquement plus lourds et plus précis.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66083880"
   
  Pour comprendre le fonctionnement, utilisez la Visionneuse de l'algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (comme illustré dans le graphique suivant) pour explorer visuellement la manière dont l'algorithme distribue les états.  
   
- ![Distribution Naive bayes des états](../media/naive-bayes.gif "distribution Naive bayes des États")  
+ ![Distribution de l'algorithme MNB (Microsoft Naive Bayes) des états](../media/naive-bayes.gif "Distribution de l'algorithme MNB (Microsoft Naive Bayes) des états")  
   
  Dans ce cas, la Visionneuse de l’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes répertorie chacune des colonnes d’entrée du dataset et montre comment les états de chaque colonne sont distribués, en fonction de chaque état de la colonne prédictible.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083880"
   
  Les spécifications liées à un modèle Naive Bayes se présentent comme suit :  
   
--   **Colonne à index unique** Chaque modèle doit contenir une colonne numérique ou une colonne de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
+-   **Une seule colonne clé** Chaque modèle doit contenir une colonne numérique ou de texte qui identifie de façon unique chaque enregistrement. Les clés composées ne sont pas autorisées.  
   
--   **Colonnes d’entrée** dans un modèle Naive Bayes, toutes les colonnes doivent être discrets ou discrétisés colonnes. Pour plus d’informations sur la discrétisation des colonnes, consultez [méthodes de discrétisation &#40;d’exploration de données&#41;](discretization-methods-data-mining.md).  
+-   **Colonnes d’entrée** Dans un modèle Naive Bayes, toutes les colonnes doivent être des colonnes discrètes ou discrètes. Pour plus d’informations sur la discrétisation des colonnes, consultez [méthodes de discrétisation &#40;&#41;d’exploration de données ](discretization-methods-data-mining.md).  
   
      Pour un modèle Naive Bayes, il est également important de garantir que les attributs d'entrée sont indépendants les uns des autres. Cela est particulièrement important lorsque vous utilisez le modèle pour effectuer une prédiction.  
   
@@ -65,12 +65,12 @@ ms.locfileid: "66083880"
   
      Inversement, la capacité de l'algorithme à identifier les corrélations entre les variables est utile lorsque vous explorez un modèle ou un dataset, pour d'identifier les relations entre des entrées.  
   
--   **Au moins une colonne prévisible** L’attribut prédictible doit contenir des valeurs discrètes ou discrétisées.  
+-   **Au moins une colonne prévisible** L’attribut prévisible doit contenir des valeurs discrètes ou discrètes.  
   
      Les valeurs de la colonne prédictible peuvent être traitées comme entrées. Cette approche peut être utile lorsque vous explorez un nouveau dataset, afin de rechercher des relations entre les colonnes.  
   
 ## <a name="viewing-the-model"></a>Affichage du modèle  
- Pour explorer le modèle, vous pouvez utiliser la **Visionneuse de l’algorithme MNB (Microsoft Naive Bayes)** . Elle illustre la manière dont les attributs d’entrée sont liés à l’attribut prédictible. Elle présente également un profil détaillé de chaque cluster, une liste des attributs qui permettent de distinguer les clusters les uns des autres, ainsi que les caractéristiques du jeu de données d'apprentissage complet. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](browse-a-model-using-the-microsoft-naive-bayes-viewer.md).  
+ Pour explorer le modèle, vous pouvez utiliser la **Visionneuse de l’algorithme MNB (Microsoft Naive Bayes)**. Elle illustre la manière dont les attributs d’entrée sont liés à l’attribut prédictible. Elle présente également un profil détaillé de chaque cluster, une liste des attributs qui permettent de distinguer les clusters les uns des autres, ainsi que les caractéristiques du jeu de données d'apprentissage complet. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](browse-a-model-using-the-microsoft-naive-bayes-viewer.md).  
   
  Si vous voulez en savoir plus, vous pouvez parcourir le modèle dans la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md). Pour plus d’informations sur le type d’informations stockées dans le modèle, consultez [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md).  
   
@@ -92,10 +92,10 @@ ms.locfileid: "66083880"
 -   Prend en charge l'utilisation de modèles d'exploration de données OLAP.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Sélection des fonctionnalités &#40;exploration de données&#41;](feature-selection-data-mining.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Sélection des fonctionnalités &#40;l’exploration de données&#41;](feature-selection-data-mining.md)   
  [Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

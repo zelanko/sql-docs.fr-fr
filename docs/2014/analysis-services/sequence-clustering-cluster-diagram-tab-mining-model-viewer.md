@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering onglet Diagramme de Cluster (visionneuse de modèle d’exploration de données | Microsoft Docs
+title: Onglet diagramme de cluster de séquence clustering (visionneuse de modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069111"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Onglet Diagramme de cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
@@ -24,13 +24,13 @@ ms.locfileid: "66069111"
   
  Utilisez cette vue d'un modèle Sequence Clustering pour procéder à une extraction depuis chaque cluster dans les cas de prise en charge, si l'extraction a été activée. Vous pouvez également affecter des noms descriptifs aux clusters et remplacer la variable d'ombrage afin d'évaluer la distribution des valeurs en un coup d'œil  
   
- **Pour plus d’informations :** [Algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :** [algorithme de clustering de séquences Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [Parcourir un modèle à l’aide de Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
- **Actualiser le contenu de l’Observateur**  
+ **Actualiser le contenu de l'observateur**  
  Recharge le modèle d'exploration de données dans la visionneuse.  
   
- **Modèle d'exploration de données**  
+ **Modèle d’exploration de données**  
  Choisissez un modèle d'exploration de données pour afficher le contenu de la structure d'exploration actuelle. Le modèle d'exploration de données s'ouvre dans sa visionneuse associée.  
   
  **Visionneuse**  
@@ -39,7 +39,7 @@ ms.locfileid: "66069111"
  **Zoom avant**  
  Permet d'effectuer un zoom avant sur le schéma et d'obtenir une vue plus détaillée des clusters.  
   
- **Effectuer un zoom arrière**  
+ **Zoom arrière**  
  Permet d'effectuer un zoom arrière sur le schéma, pour voir tous les clusters du modèle.  
   
  **Copier la vue du graphique**  
@@ -48,10 +48,10 @@ ms.locfileid: "66069111"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Diagramme de mise à l’échelle à la fenêtre**  
+ **Ajuster le diagramme à la fenêtre**  
  Réduit la taille du diagramme jusqu'à ce qu'il soit ajusté à l'écran.  
   
- **Nœud introuvable**  
+ **Rechercher un nœud**  
  Utilisez la boîte de dialogue **Rechercher un nœud** pour filtrer les clusters dans le graphique et ainsi faciliter la recherche d’un cluster spécifique. Pour plus d’informations, consultez [Boîte de dialogue Rechercher un nœud &#40;visionneuse de modèle d’exploration de données&#41;](find-node-dialog-box-mining-model-viewer.md).  
   
  Notez que dans ce contexte, vous recherchez uniquement le nom du cluster, pas les attributs du cluster ; par conséquent, cette option est très utile si vous avez affecté des noms descriptifs à votre cluster. Vous pouvez affecter des noms aux clusters dans la visionneuse en cliquant avec le bouton droit sur chaque cluster et en sélectionnant **Renommer**.  
@@ -59,7 +59,7 @@ ms.locfileid: "66069111"
  **Améliorer la disposition**  
  Réorganise les clusters du diagramme pour en améliorer la disposition.  
   
- **Densité**  
+ **Masse**  
  L’apparence du graphique à barres de densité et les valeurs qu’il contient dépendent de l’attribut que vous sélectionnez dans **Variable d’ombrage**.  
   
 -   Si aucun état d'attribut n'est sélectionné comme variable d'ombrage, par défaut l'ombrage de densité appliqué à chaque cluster représente la prise en charge du cluster, par comparaison à la population globale des cas.  
@@ -69,15 +69,15 @@ ms.locfileid: "66069111"
  **Variable d’ombrage**  
  Sélectionnez un attribut du modèle d'exploration de données à utiliser lors de l'ombrage du schéma de cluster.  
   
- **État**  
+ **State**  
  Sélectionnez un état qui correspond à **Variable d’ombrage**. Par exemple, si vous souhaitez consulter les séquences qui incluent un produit particulier, sélectionnez la colonne [Product] comme attribut pour **Variable d’ombrage**, ainsi que le nom de produit spécifique comme valeur pour **État** .  
   
- **Links**  
+ **Liens**  
  Les lignes du schéma indiquent des associations entre les clusters de séquence. Vous pouvez modifier le nombre de liens affichés par la visionneuse à l'aide du curseur situé à droite des clusters. Si vous déplacez le curseur vers le bas, seuls les liens les plus forts sont affichés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

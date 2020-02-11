@@ -1,5 +1,5 @@
 ---
-title: Définir le Type de relation d’une relation d’attribut | Microsoft Docs
+title: Définir le type de relation d’une relation d’attribut | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077081"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>Définir le type de relation d'une relation d'attribut
@@ -38,6 +38,6 @@ ms.locfileid: "66077081"
      Dans une relation flexible, les relations entre les membres changent dans le temps. Dans une relation rigide, les relations entre les membres ne changent pas dans le temps.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des relations d’attributs](attribute-relationships-define.md)  
+ [Définir des relations d'attributs](attribute-relationships-define.md)  
   
   

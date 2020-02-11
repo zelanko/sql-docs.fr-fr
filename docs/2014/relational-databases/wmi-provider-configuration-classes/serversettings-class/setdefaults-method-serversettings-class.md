@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735892"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Méthode SetDefaults (classe ServerSettings)
-  Définit toutes les valeurs par défaut pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec l’option permettant de remplacer les données existantes.  
+  Définit toutes les valeurs par défaut de l’instance [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de avec l’option permettant de remplacer les données existantes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,8 +40,8 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Éléments  
- *object*  
- Un [classe ServerSettings](serversettings-class.md) objet qui représente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance du client.  
+ *dessin*  
+ Objet de [classe ServerSettings](serversettings-class.md) qui représente une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance de client.  
   
 #### <a name="parameters"></a>Paramètres  
   

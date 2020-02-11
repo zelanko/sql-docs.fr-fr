@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076607"
 ---
 # <a name="configure-measure-properties"></a>Configurer des propriétés de mesure
@@ -58,7 +58,8 @@ ms.locfileid: "66076607"
   
 |Propriété|Définition|  
 |--------------|----------------|  
-|`AggregateFunction`|Obligatoire. Détermine la manière dont les mesures sont agrégées. `Sum` est l'agrégation par défaut. Pour plus d’informations et obtenir une description de chaque fonction, consultez [Utiliser des fonctions d’agrégation](use-aggregate-functions.md) .|  
+|`AggregateFunction`|Obligatoire. Détermine la manière dont les mesures sont agrégées. 
+  `Sum` est l'agrégation par défaut. Pour plus d’informations et obtenir une description de chaque fonction, consultez [Utiliser des fonctions d’agrégation](use-aggregate-functions.md) .|  
 |`DataType`|Obligatoire. Spécifie le type de données de la colonne dans la table de faits sous-jacente à laquelle est liée la mesure. Par défaut, cette valeur est héritée de la colonne source.|  
 |`Description`|Fournit une description de la mesure qui peut être exposée dans les applications clientes.|  
 |`DisplayFolder`|Spécifie le dossier dans lequel apparaît la mesure lorsque les utilisateurs se connectent au cube. Si un cube possède plusieurs mesures, vous pouvez utiliser les dossiers d'affichage pour classer les mesures par catégories et faciliter la navigation pour l'utilisateur.|  
@@ -70,7 +71,7 @@ ms.locfileid: "66076607"
 |`Visible`|Détermine la visibilité de la mesure dans les applications clientes.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer les propriétés d'un groupe de mesures](configure-measure-group-properties.md)   
+ [Configurer les propriétés d’un groupe de mesures](configure-measure-group-properties.md)   
  [Modification des mesures](../lesson-3-1-modifying-measures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - modifier le filtre | Microsoft Docs
+title: SQL Server Profiler-modifier le filtre | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089778"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Modifier le filtre
@@ -26,9 +26,9 @@ ms.locfileid: "66089778"
 >  Pour les colonnes de données de type chaîne, les critères de filtre s'afficheront en tant que valeur de chaîne LIKE ou NOT LIKE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtrer les événements dans une Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [Filtrer les événements en fonction de l’heure de fin d’événement &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
- [Filtrer les événements en fonction de l’heure de début d’événement &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
+ [Filtrer les événements dans une trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [Filtrer les événements en fonction de l’heure de fin de l’événement &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
+ [Filtrer les événements en fonction de l’heure de début de l’événement &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
  [Filtrer une trace](../relational-databases/sql-trace/filter-a-trace.md)   
  [Filtrer des traces avec SQL Server Profiler](../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)  
   

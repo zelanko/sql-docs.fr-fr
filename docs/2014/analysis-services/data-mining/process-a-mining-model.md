@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083095"
 ---
 # <a name="process-a-mining-model"></a>Traiter un modèle d'exploration de données
@@ -38,13 +38,13 @@ ms.locfileid: "66083095"
   
      Si vous avez modifié la structure d'exploration de données, un message vous demande de la redéployer avant de traiter le modèle. Cliquez sur **Oui**.  
   
-3.  Dans le **traiter le modèle d’exploration de données - \<modèle >** boîte de dialogue, cliquez sur **exécuter**.  
+3.  Dans la boîte de dialogue **traitement \<du modèle d’exploration de données model>** , cliquez sur **exécuter**.  
   
      La boîte de dialogue **État d'avancement du traitement** s'ouvre avec les informations de traitement du modèle.  
   
 4.  Une fois le modèle traité, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-5.  Cliquez sur **fermer** dans le **traiter le modèle d’exploration de données - \<modèle >** boîte de dialogue.  
+5.  Cliquez sur **Fermer** dans la boîte de dialogue **traitement de modèles d’exploration de \<données>** .  
   
  Seuls la structure d'exploration de données et le modèle d'exploration de données sélectionné ont été traités.  
   
@@ -54,17 +54,17 @@ ms.locfileid: "66083095"
   
 2.  Si vous avez modifié la structure d'exploration de données, un message vous demande de la redéployer avant de traiter les modèles. Cliquez sur **Oui**.  
   
-3.  Dans le **traiter la Structure d’exploration de données - \<structure >** boîte de dialogue, cliquez sur **exécuter**.  
+3.  Dans la boîte de dialogue traitement de la structure d' **exploration de données- \<structure>** , cliquez sur **exécuter**.  
   
 4.  La boîte de dialogue **État d'avancement du traitement** s'ouvre avec les informations de traitement du modèle.  
   
 5.  Une fois les modèles traités, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-6.  Cliquez sur **fermer** dans le **traitement \<modèle >** boîte de dialogue.  
+6.  Cliquez sur **Fermer** dans la boîte de dialogue **>du modèle de traitement \<** .  
   
  La structure d'exploration de données et tous les modèles d'exploration de données associés ont été traités.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures des modèles d’exploration de données](mining-model-tasks-and-how-tos.md)  
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)  
   
   

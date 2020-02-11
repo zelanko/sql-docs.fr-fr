@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087717"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>Fin de l'Assistant (Assistant Cube)
@@ -26,11 +26,11 @@ ms.locfileid: "66087717"
  **Nom du cube**  
  Tapez le nom du cube.  
   
- **Aperçu**  
+ **Préversion**  
  Affiche la structure du cube qui doit être créé à la fin de l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de cube &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Objets de cube &#40;Analysis Services-données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

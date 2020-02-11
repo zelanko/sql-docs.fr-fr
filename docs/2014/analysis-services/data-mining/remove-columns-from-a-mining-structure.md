@@ -1,5 +1,5 @@
 ---
-title: Supprimer des colonnes dans une Structure d’exploration de données | Microsoft Docs
+title: Supprimer des colonnes d’une structure d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082959"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Supprimer des colonnes d'une structure d'exploration de données
@@ -44,6 +44,6 @@ ms.locfileid: "66082959"
 4.  Dans la boîte de dialogue **Supprimer les objets** , cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures relatives aux structures d’exploration de données](mining-structure-tasks-and-how-tos.md)  
+ [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Importing (SSAS) | Microsoft Docs
+title: Importation (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080509"
 ---
 # <a name="importing-ssas"></a>Importation (SSAS)
@@ -26,13 +26,13 @@ ms.locfileid: "66080509"
  **Détails**  
  Affiche les informations suivantes pour chaque opération d'importation de données.  
   
-|colonne|Description|  
+|Colonne|Description|  
 |------------|-----------------|  
 |**Élément de travail**|Affiche le nom de la table ou de la vue importée.|  
 |**État**|Indique si la table ou la vue a été importée avec succès, ainsi que le nombre de lignes importées.|  
 |**Message**|Si l'importation de la table ou de la vue a échoué, affiche un lien permettant d'obtenir plus d'informations. Ces informations sont affichées dans la fenêtre Détails.<br /><br /> Pour réessayer d'importer la table ou la vue, quittez l'Assistant et recommencez l'opération.|  
   
- **Arrêter l’importation**  
+ **Arrêter l'importation**  
  Cliquez sur cette option pour arrêter l'opération d'importation avant son achèvement. Les tables et les vues qui ont déjà été importées s’affichent dans le concepteur [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] . Les tables et les vues qui n'ont pas encore été importées ne seront pas importées.  
   
   

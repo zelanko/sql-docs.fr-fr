@@ -14,40 +14,40 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67e79a107c47563e507ad27fb0bd14f703206b4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088791"
 ---
-# <a name="technical-reference-database-engine"></a>Informations techniques de référence (moteur de base de données)
+# <a name="technical-reference-database-engine"></a>Références techniques (moteur de base de données)
   Trouvez la documentation de référence de programmation relative aux outils, langages et à l'administration pour le [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **Références relatives aux fonctionnalités**  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **référence des fonctionnalités**  
  [Serveurs inscrits – Aide (F1)](../ssms/register-servers/registered-servers-f1-help.md)  
   
  [Aide de SQL Server Management Studio](../ssms/menu-help/sql-server-management-studio-menu-help.md)  
   
  [Aide (F1) de Visual Database Tools](../ssms/visual-db-tools/visual-database-tools-f1-help.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **référence utilitaire d’invite de commandes**  
+ ![Petite icône de dossier de fichiers-](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") informations de référence sur l' **utilitaire**  
  [Utilitaire bcp](../tools/bcp-utility.md)  
   
- [Utilitaire dta](../tools/dta/dta-utility.md)  
+ [dta (utilitaire)](../tools/dta/dta-utility.md)  
   
  [Utilitaire SqlLocalDB](../tools/sqllocaldb-utility.md)  
   
- [Plus...](../tools/command-prompt-utility-reference-database-engine.md)  
+ [En savoir plus...](../tools/command-prompt-utility-reference-database-engine.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **applets de commande PowerShell du moteur de base de données**  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **moteur de base de données les applets** de commande PowerShell  
  [Invoke-PolicyEvaluation (applet de commande)](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
   
- [Invoke-Sqlcmd, applet de commande](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd (applet de commande)](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **erreurs et référence des événements**  
- [Erreurs et les événements du moteur de base de données] (.. /Relational-Databases/Errors-Events/Database-Engine-Events-and-Errors.md0  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **, erreurs et référence des événements**  
+ [Moteur de base de données les événements et les erreurs] (.. /relational-databases/errors-events/database-engine-events-and-errors.md0  
   
- ![Icône de dossier petit fichier](../../2014/integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") **Showplan de référence des opérateurs logiques et physiques**  
+ ![Petite icône de dossier de fichiers](../../2014/integration-services/media/filefolder-small.gif "Petite icône de dossier de fichiers") **Showplan référence des opérateurs logiques et physiques**  
  [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
   

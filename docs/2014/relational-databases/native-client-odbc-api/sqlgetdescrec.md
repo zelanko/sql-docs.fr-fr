@@ -13,19 +13,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657712"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-  Cette rubrique décrit les fonctionnalités de SQLGetDescRec qui sont spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  Cette rubrique décrit les fonctionnalités de SQLGetDescRec qui sont spécifiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à Native Client.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec et paramètres table  
- SQLGetDescRec peut être utilisé pour obtenir des valeurs pour les attributs des paramètres table et les colonnes de paramètre table. Le *RecNumber* paramètre de SQLGetDescRec correspond à la *ParameterNumber* paramètre de SQLBindParameter.  
+ SQLGetDescRec peut être utilisé pour obtenir des valeurs pour les attributs de paramètres table et les colonnes de paramètre table. Le paramètre *recnumber* de SQLGetDescRec correspond au paramètre *ParameterNumber* de SQLBindParameter.  
   
- Les colonnes de paramètre table sont disponibles uniquement lorsque le champ d'en-tête de descripteur SQL_SOPT_SS_PARAM_FOCUS est défini sur l'ordinal d'un enregistrement pour lequel SQL_DESC_TYPE a la valeur SQL_SS_TABLE. Pour plus d’informations sur SQL_SOPT_SS_PARAM_FOCUS sur, consultez [SQLSetStmtAttr](sqlsetstmtattr.md).  
+ Les colonnes de paramètre table sont disponibles uniquement lorsque le champ d'en-tête de descripteur SQL_SOPT_SS_PARAM_FOCUS est défini sur l'ordinal d'un enregistrement pour lequel SQL_DESC_TYPE a la valeur SQL_SS_TABLE. Pour plus d’informations sur les SQL_SOPT_SS_PARAM_FOCUS sur, consultez [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  SQLGetDescRec retourne les données suivantes :  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62657712"
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*Nom*|Nom de paramètre formel pour un appel de procédure stockée ; sinon, chaîne de longueur 0.|Nom de la colonne de paramètre table.|  
 |*TypePtr*|SQL_DESC_TYPE. Pour les paramètres table, il s'agit de SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*SubTypePtr*|Indéfini|SQL_DESC_DATETIME_INTERVAL_CODE (pour les enregistrements de type SQL_DATETIME ou SQL_INTERVAL.)|  
+|*SubTypePtr*|Non défini(e)|SQL_DESC_DATETIME_INTERVAL_CODE (pour les enregistrements de type SQL_DATETIME ou SQL_INTERVAL.)|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  
@@ -46,20 +46,21 @@ ms.locfileid: "62657712"
   
 ||*TypePtr*|*SubTypePtr*|*LengthPtr*|*PrecisionPtr*|*ScalePtr*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
-|datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
+|DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|Date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>Prise en charge par SQLSetDescRec des grands types CLR définis par l'utilisateur  
- `SQLGetDescRec` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLGetDescRec` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

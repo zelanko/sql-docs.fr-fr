@@ -1,5 +1,5 @@
 ---
-title: Général (boîte de dialogue Structure d’exploration de données) (Analysis Services - Exploration de données) | Microsoft Docs
+title: Général (boîte de dialogue structure d’exploration de données) (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081055"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Général (Boîte de dialogue Structure d'exploration de données) (Analysis Services – Exploration de données)
@@ -27,14 +27,14 @@ ms.locfileid: "66081055"
 |Terme|Définition|  
 |----------|----------------|  
 |**Nom**|Affiche le nom de la structure d'exploration des données.|  
-|**ID**|Affiche l'identifiant de la structure d'exploration de données.|  
+|**IDENTIFI**|Affiche l'identifiant de la structure d'exploration de données.|  
 |**Description**|Affiche la description de la structure d'exploration de données.|  
 |**Créer un horodateur**|Affiche la date et l'heure de la création de la structure d'exploration de données.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la structure d'exploration de données.|  
-|**État**|Affiche l'état d'avancement de la structure d'exploration de données. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**State**|Affiche l'état d'avancement de la structure d'exploration de données. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la structure d'exploration de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Vue (Concepteur de modèle d’exploration de données) de la Structure d’exploration de données | Microsoft Docs
+title: Vue structure d’exploration de données (Concepteur de modèle d’exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077668"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Vue Structure d'exploration de données (Concepteur de modèle d'exploration de données)
@@ -24,16 +24,16 @@ ms.locfileid: "66077668"
   
  La vue **Structure d'exploration de données** contient les outils et les boîtes de dialogue suivants :  
   
--   [Nouvelle boîte de dialogue de modèle d’exploration de données &#40;vue Structure d’exploration de données&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
+-   [Boîte de dialogue Nouveau modèle d’exploration de données &#40;vue structure d’exploration de données&#41;](new-mining-model-dialog-box-mining-structure-view.md)  
   
--   [Sélectionnez une boîte de dialogue colonne &#40;vue Structure d’exploration de données&#41;](select-a-column-dialog-box-mining-structure-view.md)  
+-   [Boîte de dialogue Sélectionner une colonne &#40;vue structure d’exploration de données&#41;](select-a-column-dialog-box-mining-structure-view.md)  
   
--   [Sélectionnez une boîte de dialogue de colonne de clé de Table imbriquée &#40;vue Structure d’exploration de données&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
+-   [Boîte de dialogue Sélectionner une colonne clé de table imbriquée &#40;vue structure d’exploration de données&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-models-view-data-mining-model-designer.md)   
- [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
+ [Vue modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;le concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Concepteur graphique d’analyse de précision de l’exploration de données &#40;&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Prédiction Générateur de requêtes &#40;l’exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

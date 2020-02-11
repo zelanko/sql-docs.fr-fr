@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721372"
 ---
 # <a name="distribution-database"></a>Base de données de distribution
@@ -26,9 +26,9 @@ ms.locfileid: "62721372"
   
 ## <a name="options"></a>Options  
  **Nom de la base de données de distribution**  
- Entrez le nom de la base de données de distribution. Le nom par défaut de la base de données de distribution est « distribution ». Si vous définissez un nom, le nom peut contenir jusqu'à 128 caractères et il doit être unique dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et conforme aux règles des identificateurs. Pour plus d'informations, consultez [Database Identifiers](../databases/database-identifiers.md).  
+ Entrez le nom de la base de données de distribution. Le nom par défaut de la base de données de distribution est « distribution ». Si vous spécifiez un nom, le nom peut contenir jusqu’à 128 caractères, doit être unique dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et doit respecter les règles applicables aux identificateurs. Pour plus d'informations, consultez [Database Identifiers](../databases/database-identifiers.md).  
   
- **Dossier du fichier de la base de données de distribution** et **Dossier du fichier-journal de la base de données de distribution**  
+ **Dossier du fichier de base de données de distribution** et du **dossier du fichier journal de la base de données de distribution**  
  Entrez le chemin d'accès aux fichiers journaux et de base de données de distribution. Les chemins d'accès doivent faire référence à des disques locaux situés sur le serveur de distribution et commencer par une lettre de lecteur local suivie des deux-points (par exemple, C:). Les lettres d'unités mappées et les chemins d'accès réseau ne sont pas valides.  
   
 > [!NOTE]  

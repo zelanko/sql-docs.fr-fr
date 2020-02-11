@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721459"
 ---
 # <a name="delete-a-pull-subscription"></a>Supprimer un abonnement par extraction
@@ -65,15 +65,15 @@ ms.locfileid: "62721459"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Pour supprimer un abonnement par extraction à une publication transactionnelle ou d'instantané  
   
-1.  Dans la base de données d’abonnement de l’Abonné, exécutez [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Specify **@publication** , de **@publisher** et **@publisher_db** .  
+1.  Dans la base de données d’abonnement de l’Abonné, exécutez [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). **@publication**Spécifiez **@publisher**, et **@publisher_db**.  
   
-2.  Dans la base de données de publication du serveur de publication, exécutez [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Spécifiez **@publication** et **@subscriber** . Affectez la valeur **all** à **@article** . (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
+2.  Dans la base de données de publication du serveur de publication, exécutez [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). **@publication** Spécifiez **@subscriber**et. Affectez la valeur **all** à **@article**. (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Pour supprimer un abonnement par extraction à une publication de fusion  
   
-1.  Dans la base de données d’abonnement de l’Abonné, exécutez [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Spécifiez **@publication** , de **@publisher** et **@publisher_db** .  
+1.  Dans la base de données d’abonnement de l’Abonné, exécutez [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). **@publication**Spécifiez **@publisher**, et **@publisher_db**.  
   
-2.  Dans la base de données de publication du serveur de publication, exécutez [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Specify **@publication** , de **@subscriber** et **@subscriber_db** . Affectez la valeur **pull** à **@subscription_type** . (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
+2.  Dans la base de données de publication du serveur de publication, exécutez [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). **@publication**Spécifiez **@subscriber**, et **@subscriber_db**. Affectez la valeur **pull** pour **@subscription_type**. (Facultatif) Si le serveur de distribution n'est pas accessible, affectez la valeur **1** à **@ignore_distributor** pour supprimer l'abonnement sans supprimer les objets connexes au niveau du serveur de distribution.  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple suivant supprime un abonnement par extraction à une publication transactionnelle. Le premier lot est exécuté sur l'Abonné, le second sur le serveur de publication.  
@@ -137,7 +137,7 @@ ms.locfileid: "62721459"
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [S’abonner à des publications](subscribe-to-publications.md)   
+ [S’abonner aux Publications](subscribe-to-publications.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md)  
   
   

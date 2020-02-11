@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering Model Query Examples | Microsoft Docs
+title: Exemples de requêtes de modèle Sequence Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082921"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
@@ -28,22 +28,22 @@ ms.locfileid: "66082921"
   
  Cette section explique comment créer des requêtes pour les modèles basés sur l'algorithme MSC (Microsoft Sequence Clustering). Pour obtenir des informations générales sur la création de requêtes, consultez [Requêtes d’exploration de données](data-mining-queries.md).  
   
- **Content Queries**  
+ **Requêtes de contenu**  
   
- [Utilisation de l'ensemble de lignes de schéma d'exploration de données pour retourner les paramètres du modèle](#bkmk_Query1)  
+ [Utilisation de l’ensemble de lignes de schéma d’exploration de données pour retourner les paramètres de modèle](#bkmk_Query1)  
   
- [Obtention d'une liste de séquences pour un état](#bkmk_Query2)  
+ [Obtention d’une liste de séquences pour un État](#bkmk_Query2)  
   
  [Utilisation des procédures stockées système](#bkmk_Query3)  
   
  **Requêtes de prédiction**  
   
- [Prédiction d'un ou de plusieurs états suivants](#bkmk_Query4)  
+ [Prédire l’État ou les États suivants](#bkmk_Query4)  
   
-##  <a name="bkmk_ContentQueries"></a> Recherche d'informations sur le modèle Sequence Clustering  
+##  <a name="bkmk_ContentQueries"></a>Recherche d’informations sur le modèle Sequence Clustering  
  Pour créer des requêtes pertinentes sur le contenu d'un modèle d'exploration de données, vous devez comprendre la structure du contenu du modèle et les types d'informations stockés dans les différents types de nœuds. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md).  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : À l’aide de l’ensemble de lignes de schéma d’exploration de données pour retourner les paramètres de modèle  
+###  <a name="bkmk_Query1"></a>Exemple de requête 1 : utilisation de l’ensemble de lignes de schéma d’exploration de données pour retourner les paramètres de modèle  
  En interrogeant l'ensemble de lignes de schéma d'exploration de données, vous pouvez rechercher plusieurs types d'informations sur le modèle, dont les métadonnées de base, sa date et heure de création, le moment où il a été traité pour la dernière fois, le nom de la structure d'exploration de données sur laquelle il est basé et la colonne utilisée comme attribut prévisible.  
   
  La requête suivante retourne les paramètres utilisés pour générer et procéder à l'apprentissage du modèle, `[Sequence Clustering]`. Vous pouvez créer ce modèle dans  la leçon 5 du [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
@@ -54,7 +54,7 @@ from $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'Sequence Clustering'  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |MINING_PARAMETERS|  
 |------------------------|  
@@ -66,7 +66,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  La valeur de 10 est utilisée par défaut parce que la réduction du nombre de clusters simplifie pour la plupart des personnes la navigation dans les regroupements des données et leur compréhension. Toutefois, chaque modèle et chaque jeu de données sont différents. Vous pouvez tester différents nombres de clusters pour voir quelle valeur de paramètre donne le modèle le plus exact.  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Obtention d’une liste de séquences pour un état  
+###  <a name="bkmk_Query2"></a>Exemple de requête 2 : obtention d’une liste de séquences pour un État  
  Le contenu du modèle d'exploration de données stocke les séquences trouvées dans les données d'apprentissage comme un premier état couplé à une liste de tous les deuxièmes états. Le premier état est utilisé comme étiquette pour la séquence et les deuxièmes états connexes sont appelés des transitions.  
   
  Par exemple, la requête suivante retourne la liste complète de premiers états dans le modèle, avant que les séquences soient regroupées dans des clusters.  Vous pouvez obtenir cette liste en retournant la liste des séquences (NODE_TYPE = 13) qui ont le nœud racine du modèle comme parent (PARENT_UNIQUE_NAME = 0). Le mot clé FLATTENED simplifie la lecture des résultats.  
@@ -108,7 +108,7 @@ WHERE NODE_DESCRIPTION = 'Transition row for sequence state 37'
 AND [PARENT_UNIQUE_NAME] = '1081327'  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |NODE_UNIQUE_NAME|  
 |------------------------|  
@@ -126,7 +126,7 @@ FROM [Sequence Clustering].CONTENT
 WHERE NODE_UNIQUE_NAME = '1081365'  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |t.Product2|t.P2 Support|t.P2 Probability|  
 |----------------|------------------|----------------------|  
@@ -142,7 +142,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Par exemple, s'il y a quatre clusters, une séquence particulière peut avoir 40 % de chance d'appartenir au cluster 1, 30 % de chance d'appartenir au cluster 2, 20 % de chance d'appartenir au cluster 3 et 100 % de chance d'appartenir au cluster 4. Lorsque l'algorithme a déterminé le cluster auquel la transition a le plus de chance d'appartenir, il pondère les probabilités au sein du cluster par la probabilité a priori du cluster.  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3 : À l’aide du système de procédures stockées  
+###  <a name="bkmk_Query3"></a>Exemple de requête 3 : utilisation des procédures stockées système  
  Vous pouvez voir à partir de ces exemples de requête que les informations stockées dans le modèle sont complexes et que vous devrez peut-être créer plusieurs requêtes pour obtenir les informations dont vous avez besoin. Toutefois, la visionneuse de l'algorithme MSC fournit un jeu performant d'outils pour parcourir graphiquement les informations contenues dans une séquence de modèle Sequence Clustering. Vous pouvez également utiliser la visionneuse pour interroger et extraire dans le modèle.  
   
  Dans la plupart des cas, les informations présentées dans la visionneuse de l'algorithme MSC sont créées en utilisant des procédures stockées système Analysis Services pour interroger le modèle. Vous pouvez écrire des requêtes Data Mining Extensions (DMX) sur le contenu du modèle pour extraire les mêmes informations, mais les procédures stockées système Analysis Services fournissent un raccourci commode lors de l'exploration ou du test des modèles.  
@@ -155,9 +155,11 @@ WHERE NODE_UNIQUE_NAME = '1081365'
 #### <a name="cluster-profiles-and-sample-cases"></a>Profils du cluster et cas d'exemple  
  L'onglet Profils du cluster affiche une liste des clusters dans le modèle, la taille de chaque cluster et un histogramme qui indique les états inclus dans le cluster. Il existe deux procédures stockées système que vous pouvez utiliser dans les requêtes pour extraire des informations semblables :  
   
--   `GetClusterProfile` retourne les caractéristiques du cluster, avec toutes les informations trouvées dans la table NODE_DISTRIBUTION du cluster.  
+-   
+  `GetClusterProfile` retourne les caractéristiques du cluster, avec toutes les informations trouvées dans la table NODE_DISTRIBUTION du cluster.  
   
--   `GetNodeGraph` retourne les nœuds et les contours qui peuvent être utilisés pour construire une représentation graphique mathématique des clusters, correspondant à ce que vous voyez sur le premier onglet de la vue Sequence Clustering. Les nœuds sont des clusters et les contours représentent des poids ou force.  
+-   
+  `GetNodeGraph` retourne les nœuds et les contours qui peuvent être utilisés pour construire une représentation graphique mathématique des clusters, correspondant à ce que vous voyez sur le premier onglet de la vue Sequence Clustering. Les nœuds sont des clusters et les contours représentent des poids ou force.  
   
  L'exemple suivant illustre la manière d'utiliser la procédure stockée système `GetClusterProfiles`pour retourner tous les clusters du modèle, avec leurs profils respectifs. Cette procédure stockée exécute une série d'instructions DMX qui retournent le jeu complet de profils dans le modèle. Toutefois, pour utiliser cette procédure stockée, vous devez connaître l'adresse du modèle.  
   
@@ -184,7 +186,7 @@ SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')
  Pour plus d’informations, consultez [SELECT FROM &#60;modèle&#62;.SAMPLE_CASES &#40;DMX&#41;](/sql/dmx/select-from-model-dmx).  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>Caractéristiques et discrimination du cluster  
- L'onglet **Caractéristiques du cluster** résume les attributs principaux de chaque cluster, classés par probabilité. Vous pouvez déterminer combien de cas appartenant à un cluster et les nouveautés de la distribution des cas dans le cluster : Chaque caractéristique a un certain support. Pour consulter les caractéristiques d'un cluster particulier, vous devez connaître l'ID du cluster.  
+ L'onglet **Caractéristiques du cluster** résume les attributs principaux de chaque cluster, classés par probabilité. Vous pouvez trouver le nombre de cas appartenant à un cluster ainsi que des informations relatives à la distribution des cas dans le cluster : chaque caractéristique a un certain support. Pour consulter les caractéristiques d'un cluster particulier, vous devez connaître l'ID du cluster.  
   
  Les exemples suivants utilisent la procédure stockée système `GetClusterCharacteristics`pour retourner toutes les caractéristiques du Cluster 12 qui ont un score de probabilité supérieur au seuil spécifié de 0,0005.  
   
@@ -214,7 +216,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ## <a name="using-the-model-to-make-predictions"></a>Utilisation du modèle pour réaliser des prédictions  
  Les requêtes de prédiction sur un modèle Sequence Clustering peuvent utiliser beaucoup des fonctions de prédiction utilisées avec d'autres modèles de clustering. De plus, vous pouvez utiliser la fonction de prédiction spéciale, [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx), pour effectuer des recommandations ou prédire les états suivants.  
   
-###  <a name="bkmk_Query4"></a> Exemple de requête 4 : Prédire suivant ou plusieurs États  
+###  <a name="bkmk_Query4"></a>Exemple de requête 4 : prédiction de l’État ou des États suivants  
  Vous pouvez utiliser la fonction [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) pour prévoir l’état suivant le plus probable, compte tenu d’une valeur. Vous pouvez également prédire plusieurs états suivants. Par exemple, vous pouvez retourner une liste des trois premiers produits qu'il est probable qu'un client achète, pour présenter une liste de recommandations.  
   
  La requête d'exemple suivante est une requête singleton de prédiction qui retourne les cinq premières prédictions, avec leur probabilité. Vous devez utiliser une table imbriquée, `[v Assoc Seq Line Items]`, comme référence de colonne lorsque vous effectuez des prédictions parce que le modèle inclut une table imbriquée. En outre, lorsque vous fournissez des valeurs comme entrée, vous devez joindre à la fois les colonnes de la table de cas et de la table imbriquée, comme indiqué dans les instructions SELECT imbriquées.  
@@ -228,7 +230,7 @@ NATURAL PREDICTION JOIN
 AS t  
 ```  
   
- Résultats de l'exemple :  
+ Résultats de l’exemple :  
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
@@ -253,28 +255,28 @@ AS t
   
 |||  
 |-|-|  
-|Fonction de prédiction|Utilisation|  
-|[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Retourne le cluster qui est le plus susceptible de contenir le cas d'entrée|  
-|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Retourne la distance séparant le cas d'entrée du cluster spécifié ou, si aucun cluster n'est indiqué, la distance séparant le cas d'entrée du cluster le plus probable.<br /><br /> CEtte fonction peut être utilisée avec n'importe quel type de modèle de clustering (EM, K-Means, etc.), mais les résultats diffèrent selon l'algorithme.|  
-|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Retourne la probabilité que le cas d'entrée appartient au cluster spécifié.|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indique si le nœud spécifié contient le cas courant.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité ajustée d'un état spécifié.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Prévoit une appartenance associative.|  
-|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|Retourne le degré de vraisemblance de l'intégration d'un cas d'entrée au modèle existant.|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Retourne une table qui représente un histogramme de la prévision d'une colonne donnée.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Retourne le Node_ID du nœud dans lequel le cas est classé.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour un état spécifié.|  
-|[PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)|Prédit les valeurs de séquence pour un ensemble spécifié de données de séquence.|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Retourne l'écart-type prévu pour la colonne spécifiée.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retourne la variance d'une colonne spécifiée.|  
+|Fonction de prédiction|Usage|  
+|[&#41;DMX &#40;cluster](/sql/dmx/cluster-dmx)|Retourne le cluster qui est le plus susceptible de contenir le cas d'entrée|  
+|[ClusterDistance&#41;DMX &#40;](/sql/dmx/clusterdistance-dmx)|Retourne la distance séparant le cas d'entrée du cluster spécifié ou, si aucun cluster n'est indiqué, la distance séparant le cas d'entrée du cluster le plus probable.<br /><br /> CEtte fonction peut être utilisée avec n'importe quel type de modèle de clustering (EM, K-Means, etc.), mais les résultats diffèrent selon l'algorithme.|  
+|[ClusterProbability&#41;DMX &#40;](/sql/dmx/clusterprobability-dmx)|Retourne la probabilité que le cas d'entrée appartient au cluster spécifié.|  
+|[IsInNode&#41;DMX &#40;](/sql/dmx/isinnode-dmx)|Indique si le nœud spécifié contient le cas courant.|  
+|[PredictAdjustedProbability&#41;DMX &#40;](/sql/dmx/predictadjustedprobability-dmx)|Retourne la probabilité ajustée d'un état spécifié.|  
+|[PredictAssociation&#41;DMX &#40;](/sql/dmx/predictassociation-dmx)|Prévoit une appartenance associative.|  
+|[PredictCaseLikelihood&#41;DMX &#40;](/sql/dmx/predictcaselikelihood-dmx)|Retourne le degré de vraisemblance de l'intégration d'un cas d'entrée au modèle existant.|  
+|[&#41;&#40;DMX de PredictHistogram](/sql/dmx/predicthistogram-dmx)|Retourne une table qui représente un histogramme de la prévision d'une colonne donnée.|  
+|[PredictNodeId&#41;DMX &#40;](/sql/dmx/predictnodeid-dmx)|Retourne le Node_ID du nœud dans lequel le cas est classé.|  
+|[PredictProbability&#41;DMX &#40;](/sql/dmx/predictprobability-dmx)|Retourne la probabilité pour un état spécifié.|  
+|[PredictSequence&#41;DMX &#40;](/sql/dmx/predictsequence-dmx)|Prédit les valeurs de séquence pour un ensemble spécifié de données de séquence.|  
+|[PredictStdev&#41;DMX &#40;](/sql/dmx/predictstdev-dmx)|Retourne l'écart-type prévu pour la colonne spécifiée.|  
+|[PredictSupport&#41;DMX &#40;](/sql/dmx/predictsupport-dmx)|Retourne la valeur de support pour un état spécifié.|  
+|[PredictVariance&#41;DMX &#40;](/sql/dmx/predictvariance-dmx)|Retourne la variance d'une colonne spécifiée.|  
   
  Pour obtenir la liste des fonctions communes à tous les algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)], consultez [Fonctions de prédiction générales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’exploration de données](data-mining-queries.md)   
- [Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Informations techniques de référence sur l’algorithme Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Algorithme Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

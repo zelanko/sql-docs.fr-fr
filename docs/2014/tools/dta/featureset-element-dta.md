@@ -1,5 +1,5 @@
 ---
-title: Featureset, élément (DTA) | Microsoft Docs
+title: Élément FeatureSet, (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735752"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet, élément (Assistant Paramétrage de base de données)
@@ -38,7 +38,8 @@ ms.locfileid: "62735752"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`string`, aucune longueur maximale.|  
+|**Type de données et longueur**|
+  `string`, aucune longueur maximale.|  
 |**Valeurs autorisées**|**IDX_IV**<br /> Index et vues indexées.<br /><br /> **IDX**<br /> Index uniquement.<br /><br /> **IV**<br /> Vues indexées uniquement.<br /><br /> **NCL_IDX**<br /> Index non-cluster uniquement.<br /><br /> Utilisez une de ces valeurs avec cet élément.|  
 |**Valeur par défaut**|**IDX**|  
 |**Occurrence**|Obligatoire une fois pour chaque élément `TuningOptions`, excepté si l'élément `DropOnlyMode` est utilisé. Si l'élément `DropOnlyMode` est utilisé, vous ne pouvez pas utiliser l'élément `FeatureSet`. Ces éléments s'excluent mutuellement.|  

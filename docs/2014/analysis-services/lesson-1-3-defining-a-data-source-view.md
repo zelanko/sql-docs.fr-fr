@@ -1,5 +1,5 @@
 ---
-title: Définition des données d’une vue de Source | Microsoft Docs
+title: Définition d’une vue de source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079276"
 ---
 # <a name="defining-a-data-source-view"></a>Définition d'une vue de source de données
@@ -26,9 +26,9 @@ ms.locfileid: "66079276"
   
 1.  Dans l’Explorateur de solutions (à droite de la fenêtre de Microsoft Visual Studio), cliquez avec le bouton droit sur **Vues des sources de données**, puis cliquez sur **Nouvelle vue de source de données**.  
   
-2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**. La page **Sélectionner une source de données** s’affiche.  
+2.  Sur la page **Bienvenue dans l'Assistant Sources de données**, cliquez sur **Suivant**. La page **Sélectionner une source de données** s'affiche.  
   
-3.  Sous **Sources de données relationnelles**, la source de données **Adventure Works DW 2012** est sélectionnée. Cliquer sur **Suivant**.  
+3.  Sous **Sources de données relationnelles**, la source de données **Adventure Works DW 2012** est sélectionnée. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
     >  Pour créer une vue de source de données basée sur plusieurs sources de données, vous devez d’abord définir une vue de source de données basée sur une seule source de données. Cette source de données est alors appelée la source de données principale. Vous pouvez ensuite ajouter des tables et des vues à partir d'une source de données secondaire. Quand vous concevez des dimensions qui contiennent des attributs basés sur des tables associées dans plusieurs sources de données, vous pouvez avoir besoin de définir une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comme source de données principale pour utiliser ses fonctionnalités de moteur de requête distribuée.  
@@ -40,19 +40,19 @@ ms.locfileid: "66079276"
   
      Dans la liste **Objets disponibles** , sélectionnez les objets suivants. Vous pouvez sélectionner plusieurs tables en maintenant enfoncée la touche Ctrl :  
   
-    -   **DimCustomer (dbo)**  
+    -   **DimCustomer (DBO)**  
   
-    -   **DimDate (dbo)**  
+    -   **DimDate (DBO)**  
   
-    -   **DimGeography (dbo)**  
+    -   **DimGeography (DBO)**  
   
-    -   **DimProduct (dbo)**  
+    -   **DimProduct (DBO)**  
   
-    -   **FactInternetSales (dbo)**  
+    -   **FactInternetSales (DBO)**  
   
-5.  Cliquez sur **>** pour ajouter les tables sélectionnées à la liste **Objets inclus** .  
+5.  Cliquez **>** sur cette option pour ajouter les tables sélectionnées à la liste **objets inclus** .  
   
-6.  Cliquez sur **Suivant.**  
+6.  Cliquez sur **Suivant**.  
   
 7.  Dans le champ Nom, vérifiez que **Adventure Works DW 2012** s’affiche, puis cliquez sur **Terminer**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66079276"
   
     -   Une barre d'outils qui est spécifique au Concepteur de vues de source de données.  
   
-8.  Cliquez sur le bouton [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour agrandir l’environnement de **développement** .  
+8.  Cliquez sur le bouton [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] development environment, click the **Maximize** button.  
   
 9. Pour afficher à 50 % les tables dans le volet **Diagramme** , cliquez sur l’icône **Zoom** de la barre d’outils du Concepteur de vues de sources de données. Cela permet de masquer les détails des colonnes de chaque table.  
   

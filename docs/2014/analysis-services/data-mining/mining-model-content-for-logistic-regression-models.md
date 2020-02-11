@@ -1,5 +1,5 @@
 ---
-title: Contenu du modèle pour les modèles de régression logistique d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
+title: Contenu du modèle d’exploration de données pour les modèles de régression logistique (Analysis Services-exploration de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083623"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression logistique (Analysis Services - Exploration de données)
@@ -33,7 +33,7 @@ ms.locfileid: "66083623"
   
  ![structure du contenu pour le modèle de régression logistique](../media/skt-modelcontentstructure-logregc.gif "structure du contenu pour le modèle de régression logistique")  
   
- Par défaut, un modèle de régression logistique est affiché dans la **Visionneuse de l'algorithme MNN (Microsoft Neural Network)** . Avec cette visionneuse personnalisée, vous pouvez filtrer les attributs d'entrée et leurs valeurs, et consulter des graphiques qui illustrent comment ils affectent les sorties. Les info-bulles de la visionneuse montrent la probabilité et la finesse associées à chaque paire de valeurs d'entrée et de sortie. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ Par défaut, un modèle de régression logistique est affiché dans la **Visionneuse de l'algorithme MNN (Microsoft Neural Network)**. Avec cette visionneuse personnalisée, vous pouvez filtrer les attributs d'entrée et leurs valeurs, et consulter des graphiques qui illustrent comment ils affectent les sorties. Les info-bulles de la visionneuse montrent la probabilité et la finesse associées à chaque paire de valeurs d'entrée et de sortie. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  Pour explorer la structure des entrées et des sous-réseaux, et pour consulter des statistiques détaillées, vous pouvez utiliser la Visionneuse de l'arborescence de contenu générique Microsoft. Vous pouvez cliquer sur n'importe quel nœud pour le développer et voir les nœuds enfants, ou consulter les poids et autres statistiques contenues dans le nœud.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66083623"
  ATTRIBUTE_NAME  
  Noms de l’attribut correspondant à ce nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -89,7 +89,7 @@ ms.locfileid: "66083623"
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Indique le nombre de nœuds enfants, qui inclut au moins un réseau, un nœud marginal requis et une couche d'entrée requise. Par exemple, si la valeur est égale à 5, il y a trois sous-réseaux.|  
 |Statistiques marginales|Toujours 0.|  
@@ -107,7 +107,7 @@ ms.locfileid: "66083623"
  NODE_DESCRIPTION  
  Description conviviale du nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -120,7 +120,7 @@ ms.locfileid: "66083623"
  NODE_RULE  
  Description XML de la règle incorporée dans le nœud.  
   
-|Nœud|Contenu|  
+|Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -140,7 +140,7 @@ ms.locfileid: "66083623"
  Probabilité d'accès au nœud à partir du nœud parent. Dans les modèles de régression logistique, toujours 0.  
   
  NODE_DISTRIBUTION  
- Table imbriquée qui contient des informations statistiques pour le nœud. Pour plus d’informations sur le contenu de cette table pour chaque type de nœud, consultez la section Présentation de la table NODE_DISTRIBUTION de [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Table imbriquée qui contient des informations statistiques pour le nœud. Pour plus d’informations sur le contenu de cette table pour chaque type de nœud, consultez la section Présentation de la table NODE_DISTRIBUTION de [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  Dans les modèles de régression logistique, toujours 0.  
@@ -151,7 +151,7 @@ ms.locfileid: "66083623"
  Pour recevoir des informations sur la prise en charge dans les cas d'apprentissage pour des valeurs spécifiques, consultez le nœud des statistiques marginales.  
   
  MSOLAP_MODEL_COLUMN  
- |Nœud|Contenu|  
+ |Nœud|Content|  
 |----------|-------------|  
 |Racine du modèle|Vide|  
 |Statistiques marginales|Vide|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083623"
  MSOLAP_NODE_SHORT_CAPTION  
  Dans les modèles de régression logistique, toujours vide.  
   
-##  <a name="bkmk_NodeIDs"></a> Utilisation de noms des nœuds et ID  
+##  <a name="bkmk_NodeIDs"></a>Utilisation des noms de nœuds et des ID  
  La désignation des nœuds dans un modèle de régression logistique fournit des informations supplémentaires à propos des relations entre les nœuds du modèle. La table suivante présente les conventions pour les ID attribués aux nœuds dans chaque couche.  
   
 |Type de nœud|Convention pour l'ID du nœud|  
@@ -184,9 +184,9 @@ ms.locfileid: "66083623"
  Vous pouvez utiliser ces ID pour déterminer comment les attributs de sortie sont liés aux attributs spécifiques de la couche d'entrée, en consultant la table NODE_DISTRIBUTION du nœud de sortie. Chaque ligne de cette table contient un ID qui renvoie à un nœud d'attribut d'entrée spécifique. La table NODE_DISTRIBUTION contient également le coefficient correspondant à cette paire entrée/sortie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm.md)   
- [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Algorithme de régression logistique Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services d’exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de régression logistique](logistic-regression-model-query-examples.md)   
- [Références techniques relatives à l'algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

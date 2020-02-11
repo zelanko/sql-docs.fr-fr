@@ -1,5 +1,5 @@
 ---
-title: Introduction à la surveillance d’Analysis Services avec SQL Server Profiler | Microsoft Docs
+title: Présentation de l’analyse des Analysis Services avec SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3146f5a9f3e22753cc86c07b609d997be580b9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079798"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>Introduction à la surveillance d’Analysis Services à l’aide de SQL Server Profiler
-  Vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour surveiller les événements générés par une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vous permet d'effectuer les opérations suivantes :  
+  Vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour surveiller les événements générés par une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]instance de. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vous permet d'effectuer les opérations suivantes :  
   
 -   Surveiller les performances d'une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -54,12 +55,12 @@ ms.locfileid: "66079798"
 -   Une trace peut continuer lorsque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'arrête et redémarre.  
   
     > [!NOTE]  
-    >  Les mots de passe ne sont pas révélés dans les événements de trace, mais sont remplacés par \* \* \* \* \* \* dans l’événement.  
+    >  Les mots de passe ne sont pas révélés dans les événements de \* \* \* \* \* \* trace, mais sont remplacés par dans l’événement.  
   
  Pour optimiser les performances, utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour ne surveiller que les événements qui vous intéressent le plus. En effet, le fait de surveiller un trop grand nombre d'événements augmente les servitudes logicielles et peut considérablement accroître la taille du fichier ou de la table de trace, surtout si la surveillance se prolonge sur une période importante. En outre, utilisez le filtrage pour limiter la quantité de données recueillies et éviter que les traces ne deviennent trop volumineuses.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Événements de trace Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
- [Créer des traces de SQL Server Profiler pour la relecture &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
+ [Événements de trace de Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
+ [Créer des traces de profileur pour la relecture &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)  
   
   

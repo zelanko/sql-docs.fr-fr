@@ -1,5 +1,5 @@
 ---
-title: SQL Server Express référence de Message d’erreur de base de données locale | Microsoft Docs
+title: Informations de référence sur les messages d’erreur de base de données locale | SQL Server Express Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714906"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>Guide de référence des messages d'erreur propres à SQL Server Express LocalDB
@@ -69,7 +69,7 @@ ms.locfileid: "62714906"
  Le tampon d'entrée est trop court, et la troncation n'a pas été demandée.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](localdb-error-internal-error.md)  
- Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
+ Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
  [LOCALDB_ERROR_INVALID_INSTANCE_NAME](localdb-error-invalid-instance-name.md)  
  Le nom d'instance spécifié n'est pas valide.  

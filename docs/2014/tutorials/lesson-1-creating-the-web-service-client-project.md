@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Création du projet de Client de Service Web | Microsoft Docs'
+title: 'Leçon 1 : création du projet client du service Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676066"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Leçon 1 : Création du projet client du service web
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Leçon 1 : création du projet client du service Web
   Dans cette procédure pas à pas, vous allez créer une application console simple qui accède au service Web Report Server. Il est supposé que vous utilisez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour le développement.  
   
 ### <a name="to-create-a-console-application"></a>Pour créer une application console  
@@ -30,14 +30,14 @@ ms.locfileid: "62676066"
   
 4.  Dans la zone **Nom** , tapez le nom de votre projet. Tapez le nom `GetPropertiesSample`.  
   
-5.  Dans le **emplacement** , entrez le chemin d’accès où vous souhaitez enregistrer votre projet, ou cliquez sur **Parcourir** pour accéder au dossier.  
+5.  Dans la zone **emplacement** , entrez le chemin d’accès à l’emplacement où vous souhaitez enregistrer votre projet ou cliquez sur **Parcourir** pour naviguer jusqu’au dossier.  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Une vue réduite de votre projet apparaît dans l’Explorateur de solutions.  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]Une vue réduite de votre projet s’affiche dans Explorateur de solutions.  
   
-     Dans l'Explorateur de solutions, développez le nœud du projet. Un fichier portant le nom par défaut du fichier Program.cs (Module1.vb pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a été ajouté à votre projet.  
+     Dans l'Explorateur de solutions, développez le nœud du projet. Un fichier avec le nom par défaut Program.cs (Module1. vb pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) a été ajouté à votre projet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Leçon 2 : Ajout d’une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
- [Le Service Report Server Web à l’aide de Visual Basic ou Visual C# de l’accès à&#35; &#40;didacticiel SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Leçon 2 : ajout d’une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [Accès au service Web Report Server à l’aide de Visual Basic ou du didacticiel Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

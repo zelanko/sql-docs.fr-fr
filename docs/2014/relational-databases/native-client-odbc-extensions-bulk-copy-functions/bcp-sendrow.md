@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688828"
 ---
-# <a name="bcpsendrow"></a>bcp_sendrow
+# <a name="bcp_sendrow"></a>bcp_sendrow
   Envoie une ligne de données à partir de variables de programme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -43,7 +43,7 @@ hdbc
  *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
@@ -55,9 +55,9 @@ hdbc
   
  Lorsque **bcp_sendrow** est utilisé pour copier en bloc des lignes à partir de variables de programme dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les lignes sont validées uniquement lorsque l'utilisateur appelle [bcp_batch](bcp-batch.md) ou [bcp_done](bcp-done.md). L'utilisateur peut choisir d'appeler **bcp_batch** une fois chaque *n* lignes ou lors de creux entre deux périodes de données entrantes. Si **bcp_batch** n'est jamais appelé, les lignes sont validées lorsque **bcp_done** est appelé.  
   
- Pour plus d’informations sur les importantes modifier une copie en bloc de début dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], consultez [effectuant des opérations de copie en bloc &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Pour plus d’informations sur la modification avec rupture dans la copie [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]en bloc à compter de, consultez [exécution d’opérations de copie en bloc &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

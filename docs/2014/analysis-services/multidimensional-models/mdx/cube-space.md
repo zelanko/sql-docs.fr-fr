@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074708"
 ---
 # <a name="cube-space"></a>Espace du cube
@@ -55,7 +55,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Remarquez l'emploi de 0, soit la formule abrégée de Axes(0), pour désigner l'axe des colonnes.  
   
- La requête ci-dessus retourne uniquement les cellules des membres de chaque hiérarchie d'attribut dans la requête qui coexistent entre eux. La requête précédente peut également être écrite en utilisant la nouvelle * variant de la [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) (fonction).  
+ La requête ci-dessus retourne uniquement les cellules des membres de chaque hiérarchie d'attribut dans la requête qui coexistent entre eux. La requête précédente peut également être écrite à l’aide de la nouvelle variante * de la [ \* fonction (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
   
 ```  
 SELECT   
@@ -78,7 +78,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Les valeurs retournées des cellules sont identiques, même si les métadonnées dans l'ensemble de résultats apparaissent différemment. Par exemple, dans la requête ci-dessus, la hiérarchie Country a été déplacée vers l'axe de segment (dans la clause WHERE) et ne peut donc s'afficher de manière explicite dans l'ensemble de résultats.  
   
- Chacune des trois requêtes présentées ci-dessus illustre les effets du comportement de l’existence automatique dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Chacune de ces trois requêtes précédentes illustre l’effet du comportement de l’auto-existence [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]dans.  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Hiérarchies définies par l'utilisateur et espace du cube  
  Les exemples présentés précédemment dans cette rubrique définissent des positions au sein de l'espace du cube par le biais des hiérarchies d'attribut. Néanmoins, vous pouvez également définir une position dans l'espace du cube en utilisant des hiérarchies définies par l'utilisateur qui ont été conçues à partir des hiérarchies d'attribut d'une dimension. Une hiérarchie définie par l'utilisateur est une hiérarchie de hiérarchies d'attribut conçue pour faciliter la navigation des utilisateurs dans les données du cube.  
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  Dans la requête ci-dessus, la hiérarchie définie par l'utilisateur Customer Geography incluse dans la dimension Customer est utilisée pour définir la position dans l'espace du cube définie auparavant à l'aide d'une hiérarchie d'attribut. La même position dans l'espace du cube peut être définie soit au moyen de hiérarchies d'attribut, soit à l'aide de hiérarchies définies par l'utilisateur.  
   
-##  <a name="AttribRelationships"></a> Relations d'attributs et espace du cube  
+##  <a name="AttribRelationships"></a>Relations d’attributs et espace du cube  
  La définition de relations d'attributs entre des attributs associés améliore les performances des requêtes (grâce à la création facilitée d'agrégations adaptées) et affecte le membre d'une hiérarchie d'attribut associée qui apparaît avec un membre de hiérarchie d'attribut. Par exemple, lorsque vous définissez un tuple qui inclut un membre de la hiérarchie d'attribut City et que le tuple ne définit pas explicitement le membre de la hiérarchie d'attribut Country, vous pouvez vous attendre à ce que le membre par défaut de la hiérarchie d'attribut Country corresponde au membre associé de la hiérarchie d'attribut Country. Néanmoins, cette situation ne vaut que si une relation d'attribut est définie entre les hiérarchies d'attribut City et Country.  
   
  L'exemple ci-après retourne le membre d'une hiérarchie d'attribut associée qui ne figure pas de manière explicite dans la requête.  
@@ -112,7 +112,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Notez que le `WITH` mot clé est utilisé avec le [CurrentMember (MDX)](/sql/mdx/current-mdx) et [Name (MDX)](/sql/mdx/members-string-mdx) fonctions pour créer un membre calculé à utiliser dans la requête. Pour plus d’informations, consultez [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Notez que le `WITH` mot clé est utilisé avec les fonctions [CurrentMember (MDX)](/sql/mdx/current-mdx) et [Name (MDX)](/sql/mdx/members-string-mdx) pour créer un membre calculé à utiliser dans la requête. Pour plus d’informations, consultez [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  Dans la requête précédente, le nom du membre de la hiérarchie d'attribut Country associé à chaque membre de la hiérarchie d'attribut State est retourné. Le membre Country attendu apparaît (puisqu'une relation d'attribut est définie entre les attributs City et Country). Par contre, si aucune relation d'attribut n'est définie entre les hiérarchies d'attribut de la même dimension, le membre (All) doit être retourné comme dans la requête suivante.  
   
@@ -129,12 +129,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Contexte de calcul  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés dans MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuples](tuples.md)   
  [Autoexists](autoexists.md)   
  [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Valeurs totales affichées et non affichées](visual-totals-and-non-visual-totals.md)   
- [Guide de référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Totaux visuels et non visuels](visual-totals-and-non-visual-totals.md)   
+ [Référence du langage MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
+ [Expressions multidimensionnelles &#40;référence de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

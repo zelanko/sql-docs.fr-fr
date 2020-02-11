@@ -1,5 +1,5 @@
 ---
-title: Modifier la vue des résultats de Trace | Microsoft Docs
+title: Modifier la vue des résultats de trace | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089438"
 ---
 # <a name="modify-the-trace-results-view"></a>Modifier la vue des résultats de trace
@@ -32,16 +32,16 @@ ms.locfileid: "66089438"
   
 6.  [Filtrer les résultats](#Filter)  
   
-7.  [Rechercher du texte dans les colonnes](#Search)  
+7.  [Rechercher du texte dans des colonnes](#Search)  
   
-8.  [Modifier les paramètres d’affichage](#ChangeDisplay)  
+8.  [Modifier les paramètres d'affichage](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a> Ajouter ou supprimer des colonnes  
+##  <a name="AddRemoveColumns"></a>Ajouter ou supprimer des colonnes  
   
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.  
   
 2.  Dans la fenêtre des résultats de trace, cliquez avec le bouton droit sur l'en-tête de colonne, puis sélectionnez **Choisir les colonnes**.  
   
@@ -56,14 +56,14 @@ ms.locfileid: "66089438"
   
 5.  Cliquez sur **OK**.  
   
-##  <a name="ChangeColumns"></a> Créer, modifier ou supprimer des colonnes fusionnées  
+##  <a name="ChangeColumns"></a>Créer, modifier ou supprimer des colonnes fusionnées  
   
 #### <a name="to-create-merged-columns"></a>Pour créer des colonnes fusionnées  
   
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.  
   
 2.  Dans la fenêtre des résultats de trace, cliquez avec le bouton droit sur l'en-tête de colonne, puis sélectionnez **Choisir les colonnes**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66089438"
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.  
   
 2.  Dans la fenêtre des résultats de trace, cliquez avec le bouton droit sur l'en-tête de colonne, puis sélectionnez **Choisir les colonnes**.  
   
@@ -98,26 +98,26 @@ ms.locfileid: "66089438"
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.  
   
 2.  Dans la fenêtre des résultats de trace, cliquez avec le bouton droit sur l'en-tête de colonne, puis sélectionnez **Choisir les colonnes**.  
   
 3.  Dans la boîte de dialogue **Choisir les colonnes** , sélectionnez le nom de la colonne fusionnée à supprimer, puis cliquez sur **Supprimer**.  
   
-##  <a name="SortResults"></a> Trier les résultats  
+##  <a name="SortResults"></a>Trier les résultats  
   
 #### <a name="to-sort-the-results-in-ascending-or-descending-order"></a>Pour trier les résultats dans l'ordre croissant ou décroissant  
   
 -   Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **Surveiller les données actives**, puis cliquer sur le bouton **Arrêter le flux de données** dans la barre d'outils.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **surveiller les données actives**, puis cliquer sur le bouton **arrêter le flux de données** dans la barre d’outils.  
   
 -   Dans la fenêtre des résultats de trace, cliquez avec le bouton droit sur l'en-tête de colonne que vous souhaitez trier. Cliquez sur **Tri croissant** ou **Tri décroissant** pour trier la colonne dans l'ordre croissant décroissant respectivement.  
   
      Si vous avez regroupé des colonnes, le tri de la colonne ne concerne que les données du groupe.  
   
-##  <a name="GroupResults"></a> Regrouper des résultats  
+##  <a name="GroupResults"></a>Résultats du groupe  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Pour regrouper les résultats par une seule colonne  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66089438"
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **Surveiller les données actives**, puis cliquer sur le bouton **Arrêter le flux de données** dans la barre d'outils.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **surveiller les données actives**, puis cliquer sur le bouton **arrêter le flux de données** dans la barre d’outils.  
   
 2.  Cliquez sur le bouton **Regroupement** dans la barre d'outils des événements étendus.  
   
@@ -145,16 +145,16 @@ ms.locfileid: "66089438"
   
 4.  Cliquez sur **OK**.  
   
-##  <a name="AggregateResults"></a> Agréger les résultats  
+##  <a name="AggregateResults"></a>Résultats de l’agrégat  
  Les événements étendus prennent en charge cinq fonctions d'agrégation :  
   
--   Sum  
+-   SUM  
   
 -   Min  
   
 -   Max  
   
--   Moyenne  
+-   Average  
   
 -   Count  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66089438"
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **Surveiller les données actives**, puis cliquer sur le bouton **Arrêter le flux de données** dans la barre d'outils.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, sélectionner **surveiller les données actives**, puis cliquer sur le bouton **arrêter le flux de données** dans la barre d’outils.  
   
     > [!NOTE]  
     >  L'agrégation est effectuée sur un groupe ; vous devez donc regrouper les résultats avant de pouvoir exécuter l'agrégation.  
@@ -184,7 +184,7 @@ ms.locfileid: "66089438"
   
 7.  Cliquez sur **OK**.  
   
-##  <a name="Filter"></a> Filtrer les résultats  
+##  <a name="Filter"></a>Filtrer les résultats  
  Vous pouvez appliquer des filtres pour limiter les résultats de trace affichés dans la fenêtre de trace. Le filtre d'affichage comprend un filtre de temps et un filtre avancé. Vous utilisez le filtre de temps pour filtrer les résultats de trace par horodatage d'un événement, et le filtre avancé pour élaborer des conditions de filtre à l'aide des actions et des champs d'événement. Il existe une relation AND logique entre les filtres de temps et les filtres avancés.  
   
 #### <a name="to-create-a-filter"></a>Pour créer un filtre  
@@ -192,13 +192,13 @@ ms.locfileid: "66089438"
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.  
   
 2.  Dans la fenêtre des résultats de trace, sélectionnez les résultats que vous souhaitez filtrer, puis dans la barre d'outils d'événements étendus, cliquez sur le bouton **Filtres** .  
   
 3.  Dans la boîte de dialogue **Filtres** , sélectionnez **Définir le filtre de temps** afin de définir le filtre de temps en faisant glisser les barres de curseur pour définir la chronologie. Notez que lorsque vous déplacez les barres de curseur, la zone de temps affiche la valeur d'heure en conséquence. Vous pouvez également entrer l'heure dans les zones de temps, ou la sélectionner dans la liste déroulante. Notez que lorsque vous entrez l'heure, le curseur gauche de temps se déplace en conséquence.  
   
-4.  Dans la section **Filtres supplémentaires** , appliquez vos critères de filtre, puis cliquez sur **Appliquer**. Lorsque votre filtre a été créé, cliquez sur **OK**.  
+4.  Dans la section **filtres supplémentaires** , appliquez vos critères de filtre, puis cliquez sur **appliquer**. Lorsque votre filtre a été créé, cliquez sur **OK**.  
   
  Un cas spécial est celui où un champ d'événement porte le même nom qu'une action. Par exemple, le nom « session_id ». Il existe plusieurs événements qui incluent un champ session_id et vous pouvez également ajouter l'action session_id. Les deux informations sont collectées, mais la grille d'affichage du Générateur de profils d'événements étendus utilise la logique suivante.  
   
@@ -210,12 +210,12 @@ ms.locfileid: "66089438"
   
 -   Si ni l'action ni le champ existent, NULL est affiché.  
   
-##  <a name="Search"></a> Rechercher du texte dans les colonnes  
+##  <a name="Search"></a>Rechercher du texte dans des colonnes  
   
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.  
   
 2.  Dans la barre d'outils événements étendus, cliquez sur le bouton **Rechercher** .  
   
@@ -227,23 +227,23 @@ ms.locfileid: "66089438"
   
     -   **Colonnes de table**. Utilisez cette option pour rechercher toutes les colonnes visibles dans la fenêtre de trace.  
   
-    -   **Détails**. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d’ouvrir le **rechercher dans les événements étendus** boîte de dialogue.  
+    -   **Détails**. Utilisez cette option pour rechercher toutes les colonnes (promues et non promues) dans la fenêtre de trace qui ont été sélectionnées avant d’ouvrir la boîte **de dialogue Rechercher dans les événements étendus** .  
   
-    -   **\<Nom de colonne d’événement >** . Utilisez cette option pour effectuer une recherche dans une colonne d'événement spécifique dans la liste déroulante.  
+    -   **Nom de la colonne d’événement>. \< ** Utilisez cette option pour effectuer une recherche dans une colonne d'événement spécifique dans la liste déroulante.  
   
 5.  Utilisez les options suivantes pour spécifier la façon dont vous souhaitez définir la recherche :  
   
-    1.  **Respecter la casse**. Utilisez cette option pour afficher les résultats de la recherche pour le texte que vous avez entré dans la zone **Rechercher** et qui correspondent par le contenu et par la casse.  
+    1.  **Respecter la casse**. Utilisez cette option pour afficher les résultats de la recherche pour le texte que vous avez entré dans la zone **Rechercher** qui correspond à la fois par le contenu et par la casse.  
   
     2.  **Mot entier**. Utilisez cette option pour n'afficher que les résultats de la recherche du texte que vous avez entré et qui correspondent à des mots entiers.  
   
-    3.  **Rechercher vers le haut**. Utilisez cette option pour effectuer la recherche depuis l'emplacement du curseur jusqu'au début des résultats.  
+    3.  **Recherche vers le haut**. Utilisez cette option pour effectuer la recherche depuis l'emplacement du curseur jusqu'au début des résultats.  
   
-    4.  **Utilisation**. Utilisez cette option pour interpréter les caractères spéciaux et les expressions régulières que vous avez entrés dans la zone **Rechercher** . Les caractères spéciaux incluent les caractères génériques (*) et (?) pour représenter un ou plusieurs caractères. Les expressions régulières sont des notations spéciales utilisées pour définir des modèles de texte recherché.  
+    4.  **Utilisez**. Utilisez cette option pour interpréter les caractères spéciaux et les expressions régulières que vous avez entrés dans la zone **Rechercher** . Les caractères spéciaux incluent les caractères génériques (*) et (?) pour représenter un ou plusieurs caractères. Les expressions régulières sont des notations spéciales utilisées pour définir des modèles de texte recherché.  
   
 6.  Cliquez sur **Suivant** pour rechercher le texte suivant que vous avez entré dans la zone **Rechercher** .  
   
-##  <a name="ChangeDisplay"></a> Modifier les paramètres d’affichage  
+##  <a name="ChangeDisplay"></a>Modifier les paramètres d’affichage  
  Vous pouvez enregistrer les informations sur la colonne (ordre des colonnes, colonne de fusion et largeur de colonne) et les informations de filtre d'un résultat de trace dans un fichier de paramètres d'affichage des événements étendus (fichier .viewsetting). Après avoir enregistré le fichier, vous pouvez l'appliquer à vos résultats de trace pour modifier la vue.  
   
 #### <a name="to-change-the-display-settings"></a>Pour modifier les paramètres d'affichage  
@@ -251,7 +251,7 @@ ms.locfileid: "66089438"
 1.  Ouvrez un fichier .XEL pour consulter les résultats de trace.  
   
     > [!NOTE]  
-    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **Surveiller les données actives**.  
+    >  Vous pouvez également cliquer avec le bouton droit sur le nom de session, puis sélectionner **surveiller les données actives**.  
   
 2.  Dans la fenêtre de résultats de trace, dans la barre d'outils ou dans le menu Événements étendus, sélectionnez **Paramètres d'affichage**.  
   
@@ -259,8 +259,8 @@ ms.locfileid: "66089438"
   
     -   **Enregistrer sous**. Enregistrez les informations de colonne et de filtre d'un résultat de trace dans un fichier .viewsetting.  
   
-    -   **Ouvrir**. Ouvrez un fichier .viewsetting existant.  
+    -   **Ouvrez**. Ouvrez un fichier .viewsetting existant.  
   
-    -   **Ouvrir un fichier récent**. Ouvrez un fichier .viewsetting enregistré récemment.  
+    -   **Ouvrez récent**. Ouvrez un fichier .viewsetting enregistré récemment.  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783125"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Afficher ou modifier des propriétés de serveur (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "72783125"
   
      [Gestionnaire de configuration SQL Server](#PowerShellProcedure)  
   
--   **Suivi :**  [après avoir modifié les propriétés du serveur](#FollowUp)  
+-   **Suivi :**  [Après avoir modifié les propriétés du serveur](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -56,10 +56,10 @@ ms.locfileid: "72783125"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
- Pour plus d’informations, consultez [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).  
+####  <a name="Permissions"></a> Autorisations  
+ Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Les autorisations d’exécution sur `sp_configure` sans paramètre ou avec uniquement le premier paramètre sont accordées par défaut à tous les utilisateurs. Pour exécuter `sp_configure` avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation ALTER SETTINGs au niveau du serveur. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
+ Les autorisations d' `sp_configure` exécution sur sans paramètre ou avec uniquement le premier paramètre sont accordées par défaut à tous les utilisateurs. Pour exécuter `sp_configure` avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation ALTER Settings au niveau du serveur. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -148,21 +148,21 @@ GO
   
 2.  Dans le **Gestionnaire de configuration SQL Server**, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<***nom_instance***>)** , puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<***InstanceName***>)**, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<***nom_instance***>)** , modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<***nom_instance***>)**, modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
   
-##  <a name="FollowUp"></a> Suivi : après avoir modifié les propriétés du serveur  
+##  <a name="FollowUp"></a> Suivi : Après avoir modifié les propriétés du serveur  
  Pour certaines propriétés, le serveur doit être redémarré afin d'appliquer les modification.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [SET Statements &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
+ [Instructions SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [Configurer WMI pour afficher l'état du serveur dans les outils SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
+ [Configurer WMI pour afficher l’état du serveur dans les outils SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
  [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Fonctions de configuration &#40;Transact-SQL&#41;](/sql/t-sql/functions/configuration-functions-transact-sql)   
  [Fonctions et vues de gestion dynamique relatives au serveur &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  

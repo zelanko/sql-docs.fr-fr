@@ -13,20 +13,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679969"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Élément &lt;xsd:redefine&gt;
-  L’élément W3C XSD **redefine** assure la prise en charge de la redéfinition des composants de schéma. Toutefois, la prise en charge de cette directive est potentiellement dommageable aux performances et exige en outre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] revalide toutes les instances de la `xml` type de données associé au schéma redéfini. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML qui incluent l’élément **\<xsd:redefine>** sont rejetés par le serveur.  
+  L’élément W3C XSD **redefine** assure la prise en charge de la redéfinition des composants de schéma. Toutefois, la prise en charge de cette directive est potentiellement coûteuse pour les performances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et requiert également que revalide toutes `xml` les instances du type de données associées au schéma redéfini. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML qui incluent l’élément **\<xsd:redefine>** sont rejetés par le serveur.  
   
  Au lieu d'utiliser cet élément, vous pouvez mettre à jour un schéma ou ses composants en procédant comme suit :  
   
 1.  Créez une nouvelle collection de schémas XML en y incluant les composants de schéma modifiés.  
   
-2.  Retapez tous les `xml` des types de données (XML DT) qui utilisent la collection de schémas XML à redéfinir de façon à utiliser la nouvelle collection de schémas XML à la place. Pour cela, utilisez l'option ALTER COLUMN de la commande ALTER TABLE pour retaper les colonnes ou modifiez les contraintes de collection de schémas XML sur les variables ou les paramètres.  
+2.  Retapez tous `xml` les types de données (XML DT) qui utilisent la collection de schémas XML à redéfinir pour utiliser la nouvelle collection de schémas XML à la place. Pour cela, utilisez l'option ALTER COLUMN de la commande ALTER TABLE pour retaper les colonnes ou modifiez les contraintes de collection de schémas XML sur les variables ou les paramètres.  
   
 3.  Supprimez l'ancienne version de la collection de schémas XML.  
   

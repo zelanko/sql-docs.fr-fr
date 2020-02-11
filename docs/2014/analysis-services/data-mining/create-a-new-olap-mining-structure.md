@@ -1,5 +1,5 @@
 ---
-title: Créer une Structure d’exploration de données OLAP | Microsoft Docs
+title: Créer une structure d’exploration de données OLAP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085457"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Créer une structure d’exploration de données OLAP
-  Vous pouvez utiliser l’Assistant Exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer une structure d’exploration de données qui utilise les données d’un modèle multidimensionnel. Les modèles d'exploration de données basés sur des cubes OLAP peuvent utiliser la colonne et les valeurs des tables de faits, les dimensions et les groupes de mesures comme attributs pour l'analyse.  
+  Vous pouvez utiliser l’Assistant Exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans pour créer une structure d’exploration de données qui utilise les données d’un modèle multidimensionnel. Les modèles d'exploration de données basés sur des cubes OLAP peuvent utiliser la colonne et les valeurs des tables de faits, les dimensions et les groupes de mesures comme attributs pour l'analyse.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Pour créer une structure d'exploration de données OLAP  
   
@@ -38,17 +38,17 @@ ms.locfileid: "66085457"
   
      Si vous envisagez de créer un modèle d’exploration de données, sélectionnez l’algorithme d’exploration de données à utiliser, puis cliquez sur **Suivant**. Pour plus d’informations sur la façon de choisir un algorithme, consultez [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
-5.  Dans la page **Sélectionner la dimension de cube source**, sous **Sélectionnez une dimension du cube source**, recherchez la dimension qui contient la majorité de vos données de cas.  
+5.  Dans la page **Sélectionner la dimension de cube source** , sous **Sélectionnez une dimension du cube source**, recherchez la dimension qui contient la majorité de vos données de cas.  
   
      Par exemple, si vous essayez d’identifier les regroupements de client, vous pouvez sélectionner la dimension Customer ; si vous essayez d’analyser les achats entre les transactions, vous pouvez sélectionner la dimension Internet Sales Order Details. Vous n'êtes pas limité à utiliser uniquement les données de cette dimension, mais elle doit contenir des attributs importants à utiliser dans l'analyse.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 6.  Dans la page **Sélectionner la clé de cas** , sous **Attributs**, sélectionnez l’attribut qui doit correspondre à la clé de la structure d’exploration de données, puis cliquez sur **Suivant**.  
   
      Généralement l'attribut que vous utilisez comme clé de la structure d'exploration de données est également une clé de la dimension et sera pré-sélectionné.  
   
-7.  Dans la page **Sélectionner les colonnes de niveau de cas** , sous **Attributs et mesures associés**, sélectionnez les attributs et les mesures qui contiennent des valeurs que vous souhaitez ajouter à la structure d’exploration de données en tant que données de cas. Cliquer sur **Suivant**.  
+7.  Dans la page **Sélectionner les colonnes de niveau de cas** , sous **Attributs et mesures associés**, sélectionnez les attributs et les mesures qui contiennent des valeurs que vous souhaitez ajouter à la structure d’exploration de données en tant que données de cas. Cliquez sur **Suivant**.  
   
 8.  Dans la page **Spécifier l’utilisation des colonnes du modèle d’exploration de données** , sous **Structure du modèle d’exploration de données**, définissez d’abord la colonne prédictible, puis choisissez ensuite les colonnes à utiliser comme entrées.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66085457"
   
      Notez que les colonnes que vous avez désignées comme clés ne peuvent pas être utilisées pour l'entrée ou la prédiction.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 9. Dans la page **Spécifier l’utilisation des colonnes du modèle d’exploration de données** , vous pouvez également ajouter et supprimer des tables imbriquées à la structure d’exploration de données, en utilisant **Ajouter des tables imbriquées** et **Tables imbriquées**.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "66085457"
   
      Si vous ajoutez des données imbriquées, vous devez spécifier deux colonnes supplémentaires :  
   
-    -   La clé de la table imbriquée : Cette valeur doit être présélectionnée dans la page, **sélectionner la clé de Table imbriquée**.  
+    -   La clé de la table imbriquée : elle doit être pré-sélectionnée dans la page **Sélectionner la clé de la table imbriquée**.  
   
-    -   L’ou les attributs à utiliser pour l’analyse : La page, **sélectionner les colonnes de Table imbriquée**fournit une liste de mesures et d’attributs dans la table imbriquée sélectionnée.  
+    -   Le ou les attributs à utiliser pour l’analyse : la page **Sélectionner les colonnes de la table imbriquée**fournit une liste de mesures et d’attributs de la table imbriquée sélectionnée.  
   
         -   Pour chaque attribut que vous incluez dans le modèle, activez la case à cocher dans la colonne gauche.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66085457"
   
         -   Si vous souhaitez inclure la colonne dans l’un des attributs prédictibles du modèle, sélectionnez **Prédire**.  
   
-        -   Tout élément inclus dans la structure mais non spécifié comme entrée ou un attribut prédictible est ajouté à la structure avec l'indicateur `Ignore` ; cela signifie que les données sont traitées lorsque vous générez le modèle, mais ne sont pas utilisées dans l'analyse, et sont disponibles uniquement pour l'extraction. Cela peut être pratique si vous souhaitez inclure des détails tels que les noms des clients mais que vous ne souhaitez pas les utiliser dans l’analyse.  
+        -   Tout élément inclus dans la structure mais non spécifié comme entrée ou un attribut prédictible est ajouté à la structure avec l'indicateur `Ignore` ; cela signifie que les données sont traitées lorsque vous générez le modèle, mais ne sont pas utilisées dans l'analyse, et sont disponibles uniquement pour l'extraction. Cela peut être pratique si vous souhaitez inclure des détails tels que des noms de clients, mais que vous ne souhaitez pas les utiliser dans l’analyse.  
   
      Cliquez sur **Terminer** pour fermer la partie de l’Assistant qui fonctionne avec les tables imbriquées. Vous pouvez répéter le processus pour ajouter plusieurs colonnes imbriquées.  
   
@@ -89,27 +89,27 @@ ms.locfileid: "66085457"
     > [!NOTE]  
     >  Les modèles d’exploration de données OLAP ne permettent pas d’utiliser la fonction de **détection** pour déterminer automatiquement si une colonne contient des données continues ou discrètes.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
 11. Dans la page **Découper le cube source** , vous pouvez filtrer les données utilisées pour créer la structure d’exploration de données.  
   
      Le découpage du cube vous permet de limiter les données utilisées pour générer le modèle. Par exemple, vous pouvez générer des modèles distincts pour chaque zone en découpant la hiérarchie Geography et  
   
-    -   **Dimension**: Dans la liste déroulante, choisissez une dimension associée.  
+    -   **Dimension**: choisissez une dimension associée dans la liste déroulante.  
   
-    -   **Hiérarchie**:  Sélectionnez le niveau de la hiérarchie de dimension à laquelle vous souhaitez appliquer le filtre. Par exemple, si vous découpez la dimension [Geography], vous devez choisir un niveau de hiérarchie tel que [Region Country Name].  
+    -   **Hiérarchie**: sélectionnez le niveau de la hiérarchie de dimension auquel vous souhaitez appliquer le filtre. Par exemple, si vous découpez la dimension [Geography], vous devez choisir un niveau de hiérarchie tel que [Region Country Name].  
   
-    -   **Opérateur**: Choisissez un opérateur dans la liste.  
+    -   **Opérateur**: choisissez un opérateur dans la liste.  
   
-    -   **Expression de filtre**: Tapez une valeur ou une expression pour servir de la condition de filtre, ou utilisez la liste déroulante pour sélectionner une valeur dans la liste des membres du niveau spécifié de la hiérarchie.  
+    -   **Expression de filtre**: tapez une valeur ou une expression à utiliser comme condition de filtre, ou utilisez la liste déroulante pour sélectionner une valeur dans la liste des membres au niveau spécifié de la hiérarchie.  
   
          Par exemple, si vous avez sélectionné [Geography] comme dimension et [Region Country Name] comme niveau de la hiérarchie, la liste déroulante contient tous les pays valides que vous pouvez utiliser comme condition de filtre. Vous pouvez effectuer plusieurs sélections. Par conséquent, les données de la structure d'exploration de données seront limitées aux données du cube de ces régions géographiques.  
   
-    -   **Paramètres**: Ignorez cette case à cocher. Cette boîte de dialogue prend en charge plusieurs scénarios de filtrage du cube et cette option n'est pas appropriée pour générer une structure d'exploration de données.  
+    -   **Paramètres**: ignorez cette case à cocher. Cette boîte de dialogue prend en charge plusieurs scénarios de filtrage du cube et cette option n'est pas appropriée pour générer une structure d'exploration de données.  
   
-     Cliquer sur **Suivant**.  
+     Cliquez sur **Suivant**.  
   
-12. Dans la page **Fractionner les données en jeux d’apprentissage et jeux de test** , spécifiez un pourcentage des données de la structure d’exploration à réserver pour les tests ou spécifiez le nombre maximal de scénarios de test. Cliquer sur **Suivant**.  
+12. Dans la page **Fractionner les données en jeux d’apprentissage et jeux de test** , spécifiez un pourcentage des données de la structure d’exploration à réserver pour les tests ou spécifiez le nombre maximal de scénarios de test. Cliquez sur **Suivant**.  
   
      Si vous spécifiez les deux valeurs, les limites sont associées pour que la plus basse soit utilisée.  
   
@@ -125,11 +125,11 @@ ms.locfileid: "66085457"
   
     -   Algorithme MAR (Microsoft Association Rules)  
   
-     **Créer une dimension du modèle d’exploration de données**: Activez cette case à cocher et fournissez un nom de type pour la dimension du modèle d’exploration de données. Lorsque vous utilisez cette option, une nouvelle dimension est créée dans le cube d'origine utilisé pour créer la structure d'exploration de données. Vous pouvez utiliser cette dimension pour extraire et réaliser une analyse ultérieure. Étant donné que la dimension se trouve dans le cube, la dimension est automatiquement mappée à la dimension de données de cas.  
+     **Créer une dimension de modèle d’exploration de données**: activez cette case à cocher et fournissez un nom de type pour la dimension du modèle d’exploration de données. Lorsque vous utilisez cette option, une nouvelle dimension est créée dans le cube d'origine utilisé pour créer la structure d'exploration de données. Vous pouvez utiliser cette dimension pour extraire et réaliser une analyse ultérieure. Étant donné que la dimension se trouve dans le cube, la dimension est automatiquement mappée à la dimension de données de cas.  
   
-     **Créer un cube à l’aide de la dimension du modèle d’exploration de données**: Activez cette case à cocher et fournissez un nom pour le nouveau cube. Lorsque vous utilisez cette option, un cube est créé. Il contient les dimensions existantes qui ont été utilisées pour générer la structure, et la nouvelle dimension d'exploration de données qui contient les résultats du modèle.  
+     **Créer un cube à l’aide**de la dimension du modèle d’exploration de données : activez cette case à cocher et fournissez un nom pour le nouveau cube. Lorsque vous utilisez cette option, un cube est créé. Il contient les dimensions existantes qui ont été utilisées pour générer la structure, et la nouvelle dimension d'exploration de données qui contient les résultats du modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches et procédures relatives aux structures d’exploration de données](mining-structure-tasks-and-how-tos.md)  
+ [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743490"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
@@ -35,9 +35,9 @@ ms.locfileid: "62743490"
 ##  <a name="Security"></a> Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Lorsque vous utilisez [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, nécessite `ALTER ANY LINKED SERVER` sur le serveur ou l’appartenance dans le **setupadmin** rôle serveur fixe. Lorsque vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiert `CONTROL SERVER` autorisation ou l’appartenance dans le **sysadmin** rôle serveur fixe.  
+ Lors de [!INCLUDE[tsql](../../includes/tsql-md.md)] l’utilisation d' `ALTER ANY LINKED SERVER` instructions, requiert l’autorisation sur le serveur ou l’appartenance au rôle serveur fixe **setupadmin** . Lors de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] l' `CONTROL SERVER` utilisation de, l’autorisation ou l’appartenance au rôle serveur fixe **sysadmin** est nécessaire.  
   
-##  <a name="Procedures"></a> Comment créer un serveur lié  
+##  <a name="Procedures"></a>Comment créer un serveur lié  
  Vous pouvez utiliser l'une des options suivantes :  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -61,7 +61,7 @@ ms.locfileid: "62743490"
      **Fournisseur**  
      Sélectionnez une source de données OLE DB dans la zone de liste. Le fournisseur OLE DB est inscrit avec le PROGID donné dans le Registre.  
   
-     **Nom de produit**  
+     **Nom du produit**  
      Tapez le nom de produit de la source de données OLE DB à ajouter en tant que serveur lié.  
   
      **Source de données**  
@@ -70,7 +70,7 @@ ms.locfileid: "62743490"
      **Chaîne du fournisseur**  
      Tapez l'identificateur de programme unique (PROGID) du fournisseur OLE DB qui correspond à la source de données. Pour obtenir des exemples de chaînes de fournisseur valides, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
-     **Emplacement**  
+     **Location**  
      Tapez l'emplacement de la base de données tel qu'il est interprété par le fournisseur OLE DB.  
   
      **Catalogue**  
@@ -88,7 +88,7 @@ ms.locfileid: "62743490"
      **Connexion locale**  
      Affiche la connexion locale qui peut se connecter au serveur lié. La connexion locale peut être une connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une connexion utilisant l'authentification Windows. Utilisez cette liste pour restreindre la connexion à des connexions spécifiques ou pour autoriser certaines connexions à se connecter sous une connexion différente.  
   
-     **Impersonate**  
+     **Emprunter l’identité**  
      Permet de transmettre le nom d'utilisateur et le mot de passe de la connexion locale au serveur lié. Pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , une connexion possédant un nom et un mot de passe identiques doit exister sur le serveur distant. Pour les connexions Windows, la connexion doit être une connexion valide sur le serveur lié.  
   
      Pour utiliser l'emprunt d'identité, la configuration doit se conformer aux exigences relatives à la délégation.  
@@ -102,32 +102,33 @@ ms.locfileid: "62743490"
      **Ajouter**  
      Ajoute une nouvelle connexion locale.  
   
-     **Supprimer**  
+     **Remove**  
      Supprime une connexion locale existante.  
   
-     **Ne seront pas effectuées**  
+     **Ne pas être effectué**  
      Spécifie qu'une connexion ne sera pas établie pour les connexions non définies dans la liste.  
   
-     **Seront effectuées sans contexte de sécurité**  
+     **Être effectuée sans utiliser de contexte de sécurité**  
      Spécifie qu'une connexion sera établie sans utiliser de contexte de sécurité pour les connexions d'accès non définies dans la liste.  
   
-     **Seront effectuées dans le contexte de sécurité de la connexion actuelle**  
+     **Être effectué à l’aide du contexte de sécurité actuel de la connexion**  
      Spécifie qu'une connexion sera établie à l'aide du contexte de sécurité en cours de la connexion pour les connexions non définies dans la liste. Si vous vous connectez au serveur local en utilisant l'authentification Windows, vos informations d'identification Windows seront utilisées pour vos connexions au serveur distant. Si vous vous connectez au serveur local en utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le nom et le mot de passe de connexion seront utilisés pour vos connexions au serveur distant. Dans ce cas, une connexion possédant exactement les mêmes nom et mot de passe doit exister sur le serveur distant.  
   
-     **Seront effectuées dans ce contexte de sécurité**  
+     **Être effectuée à l’aide de ce contexte de sécurité**  
      Spécifie qu’une connexion sera établie en utilisant la connexion d’accès et le mot de passe définis dans les zones **Ouverture de session à distance** et **Avec le mot de passe** pour les connexions non définies dans la liste. L'ouverture de session à distance doit être une connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur distant.  
   
 5.  Éventuellement, pour afficher ou spécifier les options de serveur, cliquez sur la page **Options du serveur**  .  
   
-     **Compatible avec le classement**  
-     Concerne l'exécution des requêtes distribuées sur les serveurs liés. Si la valeur de cette option est true, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère que tous les caractères du serveur lié sont compatibles avec le serveur local, en matière de jeu de caractères et d'ordre de classement (ou ordre de tri). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut alors envoyer au fournisseur des comparaisons sur les colonnes de caractères. Si cette option n'est pas activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compare toujours les colonnes de caractères en local.  
+     **Compatibilité du classement**  
+     Concerne l'exécution des requêtes distribuées sur les serveurs liés. Si la valeur de cette option est true, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère que tous les caractères du serveur lié sont compatibles avec le serveur local, en matière de jeu de caractères et d'ordre de classement (ou ordre de tri). 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut alors envoyer au fournisseur des comparaisons sur les colonnes de caractères. Si cette option n'est pas activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compare toujours les colonnes de caractères en local.  
   
      Cette option ne doit être définie que si la source de données correspondant au serveur lié possède le même jeu de caractères et respecte le même ordre de tri que le serveur local.  
   
      **Accès aux données**  
      Active ou désactive un serveur lié pour l'accès des requêtes distribuées.  
   
-     **RPC**  
+     **Call**  
      Active l'appel de procédure à distance (RPC) à partir du serveur spécifié.  
   
      **Sortie RPC**  
@@ -166,7 +167,8 @@ ms.locfileid: "62743490"
   
 -   Pour afficher les options que le fournisseur met à disposition, cliquez sur la page **Options de fournisseurs** .  
   
-     Tous les fournisseurs n'offrent pas les mêmes options. Par exemple, certains types de données proposent des index et d'autres pas. Utilisez cette boîte de dialogue pour aider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à comprendre les possibilités du fournisseur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe des fournisseurs de données communes, toutefois lorsque le produit qui fournit les données est modifié, le fournisseur installé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut ne pas prendre en charge toutes les nouvelles fonctionnalités. La meilleure source d'informations à propos des fonctions du produit qui fournit les données est la documentation pour ce produit.  
+     Tous les fournisseurs n'offrent pas les mêmes options. Par exemple, certains types de données proposent des index et d'autres pas. Utilisez cette boîte de dialogue pour aider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à comprendre les possibilités du fournisseur. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe des fournisseurs de données communes, toutefois lorsque le produit qui fournit les données est modifié, le fournisseur installé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut ne pas prendre en charge toutes les nouvelles fonctionnalités. La meilleure source d'informations à propos des fonctions du produit qui fournit les données est la documentation pour ce produit.  
   
      **Paramètre dynamique**  
      Indique que le fournisseur autorise la syntaxe de marqueur de paramètre '?' pour les requêtes paramétrables. Définissez cette option uniquement si le fournisseur prend en charge l'interface **ICommandWithParameters** et accepte le point d'interrogation en tant que marqueur de paramètre. La configuration de cette option permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des requêtes paramétrables sur le fournisseur. Cette possibilité peut améliorer les performances de certaines requêtes.  
@@ -174,22 +176,25 @@ ms.locfileid: "62743490"
      **Requêtes imbriquées**  
      Indique que le fournisseur autorise les instructions  `SELECT` imbriquées dans la clause FROM. La configuration de cette option permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de déléguer au fournisseur certaines requêtes nécessitant l'imbrication des instructions SELECT dans la clause FROM.  
   
-     **Uniquement niveau zéro**  
+     **Niveau zéro uniquement**  
      Seules les interfaces OLE DB de niveau 0 sont invoquées pour le fournisseur.  
   
-     **Autoriser inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les mises à jour ou insertions faisant référence à des colonnes longues (`text`, `ntext` ou `image`) ne sont pas autorisées.  
+     **Autoriser InProcess**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l’instanciation du fournisseur en tant que serveur in-process. Lorsque cette option n'est pas définie, le comportement par défaut consiste à instancier le fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'instanciation du fournisseur en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protège le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des erreurs contenues dans le fournisseur. Lorsque le fournisseur est instancié en dehors du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les mises à jour ou insertions faisant référence à des colonnes longues (`text`, `ntext` ou `image`) ne sont pas autorisées.  
   
      **Mises à jour non transactionnelles**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les mises à jour, même si **ITransactionLocal** n’est pas disponible. Si cette option est activée, les mises à jour du fournisseur ne sont pas récupérables puisque celui-ci ne prend pas en charge les transactions.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]autorise les mises à jour, même si **ITransactionLocal** n’est pas disponible. Si cette option est activée, les mises à jour du fournisseur ne sont pas récupérables puisque celui-ci ne prend pas en charge les transactions.  
   
-     **Indexer en tant que chemin d'accès**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’utiliser les index du fournisseur pour extraire des données. Par défaut, les index sont uniquement utilisés pour les métadonnées et ne sont jamais ouverts.  
+     **Indexer en tant que chemin d’accès**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’utiliser les index du fournisseur pour extraire des données. Par défaut, les index sont uniquement utilisés pour les métadonnées et ne sont jamais ouverts.  
   
-     **Interdire l'accès ad hoc**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas l’accès ad hoc par le biais des fonctions OPENROWSET et OPENDATASOURCE au fournisseur OLE DB. Lorsque cette option n'est pas définie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne permet pas non plus l'accès ad hoc.  
+     **Interdire l’accès ad hoc**  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas l’accès ad hoc par le biais des fonctions OPENROWSET et OPENDATASOURCE au fournisseur OLE DB. Lorsque cette option n'est pas définie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne permet pas non plus l'accès ad hoc.  
   
-     **Prend en charge l'opérateur 'Like'**  
+     **Prend en charge l’opérateur’like'**  
      Indique que le fournisseur prend en charge les requêtes qui utilisent le mot clé LIKE.  
   
 ###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
@@ -220,7 +225,7 @@ ms.locfileid: "62743490"
   
     ```  
   
-##  <a name="FollowUp"></a> Suivi : Étapes à suivre après avoir créé un serveur lié  
+##  <a name="FollowUp"></a>Suivi : étapes à suivre après avoir créé un serveur lié  
   
 #### <a name="to-test-the-linked-server"></a>Pour tester le serveur lié  
   

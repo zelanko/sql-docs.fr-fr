@@ -1,5 +1,5 @@
 ---
-title: Création de calculs de cellules au niveau requête (MDX) | Microsoft Docs
+title: Création de calculs de cellules d’étendue de requête (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074421"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Création de calculs de cellules au niveau de la requête (MDX)
@@ -33,8 +33,8 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |Jeu vide|Expression de jeu MDX qui prend la valeur d'un ensemble vide. Dans ce cas, la portée de la cellule calculée est l'intégralité du cube.|  
 |Jeu à un seul membre|Expression de jeu MDX qui prend la valeur d'un seul membre.|  
-|Jeu de membres de niveau|Expression de jeu MDX qui prend la valeur des membres d'un même niveau. Un exemple d’une telle expression de jeu est le *Level_Expression*.`Members` Fonction MDX. Pour inclure des membres calculés, utilisez le *Level_Expression*.`AllMembers` Fonction MDX. Pour plus d’informations, consultez [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Un exemple d’une telle expression de jeu est le `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) fonction MDX. Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Jeu de membres de niveau|Expression de jeu MDX qui prend la valeur des membres d'un même niveau. Le *Level_Expression*est un exemple d’une telle expression de jeu.`Members` Fonction MDX. Pour inclure des membres calculés, utilisez l' *Level_Expression*.`AllMembers` Fonction MDX. Pour plus d’informations, consultez [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Un exemple d’une telle expression d’ensemble est `Descendants`la fonction MDX (*Member_Expression*, *Level_Expresion*, *Desc_Flag*). Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  Si l’argument `String_Expression` ne décrit pas de dimension, la syntaxe MDX suppose que tous ses membres sont inclus pour la construction du sous-cube de calcul. Par conséquent, si l'argument `String_Expression` a pour valeur NULL, la définition de cellules calculées s'applique au cube tout entier.  
   
@@ -54,6 +54,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Par ailleurs, la syntaxe MDX traite la formule de calcul chaque fois qu'une requête MDX impliquant les cellules comprises dans la définition de cellules calculées est adressée au cube. Ce traitement se produit quelle que soit la portée de création.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [Instruction CREATe CELL CALCULation &#40;&#41;MDX](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

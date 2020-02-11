@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077089"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>Créer, modifier ou supprimer une relation d'attribut
-  Vous pouvez créer, modifier ou supprimer une relation d’attribut entre des attributs dans une dimension à l’aide de l’onglet **Relations d’attributs[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] du Concepteur de dimensions dans** .  
+  Vous pouvez créer, modifier ou supprimer une relation d’attribut entre des attributs dans une dimension à l’aide de l’onglet **Relations d’attributs** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-an-attribute-relationship"></a>Pour créer une relation d'attribut  
   

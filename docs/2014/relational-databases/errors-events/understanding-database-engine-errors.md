@@ -16,21 +16,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761684"
 ---
 # <a name="understanding-database-engine-errors"></a>Présentation des erreurs du moteur de base de données
-  Les erreurs déclenchées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] have the attributes described in the following table.  
+  Les erreurs déclenchées [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] par le ont les attributs décrits dans le tableau suivant.  
   
-|Attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |Numéro d'erreur|Chaque message d'erreur possède un numéro d'erreur unique.|  
 |Chaîne de message d'erreur|Le message d'erreur contient des informations sur la cause probable de l'erreur. De nombreux messages d'erreur ont des variables de substitution contenant des informations telles que le nom de l'objet à l'origine de l'erreur.|  
-|Severity|La gravité indique l'importance de l'erreur. Les erreurs dont le degré de gravité est faible (1 ou 2), sont de simples messages d'information ou des avertissements peu importants. Si le degré de gravité est élevé, le problème doit être résolu le plus rapidement possible. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](database-engine-error-severities.md).|  
-|État|Certains messages d'erreur peuvent apparaître en de multiples endroits du code du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'erreur 1105 par exemple, peut être provoquée par différentes conditions. Un code d'état unique est assigné à chaque condition spécifique qui déclenche une erreur.<br /><br /> Lors de la consultation de bases de données contenant des informations sur les problèmes connus, par exemple la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] , le numéro d'état vous permet de déterminer si le problème enregistré est identique à l'erreur rencontrée. Par exemple, si un article de la Base de connaissances décrit l'erreur 1105 avec le numéro d'état 2, et si le message d'erreur 1105 que vous avez reçu a le numéro d'état 3, il est probable que l'erreur n'a pas la même origine que celle signalée dans l'article.<br /><br /> Un ingénieur du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut également utiliser le code d'état d'une erreur pour déterminer l'emplacement du code source d'où provient ce code d'erreur. Ces informations peuvent apporter des indications supplémentaires sur la façon de diagnostiquer le problème.|  
+|severity|La gravité indique l'importance de l'erreur. Les erreurs dont le degré de gravité est faible (1 ou 2), sont de simples messages d'information ou des avertissements peu importants. Si le degré de gravité est élevé, le problème doit être résolu le plus rapidement possible. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](database-engine-error-severities.md).|  
+|State|Certains messages d'erreur peuvent apparaître en de multiples endroits du code du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'erreur 1105 par exemple, peut être provoquée par différentes conditions. Un code d'état unique est assigné à chaque condition spécifique qui déclenche une erreur.<br /><br /> Lors de la consultation de bases de données contenant des informations sur les problèmes connus, par exemple la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] , le numéro d'état vous permet de déterminer si le problème enregistré est identique à l'erreur rencontrée. Par exemple, si un article de la Base de connaissances décrit l'erreur 1105 avec le numéro d'état 2, et si le message d'erreur 1105 que vous avez reçu a le numéro d'état 3, il est probable que l'erreur n'a pas la même origine que celle signalée dans l'article.<br /><br /> Un ingénieur du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut également utiliser le code d'état d'une erreur pour déterminer l'emplacement du code source d'où provient ce code d'erreur. Ces informations peuvent apporter des indications supplémentaires sur la façon de diagnostiquer le problème.|  
 |Nom de la procédure|Nom de la procédure stockée ou du déclencheur dans lequel l'erreur s'est produite.|  
 |Numéro de ligne|Indique l'instruction qui a provoqué l'erreur dans un traitement, une procédure stockée, un déclencheur ou une fonction.|  
   

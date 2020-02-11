@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689088"
 ---
-# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
+# <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Utilisé pour rechercher la valeur de la propriété de format de colonne.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -57,10 +57,10 @@ pcbLen
  *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
- *field*  
+ *case*  
  Numéro de colonne pour lequel la propriété est extraite.  
   
- *property*  
+ *propriété*  
  L'une des constantes de propriété.  
   
  *pValue*  
@@ -72,7 +72,7 @@ pcbLen
  *pcbLen*  
  Pointeur vers la longueur des données retournées dans la mémoire tampon de propriété.  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
@@ -80,12 +80,12 @@ pcbLen
   
  Des changements de comportement peuvent être observés lors de la connexion à un serveur [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou version ultérieure), par rapport aux versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures. Pour plus d’informations, consultez [Découverte des métadonnées](../native-client/features/metadata-discovery.md).  
   
-## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge  par bcp_getcolfmt des fonctionnalités de date et heure améliorées  
- Les types utilisés avec la `BCP_FMT_TYPE` sont de propriété pour les types date/heure comme spécifié dans [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>Prise en charge  par bcp_getcolfmt des fonctionnalités de date et heure améliorées  
+ Les types utilisés avec la `BCP_FMT_TYPE` propriété pour les types date/heure sont les mêmes que ceux spécifiés dans les [modifications de copie en bloc pour les types de date et d’heure améliorés &#40;OLE DB et ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Pour plus d’informations, consultez [améliorations Date / heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

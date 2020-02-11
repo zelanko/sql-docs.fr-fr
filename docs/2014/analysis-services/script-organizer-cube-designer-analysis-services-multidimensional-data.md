@@ -1,5 +1,5 @@
 ---
-title: Script organisateur (onglet calculs, Concepteur de Cube) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Organisateur de script (onglet calculs, concepteur de cube) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069932"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur de script (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -46,18 +46,18 @@ ms.locfileid: "66069932"
 |------------|----------------|  
 |**Nouveau membre calculé**|Sélectionnez cette option pour afficher **l’Éditeur de formulaire de membre calculé** et créer un membre calculé. Pour plus d’informations sur **l’Éditeur de formulaire de membre calculé**, consultez [l’Éditeur de formulaire de membre calculé &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Nouveau jeu nommé**|Sélectionnez cette option pour afficher **l’Éditeur de formulaire de jeu nommé** et créer un jeu nommé. Pour plus d’informations sur **l’Éditeur de formulaire de jeu nommé**, consultez [l’Éditeur de formulaire de jeu nommé &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Nouvelle commande de Script**|Sélectionnez cette option pour afficher **l’Éditeur de script** et créer une commande de script. Pour plus d’informations sur **l’Éditeur de script**, consultez [l’Éditeur de script &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Monter**|Sélectionnez cette option pour monter le calcul sélectionné d'une position.<br /><br /> Remarque : Cette option est désactivée si le calcul sélectionné ne peut pas être déplacé.|  
-|**Descendre**|Sélectionnez cette option pour descendre le calcul sélectionné d'une position.<br /><br /> Remarque : Cette option est désactivée si le calcul sélectionné ne peut pas être déplacé.|  
+|**Nouvelle commande de script**|Sélectionnez cette option pour afficher **l’Éditeur de script** et créer une commande de script. Pour plus d’informations sur **l’Éditeur de script**, consultez [l’Éditeur de script &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Monter**|Sélectionnez cette option pour monter le calcul sélectionné d'une position.<br /><br /> Remarque : cette option est désactivée si le calcul sélectionné ne peut plus être déplacé.|  
+|**Descendre**|Sélectionnez cette option pour descendre le calcul sélectionné d'une position.<br /><br /> Remarque : cette option est désactivée si le calcul sélectionné ne peut plus être déplacé.|  
 |**Supprimer**|Sélectionnez cette option pour supprimer le calcul sélectionné.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Barre d’outils &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Outils de calcul &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de formulaire de membre calculé &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de formulaire de jeu nommé &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Éditeur de script &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculs &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de cube &#40;Analysis Services-données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Outils de calcul &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire de membre calculé &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire de jeu nommé &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de script &#40;onglet calculs, concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculs &#40;concepteur de cube&#41; &#40;Analysis Services-données multidimensionnelles&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

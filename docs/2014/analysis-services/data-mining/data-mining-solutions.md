@@ -14,27 +14,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084891"
 ---
 # <a name="data-mining-solutions"></a>Solutions d'exploration de données
   Une solution d'exploration de données est une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contient un ou plusieurs projets d'exploration de données.  
   
- Les rubriques de cette section fournissent des informations sur la façon de concevoir et d’implémenter une solution d’exploration de données intégrée à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour une présentation du processus de conception d’exploration de données et des outils connexes, consultez [Concepts d’exploration de données](data-mining-concepts.md).  
+ Les rubriques de cette section fournissent des informations sur la conception et l’implémentation d’une solution d’exploration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]données intégrée à l’aide de. Pour une présentation du processus de conception d’exploration de données et des outils connexes, consultez [Concepts d’exploration de données](data-mining-concepts.md).  
   
  Pour plus d’informations sur d’autres types de projets qui sont utiles pour l’exploration de données, consultez [Projets connexes pour des solutions d’exploration de données](data-mining-solutions.md).  
   
- [Vs relationnelles. Solutions multidimensionnelles](#bkmk_RelMD)  
+ [Solutions relationnelles et solutions multidimensionnelles](#bkmk_RelMD)  
   
  [Déploiement de solutions d’exploration de données](#bkmk_Deploy)  
   
- [Procédures pas à pas liées à la solution](#bkmk_Walkthru)  
+ [Procédures pas à pas de la solution](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> Vs relationnelles. solutions multidimensionnelles  
- Une solution d’exploration de données peut être basée sur des données multidimensionnelles-autrement dit, un cube existant- ou sur des données purement relationnelles, telles que les tables et vues dans un entrepôt de données ou fichiers texte, Excel classeurs ou autres sources de données externes.  
+##  <a name="bkmk_RelMD"></a>Solutions relationnelles et solutions multidimensionnelles  
+ Une solution d’exploration de données peut être basée sur des données multidimensionnelles (c’est-à-dire un cube existant) ou sur des données purement relationnelles, telles que les tables et les vues d’un entrepôt de données, ou sur des fichiers texte, des classeurs Excel ou d’autres sources de données externes.  
   
 -   Vous pouvez créer des objets d'exploration de données dans une solution de base de données multidimensionnelle existante.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66084891"
   
      Cette méthode est recommandée pour créer des modèles d'exploration de données, car la rapidité du traitement et de l'interrogation est généralement optimale sur les sources de données relationnelles. Vous pouvez également déplacer et sauvegarder facilement des modèles entre des serveurs à l'aide des commandes EXPORT et IMPORT.  
   
-##  <a name="bkmk_Deploy"></a> Déploiement de solutions d’exploration de données  
+##  <a name="bkmk_Deploy"></a>Déploiement de solutions d’exploration de données  
  L'instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle vous déployez la solution doit être en cours d'exécution dans un mode qui prend en charge les objets multidimensionnels et les objets d'exploration de données ; autrement dit, vous ne pouvez pas déployer des objets d'exploration de données dans une instance qui héberge des modèles tabulaires ou des données PowerPivot.  
   
  Par conséquent, lorsque vous créez une solution d'exploration de données dans Visual Studio, veillez à utiliser le modèle **Projet multidimensionnel et d'exploration de données Analysis Services**.  
@@ -53,19 +53,19 @@ ms.locfileid: "66084891"
   
  Pour plus d’informations sur la façon de déployer des solutions relationnelles et des solutions multidimensionnelles, consultez [Déploiement de solutions d’exploration de données](deployment-of-data-mining-solutions.md).  
   
-##  <a name="bkmk_Walkthru"></a> Procédure pas à pas liées à la solution  
+##  <a name="bkmk_Walkthru"></a>Procédure pas à pas  
  Fournit une vue d'ensemble de la création de solutions d'exploration de données à l'aide de l'Assistant Exploration de données.  
   
- [Créer une structure d'exploration de données relationnelle](create-a-relational-mining-structure.md)  
+ [Créer une structure d’exploration de données relationnelle](create-a-relational-mining-structure.md)  
  Créez une structure d'exploration de données à partir de données relationnelles, de fichiers texte et d'autres sources qui peuvent être combinées dans une vue de source de données.  
   
- [Créer une structure d’exploration de données OLAP](create-an-olap-mining-structure.md)  
+ [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  
  Créez une structure d'exploration de données basée sur des données dans un cube OLAP. Les modèles que vous créez à partir de données OLAP peuvent être enregistrés en tant que dimension d'exploration de données, ou vous pouvez enregistrer l'ensemble de données et vos modèles en tant que nouveau cube.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Projets d'exploration de données](data-mining-projects.md)  
   
- [Traitement des objets d’exploration de données](processing-data-mining-objects.md)  
+ [Traitement des objets d'exploration de données](processing-data-mining-objects.md)  
   
  [Projets connexes pour des solutions d’exploration de données](data-mining-solutions.md)  
   
@@ -74,14 +74,14 @@ ms.locfileid: "66084891"
 ## <a name="related-tasks-and-topics"></a>Tâches et rubriques connexes  
  Après avoir créé une solution d'exploration de données de base, notamment des sources de données et une structure d'exploration de données, vous pouvez générer la solution en ajoutant de nouveaux modèles, en testant et en comparant des modèles, en créant des prédictions et effectuant des essais avec des sous-ensembles de données.  
   
- Pour plus d'informations, consultez les liens suivants :  
+ Pour plus d’informations, consultez les liens suivants :  
   
 |Tâches|Rubriques|  
 |-----------|------------|  
-|Testez les modèles que vous créez, validez la qualité de vos données d'apprentissage et créez des graphiques qui représentent la précision des modèles d'exploration de données.|[Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)|  
-|Effectuez l'apprentissage du modèle en remplissant la structure et les modèles associés avec des données. Mettez à jour et étendez des modèles avec de nouvelles données.|[Traitement des objets d’exploration de données](processing-data-mining-objects.md)|  
-|Personnalisez un modèle d'exploration de données en appliquant des filtres aux données d'apprentissage, en choisissant un algorithme différent ou en définissant des paramètres d'algorithme avancés.|[Personnaliser les modèles et les structures d’exploration de données](customize-mining-models-and-structure.md)|  
-|Personnalisez un modèle d'exploration de données en appliquant des filtres aux données utilisées dans l'apprentissage du modèle.|[Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services - Exploration de données&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Testez les modèles que vous créez, validez la qualité de vos données d'apprentissage et créez des graphiques qui représentent la précision des modèles d'exploration de données.|[Test et validation &#40;l’exploration de données&#41;](testing-and-validation-data-mining.md)|  
+|Effectuez l'apprentissage du modèle en remplissant la structure et les modèles associés avec des données. Mettez à jour et étendez des modèles avec de nouvelles données.|[Traitement des objets d'exploration de données](processing-data-mining-objects.md)|  
+|Personnalisez un modèle d'exploration de données en appliquant des filtres aux données d'apprentissage, en choisissant un algorithme différent ou en définissant des paramètres d'algorithme avancés.|[Personnaliser les modèles et les structures d'exploration de données](customize-mining-models-and-structure.md)|  
+|Personnalisez un modèle d'exploration de données en appliquant des filtres aux données utilisées dans l'apprentissage du modèle.|[Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services d’exploration de données&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Mettez à jour et gérer des solutions d'exploration de données.|Lien à déterminer|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -39,13 +39,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069029"
 ---
 # <a name="general-properties"></a>Propriétés générales
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **S’applique à :** Mode serveur multidimensionnel et tabulaire, sauf indication contraire  
@@ -60,7 +61,7 @@ ms.locfileid: "66069029"
  Propriété de type chaîne qui spécifie dans une liste délimitée les dossiers qui peuvent être parcourus en enregistrant, en ouvrant, puis en recherchant les fichiers dans les boîtes de dialogue Analysis Services. Le compte de service Analysis Services doit disposer d'autorisations de lecture et d'écriture sur tous les dossiers que vous ajoutez à la liste.  
   
  `BackupDir`  
- Une propriété de chaîne qui définit le nom du répertoire où les fichiers de sauvegarde sont stockés par défaut, lorsqu’un chemin d’accès n’est pas spécifié dans le cadre de la commande Backup.  
+ Propriété de type chaîne qui identifie le nom du répertoire dans lequel les fichiers de sauvegarde sont stockés par défaut, dans le cas où aucun chemin d’accès n’est spécifié dans le cadre de la commande de sauvegarde.  
   
  `CollationName`  
  Propriété de type chaîne qui identifie le classement du serveur. Pour plus d’informations, consultez [Langues et classements &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -76,12 +77,14 @@ ms.locfileid: "66069029"
  `CoordinatorCancelCount`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie la fréquence selon laquelle le serveur doit vérifier si un événement d'annulation s'est produit (en fonction d'un nombre d'itérations interne). Diminuez ce nombre si vous souhaitez augmenter la fréquence de ces vérifications au détriment des performances générales.  
   
- `CoordinatorCancelCount` est ignoré en mode serveur tabulaire.  
+ 
+  `CoordinatorCancelCount` est ignoré en mode serveur tabulaire.  
   
  `CoordinatorExecutionMode`  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal d'opérations parallèles que le serveur essaiera d'effectuer, notamment les opérations de traitement et d'interrogation. Zéro (0) indique que le serveur décidera lui-même, en fonction d'un algorithme interne. Un nombre positif indique le nombre maximal d'opérations au total. Un nombre négatif (précédé du signe moins) indique le nombre maximal d'opérations par processeur.  
   
- `CoordinatorExecutionMode` est ignoré en mode serveur tabulaire.  
+ 
+  `CoordinatorExecutionMode` est ignoré en mode serveur tabulaire.  
   
  La valeur par défaut de cette propriété, -4, indique que le serveur est limité à quatre opérations parallèles par processeur. Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -95,13 +98,13 @@ ms.locfileid: "66069029"
  Propriété de type chaîne qui spécifie le nom du répertoire où les données sont stockées.  
   
  `DeploymentMode`  
- Détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété est appelée « mode serveur » dans la documentation, les messages et les boîtes de dialogue. Cette propriété est configurée par le programme d'installation de SQL Server selon le mode serveur que vous avez sélectionné en installant Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
+ Détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété est appelée « mode serveur » dans les boîtes de dialogue, les messages et la documentation. Cette propriété est configurée par le programme d'installation de SQL Server selon le mode serveur que vous avez sélectionné en installant Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|0|Valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
+|0|Il s’agit de la valeur par défaut. Elle spécifie le mode multidimensionnel, utilisé pour servir les bases de données multidimensionnelles qui utilisent le stockage MOLAP, HOLAP et ROLAP, ainsi que les modèles d'exploration de données.|  
 |1|Spécifie des instances d'Analysis Services installées dans le cadre d'un déploiement PowerPivot pour SharePoint. Ne modifiez pas la propriété du mode de déploiement de l'instance Analysis Services qui fait partie d'une installation PowerPivot pour SharePoint. Les données PowerPivot ne s'exécuteront plus sur le serveur si vous modifiez le mode.|  
 |2|Spécifie le mode tabulaire utilisé pour héberger les bases de données model tabulaires qui utilisent le stockage en mémoire ou le stockage DirectQuery.|  
   
@@ -131,7 +134,8 @@ ms.locfileid: "66069029"
  Pour plus d’informations sur cette propriété, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` s'applique aux commandes de traitement de cube et aux opérations d'écriture différée.  
+>  
+  `ForceCommitTimeout` s'applique aux commandes de traitement de cube et aux opérations d'écriture différée.  
   
  `IdleConnectionTimeout`  
  Propriété dont la valeur est un entier qui spécifie le délai, en secondes, pour les connexions qui sont inactives.  
@@ -153,7 +157,7 @@ ms.locfileid: "66069029"
  Propriété de type chaîne qui spécifie le nom du répertoire qui contient les journaux du serveur. Cette propriété s'applique uniquement si vous utilisez des fichiers sur disque pour l'enregistrement, au lieu de tables de base de données (comportement par défaut).  
   
  `MaxIdleSessionTimeout`  
- Propriété dont la valeur est un entier qui définit le délai d'attente maximal des sessions inactives, exprimé en secondes. La valeur par défaut, zéro (0), indique que les sessions n'expirent jamais. Toutefois, les sessions inactives seront encore supprimées si le serveur est soumis à des contraintes de ressources.  
+ Propriété dont la valeur est un entier qui définit le délai d'attente maximal des sessions inactives, exprimé en secondes. La valeur par défaut est zéro (0), ce qui indique que les sessions n’ont jamais dépassé le délai d’attente. Toutefois, les sessions inactives seront quand même supprimées si le serveur est soumis à des contraintes de ressources.  
   
  `MinIdleSessionTimeout`  
  Propriété dont la valeur est un entier qui définit le délai d'attente minimal des sessions inactives, exprimé en secondes. La valeur par défaut est 2700 secondes. Une fois ce délai expiré, le serveur est autorisé à mettre fin à la session inactive, mais il ne le fera que si de la mémoire est requise.  
@@ -161,7 +165,7 @@ ms.locfileid: "66069029"
  `Port`  
  Propriété dont la valeur est un entier qui définit le numéro de port sur lequel le serveur sera à l'écoute des connexions clientes. Si cette propriété n'est pas définie, le serveur recherche dynamiquement le premier port inutilisé.  
   
- La valeur par défaut de cette propriété, zéro (0), correspond au port 2383. Pour plus d'informations sur la configuration du port, consultez [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ La valeur par défaut de cette propriété, zéro (0), correspond au port 2383. Pour plus d'informations sur la configuration du port, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  `ServerTimeout`  
  Entier qui spécifie le délai d'attente des requêtes, en secondes. La valeur par défaut est 3 600 secondes (ou 60 minutes). Zéro (0) indique qu'aucune requête n'expire.  
@@ -178,6 +182,6 @@ ms.locfileid: "66069029"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d’une instance de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

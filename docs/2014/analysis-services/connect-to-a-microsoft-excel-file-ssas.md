@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087318"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Connexion à un fichier Microsoft Excel (SSAS)
@@ -28,17 +28,17 @@ ms.locfileid: "66087318"
 >  Les informations d'identification de l'utilisateur actuel sont utilisées lors de la sélection d'un fichier dans cette page. Toutefois, l'importation ne réussira pas si l'utilisateur spécifié dans la page Informations d'emprunt d'identité n'a pas de privilèges suffisants pour lire le fichier sélectionné.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Nom convivial de connexion**  
+ **Nom convivial de la connexion**  
  Tapez un nom unique pour cette connexion à la source de données. Ce champ est obligatoire.  
   
- **Chemin d’accès du fichier Excel**  
+ **Chemin du fichier Excel**  
  Spécifiez le chemin d'accès complet du fichier Excel.  
   
  **Parcourir**  
  Accédez à un emplacement dans lequel un fichier Excel est disponible.  
   
- **Avancé**  
- Définissez des propriétés de connexion supplémentaires à partir de la boîte de dialogue **Définir les propriétés avancées** .  
+ **Avancée**  
+ Définissez des propriétés de connexion supplémentaires à l’aide de la boîte de dialogue **définir les propriétés avancées** .  
   
  **Utiliser la première ligne comme en-têtes de colonnes**  
  Spécifiez s'il convient d'utiliser la première ligne de données comme en-têtes de colonnes de la table de destination.  
