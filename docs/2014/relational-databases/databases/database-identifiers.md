@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762085"
 ---
 # <a name="database-identifiers"></a>Identificateur de la base de données
-  Le nom d'un objet d'une base de données est son identificateur. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tous les éléments peuvent avoir un identificateur. Les serveurs, les bases de données et les objets de bases de données tels que les tables, les vues, les colonnes, les index, les déclencheurs, les procédures, les contraintes, les règles, etc. peuvent avoir des identificateurs. La plupart des objets doivent avoir un identificateur ; les identificateurs sont facultatifs pour certains objets, tels que les contraintes.  
+  Le nom d'un objet d'une base de données est son identificateur. Tout dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut avoir un identificateur. Les serveurs, les bases de données et les objets de bases de données tels que les tables, les vues, les colonnes, les index, les déclencheurs, les procédures, les contraintes, les règles, etc. peuvent avoir des identificateurs. La plupart des objets doivent avoir un identificateur ; les identificateurs sont facultatifs pour certains objets, tels que les contraintes.  
   
  L'identificateur d'un objet est créé lors de la définition de l'objet. L'identificateur est ensuite utilisé pour référencer l'objet. L'instruction suivante, par exemple, crée une table avec l'identificateur `TableX`, et deux colonnes avec les identificateurs `KeyCol` et `Description`:  
   
@@ -57,7 +57,7 @@ WHERE KeyCol = 124
 ```  
   
  Identificateurs délimités  
- Les identificateurs délimités sont mis entre guillemets (") ou entre crochets ([ ]). Les identificateurs qui respectent les règles relatives au format des identificateurs peuvent ne pas être délimités. Exemple :  
+ Les identificateurs délimités sont mis entre guillemets (") ou entre crochets ([ ]). Les identificateurs qui respectent les règles relatives au format des identificateurs peuvent ne pas être délimités. Par exemple :  
   
 ```  
 SELECT *  
@@ -65,7 +65,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- Ceux qui ne respectent pas ces règles ne peuvent être utilisés dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'en étant délimités. Exemple :  
+ Ceux qui ne respectent pas ces règles ne peuvent être utilisés dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'en étant délimités. Par exemple :  
   
 ```  
 SELECT *  
@@ -96,7 +96,8 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   L'arobase, le symbole dollar ($), le symbole dièse ou le trait de soulignement.  
   
-3.  L'identificateur ne doit pas être un mot réservé [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les majuscules et les minuscules des mots réservés. Un identificateur qui ne respecte pas toutes ces règles doit toujours être délimité par des crochets ou des guillemets doubles lors de son utilisation dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les mots réservés dépendent du niveau de compatibilité de la base de données. Vous pouvez définir ce niveau avec l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
+3.  L'identificateur ne doit pas être un mot réservé [!INCLUDE[tsql](../../includes/tsql-md.md)] . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les majuscules et les minuscules des mots réservés. Un identificateur qui ne respecte pas toutes ces règles doit toujours être délimité par des crochets ou des guillemets doubles lors de son utilisation dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les mots réservés dépendent du niveau de compatibilité de la base de données. Vous pouvez définir ce niveau avec l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
   
 4.  Les espaces incorporés ou les caractères spéciaux ne sont pas autorisés.  
   
@@ -111,15 +112,15 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
- [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)   
+ [CRÉER une procédure &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-procedure-transact-sql)   
+ [CRÉER une règle &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-rule-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Mots clés réservés &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
+ [Mots clés réservés &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   
