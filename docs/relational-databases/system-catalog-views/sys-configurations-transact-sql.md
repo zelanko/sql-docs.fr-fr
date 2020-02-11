@@ -1,5 +1,5 @@
 ---
-title: sys.configurations (Transact-SQL) | Microsoft Docs
+title: sys. configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,39 +20,39 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109557"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque valeur d’option de configuration de l’échelle du serveur dans le système.  
+  Contient une ligne pour chaque valeur de l’option de configuration au niveau du serveur dans le système.  
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|ID unique pour la valeur de configuration.|  
-|**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
-|**value**|**sql_variant**|Valeur configurée pour cette option.|  
-|**minimum**|**sql_variant**|Valeur minimale pour l'option de configuration.|  
-|**maximum**|**sql_variant**|Valeur maximale pour l'option de configuration.|  
+|**nomme**|**nvarchar (35)**|Nom de l'option de configuration.|  
+|**ajoutée**|**sql_variant**|Valeur configurée pour cette option.|  
+|**minimale**|**sql_variant**|Valeur minimale pour l'option de configuration.|  
+|**valeurs**|**sql_variant**|Valeur maximale pour l'option de configuration.|  
 |**value_in_use**|**sql_variant**|Valeur en cours d'exécution actuellement en effet pour cette option.|  
 |**description**|**nvarchar(255)**|Description de l'option de configuration.|  
 |**is_dynamic**|**bit**|1 = Variable qui prend effet lorsque l'instruction RECONFIGURE est exécutée.|  
-|**is_advanced**|**bit**|1 = la variable est affichée uniquement lorsque le **afficher advancedoption** est défini.|  
+|**is_advanced**|**bit**|1 = la variable s’affiche uniquement lorsque l' **affichage advancedoption** est défini.|  
   
- Pour obtenir la liste de toutes les options de configuration de serveur, consultez [les Options de Configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Pour obtenir la liste de toutes les options de configuration du serveur, consultez [options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
->  Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer Soft-NUMA, consultez [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE scoped configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer soft-NUMA, consultez [Soft-numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de Configuration de l’échelle du serveur &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [Affichages catalogue de configurations à l’ensemble du serveur &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

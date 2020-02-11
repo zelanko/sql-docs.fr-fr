@@ -1,5 +1,5 @@
 ---
-title: Configurations matérielle et logicielle requises (ODBC) | Microsoft Docs
+title: Configuration matérielle et logicielle requise (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,41 +16,41 @@ ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952441"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Configuration matérielle et logicielle requise (ODBC)
-Cette rubrique répertorie les conditions requises pour utiliser les pilotes de base de données ODBC Desktop.  
+Cette rubrique répertorie la configuration requise pour l’utilisation des pilotes de base de données de bureau ODBC.  
   
 ## <a name="hardware-requirements"></a>Configuration matérielle  
- Pour utiliser les pilotes de base de données ODBC Desktop, vous devez disposer de :  
+ Pour utiliser les pilotes de base de données de bureau ODBC, vous devez disposer des éléments suivants :  
   
--   Un ordinateur compatible IBM.  
+-   Un ordinateur personnel compatible IBM.  
   
 -   Un disque dur avec 6 Mo d’espace disque libre.  
   
 -   Au moins 16 Mo de mémoire vive (RAM).  
   
-## <a name="software-requirements"></a>Configuration logicielle  
- Pour accéder aux données avec un pilote ODBC, vous devez disposer de :  
+## <a name="software-requirements"></a>Configuration logicielle requise  
+ Pour accéder aux données avec un pilote ODBC, vous devez disposer des éléments suivants :  
   
--   Le pilote ODBC.  
+-   Pilote ODBC.  
   
--   32 bits Gestionnaire de pilote ODBC, version 3.51 ou version ultérieure (Odbc32.dll).  
+-   Le gestionnaire de pilotes ODBC 32 bits, version 3,51 ou ultérieure (Odbc32. dll).  
   
--   Microsoft Windows 95 ou version ultérieure, ou Windows NT 4.0 ou Windows 2000.  
+-   Microsoft Windows 95 ou version ultérieure, ou Windows NT 4,0 ou Windows 2000.  
   
--   Taille de pile d’au moins 20 Ko pour une application à l’aide d’un pilote ODBC de Microsoft.  
+-   Taille de la pile d’au moins 20 Ko pour une application utilisant un pilote Microsoft ODBC.  
   
- Lorsque vous utilisez Microsoft Windows NT 4.0 ou Windows 2000, le pilote 32 bits est thread-safe, mais uniquement via l’utilisation d’un sémaphore global qui contrôle l’accès au pilote. Utilisation simultanée du pilote est très limitée sous Windows NT. Tous les accès à la couche de Jet ISAM sera monothread pour toutes les applications utilisant le moteur Microsoft Jet.  
+ Lorsque vous utilisez Microsoft Windows NT 4,0 ou Windows 2000, le pilote 32 bits est thread-safe, mais uniquement via l’utilisation d’un sémaphore global qui contrôle l’accès au pilote. L’utilisation simultanée du pilote est très limitée sous Windows NT. Tout accès à la couche ISAM jet sera monothread pour toutes les applications utilisant le moteur Microsoft Jet.  
   
- Lorsque vous exécutez plusieurs applications 16 bits sur Windows on Windows (WOW) sur Microsoft Windows NT 4.0, les applications doivent être exécutées dans des espaces mémoire distincts. (Le même espace mémoire ne peut pas être utilisé car ODBC ne prend pas en charge plusieurs environnements dans le même processus.) Pour exécuter une application dans un espace de mémoire distincts, sélectionnez icône de l’application dans le Gestionnaire de programme, ouvrez le **fichier** menu et cliquez sur **propriétés**, puis cliquez sur **exécuter dans la mémoire distincts Espace**.  
+ Lors de l’exécution de plusieurs applications 16 bits sur Windows sur Windows (WOW) sur Microsoft Windows NT 4,0, les applications doivent être exécutées dans des espaces mémoire distincts. (Vous ne pouvez pas utiliser le même espace mémoire, car ODBC ne prend pas en charge plusieurs environnements dans le même processus.) Pour exécuter une application dans un espace mémoire séparé, sélectionnez l’icône de l’application dans le gestionnaire de programmes, ouvrez le menu **fichier** , cliquez sur **Propriétés**, puis cliquez sur **exécuter dans un espace mémoire séparé**.  
   
- L’utilisation de ces pilotes par les applications 16 bits sur Windows 95 n’est pas pris en charge.  
+ L’utilisation de ces pilotes par des applications 16 bits sur Windows 95 n’est pas prise en charge.  
   
-## <a name="driver-specific-hardware-and-software-requirements"></a>Spécifiques au pilote matérielle et logicielle requise  
+## <a name="driver-specific-hardware-and-software-requirements"></a>Configuration matérielle et logicielle requise spécifique au pilote  
   
--   Le MicrosoftAccess et dBASEdrivers peut nécessiter des modifications dans les fichiers Autoexec.bat ou Config.sys.
+-   MicrosoftAccess et dBASEdrivers peuvent nécessiter des modifications dans les fichiers Autoexec. bat ou config. sys.

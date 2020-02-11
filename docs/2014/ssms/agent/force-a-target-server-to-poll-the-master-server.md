@@ -16,13 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044054"
 ---
-# <a name="force-a-target-server-to-poll-the-master-server"></a>Forcer l'interrogation d'un serveur maître par un serveur cible
+# <a name="force-a-target-server-to-poll-the-master-server"></a>Forcer un serveur cible à interroger le serveur maître
   Cette rubrique explique comment forcer l'interrogation du serveur maître par un serveur cible. Le serveur cible doit être un serveur inscrit sur le serveur maître.  
   
  Un travail est une série d'actions exécutées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un travail multiserveur est un travail exécuté par un serveur maître sur un ou plusieurs serveurs cibles. Chaque serveur cible peut exécuter une instance du même travail au même moment. Chaque serveur cible interroge régulièrement le serveur maître, télécharge une copie des nouveaux travaux affectés au serveur cible, puis se déconnecte. Le serveur cible exécute localement le travail, puis se reconnecte au serveur maître pour charger l'état de la sortie du travail.  
@@ -30,9 +30,9 @@ ms.locfileid: "63044054"
 > [!NOTE]  
 >  Si le serveur maître est accessible lorsque le serveur cible tente de charger l'état du travail, ce dernier est mis en attente dans le spouleur jusqu'à ce que le serveur maître soit accessible.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
+-   **Avant de commencer :**  [limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour forcer l’interrogation du serveur maître par un serveur cible, avec :**  [SQL Server Management Studio](#SSMS)  
+-   **Pour forcer un serveur cible à interroger le serveur maître à l’aide de :**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63044054"
  Pour plus d'informations, consultez [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) et [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ##  <a name="SSMS"></a> Utilisation de SQL Server Management Studio  
- **Pour forcer l'interrogation d'un serveur maître par un serveur cible**  
+ **Pour forcer un serveur cible à interroger le serveur maître**  
   
 1.  Dans l' **Explorateur d'objets**, développez le serveur maître.  
   

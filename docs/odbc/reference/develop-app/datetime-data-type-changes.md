@@ -1,5 +1,5 @@
 ---
-title: Type de données DateTime change | Microsoft Docs
+title: Modifications des types de données DateTime | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,45 +18,45 @@ ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6bc7e07ab65b5894c3ac2b913e5d4afcbd4f98f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076963"
 ---
 # <a name="datetime-data-type-changes"></a>Changements dans le type de données datetime
-Dans ODBC *3.x*, les identificateurs de date, heure et types de données timestamp SQL ont été modifiés à partir de SQL_DATE, SQL_TIME et SQL_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête de 9, 10 et 11) à SQL_ TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête de 91, 92 et 93), respectivement. Les identificateurs de type C correspondants ont remplacé par SQL_C_DATE, SQL_C_TIME et SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME et SQL_C_TYPE_TIMESTAMP, respectivement.  
+Dans ODBC *3. x*, les identificateurs pour les types de données SQL date, Time et TIMESTAMP sont modifiés par rapport à SQL_DATE, SQL_TIME et SQL_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête 9, 10 et 11) à SQL_TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête 91, 92 et 93), respectivement. Les identificateurs de type C correspondants ont été modifiés de SQL_C_DATE, SQL_C_TIME et SQL_C_TIMESTAMP en SQL_C_TYPE_DATE, SQL_C_TYPE_TIME et SQL_C_TYPE_TIMESTAMP, respectivement.  
   
- La taille de colonne et les chiffres décimaux retournaient pour les types de données datetime SQL dans ODBC *3.x* sont le même que la précision et l’échelle retourné pour eux dans ODBC *2.x*. Ces valeurs sont différentes de celles figurant dans les champs de descripteur SQL_DESC_PRECISION et SQL_DESC_SCALE. (Pour plus d’informations, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
+ La taille de colonne et les chiffres décimaux renvoyés pour les types de données DateTime SQL dans ODBC *3. x* sont les mêmes que la précision et l’échelle retournées pour eux dans ODBC *2. x*. Ces valeurs sont différentes de celles des champs de descripteur SQL_DESC_PRECISION et SQL_DESC_SCALE. (Pour plus d’informations, consultez [taille de colonne, chiffres décimaux, longueur d’octet de transfert et taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
   
- Ces modifications affectent **SQLDescribeCol**, **SQLDescribeParam**, et **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, et **SQLGetData**; et **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, et **SQLSpecialColumns**.  
+ Ces modifications affectent **SQLDescribeCol**, **SQLDescribeParam**et **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**et **SQLGetData**; et **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, **SQLStatistics**et **SQLSpecialColumns**.  
   
- Le tableau suivant montre comment ODBC *3.x* Gestionnaire de pilotes effectue le mappage des date, time et timestamp C types de données entré dans le *TargetType* arguments de **SQLBindCol**et **SQLGetData** ou dans le *ValueType* argument de **SQLBindParameter**.  
+ Le tableau suivant montre comment le gestionnaire de pilotes ODBC *3. x* effectue le mappage des types de données date, Time et timestamp C entrés dans les arguments *TargetType* de **SQLBindCol** et **SQLGetData** ou dans l’argument *ValueType* de **SQLBindParameter**.  
   
-|Type de données<br /><br /> code entré|*2.x* application<br /><br /> *2.x* pilote|*2.x* application<br /><br /> *3.x* pilote|*3.x* application<br /><br /> *2.x* pilote|*3.x* application<br /><br /> *3.x* pilote|  
+|Type de données<br /><br /> Code entré|application *2. x* à<br /><br /> pilote *2. x*|application *2. x* à<br /><br /> pilote *3. x*|application *3. x* à<br /><br /> pilote *2. x*|application *3. x* à<br /><br /> pilote *3. x*|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
 |SQL_C_DATE (9)|Aucun mappage|SQL_C_TYPE_DATE (91)|Aucun mappage [1]|SQL_C_TYPE_DATE (91)|  
-|SQL_C_TYPE_DATE (91)|Erreur (DM)|Erreur (DM)|SQL_C_DATE (9)|Aucun mappage [2]|  
+|SQL_C_TYPE_DATE (91)|Erreur (de DM)|Erreur (de DM)|SQL_C_DATE (9)|Aucun mappage [2]|  
 |SQL_C_TIME (10)|Aucun mappage|SQL_C_TYPE_TIME (92)|Aucun mappage [1]|SQL_C_TYPE_TIME (92)|  
-|SQL_C_TYPE_TIME (92)|Erreur (DM)|Erreur (DM)|SQL_C_TIME (10)|Aucun mappage [2]|  
+|SQL_C_TYPE_TIME (92)|Erreur (de DM)|Erreur (de DM)|SQL_C_TIME (10)|Aucun mappage [2]|  
 |SQL_C_TIMESTAMP (11)|Aucun mappage|SQL_C_TYPE_TIMESTAMP (93)|Aucun mappage [1]|SQL_C_TYPE_TIMESTAMP (93)|  
-|SQL_C_TYPE_TIMESTAMP (93)|Erreur (DM)|Erreur (DM)|SQL_C_TIMESTAMP (11)|Aucun mappage [2]|  
+|SQL_C_TYPE_TIMESTAMP (93)|Erreur (de DM)|Erreur (de DM)|SQL_C_TIMESTAMP (11)|Aucun mappage [2]|  
   
- [1] en raison de cela, une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote peut utiliser les codes de date, heure ou timestamp renvoyés dans les jeux de résultats retournés par les fonctions de catalogue.  
+ [1] par conséquent, une application ODBC *3. x* utilisant un pilote ODBC *2. x* peut utiliser les codes de date, d’heure ou d’horodatage renvoyés dans les jeux de résultats qui sont retournés par les fonctions de catalogue.  
   
- [2] en raison de cela, une application ODBC *3.x* application fonctionne avec une application ODBC *3.x* pilote peut utiliser les codes de date, heure ou timestamp renvoyés dans les jeux de résultats retournés par les fonctions de catalogue.  
+ [2] à la suite de cela, une application ODBC *3. x* qui utilise un pilote ODBC *3. x* peut utiliser les codes de date, d’heure ou d’horodatage retournés dans les jeux de résultats qui sont retournés par les fonctions de catalogue.  
   
- Le tableau suivant montre comment ODBC *3.x* Gestionnaire de pilotes effectue un mappage des types de données SQL date, time et timestamp entré dans le *ParameterType* argument de **SQLBindParameter**  ou dans le *DataType* argument de **SQLGetTypeInfo**.  
+ Le tableau suivant montre comment le gestionnaire de pilotes ODBC *3. x* effectue le mappage des types de données SQL date, Time et timestamp entrés dans l’argument *ParameterType* de **SQLBindParameter** ou dans l’argument *DataType* de **SQLGetTypeInfo**.  
   
-|Type de données<br /><br /> code entré|*2.x* application<br /><br /> *2.x* pilote|*2.x* application<br /><br /> *3.x* pilote|*3.x* application<br /><br /> *2.x* pilote|*3.x* application<br /><br /> *3.x* pilote|  
+|Type de données<br /><br /> Code entré|application *2. x* à<br /><br /> pilote *2. x*|application *2. x* à<br /><br /> pilote *3. x*|application *3. x* à<br /><br /> pilote *2. x*|application *3. x* à<br /><br /> pilote *3. x*|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
 |SQL_DATE (9)|Aucun mappage|SQL_TYPE_DATE (91)|Aucun mappage [1]|SQL_TYPE_DATE (91)|  
-|SQL_TYPE_DATE (91)|Erreur (DM)|Erreur (DM)|SQL_DATE (9)|Aucun mappage [2]|  
+|SQL_TYPE_DATE (91)|Erreur (de DM)|Erreur (de DM)|SQL_DATE (9)|Aucun mappage [2]|  
 |SQL_TIME (10)|Aucun mappage|SQL_TYPE_TIME (92)|Aucun mappage [1]|SQL_TYPE_TIME (92)|  
-|SQL_TYPE_TIME (92)|Erreur (DM)|Erreur (DM)|SQL_TIME (10)|Aucun mappage [2]|  
+|SQL_TYPE_TIME (92)|Erreur (de DM)|Erreur (de DM)|SQL_TIME (10)|Aucun mappage [2]|  
 |SQL_TIMESTAMP (11)|Aucun mappage|SQL_TYPE_TIMESTAMP (93)|Aucun mappage [1]|SQL_TYPE_TIMESTAMP (93)|  
-|SQL_TYPE_TIMESTAMP (93)|Erreur (DM)|Erreur (DM)|SQL_TIMESTAMP (11)|Aucun mappage [2]|  
+|SQL_TYPE_TIMESTAMP (93)|Erreur (de DM)|Erreur (de DM)|SQL_TIMESTAMP (11)|Aucun mappage [2]|  
   
- [1] en raison de cela, une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote peut utiliser les codes de date, heure ou timestamp renvoyés dans les jeux de résultats retournés par les fonctions de catalogue.  
+ [1] par conséquent, une application ODBC *3. x* utilisant un pilote ODBC *2. x* peut utiliser les codes de date, d’heure ou d’horodatage renvoyés dans les jeux de résultats qui sont retournés par les fonctions de catalogue.  
   
- [2] en raison de cela, une application ODBC *3.x* application fonctionne avec une application ODBC *3.x* pilote peut utiliser les codes de date, heure ou timestamp renvoyés dans les jeux de résultats retournés par les fonctions de catalogue.
+ [2] à la suite de cela, une application ODBC *3. x* qui utilise un pilote ODBC *3. x* peut utiliser les codes de date, d’heure ou d’horodatage retournés dans les jeux de résultats qui sont retournés par les fonctions de catalogue.

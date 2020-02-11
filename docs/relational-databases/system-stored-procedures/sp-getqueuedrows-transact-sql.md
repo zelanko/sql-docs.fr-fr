@@ -16,18 +16,18 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123941"
 ---
-# <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
+# <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Extrait, de l'Abonné, les lignes pour lesquelles il existe des mises à jour dans la file d'attente. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,32 +39,32 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tablename = ] 'tablename'` Est le nom de la table. *TableName* est **sysname**, sans valeur par défaut. La table doit faire partie d'un abonnement en file d'attente.  
+`[ @tablename = ] 'tablename'`Nom de la table. *TableName* est de **type sysname**, sans valeur par défaut. La table doit faire partie d'un abonnement en file d'attente.  
   
-`[ @owner = ] 'owner'` Est le propriétaire de l’abonnement. *propriétaire* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @owner = ] 'owner'`Est le propriétaire de l’abonnement. *owner* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @tranid = ] 'transaction_id'` Permet à la sortie à filtrer par ID de transaction. *transaction_id* est **nvarchar (70)** , avec NULL comme valeur par défaut. Si cet argument est défini, l'identificateur de transaction associé à la commande placée en file d'attente est affiché. Si la valeur est NULL, toutes les commandes figurant dans la file d'attente sont affichées.  
+`[ @tranid = ] 'transaction_id'`Autorise le filtrage de la sortie par l’ID de transaction. *transaction_id* est de type **nvarchar (70)**, avec NULL comme valeur par défaut. Si cet argument est défini, l'identificateur de transaction associé à la commande placée en file d'attente est affiché. Si la valeur est NULL, toutes les commandes figurant dans la file d'attente sont affichées.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Affiche toutes les lignes détenant actuellement au moins une transaction en attente pour la table d'abonnement.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Action**|**nvarchar(10)**|Type d'action à appliquer au moment de la synchronisation.<br /><br /> INS= insertion<br /><br /> DEL = suppression<br /><br /> UPD = mise à jour|  
-|**tranid**|**nvarchar(70)**|Identificateur de transaction sous lequel la commande a été exécutée.|  
-|**Colonne1 table... n**||La valeur pour chaque colonne de la table spécifiée dans *tablename*.|  
+|**Action**|**nvarchar(10**|Type d'action à appliquer au moment de la synchronisation.<br /><br /> INS= insertion <br /><br /> DEL = suppression<br /><br /> UPD = mise à jour|  
+|**Tranid**|**nvarchar (70)**|Identificateur de transaction sous lequel la commande a été exécutée.|  
+|**table column1...n**||Valeur de chaque colonne de la table spécifiée dans *TableName*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Cette colonne permet d'assurer le suivi des modifications apportées aux données répliquées et de détecter les conflits sur le serveur de publication. Cette colonne est automatiquement ajoutée à la table.|  
   
 ## <a name="remarks"></a>Notes  
- **sp_getqueuedrows** est utilisé sur les abonnés concernés dans la mise à jour en file d’attente.  
+ **sp_getqueuedrows** est utilisé sur les abonnés participant à la mise à jour en attente.  
   
- **sp_getqueuedrows** recherche les lignes d’une table donnée sur un abonnement de base de données qui ont participé à une mise à jour en file d’attente, mais actuellement pas résolues par l’agent de lecture de file d’attente.  
+ **sp_getqueuedrows** recherche les lignes d’une table donnée sur une base de données d’abonnement qui ont participé à une mise à jour en file d’attente, mais qui n’ont pas encore été résolues par l’agent de lecture de la file d’attente.  
   
 ## <a name="permissions"></a>Autorisations  
- **sp_getqueuedrows** requiert des autorisations SELECT sur la table spécifiée dans *tablename*.  
+ **sp_getqueuedrows** nécessite des autorisations SELECT sur la table spécifiée dans *TableName*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

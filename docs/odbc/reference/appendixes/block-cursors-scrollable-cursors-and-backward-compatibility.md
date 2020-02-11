@@ -17,20 +17,20 @@ ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 433647481b2b73c22e00657c430d98177d3d4524
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125217"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Curseurs de bloc, curseurs avec défilement et compatibilité descendante
-L’existence des deux **SQLFetchScroll** et **SQLExtendedFetch** représente la première clear Fractionner dans ODBC entre l’Interface API (Application Programming), qui est l’ensemble de fonctions le les appels de l’application et l’Interface de fournisseur de Service (SPI), qui est l’ensemble de fonctions le pilote implémente. Cette distinction est nécessaire afin que ODBC *3.x*, qui utilise **SQLFetchScroll**, bealigned avec les normes et également être compatible avec ODBC *2.x*, qui utilise **SQLExtendedFetch**.  
+L’existence de **SQLFetchScroll** et **SQLExtendedFetch** représente le premier fractionnement clair dans ODBC entre l’interface de programmation d’applications (API), qui est l’ensemble des fonctions que l’application appelle, et l’interface de fournisseur de services (SPI), qui est l’ensemble de fonctions implémentées par le pilote. Ce fractionnement est nécessaire pour que ODBC *3. x*, qui utilise **SQLFetchScroll**, s’aligne avec les normes et soit également compatible avec ODBC *2. x*, qui utilise **SQLExtendedFetch**.  
   
- ODBC *3.x* API, qui est l’ensemble de l’application appelle les fonctions, inclut **SQLFetchScroll** et les attributs d’instruction. ODBC *3.x* SPI, qui est l’ensemble de fonctions, le pilote implémente, inclut **SQLFetchScroll**, **SQLExtendedFetch**et les attributs d’instruction. Comme ODBC n’applique pas formellement cette distinction entre l’API et le SPI, il est possible pour ODBC *3.x* applications d’appeler **SQLExtendedFetch** et les attributs d’instruction. Toutefois, il n’existe aucune raison pour ODBC *3.x* application pour ce faire. Pour plus d’informations sur les API et SPI, reportez-vous à l’introduction [Architecture ODBC](../../../odbc/reference/odbc-architecture.md).  
+ L’API ODBC *3. x* , qui est l’ensemble des fonctions appelées par l’application, comprend **SQLFetchScroll** et les attributs d’instruction associés. Le SPI ODBC *3. x* , qui est l’ensemble des fonctions implémentées par le pilote, comprend **SQLFetchScroll**, **SQLExtendedFetch**et les attributs d’instruction associés. Dans la mesure où ODBC n’impose pas cette séparation entre l’API et le SPI, il est possible pour les applications ODBC *3. x* d’appeler **SQLExtendedFetch** et les attributs d’instruction associés. Toutefois, il n’y a aucune raison pour que l’application ODBC *3. x* le fasse. Pour plus d’informations sur les API et les SPI, consultez Introduction à [ODBC architecture](../../../odbc/reference/odbc-architecture.md).  
   
- Pour plus d’informations sur les fonctions et l’instruction attributs d’une application ODBC *3.x* application doit utiliser avec bloc et de curseurs avec défilement, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante pour ODBC 3.x Applications](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
+ Pour plus d’informations sur les fonctions et attributs d’instruction qu’une application ODBC *3. x* doit utiliser avec les curseurs de bloc et de défilement, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante pour les applications ODBC 3. x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Ce que fait le gestionnaire de pilotes](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
   

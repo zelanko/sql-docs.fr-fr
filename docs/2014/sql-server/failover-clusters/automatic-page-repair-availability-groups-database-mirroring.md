@@ -1,5 +1,5 @@
 ---
-title: Réparation de Page automatique (groupes de disponibilité et la mise en miroir de base de données) | Microsoft Docs
+title: Réparation de page automatique (pour les groupes de disponibilité et la mise en miroir de bases de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137516"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Réparation de page automatique (pour les groupes de disponibilité et la mise en miroir de bases de données)
@@ -32,7 +32,7 @@ ms.locfileid: "63137516"
   
   
   
-##  <a name="ErrorTypes"></a> Types d’erreurs qui provoquent une tentative de réparation de Page automatique  
+##  <a name="ErrorTypes"></a>Types d’erreur qui provoquent une tentative de réparation de page automatique  
  La réparation de page automatique de la mise en miroir de bases de données tente de réparer uniquement les pages situées dans un fichier de données sur lequel une opération a échoué en raison de l'une des erreurs répertoriées dans le tableau suivant.  
   
 |Numéro d'erreur|Description|Instances qui provoquent une tentative de réparation de page automatique|  
@@ -45,18 +45,18 @@ ms.locfileid: "63137516"
   
   
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="UnrepairablePageTypes"></a>Types de page qui ne peuvent pas être réparés automatiquement  
  La réparation de page automatique ne peut pas réparer les types de page de contrôle suivants :  
   
 -   Page d'en-tête de fichier (ID de page 0).  
   
 -   Page 9 (page de démarrage de la base de données).  
   
--   Pages d’allocation : Les pages GAM (Allocation Map) global, les pages SGAM Shared Global Allocation Map () et gratuit espace pages PFS (Page).  
+-   Pages d'allocation : pages GAM (Global Allocation Map), pages SGAM(Shared Global Allocation Map) et pages PFS (Page Free Space).  
   
 
   
-##  <a name="PrimaryIOErrors"></a> Gestion des erreurs d’e/s sur la base de données principale/primaire  
+##  <a name="PrimaryIOErrors"></a>Gestion des erreurs d’e/s sur la base de données principale/primaire  
  Sur le principal/la base de données primaire, la réparation de page automatique est lancée uniquement lorsque la base de données est dans l'état SYNCHRONIZED et que le principal/la base de données primaire envoie encore des enregistrements de journal au serveur miroir/secondaire pour la base de données. La séquence de base pour les actions relatives à une tentative de réparation de page automatique est la suivante :  
   
 1.  Quand une erreur de lecture se produit sur une page de données sur le principal/la base de données primaire, ce dernier ou cette dernière insère une ligne dans la table [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) avec l’état d’erreur approprié. Pour la mise en miroir de bases de données, le principal demande ensuite une copie de la page au serveur miroir. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le principal diffuse la demande à tous les serveurs secondaires et obtient la page du premier serveur qui répond. La demande spécifie l'ID de page et le numéro séquentiel dans le journal (Log Sequence Number ou LSN) se trouvant actuellement à la fin du journal vidé. La page est marquée comme *restauration en attente*, elle est par conséquent inaccessible pendant la tentative de réparation de page automatique. Les tentatives d'accès à cette page lors de la tentative de réparation échouent avec une erreur 829 (restauration en attente).  
@@ -71,7 +71,7 @@ ms.locfileid: "63137516"
   
 
   
-##  <a name="SecondaryIOErrors"></a> Gestion des erreurs d’e/s sur la base de données miroir/secondaire  
+##  <a name="SecondaryIOErrors"></a>Gestion des erreurs d’e/s sur la base de données miroir/secondaire  
  Les erreurs d'E/S sur les pages de données qui se produisent sur la base de données miroir/secondaire sont généralement gérées de la même manière par la mise en miroir de bases de données et par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 1.  Avec la mise en miroir de bases de données, si le serveur miroir rencontre une ou plusieurs erreurs d'E/S de page lorsqu'il reconstruit un enregistrement de journal, la session de mise en miroir passe à l'état SUSPENDED. Avec [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], si un réplica secondaire rencontre une ou plusieurs erreurs d'E/S de page lorsqu'il reconstruit un enregistrement de journal, la base de données secondaire passe à l'état SUSPENDED. Le serveur miroir/secondaire insère alors une ligne dans la table **suspect_pages** avec l’état d’erreur approprié. Le serveur miroir/secondaire demande ensuite une copie de la page au principal/à la base de données primaire.  
@@ -83,23 +83,23 @@ ms.locfileid: "63137516"
      Si un serveur miroir/secondaire ne reçoit pas une page qu'il a demandée au principal/à la base de données primaire, la tentative de réparation de page automatique échoue. Avec la mise en miroir de bases de données, la session de mise en miroir reste suspendue. Avec [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], la base de données secondaire reste suspendue. Si la session de mise en miroir ou la base de données secondaire est rétablie manuellement, les pages endommagées sont à nouveau renvoyées lors de la phase de synchronisation.  
 
   
-##  <a name="DevBP"></a> Developer Best Practice  
+##  <a name="DevBP"></a>Meilleures pratiques pour les développeurs  
  Une réparation de page automatique est un processus asynchrone qui s'exécute en arrière-plan. Par conséquent, une opération de base de données qui demande une page illisible échoue et renvoie le code d'erreur correspondant à la condition ayant provoqué l'échec. Lorsque vous développez une application pour une base de données mise en miroir ou une base de données de disponibilité, vous devez intercepter les exceptions pour les opérations ayant échoué. Si le code d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est 823, 824 ou 829, vous devez retenter l'opération ultérieurement.  
   
 
   
-##  <a name="ViewAPRattempts"></a> Procédure : Afficher les tentatives de réparation de Page automatique  
+##  <a name="ViewAPRattempts"></a>Procédure : afficher les tentatives de réparation de page automatique  
  Les vues de gestion dynamique suivantes retournent les lignes correspondant aux dernières tentatives de réparation de page automatique sur une base de données de disponibilité ou une base de données mise en miroir spécifique, avec un maximum de 100 lignes par base de données.  
   
--   **Groupes de disponibilité AlwaysOn :**  
+-   **groupes de disponibilité AlwaysOn:**  
   
-     [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
+     [sys. dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
   
      Retourne une ligne pour chaque tentative de réparation de page automatique sur une base de données de disponibilité sur un réplica de disponibilité hébergé pour un groupe de disponibilité quelconque par l'instance de serveur.  
   
--   **Mise en miroir de bases de données :**  
+-   **Mise en miroir de bases de données :**  
   
-     [sys.dm_db_mirroring_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair)  
+     [sys. dm_db_mirroring_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair)  
   
      Retourne une ligne pour chaque tentative de réparation de page automatique sur toute base de données mise en miroir sur l'instance de serveur.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63137516"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

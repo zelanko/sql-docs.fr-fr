@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026860"
 ---
-# <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Retourne des statistiques sur les opérations de point de contrôle de l'OLTP en mémoire dans la base de données active. Si la base de données n'a pas d'objets OLTP en mémoire, retourne un ensemble de résultats vide.  
@@ -39,54 +39,54 @@ USE In_Memory_db_name
 SELECT * FROM sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] diffère sensiblement de versions plus récentes et fait inférieure de la rubrique à [SQL Server 2014](#bkmk_2014).**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]est fondamentalement différent des versions plus récentes et est abordé plus bas dans la rubrique [SQL Server 2014](#bkmk_2014).**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures  
- Le tableau suivant décrit les colonnes de `sys.dm_db_xtp_checkpoint_stats`, en commençant par **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]et versions ultérieures  
+ Le tableau suivant décrit les colonnes de `sys.dm_db_xtp_checkpoint_stats`, à partir **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** de.  
   
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
-|last_lsn_processed|**bigint**|Dernier NSE vu par le contrôleur.|  
-|end_of_log_lsn|**numeric(38)**|Le LSN de la fin du journal.|  
-|bytes_to_end_of_log|**bigint**|Non traités par le contrôleur, correspondant aux octets entre des octets de journal `last_lsn_processed` et `end_of_log_lsn`.|  
-|log_consumption_rate|**bigint**|Taux de consommation de journal des transactions par le contrôleur (en Ko/s).|  
-|active_scan_time_in_ms|**bigint**|Temps passé par le contrôleur dans analyse activement le journal des transactions.|  
-|total_wait_time_in_ms|**bigint**|Temps d’attente cumulé pour le contrôleur lors de l’analyse ne pas le journal.|  
-|waits_for_io|**bigint**|Nombre d’attentes pour le journal d’e/s générée par le thread du contrôleur.|  
-|io_wait_time_in_ms|**bigint**|Durée cumulative d’attente sur les e/s de journal par le thread du contrôleur.|  
-|waits_for_new_log_count|**bigint**|Nombre d’attentes induite par le thread du contrôleur pour un nouveau journal doit être généré.|  
-|new_log_wait_time_in_ms|**bigint**|Durée cumulative d’attente sur un nouveau journal par le thread du contrôleur.|  
-|idle_attempts_count|**bigint**|Nombre de fois que le contrôleur a basculé vers un état inactif.|  
-|tx_segments_dispatched|**bigint**|Nombre de segments vu par le contrôleur et d’expédition les sérialiseurs. Segment est une partie contiguë de journal constituant une unité de sérialisation. Il est actuellement une taille de 1 Mo, mais peut changer dans les futures.|  
-|segment_bytes_dispatched|**bigint**|Nombre total d’octets d’octets envoyés par le contrôleur de sérialiseurs, depuis le redémarrage de la base de données.|  
-|bytes_serialized|**bigint**|Nombre total d’octets sérialisé, car le redémarrage de la base de données.|  
+|last_lsn_processed|**bigint**|Dernier LSN détecté par le contrôleur.|  
+|end_of_log_lsn|**numérique (38)**|LSN de la fin du journal.|  
+|bytes_to_end_of_log|**bigint**|Octets du journal non traités par le contrôleur, correspondant aux octets compris entre `last_lsn_processed` et `end_of_log_lsn`.|  
+|log_consumption_rate|**bigint**|Taux de consommation du journal des transactions par le contrôleur (en Ko/s).|  
+|active_scan_time_in_ms|**bigint**|Temps passé par le contrôleur à analyser activement le journal des transactions.|  
+|total_wait_time_in_ms|**bigint**|Temps d’attente cumulé pour le contrôleur sans analyser le journal.|  
+|waits_for_io|**bigint**|Nombre d’attentes pour les e/s du journal effectuées par le thread du contrôleur.|  
+|io_wait_time_in_ms|**bigint**|Temps cumulé passé à attendre l’e/s du journal par le thread du contrôleur.|  
+|waits_for_new_log_count|**bigint**|Nombre d’attentes effectuées par le thread du contrôleur pour la génération d’un nouveau journal.|  
+|new_log_wait_time_in_ms|**bigint**|Temps cumulatif passé à attendre un nouveau journal par le thread du contrôleur.|  
+|idle_attempts_count|**bigint**|Nombre de fois où le contrôleur est passé à un état inactif.|  
+|tx_segments_dispatched|**bigint**|Nombre de segments vus par le contrôleur et distribués aux sérialiseurs. Segment est une partie contiguë du journal qui forme une unité de sérialisation. Il est actuellement dimensionné à 1 Mo, mais peut changer à l’avenir.|  
+|segment_bytes_dispatched|**bigint**|Nombre total d’octets envoyés par le contrôleur aux sérialiseurs, depuis le redémarrage de la base de données.|  
+|bytes_serialized|**bigint**|Nombre total d’octets sérialisés depuis le redémarrage de la base de données.|  
 |serializer_user_time_in_ms|**bigint**|Temps passé par les sérialiseurs en mode utilisateur.|  
 |serializer_kernel_time_in_ms|**bigint**|Temps passé par les sérialiseurs en mode noyau.|  
 |xtp_log_bytes_consumed|**bigint**|Nombre total d’octets de journal consommés depuis le redémarrage de la base de données.|  
 |checkpoints_closed|**bigint**|Nombre de points de contrôle fermés depuis le redémarrage de la base de données.|  
-|last_closed_checkpoint_ts|**bigint**|Horodatage du dernier point de contrôle fermé.|  
-|hardened_recovery_lsn|**numeric(38)**|Récupération démarre à partir de LSN.|  
-|hardened_root_file_guid|**uniqueidentifier**|GUID du fichier racine qui renforcés à la suite du dernier point de contrôle terminé.|  
-|hardened_root_file_watermark|**bigint**|**Interne uniquement**. La distance, il est valide pour lire le fichier racine jusqu'à (c’est un type pertinente en interne uniquement - appelé BSN).|  
-|hardened_truncation_lsn|**numeric(38)**|LSN du point de troncation.|  
-|log_bytes_since_last_close|**bigint**|Octets à partir du dernier fermer à la fin actuelle du journal.|  
+|last_closed_checkpoint_ts|**bigint**|Horodateur du dernier point de contrôle fermé.|  
+|hardened_recovery_lsn|**numérique (38)**|La récupération va démarrer à partir de ce LSN.|  
+|hardened_root_file_guid|**uniqueidentifier**|GUID du fichier racine qui a été renforcé suite au dernier point de contrôle terminé.|  
+|hardened_root_file_watermark|**bigint**|**Interne uniquement**. Jusqu’à quel point il est valide pour lire le fichier racine (il s’agit d’un type qui est pertinent en interne uniquement-appelé BSN).|  
+|hardened_truncation_lsn|**numérique (38)**|LSN du point de troncation.|  
+|log_bytes_since_last_close|**bigint**|Octets de la dernière fermeture jusqu’à la fin actuelle du journal.|  
 |time_since_last_close_in_ms|**bigint**|Heure depuis la dernière fermeture du point de contrôle.|  
-|current_checkpoint_id|**bigint**|Actuellement nouveaux segments sont assignées à ce point de contrôle. Le système de point de contrôle est un pipeline. Le point de contrôle actuel est celui qui sont assignées aux segments à partir du journal. Une fois qu’il a atteint une limite, le point de contrôle est libéré par le contrôleur et un autre créé comme en cours.|  
+|current_checkpoint_id|**bigint**|De nouveaux segments sont actuellement affectés à ce point de contrôle. Le système de point de contrôle est un pipeline. Le point de contrôle actuel est celui auquel les segments du journal sont affectés. Une fois la limite atteinte, le point de contrôle est libéré par le contrôleur et un nouveau est créé comme actuel.|  
 |current_checkpoint_segment_count|**bigint**|Nombre de segments dans le point de contrôle actuel.|  
-|recovery_lsn_candidate|**bigint**|**En interne uniquement**. Candidat pour être sélectionnées en tant que recoverylsn lorsque current_checkpoint_id se ferme.|  
-|outstanding_checkpoint_count|**bigint**|Nombre de points de contrôle dans le pipeline en attente d’être fermé.|  
-|closing_checkpoint_id|**bigint**|ID du point de contrôle de fermeture.<br /><br /> Sérialiseurs sont exécutés en parallèle, par conséquent, une fois qu’ils ont fini le point de contrôle est un candidat pour être fermée par le thread de fermeture. Mais le thread de fermeture peut fermer uniquement à la fois et il doit être dans l’ordre, par conséquent, le point de contrôle de fermeture est celui qui fonctionne sur le thread de fermeture.|  
-|recovery_checkpoint_id|**bigint**|ID du point de contrôle à utiliser dans la récupération.|  
+|recovery_lsn_candidate|**bigint**|En **interne uniquement**. Candidat à choisir comme recoverylsn quand current_checkpoint_id se ferme.|  
+|outstanding_checkpoint_count|**bigint**|Nombre de points de contrôle dans le pipeline en attente de fermeture.|  
+|closing_checkpoint_id|**bigint**|ID du point de contrôle de fermeture.<br /><br /> Les sérialiseurs fonctionnent en parallèle. ainsi, une fois qu’ils sont terminés, le point de contrôle est un candidat à fermer par le thread de fermeture. Mais le thread de fermeture ne peut se fermer qu’une seule fois et doit être dans l’ordre. le point de contrôle de fermeture est donc celui sur lequel le thread de fermeture travaille.|  
+|recovery_checkpoint_id|**bigint**|ID du point de contrôle à utiliser pour la récupération.|  
 |recovery_checkpoint_ts|**bigint**|Horodatage du point de contrôle de récupération.|  
-|bootstrap_recovery_lsn|**numeric(38)**|LSN de récupération pour le programme d’amorçage.|  
-|bootstrap_root_file_guid|**uniqueidentifier**|GUID du fichier racine pour le programme d’amorçage.|  
-|internal_error_code|**bigint**|Erreur lors de la vue par le contrôleur, le sérialiseur, fermez, et le threads de fusion.|
-|bytes_of_large_data_serialized|**bigint**|La quantité de données qui a été sérialisées. |  
+|bootstrap_recovery_lsn|**numérique (38)**|LSN de récupération pour le bootstrap.|  
+|bootstrap_root_file_guid|**uniqueidentifier**|GUID du fichier racine pour le bootstrap.|  
+|internal_error_code|**bigint**|Erreur détectée par l’un des threads du contrôleur, du sérialiseur, de la fermeture et de la fusion.|
+|bytes_of_large_data_serialized|**bigint**|Quantité de données qui a été sérialisée. |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- Le tableau suivant décrit les colonnes de `sys.dm_db_xtp_checkpoint_stats`, pour **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
+ Le tableau suivant décrit les colonnes dans `sys.dm_db_xtp_checkpoint_stats`, pour **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Nombre d'octets du journal entre le numéro séquentiel dans le journal (LSN) actuel du thread et la fin du journal.|  
 |total_log_blocks_processed|**bigint**|Nombre total de blocs de journal traités depuis le démarrage du serveur.|  
@@ -102,12 +102,12 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |checkpoint_lsn|**numérique (38)**|Numéro séquentiel dans le journal (LSN) de récupération associé au dernier point de vérification de l'OLTP en mémoire terminé.|  
 |current_lsn|**numérique (38)**|Numéro séquentiel dans le journal de l'enregistrement de journal en cours de traitement.|  
 |end_of_log_lsn|**numérique (38)**|Numéro séquentiel dans le journal à la fin du journal.|  
-|task_address|**varbinary(8)**|Adresse de SOS_Task. Jointure à sys.dm_os_tasks pour rechercher des informations supplémentaires.|  
+|task_address|**varbinary (8)**|Adresse de SOS_Task. Jointure à sys.dm_os_tasks pour rechercher des informations supplémentaires.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW DATABASE STATE` sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

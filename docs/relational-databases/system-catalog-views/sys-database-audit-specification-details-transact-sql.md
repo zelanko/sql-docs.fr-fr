@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: sys. database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940287"
 ---
-# <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
+# <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient des informations sur les spécifications de l’audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de serveur, pour toutes les bases de données. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Pour obtenir la liste de tous les audit_action_id et de leurs noms, interroger [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Contient des informations sur les spécifications de l’audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de serveur, pour toutes les bases de données. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Pour obtenir la liste de tous les audit_action_id et leurs noms, interrogez [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_specification_id**|**Int**|ID de la spécification d'audit.|  
+|**database_specification_id**|**int**|ID de la spécification d'audit.|  
 |**audit_action_id**|**int**|ID de l'action d'audit.|  
-|**audit_action_name**|**sysname**|Nom de l'action d'audit ou du groupe d'actions d'audit|  
-|**Classe**|**Int**|Identifie la classe d'objets auditée.|  
-|**class_ desc**|**Nvarchar(60)**|Description de la classe d'objets auditée :<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**audit_action_name**|**Sa**|Nom de l'action d'audit ou du groupe d'actions d'audit|  
+|**Type**|**int**|Identifie la classe d'objets auditée.|  
+|**class_ DESC**|**Nvarchar (60)**|Description de la classe d'objets auditée :<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|ID majeur de l'objet audité, tel qu'un ID de table d'une action d'audit de table.|  
-|**minor_id**|**Int**|ID secondaire de l'objet audité, interprété d'après la classe, telle que l'ID de colonne d'une action d'audit de table.|  
+|**minor_id**|**Tiers**|ID secondaire de l'objet audité, interprété d'après la classe, telle que l'ID de colonne d'une action d'audit de table.|  
 |**audited_principal_id**|**int**|Principal audité.|  
-|**audited_result**|**Nvarchar(60)**|Résultats de l'action d'audit :<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
-|**is_group**|**Bit**|Indique si l'objet est un groupe :<br /><br /> 0 - Pas un groupe<br /><br /> 1 - Groupe|  
+|**audited_result**|**Nvarchar (60)**|Résultats de l'action d'audit :<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**is_group**|**64bits**|Indique si l'objet est un groupe :<br /><br /> 0 - Pas un groupe<br /><br /> 1 - Groupe|  
   
 ## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY DATABASE AUDIT** ou **VIEW DEFINITION** autorisations, le **dbo** et du rôle de la **db_owners** rôle de base de données fixe a accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW DEFINITION** autorisation.  
+ Les principaux avec les autorisations **ALTER ANY DATABASE audit** ou **View definition** , le rôle **dbo** et les membres du rôle de base de données fixe **db_owners** ont accès à cet affichage catalogue. En outre, l’autorisation **View definition** ne doit pas être refusée au principal.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

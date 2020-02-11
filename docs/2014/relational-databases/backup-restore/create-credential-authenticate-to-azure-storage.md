@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175957"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Créer des informations d’identification - Authentification Azure Storage
   Utilisez la boîte de dialogue **Sauvegarde sur un périphérique URL - Créer des informations d’identification** pour créer des informations d’identification SQL.  
   
- Lorsque vous utilisez cette boîte de dialogue pour créer des informations d’identification, vous devez fournir un certificat de gestion Azure ajouté au magasin de certificats local ou à un profil de publication téléchargé sur votre ordinateur pour valider l’abonnement et les informations du compte de stockage.  
+ Lorsque vous utilisez cette boîte de dialogue pour créer des informations d’identification, vous devez ajouter un certificat de gestion Azure au magasin de certificats local, ou un profil de publication téléchargé sur votre ordinateur, pour valider l’abonnement et les informations d’identification du compte de stockage.  
   
  **Informations d'identification SQL**  
  Spécifiez le nom des informations d'identification SQL que vous souhaitez créer.  
   
 ## <a name="azure-credentials"></a>Informations d’identification Azure  
  **Certificat de gestion**  
- Utilisez cette option pour spécifier un certificat du magasin de certificats local qui correspond au certificat de gestion d’Azure. Pour plus d’informations sur le certificat de gestion Azure, consultez [créer et télécharger un certificat de gestion pour Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Utilisez cette option pour spécifier un certificat dans le magasin de certificats local qui correspond au certificat de gestion Azure. Pour plus d’informations sur le certificat de gestion Azure, consultez [Créer et télécharger un certificat de gestion pour Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Abonnement**  
- Sélectionnez, tapez ou collez votre ID d’abonnement Azure qui correspond au certificat de gestion du magasin de certificats local.  
+ Sélectionnez, entrez ou collez votre ID d’abonnement Azure qui correspond au certificat de gestion dans le magasin de certificats local.  
   
  **Profil de publication**  
  Utilisez cette option si vous avez un profil de publication téléchargé sur votre ordinateur. Si vous utilisez cette option, l'ID d'abonnement et le certificat sont remplis automatiquement.  

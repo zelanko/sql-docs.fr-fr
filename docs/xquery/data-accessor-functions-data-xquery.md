@@ -16,10 +16,10 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038972"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Fonctions d’accesseur de données : data (XQuery)
@@ -55,19 +55,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   Si un nœud d'attribut est typé avec un type de schéma XML, sa valeur typée est la valeur typée correspondante.  
   
--   Si le nœud d’attribut est non typé, sa valeur typée est égale à sa valeur de chaîne qui est retourné comme une instance de **xdt : untypedAtomic**.  
+-   Si le nœud d’attribut n’est pas typé, sa valeur typée est égale à sa valeur de chaîne qui est retournée en tant qu’instance de **xdt : untypedAtomic**.  
   
--   Si le nœud d’élément n’a pas été typé, sa valeur typée est égale à sa valeur de chaîne qui est retourné comme une instance de **xdt : untypedAtomic**.  
+-   Si le nœud d’élément n’a pas été typé, sa valeur typée est égale à sa valeur de chaîne qui est retournée en tant qu’instance de **xdt : untypedAtomic**.  
   
  Les points suivants s'appliquent aux nœuds d'élément typés :  
   
--   Si l’élément a un type de contenu simple, **data()** retourne la valeur typée de l’élément.  
+-   Si l’élément a un type de contenu simple, **Data ()** retourne la valeur typée de l’élément.  
   
--   Si le nœud est de type complexe, notamment xs : anyType, **data()** renvoie une erreur statique.  
+-   Si le nœud est de type complexe, y compris XS : anyType, **Data ()** renvoie une erreur statique.  
   
- Bien que l’utilisation du **data()** fonction soit souvent facultative, comme indiqué dans les exemples suivants, en spécifiant le **data()** fonction augmente la lisibilité de requête. Pour plus d’informations, consultez [principes fondamentaux de XQuery](../xquery/xquery-basics.md).  
+ Bien que l’utilisation de la fonction **Data ()** soit souvent facultative, comme indiqué dans les exemples suivants, la spécification de la fonction **Data ()** augmente explicitement la lisibilité des requêtes. Pour plus d’informations, consultez [principes de base de XQuery](../xquery/xquery-basics.md).  
   
- Vous ne pouvez pas spécifier **data()** sur du code XML construit, comme indiqué dans l’exemple suivant :  
+ Vous ne pouvez pas spécifier de **données ()** sur du code XML construit, comme illustré ci-dessous :  
   
 ```  
 declare @x xml  
@@ -76,10 +76,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>R. Utilisation de la fonction XQuery data() pour extraire la valeur typée d'un nœud  
- L’exemple suivant illustre comment la **data()** fonction est utilisée pour récupérer des valeurs d’un attribut, un élément et un nœud de texte :  
+ La requête suivante illustre l’utilisation de la fonction **Data ()** pour extraire les valeurs d’un attribut, d’un élément et d’un nœud de texte :  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -98,13 +98,13 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- Comme mentionné, le **data()** fonction est facultative lors de la construction des attributs. Si vous ne spécifiez pas le **data()** (fonction), elle est implicitement sous-entendue. La requête suivante produit les mêmes résultats que la précédente :  
+ Comme mentionné, la fonction **Data ()** est facultative lorsque vous construisez des attributs. Si vous ne spécifiez pas la fonction **Data ()** , elle est implicitement utilisée. La requête suivante produit les mêmes résultats que la précédente :  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -123,9 +123,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Les exemples suivants illustrent des instances dans lesquelles la **data()** fonction est nécessaire.  
+ Les exemples suivants illustrent des instances dans lesquelles la fonction **Data ()** est requise.  
   
- Dans la requête suivante, **$pd / P1 : Specifications / Material** retourne le <`Material`> élément. En outre, **données ($pd/P1 : Specifications/Material)** retourne des données caractères typées sous xdt : untypedAtomic, étant donné que <`Material`> est non typé. Lorsque l’entrée est non typée, le résultat de **data()** est de type **xdt : untypedAtomic**.  
+ Dans la requête suivante, **$PD/P1 : Specifications/Material** retourne l' `Material` élément <>. En outre, les **données ($PD/P1 : Specifications/Material)** retournent des données de type caractère `Material` sous la forme xdt : untypedAtomic, car <> n’est pas typée. Lorsque l’entrée n’est pas typée, le résultat de **Data ()** est de type **xdt : untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -141,7 +141,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Root>  
@@ -149,7 +149,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- Dans la requête suivante, **data($pd/p1:Features/wm:Warranty)** renvoie une erreur statique car <`Warranty`> est un élément de type complexe.  
+ Dans la requête suivante, les **données ($PD/P1 : features/WM : Warranty)** renvoient une erreur `Warranty` statique, car <> est un élément de type complexe.  
   
 ```  
 WITH XMLNAMESPACES (  

@@ -18,18 +18,18 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124079"
 ---
-# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
+# <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la forme paramétrable d'une requête. Les résultats retournés simulent la forme paramétrable d'une requête obtenue à l'aide d'un paramétrage forcé. sp_get_query_template sert essentiellement à créer des repères de plan TEMPLATE.  
+  Retourne la forme paramétrable d'une requête. Les résultats retournés simulent la forme paramétrable d'une requête obtenue à l'aide d'un paramétrage forcé. sp_get_query_template est principalement utilisé lorsque vous créez des repères de plan TEMPLATE.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,23 +42,23 @@ sp_get_query_template
 ```  
   
 ## <a name="arguments"></a>Arguments  
- «*query_text*»  
- Requête dont la version paramétrable doit être générée. «*query_text*' doit être placé entre guillemets simples et précédé du spécificateur Unicode N. N'*query_text*» est la valeur affectée à la @querytext paramètre. Il s’agit du type **nvarchar (max)** .  
+ '*query_text*'  
+ Requête dont la version paramétrable doit être générée. '*query_text*'doit être placé entre guillemets simples et être précédé par le spécificateur Unicode N. N'*query_text*'est la valeur assignée @querytext au paramètre. Il s’agit du type **nvarchar (max)**.  
   
  @templatetext  
- Est un paramètre output de type **nvarchar (max)** , fourni tel qu’indiqué, permettant de recevoir la forme paramétrable de *query_text* comme un littéral de chaîne.  
+ Paramètre de sortie de type **nvarchar (max)**, fourni comme indiqué, pour recevoir la forme paramétrable de *query_text* en tant que littéral de chaîne.  
   
  @parameters  
- Est un paramètre output de type **nvarchar (max)** , fourni tel qu’indiqué, permettant de recevoir un littéral de chaîne des données et les noms de types de paramètres qui ont été paramétrés dans @templatetext.  
+ Paramètre de sortie de type **nvarchar (max)**, fourni comme indiqué, pour recevoir un littéral de chaîne des noms de paramètres et des types de données qui ont été paramétrés dans @templatetext.  
   
 ## <a name="remarks"></a>Notes  
  sp_get_query_template retourne une erreur dans les cas suivants :  
   
--   Elle ne paramètre pas les valeurs littérales constantes dans *query_text*.  
+-   Elle ne paramétre pas de valeurs littérales constantes dans *query_text*.  
   
--   *query_text* est NULL, pas une chaîne Unicode, syntaxiquement n’est pas valide ou ne peut pas être compilée.  
+-   *query_text* a la valeur null, n’est pas une chaîne Unicode, n’est pas valide ou ne peut pas être compilée.  
   
- Si sp_get_query_template retourne une erreur, il ne modifie pas les valeurs de la @templatetext et @parameters paramètres de sortie.  
+ Si sp_get_query_template retourne une erreur, elle ne modifie pas les valeurs des paramètres @templatetext de @parameters sortie et.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données public.  
@@ -114,7 +114,7 @@ SELECT @my_parameters;
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

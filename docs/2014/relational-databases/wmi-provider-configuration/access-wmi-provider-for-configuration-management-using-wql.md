@@ -1,5 +1,5 @@
 ---
-title: Accéder au fournisseur WMI pour la gestion de Configuration à l’aide de WQL | Microsoft Docs
+title: Accéder au fournisseur WMI pour la gestion de la configuration à l’aide de WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195873"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accéder au fournisseur WMI pour Gestion de l'ordinateur à l'aide de WQL
@@ -29,13 +29,13 @@ ms.locfileid: "68195873"
   
 ### <a name="querying-services-using-wbemtest"></a>Interrogation de services à l'aide de WBEMtest  
   
-1.  À partir de la **Démarrer** menu, cliquez sur **exécuter**, puis entrez `WBEMtest`.  
+1.  Dans le menu **Démarrer** , cliquez sur **exécuter**, puis entrez `WBEMtest`.  
   
-2.  La boîte de dialogue WBEMtest.exe apparaît. Cliquer sur **Se connecter**.  
+2.  La boîte de dialogue WBEMtest.exe apparaît. Cliquez sur **Connecter**.  
   
-3.  Dans le premier champ de texte, tapez l'espace de noms de fournisseur WMI pour Gestion de l'ordinateur : root\Microsoft\SqlServer\ComputerManagement11. Cliquer sur **Se connecter**.  
+3.  Dans le premier champ de texte, tapez l'espace de noms de fournisseur WMI pour Gestion de l'ordinateur : root\Microsoft\SqlServer\ComputerManagement11. Cliquez sur **Connecter**.  
   
-4.  Cliquez sur **requête**. Tapez une requête qui retourne les services actuels en cours d’exécution sur l’ordinateur local : **Sélectionnez \* FROM SqlService.** Cliquez sur **Appliquer**.  
+4.  Cliquez sur **Requête**. Tapez une requête qui retourne les services en cours d’exécution sur l’ordinateur local : **sélectionnez \* dans SqlService.** Cliquez sur **Appliquer**.  
   
 5.  Affinez davantage la requête en ajoutant `WHERE ServiceName = "MSSQLSERVER"`.  
   

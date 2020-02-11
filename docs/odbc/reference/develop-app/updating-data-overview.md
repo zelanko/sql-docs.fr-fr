@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble des données de la mise à jour | Microsoft Docs
+title: Présentation de la mise à jour des données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942816"
 ---
 # <a name="updating-data-overview"></a>Vue d’ensemble de la mise à jour des données
-Les applications peuvent mettre à jour les données en exécutant des instructions SQL ou en appelant **SQLSetPos** ou **SQLBulkOperations**. **Mise à jour**, **supprimer**, et **insérer** instructions agir directement sur la source de données et sont généralement prises en charge par les pilotes. Rechercher les mises à jour et les instructions delete contient une spécification des lignes à modifier. Positionné de mise à jour et supprimer des instructions et **SQLSetPos** agissent sur la source de données via un curseur et sont moins couramment pris en charge.  
+Les applications peuvent mettre à jour les données en exécutant des instructions SQL ou en appelant **SQLSetPos** ou **SQLBulkOperations**. Les instructions **Update**, **Delete**et **Insert** agissent directement sur la source de données et sont généralement prises en charge par les pilotes. Les instructions Update et Delete recherchées contiennent une spécification des lignes à modifier. Les instructions Update et DELETE positionnées et **SQLSetPos** agissent sur la source de données via un curseur et sont moins largement prises en charge.  
   
- Si les curseurs peuvent détecter les modifications apportées à l’ensemble de résultats avec les méthodes décrites dans cette section varie selon le type du curseur et comment il est implémenté. Curseurs avant uniquement et ne pas réexaminer les lignes et par conséquent ne détectent pas les modifications. Pour savoir si les curseurs avec défilement peuvent détecter des modifications, consultez [curseurs avec défilement](../../../odbc/reference/develop-app/scrollable-cursors.md).  
+ Le fait que les curseurs puissent détecter les modifications apportées au jeu de résultats avec les méthodes décrites dans cette section dépend du type du curseur et de la façon dont il est implémenté. Les curseurs avant uniquement ne réexaminent pas les lignes et, par conséquent, ne détectent pas les modifications. Pour plus d’informations sur la possibilité de détecter les modifications, consultez [curseurs avec défilement](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient les rubriques suivantes :  
   
 -   [Instructions UPDATE, DELETE et INSERT](../../../odbc/reference/develop-app/update-delete-and-insert-statements.md)  
   

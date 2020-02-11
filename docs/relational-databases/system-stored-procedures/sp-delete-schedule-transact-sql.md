@@ -18,18 +18,18 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008963"
 ---
-# <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
+# <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime une planification.  
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,24 +40,24 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @schedule_id = ] schedule_id` Le numéro d’identification de planification de la planification à supprimer. *id_de_la_planification* est **int**, avec NULL comme valeur par défaut.  
+`[ @schedule_id = ] schedule_id`Numéro d’identification de la planification à supprimer. *schedule_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié, mais ne peut pas être spécifiés.  
+> **Remarque :** *Schedule_id* ou *schedule_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @schedule_name = ] 'schedule_name'` Le nom de la planification à supprimer. *nom_de_la_planification* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'`Nom de la planification à supprimer. *schedule_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié, mais ne peut pas être spécifiés.  
+> **Remarque :** *Schedule_id* ou *schedule_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @force_delete = ] force_delete` Spécifie si la procédure doit échouer si la planification est attachée à un travail. *Force_delete* est de type bit, avec une valeur par défaut **0**. Lorsque *force_delete* est **0**, la procédure stockée échoue si la planification est attachée à un travail. Lorsque *force_delete* est **1**, la planification est supprimée indépendamment de si la planification est attachée à un travail.  
+`[ @force_delete = ] force_delete`Spécifie si la procédure doit échouer si la planification est attachée à un travail. *Force_delete* est de bit, avec **0**comme valeur par défaut. Lorsque *force_delete* a la **valeur 0**, la procédure stockée échoue si la planification est attachée à un travail. Lorsque *force_delete* a la valeur **1**, la planification est supprimée, que la planification soit jointe ou non à un travail.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, il est impossible de supprimer une planification si elle est attachée à un travail. Pour supprimer une planification qui est attachée à un travail, spécifiez la valeur **1** pour *force_delete*. La suppression d'une planification n'arrête pas les travaux en cours d'exécution.  
+ Par défaut, il est impossible de supprimer une planification si elle est attachée à un travail. Pour supprimer une planification attachée à un travail, spécifiez la valeur **1** pour *force_delete*. La suppression d'une planification n'arrête pas les travaux en cours d'exécution.  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
@@ -68,11 +68,11 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 -   **SQLAgentOperatorRole**  
   
- Notez que le propriétaire du travail peut joindre un travail à une planification et détacher un travail d'une planification sans être le propriétaire de la planification. Toutefois, une planification ne peut pas être supprimée si le détachement la conserve sans travaux, sauf si l’appelant est propriétaire de la planification.  
+ Notez que le propriétaire du travail peut joindre un travail à une planification et détacher un travail d'une planification sans être le propriétaire de la planification. Toutefois, une planification ne peut pas être supprimée si le détachement le laisse sans travaux, sauf si l’appelant est le propriétaire de la planification.  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres de la **sysadmin** rôle peut supprimer une planification de travail appartenant à un autre utilisateur.  
+ Seuls les membres du rôle **sysadmin** peuvent supprimer une planification de travail appartenant à un autre utilisateur.  
   
 ## <a name="examples"></a>Exemples  
   

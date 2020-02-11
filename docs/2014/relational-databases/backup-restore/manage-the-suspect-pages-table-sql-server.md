@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921954"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
   Cette rubrique explique comment gérer la table **suspect_pages** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La table **suspect_pages** est conçue pour gérer les informations sur les pages suspectes et aide à déterminer si une restauration est nécessaire ou non. La table [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) réside dans la [base de données msdb](../databases/msdb-database.md).  
   
  Une page est considérée « suspecte » quand le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] rencontre l'une des erreurs suivantes alors qu'il essaie de lire une page de données :  
   
--   Une [erreur 823](../errors-events/mssqlserver-823-database-engine-error.md) provoquée par un contrôle de redondance cyclique (CRC) généré par le système d’exploitation, telle qu’une erreur disque (certaines défaillances matérielles)  
+-   Une [erreur 823](../errors-events/mssqlserver-823-database-engine-error.md) provoquée par un contrôle de redondance cyclique (CRC) émis par le système d’exploitation, telle qu’une erreur disque (certaines erreurs matérielles)  
   
--   Une [erreur 824](../errors-events/mssqlserver-824-database-engine-error.md)telle qu’une page endommagée (toute erreur logique)  
+-   Une [erreur 824](../errors-events/mssqlserver-824-database-engine-error.md), telle qu’une page endommagée (toute erreur logique)  
   
  L’ID de page de chaque page suspecte est enregistré dans la table **suspect_pages** . Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre toutes les pages suspectes détectées lors du traitement standard, notamment dans les cas suivants :  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62921954"
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Pour gérer la table suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Pour gérer la table suspect_pages  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62921954"
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Pour gérer la table suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Pour gérer la table suspect_pages  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

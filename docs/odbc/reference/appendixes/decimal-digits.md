@@ -16,39 +16,39 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130054"
 ---
 # <a name="decimal-digits"></a>Nombres décimaux
-Le *chiffres décimaux* de données decimal et numeric types est défini comme le nombre maximal de chiffres à droite de la virgule décimale, ou à l’échelle des données. Pour les colonnes de nombres à virgule flottante approximatifs ou de paramètres, l’échelle est non définie, car le nombre de chiffres à droite de la virgule décimale n’est pas fixe. Pour les données datetime ou interval qui contient un composant « secondes », les chiffres décimaux est défini comme le nombre de chiffres à droite de la virgule décimale dans le composant « secondes » des données.  
+Les *chiffres décimaux* des types de données decimal et numeric sont définis comme étant le nombre maximal de chiffres à droite de la virgule décimale, ou l’échelle des données. Pour les colonnes ou les paramètres de nombre à virgule flottante approximatifs, l’échelle n’est pas définie, car le nombre de chiffres à droite de la virgule décimale n’est pas fixe. Pour les données DateTime ou Interval qui contiennent un composant seconds, les chiffres décimaux sont définis en tant que nombre de chiffres à droite de la virgule décimale dans le composant seconds des données.  
   
- Pour les types de données SQL_DECIMAL et SQL_NUMERIC, l’échelle maximale est généralement identique à la précision maximale. Toutefois, certaines sources de données imposent une limite distincte sur l’échelle maximale. Pour déterminer les échelles minimales et maximales autorisées pour un type de données, une application appelle **SQLGetTypeInfo**.  
+ Pour les types de données SQL_DECIMAL et SQL_NUMERIC, l’échelle maximale est généralement identique à la précision maximale. Toutefois, certaines sources de données imposent une limite distincte à l’échelle maximale. Pour déterminer les échelles minimale et maximale autorisées pour un type de données, une application appelle **SQLGetTypeInfo**.  
   
- Les chiffres décimaux définis pour chaque type de données SQL concis est indiqué dans le tableau suivant.  
+ Les chiffres décimaux définis pour chaque type de données SQL concis sont présentés dans le tableau suivant.  
   
-|Type SQL|Chiffres décimaux|  
+|Type SQL|des chiffres décimaux|  
 |--------------|--------------------|  
-|Tous les types caractères et binaires [a]|N/A|  
-|SQL_DECIMAL<br />SQL_NUMERIC|Le nombre défini de chiffres à droite de la virgule décimale. Par exemple, l’échelle d’une colonne définie en tant que NUMERIC(10,3) est 3. Cela peut être un nombre négatif pour prendre en charge le stockage de très grands nombres sans utiliser de notation exponentielle ; par exemple, « 12000 » peuvent être stockées en tant que « 12 » avec une échelle de -3.|  
+|Tous les types caractère et binaire [a]|n/a|  
+|SQL_DECIMAL<br />SQL_NUMERIC|Nombre défini de chiffres à droite de la virgule décimale. Par exemple, l’échelle d’une colonne définie en tant que valeur numérique (10, 3) est 3. Il peut s’agir d’un nombre négatif pour prendre en charge le stockage de très grands nombres sans utiliser la notation exponentielle. par exemple, « 12000 » peut être stocké sous la forme « 12 » avec une échelle de-3.|  
 |Tous les types numériques exacts autres que SQL_DECIMAL et SQL_NUMERIC [a]|0|  
-|Tous les types de données approximatifs [a]|N/A|  
-|SQL_TYPE_DATE et tous les types d’intervalle avec aucun composant « secondes » [a]|N/A|  
-|Tous les types de date/heure sauf SQL_TYPE_DATE et tous les types d’intervalle avec un composant « secondes »|Le nombre de chiffres à droite de la virgule décimale dans la partie secondes de la valeur (en fractions de seconde). Ce nombre ne peut pas être négatif.|  
-|SQL_GUID|N/A|  
+|Tous les types de données approximatifs [a]|n/a|  
+|SQL_TYPE_DATE et tous les types d’intervalle sans composant de secondes [a]|n/a|  
+|Tous les types DateTime sauf SQL_TYPE_DATE et tous les types d’intervalle avec un composant seconds|Nombre de chiffres à droite de la virgule décimale dans la partie des secondes de la valeur (fractions de seconde). Ce nombre ne peut pas être négatif.|  
+|SQL_GUID|n/a|  
   
- [a] le *DecimalDigits* argument de **SQLBindParameter** est ignorée pour ce type de données.  
+ [a] l’argument *DecimalDigits* de **SQLBindParameter** est ignoré pour ce type de données.  
   
- Les valeurs retournées pour les chiffres décimaux ne correspondent pas aux valeurs dans n’importe quel champ de descripteur un. Les valeurs peuvent provenir de la SQL_DESC_SCALE ou le champ SQL_DESC_PRECISION, selon le type de données, comme indiqué dans le tableau suivant.  
+ Les valeurs retournées pour les chiffres décimaux ne correspondent pas aux valeurs d’un champ de descripteur. Les valeurs peuvent provenir du champ SQL_DESC_SCALE ou SQL_DESC_PRECISION, selon le type de données, comme indiqué dans le tableau suivant.  
   
-|Type SQL|Champ de descripteur correspondant à<br /><br /> Chiffres décimaux|  
+|Type SQL|Champ de descripteur correspondant à<br /><br /> chiffres décimaux|  
 |--------------|----------------------------------------------------------|  
-|Tous les types caractères et binaires|N/A|  
+|Tous les types caractère et binaire|n/a|  
 |Tous les types numériques exacts|SCALE|  
-|SQL_BIT|N/A|  
-|Tous les types numériques approximatifs|N/A|  
-|Tous les types de date/heure|PRECISION|  
-|Tous les types d’intervalle avec un composant « secondes »|PRECISION|  
-|Tous les types d’intervalle avec aucun composant « secondes »|N/A|
+|SQL_BIT|n/a|  
+|Tous les types numériques approximatifs|n/a|  
+|Tous les types DateTime|PRECISION|  
+|Tous les types d’intervalles avec un composant « secondes »|PRECISION|  
+|Tous les types d’intervalle sans composant de secondes|n/a|

@@ -20,18 +20,18 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098816"
 ---
-# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
+# <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie le nombre de déclencheurs exécutés pour l'instruction qui a activé le déclencheur. TRIGGER_NESTLEVEL est utilisé dans les déclencheurs DML et DDL pour déterminer le niveau d'imbrication actuel.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +61,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>A. Test du niveau d'imbrication d'un déclencheur DML spécifique  
+### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>R. Test du niveau d'imbrication d'un déclencheur DML spécifique  
   
 ```  
 IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID('xyz') , 'AFTER' , 'DML' ) ) > 5 )  

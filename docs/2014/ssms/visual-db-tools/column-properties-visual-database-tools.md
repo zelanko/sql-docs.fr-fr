@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990203"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
@@ -47,19 +47,19 @@ ms.locfileid: "62990203"
  **Sauvegarde de la base de données**  
  Affiche le nom de la source de données pour la colonne sélectionnée. (S'applique uniquement à OLE DB.)  
   
- **Catégorie Divers**  
+ **Catégorie divers**  
  S'étend pour afficher les propriétés restantes.  
   
  **Type de données**  
  Affiche le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
- **Incrément d'identité**  
+ **Incrément d’identité**  
  Indique l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** pour chaque ligne ultérieure de la colonne d’identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- **Valeur initiale de la propriété Identity**  
+ **Valeur initiale d’identité**  
  Affiche la valeur de départ affectée à la première ligne de la table pour la colonne d'identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- **Est d'identité**  
+ **Est une identité**  
  Détermine si la colonne sélectionnée est la colonne identité de la table. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
  **Longueur**  
@@ -113,7 +113,7 @@ ms.locfileid: "62990203"
  **Classement**  
  Affiche le paramètre de classement pour la colonne sélectionnée. Pour modifier ce paramètre, cliquez sur **Classement**, puis sur le bouton de sélection **(…)** à droite de la valeur.  
   
- **Catégorie Spécification de la colonne calculée**  
+ **Catégorie de spécification de colonne calculée**  
  Peut être développée pour afficher les propriétés **Formule** et **Est persistant**. Si la colonne est calculée, la formule est également affichée. Pour modifier la formule, développez cette catégorie et modifiez-la dans la propriété **Formule** .  
   
  **Formule**  
@@ -128,10 +128,10 @@ ms.locfileid: "62990203"
  **Description**  
  Affiche la description de la colonne. Pour afficher la description complète ou pour la modifier, cliquez sur Description, puis sur le bouton de sélection **(…)** à droite de la propriété.  
   
- **Catégorie Spécification de texte intégral**  
+ **Catégorie spécification de texte intégral**  
  Peut être développée pour afficher les propriétés spécifiques aux colonnes de texte intégral.  
   
- **Est d'index de texte intégral**  
+ **Est un index de recherche en texte intégral**  
  Indique si cette colonne est indexée en texte intégral. Cette propriété ne peut prendre la valeur **Oui** que si le type de données de cette colonne peut être soumis à une recherche en texte intégral et si la table contenant cette colonne contient un index de texte intégral. Pour modifier cette valeur, cliquez dessus, développez la liste déroulante et choisissez une autre valeur.  
   
  **Colonne de type de texte intégral**  
@@ -145,46 +145,47 @@ ms.locfileid: "62990203"
   
  Si vous sélectionnez une **langue** avant de sélectionner **Sémantique statistique**, et que la langue sélectionnée n'est pas associée à un modèle linguistique sémantique, l'option **Sémantique statistique** est définie avec la valeur **Non** et ne peut pas être modifiée. Si vous sélectionnez **Oui** pour l'option **Sémantique statistique** avant de sélectionner une **langue**, les langues disponibles dans la colonne **Langue** sont limitées à celles pour lesquelles il existe une prise en charge de modèle linguistique sémantique.  
   
- **A un abonné autre que SQL Server**  
+ **A un abonné non-SQL Server**  
  Indique si la colonne a un abonné autre que Microsoft SQL Server.  
   
- **Catégorie Spécification du compteur**  
+ **Catégorie spécification d’identité**  
  Développez pour afficher les propriétés **Est d’identité**, **Incrément d’identité**et **Valeur initiale de la propriété Identity**.  
   
- **Est d'identité**  
+ **Est une identité**  
  Détermine si la colonne sélectionnée est la colonne identité de la table. Pour modifier la propriété, ouvrez la table dans le Concepteur de tables et modifiez-la dans la fenêtre **Propriétés** . Ce paramètre s’applique uniquement aux colonnes dont le type de données est basé sur les nombres, comme *int*.  
   
- **Incrément d'identité**  
+ **Incrément d’identité**  
  Affiche l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** à chaque nouvelle ligne. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
   
- **Valeur initiale de la propriété Identity**  
+ **Valeur initiale d’identité**  
  Affiche la valeur attribuée à la première ligne de la table. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
   
  **Est déterministe**  
  Indique si le type de données de la colonne sélectionnée peut être déterminé avec certitude.  
   
- **Publiée via DTS**  
+ **Est publié par DTS**  
  Indique si la colonne est publiée via DTS.  
   
- **Indexable**  
+ **Est indexable**  
  Indique si la colonne sélectionnée peut être indexée. Par exemple, les colonnes calculées non déterministes ne peuvent pas être indexées.  
   
- **Publiée par fusion**  
+ **Est publié par fusion**  
  Indique si la colonne est publiée par fusion.  
   
- **Pas pour la réplication**  
+ **N’est pas pour la réplication**  
  Indique si les valeurs d'identité d'origine sont préservées pendant la réplication. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
- **Répliquée**  
+ **Est répliquée**  
  Indique si cette colonne est répliquée dans un autre emplacement.  
   
  **Est RowGuid**  
- Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne en tant que ROWGUID. Vous pouvez définir cette valeur sur **Oui** uniquement pour une colonne avec le type de données `uniqueidentifier`. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
+ Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne en tant que ROWGUID. Vous pouvez définir cette valeur sur **Oui** uniquement pour une colonne avec le type de `uniqueidentifier`données. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
  **Taille**  
  Affiche la taille en octets autorisée par le type de données de la colonne. Par exemple, un type de données `nchar` peut avoir une longueur égale à 10 (nombre de caractères), mais une taille égale à 20 pour tenir compte des jeux de caractères Unicode.  
   
 > [!NOTE]  
->  La longueur d'un type de données `varchar(max)` varie pour chaque ligne. sp_help retourne (-1) comme longueur de `varchar(max)` colonne. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
+>  La longueur d'un type de données `varchar(max)` varie pour chaque ligne. sp_help retourne (-1) comme longueur de `varchar(max)` la colonne. 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
   
   

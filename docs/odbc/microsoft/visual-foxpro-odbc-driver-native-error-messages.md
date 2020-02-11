@@ -1,5 +1,5 @@
 ---
-title: Messages des erreurs natives de pilote ODBC Visual FoxPro | Microsoft Docs
+title: Messages d’erreur natifs du pilote ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cb5022df9628607c94754cbbadceecaea02c4db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087778"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messages des erreurs natives du pilote ODBC Visual FoxPro
-Les tableaux suivants répertorient les messages d’erreur natifs pour le pilote ODBC Visual FoxPro.  
+Les tableaux suivants répertorient les messages d’erreur natifs du pilote ODBC Visual FoxPro.  
   
 ## <a name="001"></a>001  
   
 |||  
 |-|-|  
-|1|Fonctionnalité n’est pas disponible.|  
+|1|La fonctionnalité n’est pas disponible.|  
 |2|Échec de l’opération d’entrée/sortie.|  
-|3|Handle libre n’est pas trouvé.|  
-|5\.|Utilisation d’un handle non alloué.|  
-|99|Annulation de la procédure.|  
+|3|Handle libre introuvable.|  
+|5|Utilisation d’un descripteur non alloué.|  
+|99|Procédure annulée.|  
   
 ## <a name="100"></a>100  
   
@@ -41,94 +41,94 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
 |100|Trop de fichiers ouverts.|  
 |101|Impossible d’ouvrir le fichier.|  
 |102|Impossible de créer le fichier.|  
-|105|Erreur d’écriture dans le fichier.|  
+|105|Erreur lors de l’écriture dans le fichier.|  
 |107|Longueur de clé non valide.|  
-|109|Enregistrement est hors limites.|  
-|110|Enregistrement n’est pas dans l’index.|  
+|109|L’enregistrement est hors limites.|  
+|110|L’enregistrement n’est pas dans l’index.|  
 |111|Descripteur de fichier non valide.|  
-|113|Fichier n’est pas ouvert.|  
-|114|Espace disque est insuffisant *valeur*.|  
+|113|Le fichier n’est pas ouvert.|  
+|114|Espace disque insuffisant pour la *valeur*.|  
 |115|Opération non valide pour le curseur.|  
-|118|Fichier d’index ne correspond pas à la table.|  
-|119|Aucune table n’est ouvert.|  
-|120|Fichier n’existe pas.|  
+|118|Le fichier d’index ne correspond pas à la table.|  
+|119|Aucune table n’est ouverte.|  
+|120|Le fichier n’existe pas.|  
 |121|Le fichier existe déjà.|  
-|122|Table n’a aucun ordre d’index à définir.|  
-|123|Pas d’une table.|  
-|125|Expression d’index dépasse la longueur maximale.|  
-|127|Vous devez utiliser une expression logique avec FOR ou WHILE, clause.|  
-|128|Pas d’une expression numérique.|  
-|129|Variable n’est pas trouvée.|  
-|132|Fichier est en cours d’utilisation.|  
-|133|Index ne correspond pas à la table. Supprimer le fichier d’index et recréez l’index.|  
-|135|Fin de fichier.|  
-|136|Début de la file a rencontré.|  
-|137|Alias est introuvable.|  
-|139|Vous devez utiliser une expression logique avec le filtre.|  
+|122|La table n’a pas d’ordre d’index défini.|  
+|123|N’est pas une table.|  
+|125|L’expression d’index dépasse la longueur maximale.|  
+|127|Vous devez utiliser une expression logique avec une clause FOR ou WHILe.|  
+|128|N’est pas une expression numérique.|  
+|129|Variable introuvable.|  
+|132|Le fichier est en cours d’utilisation.|  
+|133|L’index ne correspond pas à la table. Supprimez le fichier d’index et recréez l’index.|  
+|135|Fin de fichier rencontrée.|  
+|136|Début du fichier rencontré.|  
+|137|L’alias est introuvable.|  
+|139|Vous devez utiliser une expression logique avec un filtre.|  
 |142|Relation cyclique.|  
-|143|Aucun champ n’a été trouvé à copier.|  
-|144|La commande localiser doit être émise avant la commande de continuer.|  
-|145|Doit être un caractère ou un champ de clé numérique.|  
+|143|Aucun champ à copier n’a été trouvé.|  
+|144|La commande LOCATe doit être émise avant la commande CONTINUE.|  
+|145|Doit être un champ de caractère ou de clé numérique.|  
 |146|Impossible d’écrire dans un fichier en lecture seule.|  
-|147|Table cible est déjà engagée dans une relation.|  
-|148|L’expression a été réactivée pendant l’exécution du filtre.|  
+|147|La table cible est déjà engagée dans une relation.|  
+|148|L’expression a été entrée à nouveau lors de l’exécution du filtre.|  
 |149|Mémoire insuffisante pour la mémoire tampon.|  
 |150|Mémoire insuffisante pour le mappage de fichier.|  
-|155|Appel non valide.|  
-|156|Noms de champs dupliqués.|  
+|155|Appel buffdirty non valide.|  
+|156|Noms de champ en double.|  
 |158|Aucun champ à traiter.|  
-|159|Dépassement de capacité numérique. Données ont été perdues.|  
-|162|Procédure '*valeur*' est introuvable.|  
-|165|*valeur* n’est pas lié à la zone de travail en cours.|  
-|170|Variable '*valeur*' est introuvable.|  
-|171|Impossible d’ouvrir le fichier *valeur*.|  
-|173|Fichier '*valeur*' n’existe pas.|  
-|174|«*valeur*' n’est pas une variable de mémoire.|  
-|175|«*valeur*' n’est pas une variable de fichier.|  
-|176|«*valeur*' n’est pas un tableau.|  
-|177|L’alias*valeur*' est introuvable.|  
-|180|Fichier n’a été pas placé dans la mémoire à l’aide de la commande de chargement.|  
-|182|Il n’est pas suffisamment de mémoire pour terminer cette opération.|  
+|159|Dépassement numérique. Les données ont été perdues.|  
+|162|La procédure «*valeur*» est introuvable.|  
+|165|la *valeur* n’est pas liée à la zone de travail actuelle.|  
+|170|La variable'*value*'est introuvable.|  
+|171|Impossible d’ouvrir la *valeur*du fichier.|  
+|173|Le fichier'*valeur*'n’existe pas.|  
+|174|'*valeur*'n’est pas une variable mémoire.|  
+|175|'*valeur*'n’est pas une variable de fichier.|  
+|176|'*valeur*'n’est pas un tableau.|  
+|177|L’alias'*value*'est introuvable.|  
+|180|Le fichier n’a pas été placé en mémoire à l’aide de la commande LOAD.|  
+|182|La mémoire est insuffisante pour terminer cette opération.|  
   
 ## <a name="200"></a>200  
   
 |||  
 |-|-|  
 |200|Erreur de syntaxe.|  
-|201|Trop de noms utilisé.|  
-|202|Programme est trop grand.|  
+|201|Trop de noms utilisés.|  
+|202|Le programme est trop volumineux.|  
 |203|Trop de variables de mémoire.|  
 |205|Erreur d’imbrication.|  
 |206|Définition de macro récursive.|  
-|209|Ligne est trop longue.|  
-|210|Autorisées DO imbriqués.|  
-|211|IF &#124; ELSE &#124; ENDIF manque.|  
-|212|Imbrication de la structure est trop profonde.|  
-|213|Il est un mot clé manquant dans le pour... ENDFOR ou cas faire... Structure de la commande ENDCASE.|  
-|219|Commande contient une expression/le mot clé non reconnu.|  
-|221|Clause requise absente de commande.|  
-|222|Verbe de commande non reconnue.|  
+|209|La ligne est trop longue.|  
+|210|Le niveau d’imbrication des tâches autorisées est dépassé.|  
+|211|Une instruction IF &#124; ELSE &#124; ENDIF est manquante.|  
+|212|L’imbrication de la structure est trop profonde.|  
+|213|Il manque un mot clé dans le pour... ENDFOR ou DO... Structure de commande ENDCASE.|  
+|219|La commande contient une expression/mot clé non reconnu.|  
+|221|La clause Required est manquante dans la commande.|  
+|222|Verbe de commande non reconnu.|  
 |224|Référence d’indice non valide.|  
 |227|Expression manquante.|  
-|228|Numéro de la table n’est pas valide.|  
-|229|Trop peu d’arguments.|  
+|228|Le numéro de table n’est pas valide.|  
+|229|Arguments insuffisants.|  
 |230|Arguments trop nombreux.|  
-|233|Instruction n’est pas autorisée en mode interactif.|  
-|234|Indice est en dehors des limites définies.|  
-|236|Interrompre le programme avant à l’aide de la reprise.|  
-|238|Aucune instruction de paramètre n’est trouvée.|  
-|239|Doit spécifier des paramètres supplémentaires.|  
-|240|Expression de caractères.|  
-|250|Trop de commandes de procédure sont en vigueur.|  
-|252|Code compilé pour cette ligne est trop long.|  
-|257|Chaîne de clé est trop long.|  
-|291|Expression utilisée avec ASIN() est hors limites.|  
-|292|Ne peut pas utiliser de 0 ou négatif comme argument pour LOG10().|  
-|293|Expression utilisée avec ACOS() est hors limites.|  
-|294|FOXUSER. Fichier DBF n’est pas valide.|  
-|295|Nom de fichier ou chemin d’accès non valide.|  
+|233|L’instruction n’est pas autorisée en mode interactif.|  
+|234|L’indice est en dehors de la plage définie.|  
+|236|Interrompez le programme avant d’utiliser RESUME.|  
+|238|Aucune instruction de paramètre n’a été trouvée.|  
+|239|Vous devez spécifier des paramètres supplémentaires.|  
+|240|N’est pas une expression de caractères.|  
+|250|Un trop grand nombre de commandes de procédure est en vigueur.|  
+|252|Le code compilé pour cette ligne est trop long.|  
+|257|La chaîne de clé est trop longue.|  
+|291|L’expression utilisée avec ASIN () est hors limites.|  
+|292|Impossible d’utiliser 0 ou un négatif comme argument pour LOG10 ().|  
+|293|L’expression utilisée avec ACOS () est hors limites.|  
+|294|FOXUSER. Le fichier DBF n’est pas valide.|  
+|295|Chemin d’accès ou nom de fichier non valide.|  
 |296|Erreur lors de la lecture de la ressource.|  
-|297|Commande est autorisée uniquement en mode interactif.|  
+|297|La commande est autorisée uniquement en mode interactif.|  
   
 ## <a name="300"></a>300  
   
@@ -136,7 +136,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
 |-|-|  
 |301|Incompatibilité de type d’opérateur/opérande.|  
 |302|Incompatibilité de type de données.|  
-|305|Expression évaluée à une valeur non conforme.|  
+|305|L’expression a été évaluée à une valeur non conforme.|  
 |307|Impossible de diviser par 0.|  
 |308|Espace de pile insuffisant.|  
 |337|Impossible d’imbriquer la commande PRINTJOB.|  
@@ -145,191 +145,191 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
   
 |||  
 |-|-|  
-|406|Imprimante n’est pas prête.|  
+|406|L’imprimante n’est pas prête.|  
 |407|Argument non valide utilisé avec la fonction SET.|  
-|410|Impossible de créer des fichiers de travail temporaires.|  
+|410|Impossible de créer les fichiers de travail temporaires.|  
 |423|Erreur lors de la création de l’objet OLE.|  
-|424|Erreur lors de la copie de l’objet OLE dans le Presse-papiers.|  
-|462|*valeur* erreur de cohérence interne.|  
-|465|Erreur de cohérence interne directe de SQL.|  
-|466|Handle de connexion n’est pas valide.|  
-|467|Propriété n’est pas valide pour les curseurs locaux.|  
-|468|Propriété n’est pas valide pour les curseurs de table.|  
-|469|Valeur de propriété est hors limites.|  
-|470|Nom de propriété incorrecte.|  
+|424|Erreur lors de la copie de l’objet OLE dans le presse-papiers.|  
+|462|erreur de cohérence interne de la *valeur* .|  
+|465|Erreur de cohérence interne SQL directe.|  
+|466|Le descripteur de connexion n’est pas valide.|  
+|467|La propriété n’est pas valide pour les curseurs locaux.|  
+|468|La propriété n’est pas valide pour les curseurs de table.|  
+|469|La valeur de la propriété est hors limites.|  
+|470|Nom de la propriété incorrect.|  
 |471|Format de colonne incorrect.|  
-|473|Propriété de niveau de l’environnement n’est pas valide.|  
-|474|Appel non valide émis lors de l’exécution d’une séquence SQLEXEC().|  
-|479|Nom de colonne non valide de mise à jour \\ *valeur*\\.|  
-|489|Champs générales ne peut pas être utilisés dans la condition WHERE d’une instruction update. Modifier la propriété WhereType de la vue.|  
-|491|Aucune table de mise à jour n’est spécifiés. Utilisez la propriété Tables du curseur.|  
-|492|Aucune colonne clé ne spécifiée pour la table de mise à jour \\ *valeur*\\. Utilisez la propriété KeyFieldList du curseur.|  
-|493|Il manque le paramètre SQL.|  
-|494|Définition de la vue a été modifiée.|  
-|495|Avertissement : La clé définie par la propriété KeyField de table *valeur* n’est pas unique.|  
-|498|Instruction SQL SELECT n’est pas valide.|  
-|499|Paramètre SQL *valeur* n’est pas valide.|  
+|473|La propriété de niveau environnement n’est pas valide.|  
+|474|Appel non valide émis lors de l’exécution d’une séquence SQLEXEC ().|  
+|479|\\ ** Valeur\\de nom de colonne de mise à jour non valide.|  
+|489|Les champs General ne peuvent pas être utilisés dans la condition WHERE d’une instruction Update. Modifiez la propriété WhereType de la vue.|  
+|491|Aucune table de mise à jour n’est spécifiée. Utilisez la propriété tables du curseur.|  
+|492|Aucune colonne clé n’est spécifiée pour la \\ *valeur*\\de la table de mise à jour. Utilisez la propriété KeyFieldList du curseur.|  
+|493|Le paramètre SQL est manquant.|  
+|494|La définition de la vue a été modifiée.|  
+|495|AVERTISSEMENT : la clé définie par la propriété keyField pour la *valeur* de la table n’est pas unique.|  
+|498|L’instruction SQL SELECT n’est pas valide.|  
+|499|La *valeur* du paramètre SQL n’est pas valide.|  
   
 ## <a name="500"></a>500  
   
 |||  
 |-|-|  
 |502|Impossible d’écrire dans l’enregistrement, car il est en cours d’utilisation.|  
-|503|Fichier ne peut pas être verrouillé.|  
-|508|Erreur d’initialisation OLE.|  
-|520|Aucune base de données n’est ouverte ou définie comme base de données actuelle.|  
-|522|Erreur de cohérence interne de connectivité.|  
+|503|Impossible de verrouiller le fichier.|  
+|508|Erreur lors de l’initialisation d’OLE.|  
+|520|Aucune base de données n’est ouverte ou définie en tant que base de données actuelle.|  
+|522|Erreur de cohérence interne de la connectivité.|  
 |523|L’exécution a été annulée par l’utilisateur.|  
-|525|Fonction n’est pas prise en charge sur les tables distantes.|  
+|525|La fonction n’est pas prise en charge sur les tables distantes.|  
 |526|Erreur de connectivité : *valeur.*|  
 |527|Impossible de charger la bibliothèque ODBC, ODBC32. DLL.|  
-|528|ODBC point d’entrée manquant, *valeur*.|  
-|530|Extraction annulée ; table distante est fermé.|  
-|532|Conversion de type n’est pas pris en charge.|  
+|528|Point d’entrée ODBC manquant, *valeur*.|  
+|530|Récupération annulée ; la table distante est fermée.|  
+|532|La conversion de type n’est pas prise en charge.|  
 |533|Cette propriété est en lecture seule.|  
-|536|Fonction n’est pas prise en charge sur les tables natifs.|  
-|538|Une procédure stockée s’exécute.|  
-|540|Numéro de session n’est pas valide.|  
-|541|Connexion *valeur* est occupé.|  
-|542|Champs de la table ont été modifiés et ne correspondent plus aux champs de la vue. Afficher les propriétés de champ ne peut pas être définies.|  
-|543|Conversion requise par la propriété DataType de champ de type «*valeur*' n’est pas valide.|  
-|544|Propriété de type de données pour le champ «*valeur*' n’est pas valide.|  
-|545|Mémoire tampon de table pour l’alias \\ *valeur*\ contient des modifications non validées.|  
-|546|Impossible de fermer la table pendant l’exécution d’expression de liaison de table.|  
-|547|Impossible d’insérer une ligne vide d’une vue dans ses tables de base.|  
-|548|Table *valeur* a un ou plusieurs index non structurels ouvert. Veuillez les fermer et réessayez l’instruction Begin Transaction.|  
-|549|Session de données #*valeur* ne peut pas être libérée avec une transaction ouverte.|  
-|550|. Erreur de cohérence interne de DBC.|  
-|557|La base de données doit être ouvert en mode exclusif.|  
-|559|Propriété n’est pas trouvée.|  
-|560|Valeur de propriété n’est pas valide.|  
-|561|Base de données n’est pas valide. Veuillez valider.|  
-|562|Ne peut pas trouver l’objet *valeur* dans la base de données.|  
-|563|Impossible de trouver le mode *valeur* dans la base de données actuelle.|  
-|566|Impossible d’émettre la commande PACK sur une base de données tandis que ses tables sont en cours d’utilisation.|  
-|567|Propriété de clé primaire n’est pas valide ; Vérifiez la base de données.|  
-|570|Base de données est en lecture seule.|  
-|571|Le nom *valeur* est déjà utilisé par un autre|  
-|575|Nom de l’objet n’est pas valide.|  
-|577|Table *valeur* est référencée dans une relation.|  
-|578|Nom de table de base de données non valide.|  
-|579|Commande ne peut pas être émise sur une table avec les curseurs dans la table en mode de mise en mémoire tampon.|  
-|580|Fonctionnalité n’est pas prise en charge pour les non-. Tables DBC.|  
-|581|Champ *valeur* n’accepte pas de valeur null *valeur*.|  
-|583|Violation de la règle de validation d’enregistrement.|  
-|585|Conflit de mise à jour. Utilisez TABLEUPDATE() avec le paramètre lForce pour valider la mise à jour ou TABLEREVERT() pour la mise à jour.|  
-|586|Fonction requiert la ligne ou la table en mode de mise en mémoire tampon.|  
-|587|Non conforme imbriquées OLDVAL() ou CURVAL().|  
-|589|Table ou la mise en mémoire tampon de ligne nécessite que SET MULTILOCKS est définie sur ON.|  
-|590|Échoué de la commande BEGIN TRANSACTION. Niveau d’imbrication est trop profond.|  
+|536|La fonction n’est pas prise en charge sur les tables natives.|  
+|538|Une procédure stockée est en cours d’exécution.|  
+|540|Le numéro de session n’est pas valide.|  
+|541|La *valeur* de la connexion est occupée.|  
+|542|Les champs de la table de base ont été modifiés et ne correspondent plus aux champs de vue. Les propriétés de champ d’affichage ne peuvent pas être définies.|  
+|543|La conversion de type requise par la propriété DataType du champ'*value*'n’est pas valide.|  
+|544|La propriété DataType du champ'*value*'n’est pas valide.|  
+|545|La mémoire tampon de \\la table pour la *valeur*d’alias \ contient des modifications non validées.|  
+|546|Impossible de fermer la table lors de l’exécution de l’expression liée à la table.|  
+|547|Impossible d’insérer une ligne vide à partir d’une vue dans sa ou ses tables de base.|  
+|548|Un ou plusieurs index non structurels sont ouverts dans la *valeur* de la table. Fermez-les et recommencez la transaction.|  
+|549|Impossible de libérer la*valeur* # de session de données avec Open transaction (s).|  
+|550|. Erreur de cohérence interne DBC.|  
+|557|La base de données doit être ouverte en mode exclusif.|  
+|559|La propriété est introuvable.|  
+|560|La valeur de la propriété n’est pas valide.|  
+|561|La base de données n’est pas valide. Veuillez valider.|  
+|562|Impossible de trouver la *valeur* de l’objet dans la base de données.|  
+|563|Impossible de trouver la *valeur* de l’affichage dans la base de données actuelle.|  
+|566|Impossible d’émettre la commande PACK sur une base de données alors que ses tables sont en cours d’utilisation.|  
+|567|La propriété de clé primaire n’est pas valide ; validez la base de données.|  
+|570|La base de données est en lecture seule.|  
+|571|La *valeur* de nom est déjà utilisée pour une autre|  
+|575|Le nom d’objet n’est pas valide.|  
+|577|La *valeur* de la table est référencée dans une relation.|  
+|578|Nom de la table de base de données non valide.|  
+|579|Impossible d’émettre la commande sur une table avec des curseurs en mode de mise en mémoire tampon de table.|  
+|580|La fonctionnalité n’est pas prise en charge pour les non-. Tables DBC.|  
+|581|La *valeur* du champ n’accepte pas la *valeur*null.|  
+|583|La règle de validation d’enregistrement n’est pas respectée.|  
+|585|Conflit de mise à jour. Utilisez TABLEUPDATE () avec le paramètre lForce pour valider la mise à jour ou TABLEREVERT () afin de restaurer la mise à jour.|  
+|586|La fonction requiert le mode de mise en mémoire tampon de ligne ou de table.|  
+|587|OLDVAL imbriqué non conforme () ou incurvé ().|  
+|589|La mise en mémoire tampon d’une table ou d’une ligne requiert l’ensemble de l’ensemble de VERROUILLAGEs.|  
+|590|Échec de la commande BEGIN TRANSACTION. Le niveau d’imbrication est trop profond.|  
 |591|La commande END TRANSACTION ne peut pas être émise sans une commande BEGIN TRANSACTION correspondante.|  
-|592|Commande de restauration ne peut pas être émise sans une commande BEGIN TRANSACTION correspondante.|  
-|593|Commande ne peut pas être émise dans une transaction.|  
-|594|Un fichier non conforme de verrouillage dans une transaction après avoir verrouillé des enregistrements.|  
-|596|Mise en mémoire tampon de table n’est pas activée.|  
-|597|Vues nécessitent DB_BUFOPTROW, soit DB_BUFOPTTABLE.|  
-|598|Code de règle et le déclencheur doit équilibrer l’utilisation des transactions.|  
-|599|Session de données #*valeur* restauration forcée pour toutes les transactions pour éviter un blocage.|  
+|592|Impossible d’émettre la commande ROLLBACK sans commande BEGIN TRANSACTION correspondante.|  
+|593|Impossible d’émettre la commande dans une transaction.|  
+|594|Tentative non autorisée d’effectuer un verrou de fichier dans une transaction après avoir effectué des verrous d’enregistrement antérieurs.|  
+|596|La mise en mémoire tampon de la table n’est pas activée.|  
+|597|Les affichages requièrent DB_BUFOPTROW ou DB_BUFOPTTABLE.|  
+|598|La règle et le code de déclencheur doivent équilibrer l’utilisation des transactions.|  
+|599|La*valeur* # de session de données a été forcée à restaurer toutes les transactions pour éviter un blocage.|  
   
 ## <a name="600"></a>600  
   
 |||  
 |-|-|  
-|601|Nom d’alias est déjà en cours d’utilisation.|  
-|602|Opération non valide pour un champ de type Mémo, général ou image.|  
-|612|Pas de menu ou élément de menu est défini.|  
-|618|Menu n’a pas été défini avec MENU définir.|  
-|624|Titre de menu n’a pas été défini avec DEFINE PAD.|  
-|625|Menu n’a pas été défini avec DEFINE POPUP.|  
-|631|Dimensions du tableau ne sont pas valides.|  
-|637|Fichier doit être ouvert en mode exclusif pour convertir le fichier Mémo.|  
-|638|Champ doit être un champ de type Mémo.|  
-|649|Aucune commande PRINTJOB précédente pour qu’elles correspondent à cette commande.|  
-|651|Annuler ou suspendre n’est pas autorisée.|  
-|659|La table contient des champs de type Mémo qui ne peut pas être convertis ouvert en lecture seule.|  
-|683|Balise de l’index est introuvable.|  
+|601|Le nom d’alias est déjà utilisé.|  
+|602|L’opération n’est pas valide pour un champ MEMO, General ou image.|  
+|612|Aucun menu ou élément de menu de ce type n’est défini.|  
+|618|Le menu n’a pas été défini avec le MENU définir.|  
+|624|Le titre de menu n’a pas été défini avec DEFINE PAD.|  
+|625|Le menu n’a pas été défini avec l’option définir la fenêtre contextuelle.|  
+|631|Les dimensions du tableau ne sont pas valides.|  
+|637|Le fichier doit être ouvert en mode exclusif pour convertir le fichier mémo.|  
+|638|Le champ doit être un champ Mémo.|  
+|649|Aucune commande PRINTJOB précédente ne correspond à cette commande.|  
+|651|CANCEL ou SUSPEND n’est pas autorisé.|  
+|659|La table contient des champs Mémo qui ne peuvent pas être convertis en lecture seule.|  
+|683|La balise d’index est introuvable.|  
   
 ## <a name="700"></a>700  
   
 |||  
 |-|-|  
-|700|Enregistrement est en cours d’utilisation par un autre utilisateur.|  
-|701|Fichier doit être ouvert en mode exclusif.|  
-|702|Fichier est en cours d’utilisation par un autre utilisateur.|  
-|703|Enregistrement n’est pas verrouillé.|  
-|705|Accès au fichier est refusé.|  
-|706|Impossible de trier. Fichiers IDX dans l’ordre décroissant.|  
-|707|Structurelle. Fichier CDX est introuvable.|  
-|708|Fichier est ouvert dans un autre espace de travail.|  
-|712|Nom du champ est non valide ou dupliqué.|  
-|714|Fenêtre «*valeur*' n’a pas été défini.|  
-|718|Fichier est en lecture seule.|  
-|722|Expression de préprocesseur n’est pas valide.|  
-|734|Propriété *valeur* est introuvable.|  
-|737|*valeur* est une méthode, un événement ou un objet.|  
-|738|Propriété *valeur* n’est pas une méthode ou un événement.|  
-|740|*valeur* est une propriété en lecture seule.|  
+|700|L’enregistrement est utilisé par un autre utilisateur.|  
+|701|Le fichier doit être ouvert en mode exclusif.|  
+|702|Le fichier est en cours d’utilisation par un autre utilisateur.|  
+|703|L’enregistrement n’est pas verrouillé.|  
+|705|L’accès au fichier est refusé.|  
+|706|Tri impossible. Fichiers IDX dans l’ordre décroissant.|  
+|707|Opéré. Le fichier CDX est introuvable.|  
+|708|Le fichier est ouvert dans une autre zone de travail.|  
+|712|Le nom du champ est un doublon ou n’est pas valide.|  
+|714|La fenêtre'*valeur*'n’a pas été définie.|  
+|718|Le fichier est en lecture seule.|  
+|722|L’expression de préprocesseur n’est pas valide.|  
+|734|*Valeur* de propriété introuvable.|  
+|737|la *valeur* est une méthode, un événement ou un objet.|  
+|738|La *valeur* de la propriété n’est pas une méthode ou un événement.|  
+|740|la *valeur* est une propriété en lecture seule.|  
 |748|Ce fichier est incompatible avec la version actuelle de Visual FoxPro.|  
-|750|Fichier a été créé dans une version ultérieure de Visual FoxPro à la version actuelle.|  
-|763|Propriété *valeur* existe déjà.|  
-|773|Type d’objet de base de données n’est pas valide.|  
-|784|Cet objet est dérivé d’une classe de base et n’a pas d’une classe parente.|  
+|750|Le fichier a été créé dans une version plus récente de Visual FoxPro que la version actuelle.|  
+|763|La *valeur* de propriété existe déjà.|  
+|773|Le type d’objet de base de données n’est pas valide.|  
+|784|Cet objet est dérivé d’une classe de base et n’a pas de classe parente.|  
   
 ## <a name="800"></a>800  
   
 |||  
 |-|-|  
-|802|SQL : Impossible de localiser la table.|  
+|802|SQL : Table introuvable.|  
 |872|Trop de colonnes.|  
 |879|Aucune clé primaire.|  
-|884|L’unicité des index *valeur* est violée.|  
-|885|Uniquement les balises structurelles peuvent être définis comme candidat.|  
-|886|Index n’accepte pas de valeur NULL.|  
+|884|L’unicité de la *valeur* d’index n’est pas respectée.|  
+|885|Seules les balises structurelles peuvent être définies comme candidates.|  
+|886|L’index n’accepte pas la valeur NULL.|  
 |887|Récurrence non conforme dans l’évaluation de la règle.|  
-|888|Nom de balise est trop long.|  
+|888|Le nom de la balise est trop long.|  
   
 ## <a name="900"></a>900  
   
 |||  
 |-|-|  
-|901|Valeur d’argument de fonction, type ou nombre n’est pas valide.|  
+|901|La valeur, le type ou le nombre d’arguments de la fonction ne sont pas valides.|  
 |902|Échec de l’évaluateur d’expression.|  
-|903|Chaîne est trop longue pour tenir.|  
-|904|** ou ^ erreur de domaine.|  
-|905|LOG() : Zéro ou négatif utilisé comme argument.|  
-|906|L’argument de SQRT() ne peut pas être négatif.|  
-|912|Opération non valide pour un champ général.|  
-|914|Numéro de page de codes n’est pas valide.|  
-|915|Séquence de classement «*valeur*' est introuvable.|  
-|918|Nom de fichier est trop long.|  
-|922|Volume n’existe pas.|  
-|923|Objet *valeur* est introuvable.|  
-|924|*valeur* n’est pas un objet.|  
-|925|Membre inconnu *valeur*.|  
-|928|Instruction est uniquement valide dans une définition de classe.|  
-|929|*valeur* peut seulement être utilisé dans une méthode.|  
-|930|Impossible de redéfinir *valeur*.|  
-|931|Instruction n’est pas dans une procédure.|  
-|934|Instruction est uniquement valide dans une méthode.|  
-|935|L’objet en cours n’hérite pas de classe *valeur*.|  
-|937|Fichier de la procédure «*valeur*' est introuvable.|  
-|938|Objet n’est pas contenu dans un *valeur*.|  
-|939|AVEC / incompatibilité ENDWITH.|  
-|940|Expression n’est pas valide en dehors de WITH / ENDWITH.|  
-|941|Code d’erreur n’est pas valide.|  
-|942|Objets ne peuvent pas être attribués aux tableaux.|  
-|943|Membre *valeur* ne correspond pas à un objet.|  
-|945|L’objet actuel a été publié.|  
-|947|Expression est trop complexe.|  
-|951|Impossible d’effacer l’objet en cours d’utilisation.|  
-|955|WIN. INI/Registre est endommagé.|  
-|957|L’accès aux imprimantes spouleur d’erreur.|  
+|903|La chaîne est trop longue pour être contenue.|  
+|904|* * ou ^ erreur de domaine.|  
+|905|LOG () : zéro ou négatif utilisé comme argument.|  
+|906|L’argument SQRT () ne peut pas être négatif.|  
+|912|L’opération n’est pas valide pour un champ général.|  
+|914|Le numéro de page de codes n’est pas valide.|  
+|915|La séquence de classement «*valeur*» est introuvable.|  
+|918|Le nom de fichier est trop long.|  
+|922|Le volume n’existe pas.|  
+|923|*Valeur* de l’objet introuvable.|  
+|924|la *valeur* n’est pas un objet.|  
+|925|*Valeur*de membre inconnue.|  
+|928|L’instruction est valide uniquement dans une définition de classe.|  
+|929|la *valeur* ne peut être utilisée que dans une méthode.|  
+|930|Impossible de redéfinir la *valeur*.|  
+|931|L’instruction n’est pas dans une procédure.|  
+|934|L’instruction est valide uniquement dans une méthode.|  
+|935|L’objet actuel n’hérite pas de la *valeur*de la classe.|  
+|937|Le fichier de procédure'*valeur*'est introuvable.|  
+|938|L’objet n’est pas contenu dans une *valeur*.|  
+|939|Incompatibilité avec/ENDWITH.|  
+|940|L’expression n’est pas valide en dehors de WITH/ENDWITH.|  
+|941|Code d’erreur non valide.|  
+|942|Les objets ne peuvent pas être assignés à des tableaux.|  
+|943|La *valeur* de membre n’est pas évaluée à un objet.|  
+|945|L’objet actuel a été relâché.|  
+|947|L’expression est trop complexe.|  
+|951|Impossible de supprimer l’objet en cours d’utilisation.|  
+|955|Gagn. Le registre INI/est endommagé.|  
+|957|Erreur lors de l’accès au spouleur d’impression.|  
 |959|Coordonnées non valides.|  
-|960|Redéfinition non conforme de variable *valeur*.|  
-|971|Impossible de compiler jusqu'à la fin de la commande de compilation actuelle.|  
-|972|Tableau *valeur* est en cours d’utilisation.|  
-|974|Tableaux ne peuvent pas être attribués aux éléments du tableau.|  
-|976|Impossible de résoudre le lien secondaire.|  
-|988|Valeur monétaire est hors limites.|  
+|960|Redéfinition non conforme de la *valeur*de la variable.|  
+|971|Compilation impossible tant que la commande de compilation en cours n’est pas terminée.|  
+|972|La *valeur* du tableau est en cours d’utilisation.|  
+|974|Les tableaux ne peuvent pas être assignés à des éléments de tableau.|  
+|976|Impossible de résoudre lien secondaire.|  
+|988|La valeur monétaire est hors limites.|  
 |990|Annuler.|  
-|999|Fonction n’est pas implémentée.|
+|999|La fonction n’est pas implémentée.|

@@ -20,16 +20,16 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039010"
 ---
 # <a name="conditional-expressions-xquery"></a>Expressions conditionnelles (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery prend en charge l’instruction conditionnelle suivante **if-then-else** instruction :  
+  XQuery prend en charge l’instruction **if-then-else** suivante :  
   
 ```  
 if (<expression1>)  
@@ -39,7 +39,7 @@ else
   <expression3>  
 ```  
   
- Suivant la valeur booléenne effective de `expression1`, `expression2` ou `expression3` est évaluée. Exemple :  
+ Suivant la valeur booléenne effective de `expression1`, `expression2` ou `expression3` est évaluée. Par exemple :  
   
 -   Si l'expression de test, `expression1`, aboutit à une séquence vide, le résultat est False.  
   
@@ -47,15 +47,15 @@ else
   
 -   Si l'expression de test, `expression1`, aboutit à une séquence d'un ou plusieurs nœuds, le résultat de l'expression est True.  
   
--   Sinon, une erreur statique est générée.  
+-   Dans le cas contraire, une erreur statique est générée.  
   
- En outre, notez les points suivants :  
+ Notez également les éléments suivants :  
   
 -   L'expression de test doit figurer entre parenthèses.  
   
--   Le **else** expression est requise. Si vous n'en avez pas besoin, vous pouvez renvoyer « ( ) », comme le montrent les exemples de cette rubrique.  
+-   L’expression **else** est obligatoire. Si vous n'en avez pas besoin, vous pouvez renvoyer « ( ) », comme le montrent les exemples de cette rubrique.  
   
- Par exemple, la requête suivante porte sur le **xml** variable de type. Le **si** condition teste la valeur de la variable SQL (@v) à l’intérieur de l’expression XQuery à l’aide de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) fonction d’extension. Si la valeur de la variable « FirstName », elle retourne le <`FirstName`> élément. Sinon, elle retourne le <`LastName`> élément.  
+ Par exemple, la requête suivante est spécifiée par rapport à la variable de type **XML** . La condition **If** teste la valeur de la variable SQL@v() à l’intérieur de l’expression XQuery à l’aide de la fonction d’extension de [fonction SQL : variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Si la valeur de la variable est « FirstName », elle retourne `FirstName` l’élément <>. Sinon, elle retourne l’élément `LastName` <>.  
   
 ```  
 declare @x xml  
@@ -74,13 +74,13 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <FirstName>fname</FirstName>  
 ```  
   
- La requête suivante extrait les deux premières descriptions de fonctionnalités de la description de catalogue de produit d'un modèle de produit spécifique. S’il existe plus de fonctionnalités dans le document, il ajoute un <`there-is-more`> élément avec un contenu vide.  
+ La requête suivante extrait les deux premières descriptions de fonctionnalités de la description de catalogue de produit d'un modèle de produit spécifique. S’il y a plus de fonctionnalités dans le document, il ajoute `there-is-more` un <élément> avec un contenu vide.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,9 +104,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Dans la requête précédente, la condition dans le **si** expression vérifie s’il existe plus de deux éléments enfants de <`Features`>. Si tel est le cas, elle renvoie l'élément `\<there-is-more/>` dans le résultat.  
+ Dans la requête précédente, la condition dans l’expression **If** vérifie s’il existe plus de deux éléments enfants dans <`Features`>. Si tel est le cas, elle renvoie l'élément `\<there-is-more/>` dans le résultat.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -122,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- Dans la requête suivante, un <`Location`> élément avec un attribut LocationID est renvoyé si le poste de travail ne spécifie pas les heures d’installation.  
+ Dans la requête suivante, un élément `Location` <> avec un attribut LocationID est retourné si l’emplacement du poste de travail ne spécifie pas les heures d’installation.  
   
 ```  
 SELECT Instructions.query('  
@@ -141,7 +141,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <WorkCenterLocation LocationID="30" />  
@@ -149,7 +149,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- Cette requête peut être écrite sans la **si** clause, comme indiqué dans l’exemple suivant :  
+ Cette requête peut être écrite sans la clause **If** , comme illustré dans l’exemple suivant :  
   
 ```  
 SELECT Instructions.query('  

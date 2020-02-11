@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105261"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
@@ -35,10 +35,10 @@ IsAncestor(Member_Expression1, Member_Expression2)
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Le **IsAncestor** fonction renvoie **true** si le premier membre spécifié est un ancêtre du deuxième membre spécifié. Sinon, la fonction retourne **false**.  
+ La fonction **IsAncestor** retourne la **valeur true** si le premier membre spécifié est un ancêtre du deuxième membre spécifié. Dans le cas contraire, la fonction retourne **false**.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant retourne **true** si [Date]. [ Fiscal]. CurrentMember est un ancêtre de January 2003 :  
+ L’exemple suivant retourne la **valeur true** si [date]. [Fiscal]. CurrentMember est un ancêtre de janvier 2003 :  
   
  `WITH MEMBER MEASURES.ISANCESTORDEMO AS`  
   
@@ -51,7 +51,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ancêtre &#40;MDX&#41;](../mdx/ancestor-mdx.md)   
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [&#41;MDX &#40;MDX](../mdx/ancestor-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

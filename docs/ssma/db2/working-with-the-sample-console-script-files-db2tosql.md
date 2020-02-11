@@ -1,5 +1,5 @@
 ---
-title: Utilisation des fichiers de Script de Console exemple (DB2ToSQL) | Microsoft Docs
+title: Utilisation des exemples de fichiers de script de console (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,74 +10,74 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086174"
 ---
-# <a name="working-with-the-sample-console-script-files-db2tosql"></a>Utilisation des fichiers de Script de Console exemple (DB2ToSQL)
-Quelques exemples de fichiers ont été fournis, ainsi que le produit pour la référence de l’utilisateur et l’utilisation. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins des utilisateurs finaux.  
+# <a name="working-with-the-sample-console-script-files-db2tosql"></a>Utilisation des exemples de fichiers de script de console (DB2ToSQL)
+Quelques exemples de fichiers ont été fournis avec le produit pour la référence et l’utilisation de l’utilisateur. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins de l’utilisateur final.  
   
-## <a name="sample-console-script-files"></a>Exemples de fichiers de Script Console  
-Les fichiers de script de console exemple suivants couvrant différents scénarios ont été fournies pour la référence de l’utilisateur :  
+## <a name="sample-console-script-files"></a>Exemples de fichiers de script de console  
+Les exemples de fichiers de script de console suivants couvrant différents scénarios ont été fournis pour la référence utilisateur :  
   
--   ServersConnectionFileSample.xml  
+-   ServersConnectionFileSample. Xml  
   
--   VariableValueFileSample.xml  
+-   VariableValueFileSample. Xml  
   
--   AssessmentReportGenerationSample.xml  
+-   AssessmentReportGenerationSample. Xml  
   
--   SqlStatementConversionSample.xml  
+-   SqlStatementConversionSample. Xml  
   
--   ConversionAndDataMigrationSample.xml  
+-   ConversionAndDataMigrationSample. Xml  
   
-1.  **ServersConnectionFileSample.xml :**  
+1.  **ServersConnectionFileSample. xml :**  
   
-    -   Cet exemple donne les différents modes de connexion disponible à la base de données source et cible et l’utilisateur peut sélectionner n’importe quel mode selon les besoins. Cet exemple contient les définitions de serveur.  
+    -   Cet exemple fournit les différents modes de connexion disponibles pour la base de données source et cible, et l’utilisateur peut sélectionner n’importe quel mode conformément à la spécification. Cet exemple contient les définitions de serveur.  
   
-    -   L’utilisateur peut se connecter à la base de données requis en modifiant simplement les valeurs à la source requis et les définitions de serveur cible. Dans l’exemple fourni toutes les valeurs ont été fournies comme variable les valeurs qui sont disponibles dans le **VariableValueFileSample.xml**.  Tous les autres paramètres de connexion peuvent être supprimés du fichier de connexion de serveur de travail de l’utilisateur.  
+    -   L’utilisateur peut se connecter à la base de données requise en remplaçant simplement les valeurs par les définitions des serveurs source et cible requis. Dans l’exemple fourni, toutes les valeurs ont été fournies en tant que valeurs de variable disponibles dans **VariableValueFileSample. xml**.  Tous les autres paramètres de connexion peuvent être supprimés du fichier de connexion du serveur de travail de l’utilisateur.  
   
-    -   Pour plus d’informations sur la connexion au serveur source et cible, consultez [création des fichiers de connexion de serveur &#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) .  
+    -   Pour plus d’informations sur la connexion aux serveurs source et cible, consultez [création de fichiers de connexion au serveur &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) .  
   
-2.  **VariableValueFileSample.xml :** Toutes les variables qui ont été utilisés dans la console de l’exemple des fichiers de script et `ServersConnectionFileSample.xml` ont été assemblés dans ce fichier. Pour exécuter les exemples de scripts de console que l’utilisateur doit simplement remplacer la variable exemple valeurs avec l’utilisateur ceux définis et passer ce fichier comme un argument de ligne de commande supplémentaires, ainsi que le fichier de script.  
+2.  **VariableValueFileSample. xml :** Toutes les variables qui ont été utilisées dans les exemples de fichiers de `ServersConnectionFileSample.xml` script de console et qui ont été assemblées dans ce fichier. Pour exécuter les exemples de scripts de la console, l’utilisateur doit simplement remplacer les exemples de valeurs de variables par des scripts définis par l’utilisateur et passer ce fichier comme argument de ligne de commande supplémentaire avec le fichier de script.  
   
-    Pour plus d’informations sur le fichier de valeurs variables, consultez [création de fichiers de valeur Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
+    Pour plus d’informations sur le fichier de valeurs de variable, consultez [création de fichiers de valeurs de variables &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
-3.  **AssessmentReportGenerationSample.xml :** Cet exemple permet à l’utilisateur Générer un rapport d’évaluation xml qui peut être utilisé par l’utilisateur pour l’analyse avant de commencer à convertir et migrer des données.  
+3.  **AssessmentReportGenerationSample. xml :** Cet exemple permet à l’utilisateur de générer un rapport d’évaluation XML qui peut être utilisé par l’utilisateur pour l’analyse avant de commencer à convertir et à migrer des données.  
   
-    Dans le `generate-assessment-report` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (reportez-vous **VariableValueFileSample.xml**) dans le `object-name` attribut le nom de base de données est en cours d’utilisation par l’utilisateur. Selon le type d’objet spécifié, le `object-type` valeur devra également être modifié.  
+    Dans la `generate-assessment-report` commande, l’utilisateur doit mandatorily remplacer la valeur de la variable (refer **VariableValueFileSample. xml**) `object-name` dans l’attribut par le nom de la base de données en cours d’utilisation par l’utilisateur. Selon le type d’objet spécifié, la `object-type` valeur doit également être modifiée.  
   
-    Si l’utilisateur a évaluer plusieurs objets ou des bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `generate-assessment-report` 4 d’exemple de la commande de l’exemple de fichier de script de console.  
+    Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier `metabase-object` plusieurs nœuds, comme `generate-assessment-report` illustré dans l’exemple 4 de la commande de l’exemple de fichier de script de console.  
   
-    Pour plus d’informations sur la génération de rapports, consultez [génération de rapports &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
+    Pour plus d’informations sur la génération de rapports, consultez [génération de rapports &#40;&#41;DB2ToSQL ](../../ssma/db2/generating-reports-db2tosql.md).  
   
-    **Remarques :**  
+    **Notes**  
   
-    Assurez-vous que l’argument de ligne de commande de fichier de valeur de la variable est passée à l’application de console et VariableValueFileSample.xml est mis à jour avec l’utilisateur spécifié les valeurs.  
+    Assurez-vous que l’argument de ligne de commande du fichier de valeur de variable est passé à l’application console et que VariableValueFileSample. xml est mis à jour avec les valeurs spécifiées par l’utilisateur.  
   
-    Assurez-vous qu’argument de ligne de commande de fichier de connexion serveur est passé à l’application de console et le ServersConnectionFileSample.xml est mis à jour avec les valeurs de paramètre de serveur correct.  
+    Vérifiez que l’argument de ligne de commande du fichier de connexion du serveur est passé à l’application console et que ServersConnectionFileSample. xml est mis à jour avec des valeurs de paramètre de serveur correctes.  
   
-4.  **SqlStatementConversionSample.xml :** Cet exemple permet à l’utilisateur Générer le correspondantes `t-sql` script pour la base de données source `sql` commande fournie en tant qu’entrée.  
+4.  **SqlStatementConversionSample. xml :** Cet exemple permet à l’utilisateur de générer le `t-sql` script correspondant pour la commande `sql` de base de données source fournie en entrée.  
   
-    Dans le `convert-sql-statement` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (reportez-vous **VariableValueFileSample.xml**) dans le `context` nom à l’attribut de base de données qui est en cours d’utilisation par l’utilisateur. L’utilisateur sera également être requises pour modifier le `sql` valeur d’attribut à la base de données source `sql` commande nécessitant une qu’il doit être convertie.  
+    Dans la `convert-sql-statement` commande, l’utilisateur doit mandatorily remplacer la valeur de la variable (reportez-vous `context` à **VariableValueFileSample. xml**) dans l’attribut par le nom de la base de données en cours d’utilisation par l’utilisateur. L’utilisateur devra également changer la valeur de l' `sql` attribut en la commande de base `sql` de données source dont il a besoin pour être converti.  
   
-    L’utilisateur peut également fournir des fichiers sql à convertir. Cela a été illustré dans la `convert-sql-statement` 4 d’exemple de la commande de l’exemple de fichier de script de console.  
+    L’utilisateur peut également fournir des fichiers SQL à convertir. Cela a été illustré dans l' `convert-sql-statement` exemple 4 de la commande de l’exemple de fichier de script de console.  
   
     > [!NOTE]  
-    > Assurez-vous que l’argument de ligne de commande de fichier de valeur de la variable est passée à l’application de console et VariableValueFileSample.xml est mis à jour avec l’utilisateur spécifié les valeurs.  
+    > Assurez-vous que l’argument de ligne de commande du fichier de valeur de variable est passé à l’application console et que VariableValueFileSample. xml est mis à jour avec les valeurs spécifiées par l’utilisateur.  
   
-5.  **ConversionAndDataMigrationSample.xml :** Cet exemple permet à l’utilisateur effectuer une migration de bout en bout à partir de la conversion de la migration des données. Vous trouverez ci-dessous la liste des valeurs d’attribut obligatoire qui devront modifier :  
+5.  **ConversionAndDataMigrationSample. xml :** Cet exemple permet à l’utilisateur d’effectuer une migration de bout en bout, de la conversion à la migration des données. La liste des valeurs d’attribut obligatoires qu’ils devront modifier est indiquée ci-dessous :  
   
-    |Nom de la commande|Description|Attribute|  
+    |Nom de la commande|Description|Attribut|  
     |----------------|---------------|-------------|  
-    |`map-schema`|Mappage de schéma de base de données source vers le schéma cible.|`source-schema:` Spécifie la base de données source dont a besoin pour être converti.<br /><br />`sql-server-schema`: Spécifie la base de données cible qui doit être migré vers|  
-    |`convert-schema`|Effectue une conversion de schéma à partir de la source vers le schéma cible.<br /><br />Si l’utilisateur a évaluer plusieurs objets ou des bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `convert-schema` 4 d’exemple de la commande de l’exemple de fichier de script de console.|`object-name`: Spécifiez la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`|  
-    |`synchronize-target`|Synchronise les objets cibles avec la base de données cible.<br /><br />Si l’utilisateur a évaluer plusieurs objets ou des bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `synchronize-target` exemple 3 de la commande de l’exemple de fichier de script de console.|`object-name:` Spécifiez la base de données sql server / nom qui nécessite la création de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`|  
-    |`migrate-data`|Migre les données source vers la cible.<br /><br />Si l’utilisateur a évaluer plusieurs objets ou des bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `migrate-data` exemple 2 de la commande de l’exemple de fichier de script de console.|`object-name:` Spécifie la source de données / tables nom qui nécessite à migrer. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`|  
+    |`map-schema`|Mappage de schéma de la base de données source vers le schéma cible.|`source-schema:`Spécifie la base de données source qui nécessite d’être convertie.<br /><br />`sql-server-schema`: Spécifie la base de données cible à migrer vers|  
+    |`convert-schema`|Effectue une conversion de schéma de la source vers le schéma cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier `metabase-object` plusieurs nœuds, comme `convert-schema` illustré dans l’exemple 4 de la commande de l’exemple de fichier de script de console.|`object-name`: Spécifiez le nom de la base de données ou de l’objet source qui doit être converti. Assurez-vous `object-type` que le correspondant est modifié en fonction du type d’objet spécifié dans le`object-name`|  
+    |`synchronize-target`|Synchronise les objets cibles avec la base de données cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier `metabase-object` plusieurs nœuds, comme `synchronize-target` illustré dans l’exemple 3 de la commande de l’exemple de fichier de script de console.|`object-name:`Spécifiez le nom de la base de données ou de l’objet SQL Server qui doit être créé. Assurez-vous `object-type` que le correspondant est modifié en fonction du type d’objet spécifié dans le`object-name`|  
+    |`migrate-data`|Migre les données sources vers la cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier `metabase-object` plusieurs nœuds, comme `migrate-data` illustré dans l’exemple 2 de la commande de l’exemple de fichier de script de console.|`object-name:`Spécifie le nom de la base de données/des tables source dont la migration doit être effectuée. Assurez-vous `object-type` que le correspondant est modifié en fonction du type d’objet spécifié dans le`object-name`|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Création de fichiers de la valeur de la Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
-[Création des fichiers de connexion de serveur &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
-[Génération de rapports &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)  
+[Création de fichiers de valeurs de variables &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[Création des fichiers de connexion au serveur &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+[Génération de rapports &#40;&#41;DB2ToSQL](../../ssma/db2/generating-reports-db2tosql.md)  
   

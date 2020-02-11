@@ -13,11 +13,11 @@ ms.assetid: 301817a7-d656-4078-b95f-e5b8099d4be4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3582586fe7d3ae57827d1c29da580cbc22f4acfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104834"
 ---
 # <a name="odbc-sql-grammar"></a>Grammaire SQL d’ODBC
-Interopérables applications doivent toujours utiliser la grammaire SQL ODBC dans les instructions SQL. Toutefois, la variation considérable est possible même au sein de cette grammaire. Pour plus d’informations, consultez [interopérabilité of SQL Statements](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md).
+Les applications interopérables doivent toujours utiliser la syntaxe ODBC SQL dans les instructions SQL. Toutefois, une variation considérable est possible même dans cette syntaxe. Pour plus d’informations, consultez [interopérabilité des instructions SQL](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md).

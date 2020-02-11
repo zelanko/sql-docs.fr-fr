@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952171"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Clés de chiffrement (SSRS en mode natif)
@@ -28,7 +28,7 @@ ms.locfileid: "71952171"
   
 -   Configuration d'une nouvelle instance de serveur de rapports pour partager ou utiliser une base de données existante du serveur de rapports  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode natif.  
   
 > [!IMPORTANT]  
 >  Par mesure de sécurité, il est recommandé de modifier régulièrement la clé de chiffrement Reporting Services. Il est recommandé de modifier la clé juste après la mise à niveau d'une version principale de Reporting Services. La modification de la clé après une mise à niveau réduit l'interruption de service provoquée par la modification de la clé de chiffrement Reporting Services hors du cycle de mise à niveau.  
@@ -45,13 +45,13 @@ ms.locfileid: "71952171"
  Pour ouvrir cette page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez le lien dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
- **Backup**  
+ **Secondaires**  
  Copie la clé symétrique dans un fichier que vous spécifiez. La clé symétrique n'est jamais stockée en texte clair. Vous devez taper un mot de passe pour protéger le fichier.  
   
- **Restaurer**  
+ **Tabli**  
  Applique une copie de la clé symétrique enregistrée précédemment à la base de données du serveur de rapports. Vous devez fournir un mot de passe pour déverrouiller le fichier.  
   
- La copie précédente de la clé symétrique de l'instance du serveur de rapports à laquelle vous est actuellement connecté est remplacée par la version restaurée. Après avoir restauré la clé symétrique, vous devez initialiser tous les serveurs de rapports qui utilisent la base de données du serveur de rapports. Pour plus d’informations sur l’initialisation des serveurs de rapports, consultez [initialiser &#40;un Configuration Manager&#41;SSRS de serveur de rapports](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ La copie précédente de la clé symétrique de l'instance du serveur de rapports à laquelle vous est actuellement connecté est remplacée par la version restaurée. Après avoir restauré la clé symétrique, vous devez initialiser tous les serveurs de rapports qui utilisent la base de données du serveur de rapports. Pour plus d’informations sur l’initialisation des serveurs de rapports, consultez [initialiser un serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
  **Modifiés**  
  Recrée la clé symétrique et rechiffre toutes les valeurs chiffrées de la base de données du serveur de rapports. Veillez à arrêter le service Report Server avant de recréer la clé symétrique.  
@@ -60,7 +60,7 @@ ms.locfileid: "71952171"
   
  Notez que la régénération de la clé symétrique peut prendre du temps s'il existe un grand nombre de sources de données et d'abonnements.  
   
- **Delete**  
+ **Supprimer**  
  Supprime la clé symétrique de la totalité du contenu chiffré, notamment les chaînes de connexion et les informations d'identification stockées. Vous devez supprimer uniquement la clé symétrique si vous ne pouvez pas la restaurer.  
   
  Une fois la clé symétrique supprimée, vous devez entrer à nouveau les chaînes de connexion et les informations d'identification stockées manquantes dans les rapports et les sources de données partagées qui ne contiennent plus ces valeurs. Vous devez également mettre à jour tous les abonnements dont les extensions de remise stockent des données chiffrées. Il s'agit notamment de l'extension de remise de partage de fichiers et des éventuelles extensions de remise tierces qui utilisent les valeurs chiffrées.  
@@ -68,10 +68,10 @@ ms.locfileid: "71952171"
  Il n'existe pas de méthode automatique de mise à jour de ces informations. Les rapports, les abonnements et les sources de données partagées qui utilisent des informations d'identification stockées et des chaînes de connexion doivent être mis à jour l'un après l'autre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de configuration de Reporting Services les &#40;rubriques d’aide F1 en&#41; mode natif SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services les rubriques d’aide F1 &#40;le mode natif SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Initialiser un serveur de rapports &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Stocker les données du serveur de rapports chiffrées &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

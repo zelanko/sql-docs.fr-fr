@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782763"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
-  Les modèles SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
+  Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72782763"
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Objet*  
+ *Object*  
  Spécifie le type d'objet qui est représenté au niveau de ce nœud par la chaîne d'expression. Chaque objet représente une classe de collection à partir de ces espaces de noms du modèle objet SMO :  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -83,7 +83,7 @@ ms.locfileid: "72782763"
 |||  
 |-|-|  
 |aaaa|Année à quatre chiffres.|  
-|mm|Mois à deux chiffres (01 à 12).|  
+|MM|Mois à deux chiffres (01 à 12).|  
 |jj|Date à deux chiffres (01 à 31).|  
 |hh|Heure à deux chiffres au format 24 heures (01 à 23).|  
 |mi|Minutes à deux chiffres (01 à 59).|  
@@ -114,7 +114,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-enumerating-objects-using-false"></a>A. Énumération d'objets à l'aide de false()  
+### <a name="a-enumerating-objects-using-false"></a>R. Énumération d'objets à l'aide de false()  
  Cette expression de requête énumère toutes les bases de données dont l’attribut **AutoClose** a la valeur false dans l’instance par défaut sur **MyComputer**.  
   
 ```  
@@ -158,4 +158,4 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>Voir aussi  
  [Invoke-PolicyEvaluation (applet de commande)](../database-engine/invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40Moteur de base de données&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40moteur de base de données&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

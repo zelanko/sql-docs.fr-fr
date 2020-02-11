@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090175"
 ---
-# <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Fournit des informations (statistiques globales) sur le comportement actuel du processus de garbage collection de [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
- Les lignes sont récupérées par le garbage collector dans le cadre du traitement transactionnel normal de la transaction, ou par le thread principal du garbage collection, désigné comme le processus de travail inactif. Lorsqu’une transaction utilisateur est validée, elle enlève un élément de travail à partir de la file d’attente de garbage collection ([sys.dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Toutes les lignes qui peuvent être récupérées par le garbage collection mais auxquelles la transaction utilisateur principale n'a pas eu accès, sont récupérées par le garbage collection via le processus de travail inactif, au cours d'une analyse d'angles inutilisés (une analyse des zones de l'index auxquelles on accède moins).  
+ Les lignes sont récupérées par le garbage collector dans le cadre du traitement transactionnel normal de la transaction, ou par le thread principal du garbage collection, désigné comme le processus de travail inactif. Lorsqu’une transaction utilisateur est validée, elle défile un élément de travail de la file d’attente garbage collection ([sys. dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Toutes les lignes qui peuvent être récupérées par le garbage collection mais auxquelles la transaction utilisateur principale n'a pas eu accès, sont récupérées par le garbage collection via le processus de travail inactif, au cours d'une analyse d'angles inutilisés (une analyse des zones de l'index auxquelles on accède moins).  
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nom de la colonne|type|Description|  
+|Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|Nombre de lignes examinées par le sous-système de garbage collection depuis le démarrage du serveur.|  
 |rows_no_sweep_needed|**bigint**|Nombre de lignes ayant été supprimées sans analyse d'angles inutilisés.|  
@@ -70,6 +70,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

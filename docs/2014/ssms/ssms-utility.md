@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127002"
 ---
 # <a name="ssms-utility"></a>Utilitaire Ssms
   L’utilitaire **Ssms**ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Si cela est spécifié, **Ssms** établit également une connexion à un serveur et ouvre des requêtes, des scripts, des fichiers, des projets et des solutions.  
   
- Vous pouvez spécifier des fichiers contenant des requêtes, des projets ou des solutions. Les fichiers qui contiennent des requêtes sont automatiquement connectés à un serveur si des informations de connexion sont fournies et si le type de fichier est associé à ce type de serveur. Par exemple, les fichiers .sql ouvrent une fenêtre Éditeur de requête SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tandis que des fichiers .mdx ouvrent une fenêtre Éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Les**solutions et projets SQL Server** s’ouvrent dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Vous pouvez spécifier des fichiers contenant des requêtes, des projets ou des solutions. Les fichiers qui contiennent des requêtes sont automatiquement connectés à un serveur si des informations de connexion sont fournies et si le type de fichier est associé à ce type de serveur. Par exemple, les fichiers .sql ouvrent une fenêtre Éditeur de requête SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tandis que des fichiers .mdx ouvrent une fenêtre Éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. **Les solutions et projets SQL Server** s’ouvrent dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
 >  L’utilitaire **Ssms** n’exécute pas de requêtes. Pour exécuter des requêtes depuis la ligne de commande, employez l’utilitaire **sqlcmd** .  
@@ -45,42 +45,42 @@ ms.locfileid: "63127002"
  *scriptfile*  
  Spécifie un ou plusieurs fichiers de script à ouvrir. Le paramètre doit contenir le chemin complet d'accès aux fichiers.  
   
- *projectfile*  
+ *ProjectFile*  
  Spécifie un projet de script à ouvrir. Le paramètre doit contenir le chemin d'accès complet au fichier de projet de script.  
   
- *solutionfile*  
+ *fichiersolution*  
  Spécifie une solution à ouvrir. Le paramètre doit contenir le chemin d'accès complet au fichier de solution.  
   
- [ **-S** _nom_serveur_]  
+ [**-S** _nom_serveur_]  
  Nom du serveur  
   
- [ **-d** _nom_base_de_données_]  
+ [**-d** _DatabaseName_]  
  Nom de la base de données  
   
- [ **-U** _nom_d_utilisateur_]  
+ [**-U** _nom_d_utilisateur_]  
  Nom d'utilisateur lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- [ **-P** _mot de passe_]  
+ [**-P** _mot de passe_]  
  Mot de passe lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- [ **-E**]  
+ [**-E**]  
  Connexion avec l'authentification Windows  
   
- [ **-nosplash**]  
+ [**-nosplash**]  
  Empêche [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] d'afficher le graphique de l'écran de démarrage lors de l'ouverture. Utilisez cette option lors d'une connexion à l'ordinateur exécutant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] au moyen des services Terminal Server sur une connexion dotée d'une bande passante limitée. Cet argument ne respecte pas la casse et peut apparaître avant ou après d'autres arguments  
   
- [ **-log** _[nom_fichier]?_ ]  
+ [**-log**_[nom de fichier] ?_]  
  Consigne l'activité de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans le fichier spécifié à des fins de dépannage  
   
- [ **-?** ]  
+ [**-?**]  
  Affiche l'aide de la ligne de commande.  
   
 ## <a name="remarks"></a>Notes  
  Tous les commutateurs sont facultatifs et séparés par un espace à l'exception des fichiers qui sont séparés par des virgules. Si vous ne spécifiez pas de commutateur, **Ssms** ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tel que spécifié dans les paramètres **Options** du menu **Outils** . Par exemple, si l’option **Au démarrage** de la page **Environnement/Général** spécifie **Ouvrir la fenêtre de nouvelle requête**, **Ssms** s’ouvre avec un éditeur de requête vide.  
   
- Le commutateur **-log** doit apparaître à la fin de la ligne de commande, après tous les autres commutateurs. L'argument de nom de fichier (filename) est facultatif. Si un nom de fichier est spécifié et que le fichier n'existe pas, il est créé. Si le fichier ne peut pas être créé (par exemple, en raison d’un accès en écriture insuffisant), le journal est écrit à la place à l’emplacement APPDATA non localisé (voir ci-dessous). Si l'argument du nom de fichier (filename) n'est pas spécifié, deux fichiers sont écrits dans le dossier des données d'application non localisé de l'utilisateur actuel. Le dossier de données d'application non localisé de SQL Server peut se trouver dans la variable d'environnement APPDATA. Par exemple, pour SQL Server 2012, le dossier est le suivant : \<lecteur système>:\Users\\<nom utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Les deux fichiers sont nommés, par défaut, ActivityLog.xml et ActivityLog.xsl. Le premier contient les données du journal des activités et le deuxième est une feuille de style XML qui offre un moyen plus pratique d'afficher le fichier XML. Utilisez les étapes suivantes pour afficher le fichier journal dans votre visionneuse XML par défaut, comme Internet Explorer :  Cliquez sur Démarrer, sur Exécuter…, tapez « \<lecteur système>:\Users\\<nom_utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml » dans le champ fourni, puis appuyez sur Entrée.  
+ Le commutateur **-log** doit apparaître à la fin de la ligne de commande, après tous les autres commutateurs. L'argument de nom de fichier (filename) est facultatif. Si un nom de fichier est spécifié et que le fichier n'existe pas, il est créé. Si le fichier ne peut pas être créé (par exemple, en raison d’un accès en écriture insuffisant), le journal est écrit à la place à l’emplacement APPDATA non localisé (voir ci-dessous). Si l'argument du nom de fichier (filename) n'est pas spécifié, deux fichiers sont écrits dans le dossier des données d'application non localisé de l'utilisateur actuel. Le dossier de données d'application non localisé de SQL Server peut se trouver dans la variable d'environnement APPDATA. Par exemple, pour SQL Server 2012, le dossier est le suivant : \<lecteur système>:\Users\\<nom utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Les deux fichiers sont nommés, par défaut, ActivityLog.xml et ActivityLog.xsl. Le premier contient les données du journal des activités et le deuxième est une feuille de style XML qui offre un moyen plus pratique d'afficher le fichier XML. Utilisez les étapes suivantes pour afficher le fichier journal dans votre visionneuse XML par défaut, comme Internet Explorer : cliquez sur Démarrer, sur Exécuter…, tapez « \<lecteur système>:\Users\\<nom utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml » dans le champ fourni, puis appuyez sur Entrée.  
   
- Les fichiers qui contiennent des requêtes demandent une confirmation pour la connexion à un serveur si des informations de connexion sont fournies et si le type de fichier est associé à ce type de serveur. Par exemple, les fichiers .sql ouvrent une fenêtre Éditeur de requête SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tandis que des fichiers .mdx ouvrent une fenêtre Éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Les**solutions et projets SQL Server** s’ouvrent dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Les fichiers qui contiennent des requêtes demandent une confirmation pour la connexion à un serveur si des informations de connexion sont fournies et si le type de fichier est associé à ce type de serveur. Par exemple, les fichiers .sql ouvrent une fenêtre Éditeur de requête SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tandis que des fichiers .mdx ouvrent une fenêtre Éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. **Les solutions et projets SQL Server** s’ouvrent dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
  Le tableau suivant mappe des types de serveur à des extensions de fichier.  
   

@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue (Analysis Services - données multidimensionnelles) processus | Microsoft Docs
+title: Boîte de dialogue traiter (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070746"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Traiter (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Traiter** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour traiter les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour ouvrir la boîte de dialogue **Traiter** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] :  
   
--   cliquez avec le bouton droit sur un projet, un cube, une dimension ou une structure d’exploration de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans l’**Explorateur de solutions** et sélectionnez **Traiter** ;  
+-   cliquez avec le bouton droit sur un projet, un cube, une dimension ou une structure d’exploration de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans l’ **Explorateur de solutions** et sélectionnez **Traiter**;  
   
 -   sélectionnez **Traiter** dans la barre d'outils de chaque page du **Cube Designer**ou du **Concepteur de dimensions**, ou dans les pages **Structure d'exploration de données** et **Modèles d'exploration de données** du **Concepteur de modèle d'exploration de données**;  
   
@@ -30,10 +30,10 @@ ms.locfileid: "66070746"
   
  Pour ouvrir la boîte de dialogue **Traiter** de **SQL Server Management Studio** :  
   
--   cliquez avec le bouton droit sur une base de données, un cube, un groupe de mesures, une partition, une dimension ou une structure d’exploration de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans l’**Explorateur d’objets** et sélectionnez **Traiter**.  
+-   cliquez avec le bouton droit sur une base de données, un cube, un groupe de mesures, une partition, une dimension ou une structure d’exploration de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans l’ **Explorateur d’objets** et sélectionnez **Traiter**.  
   
 ## <a name="options"></a>Options  
- **Liste d'objets**  
+ **Liste d’objets**  
  Sélectionnez les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à traiter, ainsi que les options et les paramètres à appliquer. Cette grille comporte les colonnes suivantes :  
   
  **Nom de l’objet**  
@@ -43,15 +43,15 @@ ms.locfileid: "66070746"
  Affiche le type de l'objet à traiter.  
   
  **Options de traitement**  
- Sélectionnez le type de traitement à effectuer sur l'objet sélectionné. Pour plus d’informations sur les options de traitement disponibles, consultez [traitement d’un objet de modèle multidimensionnel](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Sélectionnez le type de traitement à effectuer sur l'objet sélectionné. Pour plus d’informations sur les options de traitement disponibles, consultez [traitement des objets de modèle multidimensionnel](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Paramètres**  
  Affiche le lien hypertexte **Configurer** quand vous choisissez **Traitement incrémentiel** dans les **Options de traitement** des cubes, des groupes de mesures ou des partitions. Cliquez sur **Configurer** pour ouvrir la boîte de dialogue **Mise à jour incrémentielle** . Pour plus d’informations sur la boîte de dialogue **Mise à jour incrémentielle**, consultez [Boîte de dialogue Mise à jour incrémentielle &#40;Analysis Services - Données multidimensionnelles&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Supprimer**  
+ **Remove**  
  Supprime les éléments sélectionnés de la **Liste d’objets**.  
   
- **Analyse d'impact**  
+ **Analyse d’impact**  
  Ouvre la boîte de dialogue **Analyse d’impact** et affiche les objets affectés par le traitement. Pour plus d’informations sur la boîte de dialogue **Analyse d’impact**, consultez [Boîte de dialogue Analyse d’impact &#40;Analysis Services - Données multidimensionnelles&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
@@ -64,7 +64,7 @@ ms.locfileid: "66070746"
  Traite les objets.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Boîte de dialogue de progression processus &#40;Analysis Services - données multidimensionnelles&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services les concepteurs et les boîtes de dialogue &#40;les données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Boîte de dialogue État d’avancement du traitement &#40;Analysis Services-données multidimensionnelles&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

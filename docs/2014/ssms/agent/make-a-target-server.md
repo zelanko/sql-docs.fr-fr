@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798188"
 ---
 # <a name="make-a-target-server"></a>Créer un serveur cible
@@ -35,7 +35,7 @@ ms.locfileid: "72798188"
   
      [Sécurité](#Security)  
   
--   **Pour créer un serveur cible à l'aide de :**  
+-   **Pour créer un serveur cible, utilisez :**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72798188"
 ###  <a name="Security"></a> Sécurité  
  Les travaux distribués dont les étapes sont associées à un proxy sont exécutés dans le contexte du compte proxy du serveur cible. Assurez-vous que les conditions suivantes sont remplies ou que les étapes de travail associées à un proxy ne seront pas téléchargées du serveur maître vers la cible :  
   
--   La sous-clé de Registre du serveur maître **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*nom_instance*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) a la valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
+-   La sous-clé de Registre du serveur maître **\ HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) a la valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
   
 -   Il existe sur le serveur cible un compte proxy possédant le même nom que le compte proxy du serveur maître sur lequel l'étape du travail est exécutée.  
   
@@ -62,20 +62,20 @@ ms.locfileid: "72798188"
   
      Pour résoudre ce problème, vérifiez qu'un compte proxy portant le même nom que le compte proxy du serveur maître sous lequel l'étape s'exécute existe sur le serveur cible.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations d'exécution de cette procédure sont octroyées par défaut aux membres du rôle serveur fixe `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-make-a-target-server"></a>Pour créer un serveur cible  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]et développez-la.  
+1.  Dans l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **Explorateur d’objets,** Connectez-vous à une instance du, puis développez cette instance.  
   
 2.  Cliquez avec le bouton droit sur **Agent SQL Server**, pointez sur **Administration multiserveur**, puis cliquez sur **Transformer en serveur cible**. L' **Assistant Création d'un serveur cible** vous aide à créer un serveur cible.  
   
 3.  Dans la page **Sélectionner un serveur maître** , sélectionnez le serveur maître à partir duquel ce serveur cible va recevoir des travaux.  
   
-     **Choisir le serveur**  
+     **Choisir un serveur**  
      Connectez-vous au serveur maître.  
   
      **Description de ce serveur**  
@@ -105,9 +105,9 @@ ms.locfileid: "72798188"
     GO;  
     ```  
   
-     Pour plus d’informations, [consultez &#40;SP_MSX_ENLIST Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
+     Pour plus d’informations, consultez [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a>Utilisation de SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration automatisée à l’échelle d’une entreprise](automated-administration-across-an-enterprise.md)  
+ [Administration automatisée à l'échelle d'une entreprise](automated-administration-across-an-enterprise.md)  

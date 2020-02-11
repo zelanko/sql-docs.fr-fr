@@ -1,5 +1,5 @@
 ---
-title: Sys.server_audits (Transact-SQL) | Microsoft Docs
+title: sys. server_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125001"
 ---
-# <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
+# <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -34,21 +34,21 @@ ms.locfileid: "68125001"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID de l'audit.|  
-|**name**|**sysname**|Nom de l’audit.|  
-|**AUDIT_GUID**|**uniqueidentifier**|GUID de l’audit qui est utilisé pour énumérer les audits avec membre Server&#124;opérations d’attachement de spécifications d’audit de base de données pendant le démarrage du serveur et base de données.|  
-|**create_date**|**datetime**|Date UTC de création de l'audit.|  
-|**modify_date**|**datetime**|Date UTC de dernière modification de l'audit.|  
-|**principal_id**|**int**|ID du propriétaire de l’audit, tel qu’enregistré dans le serveur.|  
-|**type**|**char(2)**|Type d'audit :<br /><br /> SL - journal des événements de sécurité NT<br /><br /> AL - journal des événements Application NT<br /><br /> FL - fichier sur le système de fichiers|  
-|**type_desc**|**nvarchar(60)**|JOURNAL DE SÉCURITÉ<br /><br /> JOURNAL DES APPLICATIONS<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> 0 - continuer<br /><br /> 1 - arrêter l’instance de serveur<br /><br /> 2 - faire échouer l’opération|  
-|**on_failure_desc**|**nvarchar(60)**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 - désactivé<br /><br /> 1 – Activé|  
-|**QUEUE_DELAY**|**int**|Durée maximale, en millisecondes, avant d'écrire sur disque. Si la valeur 0 est spécifiée, l'audit garantira une écriture avant qu'un événement puisse continuer.|  
-|**predicate**|**nvarchar(3000)**|L’expression de prédicat est appliquée à l’événement.|  
+|**nomme**|**sysname**|Nom de l’audit.|  
+|**audit_guid**|**uniqueidentifier**|GUID de l’audit utilisé pour énumérer les audits avec les spécifications de l’audit de la base de données du serveur membre&#124;lors du démarrage du serveur et des opérations d’attachement de la base de données.|  
+|**create_date**|**DATETIME**|Date UTC de création de l'audit.|  
+|**modify_date**|**DATETIME**|Date UTC de dernière modification de l'audit.|  
+|**principal_id**|**int**|ID du propriétaire de l’audit, inscrit auprès du serveur.|  
+|**entrer**|**Char (2)**|Type d'audit :<br /><br /> SL-journal des événements de sécurité NT<br /><br /> AL-journal des événements de l’application NT<br /><br /> FL-fichier sur le système de fichiers|  
+|**type_desc**|**nvarchar (60)**|JOURNAL DE SÉCURITÉ<br /><br /> JOURNAL DES APPLICATIONS<br /><br /> FILE|  
+|**on_failure**|**tinyint**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> 0-continuer<br /><br /> 1-arrêter l’instance de serveur<br /><br /> 2-opération d’échec|  
+|**on_failure_desc**|**nvarchar (60)**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
+|**is_state_enabled**|**tinyint**|0-désactivé<br /><br /> 1 – Activé|  
+|**queue_delay**|**int**|Durée maximale, en millisecondes, avant d'écrire sur disque. Si la valeur 0 est spécifiée, l'audit garantira une écriture avant qu'un événement puisse continuer.|  
+|**prédicat**|**nvarchar (3000)**|Expression de prédicat qui est appliquée à l’événement.|  
   
 ## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW ANY DEFINITION** autorisation.  
+ Les principaux avec l’autorisation **ALTER ANY Server audit** ou **View any Definition** ont accès à cet affichage catalogue. En outre, le principal ne doit pas être refusé pour **afficher une autorisation de définition** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

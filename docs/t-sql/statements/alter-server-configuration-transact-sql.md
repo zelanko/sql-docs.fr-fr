@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006069"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72006069"
 
 Modifie les options de configuration générales pour le serveur actif dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 
@@ -146,7 +146,7 @@ Liste d'un ou de plusieurs nœuds NUMA. Les ID de nœud NUMA commencent par 0 et
 DIAGNOSTICS LOG  
 Démarre ou arrête la journalisation des données de diagnostic que la procédure sp_server_diagnostics capture. Cet argument définit également les paramètres de configuration de journal SQLDIAG comme le nombre de substitutions du fichier journal, la taille du fichier journal et l’emplacement du fichier. Pour plus d’informations, consultez [Afficher et lire le journal de diagnostic de l’instance de cluster de basculement](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
-ON  
+ACTIVÉ  
 Démarre la journalisation [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] des données de diagnostics à l'emplacement spécifié dans l'option de fichier PATH. Il s’agit de l’argument par défaut.  
   
 OFF  
@@ -220,7 +220,7 @@ Pour plus d’informations, consultez [Changer le contexte de cluster HADR de l�
   
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
-ON  
+ACTIVÉ  
 Active l'option d'extension du pool de mémoires tampons. Cette option augmente la taille de pool de mémoires tampons en utilisant le stockage non volatile. Le stockage non volatile comme les disques SSD conserve les pages de données propres dans le pool. Pour plus d’informations sur cette fonctionnalité, consultez [Extension du pool de mémoires tampons](../../database-engine/configure-windows/buffer-pool-extension.md). L’extension du pool de mémoires tampons n’est pas disponible dans toutes les éditions de SQL Server. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
@@ -241,7 +241,7 @@ Désactive l'option d'extension du pool de mémoires tampons. Désactivez l'opti
 
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
-ON  
+ACTIVÉ  
 Active le partitionnement automatique afin de fractionner les nœuds NUMA matériels volumineux en nœuds NUMA plus petits. La modification de la valeur active nécessite un redémarrage du moteur de base de données.  
   
 OFF  
@@ -260,7 +260,7 @@ Désactive le partitionnement logiciel automatique des nœuds NUMA matériels vo
 
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-ON <br>
+ACTIVÉ <br>
 Active toutes les fonctionnalités de niveau instance qui font partie de la famille de fonctionnalités [Base de données en mémoire](../../relational-databases/in-memory-database.md). Cela inclut les [métadonnées tempdb à mémoire optimisée](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) et le [pool de mémoires tampons hybride](../../database-engine/configure-windows/hybrid-buffer-pool.md). Nécessite un redémarrage.
 
 OFF <br>
@@ -294,12 +294,12 @@ La DLL de ressource du [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssNo
   
 ## <a name="examples"></a>Exemples  
   
-|Catégorie|Éléments syntaxiques proposés|  
+|Category|Éléments syntaxiques proposés|  
 |--------------|------------------------------|  
 |[Définition de l’affinité de processus](#Affinity)|CPU • NUMANODE • AUTO|  
 |[Définition des options du journal de diagnostics](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Définition des propriétés de cluster de basculement](#Failover)|HealthCheckTimeout|  
-|[Modification du contexte de cluster d’un réplica de disponibilité](#ChangeClusterContextExample)|**’** *windows_cluster* **’**|  
+|[Modification du contexte de cluster d’un réplica de disponibilité](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
 |[Définition de l’extension du pool de mémoires tampons](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
 |[Définition des options de base de données en mémoire](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
@@ -312,7 +312,7 @@ Les exemples de cette section montrent comment définir l'affinité de processus
 -   Groupe 2 : nœuds NUMA 8 à 12, UC 128 à 191  
 -   Groupe 3 : nœuds NUMA 13 à 16, UC 192 à 255  
   
-#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Définition de l'affinité sur toutes les unités centrales dans les groupes 0 et 2  
+#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>R. Définition de l'affinité sur toutes les unités centrales dans les groupes 0 et 2  
 L'exemple suivant définit l'affinité sur toutes les unités centrales dans les groupes 0 et 2.  
   
 ```sql  
@@ -357,7 +357,7 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 Les exemples de cette section montrent comment définir les valeurs de l'option de journal de diagnostics.  
   
-#### <a name="a-starting-diagnostic-logging"></a>A. Début de la journalisation des diagnostics  
+#### <a name="a-starting-diagnostic-logging"></a>R. Début de la journalisation des diagnostics  
 L'exemple suivant démarre la journalisation de données de diagnostics.  
   
 ```sql  
@@ -393,7 +393,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 L'exemple suivant illustre la définition des valeurs des propriétés de ressource de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>A. Spécification de la valeur de la propriété HealthCheckTimeout  
+#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>R. Spécification de la valeur de la propriété HealthCheckTimeout  
 L'exemple suivant définit l'option `HealthCheckTimeout` sur 15 000 millisecondes (15 secondes).  
   
 ```sql  
@@ -443,7 +443,7 @@ GO
 
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Activer toutes les fonctionnalités de base de données en mémoire avec les options par défaut
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>R. Activer toutes les fonctionnalités de base de données en mémoire avec les options par défaut
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;

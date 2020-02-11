@@ -18,10 +18,10 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140571"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68140571"
   
  Cette fonction d'ensemble de lignes peut uniquement être référencée dans la clause FROM d'une instruction SELECT comme tout nom de table standard.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,12 +45,12 @@ SEMANTICKEYPHRASETABLE
 ```  
   
 ##  <a name="Arguments"></a> Arguments  
- **table**  
+ **Tableau**  
  Nom d'une table dont l'indexation sémantique et de texte intégral est activée.  
   
  Ce nom peut être en une à quatre parties, mais un nom de serveur distant n'est pas autorisé.  
   
- **column**  
+ **chronique**  
  Nom de la colonne indexée pour laquelle les résultats doivent être retournés L'indexation sémantique doit être activée pour la colonne.  
   
  **column_list**  
@@ -67,15 +67,15 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Table retournée  
  Le tableau suivant décrit les informations sur les expressions clés renvoyées par cette fonction d'ensemble de lignes.  
   
-|Column_name|type|Description|  
+|Column_name|Type|Description|  
 |------------------|----------|-----------------|  
-|**column_id**|**Int**|ID de la colonne à partir de laquelle l’expression clé actuelle a été extraite et indexée.<br /><br /> Consultez les fonctions COL_NAME et COLUMNPROPERTY pour plus d'informations sur la récupération d'un nom de colonne à partir de column_id et inversement.|  
+|**column_id**|**int**|ID de la colonne à partir de laquelle l’expression clé actuelle a été extraite et indexée.<br /><br /> Consultez les fonctions COL_NAME et COLUMNPROPERTY pour plus d'informations sur la récupération d'un nom de colonne à partir de column_id et inversement.|  
 |**document_key**|**\***<br /><br /> Cette clé correspond au type de la clé unique dans la table source.|Valeur de clé unique du document ou de la ligne à partir de laquelle l'expression clé actuelle a été indexée.|  
 |**keyphrase**|**NVARCHAR**|Expression clé trouvée dans la colonne identifiée par column_id et associée au document spécifié par document_key.|  
-|**score**|**REAL**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés du même document dans la colonne indexée.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
+|**enjeu**|**NON**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés du même document dans la colonne indexée.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Pour plus d’informations, consultez [rechercher des expressions clés dans des Documents avec la recherche sémantique](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  
+ Pour plus d’informations, consultez [Rechercher des expressions clés dans des documents avec la recherche sémantique](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  
   
 ## <a name="metadata"></a>Métadonnées  
  Pour obtenir des informations et connaître l'état relatif à l'extraction d'expressions clés sémantiques et au remplissage, interrogez les vues de gestion dynamique suivantes :  
@@ -91,7 +91,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Exemples  
   
-###  <a name="HowToTopPhrases"></a> Exemple 1 : Rechercher les expressions Clées de niveau supérieur dans un Document spécifique  
+###  <a name="HowToTopPhrases"></a>Exemple 1 : Rechercher les expressions clés de niveau supérieur dans un document spécifique  
  L’exemple suivant extrait les 10 expressions clés de niveau supérieur du document spécifié par la variable @DocumentId dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks. La variable @DocumentId représente une valeur de la colonne clé de l’index de recherche en texte intégral. La fonction **SEMANTICKEYPHRASETABLE** récupère efficacement ces résultats en utilisant une recherche d'index au lieu d'une analyse de table. Cet exemple suppose que la colonne est configurée pour l'indexation de texte intégral et sémantique.  
   
 ```sql  
@@ -106,7 +106,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a> Exemple 2 : Rechercher les Documents de niveau supérieur qui contiennent une expression clé spécifique  
+###  <a name="HowToTopDocuments"></a>Exemple 2 : Rechercher les documents de niveau supérieur qui contiennent une expression clé spécifique  
  L’exemple suivant récupère les 25 premiers documents qui contiennent l’expression clé « bracket » dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks. Cet exemple suppose que la colonne est configurée pour l'indexation de texte intégral et sémantique.  
   
 ```sql  

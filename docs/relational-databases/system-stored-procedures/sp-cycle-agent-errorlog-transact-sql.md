@@ -18,18 +18,18 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108352"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ferme actuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cycles et fichier journal des erreurs Agent le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent numéros extension journal d’erreurs comme un redémarrage du serveur. Le nouveau journal d'erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent contient une ligne indiquant que le nouveau journal a été créé.  
+  Ferme le fichier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journal des erreurs de l’agent en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cours et parcourt les numéros d’extension du journal des erreurs de l’agent tout comme un redémarrage du serveur. Le nouveau journal d'erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent contient une ligne indiquant que le nouveau journal a été créé.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,19 +38,19 @@ ms.locfileid: "68108352"
 sp_cycle_agent_errorlog  
 ```  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- Chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est démarré, en cours [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent journal d’erreurs est renommé **SQLAgent.1**; **SQLAgent.1** devient **SQLAgent.2**, **SQLAgent.2** devient **SQLAgent.3**, et ainsi de suite. **sp_cycle_agent_errorlog** vous permet de parcourir les fichiers journaux des erreurs sans arrêter et démarrer le serveur.  
+ Chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que l’agent est démarré, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le journal des erreurs de l’agent en cours est renommé **sqlagent. 1**; **Sqlagent. 1** devient **sqlagent. 2**, **sqlagent. 2** devient **sqlagent. 3**, et ainsi de suite. **sp_cycle_agent_errorlog** vous permet de parcourir les fichiers journaux d’erreurs sans arrêter ni redémarrer le serveur.  
   
- Cette procédure stockée doit être exécutée à partir de la **msdb** base de données.  
+ Cette procédure stockée doit être exécutée à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  
- Les autorisations d’exécution **sp_cycle_agent_errorlog** sont limités aux membres de la **sysadmin** rôle serveur fixe.  
+ Les autorisations d’exécution pour **sp_cycle_agent_errorlog** sont limitées aux membres du rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant parcourt le journal d'erreurs de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -16,19 +16,19 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124868"
 ---
-# <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
+# <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifie les propriétés sélectionnées d'un abonnement de fusion par envoi de données (push). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!IMPORTANT]  
->  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [activer les connexions chiffrées dans le Moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,22 +42,22 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication à modifier. *publication* est **sysname**, avec NULL comme valeur par défaut. La publication doit déjà exister et respecter les règles applicables aux identificateurs.  
+`[ @publication = ] 'publication'`Nom de la publication à modifier. *publication* est de **type sysname**, avec NULL comme valeur par défaut. La publication doit déjà exister et respecter les règles applicables aux identificateurs.  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *bd_abonné*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @property = ] 'property'` Est la propriété à modifier pour la publication concernée. *propriété* est **sysname**, et peut prendre l’une des valeurs dans la table.  
+`[ @property = ] 'property'`Propriété à modifier pour la publication donnée. *Property* est de **type sysname**et peut prendre l’une des valeurs de la table.  
   
-`[ @value = ] 'value'` Nouvelle valeur pour le texte spécifié *propriété*. *valeur* est **nvarchar (255)** , et peut prendre l’une des valeurs dans la table.  
+`[ @value = ] 'value'`Nouvelle valeur de la *propriété*spécifiée. la *valeur* est de type **nvarchar (255)** et peut prendre l’une des valeurs de la table.  
   
-|Propriété|Value|Description|  
+|Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**description**||Description de cet abonnement de fusion.|  
-|**priority**||Est la priorité d’abonnement. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés.|  
+|**importance**||Priorité de l’abonnement. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés.|  
 |**merge_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
-|**merge_job_password**||Mot de passe pour le compte Windows sous lequel l’agent s’exécute.|  
+|**merge_job_password**||Mot de passe du compte Windows sous lequel l’agent s’exécute.|  
 |**publisher_security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication.|  
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication.|  
 |**publisher_login**||Nom de connexion du côté du serveur de publication.|  
@@ -66,14 +66,14 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion à l'Abonné.|  
 |**subscriber_login**||Nom de la connexion du côté Abonné.|  
 |**subscriber_password**||Mot de passe renforcé pour la connexion de l'Abonné.|  
-|**sync_type**|**automatic**|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
+|**sync_type**|**Automatique**|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
 ||**None**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
-|**use_interactive_resolver**|**true**|Autorise la résolution interactive des conflits pour tous les articles autorisant la résolution interactive.|  
-||**false**|Les conflits sont automatiquement résolus au moyen d'un programme de résolution par défaut ou personnalisé.|  
+|**use_interactive_resolver**|**:**|Autorise la résolution interactive des conflits pour tous les articles autorisant la résolution interactive.|  
+||**fausses**|Les conflits sont automatiquement résolus au moyen d'un programme de résolution par défaut ou personnalisé.|  
 |NULL (par défaut)|NULL (par défaut)||  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- **0** (réussite) ou **1** (échec)  
+## <a name="return-code-values"></a>Codet de retour  
+ **0** (succès) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
  **sp_changemergesubscription** est utilisé dans la réplication de fusion.  
@@ -81,7 +81,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
 ## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergesubscription**.  
+ Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

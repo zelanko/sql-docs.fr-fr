@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049437"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administration et maintenance de l'instance de cluster de basculement
@@ -37,7 +37,8 @@ ms.locfileid: "63049437"
  Après avoir installé une FCI, vous pouvez la changer ou la réparer au moyen du programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez ajouter des nœuds supplémentaires à une FCI, exécuter une FCI comme une instance indépendante, ou supprimer un nœud d'une configuration de FCI.  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>Ajout d'un nœud à une instance cluster de basculement existante  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet de maintenir une FCI existante. Si vous choisissez cette option, vous pouvez ajouter d’autres nœuds à votre FCI en exécutant le programme d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l’ordinateur que vous souhaitez ajouter à la FCI. Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;Setup&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) et [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet de maintenir une FCI existante. Si vous choisissez cette option, vous pouvez ajouter d’autres nœuds à votre FCI en exécutant le programme d’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l’ordinateur que vous souhaitez ajouter à la FCI. Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;Setup&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) et [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>Suppression d'un nœud dans une instance cluster de basculement existante  
  Vous pouvez supprimer un nœud d'une FCI en exécutant le programme d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur l'ordinateur que vous souhaitez supprimer de la FCI. Chaque nœud dans une FCI est considéré comme un homologue sans dépendances sur d'autres nœuds de la FCI, et vous pouvez supprimer n'importe quel nœud. Il n'est pas nécessaire qu'un nœud endommagé soit disponible pour le supprimer : la suppression ne désinstalle aucun binaire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du nœud indisponible. Un nœud supprimé peut être ajouté à nouveau à une FCI à tout moment. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
@@ -50,16 +51,16 @@ ms.locfileid: "63049437"
 > [!IMPORTANT]  
 >  N'utilisez pas le même compte pour le compte du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et pour le compte de service WSFC. Si le mot de passe du compte de service WSFC change, votre installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] échouera.  
   
- Sur [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], des SID de service sont utilisés pour les comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Sur [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], des SID de service sont utilisés pour les comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Administration d'une instance de cluster de basculement  
   
 |Description de la tâche|Lien de rubrique|  
 |----------------------|----------------|  
 |Explique comment ajouter des dépendances à une ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Ajouter des dépendances à une ressource SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos est un protocole d'authentification de réseau conçu pour fournir une authentification renforcée pour applications client/serveur. Kerberos fournit une base d'interopérabilité et permet d'améliorer la sécurité de l'authentification réseau à l'échelle de l'entreprise. Vous pouvez utiliser l'authentification Kerberos avec des instances autonomes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou avec des FCI AlwaysOn.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos est un protocole d'authentification de réseau conçu pour fournir une authentification renforcée pour applications client/serveur. Kerberos fournit une base d'interopérabilité et permet d'améliorer la sécurité de l'authentification réseau à l'échelle de l'entreprise. Vous pouvez utiliser l'authentification Kerberos avec des instances autonomes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou avec des FCI AlwaysOn.|[Inscrivez un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Fournit des liens vers un contenu qui explique comment activer l'authentification Kerberos||  
-|Décrit la procédure utilisée pour effectuer une récupération suite à échec d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Récupérer à partir d'une défaillance d'instance de cluster de basculement](recover-from-failover-cluster-instance-failure.md)|  
+|Décrit la procédure utilisée pour effectuer une récupération suite à échec d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Récupérer à partir d’un échec d’instance de cluster de basculement](recover-from-failover-cluster-instance-failure.md)|  
 |Décrit la procédure utilisée pour modifier la ressource d'adresse IP d'une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modifier l'adresse IP d'une instance de cluster de basculement](change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

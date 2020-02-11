@@ -10,62 +10,62 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103231"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Se connecter à MySQL (MySQLToSQL)
-Utilisez le **se connecter à MySQL** boîte de dialogue pour vous connecter à la base de données MySQL que vous souhaitez migrer.  
+Utilisez la boîte de dialogue **se connecter à MySQL** pour vous connecter à la base de données MySQL que vous souhaitez migrer.  
   
-Pour accéder à cette boîte de dialogue, dans le **fichier** menu, sélectionnez **se connecter à MySQL**. Si vous êtes déjà connecté, la commande est **reconnexion à MySQL**.  
+Pour accéder à cette boîte de dialogue, dans le menu **fichier** , sélectionnez **se connecter à MySQL**. Si vous vous êtes connecté précédemment, la commande se **reconnecte à MySQL**.  
   
 ## <a name="options"></a>Options  
 **Fournisseur**  
   
-Fournisseur MySQL disponible est MySQL ODBC 5.1 pilote (approuvé).  
+Le fournisseur MySQL disponible est le pilote MySQL ODBC 5,1 (approuvé).  
   
 **Mode**  
   
-Le mode par défaut est le mode Standard. En mode Standard, vous entrez ou sélectionnez des valeurs pour le MySQL, un nom de serveur, un port du serveur, un nom d’utilisateur et un mot de passe.  
+Le mode par défaut est le mode standard. En mode standard, vous entrez ou sélectionnez des valeurs pour MySQL, le nom du serveur, le port du serveur, le nom d’utilisateur et le mot de passe.  
   
 **Nom du serveur**  
   
-Entrez le nom du serveur MySQL. Il s’agit d’une option de mode Standard.  
+Entrez le nom du serveur MySQL. Il s’agit d’une option de mode standard.  
   
 **Port du serveur**  
   
-Entrez le port du serveur. Le port de serveur par défaut est 3306. Il s’agit d’une option de mode Standard.  
+Entrez le port du serveur. Le port du serveur par défaut est 3306. Il s’agit d’une option de mode standard.  
   
 **Nom d'utilisateur**  
   
-Entrez le nom d’utilisateur SSMA utilisera pour se connecter à la base de données MySQL.  
+Entrez le nom d’utilisateur que SSMA utilisera pour se connecter à la base de données MySQL.  
   
 **Mot de passe**  
   
-Entrez le mot de passe correspondant au nom d'utilisateur indiqué.  
+Entrez le mot de passe correspondant au nom d’utilisateur.  
   
-**SSL**  
+**Socket**  
   
-Si vous souhaitez vous connecter en toute sécurité à MySQL, servez-vous de Socket couche SSL (Secure) en vérifiant la **SSL** case à cocher.  
+Si vous souhaitez vous connecter en toute sécurité à MySQL, utilisez SSL (Secure Socket Layer) en activant la case à cocher **SSL** .  
   
 **Configurer**  
   
-Il fournit une option pour configurer la connexion à MySQL via couche SSL (Secure Socket).  
+Il fournit une option permettant de configurer la connexion à MySQL via SSL (Secure Socket Layer).  
   
 > [!NOTE]  
-> Pour activer **configurer**, SSL doit être défini sur **True**.  
+> Pour activer la **configuration**, SSL doit avoir la valeur **true**.  
   
-Lorsque vous cliquez sur le bouton « Configurer », une boîte de dialogue s’affiche. Pour utiliser le chiffrement alors que la connexion à la base de données MySQL, chemin d’accès aux fichiers de trois certificat suivants présents dans la boîte de dialogue doit être défini [confidentialité améliorée messagerie certificats (PEM)] :  
+Lorsque vous cliquez sur le bouton « configurer », une boîte de dialogue s’affiche. Pour utiliser le chiffrement lors de la connexion à la base de données MySQL, le chemin d’accès aux trois fichiers de certificat suivants présents dans la boîte de dialogue doit être défini [Privacy Enhanced Mail les certificats (PEM)] :  
   
--   **Autorité de certification SSL :** Spécifie le chemin d’accès à un fichier avec une liste d’approbation autorités de certification SSL.  
+-   **Autorité de certification SSL :** Spécifie le chemin d’accès à un fichier avec une liste d’autorités de certification SSL de confiance.  
   
 -   **Certificat SSL :** Spécifie le nom du fichier de certificat SSL à utiliser pour établir une connexion sécurisée.  
   
--   **CLÉ SSL :** Spécifie le nom du fichier de clé SSL à utiliser pour établir une connexion sécurisée.  
+-   **clé SSL :** Spécifie le nom du fichier de clé SSL à utiliser pour établir une connexion sécurisée.  
   
 > [!NOTE]  
-> -   Le **OK** bouton est activé lorsque les informations requises ont été fournies. Si un des chemins de fichier ne sont pas valide, le bouton « OK » reste désactivé.  
-> -   Le **Annuler** bouton ferme la boîte de dialogue et **désactive** l’option SSL à partir du formulaire de connexion principale.  
+> -   Le bouton **OK** est activé lorsque les informations requises ont été fournies. Si l’un des chemins d’accès aux fichiers n’est pas valide, le bouton « OK » reste désactivé.  
+> -   Le bouton **Annuler** ferme la boîte de dialogue et **désactive** l’option SSL dans le formulaire de connexion principal.  
   

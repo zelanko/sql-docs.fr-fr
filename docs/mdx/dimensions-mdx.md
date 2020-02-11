@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999968"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
@@ -39,15 +39,15 @@ Dimensions(Hierarchy_Name)
  Expression de chaîne valide qui spécifie un nom de hiérarchie.  
   
 ## <a name="remarks"></a>Notes  
- Si un numéro de hiérarchie est spécifié, le **Dimensions** fonction retourne une hiérarchie dont la position de base zéro dans le cube est spécifiée de numéro de hiérarchie.  
+ Si un numéro de hiérarchie est spécifié, la fonction **dimensions** retourne une hiérarchie dont la position de base zéro dans le cube est un numéro de hiérarchie spécifié.  
   
- Si un nom de la hiérarchie est spécifié, le **Dimensions** fonction retourne la hiérarchie spécifiée. En général, vous utilisez cette version de chaîne de la **Dimensions** fonction avec les fonctions définies par l’utilisateur.  
+ Si un nom de hiérarchie est spécifié, la fonction **dimensions** retourne la hiérarchie spécifiée. En règle générale, vous utilisez cette version de chaîne de la fonction **dimensions** avec les fonctions définies par l’utilisateur.  
   
 > [!NOTE]  
->  Le **mesures** dimension est toujours représentée par `Dimensions(0)`.  
+>  La dimension **Measures** est toujours représentée `Dimensions(0)`par.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants utilisent le **Dimensions** fonction pour retourner le nom, le nombre de niveaux et le nombre de membres d’une hiérarchie spécifiée, à l’aide d’une expression numérique et une expression de chaîne.  
+ Les exemples suivants utilisent la fonction **dimensions** pour retourner le nom, le nombre de niveaux et le nombre de membres d’une hiérarchie spécifiée, à l’aide d’une expression numérique et d’une expression de chaîne.  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  
@@ -79,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

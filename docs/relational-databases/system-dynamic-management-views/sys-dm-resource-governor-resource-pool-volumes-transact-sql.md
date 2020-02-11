@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft Docs
+title: sys. dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,33 +20,33 @@ ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 801997509242bae7af2d2ae438dfdb952be9e1fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090816"
 ---
-# <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>Sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys. dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les statistiques d'E/S du pool de ressources actuel pour chaque volume de disque. Ces informations sont également disponibles au niveau du pool de ressources dans [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+  Retourne des informations sur les statistiques d'E/S du pool de ressources actuel pour chaque volume de disque. Ces informations sont également disponibles au niveau du pool de ressources dans [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|pool_id|**Int**|ID du pool de ressources. N'accepte pas la valeur NULL.|  
+|pool_id|**int**|ID du pool de ressources. N'accepte pas la valeur NULL.|  
 |volume_name|**sysname**|Nom du volume de disque. N'accepte pas la valeur NULL.|  
-|read_io_queued_total|**int**|Total IOs en file d’attente de lecture dans la mesure où le gouverneur de ressources est réinitialisé. N'accepte pas la valeur NULL.|  
+|read_io_queued_total|**int**|Nombre total d’IOs lus mis en file d’attente depuis la réinitialisation de la ressource du gouverneur. N'accepte pas la valeur NULL.|  
 |read_io_issued_total|**int**|Total d'entrées/sorties de lecture émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |read_ios_completed_total|**int**|Total d'entrées/sorties de lecture terminées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |read_ios_throttled_total|**int**|Total d'entrées/sorties de lecture limitées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |read_bytes_total|**bigint**|Nombre total d'octets lus depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |read_io_stall_total_ms|**bigint**|Durée totale (en millisecondes) entre l'arrivée des E/S de lecture et la fin de l'opération. N'accepte pas la valeur NULL.|  
 |read_io_stall_queued_ms|**bigint**|Durée totale (en millisecondes) entre l'arrivée des E/S de lecture et leur émission. Latence introduite par la gouvernance des ressources d'E/S. N'accepte pas la valeur NULL.|  
-|write_io_queued_total|**Int**|Total des entrées/sorties d'écriture empilées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
-|write_io_issued_total|**Int**|Total des entrées/sorties d'écriture émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
+|write_io_queued_total|**int**|Total des entrées/sorties d'écriture empilées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
+|write_io_issued_total|**int**|Total des entrées/sorties d'écriture émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |write_io_completed_total|**int**|Total des entrées/sorties d'écriture terminées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL|  
-|write_io_throttled_total|**Int**|Total des entrées/sorties d'écriture limitées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL|  
+|write_io_throttled_total|**int**|Total des entrées/sorties d'écriture limitées depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL|  
 |write_bytes_total|**bigint**|Nombre total d'octets écrits depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |write_io_stall_total_ms|**bigint**|Durée totale (en millisecondes) entre l'émission des E/S d'écriture et la fin de l'opération. N'accepte pas la valeur NULL.|  
 |write_io_stall_queued_ms|**bigint**|Durée totale (en millisecondes) entre l'arrivée des E/S d'écriture et leur émission. Latence introduite par la gouvernance des ressources d'E/S. N'accepte pas la valeur NULL.|  
@@ -58,8 +58,8 @@ ms.locfileid: "68090816"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys. resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

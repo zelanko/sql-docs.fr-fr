@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244952"
 ---
 # <a name="color-coding-in-query-editors"></a>Codage en couleurs dans les éditeurs de requête
@@ -28,13 +28,13 @@ ms.locfileid: "75244952"
 |Couleur|Category|  
 |-----------|--------------|  
 |Rouge|Chaîne SQL|  
-|Vert foncé|Comment|  
+|Vert foncé|Commentaire|  
 |Noir avec un arrière-plan argenté|Commande SQLCMD|  
 |Magenta|Fonction système|  
 |Vert|Table système, vue ou fonction table. Également, les schémas système et INFORMATION_SCHEMA.|  
 |Bleu|Mot clé|  
 |Bleu-vert|Numéros de lignes ou paramètre de modèle|  
-|Rouge foncé|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]procédure stockée|  
+|Rouge foncé|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procédure stockée|  
 |Gris foncé|Opérateurs|  
   
 ## <a name="status-bar"></a>Barre d’état  
