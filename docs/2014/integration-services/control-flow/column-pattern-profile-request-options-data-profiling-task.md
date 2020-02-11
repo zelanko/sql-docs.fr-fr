@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832606"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
@@ -25,14 +25,14 @@ ms.locfileid: "62832606"
 > [!NOTE]  
 >  Les options décrites dans cette rubrique apparaissent sur la page **Demandes de profil** de l' **Éditeur de tâche de profilage de données**. Pour plus d’informations sur cette page de l’éditeur, consultez [Éditeur de tâche de profilage de données &#40;page Demandes de profil&#41;](data-profiling-task-editor-profile-requests-page.md).  
   
- Pour plus d’informations sur l’utilisation de la tâche de profilage des données, consultez [Configuration de la tâche de profilage des données](data-profiling-task.md). Pour plus d’informations sur l’utilisation de la Visionneuse du profil des données pour analyser le résultat de la tâche de profilage de données, consultez [Visionneuse du profil des données](data-profile-viewer.md).  
+ Pour plus d’informations sur l’utilisation de la tâche de profilage des données, consultez [Configuration de la tâche de profilage des données](data-profiling-task.md). Pour plus d’informations sur l’utilisation de la visionneuse du profil des données pour analyser le résultat de la tâche de profilage des données, consultez [Visionneuse du profil des données](data-profile-viewer.md).  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>Fonctionnement de l'utilisation des séparateurs et des symboles  
  Avant de calculer les modèles d’une **Demande de profil de modèle de colonne**, la tâche de profilage des données marque les données sous forme de jetons. Autrement dit, elle sépare les valeurs de chaîne en unités plus petites appelées « jetons ». Pour séparer les chaînes en jetons, la tâche se base sur les séparateurs et les symboles que vous spécifiez pour les propriétés **Séparateurs** et **Symboles** :  
   
 -   **Séparateurs** Par défaut, la liste des séparateurs contient les caractères suivants : espace, tabulation horizontale (\t), nouvelle ligne (\n) et retour chariot (\r). Vous pouvez définir d'autres séparateurs mais vous ne pouvez pas supprimer les séparateurs par défaut.  
   
--   **Symboles** par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~ = & / @ ! ? (), <> []{}| #* ^ %`. For example, if the symbols are "`()-' », la valeur « (425) 123-4567 » est tokenisée en tant que ["(", "425", «) », « 123 », «-«, « 4567 », ») »].  
+-   **Symboles** Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~ =&/@ !? () <> []{}| # * ^%`. For example, if the symbols are "`()-« », la valeur «(425) 123-4567 » est sous forme de jeton : [« ( », « 425 », « ) », « 123 », « - », « 4567 », « ) »].  
   
  Un caractère ne peut pas être à la fois un séparateur et un symbole.  
   
@@ -43,21 +43,21 @@ ms.locfileid: "62832606"
   
  Par exemple, vous pouvez regrouper les valeurs « East », « West », « North » et « South » susceptibles d'apparaître dans des adresses postales en utilisant la balise unique « Direction ». Un exemple de cette table des balises est proposé ci-dessous.  
   
-|Balise|Terme|  
+|Tag|Terme|  
 |---------|----------|  
-|Sens|Est|  
-|Sens|Ouest|  
-|Sens|Nord|  
-|Sens|Sud|  
+|Direction|Est|  
+|Direction|West|  
+|Direction|Nord|  
+|Direction|Sud|  
   
  Vous pouvez éventuellement utiliser une autre balise pour regrouper les différents mots qui expriment la notion de « rue » (Street) dans les adresses postales :  
   
-|Balise|Terme|  
+|Tag|Terme|  
 |---------|----------|  
-|Street|Street|  
-|Street|Avenue|  
-|Street|Place|  
-|Street|Way|  
+|Rue|Rue|  
+|Rue|Avenue|  
+|Rue|Emplacement|  
+|Rue|Moyen|  
   
  D'après cette combinaison de balises, le modèle obtenu pour une adresse postale peut se présenter de la manière suivante :  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62832606"
   
  Pour plus d'informations, consultez la section « Options TableorView » dans cette rubrique.  
   
- **Column**  
+ **Colonne**  
  Sélectionnez la colonne existante à profiler. Sélectionnez **(\*)** pour profiler toutes les colonnes.  
   
  Pour plus d'informations, consultez la section « Options de colonne » dans cette rubrique.  
@@ -100,16 +100,16 @@ ms.locfileid: "62832606"
   
 #### <a name="column-options"></a>Options de colonne  
  **IsWildCard**  
- Indique si le caractère générique **(\*)** a été sélectionné. Cette option a la valeur **True** si vous avez sélectionné **(\*)** pour générer le profil de toutes les colonnes. Sa valeur est **False** si vous avez sélectionné une colonne spécifique dont le profil doit être généré. Cette option est en lecture seule.  
+ Spécifie si le caractère générique **(\*)** a été sélectionné. Cette option a la valeur **True** si vous avez sélectionné **(\*)** pour générer le profil de toutes les colonnes. Sa valeur est **False** si vous avez sélectionné une colonne spécifique dont le profil doit être généré. Cette option est en lecture seule.  
   
- **ColumnName**  
- Affiche le nom de la colonne sélectionnée. Cette option est vide si vous avez sélectionné **(\*)** pour générer le profil de toutes les colonnes. Cette option est en lecture seule.  
+ **NomColonne**  
+ Affiche le nom de la colonne sélectionnée. Cette option est vide si vous avez sélectionné **(\*)** pour profiler toutes les colonnes. Cette option est en lecture seule.  
   
  **StringCompareOptions**  
  Cette option ne s'applique pas au profil de modèle de colonne.  
   
 ### <a name="general-options"></a>Options générales  
- **RequestID**  
+ **Identifi**  
  Tapez un nom descriptif pour identifier cette demande de profil. En règle générale, il n'est pas nécessaire de modifier la valeur générée automatiquement.  
   
 ### <a name="options"></a>Options  
@@ -122,13 +122,13 @@ ms.locfileid: "62832606"
  **CaseSensitive**  
  Indiquez si les modèles doivent respecter la casse. La valeur par défaut de cette option est **False**.  
   
- **Séparateurs**  
+ **Délimiteurs**  
  Répertoriez les caractères à traiter en tant qu'équivalents des espaces entre les mots lorsque vous marquez du texte sous forme de jetons. Par défaut, la liste des **séparateurs** contient les caractères suivants : espace, tabulation horizontale (\t), nouvelle ligne (\n) et retour chariot (\r). Vous pouvez définir d'autres séparateurs mais vous ne pouvez pas supprimer les séparateurs par défaut.  
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  
   
- **Symboles**  
- Répertoriez les symboles à conserver dans le cadre des modèles. Les exemples peuvent inclure « / » pour les dates, « : » pour les heures et « @ » pour les adresses de messagerie. Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~ = & / @ ! ? [] de <> (){}| #* ^ %'.  
+ **Sigle**  
+ Répertoriez les symboles à conserver dans le cadre des modèles. Les exemples peuvent inclure « / » pour les dates, « : » pour les heures et « @ » pour les adresses de messagerie. Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~ =&/@ !? () <> []{}| # * ^%».  
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "62832606"
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation de la table des balises » plus haut dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de tâche de profilage de données &#40;page Général&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche de profilage de données &#40;page général&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

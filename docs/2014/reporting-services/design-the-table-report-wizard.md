@@ -1,5 +1,5 @@
 ---
-title: Concevoir le tableau (Assistant Rapport) | Microsoft Docs
+title: Concevoir le tableau (Assistant rapport) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 056e96963c9e8f6450861fb6a54e496b406d0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109280"
 ---
 # <a name="design-the-table-report-wizard"></a>Générer le tableau (Assistant Rapport)
@@ -32,7 +32,7 @@ ms.locfileid: "66109280"
  **Page**  
  Consultez la liste des champs qui s'affichent au niveau de la page. Pour modifier l'ordre des champs, sélectionnez l'un d'entre eux, puis cliquez sur le bouton Haut ou Bas.  
   
- **Grouper**  
+ **Groupe**  
  Affichez la liste des champs en fonction desquels les données doivent être groupées dans le tableau. Pour modifier l'ordre des champs, sélectionnez l'un d'entre eux, puis cliquez sur le bouton Haut ou Bas.  
   
  **Détails**  
@@ -40,6 +40,6 @@ ms.locfileid: "66109280"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables &#40;Générateur de rapports et SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Aide de l’Assistant Rapport](../../2014/reporting-services/report-wizard-help.md)  
+ [Aide de l'Assistant Rapport](../../2014/reporting-services/report-wizard-help.md)  
   
   

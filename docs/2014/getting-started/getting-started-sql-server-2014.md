@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683498"
 ---
 # <a name="getting-started-sql-server-2014"></a>Mise en route (SQL Server 2014)
@@ -22,9 +22,9 @@ ms.locfileid: "74683498"
   
  [Spécifications de produit pour SQL Server 2014](sql-server-2014-product-specifications.md)  
   
- [Nouveautés de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)  
+ [Nouveautés de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)  
   
- [Présentation de SQL Server Cloud hybride 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
+ [Introduction au cloud hybride SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
  [Installation de démarrage rapide de SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
@@ -36,6 +36,6 @@ ms.locfileid: "74683498"
   
  [À propos des termes du contrat de licence SQL Server](about-the-sql-server-license-terms.md)  
   
- [Microsoft SQL Server déclaration de confidentialité](microsoft-sql-server-privacy-statement.md)  
+ [Déclaration de confidentialité de Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
   
   

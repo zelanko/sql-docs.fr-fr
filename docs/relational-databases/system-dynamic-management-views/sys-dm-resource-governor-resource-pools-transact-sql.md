@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982308"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "73982308"
   Retourne des informations sur l'état et la configuration actuels des pools de ressources, ainsi que sur leurs statistiques.  
   
 > [!NOTE]  
->  Pour l’appeler à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
+>  Pour appeler cette valeur [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]partir de ou, utilisez le nom **sys. dm_pdw_nodes_resource_governor_resource_pools**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID du pool de ressources. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|  
-|statistics_start_time|**datetime**|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|  
+|statistics_start_time|**DATETIME**|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|  
 |total_cpu_usage_ms|**bigint**|L'utilisation cumulative de l'UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |cache_memory_kb|**bigint**|Utilisation de la mémoire cache totale actuelle en kilo-octets. N'accepte pas la valeur NULL.|  
 |compile_memory_kb|**bigint**|Utilisation de la mémoire occultée totale actuelle en kilo-octets (Ko). Cette utilisation est essentiellement destinée à la compilation et l'optimisation, mais d'autres utilisations de la mémoire peuvent exister. N'accepte pas la valeur NULL.|  
@@ -76,7 +76,7 @@ ms.locfileid: "73982308"
 |write_io_stall_queued_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Durée totale (en millisecondes) entre l'arrivée des E/S d'écriture et leur émission. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.<br /><br /> Latence introduite par la gouvernance des ressources d'E/S.|  
 |io_issue_violations_total|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Total des violations d'émission d'E/S. Autrement dit, le nombre de fois où la fréquence d'émission d'E/S était inférieure à la fréquence réservée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.|  
 |io_issue_delay_total_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Durée totale (en millisecondes) entre l'émission planifiée et l'émission réelle des E/S. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="remarks"></a>Notes  
  Les groupes de charges de travail et les pools de ressources du gouverneur de ressources respectent un mappage de type plusieurs-à-un. De nombreuses statistiques de pool de ressources sont donc dérivées des statistiques de groupe de charges de travail.  
@@ -88,8 +88,8 @@ ms.locfileid: "73982308"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys. resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

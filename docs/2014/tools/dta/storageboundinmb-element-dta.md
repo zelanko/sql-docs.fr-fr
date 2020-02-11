@@ -1,5 +1,5 @@
 ---
-title: Storageboundinmb, élément (DTA) | Microsoft Docs
+title: Élément StorageBoundInMB, (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460105"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB, élément (Assistant Paramétrage de base de données)
@@ -38,9 +38,10 @@ ms.locfileid: "63460105"
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|`unsignedInt`, longueur illimitée.|  
+|**Type de données et longueur**|
+  `unsignedInt`, longueur illimitée.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Facultatif. Ne peut être utilisé qu'une seule fois pour l'élément `TuningOptions`.|  
+|**Occurrence**|facultatif. Ne peut être utilisé qu'une seule fois pour l'élément `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   

@@ -1,5 +1,5 @@
 ---
-title: Nouveau ou modifier l’enregistrement du serveur (onglet Général) (Analysis Services - données multidimensionnelles) | Microsoft Docs
+title: Nouvelle inscription de serveur ou modifier l’inscription du serveur (onglet général) (Analysis Services-données multidimensionnelles) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774913"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Nouvelle inscription de serveur ou Modifier les propriétés d’inscription du serveur (onglet Général) (Analysis Services - Données multidimensionnelles)
@@ -34,13 +34,13 @@ ms.locfileid: "62774913"
  **Authentification**  
  L'authentification Windows permet à l'utilisateur de se connecter au moyen de ses informations d'identification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows, en tant qu'utilisateur Windows ou en tant que membre d'un groupe Windows.  
   
- **User name**  
+ **Nom d'utilisateur**  
  Cette option n'est pas disponible dans cette version.  
   
  **Mot de passe**  
  Cette option n'est pas disponible dans cette version.  
   
- **Mémoriser le mot de passe**  
+ **Se souvenir du mot de passe**  
  Cette option n'est pas disponible dans cette version.  
   
  **Nom du serveur inscrit**  
@@ -52,7 +52,7 @@ ms.locfileid: "62774913"
  **Test**  
  Cliquez sur cette option pour tester la connexion au serveur sélectionné dans la zone **Nom du serveur**.  
   
- **Enregistrer**  
+ **Été**  
  Cliquez sur ce bouton pour enregistrer les paramètres des serveurs inscrits.  
   
   

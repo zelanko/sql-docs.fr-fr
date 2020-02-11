@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957243"
 ---
 # <a name="create-a-database-master-key"></a>Créer une clé principale de base de données
@@ -25,28 +25,28 @@ Cette rubrique explique comment créer une clé principale de base de données `
 
 **Dans cette rubrique**
 
-- **Avant de commencer :**
+- **Avant de commencer :**
 
-  [Caution](#Security)
+  [Sécurité](#Security)
 
 - [Pour créer une clé principale de base de données à l’aide de Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a>Avant de commencer
+## <a name="BeforeYouBegin"></a> Avant de commencer
 
-### <a name="Security"></a>Caution
+### <a name="Security"></a> Sécurité
 
-#### <a name="Permissions"></a>Autorisations
+#### <a name="Permissions"></a> Autorisations
 
 Requiert l'autorisation CONTROL sur la base de données.
 
-## <a name="TsqlProcedure"></a>Utilisation de Transact-SQL
+## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Pour créer une clé principale de base de données
 
 1. Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données.
 2. Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
 3. Développez **Bases de données système**, cliquez avec le bouton droit sur `master`, puis cliquez sur **Nouvelle requête**.
-4. Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.
+4. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.
 
   ```sql
   -- Creates the master key.

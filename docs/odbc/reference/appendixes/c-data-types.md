@@ -16,46 +16,46 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037770"
 ---
 # <a name="c-data-types"></a>Type de données C
-Types de données ODBC C indiquent le type de données de mémoires tampons de C permet de stocker des données dans l’application.  
+Les types de données ODBC C indiquent le type de données des mémoires tampons C utilisées pour stocker les données dans l’application.  
   
- Tous les pilotes doivent prendre en charge tous les types de données C. Cela est nécessaire car tous les pilotes doivent prendre en charge tous les types C à laquelle les types SQL pris en charge peuvent être convertis, et tous les pilotes prennent en charge au moins un caractère de type SQL. Étant donné que le type SQL de caractère peut être converti vers et depuis tous les types C, tous les pilotes doivent prendre en charge tous les types C.  
+ Tous les pilotes doivent prendre en charge tous les types de données C. Cela est nécessaire, car tous les pilotes doivent prendre en charge tous les types C auxquels les types SQL qu’ils prennent en charge peuvent être convertis, et tous les pilotes prennent en charge au moins un caractère de type SQL. Étant donné que le type SQL de caractère peut être converti vers et à partir de tous les types C, tous les pilotes doivent prendre en charge tous les types C.  
   
- Le type de données C est spécifié dans le **SQLBindCol** et **SQLGetData** fonctionne avec le *TargetType* argument et, dans le **SQLBindParameter**fonctionne avec le *ValueType* argument. Il peut également être spécifié en appelant **SQLSetDescField** pour définir le champ SQL_DESC_CONCISE_TYPE d’un ARD ou d’APD, ou en appelant **SQLSetDescRec** avec la *Type* argument (et le *sous-type* argument si nécessaire) et le *DescriptorHandle* argument défini sur le handle d’un ARD ou d’APD.  
+ Le type de données C est spécifié dans les fonctions **SQLBindCol** et **SQLGetData** avec l’argument *TargetType* et dans la fonction **SQLBindParameter** avec l’argument *ValueType* . Il peut également être spécifié en appelant **SQLSetDescField** pour définir le champ SQL_DESC_CONCISE_TYPE d’un ARD ou APD, ou en appelant **SQLSetDescRec** avec l’argument de *type* (et l’argument de *sous-type* si nécessaire) et l’argument *DESCRIPTORHANDLE* défini sur le handle d’un ARD ou APD.  
   
- Les tableaux suivants répertorient les identificateurs de type valide pour les types de données C. Le tableau répertorie également le type de données ODBC C qui correspond à chaque identificateur et la définition de ce type de données.  
+ Les tableaux suivants répertorient les identificateurs de type valides pour les types de données C. Le tableau répertorie également le type de données ODBC C qui correspond à chaque identificateur et la définition de ce type de données.  
   
-|Identificateur de type C|ODBC C typedef|Type C|  
+|Identificateur de type C|Typedef C ODBC|Type C|  
 |-----------------------|--------------------|------------|  
-|SQL_C_CHAR|SQLCHAR *|unsigned char *|  
-|SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT[j]|SQLUSMALLINT|entier court non signé|  
-|SQL_C_SLONG[j]|SQLINTEGER|long int|  
-|SQL_C_ULONG[j]|SQLUINTEGER|entier long non signé|  
+|SQL_C_CHAR|SQLCHAR|unsigned char *|  
+|SQL_C_WCHAR|SQLWCHAR|wchar_t *|  
+|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT [j]|SQLUSMALLINT|entier Short non signé|  
+|SQL_C_SLONG [j]|SQLINTEGER|long int|  
+|SQL_C_ULONG [j]|SQLUINTEGER|entier long non signé|  
 |SQL_C_FLOAT|SQLREAL|float|  
-|SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|Double|  
-|SQL_C_BIT|SQLCHAR|unsigned char|  
-|SQL_C_STINYINT[j]|SQLSCHAR|char signé|  
-|SQL_C_UTINYINT[j]|SQLCHAR|unsigned char|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|non signé _int64 [h]|  
-|SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK[i]|SIGNET|entier long non signé [d]|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
-|Tous les types de données d’intervalle C|SQL_INTERVAL_STRUCT|Consultez le [Structure d’intervalle C](../../../odbc/reference/appendixes/c-interval-structure.md) section, plus loin dans cette annexe.|  
+|SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
+|SQL_C_BIT|SQLCHAR|caractère non signé|  
+|SQL_C_STINYINT [j]|SQLSCHAR|signed char|  
+|SQL_C_UTINYINT [j]|SQLCHAR|caractère non signé|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|_int64 non signé [h]|  
+|SQL_C_BINARY|SQLCHAR|unsigned char *|  
+|SQL_C_BOOKMARK [i]|Signet|unsigned long int [d]|  
+|SQL_C_VARBOOKMARK|SQLCHAR|unsigned char *|  
+|Tous les types de données de l’intervalle C|SQL_INTERVAL_STRUCT|Consultez la section structure de l' [intervalle C](../../../odbc/reference/appendixes/c-interval-structure.md) , plus loin dans cette annexe.|  
   
- **Identificateur de type C** SQL_C_TYPE_DATE [c]  
+ **Identificateur de type C** SQL_C_TYPE_DATE (C)  
   
- **ODBC C typedef** SQL_DATE_STRUCT  
+ **Typedef C ODBC** SQL_DATE_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagDATE_STRUCT {  
@@ -65,11 +65,11 @@ struct tagDATE_STRUCT {
 } DATE_STRUCT;[a]  
 ```  
   
- **Identificateur de type C** SQL_C_TYPE_TIME [c]  
+ **Identificateur de type C** SQL_C_TYPE_TIME (C)  
   
- **ODBC C typedef** SQL_TIME_STRUCT  
+ **Typedef C ODBC** SQL_TIME_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagTIME_STRUCT {  
@@ -79,11 +79,11 @@ struct tagTIME_STRUCT {
 } TIME_STRUCT;[a]  
 ```  
   
- **Identificateur de type C** SQL_C_TYPE_TIMESTAMP [c]  
+ **Identificateur de type C** SQL_C_TYPE_TIMESTAMP (C)  
   
- **ODBC C typedef** SQL_TIMESTAMP_STRUCT  
+ **Typedef C ODBC** SQL_TIMESTAMP_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagTIMESTAMP_STRUCT {  
@@ -99,9 +99,9 @@ struct tagTIMESTAMP_STRUCT {
   
  **Identificateur de type C** SQL_C_NUMERIC  
   
- **ODBC C typedef** SQL_NUMERIC_STRUCT  
+ **Typedef C ODBC** SQL_NUMERIC_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagSQL_NUMERIC_STRUCT {  
@@ -114,9 +114,9 @@ struct tagSQL_NUMERIC_STRUCT {
   
  **Identificateur de type C** SQL_C_GUID  
   
- **ODBC C typedef** SQLGUID  
+ **Typedef C ODBC** SQLGUID  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagSQLGUID {  
@@ -127,31 +127,31 @@ struct tagSQLGUID {
 } SQLGUID;[k]  
 ```  
   
- [a] les valeurs de l’année mois, jour, heure, minute et deuxième champs dans les types de données datetime C doivent être conforme aux contraintes du calendrier grégorien. (Consultez [contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) plus loin dans cette annexe.)  
+ [a] les valeurs des champs année, mois, jour, heure, minute et seconde des types de données DateTime C doivent être conformes aux contraintes du calendrier grégorien. (Voir [les contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) plus loin dans cette annexe.)  
   
- [b] la valeur du champ de fraction est le nombre de milliardièmes de seconde et comprise entre 0 et 999 999 999 (1 moins de 1 milliard). Par exemple, la valeur du champ de fraction pour une demi-seconde est 500,000,000, pour un millième de seconde (un millième de seconde) est 1 000 000, pour un millionième de seconde (une microseconde) est 1 000 et pour un (milliardième de seconde (une nanoseconde) est 1.  
+ [b] la valeur du champ de fraction est le nombre de milliardièmes de seconde et est comprise entre 0 et 999 999 999 (1 inférieur à 1 milliard). Par exemple, la valeur du champ de fraction pour une demi-seconde est 500 millions, pour un millième de seconde (une milliseconde) est 1 million, pour un millionième de seconde (une microseconde) est 1 000 et pour un milliardième de seconde (une nanoseconde) est 1.  
   
- [c] dans ODBC 2. *x*, les types de données date, time et timestamp C sont SQL_C_DATE, SQL_C_TIME et SQL_C_TIMESTAMP.  
+ [c] dans ODBC 2. *x*, les types de données de date, d’heure et d’horodatage C sont SQL_C_DATE, SQL_C_TIME et SQL_C_TIMESTAMP.  
   
- [d] ODBC 3 *.x* SQL_C_VARBOOKMARK, SQL_C_BOOKMARK pas les applications doivent utiliser. Quand un ODBC 3 *.x* application fonctionne avec une API ODBC 2. *x* pilote, le 3 ODBC *.x* Gestionnaire de pilotes mappera SQL_C_VARBOOKMARK à SQL_C_BOOKMARK.  
+ [d] les applications ODBC 3 *. x* doivent utiliser SQL_C_VARBOOKMARK, pas SQL_C_BOOKMARK. Quand une application ODBC 3 *. x* fonctionne avec ODBC 2. *x* , le gestionnaire de pilotes ODBC 3 *. x* mappe SQL_C_VARBOOKMARK à SQL_C_BOOKMARK.  
   
- [e] un numéro est stocké dans le *val* champ de la structure SQL_NUMERIC_STRUCT comme un entier à l’échelle, en mode endian peu (l’octet de plus à gauche en cours de l’octet de poids faible). Par exemple, le nombre 10.001 base 10, avec une échelle de 4, est à l’échelle vers un entier de 100010. Comme il s’agit 186AA au format hexadécimal, la valeur dans SQL_NUMERIC_STRUCT serait « AA 86 01 00 00... 00", avec le nombre d’octets défini par le SQL_MAX_NUMERIC_LEN **#define**.  
+ [e] un nombre est stocké dans le champ *Val* de la structure SQL_NUMERIC_STRUCT sous la forme d’un entier mis à l’échelle, en mode Little endian (l’octet le plus à gauche étant l’octet le moins significatif). Par exemple, le nombre 10,001 de base 10, avec une échelle de 4, est mis à l’échelle sur un entier de 100010. Étant donné qu’il s’agit de 186AA au format hexadécimal, la valeur de SQL_NUMERIC_STRUCT serait «AA 86 01 00 00... 00», avec le nombre d’octets défini par le **#define**SQL_MAX_NUMERIC_LEN.  
   
- Pour plus d’informations sur **SQL_NUMERIC_STRUCT**, consultez [HOWTO : Récupération des données numériques avec SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Pour plus d’informations sur **SQL_NUMERIC_STRUCT**, consultez [Comment : récupérer des données numériques avec des SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
- [f] les champs de précision et l’échelle des données SQL_C_NUMERIC tapez areused pour l’entrée à partir d’une application et pour la sortie à partir du pilote à l’application. Lorsque le pilote écrit une valeur numérique dans le SQL_NUMERIC_STRUCT, il utilise sa propre valeur par défaut spécifiques au pilote comme valeur pour le *précision* champ et il utilisera la valeur dans le champ SQL_DESC_SCALE de l’application (de descripteur qui est par défaut 0) pour le *mise à l’échelle* champ. Une application peut fournir ses propres valeurs pour la précision et l’échelle en définissant les champs SQL_DESC_PRECISION et SQL_DESC_SCALE du descripteur d’application.  
+ [f] les champs de précision et d’échelle de l’SQL_C_NUMERIC type de données areused pour l’entrée d’une application et pour la sortie du pilote vers l’application. Lorsque le pilote écrit une valeur numérique dans le SQL_NUMERIC_STRUCT, il utilise sa propre valeur par défaut propre au pilote en tant que valeur du champ de *précision* , et il utilise la valeur dans le champ SQL_DESC_SCALE du descripteur d’application (valeur par défaut 0) pour le champ de mise à l' *échelle* . Une application peut fournir ses propres valeurs pour la précision et l’échelle en définissant les champs SQL_DESC_PRECISION et SQL_DESC_SCALE du descripteur d’application.  
   
- [g] le champ de connexion est 1 si elle est positif, 0 si elle est négative.  
+ [g] le champ signe est 1 si positif, 0 si négatif.  
   
- [h] _int64 ne peuvent pas être fournis par certains compilateurs.  
+ [h] _int64 peut ne pas être fourni par certains compilateurs.  
   
- [i] _SQL_C_BOOKMARK est déconseillé dans ODBC 3 *.x*.  
+ [i] _SQL_C_BOOKMARK est déconseillé dans ODBC 3 *. x*.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG et SQL_C_TINYINT ont été remplacés dans ODBC par types signés et non signés : SQL_C_SSHORT et SQL_C_USHORT, SQL_C_SLONG et SQL_C_ULONG et SQL_C_STINYINT et SQL_C_UTINYINT. Un ODBC 3 *.x* pilote doit fonctionner avec ODBC 2. *x* applications doivent prendre en charge SQL_C_SHORT, SQL_C_LONG et SQL_C_TINYINT, étant donné que lorsqu’elles sont appelées, le Gestionnaire de pilotes les passe par le biais du pilote.  
+ [j] _SQL_C_SHORT, SQL_C_LONG et SQL_C_TINYINT ont été remplacés dans ODBC par des types signés et non signés : SQL_C_SSHORT et SQL_C_USHORT, SQL_C_SLONG et SQL_C_ULONG, et SQL_C_STINYINT et SQL_C_UTINYINT. Pilote ODBC 3 *. x* qui doit fonctionner avec ODBC 2. *x* les applications doivent prendre en charge SQL_C_SHORT, SQL_C_LONG et SQL_C_TINYINT, car lorsqu’elles sont appelées, le gestionnaire de pilotes les transmet au pilote.  
   
- [k] SQL_C_GUID peuvent être convertis uniquement aux SQL_CHAR ou SQL_WCHAR.  
+ [k] SQL_C_GUID peuvent être converties uniquement en SQL_CHAR ou SQL_WCHAR.  
   
- Cette section contient les rubriques suivantes.  
+ Cette section contient la rubrique suivante.  
   
 -   [Structures d’entiers 64 bits](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   

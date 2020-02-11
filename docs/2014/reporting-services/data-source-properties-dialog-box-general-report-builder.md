@@ -1,5 +1,5 @@
 ---
-title: Général (Générateur de rapports), boîte de dialogue Propriétés de Source de données | Microsoft Docs
+title: Boîte de dialogue Propriétés de la source de données, général (Générateur de rapports) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109469"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Boîte de dialogue Propriétés de la source de données, Général (Générateur de rapports)
@@ -24,7 +24,7 @@ ms.locfileid: "66109469"
   
  Le type d'informations d'identification utilisé pour se connecter à une source de données est spécifié dans les propriétés de la source de données. Lorsque vous ouvrez un rapport à partir du serveur de rapports, les informations d'identification d'exécution, spécifiées dans les propriétés de la source de données, peuvent ne pas être appropriées pour des tâches de conception telles que la création de requêtes et l'aperçu des rapports. Par exemple, la source de données peut utiliser des informations d'identification Windows autres que les vôtres ou un nom d'utilisateur et un mot de passe inconnus de vous.  
   
- Le Générateur de rapports ouvre la boîte de dialogue **Entrez les informations d'identification pour la source de données** lorsqu'il ne peut pas se connecter à la source de données à l'aide des informations d'identification fournies dans les propriétés de cette source. Ceci se produit en général dans les cas suivants :  
+ Le Générateur de rapports ouvre la boîte de dialogue **Entrez les informations d'identification pour la source de données** lorsqu'il ne peut pas se connecter à la source de données à l'aide des informations d'identification fournies dans les propriétés de cette source. En général, cela se produit dans les cas suivants :  
   
 -   La source de données est configurée de manière à inviter les utilisateurs à fournir des informations d'identification.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66109469"
   
  Après avoir sélectionné une source de données à partir d'un serveur de rapports, le Générateur de rapports conserve une connexion à ce serveur de rapports.  
   
- **Utiliser une connexion incorporée dans mon rapport**  
+ **Utiliser une connexion incorporée à mon rapport**  
  Sélectionnez cette option pour créer une source de données qui est utilisée uniquement par ce rapport.  
   
  **Type**  
@@ -65,9 +65,9 @@ ms.locfileid: "66109469"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Informations d’identification, boîte de dialogue Propriétés de Source de données &#40;Générateur de rapports&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ajouter et vérifier une connexion de données ou une source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Boîte de dialogue Propriétés de la source de données, informations d’identification &#40;Générateur de rapports&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
+ [Aide Générateur de rapports pour les boîtes de dialogue, les volets et les assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

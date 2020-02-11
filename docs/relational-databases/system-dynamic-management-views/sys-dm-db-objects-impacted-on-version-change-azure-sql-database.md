@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_objects_impacted_on_version_change
+title: sys.dm_db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73843860"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
@@ -32,9 +32,9 @@ ms.locfileid: "73843860"
 
   Cette vue système dont l'étendue est la base de données est conçue pour fournir un système d'avertissement anticipé pour déterminer les objets qui seront affectés par une mise à niveau de version majeure dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Utilisez cette vue avant ou après la mise à niveau pour obtenir une énumération complète des objets affectés. Vous devez interroger cette vue dans chaque base de données pour obtenir le nombre total sur le serveur.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|class|**entier** NON NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = contrainte<br /><br /> **7** = index et segments de mémoire|  
+|classe|**entier** NON NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = contrainte<br /><br /> **7** = index et segments de mémoire|  
 |class_desc|**nvarchar (60)** NON NULL|Description de la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**entier** NON NULL|ID d'objet de la contrainte, ou ID d'objet de la table contenant l'index ou le segment de mémoire.|  
 |minor_id|**entier** NUL|**Null** pour les contraintes<br /><br /> Index_id pour les index et les segments|  
@@ -44,7 +44,7 @@ ms.locfileid: "73843860"
  Requiert l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre une requête sur **sys. dm_db_objects_impacted_on_version_change** pour rechercher les objets affectés par une mise à niveau vers la version majeure suivante du serveur  
+ L'exemple suivant illustre une requête portant sur **sys.dm_db_objects_impacted_on_version_change** qui vise à détecter les objets affectés par une mise à niveau vers la prochaine version majeure du serveur.  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -67,7 +67,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |JSON|Objet affecté|Action corrective|  
 |-----------|---------------------|-----------------------|  
-|1|**Index**|Reconstruisez tout index identifié par **sys. dm_db_objects_impacted_on_version_change** , par exemple : `ALTER INDEX ALL ON <table> REBUILD`<br />, ou<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objet**|Toutes les contraintes identifiées par **sys. dm_db_objects_impacted_on_version_change** doivent être revalidées une fois que les données geometry et Geography de la table sous-jacente sont recalculées. Pour les contraintes, revalidez l'aide de ALTER TABLE. <br />Par exemple : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />, ou<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Index**|Reconstruisez tout index identifié par **sys. dm_db_objects_impacted_on_version_change** par exemple :`ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Object**|Toutes les contraintes identifiées par **sys.dm_db_objects_impacted_on_version_change** doivent être revalidées lorsque les données de géométrie et de géographie de la table sous-jacente ont été recalculées. Pour les contraintes, revalidez l'aide de ALTER TABLE. <br />Par exemple : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

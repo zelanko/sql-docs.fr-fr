@@ -1,5 +1,5 @@
 ---
-title: Commande de flux | Microsoft Docs
+title: Flux de commandes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925843"
 ---
 # <a name="command-streams"></a>Flux de commandes
-ADO a toujours pris en charge d’entrée de commande au format de chaîne spécifié par le **CommandText** propriété. Comme alternative, avec ADO 2.7 ou version ultérieure, vous pouvez également utiliser un flux d’informations pour l’entrée de commande en affectant le flux à la **CommandStream** propriété. Vous pouvez affecter une ADO **Stream** objet, ou n’importe quel objet qui prend en charge le modèle COM **IStream** interface.  
+ADO a toujours pris en charge l’entrée de commande dans un format de chaîne spécifié par la propriété **CommandText** . En guise d’alternative, avec ADO 2,7 ou une version ultérieure, vous pouvez également utiliser un flux d’informations pour l’entrée de commande en affectant le flux à la propriété **CommandStream** . Vous pouvez assigner un objet de **flux** ADO ou tout objet qui prend en charge l’interface com **IStream** .  
   
- Le contenu du flux de commande est simplement transmis à partir d’ADO à votre fournisseur, donc votre fournisseur doit prendre en charge d’entrée de commande par le flux de données pour cette fonctionnalité soit opérationnelle. Par exemple, SQL Server prend en charge les requêtes sous la forme de modèles XML ou OpenXML extensions Transact-SQL.  
+ Le contenu du flux de commande est simplement transmis d’ADO à votre fournisseur. votre fournisseur doit donc prendre en charge l’entrée de commande par flux pour que cette fonctionnalité fonctionne. Par exemple, SQL Server prend en charge les requêtes sous forme de modèles XML ou d’extensions OpenXML pour Transact-SQL.  
   
- Étant donné que les détails du flux de données doivent être interprétés par le fournisseur, vous devez spécifier le dialecte de commande en définissant le **dialecte** propriété. La valeur de **dialecte** est une chaîne qui contient un GUID, qui est défini par votre fournisseur. Pour plus d’informations sur les valeurs valides pour **dialecte** pris en charge par votre fournisseur, consultez la documentation du fournisseur.  
+ Étant donné que les détails du flux doivent être interprétés par le fournisseur, vous devez spécifier le dialecte de la commande en définissant la propriété **dialecte** . La valeur du **dialecte** est une chaîne contenant un GUID, qui est défini par votre fournisseur. Pour plus d’informations sur les valeurs valides pour le **dialecte** pris en charge par votre fournisseur, consultez la documentation de votre fournisseur.  
   
 ## <a name="xml-template-query-example"></a>Exemple de requête de modèle XML  
- L’exemple suivant est écrit en VBScript pour la base de données Northwind.  
+ L’exemple suivant est écrit en VBScript dans la base de données Northwind.  
   
- Tout d’abord, initialiser et ouvrir le **Stream** objet qui sera utilisé pour contenir le flux de requête :  
+ Tout d’abord, initialisez et ouvrez l’objet de **flux** qui sera utilisé pour contenir le flux de requête :  
   
 ```  
 Dim adoStreamQuery  
@@ -38,9 +38,9 @@ Set adoStreamQuery = Server.CreateObject("ADODB.Stream")
 adoStreamQuery.Open  
 ```  
   
- Le contenu du flux de requête sera un modèle de requête XML.  
+ Le contenu du flux de requête est une requête de modèle XML.  
   
- Le modèle de requête requiert une référence à l’espace de noms XML identifié par le code sql : préfixe de le \<SQL : > balise. Une instruction SQL SELECT est incluse en tant que le contenu du modèle XML et affectée à une variable de chaîne comme suit :  
+ La requête de modèle requiert une référence à l’espace de noms XML identifié par le préfixe \<SQL : de la balise de> SQL : Query. Une instruction SQL SELECT est incluse en tant que contenu du modèle XML et affectée à une variable de chaîne comme suit :  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -55,7 +55,7 @@ adoStreamQuery.WriteText sQuery, adWriteChar
 adoStreamQuery.Position = 0  
 ```  
   
- Affecter adoStreamQuery à la **CommandStream** propriété d’un ADO **commande** objet :  
+ Affectez adoStreamQuery à la propriété **CommandStream** d’un objet **Command** ADO :  
   
 ```  
 Dim adoCmd  
@@ -63,13 +63,13 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- Spécifier la langue de la commande **dialecte**, ce qui indique comment le fournisseur OLE DB de SQL Server doit interpréter le flux de commandes. Le dialecte spécifié par un GUID spécifique au fournisseur :  
+ Spécifiez le **dialecte**du langage de commande, qui indique comment le fournisseur d’OLE DB SQL Server doit interpréter le flux de commande. Dialecte spécifié par un GUID spécifique au fournisseur :  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  
 ```  
   
- Enfin, exécutez la requête et renvoyer les résultats à un **Recordset** objet :  
+ Enfin, exécutez la requête et renvoyez les résultats à un objet **Recordset** :  
   
 ```  
 Set objRS = adoCmd.Execute  

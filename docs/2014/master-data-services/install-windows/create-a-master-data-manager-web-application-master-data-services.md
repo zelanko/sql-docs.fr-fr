@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 238cf52a52e53aa4ee2712e0bd6abf43a6c5e128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479382"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Créer une application Web Master Data Manager (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65479382"
   
  Après avoir créé l'application Web, vous l'associez à la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prérequis  
+## <a name="prerequisites"></a>Conditions préalables requises  
   
 -   Pour plus d’informations sur la configuration requise pour l’ordinateur qui héberge l’application web, consultez [Configuration requise pour l’application Web &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65479382"
   
 3.  Dans la page **Configuration Web** , dans la liste des site web, sélectionnez **Créer un site Web**.  
   
-4.  Dans la boîte de dialogue **Créer un site Web**, spécifiez les informations pour un nouveau site web. Pour plus d’informations sur les options d’interface utilisateur dans la boîte de dialogue, consultez [Boîte de dialogue Créer un site Web &#40;Gestionnaire de configuration Master Data Services&#41;](../create-website-dialog-box-master-data-services-configuration-manager.md).  
+4.  Dans la boîte de dialogue **Créer un site Web** , spécifiez les informations pour un nouveau site web. Pour plus d’informations sur les options d’interface utilisateur dans la boîte de dialogue, consultez [Boîte de dialogue Créer un site Web &#40;Gestionnaire de configuration Master Data Services&#41;](../create-website-dialog-box-master-data-services-configuration-manager.md).  
   
 5.  Cliquez sur **OK**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65479382"
   
 4.  Cliquez sur **Créer une application**.  
   
-5.  Dans la boîte de dialogue **Créer une application Web**, spécifiez les informations pour une nouvelle application web. Pour plus d’informations sur les options d’interface utilisateur dans la boîte de dialogue, consultez [Boîte de dialogue Créer une application Web &#40;Gestionnaire de configuration Master Data Services&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md).  
+5.  Dans la boîte de dialogue **Créer une application Web** , spécifiez les informations pour une nouvelle application web. Pour plus d’informations sur les options d’interface utilisateur dans la boîte de dialogue, consultez [Boîte de dialogue Créer une application Web &#40;Gestionnaire de configuration Master Data Services&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md).  
   
 6.  Cliquez sur **OK**.  
   

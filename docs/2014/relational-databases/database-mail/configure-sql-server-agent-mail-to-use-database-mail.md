@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872318"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurer la messagerie de l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données
@@ -25,23 +25,23 @@ ms.locfileid: "62872318"
   
 -   **Avant de commencer :**  
   
--   [Conditions préalables](#Prerequisites)  
+-   [Prérequis](#Prerequisites)  
   
 -   [Sécurité](#Security)  
   
--   [Pour configurer l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données, à l'aide de SQL Server Management Studio](#SSMSProcedure)  
+-   [Pour configurer SQL Server Agent utiliser Database Mail à l’aide de SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Tâches de suivi](#Follow_Up)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a>Conditions préalables  
   
 -   Activer la messagerie de base de données.  
   
 -   Créer un compte de messagerie de base de données pour le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à utiliser.  
   
--   Créer un profil de messagerie de base de données pour le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à utiliser, et ajouter l'utilisateur au rôle **DatabaseMailUserRole** de la base de données **msdb** .  
+-   Créez un profil de Database Mail pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le compte de service de l’agent à utiliser et ajoutez l’utilisateur au **DatabaseMailUserRole** dans la base de données **msdb** .  
   
 -   Définir le profil comme profil par défaut pour la base de données **msdb** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62872318"
  L'utilisateur qui crée les comptes de profils et exécute des procédures stockées doit être membre du rôle serveur fixe sysadmin.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- **Pour configurer l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données**  
+ **Pour configurer SQL Server Agent pour utiliser Database Mail**  
   
 -   Dans l'Explorateur d'objets, développez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62872318"
   
 -   Redémarrez l'Agent SQL Server.  
   
-##  <a name="Follow_Up"></a> Tâches de suivi  
+##  <a name="Follow_Up"></a>Tâches de suivi  
  Les tâches suivantes sont nécessaires pour terminer la configuration de l'Agent pour envoyer des alertes et des notifications.  
   
 -   [Alertes](../../ssms/agent/alerts.md)  

@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: jtoland
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056478"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrer des connexions SQL Server avec Assistant Migration de données
@@ -34,7 +34,7 @@ Cet article fournit une vue d’ensemble de la migration des connexions SQL Serv
 
 - Assistant Migration de données ne prend actuellement pas en charge les connexions associées à un certificat de sécurité autonome (connexions mappées au certificat), une clé asymétrique autonome (connexions mappées à une clé asymétrique) et des connexions mappées à des informations d’identification.
 
-- Assistant Migration de données ne déplace pas la connexion **sa** et les principes du serveur avec les noms encadrés par des marques de hachage double (\#\#), qui sont réservées à un usage interne uniquement.
+- Assistant Migration de données ne déplace pas la connexion **sa** et les principes du serveur avec les noms encadrés\#\#de doubles signes dièse (), qui sont destinés à un usage interne uniquement.
 
 - Par défaut, Assistant Migration de données sélectionne toutes les connexions qualifiées à migrer. Si vous le souhaitez, vous pouvez sélectionner des connexions spécifiques à migrer. Lorsque Assistant Migration de données migre toutes les connexions qualifiées, le mappage de l’utilisateur de connexion reste intact dans les bases de données qui sont migrées.
 
@@ -54,6 +54,6 @@ Cet article fournit une vue d’ensemble de la migration des connexions SQL Serv
 
 ## <a name="resources"></a>Ressources
 
-[Assistant Migration de données (DMA)](../dma/dma-overview.md)
+[Assistant Migration de données (DMA)](../dma/dma-overview.md)
 
 [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)

@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f032cd8a9e8d5305f4eef82f815b4f0e328756a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097427"
 ---
-# <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>Propriété UnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
-  Retourne le compte d'utilisateur dont le serveur de rapports emprunte l'identité lorsqu'il exécute des rapports sans assistance. En lecture seule.  
+# <a name="unattendedexecutionaccount-property-wmi-msreportserver_configurationsetting"></a>Propriété UnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
+  Retourne le compte d'utilisateur dont le serveur de rapports emprunte l'identité lorsqu'il exécute des rapports sans assistance. Lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,8 +44,8 @@ public string UnattendedExecutionAccount;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
- **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Spécifications  
+ **Espace de noms :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

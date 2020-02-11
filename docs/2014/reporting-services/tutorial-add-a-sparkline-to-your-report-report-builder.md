@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,58 +11,58 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099043"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un rapport de tableau de base reposant sur les exemples de données de vente, puis ajouter un graphique sparkline à une cellule du tableau.  
   
- Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  
+ Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [Générateur de rapports exemples de rapports](https://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- La vidéo [Comment : Créer un graphique Sparkline dans une Table (vidéo Générateur de rapports)](https://technet.microsoft.com/bi/ff871942.aspx) montre comment créer un rapport similaire avec des graphiques sparkline.  
+ La vidéo [Comment : créer un graphique sparkline dans une table (générateur de rapports vidéo)](https://technet.microsoft.com/bi/ff871942.aspx) illustre la création d’un rapport similaire avec des graphiques sparkline.  
   
-##  <a name="BackToTop"></a> Ce que vous allez apprendre  
- Dans ce didacticiel, vous apprendrez à effectuer les tâches suivantes :  
+##  <a name="BackToTop"></a>Ce que vous allez apprendre  
+ Ce didacticiel vous apprendra à effectuer les opérations suivantes :  
   
- 1. [Créer un rapport avec une Table](#CreateTable)  
+ 1. [Créer un rapport avec un tableau](#CreateTable)  
   
- 2. [Créer une requête dans l’Assistant tableau ou matrice](#Query)  
+ 2. [Créer une requête dans l'Assistant Tableau ou matrice](#Query)  
   
- 3. [Ajouter un graphique Sparkline à la Table](#Sparkline)  
+ 3. [Ajouter un graphique sparkline au tableau](#Sparkline)  
   
  4. [Aligner les graphiques sparkline verticalement et horizontalement](#AlignSparklines)  
   
 ### <a name="other-optional-steps"></a>Autres étapes facultatives  
- 5. [Format des données en tant que devises](#FormatCurrency)  
+ 5. [Mettre en forme les données en tant que devises](#FormatCurrency)  
   
- 6. [Format des données en tant que Dates](#FormatDates)  
+ 6. [Mettre en forme les données en tant que dates](#FormatDates)  
   
- 7. [Modifier la largeur de colonne](#Width)  
+ 7. [Modifier la largeur des colonnes](#Width)  
   
  8. [Ajouter un titre de rapport](#Title)  
   
  9. [Enregistrer le rapport](#Save)  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a> 1. Créer un rapport avec un tableau  
+##  <a name="CreateTable"></a>1. créer un rapport avec une table  
   
 #### <a name="to-create-a-report"></a>Pour créer un rapport  
   
 1.  Cliquez sur **Démarrer**, pointez sur **Programmes**, sur **Générateur de rapports Microsoft SQL Server 2012**, puis cliquez sur **Générateur de rapports version**.  
   
-     Le **mise en route** boîte de dialogue s’ouvre.  
+     La boîte de dialogue **prise en main** s’ouvre.  
   
     > [!NOTE]  
-    >  Si le **mise en route** boîte de dialogue n’apparaît pas, à partir de la **le Générateur de rapports** bouton, cliquez sur **New**.  
+    >  Si la boîte de dialogue **prise en main** n’apparaît pas, à partir du bouton **Générateur de rapports** , cliquez sur **nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "66099043"
   
 8.  Dans **Chaîne de connexion**, tapez le texte suivant :  
   
-     **Source de données =\<nom_serveur >**  
+     **Data source =\<ServerName>**  
   
-     L’expression \<servername >, par exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d'une base de données SQL Server, vous n'avez pas besoin d'inclure le nom d'une base de données. La base de données par défaut sur le serveur spécifié est utilisée pour analyser la requête.  
+     L’expression \<ServerName>, par exemple rapport001, spécifie un ordinateur sur lequel une instance du SQL Server moteur de base de données est installée. Dans la mesure où les données du rapport ne sont pas extraites d'une base de données SQL Server, vous n'avez pas besoin d'inclure le nom d'une base de données. La base de données par défaut sur le serveur spécifié est utilisée pour analyser la requête.  
   
 9. Cliquez sur **Informations d'identification**. Entrez les informations d'identification nécessaires pour accéder à la source de données externe.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66099043"
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. Cliquer sur **Suivant**.  
+13. Cliquez sur **Suivant**.  
   
-##  <a name="Query"></a> 2. Créer une requête dans l'Assistant Tableau  
+##  <a name="Query"></a>2. créer une requête dans l’Assistant Tableau  
  Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 > [!NOTE]  
@@ -109,7 +109,7 @@ ms.locfileid: "66099043"
   
 1.  Dans la page **Créer une requête** , le concepteur de requêtes relationnelles est ouvert. Pour ce didacticiel, vous utiliserez le Concepteur de requêtes textuel.  
   
-2.  Cliquez sur **Modifier en tant que texte**. Le Concepteur de requêtes textuel affiche un volet de requête et un volet de résultats.  
+2.  Cliquez sur **modifier en tant que texte**. Le Concepteur de requêtes textuel affiche un volet de requête et un volet de résultats.  
   
 3.  Collez la requête [!INCLUDE[tsql](../includes/tsql-md.md)] ci-après dans la zone **Requête** .  
   
@@ -146,11 +146,11 @@ ms.locfileid: "66099043"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur Exécuter ( **!** ).  
+4.  Dans la barre d’outils du concepteur de requêtes, cliquez sur Exécuter (**!**).  
   
      La requête s’exécute et affiche le jeu de résultats pour les champs **SalesDate**, **Subcategory**, **Product**, **Sales**et **Quantity**.  
   
-5.  Cliquer sur **Suivant**.  
+5.  Cliquez sur **Suivant**.  
   
 6.  Dans la page **Organiser les champs** , faites glisser **Sales** vers **Valeurs**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66099043"
   
 8.  Faites glisser **SalesDate** vers **Groupes de colonnes**.  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
 10. Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "66099043"
   
     3.  La troisième ligne apparaît une fois pour le tableau afin d'afficher les totaux généraux.  
   
-11. Cliquer sur **Suivant**.  
+11. Cliquez sur **Suivant**.  
   
 12. Dans la page **Choisir un style** , dans le volet **Styles** , sélectionnez **Ardoise**.  
   
@@ -182,11 +182,11 @@ ms.locfileid: "66099043"
   
 14. Le tableau est ajouté à l'aire de conception. Il comporte trois colonnes et trois lignes.  
   
-     Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet groupes de lignes affiche un groupe de lignes : **Product**. Le volet groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+     Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 15. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Sparkline"></a> 3. Ajouter un graphique sparkline  
+##  <a name="Sparkline"></a>3. Ajouter un graphique sparkline  
   
 #### <a name="to-add-a-sparkline-chart-to-a-table"></a>Pour ajouter un graphique sparkline à un tableau  
   
@@ -196,9 +196,9 @@ ms.locfileid: "66099043"
   
 3.  Cliquez avec le bouton droit, pointez sur **Insérer une colonne**, puis cliquez sur **Gauche**.  
   
-4.  Dans la nouvelle colonne, cliquez dans la ligne [Product], pointez sur le **insérer** onglet de ruban, puis cliquez sur **graphique Sparkline**.  
+4.  Dans la nouvelle colonne, cliquez avec le bouton droit sur la ligne [Product], pointez sur l’onglet **Insérer** un ruban, puis cliquez sur **graphique sparkline**.  
   
-5.  Assurez-vous que le premier graphique sparkline dans le **colonne** ligne est sélectionnée, puis **OK**.  
+5.  Assurez-vous que le premier graphique sparkline de la ligne **colonne** est sélectionné, puis cliquez sur **OK**.  
   
 6.  Cliquez sur le graphique sparkline pour afficher le volet Données du graphique.  
   
@@ -206,18 +206,18 @@ ms.locfileid: "66099043"
   
      Les valeurs du champ **Sales** sont maintenant les valeurs du graphique sparkline.  
   
-8.  Cliquez sur le signe plus (+) dans la zone groupes de catégories, puis cliquez sur **SalesDate**.  
+8.  Cliquez sur le signe plus (+) dans la zone groupes de catégories, puis cliquez sur **DateVente**.  
   
 9. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
      Notez que des graphiques sparkline sont présents dans chaque ligne du tableau, mais qu'ils ne sont pas corrects. Les barres des graphiques ne sont pas alignées les unes par rapport aux autres. Il n'y a que quatre barres dans la seconde ligne de données, ce qui fait qu'elles sont plus larges que les barres de la première ligne, qui en a six. Vous ne pouvez pas comparer les valeurs de chaque produit par jour. Elles doivent être alignées les unes par rapport aux autres.  
   
-     Notez également que pour chaque ligne, la barre la plus grande correspond à la hauteur de la ligne. Ceci est également trompeur, car les valeurs les plus grandes pour chaque ligne ne sont pas égales : la valeur la plus élevée pour Budget Movie-Maker est $10,400, mais la plus grande valeur pour Digital est $26,576-plus de double de la taille. Or les barres les plus grandes pour ces deux lignes ont pratiquement la même hauteur. Il faut donc également les mettre à la même échelle que les autres graphiques sparkline.  
+     Notez également que pour chaque ligne, la barre la plus grande correspond à la hauteur de la ligne. Cela est également trompeur, car les valeurs les plus élevées pour chaque ligne ne sont pas égales : la plus grande valeur pour le fabricant de films de budget est $10 400, mais la plus grande valeur pour Compact Digital est $26 576-plus de deux fois plus grand. Or les barres les plus grandes pour ces deux lignes ont pratiquement la même hauteur. Il faut donc également les mettre à la même échelle que les autres graphiques sparkline.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
-##  <a name="AlignSparklines"></a> 4. Aligner les graphiques sparkline verticalement et horizontalement  
- Les graphiques sparkline sont difficiles à lire s’ils n’utilisent pas tous les mêmes mesures. Les axes horizontal et vertical doivent chacun correspondre au reste.  
+##  <a name="AlignSparklines"></a>4. Aligner les graphiques sparkline verticalement et horizontalement  
+ Les graphiques sparkline sont difficiles à lire lorsqu’ils n’utilisent pas tous les mêmes mesures. Les axes horizontal et vertical doivent chacun correspondre au reste.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>Pour définir l'alignement des graphiques sparkline dans le tableau  
   
@@ -243,24 +243,24 @@ ms.locfileid: "66099043"
   
  Notez que toutes les barres sont maintenant alignées sur les barres des autres lignes.  
   
-##  <a name="FormatCurrency"></a> 5. (Facultatif) Format des données en tant que devises  
+##  <a name="FormatCurrency"></a>5. (facultatif) mettre en forme les données en tant que devise  
  Par défaut, les données de synthèse du champ **Sales** affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  
   
 #### <a name="to-format-a-currency-field"></a>Pour mettre en forme un champ monétaire  
   
-1.  Cliquez sur **Conception** pour basculer en mode Conception.  
+1.  Cliquez sur **conception** pour basculer en mode conception.  
   
-2.  Cliquez sur la cellule dans la deuxième ligne (sous la ligne des en-têtes de colonne) dans le **SalesDate** colonne et faites glisser pour sélectionner toutes les cellules qui contiennent des `[Sum(Sales)]`.  
+2.  Cliquez sur la cellule de la deuxième ligne (sous la ligne des en-têtes de colonne) dans la colonne **DateVente** , puis faites glisser `[Sum(Sales)]`pour sélectionner toutes les cellules qui contiennent.  
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** . Les cellules changent pour afficher le format de devise.  
   
-     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
+     Si votre paramètre régional est anglais (États-Unis), le texte d’exemple par défaut est [**$12 345,00**]. Si vous ne voyez pas d’exemple de valeur monétaire, cliquez sur **styles des espaces réservés** dans le groupe **nombres** , puis cliquez sur **exemples de valeurs**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
- Les valeurs de synthèse pour **Sales** afficher en tant que devises.  
+ Les valeurs de synthèse des **ventes** sont affichées sous forme de devise.  
   
-##  <a name="FormatDates"></a> 6. (Facultatif) Mettre en forme les données en tant que dates  
+##  <a name="FormatDates"></a>6. (facultatif) mettre en forme les données en tant que dates  
  Par défaut, le champ **SalesDate** affiche les informations de date et d’heure. Vous pouvez le mettre en forme de sorte qu'il n'affiche que la date.  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>Pour appliquer à un champ de date le format par défaut  
@@ -269,15 +269,15 @@ ms.locfileid: "66099043"
   
 2.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-3.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** groupe, dans la liste déroulante, sélectionnez **Date**.  
+3.  Dans le ruban, sous l’onglet dossier de **démarrage** , dans le groupe **nombre** , dans la liste déroulante, sélectionnez **Date**.  
   
-     La cellule affiche la date d’exemple **[1/31/2000]** . Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
+     La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
- Le **SalesDate** valeurs s’affichent dans le format de date par défaut.  
+ Les valeurs **DateVente** sont affichées dans le format de date par défaut.  
   
-##  <a name="Width"></a> 7. (Facultatif) Modifier la largeur des colonnes  
+##  <a name="Width"></a>7. (facultatif) modifier la largeur des colonnes  
  Par défaut, chaque cellule d'un tableau contient une zone de texte. Une zone de texte s'étend verticalement pour accueillir le texte lors du rendu de la page. Dans le rapport rendu, chaque ligne s'étend en fonction de la hauteur de la plus grande zone de texte rendue dans la ligne. La hauteur de la ligne dans l'aire de conception n'a aucun impact sur la hauteur de la ligne dans le rapport rendu.  
   
  Pour réduire l'espace vertical occupé par chaque ligne, augmentez la largeur de colonne afin d'accueillir le contenu attendu des zones de texte dans la colonne sur une seule ligne.  
@@ -290,11 +290,11 @@ ms.locfileid: "66099043"
   
      Les barres grises le long du haut et du côté de la table sont les poignées de colonne et de ligne.  
   
-3.  Placez le curseur entre les séparateurs de colonne pour qu'il se transforme en flèche à deux pointes. Faites glisser les colonnes pour les redimensionner. Par exemple, agrandissez la colonne **produit** afin que le nom des produits tienne sur une seule ligne.  
+3.  Placez le curseur entre les séparateurs de colonne pour qu'il se transforme en flèche à deux pointes. Faites glisser les colonnes pour les redimensionner. Par exemple, développez la colonne **produit** afin que le nom du produit s’affiche sur une seule ligne.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-##  <a name="Title"></a> 8. (Facultatif) Ajouter un titre au rapport  
+##  <a name="Title"></a>8. (facultatif) ajouter un titre de rapport  
  Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
   
  Vous pouvez améliorer le texte en appliquant différents types de styles de police, de tailles et de couleurs à des expressions et des caractères spécifiques. Pour plus d’informations, consultez [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -311,13 +311,13 @@ ms.locfileid: "66099043"
   
 5.  Dans la liste **Taille** , sélectionnez **18pt**.  
   
-6.  Dans le **couleur** liste, sélectionnez **marron**.  
+6.  Dans la liste **couleur** , sélectionnez **marron**.  
   
 7.  Sélectionnez **Gras**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> 9. Enregistrer le rapport  
+##  <a name="Save"></a>9. enregistrer le rapport  
  Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vous n'enregistrez pas le rapport sur le serveur de rapports, plusieurs fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] telles que les parties de rapports et les sous-rapports ne sont pas disponibles.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Pour enregistrer le rapport sur un serveur de rapports  

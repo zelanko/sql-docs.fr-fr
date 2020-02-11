@@ -1,5 +1,5 @@
 ---
-title: Conventions pour la combinaison de Conditions de recherche dans le volet Critères (Visual Database Tools) | Microsoft Docs
+title: Conventions pour la combinaison de conditions de recherche dans le volet critères (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140381"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Conventions pour la combinaison de conditions de recherche dans le volet Critères (Visual Database Tools)
@@ -139,7 +139,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  Le Concepteur de requêtes et de vues représente cette clause WHERE dans le volet Critères de la manière suivante :  
   
- ![Priorité de la clause OR dans le volet Critères](../../database-engine/media//vs-criteriapane1.gif "Priorité de la clause OR dans le volet Critères")  
+ ![Précédence de clause OR dans le volet Critères](../../database-engine/media//vs-criteriapane1.gif "Précédence de clause OR dans le volet Critères")  
   
  En revanche, si les clauses liées par OR sont prioritaires sur une clause AND, la clause AND est répétée pour chaque clause OR. Nous dirons qu'elle est distribuée à chaque clause OR. Par exemple, vous pouvez créer dans le volet SQL une clause WHERE du type suivant :  
   

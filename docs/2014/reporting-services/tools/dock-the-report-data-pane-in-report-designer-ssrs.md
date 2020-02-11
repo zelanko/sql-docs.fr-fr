@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100338"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancrer le volet des données de rapport dans le Concepteur de rapports (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66100338"
   
 ### <a name="to-display-the-report-data-pane"></a>Pour afficher le volet Données du rapport  
   
--   En mode conception, sur le **vue** menu, sélectionnez **les données de rapport**.  
+-   Dans Mode Création, dans le menu **affichage** , sélectionnez **données du rapport**.  
   
 ### <a name="to-dock-the-report-data-pane"></a>Pour ancrer le volet Données du rapport  
   
@@ -34,16 +34,16 @@ ms.locfileid: "66100338"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>Pour faire passer le volet des données de rapportd'une fenêtre ancrée à une fenêtre avec onglets  
   
--   Avec le bouton droit de la barre de titre du volet données du rapport, puis cliquez sur **Document avec onglet**.  
+-   Cliquez avec le bouton droit sur la barre de titre du volet des données de rapport, puis cliquez sur **document avec onglet**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>Pour faire passer le volet des données de rapportd'une fenêtre avec onglets à une fenêtre ancrée  
   
--   Cliquez sur l’onglet données du rapport, puis cliquez sur **ancrable**.  
+-   Cliquez avec le bouton droit sur l’onglet données du rapport, puis cliquez sur **Ancrable**.  
   
      Pour basculer entre les deux derniers états d'affichage, double-cliquez sur la barre de titre du volet Données du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Données du rapport, volet](../report-data/report-data-pane.md)   
+ [Volet des données de rapport](../report-data/report-data-pane.md)   
  [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

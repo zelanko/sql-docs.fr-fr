@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782622"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -50,17 +50,17 @@ RETCODE bcp_moretext (
  *pData*  
  Pointeur vers le segment de données long, de longueur variable, pris en charge à envoyer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="returns"></a>Valeur renvoyée  
+## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction peut être utilisée conjointement avec des [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) et des [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour copier des valeurs de données longues de longueur variable en SQL Server dans plusieurs segments plus petits. **bcp_moretext** peut être utilisé avec des colonnes qui ont les types de données SQL Server suivants : **Text**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , type défini par l’utilisateur (UDT) et XML. **bcp_moretext** ne prend pas en charge les conversions de données, les données fournies doivent correspondre au type de données de la colonne cible.  
+ Cette fonction peut être utilisée conjointement avec des [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) et des [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour copier des valeurs de données longues de longueur variable en SQL Server dans plusieurs segments plus petits. **bcp_moretext** peut être utilisé avec des colonnes qui ont les types de données SQL Server suivants : **Text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, type défini par l’utilisateur (UDT) et XML. **bcp_moretext** ne prend pas en charge les conversions de données, les données fournies doivent correspondre au type de données de la colonne cible.  
   
- Si **bcp_bind** est appelé avec un paramètre *pData* non null pour les types de données pris en charge par **bcp_moretext**, **bcp_sendrow** envoie la valeur de données entière, quelle que soit la longueur. Toutefois, si **bcp_bind** possède un paramètre *pData* null pour les types de données pris en charge, **bcp_moretext** peut être utilisé pour copier des données immédiatement après un retour réussi de **bcp_sendrow** indiquant que toutes les colonnes liées contenant des données sont présentes. ont été traités.  
+ Si **bcp_bind** est appelé avec un paramètre *pData* non null pour les types de données pris en charge par **bcp_moretext**, **bcp_sendrow** envoie la valeur de données entière, quelle que soit la longueur. Toutefois, si **bcp_bind** possède un paramètre *pData* null pour les types de données pris en charge, **bcp_moretext** peut être utilisé pour copier des données immédiatement après un retour réussi de **bcp_sendrow** indiquant que toutes les colonnes liées avec des données présentes ont été traitées.  
   
  Si vous utilisez **bcp_moretext** pour envoyer une colonne de type de données prise en charge dans une ligne, vous devez également l’utiliser pour envoyer toutes les autres colonnes de type de données prises en charge dans la ligne. Aucune colonne ne peut être ignorée. Les types de données pris en charge sont SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT et SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY et SQLVARBINARY appartiennent également à cette catégorie si la colonne est un varchar (max), nvarchar (max) ou varbinary (max), respectivement.  
   
- L’appel de **bcp_bind** ou [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) définit la longueur totale de toutes les parties de données à copier dans la colonne SQL Server. Une tentative d’envoi d’SQL Server plus d’octets que ce qui est spécifié dans l’appel à **bcp_bind** ou **bcp_collen** génère une erreur. Cette erreur se produit, par exemple, dans une application qui a utilisé **bcp_collen** pour définir la longueur des données disponibles pour une colonne de **texte** SQL Server sur 4500, puis appelée **bcp_moretext** cinq fois en indiquant à chaque appel que la mémoire tampon de données la longueur était de 1000 octets.  
+ L’appel de **bcp_bind** ou [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) définit la longueur totale de toutes les parties de données à copier dans la colonne SQL Server. Une tentative d’envoi d’SQL Server plus d’octets que ce qui est spécifié dans l’appel à **bcp_bind** ou **bcp_collen** génère une erreur. Cette erreur se produit, par exemple, dans une application qui a utilisé **bcp_collen** pour définir la longueur des données disponibles pour une colonne de **texte** SQL Server sur 4500, puis appelée **bcp_moretext** cinq fois en indiquant à chaque appel que la longueur de la mémoire tampon de données était de 1000 octets.  
   
  Si une ligne copiée contient plus d’une colonne de longueur variable, **bcp_moretext** envoie tout d’abord ses données à la colonne à numérotation ordinale la plus basse, suivie de la colonne numérotée ordinale suivante, et ainsi de suite. Il est important de définir correctement la longueur totale des données attendues. Il n'existe aucun moyen de signaler, en dehors du paramètre de longueur, que toutes les données pour une colonne ont été reçues par copie en bloc.  
   
@@ -166,6 +166,6 @@ nRowsProcessed = bcp_done(hdbc);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de copie en bloc](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

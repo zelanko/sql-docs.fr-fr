@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056400"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "74056400"
 
   Spécifie une condition de recherche pour un graphique, qui est recherchée de manière récursive ou répétée. SHORTEST_PATH peut être utilisé dans une correspondance avec le nœud de graphique et les tables de bord, dans l’instruction SELECT. 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>Chemin d’accès le plus rapide
 La fonction SHORTEST_PATH vous permet de trouver :    
@@ -48,8 +48,8 @@ POUR PATH doit être utilisé avec n’importe quel nom de table de nœud ou d�
 ## <a name="arbitrary-length-pattern"></a>Modèle de longueur arbitraire
 Ce modèle comprend les nœuds et les bords qui doivent être parcourus à plusieurs reprises jusqu’à ce que le nœud souhaité soit atteint ou jusqu’à ce que le nombre maximal d’itérations spécifié dans le modèle soit respecté. Chaque fois que la requête est exécutée, le résultat de l’exécution de ce modèle est une collection ordonnée des nœuds et des bords parcourus le long du nœud de départ jusqu’au nœud de fin. Il s’agit d’un modèle de syntaxe de style d’expression régulière et les quantificateurs de deux modèles suivants sont pris en charge :
 
-* **' + '** : Répéter le modèle 1 ou plusieurs fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.
-* **{1, n}** : répéter le modèle de 1 à’n’fois. Terminer dès qu’un plus petit est trouvé.
+* **' + '**: Répéter le modèle 1 ou plusieurs fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.
+* **{1, n}**: répéter le modèle de 1 à’n’fois. Terminer dès qu’un plus petit est trouvé.
 
 ## <a name="last_node"></a>LAST_NODE
 La fonction LAST_NODE () autorise le chaînage de deux modèles de traversée de longueur arbitraire. Il peut être utilisé dans les scénarios où :    
@@ -87,13 +87,13 @@ Pour projeter les attributs du dernier nœud du chemin parcouru, LAST_VALUE fonc
 
 **Dernier nœud**: le dernier nœud fait référence au nœud qui apparaît en dernier dans le chemin parcouru, quelle que soit la direction de la flèche dans le PRÉDICAT de correspondance. Par exemple : `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Ici, le dernier nœud du chemin d’accès est le dernier nœud P visité. 
 
-Tandis que le dernier nœud est le dernier nième nœud dans le chemin d’accès du graphique de sortie pour ce modèle : `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Tandis que le dernier nœud est le dernier nième nœud dans le chemin d’accès du graphique de sortie pour ce modèle :`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Cette fonction retourne la somme des valeurs d’attribut node/Edge fournies ou de l’expression qui apparaissait dans le chemin parcouru.
 
 ### <a name="count"></a>COUNT
-Cette fonction retourne le nombre de valeurs non null de l’attribut node/Edge souhaité dans le chemin d’accès. La fonction COUNT prend en charge l’opérateur'\*'avec un nœud ou un alias de table Edge. Sans l’alias de la table node ou Edge, l’utilisation de \* est ambiguë et génère une erreur.
+Cette fonction retourne le nombre de valeurs non null de l’attribut node/Edge souhaité dans le chemin d’accès. La fonction COUNT prend en charge\*l’opérateur «» avec un nœud ou un alias de table Edge. Sans l’alias de la table node ou Edge, l' \* utilisation de est ambiguë et génère une erreur.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -117,7 +117,7 @@ Dans certains cas, des plans incorrects peuvent être générés pour les requê
 ## <a name="examples"></a>Exemples 
 Pour les exemples de requêtes indiqués ici, nous allons utiliser les tables node et Edge créées dans l' [exemple SQL Graph](./sql-graph-sample.md) .
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Rechercher le chemin le plus rapide entre 2 personnes
+### <a name="a--find-shortest-path-between-2-people"></a>R.  Rechercher le chemin le plus rapide entre 2 personnes
  Dans l’exemple suivant, nous trouvons le chemin le plus rapide entre Jacob et Alice. Nous aurons besoin du nœud Person et du Edge FriendOf créé à partir de l’exemple de script Graph. 
 
  ```
@@ -209,8 +209,8 @@ WHERE Q.levels = 2
 ```
 
 ## <a name="see-also"></a>Voir aussi  
- [Match (graphique SQL)](../../t-sql/queries/match-sql-graph.md)    
+ [MATCH (graphique SQL)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [Traitement des graphiques avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)     
+ [Insert (graphique SQL)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Traitement des graphes avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)     
  

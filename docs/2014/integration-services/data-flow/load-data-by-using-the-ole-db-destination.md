@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902428"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Charger des données à l'aide de la destination OLE DB
@@ -42,7 +42,7 @@ ms.locfileid: "62902428"
   
     -   **Table ou vue** : sélectionnez une table ou une vue dans la base de données qui contient les données.  
   
-    -   **Table ou vue – chargement rapide** : sélectionnez une table ou une vue dans la base de données contenant les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs Null**, **Verrou de table**, **Vérifier les contraintes**, **Lignes par lot** ou **Taille maximale de validation d’insertion**.  
+    -   **Table ou vue - chargement rapide** : sélectionnez une table ou une vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Contrainte de validation**, **Lignes par lot**ou **Taille de validation d’insertion maximale**.  
   
     -   **Variable de nom de table ou de vue** : sélectionnez la variable définie par l’utilisateur qui contient le nom d’une table ou d’une vue dans la base de données.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62902428"
 ## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](ole-db-destination.md)   
  [Transformations Integration Services](transformations/integration-services-transformations.md)   
- [Chemins d'accès d'Integration Services](integration-services-paths.md)   
+ [Chemins Integration Services](integration-services-paths.md)   
  [tâche de flux de données](../control-flow/data-flow-task.md)  
   
   

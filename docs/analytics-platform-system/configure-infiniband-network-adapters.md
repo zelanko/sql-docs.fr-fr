@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401291"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurer des cartes réseau InfiniBand pour Analytics Platform System
@@ -53,7 +53,7 @@ Vous avez besoin d’un compte de domaine d’appliance APS pour vous connecter 
   
 Vous avez besoin d’un compte Windows sur le serveur client qui a l’autorisation de configurer les cartes réseau.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Conditions préalables requises  
 Ces instructions supposent que le serveur client est déjà monté en rack et branché au réseau de l’appliance InfiniBand. Pour obtenir des instructions sur la mise en rack et le câblage, consultez [acquérir et configurer un serveur de chargement](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Remarques d'ordre général  
@@ -98,7 +98,7 @@ Pour répondre aux besoins de votre entreprise, vous pouvez également joindre l
   
 ## <a name="Sec2"></a>Étape 2 : configurer les paramètres de carte réseau InfiniBand sur votre serveur client  
 
-### <a name="notes"></a>Remarques  
+### <a name="notes"></a>Notes  
   
 -   Ces étapes vous montrent comment inscrire votre serveur auprès des serveurs DNS APS.  
   

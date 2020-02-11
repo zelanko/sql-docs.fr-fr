@@ -1,5 +1,5 @@
 ---
-title: C pour les exemples de Conversion de données SQL | Microsoft Docs
+title: Exemples de conversion de données C en SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,36 +14,36 @@ ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e475abb699c7fa7240ca6eb39b1b32f1730d33c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125740"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>Exemples de conversion de données C en SQL
-Les exemples suivants illustrent la façon dont le pilote convertit les données de C de données SQL :  
+Les exemples suivants illustrent la façon dont le pilote convertit les données C en données SQL :  
   
-|Identificateur de type C|Valeur de données C|Type SQL<br /><br /> identificateur|colonne<br /><br /> length|Données SQL<br /><br /> valeur|SQLSTATE|  
+|Identificateur de type C|Valeur de données C|Type SQL<br /><br /> identificateur|Colonne<br /><br /> length|Données SQL<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
-|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|6\.|abcdef|N/A|  
-|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|5\.|abcde|22001|  
-|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|8[b]|1234.56|N/A|  
-|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|7[b]|1234.5|22001|  
-|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|4|----|22003|  
-|SQL_C_FLOAT|1234.56|SQL_FLOAT|N/A|1234.56|N/A|  
-|SQL_C_FLOAT|1234.56|SQL_INTEGER|N/A|1234|22001|  
-|SQL_C_FLOAT|1234.56|SQL_TINYINT|N/A|----|22003|  
-|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_CHAR|10|1992-12-31|N/A|  
-|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_CHAR|9|----|22003|  
-|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_TIMESTAMP|N/A|1992-12-31 00:00:00.0|N/A|  
-|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000 [d]|SQL_CHAR|22|1992-12-31 23:45:55.12|N/A|  
-|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000 [d]|SQL_CHAR|21|1992-12-31 23:45:55.1|22001|  
-|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000 [d]|SQL_CHAR|18|----|22003|  
+|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/a|  
+|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|ABCDE|22001|  
+|SQL_C_CHAR|1234,56 \ 0 [a]|SQL_DECIMAL|8 [b]|1234,56|n/a|  
+|SQL_C_CHAR|1234,56 \ 0 [a]|SQL_DECIMAL|7 [b]|1234,5|22001|  
+|SQL_C_CHAR|1234,56 \ 0 [a]|SQL_DECIMAL|4|----|22003|  
+|SQL_C_FLOAT|1234,56|SQL_FLOAT|n/a|1234,56|n/a|  
+|SQL_C_FLOAT|1234,56|SQL_INTEGER|n/a|1234|22001|  
+|SQL_C_FLOAT|1234,56|SQL_TINYINT|n/a|----|22003|  
+|SQL_C_TYPE_DATE|1992, 12, 31 [c]|SQL_CHAR|10|1992-12-31|n/a|  
+|SQL_C_TYPE_DATE|1992, 12, 31 [c]|SQL_CHAR|9|----|22003|  
+|SQL_C_TYPE_DATE|1992, 12, 31 [c]|SQL_TIMESTAMP|n/a|1992-12-31 00:00:00.0|n/a|  
+|SQL_C_TYPE_TIMESTAMP|1992, 12, 31, 23, 45, 55, 120000000 [d]|SQL_CHAR|22|1992-12-31 23:45:55.12|n/a|  
+|SQL_C_TYPE_TIMESTAMP|1992, 12, 31, 23, 45, 55, 120000000 [d]|SQL_CHAR|21|1992-12-31 23:45:55.1|22001|  
+|SQL_C_TYPE_TIMESTAMP|1992, 12, 31, 23, 45, 55, 120000000 [d]|SQL_CHAR|18|----|22003|  
   
- [a] « \0 » représente un octet de caractère nul de terminaison. L’octet de caractère nul de terminaison est requis uniquement si la longueur des données est SQL_NTS.  
+ [a] « \ 0 » représente un octet de fin null. L’octet de fin null est requis uniquement si la longueur des données est SQL_NTS.  
   
- [b] en plus d’octets pour les nombres, un seul octet est requis pour une connexion et un autre octets est nécessaire pour la virgule décimale.  
+ [b] en plus des octets pour les nombres, un octet est requis pour un signe et un autre octet est requis pour la virgule décimale.  
   
- [c] les nombres dans cette liste sont les nombres stockés dans les champs de la structure SQL_DATE_STRUCT.  
+ [c] les nombres de cette liste sont les nombres stockés dans les champs de la structure SQL_DATE_STRUCT.  
   
- [d] les nombres dans cette liste sont les nombres stockés dans les champs de la structure SQL_TIMESTAMP_STRUCT.
+ [d] les nombres de cette liste sont les nombres stockés dans les champs de la structure SQL_TIMESTAMP_STRUCT.

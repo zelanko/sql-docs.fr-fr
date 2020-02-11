@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401375"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Appliquer des correctifs logiciels Analytics Platform System
@@ -27,7 +27,7 @@ Cet article explique comment appliquer des correctifs au logiciel système de la
 > [!WARNING]  
 > N’appliquez pas de correctif logiciel de plateforme d’analyse lorsque l’appareil est en cours d’utilisation. L’application d’un correctif peut entraîner le redémarrage des nœuds de l’appliance. Le correctif doit être appliqué au cours d’une fenêtre de maintenance lorsque l’appareil n’est pas utilisé.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Conditions préalables requises  
 Pour effectuer ces étapes, vous aurez besoin des éléments suivants :  
   
 -   Une connexion Analytics Platform System avec des autorisations pour accéder à la console d’administration afin de surveiller l’état de l’appliance. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

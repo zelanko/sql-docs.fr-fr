@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243278"
 ---
 # <a name="search-text-with-wildcards"></a>Rechercher du texte avec des caractères génériques
@@ -43,5 +43,5 @@ ms.locfileid: "75243278"
 |Jeu de caractères|[ ]|Représente tout caractère du jeu de caractères spécifié.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rechercher et remplacer](search-and-replace.md)   
+ [Recherche et remplacement](search-and-replace.md)   
  [Rechercher du texte avec des expressions régulières](search-text-with-regular-expressions.md)  

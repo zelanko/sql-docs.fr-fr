@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400933"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Composants de Data Warehouse parallèles-système de plateforme d’analyse
@@ -140,7 +140,7 @@ La technologie Polybase intègre des données SQL Server PDW avec des données H
   
 Les requêtes sont écrites avec\-Transact SQL modifié pour s’adapter à la nature MPP des requêtes. Toutes les requêtes sont envoyées au nœud de contrôle, qui génère un plan de requête parallèle pour exécuter la requête sur les nœuds de calcul.  
   
-### <a name="sql-server-data-tools-ssdt"></a>Outils SQL Server Data Tools (SSDT)  
+### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools s’exécute dans Visual Studio et est notre outil GUI recommandé pour soumettre des requêtes à SQL Server PDW. Elle est similaire à SQL Server Management Studio en vous permettant de naviguer dans un Explorateur d’objets.  
   
 Si vous ne disposez pas de Visual Studio, vous pouvez télécharger gratuitement les outils dont vous avez besoin. 

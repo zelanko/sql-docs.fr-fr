@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400869"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestion des autorisations dans les Data Warehouse parallèles
@@ -210,7 +210,7 @@ Le système des rôles serveur fixes et des rôles de base de données fixes est
   
 ![Rôles de base de données fixes de sécurité APS](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")  
   
-### <a name="related-content"></a>Contenu connexe  
+### <a name="related-content"></a>Contenu associé  
   
 -   Pour créer des rôles définis par l’utilisateur, voir [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md).  
   

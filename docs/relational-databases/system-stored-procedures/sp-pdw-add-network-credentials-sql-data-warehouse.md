@@ -13,18 +13,18 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844413"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Cela stocke les informations d’identification réseau dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et les associe à un serveur. Par exemple, utilisez cette procédure stockée pour accorder [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] autorisations de lecture/écriture appropriées pour effectuer des opérations de sauvegarde et de restauration de base de données sur un serveur cible, ou pour créer une sauvegarde d’un certificat utilisé pour TDE.  
+  Cela stocke les informations d' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] identification réseau dans et les associe à un serveur. Par exemple, utilisez cette procédure stockée pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] accorder des autorisations de lecture/écriture appropriées pour effectuer des opérations de sauvegarde et de restauration de base de données sur un serveur cible, ou pour créer une sauvegarde d’un certificat utilisé pour TDE.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>Arguments  
  '*target_server_name*'  
- Spécifie le nom d’hôte ou l’adresse IP du serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] accédera à ce serveur en utilisant les informations d’identification de nom d’utilisateur et de mot de passe transmises à cette procédure stockée.  
+ Spécifie le nom d’hôte ou l’adresse IP du serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]accédera à ce serveur à l’aide des informations d’identification de nom d’utilisateur et de mot de passe transmises à cette procédure stockée.  
   
  Pour vous connecter via le réseau InfiniBand, utilisez l’adresse IP InfiniBand du serveur cible.  
   
@@ -50,7 +50,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  *mot de passe*ꞌ  
  Spécifie le mot de passe pour *user_name*.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
+## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
@@ -60,12 +60,12 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  Une erreur se produit si l’ajout d’informations d’identification échoue sur le nœud de contrôle et sur tous les nœuds de calcul.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Cette procédure stockée ajoute les informations d’identification réseau au compte NetworkService pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Le compte NetworkService exécute chaque instance de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le nœud de contrôle et les nœuds de calcul. Par exemple, lorsqu’une opération de sauvegarde s’exécute, le nœud de contrôle et chaque nœud de calcul utilisent les informations d’identification du compte NetworkService pour obtenir des autorisations de lecture et d’écriture sur le serveur cible.  
+ Cette procédure stockée ajoute les informations d’identification réseau au compte [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService pour. Le compte NetworkService exécute chaque instance de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le nœud de contrôle et les nœuds de calcul. Par exemple, lorsqu’une opération de sauvegarde s’exécute, le nœud de contrôle et chaque nœud de calcul utilisent les informations d’identification du compte NetworkService pour obtenir des autorisations de lecture et d’écriture sur le serveur cible.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Ajouter des informations d’identification pour effectuer une sauvegarde de base de données  
- L’exemple suivant associe les informations d’identification de nom d’utilisateur et de mot de passe pour l’utilisateur de domaine seattle\david à un serveur cible qui a l’adresse IP 10.172.63.255. L’utilisateur seattle\david dispose d’autorisations de lecture/écriture sur le serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] stocke ces informations d’identification et les utilise pour lire et écrire dans et à partir du serveur cible, si nécessaire pour les opérations de sauvegarde et de restauration.  
+### <a name="a-add-credentials-for-performing-a-database-backup"></a>R. Ajouter des informations d’identification pour effectuer une sauvegarde de base de données  
+ L’exemple suivant associe les informations d’identification de nom d’utilisateur et de mot de passe pour l’utilisateur de domaine seattle\david à un serveur cible qui a l’adresse IP 10.172.63.255. L’utilisateur seattle\david dispose d’autorisations de lecture/écriture sur le serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]stocke ces informations d’identification et les utilise pour lire et écrire dans et à partir du serveur cible, si nécessaire pour les opérations de sauvegarde et de restauration.  
   
 ```  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

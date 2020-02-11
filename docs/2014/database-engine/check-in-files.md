@@ -1,5 +1,5 @@
 ---
-title: Archiver les fichiers | Microsoft Docs
+title: Archiver des fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812583"
 ---
 # <a name="check-in-files"></a>Archiver des fichiers
@@ -32,7 +32,7 @@ ms.locfileid: "62812583"
   
 2.  Si la boîte de dialogue **Archivage** apparaît, sélectionnez les options appropriées, puis cliquez sur **OK**.  
   
-     **Date d'arrivée**  
+     **Archiver**  
      Archive tous les éléments sélectionnés.  
   
      **Colonnes**  
@@ -41,7 +41,7 @@ ms.locfileid: "62812583"
      **Commentaires**  
      Ajoutez un commentaire à associer à l'opération d'archivage.  
   
-     **Ne pas afficher dans la boîte de dialogue lors de l’archivage d’éléments**  
+     **Ne pas afficher la boîte de dialogue Archiver lors de l'archivage d'éléments**  
      Supprime la boîte de dialogue pendant les archivages.  
   
      **Affichage en 2D**  
@@ -53,10 +53,10 @@ ms.locfileid: "62812583"
      **Options**  
      Affiche des options d'archivage propres au plug-in de contrôle de code source lorsque vous cliquez sur la flèche située à droite du bouton.  
   
-     **Sort**  
+     **Trier**  
      Permet d'ordonner les colonnes d'affichage.  
   
-     **Vue d’arborescence**  
+     **Arborescence**  
      Affiche la hiérarchie des dossiers et des fichiers pour les éléments que vous archivez.  
   
  Si le fichier que vous avez archivé ne fait pas partie d'une extraction partagée, l'environnement [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] archive alors immédiatement le fichier. Sinon, il peut vous demander de fusionner votre version avec celles créées par d'autres utilisateurs.  

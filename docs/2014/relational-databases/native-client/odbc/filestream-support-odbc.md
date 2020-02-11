@@ -1,5 +1,5 @@
 ---
-title: Prise en charge FILESTREAM (ODBC) | Microsoft Docs
+title: Prise en charge de FILESTREAM (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206592"
 ---
 # <a name="filestream-support-odbc"></a>Prise en charge de FILESTREAM (ODBC)
-  ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la fonctionnalité FILESTREAM améliorée. Pour plus d’informations sur cette fonctionnalité, consultez [prise en charge FILESTREAM](../features/filestream-support.md). Pour un exemple illustrant la prise en charge ODB pour FILESTREAM, consultez [envoi et réception de données façon incrémentielle avec FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la fonctionnalité FILESTREAM améliorée. Pour plus d’informations sur cette fonctionnalité, consultez [prise en charge de FileStream](../features/filestream-support.md). Pour obtenir un exemple illustrant la prise en charge d’ODB pour FILESTREAM, consultez [Envoyer et recevoir des données de façon incrémentielle avec filestream &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Pour envoyer et recevoir `varbinary(max)` valeurs supérieures à 2 Go, une application doit lier des paramètres à l’aide de SQLBindParameter avec *ColumnSize* définie sur `SQL_SS_LENGTH_UNLIMITED`et définir le contenu de *StrLen_or_IndPtr* à `SQL_DATA_AT_EXEC` avant SQLExecDirect ou SQLExecute.  
+ Pour envoyer et recevoir `varbinary(max)` des valeurs supérieures à 2 Go, une application doit lier des paramètres à l’aide de SQLBindParameter avec `SQL_SS_LENGTH_UNLIMITED`l’ensemble de *colonnes* défini sur et définir `SQL_DATA_AT_EXEC` le contenu de *StrLen_or_IndPtr* sur avant SQLExecDirect ou SQLExecute.  
   
- Comme avec n’importe quel paramètre data-at-execution, les données sont fournies avec SQLParamData et SQLPutData.  
+ Comme pour tout paramètre de données en cours d’exécution, les données sont fournies avec SQLParamData et SQLPutData.  
   
- Vous pouvez appeler SQLGetData pour extraire des données dans des segments pour une colonne FILESTREAM si la colonne n’est pas liée avec SQLBindCol.  
+ Vous pouvez appeler SQLGetData pour extraire des données en segments pour une colonne FILESTREAM si la colonne n’est pas liée à SQLBindCol.  
   
- Vous pouvez mettre à jour les données FILESTREAM si elles sont liées avec SQLBindCol.  
+ Vous pouvez mettre à jour les données FILESTREAM si elles sont liées à SQLBindCol.  
   
- Si vous appelez SQLFetch sur une colonne liée, vous recevrez un avertissement « données tronquées » si la mémoire tampon n’est pas assez grande pour contenir la valeur entière. Ignorer cet avertissement et mettre à jour les données dans cette colonne liée avec les appels de SQLParamData et SQLPutData. Vous pouvez mettre à jour les données FILESTREAM à l’aide de SQLSetPos si elles sont liées avec SQLBindCol.  
+ Si vous appelez SQLFetch sur une colonne liée, vous recevrez un avertissement « données tronquées » si la mémoire tampon n’est pas assez grande pour contenir la valeur entière. Ignorez cet avertissement et mettez à jour les données de cette colonne liée avec les appels SQLParamData et SQLPutData. Vous pouvez mettre à jour les données FILESTREAM à l’aide de SQLSetPos si elles sont liées à SQLBindCol.  
   
 ## <a name="example"></a>Exemple  
- Les colonnes FILESTREAM se comportent exactement comme les colonnes `varbinary(max)`, mais sans limite de taille. Elles sont liées en tant que SQL_VARBINARY. (SQL_LONGVARBINARY est utilisé avec les colonnes image et ce type comporte un certain nombre de restrictions. Par exemple, SQL_LONGVARBINARY ne peut pas être utilisé comme un paramètre de sortie.) Les exemples suivants montrent l’accès NTFS direct pour les colonnes FILESTREAM. Ces exemples supposent que le code [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant a été exécuté dans la base de données :  
+ Les colonnes FILESTREAM se comportent exactement comme les colonnes `varbinary(max)`, mais sans limite de taille. Elles sont liées en tant que SQL_VARBINARY. (SQL_LONGVARBINARY est utilisé avec les colonnes image et ce type comporte un certain nombre de restrictions. Par exemple, SQL_LONGVARBINARY connot être utilisé comme paramètre de sortie.) Les exemples suivants montrent un accès direct au NTFS pour les colonnes FILESTREAM. Ces exemples supposent que le code [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant a été exécuté dans la base de données :  
   
 ```  
 CREATE TABLE fileStreamDocs(  
@@ -43,7 +43,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>Lecture  
+### <a name="read"></a>Lire  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  
@@ -99,7 +99,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>Insérer  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  

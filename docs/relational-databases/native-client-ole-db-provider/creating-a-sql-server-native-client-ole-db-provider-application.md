@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84a920320860512dcc0cdd80619cd7aa671c96a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247131"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Création d'une application de fournisseur OLE DB de SQL Server Native Client
@@ -40,11 +40,11 @@ ms.locfileid: "75247131"
   
 -   [Établissement d'une connexion à une source de données](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
   
--   [Exécution d’une commande](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
+-   [Exécution d'une commande](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
   
 -   [Traitement des résultats](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
--   [À propos des propriétés de OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
+-   [À propos des propriétés OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
 -   [Utilisation de la clause OUTPUT avec OLE DB dans SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   

@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165212"
 ---
 # <a name="delivery-extensions-overview"></a>Vue d'ensemble des extensions de remise
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet aux utilisateurs de créer et de publier des rapports qui, une fois créés et publiés, peuvent être remis à différents emplacements. De plus, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut plusieurs extensions de remise et une API de remise qui permettent aux développeurs de créer des extensions de remise supplémentaires pour étendre les fonctionnalités de remise proposées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet aux utilisateurs de créer et de publier des rapports qui, une fois créés et publiés, peuvent être remis à différents emplacements. De plus, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut plusieurs extensions de remise et une API de remise qui permettent aux développeurs de créer des extensions de remise supplémentaires pour étendre les fonctionnalités de remise proposées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Le tableau suivant répertorie les extensions de remise fournies avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63165212"
 |Messagerie du serveur de rapports|Utilise un serveur SMTP pour envoyer électroniquement des rapports aux utilisateurs ou groupes individuels.|  
 |Partage de fichiers du serveur de rapports|Utilisé pour distribuer des rapports dans votre organisation aux partages de fichier réseau. Permet de copier automatiquement un rapport dans un partage de fichiers dans le cadre d'une planification désignée.|  
   
- ![Architecture d’extension de remise de Reporting Services](../../media/bk-reportservicedelivery.gif "Architecture d’extension de remise de Reporting Services")  
+ ![Architecture d'extension de remise de Reporting Services](../../media/bk-reportservicedelivery.gif "Architecture d'extension de remise de Reporting Services")  
 Architecture d'extension de remise de Reporting Services  
   
  Les extensions de remise sont associées avec des abonnements. Lors de la création d'un abonnement, un utilisateur peut choisir l'une des extensions de remise disponibles pour déterminer le mode de remise du rapport. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les abonnements se trouvent dans la base de données du serveur de rapports. Lorsqu'un événement se produit, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] associe l'événement aux abonnements contenus dans la base de données du serveur de rapports. Pour chaque abonnement attaché à l'événement, le serveur de rapports crée une notification. Pour les abonnements pilotés par les données, une notification est créée pour chaque destinataire. Une fois qu'une notification est créée, le serveur de rapports appelle une extension de remise particulière et passe dans les valeurs les paramètres d'extensions spécifiés dans la notification. L'extension de remise envoie la notification à l'utilisateur spécifiée par l'extension de remise sélectionnée.  
@@ -47,13 +47,13 @@ Architecture d'extension de remise de Reporting Services
   
 -   un ordinateur de déploiement sur lequel est installé un serveur de rapports ;  
   
--   un ordinateur de développement sur lequel est installé [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] ou le SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ;  
+-   Un ordinateur de développement [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] avec ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] le kit de développement logiciel (SDK) installé.  
   
 -   une connaissance détaillée des fonctions et fonctionnalités [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], notamment l'abonnement et la remise ;  
   
 -   une compréhension approfondie de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] et des contrôles Web si vous envisagez d'implémenter votre propre interface utilisateur d'abonnement pour le Gestionnaire de rapports ;  
   
--   de l’expérience en développement dans un langage [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tel que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Expérience de développement dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] un langage tel [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que Visual C# [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou .net.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de remise](../delivery-extension/implementing-a-delivery-extension.md)   

@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d8768fec2f96c725a9ba4bbf91996e95de4c800a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056300"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Installation et configuration de WideWorldImportersDW
@@ -24,19 +24,19 @@ Instructions d’installation et de configuration pour la base de données WideW
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour utiliser la version complète de l’exemple, utilisez l’édition Évaluation SQL Server/Developer/Enterprise.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour obtenir les meilleurs résultats, utilisez la version du 2016 juin ou une version ultérieure.
 
-## <a name="download"></a>Télécharger
+## <a name="download"></a>Téléchargement
 
 La dernière version de l’exemple :
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[larges-World-importateurs-version](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Téléchargez l’exemple de sauvegarde de base de données WideWorldImportersDW/BacPac qui correspond à votre édition de SQL Server ou Azure SQL Database.
 
 Le code source permettant de recréer l’exemple de base de données est disponible à partir de l’emplacement suivant. Notez que le remplissage des données est basé sur ETL à partir de la base de données OLTP (WideWorldImporters) :
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[larges-World-importeurs-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Installation
+## <a name="install"></a>Installer
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -50,7 +50,7 @@ Pour restaurer une sauvegarde sur une instance de SQL Server, vous pouvez utilis
 5. Si nécessaire, modifiez l’emplacement cible pour les fichiers de données et les fichiers journaux dans le volet **fichiers** . Notez qu’il est recommandé de placer les fichiers de données et les fichiers journaux sur des lecteurs différents.
 6. Cliquez sur **OK**. La restauration de la base de données est lancée. Une fois l’opération terminée, la base de données WideWorldImporters est installée sur votre instance SQL Server.
 
-### <a name="azure-sql-database"></a>Base de données Azure SQL
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Management Studio.
 
@@ -60,7 +60,7 @@ Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Manag
 3. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **Importer une application de la couche données**.
 4. Dans **Importer les paramètres** , sélectionnez **Importer à partir du disque local** et sélectionnez le BacPac de l’exemple de base de données à partir de votre système de fichiers.
 5. Sous **paramètres de la base de données** , modifiez le nom de la base de données en *WideWorldImportersDW* et sélectionnez l’édition cible et l’objectif de service à utiliser.
-6. Cliquez sur **suivant** et sur **Terminer** pour lancer le déploiement. La réalisation de cette opération prend quelques minutes. Lorsque vous spécifiez un objectif de service inférieur à S2, il peut prendre plus de temps.
+6. Cliquez sur **suivant** et sur **Terminer** pour lancer le déploiement. L’exécution de cette opération nécessite quelques minutes. Lorsque vous spécifiez un objectif de service inférieur à S2, il peut prendre plus de temps.
 
 ## <a name="configuration"></a>Configuration
 

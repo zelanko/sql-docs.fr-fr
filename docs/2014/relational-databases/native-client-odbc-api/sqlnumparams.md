@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046704"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
-  Améliorations apportées au début du moteur de base de données avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser SQLNumParams obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par SQLNumParams dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Les améliorations du moteur de base de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] données commencent par allow SQLNumParams pour obtenir des descriptions plus précises des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par SQLNumParams dans les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versions précédentes de.  
   
  Pour plus d’informations, consultez [Découverte des métadonnées](../native-client/features/metadata-discovery.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLNumParams, fonction](https://go.microsoft.com/fwlink/?LinkId=58404)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [SQLNumParams fonction)](https://go.microsoft.com/fwlink/?LinkId=58404)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

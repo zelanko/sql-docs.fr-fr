@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957167"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
@@ -25,11 +25,11 @@ ms.locfileid: "74957167"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Caution](#Security)  
+     [Sécurité](#Security)  
   
 -   **Pour créer une base de données protégée par le chiffrement transparent des données, utilisez :**  
   
@@ -43,19 +43,19 @@ ms.locfileid: "74957167"
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a>Avant de commencer  
+##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Restrictions"></a>Limitations et restrictions  
+###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installé dans `master` la base de données du serveur de destination [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , afin que puisse accéder aux fichiers de base de données. Pour plus d’informations, consultez [Chiffrement transparent des données &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Lors du déplacement d'une base de données protégée par chiffrement transparent des données, vous devez également déplacer le certificat ou la clé asymétrique qui sert à ouvrir la clé DEK. Le certificat ou la clé asymétrique doit être installé dans `master` la base de données du serveur de destination [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , afin que puisse accéder aux fichiers de base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Vous devez conserver des copies du fichier de certificat et du fichier de clé privée pour permettre la récupération du certificat. Le mot de passe de la clé privée ne doit pas forcément être le même que le mot de passe de la clé principale de la base de données.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stocke les fichiers créés ici dans **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** par défaut. Vos noms et emplacements de fichier peuvent être différents.  
   
-###  <a name="Security"></a>Caution  
+###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a>Autorisations  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Nécessite `CONTROL DATABASE` l’autorisation sur `master` la base de données pour créer la clé principale de base de données.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74957167"
   
 ##  <a name="SSMSProcedure"></a>Pour créer une base de données protégée par le chiffrement transparent des données  
   
-###  <a name="SSMSCreate"></a>Utilisation de SQL Server Management Studio  
+###  <a name="SSMSCreate"></a> Utilisation de SQL Server Management Studio  
   
 1.  Créez une clé principale de base de données et `master` un certificat dans la base de données. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
@@ -98,13 +98,13 @@ ms.locfileid: "74957167"
   
 8.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-###  <a name="TsqlCreate"></a>Utilisation de Transact-SQL  
+###  <a name="TsqlCreate"></a> Utilisation de Transact-SQL  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Create a database master key and a certificate in the master database.  
@@ -144,23 +144,23 @@ ms.locfileid: "74957167"
     GO  
     ```  
   
- Pour plus d’informations, voir :  
+ Pour plus d'informations, consultez les pages suivantes :  
   
--   [CRÉER une clé principale &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CRÉER un certificat &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CERTIFICAT de sauvegarde &#40;&#41;Transact-SQL](/sql/t-sql/statements/backup-certificate-transact-sql)  
+-   [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
   
--   [CRÉER une base de données &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [CRÉER une clé de CHIFFREment de base de données &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ##  <a name="TsqlProcedure"></a>Pour déplacer une base de données  
   
-###  <a name="SSMSMove"></a>Utilisation de SQL Server Management Studio  
+###  <a name="SSMSMove"></a> Utilisation de SQL Server Management Studio  
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données que vous avez chiffrée précédemment, pointez sur **Tâches** et sélectionnez **Détacher…**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74957167"
      **Conserver les catalogues de texte intégral**  
      Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral** . Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-     **Statu**  
+     **État**  
      Affiche l’un des états suivants : **Prêt** ou **Non prêt**.  
   
      **Message**  
@@ -230,28 +230,28 @@ ms.locfileid: "74957167"
      **Attacher en tant que**  
      Permet de spécifier éventuellement un autre nom sous lequel la base de données doit être attachée.  
   
-     **Du**  
+     **Propriétaire**  
      Fournit une liste déroulante des propriétaires de bases de données possibles dans laquelle vous pouvez sélectionner un autre propriétaire.  
   
-     **Statu**  
+     **État**  
      Affiche l'état de la base de données conformément au tableau ci-après.  
   
     |Icône|Texte d'état|Description|  
     |----------|-----------------|-----------------|  
     |(Aucune icône)|(Aucun texte)|L'opération d'attachement n'a pas démarré ou est peut-être en attente pour cet objet. Il s'agit de la valeur par défaut lorsque la boîte de dialogue est ouverte.|  
     |Triangle vert dirigé vers la droite|En cours|L'opération d'attachement a démarré, mais n'est pas terminée.|  
-    |Coche verte|Opération réussie|L'attachement de l'objet a réussi.|  
-    |Cercle rouge contenant une croix blanche|Erreur|L'opération d'attachement a rencontré une erreur et ne s'est pas terminée correctement.|  
+    |Coche verte|Succès|L'attachement de l'objet a réussi.|  
+    |Cercle rouge contenant une croix blanche|Error|L'opération d'attachement a rencontré une erreur et ne s'est pas terminée correctement.|  
     |Cercle contenant deux quartiers noirs (à gauche et à droite) et deux quartiers blancs (en haut et en bas)|Arrêté|L'opération d'attachement n'a pas réussi, car l'utilisateur l'a interrompue.|  
     |Cercle contenant une flèche courbe pointant dans le sens inverse des aiguilles d'une montre|Restauré|L'opération d'attachement a réussi, mais a été restaurée en raison d'une erreur lors de l'attachement d'un autre objet.|  
   
      **Message**  
      Affiche un message vierge ou un lien hypertexte « Fichier introuvable ».  
   
-     **Complémentaires**  
+     **Ajouter**  
      Permet de rechercher les principaux fichiers de base de données nécessaires. Lorsque l'utilisateur sélectionne un fichier .mdf, les informations applicables sont automatiquement remplies dans les champs respectifs de la grille **Bases de données à attacher** .  
   
-     **Installez**  
+     **Remove**  
      Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
   
      **Détails de la base de données** **«** _<database_name>_ »  
@@ -260,7 +260,7 @@ ms.locfileid: "74957167"
     > [!NOTE]  
     >  Si un fichier n'existe pas, la colonne **Message** affiche « Introuvable ». Si un fichier journal est introuvable, cela signifie qu'il se trouve dans un autre répertoire ou qu'il a été supprimé. Vous devez mettre à jour le chemin d'accès du fichier dans la grille **Détails de la base de données** pour désigner l'emplacement correct ou supprimer le fichier journal de la grille. Si un fichier de données .ndf est introuvable, vous devez mettre à jour son chemin d'accès dans la grille pour désigner l'emplacement correct.  
   
-     **Nom du fichier d’origine**  
+     **Nom du fichier d'origine**  
      Affiche le nom du fichier attaché appartenant à la base de données.  
   
      **Type de fichier**  
@@ -272,13 +272,13 @@ ms.locfileid: "74957167"
      **Message**  
      Affiche un message vierge ou un lien hypertexte «**Fichier introuvable**».  
   
-###  <a name="TsqlMove"></a>Utilisation de Transact-SQL  
+###  <a name="TsqlMove"></a> Utilisation de Transact-SQL  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Dans la barre d'outils Standard , cliquez sur **Nouvelle requête**.  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l’exemple suivant dans la fenêtre de requête et cliquez sur **exécuter**.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Detach the TDE protected database from the source server.   
@@ -313,17 +313,17 @@ ms.locfileid: "74957167"
     GO  
     ```  
   
- Pour plus d’informations, voir :  
+ Pour plus d'informations, consultez les pages suivantes :  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
--   [CRÉER une clé principale &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CRÉER un certificat &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CRÉER une base de données &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détachement et attachement de la base de données &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
+ [Attacher et détacher une base de données &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   

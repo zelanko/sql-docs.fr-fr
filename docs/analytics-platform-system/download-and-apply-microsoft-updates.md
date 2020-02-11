@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401193"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Télécharger et appliquer des mises à jour Microsoft pour Analytics Platform System
@@ -26,7 +26,7 @@ Cette rubrique explique comment télécharger des mises à jour à partir du cat
 >   
 > N’appliquez pas les mises à jour Microsoft lorsque l’appliance est en cours d’utilisation. L’application de mises à jour peut entraîner le redémarrage des nœuds de l’appliance. Les mises à jour doivent être appliquées au cours d’une fenêtre de maintenance lorsque l’appliance n’est pas utilisée.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Conditions préalables requises  
 Avant d’effectuer ces étapes, vous devez :  
   
 -   Configurez WSUS sur votre appareil en suivant les instructions de la procédure de [configuration de Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  

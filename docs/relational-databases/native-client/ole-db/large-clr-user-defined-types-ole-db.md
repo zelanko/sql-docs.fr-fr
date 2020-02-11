@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da389befc45fec755e65426850a7f98fd66d119e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760042"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
@@ -25,14 +25,15 @@ ms.locfileid: "73760042"
 
   Cette rubrique traite des modifications apportées à OLE DB dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour prendre en charge les types définis par l'utilisateur (UDT) du CLR (Common Language Runtime) volumineux.  
   
- Pour plus d’informations sur la prise en charge des UDT volumineux CLR dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [types CLR volumineux définis par l’utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Pour obtenir un exemple, consultez [utiliser des UDT &#40;CLR&#41;de grande taille OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Pour plus d’informations sur la prise en charge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT volumineux CLR dans Native Client, consultez [types CLR volumineux définis par l’utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Pour obtenir un exemple, consultez [utiliser des UDT CLR de grande taille &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Format de données  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise ~0 pour représenter la longueur des valeurs qui sont de taille illimitée pour les types d'objets volumineux (LOB). ~0 représente également la taille des types UDT du CLR supérieurs à 8 000 octets.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise ~0 pour représenter la longueur des valeurs qui sont de taille illimitée pour les types d'objets volumineux (LOB). ~0 représente également la taille des types UDT du CLR supérieurs à 8 000 octets.  
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les ensembles de lignes :  
   
-|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Value|  
+|Type de données SQL Server|Type de données OLE DB|Disposition en mémoire|Valeur|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](tableau d’octets\)|132 (oledb.h)|  
   
@@ -57,7 +58,7 @@ ms.locfileid: "73760042"
 |Type de paramètre|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|"DBTYPE_UDT"|*n*|non défini|non défini|clear|  
-|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|"DBTYPE_UDT"|~0|non défini|non défini|jeu|  
+|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|"DBTYPE_UDT"|~0|non défini|non défini|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Les informations fournies dans la structure DBPARAMBINDINFO doivent respecter les conditions suivantes :  
@@ -75,7 +76,7 @@ ms.locfileid: "73760042"
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|NULL|NULL|Désactiver|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~0|NULL|NULL|Définissez|DB_ALL_EXCEPT_LIKE|0|  
   
  Les colonnes suivantes sont également définies pour les types UDT :  
@@ -92,7 +93,7 @@ ms.locfileid: "73760042"
   
 |Type de paramètre|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|~0|~0|Désactiver|  
+|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|~0|~0|Clear|  
 |DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~0|~0|~0|Définissez|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Ensemble de lignes COLUMNS (ensembles de lignes de schéma)  
@@ -100,7 +101,7 @@ ms.locfileid: "73760042"
   
 |Type de colonne|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|Désactiver|*n*|  
+|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|Clear|*n*|  
 |DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|Définissez|0|  
   
  Les colonnes supplémentaires suivantes sont définies pour les types UDT :  
@@ -121,13 +122,13 @@ ms.locfileid: "73760042"
 |Type de données de liaison|UDT vers serveur|Non-UDT vers serveur|UDT à partir du serveur|Non-UDT à partir du serveur|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Pris en charge (5)|Erreur (1)|Pris en charge (5)|Erreur (4)|  
-|DBTYPE_BYTES|Pris en charge (5)|Néant|Pris en charge (5)|Néant|  
-|DBTYPE_WSTR|Pris en charge (2), (5)|Néant|Pris en charge (3), (5), (6)|Néant|  
-|DBTYPE_BSTR|Pris en charge (2), (5)|Néant|Pris en charge (3), (5)|Néant|  
-|DBTYPE_STR|Pris en charge (2), (5)|Néant|Pris en charge (3), (5)|Néant|  
-|DBTYPE_IUNKNOWN|Pris en charge (6)|Néant|Pris en charge (6)|Néant|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|Néant|Pris en charge (3), (5)|Néant|  
-|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|Néant|Néant|Néant|  
+|DBTYPE_BYTES|Pris en charge (5)|N/A|Pris en charge (5)|N/A|  
+|DBTYPE_WSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5), (6)|N/A|  
+|DBTYPE_BSTR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_STR|Pris en charge (2), (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_IUNKNOWN|Pris en charge (6)|N/A|Pris en charge (6)|N/A|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge (5)|N/A|Pris en charge (3), (5)|N/A|  
+|DBTYPE_VARIANT (VT_BSTR)|Pris en charge (2), (5)|N/A|N/A|N/A|  
   
 ### <a name="key-to-symbols"></a>Liste des symboles  
   
@@ -142,7 +143,7 @@ ms.locfileid: "73760042"
   
  DBTYPE_NULL et DBTYPE_EMPTY peuvent être liés pour des paramètres d'entrée, mais pas pour des résultats ou des paramètres de sortie. S'ils sont liés pour des paramètres d'entrée, l'état doit avoir la valeur DBSTATUS_S_ISNULL pour DBTYPE_NULL ou DBSTATUS_S_DEFAULT pour DBTYPE_EMPTY. DBTYPE_BYREF ne peut pas être utilisé avec DBTYPE_NULL ou DBTYPE_EMPTY.  
   
- DBTYPE_UDT peut également être converti en DBTYPE_EMPTY et en DBTYPE_NULL. Toutefois, DBTYPE_NULL et DBTYPE_EMPTY ne peuvent pas être convertis en DBTYPE_UDT, ce qui est cohérent avec DBTYPE_BYTES. **ISSCommandWithParameters** est utilisé pour traiter les types UDT en tant que paramètres.  
+ DBTYPE_UDT peut également être converti en DBTYPE_EMPTY et en DBTYPE_NULL. Toutefois, DBTYPE_NULL et DBTYPE_EMPTY ne peuvent pas être convertis en DBTYPE_UDT, ce qui est cohérent avec DBTYPE_BYTES. **ISSCommandWithParameters** est utilisé pour traiter les UDT comme paramètres.  
   
  Les conversions de données fournies par les services principaux d’OLE DB (**IDataConvert**) ne s’appliquent pas à DBTYPE_UDT.  
   
@@ -167,13 +168,13 @@ ms.locfileid: "73760042"
   
 |Version du client|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
-|SQL Server 2005|UDT|varbinary(max)|  
-|SQL Server 2008 et ultérieur|UDT|UDT|  
+|SQL Server 2005|UDT|varbinary(max)|  
+|SQL Server 2008 et versions ultérieures|UDT|UDT|  
   
  Quand **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) est défini sur 80, les types UDT volumineux apparaissent aux clients de la même façon que pour les clients de bas niveau.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR volumineux définis par l’utilisateur](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
+ [Types CLR volumineux définis par l'utilisateur](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   
 

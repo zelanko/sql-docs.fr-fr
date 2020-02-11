@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240151"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
@@ -32,7 +32,7 @@ ms.locfileid: "63240151"
  **Ajouter**  
  Cliquez sur ce bouton pour ajouter un programme à la liste **Sélectionnez le programme à ouvrir**. Vous pouvez soit taper le chemin du programme dans le champ **Nom du programme** , soit rechercher l’emplacement du programme en cliquant sur **Parcourir**. Dans le champ **Nom convivial**, entrez un nom de programme à afficher dans la liste **Sélectionnez le programme à ouvrir**.  
   
- **Supprimer**  
+ **Remove**  
  Pour supprimer un programme, sélectionnez-le, puis cliquez sur **Supprimer**.  
   
  **Par défaut**  

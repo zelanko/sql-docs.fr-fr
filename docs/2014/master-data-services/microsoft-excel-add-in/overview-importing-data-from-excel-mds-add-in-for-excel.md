@@ -1,5 +1,5 @@
 ---
-title: Publication de données (complément MDS pour Excel) | Microsoft Docs
+title: Publication de données (Complément MDS pour Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479032"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publication des données (Complément MDS pour Excel)
@@ -35,11 +35,11 @@ ms.locfileid: "65479032"
   
 -   Vous ne pouvez pas annoter les suppressions, bien que celles-ci soient enregistrées en tant que transactions qui peuvent être inversées par un administrateur.  
   
--   Si vous modifiez le **Code** valeur pour un membre, il n’est pas enregistrée en tant que transaction, et toutes les transactions précédentes pour le membre ne sont pas disponibles.  
+-   Si vous modifiez la valeur de **code** d’un membre, celle-ci n’est pas enregistrée en tant que transaction et toutes les transactions précédentes pour le membre ne sont pas disponibles.  
   
 -   Vous pouvez afficher les transactions effectuées sur un membre par d'autres utilisateurs. Vous pouvez également afficher toutes les transactions que vous avez effectuées sur un membre, même si vous n’avez plus l’autorisation d’accès aux attributs spécifiques.  
   
- Vous pouvez afficher toutes les transactions effectuées sur un membre. Pour plus d’informations, consultez [afficher toutes les Annotations ou Transactions pour un membre &#40;complément MDS pour Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
+ Vous pouvez afficher toutes les transactions effectuées sur un membre. Pour plus d’informations, consultez [Afficher toutes les annotations ou transactions pour un membre &#40;Complément MDS pour Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
   
 > [!IMPORTANT]  
 >  Si vous entrez une annotation de plus de 500 caractères, elle sera automatiquement tronquée.  
@@ -51,7 +51,7 @@ ms.locfileid: "65479032"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Publiez des données à partir de la feuille de calcul active vers le référentiel MDS.|[Publier des données à partir d’Excel dans MDS &#40;complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Publiez des données à partir de la feuille de calcul active vers le référentiel MDS.|[Publier des données d’Excel dans MDS &#40;Complément MDS pour Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |Supprimez une ligne du référentiel MDS et de la feuille de calcul en même temps.|[Supprimer une ligne &#40;Complément MDS pour Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenu associé  

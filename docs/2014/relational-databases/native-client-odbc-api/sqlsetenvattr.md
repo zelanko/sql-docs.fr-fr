@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47b0d30ac70ff3b7974f7d0530b9fb50494ac424
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188746"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
@@ -27,7 +27,7 @@ ms.locfileid: "63188746"
  L'un des attributs contrôlé par **SQLSetEnvAttr** indique si le regroupement de connexions sera utilisé. Si le regroupement de connexions est utilisé avec le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, il faut affecter au paramètre *DriverCompletion* la valeur SQL_DRIVER_NOPROMPT lors de la connexion à [SQLDriverConnect](sqldriverconnect.md) ou **SQLConnect**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLSetEnvAttr Function](https://go.microsoft.com/fwlink/?LinkId=59369)   
- [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
+ [SQLSetEnvAttr fonction)](https://go.microsoft.com/fwlink/?LinkId=59369)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

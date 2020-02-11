@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f8f04d699c46c654290d1badc26de246a2d9125
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783695"
 ---
 # <a name="metadata---parameter-and-result"></a>Métadonnées - Paramètres et résultats
@@ -28,7 +28,7 @@ ms.locfileid: "73783695"
 ## <a name="information-returned-in-ipd-fields"></a>Informations retournées dans les champs IPD  
  Les informations suivantes sont retournées dans les champs IPD :  
   
-|Type de paramètre|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Type de paramètre|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -40,10 +40,10 @@ ms.locfileid: "73783695"
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_TYPE|SQL_TYPE_DATE|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime** dans IRD, **datetime2** dans IPD|**DateTime** dans IRD, **datetime2** dans IPD|**datetime2**|datetimeoffset|  
+|SQL_DESC_TYPE_NAME|**Date**|**time**|**smalldatetime** dans IRD, **datetime2** dans IPD|**DateTime** dans IRD, **datetime2** dans IPD|**datetime2**|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|Néant|Néant|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|Néant|  
+|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
   
  Il y a parfois des discontinuités dans les plages de valeurs. Par exemple, 9 est manquant dans 8,10.. 6. Cela est dû à l'ajout d'une virgule décimale lorsque la précision fractionnaire est supérieure à zéro.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73783695"
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
 |SQL_SS_TYPE_DEFAULT|0..7|19, 21..27|**datetime2**|  
 |SQL_SS_TYPE_SMALLDATETIME|0|19|**smalldatetime**|  
-|SQL_SS_TYPE_DATETIME|3|23|**datetime**|  
+|SQL_SS_TYPE_DATETIME|3|23|**DATETIME**|  
   
  Le paramètre par défaut de SQL_CA_SS_SERVER_TYPE est SQL_SS_TYPE_DEFAULT. Les paramètres de SQL_DESC_PRECISION et SQL_DESC_LENGTH sont validés avec le paramètre de SQL_CA_SS_SERVER_TYPE comme décrit dans le tableau ci-dessus. Si cette validation échoue, SQL_ERROR est retourné et un enregistrement de diagnostic est consigné avec SQLState 07006 et le message « Violation de l'attribut de type de données restreint ». Cette erreur est également retournée si SQL_CA_SS_SERVER_TYPE a une valeur autre que SQL_SS_TYPE DEFAULT et que DESC_CONCISE_TYPE n'est pas SQL_TYPE_TIMESTAMP. Ces validations sont effectuées lorsque la validation de cohérence du descripteur a lieu, par exemple :  
   
@@ -74,7 +74,7 @@ ms.locfileid: "73783695"
 ## <a name="information-returned-in-ird-fields"></a>Informations retournées dans les champs IRD  
  Les informations suivantes sont retournées dans les champs IRD :  
   
-|Type de colonne|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Type de colonne|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
@@ -86,13 +86,13 @@ ms.locfileid: "73783695"
 |SQL_DESC_LENGTH|10|8, 10.. 16|16|2|19, 21..27|26, 28..34|  
 |SQL_DESC_LITERAL_PREFIX|'|'|'|'|'|'|  
 |SQL_DESC_LITERAL_SUFFIX|'|'|'|'|'|'|  
-|SQL_DESC_LOCAL_TYPE_NAME|**date**|**time**|**smalldatetime**|**datetime**|**datetime2**|datetimeoffset|  
+|SQL_DESC_LOCAL_TYPE_NAME|**Date**|**time**|**smalldatetime**|**DATETIME**|**datetime2**|datetimeoffset|  
 |SQL_DESC_OCTET_LENGTH|6|12|4|8|16|20|  
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |SQL_DESC_TYPE|SQL_DATETIME|SQL_SS_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime**|**datetime**|**datetime2**|datetimeoffset|  
+|SQL_DESC_TYPE_NAME|**Date**|**time**|**smalldatetime**|**DATETIME**|**datetime2**|datetimeoffset|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## <a name="see-also"></a>Voir aussi  

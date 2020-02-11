@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11acec127d354688aa81e8e50006c0b80c14347d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761651"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Création d'un ensemble de lignes de paramètre table
@@ -42,14 +42,14 @@ ms.locfileid: "73761651"
   
  Pour récupérer les informations sur l’État null, unique, calculé et mis à jour de chaque colonne, le consommateur utilise IColumnsRowset :: GetColumnsRowset ou IColumnsInfo :: GetColumnInfo. Ces méthodes fournissent des informations détaillées sur chaque colonne de l'ensemble de lignes du paramètre table.  
   
- Le consommateur spécifie le type de chaque colonne du paramètre table. Cela est identique à la spécification de colonnes lors de la création d'une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le consommateur obtient un objet d’ensemble de lignes de paramètre table auprès du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB via le paramètre de sortie *ppRowset* .  
+ Le consommateur spécifie le type de chaque colonne du paramètre table. Cela est identique à la spécification de colonnes lors de la création d'une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le consommateur obtient un objet d’ensemble de lignes de paramètre table à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir du fournisseur de OLE DB Native Client via le paramètre de sortie *ppRowset* .  
   
 ## <a name="dynamic-scenario"></a>Scénario Dynamique  
  Lorsque le consommateur n’a pas d’informations de type, il doit utiliser IOpenRowset :: OpenRowset pour instancier des objets d’ensemble de lignes de paramètre table. Tout ce que le consommateur doit fournir au fournisseur est le nom du type.  
   
  Dans ce scénario, le fournisseur obtient les informations de type d'un objet d'ensemble de lignes de paramètre table à partir du serveur au nom du consommateur.  
   
- Les paramètres *pTableID* et *pUnkOuter* doivent être définis comme dans le scénario statique. Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB obtient ensuite les informations de type (informations de colonne et contraintes) à partir du serveur et retourne un objet d’ensemble de lignes de paramètre table par le biais du paramètre *ppRowset* . Cette opération requiert une communication avec le serveur, et par conséquent ne fonctionne pas aussi bien que le scénario statique. Le scénario dynamique fonctionne uniquement avec des appels de procédure paramétrables.  
+ Les paramètres *pTableID* et *pUnkOuter* doivent être définis comme dans le scénario statique. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client obtient ensuite les informations de type (informations de colonne et contraintes) à partir du serveur et retourne un objet d’ensemble de lignes de paramètre table par le biais du paramètre *ppRowset* . Cette opération requiert une communication avec le serveur, et par conséquent ne fonctionne pas aussi bien que le scénario statique. Le scénario dynamique fonctionne uniquement avec des appels de procédure paramétrables.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229403"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
@@ -28,7 +28,7 @@ ms.locfileid: "75229403"
   
  ![Power View pour l’architecture des modèles multidimensionnels](../media/daxmd-architecture.gif "Power View pour l’architecture des modèles multidimensionnels")  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Conditions préalables requises  
  **Configuration requise du serveur**  
   
 -   SQL Server 2014 édition Enterprise ou Business Intelligence avec Analysis Services exécuté en mode multidimensionnel.  
@@ -39,7 +39,7 @@ ms.locfileid: "75229403"
   
 -   La fonctionnalité cliente Power View requiert Microsoft Silverlight 5. Pour plus d’informations, consultez [planification de la prise en charge des navigateurs Reporting Services et Power View &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-## <a name="features"></a>Caractéristiques  
+## <a name="features"></a>Fonctionnalités  
  **Prise en charge native de Power View**  
   
  Dans cette version, les modèles multidimensionnels prennent en charge l'analyse et la visualisation grâce à l'utilisation de Power View en mode SharePoint. Aucune configuration particulière de vos modèles multidimensionnels n'est nécessaire. Il existe toutefois quelques différences dans la manière dont les objets de modèle multidimensionnel sont affichés dans Power View, par rapport à d'autres outils clients, tels que Microsoft Excel et Microsoft Performance Point. Cette version ne prend pas en charge l'analyse et la visualisation de modèles multidimensionnels à l'aide de Power View dans Excel 2013.  
@@ -56,15 +56,15 @@ ms.locfileid: "75229403"
 |Objet multidimensionnel|Objet tabulaire|  
 |-----------------------------|--------------------|  
 |Cube|Modèle|  
-|Dimension de cube|Table|  
+|Dimension de cube|Table de charge de travail|  
 |Attributs de dimension (clé, nom)|Colonne|  
-|Groupe de mesures|Table|  
+|Groupe de mesures|Table de charge de travail|  
 |Measure|Measure|  
 |Mesure sans groupe de mesures|Dans un tableau nommé Mesures|  
 |Relations de dimension de cube de groupe de mesures|Relation|  
 |Perspective|Perspective|  
 |KPI|KPI|  
-|Hiérarchies parent-enfant/utilisateur|Hiérarchie|  
+|Hiérarchies parent-enfant/utilisateur|Hierarchy|  
 |Afficher le dossier|Afficher le dossier|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Mesures, groupes de mesures et indicateurs de performance clés  

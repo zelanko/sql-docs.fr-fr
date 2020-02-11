@@ -1,5 +1,5 @@
 ---
-title: Exemple de Code JScript pour retourner un jeu d’enregistrements | Microsoft Docs
+title: Exemple de code JScript pour retourner un jeu d’enregistrements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924935"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Exemple de code JScript pour retourner un recordset
-## <a name="jscript-code-rsjs"></a>Code JScript (rs.js)  
+## <a name="jscript-code-rsjs"></a>Code JScript (RS. js)  
   
 ```  
 main();  
@@ -79,10 +79,10 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>Essaie !  
+#### <a name="try-it"></a>Essayez !  
   
-1.  Enregistrez le code ci-dessus dans un fichier texte. Enregistrez le fichier sous rs.js.  
+1.  Enregistrez le code ci-dessus dans un fichier texte. Enregistrez le fichier sous le format RS. js.  
   
-2.  Ouvrez une invite de commandes et d’un cd dans le répertoire où vous avez enregistré le fichier JScript (rs.js).  
+2.  Ouvrez une invite de commandes et un CD-ROM dans le répertoire où vous avez enregistré le fichier JScript (RS. js).  
   
-3.  Type `CScript rs.js` à partir de l’invite de commandes.
+3.  Tapez `CScript rs.js` à partir de l’invite de commandes.

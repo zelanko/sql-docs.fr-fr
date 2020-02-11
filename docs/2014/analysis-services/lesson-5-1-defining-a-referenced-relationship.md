@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493932"
 ---
 # <a name="defining-a-referenced-relationship"></a>Définition d'une relation référencée
@@ -30,7 +30,7 @@ ms.locfileid: "69493932"
   
      Notez que la mesure **Reseller Sales-Sales Amount** n’est pas dimensionnée correctement par les membres d’attribut **Country-Region** de la hiérarchie **Regions** . La valeur de **Reseller Sales-Sales Amount** se répète pour chaque membre d’attribut de **Country-Region** .  
   
-     ![Mesure du montant des ventes des revendeurs dimensionnés-ventes](../../2014/tutorials/media/l5-referencedrelationship-1.gif "Mesure du montant des ventes des revendeurs dimensionnés-ventes")  
+     ![Mesure Dimensioned Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "Mesure Dimensioned Reseller Sales-Sales Amount")  
   
 4.  Ouvrez le Concepteur de vues de source de données pour la vue de source de données **Adventure Works DW 2012** .  
   
@@ -46,17 +46,17 @@ ms.locfileid: "69493932"
   
      Notez que la dimension de cube **Geography** n’a actuellement aucune relation avec le groupe de mesures **Internet Sales** ou **Reseller Sales** .  
   
-8.  Cliquez sur le bouton de sélection ( **...** ) dans la cellule **nom complet** à l’intersection de la dimension **Customer** et du groupe de mesures **Internet Sales** .  
+8.  Cliquez sur le bouton de sélection (**...**) dans la cellule **nom complet** à l’intersection de la dimension **Customer** et du groupe de mesures **Internet Sales** .  
   
      Dans la boîte de dialogue **Définir une relation** , notez qu’une relation **régulière** est définie entre la table de dimension **DimCustomer** et le groupe de mesures **FactInternetSales** , et qu’elle est basée sur la colonne **CustomerKey** dans chacune de ces tables. Toutes les relations que vous avez définies jusqu'à présent dans ce didacticiel sont des relations régulières.  
   
      L’illustration suivante représente la boîte de dialogue **Définir une relation** avec une relation régulière entre la table de dimension **DimCustomer** et la table du groupe de mesures **FactInternetSales** .  
   
-     ![Boîte de dialogue définir une relation](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Boîte de dialogue définir une relation")  
+     ![Boîte de dialogue définir une relation](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Boîte de dialogue Définir une relation")  
   
 9. Cliquez sur **Annuler**.  
   
-10. Cliquez sur le bouton de sélection ( **...** ) dans la cellule sans nom à l’intersection de la dimension **Geography** et du groupe de mesures **Reseller Sales** .  
+10. Cliquez sur le bouton de sélection (**...**) dans la cellule sans nom à l’intersection de la dimension **Geography** et du groupe de mesures **Reseller Sales** .  
   
      Dans la boîte de dialogue **Définir une relation** , notez qu’aucune relation n’est actuellement définie entre la dimension de cube Geography et le groupe de mesures Reseller Sales. Vous ne pouvez pas définir une relation régulière car il n'existe pas de relation directe entre la table de dimension de la dimension Geography et la table de faits du groupe de mesures Reseller Sales.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "69493932"
   
      L'attribut Geography Key de la dimension Reseller sera utilisé uniquement pour lier la dimension Geography à la table de faits Reseller Sales. Étant donné que la hiérarchie d'attributs ne sera pas utilisée pour des recherches, cela ne présente pas d'intérêt de la définir comme hiérarchie visible. En outre, le classement et l'optimisation de la hiérarchie d'attributs nuit aux performances. Toutefois, l'attribut doit être activé pour servir de lien entre les deux dimensions.  
   
-4.  Basculez vers le concepteur de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube pour le cube du didacticiel, cliquez sur l’onglet utilisation de la **dimension** , puis cliquez sur le bouton de sélection ( **...** ) à l’intersection du groupe de mesures **Reseller Sales** et de la dimension de cube **Geography** .  
+4.  Basculez vers le concepteur de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube pour le cube du didacticiel, cliquez sur l’onglet utilisation de la **dimension** , puis cliquez sur le bouton de sélection (**...**) à l’intersection du groupe de mesures **Reseller Sales** et de la dimension de cube **Geography** .  
   
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -118,13 +118,13 @@ ms.locfileid: "69493932"
   
      Notez que la mesure **Reseller Sales-Sales Amount** est désormais dimensionnée correctement par l’attribut **Country-Region** de la hiérarchie **Geographies** définie par l’utilisateur, comme le montre l’illustration suivante.  
   
-     ![Boîte de dialogue définir une relation](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Boîte de dialogue définir une relation")  
+     ![Boîte de dialogue définir une relation](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Boîte de dialogue Définir une relation")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d’une relation de faits](lesson-5-2-defining-a-fact-relationship.md)  
+ [Définition d'une relation de faits](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relations d'attributs](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [Relations d’attributs](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Définir une relation référencée et des propriétés de relation référencée](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

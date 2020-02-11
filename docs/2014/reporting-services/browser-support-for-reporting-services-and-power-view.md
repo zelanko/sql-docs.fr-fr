@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241200"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925783"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
   Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous utilisez un navigateur Web pour afficher les rapports et exécuter le Gestionnaire de rapports. Certains navigateurs ne prennent pas en charge toutes les fonctionnalités de rapport. Cette rubrique décrit la prise en charge et la configuration requise pour les fonctionnalités de gestion du Gestionnaire de rapports, l'affichage de rapports, les contrôles de la visionneuse de rapports dans Visual Studio. Elle résume également la disponibilité des fonctionnalités pour les navigateurs pris en charge, les conditions requises pour l'authentification et les conditions requises pour les scripts.  
@@ -37,7 +37,7 @@ ms.locfileid: "75241200"
 
  La liste des navigateurs pris en charge et des versions de navigateur que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge dépend du type de document ouvert. Les classeurs Excel 2013 et les fichiers «**. rdlx**» utilisent des composants différents.  
   
-|Type de document|Environment|Prise en charge des navigateurs|  
+|Type de document|Environnement|Prise en charge des navigateurs|  
 |-------------------|-----------------|---------------------|  
 |Rapport Power View (.RDLX)|**SharePoint Server :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mode intégré SharePoint et l’application Web Power View.|Consultez [Power View sur SharePoint Server et Reporting Services en mode intégré SharePoint](#bkmk_powerview_on_SSRS).|  
 |Classeur Excel 2013 avec des feuilles Power View|**SharePoint Server :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] dans Excel Services.<br /><br /> **SharePoint Online (Office 365) :** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] sur Excel Web App.|Consultez [Power View dans Excel Services ou Excel Web App dans SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
@@ -51,7 +51,7 @@ ms.locfileid: "75241200"
   
 - Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2010, consultez [planifier la prise en charge des navigateurs (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
 |**Internet Explorer 10 (pour le Bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
@@ -74,7 +74,7 @@ ms.locfileid: "75241200"
   
 -   Pour plus d’informations sur la prise en charge des navigateurs SharePoint 2013, consultez planifier lahttps://technet.microsoft.com/library/cc263526(office.15).aspx) [prise en charge des navigateurs dans SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (.  
   
-|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
 |**Internet Explorer 10 (pour le Bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|  
@@ -101,7 +101,7 @@ ms.locfileid: "75241200"
 
  Voici la liste actuelle des navigateurs et des fonctionnalités pris en charge avec la visionneuse de rapports. La visionneuse de rapports prend en charge les rapports du Gestionnaire de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et des bibliothèques SharePoint.  
   
-|**Navigateur**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6 -7 pour iPad**|  
+|**Browser**|**Windows 8 et 8.1**|**Windows 7**|**Windows Server 2012 et 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6 -7 pour iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (pour le bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|  
 |**Internet Explorer 10 (pour le Bureau)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|  
@@ -128,17 +128,17 @@ ms.locfileid: "75241200"
   
  Pour plus d'informations sur l'accès URL, consultez la rubrique suivante :  
   
-- [Référence de paramètre d’accès URL](url-access-parameter-reference.md)  
+- [Référence de paramètres d'accès URL](url-access-parameter-reference.md)  
   
 ###  <a name="bkmk_authentication"></a>Conditions d’authentification
 
  Les navigateurs prennent en charge des schémas d'authentification spécifiques qui doivent être gérés par le serveur de rapports pour que la demande du client réussisse. Le tableau suivant identifie les types d'authentification par défaut pris en charge par chaque navigateur exécuté sur un système d'exploitation Windows.  
   
-|**Type de navigateur**|**Permet**|**Navigateur par défaut**|**Valeur par défaut du serveur**|  
+|**Type de navigateur**|**Prise en charge**|**Valeur de navigateur par défaut**|**Valeur de serveur par défaut**|  
 |----------------------|------------------|-------------------------|------------------------|  
-|**Internet Explorer**|Negociate, Kerberos, NTLM, Basic|Négocier|Oui. Les paramètres d'authentification par défaut fonctionnent avec Internet Explorer.|  
+|**Internet Explorer**|Negociate, Kerberos, NTLM, Basic|Negotiate|Oui. Les paramètres d'authentification par défaut fonctionnent avec Internet Explorer.|  
 |**Firefox**|NTLM, Basic|NTLM|Oui. Les paramètres d'authentification par défaut fonctionnent avec Firefox.|  
-|**Safari**|de base|de base|Oui. Les paramètres d'authentification par défaut fonctionnent avec Safari.|  
+|**Safari**|De base|De base|Oui. Les paramètres d'authentification par défaut fonctionnent avec Safari.|  
 |**Chrome**|Negotiated, NTLM, Basic|Negotiated|Oui. Les paramètres d'authentification par défaut fonctionnent avec Chrome.|  
   
 ### <a name="script-requirements"></a>Contraintes liées aux scripts
@@ -147,7 +147,7 @@ ms.locfileid: "75241200"
   
  Si l'utilisation de scripts n'est pas activée, vous recevez un message d'erreur similaire au suivant lors de l'ouverture d'un rapport :  
   
-- **Votre navigateur ne prend pas en charge les scripts ou a été configuré pour ne pas autoriser l’exécution des scripts. Cliquez ici pour afficher ce rapport sans scripts**.  
+- **Votre navigateur ne prend pas en charge les scripts ou est configuré pour ne pas les autoriser. Cliquez ici pour afficher ce rapport sans les scripts**.  
   
  Si vous choisissez de visualiser le rapport sans la prise en charge des scripts, le rapport est rendu en HTML sans fonctionnalités d'afficheur de rapports, telles que la barre d'outils Rapport et l'explorateur de documents.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "75241200"
 
  Le contrôle serveur Web ReportViewer est utilisé pour inclure la fonctionnalité de rapports dans une application Web ASP.NET. Les contrôles sont inclus dans Visual Studio et prennent en charge des navigateurs et des versions de navigateur différents de ceux des autres composants décrits dans cette rubrique. Le type de navigateur utilisé pour afficher l'application détermine le type de fonctionnalité ReportViewer que vous pouvez fournir dans votre application. Utilisez le tableau de cette rubrique pour déterminer quels sont les navigateurs pris en charge soumis à des restrictions de fonctionnalités de rapport et quelles sont les plateformes prises en charge.  
   
- En raison des différences qui existent au niveau du rendu des moteurs des navigateurs pris en charge, certaines fonctionnalités de rapport avancées peuvent s'afficher différemment dans différents navigateurs.  Par exemple, la rotation du texte.  
+ En raison des différences dans les moteurs de rendu des navigateurs pris en charge, certaines fonctionnalités de rapport avancées peuvent s’afficher différemment dans différents navigateurs.  Par exemple, la rotation du texte.  
   
 ### <a name="scripting-requirements"></a>Contraintes liées aux scripts
 
@@ -170,12 +170,12 @@ ms.locfileid: "75241200"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Navigateur**|**Windows 8** et **Windows 8.1**|**Windows 7**|**Windows Server 2012** et **2012 R2**|**Windows Server 2008** et **2008 R2**|**Windows Server 2003**|**Mac OS X 10,6-10,9**|**Notes**|  
+|**Browser**|**Windows 8** et **Windows 8.1**|**Windows 7**|**Windows Server 2012** et **2012 R2**|**Windows Server 2008** et **2008 R2**|**Windows Server 2003**|**Mac OS X 10,6-10,9**|**Notes**|  
 |**Internet Explorer 11 (pour le Bureau)**|Oui|Oui|Oui|Non pris en charge|Non pris en charge|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer.|  
 |**Internet Explorer 10 (pour le Bureau)**|Oui|Oui|Oui|Non pris en charge|Non pris en charge|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer.|  
 |**Internet Explorer 9**|Non pris en charge|Oui|Non pris en charge|Oui|Oui|Oui|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer.|  
-|**Internet Explorer 8.0**|Non pris en charge|Oui|Non pris en charge|Oui|Oui<sup>1</sup>|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer. <sup>1,0</sup>|  
-|**Internet Explorer 7.0**|Non pris en charge|Oui|Non pris en charge|Oui|Oui<sup>1</sup>|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer. <sup>1,0</sup>|  
+|**Internet Explorer 8.0**|Non pris en charge|Oui|Non pris en charge|Oui|Oui<sup>1</sup>|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer. <sup>1</sup>|  
+|**Internet Explorer 7.0**|Non pris en charge|Oui|Non pris en charge|Oui|Oui<sup>1</sup>|Non pris en charge|Internet Explorer prend en charge l'ensemble complet des fonctionnalités ReportViewer. <sup>1</sup>|  
 |**Firefox (dernière version publiée publiquement)**|Oui|Oui|Oui|Oui|Oui|Non pris en charge|L'impression et le zoom ne sont pas pris en charge.|  
 |**Safari (dernière version publiée publiquement)**|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|Non pris en charge|Oui|L'impression et le zoom ne sont pas pris en charge.<br /><br /> Le contrôle de calendrier utilisé pour sélectionner des dates sur un rapport paramétré a été désactivé dans ce navigateur. Les utilisateurs doivent taper manuellement les dates dans la zone de message du paramètre.|  
 |**Chrome (dernière version publiée publiquement)**|Oui|Oui|Oui|Oui|Oui|Non pris en charge|L'impression et le zoom ne sont pas pris en charge.|  

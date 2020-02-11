@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399419"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Nouveautés d’Analytics Platform System, un entrepôt de données MPP avec montée en puissance parallèle
@@ -163,7 +163,7 @@ Microsoft conseille à tous les clients d’installer le BIOS mis à jour. Micro
 ## <a name="aps-2016"></a>APS 2016
 Cette section a décrit les nouvelles fonctionnalités pour APS 2016-AU6.
 
-### <a name="sql-server-2016"></a>SQL Server 2016
+### <a name="sql-server-2016"></a>SQL Server 2016
 
 APS AU6 s’exécute sur la dernière version de SQL Server 2016 et utilise le niveau de compatibilité de base de données par défaut 130. SQL Server 2016 permet la prise en charge de nouvelles fonctionnalités telles que :
 

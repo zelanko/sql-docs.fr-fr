@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896630"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Développement d'un composant de transformation personnalisé à sorties asynchrones
@@ -37,7 +37,7 @@ ms.locfileid: "62896630"
   
  Les colonnes des composants en amont disponibles pour un composant à sorties synchrones sont automatiquement accessibles aux composants situés en aval du composant. Par conséquent, un composant à sorties synchrones n'a pas besoin de définir de colonne de sortie pour fournir des colonnes et des lignes au composant suivant. Les composants à sorties asynchrones, en revanche, doivent définir des colonnes de sortie et fournir des lignes aux composants en aval. Par conséquent, un composant à sorties asynchrones doit exécuter un plus grand nombre de tâches au moment de la conception et de l'exécution, et le développeur de composants doit implémenter davantage de code.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient plusieurs transformations à sorties asynchrones. Par exemple, la transformation de tri requiert toutes ses lignes avant de pouvoir les trier et elle utilise pour cela des sorties asynchrones. Une fois qu'elle a reçu toutes ses lignes, elle les trie et les ajoute à sa sortie.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient plusieurs transformations avec des sorties asynchrones. Par exemple, la transformation de tri requiert toutes ses lignes avant de pouvoir les trier et elle utilise pour cela des sorties asynchrones. Une fois qu'elle a reçu toutes ses lignes, elle les trie et les ajoute à sa sortie.  
   
  Cette section explique en détail comment développer des transformations à sorties asynchrones. Pour plus d’informations sur le développement de composants sources, consultez [Développement d’un composant source personnalisé](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -318,7 +318,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Icône Integration Services (petite)](../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône de Integration Services (petite)](../media/dts-16.gif "Icône Integration Services (petite)")  **restez à jour avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’un composant de transformation personnalisé à sorties synchrones](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399442"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestion des charges de travail dans Analytics Platform System
@@ -34,7 +34,7 @@ Par exemple, avec les techniques de gestion de la charge de travail dans SQL Ser
 Gestion des charges de travail  
 La *gestion des charges de travail* est la capacité à comprendre et à ajuster l’utilisation des ressources système afin d’obtenir les meilleures performances pour les demandes simultanées.  
   
-Classe de ressources  
+Classe de ressource  
 Dans SQL Server PDW, une *classe de ressource* est un rôle serveur intégré qui a des limites préaffectées pour la mémoire et l’accès concurrentiel. SQL Server PDW alloue des ressources aux demandes en fonction de l’appartenance au rôle de serveur de la classe de ressources de la connexion qui soumet les demandes.  
   
 Sur les nœuds de calcul, l’implémentation des classes de ressources utilise la fonctionnalité Resource Governor dans SQL Server. Pour plus d’informations sur Resource Governor, consultez [Resource Governor](../relational-databases/resource-governor/resource-governor.md) sur MSDN.  
@@ -58,7 +58,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Descriptions des classes de ressources  
 Le tableau suivant décrit les classes de ressources et leurs allocations de ressources système.  
   
-|Classe de ressources|Importance de la demande|Utilisation maximale de la mémoire *|Emplacements de concurrence (maximum = 32)|Description|  
+|Classe de ressource|Importance de la demande|Utilisation maximale de la mémoire *|Emplacements de concurrence (maximum = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |default|Moyenne|400 Mo|1|Par défaut, chaque connexion est autorisée à disposer d’une petite quantité de mémoire et de ressources d’accès concurrentiel pour ses demandes.<br /><br />Lorsqu’une connexion est ajoutée à une classe de ressource, la nouvelle classe est prioritaire. Lorsqu’une connexion est supprimée de toutes les classes de ressources, la connexion revient à l’allocation de ressources par défaut.|  
 |MediumRC|Moyenne|1200 MO|3|Exemples de requêtes qui peuvent nécessiter la classe de ressources de taille moyenne :<br /><br />Opérations CTAS qui ont des jointures de hachage volumineuses.<br /><br />Sélectionnez les opérations qui nécessitent davantage de mémoire pour éviter la mise en cache sur disque.<br /><br />Chargement de données dans des index ColumnStore en cluster.<br /><br />La création, la reconstruction et la réorganisation des index ColumnStore en cluster pour les tables plus petites qui ont 10-15 colonnes.|  
@@ -98,7 +98,7 @@ Supposons que 6 demandes volumineuses sont soumises à SQL Server PDW, puis que 
   
 Dans chaque classe de ressources, les demandes s’exécutent dans l’ordre FIFO (First in First Out).  
   
-## <a name="GeneralRemarks"></a>Remarques générales  
+## <a name="GeneralRemarks"></a>Remarques d'ordre général  
 Si une connexion est membre de plusieurs classes de ressources, la classe présentant le plus de ressources est prioritaire.  
   
 Lorsqu’une connexion est ajoutée ou supprimée d’une classe de ressource, la modification prend effet immédiatement pour toutes les demandes ultérieures. les demandes en cours d’exécution ou en attente ne sont pas affectées. La connexion n’a pas besoin de se déconnecter et de se reconnecter pour que la modification se produise.  
@@ -131,7 +131,7 @@ Instructions et opérations SQL régies par des classes de ressources :
   
 -   UPDATE  
   
--   SUPPRIMER  
+-   Suppression  
   
 -   RESTAURER la base de données lors de la restauration dans une appliance avec davantage de nœuds de calcul.  
   
@@ -140,7 +140,7 @@ Instructions et opérations SQL régies par des classes de ressources :
 ## <a name="Limits"></a>Limitations et restrictions  
 Les classes de ressources gouvernent les allocations de mémoire et de concurrence.  Elles ne régissent pas les opérations d’entrée/sortie.  
   
-## <a name="Metadata"></a>Metadata  
+## <a name="Metadata"></a>Métadonnées  
 DMV qui contiennent des informations sur les classes de ressources et les membres de la classe de ressources.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -149,9 +149,9 @@ DMV qui contiennent des informations sur les classes de ressources et les membre
   
 DMV qui contiennent des informations sur l’état des demandes et les ressources dont elles ont besoin :  
   
--   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 Vues système associées exposées à partir des DMV de SQL Server sur les nœuds de calcul. Consultez [SQL Server vues de gestion dynamique](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) pour obtenir des liens vers ces DMV sur MSDN.  
   

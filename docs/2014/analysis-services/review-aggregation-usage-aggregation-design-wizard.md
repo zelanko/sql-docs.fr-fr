@@ -1,5 +1,5 @@
 ---
-title: Passez en revue l’utilisation d’agrégation (Assistant de conception d’agrégation) | Microsoft Docs
+title: Examiner l’utilisation de l’agrégation (Assistant conception d’agrégation) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070217"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>Passer en revue l'utilisation d'agrégation (Assistant Conception d'agrégation)
   Utilisez la page **Passer en revue l'utilisation d'agrégation** pour configurer des paramètres d'utilisation d'agrégation.  
   
 ## <a name="options"></a>Options  
- **Default**  
+ **Valeurs**  
  Sélectionnez pour que le paramètre d'utilisation d'agrégation de l'attribut possède la valeur Par défaut. En utilisant ce paramètre, le concepteur applique une règle par défaut selon le type d'attribut et de dimension.  
   
  `Full`  
@@ -39,7 +39,7 @@ ms.locfileid: "66070217"
  Sélectionnez pour définir les paramètres d'utilisation d'agrégation de tous les attributs avec la valeur par défaut.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide de F1 l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
- [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Aide (F1) de l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services assistants &#40;&#41;de données multidimensionnelles](analysis-services-wizards-multidimensional-data.md)  
   
   

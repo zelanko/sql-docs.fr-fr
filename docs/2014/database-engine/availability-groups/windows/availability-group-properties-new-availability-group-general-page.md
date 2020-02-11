@@ -1,5 +1,5 @@
 ---
-title: Propriétés du groupe de disponibilité et nouveau groupe de disponibilité (Page Général) | Microsoft Docs
+title: Propriétés du groupe de disponibilité et nouveau groupe de disponibilité (page général) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815652"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propriétés du groupe de disponibilité et Nouveau groupe de disponibilité (page Général)
-  Cette rubrique s’applique à l’onglet **Général** de la boîte de dialogue **Nouveau groupe de disponibilité** et de la boîte de dialogue **Propriétés du groupe de disponibilité**.  La boîte de dialogue **Nouveau groupe de disponibilité** vous permet de créer un nouveau groupe de disponibilité sans utiliser l’ [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. La boîte de dialogue **Propriétés du groupe de disponibilité** vous permet d’afficher et de modifier la configuration d’un groupe de disponibilité existant.  
+  Cette rubrique s’applique à l’onglet **général** de la boîte de dialogue **nouveau groupe de disponibilité** et de la boîte de dialogue **Propriétés du groupe de disponibilité** .  La boîte de dialogue **Nouveau groupe de disponibilité** vous permet de créer un nouveau groupe de disponibilité sans utiliser l’ [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. La boîte de dialogue **Propriétés du groupe de disponibilité** vous permet d’afficher et de modifier la configuration d’un groupe de disponibilité existant.  
   
  **Pour afficher les propriétés d'un groupe de disponibilité**  
   
 -   [Afficher les propriétés d’un groupe de disponibilité &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Utilisez le tableau de bord AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Nom du groupe de disponibilité**  
@@ -39,21 +39,21 @@ ms.locfileid: "62815652"
  **Ajouter**  
  Cliquez pour ajouter une base de données au groupe de disponibilité.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer une base de données sélectionnée du groupe de disponibilité.  
   
 ## <a name="availability-replicas"></a>Réplicas de disponibilité  
  **Instance de serveur**  
  Nom de serveur de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge ce réplica et, pour une instance non définie par défaut, son nom d'instance.  
   
- **Rôle**  
- **Principal**  
+ **Actif**  
+ **Primaire**  
  Actuellement le réplica principal.  
   
  **Secondary**  
  Actuellement un réplica secondaire.  
   
- **Résolution**  
+ **La résolution**  
  Actuellement le rôle de réplica est en cours d'être résolu en rôle principal ou secondaire.  
   
  **Mode de disponibilité**  
@@ -65,12 +65,12 @@ ms.locfileid: "62815652"
  **Validation synchrone**  
  Le réplica principal attend pour valider une transaction donnée que le réplica secondaire ait écrit la transaction sur le disque.  
   
- Pour plus d’informations, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  **Mode de basculement**  
  Mode de basculement du réplica, parmi :  
   
- **Automatic**  
+ **Automatique**  
  Basculement automatique. Le réplica est une cible pour les basculements automatiques. Pris en charge uniquement si le mode de disponibilité est défini en mode de validation synchrone.  
   
  **Manuel**  
@@ -83,9 +83,9 @@ ms.locfileid: "62815652"
  Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du paramètre par défaut.  
   
  **Autoriser les connexions en lecture/écriture**  
- Les connexions où la propriété de connexion d’intention de l’application a la valeur **ReadOnly** ne sont pas autorisées. Lorsque la propriété d'intention de l'application a la valeur **ReadWrite** ou si cette propriété n'est pas définie, la connexion est autorisée. Pour plus d'informations sur la propriété de connexion d'intention de l'application, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Les connexions où la propriété de connexion d’intention de l’application a la valeur **ReadOnly** ne sont pas autorisées. Lorsque la propriété d’intention de l’application est définie sur **ReadWrite** ou si la propriété de connexion d’intention de l’application n’est pas définie, la connexion est autorisée. Pour plus d'informations sur la propriété de connexion d'intention de l'application, consultez [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- **Lisible secondaire**  
+ **Secondaire accessible en lecture**  
  Si un réplica de disponibilité qui revêt le rôle secondaire (autrement dit, un réplica secondaire) peut accepter les connexions des clients, les options suivantes sont disponibles :  
   
  **Non**  
@@ -97,19 +97,19 @@ ms.locfileid: "62815652"
  **Oui**  
  Toutes les connexions sont autorisées aux bases de données secondaires de ce réplica, mais uniquement pour l'accès en lecture. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
   
- **Délai d'attente de session (secondes)**  
+ **Délai d’expiration de session (secondes)**  
  Nombre de secondes pour la période de délai d'expiration de session sur ce réplica.  
   
- **URL de point de terminaison**  
+ **URL du point de terminaison**  
  URL du point de terminaison. Pour plus d’informations sur le format de ces URL, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Ajouter**  
  Cliquez pour ajouter un réplica secondaire au groupe de disponibilité.  
   
- **Supprimer**  
+ **Remove**  
  Cliquez pour supprimer un réplica secondaire du groupe de disponibilité.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

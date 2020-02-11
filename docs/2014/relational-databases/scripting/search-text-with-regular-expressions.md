@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243323"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
@@ -79,7 +79,7 @@ ms.locfileid: "75243323"
 |Caractère d'échappement|\e|Unicode U+001B.|  
 |Bell|\g|Unicode U+0007.|  
 |Retour arrière|\h|Unicode U+0008.|  
-|Tab|\t|Représente un caractère de tabulation, Unicode U+0009.|  
+|Onglet|\t|Représente un caractère de tabulation, Unicode U+0009.|  
 |Caractère Unicode|\x#### ou \u####|Représente un caractère donné selon une valeur Unicode où #### désigne 1 à 4 chiffres hexadécimaux. Vous pouvez spécifier un caractère n'appartenant pas au plan BMP (Basic Multilingual Plane), autrement dit, un substitut à l'aide du point de code ISO 10646 ou de deux points de code Unicode spécifiant les valeurs de la paire de substitution.|  
   
  Le tableau suivant répertorie la syntaxe utilisée pour les opérations de recherche à l'aide de propriétés de caractères Unicode standard. L'abréviation de deux lettres est identique à celle figurant dans la base de données de propriétés de caractères Unicode. Ces abréviations peuvent être spécifiées en tant qu'élément d'un jeu de caractères. Ainsi, l'expression [:Nd:Nl:No] représente n'importe quel type de chiffre.  
@@ -122,7 +122,7 @@ ms.locfileid: "75243323"
 |Expression|Syntaxe|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Représente n'importe quel caractère. Par exemple, :Alar retourne des mots comme « Par », « partie » ou « épargne ».|  
-|Chiffre|:Nu|Représente n'importe quel nombre ou chiffre.|  
+|Numérique|:Nu|Représente n'importe quel nombre ou chiffre.|  
 |Ponctuation|:Pu|Représente n'importe quel signe de ponctuation tel que ?, @, ', etc.|  
 |Espace blanc|:Wh|Représente n'importe quel type d'espace blanc, y compris les espaces typographiques et idéographiques.|  
 |Bidirectionnel|:Bi|Représente les caractères d'un script se lisant de droite à gauche (langue arabe ou hébraïque).|  
@@ -132,5 +132,5 @@ ms.locfileid: "75243323"
 |Idéographique/Han/Kanji|:Id|Représente des caractères idéographiques tels Han et Kanji.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rechercher et remplacer](search-and-replace.md)   
+ [Recherche et remplacement](search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](search-text-with-wildcards.md)  

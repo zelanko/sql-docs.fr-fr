@@ -18,21 +18,22 @@ ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124004"
 ---
-# <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
+# <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne un identificateur unique pour la transaction. Il s'agit en fait d'une chaîne utilisée pour lier des sessions à l'aide de sp_bindsession.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,17 +43,17 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [@out_token=]'*return_value*'  
- Jeton à utiliser pour lier les sessions. *return_value* est **varchar (255)** sans valeur par défaut.  
+ [@out_token=] '*return_value*'  
+ Jeton à utiliser pour lier les sessions. *return_value* est de type **varchar (255)** et n’a pas de valeur par défaut.  
   
-## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+## <a name="return-code-values"></a>Codet de retour  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- sp_getbindtoken retourne un jeton valide uniquement lorsque la procédure stockée est exécutée dans une transaction active. Sinon, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retournera un message d’erreur. Exemple :  
+ sp_getbindtoken retourne un jeton valide uniquement lorsque la procédure stockée est exécutée dans une transaction active. Dans le cas [!INCLUDE[ssDE](../../includes/ssde-md.md)] contraire, le retourne un message d’erreur. Par exemple :  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Lorsque sp_getbindtoken est utilisée pour inscrire une connexion de transaction distribuée dans une transaction ouverte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le même jeton. Exemple :  
+ Lorsque sp_getbindtoken est utilisé pour inscrire une connexion de transaction distribuée dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ouverte, retourne le même jeton. Par exemple :  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,7 +98,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 (1 row(s_) affected)  
 ```  
   
- Le jeton de liaison peut être utilisé avec sp_bindsession afin de lier de nouvelles sessions à la même transaction. Le jeton de liaison n’est valide que localement dans chaque instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] et ne peut pas être partagé entre plusieurs instances.  
+ Le jeton de liaison peut être utilisé avec sp_bindsession afin de lier de nouvelles sessions à la même transaction. Le jeton de liaison n’est valide que localement dans chaque instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du et ne peut pas être partagé entre plusieurs instances.  
   
  Pour obtenir et passer un jeton de liaison, vous devez exécuter sp_getbindtoken avant d'utiliser sp_bindsession afin de partager le même espace de verrouillage. Si vous disposez d'un jeton de liaison, sp_bindsession sera exécuté correctement.  
   

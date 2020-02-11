@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109050"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une visionneuse HTML utilisée pour afficher des rapports sur demande lorsqu'ils sont demandés auprès du serveur de rapports. La visionneuse HTML offre une infrastructure pour afficher les rapports au format HTML. Elle comporte une barre d'outils Rapport, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. Cette barre d'outils offre des fonctionnalités qui permettent d'utiliser votre rapport, notamment des options d'exportation qui permettent d'afficher votre rapport dans d'autres formats que le format HTML. La section de paramètre et l'explorateur de documents sont affichés uniquement lorsque vous ouvrez des rapports configurés pour utiliser des paramètres et une commande d'explorateur de documents.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une visionneuse HTML qui permet d’afficher les rapports à la demande à mesure qu’ils sont demandés par le serveur de rapports. La visionneuse HTML offre une infrastructure pour afficher les rapports au format HTML. Elle comporte une barre d'outils Rapport, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. Cette barre d'outils offre des fonctionnalités qui permettent d'utiliser votre rapport, notamment des options d'exportation qui permettent d'afficher votre rapport dans d'autres formats que le format HTML. La section de paramètre et l'explorateur de documents sont affichés uniquement lorsque vous ouvrez des rapports configurés pour utiliser des paramètres et une commande d'explorateur de documents.  
   
 > [!NOTE]  
 >  Bien que vous ne puissiez pas modifier la barre d'outils Rapport, vous pouvez configurer les paramètres dans une adresse URL destinée aux rapports pour la masquer dans un rapport. Pour plus d’informations sur le masquage de la barre d’outils des rapports, consultez [Référence de paramètre d’accès URL](url-access-parameter-reference.md).  
@@ -33,21 +33,22 @@ ms.locfileid: "66109050"
   
  La barre d'outils Rapport est identique à celle illustrée ci-dessous. Elle peut être toutefois différente selon les fonctionnalités de rapport ou les options de rendu disponibles.  
   
- ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
+ ![Barre d’outils rapport](media/htmlviewer-toolbar.gif "Barre d'outils Rapports")  
   
  Le tableau ci-dessous décrit les fonctionnalités couramment utilisées de la barre d'outils Rapport. Chaque fonctionnalité est identifiée par la commande que vous utilisez pour y accéder.  
   
-|Utilisez cette icône ou cette commande||Pour|  
+|Utilisez cette icône ou cette commande||À|  
 |------------------------------|-|--------|  
-|![Commandes de navigation entre les pages](media/htmlviewer-pagenav.gif "Commandes de navigation entre les pages")|**Commandes de navigation entre les pages**|Ouvrir la première ou la dernière page d'un rapport, faire défiler un rapport page par page et ouvrir une page particulière d'un rapport. Pour afficher une page spécifique, tapez le numéro de page et appuyez sur Entrée.|  
-|![Commandes d'affichage des pages](media/htmlviewer-pagesize.gif "Commandes d'affichage des pages")|**Commandes d'affichage des pages**|Agrandir ou réduire la taille de la page d'un rapport. Outre les modifications des pourcentages, vous pouvez sélectionner **Largeur de page** pour ajuster la longueur horizontale d’une page d’un rapport à la fenêtre du navigateur ou **Page entière** pour ajuster la longueur verticale d’un rapport à la fenêtre du navigateur. **Internet Explorer 5.5 et versions ultérieures prennent en charge l'option** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
+|![Contrôles de navigation entre les pages](media/htmlviewer-pagenav.gif "Commandes de navigation entre les pages")|**Contrôles de navigation entre les pages**|Ouvrir la première ou la dernière page d'un rapport, faire défiler un rapport page par page et ouvrir une page particulière d'un rapport. Pour afficher une page spécifique, tapez le numéro de page et appuyez sur Entrée.|  
+|![Contrôles d’affichage de page](media/htmlviewer-pagesize.gif "Commandes d'affichage des pages")|**Contrôles d’affichage de page**|Agrandir ou réduire la taille de la page d'un rapport. Outre les modifications des pourcentages, vous pouvez sélectionner **Largeur de page** pour ajuster la longueur horizontale d’une page d’un rapport à la fenêtre du navigateur ou **Page entière** pour ajuster la longueur verticale d’un rapport à la fenêtre du navigateur. 
+  **Internet Explorer 5.5 et versions ultérieures prennent en charge l'option** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
 |![Champ de recherche](media/htmlviewer-search.gif "Champ de recherche")|**Champ de recherche**|Rechercher du contenu dans un rapport en tapant un terme ou une phrase que vous souhaitez trouver (la longueur maximale de la valeur est de 256 caractères). La recherche ne respecte pas la casse et commence au niveau de la page ou de la section actuellement sélectionnée. Seul le contenu visible est compris dans une opération de recherche. Pour rechercher d'autres occurrences de la même valeur, cliquez sur **Suivant**.|  
-|![Formats d'exportation](media/htmlviewer-export.GIF "Formats d'exportation")|**Formats d'exportation**|Ouvrir une nouvelle fenêtre de navigateur et effectuer le rendu du rapport dans le format sélectionné. Les formats disponibles sont déterminés par les extensions de rendu installées sur le serveur de rapports. Le format TIFF est recommandé pour l'impression. Cliquez sur **Exporter** pour afficher le rapport dans le format sélectionné.|  
+|![Formats d’exportation](media/htmlviewer-export.GIF "Formats d'exportation")|**Formats d’exportation**|Ouvrir une nouvelle fenêtre de navigateur et effectuer le rendu du rapport dans le format sélectionné. Les formats disponibles sont déterminés par les extensions de rendu installées sur le serveur de rapports. Le format TIFF est recommandé pour l'impression. Cliquez sur **Exporter** pour afficher le rapport dans le format sélectionné.|  
 |![Icône Explorateur de documents](media/htmlviewer-docmap.GIF "Icône Explorateur de documents")|**Icône Explorateur de documents**|Afficher ou masquer le volet de l'explorateur de documents dans un rapport qui comprend un explorateur de documents. Un explorateur de documents est un contrôle de navigation entre les rapports similaire au volet de navigation d'un site Web. Vous pouvez cliquer sur des éléments dans l'explorateur de documents pour naviguer jusqu'à un groupe, une page ou un sous-rapport spécifique.|  
-|![Icône Imprimante](media/printer-icon.gif "Icône Imprimante")|**Icône Imprimante**|Ouvre la boîte de dialogue Imprimer qui permet de spécifier les options d'impression et d'imprimer un rapport. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez le contrôle de l'impression.|  
-||**Icônes d'affichage ou de masquage**|Afficher ou masquer les champs de valeurs de paramètre et le bouton **Afficher le rapport** dans un rapport qui contient des paramètres.|  
-|![Bouton d’actualisation du navigateur sur la barre d’outils du rapport](media/htmlviewer-refresh.GIF "Bouton d’actualisation du navigateur sur la barre d’outils du rapport")|**Icône d'actualisation de rapport**|Actualiser le rapport. Les données des rapports actifs seront actualisées. Les rapports mis en cache sont rechargés à partir de l'emplacement où ils sont stockés.|  
-|![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icône de source de données**|Sources de données générées à partir de rapports.|  
+|![Icône d’imprimante](media/printer-icon.gif "Icône Imprimante")|**Icône d’imprimante**|Ouvre la boîte de dialogue Imprimer qui permet de spécifier les options d'impression et d'imprimer un rapport. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez le contrôle de l'impression.|  
+||**Afficher et masquer les icônes**|Afficher ou masquer les champs de valeurs de paramètre et le bouton **Afficher le rapport** dans un rapport qui contient des paramètres.|  
+|![Bouton d'actualisation du navigateur sur la barre d'outils du rapport](media/htmlviewer-refresh.GIF "Bouton d'actualisation du navigateur sur la barre d'outils du rapport")|**Icône d’actualisation de rapport**|Actualiser le rapport. Les données des rapports actifs seront actualisées. Les rapports mis en cache sont rechargés à partir de l'emplacement où ils sont stockés.|  
+|![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icône de flux de données**|Sources de données générées à partir de rapports.|  
   
 ### <a name="about-export-formats"></a>Formats d'exportation  
  À partir de la barre d'outils Rapport, vous pouvez choisir d'afficher votre rapport sous divers formats. Les formats disponibles sont déterminés par les extensions de rendu installées sur le serveur de rapports. Lorsque vous sélectionnez un autre format, une seconde fenêtre de navigateur affiche le rapport en utilisant une visionneuse associée au format d'exportation sélectionné. Si aucune visionneuse n'est disponible pour le format sélectionné, vous pouvez choisir un autre format.  
@@ -72,7 +73,7 @@ ms.locfileid: "66109050"
  Les informations d'identification sont les valeurs de nom d'utilisateur et de mot de passe qui autorisent l'accès à une source de données. Une fois les informations d'identification spécifiées, cliquez sur **Afficher le rapport** pour obtenir les données. Si un rapport requiert que vous vous connectiez, cela signifie que les données que vous êtes autorisé à afficher peuvent être différentes de celles qu'un autre utilisateur peut afficher. Par conséquent, deux utilisateurs peuvent exécuter le même rapport et obtenir des résultats différents. En outre, certains rapports contiennent des zones masquées qui sont révélées selon les informations d'identification de connexion utilisateur ou les sélections effectuées dans le rapport. Les zones masquées sont exclues des opérations de recherche, ce qui entraîne des résultats de recherche différents de ceux obtenus lorsque toutes les parties du rapport sont visibles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Spécifier les informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   

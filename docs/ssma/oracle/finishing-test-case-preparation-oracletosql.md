@@ -1,5 +1,5 @@
 ---
-title: Terminer la préparation du cas de Test (OracleToSQL) | Microsoft Docs
+title: Fin de la préparation du cas de test (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,53 +11,53 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: bc5693c71ac6061f12ee90386b3c135a45a14e09
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266074"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Terminer la préparation des cas de test (OracleToSQL)
-Dernière page de l’Assistant affiche la description du cas de Test et des informations sur les objets impliqués dans le test. En outre, sur cette page vous pouvez définir le test des options d’exécution.  
+La dernière page de l’Assistant affiche la description du cas de test et les informations relatives aux objets impliqués dans le test. En outre, sur cette page, vous pouvez définir les options d’exécution des tests.  
   
-Le **les informations de cas de Test** section indique le nom de cas de Test et la description.  
+La section **informations sur les cas de test** affiche le nom et la description du cas de test.  
   
-Le **objets sélectionnés pour être testé** section contient la liste nommée des objets testés regroupés par type d’objet.  
+La section **objets sélectionnés pour être testés** contient la liste nommée d’objets testés regroupés par type d’objet.  
   
-Le **objets affectés par Test que vous analyserez** section affiche la liste nommée d’objets, les modifications de données doivent être comparées après l’exécution d’objets testé.  
+La section **objets affectés par le test qui sera analysé** affiche la liste nommée des objets dont les modifications de données doivent être comparées après l’exécution des objets testés.  
   
 ## <a name="test-case-settings"></a>Paramètres de cas de test  
-Dans le **les paramètres de cas de Test** section, vous pouvez définir l’exécution suivante des options de test :  
+Dans la section **paramètres de cas de test** , vous pouvez définir les options de test d’exécution suivantes :  
   
-### <a name="stop-test-execution-after-first-failure"></a>Arrêter l’exécution des tests après la première défaillance  
-Spécifie pour interrompre le test si une erreur se produit pendant l’exécution du test.  
+### <a name="stop-test-execution-after-first-failure"></a>Arrêter l’exécution des tests après le premier échec  
+Spécifie de rompre le test si une erreur se produit pendant l’exécution du test.  
   
--   Si vous choisissez **Oui**, tester l’exécution s’arrête si une erreur se produit.  
+-   Si vous choisissez **Oui**, l’exécution des tests s’arrête si une erreur se produit.  
   
--   Si vous choisissez **non**, l’exécution de tests se poursuit après une erreur.  
+-   Si vous choisissez **non**, l’exécution des tests se poursuit après une erreur.  
   
-### <a name="perform-data-rollback"></a>Effectuer la restauration de données  
-Permet la restauration automatique des données après l’exécution de tests.  
+### <a name="perform-data-rollback"></a>Effectuer une restauration des données  
+Active la restauration automatique des données après l’exécution des tests.  
   
--   Si vous choisissez **Oui**, les modifications de données seront perdues après l’exécution de tests.  
+-   Si vous choisissez **Oui**, les modifications apportées aux données seront perdues après l’exécution du test.  
   
--   Si vous choisissez **non**, toutes les modifications de données seront enregistrées de l’exécution de test.  
+-   Si vous choisissez **non**, toutes les modifications apportées aux données d’exécution des tests seront enregistrées.  
   
-### <a name="auxiliary-tables-saving-mode"></a>Mode d’économie de tables auxiliaires  
-Définit le mode d’enregistrement pour les tables auxiliaires créé pendant l’exécution du test. Consultez la description de tables auxiliaires dans le [en cours d’exécution de cas de Test &#40;OracleToSQL&#41; ](../../ssma/oracle/running-test-cases-oracletosql.md) rubrique.  
+### <a name="auxiliary-tables-saving-mode"></a>Mode d’enregistrement des tables auxiliaires  
+Définit le mode d’enregistrement pour les tables auxiliaires créées pendant l’exécution du test. Consultez la description des tables auxiliaires dans la rubrique [exécution des cas de Test &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md) .  
   
--   Si vous sélectionnez **toujours enregistrer**, table auxiliaire données doivent toujours être stockées pour une utilisation ultérieure.  
+-   Si vous sélectionnez **toujours enregistrer**, les données de la table auxiliaire sont toujours stockées pour une utilisation ultérieure.  
   
--   Si vous sélectionnez **enregistrer en cas d’échec de la comparaison des tables**, les données de table auxiliaire seront stockées uniquement si une erreur se produit.  
+-   Si vous sélectionnez **enregistrer en cas d’échec**de la comparaison de tables, les données de la table auxiliaire sont stockées uniquement si une erreur se produit.  
   
--   Si vous sélectionnez **toujours supprimer**, tables auxiliaires toujours être supprimées après l’exécution de tests.  
+-   Si vous sélectionnez **toujours supprimer**, les tables auxiliaires sont toujours supprimées après l’exécution du test.  
   
--   Si vous sélectionnez **utilisateur poser en cas d’échec de la comparaison des tables**, l’utilisateur peut sélectionner l’action nécessaire si une erreur se produit.  
+-   Si vous sélectionnez **demander**à l’utilisateur en cas d’échec de la comparaison de tables, l’utilisateur peut sélectionner l’action nécessaire si une erreur se produit.  
   
-Cliquez sur le **Terminer** bouton pour enregistrer le cas de Test préparée dans [à l’aide de référentiels de Test (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Cliquez sur le bouton **Terminer** pour enregistrer le cas de test préparé dans [à l’aide des référentiels de test (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
 ## <a name="see-also"></a>Voir aussi  
-[À l’aide de référentiels de Test &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[Cas de Test en cours d’exécution &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Utilisation de référentiels de test &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[Exécution de cas de test &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Test des objets de base de données migrés &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -13,22 +13,22 @@ ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928539"
 ---
 # <a name="adox-object-model"></a>Modèle objet ADOX
-Le diagramme suivant illustre comment les objets sont représentés et liées dans ADOX. Pour plus d’informations sur un objet spécifique ou une collection, consultez la rubrique de référence spécifique, ou [objets ADOX](../../../ado/reference/adox-api/adox-objects.md) et [Collections ADOX](../../../ado/reference/adox-api/adox-collections.md).  
+Le diagramme suivant illustre la façon dont les objets sont représentés et associés dans ADOX. Pour plus d’informations sur un objet ou une collection spécifique, consultez la rubrique de référence spécifique, ou [objets ADOX](../../../ado/reference/adox-api/adox-objects.md) et [Collections ADOX](../../../ado/reference/adox-api/adox-collections.md).  
   
  ![Modèle objet ADOX](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
- Chacun de la [Table](../../../ado/reference/adox-api/table-object-adox.md), [Index](../../../ado/reference/adox-api/index-object-adox.md), et [colonne](../../../ado/reference/adox-api/column-object-adox.md) objets possède également une ADO standard [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+ Chacun des objets [table](../../../ado/reference/adox-api/table-object-adox.md), [index](../../../ado/reference/adox-api/index-object-adox.md)et [Column](../../../ado/reference/adox-api/column-object-adox.md) possède également une collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) ADO standard.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
- [Exemples de Code ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
+ [Informations de référence sur l’API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
+ [Exemples de code ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
  [Collections ADOX](../../../ado/reference/adox-api/adox-collections.md)   
  [Constantes énumérées ADOX](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
  [Méthodes ADOX](../../../ado/reference/adox-api/adox-methods.md)   

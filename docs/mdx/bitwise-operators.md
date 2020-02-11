@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016974"
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
@@ -24,14 +24,14 @@ ms.locfileid: "68016974"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|[AND](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
+|[LES](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
 |[IS](../mdx/is-mdx.md)|Effectue une comparaison logique sur deux expressions d'objet.|  
 |[NOT](../mdx/not-mdx.md)|Effectue une négation logique sur une expression numérique.|  
-|[OU](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
+|[OR](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
 |[XOR](../mdx/xor-mdx.md)|Effectue une exclusion logique sur deux expressions numériques.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
  [Opérateurs &#40;syntaxe MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrer des données dans une Table (SSAS tabulaire) | Microsoft Docs
+title: Filtrer des données dans une table (SSAS tabulaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067130"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrer des données dans une table (SSAS Tabulaire)
@@ -33,17 +33,17 @@ ms.locfileid: "66067130"
   
 2.  Dans le menu Filtre automatique, effectuez l'une des opérations suivantes :  
   
-    -   Dans la liste de valeurs de colonne, sélectionnez ou désélectionnez une ou plusieurs valeurs sur lesquelles filtrer les données, puis cliquez sur **OK**.  
+    -   Dans la liste des valeurs de colonne, sélectionnez ou désélectionnez une ou plusieurs valeurs à filtrer, puis cliquez sur **OK**.  
   
          Si le nombre de valeurs est très important, les éléments individuels peuvent ne pas être affichés dans la liste. Le message « Trop d'éléments à afficher » sera alors affiché.  
   
-    -   Cliquez sur **Filtres de nombres** ou sur **Filtres de texte** (en fonction du type de colonne), puis cliquez sur l’une des commandes de l’opérateur de comparaison (comme **Égal à**) ou cliquez sur **Filtre personnalisé**. Dans la boîte de dialogue **Filtre personnalisé** , créez le filtre, puis cliquez sur **OK**.  
+    -   Cliquez sur **filtres de nombres** ou filtres de **texte** (selon le type de colonne), puis cliquez sur les commandes de l’opérateur de comparaison (comme **égal**à) ou cliquez sur **filtre personnalisé**. Dans la boîte de dialogue **Filtre personnalisé** , créez le filtre, puis cliquez sur **OK**.  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>Pour effacer le filtre d'une colonne  
   
 1.  Cliquez sur la flèche dans l'en-tête de la colonne dont vous souhaitez effacer un filtre.  
   
-2.  Cliquez sur **effacer le filtre de \<nom de colonne >** .  
+2.  Cliquez sur **effacer le \<filtre du nom de la colonne>**.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Pour effacer tous les filtres d'une table  
   
@@ -52,8 +52,8 @@ ms.locfileid: "66067130"
 2.  Cliquez sur le menu **Colonne** , puis sur **Effacer tous les filtres**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtrer et trier les données &#40;SSAS tabulaire&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md)   
- [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md)  
+ [Filtrer et trier des données &#40;la&#41;tabulaire SSAS](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectives &#40;&#41;tabulaire SSAS](perspectives-ssas-tabular.md)   
+ [Rôles &#40;&#41;tabulaire SSAS](roles-ssas-tabular.md)  
   
   

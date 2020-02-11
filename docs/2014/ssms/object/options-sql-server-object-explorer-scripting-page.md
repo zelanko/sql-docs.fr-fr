@@ -1,5 +1,5 @@
 ---
-title: Options (Page script de l’Explorateur d’objet SQL Server) | Microsoft Docs
+title: Options (Explorateur d’objets SQL Server-page scripts) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,38 +14,38 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63031933"
 ---
-# <a name="options-sql-server-object-explorer-scripting-page"></a>Options (Page script de l’Explorateur d’objet SQL Server)
+# <a name="options-sql-server-object-explorer-scripting-page"></a>Options (Explorateur d’objets SQL Server-page script)
   Utilisez cette page pour définir les options de script qui s’appliquent aux commandes suivantes dans les menus contextuels d’objet de **l’Explorateur d’objets**:  
   
 -   Commandes **Edition** pour les vues et tables utilisateur.  
   
--   **Script \<objet > en tant que** commandes pour les objets créés par l’utilisateur.  
+-   **L' \<objet de script> en tant que** commandes pour les objets créés par l’utilisateur.  
   
 -   Commandes **Modifier** pour les objets créés par l’utilisateur.  
   
 -   Cette page définit également les valeurs par défaut des options de script de **l’Assistant Génération de scripts SQL Server**.  
   
 ## <a name="remarks"></a>Notes  
- Le **modifier** et **modifier** commandes peuvent produire des résultats différents de la **Script \<objet > en tant que** commande pour le même paramètre d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. Le **Script \<objet > en tant que** commande est conçue pour générer un script afin qu’il peut être utilisé ultérieurement pour créer des objets.  
+ Les commandes **modifier** et **modifier** peuvent produire des résultats qui sont différents de **l' \<objet script>** commande pour la même configuration d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. L' **objet \<script> commande As** est conçu pour générer un script afin qu’il puisse être utilisé ultérieurement pour créer des objets.  
   
 ## <a name="options"></a>Options  
  Spécifiez les options de script en les sélectionnant parmi les paramètres disponibles dans la liste située à droite de chaque option.  
   
 ### <a name="general-scripting-options"></a>Options de script générales  
  **Délimiter des instructions individuelles**  
- Sépare les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] par un délimiteur de traitement. Pour modifier le délimiteur de traitement par défaut de **l’Éditeur de requête**, sélectionnez **Outils**/**Options**/**Exécution de la requête**/**SQL Server**/**Général**/**Délimiteur de traitement**. La valeur par défaut est FALSE. Pour plus d’informations, consultez [accédez &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
+ Sépare les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] par un délimiteur de traitement. Pour modifier le délimiteur de traitement par défaut de **l’Éditeur de requête**, sélectionnez **Outils**/**Options**/**Exécution de la requête**/**SQL Server**/**Général**/**Délimiteur de traitement**. La valeur par défaut est FALSE. Pour plus d’informations, consultez [GO &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
   
  **Inclure des en-têtes descriptifs**  
- Ajoute des commentaires descriptifs au script en séparant le script en sections pour chaque objet. La valeur par défaut est True. Pour plus d’informations, consultez [commentaire &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
+ Ajoute des commentaires descriptifs au script en séparant le script en sections pour chaque objet. La valeur par défaut est True. Pour plus d’informations, consultez [Comment &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/comment-transact-sql).  
   
- **Inclure des options VarDecimal**  
- Inclut les options de stockage VarDecimal. La valeur par défaut est FALSE. Pour plus d’informations, consultez et [sp_db_vardecimal_storage_format &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
+ **Inclure les options vardecimal**  
+ Inclut les options de stockage VarDecimal. La valeur par défaut est FALSE. Pour plus d’informations, consultez et [sp_db_vardecimal_storage_format &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
  **Générer le script de suivi des modifications**  
  Inclut des informations de suivi des modifications dans le script.  
@@ -56,15 +56,15 @@ ms.locfileid: "63031933"
  **Générer un script pour les catalogues de texte intégral**  
  Inclut un script pour les catalogues de texte intégral. La valeur par défaut est FALSE. Pour plus d’informations, consultez [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **UTILISATION de script \<base de données >**  
+ **Script utiliser \<la base de données>**  
  Ajoute l’instruction USE DATABASE au script pour créer des objets de base de données dans le contexte de la base de données de **l’Explorateur d’objets** active. Lorsqu'il est prévu que le script sera utilisé dans une base de données différente, sélectionnez False afin d'omettre l'instruction. La valeur par défaut est True. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Options de scripts d'objets  
  **Générer un script pour les objets dépendants**  
  Génère un script pour les objets supplémentaires qui sont requis lorsque le script de l'objet sélectionné est exécuté. La valeur par défaut est FALSE.  
   
- **Inclure la clause If NOT EXISTS**  
- Inclut une instruction permettant de vérifier qu'un objet n'existe pas dans la base de données avant de créer l'objet. La valeur par défaut est FALSE. Pour plus d’informations, consultez [IF... AUTRE &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/if-else-transact-sql) et [EXISTS &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/exists-transact-sql).  
+ **Inclure la clause IF NOT EXISTs**  
+ Inclut une instruction permettant de vérifier qu'un objet n'existe pas dans la base de données avant de créer l'objet. La valeur par défaut est FALSE. Pour plus d’informations, consultez [If... SINON &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/if-else-transact-sql) et [existe &#40;&#41;Transact-SQL ](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Noms d'objet de qualification de schéma**  
  Qualifie les noms d'objets avec le schéma de l'objet. La valeur par défaut est FALSE. Pour plus d’informations, consultez [Créer un schéma de base de données](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "63031933"
  Inclut le propriétaire dans le script généré. La valeur par défaut est FALSE.  
   
  **Générer un script pour les autorisations**  
- Inclut les autorisations sur les objets de base de données dans le script. La valeur par défaut est True. Pour plus d’informations, consultez [autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
+ Inclut les autorisations sur les objets de base de données dans le script. La valeur par défaut est True. Pour plus d’informations, consultez [autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Options de table/vue  
  Les options suivantes s'appliquent uniquement aux scripts des tables et des vues.  
@@ -97,7 +97,7 @@ ms.locfileid: "63031933"
  Ajoute le nom de schéma aux références de table des contraintes FOREIGN KEY. La valeur par défaut est True.  
   
  **Valeurs par défaut et règles liées aux scripts**  
- Inclut les appels aux procédures stockées liées **sp_bindefault** et **sp_bindrule** . La valeur par défaut est True. Pour plus d’informations, consultez [sp_bindefault &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) et [sp_bindrule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql).  
+ Inclut les appels aux procédures stockées liées **sp_bindefault** et **sp_bindrule** . La valeur par défaut est True. Pour plus d’informations, consultez [sp_bindefault &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) et [sp_bindrule &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindrule-transact-sql).  
   
  **Générer un script pour les contraintes CHECK**  
  Ajoute des [contraintes CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) au script. La valeur par défaut est True.  
@@ -118,7 +118,7 @@ ms.locfileid: "63031933"
  Inclut des index cluster, non cluster et XML dans le script. La valeur par défaut est True. Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
  **Générer un script pour les schémas de partition**  
- Inclut des schémas de partition de table dans le script. La valeur par défaut est FALSE. Pour plus d’informations, consultez [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql).  
+ Inclut des schémas de partition de table dans le script. La valeur par défaut est FALSE. Pour plus d’informations, consultez [Create partition scheme &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql).  
   
  **Générer un script pour les clés primaires**  
  Inclut des [contraintes de clé primaire et de clé étrangère](../../relational-databases/tables/primary-and-foreign-key-constraints.md) dans le script. La valeur par défaut est True.  

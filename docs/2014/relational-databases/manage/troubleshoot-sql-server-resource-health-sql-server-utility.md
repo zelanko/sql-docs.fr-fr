@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 17eb193f76c0b89cec505133c96d8636b39af55f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736342"
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>Résoudre les problèmes de contrôle d'intégrité de SQL Server (Utilitaire SQL Server)
@@ -28,6 +28,6 @@ ms.locfileid: "62736342"
   
 -   [Comment identifier la version et l'édition de votre SQL Server](https://go.microsoft.com/fwlink/?LinkID=178504)  
   
--   [Résolution des problèmes de performances dans SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=151354)  
+-   [Résolution des problèmes de performances dans SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=151354)  
   
   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798205"
 ---
 # <a name="list-job-category-information"></a>Répertorier les informations de catégorie de travaux
-  Comment répertorier les informations de catégorie de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
+  Comment répertorier les informations de catégorie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de travaux [!INCLUDE[tsql](../../includes/tsql-md.md)] dans à l’aide de ou SQL Server Management Objects.  
 
   
 ##  <a name="Security"></a> Sécurité  
@@ -29,7 +29,7 @@ ms.locfileid: "72798205"
   
 #### <a name="to-list-job-category-information"></a>Pour répertorier les informations de catégorie de travaux  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -45,10 +45,10 @@ ms.locfileid: "72798205"
     GO  
     ```  
   
- Pour plus d’informations, [consultez &#40;SP_HELP_CATEGORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
+ Pour plus d’informations, consultez [sp_help_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
   
   
 ##  <a name="SMO"></a>Utilisation de SQL Server Management Objects  
  **Pour répertorier les informations de catégorie de travaux**  
   
- Utilisez la classe `JobCategory` dans le langage de programmation de votre choix, par exemple Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, [consultez &#40;SQL Server Management Objects&#41; le Guide de programmation Smo](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
+ Utilisez la classe `JobCategory` dans le langage de programmation de votre choix, par exemple Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez [SQL Server Management Objects &#40;SMO&#41; Guide de programmation](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  

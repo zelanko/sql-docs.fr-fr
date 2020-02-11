@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4e4ecf91491a88e002c92a82d321e5712d48ef76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399820"
 ---
 # <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
@@ -28,14 +28,14 @@ ms.locfileid: "74399820"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indique l'ID de partition. Unique dans une base de données.|  
 |**hobt_id**|**bigint**|ID de l’index de segment de mémoire ou arbre B (B-tree) (HoBT) pour la table qui contient cet index ColumnStore.|  
-|**column_id**|**tiers**|ID de la colonne columnstore.|  
-|**dictionary_id**|**tiers**|ID du dictionnaire.|  
-|**Version**|**tiers**|Version du format de dictionnaire.|  
-|**entrer**|**tiers**|Type de dictionnaire :<br /><br /> 1-dictionnaire de hachage contenant des valeurs **int**<br /><br /> 2-non utilisé<br /><br /> 3-dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4-dictionnaire de hachage contenant des valeurs **float**|  
-|**last_id**|**tiers**|Dernier ID de données dans le dictionnaire.|  
+|**column_id**|**int**|ID de la colonne columnstore.|  
+|**dictionary_id**|**int**|ID du dictionnaire.|  
+|**Version**|**int**|Version du format de dictionnaire.|  
+|**entrer**|**int**|Type de dictionnaire :<br /><br /> 1-dictionnaire de hachage contenant des valeurs **int**<br /><br /> 2-non utilisé<br /><br /> 3-dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4-dictionnaire de hachage contenant des valeurs **float**|  
+|**last_id**|**int**|Dernier ID de données dans le dictionnaire.|  
 |**entry_count**|**bigint**|Nombre d'entrées dans le dictionnaire.|  
 |**on_disc_size**|**bigint**|Taille du dictionnaire en octets.|  
-|**pdw_node_id**|**tiers**|Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
+|**pdw_node_id**|**int**|Identificateur unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE`.  

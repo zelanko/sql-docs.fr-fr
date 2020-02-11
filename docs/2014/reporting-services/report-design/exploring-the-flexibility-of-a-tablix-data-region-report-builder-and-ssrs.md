@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105948"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Exploration de la souplesse d'une région de données de tableau matriciel (Générateur de rapports et SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66105948"
  Par défaut, une matrice possède des groupes de lignes et des groupes de colonnes, mais aucun groupe de détails. Pour transformer une matrice en table, supprimez les groupes de colonnes et ajoutez un groupe de détails pour l'afficher sur la ligne de détails. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) et [Ajouter un groupe de détails &#40;Générateur de rapports et SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md).  
   
 ## <a name="changing-a-default-list-to-a-grouped-list"></a>Transformation d'une liste par défaut en liste groupée  
- Par défaut, une liste possède des lignes de détails et aucun groupe. Pour modifier la liste en vue d'utiliser une ligne de groupe, renommez le groupe de détails et spécifiez une expression de groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ Par défaut, une liste possède des lignes de détails et aucun groupe. Pour modifier la liste en vue d'utiliser une ligne de groupe, renommez le groupe de détails et spécifiez une expression de groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
 ## <a name="creating-stepped-displays"></a>Création d'affichages en escalier  
  Par défaut, lorsque vous ajoutez des groupes à une région de données de tableau matriciel, les cellules qui figurent dans la zone d'en-tête de groupe de lignes indiquent les valeurs de groupe d'une colonne. En présence de groupes imbriqués, chaque groupe s'affiche dans une colonne distincte. Pour créer un affichage en escalier, supprimez toutes les colonnes de groupes sauf une et mettez en forme la colonne restante pour afficher la hiérarchie de groupes sous la forme d'un texte mis en retrait. Pour plus d’informations, consultez [Créer un rapport en escalier &#40;Générateur de rapports et SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md).  

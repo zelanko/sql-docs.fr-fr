@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401639"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -26,18 +26,18 @@ ms.locfileid: "74401639"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**tiers**|ID de la base de données physique sur chaque nœud.|  
-|encryption_state|**tiers**|Indique si la base de données sur ce nœud est chiffrée ou non chiffrée.<br /><br /> 0 = aucune clé de chiffrement de base de données présente, pas de chiffrement<br /><br /> 1 = non chiffré<br /><br /> 2 = chiffrement en cours<br /><br /> 3 = chiffrée.<br /><br /> 4 = modification de clé en cours<br /><br /> 5 = déchiffrement en cours<br /><br /> 6 = modification de la protection en cours (le certificat qui chiffre la clé de chiffrement de la base de données est en cours de modification).|  
-|create_date|**Date/heure**|Affiche la date de création de la clé de chiffrement.|  
-|regenerate_date|**Date/heure**|Affiche la date de régénération de la clé de chiffrement.|  
-|modify_date|**Date/heure**|Affiche la date de modification de la clé de chiffrement.|  
-|set_date|**Date/heure**|Affiche la date à laquelle la clé de chiffrement a été appliquée à la base de données.|  
-|opened_date|**Date/heure**|Indique à quel moment la clé de base de données a été ouverte pour la dernière fois.|  
+|database_id|**int**|ID de la base de données physique sur chaque nœud.|  
+|encryption_state|**int**|Indique si la base de données sur ce nœud est chiffrée ou non chiffrée.<br /><br /> 0 = aucune clé de chiffrement de base de données présente, pas de chiffrement<br /><br /> 1 = non chiffré<br /><br /> 2 = chiffrement en cours<br /><br /> 3 = chiffrée.<br /><br /> 4 = modification de clé en cours<br /><br /> 5 = déchiffrement en cours<br /><br /> 6 = modification de la protection en cours (le certificat qui chiffre la clé de chiffrement de la base de données est en cours de modification).|  
+|create_date|**DATETIME**|Affiche la date de création de la clé de chiffrement.|  
+|regenerate_date|**DATETIME**|Affiche la date de régénération de la clé de chiffrement.|  
+|modify_date|**DATETIME**|Affiche la date de modification de la clé de chiffrement.|  
+|set_date|**DATETIME**|Affiche la date à laquelle la clé de chiffrement a été appliquée à la base de données.|  
+|opened_date|**DATETIME**|Indique à quel moment la clé de base de données a été ouverte pour la dernière fois.|  
 |key_algorithm|**varchar ( ?)**|Affiche l'algorithme utilisé pour la clé.|  
-|key_length|**tiers**|Affiche la longueur de la clé.|  
+|key_length|**int**|Affiche la longueur de la clé.|  
 |encryptor_thumbprint|**varbin**|Affiche l'empreinte numérique du chiffreur.|  
-|percent_complete|**non**|Pourcentage accompli de la modification de l'état de chiffrement de la base de données. La valeur 0 indique aucune modification d'état.|  
-|node_id|**tiers**|ID numérique unique associé au nœud.|  
+|percent_complete|**real**|Pourcentage accompli de la modification de l'état de chiffrement de la base de données. La valeur 0 indique aucune modification d'état.|  
+|node_id|**int**|ID numérique unique associé au nœud.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation VIEW SERVER STATE sur le serveur.  

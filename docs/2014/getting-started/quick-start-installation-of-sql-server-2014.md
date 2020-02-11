@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683615"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Installation de démarrage rapide de SQL Server 2014
@@ -59,7 +59,7 @@ ms.locfileid: "74683615"
   
      Consultez [installer SQL Server 2014 à l’aide d’un fichier de configuration](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md) pour obtenir un exemple de syntaxe et de paramètres d’installation pour exécuter le programme d’installation via un fichier de configuration.  
   
--   **Utilitaire**  
+-   **SysPrep**  
   
      Pour obtenir des informations procédurales sur l’installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de à l’aide de Sysprep, consultez [installer SQL Server 2014 à l’aide de Sysprep](../database-engine/install-windows/install-sql-server-using-sysprep.md) .  
   
@@ -97,11 +97,11 @@ ms.locfileid: "74683615"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Passez en revue les configurations matérielle et logicielle requises, la prise en charge du système d'exploitation, les considérations relatives au réseau et à Internet, et l'espace disque nécessaire.|[Conditions préalables à l’installation](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|Vérifier les remarques de sécurité à prendre en compte pour une installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Considérations relatives à la sécurité](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+|Passez en revue les configurations matérielle et logicielle requises, la prise en charge du système d'exploitation, les considérations relatives au réseau et à Internet, et l'espace disque nécessaire.|[Configuration requise pour l'installation](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
+|Vérifier les remarques de sécurité à prendre en compte pour une installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Security Considerations](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |Passez en revue les détails des fonctionnalités prises en charge par les différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Fonctionnalités et éditions](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |Déterminez au mieux les éditions et les composants disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Éditions et composants de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)|  
-|Examinez la configuration matérielle et apprenez à préparer l'installation de cluster de basculement [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Avant l’installation du clustering de basculement](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
+|Examinez la configuration matérielle et apprenez à préparer l'installation de cluster de basculement [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Avant l'installation du clustering de basculement](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a>Mise à niveau vers[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Vous pouvez mettre à niveau les instances existantes de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] vers [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [mettre à niveau vers SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md). Avant d'exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour procéder à la mise à niveau vers [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], examinez les rubriques suivantes à propos de la mise à niveau :  
@@ -109,8 +109,8 @@ ms.locfileid: "74683615"
 |Description|Rubrique|  
 |-----------------|-----------|  
 |Documente les chemins d'accès de mise à niveau vers [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] pris en charge.|[Mises à niveau prises en charge](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
-|Décrit le Conseiller de mise à niveau, outil qui analyse les instances de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] pour identifier les problèmes de mise à niveau connus.|[Utiliser le conseiller de mise à niveau pour préparer les mises à niveau](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
-|Décrit Distributed Replay Utility, un outil qui peut utiliser plusieurs ordinateurs pour relire les données de trace de plusieurs ordinateurs, en simulant mieux les charges de travail sensibles. En effectuant une nouvelle lecture sur un serveur de test avant et après une mise à niveau de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez mesurer les différences de performance et rechercher toute incompatibilité entre votre application et la mise à niveau.|[Utiliser l’utilitaire Distributed Replay pour préparer les mises à niveau](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
+|Décrit le Conseiller de mise à niveau, outil qui analyse les instances de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] pour identifier les problèmes de mise à niveau connus.|[Utiliser le Conseiller de mise à niveau pour la préparation des mises à niveau](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
+|Décrit Distributed Replay Utility, un outil qui peut utiliser plusieurs ordinateurs pour relire les données de trace de plusieurs ordinateurs, en simulant mieux les charges de travail sensibles. En effectuant une nouvelle lecture sur un serveur de test avant et après une mise à niveau de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez mesurer les différences de performance et rechercher toute incompatibilité entre votre application et la mise à niveau.|[Utiliser Distributed Replay Utility pour préparer des mises à niveau](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
 |Répertorie les modifications importantes susceptibles d'affecter vos applications après votre mise à niveau vers [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Compatibilité descendante](backward-compatibility.md)|  
 |Rubrique procédurale pour mettre à niveau une instance autonome de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Effectuez une mise à niveau vers SQL Server 2014 à l’aide de l’Assistant Installation &#40;le programme d’installation&#41;](../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
 |Rubrique procédurale pour mettre à niveau une édition de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vers une autre édition. Pour plus d’informations sur les chemins de mise à niveau d’édition pris en charge, consultez [Mises à niveau de version et d’édition prises en charge](../database-engine/install-windows/supported-version-and-edition-upgrades.md).|[Effectuer une mise à niveau vers une autre édition de SQL Server 2014 &#40;de l’installation&#41;](../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)|  
@@ -129,9 +129,9 @@ ms.locfileid: "74683615"
 |Utilisez cette rubrique pour gérer les nœuds d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] existante.|[Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;d’installation&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |Utilisez cette rubrique pour installer les outils clients de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un cluster de basculement.|[Installer les outils clients sur un cluster de basculement SQL Server](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
 |Vérifiez l'utilisation du rapport de découverte SQL pour vérifier la version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les fonctionnalités [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installées sur l'ordinateur.|[Valider une installation de SQL Server](../database-engine/install-windows/validate-a-sql-server-installation.md)|  
-|Fournit des liens vers des rubriques de procédure pour installer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] à partir de l'Assistant Installation, à partir de l'invite de commandes, à l'aide des fichiers de configuration, puis à l'aide de SysPrep.|[Rubriques de procédures relatives à l’installation](../../2014/sql-server/install/installation-how-to-topics.md)|  
+|Fournit des liens vers des rubriques de procédure pour installer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] à partir de l'Assistant Installation, à partir de l'invite de commandes, à l'aide des fichiers de configuration, puis à l'aide de SysPrep.|[Rubriques de procédures relatives à l'installation](../../2014/sql-server/install/installation-how-to-topics.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Cette section fournit des informations sur la configuration et la désinstallation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ###  <a name="BKMK_Configure"></a>Configuration[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -139,9 +139,9 @@ ms.locfileid: "74683615"
   
 |Description|Rubrique|  
 |-----------------|-----------|  
-|Utilisez les informations de cette rubrique pour déterminer si vous devez débloquer des ports dans un pare-feu pour permettre l'accès à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou PowerPivot pour SharePoint. Vous pouvez suivre les étapes fournies dans cette rubrique pour configurer les paramètres des ports et du pare-feu.|[Configurer le pare-feu Windows pour autoriser l’accès Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et résume les informations présentant un intérêt pour un administrateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Configurer le pare-feu Windows pour autoriser l’accès SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
-|Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans un environnement multirésident.|[Configurer un ordinateur multirésident pour l’accès SQL Server](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
+|Utilisez les informations de cette rubrique pour déterminer si vous devez débloquer des ports dans un pare-feu pour permettre l'accès à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou PowerPivot pour SharePoint. Vous pouvez suivre les étapes fournies dans cette rubrique pour configurer les paramètres des ports et du pare-feu.|[Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et résume les informations présentant un intérêt pour un administrateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans un environnement multirésident.|[Configurer un ordinateur multirésident pour l'accès à SQL Server](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="BKMK_Uninstalling"></a>Désinstallation[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Les rubriques suivantes expliquent comment désinstaller manuellement une instance autonome et une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  

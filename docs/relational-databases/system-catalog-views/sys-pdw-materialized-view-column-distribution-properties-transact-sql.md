@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 934b1ed84aa7391ad8cf47e463dd38b37408ec00
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401661"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties (Transact-SQL) 
@@ -27,9 +27,9 @@ Affiche des informations de distribution pour les colonnes d’une vue matérial
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**tiers**|ID de l’objet auquel la colonne appartient. |  
-|column_id|**tiers**|ID de la colonne.|  
-|distribution_ordinal|**sa**|0 = n’est pas une colonne de distribution.</br> 1 = SQL Data Warehouse utilise cette colonne pour distribuer la vue matérialisée.|
+|object_id|**int**|ID de l’objet auquel la colonne appartient. |  
+|column_id|**int**|ID de la colonne.|  
+|distribution_ordinal|**tinyint**|0 = n’est pas une colonne de distribution.</br> 1 = SQL Data Warehouse utilise cette colonne pour distribuer la vue matérialisée.|
  
 ## <a name="permissions"></a>Autorisations 
 
