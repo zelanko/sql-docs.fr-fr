@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107899"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107899"
 |Zone de texte|Rendu sous la forme d'un attribut ou d'un élément à l'intérieur de son conteneur.|  
 |Rectangle|Rendu sous la forme d'un élément à l'intérieur de son conteneur.|  
 |Groupes de colonnes de matrices|Rendu sous la forme d'éléments à l'intérieur de groupes de lignes.|  
-|Carte|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les couches sont des éléments enfants de la carte et chaque couche comporte des éléments pour ses membres cartographiques et attributs de membre cartographique.|  
+|Mappage|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les couches sont des éléments enfants de la carte et chaque couche comporte des éléments pour ses membres cartographiques et attributs de membre cartographique.|  
 |Graphique|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur. Les séries sont des éléments enfants du graphique, et les catégories sont des éléments enfants d'une série. Effectue le rendu de toutes les étiquettes de graphiques pour chaque valeur de graphique. Les étiquettes et les valeurs sont incluses en tant qu'attributs.|  
 |Barre de données|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur, comme un graphique. En règle générale, une barre de données n'inclut pas de hiérarchies ou d'étiquettes, seulement des valeurs.|  
 |Graphique sparkline|Rendu sous la forme d'un élément à l'intérieur de l'élément de son conteneur, comme un graphique. En règle générale, un graphique sparkline n'inclut pas de hiérarchies ou d'étiquettes, seulement des valeurs.|  
@@ -51,7 +51,8 @@ ms.locfileid: "66107899"
   
 -   Les éléments masqués qui ne peuvent pas être rendus visibles par le biais d'une bascule ne sont pas rendus. Les éléments initialement visibles et les éléments masqués qui peuvent être rendus visibles par le biais d'une bascule sont rendus.  
   
--   `Images, lines, and custom report items` sont ignorés.  
+-   
+  `Images, lines, and custom report items` sont ignorés.  
   
 ##  <a name="DataTypes"></a> Types de données  
  L'élément zone de texte ou attribut se voit affecter un type de données XSD sur la base des valeurs affichées par la zone de texte.  
@@ -59,16 +60,19 @@ ms.locfileid: "66107899"
 |Si toutes les valeurs de zone de texte sont|Le type de données affecté est|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:decimal**|  
-|`Float` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:float**|  
-|`Double` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd:dateTime**|  
-|`Time`|**xsd:string**|  
-|`Boolean`|**xsd:boolean**|  
-|`String`, `Char`|**xsd:string**|  
-|Autres|**xsd:string**|  
+|
+  `Decimal` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:decimal**|  
+|
+  `Float` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:float**|  
+|
+  `Double` (ou `Decimal` et toutes données de type entier ou octet)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd : dateTime**|  
+|`Time`|**xsd : String**|  
+|`Boolean`|**xsd : Boolean**|  
+|`String`, `Char`|**xsd : String**|  
+|Autres|**xsd : String**|  
   
-##  <a name="XMLSpecificRenderingRules"></a> Règles de rendu spécifiques à XML  
+##  <a name="XMLSpecificRenderingRules"></a>Règles de rendu spécifiques à XML  
  Les sections suivantes décrivent comment les extensions de rendu XML interprètent les éléments dans le rapport.  
   
 ### <a name="report-body"></a>Corps du rapport  
@@ -76,11 +80,11 @@ ms.locfileid: "66107899"
   
  Les définitions d'espaces de noms XML et les attributs de référence de schéma sont également inclus dans l'élément de rapport. Les variables sont notées en gras :  
   
- \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ \<**Report** xmlns = "**SchemaName**" xmlns : xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi :**schemaLocation**= "**SchemaNameReportURL**&amp;RC% 3aSchema = true" Name = "ReportName" >  
   
  Les valeurs des variables sont les suivantes :  
   
-|Nom|Value|  
+|Name|Valeur|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  
@@ -148,13 +152,13 @@ ms.locfileid: "66107899"
   
  Si la valeur de la propriété DataElementOutput est égale à Output, l’en-tête d’un élément répétitif est rendu sous la forme d’un enfant de l’élément de détail.  
   
-##  <a name="CustomFormatsXSLTransformations"></a> Formats personnalisés et XSLT  
+##  <a name="CustomFormatsXSLTransformations"></a>Formats personnalisés et transformations XSL  
  Les fichiers XML générés par l'extension de rendu XML peuvent être convertis dans n'importe quel format à l'aide de XSL Transformations (XSLT). Cette fonctionnalité permet de générer des données dans des formats qui ne sont pas déjà pris en charge par des extensions de rendu existantes. Pensez à utiliser l'extension de rendu XML et XSLT avant de tenter de créer votre propre extension de rendu.  
   
-##  <a name="DuplicateName"></a> Noms en double  
+##  <a name="DuplicateName"></a>Noms en double  
  S'il existe des noms d'élément de données en double dans la même étendue, le convertisseur affiche un message d'erreur.  
   
-##  <a name="XSLTTransformations"></a> Transformations XSLT  
+##  <a name="XSLTTransformations"></a>Transformations XSLT  
  Le convertisseur XML peut appliquer une transformation XSLT côté serveur aux données XML d'origine. Lorsqu'une transformation XSLT est appliquée, le convertisseur génère en sortie le contenu transformé au lieu des données XML d'origine. La transformation a lieu sur le serveur, et non sur le client.  
   
  La transformation XSLT à appliquer à la sortie est définie dans le fichier de définition de rapport avec la propriété DataTransform du rapport ou avec le paramètre XSLT *DeviceInfo* . Si l'une de ces valeurs est définie, la transformation se produit chaque fois que le convertisseur XML est utilisé. Lors de l’utilisation d’abonnements, la transformation XSLT doit être définie dans la propriété RDL DataTransform.  

@@ -1,5 +1,5 @@
 ---
-title: Sélectionnez l’Instance | Microsoft Docs
+title: Sélectionner une instance | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092349"
 ---
 # <a name="select-instance"></a>Sélectionner une instance
@@ -39,14 +39,15 @@ ms.locfileid: "66092349"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
+-   
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
   
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]  
   
  Pour plus d'informations sur les scénarios de mise à niveau pris en charge et sur les problèmes de mise à niveau connus, consultez [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisez le Conseiller de mise à niveau pour préparer des mises à niveau](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
+ [Utiliser le conseiller de mise à niveau pour préparer les mises à niveau](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [Utiliser plusieurs versions et instances de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Fusion de Partitions (XMLA) | Microsoft Docs
+title: Fusion de partitions (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702042"
 ---
 # <a name="merging-partitions-xmla"></a>Fusion de partitions (XMLA)
-  Si des partitions partagent la même conception d’agrégation et la structure, vous pouvez fusionner la partition à l’aide de la [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) commande XML for Analysis (XMLA). Dans le cadre de la gestion des partitions, il est important de fusionner les partitions, plus particulièrement les partitions qui contiennent des données historiques partitionnées par date.  
+  Si les partitions ont la même conception d’agrégation et la même structure, vous pouvez fusionner la partition à l’aide de la commande [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) dans XML for Analysis (XMLA). Dans le cadre de la gestion des partitions, il est important de fusionner les partitions, plus particulièrement les partitions qui contiennent des données historiques partitionnées par date.  
   
  Par exemple, un cube financier peut utiliser deux partitions :  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62702042"
  Les deux partitions utilisent des paramètres de stockage différents, mais elles partagent la même conception d'agrégation. Au lieu de traiter le cube avec plusieurs années de données historiques à la fin de l'exercice, vous pouvez utiliser la commande `MergePartitions` pour fusionner la partition de l'exercice en cours dans la partition des exercices précédents. Cela préserve les données d'agrégation sans qu'il soit nécessaire de traiter entièrement le cube, une opération qui peut s'avérer fastidieuse.  
   
 ## <a name="specifying-partitions-to-merge"></a>Spécification des partitions à fusionner  
- Lorsque le `MergePartitions` commande est exécutée, les données d’agrégation stockées dans les partitions sources spécifiées dans le [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propriété est ajoutée à la partition cible spécifiée dans le [cible](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) propriété.  
+ Lorsque la `MergePartitions` commande s’exécute, les données d’agrégation stockées dans les partitions sources spécifiées dans la propriété [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) sont ajoutées à la partition cible spécifiée dans la propriété [cible](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) .  
   
 > [!NOTE]  
 >  La propriété `Source` peut contenir plusieurs références d'objet partition. En revanche, la propriété `Target` ne le peut pas.  
@@ -46,7 +46,7 @@ ms.locfileid: "62702042"
 ## <a name="examples"></a>Exemples  
   
 ### <a name="description"></a>Description  
- L’exemple suivant fusionne toutes les partitions dans le **Customer Counts** groupe de mesures de la **Adventure Works** de cube dans le **Adventure Works DW** exemple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données dans le **Customers_2004** partition.  
+ L’exemple suivant fusionne toutes les partitions du groupe de **mesures Customer Counts** du **cube Adventure Works** de l’exemple [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données **Adventure Works DW** dans la partition **Customers_2004** .  
   
 ### <a name="code"></a>Code  
   
